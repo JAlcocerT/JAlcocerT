@@ -1,11 +1,13 @@
 ---
-title: "Tinkering with a Dron?"
+title: "Dron"
 date: 2024-09-04T10:20:21+01:00
 draft: false
 tags: ["dev"]
 summary: 'Interesting dron stuff'
 url: 'useful-dron-stuff'
 ---
+
+Tinkering with a Drone?
 
 With drons we kind of combine it all: electronics, programming, physics and...fun!
 

@@ -16,6 +16,10 @@ Or is it just my head?
 
 **Intro**
 
+Some math, some physics, some mechanics.
+
+And some [personal journey](#about-mbsd) for starters before going all in with MBSD.
+
 4 bars: leg-leg-biela bicicleta
 
 
@@ -74,11 +78,24 @@ Again: understanding, not operating.
 
 ### Bike Dynamics Thesis
 
-### D&A has real demand!
+How could i not go all in on real time 3d motion simulation for bicycles?
+
+* https://github.com/JAlcocerT/Bike_dynamic_simulator
+
+They are crazy efficient in [$/km terms](https://jalcocert.github.io/JAlcocerT/buying-bicycle-through-data-analytics/)
+
+### D&A has real demand
+
+And thats why I pivoted to D&A career.
+
+The dev part was just to sell at scale
 
 ### Found Mechanism Project
 
-Forked it and created a personal PoC
+Forked it and created a personal PoC from scratch:
+
+* https://github.com/JAlcocerT/Slider-Crank
+* https://github.com/JAlcocerT/mechanism
 
 and put together some 101 with the equations with [python sympy](#about-python-sympy)
 
@@ -86,7 +103,7 @@ and put together some 101 with the equations with [python sympy](#about-python-s
 
 Fast-forward until today.
 
-because from 2023 it has all been learn/do/learn/do around AI.
+Because from 2023 it has all been learn/do/learn/do around AI.
 
 {{% /steps %}}
 

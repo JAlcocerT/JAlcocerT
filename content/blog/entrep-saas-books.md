@@ -225,33 +225,6 @@ Lets [create sth](#building-n-ebooks-for-a-webook)
 
 
 
-* https://nav.al/read
-
-> Read the Best 100 Books Over and Over Again
-
-> > Many claim to read, but very few understand
-
-<!-- ### The Echo Chambers
-
-When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. 
-
-Today, however, people often only engage with those who share their opinions. Digital channels have returned humans to a cave-like existence: Only a small social bubble within an echo chamber shares a given person’s view of reality.
-
-“The multiplicity of digital channels allows us to avoid self-awareness and surround ourselves with the people (or machines, it is not always certain) who share our opinions.” 
-
-Individuals that hold opposing viewpoints on reality encourage, criticize, and adjust one another's ideas, influencing economic and human behavior.
-
-Different narratives, like an epidemic, may infect and alter communities, according to Shiller. 
-
-The validity of a narrative has no bearing on its "contagion rate." 
-
-Viral tales capture attention, look cohesive, and fit readily into existing narratives.
-
--->
-
-
-![Canva using neuromarketing on you](/blog_img/outro/canva-free-trial-neuromkt.png)
-
 ## Building N ebooks for a web/ook
 
 For now, this is all going to be content from...surprise, surprise: this blog!
@@ -264,9 +237,10 @@ And the result of this post: `ebooks.jalcocertech.com`
 
 is helping me a lot to define what me free tier / diy is.
 
+
 > And hey, is much better looking than the diy one (and simpler to maintain)
 
-> > No obfuscation though
+> > No obfuscation though, but deployed statically to `https://dash.cloudflare.com/login`
 
 Most likely, will be around: 1 free, give email for the rest, boilerplate x1 time paid and available at `boilerplate.jalcocertech.com`
 
@@ -336,6 +310,13 @@ See... `Z_ebooks/BiP-ebook.md`
 ## Conclusions
 
 
+* Options -> Things and not controlable
+* Choices -> Actions and are controlable
+
+A team member can deliver great results given the proper workload.
+  
+
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/boilerplate" title="NEW - BoilerPlate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Vibe Coding Templates for enhanced DIY " >}}
@@ -346,6 +327,34 @@ These are deployed at:
 
 * https://ebooks.jalcocertech.com - If you have some idea and dont know how to start creating it, this is for you
 * https://boilerplate.jalcocertech.com - If you are creating and want to do it faster, this is for you
+
+
+* https://nav.al/read
+
+> Read the Best 100 Books Over and Over Again
+
+> > Many claim to read, but very few understand
+
+<!-- ### The Echo Chambers
+
+When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. 
+
+Today, however, people often only engage with those who share their opinions. Digital channels have returned humans to a cave-like existence: Only a small social bubble within an echo chamber shares a given person’s view of reality.
+
+“The multiplicity of digital channels allows us to avoid self-awareness and surround ourselves with the people (or machines, it is not always certain) who share our opinions.” 
+
+Individuals that hold opposing viewpoints on reality encourage, criticize, and adjust one another's ideas, influencing economic and human behavior.
+
+Different narratives, like an epidemic, may infect and alter communities, according to Shiller. 
+
+The validity of a narrative has no bearing on its "contagion rate." 
+
+Viral tales capture attention, look cohesive, and fit readily into existing narratives.
+
+-->
+
+
+![Canva using neuromarketing on you](/blog_img/outro/canva-free-trial-neuromkt.png)
 
 
 ### Decap x Existing Astro x LocalHost

@@ -3,7 +3,7 @@ title: "Making an enhanced DIY offering via PaaS"
 date: 2026-01-03T23:20:21+01:00
 draft: false
 tags: ["DIY Platform Service","RoadMap26"]
-description: ''
+description: 'A platform service offering for B2C to get up to speed quickly with services that dont require any customization.'
 url: 'creating-a-diy-paas-service'
 ---
 

@@ -2,8 +2,8 @@
 title: "OOP 101 for Engineers"
 date: 2026-10-01
 draft: false
-tags: ["Dev","Mechanical Engineering","Multi-Body","MBSD"]
-description: 'Object Oriented Programming for Python users and do mechanism simulations.'
+tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD"]
+description: 'Object Oriented Programming for Python users and better mechanism simulations.'
 url: 'object-oriented-programming-101'
 ---
 
@@ -61,22 +61,20 @@ Someone once told me that for **mechanisms I would need to learn OOP**.
 And I can understand why now.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Slider-Crank Repo" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
+  {{< card link="https://github.com/JAlcocerT/mechanism" title="Mechanism Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked of GabeMorris Mechanism" >}}
 {{< /cards >}}
 
 
-* https://github.com/JAlcocerT/mechanism
 
-
-<!-- 
 declarative programming language (not procedural! - you dont have to tell it (the procedure) how to do it, the query engine worries about the how for you)
+
 great for data management, manipulation and analytics
-relational data model -->
+relational data model
 
 ## OOP 101
 
-Absolutely! Let's dive into Object-Oriented Programming (OOP).
+Let's dive into Object-Oriented Programming (OOP).
 
 **What is OOP?**
 
@@ -110,7 +108,9 @@ OOP is a programming paradigm (a style of programming) that revolves around the 
 
 **Methods (Functions Applied to Objects):**
 
-Yes, you're right! Methods are essentially functions that are associated with a specific class and operate on the objects of that class. They define the behavior of the objects.
+Yes, you're right! Methods are essentially functions that are associated with a specific class and operate on the objects of that class. 
+
+They define the behavior of the objects.
 
 **Simple Example (Python):**
 
@@ -166,7 +166,7 @@ In summary, Python's dynamic nature gives you a lot of freedom in working with o
 
 ### OOP in Python
 
-When it comes to how C and Java handle object properties, they differ significantly from Python's dynamic approach. Here's a breakdown:
+When it comes to **how C and Java handle object properties**, they differ significantly from Python's dynamic approach. 
 
 **C:**
 
@@ -196,7 +196,9 @@ When it comes to how C and Java handle object properties, they differ significan
     * Python: Offers high flexibility.
     * C and Java: Emphasize structure and type safety.
 
-In essence, C and Java prioritize a well-defined structure, which contributes to their performance and reliability. Python, on the other hand, prioritizes flexibility and ease of use.
+In essence, C and Java prioritize a well-defined structure, which contributes to their performance and reliability. 
+
+**Python prioritizes flexibility and ease of use.**
 
 Yes, all the statements you've listed are **accurate and fundamental principles of Object-Oriented Programming (OOP)**. Let's break them down:
 

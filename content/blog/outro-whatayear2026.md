@@ -15,7 +15,7 @@ url: 'tech-recap-2026'
 
 * https://github.com/leoneljdias/tempo
 
-> MIT |  Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
+> MIT | Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
 
 software product development, digital platform engineering,
 
@@ -55,7 +55,9 @@ https://www.youtube.com/watch?v=L2Ya9PYNns8
 > CodexCLI for idea validation?
 
 
-inspiring apps: all those pwa like that just...work
+## Inspiring Apps
+
+Inspiring apps: all those pwa like that just...work
 
 https://bentopdf.com/index.html
 docuseal
@@ -65,28 +67,21 @@ pairdrop...
 
 BiP user flows around newsletter layers
 
+<!--
 
-
-<!-- 
-    Options -> Things and not controlable
-    Choices -> Actions and are controlable
-
-   a team member can deliver great results given the proper workload -->
-
-
-<!-- <https://www.futuretools.io/>
-
-<https://github.com/SevaSk/ecoute>
+<https://www.futuretools.io/>
 
 <https://github.com/beyondcode/writeout.ai>
 
-<https://github.com/Significant-Gravitas/Auto-GPT>
+* https://github.com/Significant-Gravitas/Auto-GPT
+
+> AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. 
+
 <https://docs.agpt.co/setup/>>
 
+<https://ugeek.github.io/blog/post/2023-04-06-listado-de-webs-de-ia-para-busquedas-desarrollo-y-productividad.html> 
 
-<https://ugeek.github.io/blog/post/2023-04-06-listado-de-webs-de-ia-para-busquedas-desarrollo-y-productividad.html> -->
-
-
+-->
 
 
 
@@ -158,9 +153,9 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
-4. Status Pages for services: Kener / UptimeKuma. SLA matters
+4. Status Pages for services: Kener / UptimeKuma. 
 
-* https://jalcocert.github.io/JAlcocerT/link-artists/#status-pages
+SLA matters: https://jalcocert.github.io/JAlcocerT/link-artists/#status-pages
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
@@ -266,7 +261,7 @@ Ive enjoyed using Cloudflare R2 for s3 compatible storage.
 
 1. https://github.com/neondatabase/neon
 
-> Apache v2 |  Neon: Serverless Postgres. We separated storage and compute to offer autoscaling, code-like database branching, and scale to zero.
+> Apache v2 | Neon: Serverless Postgres. We separated storage and compute to offer autoscaling, code-like database branching, and scale to zero.
 
 2. Cloudflare D1: *An interesting companion for CF R2*
 
@@ -321,3 +316,20 @@ xargs -0 awk '
     print "TOTAL:", count+0
   }'
 ```
+
+
+#### Discovery of the Years
+
+[2020](https://jalcocert.github.io/JAlcocerT/blog/summary20/) - R *together with sql*
+
+[2021](https://jalcocert.github.io/JAlcocerT/blog/summary21/) - Containers *with the Pi*
+
+[2022](https://jalcocert.github.io/JAlcocerT/blog/summary22/) - PySpark *and big data*
+
+[2023](https://jalcocert.github.io/JAlcocerT/blog/summary23/) - SSGs *and static hosting*
+
+[2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/) - LLMs *and API calls*
+
+[2025](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025) - BiP *and social sign in/up*
+
+2026 - 

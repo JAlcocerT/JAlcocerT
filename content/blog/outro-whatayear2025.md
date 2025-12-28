@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2025"
-date: 2025-12-24
+date: 2025-12-29
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]
 description: 'Has this been a year? or 3 in one?'
@@ -15,16 +15,15 @@ I dared to call [2024 crazy](https://jalcocert.github.io/JAlcocerT/this-year-was
 Then 2025 happened.
 
 
-900 min of LISTENING to a podcast makes you be the top...5%? really?
+Where 900 min of LISTENING to a podcast makes you be the top...5%?
 
+Really?
 
 Have you tried more tools than actually shipped projects?
 
 This year yes, but I have changed the tendency.
 
 I believe the ratio can be... ~100 posts with new tools : 10 gh repos with sample projects
-
-
 
 Not all the content is indexed in the same way across engines and you can miss valuable info.
 
@@ -36,8 +35,6 @@ Not all the content is indexed in the same way across engines and you can miss v
 https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
 
 [Computer consultancy activities](https://ariregister.rik.ee/eng/company/16864984/iotechcrafts-O%C3%9C?lang=en)
-
-
 
 
 Even Reqable has one: Tools -> More QR-Code
@@ -208,18 +205,13 @@ Reading: *excuse alert, this is beeen a year more of creating than consuming*
 
 And that makes...xyz/12 books.
 
-
 The lean startup
 
 Company of one!
 
 Open question for reading moving forward: If learning is
 
-
 {{< /details >}}
-
-
-
 
 
 ## Better Tech Stack
@@ -249,55 +241,58 @@ Here is the combined explanation, comparing the authentication flow for both pla
 
 The user enters their credentials on your login page. The Astro frontend sends a request to your backend.
 
-  * **PocketBase**: The Astro frontend, using the PocketBase JavaScript SDK, makes a single, simple API call. The SDK abstracts the underlying `fetch` request, handling the correct endpoint and request body.
-    ```javascript
-    // Astro component with JS
-    await pb.collection('users').authWithPassword(email, password);
-    ```
-  * **FastAPI**: Your Astro frontend must manually make a `fetch` request to your custom login endpoint. You are responsible for constructing the URL, body, and headers.
-    ```javascript
-    // Astro component with JS
-    await fetch('http://127.0.0.1:8000/token', {
-      method: 'POST',
-      body: `username=${username}&password=${password}`
-    });
-    ```
+* **PocketBase**: The Astro frontend, using the PocketBase JavaScript SDK, makes a single, simple API call. The SDK abstracts the underlying `fetch` request, handling the correct endpoint and request body.
+
+```javascript
+// Astro component with JS
+await pb.collection('users').authWithPassword(email, password);
+```
+  
+* **FastAPI**: Your Astro frontend must manually make a `fetch` request to your custom login endpoint. You are responsible for constructing the URL, body, and headers.
+
+```javascript
+// Astro component with JS
+await fetch('http://127.0.0.1:8000/token', {
+  method: 'POST',
+  body: `username=${username}&password=${password}`
+});
+```
 
 2. Server Validates Credentials
 
 The backend receives the request and verifies the credentials.
 
-  * **PocketBase**: This step is entirely handled by PocketBase's core logic. The server automatically hashes the provided password and compares it to the hash stored in the `users` collection.
-  * **FastAPI**: You must write the code to handle this logic. Using libraries like `passlib` for password hashing and an ORM like `SQLAlchemy` to query your SQLite database, your FastAPI endpoint would:
-      * Query the database for the user by username.
-      * Retrieve the stored hashed password.
-      * Compare the user-provided password with the stored hash.
+* **PocketBase**: This step is entirely handled by PocketBase's core logic. The server automatically hashes the provided password and compares it to the hash stored in the `users` collection.
+* **FastAPI**: You must write the code to handle this logic. Using libraries like `passlib` for password hashing and an ORM like `SQLAlchemy` to query your SQLite database, your FastAPI endpoint would:
+    * Query the database for the user by username.
+    * Retrieve the stored hashed password.
+    * Compare the user-provided password with the stored hash.
 
 
 3. Server Issues the JWT
 
 If the credentials are valid, the server creates and sends a **JWT bearer token** to the client.
 
-  * **PocketBase**: PocketBase automatically generates a **JWT bearer token** with the user's information and a default expiration time. It returns this token in the API response without any manual coding.
+* **PocketBase**: PocketBase automatically generates a **JWT bearer token** with the user's information and a default expiration time. It returns this token in the API response without any manual coding.
 
-  * **FastAPI**: You must manually generate the JWT. Using a library like `python-jose`, your endpoint would:
-      * Create a payload with the user's ID and an expiration time.
-      * Sign the payload with a secret key using an algorithm like **HS256**.
-      * Return the generated token in the JSON response.
+* **FastAPI**: You must manually generate the JWT. Using a library like `python-jose`, your endpoint would:
+    * Create a payload with the user's ID and an expiration time.
+    * Sign the payload with a secret key using an algorithm like **HS256**.
+    * Return the generated token in the JSON response.
 
 4. Client Stores and Uses the Token
 
 The client-side code receives the token and uses it for future requests to protected endpoints.
 
-  * **PocketBase**: The PocketBase SDK automatically stores the received token for you in local storage. For all subsequent requests, the SDK automatically includes the token in the `Authorization` header.
-  * **FastAPI**: Your frontend code must manually parse the JSON response, save the token to local storage, and then retrieve it for every `fetch` request to a protected endpoint, manually adding it to the `Authorization` header.
+* **PocketBase**: The PocketBase SDK automatically stores the received token for you in local storage. For all subsequent requests, the SDK automatically includes the token in the `Authorization` header.
+* **FastAPI**: Your frontend code must manually parse the JSON response, save the token to local storage, and then retrieve it for every `fetch` request to a protected endpoint, manually adding it to the `Authorization` header.
 
 5. Server Validates the Token and Authorizes Access
 
 The backend validates the token and decides whether to grant access to the protected content.
 
-  * **PocketBase**: This is handled automatically. When a request with a bearer token hits a protected collection endpoint, PocketBase automatically validates the token's signature, checks its expiration, and authorizes access based on the **API rules** you've set up in the admin dashboard.
-  * **FastAPI**: You must write a **dependency** function that extracts the token from the header, validates it, and handles errors. You then add this dependency to every protected route.
+* **PocketBase**: This is handled automatically. When a request with a bearer token hits a protected collection endpoint, PocketBase automatically validates the token's signature, checks its expiration, and authorizes access based on the **API rules** you've set up in the admin dashboard.
+* **FastAPI**: You must write a **dependency** function that extracts the token from the header, validates it, and handles errors. You then add this dependency to every protected route.
 
 In summary, PocketBase provides a high-level SDK that abstracts the entire process, making it a fast and convenient backend solution.
 
@@ -501,7 +496,7 @@ If the drawdown if the [~20/30% MDD volatility](https://jalcocert.github.io/JAlc
 
 {{< details title="FY24 vs FY25 | HomeLab 📌" closed="true" >}}
 
-
+Ive written more here about slfhosting.
 
 {{< /details >}}
 
@@ -555,13 +550,16 @@ Which Is Better?
 
 **OAuth2.0 often uses JWT tokens as part of its workflow**, leveraging the strengths of both approaches for secure, scalable authentication and authorization.
 
-For APIs exposed to external clients, OAuth is generally considered more secure and flexible. For internal use or single-service authentication, JWT and API keys are simpler.
+For APIs exposed to external clients, OAuth is generally considered more secure and flexible.
 
+For internal use or single-service authentication, JWT and API keys are simpler.
 
 {{% /details %}}
 
 
-Notice also that **WHAT something is** has nothing to do with WHERRE something is. *As [per **ENS** and DNS](https://jalcocert.github.io/JAlcocerT/web-domain-basics/#conclusions)*
+Notice also that **WHAT something is** has nothing to do with WHERRE something is. 
+
+*As [per **ENS** and DNS](https://jalcocert.github.io/JAlcocerT/web-domain-basics/#conclusions)*
 
 And that [BRD PRD FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) are the WHY / what / how of a product you are building.
 
@@ -1548,6 +1546,8 @@ Create a Roadmap!
 
 Build.
 
+And to do NOT derail.
+
 I will be Aiming for aggressively packaging knowledge into **high-leverage products and services**.
 
 But if you are one, doing ONLY what people wants is not optional.
@@ -1590,26 +1590,21 @@ Fortunately, you have [tools to know what your clients want](https://jalcocert.g
 
 ![Cat product Meme](/blog_img/memes/features-vs-needs.png)
 
-
 The services is a matter of what to build.
 
 So to validate i built the simple waiting list concept that superseeds the waiting list v1 before ever going to prod.
 
-
-Waiting list to services
-Automation to services
-web spins to services, maybe via paas coolify/dokploy
-
-
+* Waiting list to services
+* Automation to services
+* Web spins to services, maybe via paas coolify/dokploy
 
 {{< details title="To read...6 books 📌" closed="true" >}}
 
-As i want to focus more on doing than entertainment.
+As I want to focus more on doing than entertainment.
 
 1. Unscripted
 2. Hyper focus fro, Crhsi Bailey
 3. Gonzo Capitalism (?)
-
 
 {{< /details >}}
 
@@ -1628,14 +1623,12 @@ And...to create N ebooks :)
 * https://www.nickgracilla.com/posts/year-in-review-template/
 * https://blog.cavelab.dev/2022/01/a-person-that-writes/
 
-
-* <https://Selfhosted.show>
-* <https://selfh.st/>
+* https://selfhosted.show
+* https://selfh.st/
 
 6. Keep writting, but less and MORE QUALITY: < 2/week **AND <60/year**
 
 7. Get better at Writting (N) ebooks
-
 
 #### Stop Doing
 
