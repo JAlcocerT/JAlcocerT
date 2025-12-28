@@ -273,4 +273,4 @@ https://github.com/darlinghq/darling
 
 I was very happy with both, the Huawei P30 Pro and the PocoPhone F1 (probably the best value for money I ever had til now).
 
-The F1 was quite an interesting one and also the first phone I changed its battery (13Wh, 3.85V, called BM4E, 3900mAh)
+The Poco F1 was quite an interesting one and also the first phone I changed its battery (13Wh, 3.85V, called BM4E, 3900mAh)

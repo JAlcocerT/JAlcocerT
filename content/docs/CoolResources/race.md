@@ -29,21 +29,17 @@ For which we need:
 
 ### Geo Data
 
+Geolocation data is fantastic:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro GPS Telemetry Magic" image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 versus GoPro data extraction" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-and-gopro-metadata" title="GoPro Metadata Speed trackday " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="Getting GPS info during while driving on circuits" >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-and-gopro-metadata
 
-
-![GoPro Metadata Speed trackday](/blog_img/karting/gopro-gps-trackday-speed.png)
-
-https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/#gopros-telemetry-data
-
-
-![Driver lap comparison based on Matplotlib](/blog_img/data-experiments/kart/matplotlib-driver-comparison.png)
-
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/#gopros-telemetry-data" title="Racing Analytics" image="/blog_img/data-experiments/kart/matplotlib-driver-comparison.png" subtitle="Driver lap comparison based on Matplotlib x GPS" >}}
+{{< /cards >}}
 
 
 <!-- 
@@ -54,6 +50,8 @@ https://youtu.be/tQOxnCz2lwM?si=XTgvyi-qnm3ZKiAl
 
 
 ### F1 Data
+
+This is one of the cool ones that you can get [via API](https://jalcocert.github.io/JAlcocerT/interesting-apis/#formula-1)
 
 Amazon AWS handles F1 telemetry data with very high frequency/granularity that any data geek would dream.
 
@@ -77,9 +75,20 @@ https://www.youtube.com/watch?v=TiQEElXyY2w
 
 ## Improving your Racing with Data
 
+https://jalcocert.github.io/JAlcocerT/create-your-website/
 
-![IoRacing IoTechCrafts IoTrack](/blog_img/web/WebsSnapshots/web_ioracing.png)
+<!-- ![IoRacing IoTechCrafts IoTrack](/blog_img/web/WebsSnapshots/web_ioracing.png) -->
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/#gopros-telemetry-data" title="Racing Analytics" image="/blog_img/web/WebsSnapshots/web_ioracing.png" subtitle="Driver lap comparison based on Matplotlib x GPS" >}}
+{{< /cards >}}
+
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs 101 | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 ### Optimum Gears
 
@@ -88,3 +97,9 @@ https://www.youtube.com/watch?v=TiQEElXyY2w
 
 ## Other Racing Resources
 
+
+If you like Mechanism...
+
+https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
+
+![Engine Sample Animation](/blog_img/mec/engine.gif)

@@ -32,7 +32,7 @@ Specially if they bring a phogo gallery like [this one](https://brianli.com/phot
 
 ## Some Minimalistic Sites
 
-But some people take it one level higher and do webs veeery minimalistic.
+But some people take it one level higher and do **webs veeery minimalistic**.
 
 <!-- echo chambers -->
 
@@ -371,11 +371,9 @@ make docker-down
 
 Just go to `localhost:4321` and `localhost:4321/admin` to have Astro and Dev Mode and **DecapCMS to edit the files locally via a cool editor!**
 
-* https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decapcms-local.png
-
+<!-- * https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decapcms-local.png -->
 
 [![Decap CMS Post Editor](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/decap-post-editor.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decap-post-editor.png)
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-cms-101/" title="CMS 101 | Docs ↗" >}}

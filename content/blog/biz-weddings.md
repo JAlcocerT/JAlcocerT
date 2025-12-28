@@ -429,11 +429,11 @@ networks:
     external: true
 ```
 
-Not like this:
+**Not** like this:
 
 ![CF Hetzner NGINX](/blog_img/selfh/cloudflare-hetzner-nginx.png)
 
-But like this, **also with the CNAME record for CF** if using CF:
+**But like this**, also with the **CNAME record** for CloudFlare: *if using CF at all*
 
 ![FireBat NGINX Example](/blog_img/selfh/cloudflare-hetzner-nginx2.png)
 

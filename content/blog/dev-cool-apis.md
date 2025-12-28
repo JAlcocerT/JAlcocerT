@@ -328,25 +328,26 @@ But, I got to know recently about: https://www.f1-tempo.com/ and https://www.gp-
 
 Puedes acceder a telemetría de **F1 en tiempo real y datos históricos** usando APIs y webs especializadas como OpenF1, FastF1 y soluciones comerciales como Formula Live Pulse. 
 
-Todas son populares entre fans, analistas y desarrolladores.
+| Source | Free | Open Source | Paid | Notes |
+| --- | --- | --- | --- | --- |
+| **[OpenF1](https://github.com/br-g/openf1)** | Yes | Yes | No | Open-source API for real-time and historical data; popular with developers. |
+| **[FastF1](https://github.com/theOehrly/Fast-F1)** | Yes | Yes | No | Python library for official telemetry access, analysis, and visualization. |
+| **Formula Live Pulse** | No | No | Yes | Commercial platform featuring real-time APIs and customizable widgets. |
+| **[f1-dash.com](https://github.com/slowlydev/f1-dash)** | Yes | No | No | Free web dashboard for live telemetry and sector comparisons. |
+| **TracingInsights.com** | No | No | Yes | Paid service focused on detailed telemetry analysis and graphics. |
+| **F1 TV (App)** | No | No | Yes | Official F1 service providing telemetry, premium content, and broadcasts. |
+| **Ergast API** | Yes | Yes | No | Free, open-source API for historical statistics (no live telemetry). |
 
-Fuente               |  Gratis  |  Open Source  |  De Pago  |  Notas                                                                             
----------------------+----------+---------------+-----------+------------------------------------------------------------------------------------
-[OpenF1](https://github.com/br-g/openf1)               |  Sí      |  Sí           |  No       |  API open source para datos en tiempo real e históricos, usada por desarrolladores.
-[FastF1](https://github.com/theOehrly/Fast-F1) (Python pkg)  |  Sí      |  Sí           |  No       |  Biblioteca Python para acceder a telemetría oficial, análisis y visualización.    
-Formula Live Pulse   |  No      |  No           |  Sí       |  Plataforma comercial con API en tiempo real y widgets personalizables.            
-[f1-dash.com](https://github.com/slowlydev/f1-dash)          |  Sí      |  No           |  No       |  Dashboard web gratuito para telemetría en vivo y comparación de sectores.         
-TracingInsights.com  |  No      |  No           |  Sí       |  Servicio pago enfocado en análisis y gráficos de telemetría detallados.           
-F1 TV (App)          |  No      |  No           |  Sí       |  Servicio oficial de F1 con telemetría, contenido premium y transmisiones.         
-Ergast API           |  Sí      |  Sí           |  No       |  API gratuita y open source para estadísticas históricas, no telemetría en vivo.   
+* **For Developers:** **FastF1** is the gold standard if you know Python, while **OpenF1** is excellent for modern API integration.
+* **For Historical Data:** **Ergast** remains the most reliable source for results and standings dating back to 1950.
+* **For Visual Use:** **f1-dash.com** is the most accessible "plug-and-play" option for fans wanting to see live data without coding.
 
+Would you like me to find the specific documentation for any of these APIs to help you get started with a project?
 
 - OpenF1 API: Ofrece datos en tiempo real y acceso gratuito a históricos, incluyendo telemetría, comunicaciones y vueltas. Ideal para dashboards o análisis detallado. Documentación y ejemplos en openf1.org.
 - FastF1 (Python package): Permite extraer telemetría, tiempos por vuelta, posiciones, acelerador, freno y más directamente desde los feeds oficiales. Fácil de usar con Pandas y Matplotlib para visualizaciones. Instalación vía pip o conda.
   * There is also an R version: https://cran.r-project.org/web/packages/f1dataR/index.html
 - Formula Live Pulse API: Real-time telemetría, tiempos, análisis de neumáticos y comparaciones entre pilotos. Ofrece widgets personalizables y está disponible para web, iOS y Android.
-
-Opciones en Web y Apps
 
 - f1-dash.com: Dashboard en tiempo real con telemetría y tiempos de carrera online, sector por sector y comparaciones directas.
 - TracingInsights.com: Analítica y gráficos interactivos de telemetría y rendimiento, comparando pilotos y vueltas.
@@ -355,12 +356,9 @@ Opciones en Web y Apps
 
 Comunidad y Recursos Técnicos
 
-- En Reddit y blogs técnicos, recomiendan FastF1 y OpenF1 como principales fuentes para programadores y analistas. También se menciona Ergast para estadísticas históricas.[6][18]
+- En Reddit y blogs técnicos, recomiendan FastF1 y OpenF1 como principales fuentes para programadores y analistas. También se menciona Ergast para estadísticas históricas.
 
 Estas herramientas te permiten crear dashboards, realizar análisis y estudiar estrategias de piloto en tiempo real con gran profundidad.
-
-[2](https://www.reddit.com/r/F1DataAnalysis/comments/16w84uz/openf1_an_api_for_realtime_f1_data/)
-
 
 1. https://github.com/slowlydev/f1-dash
 
@@ -374,7 +372,6 @@ As simple as:
 ```sh
 curl "https://api.openf1.org/v1/laps?session_key=9161&driver_number=63&lap_number=8"
 ```
-
 
 
 ## Social Media APIs
@@ -429,7 +426,6 @@ You are allowed to: `Web App, Automated App or Bot, Confidential client`
 You will need to create the app:
 
 Sth like: `https://grow.libreportfolio.fyi/callback` and `https://grow.libreportfolio.fyi`
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/LibrePortfolio-X" title="LibrePortfolio-X Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code - Flask x (Matplotlib Graphs + OpenAI + X API) " >}}

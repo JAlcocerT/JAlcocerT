@@ -69,7 +69,6 @@ You can uploads those to [youtube](https://youtube.com/shorts/2xMOxiRz6F4)
 <!-- {{< youtube "2xMOxiRz6F4" >}} -->
 
 
-
 So that you can see the **engine sample animation working**: Go to `./animations`
 
 ![Engine Sample Animation](/blog_img/mec/engine.gif)

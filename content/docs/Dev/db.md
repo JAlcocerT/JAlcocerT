@@ -27,6 +27,38 @@ The structured vs object/JSON differenciation is also important...
 
 2. DBCode
 
+> You could also use the [DBCode](https://dbcode.io/) extension, and if you like ipynb, check their [notebooks for DBs](https://dbcode.io/docs/notebooks/getting-started) and related `.dbcnb`
+
+```sh
+#Your database. Inside VS Code.
+ext install DBCode.dbcode
+```
+
+Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check their [notebooks for DBs](https://dbcode.io/docs/notebooks/getting-started)
+
+![DBCode vscode extension](/blog_img/DA/dbcode.png)
+
+These tools provide a graphical user interface **(GUI) to interact with and manage your databases**, offering a more user-friendly alternative to the command line.
+
+To explore vector DBs we have Vector Admin, but for **regular DB's** we have **WhoDB**
+
+A powerful, lightweight (~20Mi), and user-friendly database management tool that combines the simplicity of Adminer with superior UX and performance.
+
+* https://github.com/clidey/whodb?tab=GPL-3.0-1-ov-file#readme
+
+> A lightweight next-gen **database explorer** - Postgres, MySQL, SQLite, MongoDB, Redis, MariaDB & Elastic Search
+
+> > WhoDB is written in GoLang!
+
+See also **DBChart or DBGate**
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
+  {{< card link="https://github.com/dbgate/dbgate" title="See also DBGate | Project ↗" >}}
+{{< /cards >}}
+
+
+
 
 ## OLAP and Databases
 
@@ -37,7 +69,7 @@ I will focus this section on the D&A goal of databases, which is to **READ and a
 
 [SQL for D&A](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/) is awsome.
 
-But ultimately, make sure to keep these 5 strategies with you:
+But ultimately, make sure to keep these **5 strategies** with you:
 
 1. 
 2. 

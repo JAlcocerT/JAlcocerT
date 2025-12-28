@@ -14,6 +14,10 @@ url: 'do-your-instagram'
 
 A better [entreagujaypunto v1](https://github.com/JAlcocerT/EntreAgujayPunto) vibe coded from scratch with NextJS and potentially to be used from anyone via my PaaS offering.
 
+**Intro**
+
+Lets go straight to the point:
+
 ```md
 lets start the development and add the comments when each of them will be done and tested (when this is all finished, lets create a z-walkthrough.md with how to run the project)
 ```
@@ -114,11 +118,6 @@ And...the **final result** as per the walkthrough:
 ```sh
 make up-portainer
 ```
-
-**Intro**
-
-
-
 
 
 ---

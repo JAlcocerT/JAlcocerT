@@ -222,7 +222,7 @@ sqlite> .tables
 ext install DBCode.dbcode
 ```
 
->> [DBCode supports](https://dbcode.io/docs/supported-databases/bigquery) several [DBs](https://jalcocert.github.io/JAlcocerT/databases-101/), including [GCP BQ](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#big-query):
+> > [DBCode supports](https://dbcode.io/docs/supported-databases/bigquery) several [DBs](https://jalcocert.github.io/JAlcocerT/databases-101/), including [GCP BQ](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#big-query):
 
 
 As per this awsome article: https://kerkour.com/sqlite-for-servers be aware that:

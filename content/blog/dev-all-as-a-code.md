@@ -698,7 +698,6 @@ And then...I saw this: https://github.com/bufferhead-code/this-video-is-written-
 git clone https://github.com/bufferhead-code/this-video-is-written-in-code
 ```
 
-
 So...wait, didnt we already...?
 
 Matplotlib can be used for creating basic 2D animations and exporting them as videos or GIFs, mainly for data visualizations and scientific plots.
@@ -782,7 +781,7 @@ exiftool -ee GX011032.MP4
 
 ## Conclusions
 
-No excuses - just create.
+No excuses - **just create**.
 
 ### Webs are also code
 

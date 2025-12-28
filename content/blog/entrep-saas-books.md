@@ -25,7 +25,7 @@ This post is going to be **evolving along 2026**.
 So consider it a WIP until the year has ended - or AI took over civilization :)
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/1toN-ebooks/" title="Kind of ~ NEW 1-to-Nebooks" image=/blog_img/apps/gh-jalcocert.svg" subtitle="Putting together my thoughts and curated knowledge into N ebooks" >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks/" title="Kind of ~ NEW 1-to-Nebooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Putting together my thoughts and curated knowledge into N ebooks" >}}
   {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate for SaaS - Source Code on Github" >}}
 {{< /cards >}}
 
@@ -38,9 +38,6 @@ I saw this post coming up next and inmediately thought that I should put *at som
 
 Specially after the learnings of the [Obfuscator project](https://github.com/JAlcocerT/obfuscate), where I merged the source code of serving an ebook via FastAPI to the one of rendering the PDF via R.
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web ebook and also downlodable as PDFs" >}}
-{{< /cards >}}
 
 The idea is to use this to consolidate Docs - web/ooks, case studies and slidev ptts.
 
@@ -52,7 +49,7 @@ I thought I would create it [here](https://jalcocert.github.io/JAlcocerT/selfhos
 git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" && gh repo create 1ton-ebooks --private --source=. --remote=origin --push
 ```
 
-Last year I tinkered around tiers of services / offers and created:
+Last year I tinkered around [tiers of services / offers](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers) and created:
 
 * https://diy.jalcocertech.com/ created here
 * https://consulting.jalcocertech.com created here with that *trol* slider
@@ -311,6 +308,7 @@ But hey, if you want to still spend a weekend to get a *crappy looking* wordpres
 
 ### Servers
 
+As in...get a [homelab configured](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/) and working.
 
 ### BiP
 
@@ -324,14 +322,14 @@ See... `Z_ebooks/BiP-ebook.md`
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/boilerplate" title="NEW - Astro Editor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Editing astro posts md via NextJS + ToastUI " >}}
-  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="NEW - DIY eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="From md to n web/ooks " >}}
+  {{< card link="https://github.com/JAlcocerT/boilerplate" title="NEW - BoilerPlate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Vibe Coding Templates for enhanced DIY " >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="NEW - DIY eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="From md to n web/ooks for a better DIY service " >}}
 {{< /cards >}}
 
-These are dpeloyed at:
+These are deployed at:
 
-* ebooks.jalcocertech.com - If you have some idea and dont know how to start creating it, this is for you
-* boilerplate.jalcocertech.com - If you are creating and want to do it faster, this is for you
+* https://ebooks.jalcocertech.com - If you have some idea and dont know how to start creating it, this is for you
+* https://boilerplate.jalcocertech.com - If you are creating and want to do it faster, this is for you
 
 
 ### Decap x Existing Astro x LocalHost

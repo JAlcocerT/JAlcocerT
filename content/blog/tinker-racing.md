@@ -9,7 +9,6 @@ description: 'From OBD2 Data to GoPro GPS x Matplotlib for your trackdays.'
 
 **Tl;DR**
 
-
 People are doing cool videos with [racechrono paid software](https://racechrono.com/), Garmin Virb or other paid software for video edition.
 
 Could not avoid thinking on the GoPro GPS Telemetry *again* for those **Racing addicts** around!
@@ -44,7 +43,7 @@ If you are into [f1](https://jalcocert.github.io/JAlcocerT/interesting-apis/#for
 
 ## OnBoard Telemetry
 
-Getting the GPS position in real time would be great.
+Getting the **GPS position** in real time would be great.
 
 But there is latency and battery drain.
 
@@ -58,11 +57,9 @@ Basically, to represent into every data point of OSM what was the temperature, s
 2. Offline data visualization
 3. On board life telemetry - *Im aware that people with [bmw](https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#bmw-e36-and-canbus) have made this possible!*
 
-
 #### GoPros Telemetry Data
 
 Not the first time Im tinkering with [geospatial data](https://jalcocert.github.io/JAlcocerT/geospatial-data/) nor with [GoPro built in GPS](https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#oa5pro-vs-goprohero9)
-
 
 
 {{< cards >}}
@@ -81,17 +78,15 @@ git clone https://github.com/JAlcocerT/Py_RouteTracker
 cd Z_GoPro
 ```
 
-https://github.com/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds.ipynb
-
-https://github.com/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds_TrackDay.ipynb
+* https://github.com/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds.ipynb
+* https://github.com/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds_TrackDay.ipynb
 
 You can also open it with **Google Colab**: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds_TrackDay.ipynb)
-
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 
-2. Get exiftool ready: *this allow to extract the GPS info from the MP4*
+2. Get **exiftool** ready: *this allow to extract the GPS info from the MP4*
 
 ```sh
 #choco install exiftool -y
@@ -157,6 +152,50 @@ But how could i not follow the suck-suck less approach:
 ![suck vs gopro dashboard overlay python](/blog_img/data-experiments/kart-data.png)
 
 
+
+
+#### TorqueLite and TorquePro
+
+You can buy (or not) the Pro one.
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
+  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
+{{< /cards >}}
+
+#### PhyPhox
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Data_PhyPhox" title="PhyPhox" image="/blog_img/iot/phyphox-android.jpg" subtitle="EDA on Phyphox Data with Python - Repo" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python" >}}
+{{< /cards >}}
+
+
+---
+
+## Conclusions
+
+Improve your lap times with RaceChrono
+
+The Go Pro GPS' Telemetry is great.
+
+And now you can plot it with garmin virb or with any ot the seen custom ways.
+
+To share your videos without loosing metadata, use localsend, [snapdrop](https://github.com/SnapDrop/snapdrop) or **[pairdrop](https://github.com/schlagmichdoch/pairdrop)**
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+**Next steps**
+
+If anything, when doing sth related to racing + Data *will probably be* a Desktop App to embed the cool telemetry seen here!
+
+
+
 ### Others
 
 OBS to MQTT
@@ -168,6 +207,20 @@ ACELEROMETER BASED:
 https://racechrono.com/article/faq/which-obd-ii-adapter-should-i-buy		
 
 
+
+---
+
+## FAQ
+
+### Outro
+
+* https://upstash.com/
+
+> Serverless Data Platform (redis, vector DBs....)
+
+* https://github.com/DrewThomasson/sound-monitor
+
+Is your engine generating too much noise?
 
 
 ### Android Apps
@@ -249,22 +302,6 @@ Think of it this way:  The ELM327 is like a specialized translator for OBD-II.  
 
 {{< /details >}}
 
-
-#### TorqueLite and TorquePro
-
-You can buy (or not) the Pro one.
-
-
-
-#### PhyPhox
-
-
-
-
-{{< cards cols="1" >}}
-  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
-  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
-{{< /cards >}}
 
 
 ### CANBUS with UBUNTU
@@ -388,29 +425,3 @@ For bookings:
 * https://www.aim-sportline.com/docs/racestudio3/html/release/download-release.html
 
 https://www.youtube.com/watch?v=qhyeRS892uM
-
----
-
-## Conclusions
-
-Improve your lap times with RaceChrono
-
-The Go Pro GPS' Telemetry is great.
-
-And now you can plot it with garmin virb or with any ot the seen custom ways.
-
-To share your videos without loosing metadata, use localsend, [snapdrop](https://github.com/SnapDrop/snapdrop) or **[pairdrop](https://github.com/schlagmichdoch/pairdrop)**
-
-**Next steps**
-
-If anything, when doing sth related to racing + Data *will probably be* a Desktop App to embed the cool telemetry seen here!
-
-### Outro
-
-* https://upstash.com/
-
-> Serverless Data Platform (redis, vector DBs....)
-
-* https://github.com/DrewThomasson/sound-monitor
-
-Is your engine generating too much noise?
