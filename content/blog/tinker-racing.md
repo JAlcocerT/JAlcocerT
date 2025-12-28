@@ -1,6 +1,6 @@
 ---
 title: "Racing, IoT and Data"
-#date: 2026-03-22
+#date: 2026-01-03
 date: 2025-12-23T09:20:21+01:00
 draft: false
 tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars","Mechanics"]
@@ -9,17 +9,13 @@ description: 'From OBD2 Data to GoPro GPS x Matplotlib for your trackdays.'
 
 **Tl;DR**
 
-I got to know about Race Chrono Pro that allows to do 
 
-<!-- https://www.youtube.com/watch?v=9vidTq12des -->
-
-{{< youtube "9vidTq12des" >}}
-
-People are doing cool videos with [racechrono paid software](https://racechrono.com/).
+People are doing cool videos with [racechrono paid software](https://racechrono.com/), Garmin Virb or other paid software for video edition.
 
 Could not avoid thinking on the GoPro GPS Telemetry *again* for those **Racing addicts** around!
 
 {{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
@@ -28,6 +24,13 @@ Could not avoid thinking on the GoPro GPS Telemetry *again* for those **Racing a
 ~~Karting~~ racing is expensive.
 
 If you want to make the most of it, tracking every lap gives you the possibility to know where to improve.
+
+
+I got to know about Race Chrono Pro that allows to do:
+
+<!-- https://www.youtube.com/watch?v=9vidTq12des -->
+
+{{< youtube "9vidTq12des" >}}
 
 This can potentially guide you on the [optimum gears](https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears) to be and potentially, on the [optimum path](https://github.com/JAlcocerT/Private/tree/main/Py_OptimumPath).
 

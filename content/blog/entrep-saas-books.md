@@ -1,9 +1,9 @@
 ---
 title: "We/Books BoilerPlate"
 # date: 2026-01-02T23:20:21+01:00
-date: 2025-12-20T23:20:21+01:00
+date: 2025-12-27T23:20:21+01:00
 draft: false
-tags: ["Info Products","1toN ebooks x BiP","SaaS vs LifeTime Products","DecapCMS","RoadMap26"]
+tags: ["Info Products","1toN ebooks x BiP","SaaS vs LifeTime Products","RoadMap26"]
 description: 'Reading better, writing more. Making Kindle learnings of years actionable and sharing via web/ooks'
 url: 'interesting-books'
 ---
@@ -20,7 +20,7 @@ The aim is to enhance the DIY offer, *for people that are not ready for [the DWY
 
 **Intro**
 
-This post is going to be evolving along 2026.
+This post is going to be **evolving along 2026**.
 
 So consider it a WIP until the year has ended - or AI took over civilization :)
 
@@ -33,9 +33,61 @@ So consider it a WIP until the year has ended - or AI took over civilization :)
 
 > > The content of the n ebooks will be modified across the year as I distill it from this blog/docs
 
-Thinking about this...ive been writing for a while (quite intensively last year) and this have become some kind of a habit and...a lead nurture in a way.
 
-With this post (and year), my goal is to recap and distilled all this experience into 20/30 pages ebooks that anyone can benefit from.
+I saw this post coming up next and inmediately thought that I should put *at some point* an IoT related ebook after this.
+
+Specially after the learnings of the [Obfuscator project](https://github.com/JAlcocerT/obfuscate), where I merged the source code of serving an ebook via FastAPI to the one of rendering the PDF via R.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="NEW - 1 WebApp to n eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web ebook and also downlodable as PDFs" >}}
+{{< /cards >}}
+
+The idea is to use this to consolidate Docs - web/ooks, case studies and slidev ptts.
+
+{{% details title="Creating the N ebooks repo... 🚀" closed="true" %}}
+
+I thought I would create it [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-december-2025/#random), but no:
+
+```sh
+git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" && gh repo create 1ton-ebooks --private --source=. --remote=origin --push
+```
+
+Last year I tinkered around tiers of services / offers and created:
+
+* https://diy.jalcocertech.com/ created here
+* https://consulting.jalcocertech.com created here with that *trol* slider
+* 
+
+And the ebooks are supposed to help me with the DIY one
+
+
+
+{{% /details %}}
+
+
+Expect ,n' to be:
+
+1. Webpage creator: Because you can own your brand. *You can [DIY](https://diy.jalcocertech.com/api/book) btw*
+2. Homelabs/Servers: I started this ebook because everything has potential failures
+3. IoT: This is the one I want to put together as I write this post :)
+4. D&A...
+
+
+This time, adding more languages for the ebooks is on the table. Locale i18n!
+
+And no download option, for now you have to *come to me* for reading.
+
+In the end of the day, its been already 170+ posts in the last 12 months (totally unexpected).
+
+So a **distilled version** with less noise, less chaos and more ordered for others to get value from.
+
+I need more of: *din din din though*
+
+![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png)
+
+Thinking about this...ive been writing for a while (quite intensively last year) and this have become some kind of a habit and...a **~ lead nurture** in a way.
+
+With this post (and year), my goal is to recap and distilled all this experience into **20/30max pages ebooks** that anyone can benefit from.
 
 And yes, this is going to help shapping a lead magnet for my next product.
 
@@ -49,7 +101,7 @@ The **launch strategy**: *aka, focus strategy*
 
 The **Tier of Service**: DIY (1a - *leverages on my knowledge & experience, not in actual tools Ive built, neither my time*)
 
-The **customer segmentation**: B2C
+The **customer segmentation**: B2C, for anyone...like YOU
 
 The **tech stack**:
 
@@ -64,13 +116,14 @@ The **tech stack**:
 
 ## The journey to create N books
 
+I was putting some effort/thoughts to this before getting the idea for this post:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/" title="e-books | Docs" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="Scrapping job boards" >}}
   {{< card link="https://diy.jalcocertech.com" title="D&A e-book" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Start your D&A Career" >}}
 {{< /cards >}}
 
-After having a custom learning journey and putting together this:
+After having a **custom learning journey** and putting together this:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks//" title="eBooks | Docs ↗" icon="book-open" >}}
@@ -83,9 +136,9 @@ After having a custom learning journey and putting together this:
   {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY Web eBook x Obfuscation" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source code on GH. eBook x fastAPI x obfuscator x markdown source" >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/whats-boostrap/#too-much-info--ebooks_ideas
-https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-as-a-code
-https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/
+* https://jalcocert.github.io/JAlcocerT/whats-boostrap/#too-much-info--ebooks_ideas
+* https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-as-a-code
+* https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}
@@ -126,7 +179,7 @@ Then, as docs: https://jalcocert.github.io/JAlcocerT/docs/
 
 ### How I Build my ebooks
 
-Last year, I decided it was time to order everything, so tinker with ebook creation in few posts and repos.
+Last year, I decided it was time to order everything, so *tinkered with ebook creation* in few posts and repos.
 
 
 If you do on this repo:
@@ -141,6 +194,8 @@ You will find interesting things on this repo - Yes, some drafts!
 They were create with the learnings from [this post, bc code is everything](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#you-can-do-what-with-pdf).
 
 Is just that...you have to...do it.
+
+(Surprise)
 
 Sucks, I know.
 
@@ -160,11 +215,11 @@ What if launcing ebooks was all about writing via DecapCMS?
 
 Because the landing part is so much clear.
 
+But the CMS part has let me down in few occasions
+
 {{% /steps %}}
 
 
-
-**Intro**
 
 
 * https://nav.al/read
@@ -266,10 +321,17 @@ See... `Z_ebooks/BiP-ebook.md`
 
 ## Conclusions
 
+
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/boilerplate" title="NEW - Astro Editor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Editing astro posts md via NextJS + ToastUI " >}}
-  {{< card link="https://github.com/JAlcocerT/" title="NEW - Astro Editor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Editing astro posts md via NextJS + ToastUI " >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="NEW - DIY eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="From md to n web/ooks " >}}
 {{< /cards >}}
+
+These are dpeloyed at:
+
+* ebooks.jalcocertech.com - If you have some idea and dont know how to start creating it, this is for you
+* boilerplate.jalcocertech.com - If you are creating and want to do it faster, this is for you
 
 
 ### Decap x Existing Astro x LocalHost

@@ -1,7 +1,7 @@
 ---
-title: "Webs for Restaurants x Astro SSR."
-#date: 2026-01-08
-date: 2025-12-23T13:20:21+01:00
+title: "[Prototyping] Restaurants x Astro SSR."
+date: 2026-01-04
+#date: 2025-12-23T13:20:21+01:00
 draft: false
 tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26"]
 description: "MultiTenant Websites for Restaurants. Million dollar idea in the Mediterranean."
@@ -49,7 +49,9 @@ The **tech stack**:
 * Very interesting **video**, as soon as you enter
 * MultiLang (i18n)
 
-> AstroRante is a state-of-the-art website theme crafted for fine dining establishments. Combining the power of Astro, **Storyblok CMS**, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
+> AstroRante is a state-of-the-art website theme crafted for fine dining establishments.
+
+> > Combining the power of Astro, **Storyblok CMS**, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
 
 
 * https://github.com/hydra-billing/homs

@@ -144,6 +144,8 @@ gh repo create entreagujaypunto-astro-payload --private --source=. --remote=orig
 npx wrangler pages project create entreagujapunto #just astro ssg
 ```
 
+But the CMS part also went...side ways and ended up with: https://console.firebase.google.com/project/entreagujaypunto/apphosting
+
 ```mermaid
 graph TB
     subgraph "Development Environment (Homelab)"
