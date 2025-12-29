@@ -63,6 +63,8 @@ Are you also clearn on The "One Avatar, One Product, One Channel" strategy: *Do 
 | **One Product** | A single, core solution or offer you sell. | Ensures **Clarity of Offer** and positions you as the undisputed expert. |
 | **One Channel** | The single distribution platform (e.g., Facebook Ads, TikTok, Email) where you focus your marketing efforts. | Allows for **Mastery** of one platform, maximizing ROI and resource efficiency. |
 
+This is you **focus strategy**:
+
 ```mermaid
 graph TD
     %% Section 1: The Core Elements and their Immediate Result
@@ -122,27 +124,12 @@ source .env
 
 Chances are that you are using AI/vibe coding techniques to build your next product.
 
+![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
 
-<!-- 
-* https://github.com/JAlcocerT/openai-chatbot
-* https://platform.openai.com/api-keys
-* https://platform.openai.com/docs/models
-    * https://platform.openai.com/chat/edit?models=o1
-* Groq - 
-    * https://console.groq.com/keys
-* Gemini (Google)
-  * https://ai.google.dev/gemini-api/docs
-* Mixtral - **Open Models**, you can use their API
-    * https://docs.mistral.ai/api/
-* Anthropic (Claude) - https://www.anthropic.com/api
-  * https://console.anthropic.com
-  * https://console.anthropic.com/settings/keys
-* Open AI - GPT APIs https://platform.openai.com/api-keys
-* Grok (Twitter)
-* Azure
+And you might have troubles getting the agents to understand what you want.
 
-* https://platform.openai.com/docs/models/
-* https://platform.openai.com/docs/models/gpt-4o -->
+The good news is: that it doesnt have to be that hard, *if you get [a good start](#initial-prompts-for-success)*
+
 
 ### Initial Prompts for Success
 
@@ -244,6 +231,8 @@ And if you need more:
 <!-- 
 ![Terms and Conditions / Privacy](/blog_img/entrepre/webify/flask-terms-privacy.png) -->
 
+Dont forget to add into every SaaS the Terms and Conditions and Privacy Policy: *you can do so markdown based and keep track of changes per date*
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#tc-and-privacy" title="SaaS CYA" image="/blog_img/entrepre/webify/flask-terms-privacy.png" subtitle="Sample T&C and Priv Policy" >}}
 {{< /cards >}}
@@ -253,13 +242,13 @@ And if you need more:
 With all that clear, how about some examples?
 
 Even [a simple waiting list](https://github.com/JAlcocerT/simple-waiting-list) counts:  
-
-![CapJS + NextJS Working as a Simple Waiting List](/blog_img/dev/nextjs/capjs-nextjs-pow.png)
+<!-- 
+![CapJS + NextJS Working as a Simple Waiting List](/blog_img/dev/nextjs/capjs-nextjs-pow.png) -->
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of the BiP waiting2landing concept" >}}
+  {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="Waiting to Landing Repo" image="/blog_img/dev/nextjs/capjs-nextjs-pow.png" subtitle="Source Code of the BiP waiting2landing concept" >}}
+  {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="Waiting to Landing Repo" image="/blog_img/dev/diy-landing-bot.png" subtitle="Source Code of the BiP waiting2landing concept" >}}
 {{< /cards >}}
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/waiting-to-landing" title="Waiting to Landing ↗" icon="github" >}}

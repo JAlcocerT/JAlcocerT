@@ -208,7 +208,11 @@ Also with the DIY Landing Boilerplate!
 
 ### Noted down couple of Themes
 
-Like: https://github.com/JAlcocerT/astro-theme-typography?tab=readme-ov-file
+Like: https://github.com/JAlcocerT/astro-theme-typography or https://github.com/radishzzz/astro-theme-retypeset
+
+As seen in the journaling section for the [artists](https://jalcocert.github.io/JAlcocerT/link-artists/) post.
+
+And when i tinkered with wysiwyg editors [here](https://jalcocert.github.io/JAlcocerT/astro-journal-theme/)
 
 ### Decap x Typography x N ebooks
 
@@ -221,8 +225,6 @@ But the CMS part has let me down in few occasions
 Lets [create sth](#building-n-ebooks-for-a-webook)
 
 {{% /steps %}}
-
-
 
 
 ## Building N ebooks for a web/ook

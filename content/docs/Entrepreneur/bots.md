@@ -117,6 +117,26 @@ https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-codin
 
 -->
 
+#### Hosted Models
+
+You need to plug something to that cool UI/UX and backend with the bot logic.
+
+Like these LLM API endpoints:
+
+* Open AI - GPT APIs https://platform.openai.com/api-keys
+  * https://platform.openai.com/docs/models
+  * https://platform.openai.com/chat/edit?models=o1
+* Groq - https://console.groq.com/keys
+* Gemini (Google) -  https://ai.google.dev/gemini-api/docs
+* Mixtral - **Open Models**, you can use their API
+    * https://docs.mistral.ai/api/
+* Anthropic (Claude) - https://www.anthropic.com/api
+  * https://console.anthropic.com
+  * https://console.anthropic.com/settings/keys
+* Grok (Twitter)
+* Azure
+
+
 #### Bots x Knowledge Base
 
 If you have a company and are having a [KB based on flat files](https://jalcocert.github.io/JAlcocerT/knowledge-management/#knowledge-management-tools).
