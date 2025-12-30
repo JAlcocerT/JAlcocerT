@@ -6,10 +6,16 @@ cover:
   image: "https://socialify.git.ci/jalcocert/data-chat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
   alt: "Langchain chat with DB" # alt text
   caption: "Using LLMs to chat with databases" # display caption under cover
-tags: ["Gen-AI","Python","Dev"]
+tags: ["Gen-AI","Python","Dev","Chinook DB"]
 description: 'How to use Langchain to chat with a DB. How I prepared for a Tech Talk with AI.'
 url: 'langchain-chat-with-database'
 ---
+
+**TL;DR**
+
+If LLMs are so good, cant they understand a **DB schema as part of the context** and answer questions about it **abstracting the SQL creation**?
+
+**Intro**
 
 By tinkering with AI, I discoverd that it is possible to make [**SQL** queries more efficient](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)!
 
@@ -220,7 +226,7 @@ We will download the `Chinook_MySQL.sql` file.
 curl -L -O https://github.com/lerocha/chinook-database/releases/download/v1.4.5/Chinook_MySql.sql
 ```
 
-And place it in a local folder, that will be referenced by the docker compose file, like: `/home/jalcocert/Desktop/Data-Chat/LangChain/ChatWithDB`
+And place the downloaded DB file in a local folder, that will be referenced by the docker compose file, like: `/home/jalcocert/Desktop/Data-Chat/LangChain/ChatWithDB`
 
 ```yml
 services:

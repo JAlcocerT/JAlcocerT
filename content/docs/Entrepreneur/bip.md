@@ -237,6 +237,24 @@ Dont forget to add into every SaaS the Terms and Conditions and Privacy Policy: 
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#tc-and-privacy" title="SaaS CYA" image="/blog_img/entrepre/webify/flask-terms-privacy.png" subtitle="Sample T&C and Priv Policy" >}}
 {{< /cards >}}
 
+### Shipping Like a Pro
+
+Got the code ready?
+
+Now you need to ship it.
+
+That's why you need a server *aka VPS* or a homelab *aka some wood PC*.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="Selfhosting | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/" title="Https | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+Configure that server, see the DIY ways to get Https, then need to *deploy* your app.
+
+For that, [containers](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/#containers) are your friends.
+
+
 ## BiP Examples
 
 With all that clear, how about some examples?

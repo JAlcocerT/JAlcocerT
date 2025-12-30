@@ -53,6 +53,10 @@ I was initially using transcription [here](https://jalcocert.github.io/JAlcocerT
 
 That was based on OpenAI keys, see : https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openait2a.py
 
+* https://github.com/resemble-ai/chatterbox
+
+> MIT | SoTA open-source TTS
+
 ## S2T / Transcription
 
 See also: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py

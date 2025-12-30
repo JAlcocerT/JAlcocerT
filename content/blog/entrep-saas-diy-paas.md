@@ -1,8 +1,8 @@
 ---
 title: "Making an enhanced DIY offering via PaaS"
-date: 2026-01-03T23:20:21+01:00
+date: 2026-01-04T23:20:21+01:00
 draft: false
-tags: ["DIY Platform Service","RoadMap26"]
+tags: ["DIY Platform Service","RoadMap26","Postgres"]
 description: 'A platform service offering for B2C to get up to speed quickly with services that dont require any customization.'
 url: 'creating-a-diy-paas-service'
 ---
@@ -97,6 +97,50 @@ To *hopefully* move away from "selling time" (which caps your income) to "sellin
 ## Conclusions
 
 
+---
+
 ## FAQ
 
 ### Selfhost Postgres
+
+I read this fantastic [post about selfhosting postgres](https://pierce.dev/notes/go-ahead-self-host-postgres?ref=selfh.st).
+
+And how could I not addit to the mix.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgres" title="Postgres | Docker Config 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+```sh
+docker compose up -d
+
+#docker exec postgres_container psql -U admin -d myapp -c "SELECT 1;"
+
+docker exec -it postgres_container psql -U admin -d myapp
+#SELECT version();
+#\dt       -- List tables (empty for now)
+#\q        -- Quit
+```
+
+Let's use it with the sample chinook DB: *yes, im cooking sth on top of LangChain+DBs again*
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database" title="Chat with DBs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/" title="Chat with CSVs ↗" icon="book-open" >}}  
+{{< /cards >}}
+
+* https://github.com/lerocha/chinook-database/releases
+
+```sh
+curl -L -O https://github.com/lerocha/chinook-database/releases/download/v1.4.5/Chinook_PostgreSql.sql
+cat Chinook_PostgreSql.sql | docker exec -i postgres_container psql -U admin -d myapp
+
+docker exec postgres_container psql -U admin -d myapp -c "\l"
+
+docker exec postgres_container psql -U admin -d chinook -c "\dt"
+
+docker exec -it postgres_container psql -U admin -d chinook
+#\dt
+#SELECT * FROM artist LIMIT 5;
+```

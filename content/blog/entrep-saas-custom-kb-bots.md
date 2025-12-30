@@ -74,7 +74,7 @@ As the why, what was very clear, its time to put together the final HOW:
 
 **Intro**
 
-You cant be an AI company behore you are a data company.
+You cant be an AI company behore you are a data centered company.
 
 And before having LLMs to get company context...that context have to be somewhere.
 
@@ -101,7 +101,7 @@ Use cases:
 
 ### Tinkered with websites
 
-That bus trip to Vilna (to start the Vilnus-Tallin cycling trip) and discovering Astro paid off.
+That bus trip to Vilna (to start the Vilnus-Tallin cycling trip) and discovering [Astro](https://jalcocert.github.io/JAlcocerT/create-your-website-astro-ssg/) paid off.
 
 ### Used Streamlit to add custom RAG
 
@@ -121,15 +121,15 @@ All via containers
 
 ### Used Embeddings with LangChain
 
-Chatted with PDF information via RAG and explored few frameworks like llamaindex and pandasAI.
+://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs and explored few frameworks like llamaindex and pandasAI.
 
-Also tinkered with RAG around CSVs.
+Also tinkered with [RAG around CSVs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/).
 
 Probably the 2 most common files type in any office!
 
 ### LLM communicating with DBs
 
-Via langchain is also possible to talk with a database.
+Via langchain is also possible to [talk with a database](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/).
 
 This unlucks potential to have bots that are checking stocks in real time for their replies.
 

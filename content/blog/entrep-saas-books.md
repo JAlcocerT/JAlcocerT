@@ -1,7 +1,7 @@
 ---
 title: "We/Books BoilerPlate"
-# date: 2026-01-02T23:20:21+01:00
-date: 2025-12-27T23:20:21+01:00
+date: 2026-01-02T08:20:21+01:00
+#date: 2025-12-27T23:20:21+01:00
 draft: false
 tags: ["Info Products","1toN ebooks x BiP","SaaS vs LifeTime Products","RoadMap26"]
 description: 'Reading better, writing more. Making Kindle learnings of years actionable and sharing via web/ooks'

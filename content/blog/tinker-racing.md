@@ -149,6 +149,16 @@ But how could i not follow the suck-suck less approach:
 
 {{< youtube "jqzzkexAx2I" >}}
 
+That was promising, but not so good looking.
+
+So I made a smaller HUD and merge it to the original video:
+
+{{< youtube "7KMAZgdMqGc" >}}
+<!-- 
+https://youtu.be/7KMAZgdMqGc -->
+
+Then I also tried the output of the gopro dashboard overlay: *see the [video](https://youtu.be/b3hP1J_YVSk)*
+
 ![suck vs gopro dashboard overlay python](/blog_img/data-experiments/kart-data.png)
 
 
@@ -176,11 +186,11 @@ You can buy (or not) the Pro one.
 
 ## Conclusions
 
-Improve your lap times with RaceChrono
+Improve your lap times with RaceChrono.
 
 The Go Pro GPS' Telemetry is great.
 
-And now you can plot it with garmin virb or with any ot the seen custom ways.
+And now you can plot those onboard HUDs with garmin virb or with any ot the seen custom ways.
 
 To share your videos without loosing metadata, use localsend, [snapdrop](https://github.com/SnapDrop/snapdrop) or **[pairdrop](https://github.com/schlagmichdoch/pairdrop)**
 
