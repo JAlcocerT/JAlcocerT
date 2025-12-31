@@ -7,21 +7,25 @@ sidebar:
   open: false
 ---
 
-**Free resources:**
+You probably have landed here because **you are curious**
 
-* https://free-for.dev/#/
-  * https://github.com/ripienaar/free-for-dev
+Good news! you can feed your curiosity, learn and DO at the same time.
 
-Try new desktop app for your linux system and install them via:
+From Engineering and Racing:
+
+Going on through how to create your own ebooks, diagrams and ppts efficiently:
+
+To Photo, video and animations:
+
+
 
 {{< cards cols="2" >}}
-  {{< card link="https://flathub.org/" title="FlatHub Apps (Flatpak)" >}}
-  {{< card link="https://snapcraft.io/" title="SnapCraft Apps" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="Selfhosting | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-> See also [appimagelauncher](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#lately-i) to install `.Appimage`
 
-> > And if you use some Debian flavour, you can also install via `.deb`
+
 <!--   
 * https://github.com/protonpass/free-for-dev
  -->
@@ -33,9 +37,8 @@ Try new desktop app for your linux system and install them via:
 3. https://www.youtube.com/c/Jos%C3%A9MariaLabarta/videos
 
 {{< cards >}}
-  {{< card link="../callout" title="Callout" icon="warning" >}}
+  {{< card link="https://www.youtube.com/@CodingEntrepreneurs/videos" title="CodingEntrepreneur YT Channel" icon="warning" tag= "YT Channel" >}}
   {{< card link="https://www.youtube.com/c/Jos%C3%A9MariaLabarta/videos" title="Jose Maria Labarta" icon="warning" tag= "YT Channel" >}}
-  {{< card link="https://www.youtube.com/@CodingEntrepreneurs/videos" title="CodingEntrepreneur YT Channel" >}}
 {{< /cards >}}
 
 ## Interesting Blogs

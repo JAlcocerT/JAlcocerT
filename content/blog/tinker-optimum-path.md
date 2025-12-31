@@ -28,6 +28,13 @@ And turn up to: ~1G
   {{< card link="https://github.com/JAlcocerT/optimum-path" title="NEW - Optimum Path Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Few models to get the optimum path on a given track by a given vehicle. For fun." >}}
 {{< /cards >}}
 
+We come from some previous tinkering on racing:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/overlay" title="Py Router Tracker | Overlay Section" icon="github" >}}
+{{< /cards >}}
+
 ## How to find the optimum path in karting?
 
 This is a great moment to step back and look at the "Architecture" of your karting simulator.

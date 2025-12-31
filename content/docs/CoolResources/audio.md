@@ -12,6 +12,7 @@ Or with [audacity](https://jalcocert.github.io/Linux/docs/debian/content_creatio
 
 ```sh
 sudo snap install audacity
+#sudo snap remove audacity
 ```
 
 In between [your notes](https://jalcocert.github.io/JAlcocerT/knowledge-management/#conclusions), you can also do it with LogSeq.

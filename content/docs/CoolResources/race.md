@@ -26,6 +26,12 @@ For which we need:
 {{< /cards >}}
 
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/overlay" title="Py Router Tracker | Overlay Section" icon="github" >}}
+{{< /cards >}}
+
+
 
 ### Geo Data
 
@@ -36,17 +42,14 @@ Geolocation data is fantastic:
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#trackday-and-gopro-metadata" title="GoPro Metadata Speed trackday " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="Getting GPS info during while driving on circuits" >}}
 {{< /cards >}}
 
+If you got a GoPro with GPS, you can have lot of fun:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/#gopros-telemetry-data" title="Racing Analytics" image="/blog_img/data-experiments/kart/matplotlib-driver-comparison.png" subtitle="Driver lap comparison based on Matplotlib x GPS" >}}
 {{< /cards >}}
 
 
-<!-- 
-https://youtu.be/tQOxnCz2lwM?si=XTgvyi-qnm3ZKiAl
- -->
 
-{{< youtube "tQOxnCz2lwM" >}}
 
 
 ### F1 Data
@@ -75,13 +78,6 @@ https://www.youtube.com/watch?v=TiQEElXyY2w
 
 ## Improving your Racing with Data
 
-https://jalcocert.github.io/JAlcocerT/create-your-website/
-
-<!-- ![IoRacing IoTechCrafts IoTrack](/blog_img/web/WebsSnapshots/web_ioracing.png) -->
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/#gopros-telemetry-data" title="Racing Analytics" image="/blog_img/web/WebsSnapshots/web_ioracing.png" subtitle="Driver lap comparison based on Matplotlib x GPS" >}}
-{{< /cards >}}
 
 
 
@@ -90,19 +86,31 @@ https://jalcocert.github.io/JAlcocerT/create-your-website/
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-### Optimum Gears
-
-* https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
 
 ### Optimum Path
 
 If you know a circuit's geometry, why not estimating the best path for a given kart to go for thos hot laps?
 
-## Other Racing Resources
 
+<!-- ![IoRacing IoTechCrafts IoTrack](/blog_img/web/WebsSnapshots/web_ioracing.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/kart-optimum-path" title="Optimum Path | part 1" image="/blog_img/data-experiments/kart/optimum-path.png" subtitle="Mass Point Model + G-circle" >}}
+{{< /cards >}}
+
+### Optimum Gears
+
+Probably you Kart have no gears.
+
+But in case it does, you will need to take this into consideration: *Maaax Poweeeer...*
+
+* https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
+
+
+## Other Racing Resources
 
 If you like Mechanisms and animations [as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code)
 
-https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
+You will probably enjoy this section:
 
 ![Engine Sample Animation](/blog_img/mec/engine.gif)

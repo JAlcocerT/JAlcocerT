@@ -33,6 +33,10 @@ git clone #theme
 npm install
 #npm run dev
 npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
+#npm cache clean --force
+#yarn cache clean
+#rm -rf ~/.local/share/Trash/*
+#sudo journalctl --vacuum-time=2d
 ```
 
 ```sh

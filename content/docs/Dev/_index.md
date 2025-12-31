@@ -19,9 +19,25 @@ Just use [diagrams](https://jalcocert.github.io/JAlcocerT/docs/coolresources/dia
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/listmonk/listmonk-api-py/Ebook-cover-SSGs.pdf" title="Get an ebook with all Data Analytics concepts you need" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to land a job in D&A" >}}
 {{< /cards >}} -->
 
+**Free resources:**
+
+* https://free-for.dev/#/
+  * https://github.com/ripienaar/free-for-dev
+
+Try new desktop [apps for your linux system](https://jalcocert.github.io/Linux/docs/debian/) and install them via:
+
+{{< cards cols="2" >}}
+  {{< card link="https://flathub.org/" title="FlatHub Apps (Flatpak)" >}}
+  {{< card link="https://snapcraft.io/" title="SnapCraft Apps" >}}
+{{< /cards >}}
+
+> See also [appimagelauncher](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#lately-i) to install `.Appimage`
+
+> > And if you use some Debian flavour, you can also install via `.deb`
+
 ## Analytics vs Dev Careers
 
-Despite working with a computer, your journey and tools will be different if you are a pure developer versus a data and analytics professional:
+Despite working with a computer, your journey and tools will be different if you are a **pure developer *versus* a data and analytics professional:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="D&A Career | Docs ↗" icon="book-open" >}}

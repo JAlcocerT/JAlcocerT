@@ -40,6 +40,7 @@ If you are into [f1](https://jalcocert.github.io/JAlcocerT/interesting-apis/#for
 ![Karting Adventure](/blog_img/memes/Accidente_karting-min.gif)
 <!-- https://www.youtube.com/watch?v=LToBbKTHAkw -->
 
+Lets get started!
 
 ## OnBoard Telemetry
 
@@ -196,17 +197,20 @@ python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer.py
 
 [![Lap Analysis](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/lap_analysis_v4a.png)](https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/lap_analysis_v4a.png)
 
+{{< youtube "G1esduZUw4E" >}}
+<!-- 
+https://youtu.be/G1esduZUw4E -->
+
 #### TorqueLite and TorquePro
 
-You can buy (or not) the Pro one.
+You can buy (or not) the Pro version.
 
+I did so to support the project and see what else can i get from the OBD2
 
-{{< cards cols="1" >}}
-  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
-  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
-{{< /cards >}}
 
 #### PhyPhox
+
+If you dont have a GoPro, you can still play with your smartphone and PhyPhox:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Data_PhyPhox" title="PhyPhox" image="/blog_img/iot/phyphox-android.jpg" subtitle="EDA on Phyphox Data with Python - Repo" >}}
@@ -222,7 +226,17 @@ Improve your lap times with RaceChrono.
 
 The Go Pro GPS' Telemetry is great.
 
-And now you can plot those onboard HUDs with garmin virb or with any ot the seen custom ways.
+And now you can plot those onboard HUDs with garmin virb or with any of the seen **custom ways**:
+
+```sh
+python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v5.py
+```
+
+That will generate the exif telemetry into a `GX020411_telemetry.txt` kind of file.
+
+And will also create a Matplotlib png with the speed profile and the max and min ones per lap.
+
+Together with the video of the fastest lap.
 
 To share your videos without loosing metadata, use localsend, [snapdrop](https://github.com/SnapDrop/snapdrop) or **[pairdrop](https://github.com/schlagmichdoch/pairdrop)**
 
@@ -236,24 +250,40 @@ To share your videos without loosing metadata, use localsend, [snapdrop](https:/
 
 If anything, when doing sth related to racing + Data *will probably be* a Desktop App to embed the cool telemetry seen here!
 
-
-
-
 ### Others
 
-OBS to MQTT
+OBS to MQTT: is this even possible?
+
+ACELEROMETER BASED: https://racechrono.com/article/faq/which-obd-ii-adapter-should-i-buy		
+
+
+#### Lap Timer
+
+I put together a script based on the Go Pro GPS telemetry to infer the lap times (based on the seconds when we are going through the start line the first time as reference):
+
+```sh
+python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v4c.py
+```
+
+It will get you a Matplotlib based graph with the speed profile, the max and min ones per lap and also will cut the video +-5 seconds to give you the fastest lap!
+
+> It generates something like `Best_Lap_4_81.33s.mp4`
+
+So you can compare with your friends and see how to improve.
 
 A budget lap timer - https://www.youtube.com/watch?v=mdGOuhEq6g8
-
-ACELEROMETER BASED:
-
-https://racechrono.com/article/faq/which-obd-ii-adapter-should-i-buy		
 
 
 
 ---
 
 ## FAQ
+
+<!-- 
+https://youtu.be/tQOxnCz2lwM?si=XTgvyi-qnm3ZKiAl
+ -->
+
+{{< youtube "tQOxnCz2lwM" >}}
 
 ### Outro
 
