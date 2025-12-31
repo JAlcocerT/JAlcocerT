@@ -193,6 +193,37 @@ Before going to `https://www.interactivebrokers.ie/sso/Login?RL=1&locale=en_US` 
 You could also keep it simple and just use existing tools like https://www.perplexity.ai/finance/JNJ/financials
 {{< /callout >}}
 
+**Debt is a thing**:
+
+```sh
+=GOOGLEFINANCE("INDEXCBOE:TYX")/1000
+=GOOGLEFINANCE("INDEXCBOE:TNX";"price")/1000
+=GOOGLEFINANCE("INDEXCBOE:IRX")/1000
+```
+
+**IRX** is the ticker for the **Cboe 13-Week Treasury Bill Index**.
+
+* **Purpose:** It tracks the discount rate of the most recently auctioned 13-week (3-month) U.S. Treasury bills.
+* **How to read it:** The value of the index is typically expressed as the annualized yield multiplied by 10. For example, if the IRX is quoted at **45.20**, it represents a yield of approximately **4.52%**.
+* **Significance:** Investors monitor IRX as a benchmark for "risk-free" short-term interest rates in the United States.
+
+Here is a one-liner definition for each of those financial KPIs:
+
+* **Forward PER:** The current stock price divided by the estimated earnings per share (EPS) for the next 12 months.
+* **Yield Forward:** The estimated annual dividend payments for the next year divided by the current stock price.
+* **PER Last 5Y:** The average Price-to-Earnings ratio of the company over the last five fiscal years.
+* **Percentile 5Y Avg PER:** A ranking showing where the current PER stands relative to its historical range over the last five years (0% being the lowest, 100% being the highest).
+* **Last 5Y Yield:** The average annual dividend yield the company has offered over the past five years.
+* **Percentile 5Y Avg Yield:** A ranking showing how the current dividend yield compares to its historical levels over the last five years.
+* **Yield Growth (1Y, 5Y, 10Y):** The compound annual growth rate (CAGR) of the company's dividend payments over those specific timeframes.
+* **Shoulder Number:** A niche technical or accounting metric, often referring to a specific threshold or "tipping point" in debt-to-equity or valuation models.
+* **Payout Ratio (Today):** The percentage of current earnings being paid out to shareholders as dividends.
+* **PEG (Price/Earnings to Growth):** The PER divided by the expected earnings growth rate, used to determine if a stock is overvalued relative to its growth.
+* **PEGI:** A variation of the PEG ratio that adds the dividend yield to the earnings growth rate to account for total shareholder return.
+* **PaaP (Price as a Percent of Peak):** A measurement of how far the current stock price is trading below its all-time high or 52-week high.
+* **PaaY (Price as a Percent of Yield):** A valuation metric comparing the current price relative to historical dividend yield benchmarks to find "fair value."
+
+
 
 ### From Data In Motion to PyStonks
 

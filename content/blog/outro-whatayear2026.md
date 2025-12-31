@@ -251,6 +251,8 @@ The continuation of `http://x-api-tweet-creator:5000`, graficas...Data In Motion
 
 ![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 
+> Fundamental, Fun, Future :)
+
 ### Serverless
 
 Ive enjoyed using Cloudflare R2 for s3 compatible storage.

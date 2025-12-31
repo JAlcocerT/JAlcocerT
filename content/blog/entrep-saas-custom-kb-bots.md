@@ -78,7 +78,7 @@ You cant be an AI company behore you are a data centered company.
 
 And before having LLMs to get company context...that context have to be somewhere.
 
-Like in the selfhosted knowledge base I was commenting here.
+Like in the selfhosted knowledge base I was commenting [here](https://jalcocert.github.io/JAlcocerT/knowledge-management/).
 
 To make the solution trustless: selfhosted + local .md based + local LLM has to be the way forward.
 
@@ -88,6 +88,7 @@ To make the solution trustless: selfhosted + local .md based + local LLM has to 
   {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage" title="RE Streamlit App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the RE Calculator" >}}
 {{< /cards >}}
 
+And as [commented during xmas with a friend](https://jalcocert.github.io/JAlcocerT/calculus-101/#helping-others), this can become a thing for SMB and mid companies that power the world, just that you havent heard of them.
 
 ## The Process to build a ChatBot Platform
 

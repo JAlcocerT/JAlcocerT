@@ -161,6 +161,22 @@ Then I also tried the output of the gopro dashboard overlay: *see the [video](ht
 
 ![suck vs gopro dashboard overlay python](/blog_img/data-experiments/kart-data.png)
 
+{{< youtube "w2wwC7j882k" >}}
+
+<!-- 
+https://youtu.be/w2wwC7j882k 
+-->
+
+```sh
+time python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/racing_hud_v3c.py
+#https://youtu.be/pAhEI2xUxcM
+ffmpeg -i /home/jalcocert/Desktop/Py_RouteTracker/Z_GoPro/GX020410.MP4 \
+       -i /home/jalcocert/Desktop/Py_RouteTracker/overlay/racing_hud_v3c.mp4 \
+       -filter_complex "[1:v]format=rgba,colorkey=0x000000:0.1:0.1[ckout];[0:v][ckout]overlay=W-w-50:H-h-50" \
+       -codec:a copy \
+       -preset superfast \
+       racing_v3c_output.mp4
+```
 
 
 
@@ -203,6 +219,7 @@ To share your videos without loosing metadata, use localsend, [snapdrop](https:/
 **Next steps**
 
 If anything, when doing sth related to racing + Data *will probably be* a Desktop App to embed the cool telemetry seen here!
+
 
 
 
