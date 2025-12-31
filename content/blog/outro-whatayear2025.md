@@ -1542,7 +1542,7 @@ Create a Roadmap!
 
 7. Prepare the DIY/DWY/DFY based on the ebooks and blog content ~ *Wiki efforts*
 
-8. Get back to simulations :)
+8. Get back to simulations - *for fun :)*
 
 {{< /details >}}
 

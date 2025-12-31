@@ -3,8 +3,8 @@ title: "Racing, IoT and Data"
 #date: 2026-01-03
 date: 2025-12-23T09:20:21+01:00
 draft: false
-tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars","Mechanics"]
-description: 'From OBD2 Data to GoPro GPS x Matplotlib for your trackdays.'
+tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars x OBD2","Mechanics"]
+description: 'From GoPro GPS Data to Matplotlib HUDs for your trackdays.'
 ---
 
 **Tl;DR**
@@ -178,7 +178,23 @@ ffmpeg -i /home/jalcocert/Desktop/Py_RouteTracker/Z_GoPro/GX020410.MP4 \
        racing_v3c_output.mp4
 ```
 
+{{< youtube "VJxFuVhYAWQ" >}}
 
+<!-- 
+https://youtu.be/VJxFuVhYAWQ
+ -->
+
+What else...maybe...automatic lap time?
+
+```sh
+python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer.py
+```
+
+<!-- https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/lap_analysis_v4a.png -->
+
+<!-- ![Lap Analysis](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/lap_analysis_v4a.png) -->
+
+[![Lap Analysis](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/lap_analysis_v4a.png)](https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/lap_analysis_v4a.png)
 
 #### TorqueLite and TorquePro
 
