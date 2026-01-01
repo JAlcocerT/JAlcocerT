@@ -200,24 +200,9 @@ python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer.py
 And as I liked the look n feel of that graph, I brought it to the video overlay:
 
 {{< youtube "G1esduZUw4E" >}}
+
 <!-- 
 https://youtu.be/G1esduZUw4E -->
-
-#### TorqueLite and TorquePro
-
-You can buy (or not) the Pro version.
-
-I did so to support the project and see what else can i get from the OBD2
-
-
-#### PhyPhox
-
-If you dont have a GoPro, you can still play with your smartphone and PhyPhox:
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Data_PhyPhox" title="PhyPhox" image="/blog_img/iot/phyphox-android.jpg" subtitle="EDA on Phyphox Data with Python - Repo" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python" >}}
-{{< /cards >}}
 
 
 ---
@@ -251,6 +236,25 @@ To share your videos without loosing metadata, use localsend, [snapdrop](https:/
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+After all: *this has been so much fun*
+
+```sh
+time python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/racing_hud_v7.py
+```
+
+And got the HUD rendered in ~20min for the 2 GoPro mp4's i wanted to analyze:
+
+<!-- 
+https://youtu.be/1qkIjxl47ac 
+-->
+
+{{< youtube "1qkIjxl47ac" >}}
+
+As you can see, I ended up adding the 200HZ accerelometer data as well into a G-Circle.
+
+[![Lap Analysis](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/gforce_debug.png)](https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/gforce_debug.png)
+
 
 
 **Next steps**
@@ -393,6 +397,21 @@ Think of it this way:  The ELM327 is like a specialized translator for OBD-II.  
 
 {{< /details >}}
 
+#### TorqueLite and TorquePro
+
+You can buy (or not) the Pro version.
+
+I did so to support the project and see what else can i get from the OBD2
+
+
+#### PhyPhox
+
+If you dont have a GoPro, you can still play with your smartphone and PhyPhox:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Data_PhyPhox" title="PhyPhox" image="/blog_img/iot/phyphox-android.jpg" subtitle="EDA on Phyphox Data with Python - Repo" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python" >}}
+{{< /cards >}}
 
 
 ### CANBUS with UBUNTU
