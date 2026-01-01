@@ -197,6 +197,8 @@ python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer.py
 
 [![Lap Analysis](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/lap_analysis_v4a.png)](https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/lap_analysis_v4a.png)
 
+And as I liked the look n feel of that graph, I brought it to the video overlay:
+
 {{< youtube "G1esduZUw4E" >}}
 <!-- 
 https://youtu.be/G1esduZUw4E -->
@@ -229,8 +231,13 @@ The Go Pro GPS' Telemetry is great.
 And now you can plot those onboard HUDs with garmin virb or with any of the seen **custom ways**:
 
 ```sh
-python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v5.py
+python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v5.py #extracts the telemtry txt on its own and you can use it to compare the best laps of a group of friends #https://youtu.be/Ae8CyefuxgY
+ffmpeg -f concat -safe 0 \
+  -i <(printf "file '$PWD/overlay/Best_Lap_4_81.33s.mp4'\nfile '$PWD/overlay/Best_Lap_1_78.61s_v5.mp4'") \
+  -c copy overlay/Joined_Best_Laps.mp4
 ```
+
+https://youtu.be/Ae8CyefuxgY
 
 That will generate the exif telemetry into a `GX020411_telemetry.txt` kind of file.
 
@@ -270,6 +277,17 @@ It will get you a Matplotlib based graph with the speed profile, the max and min
 > It generates something like `Best_Lap_4_81.33s.mp4`
 
 So you can compare with your friends and see how to improve.
+
+
+From v6, it also allows to compare 2 laps of the same video:
+
+```sh
+python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v6.py
+```
+
+[![Laps Comparison](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/lap_compare_L1_vs_L5.png)](https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/lap_compare_L1_vs_L5.png)
+
+
 
 A budget lap timer - https://www.youtube.com/watch?v=mdGOuhEq6g8
 
@@ -497,4 +515,8 @@ For bookings:
 * https://www.aim-sportline.com/en/sw-fw-download.htm
 * https://www.aim-sportline.com/docs/racestudio3/html/release/download-release.html
 
-https://www.youtube.com/watch?v=qhyeRS892uM
+<!-- 
+https://www.youtube.com/watch?v=qhyeRS892uM 
+-->
+
+{{< youtube "qhyeRS892uM" >}}
