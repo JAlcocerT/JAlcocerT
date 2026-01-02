@@ -3,7 +3,7 @@ title: "Just shipping | Wedding Edition"
 date: 2025-06-04T01:20:21+01:00
 draft: false
 tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS","Gotify"]
-description: 'Wedding stuff. The story and some entrepreneurship concepts like ads'
+description: 'Weddings stuff. The story and some entrepreneurship concepts like ads'
 url: 'wedding-photo-galleries'
 ---
 

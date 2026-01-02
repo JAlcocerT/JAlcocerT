@@ -1,10 +1,10 @@
 ---
-title: "Racing, IoT and Data"
+title: "Racing and Data"
 #date: 2026-01-03
 date: 2025-12-23T09:20:21+01:00
 draft: false
-tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars x OBD2","Mechanics"]
-description: 'From GoPro GPS Data to Matplotlib HUDs for your trackdays.'
+tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars x OBD2","GoPro GPS"]
+description: 'From Action Camera Data to Matplotlib HUDs for your trackdays.'
 ---
 
 **Tl;DR**
@@ -247,19 +247,30 @@ And got the HUD rendered in ~20min for the 2 GoPro mp4's i wanted to analyze:
 
 <!-- 
 https://youtu.be/1qkIjxl47ac 
+https://youtu.be/c0YkQhsUNrg
 -->
 
-{{< youtube "1qkIjxl47ac" >}}
+{{< youtube "c0YkQhsUNrg" >}}
 
-As you can see, I ended up adding the 200HZ accerelometer data as well into a G-Circle.
+
+As you can see, I ended up adding the 200HZ accerelometer data as well into a G-Circle to complete the HUD:
 
 [![Lap Analysis](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/gforce_debug.png)](https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/gforce_debug.png)
+
+<!-- 
+https://youtu.be/c0YkQhsUNrg
+ -->
+
+{{< youtube "c0YkQhsUNrg" >}}
 
 
 
 **Next steps**
 
-If anything, when doing sth related to racing + Data *will probably be* a Desktop App to embed the cool telemetry seen here!
+If anything, when doing sth related to racing + Data *will probably be*:
+
+1. A Desktop App to embed the cool telemetry seen here!
+2. The optimum Path thingy
 
 ### Others
 
@@ -293,7 +304,9 @@ python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v6.py
 
 
 
-A budget lap timer - https://www.youtube.com/watch?v=mdGOuhEq6g8
+People build budget lap timers - https://www.youtube.com/watch?v=mdGOuhEq6g8
+
+{{< youtube "mdGOuhEq6g8" >}}
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "Estimating house work and capturing leads"
-date: 2026-01-01T23:20:21+01:00
+date: 2026-01-17T23:20:21+01:00
 #date: 2025-12-21T23:20:21+01:00
 draft: false
 tags: ["Lead testing","Painting Home","RoadMap26"]
@@ -8,6 +8,7 @@ description: 'Building a platform to match offer and demand for certain jobs.'
 url: 'paint-lead-generation'
 math: true
 ---
+
 
 **Tl;DR**
 
@@ -53,7 +54,9 @@ So that would drop to 110h (7 days, 2 persons, 8h) hence the cost at the same ho
 
 Add that tasty VAT and let it be ~ 2500$
 
-For exteriors? careful with that estimate as it can be ~2k *of 2018* for 80m2 of exterior surface.
+For exteriors? 
+
+Careful with that estimate as it can be ~2k *of 2018* for 80m2 of exterior surface.
 
 The **launch strategy**: *aka, focus strategy*
 
@@ -96,6 +99,10 @@ A guarantee that reduces the unexpected, but that you have to be willing to pay.
 
 ## Map to Paint Estimation with AI
 
+How would this be:
+
+1. Give me your house sqm and I will guestimate the surface area to pain (inside versus outside)
+2. Or...share you house plan and let AI do its magic
 
 ---
 

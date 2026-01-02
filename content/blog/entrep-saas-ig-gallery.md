@@ -1,6 +1,6 @@
 ---
 title: "Photo Gallery with...admin"
-date: 2026-01-02T23:20:21+01:00
+date: 2026-01-03T23:20:21+01:00
 #date: 2025-12-25T08:20:21+01:00
 draft: false
 tags: ["NextJS CMS versus Astro Payload","RoadMap26","imgproxy x bcrypt","Cloudflare R2","Web Audit 101"]
@@ -10,7 +10,6 @@ url: 'do-your-instagram'
 
 
 **Tl;DR**
-
 
 A better [entreagujaypunto v1](https://github.com/JAlcocerT/EntreAgujayPunto) vibe coded from scratch with NextJS and potentially to be used from anyone via my PaaS offering.
 

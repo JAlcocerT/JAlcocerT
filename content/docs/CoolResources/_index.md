@@ -13,11 +13,9 @@ Good news! you can feed your curiosity, learn and DO at the same time.
 
 From Engineering and Racing:
 
-Going on through how to create your own ebooks, diagrams and ppts efficiently:
+Going on through how to create your own ebooks, diagrams and ppts efficiently: *to show your work*
 
 To Photo, video and animations:
-
-
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="Selfhosting | Docs ↗" icon="book-open" >}}
@@ -25,10 +23,7 @@ To Photo, video and animations:
 {{< /cards >}}
 
 
-
-<!--   
 * https://github.com/protonpass/free-for-dev
- -->
 
 >  A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev 
 

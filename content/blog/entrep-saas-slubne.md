@@ -1,16 +1,12 @@
 ---
 title: "A SaaS with 100% Churn, yet LTV > CAC"
-date: 2026-01-01T23:20:21+01:00
+date: 2026-01-02T08:20:21+01:00
 draft: false
 tags: ["Landing x NextJS SaaS","Nextacular","SlubneChwile","BiP BoilerPlate","RoadMap26"]
-description: 'How to code a Saas with NEXTjs and directing traffic via ads'
+description: 'How to code a Saas with NEXTjs and directing traffic via ads. Weddings!'
 url: 'code-your-saas'
 ---
 
-
-Type of offer: attraction ~~/ upsale / downsale / continuity~~
-
-![alt text](/blog_img/dev/tiiny-host-attractionoffer.png)
 
 **Tl;DR**
 
@@ -24,7 +20,7 @@ People do their things:
 * https://libreweddingplanner.org/docs/Features/website_builder/
 * https://docs.wedding-share.org/
 
-I want to do mine
+I want to do mine:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
@@ -32,12 +28,17 @@ I want to do mine
 {{< /cards >}}
 
 
-Supply - ~ infinite (∞), scalable via [Serverless storage](https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/#cloudflare-r2).
-Demand - constrained, ad driven
+* **S vs D:**
+  * Supply - ~ infinite (∞), scalable via [Serverless storage](https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/#cloudflare-r2).
+  * Demand - constrained, ad driven
 
 ![Supply and Demand for a SaaS](/blog_img/entrepre/bip-supply-demand.png)
 
-Online marketing and an online delivery
+With a very clear: Online marketing and an online delivery
+
+**Type of offer**: attraction ~~/ upsale / downsale / continuity~~ *that's how the landing should be presented, later will be other offers*
+
+![alt text](/blog_img/dev/tiiny-host-attractionoffer.png)
 
 
 These kind of **micro-SaaS** are so so cool:
@@ -58,23 +59,7 @@ These kind of **micro-SaaS** are so so cool:
 
 Why couldnt SLubnyChwile be one of those cool UIs? :)
 
-```mermaid
-sankey
-Landing Page,Sign Up,750
-Landing Page,Abandoned (Stage 1),250
-
-Sign Up,Sign In,600
-Sign Up,Abandoned (Stage 2),150
-
-Sign In,Immediate Purchase,350
-Sign In,Browsing,250
-
-Browsing,Delayed Purchase,100
-Browsing,Abandoned (Stage 3),150
-
-Immediate Purchase,Converted (Buyer),350
-Delayed Purchase,Converted (Buyer),100
-```
+Imagine that [nice mermaid sankey](https://mermaid.live/edit#pako:eNptjjFvwjAQhf9KdFORLOTETuJ4K7AgdUBCXSovLr4mEcRGJmmbIv57HSpC1XTx-d29d9-dYecMgoSTtnvslX3S1tS2jDa6RLKtSxs9H0me0j-Tx9egnEUTPWzb0IjiGUkGl7K30LWuLckovTcnuWRG4l-54F83DZpatxhtOr-r9AkJS-l9vvDu4xQOufFGvcKD7sPmMRYP5HE8QbMR_Q9y6ew7-nZwL7oe_ezniAlj6gtUIFD62oBsfYcEGvSNHiSclY0iBW2FDSqQ4Wu03ytQ9hIyR21fnGtuMe-6sgL5pg-BA93RhANXtS69vlvQGvRL19kWZMquK0Ce4RNknBXzQtC44LSI8yITgkAPMqFsXjDBWJGw8AjOLwS-rlQ6z9KcU8oFy0TMeZJfvgHQMq7J) representing the conversion funnel of such web app
 
 The **launch strategy**: *aka, focus strategy*
 
@@ -84,7 +69,7 @@ The **launch strategy**: *aka, focus strategy*
 | **One Product** | |
 | **One Channel** | |
 
-The **Tier of Service**: A DFY that I made [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt) and Ive transformed into DIY with the cool serverless tech stack below.
+The **Tier of Service**: A DFY that I made [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt) and Ive transformed into **DIY** *(thanks to leverage x tech)* with the cool serverless tech stack below.
 
 The **customer segmentation**: B2C
 
@@ -102,8 +87,13 @@ The **tech stack**:
 | :--- | :--- | :--- |
 | **Frontend Framework** | | |
 | **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)** | | |
+| **Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+| **E-mail/ESP** | | |
+| **Analytics** | | |
+| **Hosting** | | |
+
 
 
 
@@ -185,7 +175,12 @@ https://developers.cloudflare.com/pages/framework-guides/nextjs/
 
 ## Getting Here
 
-This has been...a series of random steps.
+This has been...a series of *random* steps.
+
+
+https://jalcocert.github.io/JAlcocerT/building-in-public-wedding-photo-galleries/
+https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
+https://jalcocert.github.io/JAlcocerT/software-for-weddings/
 
 {{% steps %}}
 
