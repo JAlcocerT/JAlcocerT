@@ -15,6 +15,9 @@ draft: false
 
 ![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
 
+![KDENlive Comments](/blog_img/karting/kdenlive-gopro-gps-comments.png)
+
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Action Cam Review" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#kdenlive" title="KDenLive with OA5Pro" image="/blog_img/outro/kdenlive.png" subtitle="Editing video with kdenlive" >}}

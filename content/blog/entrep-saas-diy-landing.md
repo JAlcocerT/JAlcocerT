@@ -1181,6 +1181,38 @@ And your landing page is what your potential clients see and get to know about y
   {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
 
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef landing fill:#E3F2FD,stroke:#1976D2,stroke-width:3px,color:#0D47A1;
+    classDef steps fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#4A148C;
+    classDef slider fill:#FFF3E0,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef free fill:#E8F5E9,stroke:#388E3C,stroke-width:3px,color:#1B5E20;
+    classDef consult fill:#FFECB3,stroke:#FFA000,stroke-width:3px,color:#FF6F00;
+    classDef dfy fill:#FFCDD2,stroke:#D32F2F,stroke-width:3px,color:#B71C1C;
+
+    %% --- Nodes ---
+    START("🏠 Landing Page<br/>(Hero + Value Prop)"):::landing
+    STEPS("📋 Read Process<br/>(3-Step Guide)"):::steps
+    SLIDER("🎚️ Interactive Slider<br/>(Assess Time Value)"):::slider
+    
+    FREE("📚 FREE Path<br/>(DIY Guides)"):::free
+    CAL("📅 Consulting<br/>(Book Session)"):::consult
+    DFY("💎 Done For You<br/>(Premium Service)"):::dfy
+
+    %% --- Flow ---
+    START --> STEPS
+    STEPS --> SLIDER
+    
+    SLIDER -->|"0%<br/>I'm Learning"| FREE
+    SLIDER -->|"1-74%<br/>A lot!"| CAL
+    SLIDER -->|"75-100%<br/>Lambo Money"| DFY
+    
+    %% --- Outcomes ---
+    FREE -.->|"Explore FAQ"| END1["📖 Self-Learn"]
+    CAL -.->|"Book Time"| END2["🤝 Get Guidance"]
+    DFY -.->|"Check Resources"| END3["⚡ Fast Track"]
+```
 
 ### My Offer after DIY Landing
 

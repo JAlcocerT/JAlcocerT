@@ -7,7 +7,6 @@ description: 'How to code a Saas with NEXTjs and directing traffic via ads. Wedd
 url: 'code-your-saas'
 ---
 
-
 **Tl;DR**
 
 MVP first - get those eyes going via ads towards: https://slubnechwile.com/
@@ -211,6 +210,7 @@ How could I not tinker with QR for the sake of it...
 With Python:
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
 
 And with node:
 
