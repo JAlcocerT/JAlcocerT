@@ -222,7 +222,10 @@ ffmpeg -f concat -safe 0 \
   -c copy overlay/Joined_Best_Laps.mp4
 ```
 
-https://youtu.be/Ae8CyefuxgY
+<!-- https://youtu.be/Ae8CyefuxgY -->
+
+{{< youtube "Ae8CyefuxgY" >}}
+
 
 That will generate the exif telemetry into a `GX020411_telemetry.txt` kind of file.
 
@@ -263,14 +266,30 @@ https://youtu.be/c0YkQhsUNrg
 
 {{< youtube "c0YkQhsUNrg" >}}
 
+Then, added some comments via KDEnlive:
 
+```sh
+python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v7.py
+```
+
+![KDENlive Comments](/blog_img/karting/kdenlive-gopro-gps-comments.png)
+
+{{< youtube "Cv0-m9B3l_Y" >}}
+
+[![Lap Analysis](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/lap_compare_table_L1_vs_L5.png)](https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/lap_compare_table_L1_vs_L5.png)
+
+
+<!-- https://youtu.be/Cv0-m9B3l_Y -->
 
 **Next steps**
 
 If anything, when doing sth related to racing + Data *will probably be*:
 
+
+0. Next GoPro videos will have the HUD + the kdenlive comments all in one
 1. A Desktop App to embed the cool telemetry seen here!
 2. The optimum Path thingy
+3. Go all in with embeded analytics and IoT with that u-blox GPS module and a micro-controller
 
 ### Others
 
