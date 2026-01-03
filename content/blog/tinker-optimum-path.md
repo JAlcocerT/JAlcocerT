@@ -3,8 +3,8 @@ title: "Optimum Path in Karting x ApexSim"
 #date: 2026-01-24
 date: 2026-01-02
 draft: false
-tags: ["Karts","GoPro GPS Telemetry","Cars","Simulations","G-Circle","Pacejka","GA vs RL"]
-description: 'GP2 engine or need to improve your driving?'
+tags: ["GoPro GPS Telemetry","Cars","Simulations","Gradient Descent","G-Circle","Pacejka","GA vs RL"]
+description: 'A GP2 engine or need to improve your driving?'
 url: 'kart-optimum-path'
 math: true
 ---
@@ -24,9 +24,7 @@ Brake up to: ~0.5g and turn up to: ~1G
 ```json
     "vehicle": {
         "top_speed_kmh": 85.0,
-        "top_speed_ms": 23.61,
         "initial_speed_kmh": 72.0,
-        "initial_speed_ms": 20.0,
         "max_lateral_g": 1.0,
         "max_braking_g": 0.6,
         "max_accel_g": 0.35,
@@ -50,34 +48,31 @@ With interesting results:
 
 {{< youtube "c0YkQhsUNrg" >}}
 
-Arriving here: *after a few posts on action cams and GPS data within [this repo](https://github.com/JAlcocerT/Py_RouteTracker)*.
+Arriving here? 
 
+Just *after a few posts on action cams and GPS data within [this repo](https://github.com/JAlcocerT/Py_RouteTracker)*.
 
 ## Optimum path in karting
 
-This is a great moment to step back and look at the "Architecture" of your karting simulator.
+This is a great moment to step back and look at the "Architecture" of a **karting simulator**.
 
-You are moving from raw data to a high-level optimization problem.
+Moving from raw data to a high-level optimization problem.
 
-In real life *unlike (apparently) in modern economics* if you assume that a sferic cow will fly - you will be laughed at (and fail quickly).
+In real life *unlike (apparently) in modern economics* if you assume that a spherical cow will fly - you will be laughed at (and fail quickly).
 
-This is going to be simple, let's optimize for:
+This is going to be simple, let's optimize for: *the minimum possible lap time!*
 
 $$\int ds/v(s)$$
 
 While keeping our braking, accelerating $a_accel(v) = a_0 · (1 - v/v_max)$ and cornering limits realistic.
 
-
-So these strategies to estimate that fastest lap have all HYPOTHESIS with pros/cons.
+So these **strategies to estimate that fastest lap** have all HYPOTHESIS with pros/cons.
 
 1. The Data Foundation (The Input)
 
-* **Source:** You have **NSP** (Haltech) and **CSV** files containing track limits and G-limits.
-* **Hypothesis:** The physical limits of the kart are constant (Max , Max ), but acceleration decreases as a function of speed: .
+* **Source:** **CSV** file containing track limits. *From the Go Pro GPS*
+* **Hypothesis:** The physical limits of the kart are constant, but acceleration decreases as a function of speed: a=f(s)
 * **Pros:** CSV is universal and easy to manipulate in Python.
-* **Cons:** NSP is proprietary; you’ll likely need to export it to CSV to make it "readable" for your script.
-
----
 
 2. The Physics Models (The "Engine")
 
@@ -88,16 +83,14 @@ We discussed two ways to treat the kart:
 | **Point Mass (G-G Circle)** | The kart is a single dot. Grip is a perfect circle (or ellipse). | Very fast to calculate; requires very little data. | Ignores weight transfer, chassis flex, and tire "scrub." |
 | **Bicycle Model** | Accounts for CG height and weight transfer. | More realistic "yaw" (rotation) modeling. | Requires more measurements (CG height, wheelbase). |
 
----
-
 3. The Path Strategies (The "Line")
 
 This is where the actual "lap time" is found.
 
 Option A: Minimum Curvature Path (MCP)
 
-* **Hypothesis:** The fastest way is the "smoothest" way (maximizing radius ).
-* **Pros:** Mathematically elegant; very fast to solve; much better than the centerline.
+* **Hypothesis:** The fastest way is the "smoothest" way (maximizing radius), hence with higher speed throughout the corner and better grip utilization.
+* **Pros:** Mathematically elegant; very fast to solve; much better than a centerline.
 * **Cons:** Ignores the "Late Apex" advantage. It treats a 10m straight and a 100m straight the same way.
 
 Option B: Late Apex (Momentum/Time Bias)
@@ -106,11 +99,10 @@ Option B: Late Apex (Momentum/Time Bias)
 * **Pros:** This is how professional drivers actually drive.
 * **Cons:** Harder to calculate with a simple formula; requires "looking ahead" at the track.
 
----
 
 4. The Solver (The "Brain")
 
-Since you have an **AMD 5600G**, you have the power to choose how to find the best line:
+The good news is that we have the power to choose how to find the best line:
 
 The Genetic Algorithm (GA) — *Recommended*
 
@@ -128,21 +120,22 @@ Neural Networks / Reinforcement Learning
 * **Pros:** Can handle very complex physics (sliding, grass, etc.).
 * **Cons:** Massive overkill for a point-mass model; very high "coding cost" to setup the environment.
 
-Summary of My Recommendations for You:
+Summary to recap:
 
-1. **Format:** Convert everything to **CSV**.
-2. **Physics:** Use the **G-G Ellipse** (allowing more braking Gs than acceleration Gs) combined with your ** decay function**.
+1. **Format:** everything to **CSV**.
+2. **Physics:** Use the **G-G Ellipse** (allowing more braking Gs than acceleration Gs) combined with an **acceleration decay function**.
 3. **Pathing:** Use a **Genetic Algorithm**.
 * Use **Splines** (don't optimize every point, just "control points").
-* Use **Vectorization** (NumPy) so your 5600G can calculate 1,000 laps per second.
-
+* Use **Vectorization** (NumPy) so a ~ 5600G CPU can calculate 1,000 laps per second.
 
 4. **The Result:** This will give you a "Theoretical Best" lap time that accounts for the specific top speed (85 km/h) and power drop-off of your kart.
 
 
 ### The mass point model + Gradient based optimization
 
-A mass and a gradient based optimization, to get started: **Optimum Path 101**
+A **mass and a gradient based optimization**...
+
+to get started: **Optimum Path 101**
 
 ```sh
 #sudo apt install gh
@@ -152,8 +145,7 @@ gh auth login
 git init && git add . && git commit -m "Initial commit: simple optimum path" && gh repo create optimum-path --private --source=. --remote=origin --push
 ```
 
-
-**Minimum Curvature Path (MCP)**:
+**Minimum Curvature Path (MCP)**: *not the [AI MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/), but the curvature one*
 - Optimizes: Smoothness
 - Fast but wrong objective for racing
 - Good for initialization only
@@ -163,15 +155,19 @@ git init && git add . && git commit -m "Initial commit: simple optimum path" && 
 - Slow but correct objective for racing
 - What you actually care about!
 
-ApexSim's Design Choice
 
-ApexSim uses **gradient-based optimization** because:
+{{< callout type="info" >}}
+Understand MCP vs Gradient Based approach
+{{< /callout >}}
+
+ApexSim uses **gradient-based optimization** because: *The ApexSim's Design Choice*
 
 1. ✅ We want to minimize **lap time**, not curvature
 2. ✅ We have vehicle physics data (G-limits, power, mass)
 3. ✅ Computation time (minutes) is acceptable for analysis
 4. ✅ We need realistic racing lines that consider physics
 5. ✅ Cubic splines are used for smoothing, not optimization
+
 - **MCP**: Minimizes `∫ κ² ds` (curvature) using gradient descent
 - **ApexSim**: Minimizes `∫ ds/v(s)` (lap time) using SLSQP
 
@@ -188,18 +184,41 @@ https://youtu.be/C8ilrD-tIw4
 
 {{< youtube "C8ilrD-tIw4" >}}
 
+$$\int ds/v(s)$$
+
 <!-- 
 https://youtu.be/81wY9E29x-E 
 -->
 
-
 {{< youtube "81wY9E29x-E" >}}
-
 
 ---
 
 ## Conclusions
 
+Im **impressed** on how a simple model can provide realistic results.
+
+A simple mass + no multi body, no contact dynamics, no aerodinamics, no ICE modelling, no kart flexing...
+
+Just...a point with a **good enough model** and parameters that can be validated from the real go pro videos on board.
+
+```json
+"vehicle": {
+    "top_speed_kmh": 85.0,
+    "initial_speed_kmh": 72.0,
+    "max_lateral_g": 1.0,
+    "max_braking_g": 0.6,
+    "max_accel_g": 0.35,
+    "mass_kg": 230,
+    "comment": "Typical rental kart parameters. Adjust based on actual vehicle specs. Initial speed = entry speed for flying lap."
+},
+```
+
+Plot twist: whatever happens in [the circuit in real life](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) prevails to the model results are 🤯
+
+<!-- https://studio.youtube.com/video/c0YkQhsUNrg/edit -->
+
+{{< youtube "c0YkQhsUNrg" >}}
 
 
 
@@ -253,11 +272,12 @@ In karting, your "best lap" isn't just about geometry; it's about **Heat**.
 | **Reinforcement Learning** | Very High | Discovering non-obvious lines and "driving styles." |
 | **Thermal/Multi-Lap** | Medium | Race strategy and tire pressure management. |
 
-If you want to stick to the "engineering" side, **Optimal Control with a Bicycle Model** is the logical next step. It will allow you to see how the kart's wheelbase and CG height actually affect the lap time.
+If you want to stick to the "engineering" side, **Optimal Control with a Bicycle Model** is the logical next step. 
+
+It will allow you to see how the kart's wheelbase and CG height actually affect the lap time.
 
 If you want to see the "AI" in action, **Reinforcement Learning** is a fascinating rabbit hole that uses your hardware very effectively.
 
-**Would you like to see the "Bicycle Model" equations so you can upgrade the physics inside ApexSim?**
 
 
 ### GA vs RL
@@ -349,7 +369,9 @@ In RL, the model doesn't learn a "sequence." It learns a **Policy ()**.
 
 #### 3. Constraints: The G-G Circle Check
 
-For both models, you must enforce your physical limits. If the AI/GA tries to do **100% Braking** AND **100% Steering** at the same time, your code must intervene:
+For both models, you must enforce your physical limits. 
+
+If the AI/GA tries to do **100% Braking** AND **100% Steering** at the same time, your code must intervene:
 
 1. **Calculate the Resultant Force:** Use the Pythagorean theorem on the inputs.
 2. **Clip the Action:** If , you must "clip" or scale the inputs down so they fit inside your G-Circle.
@@ -372,7 +394,9 @@ Comparison of Control
 
 For your specific goal—**estimating the fastest lap time on a single track using a point mass model**—the **Genetic Algorithm (GA)** makes much more sense.
 
-While **Reinforcement Learning (RL)** is more "exciting," it is often overkill for lap time estimation. Here is the final verdict based on your project needs and your hardware (AMD 5600G).
+While **Reinforcement Learning (RL)** is more "exciting," it is often overkill for lap time estimation.
+
+Here is the final verdict based on your project needs and your hardware (AMD 5600G).
 
 ### 1. The Decision: Genetic Algorithm (GA) wins for Estimation
 
@@ -399,9 +423,34 @@ You should only switch to RL if your project goals change to:
 
 ### 3. How to implement the GA "Action Space"
 
-If you choose the GA, your "chromosome" (the DNA) shouldn't be the  coordinates anymore. It should be the **Control Inputs**. This makes the result "real."
+If you choose the GA, your "chromosome" (the DNA) shouldn't be the  coordinates anymore. 
+
+It should be the **Control Inputs**. 
+
+This makes the result "real."
+
+From the current 1st optimum path version generated with the GD version, we can have an idea of the actions that are been applied:
+
+<!-- 
+https://youtu.be/JUS76Y1uNFo 
+-->
+
+{{< youtube "JUS76Y1uNFo" >}}
+
+<!-- 
+https://studio.youtube.com/video/3A6fIKeBTRo/edit 
+-->
+
+These are generated from the `python3.10 apexsim_v1.py` execution.
+
+{{< youtube "3A6fIKeBTRo" >}}
+
+
+
+> And how those reflect in the trajectory and speed distribution over time
 
 **Your DNA Structure:**
+
 An array of "Control Nodes" every 5–10 meters of the track. Each node has two genes:
 
 1. **Steer Gene:** Value from -1.0 to 1.0.
@@ -420,7 +469,6 @@ def physics_step(steer, pedal):
     if (lat_g/max_lat_g)**2 + (long_g/max_long_g)**2 > 1:
         # Scale back to the edge of the ellipse
         # This represents the tire "scrubbing" or reaching its limit
-
 ```
 
 ---

@@ -3,7 +3,7 @@ title: "Optimum Path with Genetic Algorithm"
 #date: 2026-01-24
 date: 2026-01-02
 draft: false
-tags: ["Car Simulation","","GA vs RL"]
+tags: ["Car Simulation","","GA vs RL","Polynomial"]
 description: 'Finally doing this - ApexSim GA-Edition'
 url: 'genetic-algorithm-for-racing'
 math: true
@@ -55,6 +55,7 @@ Let it run - you should see improvement soon!
 From...the gradient seeds!
 
 ```sh
+cd 1-pointmass-lap-gradient-based/
 python3 apexsim_v1.py
 ```
 
@@ -146,4 +147,134 @@ Time per generation: 1.8 seconds
 
 ![Genetic Algorithm - Racing Line fail](/blog_img/karting/ga_racing_line.png)
 
+This was... promissing?
+
 ![alt text](/blog_img/karting/ga_racing_line2.png)
+
+Something was off, why despite feeding the fastest route (actions) from the GD simulation done before am i getting crashing evolutions?
+
+#### Discrete to Continuum
+
+The genetic algorithm works with **discrete control points**, but the racing line needs to be converted to a continuous representation for the physics simulation. 
+
+This conversion is crucial for the GA to effectively optimize the racing line.
+
+The conversion process involves interpolating between the discrete control points to create a smooth, continuous racing line that can be accurately simulated by the physics engine.
+
+Lets be realistic...commanding a kart once every for meters wont got you far.
+
+
+```sh
+cd 1-pointmass-lap-gradient-based/
+python3 visualize_track_splines.py #see track_spline_structure.png
+```
+
+![Continuum circuit lines - Karting Sevilla](/blog_img/karting/track_spline_structure.png)
+
+Here is when it comes that moment that brings you back to [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) or mechanincs lessons back in time.
+
+There are no N curves in a circuit, there are infinite curves, each with their radious and center somwhere in the space.
+
+<!-- 
+https://www.youtube.com/watch?v=C30Lptbb0ls
+-->
+
+{{< youtube "C30Lptbb0ls" >}}
+
+Here is the top 20 of changes in curvature:
+
+![Top curvature peaks - karting sevilla](/blog_img/karting/track_top_curvature_peaks.png)
+
+You might see some like top 6 and top 1 that represent nothing - they are there because of noise in the discrete data to make the continuum.
+
+From this point, I wanted to test how good the continuum was.
+
+So actually made a side quest and made the Minimum curvature path *but with a continuum, not a discrete circuit*
+
+
+The idea here is to provide a better seed for the genetic algorithm chromosome.
+
+```sh
+#cd 0
+
+```
+
+
+
+
+---
+
+## Conclusions
+
+---
+
+## FAQ
+
+### Taylor vs Splines?
+
+Are theused splines polynomials? Like Taylor series?
+
+Yes, but different!
+
+* Cubic splines are piecewise polynomials (degree 3 between each pair of points)
+  * Cubic splines use many small cubic polynomials connected smoothly
+  * Splines stay accurate everywhere by using local polynomials
+* Taylor series approximates a function around ONE point using infinite terms
+  * Taylor series can diverge far from the expansion point
+
+Cubic splines use many small cubic polynomials connected smoothly
+
+Key difference:
+
+Taylor: $f(x) = a_0 + a_1x + a_2x^2 + a_3x^3 + ...$ (one polynomial, many terms)
+Cubic Spline: Many cubic polynomials $p_i(s) = a_i + b_is + c_is^2 + d_is^3$ connected at "knots"
+
+Why splines are better for tracks:
+
+### Heading angle vs Curvature
+
+The heading angle represents the direction the vehicle is pointing, while curvature represents how sharply the path is bending. These are related but distinct concepts.
+
+The relationship between them is given by the derivative of the heading angle with respect to arc length, which equals the curvature.
+
+3. How do we define heading angle?
+
+Line 149: heading = np.arctan2(dy_center, dx_center)
+
+Where:
+
+dx_center = track.spline_x(s, 1) = derivative $\frac{dx}{ds}$
+dy_center = track.spline_y(s, 1) = derivative $\frac{dy}{ds}$
+
+Mathematically:
+
+$$\theta(s) = \arctan2\left(\frac{dy}{ds}, \frac{dx}{ds}\right)$$
+
+This gives the tangent direction (which way the car is pointing) at any distance $s$.
+
+4. Why is curvature measured in 1/meters?
+
+```py
+curvature = (dx_center * ddy - dy_center * ddx) / (dx_center**2 + dy_center**2)**1.5
+```
+
+Curvature $\kappa$ measures "how much the path curves":
+
+$$\kappa = \frac{1}{R}$$
+
+Where $R$ is the radius of curvature (radius of the circle that best fits the curve at that point).
+
+Units:
+
+If $R = 100$ meters (gentle curve), then $\kappa = 0.01$ (1/m)
+If $R = 10$ meters (sharp turn), then $\kappa = 0.1$ (1/m)
+
+Why 1/m makes sense:
+
+Straight line: $R = \infty$, so $\kappa = 0$ (1/m)
+
+Tighter curve: smaller $R$, larger $\kappa$
+
+The formula (Frenet-Serret):
+
+$$\kappa = \frac{x'y'' - y'x''}{(x'^2 + y'^2)^{3/2}}$$
