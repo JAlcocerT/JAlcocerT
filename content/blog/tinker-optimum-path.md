@@ -1,9 +1,9 @@
 ---
-title: "Optimum Path in Karting"
+title: "Optimum Path in Karting x ApexSim"
 #date: 2026-01-24
 date: 2026-01-02
 draft: false
-tags: ["Karts","GoPro GPS Telemetry","Cars","Mechanics","G-Circle","Pacejka","GA vs RL"]
+tags: ["Karts","GoPro GPS Telemetry","Cars","Simulations","G-Circle","Pacejka","GA vs RL"]
 description: 'GP2 engine or need to improve your driving?'
 url: 'kart-optimum-path'
 math: true
@@ -50,13 +50,10 @@ With interesting results:
 
 {{< youtube "c0YkQhsUNrg" >}}
 
-Arriving here: *after a few posts on action cams and GPS data within this repo*:
+Arriving here: *after a few posts on action cams and GPS data within [this repo](https://github.com/JAlcocerT/Py_RouteTracker)*.
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Py Route Tracker ↗" icon="github" >}}
-{{< /cards >}}
 
-## Optimum path in karting?
+## Optimum path in karting
 
 This is a great moment to step back and look at the "Architecture" of your karting simulator.
 
@@ -191,6 +188,12 @@ https://youtu.be/C8ilrD-tIw4
 
 {{< youtube "C8ilrD-tIw4" >}}
 
+<!-- 
+https://youtu.be/81wY9E29x-E 
+-->
+
+
+{{< youtube "81wY9E29x-E" >}}
 
 
 ---

@@ -1,9 +1,9 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-03T23:20:21+01:00
+date: 2026-01-04T23:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x Sales Pipeline","RoadMap26"]
-description: '.'
+description: 'Finding people that actually need your services'
 url: 'how-to-get-customers-programmatically'
 ---
 

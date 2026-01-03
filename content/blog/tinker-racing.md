@@ -1,6 +1,5 @@
 ---
 title: "Racing and Data"
-#date: 2026-01-03
 date: 2025-12-23T09:20:21+01:00
 draft: false
 tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars x OBD2","GoPro GPS"]
