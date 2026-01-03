@@ -259,6 +259,14 @@ The physic engine simulator paid off.
 
 This is a fundamental physics difference - it models power-limited acceleration (like a real engine) rather than force-limited acceleration.
 
+
+### Next Steps
+
+* https://github.com/mikalhart/TinyGPSPlus
+
+>  A new, customizable Arduino NMEA parsing library 
+
+
 ---
 
 ## FAQ

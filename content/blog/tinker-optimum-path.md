@@ -1,6 +1,6 @@
 ---
 title: "Optimum Path in Karting x ApexSim"
-#date: 2026-01-24
+#date: 2026-01-23
 date: 2026-01-02
 draft: false
 tags: ["GoPro GPS Telemetry","Cars","Simulations","Gradient Descent","G-Circle","Pacejka","GA vs RL"]
@@ -30,6 +30,8 @@ Brake up to: ~0.5g and turn up to: ~1G
         "max_accel_g": 0.35,
         "mass_kg": 230}
 ```
+
+> Sodikart RX250 typically weighs approximately 135 kg to 150 kg
 
 No need to get a mycron 5s so far, just lets do some simulations to understand the potential flying laps.
 
@@ -199,6 +201,11 @@ https://youtu.be/81wY9E29x-E
 ## Conclusions
 
 Im **impressed** on how a simple model can provide realistic results.
+
+<!-- https://youtu.be/zm0OJcpuLV8 -->
+
+{{< youtube "zm0OJcpuLV8" >}}
+
 
 A simple mass + no multi body, no contact dynamics, no aerodinamics, no ICE modelling, no kart flexing...
 
