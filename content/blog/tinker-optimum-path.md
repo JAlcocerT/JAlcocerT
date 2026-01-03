@@ -17,7 +17,7 @@ A simple starting model to find the **optimum path while racing**.
 
 Based on the **gopros data and videos** you can find online, you can see whats the [G-circle model](#g-circle) is all about.
 
-See that generally a kart can accelerate up to: 0.3G
+See that generally a kart can accelerate up to: ~0.3G
 
 Brake up to: ~0.5g and turn up to: ~1G
 
@@ -30,6 +30,8 @@ Brake up to: ~0.5g and turn up to: ~1G
         "max_accel_g": 0.35,
         "mass_kg": 230}
 ```
+
+No need to get a mycron 5s so far, just lets do some simulations to understand the potential flying laps.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/" title="Tinkering with Racing and GoPro GPS" image="/blog_img/data-experiments/kart/matplotlib-driver-comparison.png" subtitle="Using GPS data to compare karting laps and generate HUD overlay videos" >}}

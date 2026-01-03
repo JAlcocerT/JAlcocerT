@@ -1,5 +1,5 @@
 ---
-title: "Optimum Path with Genetic Algorithm"
+title: "Optimum Path x Genetic Algorithm"
 #date: 2026-01-24
 date: 2026-01-02
 draft: false
@@ -173,7 +173,7 @@ python3 visualize_track_splines.py #see track_spline_structure.png
 
 Here is when it comes that moment that brings you back to [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) or mechanincs lessons back in time.
 
-There are no N curves in a circuit, there are infinite curves, each with their radious and center somwhere in the space.
+There are no N curves in a circuit, there are **infinite curves**, each with their radious and center somwhere in the space.
 
 <!-- 
 https://www.youtube.com/watch?v=C30Lptbb0ls
@@ -189,22 +189,75 @@ You might see some like top 6 and top 1 that represent nothing - they are there 
 
 From this point, I wanted to test how good the continuum was.
 
-So actually made a side quest and made the Minimum curvature path *but with a continuum, not a discrete circuit*
+#### MCP as better seed?
 
+So actually made a **side quest** to create the Minimum curvature path *but with a continuum, not a discrete circuit*
 
 The idea here is to provide a better seed for the genetic algorithm chromosome.
 
 ```sh
 #cd 0
-
+python3 compute_min_curvature_path.py
 ```
 
+This will run for a while and get you the path: *optimized for a smoother low curvature, not for lap time*
+
+![alt text](/blog_img/karting/min_curvature_path_viz.png)
+
+```sh
+python3 compute_velocity_profile.py
+```
+
+This goes much faster as its *just* to apply the phyisical limits:
+
+![Min Curv Path Speed distribution](/blog_img/karting/min_curvature_performance_viz.png)
+
+Theoretical best lap time: 124.65 seconds *as per MCP, far worst than GD that went straight away for the ~80s validated IRL*
+* Average speed: 39.8 km/h
+
+```sh
+python3 export_actions.py #and we get a csv with the distance, speed, actions...
+```
+
+How could I not: *using the previous csv outputs*
+
+```sh
+python3 create_lap_animation.py
+#python3 create_lap_animation_v2.py
+```
+
+Which goes to `min_curvature_actions_5000.csv`
+
+<!-- https://youtu.be/6IAm_-uQpn4 -->
+
+{{< youtube "6IAm_-uQpn4" >}}
+
+I [improved the UI on a v2](https://youtu.be/r8yAQbUat0o) version of it.
 
 
+```sh
+python3 validate_with_simulation.py
+```
+
+And...it crashed at around 68m/1300m.
+
+Interesting, but if that trajectory...was smooth (?)
+
+So...given that the MCP path was smootha and i got the actions: how about creating the path that those actions create given the current physics engine?
+
+```sh
+python3 simulate_and_check_path.py
+```
+
+![alt text](/blog_img/karting/path_simulation_check.png)
 
 ---
 
 ## Conclusions
+
+The physic engine simulator paid off.
+
+This is a fundamental physics difference - it models power-limited acceleration (like a real engine) rather than force-limited acceleration.
 
 ---
 

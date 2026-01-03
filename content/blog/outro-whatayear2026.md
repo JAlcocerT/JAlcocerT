@@ -320,6 +320,11 @@ xargs -0 awk '
 ```
 
 
+### Quotes
+
+1. Choose your hard
+2. 
+
 #### Discovery of the Years
 
 [2020](https://jalcocert.github.io/JAlcocerT/blog/summary20/) - R *together with sql*
