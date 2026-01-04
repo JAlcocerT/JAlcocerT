@@ -20,6 +20,8 @@ Whatever the reason, here is how you can.
 
 If you like to create video as a code, and among all the [things we can create as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code) - you might also enjoy making cool [animations as a code](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/)
 
+* https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations
+
 
 ### Matplotlib Animations
 

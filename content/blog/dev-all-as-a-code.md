@@ -362,7 +362,15 @@ We have [Pandoc](https://github.com/jgm/pandoc) to convert between tons of forma
 
 #### Infographics as a code
 
-This can also be done with Python, but it will look more like a **report or with matplotlib**.
+This can also be done with Python.
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/#infographics" title="Infographics | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
+But it will look more like a **report or with matplotlib**.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment" title="Animating yfinance" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="YFinance for Python, cool plots and animations | Post" >}}

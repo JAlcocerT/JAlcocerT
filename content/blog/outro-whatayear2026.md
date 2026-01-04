@@ -257,6 +257,12 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
 
 > Fundamental, Fun, Future :)
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/creating-curated-and-automated-content" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
+{{< /cards >}}
+
+
+
 ### Serverless
 
 Ive enjoyed using Cloudflare R2 for s3 compatible storage.

@@ -328,7 +328,7 @@ A better structured *,passive'* service offering.
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="NEW - DIY eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="From md to n web/ooks for a better DIY service " >}}
 {{< /cards >}}
 
-These are deployed at:
+These are **deployed at**:
 
 * https://ebooks.jalcocertech.com - If you have some idea and **dont know how to start** creating it, this is for you
 * https://boilerplate.jalcocertech.com - If you are creating and want to **do it faster**, this is for you
@@ -338,6 +338,11 @@ These are deployed at:
 The problem when you havent started building is that you dont know what you need.
 
 That's why I have created a custom chatbot for registered users to do QnA over the content of the ebooks.
+
+### People Shipping ebooks
+
+* Fantastic landing page with a form, a way to get a goodie once you put an email, a product recommendation as per a form results and success stories (with video and photos) https://czasnatwojruch.pl/
+
 
 ---
 

@@ -70,7 +70,10 @@ In RL, the agent "feels" the G-load through its *,sensors'*.
 ### 3. Which one fits your 5600G better?
 
 **Genetic Algorithm (GA) is the winner for your current goal.**
-Since you want to estimate the fastest lap, the GA is much more direct. You can use all 12 threads of your 5600G to run hundreds of "virtual karts" in parallel. Because a GA doesn't require a complex Neural Network to be updated every millisecond, it will likely reach the "optimal" lap time much faster than an RL agent would.
+
+Since you want to estimate the fastest lap, the GA is much more direct. You can use all 12 threads of your 5600G to run hundreds of "virtual karts" in parallel.
+
+Because a GA doesn't require a complex Neural Network to be updated every millisecond, it will likely reach the "optimal" lap time much faster than an RL agent would.
 
 **Reinforcement Learning (RL)** is amazing if you want to see a "living" driver that reacts to things, but it requires much more "tuning" (reward functions, neural layers, etc.) just to get it to stay on the track.
 
@@ -191,7 +194,7 @@ For **RL**, you would have to build a "Gym Environment"—essentially a mini-gam
 
 1. A desktop app to boundle the best working optimum path seen so far. *And the HUD overlay for the mp4*.
 2. If at some point tinkering with IoT, particularly micro-controllers: to create a DIY GPS module -> ESP32 -> telemetry to box tool. For those going into the race tracks.
-3. To review how good (orhow bad) PhyPhox smartphone GPS sensor info was.
+3. To review how good (orhow bad) PhyPhox smartphone GPS sensor info was. Example of a Oa5pro + external gpx overlay [test 1](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/#dji-and-gpx-overlay)
 4. If someone is doing sim-racing and want to share some track - I could see how to tweak the scripts to make it work there
 
 

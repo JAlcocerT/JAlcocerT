@@ -89,11 +89,6 @@ That said, you can still do [infographics as code](https://jalcocert.github.io/J
 <!-- 
 ![alt text](/blog_img/karting/track_top_curvature_peaks.png) -->
 
-You can also try with:
-
-* Reportlab as seen on [this video](https://www.youtube.com/watch?v=0SQb__Zrg5Y) https://pypi.org/project/reportlab/
-* Typst
-
 
 ### Epubs
 

@@ -105,7 +105,7 @@ Recording with **high bitrate**, I got 4 different files with total size of 48GB
 I was already **analyzing GoPro Metadata**:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/" title="Go Pro Telemetry Post" image="/blog_img/karting/gopro-speed-sample.png" subtitle="Karting and MetaData 101" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/geospatial-data/" title="Go Pro Telemetry Post" image="/blog_img/karting/gopro-speed-sample.png" subtitle="Karting and Geospatial MetaData 101" >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Z_GoPro" title="Go Pro Telemetry EDA" image="/blog_img/apps/gh-jalcocert.svg" subtitle="EDA Metadata Extraction at PyRouteTracker" >}}
 {{< /cards >}}
 
@@ -125,7 +125,7 @@ And for action cams without GPS... like my DJI OA5Pro.
 
 How about recording the route on another app and just syncing it?
 
-{{< details title="Gemini Overlay explanation 📌" closed="true" >}}
+{{< details title="Gemini x Overlay explanation 📌" closed="true" >}}
 
 Building a Python tool to overlay GPX data onto MP4 videos is a **challenging but rewarding project**. 
 

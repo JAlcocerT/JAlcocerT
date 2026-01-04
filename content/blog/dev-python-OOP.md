@@ -616,20 +616,21 @@ I got to learn this during [this wedding post](https://jalcocert.github.io/JAlco
 
 ### Infographics
 
-* https://towardsdatascience.com/from-default-python-line-chart-to-journal-quality-infographics-80e3949eacc3
-
-* https://aiglobaltech.blogspot.com/2024/12/from-default-python-line-chart-to.html
-
 <!-- ![alt text](/blog_img/karting/track_top_curvature_peaks.png) -->
 
 Infographics are one of those things can be [done as code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#infographics-as-a-code): *with python ofc*
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/#infographics" title="Infographics | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/" title="Entrepreneur | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment" title="Animating yfinance" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="YFinance for Python, cool plots and animations | Post" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/#discrete-to-continuum" title="Track Infographic" image="/blog_img/karting/track_top_curvature_peaks.png" subtitle="Matplotlib x Race track x Curvature | GA Post" >}}
 {{< /cards >}}
 
-https://github.com/JAlcocerT/DataInMotion/blob/main/tests/plot_total_return_from_yfinance.py
+See this sample script: https://github.com/JAlcocerT/DataInMotion/blob/main/tests/plot_total_return_from_yfinance.py
 
 ```sh
 #git clone https://github.com/JAlcocerT/DataInMotion.git
@@ -655,7 +656,7 @@ The project has a great application of Python animations.
 That I could not resist to tinker with:
 
 * https://github.com/JAlcocerT/mechanism
-* https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations - Just matplotlib animations for various use cases
+* https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations - Just some **matplotlib animations** for various use cases
 
 
 ![Sample animation Gif](/blog_img/dev/503.gif)

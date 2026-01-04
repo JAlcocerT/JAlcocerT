@@ -10,6 +10,9 @@ draft: false
 Enough *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/)?*
 
 
+
+* https://github.com/JAlcocerT/mechanism
+
 ## Mechanism Simulations
 
 https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/

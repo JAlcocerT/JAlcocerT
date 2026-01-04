@@ -88,6 +88,10 @@ But this guy takes FFMPEG to the next level:
 
 {{< youtube "6uB65PdasQI" >}}
 
+And I have a dedicated repository for ffmpeg video creation:
+
+https://github.com/JAlcocerT/YT-Video-Edition
+
 
 ### Converting Video
 

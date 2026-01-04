@@ -207,7 +207,7 @@ Im **impressed** on how a simple model can provide realistic results.
 {{< youtube "zm0OJcpuLV8" >}}
 
 
-A simple mass + no multi body, no contact dynamics, no aerodinamics, no ICE modelling, no kart flexing...
+A simple mass + no multi body, no contact dynamics with those [slip angles](https://www.youtube.com/watch?v=MwrUz1WI5GY), no aerodinamics, no ICE modelling with its [volumetric efficiencies](https://www.youtube.com/watch?v=1eRsaOxxiUc), no kart flexing...
 
 Just...a point with a **good enough model** and parameters that can be validated from the real go pro videos on board.
 
