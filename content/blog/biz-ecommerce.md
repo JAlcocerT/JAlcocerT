@@ -10,7 +10,7 @@ url: 'how-about-an-ecommerce'
 **Tl;DR**
 
 
-https://github.com/riteshk-007/nextjs-store
+* https://github.com/riteshk-007/nextjs-store
 
 >  Full E commerce Website using Next js 
 

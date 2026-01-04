@@ -52,6 +52,10 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 {{< /cards >}}
 
 
+I thought that Id do for this year a separated `blog.jalc...` based on this canvas repo.
+
+Multilanguage and all that stuff.
+
 
 0. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code `.mdx`
 
@@ -99,7 +103,7 @@ can find out existing interface
 0. Restaurant SaaS: aka Multi tenant Astro Apps with protected routes
 
 {{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/webs-for-restaurants" title="WhoDB Github ↗" icon="github" >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
@@ -237,6 +241,18 @@ The continuation of the [programmatic Twitter API interaction](https://jalcocert
   {{< card link="https://github.com/JAlcocerT/DataInMotion" title="DataInMotion ↗" icon="github" >}}
 {{< /cards >}}
 
+```sh
+git clone https://github.com/JAlcocerT/DataInMotion.git
+cd DataInMotion && branch libreportfolio
+#uv run tests/plot_historical_yield.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --monthly
+uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+```
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
+{{< /cards >}}
+
 ![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 
 > Fundamental, Fun, Future :)
@@ -264,20 +280,9 @@ Ive enjoyed using Cloudflare R2 for s3 compatible storage.
 ### Tech Talks
 
 
-<!-- 
- Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
-
-https://github.com/scio-labs/inkathon?ref=statichunt.com
-
-
-
-<!-- Goals
-  • AI Gen
-    LangChain
-    LocalModels: with Docker
-    From Streamlit to Chainlit / Gradio: https://pypi.org/project/gradio/
-  • V3 of ML trainnings - To include MLFlow
--->
+* https://github.com/scio-labs/inkathon
+ 
+Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
 
 ~33...
 
@@ -336,11 +341,11 @@ xargs -0 awk '
 * https://selfhosted.show
 * https://selfh.st/
 
-6. Keep writting, but less and MORE QUALITY: < 2/week **AND <60/year**
+6. Keep writting, but less and MORE QUALITY: < 2/week **AND <60/year** <<< 170
 
 #### Stop Doing
 
-1. Opening more and more a shallow tech stack. *12/24 <<<170+ yearly posts on this blog should be more than enough*
+1. Opening more and more a shallow tech stack. 
 2. Keeping 50+ tabs on chrome. *Not watching content on the phone and commet for summaries should help*.
 4. Stop building w/o a focus strategy, like with **random avatars** - Like I did In the AIssistant example
 

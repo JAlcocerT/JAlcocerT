@@ -1,6 +1,6 @@
 ---
 title: "Making an enhanced DIY offering via PaaS"
-date: 2026-01-07T09:20:21+01:00
+date: 2026-01-09T09:20:21+01:00
 draft: false
 tags: ["DIY Platform Service","RoadMap26","Postgres"]
 description: 'A platform service offering for B2C to get up to speed with services that dont require any customization.'
@@ -106,12 +106,12 @@ From the [stop doing](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-
 ```sh
 git clone https://github.com/JAlcocerT/ourika
 #whois guideventuretour.com | grep -i -E "(creation|created|registered)"
-#cerated a hand-over.md
+#created a hand-over.md
 pandoc hand-over.md -o hand-over.pdf
 #cd /home/jalcocert/Desktop && zip -r ourika.zip ourika -x "ourika/node_modules/*" -x "ourika/.git/*"
 ```
 
-For anyone offended: DIY/DWY/DFY
+For anyone offended: *DIY/DWY/DFY :)*
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

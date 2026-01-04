@@ -1,9 +1,9 @@
 ---
-title: "We/Books BoilerPlate"
+title: "We/Books and a DIY BoilerPlate"
 date: 2026-01-05T07:20:21+01:00
 #date: 2025-12-27T23:20:21+01:00
 draft: false
-tags: ["Info Products","1toN ebooks x BiP","SaaS vs LifeTime Products","RoadMap26"]
+tags: ["Info Products","DIY 1toN ebooks x BiP","SaaS vs LifeTime Products","RoadMap26"]
 description: 'Reading better, writing more. Making Kindle learnings of years actionable and sharing via web/ooks'
 url: 'interesting-books-and-diy-offer'
 ---
@@ -17,6 +17,8 @@ As I dont expect people to have the patience to get value by reading from these 
 The aim is to enhance the DIY offer, *for people that are not ready for [the DWY one](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page)*.
 
 +++ Special section for astro ~ typography themes + DecapCMS
+
++++ [Custom chatbot QnA](#a-chatbot-for-registered-ones-to-do-qna) for registered users over the web/ooks
 
 **Intro**
 
@@ -331,233 +333,58 @@ These are deployed at:
 * https://ebooks.jalcocertech.com - If you have some idea and **dont know how to start** creating it, this is for you
 * https://boilerplate.jalcocertech.com - If you are creating and want to **do it faster**, this is for you
 
+### A Chatbot for Registered ones to do QnA
 
-* https://nav.al/read
+The problem when you havent started building is that you dont know what you need.
 
-> Read the Best 100 Books Over and Over Again
+That's why I have created a custom chatbot for registered users to do QnA over the content of the ebooks.
 
-> > Many claim to read, but very few understand
+---
 
-<!-- ### The Echo Chambers
+## Outro
 
-When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. 
+Creating a portfolio as a development, design or tech professional is a journey punctuated by complex choices.
 
-Today, however, people often only engage with those who share their opinions. Digital channels have returned humans to a cave-like existence: Only a small social bubble within an echo chamber shares a given person’s view of reality.
+One of the most prevalent of these dilemmas lies in the delicate balance between striving for perfection and the need to launch quickly. 
 
-“The multiplicity of digital channels allows us to avoid self-awareness and surround ourselves with the people (or machines, it is not always certain) who share our opinions.” 
+Explore with me the nuances of these contradictory perspectives.
 
-Individuals that hold opposing viewpoints on reality encourage, criticize, and adjust one another's ideas, influencing economic and human behavior.
+### The aspiration to perfection: an unattainable ideal?
 
-Different narratives, like an epidemic, may infect and alter communities, according to Shiller. 
+The traditional vision of artistic creation encourages us to pursue perfection from the outset. 
 
-The validity of a narrative has no bearing on its "contagion rate." 
+Every line of code, every element of design should converge towards absolute excellence.
 
-Viral tales capture attention, look cohesive, and fit readily into existing narratives.
+However, this dream of perfection can sometimes become a burden, a brake on progress. The relentless quest for perfection can paralyze the creative process, turning creation into an endless pursuit.
 
--->
+### The Perfectionism Trap: when the best becomes the enemy of the good
 
+Perfectionism can turn into a subtle trap. Waiting for every detail to be impeccable can delay your portfolio indefinitely. This prolonged stalling can have implications for professional credibility, as the market often demands a fast, dynamic online presence.
 
-![Canva using neuromarketing on you](/blog_img/outro/canva-free-trial-neuromkt.png)
+### The bold proposal to launch quickly: iterate rather than perfect
 
+The idea of launching quickly, even if the portfolio doesn't reach an immediate level of perfection, offers an alternative perspective. It's about recognizing that each iteration can be an improvement on the previous one. This approach encourages a constant iteration mentality, where each version becomes a learning opportunity.
 
-### Decap x Existing Astro x LocalHost
+### Speed as a means of learning: create by doing
 
-I got to get working decap-cms with astro at [this post](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms):
+Launching quickly thus becomes a means of learning. Speed doesn't mean compromising on quality, but rather accepting that perfection may initially be unattainable. 
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Portfolio" title="Hugo Lynx Portfolio x Decap Github ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/Twilight" title="Twilight Astro x Decap Localhost ↗" icon="github" >}}
-{{< /cards >}}
+It's an invitation to learn by doing, to use each version of the portfolio as a testing ground.
 
-And this was the result of the local editor: *which is totally open sourced*
+### The crucial importance of time: time efficiency and judicious management
 
-<!-- https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decapcms-local.png
-https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decap-post-editor.png -->
+Time plays a crucial role in this debate. Time efficiency, underlined by the perspective of speed, becomes an essential skill. Judicious time management is the key to maintaining momentum without compromising quality. Consciously choosing where to invest one's time becomes a strategic act.
 
-[![Decap CMS Post Editor](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/decap-post-editor.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decapcms-local.png)
+### Total control vs. flexibility: navigating between the two extremes
 
+Total control of the creative process offers a sense of autonomy and empowerment. However, it is vital not to confuse control with rigidity. Being open to market developments and new trends is just as essential as personal control. It's a delicate balance between autonomy and adaptability.
 
-Which is a much better tool to leverage than trying to build your own flask based cms https://github.com/JAlcocerT/hugo-theme-gallery-flasked
+### The delicate balance: a continuous journey of discovery and adaptation
 
-
-### DecapCMS x VPS
-
-**Initially**, I was thinking on this kind of setup, with some TinyAuth as middleware:
-
-<!-- ![TinyAuth UI with https](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png) -->
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat" title="Traefik x TinyAuth Setup" image="/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png" subtitle="TinyAUth as WebApp authentication middleware with the Firebat MiniPC" >}}
-{{< /cards >}}
+Ultimately, portfolio creation is an ongoing journey. It's navigating this paradox with intention. It's finding a balance between the quest for excellence and the need to move quickly, knowing that each iteration is a progression towards an improved version of yourself. To create a portfolio is to embrace the paradox, to consciously choose between perfection and speed, and to accept that the path to excellence is a journey rather than a destination.
 
 
-```mermaid
-graph TB
-    subgraph "Public Internet"
-        User[Blog Visitors]
-        Editor[Content Editors]
-    end
-    
-    subgraph "VPS/Server with Docker"
-        Traefik[Traefik Reverse Proxy<br/>:80, :443]
-        TinyAuth[TinyAuth<br/>Authentication]
-        
-        subgraph "CMS Stack"
-            Astro[Astro Dev Server<br/>:4321]
-            DecapProxy[Decap CMS Proxy<br/>:8081]
-        end
-        
-        CronJob[Cron Job<br/>Every 30 min]
-    end
-    
-    subgraph "Git Repository"
-        GitHub[GitHub/GitLab<br/>Main Branch]
-    end
-    
-    subgraph "Cloudflare"
-        CFPages[Cloudflare Pages<br/>Static Site]
-        CustomDomain[yourdomain.com]
-    end
-    
-    User -->|HTTPS| CustomDomain
-    CustomDomain --> CFPages
-    
-    Editor -->|HTTPS| Traefik
-    Traefik -->|Auth Check| TinyAuth
-    TinyAuth -->|Authenticated| Astro
-    Astro --> DecapProxy
-    
-    DecapProxy -->|Edit Content| Astro
-    CronJob -->|Check Changes| DecapProxy
-    CronJob -->|Git Commit & Push| GitHub
-    
-    GitHub -->|Webhook/CI| CFPages
-    CFPages -->|Deploy| CustomDomain
-    
-    style Traefik fill:#00d4ff
-    style TinyAuth fill:#ff6b6b
-    style CFPages fill:#f39c12
-    style CustomDomain fill:#2ecc71
-```
 
-But **now** I needed to rethink that with a **simpler architecture**:
-
-* Editing via one subdomain and the Hugo Dev container, like: `https://portfolio.jalcocertech.com/admin`
-* Consuming via the CI/CD statically deployed artifacts: `https://jalcocert.github.io/Portfolio/`
-  *  *This could be any other custom sub/domain or use cloudflare pages and workers if desired*
-  * Or...to trigger the build of the prod container to serve the assets your way :)
-
-```mermaid
-flowchart LR
-    subgraph Homelab["🏠 Your Homelab"]
-        Hugo["Hugo Server<br/>Port 1313"]
-        DecapCMS["Decap CMS<br/>/admin/"]
-        CF["Cloudflare Tunnel<br/>to Hugo Dev Container"]
-    end
-    
-    subgraph Internet["☁️ Internet"]
-        CFEdge["Cloudflare Edge"]
-        GitHub["GitHub Repo"]
-        GHPages["GitHub Pages<br/>Production Site"]
-    end
-    
-    Hugo --> DecapCMS
-    CF --> Hugo
-    CFEdge --> CF
-    User["👤 You"] --> CFEdge
-    DecapCMS --> GitHub
-    GitHub --> GHPages
-    
-    style Homelab fill:#E8F5E9,stroke:#2E7D32
-    style Internet fill:#E3F2FD,stroke:#1976D2
-```
-
-Make sure to understand how to run [hugo x decapcms pure local OR local + Github OAuth](https://github.com/JAlcocerT/Portfolio/blob/main/z-decap-local-dev.md)
-
-1. Go to: https://github.com/settings/developers
-
-2. Click "New OAuth App"
-
-3. Fill in:
-   - **Application name**: `Portfolio CMS Local`
-   - **Homepage URL**: `http://localhost:1313` or `http://tailscaleip:1313` or `https://portfolio.jalcocertech.com`
-   - **Authorization callback URL**: `https://api.netlify.com/auth/done` or `http://100.86.82.103:1313/auth/callback` or `https://portfolio.jalcocertech.com/auth/callback`
-
-| Approach | Access | Security | GitHub OAuth | Setup |
-|----------|--------|----------|--------------|-------|
-| **Local only** | Single device | 🔒🔒🔒 Highest | ⚠️ Complex | ⭐ Easy |
-| **Tailscale** | Your devices | 🔒🔒 High | ✅ Works | ⭐⭐ Medium |
-| **Public (CF Tunnel)** | Anyone | 🔒 Medium | ✅ Works | ⭐⭐⭐⭐ Complex |
-
-> When local_backend: true, is local only and it requires the `npx decap-server`
-
-4. Click "Register application"
-
-5. Note your **Client ID** and generate a **Client Secret**
-
-```
-GITHUB_CLIENT_ID=your_client_id_here
-GITHUB_CLIENT_SECRET=your_client_secret_here
-```
-
-Then, just:
-
-```sh
-#npm install -g netlify-cms-proxy-server #for localhost version
-
-#ssh jalcocert@jalcocert-x300-1
-git clone https://github.com/JAlcocerT/Portfolio && cd Portfolio
-#nano .env
-
-#make hugo-dev 
-hugo server --bind="0.0.0.0" --baseURL="http://localhost" --port=1313 #localhost:1313
-#make hugo-dev #http://100.86.82.103:1313/
-#hugo server --bind="0.0.0.0" --baseURL="http://100.86.82.103" --port=1313
-npx decap-server
-```
-
-Should get running the local or local+github oauth and automatic commits.
-
-But...how about using not netlify, but with newer decap-cms?
-
-As its newer, makes the setup more simple: *but again, its all about decap's `./static/admin/config.yml`
-
-```sh
-git clone https://github.com/JAlcocerT/EntreAgujayPunto && cd EntreAgujayPunto
-
-npm run dev:full #this runs hugo in dev and decapcms!
-
-#Alternatively, within 2 terminals
-# Terminal 1
-#hugo server --bind="0.0.0.0" --baseURL="http://localhost" --port=1313
-
-# Terminal 2
-#npm run cms
-```
-
-Doing this, revealed the theme needed to vibe code from scratch in Astro, following my BiP procedure.
-
-It all comes down to decap-cms dont recognizing nested media folders, which was the key of the hugo-theme-gallery used.
-
-So...time to I though about creating sth that is going to be working without nested media folder, but will assign properly which photo gets rendered where. Like: https://astro.build/themes/details/photography-portfolio-template/
-
-
-Or...put a simple web app with a `/portal` to upload photos as vibe coded here: `mama.entreagujaypunto.com`
-
-```sh
-make help
-
-#git clone https://github.com/JAlcocerT/EntreAgujayPunto.git #http://jalcocert-x300-1:8090/
-#npm install npm-run-all --save-dev
-#npm run dev:full #decapcms local + hugo local dev
-HUGO_BASEURL="http://jalcocert-x300-1" HUGO_PORT=1313 npm run dev:full
- 
-hugo server --bind="0.0.0.0" --baseURL="http://100.86.82.103" --port=1319
-
-docker compose up -d uploader
-```
-
-> This setup was quickly superseeded by a NextJS ISR as described here.
 
 ### From SaaS to LifeTime Products 
 
@@ -565,7 +392,7 @@ Some of the first people on doing SaaS are coming back to the product way of sel
 
 Im talking about: https://once.com/writebook
 
-Info products and one time payment artifacts are a thing today.
+**Info products** and one time payment artifacts are a thing today.
 
 https://github.com/mrwyndham/pocketbase-stripe
 https://www.fastpocket.dev/pricing
@@ -606,7 +433,35 @@ Im **launching my boilerplate**: https://boilerplate.jalcocertech.com
 
 > It has the look and feel of my latest [diy landing boilerplate](https://github.com/JAlcocerT/diy-landing-boilerplate) for a reason :)
 
+###  Interesting Resources
 
+
+* https://nav.al/read
+
+> Read the Best 100 Books Over and Over Again
+
+> > Many claim to read, but very few understand
+
+<!-- ### The Echo Chambers
+
+When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. 
+
+Today, however, people often only engage with those who share their opinions. Digital channels have returned humans to a cave-like existence: Only a small social bubble within an echo chamber shares a given person’s view of reality.
+
+“The multiplicity of digital channels allows us to avoid self-awareness and surround ourselves with the people (or machines, it is not always certain) who share our opinions.” 
+
+Individuals that hold opposing viewpoints on reality encourage, criticize, and adjust one another's ideas, influencing economic and human behavior.
+
+Different narratives, like an epidemic, may infect and alter communities, according to Shiller. 
+
+The validity of a narrative has no bearing on its "contagion rate." 
+
+Viral tales capture attention, look cohesive, and fit readily into existing narratives.
+
+-->
+
+
+![Canva using neuromarketing on you](/blog_img/outro/canva-free-trial-neuromkt.png)
 
 
 ---

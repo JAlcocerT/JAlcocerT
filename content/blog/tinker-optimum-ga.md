@@ -3,7 +3,7 @@ title: "Optimum Path x Genetic Algorithm"
 #date: 2026-01-24
 date: 2026-01-02
 draft: false
-tags: ["Car Simulation","","GA vs RL","Polynomial"]
+tags: ["Car Simulation","GA vs RL","Polynomial Approximation"]
 description: 'Finally doing this - ApexSim GA-Edition'
 url: 'genetic-algorithm-for-racing'
 math: true

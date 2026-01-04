@@ -1,29 +1,19 @@
 ---
 title: "First Look to Flutter Apps via Flet"
-date: 2027-12-31
-draft: true
+date: 2026-11-29
+draft: false
 tags: ["Dev","Ente Photos","Desktop Apps","Flutter x Python Flet","FlutterFlow"]
 description: 'Flutter Apps. Created with Python via Flet and more'
 url: 'flutter-flet-python'
 ---
 
 
-<!-- * Flutter
-        * Counter knitting
-        * Timer para ejercicios
-        https://app.uizard.io/p/1ad5e459/preview -->
-
-* https://flet.dev/
-
-> Build **multi-platform apps in Python** powered by Flutter
-
-Because some time ago (pre vibe-coding age) I tried flutter.
-
-And it was not that easy.
 
 **Tl;DR**
 
-Couple years ago I tried to do some Flet Apps with chatGPT, but the knowledge was not there.
+Couple years ago I tried to do some Flet Apps with chatGPT, but the LLM knowledge was not there.
+
+At least not to compensate for my lack of mobile app development (0).
 
 How about now?
 
@@ -39,6 +29,20 @@ https://www.youtube.com/watch?v=dQeNONerxEU
 https://www.youtube.com/watch?v=ibNzG1tMblE
 
 **Intro**
+
+
+<!-- * Flutter
+        * Counter knitting
+        * Timer para ejercicios
+        https://app.uizard.io/p/1ad5e459/preview -->
+
+* https://flet.dev/
+
+> Build **multi-platform apps in Python** powered by Flutter
+
+Because some time ago (pre vibe-coding age) I tried flutter.
+
+And it was not that easy.
 
 * https://flet.dev/
 

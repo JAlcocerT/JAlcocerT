@@ -1,7 +1,6 @@
 ---
 title: "[Prototyping] Restaurants x Astro SSR."
-date: 2026-01-09
-#date: 2025-12-23T13:20:21+01:00
+date: 2026-02-06
 draft: false
 tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26"]
 description: "MultiTenant Websites for Restaurants. Million dollar idea in the Mediterranean."

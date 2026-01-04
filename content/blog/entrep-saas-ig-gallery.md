@@ -302,6 +302,206 @@ Summary Table: Your Next.js Gallery
 | **Performance** | ISR (Static speed with dynamic updates). |
 
 
+
+### Decap x Existing Astro x LocalHost
+
+I got to get working decap-cms with astro at [this post](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms):
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Portfolio" title="Hugo Lynx Portfolio x Decap Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Twilight" title="Twilight Astro x Decap Localhost ↗" icon="github" >}}
+{{< /cards >}}
+
+And this was the result of the local editor: *which is totally open sourced*
+
+<!-- https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decapcms-local.png
+https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decap-post-editor.png -->
+
+[![Decap CMS Post Editor](https://raw.githubusercontent.com/JAlcocerT/Twilight/main/z-snaps/decap-post-editor.png)](https://github.com/JAlcocerT/Twilight/blob/main/z-snaps/decapcms-local.png)
+
+
+Which is a much better tool to leverage than trying to build your own flask based cms https://github.com/JAlcocerT/hugo-theme-gallery-flasked
+
+
+### DecapCMS x VPS
+
+**Initially**, I was thinking on this kind of setup, with some TinyAuth as middleware:
+
+<!-- ![TinyAuth UI with https](/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat" title="Traefik x TinyAuth Setup" image="/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png" subtitle="TinyAUth as WebApp authentication middleware with the Firebat MiniPC" >}}
+{{< /cards >}}
+
+
+```mermaid
+graph TB
+    subgraph "Public Internet"
+        User[Blog Visitors]
+        Editor[Content Editors]
+    end
+    
+    subgraph "VPS/Server with Docker"
+        Traefik[Traefik Reverse Proxy<br/>:80, :443]
+        TinyAuth[TinyAuth<br/>Authentication]
+        
+        subgraph "CMS Stack"
+            Astro[Astro Dev Server<br/>:4321]
+            DecapProxy[Decap CMS Proxy<br/>:8081]
+        end
+        
+        CronJob[Cron Job<br/>Every 30 min]
+    end
+    
+    subgraph "Git Repository"
+        GitHub[GitHub/GitLab<br/>Main Branch]
+    end
+    
+    subgraph "Cloudflare"
+        CFPages[Cloudflare Pages<br/>Static Site]
+        CustomDomain[yourdomain.com]
+    end
+    
+    User -->|HTTPS| CustomDomain
+    CustomDomain --> CFPages
+    
+    Editor -->|HTTPS| Traefik
+    Traefik -->|Auth Check| TinyAuth
+    TinyAuth -->|Authenticated| Astro
+    Astro --> DecapProxy
+    
+    DecapProxy -->|Edit Content| Astro
+    CronJob -->|Check Changes| DecapProxy
+    CronJob -->|Git Commit & Push| GitHub
+    
+    GitHub -->|Webhook/CI| CFPages
+    CFPages -->|Deploy| CustomDomain
+    
+    style Traefik fill:#00d4ff
+    style TinyAuth fill:#ff6b6b
+    style CFPages fill:#f39c12
+    style CustomDomain fill:#2ecc71
+```
+
+But **now** I needed to rethink that with a **simpler architecture**:
+
+* Editing via one subdomain and the Hugo Dev container, like: `https://portfolio.jalcocertech.com/admin`
+* Consuming via the CI/CD statically deployed artifacts: `https://jalcocert.github.io/Portfolio/`
+  *  *This could be any other custom sub/domain or use cloudflare pages and workers if desired*
+  * Or...to trigger the build of the prod container to serve the assets your way :)
+
+```mermaid
+flowchart LR
+    subgraph Homelab["🏠 Your Homelab"]
+        Hugo["Hugo Server<br/>Port 1313"]
+        DecapCMS["Decap CMS<br/>/admin/"]
+        CF["Cloudflare Tunnel<br/>to Hugo Dev Container"]
+    end
+    
+    subgraph Internet["☁️ Internet"]
+        CFEdge["Cloudflare Edge"]
+        GitHub["GitHub Repo"]
+        GHPages["GitHub Pages<br/>Production Site"]
+    end
+    
+    Hugo --> DecapCMS
+    CF --> Hugo
+    CFEdge --> CF
+    User["👤 You"] --> CFEdge
+    DecapCMS --> GitHub
+    GitHub --> GHPages
+    
+    style Homelab fill:#E8F5E9,stroke:#2E7D32
+    style Internet fill:#E3F2FD,stroke:#1976D2
+```
+
+Make sure to understand how to run [hugo x decapcms pure local OR local + Github OAuth](https://github.com/JAlcocerT/Portfolio/blob/main/z-decap-local-dev.md)
+
+1. Go to: https://github.com/settings/developers
+
+2. Click "New OAuth App"
+
+3. Fill in:
+   - **Application name**: `Portfolio CMS Local`
+   - **Homepage URL**: `http://localhost:1313` or `http://tailscaleip:1313` or `https://portfolio.jalcocertech.com`
+   - **Authorization callback URL**: `https://api.netlify.com/auth/done` or `http://100.86.82.103:1313/auth/callback` or `https://portfolio.jalcocertech.com/auth/callback`
+
+| Approach | Access | Security | GitHub OAuth | Setup |
+|----------|--------|----------|--------------|-------|
+| **Local only** | Single device | 🔒🔒🔒 Highest | ⚠️ Complex | ⭐ Easy |
+| **Tailscale** | Your devices | 🔒🔒 High | ✅ Works | ⭐⭐ Medium |
+| **Public (CF Tunnel)** | Anyone | 🔒 Medium | ✅ Works | ⭐⭐⭐⭐ Complex |
+
+> When local_backend: true, is local only and it requires the `npx decap-server`
+
+4. Click "Register application"
+
+5. Note your **Client ID** and generate a **Client Secret**
+
+```
+GITHUB_CLIENT_ID=your_client_id_here
+GITHUB_CLIENT_SECRET=your_client_secret_here
+```
+
+Then, just:
+
+```sh
+#npm install -g netlify-cms-proxy-server #for localhost version
+
+#ssh jalcocert@jalcocert-x300-1
+git clone https://github.com/JAlcocerT/Portfolio && cd Portfolio
+#nano .env
+
+#make hugo-dev 
+hugo server --bind="0.0.0.0" --baseURL="http://localhost" --port=1313 #localhost:1313
+#make hugo-dev #http://100.86.82.103:1313/
+#hugo server --bind="0.0.0.0" --baseURL="http://100.86.82.103" --port=1313
+npx decap-server
+```
+
+Should get running the local or local+github oauth and automatic commits.
+
+But...how about using not netlify, but with newer decap-cms?
+
+As its newer, makes the setup more simple: *but again, its all about decap's `./static/admin/config.yml`
+
+```sh
+git clone https://github.com/JAlcocerT/EntreAgujayPunto && cd EntreAgujayPunto
+
+npm run dev:full #this runs hugo in dev and decapcms!
+
+#Alternatively, within 2 terminals
+# Terminal 1
+#hugo server --bind="0.0.0.0" --baseURL="http://localhost" --port=1313
+
+# Terminal 2
+#npm run cms
+```
+
+Doing this, revealed the theme needed to vibe code from scratch in Astro, following my BiP procedure.
+
+It all comes down to decap-cms dont recognizing nested media folders, which was the key of the hugo-theme-gallery used.
+
+So...time to I though about creating sth that is going to be working without nested media folder, but will assign properly which photo gets rendered where. Like: https://astro.build/themes/details/photography-portfolio-template/
+
+
+Or...put a simple web app with a `/portal` to upload photos as vibe coded here: `mama.entreagujaypunto.com`
+
+```sh
+make help
+
+#git clone https://github.com/JAlcocerT/EntreAgujayPunto.git #http://jalcocert-x300-1:8090/
+#npm install npm-run-all --save-dev
+#npm run dev:full #decapcms local + hugo local dev
+HUGO_BASEURL="http://jalcocert-x300-1" HUGO_PORT=1313 npm run dev:full
+ 
+hugo server --bind="0.0.0.0" --baseURL="http://100.86.82.103" --port=1319
+
+docker compose up -d uploader
+```
+
+> This setup was quickly superseeded by a NextJS ISR as described [here](#going-isr).
+
 #### Cloudinary vs imgproxy
 
 If you decide to go with the **internal open-source (imgproxy)** route, you will **not** need an API key for Cloudinary or any other third-party service.

@@ -2,18 +2,26 @@
 title: "OOP 101 for Engineers"
 date: 2026-10-01
 draft: false
-tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD"]
+tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD","Infographics"]
 description: 'Object Oriented Programming for Python users and better mechanism simulations.'
 url: 'object-oriented-programming-101'
 ---
 
 **Tl;DR**
 
-Long overdue topic: WTF is OOP?
+Long overdue topic: *WTF is OOP?*
 
 What I needed to get this going for good: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
 
 **Intro**
+
+Object oriented programming!
+
+I was trying for long to avoid such concept.
+
+But not any more.
+
+
 
 * https://mermaid.js.org/syntax/classDiagram.html
 
@@ -547,3 +555,107 @@ Let's delve deeper into each of these aspects of inheritance:
 * **Multiple Inheritance:**
     * A class inherits from multiple parent classes. (A,B->C)
     * Some languages, like Java and C#, do not directly support multiple inheritance of classes (they use interfaces instead), due to the complexities and potential ambiguities it can introduce (the "diamond problem"). Python does support multiple inheritance.
+
+
+---
+
+## FAQ
+
+Python and its 288 use cases
+
+This year I have been surprised by Python language (one more time).
+
+And using uv as package manager has been a revelation:
+
+If we are ready...what are those cool use cases?
+
+### Photo
+
+* https://www.geeksforgeeks.org/python-pillow-creating-a-watermark/
+
+### Video
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
+{{< /cards >}}
+
+For editing video, i prefer to use directly FFMPEG.
+
+TO create videos with Python, for now, I have tried [data driven animations](#animations), which can be exported to .mp4
+
+### WebApps
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
+{{< /cards >}}
+
+Flask
+
+### Plots
+
+For WebApps, I try to go with Plotly, to get interactivity out of the box.
+
+You can also bring to your Python Apps: ChartJS, ApexCharts...as seen [here](https://github.com/JAlcocerT/Streamlit_PoC)
+
+* https://handhikayp.medium.com/real-time-data-visualizations-using-python-library-plotly-12e0e5b48240
+
+### QR Generation
+
+To generate [**QR's with logo** thanks to Python](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb) 
+
+
+And your QR generator can be embedded into WebApps, as seen [here](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py)
+
+> It can be done as well with Inkscape, or [with QR-Code-Generator](https://github.com/nayuki/QR-Code-generator) or with [emn178](https://emn178.github.io/online-tools/qr-code/generator/)
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+I got to learn this during [this wedding post](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt)!
+
+
+### Infographics
+
+* https://towardsdatascience.com/from-default-python-line-chart-to-journal-quality-infographics-80e3949eacc3
+
+* https://aiglobaltech.blogspot.com/2024/12/from-default-python-line-chart-to.html
+
+<!-- ![alt text](/blog_img/karting/track_top_curvature_peaks.png) -->
+
+Infographics are one of those things can be [done as code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#infographics-as-a-code): *with python ofc*
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment" title="Animating yfinance" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="YFinance for Python, cool plots and animations | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/#discrete-to-continuum" title="Track Infographic" image="/blog_img/karting/track_top_curvature_peaks.png" subtitle="Matplotlib x Race track x Curvature | GA Post" >}}
+{{< /cards >}}
+
+https://github.com/JAlcocerT/DataInMotion/blob/main/tests/plot_total_return_from_yfinance.py
+
+```sh
+#git clone https://github.com/JAlcocerT/DataInMotion.git
+#cd DataInMotion && branch libreportfolio
+uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+```
+
+But for *not just yfinance* based, I created:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
+{{< /cards >}}
+
+
+### Animations
+
+I got very much surprised couple of years ago with [the mechanism project](https://github.com/gabemorris12/mechanism).
+
+Which I finally got the change to write about on [this post](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/).
+
+The project has a great application of Python animations.
+
+That I could not resist to tinker with:
+
+* https://github.com/JAlcocerT/mechanism
+* https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations - Just matplotlib animations for various use cases
+
+
+![Sample animation Gif](/blog_img/dev/503.gif)

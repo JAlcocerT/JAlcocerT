@@ -21,7 +21,17 @@ It was all about to [extract knowledge from Kinddle clippings](https://jalcocert
 
 PDFs are strange files, actually.
 
-Thanks to R Language + Rmd + Latex, creating PDFs is very simple.
+As long as you are confortable with pandoc, you just need a `.md` to create a pdf.
+
+What for? For example, to create a quick hand over document:
+
+```sh
+#git clone https://github.com/JAlcocerT/ourika
+pandoc hand-over.md -o hand-over.pdf
+#cd /home/jalcocert/Desktop && zip -r ourika.zip ourika -x "ourika/node_modules/*" -x "ourika/.git/*"
+```
+
+Thanks to R Language + Rmd + Latex, creating cool PDFs is very simple.
 
 See the source code of the open ebooks Ive created for the docs [here](https://github.com/JAlcocerT/JAlcocerT/tree/master/Z_ebooks)
 
@@ -56,6 +66,34 @@ You could think about using your books as lead magnets:
 
 
 > Consider that there are [interesting tools](https://jalcocert.github.io/JAlcocerT/docs/coolresources/#interesting-webapps) to work with PDFs!
+
+You can also extract information from PDFs with Kreuzberg:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Extract PDF info via Kreuzberg | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+### InfoGraphics
+
+Arent these just PDFs?
+
+Yes, but with a different structure.
+
+That said, you can still do [infographics as code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#infographics-as-a-code)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment" title="Animating yfinance" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="YFinance for Python, cool plots and animations | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/#discrete-to-continuum" title="Track Infographic" image="/blog_img/karting/track_top_curvature_peaks.png" subtitle="Matplotlib x Race track x Curvature | GA Post" >}}
+{{< /cards >}}
+
+<!-- 
+![alt text](/blog_img/karting/track_top_curvature_peaks.png) -->
+
+You can also try with:
+
+* Reportlab as seen on [this video](https://www.youtube.com/watch?v=0SQb__Zrg5Y) https://pypi.org/project/reportlab/
+* Typst
+
 
 ### Epubs
 

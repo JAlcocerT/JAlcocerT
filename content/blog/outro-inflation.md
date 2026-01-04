@@ -21,12 +21,14 @@ This year ive been covering few posts about the job market:
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/" title="Scraping Post 101" image="/blog_img/data-experiments/job-market.png" subtitle="Tinkering on Y2024 with Firecrawl, crawl4AI, ScrapeGraph..." >}}
 {{< /cards >}}
 
+But before going to the details about when, how to apply and so on...
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/when-to-apply-for-a-job/" title="When to apply?" image="/blog_img/memes/oldnewjob.jpg" subtitle="With such setup, you will know when and what to send for each job offer!" >}}
 {{< /cards >}}
 
 
-So, how much will you have to ask to stay as you started the year?
+...how much will you have to ask to stay with the same purchasing power as you started the year?
 
 ## Inflation and Jobs
 

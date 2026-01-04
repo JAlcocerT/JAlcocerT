@@ -1,5 +1,5 @@
 ---
-title: "Optimum Path x Genetic Algorithm"
+title: "Optimum Path x Reinforced Learning"
 #date: 2026-01-25
 date: 2026-01-02
 draft: false
@@ -187,6 +187,12 @@ For **RL**, you would have to build a "Gym Environment"—essentially a mini-gam
 
 ## Conclusions
 
+### Next Steps
+
+1. A desktop app to boundle the best working optimum path seen so far. *And the HUD overlay for the mp4*.
+2. If at some point tinkering with IoT, particularly micro-controllers: to create a DIY GPS module -> ESP32 -> telemetry to box tool. For those going into the race tracks.
+3. To review how good (orhow bad) PhyPhox smartphone GPS sensor info was.
+4. If someone is doing sim-racing and want to share some track - I could see how to tweak the scripts to make it work there
 
 
 ---

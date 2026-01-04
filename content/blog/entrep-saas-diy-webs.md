@@ -1,9 +1,9 @@
 ---
 title: "Attraction Web Offer x Show a Problem"
-date: 2026-01-10T23:20:21+01:00
+date: 2026-01-12T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey"]
-description: 'A scalable way to provide DIY websites. Now with Free Web Audits!'
+description: 'A scalable way to provide DIY websites. With Free Web Audits!'
 url: 'diy-webs-via-paas'
 ---
 
@@ -18,6 +18,8 @@ Time to put those together with a quick WebApp/SaaS to free my time and **enhanc
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
++++ [Gitlab Pages](#what-about-gitlab-pages)
 
 **Intro**
 
@@ -225,37 +227,6 @@ mindmap
 ```
 
 
-### Programmatic Free Audits for Websites
-
-Give me your contact details and I will move the world.
-
-Or in this case: verify your email and select which if these audits you want to perform against your site for free (by default some will be selected).
-
-Ive seen some good examples: https://www.beedigital.es/analisis-seo-gratuito/
-
-
-
-Btw, the **pages speed insights**, can be done via **API**: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
-
-![Checking Google Pages Speed Insights Via API](/blog_img/web/morita-flask/pagespeedinsightapi.png)
-
-Must have also Lighthouse-CI:
-
-Could it also be a check on exposed API endpoints?
-
-At least to have CORS and Rate limiting (?)
-
-Whatever this is...I made it work into a secondary mission.
-
-A side side side project.
-
-I mean...the photo gallery v2 things i was tinkering during xmas *now winter holidays*
-
-It incorporated a programmatic 101 web audit.
-
-do-your-instagram
-POST!!!!!!!!!! and repossss
-
 
 ---
 
@@ -453,3 +424,58 @@ This is a very cool proposal for landing pages see https://plenti.co/themes !
 Keystone helps you build faster and scale further than any other CMS or App Framework. Describe your schema, and get a powerful GraphQL API & beautiful Management UI for your content and data.
 
 > MIT | The superpowered headless CMS for Node.js — built with GraphQL and React 
+
+### What about GitLab Pages?
+
+Hosting a static website can be simple, secure, and cost-effective.
+
+GitLab Pages embodies these qualities by providing developers with a straightforward platform for hosting static sites directly from GitLab repositories.
+
+GitLab Pages is an integrated feature within GitLab that allows users to publish static websites directly from repositories in their GitLab accounts.
+
+It supports various static site generators like Jekyll, Hugo, and others, or simply HTML, CSS, and JavaScript, making it a versatile option for all types of static content.
+
+{{< dropdown title="GitLab: Open Source and Self-Hostable with Docker 🐰" closed="true" >}}
+
+One of the distinguishing features of **GitLab is its open-source nature** and the ability to self-host the platform using Docker.
+
+> You dont need to - but you can go deep the **rabbit hole** and have [full control of Gitlab]
+
+This contrasts significantly with services like GitHub Pages, Firebase, and Cloudflare Pages, where you do not control the underlying infrastructure.
+
+**Key Comparisons:**
+- **Open Source**: GitLab is fully open source, which allows users to inspect, modify, and enhance the source code, providing a level of transparency and customization that is not available in proprietary platforms like Firebase or fully managed environments like GitHub Pages and Cloudflare Pages.
+- **Self-Hosting**: With GitLab, you have the **option to self-host** your entire DevOps platform using Docker. This offers complete control over your data and the infrastructure, which is particularly important for organizations with strict data sovereignty or privacy requirements.
+- **Infrastructure Control**: While platforms like GitHub Pages and Cloudflare Pages offer convenience and ease of use, they do not allow for infrastructure control. This means you rely entirely on their managed services, which can be a limitation if you need more control over performance optimizations, security settings, or compliance measures.
+
+By choosing **GitLab**, you leverage the benefits of an **open ecosystem** and the flexibility to host your own instance, ensuring that you have full authority over your development and hosting environment.
+
+{{< /dropdown >}}
+
+
+Key Features of GitLab Pages
+
+- **Seamless Integration with GitLab**: Directly connect your static site's repository with GitLab Pages for continuous integration and deployment without leaving the GitLab ecosystem.
+- **Custom Domain Support**: Easily connect your custom domain to your GitLab Pages site with the added benefit of free SSL certificates provided by Let's Encrypt.
+- **Automatic HTTPS**: Secure your site by default with HTTPS, enhancing security and trust for your visitors.
+- **CI/CD Pipeline**: Leverage GitLab's powerful CI/CD tools to automate the build and deployment process, ensuring that updates are pushed live with minimal manual intervention.
+- **Free and Unlimited**: Yes, you read that right. GitLab Pages is completely free and offers unlimited bandwidth, so you can focus on building and sharing your projects without worrying about hidden costs.
+
+Getting Started with GitLab Pages
+
+1. **Set Up Your Project**:
+   - Ensure your static site project is hosted in a GitLab repository. If you're using a static site generator, set up your project according to the specific requirements of that generator.
+
+2. **Configure GitLab CI/CD**:
+   - Create a `.gitlab-ci.yml` file in the root of your repository to define the build and deployment process. GitLab Pages integrates with GitLab CI/CD to build and deploy your site whenever you push changes.
+
+3. **Enable GitLab Pages**:
+   - In the project’s settings, navigate to the 'Pages' section to configure and enable GitLab Pages. This will automatically deploy your site to a GitLab subdomain, which you can then link to a custom domain if preferred.
+
+Enhancing Your Static Site with GitLab Pages
+
+GitLab Pages is not just for serving static content. You can enhance site interactivity and functionality using modern web development approaches:
+
+- **Client-Side JavaScript**: Enrich your site with dynamic content and interactive elements using JavaScript frameworks like React or Vue.js.
+- **Third-Party APIs**: Integrate APIs to bring dynamic data into your static site, such as e-commerce platforms, CMSes, or social media feeds.
+- **WebAssembly**: Use WebAssembly for high-performance web applications directly in the browser, which can be hosted as part of your static GitLab Pages site.

@@ -1,10 +1,9 @@
 ---
 title: "Frigate - Cam with object detection"
-date: 2030-01-21T23:20:21+01:00
-draft: true
-tags: ["Dashboards","Docker","Self-Hosting"]
+date: 2026-09-21T23:20:21+01:00
+draft: false
+tags: ["Dashboards","NVR","Self-Hosting","Pi-Camera"]
 description: ''
-summary: '.'    
 url: 'selfhosting-frigate'
 ---
 
@@ -14,7 +13,7 @@ If you like computer vision and homelabs, you will enjoy this one :)
 
 **Intro**
 
-The computer vision is an interesting topic that I have just tinkered superficially:
+The **computer vision** is an interesting topic that I have just tinkered superficially:
 
 * With plain python on [this repo](https://gitlab.com/fossengineer1/cv) and with the DJI Dron on this one: [DJI Tello Python](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/)
 

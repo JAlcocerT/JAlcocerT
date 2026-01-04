@@ -291,7 +291,7 @@ git clone https://github.com/JAlcocerT/jira-datamodel
 
 > Apache v2 | A powerful tool that leverages multimodal large language models to transcribe PDF files into Markdown format.
 
-15. https://github.com/Goldziher/kreuzberg ✅✅✅ Works locally via container exposing an API, very fast, no LLM Keys
+15. https://github.com/Goldziher/kreuzberg ✅ **Works locally** via container exposing an API, very fast and **no LLM Keys** ✅✅
 
 ```sh
 #cd z-kreuzberg

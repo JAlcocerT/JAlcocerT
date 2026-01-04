@@ -2,7 +2,7 @@
 title: "Analyzing your Sport Performance with Python and Polar data"
 date: 2023-02-26T23:20:21+01:00
 draft: false
-tags: ["Python","Trip-Planner"]
+tags: ["Python","Trip-Planner","GPX"]
 cover:
     image: "https://socialify.git.ci/JAlcocerT/Py_RouteTracker/image?language=1&name=1&owner=1&theme=Auto" # image path/url    
     alt: "Python Polar Analysis" # alt text
@@ -18,10 +18,10 @@ The experience was much better than I could have thought, so right now I am plan
 
 The preparation for such trip needs to start months before the event.
 
-So I decided to get one Polar HR monitor and play a little bit with the data that its recorded during the routes:
+So I decided to get a **Polar HR monitor** and play a little bit with the data that its recorded during the routes.
 
 {{< callout type="info" >}}
-* See the Project: https://github.com/JAlcocerT/Py_RouteTracker
+See the Project: https://github.com/JAlcocerT/Py_RouteTracker
 {{< /callout >}}
 
 ### Tracking your Heart Rate
@@ -50,3 +50,5 @@ If you have a Google account, you can run this code by uploading the `.GPX` file
 * GPX studio:
     * https://www.roadrunner.travel/articles/how-to-create-and-edit-gpx-files-with-gpx-studio/
     * https://github.com/mpetazzoni/leaflet-gpx
+
+Need a web app? Go From Streamlit to Chainlit / Gradio: https://pypi.org/project/gradio/

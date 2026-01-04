@@ -447,7 +447,7 @@ People do all sort of creative stuff around PDF: https://github.com/domdomegg/pd
 
 #### You can do what with PDF?
 
-Not only you can extract PDF info to txt or create PDFs in many ways, like with R language.
+Not only you can extract PDF info to txt or create PDFs in many ways - *Like with the R language*.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Extract PDF info via Kreuzberg | Docker Config 🐋 ↗" >}}
