@@ -89,14 +89,18 @@ https://www.youtube.com/watch?v=TiQEElXyY2w
 
 ### Optimum Path
 
-If you know a circuit's geometry, why not estimating the best path for a given kart to go for thos hot laps?
-
+If you know a **circuit's geometry**, why not estimating the best path for a given kart to go for those hot laps?
 
 <!-- ![IoRacing IoTechCrafts IoTrack](/blog_img/web/WebsSnapshots/web_ioracing.png) -->
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/kart-optimum-path" title="Optimum Path | part 1" image="/blog_img/data-experiments/kart/optimum-path.png" subtitle="Mass Point Model + G-circle" >}}
 {{< /cards >}}
+
+{{< youtube "zm0OJcpuLV8" >}}
+
+
+This is also a chance to try more complex algorithm: 
 
 ### Optimum Gears
 

@@ -9,9 +9,26 @@ url: 'reinforce-learning-racing-simulator'
 math: true
 ---
 
+**Tl;DR**
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 
-**INtro**
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Py Route Tracker ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
+{{< /cards >}}
+
+<!-- 
+https://youtu.be/-fY5OpiBNjI
+-->
+
+{{< youtube "-fY5OpiBNjI" >}}
+
+
+**Intro**
 
 To compare **Genetic Algorithms (GA)** and **Reinforcement Learning (RL)** for your karting project, it helps to see them as two different ways to solve the same mystery: **"What is the fastest way around this track?"**
 
@@ -101,8 +118,6 @@ The RL agent doesn't need a "script" of the lap. It needs to know its **State** 
 
 **Do you need "Training Data" for RL?**
 No. Unlike a typical AI that learns from photos, an RL agent learns by **interacting** with your physics engine. You don't give it a log of a pro driver; you give it a **Reward Function** (e.g., `+1` point for every meter traveled, `-100` points for hitting a wall).
-
----
 
 ### 3. Summary of "Inputs"
 

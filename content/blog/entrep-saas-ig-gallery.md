@@ -1,5 +1,5 @@
 ---
-title: "Photo Gallery with...admin"
+title: "Photo Gallery with...Admin (?)"
 date: 2026-01-03T20:20:21+01:00
 #date: 2025-12-25T08:20:21+01:00
 draft: false
@@ -13,9 +13,17 @@ url: 'do-your-instagram'
 
 A better [entreagujaypunto v1](https://github.com/JAlcocerT/EntreAgujayPunto) vibe coded from scratch with NextJS and potentially to be used from anyone via my PaaS offering.
 
++++ FREE [Web Audits!](#web-audits)
+
 **Intro**
 
-Lets go straight to the point:
+Lets go straight to the point: *this will be all about 2 repos*
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/entreagujaypunto-next-gallery" title="EAyP v2a Next Gallery ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/entreagujaypunto-astro-payload" title="EAyP v2b Astro Gallery ↗" icon="github" >}}
+{{< /cards >}}
 
 ```md
 lets start the development and add the comments when each of them will be done and tested (when this is all finished, lets create a z-walkthrough.md with how to run the project)
@@ -123,7 +131,7 @@ make up-portainer
 
 ## Conclusions
 
-Ive learnt a couple of things with this one:
+**Ive learnt** a couple of things with this one:
 
 1. [ISR](#going-isr) caching issue - Changed homepage to dynamic rendering to prevent build-time pre-rendering errors
 2. [IMGProxy](#cloudinary-vs-imgproxy)
@@ -239,7 +247,9 @@ If you were building a site where you only added photos by changing the code you
 
 #### Going ISR
 
-Choosing Next.js is a smart move for this specific project. While Astro is faster for static content, Next.js is a **web application framework** that makes building your "Editor" and handling secure uploads much more seamless.
+Choosing Next.js is a smart move for this specific project. 
+
+While Astro is faster for static content, Next.js is a **web application framework** that makes building your "Editor" and handling secure uploads much more seamless.
 
 To answer your question: **Yes, it will be SSR** (or more accurately, a hybrid), and the authentication can be exactly as "hardcoded and top-notch" as you described.
 

@@ -377,7 +377,7 @@ I have [vibe coded](https://jalcocert.github.io/JAlcocerT/vide-coding/#windsurf)
 It's the **3 body problem**, baby!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Three Body Repo" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask and ChartJS + WS + sensors | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/" title="Three Body x Flas" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask web app 101 | Blog Post" >}}
   {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
 {{< /cards >}}
 

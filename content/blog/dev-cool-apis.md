@@ -376,9 +376,12 @@ curl "https://api.openf1.org/v1/laps?session_key=9161&driver_number=63&lap_numbe
 
 ## Social Media APIs
 
+
+Everyone has the potential to sell information / create an audience as long as they understand **programmatic content creation**.
+
 ### Twitter
 
-Some years back, I was pulling tweets and later applying the detoxify models on it.
+Some years back, I was pulling tweets and later applying the [detoxify NLP model](https://jalcocert.github.io/JAlcocerT/nlp-tools/#name-entity-recognition) over them.
 
 * https://docs.x.com/overview
 
@@ -494,7 +497,6 @@ And add `x-gen-ui:5088` to `grow.libreportfolio.fyi`
 Then, each generation goes to `https://grow.libreportfolio.fyi/preview/06cbbc68a88b` and 4 graphs are uploaded with the comment.
 
 
-
 ### Threads
 
 The Threads API by Meta has specific limits designed to control usage and maintain platform integrity. 
@@ -536,7 +538,6 @@ If the [formula 1 data](#formula-1) was not enough:
 4. https://github.com/hotheadhacker/no-as-a-service
 
 > No-as-a-Service (NaaS) is a simple API that returns a random rejection reason. Use it when you need a realistic excuse, a fun “no,” or want to simulate being turned down in style.
-
 
 
 ## Checking APIs

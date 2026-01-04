@@ -234,20 +234,46 @@ can find out existing interfac
 
 13. Mechanisms reloaded. *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) back in place*
 
-https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code
-
-![Matplotlib GIF Animation of a mechanism](/blog_img/mechanics/fourbarlinkage.gif)
+Simulations are back.
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/chaos-theory-and-the-double-pendulum-with-python/" title="Double Pendulum Repo" image="https://raw.githubusercontent.com/JAlcocerT/Py_Double_Pendulum/main/Z_Outro/DoublePendulum.gif" subtitle="Python Double Pendulum" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+
+And not only for mechanism.
+
+14. Racing *best lap* optimizer / simulator.
+
+It all started with the *Optimum Path* Idea.
+
+Then I put together a repo that leveraged the existing Go Pro extraction / overlays to get the circuit path.
+
+And tinkered with few algorithms to optimize the path: minimum curvature (obviously not the fastest), a GD with a mass point model that brought very interesting results, plus the Genetic Algorithm and Reinforced Learning (for fun!).
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Py Route Tracker ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
+{{< /cards >}}
+
+Surprise, surprise: simple mode + realistic assumptions wins the day
+
+{{< youtube "zm0OJcpuLV8" >}}
+
 
 14. Twitter / X powered by pystocks / stonks / libreportfolio.
 
+The continuation of the [programmatic Twitter API interaction](https://jalcocert.github.io/JAlcocerT/interesting-apis/#twitter): `http://x-api-tweet-creator:5000`, graficas...Data In Motion etc
 
-The continuation of `http://x-api-tweet-creator:5000`, graficas...Data In Motion etc
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/LibrePortfolio-X" title="LibrePortfolio Twitter/X ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="DataInMotion ↗" icon="github" >}}
+{{< /cards >}}
 
 ![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 

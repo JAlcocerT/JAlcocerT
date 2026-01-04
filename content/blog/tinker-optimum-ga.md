@@ -267,6 +267,12 @@ This is a fundamental physics difference - it models power-limited acceleration 
 >  A new, customizable Arduino NMEA parsing library 
 
 
+
+https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code
+
+![Matplotlib GIF Animation of a mechanism](/blog_img/mechanics/fourbarlinkage.gif)
+
+
 ---
 
 ## FAQ
