@@ -5,6 +5,11 @@ description: 'Career tools and recap. From self-learning to D&A '
 url: 'career'
 ---
 
+
+Enough [Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) and [R](https://jalcocert.github.io/JAlcocerT/useful-r-stuff/).
+
+Can you actually build a career and be useful, solve problems with those analytical skills?
+
 <!-- 
 deeper Power BI expertise, particularly in BI semantic model design and self-service analytics. 
 -->
@@ -13,23 +18,6 @@ deeper Power BI expertise, particularly in BI semantic model design and self-ser
 MMM marketing analytics 
 -->
 
-
-<!-- * My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) -->
-
-
-<!-- # The ML Guide -->
-<!-- 
-https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.18371&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false -->
-
-<!-- 
-Basic understanding of Supervised, Unsupervised and Reinforcement ML.
-Basic understanding of Location, Spread, Assymetry, Concentration, Dependence measures.
-Basic understanding of Hypothesis testing (confidence interval, Type 1 and Type 2 errors, Null hypothesis, significance level and p-value). 
-Basic understanding of Classification, Regression and Clustering tasks in ML. -->
-<!-- 
-Ability to list use cases for Hypothesis testing.
-Ability to list use cases for Classification, Clustering, Regression, their benefits, pros and cons.
-Ability to list use cases for Supervised and Unsupervised ML methods, compare them. -->
 
 <!-- 
 <https://youtu.be/OwZHNH8EfSU?t=14314> -->
@@ -468,6 +456,22 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 {{< /cards >}}
 
 
+My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) 
+
+The ML Guide
+
+* https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.18371&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false 
+
+Basic understanding of Supervised, Unsupervised and Reinforcement ML.
+Basic understanding of Location, Spread, Assymetry, Concentration, Dependence measures.
+Basic understanding of Hypothesis testing (confidence interval, Type 1 and Type 2 errors, Null hypothesis, significance level and p-value). 
+Basic understanding of Classification, Regression and Clustering tasks in ML. 
+Ability to list use cases for Hypothesis testing.
+Ability to list use cases for Classification, Clustering, Regression, their benefits, pros and cons.
+Ability to list use cases for Supervised and Unsupervised ML methods, compare them.
+
+
+
 {{< details title="Some examples of tasks and skills in machine learning/DSc, along with how you could demonstrate them using Python and popular libraries 📌" closed="true" >}}
 
 
@@ -629,4 +633,9 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 
 Tired of being an ,IC', aka *individual contributor* or the politics around managerial roles?
 
-Find clients that need your expertise, build with your knowledge and help others on your own way.
+Find clients that need your expertise, build with your knowledge and help others on **your own way**.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}

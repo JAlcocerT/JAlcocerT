@@ -63,6 +63,13 @@ Now, the epub files are closer to htmls than we might expect.
 
 And IMO they are trickier to create compared to PDFs.
 
+### Web/ooks
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="From blogs/docs to web ebooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web/book and also downlodable as PDFs" >}}
+{{< /cards >}}
+
 
 ## Tools for Writters
 

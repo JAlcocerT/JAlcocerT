@@ -267,10 +267,14 @@ This is a fundamental physics difference - it models power-limited acceleration 
 >  A new, customizable Arduino NMEA parsing library 
 
 
+Put together at some point this year the MBSD simulator for good. Cool animations and mechanism synthesis *coming up?*
 
-https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Animations as a Code | Post" image="/blog_img/mechanics/fourbarlinkage.gif" subtitle="Mechanism Animation" >}}
+{{< /cards >}}
 
-![Matplotlib GIF Animation of a mechanism](/blog_img/mechanics/fourbarlinkage.gif)
+<!-- 
+![Matplotlib GIF Animation of a mechanism](/blog_img/mechanics/fourbarlinkage.gif) -->
 
 
 ---

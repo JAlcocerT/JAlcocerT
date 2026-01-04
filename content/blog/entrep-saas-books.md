@@ -313,6 +313,12 @@ See... `Z_ebooks/BiP-ebook.md`
 
 This is it *for now*.
 
+From blogs, to docs, to knowledge in ebooks / webooks.
+
+```sh
+git clone https://github.com/JAlcocerT/1ton-ebooks.git
+```
+
 A better structured *,passive'* service offering.
 
 {{< cards >}}

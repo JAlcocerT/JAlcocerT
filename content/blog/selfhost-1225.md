@@ -136,13 +136,10 @@ Direct, built-in support in major SSGs is less common, but you can usually achie
 
 > Free and Self-Hosted Server Management Tool 
 
-* The PaaS ones:
-
-https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/
+* The PaaS ones: https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/" title="DokPloy x VPS" image="/blog_img/selfh/umbrel-os/umbrel-apps.png" subtitle="Using UmbrelOS as Container to selfhost apps" >}}
-  {{< card link="https://github.com/JAlcocerT/1toN-ebooks" title="Coolify x Pi" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web/book and also downlodable as PDFs" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/" title="DokPloy x VPS | Nov 25" image="/blog_img/selfh/umbrel-os/umbrel-apps.png" subtitle="Using UmbrelOS as Container to selfhost apps" >}}
 {{< /cards >}}
 
 ---
