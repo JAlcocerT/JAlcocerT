@@ -2,7 +2,7 @@
 title: "How about getting leads for your SaaS?"
 date: 2026-01-08T11:20:21+01:00
 draft: false
-tags: ["BiP","APIFY x Sales Pipeline","RoadMap26"]
+tags: ["BiP","APIFY x Sales Pipeline","Web Scrapping","RoadMap26"]
 description: 'Finding people that actually need your services'
 url: 'how-to-get-customers-programmatically'
 ---
@@ -46,3 +46,31 @@ Like the ones you will be generating after getting leads right for your SaaS by 
 ## Conclusions
 
 This is all from the start doing goal for this year: *Go all-in to find new clients*
+
+
+
+
+---
+
+## FAQ
+
+ https://github.com/browser-use/browser-use
+
+>  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
+
+See also:
+
+1. LangChain Web Scrapping
+
+2. Browserless
+
+* https://github.com/browserless/browserless
+
+>  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
+
+summary: 'Crawl4AI is an open-source web crawler and scrapper tailored for LLMs and AI applications. It offers asynchronous crawling, data extraction, and various features for enhanced performance and scalability.'
+
+* https://github.com/saifyxpro/HeadlessX
+
+> MIT |  A lightweight, self-hosted headless browser automation platform. Designed as an alternative to Browserless, built for speed, privacy, and scalability. 
+

@@ -1,6 +1,6 @@
 ---
 title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
-date: 2026-01-05T23:20:21+01:00
+date: 2026-01-07T23:20:21+01:00
 #date: 2025-12-20T23:20:21+01:00
 draft: false
 tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story 1"]
@@ -77,10 +77,7 @@ It all started with the QnA of streamlit over property data on `.md` files.
 
 and the chat with a DB via LangChain.
 
-{{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-{{< /cards >}}
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="NEW - Real Estate BluePrint - Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Real Estate Web/App + Bot/RAG + Editor + Calculator" >}}
@@ -200,6 +197,10 @@ Then, I just...**simplified via vibe coding** with a simple http basic auth inst
 
 I deployed to my x300 as seen on [this section](#dream-calculator-x-chartjs).
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="Real Estate x Astro x ChatBot ↗" icon="github" >}}
+{{< /cards >}}
+
 How It All Works Together:
 
 **Vite's Role:**
@@ -230,7 +231,7 @@ How It All Works Together:
 
 Its crazy that one year ago it took me...a weekend to put together the streamlit/flet equivalent to this.
 
-And now in 2/3h you get the cool website UI, its editor and the real estate french amortization logic working....with the chatbot and the scrapper.
+And now **in 2/3h** you get the cool website UI, its editor and the real estate french amortization logic working....with the chatbot and the scrapper.
 
 Again: CRAZY.
 

@@ -13,83 +13,22 @@ url: 'tech-recap-2026'
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
-* https://github.com/leoneljdias/tempo
-
-> MIT | Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
-
-software product development, digital platform engineering,
-
-https://nav.al/feedback
 
 
-
-https://free-for.dev/#/
-
-https://freestuff.dev/alternative/clerk/
-
-
-Comercial ones like: `https://www.lindy.ai/pricing`
-
-* https://github.com/browser-use/browser-use
-
->  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
-
-See also:
-
-1. LangChain Web Scrapping
-
-2. Browserless
-
-* https://github.com/browserless/browserless
-
->  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
-
-summary: 'Crawl4AI is an open-source web crawler and scrapper tailored for LLMs and AI applications. It offers asynchronous crawling, data extraction, and various features for enhanced performance and scalability.'
-
-* https://github.com/saifyxpro/HeadlessX
-
-> MIT |  A lightweight, self-hosted headless browser automation platform. Designed as an alternative to Browserless, built for speed, privacy, and scalability. 
-
-https://www.youtube.com/watch?v=L2Ya9PYNns8
-
-> CodexCLI for idea validation?
+Software product development, digital platform engineering, ...
 
 
 ## Inspiring Apps
 
 Inspiring apps: all those pwa like that just...work
 
-https://bentopdf.com/index.html
-docuseal
-it-tools
-vert - https://jalcocert.github.io/JAlcocerT/wasm/
-pairdrop...
+* https://bentopdf.com/index.html
+* Docuseal
+* it-tools
+* Vert - https://jalcocert.github.io/JAlcocerT/wasm/
+* Pairdrop...
 
-BiP user flows around newsletter layers
-
-<!--
-
-<https://www.futuretools.io/>
-
-<https://github.com/beyondcode/writeout.ai>
-
-* https://github.com/Significant-Gravitas/Auto-GPT
-
-> AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. 
-
-<https://docs.agpt.co/setup/>>
-
-<https://ugeek.github.io/blog/post/2023-04-06-listado-de-webs-de-ia-para-busquedas-desarrollo-y-productividad.html> 
-
--->
-
-
-
-* with react (v1) as per astro project: https://github.com/gio-del/Astro-Theme-Astroway
-* with embla - v2
-    * https://www.embla-carousel.com/
-    * https://github.com/davidjerleke/embla-carousel
-
+How about building like they've done?
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
@@ -97,10 +36,14 @@ BiP user flows around newsletter layers
 {{< /cards >}}
 
 
-1. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code `.mdx`
-
 
 ### Curated Posts / Videos
+
+AI...employees?
+
+Comercial ones like: `https://www.lindy.ai/pricing`
+
+So try to build a brand *before its too late*.
 
 D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
@@ -108,18 +51,28 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
 {{< /cards >}}
 
+
+
+0. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code `.mdx`
+
+0. BiP user flows around newsletter layers
+
 0. Creating D&A Reports with AI
 
 0. Embeded Chatbots for a business website x [Business Knowledge Base setup](https://jalcocert.github.io/JAlcocerT/custom-bots-kb/)!.
 
 0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/). Success Story 1.
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/custom-re-rag" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="Real Estate x Astro x ChatBot ↗" icon="github" >}}
+{{< /cards >}}
+
 0. I did not know that **creating an/N ebook/s** was that simple.
 
 The captured knowledge on these posts into ebooks anyone can use for quick DIY.
 
 One of the start doing goals from last year.
-
 
 * https://www.amazon.es/sendtokindle
 
@@ -136,31 +89,38 @@ One of the start doing goals from last year.
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
-0. Blogspot vs Wordpress Migrations and Free web Audits
+0. IoDoctor reloaded
+
+* with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
+can find out existing interface
+
+0. Blogspot vs Wordpress Migrations and Free web Audits around a PaaS Website Hosting.
 
 0. Restaurant SaaS: aka Multi tenant Astro Apps with protected routes
-
-
-
-1. Weddings and ads 101.
-
-![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
-
-
-2. About Posthog: Post an ebook page post on IG, then web session will be recorded and a YT video can be made out of that
-
-3. How to create a **waiting list** to test your ideas + ListMonk + SMTP - Share on ig too.
-
-* https://jalcocert.github.io/JAlcocerT/link-artists/#waiting-list-for-products
 
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
+1. Weddings and ads 101.
+
+![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
+
+2. About Posthog: Post an ebook page post on IG, then web session will be recorded and a YT video can be made out of that
+
+3. How to create a **waiting list** to test your ideas + ListMonk + SMTP - Share on ig too.
+
+It was a continuation of [this section for artists](https://jalcocert.github.io/JAlcocerT/link-artists/#waiting-list-for-products) 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/" title="DIY Landing BoilerPlate ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/diy-landing-boilerplate" title="DIY Landing BoilerPlate Repo ↗" icon="github" >}}
+{{< /cards >}}
+
 4. Status Pages for services: Kener / UptimeKuma. 
 
-SLA matters: https://jalcocert.github.io/JAlcocerT/link-artists/#status-pages
+SLA matters and [some people need that status pages](https://jalcocert.github.io/JAlcocerT/link-artists/#status-pages) or the information tat it exists.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
@@ -179,6 +139,11 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
 
 > But if someone is not paying 10$/m to a company, guess how much is willing to pay you :)
 
+{{< cards >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
+
 7. Boiler plate / blueprint for vibe coders: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
 
 {{< cards >}}
@@ -187,7 +152,6 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
 {{< /cards >}}
 
 8. Proper CI/CD for streamlit Web Apps. [Success Story 2 + Hospital D&A](https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics).
-
 
 9. Authentication Post: *flowing directly to BiP*
 
@@ -203,7 +167,7 @@ Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#c
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-10. Embeded Analytics with Graphic Walker
+10. Embeded Analytics with Graphic Walker:
 
 * https://github.com/Kanaries/graphic-walker
 
@@ -217,35 +181,28 @@ Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#c
 ![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) 
 
 {{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/BI/#custom-bi-tools" title="BI | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
 11. Geolocation - GEOSPATIAL DATA RECAP [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/).
 
 {{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Py Route Tracker ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
 {{< /cards >}}
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/#geo-data" title="Geo | Docs ↗" >}}
 {{< /cards >}}
 
-
-12. IoDoctor reloaded
-
-* with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
-can find out existing interfac
-
 13. Mechanisms reloaded. *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) back in place*
 
 Simulations are back.
 
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
-
 
 And not only for mechanism.
 
@@ -355,6 +312,11 @@ xargs -0 awk '
 
 1. Choose your hard
 2. 
+
+#### Interesting Posts
+
+* https://nav.al/feedback
+
 
 ### For Next year...
 

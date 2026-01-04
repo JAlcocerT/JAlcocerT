@@ -23,6 +23,7 @@ Just use [diagrams](https://jalcocert.github.io/JAlcocerT/docs/coolresources/dia
 
 * https://free-for.dev/#/
   * https://github.com/ripienaar/free-for-dev
+* https://freestuff.dev/alternative/clerk/
 
 Try new desktop [apps for your linux system](https://jalcocert.github.io/Linux/docs/debian/) and install them via:
 

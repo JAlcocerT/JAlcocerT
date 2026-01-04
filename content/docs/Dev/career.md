@@ -40,13 +40,24 @@ As someone said: *we can just trace the dots backwards*.
 
 For the ones that would like to share their experience, [creating and publishing an ebook](https://jalcocert.github.io/JAlcocerT/cool-ebooks/) is quite **simple**.
 
-So is preparing your **CV and your interviews**:
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="DWY Consulting" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
+So is preparing your **CV and your interviews**:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
   {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CVs as a Code. Application Job History and Historieta" >}}
 {{< /cards >}}
+
+
+A team member can deliver great results given the proper workload.
+
+* Options -> Things and not controlable
+* Choices -> Actions and are controlable
+
 
 ---
 

@@ -14,8 +14,6 @@ You should probably know the WHY you are going somewhere first.
 
 This will just reply to the where/how.
 
-
-
 **Intro**
 
 Following the TripPlanner, I thought that bringing cost of living data was a good idea.
@@ -85,3 +83,7 @@ I got to know that something similar exists: https://nomads.com/ from cool solop
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trip" title="Selfhostable Trip | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+* https://github.com/leoneljdias/tempo
+
+> MIT | Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 

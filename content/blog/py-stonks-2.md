@@ -181,8 +181,11 @@ Building a **proper data foundation is key** for such projects: *get a proper da
 
 ```sh
 git clone https://github.com/jlleongarcia/PyStocks
-cp env.example .env
+cp .env.example .env
 make up
+#docker stop $(docker ps -a -q) #stop all
+#docker system df
+#docker system prune -a --volumes -f
 ```
 
 ![Django Web App - Stocks](/blog_img/apps/django-pystocks-cerdos.png)

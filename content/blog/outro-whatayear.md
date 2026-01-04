@@ -363,6 +363,14 @@ streamlit run Z_ST_AIssistant_v1.py
   * Groq: LLama3 / 3.1 / 3.2 models are really good!
 * Made another test to the latest T2I (text 2 image) models
   * https://jalcocert.github.io/JAlcocerT/stable-difussion-free-generation/
+* https://github.com/Significant-Gravitas/Auto-GPT
+
+> AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. 
+
+
+* <https://www.futuretools.io/>
+* <https://docs.agpt.co/setup/>
+* <https://ugeek.github.io/blog/post/2023-04-06-listado-de-webs-de-ia-para-busquedas-desarrollo-y-productividad.html> 
 
 {{% /steps %}}
 

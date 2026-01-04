@@ -311,14 +311,9 @@ See... `Z_ebooks/BiP-ebook.md`
 
 ## Conclusions
 
+This is it *for now*.
 
-* Options -> Things and not controlable
-* Choices -> Actions and are controlable
-
-A team member can deliver great results given the proper workload.
-  
-
-
+A better structured *,passive'* service offering.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/boilerplate" title="NEW - BoilerPlate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Vibe Coding Templates for enhanced DIY " >}}
@@ -327,8 +322,8 @@ A team member can deliver great results given the proper workload.
 
 These are deployed at:
 
-* https://ebooks.jalcocertech.com - If you have some idea and dont know how to start creating it, this is for you
-* https://boilerplate.jalcocertech.com - If you are creating and want to do it faster, this is for you
+* https://ebooks.jalcocertech.com - If you have some idea and **dont know how to start** creating it, this is for you
+* https://boilerplate.jalcocertech.com - If you are creating and want to **do it faster**, this is for you
 
 
 * https://nav.al/read

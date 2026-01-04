@@ -61,3 +61,10 @@ That was based on OpenAI keys, see : https://github.com/JAlcocerT/Streamlit-Mult
 ## S2T / Transcription
 
 See also: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py
+
+## Other OSS Audio Apps
+
+
+* https://github.com/beyondcode/writeout.ai
+
+> MIT |Transcribe and translate your audio files - for free

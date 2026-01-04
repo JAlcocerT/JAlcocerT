@@ -415,6 +415,13 @@ So...decided to try with [CF R2, as preparation](https://github.com/JAlcocerT/en
 
 ## FAQ
 
+I saw a couple interesting astro themes:
+
+* With react (v1) as per astro project: https://github.com/gio-del/Astro-Theme-Astroway
+* With embla - v2
+    * https://www.embla-carousel.com/
+    * https://github.com/davidjerleke/embla-carousel
+
 ### Web Audits
 
 #### Lighthouse
