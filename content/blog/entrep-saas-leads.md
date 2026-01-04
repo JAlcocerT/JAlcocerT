@@ -1,6 +1,6 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-04T23:20:21+01:00
+date: 2026-01-08T11:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x Sales Pipeline","RoadMap26"]
 description: 'Finding people that actually need your services'
@@ -39,3 +39,10 @@ Like the ones you will be generating after getting leads right for your SaaS by 
 > Dont blame them, they deserve such lifestyle
 
 > > PS: in their eyes, you dont :)
+
+
+--- 
+
+## Conclusions
+
+This is all from the start doing goal for this year: *Go all-in to find new clients*

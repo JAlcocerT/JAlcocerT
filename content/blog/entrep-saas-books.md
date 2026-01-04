@@ -1,6 +1,6 @@
 ---
 title: "We/Books BoilerPlate"
-date: 2026-01-04T08:20:21+01:00
+date: 2026-01-05T07:20:21+01:00
 #date: 2025-12-27T23:20:21+01:00
 draft: false
 tags: ["Info Products","1toN ebooks x BiP","SaaS vs LifeTime Products","RoadMap26"]

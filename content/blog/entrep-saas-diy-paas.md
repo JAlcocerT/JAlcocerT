@@ -1,6 +1,6 @@
 ---
 title: "Making an enhanced DIY offering via PaaS"
-date: 2026-01-04T09:20:21+01:00
+date: 2026-01-07T09:20:21+01:00
 draft: false
 tags: ["DIY Platform Service","RoadMap26","Postgres"]
 description: 'A platform service offering for B2C to get up to speed with services that dont require any customization.'
@@ -56,6 +56,8 @@ The **launch strategy**: *aka, focus strategy*
 
 The **Tier of Service**: DIY (1b - *leverages on tech*)
 
+The **Lead Magnet**: get a FREE web audit *leveraging the discoveries done [here](https://jalcocert.github.io/JAlcocerT/do-your-instagram/#web-audits)*
+
 The **tech stack**: 
 
 | Requirement | Specification | Clarification / Decision |
@@ -95,6 +97,20 @@ To *hopefully* move away from "selling time" (which caps your income) to "sellin
 ---
 
 ## Conclusions
+
+
+### 1 - Stopping Low value commitments
+
+From the [stop doing](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#stop-doing) section for this year: *For the hard to sell people: it needs to be fully scalable or nothing - accounting for my opportunity cost. *
+
+```sh
+git clone https://github.com/JAlcocerT/ourika
+#whois guideventuretour.com | grep -i -E "(creation|created|registered)"
+#cerated a hand-over.md
+pandoc hand-over.md -o hand-over.pdf
+#cd /home/jalcocert/Desktop && zip -r ourika.zip ourika -x "ourika/node_modules/*" -x "ourika/.git/*"
+```
+
 
 
 ---

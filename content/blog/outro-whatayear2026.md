@@ -116,6 +116,11 @@ D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
 0. I did not know that **creating an/N ebook/s** was that simple.
 
+The captured knowledge on these posts into ebooks anyone can use for quick DIY.
+
+One of the start doing goals from last year.
+
+
 * https://www.amazon.es/sendtokindle
 
 > Want a website? DIY your own with this free ebook when subscribed / DWY with consulting / contact for a DFY.
@@ -350,6 +355,41 @@ xargs -0 awk '
 
 1. Choose your hard
 2. 
+
+### For Next year...
+
+
+#### Keep Doing
+
+1. Vibe Coding and BiP
+2. Sharing what I know with people around me. In person.
+3. Slowly getting better at action cam videos and ffmpeg / kdenlive. *Just for fun.*
+
+5. Reading from time to time, people that inspires
+
+* https://www.randomgarage.com
+* https://www.nickgracilla.com/posts/year-in-review-template/
+* https://blog.cavelab.dev/2022/01/a-person-that-writes/
+
+* https://selfhosted.show
+* https://selfh.st/
+
+6. Keep writting, but less and MORE QUALITY: < 2/week **AND <60/year**
+
+#### Stop Doing
+
+1. Opening more and more a shallow tech stack. *12/24 <<<170+ yearly posts on this blog should be more than enough*
+2. Keeping 50+ tabs on chrome. *Not watching content on the phone and commet for summaries should help*.
+4. Stop building w/o a focus strategy, like with **random avatars** - Like I did In the AIssistant example
+
+#### Start Doing
+
+1. Promoting what I do via youtube/jalcocertech.com/fossengineer. *Curated niche posts, expanding knowledge I already gained here*
+2. Share interesting animations as a code on reddit/twitter/youtube/whatever forums. Its not ycombinator, nor producthunt but its sth
+2. x30>x24 youtube tech videos, more elaborated, *probably without AI voice*
+3. Go all-in to find new clients
+4. Not scalable but clients want it? Sell w high gross margin to the ones who can benefit
+
 
 #### Discovery of the Years
 

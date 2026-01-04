@@ -46,7 +46,7 @@ While playing very well with SSGs like Astro, unlike Flask or Django.
 Now, Im going to take back the collaboration with my friend: btw, he is a [PDH](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/).
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/py-stonks-cerdos" title="NEW PyStonks Cerdos Version" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code" >}}
+  {{< card link="https://github.com/JAlcocerT/py-stonks-cerdos" title="NEW PyStonks 🐷 Version" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code" >}}
   {{< card link="https://github.com/JAlcocerT/R_Stocks" title="RStocks" image="https://github.com/JAlcocerT/R_Stocks/raw/main/Z_Sample_Data/DividendGrowth.jpeg" subtitle="Source Code of the good old R_Stocks WebApp with Shiny" >}}  
 {{< /cards >}}
 
@@ -174,24 +174,34 @@ It offers a lightweight interface for extracting data from REST APIs, SQL databa
 
 ## Conclusions
 
-Building a **proper data foundation is key** for such projects.
+Building a **proper data foundation is key** for such projects: *get a proper data model, then build on top of it*
 
-Then, use streamlit to make quick visuals and layouts for a PoC.
+* https://github.com/jlleongarcia/PyStocks
+* https://github.com/JAlcocerT/py-stonks-cerdos
 
-To make it look cooler, vibe code as per those guidelines using any webapp [backend framework](https://jalcocert.github.io/JAlcocerT/backend-alternatives/) from Python or NextJS.
+```sh
+git clone https://github.com/jlleongarcia/PyStocks
+cp env.example .env
+make up
+```
+
+![Django Web App - Stocks](/blog_img/apps/django-pystocks-cerdos.png)
+
+Use streamlit to make quick visuals and layouts for a PoC.
+
+To make it look cooler, vibe code as per those guidelines using any webapp [backend framework](https://jalcocert.github.io/JAlcocerT/backend-alternatives/) from Python frameworks like Django/Flask/... or NextJS if you are a web dev.
 
 If you need a proper finance tool, see: https://www.perplexity.ai/finance/XOM?comparing=CVX&period=1y
 
 Before going to `https://www.interactivebrokers.ie/sso/Login?RL=1&locale=en_US` or `https://www.xtb.com/es` :)
 
-
 > Having the possibility to export data from famous brokers, get it cleaned automatically and have your portfolio visualized can be great
-
-
 
 {{< callout type="warning" >}}
 You could also keep it simple and just use existing tools like https://www.perplexity.ai/finance/JNJ/financials
 {{< /callout >}}
+
+### About Debt
 
 **Debt is a thing**:
 
@@ -232,9 +242,8 @@ With matplotlib you can do such cool custom graphs: *they wont be interactive th
 
 ![Survivorship bias with a dividend stock that broke its dividend increase track record](/blog_img/data-experiments/MMM_dividends_pct_12m.png)
 
-https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment
-
-https://plotly.com/python/horizontal-bar-charts/
+* https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment
+* https://plotly.com/python/horizontal-bar-charts/
 
 Diverging Bar (or Butterfly) Chart and Bar Chart with Line Plot
 

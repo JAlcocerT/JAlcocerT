@@ -1,6 +1,6 @@
 ---
 title: "Streamlit x GHCR x CI/CD"
-date: 2026-01-04T13:20:21+01:00
+date: 2026-01-11T10:20:21+01:00
 #date: 2025-12-20T23:20:21+01:00
 draft: false
 tags: ["Success Story 2","DWY Consulting","Medical Physics x PHD","Healthcare Analytics"]
@@ -154,6 +154,9 @@ mindmap
         Distance
         Shielding
 ```
+
+**Powered by** the start doing section of last year: *Collect **case studies** / success stories: Flask web app https on a server for SMB / real estate DFY w custom chatbot / hospital D&A CI/CD radiophysics / from zero to astro web hero for a mechanical engineer...and add them to the `consulting.jalcocer` and/or as article on the main www site.*
+
 
 ---
 
