@@ -1,7 +1,7 @@
 ---
 title: "Optimum Path x Genetic Algorithm"
-#date: 2026-01-24
-date: 2026-01-02
+date: 2026-01-24
+#date: 2026-01-02
 draft: false
 tags: ["Car Simulation","GA vs RL","Polynomial Approximation"]
 description: 'Finally doing this - ApexSim GA-Edition'
@@ -33,10 +33,15 @@ Gradient solver (v1) optimizes: Positions (x, y) - where to be on track
 
 Implicitly: "drive along this line"
 
-Now, the GA (v2) needs: Actions (steering, pedal) - what to do
+Now, the GA (v2) needs: Actions (steering, pedal) - what to do.
+
+the GA, your "chromosome" (the DNA) shouldn't be the  coordinates anymore. 
+
+It should be the **Control Inputs**. 
+
+This makes the result "real."
 
 What's Happening in Gen 0: The ga_converter.py converts gradient results to steering/pedal:
-
 
 Goes off-track → fitness = 100s penalty + remaining distance ≈ 1000s+
 
@@ -145,6 +150,8 @@ Time per generation: 1.8 seconds
 
 ![alt text](/blog_img/karting/ga_input_profile.png)
 
+After some training, it learn this:
+
 ![Genetic Algorithm - Racing Line fail](/blog_img/karting/ga_racing_line.png)
 
 This was... promissing?
@@ -173,7 +180,7 @@ python3 visualize_track_splines.py #see track_spline_structure.png
 
 Here is when it comes that moment that brings you back to [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) or mechanincs lessons back in time.
 
-There are no N curves in a circuit, there are **infinite curves**, each with their radious and center somwhere in the space.
+There are **no N curves** in a circuit, there are **infinite curves**, each with their radious and center somwhere in the space.
 
 <!-- 
 https://www.youtube.com/watch?v=C30Lptbb0ls
@@ -181,7 +188,7 @@ https://www.youtube.com/watch?v=C30Lptbb0ls
 
 {{< youtube "C30Lptbb0ls" >}}
 
-Here is the top 20 of changes in curvature:
+Here is the top 20 of changes in curvature: *which should normally be the entries/exits of what we tend to call turns of the circuit*
 
 ![Top curvature peaks - karting sevilla](/blog_img/karting/track_top_curvature_peaks.png)
 
@@ -258,24 +265,6 @@ python3 simulate_and_check_path.py
 The physic engine simulator paid off.
 
 This is a fundamental physics difference - it models power-limited acceleration (like a real engine) rather than force-limited acceleration.
-
-
-### Next Steps
-
-* https://github.com/mikalhart/TinyGPSPlus
-
->  A new, customizable Arduino NMEA parsing library 
-
-
-Put together at some point this year the MBSD simulator for good. Cool animations and mechanism synthesis *coming up?*
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Animations as a Code | Post" image="/blog_img/mechanics/fourbarlinkage.gif" subtitle="Mechanism Animation" >}}
-{{< /cards >}}
-
-<!-- 
-![Matplotlib GIF Animation of a mechanism](/blog_img/mechanics/fourbarlinkage.gif) -->
-
 
 ---
 

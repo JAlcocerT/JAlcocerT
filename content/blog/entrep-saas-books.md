@@ -339,6 +339,10 @@ The problem when you havent started building is that you dont know what you need
 
 That's why I have created a custom chatbot for registered users to do QnA over the content of the ebooks.
 
+### KB Ive added so far
+
+1. The D&A one
+
 ### People Shipping ebooks
 
 * Fantastic landing page with a form, a way to get a goodie once you put an email, a product recommendation as per a form results and success stories (with video and photos) https://czasnatwojruch.pl/

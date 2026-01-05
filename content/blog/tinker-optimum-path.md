@@ -1,7 +1,7 @@
 ---
 title: "Optimum Path in Karting x ApexSim"
-#date: 2026-01-23
-date: 2026-01-02
+date: 2026-01-18
+#date: 2026-01-02
 draft: false
 tags: ["GoPro GPS Telemetry","Cars","Simulations","Gradient Descent","G-Circle","Pacejka"]
 description: 'A GP2 engine or need to improve your driving?'
@@ -202,6 +202,8 @@ https://youtu.be/81wY9E29x-E
 
 Im **impressed** on how a simple model can provide realistic results.
 
+### The results
+
 <!-- https://youtu.be/zm0OJcpuLV8 -->
 
 {{< youtube "zm0OJcpuLV8" >}}
@@ -297,9 +299,8 @@ Yes, they are fundamentally different "philosophies" of optimization. Think of i
 
 Here is a breakdown of how they compare when applied to your Point-Mass model.
 
----
 
-#### 1. The Genetic Algorithm (The "Evolutionary" Approach)
+1. The Genetic Algorithm (The "Evolutionary" Approach)
 
 In your ApexSim context, a GA looks at the track as a whole. It treats the entire racing line as a "DNA strand."
 
@@ -307,9 +308,7 @@ In your ApexSim context, a GA looks at the track as a whole. It treats the entir
 * **Knowledge:** The GA has **zero** memory. If you change one corner, it has to evolve all over again. It doesn't "understand" racing; it just understands that "Path A was faster than Path B."
 * **End Result:** You get a **static file** of coordinates  that represents the perfect line.
 
----
-
-#### 2. Reinforcement Learning (The "Neural" Approach)
+2. Reinforcement Learning (The "Neural" Approach)
 
 RL doesn't care about the "line" initially. It cares about the **Policy**—a set of rules in a Neural Network that tells the driver what to do based on what it sees.
 
@@ -317,9 +316,7 @@ RL doesn't care about the "line" initially. It cares about the **Policy**—a se
 * **Knowledge:** The RL agent develops **"Intuition."** It learns that "If the curvature is high, I must brake." If you move the agent to a different track, it will likely drive it reasonably well immediately because it learned the *principles* of driving, not just one specific path.
 * **End Result:** You get a **trained model (a .zip or .pkl file)** that can drive the kart in real-time.
 
----
-
-#### 3. Comparison for your Point-Mass Kart
+3. Comparison for your Point-Mass Kart
 
 If your goal is purely to **estimate the fastest lap time** for your specific track:
 
@@ -330,9 +327,7 @@ If your goal is purely to **estimate the fastest lap time** for your specific tr
 | **Optimal Value** | Very high. Usually finds the "Global Optimum." | Can be "noisy." Might settle for 99% of the limit. |
 | **Transferability** | None. Only works for that specific track. | High. Can drive other tracks or handle rain/oil. |
 
----
-
-#### 4. Which is better for you?
+4. Which is better for you?
 
 Since you already have **ApexSim** working with a Gradient-Based solver (which is mathematically closer to a GA), switching to RL would be a "lateral move" in terms of lap time accuracy, but a "vertical move" in terms of complexity.
 
@@ -344,11 +339,10 @@ Yes, exactly. But the **way** they learn and use those percentages is the key di
 
 To make this work for either a Genetic Algorithm (GA) or Reinforcement Learning (RL), you have to define the **Action Space**. Instead of just moving  points, you are now controlling the "pedals" and the "wheel."
 
----
 
 For those 2 the model will have to learn on the % of braking % accelerating and % steering?
 
-#### 1. For the Genetic Algorithm (GA)
+1. For the Genetic Algorithm (GA)
 
 In a GA, the "DNA" is a **time-series of inputs**.
 
@@ -360,9 +354,7 @@ In a GA, the "DNA" is a **time-series of inputs**.
 * **The Process:** The GA generates a random sequence of these inputs. The "Physics Engine" (your point mass model) executes them to see where the kart ends up.
 * **The Problem:** Most random sequences will just result in the kart driving straight into a wall or spinning in circles. The GA has to "evolve" the perfect sequence of steering and pedal inputs to stay on track.
 
----
-
-#### 2. For Reinforcement Learning (RL)
+2. For Reinforcement Learning (RL)
 
 In RL, the model doesn't learn a "sequence." It learns a **Policy ()**.
 
@@ -371,12 +363,9 @@ In RL, the model doesn't learn a "sequence." It learns a **Policy ()**.
 * `Steering`
 * `Acceleration/Braking`
 
-
 * **The Learning:** If the AI chooses 100% acceleration and 0% steering and hits a wall, the weights in the Neural Network are adjusted so it is less likely to do that again in that specific situation.
 
----
-
-#### 3. Constraints: The G-G Circle Check
+3. Constraints: The G-G Circle Check
 
 For both models, you must enforce your physical limits. 
 
@@ -384,11 +373,10 @@ If the AI/GA tries to do **100% Braking** AND **100% Steering** at the same time
 
 1. **Calculate the Resultant Force:** Use the Pythagorean theorem on the inputs.
 2. **Clip the Action:** If , you must "clip" or scale the inputs down so they fit inside your G-Circle.
+
 3. **The Penalty:** In RL, if the AI tries to exceed the G-limit, you give it a small negative reward to teach it that "scrubbing" the tires is inefficient.
 
----
-
-#### 4. Which is harder to learn?
+4. Which is harder to learn?
 
 * **Steering** is actually the hardest part for an AI to learn because a tiny mistake at the start of a corner leads to a massive crash at the end.
 * **Braking/Acceleration** is easier because it’s a direct relationship with the  function you already built.
@@ -407,7 +395,7 @@ While **Reinforcement Learning (RL)** is more "exciting," it is often overkill f
 
 Here is the final verdict based on your project needs and your hardware (AMD 5600G).
 
-### 1. The Decision: Genetic Algorithm (GA) wins for Estimation
+1. The Decision: Genetic Algorithm (GA) wins for Estimation
 
 The GA is essentially a **global search tool**. Since you are looking for *one* specific answer (the absolute fastest line and set of inputs for one track), the GA is more efficient.
 
@@ -418,9 +406,7 @@ The GA is essentially a **global search tool**. Since you are looking for *one* 
 | **Speed** | 100% of your 5600G power goes into finding the line. | Much power is "wasted" on the AI learning how to not hit walls. |
 | **Data** | Works perfectly with your static CSV/NSP track limits. | Needs a "live" interactive environment to learn. |
 
----
-
-### 2. When would RL make more sense?
+2. When would RL make more sense?
 
 You should only switch to RL if your project goals change to:
 
@@ -428,9 +414,7 @@ You should only switch to RL if your project goals change to:
 * **"I want to see how a driver reacts to a tire puncture or rain mid-lap."**
 * **"I want to export a 'brain' into a game like Assetto Corsa or a real-time coach."**
 
----
-
-### 3. How to implement the GA "Action Space"
+3. How to implement the GA "Action Space"
 
 If you choose the GA, your "chromosome" (the DNA) shouldn't be the  coordinates anymore. 
 
@@ -480,9 +464,7 @@ def physics_step(steer, pedal):
         # This represents the tire "scrubbing" or reaching its limit
 ```
 
----
-
-### 4. Final Verdict for ApexSim
+4. Final Verdict for ApexSim
 
 Since you’ve already built a **Gradient-Based optimizer**, you are actually closer to a **GA** philosophy than an RL one.
 

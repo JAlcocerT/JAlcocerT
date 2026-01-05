@@ -1,7 +1,7 @@
 ---
 title: "Optimum Path for Karting x CustomTkinter"
 date: 2026-01-02
-#date: 2026-01-26
+#date: 2026-02-28
 draft: false
 tags: ["GoPro GPS Telemetry","GD Simulation","G-Elypse"]
 description: 'A Python CustomTkinter Desktop App.'
@@ -30,12 +30,81 @@ So Im going to dare and try to combine what Ive learnt on these projects:
 
 And create my first desktop app.
 
+We come from tinkering with GA and RL models.
+
+But this is going to focus on putting together the HUD *for gopros based on gps and accelerometer* plus the gradient descent best lap estimation:
+
+{{< cards cols="1" >}}
+  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
+  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
+{{< /cards >}}
+
+
+**Options to create GoPro overlays**
+
+This worked https://github.com/time4tea/gopro-dashboard-overlay
+
+Also the custom script I placed: *you need to provide the location/s of the MP4/s to be analyzed*
+
+```sh
+git clone https://github.com/JAlcocerT/Py_RouteTracker
+time python3.10 ./Py_RouteTracker/overlay/racing_hud_v7.py
+```
+
+{{< youtube "c0YkQhsUNrg" >}}
+
+Can this be shipped as a desktop app?
+
+If I will ever want to share this, I dont want to do it via webapp and have a constrain on my CPU power.
+
+
+### Creating
+
 ```sh
 pip install customtkinter
 cd 4-apexsim-desktop && python3.10 main.py
 ```
 
 ![CustomTkinter | ApexSim Python Desktop](/blog_img/karting/apexsim-desktop.png)
+
+---
+
+## Conclusions
+
+```sh
+git clone
+
+cd 4-apexsim-desktop && python3.10 main.py
+```
+
+![CustomTkinter | ApexSim Python Desktop](/blog_img/karting/apexsim-desktop.png)
+
+### Next Steps
+
+OBS to MQTT: is this even possible?
+
+ACELEROMETER BASED: https://racechrono.com/article/faq/which-obd-ii-adapter-should-i-buy		
+
+People build budget lap timers - https://www.youtube.com/watch?v=mdGOuhEq6g8
+
+{{< youtube "mdGOuhEq6g8" >}}
+
+If you dont have a GoPro, you can still play with your smartphone and PhyPhox:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Data_PhyPhox" title="PhyPhox" image="/blog_img/iot/phyphox-android.jpg" subtitle="EDA on Phyphox Data with Python - Repo" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python" >}}
+{{< /cards >}}
+
+### Outro
+
+* https://upstash.com/
+
+> Serverless Data Platform (redis, vector DBs....)
+
+* https://github.com/DrewThomasson/sound-monitor
+
+Is your engine generating too much noise?
 
 ---
 

@@ -119,18 +119,13 @@ Ive created a new ipynb with addititional *matplotlib based this time* graphs
 
 <!-- ![Custom matplotlib x fastAPI x Graficas LibrePortfolio](/blog_img/AIBI/fastapi-custom-matplotlib.png) -->
 
-{{< cards cols="1" >}}
-  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
-  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
-{{< /cards >}}
-
 
 **Along the way** I found about: https://github.com/time4tea/gopro-dashboard-overlay
 
 [![shields.io Stars](https://img.shields.io/github/stars/time4tea/gopro-dashboard-overlay)](https://github.com/time4tea/gopro-dashboard-overlay/stargazers)
 
 
-> GPL 3.0 | Programs to process GoPro MP4 & Generic GPX/FIT files and create video dashboards & maps
+> GPL 3.0 | Programs to process GoPro MP4 & Generic GPX/FIT files and **create video dashboards** & maps
 
 ```sh
 #python -m venv venv
@@ -148,9 +143,9 @@ apt install fonts-roboto
 uv run gopro-dashboard.py /home/jalcocert/Desktop/Py_RouteTracker/Z_GoPro/GX020410.MP4 /home/jalcocert/Desktop/Py_RouteTracker/Z_GoPro/GX020410-dashboard.MP4
 ```
 
-And it worked briliantly: *with rencoding required, so sit back*
+And **it worked** briliantly: *with rencoding required, so sit back*
 
-But how could i not follow the suck-suck less approach:
+But how could I not follow the suck-suck less approach:
 
 <!-- https://youtu.be/jqzzkexAx2I -->
 
@@ -217,9 +212,9 @@ https://youtu.be/G1esduZUw4E -->
 
 Improve your lap times with RaceChrono.
 
-The Go Pro GPS' Telemetry is great.
+The Go Pro GPS' Telemetry is great to get started anyways.
 
-And now you can plot those onboard HUDs with garmin virb or with any of the seen **custom ways**:
+And now you can plot those **onboard HUDs** with garmin virb or with any of the seen **custom ways**:
 
 ```sh
 python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v5.py #extracts the telemtry txt on its own and you can use it to compare the best laps of a group of friends #https://youtu.be/Ae8CyefuxgY
@@ -252,7 +247,7 @@ After all: *this has been so much fun*
 time python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/racing_hud_v7.py
 ```
 
-And got the HUD rendered in ~20min for the 2 GoPro mp4's i wanted to analyze:
+And got the HUD rendered in ~20min for the 2 GoPro mp4's (the full session) that I wanted to analyze:
 
 <!-- 
 https://youtu.be/1qkIjxl47ac 
@@ -291,18 +286,12 @@ python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v7.py
 
 If anything, when doing sth related to racing + Data *will probably be*:
 
-
 0. Next GoPro videos will have the HUD + the kdenlive comments all in one
 1. A Desktop App to embed the cool telemetry seen here!
 2. The optimum Path thingy
 3. Go all in with embeded analytics and IoT with that u-blox GPS module and a micro-controller
 
 ### Others
-
-OBS to MQTT: is this even possible?
-
-ACELEROMETER BASED: https://racechrono.com/article/faq/which-obd-ii-adapter-should-i-buy		
-
 
 #### Lap Timer
 
@@ -312,11 +301,11 @@ I put together a script based on the Go Pro GPS telemetry to infer the lap times
 python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v4c.py
 ```
 
-It will get you a Matplotlib based graph with the speed profile, the max and min ones per lap and also will cut the video +-5 seconds to give you the fastest lap!
+It will get you a Matplotlib based graph with the speed profile, the max and min ones per lap and also will cut the video +-5 seconds to **give you the fastest lap**!
 
 > It generates something like `Best_Lap_4_81.33s.mp4`
 
-So you can compare with your friends and see how to improve.
+So you can compare with your friends and see how to improve. Or just share it to youtube.
 
 
 From v6, it also allows to compare 2 laps of the same video:
@@ -326,13 +315,6 @@ python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v6.py
 ```
 
 [![Laps Comparison](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/lap_compare_L1_vs_L5.png)](https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/lap_compare_L1_vs_L5.png)
-
-
-
-People build budget lap timers - https://www.youtube.com/watch?v=mdGOuhEq6g8
-
-{{< youtube "mdGOuhEq6g8" >}}
-
 
 
 ---
@@ -345,20 +327,10 @@ https://youtu.be/tQOxnCz2lwM?si=XTgvyi-qnm3ZKiAl
 
 {{< youtube "tQOxnCz2lwM" >}}
 
-### Outro
-
-* https://upstash.com/
-
-> Serverless Data Platform (redis, vector DBs....)
-
-* https://github.com/DrewThomasson/sound-monitor
-
-Is your engine generating too much noise?
-
 
 ### Android Apps
 
-1. Torque
+1. [Torque](#torquelite-and-torquepro)
 2. inCarDoc
 3. Car Scanner
 4. ScanMaster-ELM
@@ -439,17 +411,7 @@ Think of it this way:  The ELM327 is like a specialized translator for OBD-II.  
 
 You can buy (or not) the Pro version.
 
-I did so to support the project and see what else can i get from the OBD2
-
-
-#### PhyPhox
-
-If you dont have a GoPro, you can still play with your smartphone and PhyPhox:
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Data_PhyPhox" title="PhyPhox" image="/blog_img/iot/phyphox-android.jpg" subtitle="EDA on Phyphox Data with Python - Repo" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python" >}}
-{{< /cards >}}
+I did so to support the project and see what else can i get from the OBD2.
 
 
 ### CANBUS with UBUNTU
