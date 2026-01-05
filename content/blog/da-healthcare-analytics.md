@@ -117,6 +117,14 @@ On my latest projects, I try to differenciate the docker-compose for:
 
 ## Conclusions
 
+We started out with the framework: Whats working, whats not and whats next?
+
+The problem was clearly the way of shipping the code to production and the maintanability/ trazability of the versions.
+
+Thats where bringing the CI/CD strategy with the containers automated built method was a game changer.
+
+Regarding the what's next: I recommended to have a look for automated SSL certificates for their internal domain.
+
 Knowing how to control infrastructure (servers/homelab) and providing SSL/https is a must.
 
 {{< cards cols="2" >}}

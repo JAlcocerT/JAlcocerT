@@ -13,11 +13,11 @@ draft: false
 
 2. KDEnlive
 
-![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
 
 ![KDENlive Comments](/blog_img/karting/kdenlive-gopro-gps-comments.png)
 
 ![alt text](/blog_img/outro/kdenlive-zoom.png)
+
 1. Apply the Effect
 Open Kdenlive and drag your video clip onto the Timeline.
 
@@ -36,12 +36,15 @@ Position: You will see a red rectangle in the Project Monitor. Grab the center o
 
 Tip: You can also adjust the X and Y coordinates in the Effect Stack for more precision.
 
-![alt text](/blog_img/outro/kdenlive-blur.png)
+![Obfuscate an area with KDEnlive](/blog_img/outro/kdenlive-blur.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Action Cam Review" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#kdenlive" title="KDenLive with OA5Pro" image="/blog_img/outro/kdenlive.png" subtitle="Editing video with kdenlive" >}}
 {{< /cards >}}
+
+![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
+
 
 3. Others like: Shotcut
 

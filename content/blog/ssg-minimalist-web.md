@@ -125,6 +125,10 @@ git clone https://github.com/JAlcocerT/dockit-astro
 #make install && make dev
 ```
 
+{{< youtube "r1JP31d_2Dk" >}}
+
+<!-- https://youtu.be/r1JP31d_2Dk -->
+
 ![Dockit - A better Astro Starlight for FossEngineer](/blog_img/web/fosseng/dockit-astro.png)
 
 {{< cards >}}
@@ -133,7 +137,7 @@ git clone https://github.com/JAlcocerT/dockit-astro
 {{< /cards >}}
 
 
-> This is simple great for F/OSS 
+> This is simple and great for F/OSS 
 
 Time for a: Whats working, whats not and whats next?
 

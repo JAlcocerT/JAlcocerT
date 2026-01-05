@@ -408,7 +408,7 @@ http://divephiphiisland.com/
 
 -->
 
-<!-- More ppl to help - future CLIENTS
+More ppl to help - future CLIENTS
 
 * you dont need to pay for wordpress themes, its already there and it works
   * https://generatepress.com/pricing/
@@ -445,3 +445,20 @@ https://quadscadiz.com/
   * https://hormigasenlanube.com/
   * https://lyk-website.pl/brief/
 
+
+### Getting Here
+
+
+Tried Wordpress and Ghost.
+
+But those...are not quite ecommerce.
+
+Didnt care and wrote via SSG.
+
+Created some custom CMS for people who were not willing to pay and fail.
+
+Tested Strapi and DirectusCMS
+
+<!-- https://youtu.be/bREja-vW6fA -->
+
+{{< youtube "bREja-vW6fA" >}}

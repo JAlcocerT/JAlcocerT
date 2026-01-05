@@ -43,29 +43,45 @@ AI...employees?
 
 Comercial ones like: `https://www.lindy.ai/pricing`
 
-So try to build a brand *before its too late*.
+Maybe, try to build a brand *before its too late*.
 
-D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
+0. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
 {{< /cards >}}
 
+I thought that Id do for this year a separated `blog.jalc...` based on this [canvas repo](https://github.com/JAlcocerT/canvas).
 
-I thought that Id do for this year a separated `blog.jalc...` based on this canvas repo.
+But i Just continued here.
 
-Multilanguage and all that stuff.
+0. Improved FOSS from blog to doc like. Multilanguage and all that stuff. Still as HUGO.
 
 
-0. Create individual pages on jalcocertech.com with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code `.mdx`
+0. Create individual pages on `jalcocertech.com` with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code `.mdx`
 
 0. BiP user flows around newsletter layers
 
 0. Creating D&A Reports with AI
 
+0. IoDoctor reloaded
+
+* with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
+can find out existing interface
+
+0. Blogspot vs Wordpress Migrations and Free web Audits around a PaaS Website Hosting.
+
+0. Restaurant SaaS: aka Multi tenant Astro Apps with protected routes
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/webs-for-restaurants" title="Restaurants micro-SaaS ↗" icon="github" >}}
+  {{< card link="https://github.com/" title=" Github ↗" icon="github" >}}
+{{< /cards >}}
+
+
 0. Embeded Chatbots for a business website x [Business Knowledge Base setup](https://jalcocert.github.io/JAlcocerT/custom-bots-kb/)!.
 
-0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/). Success Story 1.
+0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/). A Success Story!.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/custom-re-rag" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
@@ -74,9 +90,14 @@ Multilanguage and all that stuff.
 
 0. I did not know that **creating an/N ebook/s** was that simple.
 
-The captured knowledge on these posts into ebooks anyone can use for quick DIY.
+The captured knowledge on these [blog posts](https://jalcocert.github.io/JAlcocerT/blog/) and [docs](https://jalcocert.github.io/JAlcocerT/docs/) into ebooks *markdown driven* anyone can use for quick DIY.
 
-One of the start doing goals from last year.
+One of the start doing goals from last year. And that I quickly put together [here](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#building-n-ebooks-for-a-webook).
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#building-n-ebooks-for-a-webook" title="Web/ook | Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks/" title="From 1 to n Ebooks | Repo ↗" icon="github" >}}
+{{< /cards >}}
 
 * https://www.amazon.es/sendtokindle
 
@@ -93,19 +114,6 @@ One of the start doing goals from last year.
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
-0. IoDoctor reloaded
-
-* with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
-can find out existing interface
-
-0. Blogspot vs Wordpress Migrations and Free web Audits around a PaaS Website Hosting.
-
-0. Restaurant SaaS: aka Multi tenant Astro Apps with protected routes
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/webs-for-restaurants" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-{{< /cards >}}
 
 1. Weddings and ads 101.
 
@@ -118,7 +126,7 @@ can find out existing interface
 It was a continuation of [this section for artists](https://jalcocert.github.io/JAlcocerT/link-artists/#waiting-list-for-products) 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/" title="DIY Landing BoilerPlate ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/" title="DIY Landing BoilerPlate | Post ↗" >}}
   {{< card link="https://github.com/JAlcocerT/diy-landing-boilerplate" title="DIY Landing BoilerPlate Repo ↗" icon="github" >}}
 {{< /cards >}}
 
@@ -148,12 +156,35 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
-7. Boiler plate / blueprint for vibe coders: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
+7. Boiler plate / **blueprint for vibe coders**: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
+
+* https://github.com/JAlcocerT/bip-boilerplate-saas
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C;
+
+    %% --- Nodes ---
+    L1("Free Content<br/>(Blog/YT $0)"):::free
+    L2("DIY<br/>(Templates / Platform) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Services) $$$"):::high
+
+    %% --- Connections ---
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+```
 
 8. Proper CI/CD for (streamlit) Web Apps. [Success Story 1 + Hospital D&A](https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics). There is a session recorded and shared [here](https://youtu.be/3lcywTUeP5k) *and [here](https://youtu.be/eFS7crQpm_s)*
 
@@ -189,20 +220,25 @@ Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#c
   {{< card link="https://jalcocert.github.io/JAlcocerT/BI/#custom-bi-tools" title="BI | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-11. Geolocation - GEOSPATIAL DATA RECAP [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/).
+11. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and video overlays.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Py Route Tracker ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
 {{< /cards >}}
 
+I made some **HUD overlays for GoPro videos** to have their telemetry in place, without having to use closed sourced apps that in most cases dont work on Linux.
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/#geo-data" title="Geo | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
 13. Mechanisms reloaded. *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) back in place*
 
 Simulations are back.
+
+For racers, see how to estimate the [optimum path based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and gradient descent.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}
@@ -216,7 +252,7 @@ It all started with the *Optimum Path* Idea.
 
 Then I put together a repo that leveraged the existing Go Pro extraction / overlays to get the circuit path.
 
-And tinkered with few algorithms to optimize the path: minimum curvature (obviously not the fastest), a GD with a mass point model that brought very interesting results, plus the Genetic Algorithm and Reinforced Learning (for fun!).
+And tinkered with few algorithms to optimize the path: minimum curvature (obviously not the fastest), a [GD with a mass point model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) that brought very interesting results, plus the [Genetic Algorithm](https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/) and [Reinforced Learning](https://jalcocert.github.io/JAlcocerT/reinforce-learning-racing-simulator/) (for fun!).
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
