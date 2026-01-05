@@ -63,6 +63,11 @@ No action.
 
 So, as my BRD of doing these landings works so good, im *productionazing it* with the shape of...**code + life time access and a landing.**
 
+<!-- https://studio.youtube.com/video/P6MQBU3YpmM/edit -->
+
+{{< youtube "P6MQBU3YpmM" >}}
+
+
 
 Kind of...
 
@@ -736,7 +741,7 @@ https://youtu.be/4xQVUw5YirE -->
 
 I said 5 min - i meant of you telling next next next to antigravity.
 
-The full process took ~30 min:
+The full process took **~30 min**: *dont trust me? see [the video](https://youtu.be/4xQVUw5YirE)*
 
 {{< youtube "4xQVUw5YirE" >}}
 

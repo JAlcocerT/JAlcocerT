@@ -1,6 +1,6 @@
 ---
 title: "Streamlit x GHCR x CI/CD"
-date: 2026-01-01T19:20:21+01:00
+date: 2026-01-04T19:20:21+01:00
 #date: 2025-12-20T23:20:21+01:00
 draft: false
 tags: ["Success Story 1","DWY Consulting","Medical Physics x PHD","Healthcare Analytics"]
@@ -31,7 +31,7 @@ Even better if you do so around a well defined offer, so people know what to exp
   {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
 
-In this case, it has been a success story based on **github actions x containers best practices**
+In this case, it has been a **success story** based on **github actions x containers best practices**
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#actions-cicd-for-python-projects" title="SelfHosted Landing Repo" image="/blog_img/dev/re-actions-container-built.png" subtitle="Tier of Service" >}}
@@ -157,6 +157,13 @@ mindmap
 
 **Powered by** the start doing section of last year: *Collect **case studies** / success stories: Flask web app https on a server for SMB / real estate DFY w custom chatbot / hospital D&A CI/CD radiophysics / from zero to astro web hero for a mechanical engineer...and add them to the `consulting.jalcocer` and/or as article on the main www site.*
 
+
+<!-- https://youtu.be/eFS7crQpm_s -->
+<!-- {{< youtube "eFS7crQpm_s" >}} -->
+
+The success story has been recorded [here](https://youtu.be/3lcywTUeP5k)
+
+{{< youtube "3lcywTUeP5k" >}}
 
 ---
 

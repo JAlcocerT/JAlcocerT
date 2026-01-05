@@ -1,6 +1,6 @@
 ---
 title: "A SaaS with 100% Churn, yet LTV > CAC"
-date: 2026-01-02T08:20:21+01:00
+date: 2026-01-09T08:20:21+01:00
 draft: false
 tags: ["Landing x NextJS SaaS","Nextacular","SlubneChwile","BiP BoilerPlate","RoadMap26"]
 description: 'How to code a Saas with NEXTjs and directing traffic via ads. Weddings!'
@@ -9,7 +9,7 @@ url: 'code-your-saas'
 
 **Tl;DR**
 
-MVP first - get those eyes going via ads towards: https://slubnechwile.com/
+MVP first - get those eyes going via ads towards: https://www.slubnechwile.com/
 
 See what works and what not - PMF
 

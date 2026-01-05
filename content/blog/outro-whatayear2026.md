@@ -155,7 +155,7 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-8. Proper CI/CD for streamlit Web Apps. [Success Story 2 + Hospital D&A](https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics).
+8. Proper CI/CD for (streamlit) Web Apps. [Success Story 1 + Hospital D&A](https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics). There is a session recorded and shared [here](https://youtu.be/3lcywTUeP5k) *and [here](https://youtu.be/eFS7crQpm_s)*
 
 9. Authentication Post: *flowing directly to BiP*
 
@@ -262,6 +262,11 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
 {{< /cards >}}
 
 
+
+16. Tech videos were not a priority this year.
+
+* [Goose Desktop](https://youtu.be/ZW5eEocyrTU) 
+* [GrowChief](https://youtu.be/in8uTdLhFqI)
 
 ### Serverless
 

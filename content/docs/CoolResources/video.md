@@ -17,6 +17,26 @@ draft: false
 
 ![KDENlive Comments](/blog_img/karting/kdenlive-gopro-gps-comments.png)
 
+![alt text](/blog_img/outro/kdenlive-zoom.png)
+1. Apply the Effect
+Open Kdenlive and drag your video clip onto the Timeline.
+
+Go to the Effects tab (usually in the top-left or middle-left panel).
+
+Search for "Transform".
+
+Drag and drop the Transform effect directly onto your video clip in the timeline.
+
+2. Adjust the Zoom (Static Zoom)
+Once the effect is applied, look at the Effect Stack panel (usually on the right):
+
+Size: Change the percentage (e.g., set it to 150% to zoom in).
+
+Position: You will see a red rectangle in the Project Monitor. Grab the center of the rectangle to move the video until the specific part you want to highlight is centered.
+
+Tip: You can also adjust the X and Y coordinates in the Effect Stack for more precision.
+
+![alt text](/blog_img/outro/kdenlive-blur.png)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Action Cam Review" >}}

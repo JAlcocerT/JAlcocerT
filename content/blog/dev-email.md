@@ -847,7 +847,7 @@ A **CSV just works** and its a future proof format.
 
 ### PostIZ vs GrowChief
 
-GrowChief and Postiz are both open-source tools aimed at social media management.
+GrowChief and Postiz are both open-source tools aimed at **social media management**.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/social-media-automation/" title="PostIZ Setup | Post" image="/blog_img/selfh/postiz/postiz-https-ui.png" subtitle="Social Media Automation with PostIZ" >}}
