@@ -3,7 +3,7 @@ title: "How to get Started with SQL"
 date: 2020-07-17T23:20:21+01:00
 Lastmod: 2022-11-17
 draft: false
-tags: ["Dev"]
+tags: ["Dev","Career"]
 description: 'SQL starting guide that will make your road to Data Analytics easier.'
 url: 'sql-data-analytics'
 ---
@@ -15,49 +15,15 @@ Master these and you will make a great progress with your analytical skills!
 
 ## The SQL Guide
 
-**SQL is a programming language** used for managing and manipulating data in databases. It is used for creating, updating, and deleting data in databases, as well as for querying data from databases.
+**SQL is a programming language** used for managing and manipulating data in databases. 
+
+It is used for creating, updating, and deleting data in databases, as well as for querying data from databases.
 
 It can be used to retrieve data from multiple tables, perform calculations on the data, and update or delete data in a database.
 
 SQL can also be used to create stored procedures, triggers, and views, and is an essential tool for data analysis, data migration, and data integration.
 
 ## SQL Concepts
-
-<!-- SQL: Basic retrieval techniques
-
-SQL | **DDL**, DQL, DML, DCL and TCL Commands
-
-
-The SELECT statement (purpose, syntax).
-Set operations (union, union all, intersect, minus).
-Joins (inner, outer (left, right, full), Cartesian product).
-Subqueries (returning one row, many rows, many columns).
-DML constructions - INSERT, UPDATE, DELETE, MERGE, TRUNCATE.
-DDL constructions - CREATE, ALTER, DROP.
-Basic database theory
-
-Understanding of the basics of relational databases.
-Differentiating between a database and a DBMS.
-Differentiating between PK, FK, and candidate keys.
-Understanding of relationship types (1-to-1, 1-to-many, many-to-many). -->
-<!-- 
-SQL: Basic retrieval techniques
-
-The SELECT statement (purpose, syntax).
-Set operations (union, union all, intersect, minus).
-Joins (inner, outer (left, right, full), Cartesian product).
-Subqueries (returning one row, many rows, many columns).
-DML constructions - INSERT, UPDATE, DELETE, MERGE, TRUNCATE.
-DDL constructions - CREATE, ALTER, DROP.
-Basic database theory
-
-Understanding of the basics of relational databases.
-Differentiating between a database and a DBMS.
-Differentiating between PK, FK, and candidate keys.
-Understanding of relationship types (1-to-1, 1-to-many, many-to-many). -->
-
-<!-- 
-The main concepts of SQL include tables, relationships, ordinality, cardinality, functions, common table expressions (CTEs), recursive CTEs, temporary functions [2], and string formatting. SQL also has several different types of functions [3], such as scalar functions, which take a single value and return a single value [3]. Understanding these concepts is essential for working with databases. -->
 
 ### DDL - Data Definition Language
 
@@ -129,7 +95,9 @@ ORDER BY COUNT(CustomerID) DESC;
 
 UNION combines the results of two or more SELECT queries vertically (appending rows), while a JOIN combines rows from two or more tables horizontally (adding columns) based on a related column between them.
 
-The UNION operation is used to combine the results of two or more SELECT queries into a single result set. It eliminates duplicate rows from the results.
+The UNION operation is used to combine the results of two or more SELECT queries into a single result set.
+
+It eliminates duplicate rows from the results.
 
 {{< callout type="info" >}}
 Each SELECT query within the UNION must have the same number of columns and those columns must have similar data types.
@@ -175,7 +143,9 @@ So, using both clauses in the same query allows you to apply filtering condition
 
 A SQL window function is a function that operates on a set of rows within a result set, also known as a window. Window functions are often used to calculate running totals, moving averages, and other aggregations over a set of rows.
 
-Window functions are similar to aggregate functions, but they operate on a subset of the rows in the result set, rather than the entire result set. This makes them more flexible than aggregate functions, as they can be used to calculate aggregations over a specific range of rows, such as the previous 10 rows or the next 20 rows.
+Window functions are similar to aggregate functions, but they operate on a subset of the rows in the result set, rather than the entire result set. 
+
+This makes them more flexible than aggregate functions, as they can be used to calculate aggregations over a specific range of rows, such as the previous 10 rows or the next 20 rows.
 
 Window functions are also **more efficient than aggregate functions**, as they only need to calculate the aggregation for the rows in the window, rather than for the entire result set.
 
@@ -212,11 +182,6 @@ SELECT o.occurred_at,
 
 
 #### LAG -> Events occurred before
-
-
-```sql
-
-```
 
 ```sql
  SELECT o.id,
@@ -269,34 +234,6 @@ WHERE Rank = 1;
 ```
 
 {{< tweet user="iamsimuna" id="1581816237301956609" >}}
-
-<!-- SQL: Data definition and indexing
-
-Stages of SQL execution.
-Hierarchical queries basics.
-Nested SELECT queries (select from select).
-Data comparison and transformation.
-Basic aggregate functions.
-
-Database fundamentals 
-
-Awareness of different DB types.
-Understanding of the purpose of DB objects (view, materialized view, index, trigger, synonym).
-Understanding of constraint types (referential integrity, NOT NULL, unique, etc).
-Understanding of cardinality constraints.
-Understanding of normalization (1-2-3 NF).
-Understanding use-cases for Normalization and Denormalization. -->
-
-<!-- ### OPTIMIZATION:
-USE INDEXES, PARTITION KEYS ON THE COLUMNS THAT ARE GOING TO BE USED AND ARE UNIQUE TO AVOID DATA SKEW
-USE HASHDIFF  AND HASHES
-
-SET STATISTIC TIME ON 
-SET STATISTICS TIME OFF 
- -->
-<!-- 
- Use Alias Name
-Aliasing renames a table or a column temporarily by giving another name. The use of table aliases means renaming a table in a specific SQL statement. Using aliasing, we can provide a small name to a large name which will save us time.  -->
 
 ### CTE
 
@@ -484,21 +421,17 @@ Indexes in SQL are used to improve the performance of database queries by allowi
   * Index Maintenance: Indexes need to be maintained and periodically rebuilt or optimized to ensure optimal performance. This maintenance operation can consume system resources and may impact database availability during the process.
 
 Indexes can significantly improve query performance by reducing the time it takes to locate and retrieve specific rows from a table.
+
 However, indexes also consume storage space and can slow down data modification operations like INSERT, UPDATE, and DELETE.  
 
-It's important to note that the decision to create an index should be based on careful analysis of the specific workload and query patterns of your application. Over-indexing or creating unnecessary indexes can have negative consequences on overall performance. Therefore, it's crucial to **strike the right balance between indexing and query optimization** based on the specific needs of your application.
+It's important to note that the decision to create an index should be based on careful analysis of the specific workload and query patterns of your application.
+
+Over-indexing or creating unnecessary indexes can have negative consequences on overall performance.
+
+Therefore, it's crucial to **strike the right balance between indexing and query optimization** based on the specific needs of your application.
 
 
 ### Optimizing SQL Queries
-
-<!-- 
-### Optimizing your SQL Queries
-
-* Select ONLY the columns that you need 
-    * AVOID SELECT * 
-    * AVOID SELECT DISTINCT 
-* Use LIMIT (or equivalent in your SQL version)
-* AVOID: too many joins, or, and -->
 
 Optimizing SQL queries can help to improve the performance of a database and the applications that use it.
 
@@ -541,13 +474,12 @@ Avoiding unnecessary subqueries and reducing the number of rows processed can im
 ### TRINO SQL 
 
 Also known as ex-Presto SQL.
-<!-- 
 
+<!-- 
 https://www.youtube.com/watch?v=SnvSBYhRZLg
 https://www.youtube.com/watch?v=SnvSBYhRZLg 
 
-https://trino.io/docs/current/connector.html
-https://trino.io/ecosystem/index.html
+-->
 
 User-Defined Functions (UDFs): You can create custom UDFs in Trino using Java or other supported languages, and then you can use these functions within your SQL queries. UDFs allow you to encapsulate custom logic and apply it to your data.
 
@@ -557,11 +489,10 @@ Loops and Iterations: While Trino does not have traditional loop constructs, you
 
 Expression Evaluation: Trino provides a wide range of built-in functions and expressions, allowing you to perform calculations, string manipulation, and other operations within your SQL queries.
 
--->
 
 * https://github.com/trinodb/trino
-
-
+  * https://trino.io/docs/current/connector.html
+  * https://trino.io/ecosystem/index.html
 
 Open Source, **Distributed**, paralell processing, SQL query language.
 

@@ -169,6 +169,10 @@ You can also create a quick [mermaidJS sankey of on boarding flows](https://merm
     {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartbrew" title="ChartBrew | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+* Shiny in Python
+  * <https://shiny.rstudio.com/py/gallery/>
+  * <https://shiny.rstudio.com/py/gallery/>
+
 <!-- 
 ```mermaid
 sankey

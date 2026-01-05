@@ -1,6 +1,7 @@
 ---
-title: "First Look to Flutter Apps via Flet"
-date: 2025-11-29
+title: "Optimum Path for Karting x CustomTkinter"
+date: 2026-01-02
+#date: 2026-01-26
 draft: false
 tags: ["GoPro GPS Telemetry","GD Simulation","G-Elypse"]
 description: 'A Python CustomTkinter Desktop App.'
@@ -31,7 +32,10 @@ And create my first desktop app.
 
 ```sh
 pip install customtkinter
+cd 4-apexsim-desktop && python3.10 main.py
 ```
+
+![CustomTkinter | ApexSim Python Desktop](/blog_img/karting/apexsim-desktop.png)
 
 ---
 

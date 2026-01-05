@@ -77,6 +77,82 @@ But ultimately, make sure to keep these **5 strategies** with you:
 4. 
 5. 
 
+
+<!-- SQL: Basic retrieval techniques
+
+SQL | **DDL**, DQL, DML, DCL and TCL Commands
+
+
+The SELECT statement (purpose, syntax).
+Set operations (union, union all, intersect, minus).
+Joins (inner, outer (left, right, full), Cartesian product).
+Subqueries (returning one row, many rows, many columns).
+DML constructions - INSERT, UPDATE, DELETE, MERGE, TRUNCATE.
+DDL constructions - CREATE, ALTER, DROP.
+Basic database theory
+
+Understanding of the basics of relational databases.
+Differentiating between a database and a DBMS.
+Differentiating between PK, FK, and candidate keys.
+Understanding of relationship types (1-to-1, 1-to-many, many-to-many). -->
+<!-- 
+SQL: Basic retrieval techniques
+
+The SELECT statement (purpose, syntax).
+Set operations (union, union all, intersect, minus).
+Joins (inner, outer (left, right, full), Cartesian product).
+Subqueries (returning one row, many rows, many columns).
+DML constructions - INSERT, UPDATE, DELETE, MERGE, TRUNCATE.
+DDL constructions - CREATE, ALTER, DROP.
+Basic database theory
+
+Understanding of the basics of relational databases.
+Differentiating between a database and a DBMS.
+Differentiating between PK, FK, and candidate keys.
+Understanding of relationship types (1-to-1, 1-to-many, many-to-many). -->
+
+<!-- 
+The main concepts of SQL include tables, relationships, ordinality, cardinality, functions, common table expressions (CTEs), recursive CTEs, temporary functions [2], and string formatting. SQL also has several different types of functions [3], such as scalar functions, which take a single value and return a single value [3]. Understanding these concepts is essential for working with databases. -->
+
+<!-- SQL: Data definition and indexing
+
+Stages of SQL execution.
+Hierarchical queries basics.
+Nested SELECT queries (select from select).
+Data comparison and transformation.
+Basic aggregate functions.
+
+Database fundamentals 
+
+Awareness of different DB types.
+Understanding of the purpose of DB objects (view, materialized view, index, trigger, synonym).
+Understanding of constraint types (referential integrity, NOT NULL, unique, etc).
+Understanding of cardinality constraints.
+Understanding of normalization (1-2-3 NF).
+Understanding use-cases for Normalization and Denormalization. -->
+
+<!-- ### OPTIMIZATION:
+USE INDEXES, PARTITION KEYS ON THE COLUMNS THAT ARE GOING TO BE USED AND ARE UNIQUE TO AVOID DATA SKEW
+USE HASHDIFF  AND HASHES
+
+SET STATISTIC TIME ON 
+SET STATISTICS TIME OFF 
+ -->
+<!-- 
+ Use Alias Name
+Aliasing renames a table or a column temporarily by giving another name. The use of table aliases means renaming a table in a specific SQL statement. Using aliasing, we can provide a small name to a large name which will save us time.  -->
+
+
+<!-- 
+### Optimizing your SQL Queries
+
+* Select ONLY the columns that you need 
+    * AVOID SELECT * 
+    * AVOID SELECT DISTINCT 
+* Use LIMIT (or equivalent in your SQL version)
+* AVOID: too many joins, or, and -->
+
+
 ### Other D&A Tools
 
 * https://github.com/wix-incubator/quix
@@ -93,3 +169,14 @@ If you feel confortable with Jupyter notebooks, have a look to: https://github.c
 > See an example of a data story: https://ipyvizzu-story.vizzuhq.com/latest/examples/titanic/
 
 This is food for thought if you normally create presentations with SliDev for [tech talks](https://jalcocert.github.io/JAlcocerT/ai-driven-diagrams/#mermaid-x-tech-talk)!
+
+### Other Interesting F/OSS DBMS's
+
+* [DuckDB](https://github.com/duckdb/duckdb) ~ OLAP
+  * [Huey](https://github.com/rpbouman/huey) an UI for DuckDB
+  * GetHue - https://hub.docker.com/r/gethue/hue/tags - Hue is an open source SQL Assistant for Database & Data Warehouses. 
+    * https://github.com/cloudera/hue
+
+```sh
+docker run -d -p 8888:8888 gethue/hue:latest
+```

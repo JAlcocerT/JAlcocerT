@@ -1,9 +1,9 @@
 ---
 title: "Streamlit x GHCR x CI/CD"
-date: 2026-01-11T10:20:21+01:00
+date: 2026-01-01T19:20:21+01:00
 #date: 2025-12-20T23:20:21+01:00
 draft: false
-tags: ["Success Story 2","DWY Consulting","Medical Physics x PHD","Healthcare Analytics"]
+tags: ["Success Story 1","DWY Consulting","Medical Physics x PHD","Healthcare Analytics"]
 description: 'Agile development for a hospital based on CI/CD.'
 url: 'improving-healthcare-analytics'
 ---

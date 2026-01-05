@@ -2,7 +2,7 @@
 title: "Getting Started with Python"
 date: 2020-08-30T23:20:21+01:00
 draft: false
-tags: ["Dev","Python"]
+tags: ["Dev","Python","Career"]
 # cover:
 #     image: "img/differences.PNG" # image path/url
 #     alt: "<alt text>" # alt text

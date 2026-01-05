@@ -322,7 +322,7 @@ xargs -0 awk '
 ### Quotes
 
 1. Choose your hard
-2. 
+2. What a priviledge is to choose what challenge make you struggle
 
 #### Interesting Posts
 

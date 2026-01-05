@@ -465,6 +465,16 @@ Viral tales capture attention, look cohesive, and fit readily into existing narr
 
 -->
 
+<!-- 
+#thinking fast and slow
+ -->
+ 
+<!-- 
+'psychology-skills-data-analytics' -->
+<!-- 
+### Binary Thinking
+
+*Either or* -->
 
 ![Canva using neuromarketing on you](/blog_img/outro/canva-free-trial-neuromkt.png)
 

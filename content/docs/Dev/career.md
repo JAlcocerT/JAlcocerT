@@ -35,11 +35,15 @@ For the ones that would like to share their experience, [creating and publishing
 
 So is preparing your **CV and your interviews**:
 
-{{< cards >}}
+<!-- {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
   {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CVs as a Code. Application Job History and Historieta" >}}
-{{< /cards >}}
+{{< /cards >}} -->
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
 
 A team member can deliver great results given the proper workload.
 
@@ -52,17 +56,9 @@ A team member can deliver great results given the proper workload.
 
 For a career in D&A you will need to be familiar with certain tools.
 
-https://roadmap.sh/
+Your learning will be [a journey](#a-da-journey), but a plan is always good to have: https://roadmap.sh/
 
-https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/
 
-https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/
-https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
-https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/
-
-https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/
-
-https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/
 
 
 * [**Big Data** Tools](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/)
@@ -83,7 +79,7 @@ See this [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/b
 
 https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics
 https://jalcocert.github.io/JAlcocerT/business-skills-data-analytics/
-https://jalcocert.github.io/JAlcocerT/decision-making-data-analytics/
+
 
 This can concepts get messy, very fast.
 
@@ -97,11 +93,16 @@ That's why I learnt to create ebooks and made one about **Data Analytics**
 {{< /cards >}}
 
 
+
+## Data Analysis
+
 | **Category** | Tools | Description |
 | :--- | :--- | :--- |
 | **Data Orchestration & Transformation** | **dbt**, **Dataform**, **Airflow** | These tools manage the "T" (Transformation) in ELT/ETL. They define, schedule, and execute data pipelines. Dataform is BigQuery-native, while dbt and Airflow are platform-agnostic. |
 | **Cloud Data Warehouses** | **BigQuery**, **Snowflake**, **Redshift**, **Azure Synapse Analytics** | These are highly scalable, serverless, or managed databases designed for analytical workloads over massive datasets. They are the destination for your data and the environment where your transformation tools run. |
 | **Business Intelligence (BI)** | **Looker**, **Tableau**, **Power BI** | These are tools used to visualize and analyze data from the data warehouses. They are often the final destination for data, used by business teams to create reports and dashboards. |
+
+
 
 
 **Data Modelling**
@@ -119,7 +120,9 @@ That's why I learnt to create ebooks and made one about **Data Analytics**
 | **Performance Metric** | Transactions per second (TPS). The goal is to process as many transactions as possible. | Query latency. The goal is to return analytical results as quickly as possible. |
 | **Data Volume** | Small records, frequently accessed and updated. | Large volumes of historical data, often loaded in batches. |
 
-**Languages for Data Analytics**: You need to understand which [databases are there](https://jalcocert.github.io/JAlcocerT/setup-databases-docker) with D&A lenses. You can also look to [DBs from BE devs side](https://jalcocert.github.io/JAlcocerT/databases-101/).
+**Languages for Data Analytics**: You need to understand which [databases are there](https://jalcocert.github.io/JAlcocerT/setup-databases-docker) with D&A lenses. 
+
+Its also worth to look to [DBs from BE devs side](https://jalcocert.github.io/JAlcocerT/databases-101/).
 
 * [SQL for Data Analytics](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)
 * [Getting started with Python](https://jalcocert.github.io/JAlcocerT/guide-python/)
@@ -127,7 +130,9 @@ That's why I learnt to create ebooks and made one about **Data Analytics**
 
 **Query Engines**
 
-Query engines are software systems designed to run SQL queries or similar data processing commands. They are the "brains" that execute the logic you write, often over large datasets.
+Query engines are software systems designed to run SQL queries or similar data processing commands. 
+
+They are the "brains" that execute the logic you write, often over large datasets.
 
 
 | Name | Type | Key Features | Primary Use Case |
@@ -196,11 +201,18 @@ The choice between a tool like Azure Data Factory and a more code-based tool lik
 * **Airflow** provides greater **flexibility and fine-grained control** over your pipelines, but it requires a deeper understanding of Python and more DevOps effort to manage the underlying infrastructure.
 
 
-Yes, dbt and Dataform are extremely similar; they are both designed for data transformation. Azure Data Factory (ADF), however, is both a transformation and orchestration tool.
+Yes, dbt and Dataform are extremely similar; they are both designed for data transformation. 
+
+Azure Data Factory (ADF), however, is both a transformation and orchestration tool.
 
 **dbt & Dataform: Data Transformation**
 
-dbt and Dataform are specialized tools for the "T" in ELT (Extract, Load, Transform). They enable data engineers to build robust data models and pipelines using a **declarative, SQL-first** approach. They don't handle the data ingestion (the "E" and "L")—they assume the data is already in a data warehouse like BigQuery or Snowflake.
+dbt and Dataform are specialized tools for the "T" in ELT (Extract, Load, Transform).
+
+
+They enable data engineers to build robust data models and pipelines using a **declarative, SQL-first** approach. 
+
+They don't handle the data ingestion (the "E" and "L")—they assume the data is already in a data warehouse like BigQuery or Snowflake.
 
 Their primary function is to transform raw, messy data into clean, structured data sets ready for analytics.
 
@@ -279,26 +291,32 @@ Make sure to master json and timestamps: *specially when working with [telecom d
 
 {{< /dropdown >}}
 
-> You can do cool things with [Python+JSON understanding, like reading info from s3](https://jalcocert.github.io/JAlcocerT/aws-s3-python-boto-queries/#json-tools).
+> You can do cool things with [Python+JSON understanding, like reading info **from s3**](https://jalcocert.github.io/JAlcocerT/aws-s3-python-boto-queries/#json-tools).
 
 
-**BI Stuff**: Get better at creating visual data stories that anyone can understand.
+### Business Intelligence
+
+About **BI Stuff**: Get better at creating visual data stories that anyone can understand.
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#what-it-is-looker-modelling-language" title="GCP Looker | Post ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/about-powerbi/" title="Microsoft PowerBI | Post ↗" >}}
 {{< /cards >}}
 
-You dont need to wait to be on a project to get started. See these:
+You dont need to wait to be on a project to get started. See:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/iot/grafana.png" subtitle="For Data Analytics and SelfHosting - Redash, Superset, Grafana..." >}}
 {{< /cards >}}
 
+So as long as you are clear where to get the data / transform it and represent it, you can **make the BI magic happen**.
 
-* Shiny in Python
-  * <https://shiny.rstudio.com/py/gallery/>
-  * <https://shiny.rstudio.com/py/gallery/>
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/BI/#custom-bi-tools" title="BI | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DBs | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
 
 
 ### Cool D&A Architectures
@@ -374,6 +392,8 @@ flowchart LR
     Gold -.-> Iceberg
 ```
 
+## Other Roles
+
 ### BA Stuff
 
 Dont become one of those BAs that dont know anything at all from tech.
@@ -388,32 +408,30 @@ This ensures that when you switch from "Manager" to "Developer," you know exactl
 
 **Acronyms for BAs:**
 
-1. Scope of Work - SoW
+1. Scope of Work - SoW / WoW - Way of Working
 2. BRD,PRD,FRD
 3. PoC, MVP
 4. SMART and INVEST
 
-### The User Story Skeleton
+#### The User Story Skeleton
 
 The most effective structure for a SaaS user story is the **"Role-Action-Benefit"** formula, followed by **Acceptance Criteria (AC)**.
 
-**The Skeleton:**
+**The Skeleton:** *of a properly formulated user story*
 * **Story:** As a **[Type of User]**, I want to **[Perform an Action]** so that **[Achieve a Value]**.
 * **Acceptance Criteria:** A bulleted checklist that defines when the task is "Done."
 
----
+An Example: User Authentication
 
-### The Example: User Authentication
+A story that starts with "the user logs into the app."
 
-You asked for a story that starts with "the user logs into the app."
-
-#### **User Story: Account Access**
+1. The R.A.B: **User Story: Account Access**
 
 > **As a** Registered User,  
 > **I want to** log into the application using my email and password  
 > **So that** I can access my private dashboard and saved data securely.
 
-#### **Acceptance Criteria (The "Functional" logic):**
+2. **Acceptance Criteria (The "Functional" logic):**
 
 * [ ] User is presented with a clean login screen containing Email and Password fields.
 * [ ] The "Login" button is disabled if the fields are empty.
@@ -422,6 +440,12 @@ You asked for a story that starts with "the user logs into the app."
 * [ ] **Error Path:** If credentials fail, show a generic error: *"Invalid email or password."* (Do not specify which one for security).
 * [ ] **State Persistence:** User session is maintained (JWT or Session cookie) so they don't have to re-login on refresh.
 * [ ] **Password Masking:** The password field characters must be hidden by default.
+
+
+### PM/Architect
+
+These are higher level roles where [decisions](https://jalcocert.github.io/JAlcocerT/decision-making-data-analytics/) about where to go next are made.
+
 
 ### DSc Tools
 
@@ -458,22 +482,19 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 
 My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) 
 
-The ML Guide
-
-* https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.18371&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false 
-
-Basic understanding of Supervised, Unsupervised and Reinforcement ML.
-Basic understanding of Location, Spread, Assymetry, Concentration, Dependence measures.
-Basic understanding of Hypothesis testing (confidence interval, Type 1 and Type 2 errors, Null hypothesis, significance level and p-value). 
-Basic understanding of Classification, Regression and Clustering tasks in ML. 
-Ability to list use cases for Hypothesis testing.
-Ability to list use cases for Classification, Clustering, Regression, their benefits, pros and cons.
-Ability to list use cases for Supervised and Unsupervised ML methods, compare them.
+You also have a TF playground [here](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.18371&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
 
 
 
-{{< details title="Some examples of tasks and skills in machine learning/DSc, along with how you could demonstrate them using Python and popular libraries 📌" closed="true" >}}
+{{< details title="Examples of tasks and skills in ML/DSc | How you could demonstrate them using Python 📌" closed="true" >}}
 
+* Basic understanding of Supervised, Unsupervised and Reinforcement ML.
+* Basic understanding of Location, Spread, Assymetry, Concentration, Dependence measures.
+* Basic understanding of Hypothesis testing (confidence interval, Type 1 and Type 2 errors, Null hypothesis, significance level and p-value). 
+* Basic understanding of Classification, Regression and Clustering tasks in ML. 
+* Ability to list use cases for Hypothesis testing.
+* Ability to list use cases for Classification, Clustering, Regression, their benefits, pros and cons.
+* Ability to list use cases for Supervised and Unsupervised ML methods, compare them.
 
 **1. Machine Learning/Data Science Tasks**
 
@@ -629,6 +650,7 @@ Ability to list use cases for Supervised and Unsupervised ML methods, compare th
 
 {{< /details >}}
 
+
 ## Outro
 
 Tired of being an ,IC', aka *individual contributor* or the politics around managerial roles?
@@ -639,3 +661,24 @@ Find clients that need your expertise, build with your knowledge and help others
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+
+### A D&A Journey
+
+My personal one has been for long time around [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/) and [healthcare](https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics).
+
+
+
+1. Learnt [SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)
+2. Made a course about [R](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/), then went all in with [Python](https://jalcocert.github.io/JAlcocerT/guide-python/)
+
+
+https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/
+
+https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/
+https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
+https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/
+
+https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/
+
+https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/
