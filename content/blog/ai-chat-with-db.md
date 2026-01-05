@@ -6,7 +6,7 @@ cover:
   image: "https://socialify.git.ci/jalcocert/data-chat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
   alt: "Langchain chat with DB" # alt text
   caption: "Using LLMs to chat with databases" # display caption under cover
-tags: ["Gen-AI","Python","Dev","Chinook DB"]
+tags: ["Gen-AI","Python","Dev","Chinook DB","Tech Talk"]
 description: 'How to use Langchain to chat with a DB. How I prepared for a Tech Talk with AI.'
 url: 'langchain-chat-with-database'
 ---

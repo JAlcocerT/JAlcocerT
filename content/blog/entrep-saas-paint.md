@@ -1,7 +1,6 @@
 ---
 title: "Estimating house work and capturing leads"
-date: 2026-01-17T23:20:21+01:00
-#date: 2025-12-21T23:20:21+01:00
+date: 2026-02-01T23:20:21+01:00
 draft: false
 tags: ["Lead testing","Painting Home","RoadMap26"]
 description: 'Building a platform to match offer and demand for certain jobs.'
@@ -107,6 +106,13 @@ How would this be:
 ---
 
 ## Conclusions
+
+Want this implemented for your business?
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
 
 ---

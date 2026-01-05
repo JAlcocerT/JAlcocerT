@@ -64,6 +64,35 @@ See also **DBChart or DBGate**
 
 I will focus this section on the D&A goal of databases, which is to **READ and analyze** huge amounts of data.
 
+```sql
+SELECT
+  gw_type,
+  cm_model,
+  COUNT(DISTINCT location_id) AS total_locations_in_group,
+  -- Conditional count for the filtered locations
+  COUNT(DISTINCT CASE
+    WHEN parent_node_type = 'gateway' AND child_node_type = 'pod' AND idtype IN ('LG203X', 'LG403Z', 'LG302Z', 'LG312Z')
+    THEN location_id
+  END) AS conditional_locations,
+  -- Calculate the KPI in the same query
+  (COUNT(DISTINCT CASE
+    WHEN parent_node_type = 'gateway' AND child_node_type = 'pod' AND idtype IN ('LG203X', 'LG403Z', 'LG302Z', 'LG312Z')
+    THEN location_id
+  END) * 100.0) / COUNT(DISTINCT location_id) AS percentage_kpi
+FROM
+  `some.where.table_base`
+WHERE DATE_TRUNC(ts, DAY) = DATE("2023-12-31")
+--WHERE
+--  ts >= '2023-12-30'
+-- AND ts < '2023-12-31'
+  AND gw_type IS NOT NULL
+  AND cm_model IS NOT NULL
+GROUP BY
+  gw_type,
+  cm_model
+ORDER BY
+  total_locations_in_group DESC;
+```
 
 ### SQL Tricks for OLAP
 

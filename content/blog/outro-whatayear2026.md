@@ -47,6 +47,8 @@ Maybe, try to build a brand *before its too late*.
 
 0. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
+![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
 {{< /cards >}}
@@ -331,7 +333,7 @@ Ive enjoyed using Cloudflare R2 for s3 compatible storage.
  
 Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
 
-~33...
+~33...now 46
 
 ```sh
 #du -sh .

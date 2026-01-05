@@ -1,16 +1,15 @@
 ---
 title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
-date: 2026-01-07T23:20:21+01:00
-#date: 2025-12-20T23:20:21+01:00
+date: 2026-01-11T23:20:21+01:00
 draft: false
-tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story 1"]
+tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story 2"]
 description: 'Building a custom BOT for real estate agencies. With CORS and Rate Limiting.'
 url: 'custom-re-rag'
 ---
 
 **Tl;DR**
 
-What it should have been the Real Estate project.
+What it should have been the Real Estate project from its conception.
 
 The **launch strategy**: *aka, focus strategy*:
 
@@ -235,10 +234,27 @@ And now **in 2/3h** you get the cool website UI, its editor and the real estate 
 
 Again: CRAZY.
 
+Without the need to implement more complex [setups to chat with DBs](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/)
+
 {{< callout type="info" >}}
 Did this kind of project development is just much easier (x10) or did I get better?
 {{< /callout >}}
 
+### Whats working whats not and whats next
+
+1. Whats working: the product
+2. Whats not: the client acquisition - *nobody knows this exists*
+3. Whats next: scale the client acquisition by building a cold marketing machine
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="The power to DIY - via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks that enable you to create" >}}
+{{< /cards >}}
+
+
+```sh
+whois dm-real-estate.com | grep -i -E "(creation|created|registered)"
+```
 
 
 ---

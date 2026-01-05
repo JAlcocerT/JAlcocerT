@@ -11,7 +11,7 @@ draft: false
 
 >  The open-source CapCut alternative
 
-2. KDEnlive
+2. KDEnlive: *which imo, is fantastic*
 
 
 ![KDENlive Comments](/blog_img/karting/kdenlive-gopro-gps-comments.png)
@@ -47,8 +47,6 @@ Tip: You can also adjust the X and Y coordinates in the Effect Stack for more pr
 
 
 3. Others like: Shotcut
-
-
 
 <!-- https://www.youtube.com/shorts/ls_66dIM9-4 -->
 

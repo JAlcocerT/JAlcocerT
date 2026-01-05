@@ -1,6 +1,6 @@
 ---
 title: "Mastering Social Media x InfoGraphics"
-date: 2026-01-08T11:20:21+01:00
+date: 2026-02-01T11:20:21+01:00
 draft: false
 tags: ["Twitter X","Threads","Youtube","Latex vs Typst","RoadMap26"]
 description: 'Quality and automated content creation to build a community. Compared to just ads.'
@@ -90,7 +90,29 @@ For infographics, the most critical factor is usually **layout flexibility**—h
 
 ---
 
-### ## 1. LaTeX (The "Professional Heavyweight")
+
+Reports: Pandoc vs Typst vs LaTex
+
+- Pandoc is a versatile converter tool supporting Markdown, LaTeX, HTML, DOCX, and many other formats. It is great for converting documents and combining Markdown with raw LaTeX for complex formatting. It requires some setup but is widely used and flexible.[3][4]
+- Typst is a relatively new open-source typesetting system designed as a LaTeX alternative, known for a clean syntax inspired by Rust and Python, faster compilation, and easier document styling. It offers good readability of error messages and web collaboration features. It is intuitive for simple to moderately complex documents but less mature than LaTeX.[5][6][3]
+- LaTeX is the traditional, powerful typesetting system with extensive features for academic and complex document layouts. It has a steeper learning curve and verbose syntax but the richest ecosystem and long-term support.[3][5]
+- Overall, Pandoc is excellent for format conversion and combining Markdown with LaTeX, Typst offers a modern alternative with easier syntax, and LaTeX is ideal for advanced, professionally typeset documents.
+
+
+| Use Case        | Tool         | Key Strengths                               | Notes                      |
+|-----------------|--------------|---------------------------------------------|----------------------------|
+| Presentations   | Reveal.js    | Flexible, established, supports Markdown    | Requires HTML for layouts  |
+|                 | Slidev       | Markdown-based, interactive, fast HMR       | Developer and Vue friendly |
+| Reports        | Pandoc       | Format conversion, markdown + LaTeX support | Setup needed               |
+|                 | Typst        | Clean, easy modern syntax, fast compile      | Newer, evolving            |
+|                 | LaTeX        | Powerful, rich ecosystem for academia        | Steep learning curve       |
+
+This selection depends on priorities: Slidev for modern web presentations, Reveal.js for flexible HTML slides; Pandoc for format conversions, Typst for newer simpler typesetting, and LaTeX for complex document mastery.
+
+
+
+
+### 1. LaTeX (The "Professional Heavyweight")
 
 LaTeX is used for infographics primarily through **TikZ**, a language for creating vector graphics. It allows you to define every pixel, coordinate, and node programmatically.
 
@@ -98,7 +120,7 @@ LaTeX is used for infographics primarily through **TikZ**, a language for creati
 * **Cons:** Extremely slow compilation; "TikZ" can feel like learning a second language.
 * **Infographic Use Case:** High-resolution posters for conferences where precision is non-negotiable.
 
-### ## 2. KaTeX (The "Web Specialist")
+### 2. KaTeX (The "Web Specialist")
 
 KaTeX is not a document generator; it is a **math-rendering engine** for the web.
 
@@ -106,7 +128,7 @@ KaTeX is not a document generator; it is a **math-rendering engine** for the web
 * **Cons:** It cannot create an entire infographic. It only handles the *math* within a web-based infographic (like a dashboard).
 * **Infographic Use Case:** Embedding interactive formulas into a web-based explainer.
 
-### ## 3. Typst (The "Modern Contender")
+### 3. Typst (The "Modern Contender")
 
 Typst is the newcomer designed to replace LaTeX. It uses a scripting language that feels like Python or JavaScript.
 

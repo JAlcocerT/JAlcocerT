@@ -173,9 +173,10 @@ The success story has been recorded [here](https://youtu.be/3lcywTUeP5k)
 
 {{< youtube "3lcywTUeP5k" >}}
 
+Be the next one to get a x10 workflow improvement:
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="The power to DIY - via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks that enable you to create" >}}
 {{< /cards >}}
 

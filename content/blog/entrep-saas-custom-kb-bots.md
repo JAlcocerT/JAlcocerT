@@ -1,6 +1,6 @@
 ---
 title: "KB and Local Bots to end Silos for good"
-date: 2026-01-06T23:20:21+01:00
+date: 2026-01-19T23:20:21+01:00
 #date: 2025-12-21T23:20:21+01:00
 draft: false
 tags: ["Custom Chatbots x Local AI and KB","Tech Talk","RoadMap26"]
@@ -194,6 +194,11 @@ Same questions apply: web only? desktop app required? mobile?
 
 ## Conclusions
 
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
 ### HUGO Vibe Coded Re-build
 

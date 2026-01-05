@@ -1,5 +1,5 @@
 ---
-title: "Racing and Data"
+title: "Racing and Data Overlay"
 date: 2025-12-23T09:20:21+01:00
 draft: false
 tags: ["Karts","Accelerometer Sensor","RacheChrono","Cars x OBD2","GoPro GPS"]
@@ -281,6 +281,14 @@ python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v7.py
 
 
 <!-- https://youtu.be/Cv0-m9B3l_Y -->
+
+As you can see, the code is completely free and open.
+
+If you got doubts or need a custom implementation, you can reach out:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="My Consulting Service Tier" >}}
+{{< /cards >}}
 
 **Next steps**
 

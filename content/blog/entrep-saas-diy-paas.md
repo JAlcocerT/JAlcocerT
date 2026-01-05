@@ -1,6 +1,6 @@
 ---
 title: "Making an enhanced DIY offering via PaaS"
-date: 2026-01-09T09:20:21+01:00
+date: 2026-02-01T09:20:21+01:00
 draft: false
 tags: ["DIY Platform Service","RoadMap26","Postgres"]
 description: 'A platform service offering for B2C to get up to speed with services that dont require any customization.'
@@ -111,10 +111,30 @@ pandoc hand-over.md -o hand-over.pdf
 #cd /home/jalcocert/Desktop && zip -r ourika.zip ourika -x "ourika/node_modules/*" -x "ourika/.git/*"
 ```
 
-For anyone offended: *DIY/DWY/DFY :)*
+For anyone offended:
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C;
+
+    %% --- Nodes ---
+    L1("Free Content<br/>(Blog/YT $0)"):::free
+    L2("DIY<br/>(Templates / Platform) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Services) $$$"):::high
+
+    %% --- Connections ---
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+```
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 

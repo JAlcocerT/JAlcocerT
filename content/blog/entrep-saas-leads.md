@@ -1,6 +1,6 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-08T11:20:21+01:00
+date: 2026-01-12T11:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x Sales Pipeline","Web Scrapping","RoadMap26"]
 description: 'Finding people that actually need your services'
@@ -8,6 +8,7 @@ url: 'how-to-get-customers-programmatically'
 ---
 
 **Tl;DR**
+
 
 
 **Intro**
@@ -47,7 +48,20 @@ Like the ones you will be generating after getting leads right for your SaaS by 
 
 This is all from the start doing goal for this year: *Go all-in to find new clients*
 
+One year *aka 12 months* is what you need to change your business and life.
 
+Ive seen it happen:
+
+```sh
+whois genkinfy.com | grep -i -E "(creation|created|registered)"
+```
+
+Want this implemented for your business?
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "A SaaS for Marketing Agencies: From bots to leads"
-date: 2026-01-06T23:20:21+01:00
+date: 2026-01-10T23:20:21+01:00
 draft: false
 tags: ["Custom Dashboards","Marketing Analytics","Agency Leads","RoadMap26"]
 description: 'Building a custom mkt solutions to feed your sales pipeline.'
@@ -45,9 +45,14 @@ Spaces are limited
 > > And how could have I not used gemini to [understand the strategy better](#faq)
 
 
-##
+## Conclusions
 
-## PRO and automatic content
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
+### PRO and automatic content
 
 ---
 

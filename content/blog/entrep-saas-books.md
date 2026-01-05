@@ -342,6 +342,16 @@ That's why I have created a custom chatbot for registered users to do QnA over t
 ### KB Ive added so far
 
 1. The D&A one
+2. The web one - Going from the diy version stored here, to the new one.
+
+![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+
+If you'd need, you can always reach out:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="My Consulting Service Tier" >}}
+{{< /cards >}}
+
 
 ### People Shipping ebooks
 

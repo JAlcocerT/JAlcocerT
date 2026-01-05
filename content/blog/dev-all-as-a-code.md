@@ -2,7 +2,7 @@
 title: "Everything is Code"
 date: 2025-10-25T08:20:21+01:00
 draft: false
-tags: ["Matplotlib vs Manim vs RemotionJS","SlidevJS vs ReflexJS","Pandoc vs Latex vs Typst"]
+tags: ["Matplotlib vs Manim vs RemotionJS","SlidevJS vs ReflexJS","Pandoc vs Latex"]
 url: 'things-as-a-code'
 description: 'Creating everything is a code. Animations, ppts, reports/inphographics , ebooks and obfuscation...'
 ---
@@ -22,27 +22,6 @@ Do stuff: ebooks and obfuscation, reports, ppts, animations, videos, webpages, e
 - Reveal.js is a popular HTML presentation framework that supports Markdown and is flexible but often requires writing HTML for layout and animations. It is widely used but less concise for slide content.[1]
 - Slidev is built on Vue.js and Vite, providing an extended Markdown format for creating slides. It is more concise than Reveal.js, supports Vue components for interactive slides, has instant hot-reloading, built-in theming, and recording features. Slidev is very developer-friendly and web-based, allowing extensive customization.[2][1]
 - In summary, Slidev is often preferred for modern developer presentations due to ease of use, interactivity, and faster iteration, while Reveal.js remains a flexible, established choice.
-
-Reports: Pandoc vs Typst vs LaTex
-
-- Pandoc is a versatile converter tool supporting Markdown, LaTeX, HTML, DOCX, and many other formats. It is great for converting documents and combining Markdown with raw LaTeX for complex formatting. It requires some setup but is widely used and flexible.[3][4]
-- Typst is a relatively new open-source typesetting system designed as a LaTeX alternative, known for a clean syntax inspired by Rust and Python, faster compilation, and easier document styling. It offers good readability of error messages and web collaboration features. It is intuitive for simple to moderately complex documents but less mature than LaTeX.[5][6][3]
-- LaTeX is the traditional, powerful typesetting system with extensive features for academic and complex document layouts. It has a steeper learning curve and verbose syntax but the richest ecosystem and long-term support.[3][5]
-- Overall, Pandoc is excellent for format conversion and combining Markdown with LaTeX, Typst offers a modern alternative with easier syntax, and LaTeX is ideal for advanced, professionally typeset documents.
-
-
-| Use Case        | Tool         | Key Strengths                               | Notes                      |
-|-----------------|--------------|---------------------------------------------|----------------------------|
-| Presentations   | Reveal.js    | Flexible, established, supports Markdown    | Requires HTML for layouts  |
-|                 | Slidev       | Markdown-based, interactive, fast HMR       | Developer and Vue friendly |
-| Reports        | Pandoc       | Format conversion, markdown + LaTeX support | Setup needed               |
-|                 | Typst        | Clean, easy modern syntax, fast compile      | Newer, evolving            |
-|                 | LaTeX        | Powerful, rich ecosystem for academia        | Steep learning curve       |
-
-This selection depends on priorities: Slidev for modern web presentations, Reveal.js for flexible HTML slides; Pandoc for format conversions, Typst for newer simpler typesetting, and LaTeX for complex document mastery.
-
-
-
 
 ### PPTs as a Code
 

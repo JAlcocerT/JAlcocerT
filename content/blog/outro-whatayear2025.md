@@ -563,7 +563,7 @@ Notice also that **WHAT something is** has nothing to do with WHERRE something i
 
 And that [BRD PRD FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) are the WHY / what / how of a product you are building.
 
-11. From SliDevJS for ppts, to realize that pandoc, latex or Typst allow us to create pixel perfect ebooks, newsletters... 
+11. From SliDevJS for ppts, to realize that pandoc or latex allow us to create pixel perfect ebooks, newsletters... 
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks//" title="eBooks | Docs ↗" icon="book-open" >}}

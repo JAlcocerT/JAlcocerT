@@ -85,12 +85,7 @@ This can concepts get messy, very fast.
 
 That's why I learnt to create ebooks and made one about **Data Analytics**
 
-<!-- ![Astro landing page book - Sell your ebook UI](/blog_img/shipping/astro-sell-your-ebook.png) -->
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/" title="e-books | Docs" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="Scrapping job boards" >}}
-  {{< card link="https://diy.jalcocertech.com" title="D&A e-book" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Start your D&A Career" >}}
-{{< /cards >}}
 
 
 
@@ -682,3 +677,20 @@ https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/
 https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/
 
 https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/
+
+### D&A eBook
+
+How can you **benefit from all this**
+
+![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="My Consulting Service Tier" >}}
+{{< /cards >}}
+
+<!-- ![Astro landing page book - Sell your ebook UI](/blog_img/shipping/astro-sell-your-ebook.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/" title="e-books | Docs" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="Scrapping job boards" >}}
+  {{< card link="https://diy.jalcocertech.com" title="D&A e-book" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Start your D&A Career" >}}
+{{< /cards >}}

@@ -318,6 +318,12 @@ https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/
 
 ## Conclusions
 
+Need something like this white-labeled?
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
 ### Setting Up Google ads
 

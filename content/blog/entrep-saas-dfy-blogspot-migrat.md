@@ -1,9 +1,9 @@
 ---
 title: "From Blogspot to a Cool Website"
-date: 2026-01-11
-description: "Migrating Blogspot and wordpress to a Modern and Responsive Website"
+date: 2026-01-09
+description: "How is your current site performing? Migrating Blogspot and wordpress to a Modern and Responsive Website"
 draft: false
-tags: ["Free Web Audits","Lead Magnet","Roadmap26"]
+tags: ["Free Web Audits","Lead Magnet","Roadmap26","BiP"]
 ---
 
 
@@ -83,6 +83,13 @@ A sitemap enhances your website’s discoverability and SEO performance by ensur
 ## Conclusions
 
 
+
+Want to do something similar?
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Reach out via my Consulting Service Tier and Calendar" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="The power to DIY - via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks that enable you to create" >}}
+{{< /cards >}}
 
 
 

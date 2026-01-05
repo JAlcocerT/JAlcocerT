@@ -34,9 +34,14 @@ We come from tinkering with GA and RL models.
 
 But this is going to focus on putting together the HUD *for gopros based on gps and accelerometer* plus the gradient descent best lap estimation:
 
+<!-- https://youtu.be/zm0OJcpuLV8 -->
+
+{{< youtube "zm0OJcpuLV8" >}}
+
+
 {{< cards cols="1" >}}
-  {{< card link="https://www.firecrawl.dev" title="FireCrawl API ↗ " >}}
-  {{< card link="https://docs.firecrawl.dev/features/scrape#extracting-without-schema-new" title="API Docs ↗" >}}
+  {{< card link="https://www.firecrawl.dev" title="ApexSim | GD Post ↗ " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/" title="GoPro GPS Custom HUD ↗" >}}
 {{< /cards >}}
 
 
@@ -71,6 +76,8 @@ cd 4-apexsim-desktop && python3.10 main.py
 
 ## Conclusions
 
+I manage to make this as simple as
+
 ```sh
 git clone
 
@@ -79,7 +86,19 @@ cd 4-apexsim-desktop && python3.10 main.py
 
 ![CustomTkinter | ApexSim Python Desktop](/blog_img/karting/apexsim-desktop.png)
 
+Want to build something similar?
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Reach out via my Consulting Service Tier and Calendar" >}}
+{{< /cards >}}
+
+
 ### Next Steps
+
+0. Package and distribute the app as freemium *social signin required*
+0. Gather feedback and improve
+0. Ship the desktop app (cross-platform) (Nuitka?)
+
 
 OBS to MQTT: is this even possible?
 

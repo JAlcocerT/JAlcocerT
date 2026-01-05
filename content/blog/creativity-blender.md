@@ -1,16 +1,18 @@
 ---
-title: "Using Blender with AI"
+title: "Using Blender"
 date: 2026-12-17
 draft: false
-# cover:
-#     image: "https://socialify.git.ci/alejandro-ao/ask-multiple-pdfs/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-#     alt: "ChatPDF" # alt text
-#     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
-tags: ["Gen-AI","Python","Dev","Design Patterns"]
-description: 'How to use Blender with AI'
+tags: ["Gen-AI","Python","Design Patterns"]
+description: 'Creating is easier than ever (?)'
 url: 'using-blender-with-ai'
 ---
 
+
+**Tl;DR**
+
+
+
+**Intro**
 
 Early this year, I saw a very cool video about **design patterns**.
 
