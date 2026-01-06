@@ -477,6 +477,17 @@ Im **launching my boilerplate**: https://boilerplate.jalcocertech.com
 
 > > Many claim to read, but very few understand
 
+<!-- ## Data Driven Stories
+
+<https://viborc.com/> -->
+
+<!-- Psychology-skills-data-analytics/#the-paradox-of-success
+Psychology-skills-data-analytics/#the-optimism-bias -->
+
+<!-- ### Requirements Gathering -->
+
+<!-- * Listen -->
+
 <!-- ### The Echo Chambers
 
 When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. 

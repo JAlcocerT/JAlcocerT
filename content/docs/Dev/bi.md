@@ -6,7 +6,43 @@ description: 'BI use cases and tools'
 url: 'BI'
 ---
 
-Within your [D&A Career](https://jalcocert.github.io/JAlcocerT/career/), you will find several **BI** Tools:
+Within your [D&A Career](https://jalcocert.github.io/JAlcocerT/career/), you will find several **BI** Tools.
+
+In the end, its all about: *the goal, not...the tools*
+
+| Step | Phase | Activity |
+|------|-------|----------|
+| **1** | Discovery | Understand client needs, goals, challenges, and expectations |
+| **2** | Data | Gather and analyze relevant data, perform cleaning and exploration |
+| **3** | Hypothesis | Develop initial hypotheses based on client needs and data |
+| **4** | Method | Select appropriate analytical methods and tools |
+| **5** | Analysis | Perform the analysis, document process and results |
+| **6** | Insights | Identify key patterns, trends, and findings |
+| **7** | Design | Organize insights into a coherent narrative |
+| **8** | Iterate | Share with client, gather feedback, refine |
+| **9** | Present | Deliver the final data story with clear visuals |
+| **10** | Follow-up | Measure success, determine next steps |
+
+
+Every KPI should follow the SMART framework:
+
+| Criterion | Description | Example |
+|-----------|-------------|---------|
+| **S**pecific | Clear and well-defined goals | "Develop a KPI dashboard for sales" vs "improve analysis" |
+| **M**easurable | Quantifiable metrics or observable outcomes | Track user engagement increase, time saved |
+| **A**chievable | Realistic given resources, skills, and time | Challenging but within reach |
+| **R**elevant | Aligned with business objectives | Direct impact on key business areas |
+| **T**ime-bound | Specific deadline or timeframe | "Complete by Q2" creates urgency |
+
+You will be building KPI across Categories:
+
+| Category | Focus | Examples |
+|----------|-------|----------|
+| **Financial** | Revenue, profitability | Revenue growth, profit margin, ROI |
+| **Customer** | Satisfaction, retention | NPS, churn rate, customer lifetime value |
+| **Operational** | Efficiency, quality | Processing time, error rate, throughput |
+| **Growth** | Expansion, reach | Market share, new customers, lead conversion |
+
 
 Most popular within enterprises are: *all of these are paid products*
 

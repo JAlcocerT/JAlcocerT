@@ -7,20 +7,11 @@ description: 'Software development methodologies in Analytics.'
 url: 'software-development-methodologies-data-analytics'
 ---
 
+**Intro**
+
 Reviewing software development methodologies - Understanding them and choosing the right one will provide a systematic, efficient, and quality-oriented way of working on a software project.
 
 ## Understanding Software Development Methodologies
-
-<!-- Basic understanding of SDLC (phases, roles, responsibilities, artefacts).
-Basic understanding of Agile and Waterfall   methodologies (process, roles, responsibilities, events, artefacts).
-
-Solid knowledge of Agile and Waterfall methodologies.
-Clear understanding of BA’s role & responsibilities in Agile vs Waterfall.
-Ability to drive Scrum ceremonies (refinement, planning, demo).
-
-Ability to define and produce BA deliverables across different methodologies and project phases.
-Ability to establish/enhance a BA process on a project.
-Ability to act as a proxy Product Owner. -->
 
 It is a structured approach that follows a design philosophy and a sequence of steps that guide developers through each stage of development.
 
@@ -101,6 +92,21 @@ In most cases, there is no procedure for going back and changing the project or 
 * CONS: The rigorous structure and stringent constraints of the waterfall development process make it frequently expensive and slow. Users of the waterfall technique may look into alternative software development methodologies as a result of these drawbacks.
 
 ---
+
+## Conclusions
+
+This should give you an idea of what is asked from you:
+
+* Basic understanding of SDLC (phases, roles, responsibilities, artefacts).
+* Basic understanding of Agile and Waterfall   methodologies (process, roles, responsibilities, events, artefacts).
+
+* Solid knowledge of Agile and Waterfall methodologies.
+* Clear understanding of BA’s role & responsibilities in Agile vs Waterfall.
+* Ability to drive Scrum ceremonies (refinement, planning, demo).
+
+* Ability to define and produce BA deliverables across different methodologies and project phases.
+* Ability to establish/enhance a BA process on a project.
+* Ability to act as a proxy Product Owner.
 
 ## FAQ
 

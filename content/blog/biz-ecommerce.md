@@ -9,6 +9,9 @@ url: 'how-about-an-ecommerce'
 
 **Tl;DR**
 
+You need [consumer intelligence](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/#about-consumer-intelligence) to create a 2026 proof e-commerce.
+
+And [ERP, a CRM](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/#erp-vs-crm)?
 
 * https://github.com/riteshk-007/nextjs-store
 

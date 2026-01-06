@@ -79,7 +79,7 @@ FMCG and [its concepts](#fmcg-concepts) can be applied across different industri
 
 ### About Consumer Intelligence
 
-Consumer Intelligence is the practice of using data and analytics to understand and predict consumer behavior and preferences. 
+Consumer Intelligence is the practice of using data and analytics to **understand and predict consumer behavior** and preferences. 
 
 It can be used to inform marketing and sales strategies, product development, and other business decisions.
 

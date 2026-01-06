@@ -293,12 +293,25 @@ Make sure to master json and timestamps: *specially when working with [telecom d
 
 About **BI Stuff**: Get better at creating visual data stories that anyone can understand.
 
+Basically: DA + [Story Telling](https://jalcocert.github.io/JAlcocerT/story-telling-data-analytics/) ~= [BI](https://jalcocert.github.io/JAlcocerT/BI/)
+
+
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/#what-it-is-looker-modelling-language" title="GCP Looker | Post ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/about-powerbi/" title="Microsoft PowerBI | Post ↗" >}}
 {{< /cards >}}
 
-You dont need to wait to be on a project to get started. See:
+With whatever you are building dashboard: *follow these Visualization Principles*
+
+| Principle | Description |
+|-----------|-------------|
+| **Tell a story** | Data should guide the audience through insights |
+| **Match chart to data** | Use appropriate visualization for data type |
+| **Less is more** | Avoid clutter, focus on key information |
+| **Context matters** | Provide labels, titles, and explanations |
+| **Accessible** | Consider colorblind users, screen readers |
+
+You dont need to wait to be on a project to get started with BI. See:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Visualization Tools for BI" image="/blog_img/iot/grafana.png" subtitle="For Data Analytics and SelfHosting - Redash, Superset, Grafana..." >}}
@@ -439,8 +452,36 @@ A story that starts with "the user logs into the app."
 
 ### PM/Architect
 
-These are higher level roles where [decisions](https://jalcocert.github.io/JAlcocerT/decision-making-data-analytics/) about where to go next are made.
+These are **higher level** roles where [decisions](https://jalcocert.github.io/JAlcocerT/decision-making-data-analytics/) about where to go next are made.
 
+
+As data professionals, we often focus on building models and pipelines.
+
+But the ultimate goal is to **inform decisions**. 
+
+And decisions are made by humans—who are susceptible to biases: *remember about status quo bias, anchoring, confirmation bias...*
+
+Also, [development methodologies](https://jalcocert.github.io/JAlcocerT/software-development-methodologies-data-analytics/) to make the team work at its peak will be of your concern.
+
+Technical debt is the implied cost of additional work caused by choosing quick solutions over better approaches.
+
+| Category | Warning Signs |
+|----------|---------------|
+| **Delivery** | Quality degradation, high cost of change, slow experimentation |
+| **Architecture** | Hard to integrate, reuse, grow, or support |
+| **Team** | Delays, low estimation confidence, demotivation |
+
+[Time management](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) in between meetings will be critical
+
+The ultimate goal? To [Plan and monitor the project status](https://jalcocert.github.io/JAlcocerT/planning-data-analytics/) to its successfull completion.
+
+1. **Know your peak hours** — Protect them for deep work
+2. **Schedule your to-dos** — Time-box, don't just list
+3. **Avoid multitasking** — Switching costs are real
+4. **Run effective meetings** — Focus on actions and decisions
+5. **Eliminate time liabilities** — Modernize or remove
+6. **Use the prioritization filter** — Is it needed? Can it be delegated/automated?
+7. **Beat analysis paralysis** — Find the first small action
 
 ### DSc Tools
 
@@ -665,16 +706,18 @@ My personal one has been for long time around [telecom](https://jalcocert.github
 
 
 1. Learnt [SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)
+
 2. Made a course about [R](https://jalcocert.github.io/JAlcocerT/r-knitt-package-guide/), then went all in with [Python](https://jalcocert.github.io/JAlcocerT/guide-python/)
 
+3. And later it came [PySpark](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/) *say...python for big data*
 
-https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/
+4. But there is not D&A without proper [data modelling](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/)
 
 https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/
 https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
 https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/
 
-https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/
+
 
 https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/
 

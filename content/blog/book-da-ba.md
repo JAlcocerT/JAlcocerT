@@ -81,14 +81,6 @@ Follow this steps to enhance your estimations:
 | Falls into the [Planning Fallacy](https://fossengineer.com/Psychology-skills-data-analytics/#the-optimism-bias)     | Right Time   | 
 
 
-
-<!-- Psychology-skills-data-analytics/#the-paradox-of-success
-Psychology-skills-data-analytics/#the-optimism-bias -->
-
-<!-- ### Requirements Gathering -->
-
-<!-- * Listen -->
-
 ### Priority Settings
 
 **Priority** makes sense only in singular.

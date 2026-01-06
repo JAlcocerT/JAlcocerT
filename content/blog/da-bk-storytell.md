@@ -8,14 +8,16 @@ summary: 'How to transform complex Data into engaging narratives. Explore techni
 url: 'story-telling-data-analytics'
 ---
 
-<!-- Explore techniques like data visualization, context, and emotion to captivate your audience and drive decision-making. Learn how to create impactful data-driven stories that resonate with your audience and elevate your data presentations -->
+**Intro**
 
-<!-- 
-Raw Data itself does not mean much. With the proper techniques to interpret and narrate data, you can influence decisions and highlight action paths. -->
+Explore techniques like data visualization, context, and emotion to captivate your audience and drive decision-making.
 
-<!-- ## Data Driven Stories
+Learn how to create impactful data-driven stories that resonate with your audience and elevate your data presentations 
 
-<https://viborc.com/> -->
+Raw Data itself does not mean much.
+
+With the proper techniques to interpret and narrate data, you can influence decisions and highlight action paths.
+
 
 ## Why Story Telling?
 
@@ -161,5 +163,5 @@ Data inaccuracies can arise, resulting in "machine bias," which occurs when data
 
 The [data you choose may be skewed](https://fossengineer.com/guide-python-PySpark/#what-is-data-skew), especially if it originates from social media platforms where people express prejudiced opinions.
 
-> We need to be extra careful when trusting blindly Algorithms, as [there is always a trade-off](https://fossengineer.com/machine-learning-data-analytics/#the-bias-variance-trade-off).
+> We need to be extra careful when trusting blindly Algorithms, as there is always [a trade-off](/JAlcocerT/machine-learning-data-analytics/#the-bias-variance-trade-off).
 

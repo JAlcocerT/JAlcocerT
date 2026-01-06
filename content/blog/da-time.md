@@ -2,7 +2,7 @@
 title: "Time Management in Data Analytics"
 date: 2021-09-25T23:20:21+01:00
 draft: false
-tags: ["Outro","LeanTime"]
+tags: ["Outro","LeanTime","Career"]
 description: 'Time Management Techniques for Data Analytics'
 url: 'time-management-data-analytics'
 ---

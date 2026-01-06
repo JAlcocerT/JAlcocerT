@@ -7,6 +7,7 @@ description: 'Extracting insights from databases and generating automatic charts
 url: 'plug-and-play-data-analytics'
 ---
 
+https://jalcocert.github.io/JAlcocerT/selling-ideas-in-data-analytics/#what-is-ctor
 
 **Tl;DR**
 
@@ -133,6 +134,8 @@ gh repo create astro-editor --private --source=. --remote=origin --push
 ```
 
 {{% /details %}}
+
+As recently, I started with a BRD, some clarifications, then a development plan.
 
 
 

@@ -121,7 +121,7 @@ We started out with the framework: Whats working, whats not and whats next?
 
 The problem was clearly the way of shipping the code to production and the maintanability/ trazability of the versions.
 
-Thats where bringing the CI/CD strategy with the containers automated built method was a game changer.
+Thats where bringing the [CI/CD strategy to their software methodology](https://jalcocert.github.io/JAlcocerT/software-development-methodologies-data-analytics/#cicd) with the containers automated built method was a game changer.
 
 Regarding the what's next: I recommended to have a look for automated SSL certificates for their internal domain.
 
