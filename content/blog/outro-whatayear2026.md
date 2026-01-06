@@ -8,11 +8,11 @@ url: 'tech-recap-2026'
 ---
 
 
-{{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-{{< /cards >}}
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/" title=" | Post ↗" >}}
+  {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
+{{< /cards >}}
 
 
 Software product development, digital platform engineering, ...
@@ -27,6 +27,12 @@ Inspiring apps: all those pwa like that just...work
 * it-tools
 * Vert - https://jalcocert.github.io/JAlcocerT/wasm/
 * Pairdrop...
+
+
+* https://github.com/scio-labs/inkathon
+ 
+Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
+
 
 How about building like they've done?
 
@@ -51,6 +57,7 @@ Maybe, try to build a brand *before its too late*.
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks//" title="eBooks | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
 I thought that Id do for this year a separated `blog.jalc...` based on this [canvas repo](https://github.com/JAlcocerT/canvas).
@@ -71,17 +78,42 @@ But i Just continued here.
 * with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
 can find out existing interface
 
-0. Blogspot vs Wordpress Migrations and Free web Audits around a PaaS Website Hosting.
+0. Blogspot vs Wordpress Migrations *with Free web Audits plugged in*
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Web Audits 101 x Gallery Improvement | Post ↗" >}}
+  {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
+{{< /cards >}}
+
+Which got enhanced: *after I focused on it*
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Web Audits 101 x Gallery Improvement | Post ↗" >}}
+  {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
+{{< /cards >}}
+
+
+0. DIY website enhancements around a PaaS Website Hosting.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Web Audits 101 x Gallery | Post ↗" >}}
+  {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
+{{< /cards >}}
 
 0. Restaurant SaaS: aka Multi tenant Astro Apps with protected routes
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/webs-for-restaurants" title="Restaurants micro-SaaS ↗" icon="github" >}}
-  {{< card link="https://github.com/" title=" Github ↗" icon="github" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/webs-for-restaurants" title="Restaurants micro-SaaS ↗" >}}
+  {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
 {{< /cards >}}
 
 
 0. Embeded Chatbots for a business website x [Business Knowledge Base setup](https://jalcocert.github.io/JAlcocerT/custom-bots-kb/)!.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/" title=" | Post ↗" >}}
+  {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
+{{< /cards >}}
 
 0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/). A Success Story!.
 
@@ -101,7 +133,7 @@ One of the start doing goals from last year. And that I quickly put together [he
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks/" title="From 1 to n Ebooks | Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-* https://www.amazon.es/sendtokindle
+0. Publishing ebooks be like: https://www.amazon.es/sendtokindle
 
 > Want a website? DIY your own with this free ebook when subscribed / DWY with consulting / contact for a DFY.
 
@@ -111,19 +143,30 @@ One of the start doing goals from last year. And that I quickly put together [he
 
 > > Similar to ~tiiny.host
 
+0. About Posthog: Post an ebook page post on IG, then web session will be recorded and a YT video can be made out of that
+
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
 
+0. How to create a **waiting list** to test your ideas + ListMonk + SMTP - Share on ig too.
+
+0. Web Analytics x Link Analytics: *GDPR compliant*
+
+* https://jalcocert.github.io/JAlcocerT/t3-like-chat/#selfhosted-webanalytics
+
+* https://github.com/idhamsy/openshortlink
+
+> OpenShort.link is the all-in-one, open-source, serverless URL shortener. It runs 100% on Cloudflare and offers one-click installation.
 
 1. Weddings and ads 101.
 
 ![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
 
-2. About Posthog: Post an ebook page post on IG, then web session will be recorded and a YT video can be made out of that
 
-3. How to create a **waiting list** to test your ideas + ListMonk + SMTP - Share on ig too.
+
+1. Landing Page essentials *a DIY boilerplate way with most sections you might need*
 
 It was a continuation of [this section for artists](https://jalcocert.github.io/JAlcocerT/link-artists/#waiting-list-for-products) 
 
@@ -141,9 +184,12 @@ SLA matters and [some people need that status pages](https://jalcocert.github.io
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-5. Web Analytics x Link Analytics: *GDPR compliant*
 
-* https://jalcocert.github.io/JAlcocerT/t3-like-chat/#selfhosted-webanalytics
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
 
 6. Client adquisition data pipeline: *APIFY to rule them all*
 
@@ -160,7 +206,11 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
 
 7. Boiler plate / **blueprint for vibe coders**: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
 
-* https://github.com/JAlcocerT/bip-boilerplate-saas
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="Boilerplate for Builders ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
@@ -190,6 +240,12 @@ flowchart LR
 
 8. Proper CI/CD for (streamlit) Web Apps. [Success Story 1 + Hospital D&A](https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics). There is a session recorded and shared [here](https://youtu.be/3lcywTUeP5k) *and [here](https://youtu.be/eFS7crQpm_s)*
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics/" title="Hospital Github Actions CI/CD Implementation | Post ↗" >}}
+{{< /cards >}}
+
+
 9. Authentication Post: *flowing directly to BiP*
 
 Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions) is not only cool, but useful for your SaaS.
@@ -204,23 +260,15 @@ Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#c
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-10. Embeded Analytics with Graphic Walker:
+10. Embeded Analytics with Graphic Walker: *or should i call this plug and play D&A?*
 
-* https://github.com/Kanaries/graphic-walker
-
-> Apache v2 | An open source alternative to Tableau. **Embeddable visual analytic**
 
 {{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/plug-and-play-data-analytics" title="PlugnPlay D&A | Post ↗" >}}
+  {{< card link="https://github.com/" title="Github ↗" icon="github" >}}
 {{< /cards >}}
 
-![MySQL CLI Install](/blog_img/GenAI/langchain-chinook-sample.png) 
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/BI/#custom-bi-tools" title="BI | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
 
 11. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and video overlays.
 
@@ -328,10 +376,6 @@ Ive enjoyed using Cloudflare R2 for s3 compatible storage.
 
 ### Tech Talks
 
-
-* https://github.com/scio-labs/inkathon
- 
-Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
 
 ~33...now 46
 

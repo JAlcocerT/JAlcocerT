@@ -266,6 +266,12 @@ The physic engine simulator paid off.
 
 This is a fundamental physics difference - it models power-limited acceleration (like a real engine) rather than force-limited acceleration.
 
+After getting inspired by
+
+https://www.youtube.com/watch?v=60FV5vpZYPQ
+
+and its code https://github.com/kleberandrade/evolve-kart-unity
+
 ---
 
 ## FAQ

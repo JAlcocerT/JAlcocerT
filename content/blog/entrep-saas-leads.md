@@ -9,7 +9,7 @@ url: 'how-to-get-customers-programmatically'
 
 **Tl;DR**
 
-
+![alt text](/blog_img/selfh/automation/n8n-apify.png)
 
 **Intro**
 
@@ -48,6 +48,11 @@ Like the ones you will be generating after getting leads right for your SaaS by 
 
 This is all from the start doing goal for this year: *Go all-in to find new clients*
 
+This will potentially fill my DWY pipeline
+
+https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#conclusions
+
+
 One year *aka 12 months* is what you need to change your business and life.
 
 Ive seen it happen:
@@ -62,6 +67,9 @@ Want this implemented for your business?
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
+
+
+
 
 
 ---

@@ -122,7 +122,7 @@ One more time, thanks to **AlejandroAO** this have been possible. The **working 
 
 {{< details title="How to Setup MySQL? 📌" closed="true" >}}
 
-The original post from Alejandro allow to elect sqlite or Mysql.
+The original post from Alejandro allow to select sqlite or Mysql.
 
 I went with **mysql** as per:
 
@@ -350,8 +350,8 @@ We have seen how to use LangChain to:
 ### Chat with PDF
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/" title="MultiChat Post" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="Post where I explained the creation of the streamlit chatbot" >}}
-  {{< card link="https://github.com/JAlcocerT/ask-multiple-pdfs/" title="Multichat with Auth Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Users and passwords configuration Script " >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs/" title="Chat with PDFs Post" image="https://raw.githubusercontent.com/JAlcocerT/Streamlit-MultiChat/main/streamlit-multichat.png" subtitle="Post where I explained the creation of the streamlit chatbot" >}}
+  {{< card link="https://github.com/JAlcocerT/ask-multiple-pdfs/" title="Ask Multiple PDFs Source Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Using Langchain to talk with PDF information" >}}
 {{< /cards >}}
 
 ---

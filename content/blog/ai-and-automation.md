@@ -208,7 +208,7 @@ Once you are logged in to botpress, you can create your chatbots and logic via U
 
 As always, a lot of information to digest.
 
-Do stuff!
+**Do stuff!**
 
 ### Use Cases
 
@@ -218,7 +218,7 @@ Just in case you are aware of **Pandoc**.
 
 And how to convert `.md` to cool `pdf` or even to `epub` for ebooks.
 
-> To keep things simple, id say to go with the .Rmd -> PDF and leave epubs and their html relations for later when you really have people who want to buy from you via amazon.
+> To keep things simple, id say to go with the `.Rmd` -> PDF and leave epubs and their html relations for later when you really have people who want to buy from you via amazon.
 
 #### Real Estate Chat Bot
 
@@ -241,7 +241,7 @@ Creating this n8n workflow is straightforward. You'll use three main nodes: **Ma
 
 Here is a step-by-step guide to building the workflow.
 
-1\. Set Up the Workflow Structure
+1. Set Up the Workflow Structure
 
 1.  **Create a New Workflow:** In your n8n dashboard, click **"New"** to start a blank workflow.
 
@@ -249,7 +249,7 @@ Here is a step-by-step guide to building the workflow.
 
       * Search for **"Manual Trigger"** and add it.
 
-2\. Get User Input and Send to OpenAI
+2. Get User Input and Send to OpenAI
 
 Next, you'll configure the trigger to accept your message and then pass it to OpenAI.
 

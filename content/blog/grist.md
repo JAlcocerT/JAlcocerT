@@ -12,7 +12,7 @@ tags: ["Grist","Web","Table Automation","Forms","OpenLTables vs GoRules"]
 
 From excel to grist.
 
-Because even if you are on D&A, you wont be able to scape excels and xlsx at some point.
+Because even if you are on D&A, you wont be able to scape excels and those `.csv`, `.xlsx` at some point.
 
 There are tools like [OpenLTablets](https://jalcocert.github.io/JAlcocerT/understanding-openl-tablets/)
 
@@ -80,7 +80,7 @@ The Grist platform is built with a modern, full-stack architecture.
 
 ### Grist API
 
-Yes, Grist has a robust **REST API**, and you can definitely use it as a backend for a waiting list. 
+Yes, Grist has a robust **REST API**, and you can definitely use it as a backend for a *waiting list*. 
 
 This is one of the key use cases for its "headless" mode, where Grist acts as the data management system for a custom front-end application.
 
@@ -100,8 +100,6 @@ Grist's API is fully documented and includes endpoints for not only adding recor
 You can use it to build a full-featured waiting list management system, including adding a dashboard within Grist to see sign-ups in real-time.
 
 
-
-
 Imagine a **spreadsheet on steroids** that's also secretly a **lightweight database**. 
 
 That's a pretty good way to think about Airtable.
@@ -116,7 +114,9 @@ That's a pretty good way to think about Airtable.
 
 **Think of it this way:**
 
-If a spreadsheet is like a flat note-book page, Airtable is like a binder with multiple interconnected pages. Each page (table) can hold different types of information, and you can create links between the pages to see how everything relates.
+If a spreadsheet is like a flat note-book page, Airtable is like a binder with multiple interconnected pages. 
+
+Each page (table) can hold different types of information, and you can create links between the pages to see how everything relates.
 
 In short, **Airtable is a user-friendly platform that offers the intuitive interface of a spreadsheet with the structured power and relational capabilities of a database, making it a versatile tool for organizing and collaborating on all kinds of information.**
 
@@ -168,9 +168,6 @@ See also:
 
 >  Open-source spreadsheets platform for deep research and document processing 
 
----
-
-## FAQ
 
 
 ---
@@ -194,7 +191,6 @@ The official Grist documentation and community forums confirm that you can modif
 In short, with a self-hosted Grist installation, you have a high degree of control over the branding, but it's a manual process that requires knowledge of Docker and CSS.
 
 
-
 ### OpenLTables vs GoRules
 
 <!-- https://www.youtube.com/watch?v=kPDSsdS9LAY -->
@@ -202,11 +198,11 @@ In short, with a self-hosted Grist installation, you have a high degree of contr
 {{< youtube "kPDSsdS9LAY" >}}
 
 
-GoRules is an open-source business rules engine designed to help organizations define, deploy, and manage complex decision logic with ease. 
+GoRules is an **open-source business rules engine** designed to help organizations define, deploy, and manage complex decision logic with ease. 
 
 It allows users to create business rules through an intuitive interface, making decision automation accessible even for non-developers.
 
-What GoRules can do for you:
+What GoRules can do for you: https://docs.gorules.io/docs/user-manual
 
 - **Faster Decision Implementation:** Quickly define and update business rules without heavy coding, speeding time to market.
 - **Cost Efficiency:** Reduce the dependency on developers for rule changes, lowering operational costs.
@@ -216,14 +212,4 @@ What GoRules can do for you:
 - **Visual Rule Editor:** Lets business teams clearly define conditions and outcomes visually, helping bridge communication with developers.
 - **Complex Logic Handling:** Supports decision trees, condition branching (switch nodes), function and expression nodes for sophisticated rule modeling.
 
-In essence, GoRules helps businesses automate complex decisions efficiently and securely at scale, reducing development bottlenecks and enabling faster adaptation to changing business requirements.[1][2][5][7]
-
-[1](https://gorules.io)
-[2](https://docs.gorules.io/docs/user-manual)
-[3](https://www.nected.ai/blog/rule-engine-in-node-js-javascript)
-[4](https://github.com/Icheka/go-rules-engine)
-[5](https://github.com/gorules/zen)
-[6](https://www.reddit.com/r/golang/comments/xdunm8/guide_to_rule_engines/)
-[7](https://www.youtube.com/watch?v=kPDSsdS9LAY)
-[8](https://www.reddit.com/r/golang/comments/1aowt8y/gorules_business_rules_engine_for_go/)
-[9](https://blog.elest.io/tag/open-source-softwares/)
+In essence, [GoRules](https://gorules.io) helps businesses automate complex decisions efficiently and securely at scale, reducing development bottlenecks and enabling faster adaptation to changing business requirements.

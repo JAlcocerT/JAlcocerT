@@ -53,15 +53,13 @@ git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" &
 
 > With this [brd](https://github.com/JAlcocerT/1ton-ebooks/blob/master/z-brd.md), these [clarifications](https://github.com/JAlcocerT/1ton-ebooks/blob/master/z-clarifications.md) and these [development plan](https://github.com/JAlcocerT/1ton-ebooks/blob/master/z-development-plan.md)
 
-Last year I tinkered around [tiers of services / offers](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers) and created:
+**Last year** I tinkered around [tiers of services / offers](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers) and created:
 
-* https://diy.jalcocertech.com/ created here
-* https://consulting.jalcocertech.com created here with that *trol* slider
+* https://diy.jalcocertech.com/ created [here](https://github.com/JAlcocerT/obfuscate)
+* https://consulting.jalcocertech.com created [here](https://github.com/JAlcocerT/selfhosted-landing) with that *trol* slider
+* Now: I [got a better one](#conclusions) that consolidates my blog/notes as a result of this post you are reading :)
 
-
-And the ebooks are supposed to help me with the DIY one
-
-
+And the ebooks are supposed to help me with the DIY tier.
 
 {{% /details %}}
 

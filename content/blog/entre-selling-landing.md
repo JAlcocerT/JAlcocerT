@@ -462,7 +462,13 @@ This is the [last CR-5](https://github.com/JAlcocerT/selfhosted-landing/blob/mas
 
 ## Conclusions
 
-If you need icons, consider having a look to: https://www.jsdelivr.com/package/gh/selfhst/icons?ref=selfh.st
+Ive deployed my DWY consulting *trol for some* landing page: `consulting.jalcocertech.com`. 
+
+See [these notes](#outro).
+
+> Im not sure whats higher - The friction to pay, or the friction to do
+
+If you need **icons**, consider having a look to: https://www.jsdelivr.com/package/gh/selfhst/icons
 
 For just simpler Link Collection Themes, think about these selfhosted solutions:
 
@@ -615,13 +621,13 @@ Remember that you can always check how good a site is by:
 
 That's it from the technical side.
 
-But if you are thinking to help and build websites for 100$, for people who complain about 70$/y for a protonmail subscription...
+But if you are thinking to *help and build websites* for 100$, for people who *literally* complain about 70$/y for a protonmail subscription...
 
-...while claiming to be living on easy mode and that [their car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/) pays on its own.
+...while claiming to be living on *easy mode* and that [their car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/) pays on its own.
 
-You better run away and/or change your product.
+You better run away and/or change your target audience/product.
 
-You could also get a [proper sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/) to get you qualified leads who actually can benefit from your help.
+You could also get a [proper **sales pipeline**](https://jalcocert.github.io/JAlcocerT/apify/) to get you qualified leads who actually can benefit from your help.
 
 There is a limit to how much time you have.
 
@@ -629,11 +635,11 @@ And you can record yourself to typical questions and setups:
 
 {{< youtube "uyXdHC95cU0" >}}
 
-Even twice:
+Even twice: *but some wont just do it anyways*
 
 {{< youtube "jO-PiZyVWe8" >}}
 
-Also, you can write docs for anyone to replicate:
+Also, you can write docs for anyone to replicate: *still the DO friction is huge*
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs 101 | Docs ↗" >}}
@@ -653,7 +659,7 @@ graph TD
 ```
 
 
-The concept: *diy vs dwy vs dfy is one that im trying to shape into reality*
+**The concept**: *diy vs dwy vs dfy is one that im trying to shape into reality*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}

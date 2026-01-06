@@ -42,13 +42,7 @@ We will also see some [*trendy* AI tools](#conclusions) that work with RAGs as w
 
 ## LangChain
 
-
-{{< callout type="info" >}}
 For now, the most popular RAG framework!
-{{< /callout >}}
-
-[![shields.io Stars](https://img.shields.io/github/stars/langchain-ai/langchain)](https://github.com/langchain-ai/langchain/stargazers)
-
 
 ### Web Scrapping
 
@@ -126,10 +120,10 @@ This can be very valuable for [real estate applications](https://jalcocert.githu
   {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/Agents" title="LangChain Agents | Sample Script ↗" icon="book-open" >}}
 {{< /cards >}}
 
-But thats a topic beyond RAG, with Agents:
+But thats a topic *beyond RAG*, with Agents:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-multi-agents-frameworks/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-multi-agents-frameworks/" title="Multi-Agents Frameworks" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="About agentic fwks with python" >}}
   {{< card link="https://github.com/JAlcocerT/Multi-Agents" title="Multi Agents Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Not just LangChain, but LangGraph, OpenAI Agents..." >}}
 {{< /cards >}}
 
@@ -189,21 +183,19 @@ Concepts / AI Tools that are **veeery trendy**, also as seen [here](https://jalc
 
 #### MLFlow
 
-
-MLflow/mlflow: Open source platform for the machine learning lifecycle
+MLflow/mlflow: Open source platform for the **machine learning lifecycle**
 
 LangChain, LLamaindex, OpenAI... can all be used together with MLFlow! https://mlflow.org/docs/latest/llms/
 
 What for?
 
-It helps us see/observ how our LLMs are working in production.
+It helps us see/observe how our LLMs are working in production.
 
 From this simple prompts: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_mermaid.py
 
 To This one: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openai_t2t-o1mini.py
 
 To....
-
 
 {{< callout type="info" >}}
 ...finally, **GenAI observavility with MLFlow** https://github.com/mlflow/mlflow
@@ -397,13 +389,12 @@ docker pull ghcr.io/jalcocert/streamlit-multichat:latest #:v1.1  #:latest
 
 #### Local Deep Researcher
 
-A very interesting project that makes web searches and summarizes them:
+A very interesting project that makes **web search and summarizes them**:
 
 * https://github.com/langchain-ai/local-deep-researcher
   * https://github.com/JAlcocerT/local-deep-researcher/
 
-> MIT | Fully local web research and report writing assistant
-
+> **MIT** | Fully local web research and report writing assistant
 
 <!--
 https://www.youtube.com/watch?v=sGUjmyfof4Q 
@@ -430,7 +421,6 @@ ollama pull deepseek-r1:8b
 
 
 Make sure to adapt the `.env`:
-
 
 ```
 LLM_PROVIDER=ollama
