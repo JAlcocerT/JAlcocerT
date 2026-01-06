@@ -223,6 +223,31 @@ Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/s
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf" title="QR CSR | Python static server ↗" icon="github" >}}
 {{< /cards >}}
 
+
+Not all the content is indexed in the same way across engines and you can miss valuable info.
+
+{{< callout type="info" >}}
+**Thanks to Ecosia** I could find how to add Web Analytics to the [Jekyll Chirpy Theme](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/)!
+{{< /callout >}}
+
+
+Even Reqable has one: Tools -> More QR-Code
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+
+Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-ba-tech-talk-mermaid-exadel/components/QRCode.vue) you can generate QRs!
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf" title="QR CSR | Python static server ↗" icon="github" >}}
+{{< /cards >}}
+
+
+![QR Code](https://raw.githubusercontent.com/JAlcocerT/Home-Lab/main/py-static/qr-pdf/qr-sample.png)
+
+<!-- https://github.com/JAlcocerT/Home-Lab/blob/main/py-static/qr-pdf/qr-sample.png -->
+
 ### Tinkered with Serverless
 
 And i dont mean static deploy to cloudflare pages this time

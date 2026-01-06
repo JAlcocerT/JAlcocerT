@@ -14,7 +14,6 @@ I dared to call [2024 crazy](https://jalcocert.github.io/JAlcocerT/this-year-was
 
 Then 2025 happened.
 
-
 Where 900 min of LISTENING to a podcast makes you be the top...5%?
 
 Really?
@@ -24,35 +23,6 @@ Have you tried more tools than actually shipped projects?
 This year yes, but I have changed the tendency.
 
 I believe the ratio can be... ~100 posts with new tools : 10 gh repos with sample projects
-
-Not all the content is indexed in the same way across engines and you can miss valuable info.
-
-{{< callout type="info" >}}
-**Thanks to Ecosia** I could find how to add Web Analytics to the [Jekyll Chirpy Theme](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/)!
-{{< /callout >}}
-
-<!-- 
-https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
-
-[Computer consultancy activities](https://ariregister.rik.ee/eng/company/16864984/iotechcrafts-O%C3%9C?lang=en)
-
-
-Even Reqable has one: Tools -> More QR-Code
-
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
-
-
-Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-ba-tech-talk-mermaid-exadel/components/QRCode.vue) you can generate QRs!
-
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf" title="QR CSR | Python static server ↗" icon="github" >}}
-{{< /cards >}}
-
-
-![QR Code](https://raw.githubusercontent.com/JAlcocerT/Home-Lab/main/py-static/qr-pdf/qr-sample.png)
-
-<!-- https://github.com/JAlcocerT/Home-Lab/blob/main/py-static/qr-pdf/qr-sample.png -->
 
 This year, Ive abused again of my *unfair advantage*.
 

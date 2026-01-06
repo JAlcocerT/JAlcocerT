@@ -10,6 +10,10 @@ Enough [Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) and 
 
 Can you actually build a career and be useful, solve problems with those analytical skills?
 
+Put the name that you want: Software product development, digital platform engineering, ...
+
+[Computer consultancy activities](https://ariregister.rik.ee/eng/company/16864984/iotechcrafts-O%C3%9C?lang=en)
+
 
 
 <!-- 

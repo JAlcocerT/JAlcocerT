@@ -13,7 +13,9 @@ Enough *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [
 
 * https://github.com/JAlcocerT/mechanism
 
-## Mechanism Simulations
+## Mechanical Engineering
+
+### Mechanism Simulations
 
 https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
 

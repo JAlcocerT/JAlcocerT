@@ -1,6 +1,6 @@
 ---
 title: "[AI/BI] Plug and Play Data Analytics"
-date: 2026-01-02T23:20:21+01:00
+date: 2026-01-06T23:20:21+01:00
 draft: false
 tags: ["LangChain","RoadMap26 x Tech Talk"]
 description: 'Extracting insights from databases and generating automatic charts.'

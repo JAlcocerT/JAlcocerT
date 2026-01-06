@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-01-01
+date: 2026-01-30
 draft: false
 tags: ["Year-Review","FY26","Attention is all you need"]
 description: 'Looking back to the learnings of the year 2026.'
@@ -8,6 +8,16 @@ url: 'tech-recap-2026'
 ---
 
 
+**TL;DR**
+
+
+<!-- 
+https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
+
+
+
+
+**Intro**
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/" title=" | Post ↗" >}}
@@ -15,7 +25,6 @@ url: 'tech-recap-2026'
 {{< /cards >}}
 
 
-Software product development, digital platform engineering, ...
 
 
 ## Inspiring Apps
@@ -66,6 +75,7 @@ But i Just continued here.
 
 0. Improved FOSS from blog to doc like. Multilanguage and all that stuff. Still as HUGO.
 
+With that remota data (yaml) fetching from the home-alb repo.
 
 0. Create individual pages on `jalcocertech.com` with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code `.mdx`
 
@@ -147,7 +157,7 @@ One of the start doing goals from last year. And that I quickly put together [he
 
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" >}}
 {{< /cards >}}
 
 0. How to create a **waiting list** to test your ideas + ListMonk + SMTP - Share on ig too.
@@ -354,12 +364,15 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
   {{< card link="https://jalcocert.github.io/JAlcocerT/creating-curated-and-automated-content" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
 {{< /cards >}}
 
-
-
 16. Tech videos were not a priority this year.
 
 * [Goose Desktop](https://youtu.be/ZW5eEocyrTU) 
 * [GrowChief](https://youtu.be/in8uTdLhFqI)
+
+17. I made **some animations** instead.
+
+
+
 
 ### Serverless
 
@@ -382,6 +395,8 @@ Ive enjoyed using Cloudflare R2 for s3 compatible storage.
 {{< /cards >}}
 
 ### Tech Talks
+
+1. About langchain connected to a database...v2
 
 
 ~33...now 46
@@ -417,6 +432,7 @@ xargs -0 awk '
 
 1. Choose your hard
 2. What a priviledge is to choose what challenge make you struggle
+3. 
 
 #### Interesting Posts
 

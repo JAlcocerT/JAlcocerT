@@ -95,6 +95,7 @@ Both are **really light weight** to use even on Raspberry Pis:
 #htop
 sudo docker stats linkstack
 #sudo docker prune
+#docker ps -q | grep -v portainer | xargs docker stop
 ```
 
 See the results: *This is how linkstack looks*
