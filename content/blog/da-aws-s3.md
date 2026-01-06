@@ -8,6 +8,12 @@ url: 'aws-s3-python-boto-queries'
 ---
 
 
+**Intro**
+
+Got some data on s3 buckets and need to query it?
+
+No Problem, lets do that with python.
+
 
 ## Using AWS CLI
 

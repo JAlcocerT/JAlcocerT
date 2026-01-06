@@ -9,14 +9,6 @@ url: 'useful-python-stuff'
 
 If you have [Python Installed](https://jalcocert.github.io/JAlcocerT/guide-python/#installing-python-) already.
 
-<!-- Flexdashboards: bootstrap, css, framekow (a,b,c),mcustomize from R with {bslib} 
-RSHiny + bslib
-
-DASH - flask, plotly.js, react.js, dash_bootstrap_components
-
-heroku
-netlify? -->
-
 You can do very cool things with it.
 
 {{< callout type="info" >}}
@@ -29,7 +21,6 @@ Python can do maaany things... https://github.com/vinta/awesome-python
 A good readme does the trick for any project.
 
 This is a [good Python Project Readme.](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/README.md)
-
 
 
 ### UV
@@ -147,7 +138,6 @@ You can potentially use tools like: Jenkins, or Github Actions CI/CD Workflows
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-streamlit" title="Streamlit | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-dash" title="Dash | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 
 ## Python Notebooks

@@ -30,7 +30,7 @@ But don't let these requirements intimidate you. With the right mindset and appr
     * If you are a *techie* already, make sure to have a look to how to get better in [business skills](#business-skills).
     * If you are a *master in business* skills already, having tried some of [these technologies](#tech-skills) will make you propose better solutions and [better manage your team](/team-management-data-analytics/).
 
-![3 Parts of Data Analytics Career](/img/Data_Analytics_Career.png)    
+<!-- ![3 Parts of Data Analytics Career](/img/Data_Analytics_Career.png)     -->
 
 ---
 
@@ -202,7 +202,9 @@ Having Product Vision helps data analysts align our work with the larger objecti
     * Understand productivity peaks and that ~80% of user satisfaction will come from ~20% of tasks
     * Or that ~20% of the features will be giving the customer ~80% of the product they need - **Focus in the *Vital Few***
 
-Having **[Sales Vision](/selling-ideas-in-data-analytics/)** allows data analyst to tailor the analyses and models to identify key metrics that demonstrate the value of a data product or business idea, or we can use data to tell compelling stories that persuade potential customers or stakeholders. The sales vision also helps the data analyst understand the target audience, which can inform their work.
+Having **[Sales Vision](/selling-ideas-in-data-analytics/)** allows data analyst to tailor the analyses and models to identify key metrics that demonstrate the value of a data product or business idea, or we can use data to tell compelling stories that persuade potential customers or stakeholders. 
+
+The sales vision also helps the data analyst understand the target audience, which can inform their work.
 
 * How to start to cultivate the sales vision?
     * What are you selling?
@@ -435,13 +437,19 @@ Some popular DBMSs include different [flavours of SQL](http://localhost:1313/sql
 
 #### Databases Concepts
 
-**Normalization** is a process of organizing data in a database in a way that minimizes redundancy and dependency. Redundancy is when the same data is stored in multiple places in the database. This can lead to problems, such as data inconsistency and wasted space. Dependency is when one piece of data depends on another piece of data. This can also lead to problems, such as data integrity issues.
+**Normalization** is a process of organizing data in a database in a way that minimizes redundancy and dependency.
+
+Redundancy is when the same data is stored in multiple places in the database. 
+
+This can lead to problems, such as data inconsistency and wasted space. Dependency is when one piece of data depends on another piece of data. This can also lead to problems, such as data integrity issues.
 
 There are five normal forms (1NF, 2NF, 3NF, BCNF, and 4NF) that can be used to normalize a database. 
 
 Each normal form builds on the previous normal form, so a database must be in at least 1NF before it can be in 2NF, and so on.
 
-For example: 1NF (First Normal Form): A table in 1NF is in first normal form if it does not contain any repeating groups. This means that each row in the table must be unique, and no column can contain multiple values.
+For example: 1NF (First Normal Form): A table in 1NF is in first normal form if it does not contain any repeating groups. 
+
+This means that each row in the table must be unique, and no column can contain multiple values.
 
 > Normalization ss a process used in database design to **arrange data efficiently and logically**. 
 
@@ -529,7 +537,9 @@ For example, a retail company might have a data mart that contains data about cu
 
 This data mart would be used by the marketing department to track the effectiveness of marketing campaigns and to identify trends in customer behavior.
 
-Data marts are often used to improve the performance of queries and to reduce the load on the data warehouse. This is because data marts are typically smaller and more focused than data warehouses.
+Data marts are often used to improve the performance of queries and to reduce the load on the data warehouse.
+
+This is because data marts are typically **smaller and more focused** than data warehouses.
 
 {{< /dropdown >}}
 

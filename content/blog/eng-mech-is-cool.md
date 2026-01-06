@@ -28,7 +28,9 @@ This is very motivational.
 {{< /cards >}}
 
 
-## Cynematics
+## Kynematics
+
+As someone told me: *its just geometry and the time*
 
 <!-- https://youtu.be/PWvIYU_Z8z8?si=LVaco4q82nDxspEj -->
 
@@ -188,7 +190,9 @@ Here's a breakdown of what it is and its key characteristics:
 
 **Significance:**
 
-The Lorenz attractor was groundbreaking because it demonstrated that even simple, deterministic systems could exhibit incredibly complex and chaotic behavior. This had profound implications for fields like:
+The Lorenz attractor was groundbreaking because it demonstrated that even simple, deterministic systems could exhibit incredibly complex and chaotic behavior. 
+
+This had profound implications for fields like:
 
 * **Meteorology:** It highlighted the inherent limits of long-range weather prediction.
 * **Physics:** It showed how chaos can arise in seemingly straightforward physical systems.

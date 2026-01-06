@@ -7,10 +7,9 @@ description: 'How to use PySpark (Python) for Big Data Processing.'
 url: 'guide-python-PySpark'
 ---
 
-<!-- 
-https://hub.docker.com/layers/bitnami/spark/3.5-debian-11/images/sha256-70d7589cb07f24c09a28863e3fce5b9f0419042da2fff6505d0822e0ccbb7cde -->
+If you have been using SQL and Pandas with Python for a while
 
-If you have been using SQL and Pandas with Python for a while, you might want to leverage that knowledge by learning PySpark - Using Python for Big Data Analytics with **distributed computing**.
+you might want to leverage that knowledge by learning PySpark - Using Python for Big Data Analytics with **distributed computing**.
 
 ## The PySpark Project
 
@@ -54,39 +53,13 @@ df.show(truncate=False)
 ```
 
 
-<!-- 
-
-### How to detect null's in a PySpark Dataframe
-
-
- ### How to query Kafka topics
-
-
-
-
-### How to group by a Spark DF
-
-
-### How to join Spark DF's
-
- ### How to display the data of a Spark DF
-
-
- #### Plotly
-
- #### Koalas -->
-
 ### How to use SQL in Spark - SparkSQL
 
 If you are already confortable with SQL, a good starting point is to use that knowledge combined with the power of Spark.
 
 You are lucky enought to write SQL queries with PySpark and they will get translated as well.
 
-Lets view a few examples:
-
-<!-- ### Must Know from PySpark
-
-For example: -->
+Lets view a few examples.
 
 ### PySpark with Trino
 
@@ -180,11 +153,6 @@ spark.read
      .option("snapshot-id",10963874102873L) 
      .format("iceberg") .load("path/to/table") 
 ```
-<!-- ## Try me with Google Colaboratory
-
-If you have a Google account, you can check these code snippets, as well as few useful UDF's to work more efficiently with spark directly with your Google Colab account and the code I made available in Github:
-
- [![Example image](/img/OpenInColab.svg)](https://colab.research.google.com/github/JAlcocerT/Python_is_awesome/blob/main/Z_GoodToKnow/Getting_Started_with_PySpark.ipynb) -->
 
 ---
 
@@ -278,28 +246,6 @@ Data skew can have a variety of implications, such as increased lock contention,
 
 Data skew **can be measured using the skewness coefficient**, which is a measure of the asymmetry of the data in a dataset.
 
-<!-- 
-
-### PYSPARK
-WHAT IS DRY ACRONYM? - 
-DONT REPEAT YOURSELF -->
-
-
-<!-- ### What it is Kafka and how it Relates with Spark?
-
-## Kafka Docker
-
-2011, Linkedin, Scala
-
-<https://www.youtube.com/watch?v=nZeDNMTgQUA>
-<https://www.youtube.com/watch?v=bto9WdUo5UE>
-
-<https://www.youtube.com/watch?v=uvb00oaa3k8>
-
-
-## Zookeeper
-
-In our big project (Kafka), we need to make sure that the conveyor belt (Kafka) is working smoothly and that all the workers (computers) know what to do. This is where our notebook (ZooKeeper) comes in. ZooKeeper helps us keep track of the conveyor belt's status and makes sure all the workers are doing their jobs correctly. -->
 
 ### Interesting Big Data Tools
 
@@ -332,7 +278,9 @@ Apache Hadoop is an open-source framework that facilitates storing and processin
 
 {{< dropdown title="More about DBT - Data Infrastructure ⏬" closed="true" >}}
 
-DBT (Data Build Tool) is a tool used in data analytics that provides a framework for transforming data in your warehouse more effectively. It allows users to write SQL scripts, manage them, and run them in different environments, making it a powerful tool for data transformation. 
+DBT (Data Build Tool) is a tool used in data analytics that provides a framework for transforming data in your warehouse more effectively.
+
+It allows users to write SQL scripts, manage them, and run them in different environments, making it a powerful tool for data transformation. 
 
 DBT highlight the importance in the data infrastructure landscape. 
 
@@ -360,9 +308,13 @@ In conclusion, while DBT is not a replacement for traditional data pipeline tool
 
 {{< dropdown title="What it is ODH - Open Data Hub? ⏬" closed="true" >}}
 
-Open Data Hub ([ODH](https://datahubproject.io/docs/docker/)) is an open-source project that provides an **end-to-end AI/ML platform on top of OpenShift Container Platform** which can be used to build, deploy, and manage intelligent applications. It is a blueprint for building an AI-as-a-Service (AIaaS) platform using OpenShift and Kubernetes, Ceph, Apache Kafka, Seldon, Argo, Prometheus, Grafana, and JupyterHub, among other technologies.
+Open Data Hub ([ODH](https://datahubproject.io/docs/docker/)) is an open-source project that provides an **end-to-end AI/ML platform on top of OpenShift Container Platform** which can be used to build, deploy, and manage intelligent applications. 
 
-Open Data Hub is designed to be **a meta-project**, meaning it is a project of projects. It brings together several open-source projects, each of which has a specific role in the data and AI/ML ecosystem, and integrates them into a coherent AI/ML platform with easy-to-use interfaces.
+It is a blueprint for building an AI-as-a-Service (AIaaS) platform using OpenShift and Kubernetes, Ceph, Apache Kafka, Seldon, Argo, Prometheus, Grafana, and JupyterHub, among other technologies.
+
+Open Data Hub is designed to be **a meta-project**, meaning it is a project of projects.
+
+It brings together several open-source projects, each of which has a specific role in the data and AI/ML ecosystem, and integrates them into a coherent **AI/ML platform** with easy-to-use interfaces.
 
 The main components of Open Data Hub include:
 
@@ -381,12 +333,3 @@ Open Data Hub is designed to be flexible and customizable, allowing you to pick 
     * CLI and SDK for interacting with DataHub - https://pypi.org/project/acryl-datahub/
 
 > The Metadata Platform for your Data Stack
-
-<!-- 
-Health Care Analytics - https://github.com/tuva-health
- 
-https://github.com/tuva-health/tuva
-
-Main repo including core data model, data marts, reference data, terminology, and the clinical concept library
-
- -->

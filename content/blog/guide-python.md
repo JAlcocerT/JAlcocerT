@@ -2,14 +2,8 @@
 title: "Getting Started with Python"
 date: 2020-08-30T23:20:21+01:00
 draft: false
-tags: ["Dev","Python","Career"]
-# cover:
-#     image: "img/differences.PNG" # image path/url
-#     alt: "<alt text>" # alt text
-#     capt-ion: "<text>" # display caption under cover   
+tags: ["Dev","Python","Career"]  
 description: 'The must know in Python to get started with your projects.'
-#summary: 'As part of your Data Analytics journey, you will have to build knowledge of Python.
-#In this post I am collecting some of the must know tricks to start your projects.'
 url: 'guide-python'
 ---
 
@@ -19,7 +13,6 @@ In this post I am collecting some of the must know tricks to start your projects
 
 * {{< newtab url="https://www.python.org/" text="The Python Site" >}}
 * {{< newtab url="https://github.com/python/cpython" text="The Python Source Code at Github" >}}
-    <!-- * License: {{< newtab url="https://github.com/flet-dev/flet?tab=Apache-2.0-1-ov-file#readme" text="Apache 2.0" >}} ❤️ -->
 
 Python has evolved into a go-to choice for programmers across various domains.
 
@@ -53,12 +46,15 @@ Python finds application across diverse fields, including:
 * Data analysis
 * and... machine learning!
 
-Its extensive ecosystem boasts third-party libraries like TensorFlow and OpenCV, accessible via the pip package manager. Python's flexibility and ease of use make it an invaluable tool for tackling projects of all scales.    
+Its extensive ecosystem boasts third-party libraries like TensorFlow and OpenCV, accessible via the pip package manager.
+
+Python's flexibility and ease of use make it an invaluable tool for tackling projects of all scales.    
 
 ### Takeaways
 
-Python is prized for its simplicity and readability, making it an ideal language for beginners.
-Its versatility lends itself to a myriad of applications, from web development to machine learning.
+Python is prized for its simplicity and readability, making it **an ideal language for beginners.**
+
+Its **versatility** lends itself to a myriad of applications, from web development to machine learning.
 
 Python's dynamic syntax supports various programming paradigms, enhancing developer productivity.
 
@@ -353,7 +349,7 @@ p1.myfunc()
 
 You want to make sure that your work is understandable, so make sure you write proper comments in your code.
 
-If you do this and also make sure that your code is modular enough (use UD'sF!), it is already a good start:
+If you do this and also make sure that your code is modular enough (use UDF's!), it is already a good start:
 
 ### Docstrings
 
@@ -533,26 +529,3 @@ Its goal is to provide a more comprehensive and user-friendly experience for Pyt
 
 
 {{< /dropdown >}}
-
-<!-- Other: Pyenv
-
-https://github.com/pyenv/pyenv
-
-```sh
-pyenv install 3.8.0
-pyenv install 3.9.0
-```
-
-pyenv local 3.8.0
-
-python -m venv venv
-source venv/bin/activate -->
-
-
-<!-- ### Understanding statistical distributions with Python
-
-### Poison
-
-### Normal
-
-### ...  -->

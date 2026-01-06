@@ -344,12 +344,87 @@ The problem when you havent started building is that you dont know what you need
 
 That's why I have created a custom chatbot for registered users to do QnA over the content of the ebooks.
 
+Something like...what the claude code docs are having.
+
+
+
 ### KB Ive added so far
 
-1. The D&A one
-2. The web one - Going from the diy version stored here, to the new one.
+1. [The D&A ebooks](https://github.com/JAlcocerT/1ton-ebooks/tree/master/src/content/ebooks): *the tech centered, and the business centered* 
+2. The web one - Going from the diy version stored [here](https://github.com/JAlcocerT/obfuscate), to the [new one here](https://github.com/JAlcocerT/1ton-ebooks/tree/master/src/content/ebooks/web-diy).
 
 ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef bronze fill:#EFEBE9,stroke:#8D6E63,stroke-width:3px,color:#3E2723;
+    classDef silver fill:#ECEFF1,stroke:#78909C,stroke-width:3px,color:#263238;
+    classDef gold fill:#FFFDE7,stroke:#FBC02D,stroke-width:3px,color:#F57F17;
+    
+    %% Tool Styles
+    classDef storage fill:#cfd8dc,stroke:#37474F,stroke-width:2px,color:#37474F;
+    classDef format fill:#b2dfdb,stroke:#00695c,stroke-width:2px,color:#004D40;
+    classDef quality fill:#ffecb3,stroke:#ff6f00,stroke-width:2px,stroke-dasharray: 5 5,color:#BF360C;
+    classDef code fill:#e1bee7,stroke:#4a148c,stroke-width:1px,stroke-dasharray: 2 2,color:#4a148c;
+
+    %% ================= Physical Foundation =================
+    subgraph PhysicalLayer [The Physical Foundation]
+        S3[("S3 / Minio<br/>(Object Storage)")]:::storage
+    end
+
+    %% ================= Table Format & Catalog Layer =================
+    %% This layer sits conceptually *between* physical files and the logical layers
+    subgraph ManagementLayer [Table Management & Catalog]
+        Iceberg("Apache Iceberg<br/>(Table Format / ACID)"):::format
+        Nessie("Nessie<br/>(Data Git / Catalog)"):::format
+        Iceberg -.->|Managed by| Nessie
+        S3 --- Iceberg
+    end
+
+
+    %% ================= Logical Medallion Flow =================
+    subgraph Lakehouse [Logical Data Flow]
+        direction TB
+        
+        Source[Raw Data Sources]
+
+        %% --- Ingestion Pipeline ---
+        subgraph Ingest [ETL: Ingestion]
+            Pydantic1[("Pydantic<br/>(Schema define)")]:::code
+        end
+
+        %% --- Bronze Layer ---
+        Bronze[("BRONZE Layer<br/>(Raw Iceberg Tables)")]:::bronze
+
+        %% --- Processing Pipeline 1 ---
+        subgraph Process1 [ETL: Cleaning]
+            GX1[("Great Expectations<br/>(Quality Gate: Null checks, types)")]:::quality
+        end
+
+        %% --- Silver Layer ---
+        Silver[("SILVER Layer<br/>(Enriched Iceberg Tables)")]:::silver
+
+        %% --- Processing Pipeline 2 ---
+        subgraph Process2 [ETL: Aggregation]
+            GX2[("Great Expectations<br/>(Quality Gate: Business Rules)")]:::quality
+        end
+
+        %% --- Gold Layer ---
+        Gold[("GOLD Layer<br/>(Aggregated Iceberg Tables)")]:::gold
+        
+        %% --- The Connections ---
+        Source --> Pydantic1 --> Bronze
+        Bronze --> GX1 --> Silver
+        Silver --> GX2 --> Gold
+    end
+
+    %% Mapping Logical to Physical/Management
+    %% The logical layers ARE Iceberg tables sitting on S3
+    Bronze -.-> Iceberg
+    Silver -.-> Iceberg
+    Gold -.-> Iceberg
+```
 
 If you'd need, you can always reach out:
 
@@ -508,7 +583,19 @@ The validity of a narrative has no bearing on its "contagion rate."
 Viral tales capture attention, look cohesive, and fit readily into existing narratives.
 
 -->
+<!-- Flexdashboards: bootstrap, css, framekow (a,b,c),mcustomize from R with {bslib} 
+RSHiny + bslib
 
+DASH - flask, plotly.js, react.js, dash_bootstrap_components
+
+heroku
+netlify? -->
+
+<!-- ## Understanding Routines
+
+Habits
+
+Discipline must be saved for essential activities. -->
 <!-- 
 #thinking fast and slow
  -->

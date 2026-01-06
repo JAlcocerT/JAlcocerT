@@ -11,6 +11,63 @@ Enough [Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) and 
 Can you actually build a career and be useful, solve problems with those analytical skills?
 
 
+
+<!-- 
+Health Care Analytics - https://github.com/tuva-health
+ 
+https://github.com/tuva-health/tuva
+
+Main repo including core data model, data marts, reference data, terminology, and the clinical concept library
+
+ -->
+
+ 
+<!-- 
+
+### How to detect null's in a PySpark Dataframe
+
+
+ ### How to query Kafka topics
+
+
+### How to group by a Spark DF
+
+
+### How to join Spark DF's
+
+ ### How to display the data of a Spark DF
+-->
+<!-- ## Try me with Google Colaboratory
+
+If you have a Google account, you can check these code snippets, as well as few useful UDF's to work more efficiently with spark directly with your Google Colab account and the code I made available in Github:
+
+ [![Example image](/img/OpenInColab.svg)](https://colab.research.google.com/github/JAlcocerT/Python_is_awesome/blob/main/Z_GoodToKnow/Getting_Started_with_PySpark.ipynb) -->
+
+ 
+<!-- 
+
+### PYSPARK
+WHAT IS DRY ACRONYM? - 
+DONT REPEAT YOURSELF -->
+
+
+<!-- ### What it is Kafka and how it Relates with Spark?
+
+## Kafka Docker
+
+2011, Linkedin, Scala
+
+<https://www.youtube.com/watch?v=nZeDNMTgQUA>
+<https://www.youtube.com/watch?v=bto9WdUo5UE>
+
+<https://www.youtube.com/watch?v=uvb00oaa3k8>
+
+
+## Zookeeper
+
+In our big project (Kafka), we need to make sure that the conveyor belt (Kafka) is working smoothly and that all the workers (computers) know what to do. This is where our notebook (ZooKeeper) comes in. ZooKeeper helps us keep track of the conveyor belt's status and makes sure all the workers are doing their jobs correctly. -->
+
+
 <!-- ### Managing Expectations
 
 Recognizes easily the client`s future needs and wishes within the project, determines business value
@@ -125,9 +182,82 @@ That's why I learnt to create ebooks and made one about **Data Analytics**
 | **Business Intelligence (BI)** | **Looker**, **Tableau**, **Power BI** | These are tools used to visualize and analyze data from the data warehouses. They are often the final destination for data, used by business teams to create reports and dashboards. |
 
 
+```mermaid
+graph LR
+    A[Data Profiling, Understand As-Is] --> B(Data Modeling: Design To-Be);
+    B --> C{Prepare Design Documentation};
+    C --> D["Data Model (Entities, Attributes, Relationships)"];
+    C --> E["Data Lineage (Sources, Transformations, Destinations - Future)"];
+    C --> F[Data Profiling Summary & Quality Rules];
+```
 
 
 **Data Modelling**
+
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef bronze fill:#EFEBE9,stroke:#8D6E63,stroke-width:2px,color:#3E2723;
+    classDef silver fill:#ECEFF1,stroke:#78909C,stroke-width:2px,color:#263238;
+    classDef gold fill:#FFFDE7,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef ai fill:#F3E5F5,stroke:#8E24AA,stroke-width:2px,stroke-dasharray: 5 5,color:#4A148C;
+    classDef source fill:#fff,stroke:#333,stroke-width:1px;
+
+    %% --- Sources ---
+    subgraph Sources [Data Sources]
+        direction TB
+        Logs[Logs / IoT]:::source
+        DB[Databases]:::source
+        APIs[External APIs]:::source
+    end
+
+    %% --- The Lakehouse (Medallion) ---
+    subgraph Lakehouse [The Data Lakehouse]
+        direction LR
+        
+        %% BRONZE: Raw
+        Bronze[("BRONZE<br/>(Raw Ingestion)<br/>As-is Dump")]:::bronze
+        
+        %% SILVER: Cleaned
+        Silver[("SILVER<br/>(Refined)<br/>Cleaned & Enriched")]:::silver
+        
+        %% GOLD: Aggregated
+        Gold[("GOLD<br/>(Curated)<br/>Business Aggregates")]:::gold
+    end
+
+    %% --- AI Integration ---
+    subgraph AI_Lab [AI & Machine Learning]
+        direction TB
+        Training(Model Training):::ai
+        Inference(AI Agents / RAG):::ai
+        Predictions(Predictions / Tags):::ai
+    end
+
+    %% --- Consumers ---
+    BI[BI Dashboards<br/>& Reports]:::source
+
+    %% --- The Flow ---
+    Sources --> Bronze
+    Bronze -- "ETL / Cleaning" --> Silver
+    Silver -- "Aggregation" --> Gold
+    Gold --> BI
+
+    %% --- Where AI Plugs In ---
+    
+    %% 1. Training happens on Silver (Granular but clean)
+    Silver -.->|"Feeds Data"| Training
+    
+    %% 2. Inference (Agents) read Gold (Context) or Silver (Features)
+    Gold -.->|"Context for RAG"| Inference
+    
+    %% 3. The Feedback Loop: Predictions go back into the Lake
+    Training --> Predictions
+    Inference --> Predictions
+    Predictions -.->|"Enrichment"| Silver
+    Predictions -.->|"New Insights"| Gold
+```
+
 
 * [DA Concepts](https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/)
 
@@ -147,7 +277,7 @@ That's why I learnt to create ebooks and made one about **Data Analytics**
 Its also worth to look to [DBs from BE devs side](https://jalcocert.github.io/JAlcocerT/databases-101/).
 
 * [SQL for Data Analytics](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)
-* [Getting started with Python](https://jalcocert.github.io/JAlcocerT/guide-python/)
+* [Get started with Python](https://jalcocert.github.io/JAlcocerT/guide-python/)
 * [R language Setup](https://jalcocert.github.io/JAlcocerT/r-language-101/)
 
 **Query Engines**
@@ -490,7 +620,9 @@ And decisions are made by humans—who are susceptible to biases: *remember abou
 
 Also, [development methodologies](https://jalcocert.github.io/JAlcocerT/software-development-methodologies-data-analytics/) to make the team work at its peak will be of your concern.
 
-Technical debt is the implied cost of additional work caused by choosing quick solutions over better approaches.
+Becuase [team management](https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/) is your scope.
+
+And their [Technical debt is the implied cost of additional work caused by choosing quick solutions over better approaches.
 
 | Category | Warning Signs |
 |----------|---------------|
@@ -510,7 +642,14 @@ The ultimate goal? To [Plan and monitor the project status](https://jalcocert.gi
 6. **Use the prioritization filter** — Is it needed? Can it be delegated/automated?
 7. **Beat analysis paralysis** — Find the first small action
 
-In such positions you cant forget [the Pareto](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) factor.
+In such positions you cant forget [the Pareto](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) factor, specially when shaping [product features](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/).
+
+Focus on becoming a **T-Shaped Professional**:
+*   **The Horizontal Bar**: Broad knowledge of data stacks (GCP, Azure, Open Source), orchestration, and governance.
+*   **The Vertical Stem**: Deep expertise in one or two core skills (e.g., SQL and PySpark, or Data Modeling and dbt).
+
+Remember: **Diagrams** are your best friend. Always blueprint your pipelines before writing a single line of code.
+
 
 ### DSc Tools
 

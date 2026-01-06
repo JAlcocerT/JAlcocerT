@@ -15,10 +15,13 @@ https://jalcocert.github.io/JAlcocerT/selling-ideas-in-data-analytics/#what-is-c
 
 It all started from trying to [talk with pandas dataframes](https://jalcocert.github.io/JAlcocerT/how-to-use-pandasAI/).
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career D&A | Docs ↗" >}}
-{{< /cards >}}
+And there was some evolution around it.
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with a DB" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="MySQL With LangChain and OpenAI LLM" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
 
 This is [not a new idea](#about-rags), but a new way to approach it.
 
@@ -141,6 +144,13 @@ As recently, I started with a BRD, some clarifications, then a development plan.
 
 
 ### AI/BI
+
+If you are kind of stucked in your D&A career, shaping one of this will be good for your portfolio.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career D&A | Docs ↗" >}}
+{{< /cards >}}
+
 
 * https://github.com/Kanaries/graphic-walker
 

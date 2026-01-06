@@ -24,10 +24,15 @@ A quick recap for databases for D&A people interested into SelfHosting.
 
 ## SQL
 
-The structured ones
+The structured ones that you will find all around D&A.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career D&A | Docs ↗" >}}
+{{< /cards >}}
 
 ### MySQL
 
+Some quick notes on how to connect to a MySQL database with Python.
 
 {{< details title="MySQL Python Connection 📌" closed="true" >}}
 
@@ -104,17 +109,19 @@ finally:
 
 {{< /details >}}
 
+### Selfhostable DBs
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mariadb" title="MariaDB | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="PostgreSQL | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
-### MariaDB
+#### MariaDB
 
 I got to know MariaDB as a substitute for MySQL when I was trying to use its [ARM64 container for selfhosting projects](https://jalcocert.github.io/RPi/posts/selfhosting-with-docker/).
 
 
-
-
-### PostgreSQL
-
+#### PostgreSQL
 
 <!-- 
 https://www.youtube.com/watch?v=3JW732GrMdg
@@ -196,8 +203,6 @@ NoSQL databases provide a powerful and flexible **alternative to traditional rel
 
 If you're working with MongoDB and Python, `pymongo` is the standard and most commonly used library for connecting to it.
 
-Here's a breakdown:
-
 **PyMongo: The Python Driver for MongoDB**
 
 * `pymongo` is the official Python driver for MongoDB. It allows you to interact with MongoDB databases directly from your Python code.
@@ -267,6 +272,8 @@ Therefore, if your goal is to work with MongoDB in Python, using `pymongo` is th
 
 ### InfluxDB and TimeScale
 
+I was putting together an IoT project with a Pi and a MLX90614 sensor, where I needed a database to store the data and went with InfluxDB:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Pi 101" image="/blog_img/iot/Rpi4_4gb_size.jpg" subtitle="Get Started with IoT Project" >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/#pushing-mlx90614-data-to-influxdb/" title="InfluxDB with a Pi ↗" image="https://jalcocert.github.io/RPi/img/metabase.png" subtitle="IoT Project with MLX90614" >}}
@@ -286,7 +293,7 @@ During your D&A career, you will most certainly see: ES + Kibana / Graphite / Dr
 
 #### Prometheus 
 
-For Grafana, Prometheus and Graphite are very popular:
+For Grafana, Prometheus and Graphite are very popular: *specially for monitoring*.
 
 <!-- 
 ![alt text](/blog_img/iot/grafana.png) -->
@@ -457,10 +464,10 @@ Be sure to have a running Cassandra cluster with the appropriate configuration a
 #### In Memory Data Stores
 
 
-{{< details title="In memory databases? 📌" closed="true" >}}
-
-
 An in-memory data store, often referred to as an "in-memory database" or "in-memory data store," is a type of database system that primarily stores and manages data in the system's main memory (RAM) rather than on traditional disk storage devices.
+
+
+{{< details title="In memory databases? 📌" closed="true" >}}
 
 This means that data is held and processed in memory, which offers several advantages:
 
@@ -486,10 +493,12 @@ However, there are also some limitations to in-memory data stores:
 
 3. **Cost**: RAM can be more expensive than traditional disk storage, so scaling up an in-memory database can be cost-prohibitive for large datasets.
 
-In-memory data stores are commonly used for various applications, including real-time analytics, caching, session management, and high-frequency trading, where fast data access and low-latency responses are critical. Popular examples of in-memory data stores include Redis, Memcached, and various in-memory database systems.
-
-
 {{< /details >}}
+
+In-memory data stores are commonly used for various applications, including real-time analytics, caching, session management, and high-frequency trading, where fast data access and low-latency responses are critical.
+
+Popular examples of in-memory data stores include **Redis**, Memcached, and various in-memory database systems.
+
 
 ##### REDIS
 
@@ -514,9 +523,6 @@ Popular Use Cases for Redis
 - **Data streaming:** Redis can be used to stream data in real time. This can be used for applications such as real-time analytics or live chat.
 - **Real-time applications:** Redis can be used to build real-time applications that require high performance and scalability. This includes applications such as s0cial media platforms, gaming applications, and financial trading applications.
 
----
-
-This Markdown format organizes the information into clear sections with headings, lists, and emphasized text.
 
 ```py
 
@@ -538,56 +544,58 @@ Here's how you can use `redis-py` to push data to Redis:
 
 1. Install the `redis-py` library using pip:
 
-   ```bash
-   pip install redis
-   ```
+```bash
+pip install redis
+```
 
 2. Import the `redis` module and create a connection to your Redis server:
 
-   ```python
-   import redis
+```python
+import redis
 
-   # Connect to your Redis server
-   redis_host = 'localhost'  # Replace with your Redis server's host or IP address
-   redis_port = 6379         # Default Redis port
-   redis_db = 0              # Default Redis database
-   r = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db)
-   ```
+# Connect to your Redis server
+redis_host = 'localhost'  # Replace with your Redis server's host or IP address
+redis_port = 6379         # Default Redis port
+redis_db = 0              # Default Redis database
+r = redis.StrictRedis(host=redis_host, port=redis_port, db=redis_db)
+```
 
-   Replace `'localhost'` with the address of your Redis server if it's running on a different host.
+Replace `'localhost'` with the address of your Redis server if it's running on a different host.
 
 3. Push data (key-value pairs) to Redis:
 
-   ```python
-   # Define your key-value data
-   key = 'your_key'
-   value = 'your_value'
+```python
+# Define your key-value data
+key = 'your_key'
+value = 'your_value'
 
-   # Push data to Redis
-   r.set(key, value)
-   ```
+# Push data to Redis
+r.set(key, value)
+```
 
-   You can also specify additional parameters like expiration time, if needed.
+You can also specify additional parameters like expiration time, if needed.
 
 4. Retrieve data from Redis:
 
-   ```python
-   # Retrieve data from Redis
-   retrieved_value = r.get(key)
+```python
+# Retrieve data from Redis
+retrieved_value = r.get(key)
 
-   if retrieved_value is not None:
-       print(f"Value for key '{key}': {retrieved_value.decode('utf-8')}")
-   else:
-       print(f"Key '{key}' not found in Redis.")
-   ```
+if retrieved_value is not None:
+    print(f"Value for key '{key}': {retrieved_value.decode('utf-8')}")
+else:
+    print(f"Key '{key}' not found in Redis.")
+```
 
 5. Close the Redis connection when you're done:
 
-   ```python
-   r.close()
-   ```
+```python
+r.close()
+```
 
-These are the basic steps to push data from Python to Redis using `redis-py`. You can use various Redis data structures and commands depending on your use case, such as lists, sets, hashes, and more.
+These are the basic steps to push data from Python to Redis using `redis-py`. 
+
+You can use various Redis data structures and commands depending on your use case, such as lists, sets, hashes, and more.
 
 Make sure that you have a running Redis server with the appropriate configuration and access permissions before running the code.
 

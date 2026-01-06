@@ -7,8 +7,9 @@ description: 'Data Product impact for D&A roles. The power of asking the right q
 url: 'product-skills-for-data-analytics'
 ---
 
+**Tl;DR**
 
-How can we shape data products and address requirements?
+How can we **shape data products** and address requirements?
 
 **Intro**
 
