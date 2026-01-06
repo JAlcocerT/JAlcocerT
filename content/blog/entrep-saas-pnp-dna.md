@@ -13,8 +13,7 @@ https://jalcocert.github.io/JAlcocerT/selling-ideas-in-data-analytics/#what-is-c
 
 **Intro**
 
-We come from:
-
+It all started from trying to [talk with pandas dataframes](https://jalcocert.github.io/JAlcocerT/how-to-use-pandasAI/).
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career D&A | Docs ↗" >}}
@@ -27,7 +26,7 @@ And *not yet* trying to [sell it](#offer-configuration).
 
 ## About RAGs
 
-RAGs have been around for few years so far.
+[RAGs frameworks and vector DBs](https://jalcocert.github.io/JAlcocerT/rag-frameworks-for-ai-projects/) have been around for few years so far.
 
 From all the [ways to do rag](https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/), Langchain is still the top 1 framework.
 
@@ -137,6 +136,7 @@ gh repo create astro-editor --private --source=. --remote=origin --push
 
 As recently, I started with a BRD, some clarifications, then a development plan.
 
+> PS: You dont need [1000h of prompt engineering](https://www.reddit.com/r/PromptEngineering/comments/1nt7x7v/after_1000_hours_of_prompt_engineering_i_found/) to do so
 
 
 
@@ -223,6 +223,10 @@ The **Tech Stack**:
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+Whats Working
+Whats not
+Whats next
 
 
 ---

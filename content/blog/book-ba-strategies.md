@@ -14,13 +14,25 @@ This guide focuses on the critical role of strategy in business analysis, outlin
 
 ### Understanding Strategy
 
-Strategy defines how an organization uses its resources to achieve its goals and objectives.  It can be applied at various levels: enterprise-wide, divisional, departmental, regional, product-specific, project-based, or even at the iteration level.
+Strategy defines how an organization uses its resources to achieve its goals and objectives.  
 
-Strategy analysis aims to identify the necessary future and transitional states to meet a business need. The scope of this analysis depends on the complexity of the problem and the nature of the business requirement.  It involves discovering or creating potential solutions that enhance stakeholder value and/or organizational value.
+It can be applied at various levels: enterprise-wide, divisional, departmental, regional, product-specific, project-based, or even at the iteration level.
 
-Strategy analysis provides context for design specifications and requirements analysis. It should be conducted as soon as a business need is identified to determine whether and how to address it.  It's an ongoing process, adapting to changes in the need, context, or new information.
+Strategy analysis aims to identify the necessary future and transitional states to meet a business need. 
 
-When conducting strategy analysis, business analysts consider the predictability of potential outcomes.  Predictable changes allow for well-defined future states and clear implementation plans.
+The scope of this analysis depends on the complexity of the problem and the nature of the business requirement. 
+
+It involves discovering or creating potential solutions that enhance stakeholder value and/or organizational value.
+
+Strategy analysis provides context for design specifications and requirements analysis. 
+
+It should be conducted as soon as a business need is identified to determine whether and how to address it. 
+
+It's an ongoing process, adapting to changes in the need, context, or new information.
+
+When conducting strategy analysis, business analysts consider the predictability of potential outcomes. 
+
+Predictable changes allow for well-defined future states and clear implementation plans.
 
 **Key takeaway:** A strategy can be documented in various artifacts, such as a strategic plan, product vision, business case, or product roadmap.
 

@@ -153,6 +153,9 @@ Ive used the kindle a lot.
 
 Peaking at [2023 with 20+ read books](https://jalcocert.github.io/JAlcocerT/blog/summary23/) in that year.
 
+Like [Range](https://jalcocert.github.io/JAlcocerT/blog/da-bk-learning/): *a book about...learning*
+
+Or [never split the difference](https://jalcocert.github.io/JAlcocerT/negotiation-skills-data-analytics/): *about negotiations.*
 
 ### Created a lot of notes
 

@@ -2,7 +2,7 @@
 title: "Analyzing your Sport Performance with Python and Polar data"
 date: 2023-02-26T23:20:21+01:00
 draft: false
-tags: ["Python","Trip-Planner","GPX"]
+tags: ["Python","Trip-Planner","GPX","Route-Tracker"]
 cover:
     image: "https://socialify.git.ci/JAlcocerT/Py_RouteTracker/image?language=1&name=1&owner=1&theme=Auto" # image path/url    
     alt: "Python Polar Analysis" # alt text
@@ -26,6 +26,8 @@ See the Project: https://github.com/JAlcocerT/Py_RouteTracker
 
 ### Tracking your Heart Rate
 
+What if knowing what your hearth does along the route could help you to improve your performance?
+
 {{< rawhtml >}} 
 <iframe src="/videos/Output_HR_Distrib.html"
 style="width: 100%; height: 450px;"></iframe>
@@ -44,7 +46,10 @@ style="width: 100%; height: 450px;"></iframe>
 
 If you have a Google account, you can run this code by uploading the `.GPX` file of the route that you want to visualize and avoid any installation in your computer.
 
-[![Python Notebook - RoutePolar](/img/OpenInColab.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Py_RoutePolar.ipynb)
+<!-- [![Python Notebook - RoutePolar](/img/OpenInColab.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Py_RoutePolar.ipynb) -->
+
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Py_RoutePolar.ipynb)
 
 
 * GPX studio:

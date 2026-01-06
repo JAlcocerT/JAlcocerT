@@ -73,7 +73,7 @@ CI/CD helps developers to deliver high-quality software more quickly and efficie
 
 * Continuous Deployment: automatically deploying software to production environments.
 
-![CICD](/img/CICD.JPG)
+<!-- ![CICD](/img/CICD.JPG) -->
 
 ### Popular CI/CD Tools
 

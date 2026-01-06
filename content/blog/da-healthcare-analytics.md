@@ -117,11 +117,15 @@ On my latest projects, I try to differenciate the docker-compose for:
 
 ## Conclusions
 
-We started out with the framework: Whats working, whats not and whats next?
+We started out with the framework: *Whats working, whats not and whats next?*
 
 The problem was clearly the way of shipping the code to production and the maintanability/ trazability of the versions.
 
 Thats where bringing the [CI/CD strategy to their software methodology](https://jalcocert.github.io/JAlcocerT/software-development-methodologies-data-analytics/#cicd) with the containers automated built method was a game changer.
+
+Among al [CI/CD Tools and processes](https://jalcocert.github.io/JAlcocerT/systems-engineering-and-infraestructure/#cicd-tools-and-processes): we went with a focus on the CI part via github actions.
+
+Fixing their bottleneck and major pain point with their [operations and maintainance](https://jalcocert.github.io/JAlcocerT/systems-engineering-and-infraestructure/#the-main-points-of-system-engineering).
 
 Regarding the what's next: I recommended to have a look for automated SSL certificates for their internal domain.
 

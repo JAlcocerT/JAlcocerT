@@ -9,6 +9,9 @@ url: 'selfhosting-frigate'
 
 **Tl;DR**
 
+https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/
+https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/
+
 If you like computer vision and homelabs, you will enjoy this one :)
 
 **Intro**

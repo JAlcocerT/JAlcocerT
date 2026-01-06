@@ -10,6 +10,33 @@ Enough [Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) and 
 
 Can you actually build a career and be useful, solve problems with those analytical skills?
 
+
+<!-- ### Managing Expectations
+
+Recognizes easily the client`s future needs and wishes within the project, determines business value
+Keeps clients up-to-date on the status of service and changes in it
+Follows up with clients during/after delivery to ensure that their needs are met
+Addresses clients issues, maintains service in critical periods -->
+
+
+
+<!-- 
+## BA Tools
+ -->
+
+
+<!--  Gettings things done
+7 Habits of highly effective 
+essentialism
+atomic habits
+the power of habit
+the power of now-->
+
+<!-- ### Change requests
+
+* How to prepare for them?
+* Again, yes, listen -->
+
 <!-- 
 deeper Power BI expertise, particularly in BI semantic model design and self-service analytics. 
 -->
@@ -77,7 +104,7 @@ See this [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/b
 > Hey, if you are a SoloPreneur BiP, you can simplify all of this like so!
 
 
-https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics
+
 https://jalcocert.github.io/JAlcocerT/business-skills-data-analytics/
 
 
@@ -471,7 +498,7 @@ Technical debt is the implied cost of additional work caused by choosing quick s
 | **Architecture** | Hard to integrate, reuse, grow, or support |
 | **Team** | Delays, low estimation confidence, demotivation |
 
-[Time management](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) in between meetings will be critical
+[Time management](https://jalcocert.github.io/JAlcocerT/time-management-data-analytics/) in between meetings and [negotiations](https://jalcocert.github.io/JAlcocerT/negotiation-skills-data-analytics/) will be critical
 
 The ultimate goal? To [Plan and monitor the project status](https://jalcocert.github.io/JAlcocerT/planning-data-analytics/) to its successfull completion.
 
@@ -482,6 +509,8 @@ The ultimate goal? To [Plan and monitor the project status](https://jalcocert.gi
 5. **Eliminate time liabilities** — Modernize or remove
 6. **Use the prioritization filter** — Is it needed? Can it be delegated/automated?
 7. **Beat analysis paralysis** — Find the first small action
+
+In such positions you cant forget [the Pareto](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) factor.
 
 ### DSc Tools
 
@@ -716,6 +745,8 @@ My personal one has been for long time around [telecom](https://jalcocert.github
 https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/
 https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
 https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/
+
+5. There are no projects completed without effective time management and [meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics)
 
 
 

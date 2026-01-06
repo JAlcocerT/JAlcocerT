@@ -12,31 +12,6 @@ url: 'business-skills-data-analytics'
 A Quick guide for Data Analytics who want to get better on [Business Analysis Skills](/JAlcocerT/business-analytics-skills/).
 
 
-<!-- ### Elicitation Techniques
-
-Has theoretical knowledge of the elicitation process.
-
-Has hands-on experience with 2-3 of the elicitation techniques and has theoretical knowledge in 2-3 more.
-Able to select the elicitation technique - for example, Document Analysis, Interface Analysis, Observation, Interview, Prototyping. 
-
-Has an understanding of the differences between requirements gathering and elicitation.
-Has proven facilitation and interviewing skills.
-Has hands-on experience of managing group elicitation events by using different group techniques - for example, Brainstorming, Mind-mapping, Delphi Technique, Requirements workshop, Focus Groups, Survey/Questionnaire. -->
-
-
-<!-- 
-### Gathering requirements
-
-Collecting proper requirements is one of the most critical phase in software development as it captures the required functionality of a software system. 
-
-With this step we will ensure that our deliverable will fullfil or client's needs
-
-The difference with elicitation is ....
-
-Gathering" assumes that the requirements already exist and are ready for documentation or review and forwarding to developers. "Elicitation" means gathering and understanding information, information that has to be analyzed to produce the requirements. Business analysts who "gather requirements" are recording existing requirements; business analysts who elicit information are using their analytical skills to define a solution and requirements to solve the expressed business problem.?? 
-
--->
-
 ### Estimations
 
 Effort estimation is a crucial aspect of project management, as it helps determine the resources, time, and budget required for a project.
@@ -45,7 +20,9 @@ There are several methods for effort estimation, and selecting the right one dep
 
 Here are some common estimation techniques and when to use them:
 
-* Expert Judgement: Leveraging the knowledge and experience of experts to estimate project efforts. This method is suitable for smaller projects or when there is limited data available for more formal estimation techniques.
+* Expert Judgement: Leveraging the knowledge and experience of experts to estimate project efforts. 
+
+This method is suitable for smaller projects or when there is limited data available for more formal estimation techniques.
 
 * Analogous Estimation: Comparing the current project with similar past projects to estimate efforts based on historical data. This technique works best when there is a sufficient record of comparable projects and the projects are relatively similar in nature.
 
@@ -102,34 +79,7 @@ Follow this steps to enhance your estimations:
     * Pareto Principle: understand that 80% of user satisfaction will come from 20% of tasks
     * The law of diminishing returns
 
-
-<!-- ### Managing Expectations
-
-Recognizes easily the client`s future needs and wishes within the project, determines business value
-Keeps clients up-to-date on the status of service and changes in it
-Follows up with clients during/after delivery to ensure that their needs are met
-Addresses clients issues, maintains service in critical periods -->
-
-
-
 ### Communication Flow
 
 * Effective Meetings - [How to conduct better meetings guide](/JAlcocerT/effective-meetings-data-analytics/).
 * Keep in mind the RACI Matrix
-
-<!-- 
-## BA Tools
- -->
-
-
-<!--  Gettings things done
-7 Habits of highly effective 
-essentialism
-atomic habits
-the power of habit
-the power of now-->
-
-<!-- ### Change requests
-
-* How to prepare for them?
-* Again, yes, listen -->

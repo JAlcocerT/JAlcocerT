@@ -6,10 +6,11 @@ tags: ["Blog","Career","Outro","T-shape","Book"]
 description: "Ultra-learning - Are you a specialist or a generalist?"
 ---
 
-
+**Tl;DR**
 
 > Knowledge increasingly needs not merely to be durable, but also flexible – both sticky and capable of broad application - DAVID EPSTEIN
 
+**Intro**
 
 Epstein reports that champion golfer Tiger Woods held his first golf club at the age of 18 months. Conversely, Roger Federer sampled various sports before settling on tennis in his teens. Both became world champions. 
 
@@ -42,7 +43,9 @@ DAVID EPSTEIN
 
 In the past, the author suggests, employers had more control over their employees’ career trajectories.
 
-In today’s knowledge economy, employees, Epstein asserts, have the advantage, and can take high-risk, high-reward jobs when they are young. This idea provides a useful broader conceptual framework for such people when they specialize later in their careers. 
+In today’s knowledge economy, employees, Epstein asserts, have the advantage, and can take high-risk, high-reward jobs when they are young. 
+
+This idea provides a useful broader conceptual framework for such people when they specialize later in their careers. 
 
 Many authors make the point today that employees have the advantage in the job market. But any job seeker will tell you that may be an ivory-tower fantasy.
 

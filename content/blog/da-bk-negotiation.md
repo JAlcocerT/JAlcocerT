@@ -2,7 +2,7 @@
 title: "Negotiation Skills for DAs. Ensure that requirements are met."
 date: 2023-01-29T23:20:21+01:00
 draft: false
-tags: ["Outro"]
+tags: ["Outro","Career","Book"]
 ShowCodeCopyButtons: false
 description: 'Negotiation is a process of discovery, uncovering information. We need such skills to perform a superb job in analytics.'
 url: 'negotiation-skills-data-analytics'

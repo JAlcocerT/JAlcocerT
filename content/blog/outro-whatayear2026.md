@@ -293,6 +293,8 @@ I made some **HUD overlays for GoPro videos** to have their telemetry in place, 
 
 Simulations are back.
 
+But not in [matlab, nor octave](https://jalcocert.github.io/JAlcocerT/matlab-vs-octave/).
+
 For racers, see how to estimate the [**optimum circuit path** based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and gradient descent.
 
 {{< cards >}}

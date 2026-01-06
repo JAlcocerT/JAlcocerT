@@ -90,7 +90,9 @@ Python, on the other hand, is a general-purpose language with a vast ecosystem o
 
 ### Can you do simulations?
 
-Yes, both MATLAB and Octave are **excellent for simulations**. This is one of their main applications in science and engineering. 
+Yes, both MATLAB and Octave are **excellent for simulations**. 
+
+This is one of their main applications in science and engineering. 
 
 They are widely used to model and simulate physical systems and complex algorithms.
 

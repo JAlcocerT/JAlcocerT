@@ -7,13 +7,15 @@ description: 'Business Analysis Concepts [Recap] for your career in Analytics.'
 url: 'business-analytics-concepts'
 ---
 
-In this post I am summarizing the must know points to level up your career in analytics. Excel at this Business Analytics skills and you will improve your workflow.
+In this post I am summarizing the must know points to level up your career in analytics. 
+
+Excel at this Business Analytics skills and you will improve your workflow.
 
 ## The Business Analytics Guide
 
 To conclude de series of posts regarding Business Analysis skills required to work in analytics, I am creating **this post to make a final summary**.
 
-Remember that there is deeper content on every of the topics if you need it:
+Remember that there is **deeper content** on every of these topics *if you need it*:
 
 * [How to Plan and Monitor](/JAlcocerT/planning-data-analytics)
 * [How to create Momentum - Elicitation and collaboration](/JAlcocerT/elicitation-data-analytics/)
