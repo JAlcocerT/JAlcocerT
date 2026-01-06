@@ -114,10 +114,28 @@ But I want to try something new.
 
 ### UI Wrapper
 
+To go from a python notebook / terminal / script to something that is more non tech user friendly, **we need a UI**.
+
+That's where the power of vibe coding kicks in, together with a new project:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/" title="NEW - " image="/blog_img/apps/gh-jalcocert.svg" subtitle="Editing " >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="NEW - LangChain x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Wrapping LangChain DB Queries into a custom UI to get insights" >}}
 {{< /cards >}}
+
+{{% details title="Why Starting a Tech Blog? 🚀" closed="true" %}}
+
+```sh
+#sudo apt install gh
+gh auth login
+gh repo create astro-editor --private --source=. --remote=origin --push
+
+#git init && git add . && git commit -m "Initial commit: langchain x db x ui" && gh repo create langchain-db-ui --private --source=. --remote=origin --push
+```
+
+{{% /details %}}
+
+
+
 
 ### AI/BI
 
@@ -164,8 +182,10 @@ But you can get it done for you:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
+
+
 
 
 

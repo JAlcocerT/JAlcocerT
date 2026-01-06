@@ -262,12 +262,17 @@ Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#c
 
 10. Embeded Analytics with Graphic Walker: *or should i call this plug and play D&A?*
 
-
 {{< cards >}}
   {{< card link="https://github.com/clidey/plug-and-play-data-analytics" title="PlugnPlay D&A | Post ↗" >}}
-  {{< card link="https://github.com/" title="Github ↗" icon="github" >}}
+  {{< card link="https://github.com/langchain-db-ui" title="LangChain x DB + UI QnA ↗" icon="github" >}}
 {{< /cards >}}
 
+Which I used it to be the first **tech talk** of this year.
+
+{{< cards >}}
+  {{< card link="https://github.com/" title="SliDev Repo | Pre Y26 Tech Talks ↗" icon="github" >}}
+  {{< card link="https://github.com/" title="Consulting / Landing Repo | Y26 Tech Talks ↗" icon="github" >}}
+{{< /cards >}}
 
 
 11. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and video overlays.
@@ -288,7 +293,7 @@ I made some **HUD overlays for GoPro videos** to have their telemetry in place, 
 
 Simulations are back.
 
-For racers, see how to estimate the [optimum path based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and gradient descent.
+For racers, see how to estimate the [**optimum circuit path** based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and gradient descent.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}

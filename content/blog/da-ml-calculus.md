@@ -167,13 +167,13 @@ relate it with non lineality and caos theory
 
 ### Helping Others
 
-After helping my friend who works as radiophysics and shipped its page at: box2overtake.com
+After helping my friend who works as radiophysics and shipped its page at: `box2overtake.com`
 
 I cant wait to see what this other friend will be able to share with the world with the proper platform.
 
 Material science, diesel injectors, math and piano notes...
 
-I really **cant wait**:
+Again, I really **cant wait**:
 
 1. Post embrittelment acero h2
 2. Hyundai heavy industries dfy subscription making possible a company to thrive
@@ -208,6 +208,8 @@ In the meantime: *you can also get your website going*
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
+
+Or watching some of the [101 sessions I had](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#outro) with people to get started.
 
 
 {{< cards >}}

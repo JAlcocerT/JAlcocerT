@@ -1,6 +1,6 @@
 ---
 title: "We/Books and a DIY BoilerPlate"
-date: 2026-01-05T07:20:21+01:00
+date: 2026-01-06T07:20:21+01:00
 #date: 2025-12-27T23:20:21+01:00
 draft: false
 tags: ["Info Products","DIY 1toN ebooks x BiP","SaaS vs LifeTime Products","RoadMap26"]
@@ -311,9 +311,13 @@ See... `Z_ebooks/BiP-ebook.md`
 
 ## Conclusions
 
-This is it *for now*.
+Im aware that 2026 might not be the year of info-products to bloom.
 
-From blogs, to docs, to knowledge in ebooks / webooks.
+But I wanted to put this together to have a better structured *,passive'* service offering.
+
+So, this is it *for now*.
+
+From blogs, to docs, to knowledge in ebooks / webooks - Done ✅
 
 ```sh
 git clone https://github.com/JAlcocerT/1ton-ebooks.git
@@ -380,7 +384,9 @@ Perfectionism can turn into a subtle trap. Waiting for every detail to be impecc
 
 ### The bold proposal to launch quickly: iterate rather than perfect
 
-The idea of launching quickly, even if the portfolio doesn't reach an immediate level of perfection, offers an alternative perspective. It's about recognizing that each iteration can be an improvement on the previous one. This approach encourages a constant iteration mentality, where each version becomes a learning opportunity.
+The idea of launching quickly, even if the portfolio doesn't reach an immediate level of perfection, offers an alternative perspective. 
+
+It's about recognizing that each iteration can be an improvement on the previous one. This approach encourages a constant iteration mentality, where each version becomes a learning opportunity.
 
 ### Speed as a means of learning: create by doing
 
@@ -390,17 +396,29 @@ It's an invitation to learn by doing, to use each version of the portfolio as a 
 
 ### The crucial importance of time: time efficiency and judicious management
 
-Time plays a crucial role in this debate. Time efficiency, underlined by the perspective of speed, becomes an essential skill. Judicious time management is the key to maintaining momentum without compromising quality. Consciously choosing where to invest one's time becomes a strategic act.
+Time plays a crucial role in this debate. Time efficiency, underlined by the perspective of speed, becomes an essential skill.
+
+Judicious time management is the key to maintaining momentum without compromising quality.
+
+Consciously choosing where to invest one's time becomes a strategic act.
 
 ### Total control vs. flexibility: navigating between the two extremes
 
-Total control of the creative process offers a sense of autonomy and empowerment. However, it is vital not to confuse control with rigidity. Being open to market developments and new trends is just as essential as personal control. It's a delicate balance between autonomy and adaptability.
+Total control of the creative process offers a sense of autonomy and empowerment. 
+
+However, it is vital not to confuse control with rigidity. 
+
+Being open to market developments and new trends is just as essential as personal control. 
+
+It's a delicate balance between autonomy and adaptability.
 
 ### The delicate balance: a continuous journey of discovery and adaptation
 
-Ultimately, portfolio creation is an ongoing journey. It's navigating this paradox with intention. It's finding a balance between the quest for excellence and the need to move quickly, knowing that each iteration is a progression towards an improved version of yourself. To create a portfolio is to embrace the paradox, to consciously choose between perfection and speed, and to accept that the path to excellence is a journey rather than a destination.
+Ultimately, portfolio creation is an ongoing journey. It's navigating this paradox with intention. 
 
+It's finding a balance between the quest for excellence and the need to move quickly, knowing that each iteration is a progression towards an improved version of yourself.
 
+To create a portfolio is to embrace the paradox, to consciously choose between perfection and speed, and to accept that the path to excellence is a journey rather than a destination.
 
 
 ### From SaaS to LifeTime Products 
