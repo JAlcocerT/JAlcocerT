@@ -173,19 +173,23 @@ To unify my workflow/efforts, I've moved my tech talk creation from:
 
 
 ```sh
-git clone https://github.com/JAlcocerT/slidev-editor
+git clone --depth 1 --single-branch -b logtojseauth https://github.com/JAlcocerT/slidev-editor #just current status
+#git clone https://github.com/JAlcocerT/slidev-editor
 #git branch -a
 #git checkout -b logtojseauth main
 ```
 
-As part of my consulting repository:
+As part of my consulting repository: *the responsible for `consulting.jalcocertech.com`*
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing
-cd 
+cd y2026-tech-talks/langchain-postgres
+#npm run dev 
 ```
 
-Yea, thats private :)
+This time I used not only components and public images, but also `./pages` to keep the content modular and potentially, re-use it in the future.
+
+Yea, [thats private](https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks) :)
 
 <!-- 
 You can see the video:
@@ -197,8 +201,6 @@ But you can get it done for you:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
-
-
 
 
 
