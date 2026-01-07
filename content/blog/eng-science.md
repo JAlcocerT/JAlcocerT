@@ -1,6 +1,6 @@
 ---
 title: "Science is so Cool!"
-date: 2026-12-19T23:20:21+01:00
+date: 2026-12-10T23:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/jalcocert/streamlit-multichat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
@@ -96,6 +96,9 @@ https://github.com/JAlcocerT/ThreeBodies/blob/main/Z_DeployMe/3bodes-flask.png
 {{< youtube "DT-1REn31eQ" >}}
 
 
+{{< youtube "C-FEVzI8oe8" >}}
+
+https://www.youtube.com/watch?v=C-FEVzI8oe8
 
 
 $$
@@ -163,7 +166,7 @@ https://www.youtube.com/watch?v=WfJbF0xkUOY
 
 $$\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}$$
 
-
+https://jalcocert.github.io/JAlcocerT/making-soap-at-home/
 
 {{< details title="Cool chemistry 📌" closed="true" >}}
 

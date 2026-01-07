@@ -71,7 +71,7 @@ Maybe, try to build a brand *before its too late*.
 
 I thought that Id do for this year a separated `blog.jalc...` based on this [canvas repo](https://github.com/JAlcocerT/canvas).
 
-But i Just continued here.
+But I Just continued here.
 
 0. Improved FOSS from blog to doc like. Multilanguage and all that stuff. Still as HUGO.
 
@@ -152,6 +152,39 @@ One of the start doing goals from last year. And that I quickly put together [he
 > Create ebooks be like: upload .md + upload image done via canva = download pdf/epub thanks to pandoc
 
 > > Similar to ~tiiny.host
+
+0. A better CV: *because being a [pro D&A professional](https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/) is a little bit harder nowadays*
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+{{< /cards >}}
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="Ebooks Repo- D&A ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV Latex - Offer Tracker ↗" icon="github" >}}
+{{< /cards >}}
+
+
+<!-- 
+deeper Power BI expertise, particularly in BI semantic model design and self-service analytics. 
+
+consumer analytics - fmcg - consumer insights
+-->
+
+<!-- 
+MMM marketing analytics 
+-->
+
+0. Tinkered with **new APIs**
+
+* https://github.com/agustinusnathaniel/pub-apis
+* https://publicapis.sznm.dev/
+
+0. Data driven stories
+
+<https://viborc.com/>
+
 
 0. About Posthog: Post an ebook page post on IG, then web session will be recorded and a YT video can be made out of that
 
@@ -433,6 +466,11 @@ xargs -0 awk '
 1. Choose your hard
 2. What a priviledge is to choose what challenge make you struggle
 3. 
+
+#### Interesting Concepts
+
+* Options -> Things and not controlable
+* Choices -> Actions and are controlable
 
 #### Interesting Posts
 

@@ -2,8 +2,8 @@
 title: "Be the D&A professional you want to be"
 date: 2025-11-26T07:20:21+01:00
 draft: false
-tags: ["Career", "D&A Recap", "Analytics","Job","Data Modelling for Kimball DWH vs DataLakehouse"]
-description: 'From Data Modelling, through D&A Tech, to successfull Data Product Delivery.'
+tags: ["Career", "D&A Recap", "Analytics","Job Interviews","Data Modelling for Kimball DWH vs DataLakehouse"]
+description: 'From Data Modelling, to successfull Data Product Delivery.'
 url: 'excel-data-analytics-interviews'
 ---
 
@@ -81,7 +81,11 @@ Some creative people have figured out a way to build *(beautiful)* websites from
 
 > > In theory it can also be [selfhosted as per this guide](https://sql-page.com/your-first-sql-website/nginx.sql)
 
-https://youtube.com/shorts/crZalY8oxyw?si=ZEbnZ0UC4M347Fj0
+<!-- 
+https://youtube.com/shorts/crZalY8oxyw?si=ZEbnZ0UC4M347Fj0 
+-->
+
+{{< youtube "crZalY8oxyw" >}}
 
 
 Its just... (OLAP ~ D&A) vs (OLTP ~ CRUD).
@@ -112,6 +116,7 @@ Here is the deep dive into those three specific "grilling" topics.
 This is a trap question. If you say "fully normalized (3NF)," you fail BI performance. If you say "one giant flat table," you fail usability and storage efficiency.
 
 **The Senior Answer Base:**
+
 You base your decision on the **target consumption engine**, which in this case is Power BI's VertiPaq engine.
 
 **The Strategy: "Denormalize until it hurts, then stop at a Star Schema."**
@@ -863,14 +868,17 @@ This is the core of the interview answer. Why not just use the `CustomerID` from
 Here are the critical reasons why a Senior Architect insists on using Surrogate Keys instead of Natural Keys in a data warehouse:
 
 #### A. Decoupling from Source Systems (Independence)
+
 * **Natural Key Problem:** What happens if your company buys another company? Suddenly you have two different CRM systems. Company A has Customer ID "123" and Company B also has Customer ID "123", but they are different people. If you used natural keys, your data warehouse breaks due to duplicate keys.
 * **Surrogate Key Solution:** The ETL process assigns Company A's customer SK `1` and Company B's customer SK `2`. The data warehouse doesn't care that their source IDs are identical because it manages its own unique keys.
 
 #### B. Performance (Join Speed)
+
 * **Natural Key Problem:** Natural keys are often alphanumeric strings (e.g., "CUST-A-998-X"). Joining fact tables to dimension tables on long text strings is slow for database engines.
 * **Surrogate Key Solution:** Surrogate keys are simple integers. Joining tables based on integers is the fastest operation a database can perform. In a 10-billion-row fact table, this difference is massive.
 
 #### C. Handling History (SCD Type 2) - *The most important reason*
+
 * **Natural Key Problem:** Natural keys identify a *business entity* (John Smith). If John Smith moves from New York to California, his business key (`CustomerID: JS123`) doesn't change. You cannot have two rows in your dimension table with the Primary Key `JS123`. Therefore, you cannot track his history; you can only overwrite his address.
 * **Surrogate Key Solution:** Surrogate keys identify a *specific version of a business entity at a point in time*.
 

@@ -2,7 +2,7 @@
 title: "Data Analytics Concepts [Recap]"
 date: 2025-03-05
 draft: false
-tags: ["D&A career","GXs","Pydantic"]
+tags: ["D&A career","GXs","Pydantic","Apache iceberg","Nessie"]
 description: "Data Management (Validation, Profiling, Modelling,...) within a Data LakeHouse."
 url: 'data-analytics-concepts'
 ---
@@ -10,10 +10,9 @@ url: 'data-analytics-concepts'
 
 **Intro**
 
-
 For industries like healthcare, the data lineage is a must.
 
-Fortunately, tools like Apache Iceberg + Nessie can help you to create the proper architecture.
+Fortunately, tools like **Apache Iceberg + Nessie** can help you to create the proper architecture.
 
 You can also find tools like Great Expectations to validate your data.
 

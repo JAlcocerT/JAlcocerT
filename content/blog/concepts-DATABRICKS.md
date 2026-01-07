@@ -66,6 +66,8 @@ print(tabulate(data, headers=headers, tablefmt="pipe"))
 
 Interesting queries to get started with PySpark:
 
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Python_is_awesome/blob/main/Z_GoodToKnow/Getting_Started_with_PySpark.ipynb) 
+
 ```py
 ### CREATES A SPARK DATAFRAME
 

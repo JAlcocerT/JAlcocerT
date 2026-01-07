@@ -2,7 +2,7 @@
 title: "DBs (and Tools) for the AI era"
 date: 2025-02-27T11:20:21+01:00
 draft: false
-tags: ["Dev","D&A","MySQL","PostgreSQL","MariaDB","Trino","Redis",]
+tags: ["SelfHosting","D&A","MySQL","PostgreSQL","MariaDB","Trino","Redis"]
 description: 'Setting up DataBases for Data Analytics and AI Projects.'
 url: 'setup-databases-docker'
 ---
@@ -122,6 +122,10 @@ I got to know MariaDB as a substitute for MySQL when I was trying to use its [AR
 
 
 #### PostgreSQL
+
+Got a data project?
+
+PGSQL got you covered.
 
 <!-- 
 https://www.youtube.com/watch?v=3JW732GrMdg

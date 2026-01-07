@@ -112,9 +112,15 @@ Ive created a new ipynb with addititional *matplotlib based this time* graphs
 
 ![Driver lap comparison based on Matplotlib](/blog_img/data-experiments/kart/matplotlib-driver-comparison.png)
 
+Which looks very similar to what it was covered:
+
+<!-- https://www.youtube.com/watch?v=41BHPU7lDIY -->
+
+{{< youtube "41BHPU7lDIY" >}}
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="Matplotlib x YFinance" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Using Matplotlib to generat TimeSeries Styles Snapshots" >}}
-  {{< card link="mations as a Code" title="Matplotlib x Flask WebApp" image="/blog_img/AIBI/fastapi-custom-matplotlib.png" subtitle="Custom matplotlib x Graficas LibrePortfolio" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Matplotlib x Flask WebApp" image="/blog_img/AIBI/fastapi-custom-matplotlib.png" subtitle="Custom matplotlib x Graficas LibrePortfolio" >}}
 {{< /cards >}}
 
 <!-- ![Custom matplotlib x fastAPI x Graficas LibrePortfolio](/blog_img/AIBI/fastapi-custom-matplotlib.png) -->

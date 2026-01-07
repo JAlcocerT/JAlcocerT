@@ -1,9 +1,9 @@
 ---
-title: "Streamlit x GHCR x CI/CD"
+title: "[Success Story 1] Streamlit x GHCR x CI/CD"
 date: 2026-01-04T19:20:21+01:00
 #date: 2025-12-20T23:20:21+01:00
 draft: false
-tags: ["Success Story 1","DWY Consulting","Medical Physics x PHD","Healthcare Analytics"]
+tags: ["DWY Consulting","Medical Physics x PHD","Healthcare Analytics","PHD"]
 description: 'Agile development for a hospital based on CI/CD.'
 url: 'improving-healthcare-analytics'
 ---
@@ -191,3 +191,9 @@ Be the next one to get a x10 workflow improvement:
 
 
 > Latest features shipped properly: https://github.com/JAlcocerT/X-ray-imaging-analysis + youtube video
+
+Health Care Analytics - https://github.com/tuva-health
+ 
+* https://github.com/tuva-health/tuva
+
+Main repo including core data model, data marts, reference data, terminology, and the clinical concept library

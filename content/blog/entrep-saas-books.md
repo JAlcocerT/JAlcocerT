@@ -346,6 +346,7 @@ That's why I have created a custom chatbot for registered users to do QnA over t
 
 Something like...what the claude code docs are having.
 
+Or an Alternatives to https://www.livechat.com/pricing/ - *ING uses it*
 
 
 ### KB Ive added so far
@@ -555,57 +556,6 @@ Im **launching my boilerplate**: https://boilerplate.jalcocertech.com
 
 > > Many claim to read, but very few understand
 
-<!-- ## Data Driven Stories
-
-<https://viborc.com/> -->
-
-<!-- Psychology-skills-data-analytics/#the-paradox-of-success
-Psychology-skills-data-analytics/#the-optimism-bias -->
-
-<!-- ### Requirements Gathering -->
-
-<!-- * Listen -->
-
-<!-- ### The Echo Chambers
-
-When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. 
-
-Today, however, people often only engage with those who share their opinions. Digital channels have returned humans to a cave-like existence: Only a small social bubble within an echo chamber shares a given person’s view of reality.
-
-“The multiplicity of digital channels allows us to avoid self-awareness and surround ourselves with the people (or machines, it is not always certain) who share our opinions.” 
-
-Individuals that hold opposing viewpoints on reality encourage, criticize, and adjust one another's ideas, influencing economic and human behavior.
-
-Different narratives, like an epidemic, may infect and alter communities, according to Shiller. 
-
-The validity of a narrative has no bearing on its "contagion rate." 
-
-Viral tales capture attention, look cohesive, and fit readily into existing narratives.
-
--->
-<!-- Flexdashboards: bootstrap, css, framekow (a,b,c),mcustomize from R with {bslib} 
-RSHiny + bslib
-
-DASH - flask, plotly.js, react.js, dash_bootstrap_components
-
-heroku
-netlify? -->
-
-<!-- ## Understanding Routines
-
-Habits
-
-Discipline must be saved for essential activities. -->
-<!-- 
-#thinking fast and slow
- -->
- 
-<!-- 
-'psychology-skills-data-analytics' -->
-<!-- 
-### Binary Thinking
-
-*Either or* -->
 
 ![Canva using neuromarketing on you](/blog_img/outro/canva-free-trial-neuromkt.png)
 
@@ -618,10 +568,6 @@ Discipline must be saved for essential activities. -->
 > There are Similar python projects like https://github.com/denizsafak/abogen
 
 > > Abogen is a powerful text-to-speech conversion tool that makes it easy to turn ePub, PDF, text or markdown files into high-quality audio with matching subtitles in seconds. Use it for audiobooks, voiceovers for Instagram, YouTube, TikTok, or any project that needs natural-sounding text-to-speech, using Kokoro-82M.
-
-<!-- 
-Alternatives to https://www.livechat.com/pricing/ ING uses it
- -->
 
 ### About some interesting books Ive read
 
@@ -757,3 +703,57 @@ And put together a [journaling recap for artists](https://jalcocert.github.io/JA
 But wanted to cover in depth: https://github.com/subhamBharadwaz/scribbly
 
 > MIT |  Scribbly is a web application built with Next.js and Prisma that allows users to create and manage their digital journal. With a user-friendly interface powered by Radix UI and Shadcn/UI components, Scribbly makes journaling a breeze. It includes features such as customizable reminders, secure user authentication with Clerk, and a subscription plan 
+
+
+
+<!--  Gettings things done
+7 Habits of highly effective 
+essentialism
+atomic habits
+the power of habit
+the power of now-->
+
+
+
+<!-- Psychology-skills-data-analytics/#the-paradox-of-success
+Psychology-skills-data-analytics/#the-optimism-bias -->
+
+<!-- ### Requirements Gathering -->
+
+<!-- * Listen -->
+
+<!-- ### The Echo Chambers
+
+When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. 
+
+Today, however, people often only engage with those who share their opinions. Digital channels have returned humans to a cave-like existence: Only a small social bubble within an echo chamber shares a given person’s view of reality.
+
+“The multiplicity of digital channels allows us to avoid self-awareness and surround ourselves with the people (or machines, it is not always certain) who share our opinions.” 
+
+Individuals that hold opposing viewpoints on reality encourage, criticize, and adjust one another's ideas, influencing economic and human behavior.
+
+Different narratives, like an epidemic, may infect and alter communities, according to Shiller. 
+
+The validity of a narrative has no bearing on its "contagion rate." 
+
+Viral tales capture attention, look cohesive, and fit readily into existing narratives.
+
+-->
+
+
+<!-- ## Understanding Routines
+
+Habits
+
+Discipline must be saved for essential activities. -->
+
+<!-- 
+#thinking fast and slow
+ -->
+ 
+<!-- 
+'psychology-skills-data-analytics' -->
+<!-- 
+### Binary Thinking
+
+*Either or* -->

@@ -414,7 +414,7 @@ With DSL you can do cool things, like the *contain filter*:
 Your **KQL** query is:
 
 ```py
-viewerID : * and site : "AD04" and (HttpPlayerPlaybackEndEvent_assetType : * or HttpPlayerStartEvent_assetType : * )
+viewerID : * and site : "somename" and (HttpPlayerPlaybackEndEvent_assetType : * or HttpPlayerStartEvent_assetType : * )
 ```
 
 Here's how to translate it **into Elasticsearch DSL**:
@@ -434,7 +434,7 @@ Here's how to translate it **into Elasticsearch DSL**:
         {
           "term": {
             "site.keyword": {
-              "value": "AD04"
+              "value": "somename"
             }
           }
         },
@@ -555,8 +555,7 @@ With a Very Interesting Marker cluster Page and a Page to upload your Vector Dat
 {{< youtube id="OsGq4LJHOUI" autoplay="false" >}}
 
 * Streamlit **Reacting to clicks on a Leaflet Map** - Also with Folium
-
-https://github.com/clint-kristopher-morris/Tutorials/tree/main/streamlit-part-1
+  * https://github.com/clint-kristopher-morris/Tutorials/tree/main/streamlit-part-1
 
 {{< youtube id="gWV1gbeB-IM" autoplay="false" >}}
 
@@ -693,9 +692,6 @@ IoT Project example with Superset: <>
 {{< gist JAlcocerT 953cab1052af58f4241f28dbc0a314a0>}}
 <!-- {{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks - PayoutRatioEvolution.JPG" >}} -->
 
-
-
-
 ---
 
 ## Conclusions
@@ -712,7 +708,7 @@ Many analytics tools to choose from:
 - [Lightdash](https://github.com/lightdash/lightdash)
 - [MongoDB tutorial: Building Metabase Dashboards](https://www.youtube.com/watch?v=utMxX014na4)
 
-Additional Databases and Tools
+Additional Databases and Tools:
 
 - **MongoDB**
 - **Elasticsearch (ES)**

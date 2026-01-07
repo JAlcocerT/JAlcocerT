@@ -14,99 +14,6 @@ Put the name that you want: Software product development, digital platform engin
 
 [Computer consultancy activities](https://ariregister.rik.ee/eng/company/16864984/iotechcrafts-O%C3%9C?lang=en)
 
-
-
-<!-- 
-Health Care Analytics - https://github.com/tuva-health
- 
-https://github.com/tuva-health/tuva
-
-Main repo including core data model, data marts, reference data, terminology, and the clinical concept library
-
- -->
-
- 
-<!-- 
-
-### How to detect null's in a PySpark Dataframe
-
-
- ### How to query Kafka topics
-
-
-### How to group by a Spark DF
-
-
-### How to join Spark DF's
-
- ### How to display the data of a Spark DF
--->
-<!-- ## Try me with Google Colaboratory
-
-If you have a Google account, you can check these code snippets, as well as few useful UDF's to work more efficiently with spark directly with your Google Colab account and the code I made available in Github:
-
- [![Example image](/img/OpenInColab.svg)](https://colab.research.google.com/github/JAlcocerT/Python_is_awesome/blob/main/Z_GoodToKnow/Getting_Started_with_PySpark.ipynb) -->
-
- 
-<!-- 
-
-### PYSPARK
-WHAT IS DRY ACRONYM? - 
-DONT REPEAT YOURSELF -->
-
-
-<!-- ### What it is Kafka and how it Relates with Spark?
-
-## Kafka Docker
-
-2011, Linkedin, Scala
-
-<https://www.youtube.com/watch?v=nZeDNMTgQUA>
-<https://www.youtube.com/watch?v=bto9WdUo5UE>
-
-<https://www.youtube.com/watch?v=uvb00oaa3k8>
-
-
-## Zookeeper
-
-In our big project (Kafka), we need to make sure that the conveyor belt (Kafka) is working smoothly and that all the workers (computers) know what to do. This is where our notebook (ZooKeeper) comes in. ZooKeeper helps us keep track of the conveyor belt's status and makes sure all the workers are doing their jobs correctly. -->
-
-
-<!-- ### Managing Expectations
-
-Recognizes easily the client`s future needs and wishes within the project, determines business value
-Keeps clients up-to-date on the status of service and changes in it
-Follows up with clients during/after delivery to ensure that their needs are met
-Addresses clients issues, maintains service in critical periods -->
-
-
-
-<!-- 
-## BA Tools
- -->
-
-
-<!--  Gettings things done
-7 Habits of highly effective 
-essentialism
-atomic habits
-the power of habit
-the power of now-->
-
-<!-- ### Change requests
-
-* How to prepare for them?
-* Again, yes, listen -->
-
-<!-- 
-deeper Power BI expertise, particularly in BI semantic model design and self-service analytics. 
--->
-
-<!-- 
-MMM marketing analytics 
--->
-
-
 <!-- 
 <https://youtu.be/OwZHNH8EfSU?t=14314> -->
 
@@ -123,20 +30,11 @@ For the ones that would like to share their experience, [creating and publishing
 
 So is preparing your **CV and your interviews**:
 
-<!-- {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Scrapping job boards" >}}
-  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV-lAItex Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="CVs as a Code. Application Job History and Historieta" >}}
-{{< /cards >}} -->
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV Latex - Offer Tracker ↗" icon="github" >}}
 {{< /cards >}}
-
-A team member can deliver great results given the proper workload.
-
-* Options -> Things and not controlable
-* Choices -> Actions and are controlable
 
 
 ---
@@ -146,35 +44,9 @@ For a career in D&A you will need to be familiar with certain tools.
 
 Your learning will be [a journey](#a-da-journey), but a plan is always good to have: https://roadmap.sh/
 
-
-
-
-* [**Big Data** Tools](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/)
-* [**GCP** 101](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)
-
-
-
-https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/
-https://jalcocert.github.io/JAlcocerT/business-analytics-skills/
-
-
-https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/#why-these-are-important
-
-See this [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md) for Reference
-
-> Hey, if you are a SoloPreneur BiP, you can simplify all of this like so!
-
-
-
-https://jalcocert.github.io/JAlcocerT/business-skills-data-analytics/
-
-
-This can concepts get messy, very fast.
+These concepts can get messy, very fast.
 
 That's why I learnt to create ebooks and made one about **Data Analytics**
-
-
-
 
 
 ## Data Analysis
@@ -315,6 +187,11 @@ They are the "brains" that execute the logic you write, often over large dataset
 You can think of it this way: a tool like **dbt** or **Dataform** generates and submits SQL, and a **query engine** like BigQuery, Spark, or Trino is the one that actually runs it and performs the computation.
 
 {{< /details >}}
+
+* [**Big Data** Tools](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/)
+* [**GCP** 101](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/)
+
+
 
 
 **Orchestration Tools**
@@ -565,7 +442,7 @@ flowchart LR
 
 ### BA Stuff
 
-Dont become one of those BAs that dont know anything at all from tech.
+Dont become one of those [BAs](https://jalcocert.github.io/JAlcocerT/business-skills-data-analytics/) that dont know anything at all from tech.
 
 And dont become those tech people that dont know anything about the business.
 
@@ -575,12 +452,17 @@ To write effective user stories for your **PRD**, you want to follow a standard 
 
 This ensures that when you switch from "Manager" to "Developer," you know exactly what success looks like.
 
-**Acronyms for BAs:**
+**Acronyms for BAs:** *sharp those [ba skills](https://jalcocert.github.io/JAlcocerT/business-analytics-skills/)*
 
 1. Scope of Work - SoW / WoW - Way of Working
-2. BRD,PRD,FRD
+2. [BRD,PRD,FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/)
 3. PoC, MVP
 4. SMART and INVEST
+
+See also this [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md) for Reference
+
+> Hey, if you are a SoloPreneur BiP, you can simplify all of this overhead to match your resources!
+
 
 #### The User Story Skeleton
 
@@ -626,7 +508,7 @@ Also, [development methodologies](https://jalcocert.github.io/JAlcocerT/software
 
 Becuase [team management](https://jalcocert.github.io/JAlcocerT/team-management-data-analytics/) is your scope.
 
-And their [Technical debt is the implied cost of additional work caused by choosing quick solutions over better approaches.
+And their Technical debt is the implied cost of additional work caused by choosing quick solutions over better approaches.
 
 | Category | Warning Signs |
 |----------|---------------|
@@ -654,6 +536,22 @@ Focus on becoming a **T-Shaped Professional**:
 
 Remember: **Diagrams** are your best friend. Always blueprint your pipelines before writing a single line of code.
 
+
+Requirement Elicitation: *its all about **Key Questions to Ask:***
+
+1. **Objectives**: What are the key goals (OKRs)?
+2. **Users**: Who are the primary end-users?
+3. **KPIs**: What metrics should we track?
+4. **Interactivity**: What level of customization is needed?
+5. **Validation**: How will we evaluate success?
+
+And with the product mindset:
+
+1. **Problem**: What pain point does this solve?
+2. **Solution**: How does your idea address it?
+3. **Value**: What's the business impact?
+4. **Evidence**: Data or examples supporting your case
+5. **Ask**: What do you need from stakeholders?
 
 ### DSc Tools
 
@@ -689,6 +587,11 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
 
 A solid knowledge [around Bayes](https://jalcocert.github.io/JAlcocerT/bayes-theorem-with-python/) will be handy for setting experiments.
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/#conditional-probability" title="Bayes and Streamlit | POST" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc, but Bayes is for life" >}}
+  {{< card link="https://github.com/JAlcocerT/Python_is_awesome" title="Awsome Python Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Bayes and Streamlit" >}}
+{{< /cards >}}
 
 My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) 
 
@@ -789,11 +692,6 @@ You also have a TF playground [here](https://playground.tensorflow.org/#activati
 {{< /cards >}}
 
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/AB-Testing-for-data-analytics/#conditional-probability" title="Bayes and Streamlit | POST" image="/blog_img/data-experiments/bayes-st.png" subtitle="I thought that was for ML and DSc, but Bayes is for life" >}}
-  {{< card link="https://github.com/JAlcocerT/Python_is_awesome" title="Awsome Python Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Tinkering with Bayes and Streamlit" >}}
-{{< /cards >}}
-
 
 {{< details title="Preparing a DSc Interview 📌" closed="true" >}}
 
@@ -877,7 +775,7 @@ Find clients that need your expertise, build with your knowledge and help others
 
 My personal one has been for long time around [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), [FMCG](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/) and [healthcare](https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics).
 
-
+And i have done quite a lot of [self-learning for dna](https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/):
 
 1. Learnt [SQL](https://jalcocert.github.io/JAlcocerT/sql-data-analytics/)
 
@@ -885,17 +783,12 @@ My personal one has been for long time around [telecom](https://jalcocert.github
 
 3. And later it came [PySpark](https://jalcocert.github.io/JAlcocerT/guide-python-PySpark/) *say...python for big data*
 
-4. But there is not D&A without proper [data modelling](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/)
+4. But there is not D&A without proper [data modelling](https://jalcocert.github.io/JAlcocerT/data-basics-for-data-analytics/) and [these dna concepts in place](https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/).
 
-https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/
-https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/
-https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/
 
 5. There are no projects completed without effective time management and [meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics)
 
-
-
-https://jalcocert.github.io/JAlcocerT/self-taught-career-guide-for-data-analytics/
+6. And to excel lead [da interviews](https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/), you need to have [architectural concepts mastery](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/)
 
 ### D&A eBook
 
@@ -912,4 +805,10 @@ How can you **benefit from all this**
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/" title="e-books | Docs" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="Scrapping job boards" >}}
   {{< card link="https://diy.jalcocertech.com" title="D&A e-book" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Start your D&A Career" >}}
+{{< /cards >}}
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="Ebooks Repo- D&A ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV Latex - Offer Tracker ↗" icon="github" >}}
 {{< /cards >}}
