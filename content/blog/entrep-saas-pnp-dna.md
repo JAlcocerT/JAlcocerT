@@ -98,12 +98,13 @@ Previously, I was using the Chinook artist related DB: *via MySQL*
 
 But I want to try something new.
 
+So it will be **PGSql this time** and looked with Perplexity some sample datasets.
+
 #### Sample 1
 
 #### Sample 2
 
 #### Sample 3 - Connecting to running services
-
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento" title="Commento | Docker Config 🐋 ↗" >}}
