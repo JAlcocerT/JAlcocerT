@@ -163,6 +163,7 @@ ffmpeg -i IMG_5294.MOV -ss 00:03:35 -to 00:05:25 -c copy output.MOV
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/" title="More Video Tricks ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video Docs Section with consolidated info ↗" >}}
 {{< /cards >}}
 
 How does it look the data?
@@ -172,7 +173,7 @@ You guessed it, you can process **PhyPhox Data with Python:**
 You can also open it with **Google Colab**: [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Py_RouteTracker/blob/main/Z_GoPro/gopro_explore_speeds_TrackDay.ipynb)
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/" title="PhyPhox Post" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Physical experiments with a Phone" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/" title="PhyPhox Post" image="/blog_img/iot/phyphox-android.jpg" subtitle="Physical experiments with a Phone" >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/tree/main/Data_PhyPhox" title="Route Tracker Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code PhyPhox Airplane EDA" >}}
 {{< /cards >}}
 
@@ -202,88 +203,3 @@ https://www.youtube.com/watch?v=38H_8asDUfY
  -->
 
 {{< youtube "38H_8asDUfY" >}}
-
-
-## GPS RPi IoT Project - GPS Data (VK-162) with Apache Superset
-
-* <https://www.youtube.com/watch?v=Z7cJ59sixpk&t=197s>
-<https://www.youtube.com/watch?v=3ysOqliO6F8>
-
-### ToDo list
-
-- [ ] Job Done!
-  + [ ] Setup BI - Superset
-  + [ ] Hardware Checks
-  + [ ] Connecting everything
-
-<https://www.youtube.com/watch?v=Z7cJ59sixpk>
-
-### Apache Superset Setup
-
-Apache Superset is a [Free BI Web Tool](https://superset.apache.org/docs/intro/) that we can [use with our RPi projects locally](https://superset.apache.org/docs/installation/installing-superset-using-docker-compose/).
-
-
-```sh
-git clone https://github.com/apache/superset.git
-cd superset
-
-docker compose -f docker-compose-non-dev.yml up -d
-
-#git checkout 3.0.0
-#TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up
-```
-
-Then, just use Superset with its UI at: **http://localhost:8088/login/**
-
-![Desktop View](/img/superset-working.png){: width="972" height="589" }
-_DHT22 connection to a Raspberry Pi 4_
-
-*Default credentials are: admin/admin*
-
-- [ ] Job Done!
-  + [x] Setup BI - Superset
-  + [ ] Hardware Checks
-  + [ ] Connecting everything
-
-
-### Sensors
-
-* VK-162
-* Columbus V-800 + [gpsd-gps](https://gpsd.io/) client
-* BY-353 USB GPS
-
-* GPS GNSS GPS MTK3333 adafruit 4279
-* https://www.reddit.com/r/robotics/comments/18jgsmr/rtk_gps_lap_timing/
-* https://www.reddit.com/r/UAVmapping/comments/10utv7b/cheapest_way_to_get_cmlevel_gps/
-* ublox f9p
-
-* Neo 6M GPS Sensor
-  * https://www.youtube.com/watch?v=N8fH0nc9v9Q
-
-### Comercial Sensors
-
-* mychron 5s gos
-& mylaps transponders
-* tag heuer transponders
-
-* https://www.reddit.com/r/rccars/comments/15iukhz/made_my_own_lap_timer_that_reads_mylaps/
-
----
-
-## FAQ
-
-* https://github.com/GPSBabel/gpsbabel
-
->  GPSBabel: convert, manipulate, and transfer data from GPS programs or GPS receivers. Open Source and supported on MacOS, Windows, Linux, and more. Pointy clicky GUI or a command line version... 
-
-
-### Apache Supserset DS's and API
-
-* Data Sources: <https://superset.apache.org/docs/databases/db-connection-ui>
-* API info: <https://superset.apache.org/docs/api>
-
-### PhyPhox
-
-* You can also save GPS data thanks to the [F/OSS PhyPhox](https://github.com/phyphox/phyphox-android) - An app that allow us to use phone's sensors for physics experiments:
-  * Also available for [ESP32 with micropython](https://github.com/phyphox/phyphox-micropython)
-  * And [for the Arduino microcontroller](https://github.com/phyphox/phyphox-arduino)

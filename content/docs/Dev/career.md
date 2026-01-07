@@ -687,6 +687,8 @@ With AI/ML you can do very cool stuff, from **AB Testing** to test new strategie
   {{< card link="https://jalcocert.github.io/JAlcocerT/nlp-tools/" title="NLP / PII / Sentiment Analysis ↗" icon="user" >}}
 {{< /cards >}}
 
+A solid knowledge [around Bayes](https://jalcocert.github.io/JAlcocerT/bayes-theorem-with-python/) will be handy for setting experiments.
+
 
 My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) 
 

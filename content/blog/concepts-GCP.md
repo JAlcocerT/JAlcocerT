@@ -534,11 +534,15 @@ Bigtable is highly scalable: TRUE. Bigtable is designed to scale massively to ha
 
 #### Google Cloud SQL
 
-Allows the end user to enable automatic backup of data: TRUE. Cloud SQL provides the functionality for users to configure and enable automatic backups of their databases.
+Allows the end user to enable automatic backup of data: TRUE. 
+
+Cloud SQL provides the functionality for users to configure and enable automatic backups of their databases.
 
 Cloud SQL enables bug fixing to improve performance: TRUE. Google, as the provider of Cloud SQL, continuously works on bug fixes and performance improvements for the underlying infrastructure and software.
 
-Enable high availability fail over replica: TRUE. Cloud SQL supports high availability configurations with failover replicas to minimize downtime in case of an instance failure.
+Enable high availability fail over replica: TRUE. 
+
+Cloud SQL supports high availability configurations with failover replicas to minimize downtime in case of an instance failure.
 
 
 #### Cloud Spanner
@@ -562,10 +566,7 @@ Enable high availability fail over replica: TRUE. Cloud SQL supports high availa
 
 If you are into **linux**, CLI and so on, probably this is the service you have heard of.
 
-Sometime ago, I used **GCP CE free tier** to tinker with their **VMs**.
-
-* https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#gcp
-
+Sometime ago, I used **GCP CE [free tier](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#gcp)** to tinker with their **VMs**.
 
 {{< details title="GCE Costs  📌" closed="true" >}}
 
@@ -876,10 +877,13 @@ In short, while both LookML and Power Query are essential for data preparation a
 
 **Power Query is a decentralized, GUI-first approach for ad-hoc data transformation and cleaning.**
 
+---
+
 ## Outro
 
-
 ### Other Clouds vs GCP
+
+If you were suspecting this, you are right: *different names, kind of same idea under the hood*
 
 ![Cloud Comparison](/blog_img/DA/cloud-ecosystem.jpg)
 

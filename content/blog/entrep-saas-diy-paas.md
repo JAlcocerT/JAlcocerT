@@ -138,6 +138,22 @@ flowchart LR
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
+PS: *there is a trick*
+
+```mermaid
+graph TD
+    A[Build SSG] -->|Choose one | B[GitHub Pages]
+    A -->|of these | C[Firebase]
+    A -->|deployments| D[Cloudflare Pages]
+    B --> E[Add your custom domain - OPTIONAL]
+    C --> E
+    D --> E
+
+    click B href "https://jalcocert.github.io/JAlcocerT/portfolio-website-for-social-media/#demo-results" "Visit GitHub Pages"
+    click C href "https://fossengineer.com/hosting-with-firebase/#getting-started-with-firebase-hosting" "Visit Firebase Hosting"
+    click D href "https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/" "Visit Cloudflare Pages"
+```
+
 
 
 

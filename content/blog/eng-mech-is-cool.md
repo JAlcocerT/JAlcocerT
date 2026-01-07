@@ -36,6 +36,8 @@ As someone told me: *its just geometry and the time*
 
 {{< youtube "PWvIYU_Z8z8" >}}
 
+> You can do more cool thing with geometry, like [knitting patterns](https://jalcocert.github.io/JAlcocerT/knitting-pattern-calculator/).
+
 
 ## Stress Concentrators
 

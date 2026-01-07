@@ -221,22 +221,13 @@ And these ones SelfHosted
 
 ## Outro
 
-Created this simpler version with python, for anyone just starting with mechanics:
-
-$$
-\begin{aligned}
-  \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
-  \nabla \cdot \mathbf{B} &= 0 \\
-  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
-  \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
-\end{aligned}
-$$
+Created this simpler version with python, for anyone just starting with mechanics.
 
 Dont worry, I said simpler :)
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Slider Crank Repo" image="/blog_img/GenAI/langchain-AI.jpeg" subtitle="Understanding SliderCrank Mechanism with Python - The Source Code" >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Slider Crank Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Understanding SliderCrank Mechanism with Python - The Source Code" >}}
   {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 

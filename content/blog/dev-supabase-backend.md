@@ -1,14 +1,13 @@
 ---
 title: "Self-Hosting a Firebase Alternative - Supabase vs Pocketbase"
-date: 2025-01-10T23:20:21+01:00
+date: 2026-02-10T23:20:21+01:00
 draft: false
-cover:
-  image: "https://socialify.git.ci/supabase/supabase/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-  alt: "" # alt text
-  caption: "." # display caption under cover
-tags: ["Self-Hosting","Docker","Dev"]
-description: '.'
-summary: '.'    
+# cover:
+#   image: "https://socialify.git.ci/supabase/supabase/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
+#   alt: "" # alt text
+#   caption: "." # display caption under cover
+tags: ["Self-Hosting","Docker","Dev","BackEnd"]
+description: '.'   
 url: 'selfhosting-Supabase-with-Docker'
 ---
 

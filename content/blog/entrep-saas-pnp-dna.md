@@ -7,7 +7,6 @@ description: 'Extracting insights from databases and generating automatic charts
 url: 'plug-and-play-data-analytics'
 ---
 
-https://jalcocert.github.io/JAlcocerT/selling-ideas-in-data-analytics/#what-is-ctor
 
 **Tl;DR**
 
@@ -130,7 +129,7 @@ That's where the power of vibe coding kicks in, together with a new project:
 ```sh
 #sudo apt install gh
 gh auth login
-gh repo create astro-editor --private --source=. --remote=origin --push
+gh repo create langchain-db-ui --private --source=. --remote=origin --push
 
 #git init && git add . && git commit -m "Initial commit: langchain x db x ui" && gh repo create langchain-db-ui --private --source=. --remote=origin --push
 ```
@@ -183,6 +182,7 @@ As part of my consulting repository:
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing
+cd 
 ```
 
 Yea, thats private :)
@@ -238,11 +238,17 @@ Whats Working
 Whats not
 Whats next
 
+KPIs
+
+* https://jalcocert.github.io/JAlcocerT/selling-ideas-in-data-analytics/#what-is-ctor
+
+
 
 ---
 
 ## FAQ
 
+* https://lmarena.ai/leaderboard
 * https://claude.ai/
 * https://console.anthropic.com/workbench/
 * https://console.groq.com/keys

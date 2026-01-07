@@ -2,9 +2,10 @@
 title: "Inline 4 Engines: Understanding the most popular engine once and for all"
 date: 2026-02-15T23:20:21+01:00
 draft: false
-tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance"]
+tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","Simulations"]
 description: ''
 url: 'inline-4-engine-balance'
+math: true
 ---
 
 
@@ -20,6 +21,14 @@ Getting right the slider-crank mechanism (2D) via MBSD to later form a 3D ICE I4
 **Intro**
 
 
+$$
+\begin{aligned}
+  \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+  \nabla \cdot \mathbf{B} &= 0 \\
+  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+  \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
+\end{aligned}
+$$
 
 
 ---

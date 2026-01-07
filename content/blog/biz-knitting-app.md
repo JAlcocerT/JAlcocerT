@@ -2,7 +2,7 @@
 title: "Knitting patterns are all about...math?"
 date: 2025-02-17
 draft: false
-tags: ["Tinkering","Littlyx Web Analytics","FreeSewing"]
+tags: ["Tinkering","Littlyx Web Analytics","FreeSewing","Geometry"]
 description: 'Creating a clothing size calculator.'
 url: 'knitting-pattern-calculator'
 math: true

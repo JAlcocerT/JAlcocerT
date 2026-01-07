@@ -1,10 +1,14 @@
 ---
 title: "ESP32 x NodeRed"
-date: 2025-01-08T23:20:21+01:00
+date: 2026-02-01T23:20:21+01:00
 draft: false
 description: "A solar panel, winter and the ESP32 microcontroller"
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
 ---
+
+**TL;DR**
+
+**Intro**
 
 https://github.com/micropython/micropython
 
@@ -912,7 +916,7 @@ https://www.youtube.com/watch?v=x5A5S0hoyJ0
 RPI pico 
 
 
-
+```py
 from machine import Pin, Timer, I2C, SoftI2C
 #from aphanum import ALPHANUM_I2C
 from mlx90614 import MLX90614_I2C
@@ -952,3 +956,4 @@ def tick_timer(timer):
     alph.set_digit(int(t2*100),2);
 timer1.init(freq=2,mode=Timer.PERIODIC,callback=tick_timer)
 
+```
