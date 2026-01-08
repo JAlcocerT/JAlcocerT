@@ -189,14 +189,12 @@ docker exec -it postgres_container psql -U admin -d myapp
 #\q        -- Quit
 ```
 
-Let's use it with the sample chinook DB: *yes, im cooking sth on top of LangChain+DBs again*
+Let's use it with [the sample **chinook DB**](https://github.com/lerocha/chinook-database/releases): *yes, im cooking sth on top of LangChain+DBs again*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database" title="Chat with DBs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/" title="Chat with CSVs ↗" icon="book-open" >}}  
 {{< /cards >}}
-
-* https://github.com/lerocha/chinook-database/releases
 
 This is all you need to ***plug* an existing database** into your just created **PGSQL container instance**:
 

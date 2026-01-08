@@ -1,6 +1,6 @@
 ---
 title: "[AI/BI] Plug and Play Data Analytics"
-date: 2026-01-08T23:20:21+01:00
+date: 2026-01-08T18:20:21+01:00
 draft: false
 tags: ["LangChain","RoadMap26 x Tech Talk","PostgreSQL vs DuckDB","Generative BI x WrenAI"]
 description: 'Extracting insights from databases and generating automatic charts.'
@@ -471,9 +471,18 @@ graph LR
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+##### Umami
+
+Umami works with a postgres database, as you can see at [its configuration](https://github.com/JAlcocerT/Home-Lab/blob/main/umami/umami_docker-compose.yml#L26).
+
+
 ##### Commento
 
-##### Umami
+Same with Commento, its setup [uses a postgresdb here](https://github.com/JAlcocerT/Home-Lab/blob/main/commento/docker-compose.yml#L22).
+
+And previously, I made some sample queries to know when someone commented me, as I didnt see any alerting feature.
+
+So if you got a website with commento plugged in, you will like this.
 
 ### UI Wrapper
 
@@ -502,14 +511,9 @@ As recently, I started with a BRD, some clarifications, then a development plan.
 > PS: You dont need [1000h of prompt engineering](https://www.reddit.com/r/PromptEngineering/comments/1nt7x7v/after_1000_hours_of_prompt_engineering_i_found/) to do so
 
 
-
 ### AI/BI
 
-If you are *kind of stucked* in your D&A career, shaping one of this will be good for your portfolio.
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career D&A | Docs ↗" >}}
-{{< /cards >}}
+If you are *kind of stucked* in your [D&A career](#da-career), shaping one of this will be good for your portfolio.
 
 
 * https://github.com/Kanaries/graphic-walker
@@ -705,5 +709,30 @@ KPIs
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Ollama | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+
+### D&A Career
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career D&A | Docs ↗" >}}
+{{< /cards >}}
+
+```mermaid
+graph LR
+    subgraph "Relational (OLTP)"
+        A[3rd Normal Form<br/>'Production']
+    end
+
+    subgraph "Analytical (OLAP)"
+        B[Snowflake<br/>'Organized'] --> C[Star Schema<br/>'Fast']
+        C --> D[One Flat Table<br/>'Fastest']
+    end
+
+    A -- "ETL Transformation" --> B
+    
+    style A fill:#f9f,stroke:#333
+    style B fill:#bbf,stroke:#333
+    style C fill:#bfb,stroke:#333
+    style D fill:#fbf,stroke:#333
+```
 
 ### Tools to Interact with DBs
