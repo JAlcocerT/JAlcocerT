@@ -174,7 +174,7 @@ As PG is [one of the DBs](https://jalcocert.github.io/JAlcocerT/setup-databases-
 And [pgsql can do](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/#postgresql) several parts of a tech stack all together
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgres" title="Postgres | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="Postgres | Docker Config 🐋 ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
@@ -198,7 +198,7 @@ Let's use it with the sample chinook DB: *yes, im cooking sth on top of LangChai
 
 * https://github.com/lerocha/chinook-database/releases
 
-This is all you need to *plug* an existing database into your just created PGSQL instance:
+This is all you need to ***plug* an existing database** into your just created **PGSQL container instance**:
 
 ```sh
 curl -L -O https://github.com/lerocha/chinook-database/releases/download/v1.4.5/Chinook_PostgreSql.sql
@@ -212,6 +212,8 @@ docker exec -it postgres_container psql -U admin -d chinook
 #\dt
 #SELECT * FROM artist LIMIT 5;
 ```
+
+We will be using this very soon :)
 
 > In the mentioned article, Pierce Freeman argues that the fear surrounding self-hosting PostgreSQL is largely a marketing narrative pushed by cloud providers. 
 
