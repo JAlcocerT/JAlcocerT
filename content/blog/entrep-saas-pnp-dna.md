@@ -368,8 +368,101 @@ Completely different categories despite both being fast.
 
 Keeping postgreSQL as the center of the conversation.
 
+In a production environment, you typically have two separate database instances (or schemas).
 
+```mermaid
+graph LR
+    A[Postgres OLTP<br/>'Production'] -- 1. Extract<br/>(Every Night) --> B(ETL Script / Tool)
+    B -- 2. Transform<br/>(De-normalize) --> C[Postgres OLAP<br/>'Data Warehouse']
+    C -- 3. Query --> D[Dashboard / BI Tool]
+```
 
+```bash
+docker exec -it postgres_container psql -U admin -d postgres -c "DROP DATABASE northwind_warehouse;"
+
+for t in customers categories products orders order_details; do \
+  docker exec -i postgres_container pg_dump -U admin -d northwind -t $t | \
+  docker exec -i postgres_container psql -U admin -d northwind_warehouse; \
+done
+
+docker exec -it postgres_container psql -U admin -d postgres -c "CREATE DATABASE northwind_warehouse;"
+```
+
+Data Content Verification
+
+Check if the dimension data (like customers) arrived correctly:
+
+```bash
+docker exec -it postgres_container psql -U admin -d northwind_warehouse -c "SELECT customer_id, company_name, contact_name, city FROM customers LIMIT 5;"
+```
+
+Query Verification
+
+A "Healthy" Star Schema allows you to run a query that touches the Fact table and filters by any Dimension. 
+
+If this query works, your Star Schema is correctly configured:
+
+```bash
+docker exec -it postgres_container psql -U admin -d northwind_warehouse -c "
+SELECT 
+    c.category_name, 
+    cust.company_name,
+    SUM(od.quantity) as total_sold
+FROM order_details od
+JOIN products p ON od.product_id = p.product_id
+JOIN categories c ON p.category_id = c.category_id
+JOIN orders o ON od.order_id = o.order_id
+JOIN customers cust ON o.customer_id = cust.customer_id
+GROUP BY c.category_name, cust.company_name
+LIMIT 5;
+"
+```
+
+Based on the query below: 
+
+```sh
+docker exec -it postgres_container psql -U admin -d northwind_warehouse -c "
+SELECT
+    tc.table_name AS source_table,
+    kcu.column_name AS source_column,
+    ccu.table_name AS target_table,
+    ccu.column_name AS target_column
+FROM
+    information_schema.table_constraints AS tc
+    JOIN information_schema.key_column_usage AS kcu
+      ON tc.constraint_name = kcu.constraint_name
+      AND tc.table_schema = kcu.table_schema
+    JOIN information_schema.constraint_column_usage AS ccu
+      ON ccu.constraint_name = tc.constraint_name
+      AND ccu.table_schema = tc.table_schema
+WHERE tc.constraint_type = 'FOREIGN KEY' 
+  AND tc.table_schema = 'public';
+"
+```
+
+You can get to see the snowflake schema of the OLAP design:
+
+```mermaid
+erDiagram
+    "order_details" }o--|| "orders" : order_id
+    "order_details" }o--|| "products" : product_id
+    "orders" }o--|| "customers" : customer_id
+    "products" }o--|| "categories" : category_id
+```
+
+> [!NOTE]
+> **Why your warehouse is a Snowflake:** 
+> In your `northwind_warehouse`, the `categories` table doesn't connect to the center (`order_details`). Instead, it connects to `products`. This "branching" makes it a Snowflake.
+
+To make this even more PRO: *consider setting up a medallion architecture when doing oltp2olap*
+
+```mermaid
+graph LR
+    A[Postgres OLTP Prod] -- 1. Ingest --> B[BRONZE: Raw]
+    B -- 2. Clean/Join --> C[SILVER: Cleaned]
+    C -- 3. Aggregate --> D[GOLD: Star Schema]
+    D -- 4. Connect --> E[Dashboard]
+```
 
 #### Sample 3 - Connecting to running services
 
