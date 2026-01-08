@@ -73,6 +73,12 @@ I thought that Id do for this year a separated `blog.jalc...` based on this [can
 
 But I Just continued here.
 
+0. for the ones that dont want to read an ebook neither to pay consulting or the dfy, I offered a 1 to many free session, aka webinar
+
+People are using these platforms to do so: *and you have to place your email for later use*
+
+* https://webinarjam.com/
+
 0. Improved FOSS from blog to doc like. Multilanguage and all that stuff. Still as HUGO.
 
 With that remota data (yaml) fetching from the home-alb repo.

@@ -2,7 +2,7 @@
 title: "Creating an e-Commerce"
 date: 2026-10-01
 draft: false
-tags: ["SaaS","Drupal","User Clustering","RoadMap26","BlackFriday"]
+tags: ["SaaS","Drupal","User Clustering","RoadMap26","BlackFriday","OLTP vs OLAP"]
 description: 'Creating an eCommerce. Drupal vs DFY custom solutions'
 url: 'how-about-an-ecommerce'
 ---
@@ -371,6 +371,52 @@ https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-servic
 ## Conclusions
 
 ![Blackfriday sample x20 price](/blog_img/memes/blackfriday-sample.png)
+
+
+But you can get **ecommerce analytics** done for you: *lets say its all about [plugging AI powered data analytics](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/) to it*
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef landing fill:#E3F2FD,stroke:#1976D2,stroke-width:3px,color:#0D47A1;
+    classDef steps fill:#F3E5F5,stroke:#7B1FA2,stroke-width:2px,color:#4A148C;
+    classDef slider fill:#FFF3E0,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef free fill:#E8F5E9,stroke:#388E3C,stroke-width:3px,color:#1B5E20;
+    classDef consult fill:#FFECB3,stroke:#FFA000,stroke-width:3px,color:#FF6F00;
+    classDef dfy fill:#FFCDD2,stroke:#D32F2F,stroke-width:3px,color:#B71C1C;
+
+    %% --- Nodes ---
+    START("🏠 Landing Page<br/>(Hero + Value Prop)"):::landing
+    STEPS("📋 Read Process<br/>(3-Step Guide)"):::steps
+    SLIDER("🎚️ Interactive Slider<br/>(Assess Time Value)"):::slider
+    
+    FREE("📚 FREE Path<br/>(DIY Guides)"):::free
+    CAL("📅 Consulting<br/>(Book Session)"):::consult
+    DFY("💎 Done For You<br/>(Premium Service)"):::dfy
+
+    %% --- Flow ---
+    START --> STEPS
+    STEPS --> SLIDER
+    
+    SLIDER -->|"0%<br/>I'm Learning"| FREE
+    SLIDER -->|"1-74%<br/>A lot!"| CAL
+    SLIDER -->|"75-100%<br/>Lambo Money"| DFY
+    
+    %% --- Outcomes ---
+    FREE -.->|"Explore FAQ"| END1["📖 Self-Learn"]
+    CAL -.->|"Book Time"| END2["🤝 Get Guidance"]
+    DFY -.->|"Check Resources"| END3["⚡ Fast Track"]
+```
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
+![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+
+
+
 
 <!-- 
 https://issyinformatica.es/
