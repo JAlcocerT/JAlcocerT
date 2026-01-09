@@ -180,6 +180,8 @@ But I bring you few more:
 
 #### Sample 1
 
+If you followed before the MySQL Chinook sample, here the adaptation to work with pgsql:
+
 ```sh
 curl -L -O https://github.com/lerocha/chinook-database/releases/download/v1.4.5/Chinook_PostgreSql.sql
 cat Chinook_PostgreSql.sql | docker exec -i postgres_container psql -U admin -d myapp
@@ -732,6 +734,8 @@ As recently, I started with: a BRD, some clarifications, then a development plan
 
 > PS: You dont need [1000h of prompt engineering](https://www.reddit.com/r/PromptEngineering/comments/1nt7x7v/after_1000_hours_of_prompt_engineering_i_found/) to do so
 
+> > PS2: as my ptt is as code, I put in the same repo some skeleton using the same agentic IDE conversation.
+
 
 ### AI/BI
 
@@ -806,7 +810,7 @@ This has been more a HOW, than a why or a what.
 
 ![alt text](/blog_img/DA/why-what-how.png)
 
-If you got your why's and what's in place, but still miss the how: *remember bout my tiers and*
+If you got your [why's and what's in place](#about-some-qna), but still miss the how: *remember bout my tiers*
 
 ```mermaid
 flowchart LR
@@ -861,8 +865,9 @@ We have gone from:
  https://www.youtube.com/watch?v=KXamTdJA-uc 
 -->
 
-{{< youtube "KXamTdJA-uc" >}}
-
+The previous related section is uploaded [here](https://www.youtube.com/watch?v=KXamTdJA-uc) and you can see the latest one here.
+<!-- 
+{{< youtube "KXamTdJA-uc" >}} -->
 
 To:....
 
@@ -958,6 +963,49 @@ KPIs
 
 ### D&A Career
 
+
+When designing your Star Schema in the `northwind_warehouse`, here is how you classify the tables we just moved:
+
+1. The Fact Table: `order_details`
+
+This is the **"What happened?"** table. 
+
+It contains the measurements, metrics, or "facts" of a business process.
+- **Why?** It holds the quantity, unit price, and discount—numeric values that you can sum, average, or count.
+- **Key characteristic:** It's usually the "center" of your schema and has the most rows.
+
+2. The Dimension Tables: `products`, `customers`, etc.
+
+These are the **"Who, Where, and What?"** tables. 
+
+They provide the context for the facts.
+
+- **Why?** They contain descriptive attributes like `product_name`, `company_name`, or `category_name`.
+- **Key characteristic:** You use these to **FILTER** or **GROUP** your analysis (e.g., "Show revenue *by Category*").
+
+| Table | Type | Purpose |
+| :--- | :--- | :--- |
+| **order_details** | **Fact** | Quantitative data (Quantity, Price). |
+| **orders** | **Fact / Context** | Often combined into the Fact table (Order Date, Ship Country). |
+| **products** | **Dimension** | Descriptive context (Product Name, Supplier). |
+| **customers** | **Dimension** | Descriptive context (Company Name, Region). |
+| **categories** | **Dimension** | Descriptive context (Category Name). |
+
+Pros and Cons of the Star Schema: Why did we just go through all the trouble of migrating these tables? 
+
+✅ The Pros (Why we love it for OLAP)
+
+1. **Query Simplicity:** Your SQL queries become much simpler. You usually have one `Fact` table and you just `JOIN` the `Dimensions` you need. No more 15-table join nightmares from the Production DB.
+2. **Speed (Performance):** Most analytical engines (like DuckDB or BI tools) are optimized for this specific "Star" structure. They can filter dimensions very fast.
+3. **User-Friendly:** Analysts who don't know the complex Production code can easily understand `order_details` + `products`. It's intuitive.
+4. **Aggregations:** Perfect for calculating "Top Products", "Monthly Revenue", or "Customer Growth".
+
+❌ The Cons (The trade-offs)
+
+1. **Data Redundancy:** You might store the same information twice (e.g., a customer's name might appear in multiple places if you flatten it too much).
+2. **Maintenance (ETL):** You now have to maintain a "Nightly Job" to keep the Star Schema in sync with Production. If the job fails, your reports are outdated.
+3. **Rigidity:** It's great for the questions it was built to answer, but if you suddenly need to see "Inventory Logs" that weren't migrated, you're stuck.
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career D&A | Docs ↗" >}}
 {{< /cards >}}
@@ -981,4 +1029,40 @@ graph LR
     style D fill:#fbf,stroke:#333
 ```
 
+Star vs. Snowflake Schema
+
+Which one is better? It depends on your priorities.
+
+| Feature | Star Schema | Snowflake Schema (Your Setup) |
+| :--- | :--- | :--- |
+| **Structure** | All dimensions link directly to the Fact. | Dimensions are "normalized" (branched). |
+| **Complexity** | Simple (fewest joins). | Complex (more joins needed). |
+| **Storage** | Higher (data is redundant/denormalized). | Lower (data is compact/normalized). |
+| **Integrity** | Lower (Easier to make typos). | Higher (Dimensions use lookup tables). |
+
+> [!TIP]
+> **Why is Integrity higher in Snowflake?**
+> In a **Star Schema**, you might store the category name directly inside the `products` table. If you want to change "Beverages" to "Drinks", you have to update 100 rows. If you miss one, you have a typo.
+> In a **Snowflake Schema**, you change it *once* in the `categories` table, and all products instantly reflect the change. This is the power of **Normalization**.
+
+#### About some QnA
+
+1. Document Logic (The Planning)
+*   **BRD (Business Requirements):** Answers **"WHY build this?"** (The Vision & Goals).
+*   **PRD (Product Requirements):** Answers **"WHAT are we building?"** (The Features & Roadmap).
+*   **FRD (Functional Requirements):** Answers **"HOW does it work?"** (The Technical Logic & CRUDs).
+
+2. Data Logic (The Analytics)
+*   **Fact Tables:** Answer **"WHAT happened (and how much)?"**
+    *   *Examples:* `visit_count`, `revenue`, `quantity_sold`.
+*   **Dimension Tables:** Answer **"WHO / WHERE / WHICH context?"**
+    *   *Examples:* `customer_name`, `product_category`, `country_origin`.
+
+> [!TIP]
+> **Star Schema Rule of Thumb:** 
+> Put your **Fact** (the "What") in the center and surround it with your **Dimensions** (the "Context") to get a perfect 360° view of your data.
+
 ### Tools to Interact with DBs
+
+I was covering these in previous post.
+
