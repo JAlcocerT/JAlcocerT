@@ -585,6 +585,17 @@ JOIN website w ON e.website_id = w.website_id
 GROUP BY w.name;
 ```
 
+See the magic in action:
+
+<!-- https://github.com/JAlcocerT/langchain-db-ui/blob/master/langchain_pgsql_umami.ipynb
+langchain_pgsql_umami.ipynb -->
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/langchain-db-ui/blob/main/langchain_pgsql_umami.ipynb)
+
+```py
+full_chain.invoke({"question":"What it is the most popular website visited in the database for the last 24h?I need its name and the total visits"})
+```
+
 ##### Commento
 
 Same with Commento, its setup [uses a postgresdb here](https://github.com/JAlcocerT/Home-Lab/blob/main/commento/docker-compose.yml#L22).
@@ -641,6 +652,42 @@ Use the `-x` flag or `\x on;` to flip the table 90 degrees:
 ssh -t jalcocert@192.168.1.2 "docker exec -it commento_db-foss psql -U commento -d commento -c 'SELECT * FROM comments;' -x"
 ```
 
+
+Do a copy of the production commento database to see the magic in action: 
+
+**Step 1: Create the target database locally**
+
+```bash
+docker exec -it postgres_container psql -U admin -d postgres -c "CREATE DATABASE commento_copy;"
+#ssh jalcocert@192.168.1.2 "docker exec commento_db-foss psql -U commento -d commento -c \"COPY (SELECT creationdate, markdown FROM comments ORDER BY creationdate DESC LIMIT 10) TO STDOUT WITH CSV HEADER;\"" > latest_comments.csv
+```
+
+**Step 2: Run the remote-to-local pipe**
+
+```sh
+ssh jalcocert@192.168.1.2 "docker exec -e PGPASSWORD='commento' commento_db-foss pg_dump -U commento -d commento" | \
+docker exec -i postgres_container psql -U admin -d commento_copy
+#see that you now have commento_copy
+#docker exec postgres_container psql -U admin -d postgres -c "\l" 
+#docker exec -it postgres_container psql -U admin -d commento_copy -c "\dt"
+#ssh -t jalcocert@192.168.1.2 "docker exec -it commento_db-foss psql -U commento -d commento -c 'SELECT creationdate, markdown FROM comments ORDER BY creationdate DESC LIMIT 2;'"
+```
+
+> [!TIP]
+> This is the ultimate "Lazy Developer" ETL—no files, no exports, just a direct stream of data from one server to another.
+
+```py
+full_chain.invoke({"question":"What are the latest 5 comments?"})
+full_chain.invoke({"question":"What the user name who commented about mermaidviewer?"})
+```
+
+![alt text](/blog_img/DA/langchain-commento.png)
+
+<!-- https://github.com/JAlcocerT/langchain-db-ui/blob/master/langchain_pgsql_commento.ipynb -->
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Data-Chat/blob/main/LangChain/ChatWithDB/langchain_pgsql_commento.ipynb)
+
+
 ### UI Wrapper
 
 To go from a python notebook / terminal / script to something that is more non tech user friendly, **we need a UI**.
@@ -651,7 +698,25 @@ That's where the power of vibe coding kicks in, together with a new project:
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="NEW - LangChain x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Wrapping LangChain DB Queries into a custom UI to get insights" >}}
 {{< /cards >}}
 
-{{% details title="Why Starting a Tech Blog? 🚀" closed="true" %}}
+The natural step is clear: lets wrap that backend logic wihin a UI.
+
+because all we need is to have a connection to a DB and...questions:
+
+```py
+from langchain_db_qna import SQLChatBackend
+#from langchain_community.utilities import SQLDatabase
+
+# postgresql://{USER}:{PASSWORD}@{HOST}:{PORT}/{DATABASE}
+postgresql_uri = 'postgresql://admin:securepassword@localhost:5432/commento_copy'
+
+db = SQLDatabase.from_uri(postgresql_uri)
+
+backend = SQLChatBackend(db_uri=postgresql_uri)
+sql = backend.generate_sql("Who commented last?")
+answer = backend.ask("Who commented last?")
+```
+
+{{% details title="Startging a repo for pnp D&A 🚀" closed="true" %}}
 
 ```sh
 #sudo apt install gh
@@ -672,6 +737,7 @@ As recently, I started with: a BRD, some clarifications, then a development plan
 
 If you are *kind of stucked* in your [D&A career](#da-career), shaping one of this will be good for your portfolio.
 
+Time to demonstrate *once again* that adaptability skills for the transition that we are in.
 
 * https://github.com/Kanaries/graphic-walker
 
@@ -736,6 +802,12 @@ These ppt source code and build wont be public like [the multichat](https://gith
 
 You can get such analytic setup done for you: *Yea, [its private this time](https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks) :)*
 
+This has been more a HOW, than a why or a what.
+
+![alt text](/blog_img/DA/why-what-how.png)
+
+If you got your why's and what's in place, but still miss the how: *remember bout my tiers and*
+
 ```mermaid
 flowchart LR
     %% --- Styles ---
@@ -768,6 +840,8 @@ flowchart LR
     CAL -.->|"Book Time"| END2["🤝 Get Guidance"]
     DFY -.->|"Check Resources"| END3["⚡ Fast Track"]
 ```
+
+Go from ~~problem~~ to solution proposal:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
