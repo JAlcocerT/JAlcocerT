@@ -14,13 +14,7 @@ url: 'plug-and-play-data-analytics'
 
 It all started from trying to [talk with pandas dataframes](https://jalcocert.github.io/JAlcocerT/how-to-use-pandasAI/).
 
-And there was some evolution around it.
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with a DB" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="MySQL With LangChain and OpenAI LLM" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
+And there was some evolution around that initial idea.
 
 This is [not a new idea](#about-rags), but a new way to approach it.
 
@@ -177,8 +171,12 @@ You can do the [Chinook sample with PGSql](#sample-1) anyways.
 
 But I bring you few more:
 
-* 
-* 
+* Using [Nortwind DB OLTP](#sample-2---oltp)
+* Going OLAP
+  * Doing [Northwind OLTP to DuckDB](#hybrid-pg-oltp-to-duckdb)
+  * Transforming [Nortwind OLTP to OLAP](#pg-oltp-to-olap)
+* Using real database from other container services
+
 
 #### Sample 1
 
@@ -464,7 +462,9 @@ graph LR
     D -- 4. Connect --> E[Dashboard]
 ```
 
-#### Sample 3 - Connecting to running services
+#### Sample 4 - Connecting to running services
+
+Like any of these services that you can [tinker with and selfhost](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/).
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/Comments/Commento" title="Commento | Docker Config 🐋 ↗" >}}
@@ -475,14 +475,171 @@ graph LR
 
 Umami works with a postgres database, as you can see at [its configuration](https://github.com/JAlcocerT/Home-Lab/blob/main/umami/umami_docker-compose.yml#L26).
 
+I got it working at my home-lab at: `192.168.1.2` in a container called `umamiweban-db-1`
+
+
+To avoid messing up with my production web analytics database, ill make a copy:
+
+```sh
+docker exec -it postgres_container psql -U admin -d postgres -c "CREATE DATABASE umami_warehouse;"
+```
+
+Before pushing data, lets see whats inside of it.
+
+Use this to jump directly into the remote database CLI from your local terminal:
+
+```bash
+ssh -t jalcocert@192.168.1.2 "docker exec -it umamiweban-db-1 psql -U umami -d umami"
+#\dt
+#               List of relations
+#  Schema |        Name        | Type  | Owner 
+# --------+--------------------+-------+-------
+#  public | _prisma_migrations | table | umami
+#  public | event_data         | table | umami
+#  public | report             | table | umami
+#  public | session            | table | umami
+#  public | session_data       | table | umami
+#  public | team               | table | umami
+#  public | team_user          | table | umami
+#  public | user               | table | umami
+#  public | website            | table | umami
+#  public | website_event      | table | umami
+```
+
+The "Remote ETL" Pipe (Pull Data to Umami-Warehouse)
+
+Use this to **extract data** from the remote server and load it directly into your **local** dedicated warehouse:
+
+```bash
+ssh jalcocert@192.168.1.2 "docker exec -e PGPASSWORD='your_umami_db_password' umamiweban-db-1 pg_dump -U umami -d umami" | \
+docker exec -i postgres_container psql -U admin -d umami_warehouse
+#see that you now have umami_warehouse
+#docker exec postgres_container psql -U admin -d postgres -c "\l" 
+#docker exec -it postgres_container psql -U admin -d umami_warehouse -c "\dt"
+```
+
+*This piping happens over the network. You don't need to save any intermediate files!*
+
+Full Schema Report (Columns & Types):
+
+```bash
+docker exec -it postgres_container psql -U admin -d umami_warehouse -c "
+SELECT 
+    table_name, 
+    column_name, 
+    data_type 
+FROM information_schema.columns 
+WHERE table_schema = 'public'
+ORDER BY table_name, ordinal_position;
+"
+```
+
+```mermaid
+erDiagram
+    "website_event" }o--|| "website" : website_id
+    "website_event" }o--|| "session" : session_id
+    "session" }o--|| "website" : website_id
+    "website" ||--o{ "user" : user_id
+    "website" ||--o{ "team" : team_id
+    "team_user" }o--|| "team" : team_id
+    "team_user" }o--|| "user" : user_id
+    "event_data" }o--|| "website_event" : website_event_id
+    "session_data" }o--|| "session" : session_id
+```
+
+```sh
+docker exec -it postgres_container psql -U admin -d umami_warehouse -c "
+SELECT 
+    w.name as site, 
+    s.browser, 
+    e.event_id 
+FROM website w
+JOIN session s ON s.website_id = w.website_id
+JOIN website_event e ON e.session_id = s.session_id
+LIMIT 5;"
+
+# docker exec -it postgres_container psql -U admin -d umami_warehouse -c "
+# SELECT w.name, COUNT(e.event_id) as total_events
+# FROM website_event e
+# JOIN website w ON e.website_id = w.website_id
+# GROUP BY w.name;"
+
+#              name              | total_events 
+# -------------------------------+--------------
+#  fosseng                       |        68013
+#  JAlcocerTech | Astro          |           49
+#  jalcocert blog github         |         7890
+```
+
+Which is **equivalent** to do so via Interactive Shell within the container:
+
+```bash
+docker exec -it postgres_container psql -U admin -d umami_warehouse
+```
+
+```sql
+-- Example: Count events per Website Name
+SELECT w.name, COUNT(e.event_id) as total_events
+FROM website_event e
+JOIN website w ON e.website_id = w.website_id
+GROUP BY w.name;
+```
 
 ##### Commento
 
 Same with Commento, its setup [uses a postgresdb here](https://github.com/JAlcocerT/Home-Lab/blob/main/commento/docker-compose.yml#L22).
 
-And previously, I made some sample queries to know when someone commented me, as I didnt see any alerting feature.
+And [previously on this post](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/#adding-commento), I made some sample queries to know when someone commented, as I didnt see any alerting feature.
 
 So if you got a website with commento plugged in, you will like this.
+
+
+```bash
+ssh -t jalcocert@192.168.1.2 "docker exec -it commento_db-foss psql -U commento -d commento"
+
+#\dt
+#\c commento
+
+#                List of relations
+#  Schema |       Name        | Type  |  Owner   
+# --------+-------------------+-------+----------
+#  public | commenters        | table | commento
+#  public | commentersessions | table | commento
+#  public | comments          | table | commento
+#  public | config            | table | commento
+#  public | domains           | table | commento
+#  public | emails            | table | commento
+#  public | exports           | table | commento
+#  public | migrations        | table | commento
+#  public | moderators        | table | commento
+#  public | ownerconfirmhexes | table | commento
+#  public | owners            | table | commento
+#  public | ownersessions     | table | commento
+#  public | pages             | table | commento
+#  public | resethexes        | table | commento
+#  public | ssotokens         | table | commento
+#  public | views             | table | commento
+#  public | votes             | table | commento
+```
+
+
+**Run a specific query and exit (The "CLI One-Liner"):** see the data without entering an interactive shell, use the `-c` flag
+
+```bash
+ssh -t jalcocert@192.168.1.2 "docker exec -it commento_db-foss psql -U commento -d commento -c 'SELECT * FROM comments;'"
+```
+
+Pro-Tips for Remote Queries
+
+A. Handling Wide Output (Expanded Mode)
+
+If your table is very wide (like the one you just saw in Commento), the output gets "wrapped" and hard to read. 
+
+Use the `-x` flag or `\x on;` to flip the table 90 degrees:
+
+```bash
+ssh -t jalcocert@192.168.1.2 "docker exec -it commento_db-foss psql -U commento -d commento -c 'SELECT * FROM comments;' -x"
+```
 
 ### UI Wrapper
 
@@ -506,7 +663,7 @@ gh repo create langchain-db-ui --private --source=. --remote=origin --push
 
 {{% /details %}}
 
-As recently, I started with a BRD, some clarifications, then a development plan.
+As recently, I started with: a BRD, some clarifications, then a development plan.
 
 > PS: You dont need [1000h of prompt engineering](https://www.reddit.com/r/PromptEngineering/comments/1nt7x7v/after_1000_hours_of_prompt_engineering_i_found/) to do so
 
@@ -619,6 +776,21 @@ flowchart LR
 
 ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
 
+We have gone from:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+<!--
+ https://www.youtube.com/watch?v=KXamTdJA-uc 
+-->
+
+{{< youtube "KXamTdJA-uc" >}}
+
+
+To:....
 
 
 

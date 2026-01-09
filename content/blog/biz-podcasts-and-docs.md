@@ -108,9 +108,9 @@ I found some time ago this nice astro ssg theme:
 
 > **MIT** | Free and open source **self-hosting serverless podcast** solution
 
-I got very surprised, but yes, the audio is playable.
+I got very surprised, but yes: the audio is playable while its deployed statically.
 
-Superlative job  from [ManuelErnestog](https://github.com/manuelernestog), which I forked [here](https://github.com/JAlcocerT/astropod)
+Superlative job from [ManuelErnestog](https://github.com/manuelernestog), which I forked [here](https://github.com/JAlcocerT/astropod)
 
 And actually not the only OSS project: https://github.com/manuelernestog/weektodo
 
@@ -118,7 +118,7 @@ And actually not the only OSS project: https://github.com/manuelernestog/weektod
 sudo snap install weektodo
 ```
 
-Which is great if you are Time aware!
+Which is great if you are Time/[focus](https://jalcocert.github.io/JAlcocerT/tools-to-improve-focus/) aware!
 
 <!-- 
 https://www.youtube.com/watch?v=gQW-NcPVlXQ&t=1669s 

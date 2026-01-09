@@ -14,10 +14,6 @@ Whatever you plan to **Selfhost**, there will be a moment that you will be looki
 3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/benchmarks/) Hardware
 
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/web-ebook.pdf" title="Get an ebook to get started with Selfhosting" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to SelfHost confortable" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Containerized Selfhosted Apps for your Server" >}}
-{{< /cards >}}
 
 {{< callout type="info" >}}
 Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhosted
@@ -170,6 +166,12 @@ docker stats $(docker ps --filter "name=typebot" --format "{{.Names}}")
 
 Created a repository with clean compose files for anyone to try these services: https://github.com/JAlcocerT/Home-Lab/
 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/web-ebook.pdf" title="Get an ebook to get started with Selfhosting" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to SelfHost confortable" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Containerized Selfhosted Apps for your Server" >}}
+{{< /cards >}}
+
 > See [this folder for stacks](https://github.com/JAlcocerT/Home-Lab/tree/main/z-homelab-setup/evolution) on what im Selfhosting at a certain month/year.
 
 
@@ -177,4 +179,3 @@ Created a repository with clean compose files for anyone to try these services: 
 
 
 {{% /details %}}
-
