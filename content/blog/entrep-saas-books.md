@@ -1,5 +1,5 @@
 ---
-title: "We/Books and a DIY BoilerPlate"
+title: "We/Books so that you DIY"
 date: 2026-01-06T07:20:21+01:00
 #date: 2025-12-27T23:20:21+01:00
 draft: false

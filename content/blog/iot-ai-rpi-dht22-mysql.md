@@ -1,20 +1,27 @@
 ---
 title: "[AIoT] How to use LangChain to Chat with Sensor Data"
-date: 2026-01-20T21:20:21+01:00
+date: 2026-02-20T21:20:21+01:00
 draft: false
-tags: ["AI","IoT","DB2Rest","ekuiper","Tech Talk"]
-description: 'Using LangChain with OpenAI API to get information about Temperature and Humidity of a DHT22 sensor'
+tags: ["DB2Rest","ekuiper","Embeded Analytics","Roadmap26 x Tech Talk"]
+description: 'Using LangChain to get Temperature & Humidity data from a DHT22 sensor.'
 url: 'langchain-chat-with-sensor-data'
 ---
 
 
 **TL;DR**
 
+Coming from the pgsql x langchain post...
 
 <!-- A compute framework for turning complex data into vectors.
 https://github.com/superlinked/superlinked -->
 
 **Intro**
+
+Recently I was doing a setup and [tech talk around plugandplay analytics with langchain](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions) connected to our dbs.
+
+I used the opportunity also bring life data once again to the presentation ppt.
+
+> This time not via API calls, like to yfinance, but with such chartjs related component.
 
 You can also try [PandasAI](https://pypi.org/project/pandasai/) and [Sketch](https://pypi.org/project/sketch/) with Python.
 
@@ -188,6 +195,8 @@ When you are done:
 #docker system prune -a
 ```
 
+
+
 ---
 
 ## Conclusions
@@ -225,6 +234,18 @@ Push to MongoDB. See the data properly.
 
 * MicroPython - https://awesome-micropython.com/
 
+
+### Preparing the Tech Talk
+
+
+#### SliDev DB2Rest based Component
+
+DB2REST is designed to be easily installed and self-hosted, allowing quick setup of secure REST APIs over databases on your servers.
+
+I was exploring it superficially in couple ocassions:
+
+* As part of things that you can [embed into your website](https://jalcocert.github.io/JAlcocerT/embed-that/#db2rest)
+* As an [AI/BI tool](https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#db2rest) to consider
 
 ### IoT with DataBricks
 

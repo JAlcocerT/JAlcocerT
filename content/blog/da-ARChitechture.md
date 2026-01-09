@@ -10,6 +10,8 @@ url: 'data-analytics-architecture'
 
 **TL;DR**
 
+Improving the d&a career docs.
+
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
 {{< /cards >}}

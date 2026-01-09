@@ -10,6 +10,10 @@ url: 'plug-and-play-data-analytics'
 
 **Tl;DR**
 
+Self-service seems to be a thing.
+
+Let's enable non tech people to extract insights from databases via direct qna.
+
 **Intro**
 
 It all started from trying to [talk with pandas dataframes](https://jalcocert.github.io/JAlcocerT/how-to-use-pandasAI/).
@@ -473,6 +477,10 @@ Like any of these services that you can [tinker with and selfhost](https://jalco
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+These are 2 examples that are having [remote databases](https://github.com/JAlcocerT/langchain-db-ui/blob/master/z-extra-remote-dbs.md) we can connect to.
+
+> We will be connecting to copies of such dbs to the postgres instance we have spinned locally to avoid problems
+
 ##### Umami
 
 Umami works with a postgres database, as you can see at [its configuration](https://github.com/JAlcocerT/Home-Lab/blob/main/umami/umami_docker-compose.yml#L26).
@@ -734,7 +742,7 @@ As recently, I started with: a BRD, some clarifications, then a development plan
 
 > PS: You dont need [1000h of prompt engineering](https://www.reddit.com/r/PromptEngineering/comments/1nt7x7v/after_1000_hours_of_prompt_engineering_i_found/) to do so
 
-> > PS2: as my ptt is as code, I put in the same repo some skeleton using the same agentic IDE conversation.
+> > PS2: as do my presentations as code, I put on the [same repo some ppt skeleton](https://github.com/JAlcocerT/langchain-db-ui/blob/master/z-ppt-draft.md) using the same agentic IDE conversation.
 
 
 ### AI/BI
@@ -789,14 +797,25 @@ cd y2026-tech-talks/langchain-postgres
 This time I used *not only* components and public images, but also `./pages` to keep the content modular and potentially, re-use it in the future.
 
 {{< callout type="info" >}}
-Could not resist to add a component to render cool charts from the used PG->DuckDB
+Could not resist to add a component to render cool chartsJS based from the pulled data to pgres [with this workflow](https://mermaid.live/edit#pako:eNqNlNFu2jAUhl8lMjebBFkSA0msqtISxsWENFp2NeiFIYZ4DTFybFqKePc5cdKYwsYSKbLz_-c7x-cEjmDFEgIQ2HC8S62f0SK31FXIpX6xALOMJmRvTTkpSC6woCxfAO0qr0qeV0_rhYrUGi2nlMQp5uJJu0ie6MUFOmbbHcsV1ZrgA-EmtqXM26W9l-TJ9ESYN55m-cHzQ6Sk9oylkJwgFTah-QXwRpUFXmbkssxWm8uCTFkhNqpPD5Lwg_27uFvyL_ePROrgERZ4iQtFYRu6upm2tF_pSzT_VKeZPUyqBA33803ko5IIp_nmykHKdnyfzXVb6tJjnO9xYb2HXU-gZ9_r3RtDO1PsSmoGdCG1IzKpLatCt41u5IZ3VW6ZOsdHXT-Nyd5V9Uf_qkB36Hp6U7vIbYr1TMRB5TTSr2mWoU4__joeON0VyxhHnfV63S0EZ88Edbxv_gh69bb3QhORIrh7NWlGuZrmueFwDA3aufv9AP_hNo6k3aGjSg0bN4TwjB3VrvE4DBznL8y6LQ0w9vzItIKu-kuiCUCCS9IFW8K3uNyCYwlZAFXRliwAUssE8-fyWz6pmB3OfzG2bcI4k5sUoDXOCrWTuwQLMqJY_SBaS_V1x0zmAiDPrxAAHcErQK5jBy5UtzP0XOjDQKkHgPyB3R8EQTDsu0HfHXinLnircjp26PrQ9TynH0DfD0P39AegmawW)
 {{< /callout >}}
 
-The DuckDB-in-Astro build-time static charts pattern is "static site generation with embedded OLAP processing" or "build-time analytics", not traditional "embedded analytics."
+```sh
+npm install chart.js pg
+```
 
-DuckDB-Astro does static embedding: Pre-computed pies/bars baked into HTML at build/deploy. 
+> I got to know [what a composable is](#whats-a-composable), as this case is not as simple as the yfinance slidev component
 
-No live queries—great for blogs/portfolios, not user-facing dashboards
+> > Also, as the db is not in the browser, I needed to fetch one time the data from pg *I didnt wanna create a be API for this*
+
+```sh
+npm run prefetch  # Just fetch data
+#node scripts/fetch-data.js #http://localhost:3030/db-data.json
+```
+
+See how API vs database driven component differs in [this diagram](https://mermaid.live/edit#pako:eNqNk1FvmzAUhf8Kcl9aKURgcAJompQEMWmatFTsadAHJ1wCG9iRMd2yKP-9BtJAG9qVF2zf7x4fDvYRbXkCyEM7QfeZ9mMZM009Vb3pFmIUrolhrDIqpHa7KnJgUg_zBLTvrDjcxajjmycs1LIZtS_tTy4zrW996LEVL_ecKRmFXurTxxoGzBdgIKjkItp1I_Ch5D6VVAtqtpU5Z0PFRuFraEad1K9qUHttT9P1zwMLY7Za5OJgxNRHNZ59dQCwpBtcJexv1jmcE26-cUMr0H2RPwK7DhgPA-47xwLGUV9_FXDLVHRTQFRXsOaV3Amo7msQh5f5-cvo9lwO77_dXaeOP5A6fpkYHvPaI62tMavap4bxl2-3ny2NBy4PSqL_iWleFN5NECzmeDbZ8oIL7yZN0yE82Lqj7dUiIMYbtL-8aLqOYbyn2Z2RsyZekID8j8ZnGpvuLLAGNJqoq5snyJOihgkqQZS0maJjoxMjmUEJMfLUMKHid3OeTqpnT9lPzsvnNsHrXYa8lBaVmtX7pLlyOVUntEdUniBWvGYSeaRVQN4R_UWebmIyneG5Mzcd18bmzJ2gA_Iwsae2WrDnjk1cw8DWaYL-tZuaU4tYJnEsYs-Jqzqs0xMmaF_R)
+
+Next time? There [will be](#iot---langchain-x-pg) a better setup for this.
 
 <!-- 
 You can see the video:
@@ -907,6 +926,12 @@ Quick Starts
 - **Chat2DB**: `docker run chat2db/chat2db`, connect DB → chat.
 
 All OSS, align with your Docker/PocketBase. Vanna/Chat2DB for quickest Wren-like setup; MindsDB if dividends need forecasts.
+
+##### IoT - LangChain x PG
+
+This is coming up as some shape of tech talk this year.
+
+And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
 
 ##### Offer Configuration
 
@@ -1045,6 +1070,15 @@ Which one is better? It depends on your priorities.
 > In a **Star Schema**, you might store the category name directly inside the `products` table. If you want to change "Beverages" to "Drinks", you have to update 100 rows. If you miss one, you have a typo.
 > In a **Snowflake Schema**, you change it *once* in the `categories` table, and all products instantly reflect the change. This is the power of **Normalization**.
 
+#### DuckDB vs SQLITE
+
+The DuckDB-in-Astro build-time static charts pattern is "static site generation with embedded OLAP processing" or "build-time analytics", not traditional "embedded analytics."
+
+DuckDB-Astro does **static embedding**: Pre-computed pies/bars baked into HTML at build/deploy. 
+
+No live queries—great for blogs/portfolios, not user-facing dashboards which demand real time data updates.
+
+
 #### About some QnA
 
 1. Document Logic (The Planning)
@@ -1066,3 +1100,25 @@ Which one is better? It depends on your priorities.
 
 I was covering these in previous post.
 
+
+### Whats a composable
+
+Instead of writing database connection logic in every chart component, we centralize it in one place.
+
+This composable:
+
+1. **Manages Database Connections** 🔌
+   - Creates connection pools
+   - Executes queries
+   - Cleans up connections properly
+
+2. **Provides Reactive State** 📊
+   - `data` - Query results
+   - `loading` - Loading indicator
+   - `error` - Error messages
+
+3. **Enables Reusability** ♻️
+   - Use with pie charts, bar charts, line charts, tables, etc.
+   - Write database logic once, use everywhere
+
+  

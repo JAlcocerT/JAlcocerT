@@ -2,7 +2,7 @@
 title: "Everything can be embeded. OpenAI Agent Builder."
 date: 2025-09-30T08:20:21+01:00
 draft: false
-tags: ["n8n vs Flowise","ChatWoot vs PaperCups","SolidTime","Embeded Analytics","DB2REST","OpenAI ChatKit"]
+tags: ["n8n vs Flowise","ChatWoot vs PaperCups","SolidTime","DB2REST","OpenAI ChatKit"]
 url: 'embed-that'
 description: 'Enhance your Websites - Chatbots > Live Chats  > > Whatsapp bouble or cal'
 ---
@@ -10,12 +10,13 @@ description: 'Enhance your Websites - Chatbots > Live Chats  > > Whatsapp bouble
 
 **Tl;DR**
 
-
+Artifacts that you might want to embed into your websites.
 
 **Intro**
 
 Chatwoot has some basic CRM features (contact management, conversation history) but is mainly a helpdesk and messaging platform, not a dedicated CRM.
 
+There are other [chatbots](#chatbots) thought
 
 ### Chatbots
 
@@ -474,7 +475,7 @@ What if you have any other DB, *like sqlite* and you want to expose an API of th
 
 * https://github.com/9tigerio/db2rest
 
-> Instant no code DATA API platform. Connect any database, run anywhere. Power your GENAI application function/tools calls in seconds.
+> Instant no code DATA API platform. 
 
 DB2Rest is blazing fast - It has no Object Relational Mapping (ORM) overhead, uses Single round-trip to databases, no code generation or compilation, and supports Database Query Caching and Batching.
 
@@ -521,7 +522,7 @@ While such solutions are powerful for their environments, DB2Rest's strength lie
 | AI/modern integrations   | Supports vector DBs and LLMs         | Rarely supported                                  |
 | Deployment flexibility   | On prem, VM, Docker, Kubernetes      | Typically tied to DB ecosystem                     |
 
-This makes DB2Rest an excellent choice for rapid API creation, modern AI integrations, and simplifying legacy database access without complex development overhead, compared to more traditional or native DB REST services.
+This makes DB2Rest an excellent choice for **rapid API creation, modern AI integrations**, and simplifying legacy database access without complex development overhead, compared to more traditional or native DB REST services.
 
 
 #### Llana

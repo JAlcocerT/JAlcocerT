@@ -238,8 +238,6 @@ SLA matters and [some people need that status pages](https://jalcocert.github.io
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-
-
 6. Client adquisition data pipeline: *APIFY to rule them all*
 
 To be tested with *,artists,designers and wannabe's'* from social media.
@@ -256,8 +254,8 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
 7. Boiler plate / **blueprint for vibe coders**: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="Boilerplate for Builders ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="adwadwadwad" title="Boilerplate for Builders ↗" icon="github" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/" title="DIY BRD artifacts BoilerPlate  ↗" icon="github" >}}
 {{< /cards >}}
 
 
@@ -309,7 +307,7 @@ Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#c
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-10. Embeded Analytics with Graphic Walker: *or should i call this plug and play D&A?*
+10. Analytics with Graphic Walker: *or should i call this plug and play D&A?*
 
 {{< cards >}}
   {{< card link="https://github.com/clidey/plug-and-play-data-analytics" title="PlugnPlay D&A | Post ↗" >}}
@@ -322,6 +320,12 @@ Which I used it to be the first **tech talk** of this year.
   {{< card link="https://github.com/" title="SliDev Repo | Pre Y26 Tech Talks ↗" icon="github" >}}
   {{< card link="https://github.com/" title="Consulting / Landing Repo | Y26 Tech Talks ↗" icon="github" >}}
 {{< /cards >}}
+
+
+10. IoT: From sensors, to databases and QnA
+
+Should i call this Embeded analytics?
+
 
 
 11. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and video overlays.

@@ -2,7 +2,7 @@
 title: "AI|BI Tools and PoCs with PyGWalker"
 date: 2025-05-22T00:20:21+01:00
 draft: false
-tags: ["Dev","D&A","Career","Streamlit PoCs","uv","Business Intelligence Prototype"]
+tags: ["D&A","Career","Streamlit PoCs","uv","Business Intelligence Prototypes"]
 description: 'BI/AI combo and more D&A Tools. Streamlit Quick PoC Dashboards with PyGWalker and data stories!'
 url: 'ai-bi-tools'
 ---
@@ -72,7 +72,9 @@ It has **NO Object Relational Mapping (ORM) overhead**, uses Single round-trip t
 #docker pull kdhrubo/db2rest:v1.6.4 #or docker pull kdhrubo/db2rest:latest
 ```
 
-> Apache v2 | Instant no code **DATA API platform**. Connect any database, run anywhere. Power your GENAI application [function/tools calls](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/) in seconds.
+> Apache v2 | Instant no code **DATA API platform**. 
+
+> > Connect any database, run anywhere. Power your GENAI application [function/tools calls](https://jalcocert.github.io/JAlcocerT/how-to-use-openai-function-calling/) in seconds.
 
 
 ---

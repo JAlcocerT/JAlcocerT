@@ -566,8 +566,6 @@ The self-hosted deployment gives full control over infrastructure but requires i
 
 NocoDB supports both cloud and self-hosted variants as well. When self-hosted, you have complete control over your data and can customize and secure the deployment on your own infrastructure.[5][6]
 
-DB2REST is designed to be easily installed and self-hosted, allowing quick setup of secure REST APIs over databases on your servers.[7][8]
-
 DreamFactory can be self-hosted to build and manage REST APIs on your own infrastructure, offering full control over security and deployment.[9]
 
 
