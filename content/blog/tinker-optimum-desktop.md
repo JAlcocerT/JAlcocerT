@@ -3,7 +3,7 @@ title: "Optimum Path for Karting x CustomTkinter"
 date: 2026-01-25
 #date: 2026-02-28
 draft: false
-tags: ["GoPro GPS Telemetry","GD Simulation","G-Elypse","Racing"]
+tags: ["GoPro GPS Telemetry","GD Simulation","G-Elypse","Racing","Sodis Series"]
 description: 'A Python CustomTkinter Desktop App.'
 url: 'gopro-telemetry-desktop-python'
 ---
@@ -92,6 +92,22 @@ Want to build something similar?
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Reach out via my Consulting Service Tier and Calendar" >}}
 {{< /cards >}}
 
+
+### About Sodis Series
+
+I got to know about: `https://www.sodiwseries.com/es-es/tracks/`
+
+* Prices 70/90 pln aka 20$ per 8 min
+* Versus 45eur aka 50$ 30 min
+
+https://www.sodiwseries.com/es-es/tracks/karting-sevilla-699.html
+
+<!-- https://www.youtube.com/watch?v=KyhZhERS2XE -->
+
+{{< youtube "KyhZhERS2XE" >}}
+
+
+Ten years ago i Tried [this one](https://gokartarena.pl/cennik/).
 
 ### Next Steps
 

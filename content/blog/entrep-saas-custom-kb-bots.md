@@ -200,6 +200,38 @@ Same questions apply: web only? desktop app required? mobile?
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
+Because ebooks wont create succesfull ideas into reality for you:
+
+![alt text](/blog_img/data-experiments/life-flows-blured.png)
+
+```mermaid
+graph TD
+    subgraph Metrics [Unit Economics Dashboard]
+        direction TB
+        LTV_BOX[<b>LTV</b><br/>Lifetime Value]
+        CAC_BOX[<b>CAC</b><br/>Acq. Cost]
+        Ratio{<b>3:1 Ratio</b>}
+    end
+
+    subgraph Timeline [Payback Period Tracking]
+        T0[Month 0: -CAC] --> T1[Month 3: Recovery]
+        T1 --> T2[Month 6: Breakeven]
+        T2 --> T3[Month 12+: Profit/LTV]
+    end
+
+    %% Data Flow
+    Metrics --- Timeline
+
+    %% Styling to match your hand-drawn image
+    style LTV_BOX fill:#bbf7d0,stroke:#166534,stroke-width:2px
+    style CAC_BOX fill:#fecaca,stroke:#991b1b,stroke-width:2px
+    style T0 fill:#fecaca,stroke:#991b1b
+    style T1 fill:#bbf7d0,stroke:#166534
+    style T2 fill:#bbf7d0,stroke:#166534
+    style T3 fill:#bbf7d0,stroke:#166534,stroke-dasharray: 5 5
+```
+
+
 ### HUGO Vibe Coded Re-build
 
 To offer this via fossengineer, I can try:

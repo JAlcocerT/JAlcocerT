@@ -21,7 +21,13 @@ A post about...Simply science.
 
 {{< youtube "FPvFHcQEEj0" >}}
 
+## Termodinamics
 
+https://en.wikipedia.org/wiki/Boyle%27s_law
+
+PV=nrT
+
+And i could feel that while riding my bicycle during winter.
 
 
 ## Electrical Engineering
