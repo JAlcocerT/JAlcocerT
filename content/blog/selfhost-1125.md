@@ -2,7 +2,7 @@
 title: "SelfHosting done Easy with UmbrelOS - Nov 2025"
 date: 2025-11-14T01:20:21+01:00
 draft: false
-tags: ["Analytics with onchain data sample","Adventures x GPX","HomeLab Setup"]
+tags: ["Analytics with onchain data sample","Adventures x GPX","Reitti","HomeLab Setup"]
 description: 'Using OS on the browser. Measuring the More, better, new online performance.'
 url: 'selfhosted-apps-nov-2025'
 ---
@@ -170,7 +170,7 @@ And if you are afraid to get lost in the forest [during your adventures](https:/
 
 > Reitti is a comprehensive **personal location tracking** and analysis application that helps you understand your movement patterns and significant places. The name "Reitti" comes from Finnish, meaning "route" or "path".
 
-Reitti also allow to import our previous GPX, like Wanderer do.
+[Reitti](https://github.com/dedicatedcode/reitti) also allow to import our previous GPX, like Wanderer do.
 
 
 ### Thoughts on SteamOS and OS for NAS

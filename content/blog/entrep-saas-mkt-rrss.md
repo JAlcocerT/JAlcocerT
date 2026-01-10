@@ -31,8 +31,13 @@ How hard is to get those 1000 followers via organic content creation compared to
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/" title="Entrepreneur | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-## Programmatic Social Media
+A brand helps offset some part of the CAC.
 
+So for the [artists](https://jalcocert.github.io/JAlcocerT/link-artists/) around: the first C stands for *customer*
+
+Question: Do you have a product, so tht you can effectively opt to have customers? :)
+
+## Programmatic Social Media
 
 This is a not a completely new topic for me.
 
@@ -58,6 +63,8 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
 {{< /cards >}}
+
+
 
 
 ## About Infographics
@@ -166,6 +173,14 @@ You are paying for the attention anyways:
 * With your time to build the tools to create quality content (I assume you dont do it manually any more)
 * With your money to just pay whatever platform for the ads
 
+
+Social media be like: *100k views 1000 likes 100subs (1/1000 algo free)*
+
+{{< cards >}}
+  {{< card link="https://www.youtube.com/@BeyondAJourney" title="BaJ" image="/blog_img/data-experiments/yt-1y.png" subtitle="YT Channel Powered to play with videos" >}}
+{{< /cards >}}
+
+![100k views in a year](/blog_img/data-experiments/yt-1y.png)
 
 ---
 

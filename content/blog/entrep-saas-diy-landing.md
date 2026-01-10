@@ -732,6 +732,8 @@ This is a landing...that sells...ways to do landings (?! yyyea...)
 
 ![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
 
+How hard was to ~~code~~ vibe code this?
+
 <!-- https://youtu.be/P6MQBU3YpmM -->
 
 {{< youtube "P6MQBU3YpmM" >}}

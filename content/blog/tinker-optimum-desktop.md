@@ -1,9 +1,9 @@
 ---
 title: "Optimum Path for Karting x CustomTkinter"
-date: 2026-01-02
+date: 2026-01-25
 #date: 2026-02-28
 draft: false
-tags: ["GoPro GPS Telemetry","GD Simulation","G-Elypse"]
+tags: ["GoPro GPS Telemetry","GD Simulation","G-Elypse","Racing"]
 description: 'A Python CustomTkinter Desktop App.'
 url: 'gopro-telemetry-desktop-python'
 ---

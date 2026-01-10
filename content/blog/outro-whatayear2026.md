@@ -2,7 +2,7 @@
 title: "What a Year...2026"
 date: 2026-01-30
 draft: false
-tags: ["Year-Review","FY26","Attention is all you need"]
+tags: ["Year-Review","FY26",""]
 description: 'Looking back to the learnings of the year 2026.'
 url: 'tech-recap-2026'
 ---
@@ -59,6 +59,10 @@ AI...employees?
 Comercial ones like: `https://www.lindy.ai/pricing`
 
 Maybe, try to build a brand *before its too late*.
+
+0. Delivery Analytics
+
+
 
 0. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
@@ -475,7 +479,20 @@ xargs -0 awk '
 
 1. Choose your hard
 2. What a priviledge is to choose what challenge make you struggle
-3. 
+3. Attention is all you need
+4. Intelligence and risk tolerance are 2 different skills and favoured in different environments
+
+5. Doing something for an extended period of time without guarantees of success is what makes the difference
+
+> And i could not agree more - that Y axis es left blank, because it applies to several concepts in life: from cash flows to body transformations...
+
+See these as your time vs your money Your time vs your money
+
+A certain Negative cash flow year one then...uncertainty
+
+![alt text](/blog_img/data-experiments/life-flows-blured.png)
+
+6. You dont judge a system by its process but by its result
 
 #### Interesting Concepts
 

@@ -375,6 +375,8 @@ https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-servic
 
 But you can get **ecommerce analytics** done for you: *lets say its all about [plugging AI powered data analytics](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/) to it*
 
+Same that was done with the Commento db can be done to ecommerce dbs!
+
 ```mermaid
 flowchart LR
     %% --- Styles ---
@@ -405,8 +407,11 @@ flowchart LR
     %% --- Outcomes ---
     FREE -.->|"Explore FAQ"| END1["📖 Self-Learn"]
     CAL -.->|"Book Time"| END2["🤝 Get Guidance"]
-    DFY -.->|"Check Resources"| END3["⚡ Fast Track"]
+    DFY -.->|
+    "Check Resources"| END3["⚡ Fast Track"]
 ```
+
+
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
@@ -415,6 +420,10 @@ flowchart LR
 
 ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
 
+### Next Steps
+
+Langchain with wordpress or ghost apis?
+Or to and from strapi cms?
 
 
 

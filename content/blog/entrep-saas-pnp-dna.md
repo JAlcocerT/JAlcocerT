@@ -864,7 +864,7 @@ flowchart LR
     DFY -.->|"Check Resources"| END3["⚡ Fast Track"]
 ```
 
-Go from ~~problem~~ to solution proposal:
+Go from ~~problem~~ to solution proposal: *Get it done*
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
@@ -894,6 +894,10 @@ To:....
 
 #### Next Steps
 
+Find more use cases.
+
+From GenAI BI solutions, to those *Connect AI to your CRM*. 
+
 ##### Understanding Existing solutions
 
 * https://github.com/Canner/WrenAI
@@ -901,6 +905,8 @@ To:....
 > Agpl 3.0 | ⚡️ GenBI (Generative BI) queries any database in natural language, generates accurate SQL (Text-to-SQL), charts (Text-to-Chart), and AI-powered business intelligence in seconds.
 
 Several open-source projects mirror Wren AI's generative BI (GenBI) focus: natural language → text-to-SQL → auto-charts/dashboards, self-hosted for Postgres/DuckDB e-com stacks.
+
+> Wren has a cool flow image that resonates with all a da should know
 
 **Vanna AI** (GitHub: vanna-ai/vanna): RAG-based SQL agent with viz. Train on your schema/docs, query in English → SQL + charts. Embed via Streamlit/API. Less semantic layer than Wren.[1][2][3]
 
@@ -926,6 +932,8 @@ Quick Starts
 - **Chat2DB**: `docker run chat2db/chat2db`, connect DB → chat.
 
 All OSS, align with your Docker/PocketBase. Vanna/Chat2DB for quickest Wren-like setup; MindsDB if dividends need forecasts.
+
+
 
 ##### IoT - LangChain x PG
 
@@ -1078,10 +1086,12 @@ DuckDB-Astro does **static embedding**: Pre-computed pies/bars baked into HTML a
 
 No live queries—great for blogs/portfolios, not user-facing dashboards which demand real time data updates.
 
+Duckdb (column) vs sqlite (row)
 
 #### About some QnA
 
 1. Document Logic (The Planning)
+
 *   **BRD (Business Requirements):** Answers **"WHY build this?"** (The Vision & Goals).
 *   **PRD (Product Requirements):** Answers **"WHAT are we building?"** (The Features & Roadmap).
 *   **FRD (Functional Requirements):** Answers **"HOW does it work?"** (The Technical Logic & CRUDs).
@@ -1095,6 +1105,91 @@ No live queries—great for blogs/portfolios, not user-facing dashboards which d
 > [!TIP]
 > **Star Schema Rule of Thumb:** 
 > Put your **Fact** (the "What") in the center and surround it with your **Dimensions** (the "Context") to get a perfect 360° view of your data.
+
+#### Wrenai data stack
+
+Based on the diagram from WrenAI, the architecture represents a modern data stack designed to transform raw information into actionable insights using AI.
+
+The flow moves from left to right, starting with raw data sources and ending with user-facing applications. 
+
+```mermaid
+graph LR
+    %% Data Sources
+    subgraph Sources [Data Sources]
+        DB1[(MySQL)]
+        DB2[(PostgreSQL)]
+        DB3[(BigQuery)]
+        SaaS([Slack/SaaS])
+    end
+
+    %% Core Architecture Layers
+    subgraph Architecture [WrenAI Core Engine]
+        DL{Data Layer}
+        SL{Semantic Layer}
+        AL{Agentic Layer}
+        RL{Representation Layer}
+    end
+
+    %% Output Deliverables
+    subgraph Outputs [Output Applications]
+        EA[Embedded Analytics]
+        DR[Dashboards & Reports]
+        CI[Conversational Interface]
+    end
+
+    %% Connections
+    Sources --> DL
+    DL --> SL
+    SL --> AL
+    AL --> RL
+    RL --> EA
+    RL --> DR
+    RL --> CI
+
+    %% Styling
+    style DL fill:#003366,stroke:#fff,color:#fff
+    style SL fill:#1e90ff,stroke:#fff,color:#fff
+    style AL fill:#003366,stroke:#fff,color:#fff
+    style RL fill:#1e90ff,stroke:#fff,color:#fff
+    style Architecture fill:#f9f9f9,stroke-dasharray: 5 5
+```
+
+1. Data Layer
+
+This is the foundation. It represents your **raw data sources**. The icons on the far left (like MySQL, PostgreSQL, BigQuery, and Slack) show that the system connects to various databases and SaaS platforms.
+
+* **Role:** To ingest and store data in its original form before it is interpreted.
+
+2. Semantic Layer
+
+This is one of the most critical parts of the WrenAI workflow. In raw databases, column names are often cryptic (e.g., `cust_rev_2023`).
+
+* **Role:** It acts as a "translator" that defines business logic in human terms. It maps technical data to business concepts (e.g., defining exactly how "Monthly Recurring Revenue" is calculated).
+* **Why it matters:** It ensures that when an AI or a human asks a question, the system uses a single, consistent definition of truth.
+
+3. Agentic Layer
+
+This layer is where the **AI (the "Agent")** lives. Instead of just running a static script, an agentic layer uses LLMs (Large Language Models) to "think" through a request.
+
+* **Role:** It receives a natural language question, looks at the Semantic Layer to understand the data's meaning, and then decides which tools or queries to run to find the answer.
+* **Key Feature:** It can iterate—if the first query doesn't work, the agent can self-correct to find the right data.
+
+4. Representation Layer
+
+This is the **output phase**. Once the Agentic Layer has found the answer, the Representation Layer determines how that information is visualized or delivered.
+
+* **Role:** It formats the data based on the end-user's needs, whether that is a chart, a text summary, or a table.
+
+
+End-User Deliverables
+
+The diagram ends with three primary ways users interact with this processed data:
+
+* **Embedded Analytics:** Pushing these insights directly into other software applications.
+* **Dashboards & Reports:** Traditional visual summaries of Key Performance Indicators (KPIs).
+* **Conversational Interface:** A "Chat with your data" experience where users ask questions in plain English and get immediate answers (the core value of WrenAI).
+
+Would you like me to dive deeper into how the **Semantic Layer** specifically helps the AI avoid making mistakes?
 
 ### Tools to Interact with DBs
 

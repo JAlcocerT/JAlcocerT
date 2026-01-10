@@ -24,7 +24,10 @@ After [tinkering with APIFY](https://jalcocert.github.io/JAlcocerT/apify/), it w
 
 In the end of last year I found this: *when looking for nextjs web apps on yt*
 
-https://lastcodebender.com/
+
+### Example 1
+
+* https://lastcodebender.com/
 
 
 An example of marketing?  https://www.codebender.ai/#bottom
@@ -44,7 +47,27 @@ Spaces are limited
 > > And how could have I not used gemini to [understand the strategy better](#faq)
 
 
+### Example 2
+
+* `https://mongemalo.com/`
+
+After placing your mail, you get: `https://mongemalo.com/rechazado/`
+
+And once you confirm it: `https://mongemalo.com/importante-mensaje/`
+
+You are already prompted to buy an info product.
+
+`https://youtu.be/kwIgobHPwxY?si=SIvzjdvu41-asyhS`
+
+---
+
 ## Conclusions
+
+You can get these kind of knowledge dumps from your `Context.md` library into email your leads are reading.
+
+Providing you have both: [a KB](https://jalcocert.github.io/JAlcocerT/knowledge-management/) and potential leads captured properly into your sales pipeline.
+
+If you dont, you could get it done:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
