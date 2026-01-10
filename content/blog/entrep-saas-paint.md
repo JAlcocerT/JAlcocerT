@@ -2,7 +2,7 @@
 title: "Estimating house work and capturing leads"
 date: 2026-02-01T23:20:21+01:00
 draft: false
-tags: ["Lead testing","Painting Home","RoadMap26"]
+tags: ["Lead testing","Painting Home","Side-Quest26"]
 description: 'Building a platform to match offer and demand for certain jobs.'
 url: 'paint-lead-generation'
 math: true

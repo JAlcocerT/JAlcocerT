@@ -2,7 +2,7 @@
 title: "Mastering Social Media x InfoGraphics"
 date: 2026-02-01T11:20:21+01:00
 draft: false
-tags: ["Twitter X","Threads","Youtube","Latex vs Typst","RoadMap26"]
+tags: ["Twitter X vs Threads","Youtube","Latex vs Typst","Side-Quest26","YFinance"]
 description: 'Quality and automated content creation to build a community. Compared to just ads.'
 url: 'creating-curated-and-automated-content'
 ---
