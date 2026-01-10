@@ -118,7 +118,22 @@ It seems we are moving to a state where its more about collecting ideas to make 
 
 ### The tech talk
 
-We can call this: The Boilerplate brd prd frd tech talk
+We can call this: The Boilerplate brd prd frd tech talk.
+
+The idea os to show non tech business users couple success examples.
+
+Mainly the plug and play D&A tinkered [here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions).
+
+And also the DIY component based Landing created [here](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#the-diy-landing-project)
+
+To spin the slidev ppt for BAs/PMs:
+
+```sh
+git clone https://github.com/JAlcocerT/selfhosted-landing
+cd y2026-tech-talks/
+#npm run dev 
+```
+
 
 ---
 

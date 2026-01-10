@@ -1,6 +1,6 @@
 ---
 title: "From Blogspot to a Cool Website"
-date: 2026-01-10
+date: 2026-01-12
 description: "How is your current site performing? Migrating Blogspot and wordpress to a Modern and Responsive Website"
 draft: false
 tags: ["Free Web Audits","Lead Magnet","Roadmap26","BiP"]

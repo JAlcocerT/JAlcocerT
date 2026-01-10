@@ -7,7 +7,6 @@ description: 'Quality and automated content creation to build a community. Compa
 url: 'creating-curated-and-automated-content'
 ---
 
-
 **Tl;DR**
 
 Can you create quality content and build a community with social media (Twitter/Threads)?

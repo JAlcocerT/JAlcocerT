@@ -1,9 +1,9 @@
 ---
 title: "KB and Local Bots to end Silos for good"
-date: 2026-01-19T23:20:21+01:00
+date: 2026-02-01T23:20:21+01:00
 #date: 2025-12-21T23:20:21+01:00
 draft: false
-tags: ["Custom Chatbots x Local AI and KB","Tech Talk","RoadMap26"]
+tags: ["Custom Chatbots x Local AI and KB","Tech Talk","RoadMap26","Docs Bot"]
 description: 'Building a custom BOT platform to end with silos. HUGO FOSS rebuild.'
 url: 'custom-bots-kb'
 ---
@@ -80,7 +80,9 @@ And before having LLMs to get company context...that context have to be somewher
 
 Like in the selfhosted knowledge base I was commenting [here](https://jalcocert.github.io/JAlcocerT/knowledge-management/).
 
-To make the solution trustless: selfhosted + local .md based + local LLM has to be the way forward.
+To make the solution trustless: selfhosted + local `.md` based + local LLM has to be the way forward.
+
+Is very pleasent to navigate though projects docs with AI assistances to do QnA as commented [here](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#a-chatbot-for-registered-ones-to-do-qna).
 
 
 {{< cards >}}
@@ -122,7 +124,7 @@ All via containers
 
 ### Used Embeddings with LangChain
 
-://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs and explored few frameworks like llamaindex and pandasAI.
+https://jalcocert.github.io/JAlcocerT/how-to-chat-with-pdfs and explored few frameworks like llamaindex and pandasAI.
 
 Also tinkered with [RAG around CSVs](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/).
 
@@ -163,6 +165,12 @@ The potential use case of having companies in house documentation + RAG based Qn
 
 {{% /steps %}}
 
+Reading better and writing more has been one of my go tos.
+
+Specially after putting together these repos:
+
+And the final recent outcome: the one that [enables you](#you-can-also-do-this) to create.
+
 
 ## Building the solution
 
@@ -194,6 +202,9 @@ Same questions apply: web only? desktop app required? mobile?
 
 ## Conclusions
 
+
+
+### You can also do this
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

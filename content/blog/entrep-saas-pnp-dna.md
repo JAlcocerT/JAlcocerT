@@ -3,16 +3,15 @@ title: "[AI/BI] Plug and Play Data Analytics"
 date: 2026-01-08T18:20:21+01:00
 draft: false
 tags: ["LangChain","RoadMap26 x Tech Talk","PostgreSQL vs DuckDB","Generative BI x WrenAI"]
-description: 'Extracting insights from databases and generating automatic charts.'
+description: 'Extracting insights from databases is easy when the SQL layer abstracted.'
 url: 'plug-and-play-data-analytics'
 ---
-
 
 **Tl;DR**
 
 Self-service seems to be a thing.
 
-Let's enable non tech people to extract insights from databases via direct qna.
+Let's enable non tech people to extract insights from databases via direct qna within a UI.
 
 **Intro**
 

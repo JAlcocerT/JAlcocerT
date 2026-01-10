@@ -9,6 +9,7 @@ url: 'custom-marketing-analytics'
 
 * https://kit.com/use-cases/marketers
 
+Convert kit versus MailChimp
 
 **Tl;DR**
 

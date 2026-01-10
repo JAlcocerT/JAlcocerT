@@ -4,7 +4,7 @@ date: 2026-01-06T07:20:21+01:00
 #date: 2025-12-27T23:20:21+01:00
 draft: false
 tags: ["Info Products","DIY 1toN ebooks x BiP","SaaS vs LifeTime Products","RoadMap26"]
-description: 'Reading better, writing more. Making Kindle learnings of years actionable and sharing via web/ooks'
+description: 'Making Kindle clippings and learnings of years actionable and sharing via web/ooks'
 url: 'interesting-books-and-diy-offer'
 ---
 
@@ -12,7 +12,7 @@ url: 'interesting-books-and-diy-offer'
 
 By the end of this year, I will have created a **web/ook platform** to share the learnings along the years.
 
-As I dont expect people to have the patience to get value by reading from these 300+ posts - Im destilling that into 20/30 pages ebooks.
+As I dont expect people to have the patience to get any value by reading from these *300+ posts* - Im destilling that into 20/30 pages ebooks.
 
 The aim is to enhance the DIY offer, *for people that are not ready for [the DWY one](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page)*.
 
@@ -342,11 +342,14 @@ These are **deployed at**:
 
 The problem when you havent started building is that you dont know what you need.
 
-That's why I have created a custom chatbot for registered users to do QnA over the content of the ebooks.
+That's why I have created a custom chatbot for registered users to do **QnA over the content** of the ebooks.
 
 Something like...what the claude code docs are having.
+Also the BAML docs: https://docs.boundaryml.com/home
 
-Or an Alternatives to:
+> Ill consider those examples as a reference in the future
+
+AI Chatbots as an Alternatives to:
 
 * https://www.livechat.com/pricing/ - *ING uses it*
 * https://www.smartsupp.com/
