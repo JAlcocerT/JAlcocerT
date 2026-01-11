@@ -10,6 +10,8 @@ url: 'using-blender-with-ai'
 
 **Tl;DR**
 
+Blender vs FreeCAD vs OpenSCAD
+
 <!-- https://youtu.be/r7H60u0kHRA?si= -->
 
 {{< youtube "r7H60u0kHRA" >}}

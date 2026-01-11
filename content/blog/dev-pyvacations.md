@@ -2,8 +2,8 @@
 title: "Vacations with Python and LibreChat."
 date: 2026-09-15T19:20:21+01:00
 draft: false
-tags: ["Django","PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs","Scrap"]
-summary: 'Where am I going next? With Vibe Planning.'
+tags: ["Django","PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs of Living","Scrap"]
+summary: 'Where am I going next? With Vibe Planning and wisdom of crowds.'
 url: 'py-vacations'
 ---
 
@@ -229,7 +229,12 @@ content
 
 ### Numbeo Data
 
-Its all about **Knowledge of Crowds**
+Its all about **Knowledge of Crowds**, *not the tyrannyof the experts*.
+
+$$
+\sum_{i=1}^{n} \text{opinions}_i > n \cdot \text{opinions}
+$$
+
 
 
 {{< details title="First Knowledge Adquisition (with FireCrawl + openAI) 📌" closed="true" >}}

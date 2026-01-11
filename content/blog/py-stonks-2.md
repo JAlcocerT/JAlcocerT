@@ -303,6 +303,8 @@ graph LR
     style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
 ```
 
+> Is ~70% (2,5/3,5) of savings aka future, *not fundamental nor fun expenses*, a lot?
+
 3. https://www.reddit.com/r/investing/wiki/readinglist/
 4. Boglehead guide
 5. A random walk down Wall Street

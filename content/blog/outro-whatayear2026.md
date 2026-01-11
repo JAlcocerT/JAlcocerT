@@ -63,6 +63,8 @@ Maybe, try to build a brand *before its too late*.
 0. Delivery Analytics
 
 
+0. promote in subreddit to get feedback?
+
 
 0. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
@@ -408,7 +410,8 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
 
 ![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 
-> Fundamental, Fun, Future :)
+> Fundamental, Fun, Future [:)](#open-questions)
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/creating-curated-and-automated-content" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
@@ -497,9 +500,34 @@ A certain Negative cash flow year one then...uncertainty
 
 6. You dont judge a system by its process but by its result
 
+7. Diminishing returns are still returns
+
 #### Open Questions
 
-* is some official/certified the prohibition of any other alternative?
+* Whats freedom: Possibility of acting or the absence of obstacles?
+* Will we ever get to value the spark more than the shadow it casts?
+* is blockchain the ultimate database?
+* Is some official/certified the prohibition of any other alternative?
+* How hard is to increase income? how hard is to *,save'* ~70% after taxes?
+
+```mermaid
+graph LR
+    %% Main Flow
+    A[Business System<br/>Focus] -- "5x Life Expenses" --> B{Allocation Hub}
+
+    %% Distribution Branches
+    B -- "x2.5 (50%)" --> C["Keep & Grow Wealth<br/>(Diversify)"]
+    B -- "x1.5 (30%)" --> D[Tax]
+    B -- "x1.0 (20%)" --> E[Lifestyle]
+
+    %% Styling
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#fff,stroke:#333,stroke-dasharray: 5 5
+    style C fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style D fill:#f8d7da,stroke:#dc3545,stroke-width:1px
+    style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
+```
+
 
 #### Interesting Concepts
 
@@ -561,3 +589,10 @@ A certain Negative cash flow year one then...uncertainty
 [2025](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025) - BiP *and social sign in/up*
 
 2026 - 
+
+##### Closed Projects
+
+1. ~~ CyClingThere~~
+2. ~~btcmeet~~
+
+Options to take into consideration: brand colors, seo, check links, no 404

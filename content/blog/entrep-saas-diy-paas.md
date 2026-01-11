@@ -42,7 +42,9 @@ So im going to take one of these PaaS:
 {{< /cards >}}
 
 
-Get a server and wrap it up via vibe coding.
+**Get a server** and wrap it up via vibe coding.
+
+https://jalcocert.github.io/JAlcocerT/docs/selfhosting/
 
 Simple, uh?
 
@@ -88,9 +90,11 @@ To *hopefully* move away from "selling time" (which caps your income) to "sellin
 
 {{% steps %}}
 
-### step 1
+### Tinkered with Cloud
 
-### step 2
+### Tinkered with MiniPCs
+
+And put together a KPI around: performance, volume, power
 
 {{% /steps %}}
 

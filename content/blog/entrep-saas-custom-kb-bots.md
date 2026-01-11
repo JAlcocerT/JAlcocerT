@@ -437,6 +437,8 @@ Psychology-skills-data-analytics/#the-optimism-bias -->
 
 <!-- ### The Echo Chambers
 
+is social media a source of tribalism
+
 When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. 
 
 Today, however, people often only engage with those who share their opinions. Digital channels have returned humans to a cave-like existence: Only a small social bubble within an echo chamber shares a given person’s view of reality.

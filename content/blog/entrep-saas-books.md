@@ -483,7 +483,7 @@ Launching quickly thus becomes a means of learning. Speed doesn't mean compromis
 
 It's an invitation to learn by doing, to use each version of the portfolio as a testing ground.
 
-### The crucial importance of time: time efficiency and judicious management
+**The crucial importance of time: time efficiency and judicious management**
 
 Time plays a crucial role in this debate. Time efficiency, underlined by the perspective of speed, becomes an essential skill.
 
@@ -491,7 +491,7 @@ Judicious time management is the key to maintaining momentum without compromisin
 
 Consciously choosing where to invest one's time becomes a strategic act.
 
-### Total control vs. flexibility: navigating between the two extremes
+**Total control vs. flexibility: navigating between the two extremes**
 
 Total control of the creative process offers a sense of autonomy and empowerment. 
 
@@ -501,7 +501,7 @@ Being open to market developments and new trends is just as essential as persona
 
 It's a delicate balance between autonomy and adaptability.
 
-### The delicate balance: a continuous journey of discovery and adaptation
+**The delicate balance: a continuous journey of discovery and adaptation**
 
 Ultimately, portfolio creation is an ongoing journey. It's navigating this paradox with intention. 
 
