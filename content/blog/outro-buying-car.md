@@ -80,7 +80,7 @@ pie title Car Expenses Breakdown
 
 > Making **0,5$ per km**
 
-
+The first time I put fuel in it was: 38,86L at 4,92 pln (23% of that VAT).
 <!--
  ![Car End](/blog_img/data-experiments/Car_after.JPG) 
  -->
@@ -354,6 +354,7 @@ This project started as a **test to see the costs of owning a car**.
 And in the meantime I saw an interesting post: [Buying a Mercedes and making a roadtrip](https://forocoches.com/foro/showthread.php?t=9203326&highlight=)
 
 > Some people are doing cool adventures with old card *Salgo para Dakar para intentar vender un Mercedes viejo. Haremos seguimiento*
+
 
 ---
 

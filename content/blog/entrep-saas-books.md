@@ -28,7 +28,6 @@ So consider it a WIP until the year has ended - or AI took over civilization :)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks/" title="Kind of ~ NEW 1-to-Nebooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Putting together my thoughts and curated knowledge into N ebooks" >}}
-  {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate for SaaS - Source Code on Github" >}}
 {{< /cards >}}
 
 > Its *Kind of new*, because I created the repo on [this post](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-december-2025), based on the 2025 path :)
@@ -329,7 +328,6 @@ git clone https://github.com/JAlcocerT/1ton-ebooks.git
 A better structured *,passive'* service offering.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/boilerplate" title="NEW - BoilerPlate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Vibe Coding Templates for enhanced DIY " >}}
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="NEW - DIY eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="From md to n web/ooks for a better DIY service " >}}
 {{< /cards >}}
 
@@ -513,13 +511,13 @@ Im talking about: https://once.com/writebook
 
 **Info products** and one time payment artifacts are a thing today.
 
-https://github.com/mrwyndham/pocketbase-stripe
-https://www.fastpocket.dev/pricing
+* https://github.com/mrwyndham/pocketbase-stripe
+* https://www.fastpocket.dev/pricing
 
 also
 
-https://quickdeploy.dev/
-https://www.youtube.com/watch?v=Feauj4OaePg
+* https://quickdeploy.dev/
+* https://www.youtube.com/watch?v=Feauj4OaePg
 
 With life time access
 

@@ -1,5 +1,5 @@
 ---
-title: "[Success Story 1] Streamlit x GHCR x CI/CD"
+title: "[Success Story] Streamlit x GHCR x CI/CD"
 date: 2026-01-04T19:20:21+01:00
 #date: 2025-12-20T23:20:21+01:00
 draft: false

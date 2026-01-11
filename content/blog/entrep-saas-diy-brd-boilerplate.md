@@ -1,7 +1,7 @@
 ---
 title: "A BoilerPlate so that you finally ship"
 #date: 2026-02-17T07:20:21+01:00
-date: 2026-01-10T07:20:21+01:00
+date: 2026-01-11T07:20:21+01:00
 draft: false
 tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk","Unit Economics","Gross vs net profit"]
 description: 'When building a micro-SaaS is just a matter of framing.'
@@ -20,9 +20,13 @@ I was thinking to put these in a separated repo to [the n ebooks](https://github
 
 But i changed my mind for the sake of simplicity: *last thing I created in this direction, is [inside the n ebooks post](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#building-n-ebooks-for-a-webook)*
 
-https://github.com/JAlcocerT/bip-boilerplate-saas
+Previously I was thinking to have this in a separated repo
 
-https://github.com/JAlcocerT/boilerplate
+* https://github.com/JAlcocerT/bip-boilerplate-saas
+* https://github.com/JAlcocerT/boilerplate
+
+  {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate for SaaS - Source Code on Github" >}}
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="eBook Ideas ↗" icon="github" >}}
@@ -54,11 +58,25 @@ Is curiosity a career liability?
 
 Well...maybe not if you know how to **far transfer** your learning.
 
+Agentic development abstract the *how to* so that if you have a Why and a What you can get the code running:
+
+![how to is not that important](/blog_img/DA/why-what-how.png)
+
+
 ### Shipping Features 
 
 This is exactly what I did to put together an UI to the [Database QnA plug and play analytics around langchain](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/).
 
+![langchain db qna via UI PoC](/blog_img/DA/sql/langchain-vite-pgsql.png)
+
+
 How about an example around: Selfservice data analytics?
+
+<!-- 
+https://youtu.be/qf-oNNNDXS0 -->
+
+
+{{< youtube "qf-oNNNDXS0" >}} 
 
 <!-- 
 {{< youtube "KXamTdJA-uc" >}} 
@@ -108,13 +126,21 @@ graph LR
 
 Langchain db query to postgres container and custom bi over it? 
 
+What if it would be possible not just doing QnA, but also generating insights via graphs?
+
+![alt text](/blog_img/DA/sql/langchain-qna-pgsql.png)
 
 ---
 
 ## Conclusions
 
-
 It seems we are moving to a state where its more about collecting ideas to make something people wants powered by agents.
+
+See something that people need?
+
+Why not building people's dream as a way to succeed?
+
+I have proven that you can do [a DIY landing page in ~ 30 minutes](https://youtu.be/4xQVUw5YirE), or this plug and play data analytics full stack app [in ~ 40 minutes](https://youtu.be/qf-oNNNDXS0).
 
 ### The tech talk
 

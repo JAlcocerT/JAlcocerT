@@ -1,6 +1,6 @@
 ---
 title: "[AI/BI] Plug and Play Data Analytics"
-date: 2026-01-08T18:20:21+01:00
+date: 2026-01-09T18:20:21+01:00
 draft: false
 tags: ["LangChain","RoadMap26 x Tech Talk","PostgreSQL vs DuckDB","Generative BI x WrenAI"]
 description: 'Extracting insights from databases is easy when the SQL layer abstracted.'
@@ -81,10 +81,10 @@ So...how about leveling up [with a cool setup](#the-setup)?
 
 We will need:
 
-1. A Database to tinker with
-2. A way to connect the DB (inside a container) to Langchain
-3. A UI Wrapper to do QnA *outside the terminal*
-4. Bonus: AI/BI to get visual insights from the data
+1. A [Database](#databases) to tinker with
+2. A way to [connect the DB](#sample-1) (inside a container) to Langchain
+3. A [UI Wrapper](#ui-wrapper) to do QnA *outside the terminal*
+4. Bonus: [AI/BI overview](#aibi) to frame how to get visual insights from the data
 
 These resources will provide context:
 
@@ -737,12 +737,36 @@ gh repo create langchain-db-ui --private --source=. --remote=origin --push
 
 {{% /details %}}
 
-As recently, I started with: a BRD, some clarifications, then a development plan.
+As recently, I started with: a [BRD](https://github.com/JAlcocerT/langchain-db-ui/blob/master/brd-langchain-ui.md), some [clarifications](https://github.com/JAlcocerT/langchain-db-ui/blob/master/z-clarifications.md), then a [development plan](https://github.com/JAlcocerT/langchain-db-ui/blob/master/development-phases.md).
 
 > PS: You dont need [1000h of prompt engineering](https://www.reddit.com/r/PromptEngineering/comments/1nt7x7v/after_1000_hours_of_prompt_engineering_i_found/) to do so
 
 > > PS2: as do my presentations as code, I put on the [same repo some ppt skeleton](https://github.com/JAlcocerT/langchain-db-ui/blob/master/z-ppt-draft.md) using the same agentic IDE conversation.
 
+The [vibe coding took 41 minutes](https://youtu.be/qf-oNNNDXS0), taking into consideration that claude was not so collaborative via antigravity, and I went with Gemini 3 Flash.
+
+![langchain db qna via UI PoC](/blog_img/DA/sql/langchain-vite-pgsql.png)
+
+The Technical Stack & Specifications?
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React + Vite | Tab favicon and OG metadata configured in `index.html`. |
+| **Styling/UI Library** | Tailwind CSS | Utility-first styling for premium design & performance. |
+| **Backend/Database** | FastAPI (Python) | Stateless API using `SQLChatBackend` with PostgreSQL support. |
+| **Authentication** | Environment-based (v1) | Simple `.env` configuration; multi-user auth deferred to other iterations |
+| **Development Tools** | Makefile / Docker | Standardized commands for baremetal and container-based dev. |
+
+Component Details
+
+- **Frontend:**
+  - State Management: React Context API
+  - HTTP Client: Axios
+- **Backend:**
+  - Logic: `sql_backend.py`
+  - ORM/Interface: LangChain SQLDatabase
+- **Containerization:** Docker Compose (v2)
+- **Secrets:** `.env` file for `DB_URI` and `OPENAI_API_KEY`
 
 ### AI/BI
 
@@ -754,6 +778,7 @@ Time to demonstrate *once again* that adaptability skills for the transition tha
 
 > Apache v2 | An open source alternative to Tableau. **Embeddable visual analytic**
 
+See also [this section](#understanding-existing-solutions).
 
 
 ---
@@ -879,15 +904,20 @@ We have gone from:
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
+> The previous related session is uploaded [here](https://www.youtube.com/watch?v=KXamTdJA-uc) and you can see the latest one here.
+
 <!--
  https://www.youtube.com/watch?v=KXamTdJA-uc 
 -->
 
-The previous related section is uploaded [here](https://www.youtube.com/watch?v=KXamTdJA-uc) and you can see the latest one here.
+
 <!-- 
 {{< youtube "KXamTdJA-uc" >}} -->
 
-To:....
+To:
+
+![langchain ui wrapper around pgsql qna](/blog_img/DA/sql/langchain-qna-pgsql.png)
+
 
 
 
@@ -1161,7 +1191,9 @@ This is the foundation. It represents your **raw data sources**. The icons on th
 
 2. Semantic Layer
 
-This is one of the most critical parts of the WrenAI workflow. In raw databases, column names are often cryptic (e.g., `cust_rev_2023`).
+This is one of the most critical parts of the WrenAI workflow. 
+
+In raw databases, column names are often cryptic (e.g., `cust_rev_2023`).
 
 * **Role:** It acts as a "translator" that defines business logic in human terms. It maps technical data to business concepts (e.g., defining exactly how "Monthly Recurring Revenue" is calculated).
 * **Why it matters:** It ensures that when an AI or a human asks a question, the system uses a single, consistent definition of truth.
@@ -1192,7 +1224,11 @@ Would you like me to dive deeper into how the **Semantic Layer** specifically he
 
 ### Tools to Interact with DBs
 
-I was covering these in previous post.
+I was covering these in previous post, like
+
+1. ChartDB
+
+![ChartDB](/blog_img/DA/sql/dbchart3.png)
 
 
 ### Whats a composable

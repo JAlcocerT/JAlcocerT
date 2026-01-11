@@ -1,7 +1,7 @@
 ---
 title: "[AI/BI] Plug and Play Data Analytics"
 #date: 2026-01-08T18:20:21+01:00
-date: 2026-03-08T18:20:21+01:00
+date: 2026-03-01T18:20:21+01:00
 draft: false
 tags: ["RoadMap26 x Tech Talk","Generative BI x WrenAI","BAML"]
 description: 'From databases to insights with automatic charts from your QnA.'
@@ -12,11 +12,13 @@ url: 'creating-a-generative-bi-solution'
 
 Is it possible that agents will not only reply a query based on the real content of a database,
 
- but also would provide a proper visualization?
+But also would provide a proper visualization?
 
 **Intro**
 
 After getting that pnp D&a with langchain and pgsql ready [here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions).
+
+![alt text](/blog_img/DA/sql/langchain-qna-pgsql.png)
 
 And having a [session for non-tech users](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk) to learn to vibe code similar tools.
 
@@ -51,7 +53,7 @@ Which I rebamped into this [pgsql x langchain with few real examples](https://ja
 By sharing in couple ways: 
 
 * The technical one for big data communities
-* The non-tech for business users
+* The non-tech for business users - With [a video proof](https://youtu.be/qf-oNNNDXS0) that this can be done in less than 1h
 
 {{% /steps %}}
 
@@ -96,3 +98,8 @@ git clone https://github.com/JAlcocerT/selfhosted-landing
 cd y2026-tech-talks/
 #npm run dev 
 ```
+
+
+---
+
+## FAQ

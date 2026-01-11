@@ -95,6 +95,9 @@ With that remota data (yaml) fetching from the home-alb repo.
 
 0. IoDoctor reloaded
 
+* a second opinion
+* no kyc, no receta
+
 * with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
 can find out existing interface
 
@@ -493,6 +496,10 @@ A certain Negative cash flow year one then...uncertainty
 ![alt text](/blog_img/data-experiments/life-flows-blured.png)
 
 6. You dont judge a system by its process but by its result
+
+#### Open Questions
+
+* is some official/certified the prohibition of any other alternative?
 
 #### Interesting Concepts
 

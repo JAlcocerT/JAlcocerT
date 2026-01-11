@@ -130,6 +130,19 @@ If you dont have a GoPro, you can still play with your smartphone and PhyPhox:
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Route Tracker" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Analyzing Routes Data with Python" >}}
 {{< /cards >}}
 
+All this resonated with a PoC i built `iotrack.iotechcrafts.com`:
+
+* A multi-language site: EN/ES
+* In theory with a web3 domain (not sure what for)
+* Some video as proof, possibility to ask for a demo and signin
+* And some marketing:
+  * you are yoing with your friends and you always get the GP2 engine?
+  * Stop looking behind and focus on winning (get better)
+  * How it works?
+    * Pros are using telemtry to get better - and its costing them a buch of money
+    * But you are smarter than then. You use IoTrack.
+    * Get daster & receive feedback of your laps like a Pro
+
 ### Outro
 
 * https://upstash.com/

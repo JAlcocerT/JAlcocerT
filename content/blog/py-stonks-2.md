@@ -204,6 +204,10 @@ Before going to `https://www.interactivebrokers.ie/sso/Login?RL=1&locale=en_US` 
 You could also keep it simple and just use existing tools like https://www.perplexity.ai/finance/JNJ/financials
 {{< /callout >}}
 
+Many nice to have: *for free or for subs*
+
+Like having API access, vacations with a world map, or how much do I need to retirement from now
+
 ### About Debt
 
 **Debt is a thing**:
