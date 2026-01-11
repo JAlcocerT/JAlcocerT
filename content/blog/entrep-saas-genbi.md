@@ -28,6 +28,8 @@ And build something.
 
 ## Existing GenBI Solutions
 
+![alt text](/blog_img/AIBI/wrenai-features.png)
+
 ## Building 
 
 But first, some recap on what drove me to this point.
@@ -95,7 +97,7 @@ For which they provided the code: https://github.com/BoundaryML/baml-examples/tr
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing
-cd y2026-tech-talks/
+cd y2026-tech-talks/3-genbi-langchain
 #npm run dev 
 ```
 
@@ -103,3 +105,67 @@ cd y2026-tech-talks/
 ---
 
 ## FAQ
+
+This diagram outlines a strategic approach to wealth management and lifestyle design, likely originating from a high-performance or entrepreneurial coaching framework.
+
+It emphasizes the transition from **focused income generation** to **disciplined wealth distribution.**
+
+```mermaid
+graph LR
+    %% Main Flow
+    A[Business System<br/>Focus] -- "5x Life Expenses" --> B{Allocation Hub}
+
+    %% Distribution Branches
+    B -- "x2.5 (50%)" --> C["Keep & Grow Wealth<br/>(Diversify)"]
+    B -- "x1.5 (30%)" --> D[Tax]
+    B -- "x1.0 (20%)" --> E[Lifestyle]
+
+    %% Styling
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#fff,stroke:#333,stroke-dasharray: 5 5
+    style C fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style D fill:#f8d7da,stroke:#dc3545,stroke-width:1px
+    style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
+```
+
+Here is a breakdown of what this graph suggests and why it is a powerful (though aggressive) financial model:
+
+
+1. The Engine: Business System (Focus)
+
+The starting point is a single "Business System" generating roughly **5x your life expenses.** * **The "Focus" Tag:** This is critical. It suggests that before you worry about complex investing or lifestyle upgrades, you must first build a singular, scalable engine that produces high cash flow.
+
+* **The 5x Target:** By aiming for 5x your expenses, you create a massive "margin of safety." Most people live on 1x or 1.2x their income; this model demands you over-earn significantly relative to your needs to fuel the rest of the system.
+
+2. The Multiplier Strategy
+
+The blue numbers (, , ) represent the allocation weight relative to your lifestyle:
+
+* **Lifestyle (x1):** This is your baseline. If your lifestyle costs $10,000/month, that is your "1 unit."
+* **Tax (x1.5):** This assumes a roughly 30% tax bracket on the total. It treats tax as a mandatory "expense" that is actually larger than your personal lifestyle costs.
+* **Wealth (x2.5):** This is the most aggressive part. It suggests you should be putting **2.5 times more money** into investments than you spend on your daily life.
+
+3. The Output: The 50/30/20 Split
+
+Once the cash flows through the "Focus" phase, it is split into three buckets:
+
+* **50% Keep & Grow Wealth [Diversify]:** Half of every dollar earned goes into assets (stocks, real estate, etc.). This is where the transition from "Active Income" (Business) to "Passive Wealth" happens.
+* **30% Tax:** A realistic, conservative estimate for high-earning individuals to ensure no legal or cash-flow surprises.
+* **20% Lifestyle:** This is the "Golden Handcuffs" prevention. By capping lifestyle at 20% of total earnings, you ensure that even if you have a massive year, you don't inflate your spending to a level that requires the business to run forever.
+
+My Assessment
+
+**Strengths:**
+
+* **Prevents Lifestyle Creep:** Most people increase their spending as they earn more. This graph forces spending to stay a fixed, small percentage of the whole.
+* **Psychological Clarity:** It tells you exactly when you are allowed to "diversify." You don't play with stocks until the business system is hitting that 5x marker.
+* **Aggressive Compounding:** Putting 50% of gross income into wealth-building assets will lead to financial independence much faster than traditional 10–15% savings rates.
+
+**Potential Risks:**
+
+* **The "Focus" Trap:** Staying in "Focus" mode too long can lead to burnout if the 5x target is set too high or if the business is extremely volatile.
+* **Tax Efficiency:** Depending on your jurisdiction, 30% might be too low or too high. Strategic tax planning (corporate structures) might be needed to keep that number from eating into the "Wealth" bucket.
+
+**Overall, this is a "Wealth Accelerator" map.** It is designed for someone who wants to work intensely for a decade to never have to work again, rather than someone looking for a slow, 40-year retirement plan.
+
+Would you like me to help you calculate what these numbers would look like based on a specific target monthly expense?

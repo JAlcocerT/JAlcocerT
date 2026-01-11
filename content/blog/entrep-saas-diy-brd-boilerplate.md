@@ -156,7 +156,7 @@ To spin the slidev ppt for BAs/PMs:
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing
-cd y2026-tech-talks/
+cd y2026-tech-talks/2- ba-brd-development
 #npm run dev 
 ```
 

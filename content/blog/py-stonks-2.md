@@ -284,6 +284,25 @@ Or just create a quick **flask webapp** so that anyone can download such cool pl
 
 1. The little book of valuations
 2. The Millionaire Fast Line
+
+```mermaid
+graph LR
+    %% Main Flow
+    A[Business System<br/>Focus] -- "5x Life Expenses" --> B{Allocation Hub}
+
+    %% Distribution Branches
+    B -- "x2.5 (50%)" --> C["Keep & Grow Wealth<br/>(Diversify)"]
+    B -- "x1.5 (30%)" --> D[Tax]
+    B -- "x1.0 (20%)" --> E[Lifestyle]
+
+    %% Styling
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#fff,stroke:#333,stroke-dasharray: 5 5
+    style C fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style D fill:#f8d7da,stroke:#dc3545,stroke-width:1px
+    style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
+```
+
 3. https://www.reddit.com/r/investing/wiki/readinglist/
 4. Boglehead guide
 5. A random walk down Wall Street

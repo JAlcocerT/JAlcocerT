@@ -55,6 +55,12 @@ mindmap
       V1 DB Schemamindmap
 ```
 
+Making a living from software as an indiehacker is something more than just coding.
+
+You need to wrap the product within a successful a good business model:
+ 
+![alt text](/blog_img/data-experiments/business-ltv-cac.png)
+
 Are you also clearn on The "One Avatar, One Product, One Channel" strategy: *Do you know who are you building it for?*
 
 | Element | Description | Core Logic/Benefit |

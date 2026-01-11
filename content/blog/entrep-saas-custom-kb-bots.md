@@ -204,6 +204,36 @@ Same questions apply: web only? desktop app required? mobile?
 
 
 
+### How Ive placed a Qna around my notes
+
+Recently, I was talking about my new 1ton web/ook platform.
+
+Where Im distilling all my experience in short chapters for anyone *including llms* to consume.
+
+I have just added the possibility for people to do [QnA directly to such knowledge base](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#a-chatbot-for-registered-ones-to-do-qna).
+
+You can get also perspective from [several domain ideas linked](#faq) thanks to that.
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="DIY via Ebooks repo ↗" icon="github" >}}
+{{< /cards >}}
+
+
+Because: programming, marketing and sales is all you need.
+
+But if you are able to far transfer from other aspects of life, thats what will differenciate your vision and products.
+
+#### HUGO Vibe Coded Re-build
+
+To offer this via fossengineer, I can try: *these are next steps*
+
+1. As is (later removing adsense)
+2. The local KB offer
+3. The webpage offer
+4. Finally remodel the webpage to avoid the shape of a blog, as is more a news/docs one - vibe coding ofc.
+
 ### You can also do this
 
 {{< cards >}}
@@ -243,14 +273,6 @@ graph TD
 ```
 
 
-### HUGO Vibe Coded Re-build
-
-To offer this via fossengineer, I can try:
-
-1. As is (later removing adsense)
-2. The local KB offer
-3. The webpage offer
-4. Finally remodel the webpage to avoid the shape of a blog, as is more a news/docs one - vibe coding ofc.
 
 
 
@@ -259,3 +281,192 @@ To offer this via fossengineer, I can try:
 ## FAQ
 
 
+
+### About some interesting books Ive read
+
+
+https://jalcocert.github.io/JAlcocerT/blog/da-bk-learning/
+
+https://jalcocert.github.io/JAlcocerT/negotiation-skills-data-analytics/
+
+https://jalcocert.github.io/JAlcocerT/psychology-skills-data-analytics/
+
+
+<!-- 
+#range
+#peak
+#ultra learning 
+https://jalcocert.github.io/JAlcocerT/blog/da-bk-learning/
+-->
+
+
+<!-- ## Spaced learning -->
+<!-- ultra learning 
+range - why generalist...
+-->
+
+This has been possible thanks to perplexity and notebookllm, together with a huge txt file of kindle notes I have:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="Sell your eBook ↗" icon="github" >}}
+{{< /cards >}}
+
+
+#### NeuroMarketing
+
+
+<!-- 
+neuromarketing
+brainfluence
+the persuasion code -->
+
+#### Story Telling
+
+<!-- 
+Data storytelling in analytics is important because it helps to uncover insights from data that might otherwise go unnoticed, and also helps to communicate those insights to others in a more engaging and memorable way. By presenting data in the form of a narrative, we can make the insights more relatable and understandable to a wider range of people. This is especially important in the world of business, where decisions need to be made based on data and insights, but not everyone may have the technical expertise to fully understand the underlying data.
+
+Furthermore, data storytelling has been shown to be more effective at communicating insights and influencing decisions than simply presenting data in a spreadsheet or chart. By providing context and meaning to the data, data storytelling can help decision-makers better understand the implications of the data and make more informed decisions based on those insights. Overall, data storytelling is a powerful tool that can help organizations unlock the full potential of their data and use it to drive better decision-making and business outcomes. -->
+
+<!-- 
+story telling with data
+ -->
+
+<!-- In your analytics career, 
+ -->
+
+<!-- Data interacts with narratives and systems in the following ways:
+
+* Data shapes a strategic narrative – Whether you’re segmenting customers or developing brand stories, data provides context to shape and share stories.
+* Data visualizations deliver the story – In formats such as data journalism, data-inspired social media campaigns and analyst reports, organizations use data visualizations to deliver powerful stories.
+* Data provides macro insights – Humans or AI interpret big-picture patterns in data to form an insight, which provides the basis for a story.
+* Data shapes processes – Using visually prepared data – via dashboards – systems emerge that enable the control of workflows, processes and states by detecting anomalies and monitoring systems. 
+
+-->
+
+
+
+
+### Business Ideas from my Kindle Notes
+
+
+
+#### Sales
+
+It seems we are always selling in live.
+
+Just that we dont realize it.
+
+
+
+<!-- 
+### The Punch Line -->
+
+
+
+<!-- ## BIAS and Noise
+
+<!-- 
+how this relates to ml -->
+
+<!-- ### The Prevalence of Noise
+
+Remember that correlation **does not** implies causality. --> -->
+
+<!-- 
+## Interacting with others
+
+59 seconds book -->
+<!-- ### The shiny Object Syndrome -->
+
+<!-- ### The Dunning-Krugger Effect
+
+### Dilution Effect
+
+
+### What is Wishful Thinking?
+
+### Certainty Effect -->
+
+<!-- 
+what every body is saying 
+
+the persuasion code
+influence: the psy of persuasion
+the persuasion code
+-->
+
+
+<!-- 
+referencia a persuasion escrito en jan 2022
+
+y aqui cositas de neuromarketing
+
+the buying brain....
+`brainfluence`
+
+ -->
+
+### About Journaling
+
+I was tinkering around [markdown editors](https://jalcocert.github.io/JAlcocerT/astro-i18/#an-editor-for-astro-blog-posts) last year.
+
+And put together a [journaling recap for artists](https://jalcocert.github.io/JAlcocerT/link-artists/#journals).
+
+But wanted to cover in depth: https://github.com/subhamBharadwaz/scribbly
+
+> MIT |  Scribbly is a web application built with Next.js and Prisma that allows users to create and manage their digital journal. With a user-friendly interface powered by Radix UI and Shadcn/UI components, Scribbly makes journaling a breeze. It includes features such as customizable reminders, secure user authentication with Clerk, and a subscription plan 
+
+
+
+<!--  Gettings things done
+7 Habits of highly effective 
+essentialism
+atomic habits
+the power of habit
+the power of now-->
+
+
+
+<!-- Psychology-skills-data-analytics/#the-paradox-of-success
+Psychology-skills-data-analytics/#the-optimism-bias -->
+
+<!-- ### Requirements Gathering -->
+
+<!-- * Listen -->
+
+<!-- ### The Echo Chambers
+
+When society embraces disruptive new scientific theories, philosopher Thomas Kuhn explains that such changes demand a “paradigm shift”: People must debate and agree upon a new narrative before replacing the old one. 
+
+Today, however, people often only engage with those who share their opinions. Digital channels have returned humans to a cave-like existence: Only a small social bubble within an echo chamber shares a given person’s view of reality.
+
+“The multiplicity of digital channels allows us to avoid self-awareness and surround ourselves with the people (or machines, it is not always certain) who share our opinions.” 
+
+Individuals that hold opposing viewpoints on reality encourage, criticize, and adjust one another's ideas, influencing economic and human behavior.
+
+Different narratives, like an epidemic, may infect and alter communities, according to Shiller. 
+
+The validity of a narrative has no bearing on its "contagion rate." 
+
+Viral tales capture attention, look cohesive, and fit readily into existing narratives.
+
+-->
+
+
+<!-- ## Understanding Routines
+
+Habits
+
+Discipline must be saved for essential activities. -->
+
+<!-- 
+#thinking fast and slow
+ -->
+ 
+<!-- 
+'psychology-skills-data-analytics' -->
+<!-- 
+### Binary Thinking
+
+*Either or* -->

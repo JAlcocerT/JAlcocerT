@@ -3,7 +3,7 @@ title: "A boilerplate to create Landings for lead generation."
 date: 2026-01-02T23:20:21+01:00
 #date: 2025-12-17T23:20:21+01:00
 draft: false
-tags: ["One Time Payment","Stripe x Formbricks x Cal x email x TS-ChatBot","DIY","RoadMap26 x Tech Talk"]
+tags: ["One Time Payment","Stripe x Formbricks x Cal x email x TS-ChatBot","DIY","RoadMap26"]
 description: 'Showing how to build landings realiably (and fast) with AI Agents and ESPs.'
 url: 'diy-landing-boilerplate'
 ---
