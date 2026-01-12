@@ -12,7 +12,6 @@ url: 'wedding-photo-galleries'
 
 Quote: *200?, you mean 4k?*
 
-
 * I was tinkering with [the Sassify theme](https://github.com/larry-xue/astro-sassify-template) forked [here](https://github.com/JAlcocerT/slubnechwile)
 * https://github.com/JAlcocerT/Flask_SlubnyChwile
 
@@ -1169,9 +1168,10 @@ You'll need to set up a billing method to pay for your ads.
 6. (Optional but Recommended) Google Business Profile & Google Analytics
 
 * **Google Business Profile:** If you have a physical location, setting up and verifying a Google Business Profile (formerly Google My Business) is crucial. It helps your business appear in Google Maps, local search results, and can be linked to your Google Ads account for Local campaigns.
+
 * **Google Analytics:** Linking your Google Analytics account to Google Ads allows you to get much deeper insights into user behavior on your website after they click your ads, helping you optimize your campaigns.
 
-How to Get Started:
+How to Get Started: 
 
 1.  **Go to the Google Ads Website:** Open your web browser and go to `ads.google.com`.
 2.  **Click "Start Now" or "Sign In":** If you have a Google account, sign in. If not, you'll be prompted to create one.

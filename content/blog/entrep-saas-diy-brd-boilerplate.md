@@ -1,10 +1,10 @@
 ---
-title: "A BoilerPlate so that you finally ship"
+title: "A BoilerPlate so that you finally Ship"
 #date: 2026-02-17T07:20:21+01:00
-date: 2026-01-11T07:20:21+01:00
+date: 2026-01-12T07:20:21+01:00
 draft: false
 tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk","Unit Economics","Gross vs net profit"]
-description: 'When building a micro-SaaS is just a matter of framing.'
+description: 'When building a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA.'
 url: 'a-diy-boilerplate-to-ship'
 ---
 
@@ -150,7 +150,16 @@ The idea os to show non tech business users couple success examples.
 
 Mainly the plug and play D&A tinkered [here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions).
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB QnA x UI ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="All withing the Data Chat Repo ↗" icon="github" >}}
+{{< /cards >}}
+
 And also the DIY component based Landing created [here](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#the-diy-landing-project)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/diy-landing-boilerplate" title="DIY Landing Boiler-Plate ↗" icon="github" >}}
+{{< /cards >}}
 
 To spin the slidev ppt for BAs/PMs:
 
@@ -160,6 +169,25 @@ cd y2026-tech-talks/2- ba-brd-development
 #npm run dev 
 ```
 
+Ive also used the opportunity to improve how I do my ppts.
+
+With a [skeleton for slidev](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/sample-skeleton-slides.md) to be consumed by agents and this notes about [engagement tactics](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/engaging-presentations.md).
+
+```mermaid
+graph LR
+    Start((START)) --> Hook[<b>The Hook</b><br/>Zeigarnik Effect: Open a Loop]
+    Hook --> Context[<b>The 'Why'</b><br/>Limbic System Engagement]
+    Context --> Problem[<b>The Pain Point</b><br/>Problem Amplification]
+    Problem --> Pivot{The Sparkline}
+    Pivot --> Solution[<b>What/How</b><br/>Rule of Three]
+    Solution --> Evidence[<b>Validation</b><br/>Social Proof & Dual Coding]
+    Evidence --> End[<b>The 'Ask'</b><br/>Close the Loop & Recency Effect]
+    End --> Stop((FINISH))
+
+    style Pivot fill:#f96,stroke:#333,stroke-width:2px
+    style Hook fill:#bbf,stroke:#333
+    style End fill:#bbf,stroke:#333
+```
 
 ---
 

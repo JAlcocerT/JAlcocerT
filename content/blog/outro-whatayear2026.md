@@ -60,6 +60,8 @@ Comercial ones like: `https://www.lindy.ai/pricing`
 
 Maybe, try to build a brand *before its too late*.
 
+0. CreAItive websites
+
 0. Delivery Analytics
 
 
@@ -323,7 +325,7 @@ Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#c
   {{< card link="https://github.com/langchain-db-ui" title="LangChain x DB + UI QnA ↗" icon="github" >}}
 {{< /cards >}}
 
-Which I used it to be the first **tech talk** of this year.
+Which I used for the first **tech talk** of this year.
 
 {{< cards >}}
   {{< card link="https://github.com/" title="SliDev Repo | Pre Y26 Tech Talks ↗" icon="github" >}}
@@ -410,7 +412,7 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
 
 ![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 
-> Fundamental, Fun, Future [:)](#open-questions)
+> Fundamental, Fun, Future [the 3 f's :)](#open-questions)
 
 
 {{< cards >}}
@@ -434,6 +436,10 @@ Ive enjoyed using Cloudflare R2 for s3 compatible storage.
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="CF R2 x PB" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Testing Cloudflare R2 | Post" >}}
 {{< /cards >}}
+
+Also creating invoices with json via the serverless SPA: https://github.com/JAlcocerT/serverless-invoices
+
+Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?lang=en` at this [post](https://jalcocert.github.io/JAlcocerT/csr-and-js/#csr-examples).
 
 1. https://github.com/neondatabase/neon
 
@@ -501,6 +507,8 @@ A certain Negative cash flow year one then...uncertainty
 6. You dont judge a system by its process but by its result
 
 7. Diminishing returns are still returns
+8. You just loose if you dont try
+
 
 #### Open Questions
 
@@ -509,6 +517,7 @@ A certain Negative cash flow year one then...uncertainty
 * is blockchain the ultimate database?
 * Is some official/certified the prohibition of any other alternative?
 * How hard is to increase income? how hard is to *,save'* ~70% after taxes?
+  * In other words: how hard is to change your lifesetyle ( fundamenta and fun) and your income (monetary system) so that your needs move from 50 / wants 30 / savings 20 to that proposed?
 
 ```mermaid
 graph LR
@@ -528,6 +537,9 @@ graph LR
     style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
 ```
 
+* Are all valuation methods like the multiples just different abstractions of the cash flow one?
+* Is doing x6 in something the last 2 years a matter of: luck, effort, merit? a combination of those? none of those?
+  * And x4 in 3 years?
 
 #### Interesting Concepts
 
@@ -541,6 +553,7 @@ graph LR
 
 ### For Next year...
 
+The fwk: keep / stop / start.
 
 #### Keep Doing
 

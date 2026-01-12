@@ -417,7 +417,7 @@ The BAML approach is particularly valuable for:
 {{< /details >}}
 
 
-> BAML uses Pydantic model under the hood as well!
+> BAML uses a **Pydantic model** under the hood as well!
 
 
 * https://marketplace.visualstudio.com/items?itemName=Boundary.baml-extension
@@ -429,6 +429,7 @@ The BAML approach is particularly valuable for:
 ext install Boundary.baml-extension
 ```
 You might hear about BAML as per its **type safe guarantees for LLMs**:
+
 <!-- https://www.youtube.com/watch?v=XwT7MhT_BEY -->
 
 {{< youtube "XwT7MhT_BEY" >}}

@@ -2,7 +2,7 @@
 title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
 date: 2026-02-01T23:20:21+01:00
 draft: false
-tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story 2"]
+tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story"]
 description: 'Building a custom BOT for real estate agencies. With CORS and Rate Limiting.'
 url: 'custom-re-rag'
 ---
@@ -136,7 +136,7 @@ https://jalcocert.github.io/JAlcocerT/real-estate-website/
 {{< /cards >}}
 
 
-https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/
+* https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Using LangChain Chains" >}}

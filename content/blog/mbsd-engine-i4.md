@@ -3,7 +3,7 @@ title: "Inline 4 Engines: Understanding the most popular engine once and for all
 date: 2026-02-15T23:20:21+01:00
 draft: false
 tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","Simulations"]
-description: ''
+description: 'back'
 url: 'inline-4-engine-balance'
 math: true
 ---
@@ -35,6 +35,17 @@ $$
 
 ## Conclusions
 
+
+<!-- https://www.youtube.com/watch?v=qYTguJ_fWmA -->
+
+{{< youtube "qYTguJ_fWmA" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=vzM_-Rr5mtw 
+-->
+
+
+{{< youtube "vzM_-Rr5mtw" >}}
 
 
 ### About Engine Balance

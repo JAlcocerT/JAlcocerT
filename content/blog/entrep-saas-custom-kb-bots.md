@@ -3,7 +3,7 @@ title: "KB and Local Bots to end Silos for good"
 date: 2026-02-01T23:20:21+01:00
 #date: 2025-12-21T23:20:21+01:00
 draft: false
-tags: ["Custom Chatbots x Local AI and KB","Tech Talk","RoadMap26","Docs Bot"]
+tags: ["Custom Chatbots x Local AI and KB","Tech Talk","RoadMap26","Docs Bot","Scribbly"]
 description: 'Building a custom BOT platform to end with silos. HUGO FOSS rebuild.'
 url: 'custom-bots-kb'
 ---
@@ -415,7 +415,7 @@ And put together a [journaling recap for artists](https://jalcocert.github.io/JA
 
 But wanted to cover in depth: https://github.com/subhamBharadwaz/scribbly
 
-> MIT |  Scribbly is a web application built with Next.js and Prisma that allows users to create and manage their digital journal. With a user-friendly interface powered by Radix UI and Shadcn/UI components, Scribbly makes journaling a breeze. It includes features such as customizable reminders, secure user authentication with Clerk, and a subscription plan 
+> **MIT** |  Scribbly is a web application built with Next.js and Prisma that allows users to create and manage their digital journal. With a user-friendly interface powered by Radix UI and Shadcn/UI components, Scribbly makes journaling a breeze. It includes features such as customizable reminders, secure user authentication with Clerk, and a subscription plan 
 
 
 

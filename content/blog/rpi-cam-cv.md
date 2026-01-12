@@ -153,6 +153,10 @@ The Pi with its camera, its an excellent opportunity to learn more about **compu
 Im experimenting with CV - [**C**omputer **V**ision stuff](https://gitlab.com/fossengineer1/cv) 💻
 {{< /callout >}}
 
+* https://github.com/koush/scrypted
+
+> Scrypted is a high performance video integration and automation platform
+
 ### Pi NVR
 
 An NVR stands for Network Video Recorder. It's a specialized computer system designed to record and store video footage captured by IP (Internet Protocol) cameras.

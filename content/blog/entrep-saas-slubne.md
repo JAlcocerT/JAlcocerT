@@ -1,9 +1,9 @@
 ---
 title: "A SaaS with 100% Churn, yet LTV > CAC"
-date: 2026-01-16T14:20:21+01:00
+date: 2026-01-12T11:20:21+01:00
 draft: false
 tags: ["Landing x NextJS SaaS","Nextacular","SlubneChwile","BiP BoilerPlate","RoadMap26"]
-description: 'How to code a Saas with NEXTjs and directing traffic via ads. Weddings!'
+description: 'How to code a Saas with NEXTjs and directing traffic via Google ads. Weddings 2026!'
 url: 'code-your-saas'
 ---
 
@@ -270,6 +270,7 @@ Which i got familiar with on [this post](https://jalcocert.github.io/JAlcocerT/h
 
 ### Chatting with Gemini about the offer
 
+
 {{% details title="ADS + BANT 🚀" closed="true" %}}
 
 That is the ultimate, high-level business question.
@@ -356,9 +357,17 @@ Need something like this white-labeled?
 
 ### Setting Up Google ads
 
-This has been a thing:
+This has been a thing: `https://ads.google.com`
 
 ![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
+
+Keywords: `weddings`
+
+Budget: 2000pln/month
+
+Pros say to keep getting better at this until you spend successfully 6k$/month
+
+1/2/8 pln click (cost per click) depending on competition.
 
 ![alt text](/blog_img/biz/gads/campaing-goals.png)
 

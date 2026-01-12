@@ -1226,9 +1226,27 @@ Would you like me to dive deeper into how the **Semantic Layer** specifically he
 
 I was covering these in previous post, like
 
-1. ChartDB
+1. ChartDB: https://github.com/chartdb/chartdb
+
+WHich I used [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater)
 
 ![ChartDB](/blog_img/DA/sql/dbchart3.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/stonks/" title="PyStonks Post sqlite section with DBChart" image="/blog_img/DA/sql/dbchart-sqlite-schema.png" subtitle="DBChart Working with the PyStonks Schema" >}}
+{{< /cards >}}
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
+{{< /cards >}}
+
+2. DBeaver
+
+![MySQL Dbeaver Chinook](/blog_img/GenAI/langchain-chinook-artiststable.png)
+
+
+3. DBGate https://github.com/dbgate/dbgate
 
 
 ### Whats a composable
