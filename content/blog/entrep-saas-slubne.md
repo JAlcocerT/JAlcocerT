@@ -392,6 +392,14 @@ https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/
 
 ## Conclusions
 
+Is it a new product that needs evangelization? 
+
+No, there is demand already :)
+
+Whats working and whats not?
+
+Is the product not working? wrong seller? wrong avatar/target audience/client?
+
 It has been all about building around [the BANT idea](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/#the-lead-magnet).
 
 Show the products ads for those that apply.
@@ -411,6 +419,7 @@ cd slubne-chwile-y26/slubnechwile/
 docker compose -f docker-compose.cloudflare.yml up -d --build
 #docker inspect slubnechwile-app | grep "Networks" -A 20
 #docker compose -f docker-compose.cloudflare.yml down
+sudo docker logs slubnechwile-app --tail 100
 ```
 
 

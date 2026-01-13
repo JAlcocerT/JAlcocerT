@@ -60,7 +60,11 @@ Dont find a public for a given product.
 
 Do reverse: detect a public (avatar, a profile) that can be segmented in an easy way and find out what they want to buy.
 
-This will potentially fill my DWY pipeline. The one created [here](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#conclusions).
+> We wont low friction, but SOME friction
+
+This will potentially fill my *DWY pipeline*.
+
+The one created [here](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#conclusions).
 
 One year *aka 12 months* is what you need to change your business and life.
 

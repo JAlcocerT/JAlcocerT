@@ -508,6 +508,7 @@ A certain Negative cash flow year one then...uncertainty
 
 7. Diminishing returns are still returns
 8. You just loose if you dont try
+9. Complexity is a good excuse / shelter - that gives the sensation that nobody will copy you, that you are working...
 
 
 #### Open Questions

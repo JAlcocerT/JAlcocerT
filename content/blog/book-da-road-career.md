@@ -85,6 +85,7 @@ To have a better Portfolio/Blog/Docs with your projects, you can use **Static Si
 Personally, I find **HUGO** a fantastic option (I migrated this blog to HUGO from WP) and [its not hard to get started](/web-guide-Hugo/). 
 
 {{< dropdown title="Im not yet convinced to have my own Free WebSite, Tell me More 👈" closed="true" >}}
+
 * But summing it up the pros are:
     * It's Free and Open Source
     * There are great themes that you can use as your web scheleton:
