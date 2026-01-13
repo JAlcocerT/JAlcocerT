@@ -2,18 +2,66 @@
 title: "A SaaS with 100% Churn, yet LTV > CAC"
 date: 2026-01-12T11:20:21+01:00
 draft: false
-tags: ["Landing x MVP SaaS","SlubneChwile","BiP BoilerPlate","RoadMap26","MailTrap ESP"]
-description: 'How to code a Saas with NEXTjs and directing traffic via Google ads. Weddings 2026!'
-url: 'code-your-saas'
+tags: ["Landing x MVP SaaS","BiP x RoadMap26","MailTrap ESP x Firebase FireStore"]
+description: 'Ship and direct traffic via Google ads. Weddings 2026'
+url: 'bring-eyes-to-your-saas'
 ---
-
 
 
 **Tl;DR**
 
-MVP first - get those eyes going via ads towards: https://www.slubnechwile.com/
+MVP first - *Tomate fuco y a toma pcul0*
 
-See what works and what not - PMF
+Get those eyes going via ads towards: `https://www.slubnechwile.com/`
+
+See what works and what not - PMF :)
+
+
+**Intro**
+
+For **green field AI vibe coding** has been great, for brown field...not that much.
+
+Despite the project docs with AI was interesting
+
+Thats why I want to put together some boilerplates that just get the work done.
+
+And...ship sth already this year.
+
+The main pieces are clear already as per:
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/#email-verification" title="Email Verification | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+I got to know about NextJS for SSG purposes.
+
+And themes like SaaSify can do the trick.
+
+For SaaS, there are OSS starter kits like: https://github.com/nextacular/nextacular
+
+https://nextacular.co/
+
+https://docs.nextacular.co/
+
+> MIT |  An open-source starter kit that will help you build full-stack multi-tenant SaaS platforms efficiently and help you focus on developing your core SaaS features. Built on top of popular and modern technologies such as Next JS, Tailwind, Prisma, and Stripe. 
+
+
+https://developers.cloudflare.com/pages/framework-guides/nextjs/
+
+<https://jamstack.org/generators/next/>
+
+<https://nextjs.org/>
+
+
+<https://vercel.com/templates/next.js>
+
+<https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/>
+<https://transitivebullsh.it/nextjs-notion-starter-kit>
+
+<https://transitivebullsh.it/>
+
+
 
 
 People do their things:
@@ -131,57 +179,14 @@ The **tech stack**:
 
 {{< /details >}}
 
-
-**Intro**
-
-For green field AI vibe coding has been great, for brown field...not that much, despite the project docs with AI was interesting
-
-Thats why I want to put together some boilerplates that just get the work done.
-
-And...ship sth already this year.
-
-The main pieces are clear already as per:
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/#email-verification" title="Email Verification | Docs ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-I got to know about NextJS for SSG purposes.
-
-And themes like SaaSify can do the trick.
-
-For SaaS, there are OSS starter kits like: https://github.com/nextacular/nextacular
-
-https://nextacular.co/
-
-https://docs.nextacular.co/
-
-> MIT |  An open-source starter kit that will help you build full-stack multi-tenant SaaS platforms efficiently and help you focus on developing your core SaaS features. Built on top of popular and modern technologies such as Next JS, Tailwind, Prisma, and Stripe. 
-
-
-https://developers.cloudflare.com/pages/framework-guides/nextjs/
-
-<https://jamstack.org/generators/next/>
-
-<https://nextjs.org/>
-
-
-<https://vercel.com/templates/next.js>
-
-<https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/>
-<https://transitivebullsh.it/nextjs-notion-starter-kit>
-
-<https://transitivebullsh.it/>
-
-
-
 ## Getting Here
 
 This has been...a series of *random* steps.
 
 ```sh
-dig slubnechwile.com any
+#dig slubnechwile.com any
+#ping slubnechwile.com
+
 git clone https://github.com/JAlcocerT/slubnechwile
 ```
 
@@ -392,19 +397,33 @@ Need something like this white-labeled?
 
 ### Setting Up Google ads
 
-This has been a thing: `https://ads.google.com`
+This has been a thing: `https://ads.google.com` and `https://tagassistant.google.com/`
+
+You will need terms, privacy policy and contact: `https://support.google.com/adspolicy/answer/6368661?hl=en#673`
 
 ![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
 
 Keywords: `weddings`
 
-Budget: 2000pln/month
+Budget: whatever per month
 
 Pros say to keep getting better at this until you spend successfully 6k$/month
 
 1/2/8 pln click (cost per click) depending on competition.
 
 ![alt text](/blog_img/biz/gads/campaing-goals.png)
+
+```js
+gtag('event', 'conversion', {
+                  'send_to': 'AW-',
+                  'value': 1.0,
+                  'currency': 'PLN',
+                  'transaction_id': ''
+```
+
+### Random Things i Got to know
+
+Google uses salesforce $CRM and also `https://www.qualtrics.com/` for feedback
 
 ---
 

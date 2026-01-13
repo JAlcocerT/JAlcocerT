@@ -240,6 +240,10 @@ Without the need to implement more complex [setups to chat with DBs](https://jal
 Did this kind of project development is just much easier (x10) or did I get better?
 {{< /callout >}}
 
+### A new Tech Talk
+
+After having [this last year](https://events.exadel.com/event/rag-powered-real-estate/)
+
 ### Whats working whats not and whats next
 
 1. Whats working: the product
