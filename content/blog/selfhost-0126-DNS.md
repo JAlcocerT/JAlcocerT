@@ -7,6 +7,10 @@ description: 'How to change DNS Servers and why it matters'
 url: 'private-dns-with-docker'
 ---
 
+link checker https://github.com/JAlcocerT/JAlcocerT/actions/runs/20968565017/job/60265649025
+
+https://www.youtube.com/watch?v=U9NgRShXFgk
+
 * [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
 * SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
 

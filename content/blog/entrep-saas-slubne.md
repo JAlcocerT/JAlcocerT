@@ -1,6 +1,6 @@
 ---
 title: "A SaaS with 100% Churn, yet LTV > CAC"
-date: 2026-01-12T11:20:21+01:00
+date: 2026-01-13T14:20:21+01:00
 draft: false
 tags: ["Landing x MVP SaaS","BiP x RoadMap26","MailTrap ESP x Firebase FireStore"]
 description: 'Ship and direct traffic via Google ads. Weddings 2026'
@@ -15,6 +15,10 @@ MVP first - *Tomate fuco y a toma pcul0*
 Get those eyes going via ads towards: `https://www.slubnechwile.com/`
 
 See what works and what not - PMF :)
+
+```sh
+npm install stripe firebase-admin
+```
 
 
 **Intro**
@@ -199,7 +203,7 @@ git clone https://github.com/JAlcocerT/slubnechwile
 git init && git add . && git commit -m "Initial commit: starting for google ads" && gh repo create slubne-chwile-y26 --private --source=. --remote=origin --push
 ```
 
-And it goes like: *hey antigravity...*
+And it goes like: *hey antigravity...and Claude 4.5 Opus*
 
 ```md
 can you have a look to the z-brd, z-frd  z-prd and z-user-flow documents and let me know if the requirement and end goal of the project is clear?
@@ -388,7 +392,30 @@ https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/
 
 ## Conclusions
 
-Need something like this white-labeled?
+It has been all about building around [the BANT idea](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/#the-lead-magnet).
+
+Show the products ads for those that apply.
+
+They get the free thing / trial and we are happy to get your feedback :)
+
+```sh
+git clone https://github.com/JAlcocerT/slubne-chwile-y26
+#git pull
+cd slubne-chwile-y26/slubnechwile/
+#prepare ./slubnechwile/.env
+#nano .env 
+#cd ..
+#sudo docker compose up -d
+#sudo docker compose down
+#docker compose down && npm run build && node dist/server/entry.mjs
+docker compose -f docker-compose.cloudflare.yml up -d --build
+#docker inspect slubnechwile-app | grep "Networks" -A 20
+#docker compose -f docker-compose.cloudflare.yml down
+```
+
+
+
+Need something like this just that **white-labeled**?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

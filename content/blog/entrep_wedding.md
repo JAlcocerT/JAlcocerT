@@ -2,7 +2,7 @@
 title: "Just shipping | Wedding Edition"
 date: 2025-06-04T01:20:21+01:00
 draft: false
-tags: ["Entrepreneuring","Cloud VPS","QR","Auth","Web","KPIs","ads","Funnel","Cloudflare DNS","Gotify"]
+tags: ["Entrepreneuring","Cloud VPS","KPIs","ads","Funnel","Cloudflare DNS","Gotify"]
 description: 'Weddings stuff. The story and some entrepreneurship concepts like ads'
 url: 'wedding-photo-galleries'
 ---
@@ -541,7 +541,7 @@ Try with **BANT** logic:
 * **N**eed
 * **T**imming
 
-If those apply, you get the free thing and we are happy to get your feedback
+If those apply, you get the free thing and we are happy to get your feedback :)
 
 {{< details title="Types of Lead Magnets | Chatting with Gemini about this idea 📌" closed="true" >}}
 
@@ -1239,9 +1239,9 @@ After some time, you might get an interesting ARR or **MRR**, the *monthly recur
 
 ## Conclusions
 
-Remember, people paying for your product is the only validation you need: https://levels.io/idea-validation/
+Remember, people paying for your product is the only validation you need: `https://levels.io/idea-validation/`
 
-If you are trying to build stuff, you can get some ideas also from the book: https://readmake.com/
+If you are trying to build stuff, you can get some ideas also from the book: `https://readmake.com/`
 
 > Specially if you want to ship fast / build in public / indie
 
@@ -1281,7 +1281,7 @@ Because maybe...you got a st[ripe payment](https://jalcocert.github.io/JAlcocerT
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/n8n/" title="n8n HomeLab | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
-Thanks to [magnus](https://magnus919.com/notes/gotify/) for the post
+> Thanks to [magnus](https://magnus919.com/notes/gotify/) for the post.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/IoT/gotify_docker-compose.yml" title="Gotify | Docker Config 🐋 ↗" >}}
