@@ -147,9 +147,11 @@ No server-side processing is required, ensuring your files remain secure and pri
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bentopdf" title="BentoPDF | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-So I create this:
+So I created this: https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf
 
 ```sh
+#git clone https://github.com/JAlcocerT/Home-Lab/
+cd ./py-static/qr-pdf
 python3 -m http.server 8003
 ```
 
@@ -172,7 +174,7 @@ docker run -t -i --rm -p 4000:4000 carbone/carbone-ee
 
 > CARBONE COMMUNITY LICENSE AGREEMENT | Fast and simple **report generator**, from JSON to pdf, xslx, docx, odt...
 
-Which I tested here
+Which I tested [here](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#reports-as-a-code)
 
 But it looks quite complex to use with several moving parts
 
@@ -249,29 +251,24 @@ So the flow will be: QR creation -> PDF customization & download -> Pay and get 
 
 With the photos being sent to a per wedding space inside [Cloudflare R2 s3 storage, as done on this post](https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/#cloudflare-r2).
 
-![Testing nextjs app to upload files to cf R2 buckets](/blog_img/web/agujapunto-r2-firebase/testing.png)
+<!-- ![Testing nextjs app to upload files to cf R2 buckets](/blog_img/web/agujapunto-r2-firebase/testing.png) -->
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
-  {{< card link="https://github.com/JAlcocerT/just-ssg" title="Just SSG Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Making SSG look cool with shortcodes and components" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/#cloudflare-r2" title="CF R2 Test" image="/blog_img/web/agujapunto-r2-firebase/testing.png" subtitle="A post around HUGO pocketbase and R2" >}}
 {{< /cards >}}
 
 
 
 #### Upsales
 
+Some ideas here.
+
 1. We keep your photos 60 days more for you to download
 2. Buy the physical copy if you have not already
-
-##### Get a phyiscal copy of the digital photo book
-
-
-##### Extend the time to download your photos
-
-
-
-
-
+3. Get a phyiscal copy of the digital photo book
+4. Extend the time to download your photos
+5. ...
 
 ---
 

@@ -2,7 +2,7 @@
 title: "A SaaS with 100% Churn, yet LTV > CAC"
 date: 2026-01-12T11:20:21+01:00
 draft: false
-tags: ["Landing x NextJS SaaS","Nextacular","SlubneChwile","BiP BoilerPlate","RoadMap26"]
+tags: ["Landing x MVP SaaS","SlubneChwile","BiP BoilerPlate","RoadMap26","MailTrap ESP"]
 description: 'How to code a Saas with NEXTjs and directing traffic via Google ads. Weddings 2026!'
 url: 'code-your-saas'
 ---
@@ -180,14 +180,49 @@ https://developers.cloudflare.com/pages/framework-guides/nextjs/
 
 This has been...a series of *random* steps.
 
+```sh
+dig slubnechwile.com any
+git clone https://github.com/JAlcocerT/slubnechwile
+```
 
-https://jalcocert.github.io/JAlcocerT/building-in-public-wedding-photo-galleries/
-https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
-https://jalcocert.github.io/JAlcocerT/software-for-weddings/
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slubnechwile" title="Jun25 SlubneChwile SaaSify ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="Jan26 Slubne-Chwile ↗" icon="github" >}}
+{{< /cards >}}
+
+```sh
+git init && git add . && git commit -m "Initial commit: starting for google ads" && gh repo create slubne-chwile-y26 --private --source=. --remote=origin --push
+```
+
+And it goes like: *hey antigravity...*
+
+```md
+can you have a look to the z-brd, z-frd  z-prd and z-user-flow documents and let me know if the requirement and end goal of the project is clear?
+
+wherever you see gap, lets clarify them into a z-clarifications.md document, where i will provide direction
+```
+
+Configure your stripe payment link: `https://dashboard.stripe.com/`
+
+```md
+Pełny Pakiet Weselny: Prywatna galeria 360°, 250GB miejsca na zdjęcia i filmy od gości, nielimitowane przesyłanie przez 14 dni oraz 1 rok bezpiecznego przechowywania pamiątek
+```
+
+And remember that you can prefix the email that has paid by doing [like so](https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#a-cms-with-flask).
+
+For your launch phase with a low daily budget, you should **optimize for Sign-ups** (Account Creation) rather than Purchases.
+
+The ad algorithm needs to learn and also you need to learn with PostHog what are the frictions points.
+
+* Oct25 - https://jalcocert.github.io/JAlcocerT/building-in-public-wedding-photo-galleries/
+* Jun25 - https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/
+* Feb25 - https://jalcocert.github.io/JAlcocerT/software-for-weddings/
 
 {{% steps %}}
 
 ### Tinkered with Selfhosting
+
+Like...a lot.
 
 ### Discovered one for weddings
 

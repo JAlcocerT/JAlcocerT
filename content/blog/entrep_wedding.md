@@ -300,6 +300,8 @@ Should be pointing to the DNS you queried via Flask UI.
 
 ### The Landing Page
 
+To avoid loosing potential clients as soon as they get to know you: this has to be done right.
+
 {{< details title="First Impressions matter | Above the Fold 📌" closed="true" >}}
 
 The content of a web page that is visible before scrolling is commonly called: Above the fold
@@ -379,10 +381,11 @@ We will need these artifacts from cloudflare:
 
 ![Cloudflare UI API Tokens](/blog_img/entrepre/wedding/cf/cf-api-tokens.png)
 
-Just enough with edit zone dns
+Just enough with `edit zone dns`:
 
 ![Cloudflare Zone DNS](/blog_img/entrepre/wedding/cf/zone-dns.png)
 
+Take your CF API:
 ![Getting a Cloudflare API Token](/blog_img/entrepre/wedding/cf/api-token.png)
 
 2. CF ZoneID:

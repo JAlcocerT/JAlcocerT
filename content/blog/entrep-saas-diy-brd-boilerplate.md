@@ -4,7 +4,7 @@ title: "A BoilerPlate so that you finally Ship"
 date: 2026-01-12T07:20:21+01:00
 draft: false
 tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk","Unit Economics","Gross vs net profit"]
-description: 'When building a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA.'
+description: 'Bbuilding a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA.'
 url: 'a-diy-boilerplate-to-ship'
 ---
 
@@ -171,6 +171,8 @@ cd y2026-tech-talks/2- ba-brd-development
 
 Ive also used the opportunity to improve how I do my ppts.
 
+To make my posts engaging from a psychological perspective, I should shift from a "Technical Documentation" style to a "Narrative Transformation" style.
+
 With a [skeleton for slidev](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/sample-skeleton-slides.md) to be consumed by agents and this notes about [engagement tactics](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/engaging-presentations.md).
 
 ```mermaid
@@ -187,6 +189,22 @@ graph LR
     style Pivot fill:#f96,stroke:#333,stroke-width:2px
     style Hook fill:#bbf,stroke:#333
     style End fill:#bbf,stroke:#333
+```
+
+For example:
+
+```mermaid
+graph TD
+    A[Raw Data: Postgres/MariaDB] -->|The Bridge| B(LangChain SQL Agent)
+    B -->|The Evolution| C{Architecture Choice}
+    C -->|Small/Local| D[DuckDB OLAP]
+    C -->|Production| E[Star Schema Warehouse]
+    D & E -->|The User Experience| F[React/Vite UI Wrapper]
+    F -->|The Result| G[Self-Service AI/BI]
+
+    style G fill:#f96,stroke:#333,stroke-width:4px
+    style A fill:#bbf
+    style F fill:#bbf
 ```
 
 ---

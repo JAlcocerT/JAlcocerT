@@ -3,11 +3,15 @@ title: "How about getting leads for your SaaS?"
 date: 2026-01-12T11:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x Sales Pipeline","Web Scrapping","RoadMap26"]
-description: 'Finding people that actually need your services'
+description: 'Finding people that actually need your services. A story post the first ten.'
 url: 'how-to-get-customers-programmatically'
 ---
 
 **Tl;DR**
+
+I let go most of my ,first ten' clients saying: from next year you put the price for the custom cool app you said you needed and deserved so much.
+
+Now, I need to find new customers :)
 
 ![alt text](/blog_img/selfh/automation/n8n-apify.png)
 
