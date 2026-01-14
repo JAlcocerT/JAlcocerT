@@ -60,6 +60,8 @@ Comercial ones like: `https://www.lindy.ai/pricing`
 
 Maybe, try to build a brand *before its too late*.
 
+
+
 0. Strapi directus...Web CMS stuff
 
 This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
@@ -92,6 +94,17 @@ People are using these platforms to do so: *and you have to place your email for
 * https://webinarjam.com/
 
 0. Improved FOSS from blog to doc like. Multilanguage and all that stuff. Still as HUGO.
+
+```sh
+#dig fossengineer.com any
+#ping fossengineer.com
+```
+
+Not [with codex cli](https://github.com/JAlcocerT/docs-testing/tree/master) this time, but directly with ide:
+
+```sh
+git init && git add . && git commit -m "Initial commit: better ai docs" && gh repo create docs-testing --private --source=. --remote=origin --push
+```
 
 With that remota data (yaml) fetching from the home-alb repo.
 
@@ -397,6 +410,8 @@ Surprise, surprise: simple mode + realistic assumptions wins the day
 
 The continuation of the [programmatic Twitter API interaction](https://jalcocert.github.io/JAlcocerT/interesting-apis/#twitter): `http://x-api-tweet-creator:5000`, graficas...Data In Motion etc
 
+Or like the `https://fastapi.jalcocertech.com/`
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/LibrePortfolio-X" title="LibrePortfolio Twitter/X ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/DataInMotion" title="DataInMotion ↗" icon="github" >}}
@@ -514,6 +529,7 @@ A certain Negative cash flow year one then...uncertainty
 8. You just loose if you dont try
 9. Complexity is a good excuse / shelter - that gives the sensation that nobody will copy you, that you are working...
 
+10. First you focus and create. Then you diversify to maintain.
 
 #### Open Questions
 
@@ -610,7 +626,10 @@ The fwk: keep / stop / start.
 
 ##### Closed Projects
 
+Aka ~~,failed apps'~~:
+
 1. ~~ CyClingThere~~
 2. ~~btcmeet~~
+3. Trip-Planner - Yes, the one created on this thread that you can use!
 
-Options to take into consideration: brand colors, seo, check links, no 404
+> Options to take into consideration when creating: brand colors, seo, check links, no 404

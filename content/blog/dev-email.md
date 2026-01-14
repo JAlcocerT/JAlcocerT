@@ -643,6 +643,8 @@ Go to your PB instance settings: https://pocketbase.jalcocertech.com/_/#/setting
 
 ![Configuring Pocketbase to work with MailTrap SMTP](/blog_img/email/mailtrap-pb-mail-settings.png)
 
+Then,send your first test email with pocketbase: *using Mailtrap as ESP*
+
 ![Sending a test email with PB after configuring SMTP with mailtrap](/blog_img/email/mailtrap-pb-mail-test.png)
 
 **The Mailtrap SMTP x PB setup works** as soon as we added our mailtrap API: *you can send one dummy email validation*
@@ -653,7 +655,7 @@ And realize that it points to `http://localhost:8090/_/#/auth/confirm-verificati
 
 Fix it as per the `POCKETBASE_URL` environment variable!
 
-But the email arrives to your inbox!
+And..the email **arrives to your inbox**!
 
 ![Mailtrap as Pocketbase SMTP to verify emails](/blog_img/email/mailtrap-pocketbase-verify-email.png)
 

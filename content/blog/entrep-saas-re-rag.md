@@ -76,8 +76,6 @@ It all started with the QnA of streamlit over property data on `.md` files.
 
 and the chat with a DB via LangChain.
 
-
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="NEW - Real Estate BluePrint - Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Real Estate Web/App + Bot/RAG + Editor + Calculator" >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
@@ -176,6 +174,8 @@ Now...**lets get started** with this one.
 
 {{< /details >}}
 
+And antigravity made the magic happen:
+
 ![Vibe Coded Real Estate Agency - Landing x Astro](/blog_img/biz/RE/re-agency-1.png)
 
 ### BoilerPlate 101
@@ -199,6 +199,13 @@ I deployed to my x300 as seen on [this section](#dream-calculator-x-chartjs).
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="Real Estate x Astro x ChatBot ↗" icon="github" >}}
 {{< /cards >}}
+
+The app is deployed:
+
+```sh
+ping dm-real-estate.com
+whois dm-real-estate.com | grep -i -E "(creation|created|registered)"
+```
 
 How It All Works Together:
 
@@ -242,7 +249,32 @@ Did this kind of project development is just much easier (x10) or did I get bett
 
 ### A new Tech Talk
 
-After having [this last year](https://events.exadel.com/event/rag-powered-real-estate/)
+After having [this last year](https://events.exadel.com/event/rag-powered-real-estate/).
+
+There is a re-loaded version: *around all this vibe coding*
+
+```sh
+git clone https://github.com/JAlcocerT/selfhosted-landing
+cd y2026-tech-talks/5-real-estate-pgsql-rag
+#npm run dev 
+```
+
+LLMs (Large Language Models)
+
+* **Contextual Understanding:** LLMs excel at processing and generating human-like text based on the context provided in prompts.
+* **Transfer Learning:** They leverage transfer learning, where a model trained on one task can be fine-tuned for specific applications or domains.
+* **Scalability:** Performance often improves with larger models and datasets, but they require significant computational resources for training and inference.
+
+RAGs (Retrieval-Augmented Generation)
+
+* **Hybrid Approach:** RAG combines retrieval of relevant information from a knowledge base with generative capabilities, improving accuracy and relevance of responses.
+* **Dynamic Information Access:** Allows models to incorporate up-to-date information from external sources, enhancing the richness of generated content.
+
+Vector Databases
+
+* **Efficient Similarity Search:** Vector databases store and index high-dimensional vectors, enabling fast retrieval of similar items based on cosine similarity or other metrics.
+* **Semantic Search Capabilities:** They support semantic search by mapping text to vector embeddings, allowing for more nuanced querying beyond keyword matching.
+
 
 ### Whats working whats not and whats next
 
@@ -250,15 +282,20 @@ After having [this last year](https://events.exadel.com/event/rag-powered-real-e
 2. Whats not: the client acquisition - *nobody knows this exists*
 3. Whats next: scale the client acquisition by building a cold marketing machine
 
+
+
+You cant get to places that you dont know they exists.
+
+To open your mind to new possibilities, you can always try these:
+
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="121 Consulting" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="The power to DIY - via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks that enable you to create" >}}
 {{< /cards >}}
 
+PS: you can also learn how to create a sales pipeline that gets you client.
 
-```sh
-whois dm-real-estate.com | grep -i -E "(creation|created|registered)"
-```
+I have mine here for such projects: *because not everyone is ready to pay the value these solutions contain*
 
 
 ---

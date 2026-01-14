@@ -50,6 +50,8 @@ Simple, uh?
 
 ## Creating a DIY PaaS Offering
 
+### The Idea Side
+
 The **launch strategy**: *aka, focus strategy*
 
 | Element | Decision |
@@ -85,6 +87,16 @@ To *hopefully* move away from "selling time" (which caps your income) to "sellin
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+### Inspiration for the Idea
+
+For SaaS, there are OSS starter kits like: https://github.com/nextacular/nextacular
+
+https://nextacular.co/
+
+https://docs.nextacular.co/
+
+> MIT |  An open-source starter kit that will help you build full-stack **multi-tenant SaaS platforms efficiently** and help you focus on developing your core SaaS features. Built on top of popular and modern technologies such as Next JS, Tailwind, Prisma, and Stripe. 
 
 
 

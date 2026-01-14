@@ -502,7 +502,11 @@ Well, stripe emails are...,verified' behind a paywall :)
 
 ### Combined email capture with programmatic emails
 
-If you got unverified emails from formbricks or from sth like the `make-landing` project that saves them into a `.db` or `.csv`
+If you got unverified emails from formbricks or from sth like the `make-landing` [project](https://github.com/JAlcocerT/make-landing) that saves them into a `.db` or `.csv`
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/make-landing" title="Make Landing Repo ↗" icon="github" >}}
+{{< /cards >}}
 
 You can do [programmatic emails via ESP](https://github.com/JAlcocerT/make-landing/blob/master/mailetrap-esp.ipynb) to send them goodies: *info, attachments, verifications, etc.*
 
@@ -1171,6 +1175,7 @@ So that you can replicate such lead magnets https://mailchi.mp/8bf0b0f59967/crow
 
 And get that better diy.jalc or real output from ebook-ideas.
 
+* A short ~ 30s video Sales video like `https://thebigschool.com/master-ia/` 
 
 
 ---
@@ -1182,6 +1187,19 @@ You can think of it this way: Listmonk (the EMP) is your operating system for ma
 Mailjet *(the ESP/SMTP)* is your high-performance engine that ensures your emails actually reach the inbox.
 
 And your landing page is what your potential clients see and get to know about you within 5 seconds.
+
+For me, getting this ready is just a matter of:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/diy-landing-boilerplate" title="NEW - DIY Landing" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code that brings OpenAI/Groq options" >}}
+{{< /cards >}}
+
+
+```sh
+git clone https://github.com/JAlcocerT/diy-landing-boilerplate
+```
+
+And you can get working too: *if you really have the need*
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

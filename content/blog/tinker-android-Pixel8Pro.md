@@ -2,7 +2,7 @@
 title: "Pixel8 Pro - Tricks with a New Android phone."
 date: 2024-04-27T23:20:21+01:00
 draft: false
-tags: ["Dev","Android"]
+tags: ["Dev","Android","IMEI"]
 description: 'Tricks for Google Pixel 8 Pro. Together with Android Apps I enjoy: Waydroid, Termux?'
 url: 'pixel-8-pro-tricks'
 ---
@@ -79,6 +79,8 @@ you will need to restart and HDMI cable to enjoy :)
 
 ## Pixel 8 Pro Conclusions
 
+
+
 1. **For photos it is a beast**. 
 
 And I had a Huawei P30 Pro before.
@@ -104,6 +106,9 @@ I like that it charges slow during the night, according to your alarm time.
 5. It integrates perfectly with google services and its not bloated.
 
 An interesting integration was the recorder app, to their service: https://recorder.google.com/
+
+You might need: `https://imei24.com/` or `https://www.imei.info/`
+
 
 ### Fav Apps for the Pixel
 

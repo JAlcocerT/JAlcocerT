@@ -38,35 +38,6 @@ The main pieces are clear already as per:
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-I got to know about NextJS for SSG purposes.
-
-And themes like SaaSify can do the trick.
-
-For SaaS, there are OSS starter kits like: https://github.com/nextacular/nextacular
-
-https://nextacular.co/
-
-https://docs.nextacular.co/
-
-> MIT |  An open-source starter kit that will help you build full-stack multi-tenant SaaS platforms efficiently and help you focus on developing your core SaaS features. Built on top of popular and modern technologies such as Next JS, Tailwind, Prisma, and Stripe. 
-
-
-https://developers.cloudflare.com/pages/framework-guides/nextjs/
-
-<https://jamstack.org/generators/next/>
-
-<https://nextjs.org/>
-
-
-<https://vercel.com/templates/next.js>
-
-<https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/>
-<https://transitivebullsh.it/nextjs-notion-starter-kit>
-
-<https://transitivebullsh.it/>
-
-
-
 
 People do their things:
 
@@ -93,25 +64,6 @@ With a very clear: Online marketing and an online delivery
 
 ![alt text](/blog_img/dev/tiiny-host-attractionoffer.png)
 
-
-These kind of **micro-SaaS** are so so cool:
-
-1. https://tiiny.host/
-
-> The simplest way to host & share your work online
-
-2. https://github.com/uselinked/website from https://uselinked.com/
-
-3. https://supersaas.dev/ -  The Simple, Fast & Smart Nuxt 3 Fullstack Kit.
-
-> Starter kit / boilerplate landing with...a one time payment / Lifetime access.
-
-4. https://github.com/anthonylan/angie - I love those arrows and the look... https://github.com/JAlcocerT/angie
-
-> MIT |  Angie is a free, open-source portfolio template featuring a bold, brutalist design that helps you stand out and showcase your work with style. 
-
-Why couldnt SLubnyChwile be one of those cool UIs? :)
-
 Imagine that [nice mermaid sankey](https://mermaid.live/edit#pako:eNptjjFvwjAQhf9KdFORLOTETuJ4K7AgdUBCXSovLr4mEcRGJmmbIv57HSpC1XTx-d29d9-dYecMgoSTtnvslX3S1tS2jDa6RLKtSxs9H0me0j-Tx9egnEUTPWzb0IjiGUkGl7K30LWuLckovTcnuWRG4l-54F83DZpatxhtOr-r9AkJS-l9vvDu4xQOufFGvcKD7sPmMRYP5HE8QbMR_Q9y6ew7-nZwL7oe_ezniAlj6gtUIFD62oBsfYcEGvSNHiSclY0iBW2FDSqQ4Wu03ytQ9hIyR21fnGtuMe-6sgL5pg-BA93RhANXtS69vlvQGvRL19kWZMquK0Ce4RNknBXzQtC44LSI8yITgkAPMqFsXjDBWJGw8AjOLwS-rlQ6z9KcU8oFy0TMeZJfvgHQMq7J) representing the conversion funnel of such web app
 
 and [this](https://mermaid.live/edit#pako:eNp9Vktu40YQvUqDwAwcQB_zpw8DJNBI4mAQ2WEs2QZEedEWy1LPkN1Es2lbEbwLkOwCJNnnAtllk31ukgskR0iRTcmkHUQrkap6VfXeq27tjbWIwPCMjaTpliwmK07w8-YNabfbZJ7flu8zcickGcdUMrUrftFRWfUzGYX__PrzD2QGNCLvgYOkiglO3pI5qDwlvgS40SnFZ2SGgRRZCmuFmGz9KSOj6AZhvyAj62RGecT4hgR0Ax65onEOBMNTkbEC9LPPa0CWTrL3gWQJlTsyXow8cr1L5Z-_3-YfyZKSCZWJ-PKpnmVjFjn_MNXJw3D6yFT3ncj5Gm5exS1GX-k45-QCNixT1Wy-kIlHzmkCLTJNKItbWEpBoz1HZ7on812mICmnYRFG6QzkZyyheByt11heNZJdndw7mdBseyuojLyKzisGD43Qng7th6N10ZtHZmL9iYzzTImEXF7MCHQ2nRbpUs4p-0g5tU6tXmPUvkYYHBHGIk9jIAvIVEYu01igsi4JtkIJMmMJU430QZm-NKt3wKMVf2GRJVrkl-8Ql9-DzEoGc86hICGguwS4qjlkaR4pKz11nkuVy8IV71ADntWnX5q6uLW32w45E1yhXQMJ7WuICiM1tF9alfZdDQll7tQMS0EOdntLFizN6hNOzeaEz1joj64eSukQ-4BVG3WCQ8SMA_n67g5kHXhp6yznhczkfY7UIzVZ9iBkVBi7MbS21tLdzyEu9qhksdzSBQPZnNk9zDyjaQaRzuwd2vQZpzGZPqascvY1lRx5a3SpHeabr2CL8QPKKtD-UbZK02Jz15Bh1Ub32m7LZ7td8riwbInk40qgMkf-_8tNQeGmn3T8HOQ9WxdLpNh9OULdSdqagRlWsFUpTXK1Ik2uG4NX6dar9KoaoI3jmMyVkHhedSfigZe7smBJU-jALDTSB1Zgh9V-oU9TirOSM4SSjMYZ-eaCjNEFDfsF2iWBEx741S1XixkIqVBDlj37BXlX6AtoTBNo1wTuvtoNPLJ2dasE-tAJekdhyjrHE6Dc_2Zn2hlB_9hZkwJkhkr1v1r64V-_ff_3Hz_iGJk6bC2SdYlmjeOalkG_cuH-RY3SvJA1XO-bB9eXSulF962D6_HC4Kp7xSIQVaHXu6khCofrAtrkvv0sAo1jwFunOG4h6o7keouVGpT71uvN8bWavrPXGShdvYXmGE79svLdcMqb-E79kvJ74QXcA8_x5jxi-wDlotQ0MFp437PI8JTMoWUgh8gKPhr7ImRlqC0ksDI8_BrBHc1jtTJW_AnTUsqXQiSHTCnyzdbw7tC4-JSnxeU2YRSFfQ7BeiDHxf1meG6JYHh749HwTNPuuMNTtz8YOD1nYA97LWNneO2-43YsG19aQ8sa2IPeU8v4tixqdoZDx3SG1ungtIcB_X7LgIjh8p3pfzHln5mnfwHbuaCF)
@@ -127,7 +79,6 @@ The **launch strategy**: *aka, focus strategy*
 The **Tier of Service**: A DFY that I made [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt) and Ive transformed into **DIY** *(thanks to leverage x tech)* with the cool serverless tech stack below.
 
 The **customer segmentation**: B2C
-
 
 The expected
 
@@ -148,8 +99,6 @@ The **tech stack**:
 | **E-mail/ESP** | | |
 | **Analytics** | | |
 | **Hosting** | | |
-
-
 
 
 {{< details title="Choosing an UI tech stack 📌" closed="true" >}}
@@ -190,13 +139,15 @@ This has been...a series of *random* steps.
 ```sh
 #dig slubnechwile.com any
 #ping slubnechwile.com
+#curl https://slubnechwile.com/sitemap-index0.xml
+whois slubnechwile.com | grep -i -E "(creation|created|registered)"
 
 git clone https://github.com/JAlcocerT/slubnechwile
 ```
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slubnechwile" title="Jun25 SlubneChwile SaaSify ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="Jan26 Slubne-Chwile ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="NEW - Jan26 Slubne-Chwile ↗" icon="github" >}}
 {{< /cards >}}
 
 ```sh
@@ -237,15 +188,39 @@ Like...a lot.
 
 I tested [wedding share](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#weddingshare-setup)...and it looked cool.
 
+People liked it.
+
 All of this happened [while travelling](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/).
 
 Yea, I took the laptop :)
 
-### Also Saw
+### Also Saw Cool Themes
 
 * https://github.com/jacoknapp/EternalVows
 
 > Lightweight wedding website that you host | Configurable via yaml!
+
+I got to know about NextJS for SSG purposes.
+
+And themes like SaaSify can do the trick.
+
+
+
+
+https://developers.cloudflare.com/pages/framework-guides/nextjs/
+
+<https://jamstack.org/generators/next/>
+
+<https://nextjs.org/>
+
+
+<https://vercel.com/templates/next.js>
+
+<https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/>
+<https://transitivebullsh.it/nextjs-notion-starter-kit>
+
+<https://transitivebullsh.it/
+
 
 ### DFY for a close one
 
@@ -300,14 +275,89 @@ Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/s
 
 And i dont mean static deploy to cloudflare pages this time
 
-I mean about serverless s3 storage, via cf R2.
+I mean about serverless s3 storage, via **cf R2**.
 
 Which i got familiar with on [this post](https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/).
 
+
 ![alt text](/blog_img/dev/cf/r2.png)
+
+Exactly, the [nextjs-r2 project repo](https://github.com/JAlcocerT/nextjs-r2-demo) show me sth: *there is life beyond filebrowser*
+
+```sh
+# Cloudflare R2 Configuration
+
+#get this one from the Workers and Pages section!
+ACCOUNT_ID=6f6de37edde332d0622d5802db839ff7
+
+# Required for Pre-signed URLs and Temporary Credentials methods
+# Get these from: R2 → Manage R2 API tokens → Account API Tokens → Create API token
+ACCESS_KEY_ID=
+SECRET_ACCESS_KEY=
+
+# R2 Bucket Name
+# The name of your R2 bucket (e.g., my-nextjs-demo-bucket)
+BUCKET_NAME=my-nextjs-demo-bucket
+
+# Required ONLY for Temporary Credentials method
+# Get this from: My Profile → API Tokens → Create Token
+# Permissions needed: Account - Workers R2 Storage:Edit, User - API Tokens:Edit
+AUTH_TOKEN=
+
+# Note: Workers API method doesn't use these environment variables
+# It uses R2 bindings configured in wrangler.toml instead
+```
 
 ### And ... more websites
 
+Not just the latest [DIY Landing boilerplate](https://github.com/JAlcocerT/diy-landing-boilerplate)
+
+Themes:  <https://vercel.com/templates>
+
+Some of my Favourite Themes
+
+* https://nextra.site/
+* https://github.com/shadcn-ui/taxonomy
+* https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/
+
+
+
+
+### Emails too, ofc
+
+I made an [email APIs 101 here](https://jalcocert.github.io/JAlcocerT/emails-101/#conclusions).
+
+Also, leveraged with the [make landing](https://github.com/JAlcocerT/make-landing) project at [this post](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#combined-email-capture-with-programmatic-emails).
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/make-landing/blob/main/mailetrap-esp.ipynb)
+
+
+You might be interested to see `https://proton.me/support/catch-all` for your support email [with a discount](https://pr.tn/ref/RHJ7YZE8).
+
+```md
+If you are planning to use this domain with Proton Mail, note that weʼll only accept email for enabled addresses with encryption keys.
+```
+
+### Inspired by MicroSaas
+
+
+These kind of **micro-SaaS** are so so cool:
+
+1. https://tiiny.host/
+
+> The simplest way to host & share your work online
+
+2. https://github.com/uselinked/website from https://uselinked.com/
+
+3. https://supersaas.dev/ -  The Simple, Fast & Smart Nuxt 3 Fullstack Kit.
+
+> Starter kit / boilerplate landing with...a one time payment / Lifetime access.
+
+4. https://github.com/anthonylan/angie - I love those arrows and the look... https://github.com/JAlcocerT/angie
+
+> MIT |  Angie is a free, open-source portfolio template featuring a bold, brutalist design that helps you stand out and showcase your work with style. 
+
+Why couldnt SlubnyChwile be inspired in one of those cool UIs? :)
 
 {{% /steps %}}
 
@@ -371,19 +421,6 @@ The entire *Ślubne Chwile* flow is designed as a **BANT qualification machine**
 
 It uses free access to gather the necessary data (Need, Timing, Authority) before presenting the Budget, ensuring that by the time a couple sees the price, they are already highly qualified, emotionally invested, and ready to convert.
 
-## Themes
-
-<https://vercel.com/templates>
-
-### My Favourite Themes
-
-* https://nextra.site/
-* https://github.com/shadcn-ui/taxonomy
-
-
-https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/
-
-
 
 
 
@@ -405,6 +442,11 @@ It has been all about building around [the BANT idea](https://jalcocert.github.i
 Show the products ads for those that apply.
 
 They get the free thing / trial and we are happy to get your feedback :)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="NEW - SlubneChwile 2026" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code that brings OpenAI/Groq options" >}}
+{{< /cards >}}
+
 
 ```sh
 git clone https://github.com/JAlcocerT/slubne-chwile-y26
@@ -437,6 +479,12 @@ This has been a thing: `https://ads.google.com` and `https://tagassistant.google
 
 You will need terms, privacy policy and contact: `https://support.google.com/adspolicy/answer/6368661?hl=en#673`
 
+Anda support mail.
+
+But...hey, they take you by the hand and make your on boarding very simple.
+
+Admire how much resources they can provide you, just so that you place that CC details for them.
+
 ![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
 
 Keywords: `weddings`
@@ -457,9 +505,11 @@ gtag('event', 'conversion', {
                   'transaction_id': ''
 ```
 
-### Random Things i Got to know
+### Random Things I Got to know
 
-Google uses salesforce $CRM and also `https://www.qualtrics.com/` for feedback
+1. Google uses salesforce $CRM and also `https://www.qualtrics.com/` for feedback
+2. Maybe having an optimized video sales on the landing, like this one: `https://thebigschool.com/master-ia/` 
+3. Also...the whatsapp bouble for signups people?
 
 ---
 
@@ -478,3 +528,29 @@ If you want to do the oppositve: renting attention of your readers and get paid 
 * https://github.com/seanZhang414/openadserver
 
 >  Open Source Ad Serving Platform with ML-Powered CTR Prediction | Self-hosted alternative to Google Ad Manager | Python, FastAPI, PyTorch 
+
+### More KPIs
+
+In addition to **Total Lifetime Value (TLV)**, here are several other **marketing KPIs** that are commonly used to assess the effectiveness of campaigns, customer engagement, and overall marketing performance:
+
+1. **Customer Acquisition Cost (CAC)**: Measures the cost of acquiring a new customer, helping you assess how efficient your marketing and sales efforts are.
+
+2. **Churn Rate**: The percentage of customers who stop using your product or service over a specific period, indicating customer retention.
+
+3. **Customer Retention Rate (CRR)**: The percentage of customers retained over a certain period, critical for measuring loyalty and satisfaction.
+
+4. **Net Promoter Score (NPS)**: Gauges customer satisfaction and loyalty by asking how likely customers are to recommend your product or service to others.
+
+5. **Conversion Rate**: The percentage of users who take a desired action (e.g., making a purchase) out of the total number of users exposed to the marketing effort.
+
+6. **Cost Per Lead (CPL)**: The cost incurred to generate a lead, valuable for evaluating the cost efficiency of lead-generation campaigns.
+
+7. **Return on Marketing Investment (ROMI)**: Measures the revenue gained compared to the amount spent on marketing.
+
+8. **Engagement Rate**: Tracks how actively customers interact with your content, social media posts, or campaigns (likes, shares, comments, etc.).
+
+9. **Average Revenue Per User (ARPU)**: The average amount of revenue generated per customer or user over a specific period.
+
+10. **Sales Growth**: Measures the increase in sales over a given period, showing the direct impact of marketing efforts on revenue.
+
+These KPIs offer a comprehensive view of marketing performance, from customer acquisition and engagement to long-term profitability and growth.

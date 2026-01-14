@@ -510,7 +510,7 @@ With these 2 astro themes:
 Uses [KeyStatic cloud](https://keystatic.com/docs/cloud) to skip some of the GH App config overhead
 {{< /callout >}}
 
-2. And due to [Mizar landing Page](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#conclusion)
+2. And due to [**Mizar** landing Page](https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#conclusion)
 
 {{< callout type="info" >}}
 This one is cnfigured to work locally as per its `keystatic.config.ts`. 
