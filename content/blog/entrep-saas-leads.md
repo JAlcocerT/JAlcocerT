@@ -1,6 +1,6 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-19T11:20:21+01:00
+date: 2026-01-23T11:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x Sales Pipeline","Web Scrapping","RoadMap26"]
 description: 'Finding people that actually need your services. A story post the first ten.'
@@ -9,11 +9,12 @@ url: 'how-to-get-customers-programmatically'
 
 **Tl;DR**
 
-I let go most of my ,first ten' clients saying: from next year you put the price for the custom cool app you said you needed and deserved so much.
+I let go most of my ,first ten' clients saying: *from next year you put the price for the custom cool app you said you needed and deserved so much*.
 
-Now, I need to find new customers :)
+Guess what happened as I didnt put the effort to find the right avatar.
 
-![alt text](/blog_img/selfh/automation/n8n-apify.png)
+Yes, I need to find new customers :)
+
 
 **Intro**
 
@@ -44,6 +45,28 @@ Like the ones you will be generating after getting leads right for your SaaS by 
 > Dont blame them, they deserve such lifestyle
 
 > > PS: in their eyes, you dont :)
+
+## How has this happened?
+
+As always, a series of doing steps.
+
+{{% steps %}}
+
+
+### Tested n8n automations
+
+And APIFY has a good integration for n8n.
+
+![alt text](/blog_img/selfh/automation/n8n-apify.png)
+
+Check that out if you have an [automation agency](https://jalcocert.github.io/JAlcocerT/pro-agency-automation/#n8n-x-apify).
+
+### Sales Pipeline 101
+
+Where I was testing [APIFY fantastic API](https://jalcocert.github.io/JAlcocerT/apify/).
+
+
+{{% /steps %}}
 
 
 --- 

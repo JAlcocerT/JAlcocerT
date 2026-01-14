@@ -924,6 +924,10 @@ Categorizing the details about each PC and laptop by its specifications and time
 
 **Laptops**
 
+0. Portatil Uni: [HP 4520s](https://youtu.be/9ddS3Zi20ho) with 2GB RAM.
+
+For which I still have [the intel CPU](https://youtu.be/t8LpwHygDfg)
+
 1. Portatil Corporation
 - **CPU**: Intel i5 8250U x4 (14nm)
 - **RAM**: 4 GB 1600 MHz DDR3

@@ -306,7 +306,7 @@ Which i got familiar with on [this post](https://jalcocert.github.io/JAlcocerT/h
 
 ![alt text](/blog_img/dev/cf/r2.png)
 
-### 
+### And ... more websites
 
 
 {{% /steps %}}
@@ -420,8 +420,8 @@ docker compose -f docker-compose.cloudflare.yml up -d --build
 #docker inspect slubnechwile-app | grep "Networks" -A 20
 #docker compose -f docker-compose.cloudflare.yml down
 sudo docker logs slubnechwile-app --tail 100
+#sudo docker system prune
 ```
-
 
 
 Need something like this just that **white-labeled**?

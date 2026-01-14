@@ -60,6 +60,10 @@ Comercial ones like: `https://www.lindy.ai/pricing`
 
 Maybe, try to build a brand *before its too late*.
 
+0. Strapi directus...Web CMS stuff
+
+This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
+
 0. CreAItive websites
 
 0. Delivery Analytics
