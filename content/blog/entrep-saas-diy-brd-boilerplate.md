@@ -1,10 +1,10 @@
 ---
 title: "A BoilerPlate so that you finally Ship"
-#date: 2026-02-17T07:20:21+01:00
+#date: 2026-01-30T07:20:21+01:00
 date: 2026-01-12T07:20:21+01:00
 draft: false
 tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk","Unit Economics","Gross vs net profit"]
-description: 'Bbuilding a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA.'
+description: 'Bbuilding a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA that any BA can do.'
 url: 'a-diy-boilerplate-to-ship'
 ---
 

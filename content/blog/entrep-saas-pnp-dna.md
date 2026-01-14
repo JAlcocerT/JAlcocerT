@@ -2,7 +2,7 @@
 title: "[AI/BI] Plug and Play Data Analytics"
 date: 2026-01-09T18:20:21+01:00
 draft: false
-tags: ["LangChain","RoadMap26 x Tech Talk","PostgreSQL vs DuckDB","Generative BI x WrenAI"]
+tags: ["LangChain","RoadMap26 x Tech Talk","PostgreSQL vs DuckDB"]
 description: 'Extracting insights from databases is easy when the SQL layer abstracted.'
 url: 'plug-and-play-data-analytics'
 ---
@@ -236,7 +236,6 @@ Like... getting a quick [ER mermaid diagram generated](https://mermaid.live/edit
 Northwind is a classic **OLTP (Online Transactional Processing)** database. 
 
 It is designed for daily business operations (CRUD) rather than deep analytical history.
-
 
 | Feature | OLTP (Northwind) | OLAP (Data Warehouse) |
 | :--- | :--- | :--- |
