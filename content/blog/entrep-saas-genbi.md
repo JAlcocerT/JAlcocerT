@@ -28,7 +28,34 @@ And build something.
 
 ## Existing GenBI Solutions
 
+* https://docs.getwren.ai/oss/guide/connect/duckdb
+* https://wrenaicloud.statuspage.io/
+
+> Wren AI - Open-Source GenBI Agent
+
+```sh
+git clone https://github.com/Canner/WrenAI.git
+#https://github.com/JAlcocerT/WrenAI
+cd WrenAI/docker
+cp .env.example .env
+docker-compose up -d
+#docker stats
+#docker compose down
+# sudo docker ps
+
+# CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS                  PORTS                                         NAMES
+# da91dea45d04   ghcr.io/canner/wren-ui:0.32.2            "docker-entrypoint.s…"   7 seconds ago    Up 3 seconds            0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp   wrenai-wren-ui-1
+# e0f4caa1ba51   ghcr.io/canner/wren-ai-service:0.29.0    "/app/entrypoint.sh"     8 seconds ago    Up 4 seconds            0.0.0.0:5555->5555/tcp, [::]:5555->5555/tcp   wrenai-wren-ai-service-1
+# a8f102d87fb7   ghcr.io/canner/wren-engine:0.22.0        "/__cacert_entrypoin…"   8 seconds ago    Up 4 seconds            7432/tcp, 8080/tcp                            wrenai-wren-engine-1
+# f0273f90175a   qdrant/qdrant:v1.11.0                    "./entrypoint.sh"        14 seconds ago   Up 5 seconds            6333-6334/tcp                                 wrenai-qdrant-1
+# 7f54128c5212   ghcr.io/canner/wren-engine-ibis:0.22.0   "./entrypoint.sh"        14 seconds ago   Up 5 seconds            8000/tcp, 8888/tcp                            wrenai-ibis-server-1
+```
+
 ![alt text](/blog_img/AIBI/wrenai-features.png)
+
+Data modeling adds a logical layer over your original data schema, organizing relationships, semantics, and calculations. 
+
+This helps AI align with business logic, retrieve precise data, and generate meaningful insights. More details
 
 ## Building 
 
@@ -78,6 +105,7 @@ I got couple of ideas on how to do this.
 2. To do so via BAML
 
 * https://github.com/boundaryml/baml
+* /JAlcocerT/using-baml-to-query-a-database
 
 > I got to use BAML last year here, while trying to improve the repo to doc generation tasks
 
@@ -169,3 +197,5 @@ My Assessment
 **Overall, this is a "Wealth Accelerator" map.** It is designed for someone who wants to work intensely for a decade to never have to work again, rather than someone looking for a slow, 40-year retirement plan.
 
 Would you like me to help you calculate what these numbers would look like based on a specific target monthly expense?
+
+### More Tools to Interact with DBs

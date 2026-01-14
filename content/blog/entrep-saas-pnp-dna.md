@@ -816,6 +816,8 @@ cd y2026-tech-talks/langchain-postgres
 #npm run dev 
 ```
 
+![alt text](/blog_img/AIBI/langchain-db-techtalk.png)
+
 
 This time I used *not only* components and public images, but also `./pages` to keep the content modular and potentially, re-use it in the future.
 

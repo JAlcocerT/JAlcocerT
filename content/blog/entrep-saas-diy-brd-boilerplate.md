@@ -10,7 +10,7 @@ url: 'a-diy-boilerplate-to-ship'
 
 **TL;DR**
 
-Creating green field POCs based on this pattern helped me a lot.
+Creating **green field POCs** based on this pattern helped me a lot.
 
 Get the benefits of it, without having to build it from scratch.
 
@@ -144,7 +144,7 @@ I have proven that you can do [a DIY landing page in ~ 30 minutes](https://youtu
 
 ### The tech talk
 
-We can call this: The Boilerplate brd prd frd tech talk.
+We can call this: *The Boilerplate brd prd frd tech talk.*
 
 The idea os to show non tech business users couple success examples.
 
@@ -171,7 +171,7 @@ cd y2026-tech-talks/2- ba-brd-development
 
 Ive also used the opportunity to improve how I do my ppts.
 
-To make my posts engaging from a psychological perspective, I should shift from a "Technical Documentation" style to a "Narrative Transformation" style.
+To make my posts **and presentations more engaging** from a psychological perspective, I should shift from a "Technical Documentation" style to a "Narrative Transformation" style.
 
 With a [skeleton for slidev](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/sample-skeleton-slides.md) to be consumed by agents and this notes about [engagement tactics](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/engaging-presentations.md).
 
@@ -206,6 +206,11 @@ graph TD
     style A fill:#bbf
     style F fill:#bbf
 ```
+
+
+![alt text](/blog_img/AIBI/langchain-ui-vibe-techtalk.png)
+
+> The presentation now leverages Contrast Theory, Dual Coding, Social Proof, and the Zeigarnik Effect for maximum psychological impact on your BA audience!
 
 ---
 
