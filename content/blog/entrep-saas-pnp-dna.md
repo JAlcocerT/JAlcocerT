@@ -2,7 +2,7 @@
 title: "[AI/BI] Plug and Play Data Analytics"
 date: 2026-01-09T18:20:21+01:00
 draft: false
-tags: ["LangChain","RoadMap26 x Tech Talk","PostgreSQL vs DuckDB"]
+tags: ["LangChain","RoadMap26 x Tech Talk 1","PostgreSQL vs DuckDB"]
 description: 'Extracting insights from databases is easy when the SQL layer abstracted.'
 url: 'plug-and-play-data-analytics'
 ---

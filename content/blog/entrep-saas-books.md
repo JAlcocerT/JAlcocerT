@@ -87,15 +87,15 @@ Thinking about this...ive been writing for a while (quite intensively last year)
 
 With this post (and year), my goal is to recap and distilled all this experience into **20/30max pages ebooks** that anyone can benefit from.
 
-And yes, this is going to help shapping a lead magnet for my next product.
+And yes, this is going to help *shapping a lead magnet* for my next product.
 
 The **launch strategy**: *aka, focus strategy*
 
 | Element | Decision |
 | :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
+| **One Avatar** | Tinkerers|
+| **One Product** | Free ebooks with valuable information to build|
+| **One Channel** | Web only, no ads, organic|
 
 The **Tier of Service**: DIY (1a - *leverages on my knowledge & experience, not in actual tools Ive built, neither my time*)
 

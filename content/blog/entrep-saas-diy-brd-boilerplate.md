@@ -1,10 +1,10 @@
 ---
 title: "A BoilerPlate so that you finally Ship"
-#date: 2026-01-30T07:20:21+01:00
-date: 2026-01-12T07:20:21+01:00
+date: 2026-01-23T07:20:21+01:00
+#date: 2026-01-12T07:20:21+01:00
 draft: false
-tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk","Unit Economics","Gross vs net profit"]
-description: 'Building a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA that any BA can do.'
+tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk 2","Unit Economics","Gross vs net profit"]
+description: 'Building a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA that any BA can ship.'
 url: 'a-diy-boilerplate-to-ship'
 ---
 
@@ -65,7 +65,7 @@ Agentic development abstract the *how to* so that if you have a Why and a What y
 
 ### Shipping Features 
 
-This is exactly what I did to put together an UI to the [Database QnA plug and play analytics around langchain](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/).
+This is exactly what I did to put together **an UI** to the [Database QnA plug and play analytics around langchain](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/).
 
 ![langchain db qna via UI PoC](/blog_img/DA/sql/langchain-vite-pgsql.png)
 
@@ -183,6 +183,8 @@ Ive also used the opportunity to improve how I do my ppts.
 To make my posts **and presentations more engaging** from a psychological perspective, I should shift from a "Technical Documentation" style to a "Narrative Transformation" style.
 
 With a [skeleton for slidev](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/sample-skeleton-slides.md) to be consumed by agents and this notes about [engagement tactics](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/engaging-presentations.md).
+
+See how powerful such psyco stack ideas are on [this mindmap](https://mermaid.live/edit#pako:eNpdU11v2zAM_CuEHooWa7qm-awxDMjSYCuwoFnSZUCRF0WmbSGyaEhyNq_ofx-dNLXXBwMyyaPujtSzUBSjiESubZzLYmMBHFE4P5_ZVKaYow2ftu7j54WvVEaG0urioi4CmOUUNFlp4BvR7hgDWDjaGsxhkhdGJ1rJuuaUBFhl0mEMM4t51UTvY75GJxUspLawIG3DKTklG5z0AR4zJNfC8D-sCul2Rltswr8yGeDew94fj1MqTQxfXismIdQ3kYW5tK_yTtgn1Kl0Vu9gliSoQtPzoUAL34kK38R-WoeezJ7FzCsfsKG2QpN0vqJF9147qTqk4EeJvk612s2ZCDs5KWMdfOOlzqWq4AyWqNCqlvoF_UZ3IKZt2uozUXXjzoPT3JC5TQ35pmJKqdVB77Eek0Jfp07Yu5Lvn1LcCgGsta_DH2CNbitNm6_LpY7hTsvUyfyNwbI0CJTwdBy2prKQbLyztY4jhf98weBrTA90wLylnlJXc2S6d9orVlK6Vs99RxmtdiAtu_TOziXGpUK4twm5YxIe9ugMyfhY9OhK3qkzNjxk5HR4s_a4iqGCidGpbe9HzUim-WGCS0xY9X9WzWVQGUcOM-RhIaxJyW1pZGs1SGm2k5VR0iCn0vMqhxrWkvCoc-wE6qwyXcBaGh0fdIhLkTodiyi4Ei9FfpwDP-DnGroRIeOl3oiIjzEmsjRhIzb2hWGFtE9E-QnpqEwzESXSeP4rC26Pr9N8K0Ebo-MXZIOIRr3rQw8RPYs_Iur0bodXw_F43B2Nbvrj0Wh4KSoRdQeDq5vB9WDY5--m3-_1Xy7F38O13at-d3w7GvSvGdbr8_fyD50JZmY)  which follows [such flow](https://mermaid.live/edit#pako:eNqFk2Fv2jAQhv-K5aoqSKRtCCQ0qpBY6QZStVVNtEob--DEl8TCsaPEaUsR_32OAylomsoH5Du_fu71-bLFsaSAfZyWpMhQOF8JpH-BIqXq9YJw9hT2-8iypmgh5fr3bTQNMzDr26toehuVV9PHUkYccjTLC84SFhPFpDA7AfDE-gYCSpNDs5oy9aet0P43IEMPQVRasv1RgEAPUha7Y9l-1yifs83BxoVeX3Q-lhSEYmqDZpylIteBST-wPGIxuhcpSaHJnhjQBEN9ZC9SHbgm6LhNJihIueZMgMk8Z0ShZYVeKmSWd7LmFH2BE7KBGHYged3cv7O9kK8ftp9qDkgmKMxKaPHzmnDNpEykaM6Ifpm8OkEfgK3zUsqkQf8knNG2-Qd2IGOmWUbS3oXlYClpBRkr0BxyeWq50RnoE1T7Gts7Liv490k-FObAvaDd9WbV-uh6EIOIN-g-SSBWXUNDKVia6dZlhHMQ6WnvNK3tnJJFr_d1-X0ZLPr9lWh3z8_1xka_RtrGlQ6gm5GEce6fJTfuoFKlXIN_5jjOsfDI-adaM5-tKoqS_6kau5-K2nnYV0ySEaWdko7Ite3tQ-uVUZX5w-IND_RXySj2VVnDAOdQ5qQJ8bbhrrDK9DyvsK-XFBJSc7XCK7HTxwoifkmZH06Wsk4z7CeEVzqqCz0lsB-sTgKCQqkHWSjs29eOZyDY3-I3HY_cS8-Z2PbQHdv2zdAe4A32rbHnXY482x4PHa0YD73dAL-bsvala09c2_Wca2_iThx3uPsLikFleQ).
 
 ```mermaid
 graph LR

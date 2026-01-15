@@ -514,7 +514,7 @@ It was working perfectly, as you can see on the related source code:
 {{< /cards >}}
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo" title="Astro Theme 101 for Webifyer" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="For a psycology centered portfolio | Post" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo" title="Astro Theme 101 for Webifyer" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="For a psyc centered portfolio | Post" >}}
 {{< /cards >}}
 
 But I want to compare kneck to kneck with couple of new *auth architectures* ive been learning along the way.

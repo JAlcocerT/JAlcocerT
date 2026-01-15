@@ -1,7 +1,7 @@
 ---
 title: "Closing the code to impact gap"
-#date: 2026-01-30T07:20:21+01:00
-date: 2026-01-12T07:20:21+01:00
+#date: 2026-01-24T07:20:21+01:00
+date: 2026-01-15T07:20:21+01:00
 draft: false
 tags: ["Tech Stack vs Psyco Stack"]
 description: 'Code is cheap now. Software is not. Whats the gap?'
@@ -50,9 +50,12 @@ If you have ever [wondered about psychology](https://jalcocert.github.io/JAlcoce
 
 So...wait.
 
-To improve all that, I need to get the psychologycal stack at the same level than the technical one.
+To improve all that, I need to get **the psychologycal stack** at the same level than the technical one.
 
 From the example of one of my last tech talks, here is what it came out: *mermaidjs powered [here](https://mermaid.live/edit#pako:eNpdVF1v20YQ_CuLeygS1HIVWR-xUBRQJDc1YMOs5TpAoJcTuaQWOt6ye0cnjOH_3qUcmVTfqNnb2bmZPT2blDM0c1OSz0pbbTyAMMd37xLBgD7aSOx_38pvfyShSXfsuGjev2-PAVyV3Fatg7-Y968YQCK8dVjCoqwc5ZQeGI5FgPXOCmZw5bFseqiz6R5Wt5BY8pAw-Xgs3lC5pVQbCltgiV0B4GGH8GXXQE4SenBSS8UBgZ9Q4IYLSo-1JfsoNsS2k6U5ZVpXVvaOPHbwl52NcB3gKbx-Lrl2GXz6eWIRo8rR273ysjs2fkUqrHjaw1WeY9qTdlehV0lchQ77x6vV7J7UldsmROx0rdHlg8_oUf5vIqctlMLfNYa21KNb1BnFVvFawzsxLBEqbdrAL3CPKfq0d_-Ev6lXrTryRZ8sbdkHd0LKowKXjkN3YsmFp0hPqLgVim-Eq1qXYsmZHu24Him08K_wiLK1rivcopSWMliRLcSWb-Pva6ch5hqOYC-UxKrv4ttLvM7vO_NJ2P_AwZrUTxl8Zpd12R_F3rDNenTChQYQ2sqKQqo3rKU37nGwdKTLufDqXs9r7cvbtsMDeJC628DrrF2L2MDCUeFPVzYRW5SH6O4x18ueOLRqvCIp3N3ftgEudeW2_NasoZOO0rmcdz1Lq5u-jho69nJ7oBIHkQfrHVXwaB1lJxv0pxWVbH3IUXreLWC9J-cCRIbFdTuprGKP9eo7pnW0-rxV_b81yWG9gjkzhVBm5lFqPDPla5z6p_Lctm5M3Om5jZnrZ4a5rV3cmI1_0bbK-q_M5bFTuC52Zp5bF_RXXalo_LkUb6igz1D0Ifpo5pPJ9EBi5s_mu5kPRqPx-XA6m8wuL6bD4WQ2mp2Zxsw_jCbnF5ez8XSildlw-vHi5cz8OAz-cD7-eDkejRSbDkfj8eXFy38FxZK0)*
+
+As you can imagine, this goes as: `can we now have a community chat slack alert the date before alert and the 1h before?`
+
 
 ```mermaid
 mindmap
@@ -106,6 +109,15 @@ You are missing parts.
 
 ### Improving your Presentations
 
+0. Tinker & be willing to share
+1. Mind the brand
+2. Prepare the `slides.md`
+3. Make a ppt-review
+4. Prepare a mail communication
+5. Prepare engaging slack/follow ups notifications
+
+
+
 #### Improving your emails
 
 #### Improving Slack Engagement
@@ -119,12 +131,44 @@ Done?
 
 Ok, now lets tweak with some sense that it sgoing to move into a better direction.
 
+```mermaid
+graph LR
+    %% 1. The Split
+    Start[Define] -->|Why| B[BRD]
+    Start -->|What| C[FRD]
+    Start -->|How| D[PRD]
+
+    %% 2. The Join
+    B & C & D --> E(Clarify)
+
+    %% 3. The Linear Flow
+    E --> F[Development Plan]
+    F --> G[Finished PoC]
+
+    %% Styling
+    style G fill:#f96,stroke:#333,stroke-width:4px
+    style Start fill:#bbf
+    style F fill:#e1f5fe
+```
+
+#### The Copy
+
+If you have be smart and make so that your full micro-SaaS copy is in one file, like: `copy.md`
+
+You can have inmediate feedback from any LLM, like gemini on how **and why** you can tweak a certain title/cta/whatever.
+
+#### Product emails
+
+Want to increase LTV?
+
+Make sure that your potential client remembers that you are there to help them.
+
 
 ---
 
 ## Conclusion
 
-Im preparing an agentic workflow for those who are interested to close their gap to get their ideas succed.
+Im preparing an agentic workflow for those who are interested to close their gap ando **get their ideas succed**.
 
 In the meantime, you can:
 
@@ -132,3 +176,8 @@ In the meantime, you can:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
+
+---
+
+## FAQ
+

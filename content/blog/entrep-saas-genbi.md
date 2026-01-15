@@ -1,9 +1,9 @@
 ---
-title: "[AI/BI] Plug and Play Data Analytics"
+title: "[Gen-BI] Plug and Play Data Analytics"
 date: 2026-02-01T18:20:21+01:00
 #date: 2026-03-01T18:20:21+01:00
 draft: false
-tags: ["RoadMap26 x Tech Talk","Generative BI x WrenAI","BAML"]
+tags: ["RoadMap26 x Tech Talk 4","Generative BI x WrenAI","BAML"]
 description: 'From databases to insights with automatic charts from your QnA.'
 url: 'creating-a-generative-bi-solution'
 ---

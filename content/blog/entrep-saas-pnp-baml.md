@@ -2,7 +2,7 @@
 title: "Connecting to T-SQL and OracleSQL"
 date: 2026-02-01T23:20:21+01:00
 draft: false
-tags: ["BAML","AI Tech Talk"]
+tags: ["BAML","AI Tech Talk 3"]
 description: 'Enterprise insights are behind Connecting to T-SQL and OracleSQL - Go get them.'
 url: 'using-baml-to-query-a-database'
 ---

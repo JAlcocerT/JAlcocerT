@@ -324,7 +324,7 @@ But how about editing the themes?
 Or just...adding new content, at least?
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docplanner-web-migration/" title="Astro Theme 101 for Webifyer" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="For a psycology centered portfolio | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docplanner-web-migration/" title="Astro Theme 101 for Webifyer" image="/blog_img/web/WebsSnapshots/Web_Nevin.png" subtitle="For a psyc centered portfolio | Post" >}}
   {{< card link="https://github.com/JAlcocerT/morita-web" title="Astro Theme x Webifyer Sample" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github of a sample first 10 websites to combine with Webifyer" >}}
 {{< /cards >}}
 
