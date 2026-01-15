@@ -337,8 +337,9 @@ You might be interested to see `https://proton.me/support/catch-all` for your su
 If you are planning to use this domain with Proton Mail, note that weʼll only accept email for enabled addresses with encryption keys.
 ```
 
-### Inspired by MicroSaas
+[You might reveal that](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#outro) a business email and privacy for ~70$/y is not that important for you as you say it is.
 
+### Inspired by MicroSaas
 
 These kind of **micro-SaaS** are so so cool:
 

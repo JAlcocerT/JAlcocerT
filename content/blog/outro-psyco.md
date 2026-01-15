@@ -1,20 +1,15 @@
 ---
-title: "Self-Awareness 101 or How to avoid fallacies"
+title: "Self-Awareness 101 or How to avoid Data Fallacies"
 date: 2022-01-08T23:20:21+01:00
 draft: false
 tags: ["Outro"]
-description: 'Building the psychological awareness. Self-awareness, decision making process and Open Source'
+description: 'Building the psychological awareness. A better decision making process.'
 url: 'psychology-skills-data-analytics'
 ---
 
-
 **Tl;DR**
 
-Building Self-Awareness 
-
-**Intro**
-
-
+Building Self-Awareness: *why do I do, what I do? What influences my decisions?
 
 ## Understanding Basics
 

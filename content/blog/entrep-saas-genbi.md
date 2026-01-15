@@ -14,6 +14,9 @@ Is it possible that agents will not only reply a query based on the real content
 
 But also would provide a proper visualization?
 
+Why are we still building dashboards for one-off questions?
+
+
 **Intro**
 
 After getting that pnp D&a with langchain and pgsql ready [here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions).
@@ -30,6 +33,9 @@ And build something.
 
 * https://docs.getwren.ai/oss/guide/connect/duckdb
 * https://wrenaicloud.statuspage.io/
+
+* https://docs.getwren.ai/oss/overview/how_wrenai_works
+* https://docs.getwren.ai/oss/overview/cloud_vs_self_host
 
 > Wren AI - Open-Source GenBI Agent
 
@@ -120,6 +126,53 @@ For which they provided the code: https://github.com/BoundaryML/baml-examples/tr
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Wrapping LangChain DB Queries into a custom UI to get insights" >}}
 {{< /cards >}}
+
+
+ Document Logic (The Planning)
+BRD (Business Requirements): Answers "WHY build this?" (The Vision & Goals).
+PRD (Product Requirements): Answers "WHAT are we building?" (The Features & Roadmap).
+FRD (Functional Requirements): Answers "HOW does it work?" (The Technical Logic & CRUDs).
+2. Data Logic (The Analytics)
+Fact Tables: Answer "WHAT happened (and how much)?"
+Examples: visit_count, revenue, quantity_sold.
+Dimension Tables: Answer "WHO / WHERE / WHICH context?"
+Examples: customer_name, product_category, country_origin.
+
+Yes, your understanding is spot on. In the world of data engineering, these concepts form the fundamental "fork in the road" between how we store data for **action** versus how we store it for **analysis**.
+
+
+1. OLTP: The "Action" Layer
+
+**OLTP (Online Transaction Processing)** systems are built to handle the daily operations of a business (e.g., swiping a credit card, updating a password, or placing an order).
+
+* **Mapping:** **ER Modeling**  **Normalization**
+* **The Goal:** **Data Integrity.** You want to ensure that if a customer changes their address, you only have to update it in *one* place.
+* **Why Normalization?** By breaking data into many small, related tables (usually 3rd Normal Form), you eliminate redundancy. This makes "writes" (INSERT, UPDATE, DELETE) lightning-fast and prevents data anomalies.
+2. OLAP: The "Analysis" Layer
+
+**OLAP (Online Analytical Processing)** systems are built for complex decision-making (e.g., "What were our total sales in the Northeast region vs. the Southwest over the last three years?").
+
+* **Mapping:** **Dimensional Modeling**  **Denormalization**
+* **The Goal:** **Query Performance & Simplicity.** Analysts don't want to join 50 tables to get one report. They want the data pre-organized for speed.
+* **Why Denormalization?** You intentionally bring data back together. While this creates "redundancy" (the same city name might appear 1,000 times), it drastically reduces the number of "joins" the database has to perform, making "reads" much faster.
+
+3. Star vs. Snowflake (The OLAP Variations)
+
+Within Dimensional Modeling, you have two primary ways to structure your "Dimensions":
+
+| Feature | **Star Schema** (Most Common) | **Snowflake Schema** |
+| --- | --- | --- |
+| **Structure** | **Denormalized.** Dimension tables are flat. | **Normalized.** Dimension tables are broken down further. |
+| **Visual** | Looks like a star (Fact table in the center). | Looks like a snowflake (Dimensions have sub-dimensions). |
+| **Performance** | **Faster.** Fewer joins required. | **Slower.** More joins required. |
+| **Maintenance** | Harder; data redundancy is high. | Easier; less redundancy (easier to update a category name). |
+
+| System Type | Modeling Style | Strategy | Focus |
+| --- | --- | --- | --- |
+| **OLTP** | Entity-Relationship (ER) | **Normalization** | Fast Writes / Data Integrity |
+| **OLAP** | Dimensional | **Denormalization** | Fast Reads / Easy Analysis |
+
+
 
 ### Related Tech Talk
 

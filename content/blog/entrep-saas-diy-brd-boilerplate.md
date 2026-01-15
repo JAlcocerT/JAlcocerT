@@ -4,7 +4,7 @@ title: "A BoilerPlate so that you finally Ship"
 date: 2026-01-12T07:20:21+01:00
 draft: false
 tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk","Unit Economics","Gross vs net profit"]
-description: 'Bbuilding a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA that any BA can do.'
+description: 'Building a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA that any BA can do.'
 url: 'a-diy-boilerplate-to-ship'
 ---
 
@@ -142,6 +142,15 @@ Why not building people's dream as a way to succeed?
 
 I have proven that you can do [a DIY landing page in ~ 30 minutes](https://youtu.be/4xQVUw5YirE), or this plug and play data analytics full stack app [in ~ 40 minutes](https://youtu.be/qf-oNNNDXS0).
 
+https://www.ohansemmanuel.com/books/understanding-astro
+https://github.com/understanding-astro/understanding-astro-book/tree/master?tab=readme-ov-file
+https://understanding-astro-webook.vercel.app/
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
 ### The tech talk
 
 We can call this: *The Boilerplate brd prd frd tech talk.*
@@ -212,8 +221,39 @@ graph TD
 
 > The presentation now leverages Contrast Theory, Dual Coding, Social Proof, and the Zeigarnik Effect for maximum psychological impact on your BA audience!
 
----
+> > Together with an [example brd](https://github.com/JAlcocerT/langchain-db-ui/blob/master/brd-langchain-ui.md), [clarifications](https://github.com/JAlcocerT/langchain-db-ui/blob/master/z-clarifications.md) and [development plan](https://github.com/JAlcocerT/langchain-db-ui/blob/master/development-phases.md).
 
+
+{{< callout type="info" >}}
+From now I do: tinkering + tech ppt with engagement + email proposal + slack promo.
+{{< /callout >}}
+
+Im working on that complementary *psychological stack*. See the [mindmap](https://mermaid.live/edit#pako:eNpdVF1v20YQ_CuLeygS1HIVWR-xUBRQJDc1YMOs5TpAoJcTuaQWOt6ye0cnjOH_3qUcmVTfqNnb2bmZPT2blDM0c1OSz0pbbTyAMMd37xLBgD7aSOx_38pvfyShSXfsuGjev2-PAVyV3Fatg7-Y968YQCK8dVjCoqwc5ZQeGI5FgPXOCmZw5bFseqiz6R5Wt5BY8pAw-Xgs3lC5pVQbCltgiV0B4GGH8GXXQE4SenBSS8UBgZ9Q4IYLSo-1JfsoNsS2k6U5ZVpXVvaOPHbwl52NcB3gKbx-Lrl2GXz6eWIRo8rR273ysjs2fkUqrHjaw1WeY9qTdlehV0lchQ77x6vV7J7UldsmROx0rdHlg8_oUf5vIqctlMLfNYa21KNb1BnFVvFawzsxLBEqbdrAL3CPKfq0d_-Ev6lXrTryRZ8sbdkHd0LKowKXjkN3YsmFp0hPqLgVim-Eq1qXYsmZHu24Him08K_wiLK1rivcopSWMliRLcSWb-Pva6ch5hqOYC-UxKrv4ttLvM7vO_NJ2P_AwZrUTxl8Zpd12R_F3rDNenTChQYQ2sqKQqo3rKU37nGwdKTLufDqXs9r7cvbtsMDeJC628DrrF2L2MDCUeFPVzYRW5SH6O4x18ueOLRqvCIp3N3ftgEudeW2_NasoZOO0rmcdz1Lq5u-jho69nJ7oBIHkQfrHVXwaB1lJxv0pxWVbH3IUXreLWC9J-cCRIbFdTuprGKP9eo7pnW0-rxV_b81yWG9gjkzhVBm5lFqPDPla5z6p_Lctm5M3Om5jZnrZ4a5rV3cmI1_0bbK-q_M5bFTuC52Zp5bF_RXXalo_LkUb6igz1D0Ifpo5pPJ9EBi5s_mu5kPRqPx-XA6m8wuL6bD4WQ2mp2Zxsw_jCbnF5ez8XSildlw-vHi5cz8OAz-cD7-eDkejRSbDkfj8eXFy38FxZK0).
+
+
+```mermaid
+graph LR
+    %% 1. The Split
+    Start[Define] -->|Why| B[BRD]
+    Start -->|What| C[FRD]
+    Start -->|How| D[PRD]
+
+    %% 2. The Join
+    B & C & D --> E(Clarify)
+
+    %% 3. The Linear Flow
+    E --> F[Development Plan]
+    F --> G[Finished PoC]
+
+    %% Styling
+    style G fill:#f96,stroke:#333,stroke-width:4px
+    style Start fill:#bbf
+    style F fill:#e1f5fe
+```
+
+To this you can manage change of scope by adding change request like `CRQ01.md`
+
+---
 
 ## FAQ
 
