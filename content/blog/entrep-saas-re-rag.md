@@ -3,7 +3,7 @@ title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
 date: 2026-02-01T23:20:21+01:00
 draft: false
 tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story"]
-description: 'Building a custom BOT for real estate agencies. With CORS and Rate Limiting.'
+description: 'Building a custom BOT for real estate agencies. With CORS and OpenAI Rate Limiting.'
 url: 'custom-re-rag'
 ---
 
@@ -15,9 +15,9 @@ The **launch strategy**: *aka, focus strategy*:
 
 | Element | Decision |
 | :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
+| **One Avatar** | Real Estate Agencies|
+| **One Product** | A conversion ready Landing and property layout|
+| **One Channel** | Targetting via sales pipeline|
 
 The **Tier of Service**: A clear, custom DFY
 
@@ -203,6 +203,10 @@ I deployed to my x300 as seen on [this section](#dream-calculator-x-chartjs).
 The app is deployed:
 
 ```sh
+#sudo apt-get install dnsutils -y #dns resolution
+nslookup dm-real-estate.com 
+dig dm-real-estate.com
+
 ping dm-real-estate.com
 whois dm-real-estate.com | grep -i -E "(creation|created|registered)"
 ```

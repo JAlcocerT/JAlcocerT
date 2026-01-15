@@ -486,6 +486,8 @@ Admire how much resources they can provide you, just so that you place that CC d
 
 ![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
 
+The CX customer experience was impressive.
+
 Keywords: `weddings`
 
 Budget: whatever per month

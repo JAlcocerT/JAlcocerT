@@ -4,7 +4,7 @@ title: "Closing the code to impact gap"
 date: 2026-01-15T07:20:21+01:00
 draft: false
 tags: ["Tech Stack vs Psyco Stack"]
-description: 'Code is cheap now. Software is not. Whats the gap?'
+description: 'Code is cheap now. Software is not. The gap so that people want your ideas.'
 url: 'code-is-cheap-now'
 ---
 
@@ -17,7 +17,15 @@ Thoughts after this theo video, shipping a micro-saas in front of people and doi
 
 Everything can be done with code and llms/agents are pretty good with that.
 
-So...why arent we
+So...why arent we.
+
+Product, how's and features matter.
+
+But so that's the packaging.
+
+The UI/X, the presentation, the how easily is to understand what you do or you dont do.
+
+Lets get better and close the gap.
 
 ## Some Context
 
@@ -116,6 +124,15 @@ You are missing parts.
 4. Prepare a mail communication
 5. Prepare engaging slack/follow ups notifications
 
+Why to do so?
+
+because you improve your brand: *specially if you have the same repo for your consulting landing, that where you store the ppts*
+
+```sh
+#npx slidev build --base /presentations/ba-brd/ --out dist-ba-brd
+npm run build
+mkdir -p public/presentations && cp -r y2026-tech-talks/2-ba-brd-development/dist public/presentations/ba-brd
+```
 
 
 #### Improving your emails

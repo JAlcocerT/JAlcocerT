@@ -581,12 +581,12 @@ What can I do with Directus?
 
 With Directus, you can easily:
 
-    Perform CRUD operations on your data
-    Create roles so anyone can access the data
-    Assign roles with fully configurable permissions
-    Build beautiful dashboards and no-code applications
-    Build complex data queries without having to know SQL
-    Configure event-driven webhooks and task automation
+* Perform CRUD operations on your data
+* Create roles so anyone can access the data
+* Assign roles with fully configurable permissions
+* Build beautiful dashboards and no-code applications
+* Build complex data queries without having to know SQL
+* Configure event-driven webhooks and task automation
 
 
 ### Example TinyHost

@@ -14,11 +14,17 @@ Creating **green field POCs** based on this pattern helped me a lot.
 
 Get the benefits of it, without having to build it from scratch.
 
+
+
 **Intro**
 
-I was thinking to put these in a separated repo to [the n ebooks](https://github.com/JAlcocerT/1ton-ebooks).
+How good are your ideas? How good are you describing them?
 
-But i changed my mind for the sake of simplicity: *last thing I created in this direction, is [inside the n ebooks post](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#building-n-ebooks-for-a-webook)*
+I was thinking to put these notes in a separated repo to [the n ebooks](https://github.com/JAlcocerT/1ton-ebooks).
+
+The ones that are going to get you to ship ideas. Fast.
+
+I changed my mind for the sake of simplicity: *last thing I created in this direction, is [inside the n ebooks post](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#building-n-ebooks-for-a-webook)*
 
 Previously I was thinking to have this in a separated repo
 
@@ -141,10 +147,6 @@ See something that people need?
 Why not building people's dream as a way to succeed?
 
 I have proven that you can do [a DIY landing page in ~ 30 minutes](https://youtu.be/4xQVUw5YirE), or this plug and play data analytics full stack app [in ~ 40 minutes](https://youtu.be/qf-oNNNDXS0).
-
-https://www.ohansemmanuel.com/books/understanding-astro
-https://github.com/understanding-astro/understanding-astro-book/tree/master?tab=readme-ov-file
-https://understanding-astro-webook.vercel.app/
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

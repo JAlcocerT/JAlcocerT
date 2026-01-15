@@ -798,8 +798,7 @@ When you are done, you can clear up with:
 
 ### The Related Tech Talk
 
-To unify my workflow/efforts, I've moved my tech talk creation from:
-
+To unify my workflow/efforts, I've moved my tech talk creation from: *structured [like so](https://mermaid.live/edit#pako:eNqFk2Fv2jAQhv-K5aoqSNACSUOJKiRWuoFUbVUTrdLGPjjxJbFw7Mhx2lLEf5_jQAqapuZD4ju_fvz6fNniWFLAPk4VKTIUzlcCmSfQROlOJwhnT2G3i_r9KVpIuf59G03DDOz49iqa3kbqavqoZMQhR7O84CxhMdFMCjsTAE_630CAsjk0qyjTf5odmncNsvQQRGkk2x8FCPQgZbE7lu1nrfI52xxsXJjxRetjSUFopjdoxlkqchPY9APLIxaje5GSFOrsiQFDsNRH9iL1gWuDlltngoKoNWcCbOY5IxotS_RSIju8kxWn6AuckC3EsgPJq_r8re2FfP2w_VRxQDJBYaagwc8rwg2TMpGiOSPmZvLyBH0ANs6VlEmN_kk4o03xD-xAxsywrKQ5C8uhr2U_yFiB5pDLU8u1zkKfoNzvsb3jsoR_r-RDYRfcC9oeb1auj44HMYh4g-6TBGLdFjSUgqWZKV1GOAeRntbO0JrKaVl0Ol-X35fBottdiWb2_NxMbMxtpE1cmgDaHkkY5_5ZMvF6pVZyDf6Z4zjHwiPnn2ptfzaqKEr-p6rtfipq-mG_Y5K4lLZK6pLBcLwP-6-M6swfFW-4Z_5KRrGvVQU9nIPKSR3ibc1dYZ2Zfl5h3wwpJKTieoVXYmeWFUT8kjI_rFSySjPsJ4SXJqoK0yWwb6xWAoKCMo0sNPaHzmBsIdjf4jfsO874cuI6rut5E2_sDkY9vMH-6PJm7A4nzvBmfH3tTNzRroff7a4Do554Q89166_jee7uLy2kZXU)*
 
 ```sh
 git clone --depth 1 --single-branch -b logtojseauth https://github.com/JAlcocerT/slidev-editor #just current status

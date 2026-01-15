@@ -45,9 +45,24 @@ So could not resist to explore how to do a custom and more controlable solution 
 
 To make the solution sellable to enterprises, we need a UI.
 
+And the good news is that we already vibe coded that: here.
+
+
+
 ---
 
 ## Conclusions
+
+From how to what and why.
+
+Code is cheap now. Software isnt *at least for now*.
+
+The danger is now more on not to get distracted with the daily tool or workflow that gets released.
+
+Go with cursor, antigravity, claude code, lovable, opencode, crush...
+
+But just go and try.
+
 
 ### The related tech talk
 

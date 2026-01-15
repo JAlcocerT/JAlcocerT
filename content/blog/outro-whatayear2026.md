@@ -61,7 +61,6 @@ Comercial ones like: `https://www.lindy.ai/pricing`
 Maybe, try to build a brand *before its too late*.
 
 
-
 0. Strapi directus...Web CMS stuff
 
 This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
@@ -77,6 +76,11 @@ This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
 0. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
 ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+
+* https://www.ohansemmanuel.com/books/understanding-astro
+* https://github.com/understanding-astro/understanding-astro-book/tree/master?tab=readme-ov-file
+* https://understanding-astro-webook.vercel.app/
+
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
@@ -531,6 +535,19 @@ A certain Negative cash flow year one then...uncertainty
 
 10. First you focus and create. Then you diversify to maintain.
 
+11. How good are your idea? How good are you at describe them? `/JAlcocerT/a-diy-boilerplate-to-ship`
+
+12. Saas is built to optimize for retention, locking and expansion.
+
+13. Cuando buscas la perfection antes de ship, buscas q los demas no t critiquen
+
+14. Las personas q tienen un estilo de vida feugal disfrutan de una libertad que los que estan ocupados para mantener su lofestyle se pueden inaginar
+
+15. Can we all be a hunter aka entrepreneur? Or Que nivel the comodidad atrofia tu ambicion?
+
+16. How long can you continue moving towards your goals without a possitive feedback?
+
+
 #### Open Questions
 
 * Whats freedom: Possibility of acting or the absence of obstacles?
@@ -539,6 +556,7 @@ A certain Negative cash flow year one then...uncertainty
 * Is some official/certified the prohibition of any other alternative?
 * How hard is to increase income? how hard is to *,save'* ~70% after taxes?
   * In other words: how hard is to change your lifesetyle ( fundamenta and fun) and your income (monetary system) so that your needs move from 50 / wants 30 / savings 20 to that proposed?
+* How many times have you been a buyer this year? and a seller? Have you tried Rejection therapy?
 
 ```mermaid
 graph LR

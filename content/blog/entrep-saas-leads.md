@@ -48,7 +48,13 @@ Like the ones you will be generating after getting leads right for your SaaS by 
 
 ## How has this happened?
 
-As always, a series of doing steps.
+As always, a series of tinkering steps.
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrap Tools ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads SlubneChwile x APIFY ↗" icon="github" >}}
+{{< /cards >}}
 
 {{% steps %}}
 
@@ -91,13 +97,15 @@ The one created [here](https://jalcocert.github.io/JAlcocerT/selling-with-a-land
 
 One year *aka 12 months* is what you need to change your business and life.
 
-Ive seen it happen:
+Ive seen it happen: *Programming marketing and sales is all you need*
 
 ```sh
 whois genkinfy.com | grep -i -E "(creation|created|registered)"
 ```
 
 Want this implemented for your business?
+
+Or prefer to keep your Ego safe vs take this bet and see if people/b2B want your services?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

@@ -3,8 +3,10 @@ title: "ESP32 x NodeRed"
 date: 2026-02-01T23:20:21+01:00
 draft: false
 description: "A solar panel, winter and the ESP32 microcontroller"
-tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
+tags: ["Self-Hosting","IoT","MicroControllers","NodeRed","Tech Talk 5"]
 ---
+
+
 
 **TL;DR**
 
@@ -578,6 +580,15 @@ void loop() {
 <https://www.youtube.com/watch?v=VnGRFwDrLHo>
 
 ---
+
+# Conclusions
+
+```sh
+git clone https://github.com/JAlcocerT/selfhosted-landing
+cd y2026-tech-talks/4-baml-db-insights
+```
+
+
 
 # Other Projects
 

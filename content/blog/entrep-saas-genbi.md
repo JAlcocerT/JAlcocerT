@@ -31,6 +31,23 @@ And build something.
 
 ## Existing GenBI Solutions
 
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rill" title="Rill | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wren-ai" title="WrenAI | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+### Rill
+
+Go beyond dashboards
+with BI-as-code
+
+A high-performance, AI-native alternative to legacy BI, backed by modern analytical databases.
+
+* https://github.com/rilldata/rill
+
+### WrenAI
+
 * https://docs.getwren.ai/oss/guide/connect/duckdb
 * https://wrenaicloud.statuspage.io/
 
