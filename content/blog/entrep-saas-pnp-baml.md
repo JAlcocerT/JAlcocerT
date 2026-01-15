@@ -25,9 +25,16 @@ We are going to simulate these with containers.
 
 Just as demostrated here with pgsql.
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="PostgreSQL | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ### TSQL
 
 ### Oracle SQL
+
+### DuckDB vs ClickHouse
 
 ### Using BAML
 
@@ -57,12 +64,21 @@ From how to what and why.
 
 Code is cheap now. Software isnt *at least for now*.
 
+> From [this great post](https://www.chrisgregori.dev/opinion/code-is-cheap-now-software-isnt) and [video](https://www.youtube.com/watch?v=28z6OjsNsUk)
+
 The danger is now more on not to get distracted with the daily tool or workflow that gets released.
 
 Go with cursor, antigravity, claude code, lovable, opencode, crush...
 
 But just go and try.
 
+The challenge is now the **distribution / orchestration / marketing**, not the coding thing.
+
+Do you even know the audience? is it even listening?
+
+Are you building sth for an empty room?
+
+Time to go from builder to **creator and finding people to care** about your thing.
 
 ### The related tech talk
 

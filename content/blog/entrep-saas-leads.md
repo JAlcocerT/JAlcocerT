@@ -113,7 +113,17 @@ Or prefer to keep your Ego safe vs take this bet and see if people/b2B want your
 {{< /cards >}}
 
 
+### What are my plans around client adquisition
 
+I will use this mainly for two projects:
+
+1. The weddings B2B flow
+2. The custom real estate web/app as a *high ticker* with [custom demo emailed to potential clients](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md) 
+3. People need clients, so an UI wrapper around this will be valuable on its own :)
+
+Stay tuned. 
+
+The year has just started.
 
 
 ---

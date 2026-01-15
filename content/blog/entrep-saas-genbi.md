@@ -42,6 +42,10 @@ And build something.
 Go beyond dashboards
 with BI-as-code
 
+https://www.youtube.com/watch?v=zW1Xms2qQlc
+
+ Rill delivers fast exploratory dashboards. Rill makes it easy to create and consume metrics by combining a SQL-based data modeler, real-time database, and metrics dashboard into a single product—the fastest path from data lake to dashboard. Try Rill for free today: curl -s https://cdn.rilldata.com/install.sh | bash rill start my-rill-project
+
 A high-performance, AI-native alternative to legacy BI, backed by modern analytical databases.
 
 * https://github.com/rilldata/rill

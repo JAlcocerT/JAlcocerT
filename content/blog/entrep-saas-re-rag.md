@@ -286,7 +286,11 @@ Vector Databases
 2. Whats not: the client acquisition - *nobody knows this exists*
 3. Whats next: scale the client acquisition by building a cold marketing machine
 
+Because selling such high ticker product is not valuable for everyone.
 
+Fortunately, you can fill your sales pipeline, target via mail and show on make them see on the get go **an automated demo with their listings** already there via the uploader.
+
+Some notes around there [here](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales.md) and [here](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md).
 
 You cant get to places that you dont know they exists.
 
