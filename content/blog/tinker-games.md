@@ -13,6 +13,8 @@ url: 'open-source-gaming'
 
 What about gaming?
 
+https://www.youtube.com/watch?v=LZUhBRJwp4M
+
 tags: ["Tinkering","Battle City NES",""]
 description: GPU passthrough
 

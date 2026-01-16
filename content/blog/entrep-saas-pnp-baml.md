@@ -1,8 +1,8 @@
 ---
-title: "Connecting to T-SQL and OracleSQL"
+title: "The enterprise insights are behind T-SQL and OracleSQL"
 date: 2026-02-01T23:20:21+01:00
 draft: false
-tags: ["BAML","AI Tech Talk 3","DuckDB vs ClickHouse vs SQlite"]
+tags: ["BAML","AI Tech Talk 3","DuckDB vs ClickHouse vs SQlite","Malloy"]
 description: 'Enterprise insights are behind Connecting to T-SQL and OracleSQL - Go get them.'
 url: 'using-baml-to-query-a-database'
 ---
@@ -313,7 +313,7 @@ cd y2026-tech-talks/4-baml-db-insights
 *   **Dimension Tables:** Answer **"WHO / WHERE / WHICH context?"**
     *   *Examples:* `customer_name`, `product_category`, `country_origin`.
 
-A Materialized table is a solution to d&a problem.
+A Materialized table is a solution to a d&a problem.
 
 If you were to grow your Northwind project into a "Big Data" architecture:
 
@@ -323,7 +323,7 @@ An ETL tool takes those orders and saves them as Avro files in a folder (Data La
 
 A "Lakehouse" tool (like Apache Iceberg or Delta Lake) converts those to Parquet.
 
-DuckDB or ClickHouse then queries those Parquet files directly..
+DuckDB or ClickHouse then queries those Parquet files directly.
 
 | Aspect | Dimensional Modeling | Semantic Modeling (PBI) |
 | :--- | :--- | :--- |
@@ -335,7 +335,7 @@ The Traditional BI Lifecycle (Hand-Crafted)
 
 To demonstrate the value of Gen-BI, we must first understand the manual effort required to build a high-performance Power BI dashboard aligned with business goals.
 
-The Bridge from Raw Data to Insights
+**The Bridge from Raw Data to Insights**
 
 Building a professional Power BI solution involves a rigorous 4-step process:
 
@@ -350,3 +350,238 @@ Building a professional Power BI solution involves a rigorous 4-step process:
 4.  **Visualization (RL)**: Aligning with the **Business Purpose**.
     - Selecting visuals that answer specific BRD questions (e.g., "Which region is underperforming?").
     - Tuning the UX for speed and clarity.
+
+
+Document Logic (The Planning)
+BRD (Business Requirements): Answers "WHY build this?" (The Vision & Goals).
+PRD (Product Requirements): Answers "WHAT are we building?" (The Features & Roadmap).
+FRD (Functional Requirements): Answers "HOW does it work?" (The Technical Logic & CRUDs).
+
+
+2. Data Logic (The Analytics)
+Fact Tables: Answer "WHAT happened (and how much)?"
+Examples: visit_count, revenue, quantity_sold.
+Dimension Tables: Answer "WHO / WHERE / WHICH context?"
+Examples: customer_name, product_category, country_origin.
+
+In the world of data engineering, these concepts form the fundamental "fork in the road" between how we store data for **action** versus how we store it for **analysis**.
+
+
+1. OLTP: The "Action" Layer
+
+**OLTP (Online Transaction Processing)** systems are built to handle the daily operations of a business (e.g., swiping a credit card, updating a password, or placing an order).
+
+* **Mapping:** **ER Modeling**  **Normalization**
+* **The Goal:** **Data Integrity.** You want to ensure that if a customer changes their address, you only have to update it in *one* place.
+* **Why Normalization?** By breaking data into many small, related tables (usually 3rd Normal Form), you eliminate redundancy. This makes "writes" (INSERT, UPDATE, DELETE) lightning-fast and prevents data anomalies.
+2. OLAP: The "Analysis" Layer
+
+**OLAP (Online Analytical Processing)** systems are built for complex decision-making (e.g., "What were our total sales in the Northeast region vs. the Southwest over the last three years?").
+
+* **Mapping:** **Dimensional Modeling**  **Denormalization**
+* **The Goal:** **Query Performance & Simplicity.** Analysts don't want to join 50 tables to get one report. They want the data pre-organized for speed.
+* **Why Denormalization?** You intentionally bring data back together. While this creates "redundancy" (the same city name might appear 1,000 times), it drastically reduces the number of "joins" the database has to perform, making "reads" much faster.
+
+3. Star vs. Snowflake (The OLAP Variations)
+
+Within Dimensional Modeling, you have two primary ways to structure your "Dimensions":
+
+| Feature | **Star Schema** (Most Common) | **Snowflake Schema** |
+| --- | --- | --- |
+| **Structure** | **Denormalized.** Dimension tables are flat. | **Normalized.** Dimension tables are broken down further. |
+| **Visual** | Looks like a star (Fact table in the center). | Looks like a snowflake (Dimensions have sub-dimensions). |
+| **Performance** | **Faster.** Fewer joins required. | **Slower.** More joins required. |
+| **Maintenance** | Harder; data redundancy is high. | Easier; less redundancy (easier to update a category name). |
+
+| System Type | Modeling Style | Strategy | Focus |
+| --- | --- | --- | --- |
+| **OLTP** | Entity-Relationship (ER) | **Normalization** | Fast Writes / Data Integrity |
+| **OLAP** | Dimensional | **Denormalization** | Fast Reads / Easy Analysis |
+
+The best way to see the difference between Lloyd Tabb’s **Looker** and Microsoft’s **Power BI** is to look at how they handle a simple request: *"Calculate our Gross Profit Margin."*
+
+#### 1. The Power BI Way (DAX)
+
+In Power BI, you write a **Measure**. This is a formula that lives inside your report file. It looks very similar to an advanced Excel formula.
+
+**The Code (DAX):**
+
+```dax
+Gross Profit Margin = 
+DIVIDE(
+    SUM(Sales[Revenue]) - SUM(Sales[Cost]), 
+    SUM(Sales[Revenue]), 
+    0
+)
+
+```
+
+* **Where it lives:** Inside a specific `.pbix` file or a specific dataset.
+* **The User Experience:** A user drags this "Measure" onto a chart. If they want to see it by "Year," Power BI recalculates that formula for every year on the fly.
+* **The Problem:** If another analyst creates a different report and writes `(Total_Rev - Total_Cost) / Total_Rev` manually, and forgets to handle the "divide by zero" error, your company now has two different versions of the same metric.
+
+---
+
+#### 2. The Looker Way (LookML)
+
+In Looker, you don't write a formula for a specific report. You define the **Logic** in a central code file called **LookML**.
+
+**The Code (LookML):**
+
+```lookml
+view: orders {
+  sql_table_name: production.orders ;;
+
+  measure: total_revenue {
+    type: sum
+    sql: ${TABLE}.revenue ;;
+  }
+
+  measure: total_cost {
+    type: sum
+    sql: ${TABLE}.cost ;;
+  }
+
+  measure: gross_profit_margin {
+    type: number
+    sql: (${total_revenue} - ${total_cost}) / NULLIF(${total_revenue}, 0) ;;
+    value_format_name: percent_2
+  }
+}
+
+```
+
+* **Where it lives:** In a centralized Git repository (like GitHub).
+* **The User Experience:** The business user never sees this code. They just see a button labeled **"Gross Profit Margin"** in a browser.
+* **The Benefit:** Because the logic is defined in **one central place**, it is impossible for two people to have different "Profit Margin" numbers. If you update the code, every dashboard in the entire company updates instantly.
+
+---
+
+Summary of the Difference
+
+| Feature | Power BI (DAX) | Looker (LookML) |
+| --- | --- | --- |
+| **Vibe** | "Supercharged Excel" | "Software Engineering for Data" |
+| **Logic Location** | Often scattered across many reports. | Strictly centralized in one "Model." |
+| **Version Control** | Hard (saving versions of files). | Native (Integrated with Git/GitHub). |
+| **Data Movement** | Usually "Imports" data into its own RAM. | **Never moves data.** Always queries your database (Redshift/Postgres) live. |
+
+**Lloyd Tabb’s big "Aha!" moment** was realizing that data analysts should act more like software engineers—writing reusable, version-controlled code rather than building one-off spreadsheets.
+
+
+To understand semantic modeling in Power BI, it helps to think of it as the "Translation Layer."
+
+While **Dimensional Modeling** is about how you *organize* data in the warehouse, **Semantic Modeling** is about how you *present* that data to humans.
+
+
+1. Semantic vs. Dimensional Modeling
+
+| Feature | Dimensional Modeling (The Foundation) | Semantic Modeling (The Interface) |
+| --- | --- | --- |
+| **Objective** | Organizing data for performance and storage. | Organizing data for business logic and usability. |
+| **Common Shapes** | Star Schema, Snowflake Schema. | Power BI Datasets, Looker LookML, Metrics Layer. |
+| **Key Components** | Facts (Numbers) and Dimensions (Attributes). | Measures (DAX), Hierarchies, Relationships, Metadata. |
+| **Analogy** | The way books are categorized and stored on library shelves. | The searchable digital catalog that helps you find and understand the books. |
+
+---
+
+2. Approaches to Semantic Modeling in Power BI
+
+There are three main "architectural" ways to handle this in the Microsoft ecosystem:
+
+A. The "Golden Dataset" Approach (Centralized)
+
+You create one single, highly polished Power BI file (`.pbix`) that contains the Star Schema, all DAX measures, and row-level security.
+
+* **How it works:** You publish this to the Power BI Service. Other users then "Connect to Power BI Dataset" to build their own reports.
+* **Pro:** One single source of truth.
+* **Con:** Can become a bottleneck if one person manages the "Golden" model for the whole company.
+
+B. The "Composite Model" Approach (Hybrid)
+
+This allows you to connect to a "Golden Dataset" but also add your own local data (like an Excel file or a specific SQL table) on top of it.
+
+* **How it works:** It uses "DirectQuery for Power BI datasets."
+* **Pro:** Flexibility for departments to customize data without breaking the central logic.
+* **Con:** Can become complex to manage and slightly slower in performance.
+
+C. The "External" Semantic Layer (Headless BI)
+
+Instead of defining logic inside Power BI, you define it in a tool that sits *between* your warehouse (Redshift/Snowflake) and Power BI.
+
+* **Examples:** **dbt Semantic Layer**, **Cube**, or **AtScale**.
+* **How it works:** You write your metrics in YAML or SQL. Power BI connects to these tools as if they were a database.
+* **Pro:** If you switch from Power BI to Tableau or Looker, your metrics stay exactly the same.
+
+---
+
+3. How to "Do" Semantic Modeling Right
+
+Regardless of the approach, follow these rules to ensure your Power BI model is "Semantic":
+
+1. **Hide the Plumbing:** Hide all Foreign Key columns (the IDs used for joins). Users should only see descriptive names like "Product Name," not `FK_Prod_ID_99`.
+2. **Explicit Measures:** Never let users "Auto-Sum" a column. Create an explicit DAX measure: `Total Sales = SUM(Sales[Amount])`. This ensures the calculation is the same everywhere.
+3. **Folders and Descriptions:** Use "Display Folders" to group measures (e.g., "Time Intelligence," "Profitability") and add descriptions to fields so users see a tooltip explaining what the data means.
+4. **Hierarchies:** Create "Drill-down" paths (Country > State > City) so the model feels intuitive to browse.
+
+---
+
+Summary for your Project
+
+If you are coming from the **Lloyd Tabb/Looker** world, Power BI feels different because the "Semantic" part is often bundled inside the report file. However, by using **Power BI Datasets (Live Connection)**, you can replicate that "Looker Vibe" where the logic is centralized and separated from the visuals.
+
+## SQL vs Malloy
+
+**Malloy** is a modern, open-source language for data modeling and querying, created by **Lloyd Tabb** (the founder of Looker) and a team at Google.
+
+If **LookML** was Lloyd Tabb’s first attempt to fix SQL, **Malloy** is his "clean slate" version. It is designed to be for SQL what **TypeScript** is for JavaScript: a more powerful, typed, and modular way to write code that ultimately "compiles" down to standard SQL.
+
+### What makes Malloy special?
+
+#### 1. "Escaping the Rectangle"
+
+Standard SQL forces data into "rectangles" (rows and columns). If you want to see an Order and all its Items, you have to "flatten" the data, which leads to duplicate rows and complex `JOIN` logic.
+
+* **Malloy's Fix:** It natively handles **nested data** and hierarchies. You can query a "Table within a Table" naturally, which makes it much easier to build dashboards that show a summary and a breakdown in the same view.
+
+#### 2. Reusable "Measures" (The Semantic Part)
+
+In SQL, if you want to calculate "Gross Margin," you have to write that math in every single query.
+
+* **Malloy's Fix:** You define `gross_margin` **once** in the model. From then on, you just reference it. If the definition changes, you update one line of code, and every query using it is fixed.
+
+#### 3. Automatic "Symmetric Aggregates"
+
+One of the most dangerous things in SQL is the "Fan-out" (doubling your totals because of a Join).
+
+* **Malloy's Fix:** It has built-in logic that understands the relationships between tables. It automatically prevents "double counting" when you join a one-to-many relationship, so your sums are always correct without you needing to worry about `DISTINCT` hacks.
+
+### A Quick Comparison
+
+| Feature | **SQL** | **Malloy** |
+| --- | --- | --- |
+| **Logic** | Imperative (You tell it *how* to join/group). | Declarative (You tell it *what* you want). |
+| **Reusability** | Low (Copy-paste logic). | High (Define once, use everywhere). |
+| **Complexity** | 100 lines for a nested report. | 10 lines for the same report. |
+| **Output** | Rectangles only. | Nested/Hierarchical JSON or Tables. |
+
+### How to use it
+
+Malloy isn't a database itself.
+
+It is a **compiler**.
+
+You write Malloy code, and it converts it into optimized SQL for:
+
+* **DuckDB** (Native support, great for local Parquet files).
+* **BigQuery**.
+* **PostgreSQL**.
+* **Snowflake**.
+
+### Is it still "Experimental"?
+
+As of late 2023, the team released **Malloy 4.0**, which they officially called the "end of the experimental phase."
+
+It is now considered a stable, open-source language that is ready for production use, primarily through their excellent **VS Code Extension**.
+
+**Would you like to see a "Before and After" example of a Northwind query written in SQL versus Malloy?**

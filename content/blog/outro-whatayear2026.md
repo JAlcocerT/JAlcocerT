@@ -481,7 +481,7 @@ Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?la
 1. About langchain connected to a database...v2
 
 
-~33...now 46
+~33...now 46...56
 
 ```sh
 #du -sh .
@@ -629,6 +629,8 @@ And for the ones who say that will do things, but the thing they do post 9-5 is 
 For the very alergic to the risk...well...keep your ~0% at the bank. Its saaaaafe.
 
 8. Order/clean papers / old tech. Donate.
+
+9. Collecting case studies / success stories
 
 #### Stop Doing
 

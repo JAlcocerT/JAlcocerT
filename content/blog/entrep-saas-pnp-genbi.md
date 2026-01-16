@@ -369,55 +369,6 @@ If you need it, you know where to get such solution: *The goal isn't to build mo
 
 Be smart, turn your **Data Layer** into a **Self-Service Agent**. 
 
-
-Document Logic (The Planning)
-BRD (Business Requirements): Answers "WHY build this?" (The Vision & Goals).
-PRD (Product Requirements): Answers "WHAT are we building?" (The Features & Roadmap).
-FRD (Functional Requirements): Answers "HOW does it work?" (The Technical Logic & CRUDs).
-
-
-2. Data Logic (The Analytics)
-Fact Tables: Answer "WHAT happened (and how much)?"
-Examples: visit_count, revenue, quantity_sold.
-Dimension Tables: Answer "WHO / WHERE / WHICH context?"
-Examples: customer_name, product_category, country_origin.
-
-Yes, your understanding is spot on. In the world of data engineering, these concepts form the fundamental "fork in the road" between how we store data for **action** versus how we store it for **analysis**.
-
-
-1. OLTP: The "Action" Layer
-
-**OLTP (Online Transaction Processing)** systems are built to handle the daily operations of a business (e.g., swiping a credit card, updating a password, or placing an order).
-
-* **Mapping:** **ER Modeling**  **Normalization**
-* **The Goal:** **Data Integrity.** You want to ensure that if a customer changes their address, you only have to update it in *one* place.
-* **Why Normalization?** By breaking data into many small, related tables (usually 3rd Normal Form), you eliminate redundancy. This makes "writes" (INSERT, UPDATE, DELETE) lightning-fast and prevents data anomalies.
-2. OLAP: The "Analysis" Layer
-
-**OLAP (Online Analytical Processing)** systems are built for complex decision-making (e.g., "What were our total sales in the Northeast region vs. the Southwest over the last three years?").
-
-* **Mapping:** **Dimensional Modeling**  **Denormalization**
-* **The Goal:** **Query Performance & Simplicity.** Analysts don't want to join 50 tables to get one report. They want the data pre-organized for speed.
-* **Why Denormalization?** You intentionally bring data back together. While this creates "redundancy" (the same city name might appear 1,000 times), it drastically reduces the number of "joins" the database has to perform, making "reads" much faster.
-
-3. Star vs. Snowflake (The OLAP Variations)
-
-Within Dimensional Modeling, you have two primary ways to structure your "Dimensions":
-
-| Feature | **Star Schema** (Most Common) | **Snowflake Schema** |
-| --- | --- | --- |
-| **Structure** | **Denormalized.** Dimension tables are flat. | **Normalized.** Dimension tables are broken down further. |
-| **Visual** | Looks like a star (Fact table in the center). | Looks like a snowflake (Dimensions have sub-dimensions). |
-| **Performance** | **Faster.** Fewer joins required. | **Slower.** More joins required. |
-| **Maintenance** | Harder; data redundancy is high. | Easier; less redundancy (easier to update a category name). |
-
-| System Type | Modeling Style | Strategy | Focus |
-| --- | --- | --- | --- |
-| **OLTP** | Entity-Relationship (ER) | **Normalization** | Fast Writes / Data Integrity |
-| **OLAP** | Dimensional | **Denormalization** | Fast Reads / Easy Analysis |
-
-
-
 ### Related Tech Talk
 
 There is a huge difference between [pbi - looker and this gen-bi solution](https://mermaid.live/edit#pako:eNp9U02P2jAQ_SuWDz0B3XyRkEMllrARaraim7Zb1dmDIbPEAmxkOy0f4r93QliU7aE52dZ7M--9mZzoUpVAY7rSfFeRb0khCX6mXrQP8_sZYXP1BzS5n8Xkkcuab8gH8kMYPLy06OabO2yipISlJVaRhFv-Qvr9T2Tusispt1yTfFnBlpMEjFjJLt1t0R571sICScY_ySNwU2swXZjXwnyWaL5CHYlWu6uYdzi_xQVsXi82wlTkCXZK2ysEZFnIf5xmn58Iy5Rag47JBEPpPwhtLPaYgLSab8QRyk6L7J3hZ66hUrWB1nXmshTkx2kpLGlqPmaXkl16azjzWAKvQsLNLRHySumiW9-Zz6b73UZpIDlsmtYPAjZl13nWOs8ClvPf0EjLK9RW4khMtVBcl__JIG2mjcL7zazHK_Qtlk3IB8m3Ytnpkjq4FELeZr3gb85Tl41nZFxb1Z_uMbalNWhdWtjbLr91n3rsu8HVGpu1IV-4rTFm8rUGY4Xqbkfa2k_9pjbqA80tmEukKC-3zXV16BLaFNKAzaSxHIVePVx3RRx5pwVGQXv4B4iSxlbX0KNb0FveXOmpgRTU4tpCQWM8llyvC1rIM3J2XP5SavtG06peVTR-xWXEW70rUVciOIa7vb1q7AZ6omppaeyE_qUIjU90T-O-4zn-IHADxx_6ke-FQY8eaOzd3Q1cbxhGQRRFw9AZnXv0eGnrDMKRFzpO6HijUeS67vD8F4GgJbw).
