@@ -1,6 +1,7 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-24T11:20:21+01:00
+#date: 2026-01-24T11:20:21+01:00
+date: 2026-01-15T11:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x ESP Sales Pipeline","RoadMap26"]
 description: 'Forget about B2C, sell to B2B as they have the budget for whatever product helps.'
@@ -96,6 +97,15 @@ Here is a solution to your problem: *When there is no risk for sure there is no 
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
+With that you get up to speed quickly with how to use your wishes to build:
+
+![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
+
+And how to do so, so that you build something that somebody wants: *not what you think they want*
+
+![Vibe Coding - Wrong Product Output](/blog_img/dev/Simpson_Producto_La_escopeta_maquilladora.gif)
+
+---
 
 ## FAQ
 

@@ -10,7 +10,7 @@ url: 'creating-a-generative-bi-solution'
 
 **TL;DR**
 
-Is it possible that agents will not only reply a query based on the real content of a database,
+Is it possible that agents will not only reply a query based on the real content of a database.
 
 But also would provide a proper visualization?
 
@@ -21,9 +21,15 @@ Why are we still building dashboards for one-off questions?
 
 After getting that pnp D&a with langchain and pgsql ready [here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions).
 
+With a Vibe coded UI Wrapper:
+
 ![alt text](/blog_img/DA/sql/langchain-qna-pgsql.png)
 
 And having a [session for non-tech users](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk) to learn to vibe code similar tools.
+
+They got this superpower:
+
+![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
 
 Its time to review some existing generative BI tools available.
 
@@ -49,6 +55,11 @@ https://www.youtube.com/watch?v=zW1Xms2qQlc
 A high-performance, AI-native alternative to legacy BI, backed by modern analytical databases.
 
 * https://github.com/rilldata/rill
+* https://ui.rilldata.com/demo
+* https://www.rilldata.com/pricing
+* https://docs.rilldata.com/
+* With a very interesting https://datatalks.rilldata.com/
+  * [The Semantic Layer Problem Nobody Wants to Talk About](https://www.youtube.com/watch?v=x_cnYqH4tFM)
 
 ### WrenAI
 
@@ -273,3 +284,9 @@ My Assessment
 Would you like me to help you calculate what these numbers would look like based on a specific target monthly expense?
 
 ### More Tools to Interact with DBs
+
+
+### About Semantic Model
+
+A place with facts, dimensions, joins, measures...the building blocks to describe your data.
+

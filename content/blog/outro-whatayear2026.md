@@ -582,12 +582,21 @@ graph LR
 
 #### Interesting Concepts
 
+1. Nonchalant
+
 * Options -> Things and not controlable
 * Choices -> Actions and are controlable
+
 
 #### Interesting Posts
 
 * https://nav.al/feedback
+
+And podcasts:
+
+* MongeMalo
+* [DanKoeTalks](https://www.youtube.com/@DanKoeTalks)
+* [DanielPriestley](https://www.youtube.com/@DanielPriestley)
 
 
 ### For Next year...
@@ -610,6 +619,14 @@ The fwk: keep / stop / start.
 * https://selfh.st/
 
 6. Keep writting, but less and MORE QUALITY: < 2/week **AND <60/year** <<< 170
+
+7. Keep far (far away), from people that: say that want X, do Z.
+
+Special mention to the ones that pay more in car insurance that what they spend in finding new clients.
+
+And for the ones who say that will do things, but the thing they do post 9-5 is nothing.
+
+For the very alergic to the risk...well...keep your ~0% at the bank. Its saaaaafe.
 
 #### Stop Doing
 
