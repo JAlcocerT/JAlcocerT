@@ -1,6 +1,6 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-23T11:20:21+01:00
+date: 2026-01-16T11:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x Sales Pipeline","Web Scrapping","RoadMap26"]
 description: 'Finding people that actually need your services. A story post the first ten.'
@@ -71,6 +71,8 @@ Check that out if you have an [automation agency](https://jalcocert.github.io/JA
 
 Where I was testing [APIFY fantastic API](https://jalcocert.github.io/JAlcocerT/apify/).
 
+It was all thank to [a 123 meeting](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#apify-can-do-that) with marketers
+
 
 {{% /steps %}}
 
@@ -117,9 +119,10 @@ Or prefer to keep your Ego safe vs take this bet and see if people/b2B want your
 
 I will use this mainly for two projects:
 
-1. The weddings B2B flow
+1. [The weddings](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) B2B flow (B2C goes the ad route)
 2. The custom real estate web/app as a *high ticker* with [custom demo emailed to potential clients](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md) 
-3. People need clients, so an UI wrapper around this will be valuable on its own :)
+3. The Gen-AIBI [on demand data analytics](https://github.com/JAlcocerT/langchain-db-ui/blob/master/Z_PGSQL-GenBI/sales.md) thats coming
+4. People need clients, so an UI wrapper around this will be valuable on its own :)
 
 Stay tuned. 
 
@@ -130,7 +133,7 @@ The year has just started.
 
 ## FAQ
 
- https://github.com/browser-use/browser-use
+* https://github.com/browser-use/browser-use
 
 >  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
 

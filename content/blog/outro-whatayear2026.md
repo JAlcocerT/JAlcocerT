@@ -628,6 +628,8 @@ And for the ones who say that will do things, but the thing they do post 9-5 is 
 
 For the very alergic to the risk...well...keep your ~0% at the bank. Its saaaaafe.
 
+8. Order/clean papers / old tech. Donate.
+
 #### Stop Doing
 
 1. Opening more and more a shallow tech stack. 

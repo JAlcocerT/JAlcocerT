@@ -29,6 +29,14 @@ Just as demostrated here with pgsql.
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="PostgreSQL | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+What if we could gain more control over whats going on, instead of relying on Langchain?
+
+```sh
+source datachat_venv/bin/activate
+#Then, run the extraction script:
+python3 baml-extract-schema.py --db-uri "postgresql://admin:securepassword@localhost:5432/umami_warehouse" --question "What are the most visited pages?"
+```
+
 
 ### TSQL
 
@@ -119,19 +127,140 @@ And it resonated a lot with the way langchain generates the query to the databas
 
 So could not resist to explore how to do a custom and more controlable solution around BAML.
 
-
-
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Data-Chat/blob/main/LangChain/ChatWithDB/test_langchainChatDB.ipynb)
+
+What I wanted is this: *and remove the langchain dependency*
+
+
+1.  **Extract Schema**: Use `SQLDatabase` to get the metadata.
+2.  **Generate & Separate**: Call BAML and extract the three distinct fields (`sql`, `explanation`, `promptRationale`).
+3.  **Execute**: Run the query against the DB using the existing connection.
+4.  **Final Output**:
+    - Print the **Rationale** (Why we did this).
+    - Print the **SQL** (What we are running).
+    - Print the **Data Table** (The results).
+
+```sh
+./datachat_venv/bin/baml-cli generate --from z-langchain2baml/baml_src
+```
+
+```mermaid
+graph LR
+    U[User Question] --> S[Python Script]
+    S --> |Conn| DB[(PostgreSQL)]
+    DB --> |Full Schema| S
+    S --> |Context + Question| B[BAML Client]
+    B --> |Prompt| L[LLM GPT-4o]
+    L --> |JSON Result| B
+    B --> |Typed Object| S
+    S --> Out[Final SQL & Explanation]
+    Out --> DB
+    DB --> Result[Data Result]
+    Result --> S
+```
+
+1.  **Activate Environment**:
+
+```bash
+source datachat_venv/bin/activate
+#pip install tabulate
+```
+
+2.  **RuCreate baml arficats**:
+
+```bash
+baml-cli init #configure your baml_src
+baml-cli generate #it generates baml_client, which the main python script uses
+```
+
+Working with BAML follows a very specific and reliable cycle:
+
+1.  **Define (`baml_src/`)**: You define your data models (classes) and functions in `.baml` files.
+    *   `database.baml`: Defines the `SqlResult` structure and the `GenerateSQL` function.
+    *   `clients.baml`: Configures the LLM providers (e.g., GPT-4o).
+2.  **Generate (`baml_client/`)**: Running `baml-cli generate` turns your BAML definitions into a type-safe Python client. You never edit this folder manually.
+3.  **Call (Python)**: Your application script (`baml-qna.py`) imports the generated client and calls the functions just like regular Python methods.
+
+How to Tweak the Logic (`baml_src/`)
+
+If you want to customize the behavior, here is what each file does:
+
+*   **`database.baml`**: **The Core Logic.** This is where you define the `class` (what data the LLM returns) and the `function` (the actual prompt). If you want to change **how the LLM thinks** or what info it provides, edit this.
+*   **`clients.baml`**: **The Model Settings.** Here you define which LLM providers to use (OpenAI, Anthropic, etc.), which models (GPT-4o, Claude 3.5), and parameters like `temperature` or `api_key` environment variables.
+*   **`generators.baml`**: **The Integration Settings.** This tells BAML to generate a **Python** client and where to put it. You rarely need to touch this unless you are switching languages or changing the output path.
+
+```mermaid
+graph LR
+    Start([Start]) --> Init[baml-cli init]
+    Init --> Src[baml_src folder]
+    Src --> Edit[Edit .baml files]
+    Edit --> Gen[baml-cli generate]
+    Gen --> Client[baml_client folder]
+    Client --> Py[Python Script]
+    Py --> Call[Client Calls LLM]
+    
+    subgraph "Manual Input"
+    Edit
+    end
+    
+    subgraph "Auto-Generated"
+    Client
+    end
+```
+
+3.  **Run Execution Script**:
+
+
+```sh
+# From the project root
+python3 z-langchain2baml/baml-qna.py --db-uri "postgresql://admin:securepassword@localhost:5432/umami_warehouse" --question "What are the most visited pages?"
+```
+
+By separating `promptRationale`, we gain:
+- **Debugging**: Understand if the LLM misinterpreted the schema.
+- **Auditing**: Keep track of why certain joins or filters were applied.
+- **User Trust**: Show the user the "thinking process" before showing the data.
+
+```sh
+mindmap
+  root((baml-qna.py))
+    BAML
+      Structured Output
+      Type-safe Python Client
+      Prompts & Schema Context
+      Model Clients (GPT-4o)
+    PostgreSQL
+      Data Warehouse
+      Schema Metadata source
+      SQL Execution target
+    General Python Logic
+      Orchestration
+      LangChain: Schema Extraction
+      Pandas: Data Result Formatting
+      SQLAlchemy: DB Connection
+```
 
 ### UI Wrapper
 
-To make the solution sellable to enterprises, we need a UI.
+To make the solution sellable to enterprises: we need a UI.
 
 And the good news is that we already vibe coded that: here.
 
 ![langchain db qna via UI PoC](/blog_img/DA/sql/langchain-vite-pgsql.png)
 
+> Even with a related tech talk
 
+Well, Ok.
+
+Not only a UI, but a way to get plots and potentially dashboards done from natural language.
+
+Or as people call this now: a generative BI solution.
+
+Thats coming up next: `z-baml-genbi`
+
+![alt text](/blog_img/AIBI/matplotlib-baml-pgql-qna.png)
+
+> Imagine having such graphs generated from your QnA
 
 ---
 
@@ -171,6 +300,21 @@ cd y2026-tech-talks/4-baml-db-insights
 
 ### A Recap on D&A for Interviews
 
+1. Document Logic (The Planning)
+
+*   **BRD (Business Requirements):** Answers **"WHY build this?"** (The Vision & Goals).
+*   **PRD (Product Requirements):** Answers **"WHAT are we building?"** (The Features & Roadmap).
+*   **FRD (Functional Requirements):** Answers **"HOW does it work?"** (The Technical Logic & CRUDs).
+
+2. Data Logic (The Analytics)
+
+*   **Fact Tables:** Answer **"WHAT happened (and how much)?"**
+    *   *Examples:* `visit_count`, `revenue`, `quantity_sold`.
+*   **Dimension Tables:** Answer **"WHO / WHERE / WHICH context?"**
+    *   *Examples:* `customer_name`, `product_category`, `country_origin`.
+
+A Materialized table is a solution to d&a problem.
+
 If you were to grow your Northwind project into a "Big Data" architecture:
 
 Postgres (OLTP) handles your orders.
@@ -181,48 +325,28 @@ A "Lakehouse" tool (like Apache Iceberg or Delta Lake) converts those to Parquet
 
 DuckDB or ClickHouse then queries those Parquet files directly..
 
----
+| Aspect | Dimensional Modeling | Semantic Modeling (PBI) |
+| :--- | :--- | :--- |
+| **Focus** | Efficiency and Structure (Star Schema). | Usability and Business Logic (Logic + Context). |
+| **Action** | Joining tables, defining PKs and FKs. | Refinement: DAX, Renaming, RLS, Formatting. |
+| **Output** | A clean, technical Warehouse schema. | A "Self-Service" model ready for business users. |
 
-Looker was **not** an alternative to Redshift; instead, it was designed to be the **perfect companion** for Redshift. However, it was a direct and very different **alternative to Power BI**.
+The Traditional BI Lifecycle (Hand-Crafted)
 
-To understand why, you have to look at how Lloyd Tabb reimagined the "Data Stack."
+To demonstrate the value of Gen-BI, we must first understand the manual effort required to build a high-performance Power BI dashboard aligned with business goals.
 
-### 1. Looker vs. Redshift (Partners, not Rivals)
+The Bridge from Raw Data to Insights
 
-Looker and Amazon Redshift belong to different layers of the data stack:
+Building a professional Power BI solution involves a rigorous 4-step process:
 
-* **Redshift is the "Engine" (Data Warehouse):** It stores the billions of rows and does the heavy lifting of calculations.
-* **Looker is the "Interface" (BI & Modeling):** It sits on top of Redshift. It doesn't store data; it translates your mouse clicks into high-performance SQL that runs directly on Redshift.
-
-Before Looker, people had to "extract" data from Redshift into their BI tools. Lloyd Tabb’s big idea was: *"Redshift is fast enough—why move the data? Let’s leave the data in the warehouse and just send it instructions."*
-
----
-
-### 2. Looker vs. Power BI (The True Alternatives)
-
-Looker was a radical alternative to Power BI (and Tableau). While Power BI focuses on the **Visuals**, Looker focuses on the **Logic**.
-
-| Feature | **Power BI** | **Looker** |
-| --- | --- | --- |
-| **Philosophy** | **Visual-First.** Drag and drop charts, then figure out the data. | **Code-First.** Define the data logic in **LookML**, then the charts build themselves. |
-| **Data Storage** | **Imports** data into its own memory (usually). | **Stays in the Warehouse.** Queries the live data every time. |
-| **"Source of Truth"** | Logic can be hidden in different reports, leading to different numbers. | Centralized **LookML** model ensures everyone sees the same "Revenue" number. |
-| **Workflow** | Desktop-based app, feels like Excel. | Web-based, feels like software engineering (uses Git/Version Control). |
-
----
-
-### Why would someone choose Looker over Power BI?
-
-Lloyd Tabb created Looker for companies that were tired of "Data Chaos"—where two different people would bring two different "Total Sales" numbers to a meeting because they calculated the formula differently in Power BI.
-
-**Looker’s "LookML" solved this:**
-
-* You define "Sales" **once** in code.
-* Every single chart in the company uses that same code.
-* If the definition of "Sales" changes, you change it in **one place**, and every chart in the company updates instantly.
-
-### Summary
-
-If you wanted a tool that behaved like **software code** and worked natively with **Redshift** without moving data around, Looker was the alternative you chose over Power BI.
-
-**Would you like me to show you a simple example of how LookML code looks compared to a Power BI formula (DAX)?**
+1.  **Data Acquisition (DL - Data Layer)**: Connecting to raw sources via SQL or Power Query. This is where the physical connection lives.
+2.  **Dimensional Modeling (The Foundation)**: Implementing **Kimball Methodology**.
+    - Creating a **Star Schema** with clear `Fact` tables (events) and `Dimension` tables (attributes).
+    - This is the "Structural Truth" of the data.
+3.  **Semantic Modeling (The Meaning)**: Adding the **Power BI Layer**.
+    - Writing **DAX Measures** (e.g., Year-to-Date, Moving Averages).
+    - Setting up **Hierarchies** (e.g., Category -> Product).
+    - Optimizing performance via **Aggregations** and Column indexing.
+4.  **Visualization (RL)**: Aligning with the **Business Purpose**.
+    - Selecting visuals that answer specific BRD questions (e.g., "Which region is underperforming?").
+    - Tuning the UX for speed and clarity.

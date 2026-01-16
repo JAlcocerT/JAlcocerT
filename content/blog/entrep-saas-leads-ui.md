@@ -3,7 +3,7 @@ title: "How about getting leads for your SaaS?"
 #date: 2026-01-24T11:20:21+01:00
 date: 2026-01-15T11:20:21+01:00
 draft: false
-tags: ["BiP","APIFY x ESP Sales Pipeline","RoadMap26"]
+tags: ["BiP x GTM","APIFY x ESP Sales Pipeline","RoadMap26"]
 description: 'Forget about B2C, sell to B2B as they have the budget for whatever product helps.'
 url: 'how-to-get-customers-programmatically'
 ---
@@ -16,6 +16,8 @@ Oil, aka `CL=F` is a commodity
 Your client's money is a commodity.
 
 Your [client is a commodity](https://youtu.be/O_tmZgs4LHU).
+
+~~Your tinder date, is most likely a commodity~~
 
 Your product is NOT.
 
@@ -51,7 +53,7 @@ And now, time for more APIFY:
 
 ### Use APIFY to the Max
 
-Every business needs clinets.
+Every business needs clients.
 
 Building something that does precisely that: has potential demand.
 

@@ -1,11 +1,11 @@
 ---
 title: "Closing the code to impact gap"
 #date: 2026-01-24T07:20:21+01:00
-date: 2026-01-15T07:20:21+01:00
+date: 2026-01-17T07:20:21+01:00
 draft: false
 tags: ["Tech Stack vs Psyco Stack"]
 description: 'Code is cheap now. Software is not. The gap so that people want your ideas.'
-url: 'code-is-cheap-now'
+url: 'how-is-for-agents-what-and-why-for-you'
 ---
 
 
@@ -137,7 +137,19 @@ mkdir -p public/presentations && cp -r y2026-tech-talks/2-ba-brd-development/dis
 
 #### Improving your emails
 
+Wondering why not many people are going to your tech talks?
+
+You might need to improve how you coomunicate its value via email.
+
+Get better at conveying what you will do via mail. Like [this](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/2-ba-brd-development/email.md).
+
 #### Improving Slack Engagement
+
+Got a centralized repo with your presentations as text?
+
+There is no excuse not to write a psycologycal engaging email and/or [slack alert messages](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/langchain-postgres/z-tech-talk-advert.md) to get more people flowing to your funnel.
+
+I mean: assisting to your tech talk.
 
 
 ### Improving your Products
@@ -193,6 +205,12 @@ In the meantime, you can:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
+
+### Have you Plugged PostHog?
+
+See how people really interact *and what they want* from you.
+
+What they do, not what they say.
 
 ---
 

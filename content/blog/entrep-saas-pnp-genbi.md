@@ -1,10 +1,10 @@
 ---
-title: "[Gen-BI] Plug and Play Data Analytics"
-date: 2026-02-01T18:20:21+01:00
-#date: 2026-03-01T18:20:21+01:00
+title: "[Gen-BI] Creating a custom PGSQL Gen-BI BAML Powered Analytics"
+date: 2026-01-15T18:20:21+01:00
+#date: 2026-02-01T18:20:21+01:00
 draft: false
-tags: ["RoadMap26 x Tech Talk 4","Generative BI x WrenAI","BAML"]
-description: 'From databases to insights with automatic charts from your QnA.'
+tags: ["RoadMap26 x Tech Talk 4","Generative BI", "WrenAI vs Rill","BAML x PGSQL x Vite"]
+description: 'From databases to on demand D&A insights. Orchestrating an Agentic Semantic Layer for PGSQL Analytics.'
 url: 'creating-a-generative-bi-solution'
 ---
 
@@ -93,7 +93,11 @@ docker-compose up -d
 
 Data modeling adds a logical layer over your original data schema, organizing relationships, semantics, and calculations. 
 
-This helps AI align with business logic, retrieve precise data, and generate meaningful insights. More details
+This helps AI align with business logic, retrieve precise data, and generate meaningful insights.
+
+I was impressed by [wrenai data stack here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#wrenai-data-stack).
+
+Which is why these series got started in the first place.
 
 ## Building 
 
@@ -140,7 +144,7 @@ git clone https://github.com/JAlcocerT/langchain-db-ui
 I got couple of ideas on how to do this.
 
 1. To get some graph recommended via function calling.
-2. To do so via BAML
+2. To do so **via BAML**
 
 * https://github.com/boundaryml/baml
 * /JAlcocerT/using-baml-to-query-a-database
@@ -151,19 +155,227 @@ One of their doc example resonated with this: https://baml-examples.vercel.app/e
 
 For which they provided the code: https://github.com/BoundaryML/baml-examples/tree/main/nextjs-starter/app/examples/book-analyzer
 
+### BAML x PGsql x Matplotlib
+
+Moving from `z-langchain2baml` to `z-baml-genbi`
+
+```
+i have copied the logic to z-baml-genbi
+
+the idea that i want to try now, is that if we could make baml to keep its current output, but to add according to the query and expected result of the table, to propose a kind of chart to display it.
+
+We can assume it will be one of: pie chart, bar chart, time series or unconclusive
+
+and based on this assesment (we can force it to provide 1 for only one category and 0 for the rest) we will have a python logic that will take the pandas dataframe output from pgsql and create and save a matplotlib chart
+```
+
+```sh
+./datachat_venv/bin/baml-cli generate --from z-baml-genbi/baml_src
+#pip install matplotlib
+python3 z-baml-genbi/baml-genbi.py --db-uri "postgresql://admin:securepassword@localhost:5432/umami_warehouse" --question "What are the top 10 most visited pages?"
+```
+
+![alt text](/blog_img/AIBI/matplotlib-baml-pgql-qna.png)
+
+
+```mermaid
+graph LR
+    U[User Question] --> S[Python Script]
+    S --> |LangChain| DB[(PostgreSQL)]
+    DB --> |Schema Context| S
+    S --> |Context + Quest| B[BAML]
+    B --> |1. Generate SQL| AI[GPT-4o]
+    B --> |2. Classify Chart| AI
+    AI --> |SqlResult Object| B
+    B --> |sql, chartType| S
+    S --> |Execute| DB
+    DB --> |DataFrame| S
+    S --> |Save| CSV[output.csv]
+    S --> |Plot| M[Matplotlib]
+    M --> |Save| PNG[output_chart.png]
+```
+
+```mermaid
+mindmap
+  root((baml-genbi.py))
+    BAML (Intelligence)
+      SQL Generation
+      Visualization Strategy
+      Enum: ChartType
+      Type-safe Output
+    Infrastructure
+      LangChain (Schema Extraction)
+      SQLAlchemy (DB Connection)
+    Data & Viz
+      Pandas (Processing)
+      Matplotlib (Premium Charting)
+    Outputs
+      output.csv
+      output_chart.png
+```
+
+### BAML x PGSQL x Vite x Automatic Charts
+
+All thanks to `Gemini 3 Flash`
+
+```md
+that was impressive, can we create now a folder called Z_PGSQL-GenBI
+
+where we will have the current logic of z-baml-gebi, but plugged into the vite app defined at frontend and backend?
+
+we would need to change some parts of that vite app, but the functionality i want to bring is the qna as per current baml version and if the question can be replied with a graph (as categorized by the llm) then it will generate the graph in a cool vite logic
+```
+
+You just need to provide the connection: `postgresql+psycopg2://admin:securepassword@localhost:5432/umami_warehouse`
+
+Or for the container: `postgresql+psycopg2://admin:securepassword@postgres:5432/umami_warehouse`
+
+```mermaid
+mindmap
+  root((Integrated Gen-BI))
+    Frontend (React + Vite)
+      Recharts (JS Visualization)
+      Tailwind CSS v4 (Modern Design)
+      Lucide-React (Iconography)
+      Framer Motion (Animations)
+    Backend (FastAPI)
+      BAML Client (AI Orchestration)
+      SQLAlchemy (Engine)
+      Pandas (Data Wrangling)
+      LangChain (Schema Metadata)
+    Intelligence (BAML)
+      Structure: SqlResult
+      Strategy: ChartType Enum
+      Model: GPT-4o
+    Database
+      PostgreSQL
+      DuckDB (Experimental)
+```
+
+How does this works?
+
+```mermaid
+graph LR
+    U[User] -->|Natural Question| F(Vite Frontend)
+    F -->|POST /api/ask| B(FastAPI Backend)
+    B -->|get_table_info| LC[LangChain]
+    LC -->|Metadata| B
+    B -->|GenerateSQL| BA[BAML AI]
+    BA -->|SQL + Rationale + ChartType| B
+    B -->|read_sql| DB[(PostgreSQL)]
+    DB -->|DataFrame| B
+    B -->|Structured JSON| F
+    F -->|State Update| R[Recharts]
+    R -->|Live Interactive Chart| U
+```
+
+```env
+OPENAI_API_KEY=your_key
+DATABASE_URL=postgresql://admin:securepassword@localhost:5432/umami_warehouse
+```
+
+Backend Setup
+
+```bash
+cd Z_PGSQL-GenBI/backend
+pip install -r requirements.txt
+python3 main.py
+```
+
+Frontend Setup
+
+```bash
+cd Z_PGSQL-GenBI/frontend
+npm install
+npm run dev
+```
+
+![alt text](/blog_img/AIBI/vite-baml-genbi.png)
+
+Go to `http://localhost:5173/` and enjoy.
+
+Looks cool, doesnt it? This has been the tech stack.
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React (Vite) | Chosen for low latency and modern developer experience. |
+| **Styling/UI Library** | Tailwind CSS v4 + Framer Motion | Custom "Deep Night" glassmorphism theme for a premium look. |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | FastAPI + PostgreSQL/DuckDB | High performance with Pydantic validation; SQLAlchemy for DB agnostic engine. |
+| **AI Intelligence** | BAML (GPT-4o) | Type-safe inference for SQL generation and visualization classification. |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | Environment Secrets (`.env`) | Managed via local environment for isolated deployment; ready for JWT integration. |
+
+This project follows a 4-layer architecture for Modern Data Applications:
+
+```mermaid
+graph TD
+    RL[Representation Layer: React + Recharts]
+    AL[Agentic Layer: FastAPI + Python Engine]
+    SL[Semantic Layer: BAML Definitions]
+    DL[Data Layer: PostgreSQL]
+
+    RL <--> AL
+    AL <--> SL
+    AL <--> DL
+```
+
+1.  **DL (Data Layer)**: The source of truth. In this case, your **PostgreSQL** instance containing raw Umami events.
+2.  **SL (Semantic Layer)**: Where the magic happens. **BAML** acts as the translator, turning raw questions into high-level concepts (SQL query, Data Explanation, and Visualization Strategy).
+3.  **AL (Agentic Layer)**: The **FastAPI** orchestrator. It manages the lifecycle: extracting schema, calling the Semantic Layer, executing against the Data Layer, and packaging the result.
+4.  **RL (Representation Layer)**: The **Vite + React** interface that turns JSON into interactive BI insights.
+
+And we go:
+
+```mermaid
+graph 
+    subgraph TraditionalBI [Traditional BI: Human-Centric]
+        DL1[(DL: Raw Data)] --> SL1[SL: PowerBI Model]
+        SL1 --> AL1["AL: Human Analyst (Manual Interpretation)"]
+        AL1 --> RL1[RL: Fixed Dashboards]
+    end
+
+    subgraph GenBI [Modern Gen-BI: AI-Centric]
+        DL2[(DL: Raw Data)] --> SL2[SL: BAML Schema]
+        SL2 <--> AL2["AL: Agentic Engine (Automated AI Loop)"]
+        AL2 --> RL2[RL: Dynamic JIT Charts]
+    end
+```
+
 ---
 
 ## Conclusions
+
+No 2 companies do D&A in the same way.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Wrapping LangChain DB Queries into a custom UI to get insights" >}}
 {{< /cards >}}
 
+How many dashboard are built with a lot of effort not to be consumed much in the future and get abandoned?
 
- Document Logic (The Planning)
+How many ad-hoc queries get in a queue and its insights are never revealed?
+
+With today's Gen-BI created solution, you can avoid both scenarios.
+
+In the traditional BI world, insights are expensive and slow. 
+
+**Z_PGSQL-GenBI** is designed to eliminate the "friction" between a business question and a data-driven answer.
+
+If you need it, you know where to get such solution: *The goal isn't to build more dashboards. The goal is to **answer more questions**. Gen-BI is the tool that makes the "Zero-Dashboard" future a reality.*
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
+Be smart, turn your **Data Layer** into a **Self-Service Agent**. 
+
+
+Document Logic (The Planning)
 BRD (Business Requirements): Answers "WHY build this?" (The Vision & Goals).
 PRD (Product Requirements): Answers "WHAT are we building?" (The Features & Roadmap).
 FRD (Functional Requirements): Answers "HOW does it work?" (The Technical Logic & CRUDs).
+
+
 2. Data Logic (The Analytics)
 Fact Tables: Answer "WHAT happened (and how much)?"
 Examples: visit_count, revenue, quantity_sold.
@@ -207,6 +419,10 @@ Within Dimensional Modeling, you have two primary ways to structure your "Dimens
 
 
 ### Related Tech Talk
+
+There is a huge difference between [pbi - looker and this gen-bi solution](https://mermaid.live/edit#pako:eNp9U02P2jAQ_SuWDz0B3XyRkEMllrARaraim7Zb1dmDIbPEAmxkOy0f4r93QliU7aE52dZ7M--9mZzoUpVAY7rSfFeRb0khCX6mXrQP8_sZYXP1BzS5n8Xkkcuab8gH8kMYPLy06OabO2yipISlJVaRhFv-Qvr9T2Tusispt1yTfFnBlpMEjFjJLt1t0R571sICScY_ySNwU2swXZjXwnyWaL5CHYlWu6uYdzi_xQVsXi82wlTkCXZK2ysEZFnIf5xmn58Iy5Rag47JBEPpPwhtLPaYgLSab8QRyk6L7J3hZ66hUrWB1nXmshTkx2kpLGlqPmaXkl16azjzWAKvQsLNLRHySumiW9-Zz6b73UZpIDlsmtYPAjZl13nWOs8ClvPf0EjLK9RW4khMtVBcl__JIG2mjcL7zazHK_Qtlk3IB8m3Ytnpkjq4FELeZr3gb85Tl41nZFxb1Z_uMbalNWhdWtjbLr91n3rsu8HVGpu1IV-4rTFm8rUGY4Xqbkfa2k_9pjbqA80tmEukKC-3zXV16BLaFNKAzaSxHIVePVx3RRx5pwVGQXv4B4iSxlbX0KNb0FveXOmpgRTU4tpCQWM8llyvC1rIM3J2XP5SavtG06peVTR-xWXEW70rUVciOIa7vb1q7AZ6omppaeyE_qUIjU90T-O-4zn-IHADxx_6ke-FQY8eaOzd3Q1cbxhGQRRFw9AZnXv0eGnrDMKRFzpO6HijUeS67vD8F4GgJbw).
+
+
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing

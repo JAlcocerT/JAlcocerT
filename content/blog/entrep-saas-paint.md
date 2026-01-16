@@ -57,6 +57,8 @@ For exteriors?
 
 Careful with that estimate as it can be ~2k *of 2018* for 80m2 of exterior surface.
 
+Existing competitors? or Needs PMF test?: No need of PMF, demand validated.
+
 The **launch strategy**: *aka, focus strategy*
 
 | Element | Decision |
