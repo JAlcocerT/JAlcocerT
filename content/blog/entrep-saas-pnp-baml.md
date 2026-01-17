@@ -313,7 +313,6 @@ cd y2026-tech-talks/4-baml-db-insights
 *   **Dimension Tables:** Answer **"WHO / WHERE / WHICH context?"**
     *   *Examples:* `customer_name`, `product_category`, `country_origin`.
 
-A Materialized table is a solution to a d&a problem.
 
 If you were to grow your Northwind project into a "Big Data" architecture:
 
@@ -585,3 +584,127 @@ As of late 2023, the team released **Malloy 4.0**, which they officially called 
 It is now considered a stable, open-source language that is ready for production use, primarily through their excellent **VS Code Extension**.
 
 **Would you like to see a "Before and After" example of a Northwind query written in SQL versus Malloy?**
+
+Comparing **Malloy** to **DuckDB**, **SQLite**, **ClickHouse**, and **Redshift** is a bit like comparing a **GPS system** to different types of **Engines**.
+
+Malloy is the **Language/Interface** (the GPS), while the others are the **Databases/Engines** (the car). You need one of each to actually "drive" your data.
+
+---
+
+### 1. The Big Distinction: Language vs. Engine
+
+| Tool | Category | What it does |
+| --- | --- | --- |
+| **Malloy** | **Modeling Language** | Compiles into SQL. It’s a "wrapper" that makes querying easier and reusable. |
+| **DuckDB** | **Embedded OLAP DB** | A fast, local engine for analyzing files (Parquet/CSV) on your laptop. |
+| **SQLite** | **Embedded OLTP DB** | A lightweight engine for apps/storage. Great for writing, slow for big analysis. |
+| **ClickHouse** | **Distributed OLAP DB** | A massive, server-based engine for real-time analytics on billions of rows. |
+| **Redshift** | **Cloud Data Warehouse** | Amazon's enterprise-scale engine for massive, long-term data storage. |
+
+---
+
+### 2. How Malloy interacts with them
+
+Malloy doesn't store data. It **connects** to these engines and tells them what to do.
+
+* **Malloy + DuckDB:** The most common "modern" combo. You use Malloy to write clean code, and DuckDB executes it instantly on your local files.
+* **Malloy + Redshift:** Malloy replaces the "messy" SQL you would normally send to Redshift, making your enterprise queries shorter and more readable.
+* **Malloy + ClickHouse:** Currently, Malloy has limited/community support for ClickHouse (it primarily focuses on BigQuery, Postgres, and DuckDB), but the logic is the same: Malloy writes the SQL so you don't have to.
+
+---
+
+### 3. Comparing the "Engines" (The Databases)
+
+| Feature | **SQLite** | **DuckDB** | **ClickHouse** | **Redshift** |
+| --- | --- | --- | --- | --- |
+| **Best For** | Mobile apps, local storage. | Data Science, local Parquet. | Real-time web analytics. | Enterprise BI. |
+| **Modeling** | **ER (Row-based)** | **Dimensional (Column)** | **Dimensional (Column)** | **Dimensional (Column)** |
+| **Scale** | Megabytes to Gigabytes. | Gigabytes (Single Node). | Terabytes to Petabytes. | Petabytes (Cloud). |
+| **Speed** | Fast for 1 row. | Fast for 1M rows. | Fast for 1B rows. | Fast for complex Joins. |
+
+---
+
+### 4. Which one should you use for your project?
+
+If you are following the **Lloyd Tabb** philosophy:
+
+1. **Use DuckDB** as your engine if you want to play with your Northwind data locally on your computer. It’s free and requires zero setup.
+2. **Use Malloy** as your language *on top* of DuckDB. This will allow you to define your "Gross Profit" or "Total Orders" logic once and reuse it across every chart.
+3. **Avoid SQLite** for this specific task—it’s a great database, but it will struggle once you start doing the "Nested" and "Complex" analytical queries that Malloy is designed for.
+
+Summary
+
+* **Malloy** is the **Smart Translator** (created by the Looker founder). https://www.youtube.com/watch?v=pLeF4j_Irg4
+* **DuckDB** is the **Local Turbo-Engine**.
+* **ClickHouse/Redshift** are the **Industrial Power-Plants**.
+
+**Would you like me to show you a Malloy script that connects to a DuckDB instance to query a Parquet file?**
+
+A great video about Apache Iceberg:
+<!-- 
+https://www.youtube.com/watch?v=TsmhRZElPvM -->
+
+{{< youtube "TsmhRZElPvM" >}}
+
+Apache Kafka:
+
+<!-- 
+https://www.youtube.com/watch?v=9CrlA0Wasvk
+ -->
+
+{{< youtube "9CrlA0Wasvk" >}}
+
+
+A Materialized table is a solution to a d&a problem.
+A **Materialized View** is essentially a "cached" table. While a regular view is just a saved SQL query that runs every time you look at it, a materialized view **calculates the result once and stores it physically** on the disk as a real table.
+
+Think of it like this:
+
+* **Regular View:** A recipe. Every time you want a cake, you have to follow the recipe and bake it from scratch. (Fresh, but slow).
+* **Materialized View:** A pre-baked cake. When you want a cake, you just grab it from the fridge. (Instant, but might be a day old).
+
+---
+
+### Why is it useful?
+
+1. **Speed (Performance):** If your query joins 10 huge tables and takes 2 minutes to run, a materialized view runs it once (e.g., at 3 AM) and saves the result. When you query the view at 10 AM, it's nearly instantaneous.
+2. **Saves Money/Compute:** You aren't paying your database (like Snowflake or BigQuery) to recalculate the same complex math 100 times a day.
+3. **Simplicity:** It hides complex "Big Data" messiness. Your data analysts just see a clean, fast table.
+
+---
+
+### Do Power BI or Looker have them?
+
+Technically, "Materialized View" is a **database feature** (Postgres, BigQuery, Snowflake, etc.), but both Power BI and Looker have their own versions to achieve the same result.
+
+#### **1. Looker: Persistent Derived Tables (PDTs)**
+
+Looker doesn't call them materialized views; it calls them **PDTs**.
+
+* **How it works:** You write the SQL for a table in LookML. Looker then creates a physical table in your database (e.g., Redshift or BigQuery) and updates it on a schedule.
+* **Refinement:** Looker can even do "Incremental PDTs" where it only adds the newest rows instead of rebuilding the whole thing.
+
+#### **2. Power BI: Calculated Tables / Aggregations**
+
+Power BI handles this slightly differently depending on your setup:
+
+* **Import Mode:** When you "Import" data, the entire dataset is essentially a materialized view. It's stored in Power BI's memory.
+* **Calculated Tables:** You can use DAX to create a new table based on others. This table is "materialized" inside the Power BI file during the refresh.
+* **User-Defined Aggregations:** You can tell Power BI to create a hidden, summarized version of a huge "DirectQuery" table. When a user asks for a high-level chart (e.g., "Sales by Year"), Power BI hits the "materialized" summary instead of the billion-row table.
+
+---
+
+### Summary Comparison
+
+| Tool | Feature Name | Stored In... |
+| --- | --- | --- |
+| **Database** (e.g., Postgres) | Materialized View | The database disk. |
+| **Looker** | Persistent Derived Table (PDT) | The database disk (managed by Looker). |
+| **Power BI** | Calculated Table / Aggregation | Power BI's internal Memory/Cache. |
+
+### When to use one?
+
+* **Use a Regular View** if your data changes every second (real-time) and the query is simple/fast.
+* **Use a Materialized View (or PDT)** if you have a massive dataset and your dashboards are starting to feel slow or "laggy."
+
+**Since you've been looking at your Northwind data, would you like to see the SQL command to create a Materialized View for "Total Sales by Category" so it loads instantly in your project?**

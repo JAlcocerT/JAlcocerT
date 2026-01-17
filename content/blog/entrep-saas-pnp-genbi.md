@@ -4,7 +4,7 @@ date: 2026-01-15T18:20:21+01:00
 #date: 2026-02-01T18:20:21+01:00
 draft: false
 tags: ["RoadMap26 x Tech Talk 4","Generative BI", "WrenAI vs Rill","BAML x PGSQL x Vite"]
-description: 'From databases to on demand D&A insights. Orchestrating an Agentic Semantic Layer for PGSQL Analytics.'
+description: 'From databases to on demand D&A insights. Orchestrating an Agentic Semantic Layer for PGSQL Self-Service Analytics.'
 url: 'creating-a-generative-bi-solution'
 ---
 
@@ -99,7 +99,7 @@ I was impressed by [wrenai data stack here](https://jalcocert.github.io/JAlcocer
 
 Which is why these series got started in the first place.
 
-## Building 
+## Pre-Building 
 
 But first, some recap on what drove me to this point.
 
@@ -127,6 +127,8 @@ By sharing in couple ways:
 * The non-tech for business users - With [a video proof](https://youtu.be/qf-oNNNDXS0) that this can be done in less than 1h
 
 {{% /steps %}}
+
+## Building
 
 ### Adding Generative BI to PlugnPlay D&A
 
@@ -347,7 +349,7 @@ graph
 No 2 companies do D&A in the same way.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Wrapping LangChain DB Queries into a custom UI to get insights" >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain/BAML x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to PGSQL - Get insights with automatic charts." >}}
 {{< /cards >}}
 
 How many dashboard are built with a lot of effort not to be consumed much in the future and get abandoned?
@@ -457,3 +459,8 @@ Would you like me to help you calculate what these numbers would look like based
 
 A place with facts, dimensions, joins, measures...the building blocks to describe your data.
 
+| Aspect | Dimensional Modeling | Semantic Modeling (PBI) |
+| :--- | :--- | :--- |
+| **Focus** | Efficiency and Structure (Star Schema). | Usability and Business Logic (Logic + Context). |
+| **Action** | Joining tables, defining PKs and FKs. | Refinement: DAX, Renaming, RLS, Formatting. |
+| **Output** | A clean, technical Warehouse schema. | A "Self-Service" model ready for business users. |
