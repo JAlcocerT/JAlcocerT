@@ -1,14 +1,12 @@
 ---
 title: "[Gen-BI] The insights for a profitable Shopify"
-date: 2026-01-15T18:20:21+01:00
+date: 2026-01-17T18:20:21+01:00
 #date: 2026-02-01T18:20:21+01:00
 draft: false
-tags: ["RoadMap26 x Tech Talk 5","Shopify API","BAML x Vite","RevOps x GTM"]
+tags: ["RoadMap26 x Tech Talk 5","Shopify API","BAML x Vite x Astro","RevOps x GTM"]
 description: 'Got en ecommerce? You are missing an AI Powered COO.'
 url: 'custom-analytics-for-shopify'
 ---
-
-
 
 **TL;DR**
 
@@ -24,11 +22,40 @@ There is a way to do Generative BI to improve a business.
 
 You see what's this post is all about, right?
 
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_shopify" title="NEW - Shopify D&A" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Vite x BAML x . An agentic COO for shopify" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution" title="GenBI - Vite x PGSQL x BAML Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating a sample WebApp to extract insights qna 2 graph from a pgsql db." >}}
 {{< /cards >}}
+
+PS: I didnt wake up with this idea by chance
+
+We are coming from:
+
+5. 
+
+{{< details title="Creating a Landing for the Shopify Agentic data driven COO 📌" closed="true" >}}
+
+```sh
+#git init && git add . && git commit -m "Initial commit: Starting shopify poc from langchain baml repo" && gh repo create poc_shopify --private --source=. --remote=origin --push
+```
+
+{{< /details >}}
+
+Guess what happened in ~45 minutes?
+
+![alt text](../../static/blog_img/AIBI/amazing-landing.png)
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React (Astro/Vite) | Chosen for low latency and modern "Island" architecture. |
+| **Styling/UI Library** | Tailwind CSS v4 + Framer Motion | Custom "Deep Night" glassmorphism theme for a premium look. |
+| **Authentication** | Environment Secrets (`.env`) | Managed via local environment for isolated deployment. |
+| **Deployment** | Docker | Containerized deployment for easy scaling and isolation. |
+
+
+{{< callout type="info" >}}
+Whether you are analyzing **Microsoft** or starting your own **Shopify store**, the logic is identical: Use **CapEx** and **OpEx** to drive **Volume and Price**, then use **Operational Discipline** to make sure that growth doesn't get "eaten" by the internal drains of the business.
+{{< /callout >}}
 
 ---
 
@@ -37,6 +64,11 @@ You see what's this post is all about, right?
 There are many efficiencies to be taken of when you run a business.
 
 Have a small team and constrain resources is not an excuse anymore to get your operations improving.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_shopify" title="Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB x UI | Github ↗" icon="github" >}}
+{{< /cards >}}
 
 Ready to have an **agentic [COO](#whats-a-coo) working for you?
 

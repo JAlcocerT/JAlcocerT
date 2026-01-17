@@ -44,11 +44,51 @@ And some questions: *that thing that happens when you create*
 
 {{% steps %}}
 
+### Tech Stack is Clear
+
+This simply works for me.
+
+Try and see.
+
+Specially after vibe coding few pet projects with the approach: `brd.md` - clarifications - dev plan *with out of scope features*
+
+Core Framework: Astro 5.0 as the foundational engine for this project.
+
+- **Why?** It follows a "Zero JS by default" philosophy, shipping the absolute minimum amount of JavaScript to the browser.
+- **Islands Architecture:** Interactive components (like the qualification modal) are "islands" of React that load only when needed, while the rest of the page remains static HTML.
+- **Vite-Powered:** Lightning-fast development and build times.
+
+Styling: Tailwind CSS v4
+
+**Tailwind CSS** provides a utility-first approach to styling.
+- **Modern Engine:** Version 4 uses a CSS-first configuration, making it faster and more predictable.
+- **Glassmorphism:** Custom utilities in `global.css` enable the premium "glass" effects used throughout the UI.
+- **Dark Theme:** Configured with `oklch` color tokens for consistent, vibrant colors across the dark spectrum.
+
+UI Logic: React & Framer Motion
+
+While the page is static, the complex logic and animations use React.
+
+- **Framer Motion:** Used for the staggered entrance animations and smooth transitions between qualification steps.
+- **Spring Physics:** Animations use spring-based transitions (stiffness/damping) instead of linear durations to feel more organic and "premium."
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React (Astro/Vite) | Chosen for low latency and modern "Island" architecture. |
+| **Styling/UI Library** | Tailwind CSS v4 + Framer Motion | Custom "Deep Night" glassmorphism theme for a premium look. |
+| **Deployment** | Docker | Containerized deployment for easy scaling and isolation. |
+
+
+
 ### After Shipping
+
+The tech stack just works.
+
+But does somebody even care?
 
 When you bring [eyes to your saas](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/)
 
-You might realize that [it needs some improvements](https://jalcocert.github.io/JAlcocerT/iterating-and-improving-a-micro-saas/).
+You might realize that [it needs *some* improvements](https://jalcocert.github.io/JAlcocerT/iterating-and-improving-a-micro-saas/).
 
 ### Psyco
 
@@ -210,7 +250,13 @@ In the meantime, you can:
 
 See how people really interact *and what they want* from you.
 
-What they do, not what they say.
+![Cat product Meme](/blog_img/memes/features-vs-needs.png)
+
+What they do.
+
+Not what they say.
+
+Now what you think.
 
 ---
 

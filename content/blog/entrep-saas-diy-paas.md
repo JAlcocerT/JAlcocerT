@@ -19,7 +19,7 @@ Benefit from what's automated for the masses.
 
 I want to **combine a Landing x PaaS Tool**s to enable B2C users to get up to speed quickly with certain services that dont require any customization.
 
-A Micro-SaaS on Top of PaaS x (SSG + CMS + other services TBC)
+A Micro-SaaS on Top of PaaS x (SSG + CMS + other services TBC).
 
 Not trying to do a:
 
