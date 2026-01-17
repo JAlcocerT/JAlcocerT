@@ -362,7 +362,7 @@ See: `https://makemydream.pl/wp-login`
   * https://hormigasenlanube.com/
   * https://lyk-website.pl/brief/
 
-https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known
+* https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known
 
 ![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
 

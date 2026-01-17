@@ -1,7 +1,7 @@
 ---
 title: "Blogspot? or a Cool Website?"
 date: 2026-01-17
-description: "How is your current site performing? Audits and benchmarks to grigger a Modern and Responsive Website"
+description: "Why is your site slow? Audits and benchmarks triggered inside a Modern Landing."
 draft: false
 tags: ["Free Web Audits","Lead Magnet","Roadmap26","BiP","Wordpress","Blogspot"]
 url: 'how-to-perform-free-web-audit'
@@ -13,6 +13,11 @@ url: 'how-to-perform-free-web-audit'
 Creating **Lead Magnet**: get a FREE web audit
 
 *Leveraging the audit discoveries done [here](https://jalcocert.github.io/JAlcocerT/do-your-instagram/#web-audits)*
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/entreagujaypunto-next-gallery" title="Next Gallery AgujayPunto ↗" icon="github" >}}
+    {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/imgproxy" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 **Intro**
 
@@ -53,8 +58,9 @@ It incorporated a programmatic 101 web audit.
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="NEW - Web Magnet" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Vite x BAML x . An agentic COO for shopify" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="NEW - Web Magnet" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Vite x Astro x Web Audit" >}}
 {{< /cards >}}
+
 
 People who have some product/service still need a website.
 
@@ -68,13 +74,49 @@ Let's make them see how good is their current one.
 #git init && git add . && git commit -m "Initial commit: Starting a landing with lead magnet" && gh repo create poc_webs_magnet --private --source=. --remote=origin --push
 ```
 
+```md
+what i want to create with this project is a modern landing page that acts as a lead magnet, by providing a free web audit for anyone that provides its website and contact details. So ideally we will have a clear frontend a backend part
+
+could we create a z-brd.md to describe this?
+
+couldwe also add a functional requirement, so that all the copy from the landing will be controlled from a site.md file?
+```
+
+Powered by Gemini 3 Flash this time :)
+
+
+```sh
+#./audit-master.sh https://beyondajourney.lol
+
+make dev
+```
+
 {{< /details >}}
 
+First things first, give me the website name to analyze.
+
+Then your email and contact details, consenting for marketing.
+
+Then...we move forward:
+
+![free web audit result](/blog_img/biz/leads/audit-result.png)
+
+You get via mail a detailed summary, with a transaction email.
+
 Options for Anyone to get a Website: DIY/DWY/DFY.
+
+This can play nicely with some guerrilla marketing: scan and get a free audit!
+
+![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
 
 And this landing aims to show you that it can be done better.
 
 Also more eco :)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/webcheck" title="N8N | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/linkchecker" title=" | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ---
 
@@ -101,8 +143,6 @@ Want to do something similar?
 ---
 
 ## FAQ
-
-
 
 ### Preparing for BlogSpot Migration
 

@@ -46,11 +46,13 @@ And some questions: *that thing that happens when you create*
 
 ### Tech Stack is Clear
 
-This simply works for me.
+This simply works.
 
 Try and see.
 
-Specially after vibe coding few pet projects with the approach: `brd.md` - clarifications - dev plan *with out of scope features*
+A recommendation after vibe coding few *sample projects*.
+
+Follow the approach: `brd.md` - clarifications - dev plan *with out of scope features*
 
 Core Framework: Astro 5.0 as the foundational engine for this project.
 

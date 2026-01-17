@@ -31,13 +31,16 @@ PS: I didnt wake up with this idea by chance
 
 We are coming from:
 
-5. 
+5. The GenBI Post with: WrenAI, Rill, and BAML x Vite...
+4. 
 
 {{< details title="Creating a Landing for the Shopify Agentic data driven COO 📌" closed="true" >}}
 
 ```sh
 #git init && git add . && git commit -m "Initial commit: Starting shopify poc from langchain baml repo" && gh repo create poc_shopify --private --source=. --remote=origin --push
 ```
+
+Powered by Gemini 3 Flash this time :)
 
 {{< /details >}}
 
