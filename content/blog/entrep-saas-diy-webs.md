@@ -1,6 +1,6 @@
 ---
 title: "Attraction Web Offer x Show a Problem"
-date: 2026-01-16T23:20:21+01:00
+date: 2026-02-01T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey"]
 description: 'A scalable way to provide DIY websites. With Free Web Audits!'

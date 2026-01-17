@@ -3,7 +3,7 @@ title: "KB and Local Bots to end Silos for good"
 date: 2026-02-01T23:20:21+01:00
 #date: 2025-12-21T23:20:21+01:00
 draft: false
-tags: ["Custom Chatbots x Local AI and KB","Tech Talk","RoadMap26","Docs Bot","Scribbly"]
+tags: ["Custom Chatbots x Local AI and KB","Tech Talk 99","RoadMap26","Docs Bot","Scribbly"]
 description: 'Building a custom BOT platform to end with silos. HUGO FOSS rebuild.'
 url: 'custom-bots-kb'
 ---
@@ -241,7 +241,7 @@ To offer this via fossengineer, I can try: *these are next steps*
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
-Because ebooks wont create succesfull ideas into reality for you:
+Because ebooks wont create succesfull ideas into reality for you: *would you dare to see whats behind the blur?*
 
 ![alt text](/blog_img/data-experiments/life-flows-blured.png)
 
