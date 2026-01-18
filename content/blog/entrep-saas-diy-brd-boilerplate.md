@@ -172,7 +172,7 @@ And also the DIY component based Landing created [here](https://jalcocert.github
   {{< card link="https://github.com/JAlcocerT/diy-landing-boilerplate" title="DIY Landing Boiler-Plate ↗" icon="github" >}}
 {{< /cards >}}
 
-To spin the slidev ppt for BAs/PMs:
+To spin the slidev ppt for BAs/PMs: *clone this, go to the folder and enjoy*
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing

@@ -27,15 +27,23 @@ Generate cash flow.
 
 **Intro**
 
+So you are done with the 3 F's?
+
+Yea, that stage of trying to sell to family friends and ~~fools~~
+
+Time to do some OpEx - in this case: **marketing**
+
+
+
+
+## Marketing Examples 
+
 In the end of last year I found this: *when looking for nextjs web apps on yt*
 
 
-### Example 1
+Example 1: `https://lastcodebender.com/`
 
-* https://lastcodebender.com/
-
-
-An example of marketing?  https://www.codebender.ai/#bottom
+An example of marketing?  `https://www.codebender.ai/#bottom`
 
 ```md
 CONGRATULATIONS! YOU QUALIFY:
@@ -62,7 +70,7 @@ And once you confirm it: `https://mongemalo.com/importante-mensaje/`
 
 You are already prompted to buy an info product.
 
-`https://youtu.be/kwIgobHPwxY?si=SIvzjdvu41-asyhS`
+`https://youtu.be/kwIgobHPwxY`
 
 ---
 

@@ -75,14 +75,44 @@ Let's make them see how good is their current one.
 ```
 
 ```md
-what i want to create with this project is a modern landing page that acts as a lead magnet, by providing a free web audit for anyone that provides its website and contact details. So ideally we will have a clear frontend a backend part
+what i want to create with this project is a modern landing page that acts as a lead magnet, by providing a free web audit for anyone that provides its website and contact details. 
+
+So ideally we will have a clear frontend a backend part
 
 could we create a z-brd.md to describe this?
 
-couldwe also add a functional requirement, so that all the copy from the landing will be controlled from a site.md file?
+could we also add a functional requirement, so that all the copy from the landing will be controlled from a site.md file?
+```
+
+```md
+what it needs to happen so tat when i do make dev it will be exposed to the local network not just localhost?
+can we have a docker-compose.prod.yml
+
+that makes the UI available into my network cloudflared_tunnel so that i can use it to expose via y custom domain?
+just do one that the network will be external, as i have cf in a separated docker stack already
+
+nd can we add a consent button to the t&c
+
+which have to be created as a separated markown
+
+i think we also need privacy policy
+
+and to indicate that the result of the website performance will be provided by mail and that the user also accept marketing emails with possibility tu unsub anytime
+
+can the footer content be alsocontrolled by the site.md copy?
+
+can we do that the privacy and terms pages are better looking?
+
+also, what could we do so that we use to the max the above the fold section? lets brainstorm here
+
+open in new tab all hyperlink
+
+so now if i run this, will the reply be dsaved to csv and formbricks?
 ```
 
 Powered by Gemini 3 Flash this time :)
+
+Built with Astro 5 & Tailwind 4!
 
 
 ```sh
@@ -132,9 +162,27 @@ Then see
 A post of what I learnt about [Scrapping Tools](https://github.com/JAlcocerT/Scrap_Tools)
 {{< /callout >}}
 
-You have this solution available at: `webaudit.jalcocertech.com`
+```sh
+git clone https://github.com/JAlcocerT/poc_webs_magnet
+cd poc_webs_magnet
+make docker-prod-up
+```
+
+Which is plugged to .csv and to formbricks `web-audits` as per this doc. `https://app.formbricks.com`
+
+You will need the survey id and the environentid!
+
+You have this solution available at: `webaudit.jalcocertech.com` thanks to `auditmagnet-prod:3001` or `http://192.168.1.2:3023`.
+
+![alt text](/blog_img/web/web-audit-above-the-fold.png)
+
+![alt text](/blog_img/web/web-audit.png)
+
+Things that you get to know when you tinker with servers.
 
 Want to get the website you deserve?
+
+Without spending thillion hours?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Reach out via my Consulting Service Tier and Calendar" >}}
