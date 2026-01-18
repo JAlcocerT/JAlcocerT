@@ -547,6 +547,7 @@ A certain Negative cash flow year one then...uncertainty
 
 16. How long can you continue moving towards your goals without a possitive feedback?
 
+17. Kaczka kura aby dzura
 
 #### Open Questions
 

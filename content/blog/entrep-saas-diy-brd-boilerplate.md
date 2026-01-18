@@ -3,7 +3,7 @@ title: "A BoilerPlate so that you finally Ship"
 date: 2026-01-23T07:20:21+01:00
 #date: 2026-01-12T07:20:21+01:00
 draft: false
-tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk 2","Unit Economics","Gross vs net profit"]
+tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk 2","Unit Economics 101","Gross vs net profit"]
 description: 'Building a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA that any BA can ship.'
 url: 'a-diy-boilerplate-to-ship'
 ---
@@ -290,7 +290,9 @@ Too long payback period and good ideas can go out of track: *Payback period ~ ca
 
 ![alt text](/blog_img/data-experiments/life-flows-blured.png)
 
-Great questions. These terms are the building blocks of that "Payback Period" chart you liked.
+Great questions. 
+
+These terms are the building blocks of that "Payback Period" chart you liked.
 
 To understand them, think of your business as a **leaky bucket**. **Revenue** is the water coming in, and **Profit** is what stays in the bucket after it passes through different "filters" (expenses).
 
@@ -313,7 +315,9 @@ To understand them, think of your business as a **leaky bucket**. **Revenue** is
 
 3. Where does CAC come in?
 
-**CAC (Customer Acquisition Cost)** is primarily an **Operating Expense**. It usually lives in the "Sales and Marketing" line of your financial statements.
+**CAC (Customer Acquisition Cost)** is primarily an **Operating Expense**. 
+
+It usually lives in the "Sales and Marketing" line of your financial statements.
 
 In your chart with the red and green bars, CAC is the **reason** for that initial red dip:
 

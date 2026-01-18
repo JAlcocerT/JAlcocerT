@@ -3,7 +3,7 @@ title: "Blogspot? or a Cool Website?"
 date: 2026-01-17
 description: "Why is your site slow? Audits and benchmarks triggered inside a Modern Landing."
 draft: false
-tags: ["Free Web Audits","Lead Magnet","Roadmap26","BiP","Wordpress","Blogspot"]
+tags: ["Free Web Audits","PoC Lead Magnet","Roadmap26","BiP","Wordpress","Blogspot"]
 url: 'how-to-perform-free-web-audit'
 ---
 
@@ -132,7 +132,9 @@ Then see
 A post of what I learnt about [Scrapping Tools](https://github.com/JAlcocerT/Scrap_Tools)
 {{< /callout >}}
 
-Want to do something similar?
+You have this solution available at: `webaudit.jalcocertech.com`
+
+Want to get the website you deserve?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Reach out via my Consulting Service Tier and Calendar" >}}

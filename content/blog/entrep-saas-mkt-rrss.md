@@ -171,7 +171,7 @@ You are paying for the attention anyways:
 
 * With your time to build the tools to create quality content (I assume you dont do it manually any more)
 * With your money to just pay whatever platform for the ads
-
+* By organic growth, BIP in twitter, doing quality content on youtube (aka, paid with more of your time)
 
 Social media be like: *100k views 1000 likes 100subs (1/1000 algo free)*
 

@@ -97,7 +97,9 @@ Like the creator of [postIZ](https://jalcocert.github.io/JAlcocerT/social-media-
 
 This is the one that people call it *,passive income'*
 
-Not sure how passive it is to get it started. So personally, hearing from someone they are on passive income started to sound to me like a huge coasting the 9-5 and living on the weekends and or been financed by others.
+Not sure *how passive* it is to get it started. 
+
+So personally, hearing from someone they are on passive income started to sound to me like a huge coasting the 9-5 and living on the weekends and or been financed by others.
 
 Aaaanyways.
 
@@ -161,7 +163,6 @@ Its easier than ever to build.
 
 But that doesnt mean that its easy w/o the right tools and knowledge.
 
-
 ### Too much info = ebooks_ideas
 
 The file `My Clippings` had like ~4M chars for me.
@@ -215,19 +216,10 @@ I was recently reading the 100M money models.
 
 Everything is so logical when you read/hear, but...so many variables though when you want to create your own.
 
-#### Attraction
-
-#### Upsale
-
-#### Downsale
-
-#### Continuity
-
-#### Many others...
-
-That does not make sense to write here.
-
-
+1. Attraction
+2. Upsale
+3. Downsale
+4. Continuity
 
 ### Entrepre-AI Quick Sping
 

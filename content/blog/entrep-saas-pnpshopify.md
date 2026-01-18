@@ -791,9 +791,10 @@ Think of a single developer running a small tool (like a PDF converter or a nich
 
 ### Why the 1-Person SaaS is "Fragile"
 
-Notice that the **Solopreneur** has a huge Net Margin, but if their "Marketing Efficiency" (CAC) doubles, their profit can vanish instantly. **Walmart**, however, is protected by its sheer size; even if their costs go up, their "Supply Chain" (Gross Margin) is so optimized that they can survive on "thinner air" than anyone else.
+Notice that the **Solopreneur** has a huge Net Margin, but if their "Marketing Efficiency" (CAC) doubles, their profit can vanish instantly. 
 
-**Would you like to see how the "Multiplication String" would change if the Solopreneur decided to hire their first employee? (Hint: The Operating Efficiency takes a massive hit).**
+**Walmart**, however, is protected by its sheer size; even if their costs go up, their "Supply Chain" (Gross Margin) is so optimized that they can survive on "thinner air" than anyone else.
+
 
 ### About Business Efficiency
 
@@ -912,21 +913,11 @@ The formula for Net Profit (NP) is: NP=(V×P)×GM×OE×IB×TB
 
 Each multiplication represents a "filter" in your business funnel. Using the **1-person SaaS** example (, ):
 
-1. **Revenue Generation:**
-
-*(This is your starting total.)*
-2. **Product Production (Gross Margin):**
-
-*(You lost 5% to the "Factory/API/Servers".)*
-3. **Business Operation (Operating Efficiency):**
-
-*(You lost 40% of the remainder to "Marketing/Sales/Admin".)*
-4. **Financial Structure (Interest Burden):**
-
-*(You lost 0% because you have no debt.)*
-5. **Legal/State (Tax Burden):**
-
-*(The government took 20%, leaving you with the final Net Profit.)*
+1. **Revenue Generation:** *(This is your starting total.)*
+2. **Product Production (Gross Margin):** *(You lost 5% to the "Factory/API/Servers".)*
+3. **Business Operation (Operating Efficiency):** *(You lost 40% of the remainder to "Marketing/Sales/Admin".)*
+4. **Financial Structure (Interest Burden):** *(You lost 0% because you have no debt.)*
+5. **Legal/State (Tax Burden):** *(The government took 20%, leaving you with the final Net Profit.)*
 
 The Final "Unit Economics" Formula
 
