@@ -45,12 +45,17 @@ And build something.
 
 ### Rill
 
-Go beyond dashboards
-with BI-as-code
+Go beyond dashboards: with BI-as-code
 
-https://www.youtube.com/watch?v=zW1Xms2qQlc
+<!-- 
+https://www.youtube.com/watch?v=zW1Xms2qQlc 
+-->
 
- Rill delivers fast exploratory dashboards. Rill makes it easy to create and consume metrics by combining a SQL-based data modeler, real-time database, and metrics dashboard into a single product—the fastest path from data lake to dashboard. Try Rill for free today: curl -s https://cdn.rilldata.com/install.sh | bash rill start my-rill-project
+{{< youtube "zW1Xms2qQlc" >}}
+
+Rill delivers fast exploratory dashboards. 
+
+Rill makes it easy to create and consume metrics by combining a SQL-based data modeler, real-time database, and metrics dashboard into a single product—the fastest path from data lake to dashboard.
 
 A high-performance, AI-native alternative to legacy BI, backed by modern analytical databases.
 
@@ -352,6 +357,11 @@ No 2 companies do D&A in the same way.
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain/BAML x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to PGSQL - Get insights with automatic charts." >}}
 {{< /cards >}}
 
+```sh
+git clone https://github.com/JAlcocerT/langchain-db-ui
+cd langchain-db-ui/Z_PGSQL-GenBI
+```
+
 How many dashboard are built with a lot of effort not to be consumed much in the future and get abandoned?
 
 How many ad-hoc queries get in a queue and its insights are never revealed?
@@ -362,7 +372,11 @@ In the traditional BI world, insights are expensive and slow.
 
 **Z_PGSQL-GenBI** is designed to eliminate the "friction" between a business question and a data-driven answer.
 
-If you need it, you know where to get such solution: *The goal isn't to build more dashboards. The goal is to **answer more questions**. Gen-BI is the tool that makes the "Zero-Dashboard" future a reality.*
+If you need it, you know where to get such solution: *The goal isn't to build more dashboards.*
+
+The goal is to **answer more questions**.
+
+Gen-BI is the tool that makes the "Zero-Dashboard" future a reality.
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
@@ -448,12 +462,9 @@ My Assessment
 * **The "Focus" Trap:** Staying in "Focus" mode too long can lead to burnout if the 5x target is set too high or if the business is extremely volatile.
 * **Tax Efficiency:** Depending on your jurisdiction, 30% might be too low or too high. Strategic tax planning (corporate structures) might be needed to keep that number from eating into the "Wealth" bucket.
 
-**Overall, this is a "Wealth Accelerator" map.** It is designed for someone who wants to work intensely for a decade to never have to work again, rather than someone looking for a slow, 40-year retirement plan.
+**Overall, this is a "Wealth Accelerator" map.**
 
-Would you like me to help you calculate what these numbers would look like based on a specific target monthly expense?
-
-### More Tools to Interact with DBs
-
+It is designed for someone who wants to work intensely for a decade to never have to work again, rather than someone looking for a slow, 40-year retirement plan.
 
 ### About Semantic Model
 
@@ -464,3 +475,6 @@ A place with facts, dimensions, joins, measures...the building blocks to describ
 | **Focus** | Efficiency and Structure (Star Schema). | Usability and Business Logic (Logic + Context). |
 | **Action** | Joining tables, defining PKs and FKs. | Refinement: DAX, Renaming, RLS, Formatting. |
 | **Output** | A clean, technical Warehouse schema. | A "Self-Service" model ready for business users. |
+
+
+### More Tools to Interact with DBs

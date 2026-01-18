@@ -161,6 +161,7 @@ Summary Recommendation
 Would you like me to provide a basic **Typst** or **TikZ** code snippet to get you started on a layout?
 
 [Typst vs LaTeX (2025) – Which Typesetting Tool Is Right For You?](https://www.youtube.com/watch?v=RL-8MNeHFdI)
+
 This video provides a modern comparison of the performance and usability differences between LaTeX and Typst as of 2025.
 
 ---
@@ -180,6 +181,11 @@ Social media be like: *100k views 1000 likes 100subs (1/1000 algo free)*
 {{< /cards >}}
 
 ![100k views in a year](/blog_img/data-experiments/yt-1y.png)
+
+### PRO and automatic content
+
+
+
 
 ---
 

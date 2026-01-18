@@ -1,6 +1,6 @@
 ---
 title: "Optimum Path x Genetic Algorithm"
-date: 2026-01-24
+date: 2026-02-26
 #date: 2026-01-02
 draft: false
 tags: ["Car Simulation","GA vs RL","Polynomial Approximation"]

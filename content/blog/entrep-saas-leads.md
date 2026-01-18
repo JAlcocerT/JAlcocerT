@@ -1,6 +1,6 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-16T19:20:21+01:00
+date: 2026-01-23T19:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x Sales Pipeline","Web Scrapping","RoadMap26"]
 description: 'Finding people that actually need your services. A story post the first ten.'
@@ -114,6 +114,39 @@ Or prefer to keep your Ego safe vs take this bet and see if people/b2B want your
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
+[Choose your ~~business~~ game](https://youtu.be/qsXxckCbci0?si=hH5rgUp3bwjTKHSy).
+
+Focus. Win.
+
+```mermaid
+graph LR
+    %% Unit Economics Engine
+    subgraph Engine [Unit Economics Engine]
+        P[Price] --> M1{x}
+        Q[Quantity/Volume] --> M1
+        M1 -- "Revenue" --> GM[Gross Margin %]
+        GM -- "Gross Profit" --> OM[Operating Margin %]
+        OM -- "Operating Income" --> IB[Interest/Borrowing Cost]
+        IB -- "EBT" --> TB[Tax Burden %]
+        TB -- "Net Profit" --> A
+    end
+
+    %% Main Flow
+    A[Business Net Profit<br/>Focus] -- "5x Life Expenses" --> B{Allocation Hub}
+
+    %% Distribution Branches
+    B -- "x2.5 (50%)" --> C["Keep & Grow Wealth<br/>(Diversify)"]
+    B -- "x1.5 (30%)" --> D[Tax]
+    B -- "x1.0 (20%)" --> E[Lifestyle]
+
+    %% Styling
+    style Engine fill:#f0f4f8,stroke:#0056b3,stroke-width:2px
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#fff,stroke:#333,stroke-dasharray: 5 5
+    style C fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style D fill:#f8d7da,stroke:#dc3545,stroke-width:1px
+    style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
+```
 
 ### What are my plans around client adquisition
 
@@ -127,7 +160,6 @@ I will use this mainly for two projects:
 Stay tuned. 
 
 The year has just started.
-
 
 ---
 
@@ -147,9 +179,10 @@ See also:
 
 >  Deploy headless browsers in Docker. Run on our cloud or bring your own. Free for non-commercial uses. 
 
-summary: 'Crawl4AI is an open-source web crawler and scrapper tailored for LLMs and AI applications. It offers asynchronous crawling, data extraction, and various features for enhanced performance and scalability.'
+summary: 'Crawl4AI is an open-source web crawler and scrapper tailored for LLMs and AI applications.
+
+It offers asynchronous crawling, data extraction, and various features for enhanced performance and scalability.'
 
 * https://github.com/saifyxpro/HeadlessX
 
 > MIT |  A lightweight, self-hosted headless browser automation platform. Designed as an alternative to Browserless, built for speed, privacy, and scalability. 
-

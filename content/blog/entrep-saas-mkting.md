@@ -68,9 +68,7 @@ After placing your mail, you get: `https://mongemalo.com/rechazado/`
 
 And once you confirm it: `https://mongemalo.com/importante-mensaje/`
 
-You are already prompted to buy an info product.
-
-`https://youtu.be/kwIgobHPwxY`
+You are already prompted to buy an info product: `https://youtu.be/kwIgobHPwxY`
 
 ---
 
@@ -107,7 +105,6 @@ If you dont, you could get it done:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
-### PRO and automatic content
 
 
 

@@ -673,3 +673,33 @@ Aka ~~,failed apps'~~:
 3. Trip-Planner - Yes, the one created on this thread that you can use!
 
 > Options to take into consideration when creating: brand colors, seo, check links, no 404
+
+```mermaid
+graph LR
+    %% Unit Economics Engine
+    subgraph Engine [Unit Economics Engine]
+        P[Price] --> M1{x}
+        Q[Quantity/Volume] --> M1
+        M1 -- "Revenue" --> GM[Gross Margin %]
+        GM -- "Gross Profit" --> OM[Operating Margin %]
+        OM -- "Operating Income" --> IB[Interest/Borrowing Cost]
+        IB -- "EBT" --> TB[Tax Burden %]
+        TB -- "Net Profit" --> A
+    end
+
+    %% Main Flow
+    A[Business Net Profit<br/>Focus] -- "5x Life Expenses" --> B{Allocation Hub}
+
+    %% Distribution Branches
+    B -- "x2.5 (50%)" --> C["Keep & Grow Wealth<br/>(Diversify)"]
+    B -- "x1.5 (30%)" --> D[Tax]
+    B -- "x1.0 (20%)" --> E[Lifestyle]
+
+    %% Styling
+    style Engine fill:#f0f4f8,stroke:#0056b3,stroke-width:2px
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#fff,stroke:#333,stroke-dasharray: 5 5
+    style C fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style D fill:#f8d7da,stroke:#dc3545,stroke-width:1px
+    style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
+```

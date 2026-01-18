@@ -10,6 +10,10 @@ url: 'new-post-tbd'
 
 Existing competitors? or Needs PMF test?: No need of PMF, demand validated.
 
+BANT:
+
+Value proposition: *this must be clear in the landing*
+
 The **launch strategy**: *aka, focus strategy*
 
 | Element | Decision |
@@ -18,7 +22,7 @@ The **launch strategy**: *aka, focus strategy*
 | **One Product** | |
 | **One Channel** | |
 
-The **Tier of Service**: DIY / DWY / DFY
+The **Tier of Service**: *this fits at DIY / DWY / DFY in the value ladder*.
 
 The **tech stack**:
 
@@ -177,3 +181,57 @@ Here is the **Opportunity & Pain Point Matrix** for your reference.
 * **Launch to a Small Cohort:** Post in wedding forums or local Facebook groups.
 * **The Feedback Loop:** Use your analyst skills to track the **Funnel Drop-off**. Where are people leaving the site? (Landing Page -> Upload -> Payment).
 * **The Pivot Point:** If the  (Volume) is low, adjust the **Price ()** or the **Growth Bet (Ad Creative)**.
+
+---
+
+```mermaid
+graph LR
+    %% Unit Economics Engine
+    subgraph Engine [Unit Economics Engine]
+        P[Price] --> M1{x}
+        Q[Quantity/Volume] --> M1
+        M1 -- "Revenue" --> GM[Gross Margin %]
+        GM -- "Gross Profit" --> OM[Operating Margin %]
+        OM -- "Operating Income" --> IB[Interest/Borrowing Cost]
+        IB -- "EBT" --> TB[Tax Burden %]
+        TB -- "Net Profit" --> A
+    end
+
+    %% Main Flow
+    A[Business Net Profit<br/>Focus] -- "5x Life Expenses" --> B{Allocation Hub}
+
+    %% Distribution Branches
+    B -- "x2.5 (50%)" --> C["Keep & Grow Wealth<br/>(Diversify)"]
+    B -- "x1.5 (30%)" --> D[Tax]
+    B -- "x1.0 (20%)" --> E[Lifestyle]
+
+    %% Styling
+    style Engine fill:#f0f4f8,stroke:#0056b3,stroke-width:2px
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#fff,stroke:#333,stroke-dasharray: 5 5
+    style C fill:#d4edda,stroke:#28a745,stroke-width:2px
+    style D fill:#f8d7da,stroke:#dc3545,stroke-width:1px
+    style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
+```
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>(Blog/YT/Docs $0)"):::free
+    L1("AuditMagnet 🛡️<br/>(Free Web Audit $0)"):::free
+    L2("DIY<br/>(Optimization Guides) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Full Service) $$$"):::high
+
+    %% --- Connections ---
+    L0 --> L1
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+```

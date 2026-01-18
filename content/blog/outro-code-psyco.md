@@ -266,7 +266,6 @@ npm run build
 mkdir -p public/presentations && cp -r y2026-tech-talks/2-ba-brd-development/dist public/presentations/ba-brd
 ```
 
-
 #### Improving your emails
 
 Wondering why not many people are going to your tech talks?
@@ -349,8 +348,3 @@ What they do.
 Not what they say.
 
 Now what you think.
-
----
-
-## FAQ
-

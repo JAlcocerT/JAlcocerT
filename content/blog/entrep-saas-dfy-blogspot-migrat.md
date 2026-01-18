@@ -1,6 +1,6 @@
 ---
 title: "Blogspot? or a Cool Website?"
-date: 2026-01-17
+date: 2026-01-18
 description: "Why is your site slow? Audits and benchmarks triggered inside a Modern Landing."
 draft: false
 tags: ["Free Web Audits","PoC Lead Magnet","Roadmap26","BiP","Wordpress","Blogspot"]
@@ -108,6 +108,20 @@ also, what could we do so that we use to the max the above the fold section? let
 open in new tab all hyperlink
 
 so now if i run this, will the reply be dsaved to csv and formbricks?
+
+can we have a docker-compose.prod.yml with such network?
+
+networks:
+  cloudflared_tunnel:
+    external: true
+
+add also the make comand like make-docker-prod-up
+
+can we add this compatibility?
+
+the id and web wshould be in the env variables of the prod yml
+
+<script defer src="https://weban.fossengineer.com/script.js" data-website-id="abcdef"></script>
 ```
 
 Powered by Gemini 3 Flash this time :)
@@ -166,9 +180,16 @@ A post of what I learnt about [Scrapping Tools](https://github.com/JAlcocerT/Scr
 git clone https://github.com/JAlcocerT/poc_webs_magnet
 cd poc_webs_magnet
 make docker-prod-up
+#docker ps -a --format "table {{.Names}}\t{{.Status}}\t{{.CreatedAt}}"
 ```
 
 Which is plugged to .csv and to formbricks `web-audits` as per this doc. `https://app.formbricks.com`
+
+Run it from the root directory:
+
+```bash
+bash test-formbricks.sh
+```
 
 You will need the survey id and the environentid!
 
@@ -188,6 +209,103 @@ Without spending thillion hours?
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Reach out via my Consulting Service Tier and Calendar" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="The power to DIY - via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks that enable you to create" >}}
 {{< /cards >}}
+
+If you are not doing that yet: *build with a git repo*
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="ebooks repo ↗" icon="github" >}}
+    {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="landing consulting repo | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+How does my current value ladder looks like?
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>($0)"):::free
+    L1("AuditMagnet 🛡️<br/>(Free Web Audit )"):::free
+    L11(" Blog/Youtube"):::free
+    L12(" ebooks"):::free
+    L2("DIY<br/>(Optimization Guides) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Full Service) $$$"):::high
+
+    %% --- Connections ---
+    L0 --> L1
+    L0 --> L2
+    L0 --> L11
+    L0 --> L12
+    L2 --> L3
+    L3 --> L4
+```
+
+Yep, the service tiers offering is getting some shape.
+
+This is the perfect way to visualize the "trade-off" between these two routes. 
+
+You are moving from a **Productized Commodity** (WebApp) to **Bespoke Strategic Partnership** (Fractional Agency).
+
+In the **Value Ladder**, the difference is between **Efficiency (Save me effort)** and **Results (Make me money).**
+
+
+#### 1. The Value Ladder Mapping
+
+| Level | Route | Value Proposition | "The Vibe" |
+| --- | --- | --- | --- |
+| **Low-Mid (DIY+)** | **WebApp** | **"The Quick Solve"** | "I have a problem (need photos), give me a 5-minute solution that works." |
+| **High (DWY/DFY)** | **Fractional Agency** | **"The Growth Engine"** | "I have a business, give me the brain that optimizes my entire formula." |
+
+##### **The WebApp (DIY / Automated Service)**
+
+* **Position:** **Low-friction utility.**
+* **The Proposition:** You aren't selling "photography software"; you are selling the **removal of friction**.
+* **Logic:** It's "DIY" in the sense that they set it up, but "Done-for-you" in the sense that the technology handles the heavy lifting instantly.
+* **Formula Focus:** High ****, low ****. You succeed because the "cost of trying" is so low ($49) that the customer doesn't need a meeting to decide.
+
+##### **The Fractional Agency (Done-With-You / Done-For-You)**
+
+* **Position:** **Strategic Partner.**
+* **The Proposition:** You aren't selling "reports"; you are selling **alpha**. You are the person who finds the "leaks" in their  and .
+* **Logic:** This is high-customization. You are looking at *their* specific Shopify data and giving *their* COO specific orders.
+* **Formula Focus:** Low ****, very high ****. You succeed because the ROI of your "brain" is worth 10x your retainer.
+
+---
+
+#### 2. How the "Proposition" Changes the Formula
+
+| Variable | **WebApp (Quick Solve)** | **Fractional (Strategic Partner)** |
+| --- | --- | --- |
+| **The [BET]** | "Our QR code is the fastest/prettiest." | "I will increase your Net Profit by 15%." |
+| **Sales Cycle** | **3 minutes** (Automated) | **3 weeks** (Relationship-based) |
+| **Customization** | **Low:** One size fits all. | **High:** Deep dive into specific pain points. |
+| **Churn Risk** | **High per unit** (One-off events). | **Low per unit** (Long-term stickiness). |
+| **COO Focus** | **Tech Stability:** Site must not crash. | **Client Results:** Insights must be accurate. |
+
+---
+
+#### 3. The "Moonlighter's" Strategic Advantage
+
+Because you have **$100k in assets** and **one stable job**, you have the luxury of "playing both sides" of the value ladder:
+
+1. **The WebApp** is your "Scaling Engine." It builds an asset that could eventually be worth a **7-figure exit** (based on a multiple of its ).
+2. **The Fractional Agency** is your "Expertise Engine." It keeps your skills sharp and provides high-ticket cash flow that you can dump into the WebApp's **[GROWTH BET]** (Ads).
+
+---
+
+#### 4. Which one "Wins" for You?
+
+* **Go WebApp** if you want to test your **Product/Marketing** skills. You want to build a "Machine" that makes money while you are at your 1st job.
+* **Go Fractional** if you want to test your **Consulting/Strategic** skills. You want to be the "secret weapon" for other CEOs.
+
+**The Ultimate Path:** Start the **WebApp** first. Why? Because you already have the "Service" income from your 1st job. Adding a second "Service" (the Agency) just adds more people-management. The WebApp adds **Leverage**.
+
+**Would you like me to help you refine the "Value Proposition" sentence for the WebApp landing page so it doesn't sound like just "another photo app"?**
 
 
 ---

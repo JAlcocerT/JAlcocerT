@@ -249,7 +249,6 @@ is helping me a lot to define what me free tier / diy is.
 Most likely, will be around: 1 free, give email for the rest, boilerplate x1 time paid and available at `boilerplate.jalcocertech.com`
 
 
-
 {{< details title="Create WebApps like a PRO with this boilerplate for Agents 📌" closed="true" >}}
 
 ```sh
@@ -323,7 +322,12 @@ From blogs, to docs, to knowledge in ebooks / webooks - Done ✅
 
 ```sh
 git clone https://github.com/JAlcocerT/1ton-ebooks.git
+#make help
+#make docker build && make docker-up
+make docker-prod-up
 ```
+
+With that sweet `1tonebooksprod:3000`, aka `http://192.168.1.2:3099` configuration on my server.
 
 A better structured *,passive'* service offering.
 
