@@ -1,6 +1,6 @@
 ---
 title: "KB and Local Bots to end Silos for good"
-date: 2026-02-01T23:20:21+01:00
+date: 2026-03-01T23:20:21+01:00
 #date: 2025-12-21T23:20:21+01:00
 draft: false
 tags: ["Custom Chatbots x Local AI and KB","Tech Talk 99","RoadMap26","Docs Bot","Scribbly"]
@@ -204,6 +204,8 @@ Same questions apply: web only? desktop app required? mobile?
 
 
 
+![alt text](/blog_img/data-experiments/aggresive-focus.png)
+
 ### How Ive placed a Qna around my notes
 
 Recently, I was talking about my new 1ton web/ook platform.
@@ -243,7 +245,7 @@ To offer this via fossengineer, I can try: *these are next steps*
 
 Because ebooks wont create succesfull ideas into reality for you: *would you dare to see whats behind the blur?*
 
-![alt text](/blog_img/data-experiments/life-flows-blured.png)
+![Risk and uncertainties](/blog_img/data-experiments/life-flows-blured.png)
 
 ```mermaid
 graph TD

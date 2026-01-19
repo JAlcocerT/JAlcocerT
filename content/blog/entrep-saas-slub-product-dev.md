@@ -1,7 +1,7 @@
 ---
 title: "Improving a micro-SaaS Conversion"
 #date: 2026-02-15T14:20:21+01:00
-date: 2026-01-18T10:20:21+01:00
+date: 2026-01-19T10:20:21+01:00
 draft: false
 tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap ESP"]
 description: 'Iterating over an existing product to increase its LTV to CAC. Weddings 2026'
@@ -107,3 +107,23 @@ Dare to get some goodies, as I have here:
 {{< /cards >}}
 
 ### FAQ
+
+
+How did I came up with all this?
+
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf" title="QR CSR | Python static server ↗" icon="github" >}}
+{{< /cards >}}
+
+Even Reqable has one: Tools -> More QR-Code
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+
+
+Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/slidev-editor/blob/logtojseauth/slidev/slidev-ba-tech-talk-mermaid-exadel/components/QRCode.vue) you can generate QRs!
+
+You got the code [here](https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf)
+
+![QR Code](https://raw.githubusercontent.com/JAlcocerT/Home-Lab/main/py-static/qr-pdf/qr-sample.png)

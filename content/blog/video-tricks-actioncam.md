@@ -217,7 +217,7 @@ overlay_gpx_on_video(video_path, gpx_path, output_path)
 * **Accurate Synchronization:**  This is the most crucial and often the most difficult part.
 * **Map Projection:**  For accurate position overlays, you'll need to use a proper map projection library (like `pyproj`) to convert latitude/longitude to pixel coordinates on a map image.  You'll likely want to use a tile server or download map tiles.
 * **Performance:** Processing video frame by frame can be slow. Consider optimizing your code for performance.
-* **User Interface:** For a more user-friendly tool, you could create a graphical user interface (GUI) using libraries like `Tkinter`, `PyQt`, or `Kivy`.
+* **User Interface:** For a more user-friendly tool, you could create a graphical user interface (GUI) using libraries like `Tkint`, `PyQt`, or `Kivy`.
 * **Error Handling:** Add robust error handling to your code.
 
 This detailed breakdown should give you a solid starting point for building your **Python GPX overlay tool**.

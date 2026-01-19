@@ -37,6 +37,7 @@ And build something.
 
 ## Existing GenBI Solutions
 
+I have seen couple very interesting ones: *that you can selfhost*
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rill" title="Rill | Docker Config 🐋 ↗" >}}
@@ -66,6 +67,9 @@ A high-performance, AI-native alternative to legacy BI, backed by modern analyti
 * With a very interesting https://datatalks.rilldata.com/
   * [The Semantic Layer Problem Nobody Wants to Talk About](https://www.youtube.com/watch?v=x_cnYqH4tFM)
 
+
+![alt text](/blog_img/AIBI/rill-selfhosted.png)
+
 ### WrenAI
 
 * https://docs.getwren.ai/oss/guide/connect/duckdb
@@ -94,6 +98,51 @@ docker-compose up -d
 # 7f54128c5212   ghcr.io/canner/wren-engine-ibis:0.22.0   "./entrypoint.sh"        14 seconds ago   Up 5 seconds            8000/tcp, 8888/tcp                            wrenai-ibis-server-1
 ```
 
+![alt text](/blog_img/AIBI/wrenai-sources.png)
+
+
+```mermaid
+graph LR
+    %% Data Sources
+    subgraph Sources [Data Sources]
+        DB1[(MySQL)]
+        DB2[(PostgreSQL)]
+        DB3[(BigQuery)]
+        SaaS([Slack/SaaS])
+    end
+
+    %% Core Architecture Layers
+    subgraph Architecture [WrenAI Core Engine]
+        DL{Data Layer}
+        SL{Semantic Layer}
+        AL{Agentic Layer}
+        RL{Representation Layer}
+    end
+
+    %% Output Deliverables
+    subgraph Outputs [Output Applications]
+        EA[Embedded Analytics]
+        DR[Dashboards & Reports]
+        CI[Conversational Interface]
+    end
+
+    %% Connections
+    Sources --> DL
+    DL --> SL
+    SL --> AL
+    AL --> RL
+    RL --> EA
+    RL --> DR
+    RL --> CI
+
+    %% Styling
+    style DL fill:#003366,stroke:#fff,color:#fff
+    style SL fill:#1e90ff,stroke:#fff,color:#fff
+    style AL fill:#003366,stroke:#fff,color:#fff
+    style RL fill:#1e90ff,stroke:#fff,color:#fff
+    style Architecture fill:#f9f9f9,stroke-dasharray: 5 5
+```
+
 ![alt text](/blog_img/AIBI/wrenai-features.png)
 
 Data modeling adds a logical layer over your original data schema, organizing relationships, semantics, and calculations. 
@@ -103,6 +152,12 @@ This helps AI align with business logic, retrieve precise data, and generate mea
 I was impressed by [wrenai data stack here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#wrenai-data-stack).
 
 Which is why these series got started in the first place.
+
+And as you can expect, it works locally:
+
+![alt text](/blog_img/AIBI/wrenai-ui.png)
+
+
 
 ## Pre-Building 
 
@@ -135,6 +190,8 @@ By sharing in couple ways:
 
 ## Building
 
+Time to put something together?
+
 ### Adding Generative BI to PlugnPlay D&A
 
 Now, time to continue where I left the repository: *yes, its going to be the same one*
@@ -166,6 +223,8 @@ For which they provided the code: https://github.com/BoundaryML/baml-examples/tr
 
 Moving from `z-langchain2baml` to `z-baml-genbi`
 
+You guessed: this has been powered with antigravity.
+
 ```
 i have copied the logic to z-baml-genbi
 
@@ -176,15 +235,19 @@ We can assume it will be one of: pie chart, bar chart, time series or unconclusi
 and based on this assesment (we can force it to provide 1 for only one category and 0 for the rest) we will have a python logic that will take the pandas dataframe output from pgsql and create and save a matplotlib chart
 ```
 
+As long as you execute this: *and you got pg configured:
+
 ```sh
 ./datachat_venv/bin/baml-cli generate --from z-baml-genbi/baml_src
 #pip install matplotlib
 python3 z-baml-genbi/baml-genbi.py --db-uri "postgresql://admin:securepassword@localhost:5432/umami_warehouse" --question "What are the top 10 most visited pages?"
 ```
 
+You not only get the table reply - you get the result in a recommended graph.
+
 ![alt text](/blog_img/AIBI/matplotlib-baml-pgql-qna.png)
 
-
+This is the logic flow:
 ```mermaid
 graph LR
     U[User Question] --> S[Python Script]
@@ -201,6 +264,8 @@ graph LR
     S --> |Plot| M[Matplotlib]
     M --> |Save| PNG[output_chart.png]
 ```
+
+And these are the related concepts:
 
 ```mermaid
 mindmap
@@ -223,7 +288,9 @@ mindmap
 
 ### BAML x PGSQL x Vite x Automatic Charts
 
-All thanks to `Gemini 3 Flash`
+As this worked, how about go one step further at `Z_PGSQL-GenBI`.
+
+All thats coming is thanks to `Gemini 3 Flash`
 
 ```md
 that was impressive, can we create now a folder called Z_PGSQL-GenBI
@@ -306,7 +373,7 @@ Looks cool, doesnt it? This has been the tech stack.
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
 | **Frontend Framework** | React (Vite) | Chosen for low latency and modern developer experience. |
-| **Styling/UI Library** | Tailwind CSS v4 + Framer Motion | Custom "Deep Night" glassmorphism theme for a premium look. |
+| **Styling/UI Library** | Tailwind CSS v4 + Framer Motion | Custom "Deep Night" **glassmorphism** theme for a premium look. |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | FastAPI + PostgreSQL/DuckDB | High performance with Pydantic validation; SQLAlchemy for DB agnostic engine. |
 | **AI Intelligence** | BAML (GPT-4o) | Type-safe inference for SQL generation and visualization classification. |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | Environment Secrets (`.env`) | Managed via local environment for isolated deployment; ready for JWT integration. |
@@ -353,6 +420,8 @@ graph
 
 No 2 companies do D&A in the same way.
 
+But hey, it seem that some parts could be productionized, dont they?
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain/BAML x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to PGSQL - Get insights with automatic charts." >}}
 {{< /cards >}}
@@ -360,6 +429,7 @@ No 2 companies do D&A in the same way.
 ```sh
 git clone https://github.com/JAlcocerT/langchain-db-ui
 cd langchain-db-ui/Z_PGSQL-GenBI
+#make help
 ```
 
 How many dashboard are built with a lot of effort not to be consumed much in the future and get abandoned?
@@ -478,3 +548,8 @@ A place with facts, dimensions, joins, measures...the building blocks to describ
 
 
 ### More Tools to Interact with DBs
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/stonks/" title="PyStonks Post sqlite section with DBChart" image="/blog_img/DA/sql/dbchart-sqlite-schema.png" subtitle="ChartDB x Working with the PyStonks Schema" >}}
+{{< /cards >}}
+

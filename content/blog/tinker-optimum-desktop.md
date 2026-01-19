@@ -83,7 +83,7 @@ git clone
 cd 4-apexsim-desktop && python3.10 main.py
 ```
 
-![CustomTkinter | ApexSim Python Desktop](/blog_img/karting/apexsim-desktop.png)
+![CustomTkinter | ApexSim Python Desktop](/blog_img/karting/apexsim-tkin.png)
 
 Want to build something similar?
 

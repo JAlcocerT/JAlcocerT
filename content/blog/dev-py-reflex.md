@@ -1104,9 +1104,12 @@ Stack Overflow
 * **Focus:** Making it easy to create simple GUIs in Python.  Its primary focus is on desktop applications.
 * **Technology:** Wraps various GUI toolkits (Tkinter, Qt, WxPython, etc.) to provide a simplified API.
 * **Strengths:** Very beginner-friendly.  Great for quickly creating simple desktop utilities or tools.
-* **Weaknesses:**  Limited in terms of UI customization and modern look and feel.  Not designed for web applications.  While there is a project called NiceGUI which is a separate project from PySimpleGUI that allows you to create web UIs, it's not a direct web equivalent of PySimpleGUI. NiceGUI is more comparable to Streamlit, but with a different syntax and approach.
+* **Weaknesses:**  Limited in terms of UI customization and modern look and feel.  Not designed for web applications.  
 
-**Let's summarize the key differences:**
+While there is a project called NiceGUI which is a separate project from PySimpleGUI that allows you to create web UIs, it's not a direct web equivalent of PySimpleGUI.
+
+NiceGUI is more comparable to Streamlit, but with a different syntax and approach.
+
 
 | **Feature**         | Reflex                 | Flet                    | Streamlit              | PySimpleGUI/NiceGUI        |
 |-----------------|-------------------------|--------------------------|-----------------------|-----------------------------|

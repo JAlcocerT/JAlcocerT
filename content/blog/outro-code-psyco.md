@@ -348,3 +348,7 @@ What they do.
 Not what they say.
 
 Now what you think.
+
+This helps: 
+
+![alt text](/blog_img/biz/posthog-eu.png)

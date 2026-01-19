@@ -14,6 +14,8 @@ BANT:
 
 Value proposition: *this must be clear in the landing*
 
+<!-- **Would you like me to help you refine the "Value Proposition" sentence for the WebApp landing page so it doesn't sound like just "another photo app"?** -->
+
 The **launch strategy**: *aka, focus strategy*
 
 | Element | Decision |

@@ -137,6 +137,8 @@ make dev
 
 {{< /details >}}
 
+![the process of vibe coding](/blog_img/biz/leads/audit-antigravity.png)
+
 First things first, give me the website name to analyze.
 
 Then your email and contact details, consenting for marketing.
@@ -162,6 +164,13 @@ Also more eco :)
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/linkchecker" title=" | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+
+Best lead magnets are those who show a problem.
+
+Like getting to know that your site is not that good actually.
+
+
+
 ---
 
 ## Conclusions
@@ -185,6 +194,8 @@ make docker-prod-up
 
 Which is plugged to .csv and to formbricks `web-audits` as per this doc. `https://app.formbricks.com`
 
+![formbricks API setup](/blog_img/entrepre/product/fb-api.png)
+
 Run it from the root directory:
 
 ```bash
@@ -193,9 +204,13 @@ bash test-formbricks.sh
 
 You will need the survey id and the environentid!
 
+![creating formbricks link](/blog_img/entrepre/product/fb-link.png)
+
 You have this solution available at: `webaudit.jalcocertech.com` thanks to `auditmagnet-prod:3001` or `http://192.168.1.2:3023`.
 
 ![alt text](/blog_img/web/web-audit-above-the-fold.png)
+
+When is done, you get:
 
 ![alt text](/blog_img/web/web-audit.png)
 
@@ -303,10 +318,13 @@ Because you have **$100k in assets** and **one stable job**, you have the luxury
 * **Go WebApp** if you want to test your **Product/Marketing** skills. You want to build a "Machine" that makes money while you are at your 1st job.
 * **Go Fractional** if you want to test your **Consulting/Strategic** skills. You want to be the "secret weapon" for other CEOs.
 
-**The Ultimate Path:** Start the **WebApp** first. Why? Because you already have the "Service" income from your 1st job. Adding a second "Service" (the Agency) just adds more people-management. The WebApp adds **Leverage**.
+**The Ultimate Path:** Start the **WebApp** first.
 
-**Would you like me to help you refine the "Value Proposition" sentence for the WebApp landing page so it doesn't sound like just "another photo app"?**
+Why? Because you already have the "Service" income from your 1st job.
+ 
+Adding a second "Service" (the Agency) just adds more people-management. 
 
+The WebApp adds **Leverage**.
 
 ---
 

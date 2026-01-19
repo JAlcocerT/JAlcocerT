@@ -674,6 +674,14 @@ Aka ~~,failed apps'~~:
 
 > Options to take into consideration when creating: brand colors, seo, check links, no 404
 
+That moment when you realized that you have been doing service all the time.
+
+And that R&D was your skills upgrades.
+
+Marketing with `cold emails` where the applications you sent to companies with BANT.
+
+And doing interviews? You guessed it: sales.
+
 ```mermaid
 graph LR
     %% Unit Economics Engine

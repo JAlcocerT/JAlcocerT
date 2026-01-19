@@ -910,15 +910,12 @@ We have gone from:
  https://www.youtube.com/watch?v=KXamTdJA-uc 
 -->
 
-
 <!-- 
 {{< youtube "KXamTdJA-uc" >}} -->
 
-To:
+To: *a vibe coded UI Wrapper, so non tech users can use it confortably*
 
 ![langchain ui wrapper around pgsql qna](/blog_img/DA/sql/langchain-qna-pgsql.png)
-
-
 
 
 #### Next Steps
@@ -1139,7 +1136,7 @@ Duckdb (column) vs sqlite (row)
 
 Based on the diagram from WrenAI, the architecture represents a modern data stack designed to transform raw information into actionable insights using AI.
 
-The flow moves from left to right, starting with raw data sources and ending with user-facing applications. 
+The flow, starting with raw data sources and ending with user-facing applications:
 
 ```mermaid
 graph LR
@@ -1232,11 +1229,6 @@ WHich I used [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fasta
 
 ![ChartDB](/blog_img/DA/sql/dbchart3.png)
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/stonks/" title="PyStonks Post sqlite section with DBChart" image="/blog_img/DA/sql/dbchart-sqlite-schema.png" subtitle="DBChart Working with the PyStonks Schema" >}}
-{{< /cards >}}
-
-
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
 {{< /cards >}}
@@ -1244,7 +1236,6 @@ WHich I used [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fasta
 2. DBeaver
 
 ![MySQL Dbeaver Chinook](/blog_img/GenAI/langchain-chinook-artiststable.png)
-
 
 3. DBGate https://github.com/dbgate/dbgate
 
@@ -1268,5 +1259,3 @@ This composable:
 3. **Enables Reusability** ♻️
    - Use with pie charts, bar charts, line charts, tables, etc.
    - Write database logic once, use everywhere
-
-  
