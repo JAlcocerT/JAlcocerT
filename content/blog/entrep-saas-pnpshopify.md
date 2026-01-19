@@ -28,6 +28,8 @@ There is a way to do Generative BI to improve a business.
 
 You see what's this post is all about, right?
 
+If you dont, some people do and build `https://www.onesight.ai/pricing`
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_shopify" title="NEW - Shopify D&A" image="/blog_img/AIBI/amazing-landing.png" subtitle="Vite x BAML x . An agentic COO for shopify" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution" title="GenBI - Vite x PGSQL x BAML Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating a sample WebApp to extract insights qna 2 graph from a pgsql db." >}}
@@ -41,12 +43,31 @@ We are coming from:
 2. [Querying pgsql via BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database)
 1. [PnP D&A with langchain x pgsql](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/)
 
+From Rill, I got to know the RevenueOperations RevOps concept: *they have an interesting page `https://www.brabble.io/speaking`*
+
+<!-- 
+https://www.youtube.com/watch?v=j7F6bzszITk 
+-->
+
+{{< youtube "j7F6bzszITk" >}}
+
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data-Chat | Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB x UI | Github ↗" icon="github" >}}
 {{< /cards >}}
 
 ## PoC Shopify
+
+So far you can do web audits to shopify owners like `https://morecaknit.com`.
+
+Plot twist, they wont score 100, but they sell and they dont want to change the website
+
+Get over it.
+
+What these people might want is to do more money with their ecommerce.
+
+Lets build around that.
 
 ### Starting with the Landing
 
@@ -66,7 +87,7 @@ Yea...product and no clients does not pay bills.
 3) can the footer content be also controlled by the site.md copy?
 4) and can we do so that when we do npm run dev, I will be able to access it not only via localhost?
 
-5) based on a docker-compose.prod.yml with such network?
+5) based on a docker-compose.prod.yml with such network and also env variables context?
 
 networks:
   cloudflared_tunnel:
@@ -77,6 +98,19 @@ add also the make comand like make-docker-prod-up
 
 also, what could we do so that we use to the max the above the fold section? lets brainstorm here
 
+could we add 2 more examples of real profit covered in the landing?
+
+also where would it make sense to put a video?
+
+i like the concept that zoho has, where initially its an image, but when hit the video loads
+
+should that go below the how it works?
+
+as i dont want to hos tthe video, could we start this youtube video when hit?
+
+I've added the Social Sharing Optimization to the plan! 📱✨
+
+I'll update BaseLayout.astro to include Open Graph and Twitter Card meta tags. This ensures that when you share the link on WhatsApp, Telegram, or Twitter, it will automatically show:
 ```
 
 Powered by Gemini 3 Flash this time :)
@@ -85,16 +119,23 @@ Powered by Gemini 3 Flash this time :)
 
 Guess what happened in ~45 minutes?
 
-That I went to termix `http://192.168.1.2:8090/` and made `shopify-landing-prod:4321` go live.
+That I went to termix `http://192.168.1.2:8090/` and made `shopify-landing-prod:4321` go live via cloudflare tunnels.
 
 ```sh
 git clone https://github.com/JAlcocerT/poc_shopify
 cd poc_shopify/landing
 #make help
+#docker compose -f docker-compose.prod.yml up -d --build
 make prod-up
 ```
 
+I placed this at `genbi.jalcocertech.com` for now.
+
 These projects wont only bring [the brd](https://github.com/JAlcocerT/poc_shopify/blob/master/z-brd.md), [clarifications](https://github.com/JAlcocerT/poc_shopify/blob/master/clarification.md) and [dev phases](https://github.com/JAlcocerT/poc_shopify/blob/master/z-development-phases.md). 
+
+The [tech stack](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/tech-stack.md) and how the amazing [UI/X forms](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-form-tech.md) as well, with [its psyc](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-form-psychology.md).
+
+The [video section](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-atf-changes.md) was so beautiful.
 
 But also the relation with [the value ladder and **business strategy**](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/business-strategy.md).
 
@@ -109,7 +150,7 @@ That I got a place to tweak the copy at `/src/content/landing/index.md`
 | **Authentication** | Environment Secrets (`.env`) | Managed via local environment for isolated deployment. |
 | **Deployment** | Docker | Containerized deployment for easy scaling and isolation. |
 
-With a custom form and integration with a cal meeting, for the qualified ones:
+With a **custom modern form** and integration with a cal meeting, *for the qualified ones*:
 
 ![alt text](/blog_img/AIBI/poc_shopify_form_cal.png)
 
@@ -147,6 +188,13 @@ Reserve **Audit Pro** for Shopify owners with >$10k revenue to feed your high-ti
 ## Conclusions
 
 There are many efficiencies to be taken of when you run a business.
+
+<!-- 
+https://youtu.be/eCvZxjSw6rE 
+-->
+
+{{< youtube "eCvZxjSw6rE" >}}
+
 
 Have a small team and constrain resources is not an excuse anymore to get your operations improving.
 

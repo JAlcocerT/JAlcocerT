@@ -95,9 +95,11 @@ But I Just continued here.
 
 People are using these platforms to do so: *and you have to place your email for later use*
 
-* https://webinarjam.com/
+* `https://webinarjam.com/`
 
 0. Improved FOSS from blog to doc like. Multilanguage and all that stuff. Still as HUGO.
+
+
 
 ```sh
 #dig fossengineer.com any
@@ -107,8 +109,13 @@ People are using these platforms to do so: *and you have to place your email for
 Not [with codex cli](https://github.com/JAlcocerT/docs-testing/tree/master) this time, but directly with ide:
 
 ```sh
-git init && git add . && git commit -m "Initial commit: better ai docs" && gh repo create docs-testing --private --source=. --remote=origin --push
+git init && git add . && git commit -m "Initial commit: better ai docs" && gh repo create fossengineer-hugo --private --source=. --remote=origin --push
 ```
+
+{{< cards >}}
+  {{< card link="https://gitlab.com/fossengineer/fossengineer" title="foss | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/fossengineer-hugo" title="foss reloaded x HomeLab integration | Github ↗" icon="github" >}}
+{{< /cards >}}
 
 With that remota data (yaml) fetching from the home-alb repo.
 
@@ -339,14 +346,18 @@ Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#c
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-10. Analytics with Graphic Walker: *or should i call this plug and play D&A?*
+10. Data driven agentic COO: *or should i call this [plug and play D&A](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics)?*
+
+Initially, I thought about to write about Analytics with Graphic Walker
+
+Then, this happened:
 
 {{< cards >}}
-  {{< card link="https://github.com/clidey/plug-and-play-data-analytics" title="PlugnPlay D&A | Post ↗" >}}
-  {{< card link="https://github.com/langchain-db-ui" title="LangChain x DB + UI QnA ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/" title="PlugnPlay D&A | Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB + UI QnA ↗" icon="github" >}}
 {{< /cards >}}
 
-Which I used for the first **tech talk** of this year.
+Which I used for the first **tech [talk](#tech-talks)** of this year.
 
 {{< cards >}}
   {{< card link="https://github.com/" title="SliDev Repo | Pre Y26 Tech Talks ↗" icon="github" >}}
@@ -354,11 +365,9 @@ Which I used for the first **tech talk** of this year.
 {{< /cards >}}
 
 
-10. IoT: From sensors, to databases and QnA
+10. IoT: *From sensors, to databases and QnA*
 
 Should i call this Embeded analytics?
-
-
 
 11. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and video overlays.
 
@@ -444,8 +453,12 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
 
 16. Tech videos were not a priority this year.
 
+I finally uploaded some from last year, just with youtube music:
+
 * [Goose Desktop](https://youtu.be/ZW5eEocyrTU) 
 * [GrowChief](https://youtu.be/in8uTdLhFqI)
+
+Others from the vibe coding sessions.
 
 17. I made **some animations** instead.
 
@@ -548,6 +561,8 @@ A certain Negative cash flow year one then...uncertainty
 16. How long can you continue moving towards your goals without a possitive feedback?
 
 17. Kaczka kura aby dzura
+
+18. Riesgos del juego o mediocrity garantizada?
 
 #### Open Questions
 

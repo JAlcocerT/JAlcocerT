@@ -180,7 +180,7 @@ So why not doing so via Flask?
 
 ### FossEngineer Updates
 
-**PaperMod** has been great.
+**PaperMod** has been great so far.
 
 ```sh
 git clone https://gitlab.com/fossengineer1/fossengineerpapermod

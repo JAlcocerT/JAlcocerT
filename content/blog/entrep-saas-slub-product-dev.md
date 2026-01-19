@@ -1,9 +1,9 @@
 ---
 title: "Improving a micro-SaaS Conversion"
 #date: 2026-02-15T14:20:21+01:00
-date: 2026-01-19T10:20:21+01:00
+date: 2026-01-20T10:20:21+01:00
 draft: false
-tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap ESP"]
+tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap ESP","ATF x Time2Value"]
 description: 'Iterating over an existing product to increase its LTV to CAC. Weddings 2026'
 url: 'iterating-and-improving-a-micro-saas'
 ---
@@ -11,6 +11,8 @@ url: 'iterating-and-improving-a-micro-saas'
 **Tl;DR**
 
 Congratulations, you got [a micro-SaaS like this](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) in front of people and even sold some.
+
+You understood this is all about getting the OpEx right.
 
 Now what?
 
@@ -66,12 +68,39 @@ Arent you even covering adquisition and operational costs?
 
 Lets push the levers to change that.
 
+With a very important one been the OpeX in growth, aka ads. Driven by psyc effects.
+
 ### A Video Explanation
+
+Im assuming you have a **proper ATF** (above the fold configuration) to minimize the **Time to Value**.
+
+With proper [atf instructions to Gemini](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-atf-changes.md) you go from:
+
+![landing page vite](/blog_img/AIBI/amazing-landing.png)
+
+To: *Your users on high-intent mobile searches will now see the headline + interactive input + video proof all in their first view*
+
+![alt text](/blog_img/AIBI/vite-baml-genbi-atf.png)
+
+You can have cool videos embeded into your site, like these:
+
+1. `https://www.okticket.es/`
+2. `https://www.zoho.com/mail/`
+3. `https://www.mrpresident.es/`
+4. `https://flashhub.io/`
+
+
+Or just friendly desins `https://kursy.ikliszcz.com/`
+
 
 ### A better FAQ
 
 
 ### Emails to show that you are still there
+
+Pros say that every email should contain: diversion, information, Venta.
+
+Sell a transformation. Not the vehicle, but the pain removal and dream outcome destination.
 
 You should be able to query the registered at Firebase/Firestore:
 
@@ -86,6 +115,9 @@ I was doing so with the slidev Firebase version. Same here.
 
 ## Conclusions
 
+I hope that you understand the rules of the game that you are playing.
+
+Talento vs perseverancia (But bee critic, dont hit the same wall 150 times *knowing the game helps*).
 
 
 

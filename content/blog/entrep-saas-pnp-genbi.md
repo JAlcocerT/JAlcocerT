@@ -62,7 +62,7 @@ A high-performance, AI-native alternative to legacy BI, backed by modern analyti
 
 * https://github.com/rilldata/rill
 * https://ui.rilldata.com/demo
-* https://www.rilldata.com/pricing
+* https://www.rilldata.com/pricing and `https://www.rilldata.com/apache-druid`
 * https://docs.rilldata.com/
 * With a very interesting https://datatalks.rilldata.com/
   * [The Semantic Layer Problem Nobody Wants to Talk About](https://www.youtube.com/watch?v=x_cnYqH4tFM)
@@ -420,7 +420,14 @@ graph
 
 No 2 companies do D&A in the same way.
 
-But hey, it seem that some parts could be productionized, dont they?
+But hey, it seem that some parts could be *productionized*, dont they?
+
+<!-- 
+https://youtu.be/eCvZxjSw6rE 
+-->
+
+{{< youtube "eCvZxjSw6rE" >}}
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain/BAML x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to PGSQL - Get insights with automatic charts." >}}

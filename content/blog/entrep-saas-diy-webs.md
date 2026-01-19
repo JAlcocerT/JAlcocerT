@@ -259,6 +259,11 @@ If you are building websites, get inspired:
 
 #### How Ive improved my websites
 
+{{< cards >}}
+  {{< card link="https://gitlab.com/JAlcocerT/fossengineer" title="foss | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/BeyondAJourney" title="BaJ | Github ↗" icon="github" >}}
+{{< /cards >}}
+
 ##### FOSS
 
 Fossengineer Docs and Theme Directory!

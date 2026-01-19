@@ -65,10 +65,10 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
 
 > The original theme (also MIT) is awsome and brings a lot of content costomization via `config.json`
 
-> > The theme is oriented towards one book selling, but you could adapt it so that it becomes, for example, your knitting patterns shop `https://morecaknit.com/`, and wow, that'd be a shopify competitor!
-
+> > The theme is oriented towards book selling.You can adapt it so that it becomes a knitting patterns shop `https://morecaknit.com/`, and wow, that'd be a shopify competitor!
 
 ![Ping comparison from selfhosted astro x300 vs local ping vs shopify vs cloudflare pages](/blog_img/entrepre/product/ebook-shopify-ping.png)
+
 You know what to tell, its just that... **time matters**.
 
 So why not accelerating the **time to ship ebooks** by understanding how to have their skeleton code driven?
