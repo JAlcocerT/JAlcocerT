@@ -85,13 +85,13 @@ could we also add a functional requirement, so that all the copy from the landin
 ```
 
 ```md
-what it needs to happen so tat when i do make dev it will be exposed to the local network not just localhost?
+what it needs to happen so that when i do make dev it will be exposed to the local network not just localhost?
 can we have a docker-compose.prod.yml
 
 that makes the UI available into my network cloudflared_tunnel so that i can use it to expose via y custom domain?
 just do one that the network will be external, as i have cf in a separated docker stack already
 
-nd can we add a consent button to the t&c
+can we add a consent button to the t&c
 
 which have to be created as a separated markown
 
@@ -168,8 +168,6 @@ Also more eco :)
 Best lead magnets are those who show a problem.
 
 Like getting to know that your site is not that good actually.
-
-
 
 ---
 

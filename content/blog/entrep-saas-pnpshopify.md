@@ -10,6 +10,12 @@ url: 'custom-analytics-for-shopify'
 
 **TL;DR**
 
+Building an engine for DFY services.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_shopify" title="Shopify Audit" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to Shopify API and unlock profit via hidden data insights" >}}
+{{< /cards >}}
+
 +++ About [COO](#whats-a-coo) and [business efficiency](#about-business-efficiency)
 
 **Intro**
@@ -23,7 +29,7 @@ There is a way to do Generative BI to improve a business.
 You see what's this post is all about, right?
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/poc_shopify" title="NEW - Shopify D&A" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Vite x BAML x . An agentic COO for shopify" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_shopify" title="NEW - Shopify D&A" image="/blog_img/AIBI/amazing-landing.png" subtitle="Vite x BAML x . An agentic COO for shopify" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution" title="GenBI - Vite x PGSQL x BAML Post" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Creating a sample WebApp to extract insights qna 2 graph from a pgsql db." >}}
 {{< /cards >}}
 
@@ -31,14 +37,46 @@ PS: I didnt wake up with this idea by chance
 
 We are coming from:
 
-5. The [Custom GenBI Post](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/) with: WrenAI, Rill, and BAML x Vite...
-4. [Querying pgsql via BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database)
-3. [PnP D&A with langchain x pgsql](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/)
+3. The [Custom GenBI Post](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/) with: WrenAI, Rill, and BAML x Vite...
+2. [Querying pgsql via BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database)
+1. [PnP D&A with langchain x pgsql](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/)
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data-Chat | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB x UI | Github ↗" icon="github" >}}
+{{< /cards >}}
+
+## PoC Shopify
+
+### Starting with the Landing
+
+Every project should start with a landing and capturing leads.
+
+Yea...product and no clients does not pay bills.
 
 {{< details title="Creating a Landing for the Shopify Agentic data driven COO 📌" closed="true" >}}
 
 ```sh
 #git init && git add . && git commit -m "Initial commit: Starting shopify poc from langchain baml repo" && gh repo create poc_shopify --private --source=. --remote=origin --push
+```
+
+```md
+1) when i do make dev it will be exposed to the local network not just localhost?
+2) We need the (good looking as per the landing UI/X) t&c and privacy policy, which have to be created from separated markown files
+3) can the footer content be also controlled by the site.md copy?
+4) and can we do so that when we do npm run dev, I will be able to access it not only via localhost?
+
+5) based on a docker-compose.prod.yml with such network?
+
+networks:
+  cloudflared_tunnel:
+    external: true
+
+add also the make comand like make-docker-prod-up
+
+
+also, what could we do so that we use to the max the above the fold section? lets brainstorm here
+
 ```
 
 Powered by Gemini 3 Flash this time :)
@@ -47,19 +85,62 @@ Powered by Gemini 3 Flash this time :)
 
 Guess what happened in ~45 minutes?
 
-![alt text](../../static/blog_img/AIBI/amazing-landing.png)
+That I went to termix `http://192.168.1.2:8090/` and made `shopify-landing-prod:4321` go live.
+
+```sh
+git clone https://github.com/JAlcocerT/poc_shopify
+cd poc_shopify/landing
+#make help
+make prod-up
+```
+
+These projects wont only bring [the brd](https://github.com/JAlcocerT/poc_shopify/blob/master/z-brd.md), [clarifications](https://github.com/JAlcocerT/poc_shopify/blob/master/clarification.md) and [dev phases](https://github.com/JAlcocerT/poc_shopify/blob/master/z-development-phases.md). 
+
+But also the relation with [the value ladder and **business strategy**](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/business-strategy.md).
+
+That I got a place to tweak the copy at `/src/content/landing/index.md`
+
+![landing page vite](/blog_img/AIBI/amazing-landing.png)
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
 | **Frontend Framework** | React (Astro/Vite) | Chosen for low latency and modern "Island" architecture. |
-| **Styling/UI Library** | Tailwind CSS v4 + Framer Motion | Custom "Deep Night" glassmorphism theme for a premium look. |
+| **Styling/UI Library** | Tailwind CSS v4 + Framer Motion | Custom "Deep Night" **glassmorphism theme** for a premium look. |
 | **Authentication** | Environment Secrets (`.env`) | Managed via local environment for isolated deployment. |
 | **Deployment** | Docker | Containerized deployment for easy scaling and isolation. |
 
+With a custom form and integration with a cal meeting, for the qualified ones:
+
+![alt text](/blog_img/AIBI/poc_shopify_form_cal.png)
 
 {{< callout type="info" >}}
 Whether you are analyzing **Microsoft** or starting your own **Shopify store**, the logic is identical: Use **CapEx** and **OpEx** to drive **Volume and Price**, then use **Operational Discipline** to make sure that growth doesn't get "eaten" by the internal drains of the business.
 {{< /callout >}}
+
+#### Enabling Leads via Formbricks API
+
+### The core analytics
+
+The sauce of this comes from this [custom BI with BAMl and vite UI](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#building).
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB x UI | Github ↗" icon="github" >}}
+{{< /cards >}}
+
+### Who is this for?
+
+How to use this PoC with some sense?
+
+**Strategic Shift:**
+
+Use the Web Audit for SMBs who aren't ready for data integration yet (Consulting).
+
+Reserve **Audit Pro** for Shopify owners with >$10k revenue to feed your high-ticket **Performance Analytics DFY** model.
+
+> [!TIP]
+> **AuditPro** isn't just a landing page; it's a Dis/**Qualification Filter** that protects your time (L3/L4) by ensuring only stores with >$10k revenue (where the 20% success fee is meaningful) get through to your calendar.
+
+
 
 ---
 
@@ -69,10 +150,19 @@ There are many efficiencies to be taken of when you run a business.
 
 Have a small team and constrain resources is not an excuse anymore to get your operations improving.
 
+`shopify-landing-prod:`
+
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/poc_shopify" title="Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_shopify" title="NEW - Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB x UI | Github ↗" icon="github" >}}
 {{< /cards >}}
+
+
+```sh
+git clone https://github.com/JAlcocerT/poc_shopify
+cd poc_shopify/landing
+#make help
+```
 
 Ready to have an **agentic [COO](#whats-a-coo) working for you?
 
@@ -80,6 +170,45 @@ Ready to have an **agentic [COO](#whats-a-coo) working for you?
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
+
+With this one, its some kind of...*productizing my services*.
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+    classDef bridge fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1;
+
+    subgraph "Phase 1: Attraction"
+        L0("Free Content (Blog/YT/eBooks)"):::free
+    end
+
+    subgraph "Phase 2: The Audit Magnets"
+        L1_Web("Web/UI Audit 🛡️<br/>(Find UX Leaks)"):::free
+        AP_Pro("AuditPro Landing 🚀<br/>(Find Profit Leaks)"):::bridge
+    end
+
+    subgraph "Phase 3: Service Tiers"
+        L2("DIY Guides ($)"):::low
+        L3("Consulting (DWY) $$<br/>(Web Optimization)"):::mid
+        L4("Full Service (DFY) $$$<br/>(Data Analytics / Success Fee)"):::high
+    end
+
+    %% --- Connections ---
+    L0 --> L1_Web
+    L0 --> AP_Pro
+    
+    L1_Web --> L2
+    L1_Web --> L3
+    
+    AP_Pro --> L4
+    
+    %% Cross-sell
+    L3 -.-> |"Upsell"| L4
+```
 
 Are you even having a pricing strategy that works?
 
@@ -258,6 +387,9 @@ There are many unknowns behind executive decisions on a business:
 
 ![alt text](/blog_img/data-experiments/life-flows-blured.png)
 
+But just understand that the operations is part of them.
+
+How do you plan to grow, how do you plan to optimize?
 
 ```mermaid
 graph TD

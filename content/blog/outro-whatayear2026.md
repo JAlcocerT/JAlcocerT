@@ -650,6 +650,8 @@ For the very alergic to the risk...well...keep your ~0% at the bank. Its saaaaaf
 
 #### Discovery of the Years
 
+Wait...how many years already?!
+
 [2020](https://jalcocert.github.io/JAlcocerT/blog/summary20/) - R *together with sql*
 
 [2021](https://jalcocert.github.io/JAlcocerT/blog/summary21/) - Containers *with the Pi*
@@ -666,11 +668,12 @@ For the very alergic to the risk...well...keep your ~0% at the bank. Its saaaaaf
 
 ##### Closed Projects
 
-Aka ~~,failed apps'~~:
+Aka ~~,failed apps'~~: *projects where i just learnt*
 
 1. ~~ CyClingThere~~
 2. ~~btcmeet~~
 3. Trip-Planner - Yes, the one created on this thread that you can use!
+4. ~~financeinmotion.fyi~~
 
 > Options to take into consideration when creating: brand colors, seo, check links, no 404
 
