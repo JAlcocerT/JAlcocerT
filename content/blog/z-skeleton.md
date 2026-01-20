@@ -1,6 +1,7 @@
 ---
 title: "How to analyze Business Opportunities"
-date: 2026-01-30T07:20:21+01:00
+#date: 2026-01-30T07:20:21+01:00
+date: 2026-01-20T15:20:21+01:00
 draft: false
 tags: ["BiP","Entrepreneuring","Focus"]
 description: 'Do you really want to do this...that way?'

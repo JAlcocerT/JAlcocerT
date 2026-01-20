@@ -1,6 +1,6 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-23T19:20:21+01:00
+date: 2026-01-22T19:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x Sales Pipeline","Web Scrapping","RoadMap26"]
 description: 'Finding people that actually need your services. A story post the first ten.'
@@ -49,7 +49,6 @@ Like the ones you will be generating after getting leads right for your SaaS by 
 ## How has this happened?
 
 As always, a series of tinkering steps.
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrap Tools ↗" icon="github" >}}

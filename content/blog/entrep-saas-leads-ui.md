@@ -1,7 +1,6 @@
 ---
 title: "How about getting leads for your SaaS?"
-#date: 2026-01-24T11:20:21+01:00
-date: 2026-01-22T11:20:21+01:00
+date: 2026-01-25T11:20:21+01:00
 draft: false
 tags: ["BiP x GTM","APIFY x ESP Sales Pipeline","RoadMap26"]
 description: 'Forget about B2C, sell to B2B as they have the budget for whatever product helps.'
@@ -23,7 +22,7 @@ Your product is NOT.
 
 **Intro**
 
-For custom products im starting to let clients do their own quote.
+For custom ~~products~~ services: Im starting to let clients do their own quote.
 
 Shoot an unresonably low number and I already know that you are not making enough money with my solutions.
 
@@ -44,7 +43,7 @@ Making UI wrapper around things is so easy this year.
 
 We've seen that around the langchain qna to dbs.
 
-And now, time for more APIFY:
+And now, time for [more APIFY](https://jalcocert.github.io/JAlcocerT/apify/):
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrap Tools ↗" icon="github" >}}

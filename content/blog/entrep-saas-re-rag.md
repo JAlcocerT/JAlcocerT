@@ -1,6 +1,6 @@
 ---
 title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
-date: 2026-01-29T23:20:21+01:00
+date: 2026-01-26T06:20:21+01:00
 draft: false
 tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story"]
 description: 'Building a custom BOT for real estate agencies. With CORS and OpenAI Rate Limiting.'
@@ -11,7 +11,7 @@ url: 'custom-re-rag'
 
 What it should have been the Real Estate project from its conception.
 
-The **launch strategy**: *aka, focus strategy*:
+The **launch strategy**: *aka, focus strategy* was not defined at all, neither from my side, neither my client.
 
 | Element | Decision |
 | :--- | :--- |

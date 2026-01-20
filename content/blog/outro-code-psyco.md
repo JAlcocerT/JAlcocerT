@@ -1,6 +1,5 @@
 ---
 title: "Closing the code to impact gap"
-#date: 2026-01-24T07:20:21+01:00
 date: 2026-01-17T07:20:21+01:00
 draft: false
 tags: ["Tech Stack vs Psyco Stack","Unit Economics 102"]
