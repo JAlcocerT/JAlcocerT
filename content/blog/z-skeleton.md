@@ -1,12 +1,37 @@
 ---
-title: "what will this be about"
+title: "How to analyze Business Opportunities"
 #date: 2026-01-24T07:20:21+01:00
-date: 2030-01-17T07:20:21+01:00
-draft: true
-tags: ["youcandothis"]
-description: 'domoreofthis.'
+date: 2030-01-30T07:20:21+01:00
+draft: false
+tags: ["BiP","Entrepreneuring","Focus"]
+description: 'Do you really want to do this...that way?'
 url: 'new-post-tbd'
 ---
+
+
+**Tl;DR**
+
+Business are games, with defined rules.
+
+Get to know them *to potentitally win*.
+
+**Intro**
+
+Sometimes things dont work because you need to do more.
+
+Volume, repetitions, or just get started.
+
+But how to assess if you will be starting a non-sense journey to a path that goes nowhere?
+
+## Business Idea Checklist
+
+Dont even dare to start if you dont have these cristal clear.
+
+Someone coming to you for collaborations and partnerships?
+
+Tell them to send you these filled up.
+
+
 
 Existing competitors? or Needs PMF test?: No need of PMF, demand validated.
 
@@ -237,3 +262,29 @@ flowchart LR
     L2 --> L3
     L3 --> L4
 ```
+
+
+---
+
+
+# Conclusions
+
+Now that you have protected your mind and time from your *and other's* non discounted new ideas
+
+How about...getting things done?
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://genbi.jalcocertech.com" title="Generative BI" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="The insights that you could not afford to have until now" >}}
+{{< /cards >}}
+
+https://img.youtube.com/vi/qf-oNNNDXS0/hqdefault.jpg
+
+---
+
+## FAQ
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}

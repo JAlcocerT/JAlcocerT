@@ -3,11 +3,13 @@ title: "The enterprise insights are behind T-SQL and OracleSQL"
 date: 2026-01-14T23:20:21+01:00
 draft: false
 tags: ["BAML","AI Tech Talk 3","DuckDB vs ClickHouse vs SQlite","Malloy"]
-description: 'Enterprise insights are behind Connecting to T-SQL and OracleSQL - Go get them.'
+description: 'From LangChain to BAML for insights extraction reliability. Lets go get them.'
 url: 'using-baml-to-query-a-database'
 ---
 
 **Tl;DR**
+
+Can we move [from langchain x pgsql](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/) to BAML x DB interaction to extract its insights?
 
 **Intro**
 
@@ -49,7 +51,6 @@ Transact SQL - The one that
 ### Oracle SQL
 
 ### DuckDB vs ClickHouse vs SQLite
-
 
 
 Some people say that duckdb is the opposity of redshift.

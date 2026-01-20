@@ -11,11 +11,11 @@ url: 'how-is-for-agents-what-and-why-for-you'
 
 **Tl;DR**
 
-Thoughts after this theo video, [shipping a micro-saas](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) in front of people and doing some tech talks.
+Thoughts after [this theo](https://www.youtube.com/watch?v=28z6OjsNsUk&t=3s) video, [shipping a micro-saas](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) in front of people and doing some tech talks.
 
 **Intro**
 
-Everything can be done with code and llms/agents are pretty good with that.
+Everything can be [done with code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/) and llms/agents are pretty good with that.
 
 So...why arent we.
 
@@ -97,8 +97,8 @@ Let's assume a "Base Package" of **$49** for a single wedding/event.
 
 | Variable | Value | Logic |
 | --- | --- | --- |
-| **Price ()** | **$49** | One-time payment for the "Event Pass." |
-| **Volume ()** | **High** | Targeted at weddings, birthdays, and corporate events. |
+| **Price** | **$49** | One-time payment for the "Event Pass." |
+| **Volume** | **High** | Targeted at weddings, birthdays, and corporate events. |
 | **Gross Margin ()** | **90%** | **COGS:** AWS S3 storage + QR generation. Costs pennies per event. |
 | **Op. Efficiency ()** | **50%** | **OpEx:** Heavily reliant on **[GROWTH BET]** (Ads on Pinterest/TikTok/Instagram). |
 | **Net Profit** | **~$22/unit** | After ads, hosting, and Stripe fees. |
@@ -107,7 +107,7 @@ Comparison of the "Levers"
 
 | Component | Walmart | Microsoft | SaaS (1 Person) |
 | --- | --- | --- | --- |
-| **Main Lever** | **Volume ()** | **Price () & Scale** | **Efficiency (Low OpEx)** |
+| **Main Lever** | **Volume** | **Price & Scale** | **Efficiency (Low OpEx)** |
 | **Biggest Cost** | Inventory (COGS) | R&D & Salaries (OpEx) | Marketing / Ads (OpEx) |
 | **CapEx Role** | Massive (Warehouses) | High (Data Centers) | Low (A Laptop) |
 
@@ -169,8 +169,8 @@ Case Study: The QR Guest Photo App
 
 Whenever you analyze a new business opportunity, drop it into the "Empty Column" of Table 1. 
 
-If it has a **Supply Constraint**, focus on raising your **Price ()**. 
-If it has a **Demand Constraint**, focus on increasing your **Volume ()**.
+* If it has a **Supply Constraint**, focus on raising your **Price ()**. 
+* If it has a **Demand Constraint**, focus on increasing your **Volume ()**.
 
 ### After Shipping
 
@@ -333,7 +333,7 @@ Such [astro components with mailtrap](https://github.com/JAlcocerT/diy-landing-b
 
 ![Sending via attachments Astro component and Mailtrap](/blog_img/web/mailtrap-template.png)
 
-Remember to measure and optimize KPIs: Like [CTOR](https://jalcocert.github.io/JAlcocerT/selling-ideas-in-data-analytics/#what-is-ctor)
+Remember to measure and [optimize KPIs](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/#more-kpis): Like [CTOR](https://jalcocert.github.io/JAlcocerT/selling-ideas-in-data-analytics/#what-is-ctor)
 ---
 
 ## Conclusion

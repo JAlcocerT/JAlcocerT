@@ -1,6 +1,6 @@
 ---
 title: "[Gen-BI] Creating a custom PGSQL Gen-BI BAML Powered Analytics"
-date: 2026-01-15T18:20:21+01:00
+date: 2026-01-16T18:20:21+01:00
 #date: 2026-02-01T18:20:21+01:00
 draft: false
 tags: ["RoadMap26 x Tech Talk 4","Generative BI", "WrenAI vs Rill","BAML x PGSQL x Vite"]

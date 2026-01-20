@@ -1,6 +1,6 @@
 ---
 title: "A BoilerPlate so that you finally Ship"
-date: 2026-01-23T07:20:21+01:00
+date: 2026-01-14T07:20:21+01:00
 #date: 2026-01-12T07:20:21+01:00
 draft: false
 tags: ["Info Product","LifeTime Products","RoadMap26 x Tech Talk 2","Unit Economics 101","Gross vs net profit"]
