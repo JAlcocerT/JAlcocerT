@@ -317,3 +317,11 @@ Connection Management
 Storage Optimization
 
 * **NVMe Settings:** Modern SSDs change the math on query planning. You should lower `random_page_cost` (to ~1.1) to tell Postgres that random reads are nearly as fast as sequential ones.
+
+### Building Webs with AI
+
+See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/leaderboard
+
+* https://github.com/atuinsh/atuin
+
+> MIT | ✨ Magical shell history

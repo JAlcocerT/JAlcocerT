@@ -43,8 +43,10 @@ But what if at some point they wont be available?
 The raspberry team provides for each image a `.torrent` file so that any of us will become P2P keepers of the OS history.
 
 {{< callout type="warning" >}}
-Make sure that you **understand what you are sharing** via P2P. This is just a guide to allow you to share **Open Source Software** with others purely legally. Not for you to go and download The Simpsons or MrRobot.
+Make sure that you **understand what you are sharing** via P2P. This is just a guide to allow you to share **Open Source Software** with others purely legally. *Not for you to go and download The Simpsons or MrRobot.*
 {{< /callout >}}
+
+![Simpsons Clouds](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)
 
 ## How to Setup Torrents for a Raspberry Pi
 

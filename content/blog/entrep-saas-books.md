@@ -16,8 +16,6 @@ As I dont expect people to have the patience to get any value by reading from th
 
 The aim is to enhance the DIY offer, *for people that are not ready for [the DWY one](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-coding-an-astro-ssr-landing-page)*.
 
-+++ Special section for astro ~ typography themes + DecapCMS
-
 +++ [Custom chatbot QnA](#a-chatbot-for-registered-ones-to-do-qna) for registered users over the web/ooks
 
 **Intro**
@@ -98,6 +96,10 @@ The **launch strategy**: *aka, focus strategy*
 | **One Channel** | Web only, no ads, organic|
 
 The **Tier of Service**: DIY (1a - *leverages on my knowledge & experience, not in actual tools Ive built, neither my time*)
+
+And been very honest: I do this to consolidate order my knowledge.
+
+Dont really care if you will engage or not.
 
 The **customer segmentation**: B2C, for anyone...like YOU
 
@@ -344,6 +346,8 @@ This has been possible thanks to perplexity and notebookllm, together with a hug
   {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/sell-your-ebook" title="Sell your eBook ↗" icon="github" >}}
 {{< /cards >}}
+
+What could it be [next from here](#a-chatbot-for-registered-ones-to-do-qna)?
 
 ### A Chatbot for Registered ones to do QnA
 

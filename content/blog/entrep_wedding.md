@@ -308,7 +308,7 @@ The content of a web page that is visible before scrolling is commonly called: A
 
 This term originates from newspapers, where the most important content was placed above the physical fold of the paper.
 
-On the web, "above the fold" refers to everything visible in the browser window before the user scrolls down.
+On the web, "ATF" refers to everything visible in the browser window before the user scrolls down.
 
 Other ways people might refer to this:
 

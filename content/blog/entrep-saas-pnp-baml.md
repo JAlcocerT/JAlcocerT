@@ -52,8 +52,11 @@ Transact SQL - The one that
 
 ### DuckDB vs ClickHouse vs SQLite
 
-
 Some people say that duckdb is the opposity of redshift.
+
+The most common shorthand is: *DuckDB is to Redshift (both columnar, OLAP) what SQLite is to PostgreSQL.*
+
+This is where it all connects [in the D&A space](https://jalcocert.github.io/JAlcocerT/career/):
 
 ```mermaid
 mindmap
@@ -95,9 +98,10 @@ mindmap
       )Data Warehouse(
 ```
 
-The Data Lakehouse is essentially the "modern evolution" that tries to delete the line between your Postgres (OLTP) and your ClickHouse/DuckDB (OLAP).
+The Data Lakehouse is essentially the "modern evolution" that *tries to delete the line* between your Postgres (OLTP) and your ClickHouse/DuckDB (OLAP).
 
 If OLTP is for writing and OLAP is for reading, the **Lakehouse is for unifying**.
+
 
 ```mermaid
 mindmap
@@ -130,11 +134,16 @@ mindmap
 
 I was testing BAML last year [here](https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#baml).
 
-And it resonated a lot with the way langchain generates the query to the databases.
+
+Its not as popular as langchain, but still: https://github.com/BoundaryML/baml
+
+[![shields.io Stars](https://img.shields.io/github/stars/BoundaryML/baml)](https://github.com/BoundaryML/baml/stargazers)
+
+Tt resonated a lot with the way langchain generates the query to the databases.
 
 So could not resist to explore how to do a custom and more controlable solution around BAML.
 
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Data-Chat/blob/main/LangChain/ChatWithDB/test_langchainChatDB.ipynb)
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/langchain-db-ui/blob/main/baml-101.ipynb)
 
 What I wanted is this: *and remove the langchain dependency*
 
@@ -250,9 +259,11 @@ mindmap
 
 To make the solution sellable to enterprises: we need a UI.
 
-And the good news is that we already vibe coded that: here.
+And the good news is that we already vibe coded that: [here](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/).
 
 ![langchain db qna via UI PoC](/blog_img/DA/sql/langchain-vite-pgsql.png)
+
+{{< youtube "qf-oNNNDXS0" >}} 
 
 > Even with a related tech talk
 
@@ -260,19 +271,19 @@ Well, Ok.
 
 Not only a UI, but a way to get plots *and potentially dashboards* done from natural language.
 
-Or as people call this now: a generative BI solution.
+Or as people call this now: *a generative BI solution*.
 
 Thats coming up next: `z-baml-genbi`
 
 ![alt text](/blog_img/AIBI/matplotlib-baml-pgql-qna.png)
 
-> Imagine having such graphs generated from your QnA
+*Imagine having such graphs generated directly from your QnA. No SQL, No dashboarding.*
 
 ---
 
 ## Conclusions
 
-From how to what and why.
+Another example of how we are moving *From how to what and why*.
 
 Code is cheap now. Software isnt *at least for now*.
 
@@ -280,11 +291,11 @@ Code is cheap now. Software isnt *at least for now*.
 
 The danger is now more on not to get distracted with the daily tool or workflow that gets released.
 
-Go with cursor, antigravity, claude code, lovable, opencode, crush...
+Go with whatever: *cursor, antigravity, claude code, lovable, opencode, crush...*
 
 But just go and try.
 
-The challenge is now the **distribution / orchestration / marketing**, not the coding thing.
+The challenge is now the **distribution / orchestration / marketing**, which are other OpEx, not the coding thing.
 
 Do you even know the audience? is it even listening?
 
@@ -293,6 +304,8 @@ Are you building sth for an empty room?
 Time to go from builder to **creator and finding people to care** about your thing.
 
 ### The related tech talk
+
+If there was any doubt, if put together a ppt, taking into consideration [these engagement points](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#improving-your-presentations):
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing

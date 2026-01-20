@@ -1,5 +1,5 @@
 ---
-title: "A BoilerPlate so that you finally Ship"
+title: "A [BRD] BoilerPlate so that you finally Ship"
 date: 2026-01-14T07:20:21+01:00
 #date: 2026-01-12T07:20:21+01:00
 draft: false
@@ -31,11 +31,16 @@ Previously I was thinking to have this in a separated repo
 * https://github.com/JAlcocerT/bip-boilerplate-saas
 * https://github.com/JAlcocerT/boilerplate
 
-  {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate for SaaS - Source Code on Github" >}}
-
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="eBook Ideas ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="~NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate for SaaS - Source Code on Github" >}}
+  {{< card link="https://diy.jalcocertech.com" title="D&A e-book" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Start your D&A Career" >}}
+{{< /cards >}}
+
+But for now, im putting it together here: *as im not focusing on free community building*
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="1ton ebooks x Ideas | Repo ↗" icon="github" >}}
 {{< /cards >}}
 
 
@@ -48,7 +53,7 @@ Well, before moving forward answer these questions:
 * Can you specify goals? 
 * Can you provide context? 
 * Can you divide up tasks?
-*  Can you give feedback?
+* Can you give feedback?
 
 Wanna ship like an entire dev team?
 
@@ -157,7 +162,14 @@ I have proven that you can do [a DIY landing page in ~ 30 minutes](https://youtu
 
 We can call this: *The Boilerplate brd prd frd tech talk.*
 
-The idea os to show non tech business users couple success examples.
+The idea is to show non tech business users couple success examples.
+
+Just do what you know, The Planning and contex:
+
+* **BRD (Business Requirements):** Answers **"WHY build this?"** (The Vision & Goals).
+* **PRD (Product Requirements):** Answers **"WHAT are we building?"** (The Features & Roadmap).
+* **FRD (Functional Requirements):** Answers **"HOW does it work?"** (The Technical Logic & CRUDs).
+
 
 Mainly the plug and play D&A tinkered [here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions).
 

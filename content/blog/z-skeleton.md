@@ -1,7 +1,6 @@
 ---
 title: "How to analyze Business Opportunities"
-#date: 2026-01-24T07:20:21+01:00
-date: 2030-01-30T07:20:21+01:00
+date: 2026-01-30T07:20:21+01:00
 draft: false
 tags: ["BiP","Entrepreneuring","Focus"]
 description: 'Do you really want to do this...that way?'
@@ -19,9 +18,13 @@ Get to know them *to potentitally win*.
 
 Sometimes things dont work because you need to do more.
 
-Volume, repetitions, or just get started.
+Volume, repetitions, *or just...get started*.
 
 But how to assess if you will be starting a non-sense journey to a path that goes nowhere?
+
+Despite the fact that [*The How* is now more for agents and abstracted](#building-a-how-with-sense), why should you loose time?
+
+
 
 ## Business Idea Checklist
 
@@ -32,12 +35,12 @@ Someone coming to you for collaborations and partnerships?
 Tell them to send you these filled up.
 
 
+* Is it a new product that needs evangelization?
+  * Existing competitors? or Needs PMF test?: *Would recommend to go for No need of PMF, demand validated*.
 
-Existing competitors? or Needs PMF test?: No need of PMF, demand validated.
+* BANT:
 
-BANT:
-
-Value proposition: *this must be clear in the landing*
+* Value proposition: *this must be clear for you, also in the landing*
 
 <!-- **Would you like me to help you refine the "Value Proposition" sentence for the WebApp landing page so it doesn't sound like just "another photo app"?** -->
 
@@ -50,6 +53,36 @@ The **launch strategy**: *aka, focus strategy*
 | **One Channel** | |
 
 The **Tier of Service**: *this fits at DIY / DWY / DFY in the value ladder*.
+
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+    classDef bridge fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>($0)"):::free
+    L1("AuditMagnet 🛡️<br/>(Free Web Audit )"):::free
+    L11(" Blog/Youtube"):::free
+    L12(" ebooks"):::free
+    L2("DIY<br/>(Optimization Guides) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Full Service) $$$"):::high
+    L44("TBC<br/>New Service"):::bridge
+
+    %% --- Connections ---
+    L0 --> L1
+    L0 --> L2
+    L0 --> L11
+    L0 --> L12
+    L2 --> L3
+    L3 --> L4
+    L3 --> L44
+```
 
 The **tech stack**:
 
@@ -86,7 +119,9 @@ To make this a definitive reference, I have polished the tables by integrating t
 
 ---
 
-## 1. The Strategic Game Board: Sector Comparison
+### The Strategic Game Board
+
+Know your sector
 
 *This table identifies the fundamental nature of the business model and its primary bottleneck.*
 
@@ -100,16 +135,11 @@ To make this a definitive reference, I have polished the tables by integrating t
 | **Main Constraint** | **Demand (Marketing)** | **Demand (Attention)** | **Supply (Expert Hours)** |
 | **Macro Winner** | Low-cost luxury (Recession) | Upskilling (Recession) | Interest Rate Neutral |
 
----
+### The Unit Economics
 
-## 2. The Multiplicative Formula: Unit Economics
+The "Full Stack" Multiplicative Formula that works for *all the games*.
 
-*Using the formula: . This maps the "Survival Rate" of every dollar earned.*
-
-
-To get the most granular view, we start with the "Top Line" (Units and Price) and apply each "Survival Rate" (the margins and burdens) until we reach the "Bottom Line."
-
-The "Full Stack" Multiplicative Formula. The formula for Net Profit (NP) is: NP=(V×P)×GM×OE×IB×TB
+The formula for Net Profit (NP) is: NP=(V×P)×GM×OE×IB×TB
 
 If we define:
 
@@ -119,6 +149,11 @@ GM=Gross Margin Ratio(RevenueGross Profit​)
 OE=Operating Efficiency Ratio(Gross ProfitEBITDA​)
 IB=Interest Burden(EBITPre-tax Income​)
 TB=Tax Burden(Pre-tax IncomeNet Income​)
+
+*Using the formula: . This maps the "Survival Rate" of every dollar earned.*
+
+
+To get the most granular view, we start with the "Top Line" (Units and Price) and apply each "Survival Rate" (the margins and burdens) until we reach the "Bottom Line."
 
 ### Case Study: The QR Guest Photo App
 
@@ -155,10 +190,6 @@ TB=Tax Burden(Pre-tax IncomeNet Income​)
 * **If the market doesn't know you exist:** You have a **[BET]** problem (). You aren't spending enough on the "Awareness Lever."
 * **If you are "profitable" but have $0 in the bank:** You have a **[STRUCTURE]** problem (Solvency). You are paying suppliers faster than customers pay you.
 
----
-
-### Pro-Tip for your Future Posts:
-
 Whenever you analyze a new business opportunity, drop it into the "Empty Column" of Table 1. 
 
 If it has a **Supply Constraint**, focus on raising your **Price ()**. 
@@ -171,9 +202,8 @@ This adds the "Emotional and Tactical" layer to the math. It helps you identify 
 
 Here is the **Opportunity & Pain Point Matrix** for your reference.
 
----
 
-### The Reality Check: Focus vs. Friction
+The Reality Check: Focus vs. Friction
 
 | Model | Biggest Focus (Daily Action) | Biggest Opportunity (The "Win") | Biggest Pain Point (The "Squeeze") |
 | --- | --- | --- | --- |
@@ -264,6 +294,51 @@ flowchart LR
 ```
 
 
+## Building a HOW with Sense
+
+A BRD is what works best for me now to ship fast [as described here](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk).
+
+Take time and define properly they why and what: *including what's out of scope, specially if you are just one person*
+
+```mermaid
+graph LR
+    %% 1. The Split
+    Start[Define] -->|Why| B[BRD]
+    Start -->|What| C[FRD]
+    Start -->|How| D[PRD]
+
+    %% 2. The Join
+    B & C & D --> E(Clarify)
+
+    %% 3. The Linear Flow
+    E --> F[Development Plan]
+    F --> G[Finished PoC]
+
+    %% Styling
+    style G fill:#f96,stroke:#333,stroke-width:4px
+    style Start fill:#bbf
+    style F fill:#e1f5fe
+```
+
+*   **BRD (Business Requirements):** Answers **"WHY build this?"** (The Vision & Goals).
+*   **PRD (Product Requirements):** Answers **"WHAT are we building?"** (The Features & Roadmap).
+*   **FRD (Functional Requirements):** Answers **"HOW does it work?"** (The Technical Logic & CRUDs).
+
+How can be taken care of:
+
+![how to is not that important](/blog_img/DA/why-what-how.png)
+
+And if you've been clear enough on the vision, you will get it done:
+
+![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
+
+Together with a nice tech stack: *it always helps to know what to ask for*
+
+And the [human psyc](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/) considered to bundle everything.
+
+
+
+
 ---
 
 
@@ -271,12 +346,23 @@ flowchart LR
 
 Now that you have protected your mind and time from your *and other's* non discounted new ideas
 
+Hopefully, that helps you avoid going for ideas like:
+
+1. A SaaS model to aim for V and low P, for a non well defined avatar, when you dont want OpEx and think it will all be GM - *Like Webifyer and all the web/CMS [I tried here](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#about-webifyer)*
+2. To provide custom D&A services to the wrong avatar (*that also have wrong avatar and pays you less than your opportunity cost*) - *Been there, done that, [here](https://jalcocert.github.io/JAlcocerT/custom-re-rag)*
+3. To expect people to consume your DIY/Infoproduct when you dont do ads, neither took the time to built a community. - Hopefully, I havent done that because I made the [1tonebooks here](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#conclusions) just to consolidate my knowledge and help for free.
+
+All that non sense preassure and expectations of the ideas that are supposed to work, but they wont do from their conception.
+
 How about...getting things done?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://genbi.jalcocertech.com" title="Generative BI" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="The insights that you could not afford to have until now" >}}
 {{< /cards >}}
+
+{{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This DFY I have to refine it though" >}}
+
 
 https://img.youtube.com/vi/qf-oNNNDXS0/hqdefault.jpg
 

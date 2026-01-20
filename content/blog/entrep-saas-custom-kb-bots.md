@@ -301,7 +301,7 @@ https://jalcocert.github.io/JAlcocerT/blog/da-bk-learning/
 range - why generalist...
 -->
 
-This has been possible thanks to perplexity and notebookllm, together with a huge txt file of kindle notes I have:
+This has been possible thanks to countless youtube videos, perplexity and notebookllm, together with a huge txt file of kindle notes I have:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}

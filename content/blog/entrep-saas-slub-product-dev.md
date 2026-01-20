@@ -72,7 +72,7 @@ With a very important one been the OpeX in growth, aka ads. Driven by psyc effec
 
 ### A Video Explanation
 
-Im assuming you have a **proper ATF** (above the fold configuration) to minimize the **Time to Value**.
+Im assuming you have a **proper ATF** ([above the fold essentials](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#the-above-the-fold-essentials) configured) to minimize the **Time to Value**.
 
 With proper [atf instructions to Gemini](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-atf-changes.md) you go from:
 

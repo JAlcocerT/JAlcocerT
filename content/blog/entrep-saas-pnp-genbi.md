@@ -21,7 +21,7 @@ Why are we still building dashboards for one-off questions?
 
 After getting that pnp D&a with langchain and pgsql ready [here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions).
 
-With a Vibe coded UI Wrapper:
+With a Vibe coded UI Wrapper: *done for BAs, here*
 
 ![alt text](/blog_img/DA/sql/langchain-qna-pgsql.png)
 
@@ -211,9 +211,9 @@ I got couple of ideas on how to do this.
 2. To do so **via BAML**
 
 * https://github.com/boundaryml/baml
-* /JAlcocerT/using-baml-to-query-a-database
+* https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database/#using-baml
 
-> I got to use BAML last year here, while trying to improve the repo to doc generation tasks
+> I got to use BAML last year here, while trying to improve the *repo to documentation generation tasks*
 
 One of their doc example resonated with this: https://baml-examples.vercel.app/examples/book-analyzer
 
@@ -225,6 +225,15 @@ Moving from `z-langchain2baml` to `z-baml-genbi`
 
 You guessed: *this has been powered with antigravity.*
 
+And it was the rational next step to [having baml doing the](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database/#using-baml)
+
+- Print the **Rationale** (Why we did this).
+- Print the **SQL** (What we are running).
+- Print the **Data Table** (The results).
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/langchain-db-ui/blob/main/baml-101.ipynb)
+
+
 ```
 i have copied the logic to z-baml-genbi
 
@@ -235,7 +244,11 @@ We can assume it will be one of: pie chart, bar chart, time series or unconclusi
 and based on this assesment (we can force it to provide 1 for only one category and 0 for the rest) we will have a python logic that will take the pandas dataframe output from pgsql and create and save a matplotlib chart
 ```
 
-As long as you execute this: *and you got pg configured:
+As long as you execute this: *and you got pg configured*
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="PostgreSQL | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ```sh
 ./datachat_venv/bin/baml-cli generate --from z-baml-genbi/baml_src
@@ -452,7 +465,7 @@ https://youtu.be/eCvZxjSw6rE
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain/BAML x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to PGSQL - Get insights with automatic charts." >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain or BAML x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to PGSQL - Get insights with automatic charts." >}}
 {{< /cards >}}
 
 ```sh
@@ -486,7 +499,7 @@ Be smart, turn your **Data Layer** into a **Self-Service Agent**.
 
 ### Related Tech Talk
 
-There is a huge difference between [pbi - looker and this gen-bi solution](https://mermaid.live/edit#pako:eNp9U02P2jAQ_SuWDz0B3XyRkEMllrARaraim7Zb1dmDIbPEAmxkOy0f4r93QliU7aE52dZ7M--9mZzoUpVAY7rSfFeRb0khCX6mXrQP8_sZYXP1BzS5n8Xkkcuab8gH8kMYPLy06OabO2yipISlJVaRhFv-Qvr9T2Tusispt1yTfFnBlpMEjFjJLt1t0R571sICScY_ySNwU2swXZjXwnyWaL5CHYlWu6uYdzi_xQVsXi82wlTkCXZK2ysEZFnIf5xmn58Iy5Rag47JBEPpPwhtLPaYgLSab8QRyk6L7J3hZ66hUrWB1nXmshTkx2kpLGlqPmaXkl16azjzWAKvQsLNLRHySumiW9-Zz6b73UZpIDlsmtYPAjZl13nWOs8ClvPf0EjLK9RW4khMtVBcl__JIG2mjcL7zazHK_Qtlk3IB8m3Ytnpkjq4FELeZr3gb85Tl41nZFxb1Z_uMbalNWhdWtjbLr91n3rsu8HVGpu1IV-4rTFm8rUGY4Xqbkfa2k_9pjbqA80tmEukKC-3zXV16BLaFNKAzaSxHIVePVx3RRx5pwVGQXv4B4iSxlbX0KNb0FveXOmpgRTU4tpCQWM8llyvC1rIM3J2XP5SavtG06peVTR-xWXEW70rUVciOIa7vb1q7AZ6omppaeyE_qUIjU90T-O-4zn-IHADxx_6ke-FQY8eaOzd3Q1cbxhGQRRFw9AZnXv0eGnrDMKRFzpO6HijUeS67vD8F4GgJbw).
+There is a huge difference between [pbi - looker and such *custom gen-bi* solution](https://mermaid.live/edit#pako:eNp9U02P2jAQ_SuWDz0B3XyRkEMllrARaraim7Zb1dmDIbPEAmxkOy0f4r93QliU7aE52dZ7M--9mZzoUpVAY7rSfFeRb0khCX6mXrQP8_sZYXP1BzS5n8Xkkcuab8gH8kMYPLy06OabO2yipISlJVaRhFv-Qvr9T2Tusispt1yTfFnBlpMEjFjJLt1t0R571sICScY_ySNwU2swXZjXwnyWaL5CHYlWu6uYdzi_xQVsXi82wlTkCXZK2ysEZFnIf5xmn58Iy5Rag47JBEPpPwhtLPaYgLSab8QRyk6L7J3hZ66hUrWB1nXmshTkx2kpLGlqPmaXkl16azjzWAKvQsLNLRHySumiW9-Zz6b73UZpIDlsmtYPAjZl13nWOs8ClvPf0EjLK9RW4khMtVBcl__JIG2mjcL7zazHK_Qtlk3IB8m3Ytnpkjq4FELeZr3gb85Tl41nZFxb1Z_uMbalNWhdWtjbLr91n3rsu8HVGpu1IV-4rTFm8rUGY4Xqbkfa2k_9pjbqA80tmEukKC-3zXV16BLaFNKAzaSxHIVePVx3RRx5pwVGQXv4B4iSxlbX0KNb0FveXOmpgRTU4tpCQWM8llyvC1rIM3J2XP5SavtG06peVTR-xWXEW70rUVciOIa7vb1q7AZ6omppaeyE_qUIjU90T-O-4zn-IHADxx_6ke-FQY8eaOzd3Q1cbxhGQRRFw9AZnXv0eGnrDMKRFzpO6HijUeS67vD8F4GgJbw).
 
 
 
@@ -495,6 +508,8 @@ git clone https://github.com/JAlcocerT/selfhosted-landing
 cd y2026-tech-talks/3-genbi-langchain
 #npm run dev 
 ```
+
+> Now, [more engaging](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#improving-your-presentations) than ever.
 
 
 ---

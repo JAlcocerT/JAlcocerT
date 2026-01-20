@@ -118,6 +118,8 @@ Which looks very similar to what it was covered:
 
 {{< youtube "41BHPU7lDIY" >}}
 
+Its all about creating animations and embedding them:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/" title="Matplotlib x YFinance" image="/blog_img/data-experiments/sample-matplotlib-timeseries.png" subtitle="Using Matplotlib to generat TimeSeries Styles Snapshots" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Matplotlib x Flask WebApp" image="/blog_img/AIBI/fastapi-custom-matplotlib.png" subtitle="Custom matplotlib x Graficas LibrePortfolio" >}}
@@ -151,7 +153,7 @@ uv run gopro-dashboard.py /home/jalcocert/Desktop/Py_RouteTracker/Z_GoPro/GX0204
 
 And **it worked** briliantly: *with rencoding required, so sit back*
 
-But how could I not follow the suck-suck less approach:
+But how could I not follow the suck-suck less approach: *this is one of the first iterations*
 
 <!-- https://youtu.be/jqzzkexAx2I -->
 
@@ -167,13 +169,19 @@ https://youtu.be/7KMAZgdMqGc -->
 
 Then I also tried the output of the gopro dashboard overlay: *see the [video](https://youtu.be/b3hP1J_YVSk)*
 
+This is based on the `gopro-dashboard-overlay`:
+
 ![suck vs gopro dashboard overlay python](/blog_img/data-experiments/kart-data.png)
+
+This, on another iteration of my initial hud:
 
 {{< youtube "w2wwC7j882k" >}}
 
 <!-- 
 https://youtu.be/w2wwC7j882k 
 -->
+
+This is one of the best I got so far:
 
 ```sh
 time python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/racing_hud_v3c.py
@@ -201,6 +209,8 @@ python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer.py
 <!-- https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/lap_analysis_v4a.png -->
 
 <!-- ![Lap Analysis](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/lap_analysis_v4a.png) -->
+
+Having the lap analyzed with man and mix speed was quite nice too:
 
 [![Lap Analysis](https://raw.githubusercontent.com/JAlcocerT/Py_RouteTracker/main/overlay/lap_analysis_v4a.png)](https://github.com/JAlcocerT/Py_RouteTracker/blob/main/overlay/lap_analysis_v4a.png)
 
@@ -273,13 +283,15 @@ https://youtu.be/c0YkQhsUNrg
 
 {{< youtube "c0YkQhsUNrg" >}}
 
-Then, added some comments via KDEnlive:
+Then, added some comments via KDEnlive: *these can probably be done automatically as well as per the timestamps*
 
 ```sh
 python3.10 /home/jalcocert/Desktop/Py_RouteTracker/overlay/lap_timer_v7.py
 ```
 
 ![KDENlive Comments](/blog_img/karting/kdenlive-gopro-gps-comments.png)
+
+The result has been:
 
 {{< youtube "Cv0-m9B3l_Y" >}}
 

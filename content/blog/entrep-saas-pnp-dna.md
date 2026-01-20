@@ -918,6 +918,13 @@ To: *a vibe coded UI Wrapper, so non tech users can use it confortably*
 
 ![langchain ui wrapper around pgsql qna](/blog_img/DA/sql/langchain-qna-pgsql.png)
 
+This will be presented to BAs/DEs at another tech talk to motivate them to create.
+
+Just like this:
+
+{{< youtube "qf-oNNNDXS0" >}} 
+<!-- 
+https://youtu.be/qf-oNNNDXS0 -->
 
 #### Next Steps
 

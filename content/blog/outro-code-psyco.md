@@ -17,9 +17,9 @@ Thoughts after [this theo](https://www.youtube.com/watch?v=28z6OjsNsUk&t=3s) vid
 
 Everything can be [done with code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/) and llms/agents are pretty good with that.
 
-So...why arent we.
+So...why arent we?
 
-Product, how's and features matter.
+[Product](#have-you-plugged-posthog), how's and features matter.
 
 But so that's the packaging.
 
@@ -253,6 +253,8 @@ You are missing parts.
 
 ### Improving your Presentations
 
+The workflow that I have for [this year presentations](https://github.com/JAlcocerT/selfhosted-landing/y2026-tech-talks) is:
+
 0. Tinker & be willing to share
 1. Mind the brand
 2. Prepare the `slides.md`
@@ -334,6 +336,7 @@ Such [astro components with mailtrap](https://github.com/JAlcocerT/diy-landing-b
 ![Sending via attachments Astro component and Mailtrap](/blog_img/web/mailtrap-template.png)
 
 Remember to measure and [optimize KPIs](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/#more-kpis): Like [CTOR](https://jalcocert.github.io/JAlcocerT/selling-ideas-in-data-analytics/#what-is-ctor)
+
 ---
 
 ## Conclusion
@@ -357,7 +360,7 @@ What they do.
 
 Not what they say.
 
-Now what you think.
+Not what you think.
 
 This helps: 
 

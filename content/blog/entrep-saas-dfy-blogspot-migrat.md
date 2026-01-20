@@ -151,7 +151,7 @@ You get via mail a detailed summary, with a transaction email.
 
 Options for Anyone to get a Website: DIY/DWY/DFY.
 
-This can play nicely with some guerrilla marketing: scan and get a free audit!
+This can play nicely with some guerrilla marketing: *scan and get a free audit!*
 
 ![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
 
@@ -165,7 +165,7 @@ Also more eco :)
 {{< /cards >}}
 
 
-Best lead magnets are those who show a problem.
+One option for a great lead magnets are those who show a problem.
 
 Like getting to know that your site is not that good actually.
 
@@ -230,7 +230,7 @@ If you are not doing that yet: *build with a git repo*
     {{< card link="https://github.com/JAlcocerT/selfhosted-landing" title="landing consulting repo | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-How does my current value ladder looks like?
+How does my current **value ladder** looks like?
 
 ```mermaid
 flowchart LR
@@ -385,6 +385,11 @@ Even if there's no `robots.txt`, search engines will crawl the site, but without
 
 Wanna Tinker with [php](https://jalcocert.github.io/JAlcocerT/backend-alternatives/) and wordpress?
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wordpress" title="Wordpress | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ghost" title="Ghost | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 If you start **fresh on a VPS** and have Docker and WordPress set up, bringing your WordPress theme into that environment involves a few steps:
 
 {{< cards >}}
@@ -472,12 +477,3 @@ You can manually download a theme ZIP file from GitHub and install it through **
 Alternatively, use tools like **WP Pusher** or **GitHub Updater** to install and automatically update WordPress themes directly from public GitHub repositories.[5][9]
 
 All of these themes respect GPL open-source licensing, meaning you can modify or even resell them under your own distribution as long as you retain the same license.
-
-
-### Building Webs with AI
-
-See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/leaderboard
-
-* https://github.com/atuinsh/atuin
-
-> MIT | ✨ Magical shell history

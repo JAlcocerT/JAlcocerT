@@ -1,6 +1,6 @@
 ---
 title: "[Gen-BI] The insights for a profitable Shopify"
-date: 2026-01-19T07:20:21+01:00
+date: 2026-01-20T07:20:21+01:00
 #date: 2026-02-01T18:20:21+01:00
 draft: false
 tags: ["RoadMap26 x Tech Talk 5","Shopify API","BAML x Vite x Astro","RevOps x GTM"]
@@ -94,7 +94,6 @@ networks:
     external: true
 
 add also the make comand like make-docker-prod-up
-
 
 also, what could we do so that we use to the max the above the fold section? lets brainstorm here
 

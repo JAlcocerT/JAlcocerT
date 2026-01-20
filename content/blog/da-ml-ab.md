@@ -231,7 +231,7 @@ What to Look For and Optimize:
     * Improving ad sizes.
     * Creating more engaging content that attracts relevant users and higher-paying advertisers.
 * **Active View Viewable:** A higher percentage means your ads are more likely to be seen. Consider:
-    * Ad placement (are they above the fold or in easily viewable areas?).
+    * Ad placement (are they atf or in easily viewable areas?).
     * Page load speed (slow pages mean ads might not load before users scroll away).
     * User experience (are users staying on your pages long enough for ads to become viewable?).
 * **Clics:** If clicks are low relative to impressions, it might indicate that ads aren't relevant to your audience or are not engaging enough.
