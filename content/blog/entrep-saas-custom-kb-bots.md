@@ -146,12 +146,14 @@ And shared it with a couple marketers.
 
 Tested the drag'n'drop chatbots, like Typebot.
 
+Made few custom chatbots, [with fastapi here](https://github.com/JAlcocerT/selfhosted-landing/tree/master/chatbot-logic) and [with typescript here](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#typescript-custom-chatbot) that brought context.
+
 
 ### Got tired of cloning astro templates
 
 So started vibe coding mine.
 
-From diy-landings, that you can plug chatbots to DFY real estate soltions.
+From diy-landings, that you can plug chatbots to [DFY real estate solutions](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot).
 
 ### Put together a notes about KBs
 
@@ -183,7 +185,9 @@ This has 2 sides:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Open Web UI  | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Something like a desktop app communicating with local llms running in house could be a thing. Like ~Goose.
+Something like a desktop app communicating with local llms running in house could be a thing. 
+
+Like ~Goose.
 
 2. The Local wiki / SknowledBase / [KB](https://jalcocert.github.io/JAlcocerT/knowledge-management/#conclusions) / [selfhostable notes](https://fossengineer.com/selfhostable-note-taking-tools/) / info part:
 
@@ -194,7 +198,7 @@ Something like a desktop app communicating with local llms running in house coul
 
 Same questions apply: web only? desktop app required? mobile?
 
-3. How to treat huge amount of information: embeddings , vector DBs, RAG architectures
+3. How to treat huge amount of information: *embeddings , vector DBs, RAG architectures*
 
 
 
@@ -208,14 +212,13 @@ Same questions apply: web only? desktop app required? mobile?
 
 ### How Ive placed a Qna around my notes
 
-Recently, I was talking about my new 1ton web/ook platform.
+Recently, I was talking about my new [1ton web/ook platform](https://github.com/JAlcocerT/1ton-ebooks).
 
 Where Im distilling all my experience in short chapters for anyone *including llms* to consume.
 
 I have just added the possibility for people to do [QnA directly to such knowledge base](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#a-chatbot-for-registered-ones-to-do-qna).
 
 You can get also perspective from [several domain ideas linked](#faq) thanks to that.
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}
@@ -227,16 +230,7 @@ Because: programming, marketing and sales is all you need.
 
 But if you are able to far transfer from other aspects of life, thats what will differenciate your vision and products.
 
-#### HUGO Vibe Coded Re-build
-
-To offer this via fossengineer, I can try: *these are next steps*
-
-1. As is (later removing adsense)
-2. The local KB offer
-3. The webpage offer
-4. Finally remodel the webpage to avoid the shape of a blog, as is more a news/docs one - vibe coding ofc.
-
-### You can also do this
+### Need Help?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

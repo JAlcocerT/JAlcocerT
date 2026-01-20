@@ -117,6 +117,15 @@ git init && git add . && git commit -m "Initial commit: better ai docs" && gh re
   {{< card link="https://github.com/JAlcocerT/fossengineer-hugo" title="foss reloaded x HomeLab integration | Github ↗" icon="github" >}}
 {{< /cards >}}
 
+HUGO Vibe Coded Re-build
+
+To offer this via fossengineer, I can try: *these are next steps*
+
+1. As is (later removing adsense)
+2. The local KB offer
+3. The webpage offer
+4. Finally remodel the webpage to avoid the shape of a blog, as is more a news/docs one - vibe coding ofc.
+
 With that remota data (yaml) fetching from the home-alb repo.
 
 0. Create individual pages on `jalcocertech.com` with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code `.mdx`
@@ -291,6 +300,10 @@ If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-
 {{< /cards >}}
 
 7. Boiler plate / **blueprint for vibe coders**: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
+
+Im **launching my boilerplate**: https://boilerplate.jalcocertech.com
+
+> It has the look and feel of my latest [diy landing boilerplate](https://github.com/JAlcocerT/diy-landing-boilerplate) for a reason :)
 
 {{< cards >}}
   {{< card link="adwadwadwad" title="Boilerplate for Builders ↗" icon="github" >}}
@@ -728,4 +741,15 @@ graph LR
     style C fill:#d4edda,stroke:#28a745,stroke-width:2px
     style D fill:#f8d7da,stroke:#dc3545,stroke-width:1px
     style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
+```
+
+Mermaid...
+
+```mermaid
+xychart
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
 ```

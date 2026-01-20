@@ -29,13 +29,6 @@ The **Tier of Service**: DIY (1a - *leverages on knowledge*)
 
 The **tech stack**: *see how it has been done on [this section](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#now---creating-diy-landing-boilerplate)*
 
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | Tab favicon and og must be available |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-| Others | Web Analytics / ads / Cal / Formbricks / ESP | Yes, via MailTrap |
 
 * TAM: *not calculated, if it helps someone, would be amazing*
 * LTV: *not calculated*
@@ -53,15 +46,19 @@ This might also be combined with [the upcoming offers](#my-offer-after-diy-landi
 
 I saw sth interesting across social media and forums [here](https://forocoches.com/foro/showthread.php?t=10544529) and [here](https://forocoches.com/foro/showthread.php?t=10544108)
 
-People need stg...but are not able to articulate the what.
+People need stg...
 
-And having a website is so easy, everyone does that and If i would want to....id also do mine.
+But are not able to articulate the what.
+
+Having a website is so easy, everyone does that *and If i would want to....id also do mine*.
 
 Specially with AI, its... 3 seconds.
 
 No action.
 
-So, as my BRD of doing these landings works so good, im *productionazing it* with the shape of...**code + life time access and a landing.**
+So, as my BRD of doing these landings works so good.
+
+Im moving towards *productionazing it* with the shape of...**code + life time access and a landing.**
 
 <!-- https://studio.youtube.com/video/P6MQBU3YpmM/edit -->
 
@@ -86,9 +83,9 @@ Lets get to it.
 
 ## What should a landing have?
 
-An effective landing page is less like a brochure and more like a focused conversation. 
+An effective landing page is less like a brochure and more **like a focused conversation**. 
 
-Since it usually has one specific goal—getting a visitor to sign up, buy, or download—every element needs to point toward  conversion.
+Since it usually has one specific goal—getting a visitor to sign up, buy, or download—every element needs to point toward conversion.
 
 Here are the essential parts to consider, organized by how a user typically experiences them:
 
@@ -103,7 +100,9 @@ This is what users see before they even start scrolling. You have about five sec
 
 ### Building Authority & Trust
 
-People are naturally skeptical. You need to prove you can deliver on your promises.
+People are naturally skeptical. 
+
+You need to prove you can deliver on your promises.
 
 * **Social Proof:** Testimonials, customer logos, or "As Seen In" badges. Real faces and full names make testimonials much more believable.
 * **Trust Signals:** Security badges, money-back guarantees, or data regarding your success (e.g., "Joined by 10,000+ professionals").
@@ -504,9 +503,10 @@ Well, stripe emails are...,verified' behind a paywall :)
 
 If you got unverified emails from formbricks or from sth like the `make-landing` [project](https://github.com/JAlcocerT/make-landing) that saves them into a `.db` or `.csv`
 
+<!-- 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/make-landing" title="Make Landing Repo ↗" icon="github" >}}
-{{< /cards >}}
+{{< /cards >}} -->
 
 You can do [programmatic emails via ESP](https://github.com/JAlcocerT/make-landing/blob/master/mailetrap-esp.ipynb) to send them goodies: *info, attachments, verifications, etc.*
 
@@ -772,7 +772,7 @@ The full process took **~30 min**: *dont trust me? see [the video](https://youtu
 
 How could I not...add the **ChatBot funcionality**.
 
-With custom knowledge base, unlike the previous simpler FastAPI based one.
+With **custom knowledge base**, unlike the previous simpler FastAPI based one.
 
 * https://github.com/JAlcocerT/selfhosted-landing
 
@@ -1276,17 +1276,6 @@ I cant believe more BAs / non technical users are not creating/shipping like cra
 git clone https://github.com/JAlcocerT/slidev-editor
 #git branch -a
 #git checkout -b logtojseauth main
-```
-
-Mermaid...
-
-```mermaid
-xychart
-    title "Sales Revenue"
-    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
-    y-axis "Revenue (in $)" 4000 --> 11000
-    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
-    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
 ```
 
 

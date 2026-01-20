@@ -1,6 +1,6 @@
 ---
 title: "The enterprise insights are behind T-SQL and OracleSQL"
-date: 2026-02-01T23:20:21+01:00
+date: 2026-01-14T23:20:21+01:00
 draft: false
 tags: ["BAML","AI Tech Talk 3","DuckDB vs ClickHouse vs SQlite","Malloy"]
 description: 'Enterprise insights are behind Connecting to T-SQL and OracleSQL - Go get them.'
@@ -37,16 +37,22 @@ source datachat_venv/bin/activate
 python3 baml-extract-schema.py --db-uri "postgresql://admin:securepassword@localhost:5432/umami_warehouse" --question "What are the most visited pages?"
 ```
 
+That part, BAML can take care of.
+
+But first, a look to few popular storage for enterprises.
+
 
 ### TSQL
+
+Transact SQL - The one that
 
 ### Oracle SQL
 
 ### DuckDB vs ClickHouse vs SQLite
 
+
+
 Some people say that duckdb is the opposity of redshift.
-
-
 
 ```mermaid
 mindmap
@@ -90,7 +96,7 @@ mindmap
 
 The Data Lakehouse is essentially the "modern evolution" that tries to delete the line between your Postgres (OLTP) and your ClickHouse/DuckDB (OLAP).
 
-If OLTP is for writing and OLAP is for reading, the Lakehouse is for unifying.
+If OLTP is for writing and OLAP is for reading, the **Lakehouse is for unifying**.
 
 ```mermaid
 mindmap
@@ -166,7 +172,7 @@ source datachat_venv/bin/activate
 #pip install tabulate
 ```
 
-2.  **RuCreate baml arficats**:
+2.  **ReCreate baml arficats**:
 
 ```bash
 baml-cli init #configure your baml_src
@@ -208,8 +214,7 @@ graph LR
     end
 ```
 
-3.  **Run Execution Script**:
-
+3.  **Run Execution Script**: *provide your local pgsql connection*
 
 ```sh
 # From the project root
@@ -252,7 +257,7 @@ And the good news is that we already vibe coded that: here.
 
 Well, Ok.
 
-Not only a UI, but a way to get plots and potentially dashboards done from natural language.
+Not only a UI, but a way to get plots *and potentially dashboards* done from natural language.
 
 Or as people call this now: a generative BI solution.
 
@@ -350,18 +355,18 @@ Building a professional Power BI solution involves a rigorous 4-step process:
     - Selecting visuals that answer specific BRD questions (e.g., "Which region is underperforming?").
     - Tuning the UX for speed and clarity.
 
+Document Logic (The Planning):
 
-Document Logic (The Planning)
-BRD (Business Requirements): Answers "WHY build this?" (The Vision & Goals).
-PRD (Product Requirements): Answers "WHAT are we building?" (The Features & Roadmap).
-FRD (Functional Requirements): Answers "HOW does it work?" (The Technical Logic & CRUDs).
+* BRD (Business Requirements): Answers "WHY build this?" (The Vision & Goals).
+* PRD (Product Requirements): Answers "WHAT are we building?" (The Features & Roadmap).
+* FRD (Functional Requirements): Answers "HOW does it work?" (The Technical Logic & CRUDs).
 
+Data Logic (The Analytics):
 
-2. Data Logic (The Analytics)
-Fact Tables: Answer "WHAT happened (and how much)?"
-Examples: visit_count, revenue, quantity_sold.
-Dimension Tables: Answer "WHO / WHERE / WHICH context?"
-Examples: customer_name, product_category, country_origin.
+* Fact Tables: Answer "WHAT happened (and how much)?"
+  * Examples: visit_count, revenue, quantity_sold.
+* Dimension Tables: Answer "WHO / WHERE / WHICH context?"
+  * Examples: customer_name, product_category, country_origin.
 
 In the world of data engineering, these concepts form the fundamental "fork in the road" between how we store data for **action** versus how we store it for **analysis**.
 
@@ -523,9 +528,6 @@ Regardless of the approach, follow these rules to ensure your Power BI model is 
 3. **Folders and Descriptions:** Use "Display Folders" to group measures (e.g., "Time Intelligence," "Profitability") and add descriptions to fields so users see a tooltip explaining what the data means.
 4. **Hierarchies:** Create "Drill-down" paths (Country > State > City) so the model feels intuitive to browse.
 
----
-
-Summary for your Project
 
 If you are coming from the **Lloyd Tabb/Looker** world, Power BI feels different because the "Semantic" part is often bundled inside the report file. However, by using **Power BI Datasets (Live Connection)**, you can replicate that "Looker Vibe" where the logic is centralized and separated from the visuals.
 
@@ -533,29 +535,34 @@ If you are coming from the **Lloyd Tabb/Looker** world, Power BI feels different
 
 **Malloy** is a modern, open-source language for data modeling and querying, created by **Lloyd Tabb** (the founder of Looker) and a team at Google.
 
-If **LookML** was Lloyd Tabb’s first attempt to fix SQL, **Malloy** is his "clean slate" version. It is designed to be for SQL what **TypeScript** is for JavaScript: a more powerful, typed, and modular way to write code that ultimately "compiles" down to standard SQL.
+* https://github.com/malloydata/malloy
+  * https://docs.malloydata.dev/documentation/user_guides/sql_experts1
 
-### What makes Malloy special?
+> MIT | Malloy is a modern open source language for describing data relationships and transformations.
 
-#### 1. "Escaping the Rectangle"
+If **LookML** was Lloyd Tabb’s first attempt to fix SQL, **Malloy** is his "clean slate" version. 
+
+It is designed to be for SQL what **TypeScript** is for JavaScript: *a more powerful, typed, and modular way to write code that ultimately "compiles" down to standard SQL.*
+
+What makes Malloy special?
+
+1. "Escaping the Rectangle"
 
 Standard SQL forces data into "rectangles" (rows and columns). If you want to see an Order and all its Items, you have to "flatten" the data, which leads to duplicate rows and complex `JOIN` logic.
 
 * **Malloy's Fix:** It natively handles **nested data** and hierarchies. You can query a "Table within a Table" naturally, which makes it much easier to build dashboards that show a summary and a breakdown in the same view.
 
-#### 2. Reusable "Measures" (The Semantic Part)
+2. Reusable "Measures" (The Semantic Part)
 
 In SQL, if you want to calculate "Gross Margin," you have to write that math in every single query.
 
 * **Malloy's Fix:** You define `gross_margin` **once** in the model. From then on, you just reference it. If the definition changes, you update one line of code, and every query using it is fixed.
 
-#### 3. Automatic "Symmetric Aggregates"
+3. Automatic "Symmetric Aggregates"
 
 One of the most dangerous things in SQL is the "Fan-out" (doubling your totals because of a Join).
 
 * **Malloy's Fix:** It has built-in logic that understands the relationships between tables. It automatically prevents "double counting" when you join a one-to-many relationship, so your sums are always correct without you needing to worry about `DISTINCT` hacks.
-
-### A Quick Comparison
 
 | Feature | **SQL** | **Malloy** |
 | --- | --- | --- |
@@ -564,9 +571,7 @@ One of the most dangerous things in SQL is the "Fan-out" (doubling your totals b
 | **Complexity** | 100 lines for a nested report. | 10 lines for the same report. |
 | **Output** | Rectangles only. | Nested/Hierarchical JSON or Tables. |
 
-### How to use it
-
-Malloy isn't a database itself.
+How to use it: because Malloy isn't a database itself.
 
 It is a **compiler**.
 
@@ -583,15 +588,11 @@ As of late 2023, the team released **Malloy 4.0**, which they officially called 
 
 It is now considered a stable, open-source language that is ready for production use, primarily through their excellent **VS Code Extension**.
 
-**Would you like to see a "Before and After" example of a Northwind query written in SQL versus Malloy?**
-
 Comparing **Malloy** to **DuckDB**, **SQLite**, **ClickHouse**, and **Redshift** is a bit like comparing a **GPS system** to different types of **Engines**.
 
 Malloy is the **Language/Interface** (the GPS), while the others are the **Databases/Engines** (the car). You need one of each to actually "drive" your data.
 
----
-
-### 1. The Big Distinction: Language vs. Engine
+1. The Big Distinction: Language vs. Engine
 
 | Tool | Category | What it does |
 | --- | --- | --- |
@@ -601,19 +602,17 @@ Malloy is the **Language/Interface** (the GPS), while the others are the **Datab
 | **ClickHouse** | **Distributed OLAP DB** | A massive, server-based engine for real-time analytics on billions of rows. |
 | **Redshift** | **Cloud Data Warehouse** | Amazon's enterprise-scale engine for massive, long-term data storage. |
 
----
+2. How Malloy interacts with them
 
-### 2. How Malloy interacts with them
+Malloy doesn't store data. 
 
-Malloy doesn't store data. It **connects** to these engines and tells them what to do.
+It **connects** to these engines and tells them what to do.
 
 * **Malloy + DuckDB:** The most common "modern" combo. You use Malloy to write clean code, and DuckDB executes it instantly on your local files.
 * **Malloy + Redshift:** Malloy replaces the "messy" SQL you would normally send to Redshift, making your enterprise queries shorter and more readable.
 * **Malloy + ClickHouse:** Currently, Malloy has limited/community support for ClickHouse (it primarily focuses on BigQuery, Postgres, and DuckDB), but the logic is the same: Malloy writes the SQL so you don't have to.
 
----
-
-### 3. Comparing the "Engines" (The Databases)
+3. Comparing the "Engines" (The Databases)
 
 | Feature | **SQLite** | **DuckDB** | **ClickHouse** | **Redshift** |
 | --- | --- | --- | --- | --- |
@@ -622,9 +621,7 @@ Malloy doesn't store data. It **connects** to these engines and tells them what 
 | **Scale** | Megabytes to Gigabytes. | Gigabytes (Single Node). | Terabytes to Petabytes. | Petabytes (Cloud). |
 | **Speed** | Fast for 1 row. | Fast for 1M rows. | Fast for 1B rows. | Fast for complex Joins. |
 
----
-
-### 4. Which one should you use for your project?
+4. Which one should you use for your project?
 
 If you are following the **Lloyd Tabb** philosophy:
 
@@ -638,9 +635,15 @@ Summary
 * **DuckDB** is the **Local Turbo-Engine**.
 * **ClickHouse/Redshift** are the **Industrial Power-Plants**.
 
-**Would you like me to show you a Malloy script that connects to a DuckDB instance to query a Parquet file?**
+<!-- 
+https://www.youtube.com/watch?v=fzb1Ez0bHCA 
+-->
+
+{{< youtube "fzb1Ez0bHCA" >}}
+
 
 A great video about Apache Iceberg:
+
 <!-- 
 https://www.youtube.com/watch?v=TsmhRZElPvM -->
 
@@ -656,6 +659,7 @@ https://www.youtube.com/watch?v=9CrlA0Wasvk
 
 
 A Materialized table is a solution to a d&a problem.
+
 A **Materialized View** is essentially a "cached" table. While a regular view is just a saved SQL query that runs every time you look at it, a materialized view **calculates the result once and stores it physically** on the disk as a real table.
 
 Think of it like this:
@@ -663,28 +667,24 @@ Think of it like this:
 * **Regular View:** A recipe. Every time you want a cake, you have to follow the recipe and bake it from scratch. (Fresh, but slow).
 * **Materialized View:** A pre-baked cake. When you want a cake, you just grab it from the fridge. (Instant, but might be a day old).
 
----
-
-### Why is it useful?
+Why is it useful?
 
 1. **Speed (Performance):** If your query joins 10 huge tables and takes 2 minutes to run, a materialized view runs it once (e.g., at 3 AM) and saves the result. When you query the view at 10 AM, it's nearly instantaneous.
 2. **Saves Money/Compute:** You aren't paying your database (like Snowflake or BigQuery) to recalculate the same complex math 100 times a day.
 3. **Simplicity:** It hides complex "Big Data" messiness. Your data analysts just see a clean, fast table.
 
----
-
-### Do Power BI or Looker have them?
+Do Power BI or Looker have them?
 
 Technically, "Materialized View" is a **database feature** (Postgres, BigQuery, Snowflake, etc.), but both Power BI and Looker have their own versions to achieve the same result.
 
-#### **1. Looker: Persistent Derived Tables (PDTs)**
+**1. Looker: Persistent Derived Tables (PDTs)**
 
 Looker doesn't call them materialized views; it calls them **PDTs**.
 
 * **How it works:** You write the SQL for a table in LookML. Looker then creates a physical table in your database (e.g., Redshift or BigQuery) and updates it on a schedule.
 * **Refinement:** Looker can even do "Incremental PDTs" where it only adds the newest rows instead of rebuilding the whole thing.
 
-#### **2. Power BI: Calculated Tables / Aggregations**
+**2. Power BI: Calculated Tables / Aggregations**
 
 Power BI handles this slightly differently depending on your setup:
 
@@ -692,9 +692,8 @@ Power BI handles this slightly differently depending on your setup:
 * **Calculated Tables:** You can use DAX to create a new table based on others. This table is "materialized" inside the Power BI file during the refresh.
 * **User-Defined Aggregations:** You can tell Power BI to create a hidden, summarized version of a huge "DirectQuery" table. When a user asks for a high-level chart (e.g., "Sales by Year"), Power BI hits the "materialized" summary instead of the billion-row table.
 
----
 
-### Summary Comparison
+Summary Comparison
 
 | Tool | Feature Name | Stored In... |
 | --- | --- | --- |
@@ -702,9 +701,99 @@ Power BI handles this slightly differently depending on your setup:
 | **Looker** | Persistent Derived Table (PDT) | The database disk (managed by Looker). |
 | **Power BI** | Calculated Table / Aggregation | Power BI's internal Memory/Cache. |
 
-### When to use one?
+When to use one?
 
 * **Use a Regular View** if your data changes every second (real-time) and the query is simple/fast.
 * **Use a Materialized View (or PDT)** if you have a massive dataset and your dashboards are starting to feel slow or "laggy."
 
-**Since you've been looking at your Northwind data, would you like to see the SQL command to create a Materialized View for "Total Sales by Category" so it loads instantly in your project?**
+### PGSQL vs The Rest
+
+
+#### PGSQl vs RedShift
+
+The short answer is: **No, Redshift is not "Serverless PostgreSQL."** While Amazon Redshift was originally based on an older version of PostgreSQL (8.0.2), it has evolved into a fundamentally different animal designed for a completely different purpose.
+
+To help clarify, here is how the two compare and where they fit in your tech stack:
+
+1. Architectural Differences
+
+The most critical difference is how they store and process data.
+
+* **PostgreSQL (Row-oriented):** Designed for **OLTP** (Online Transactional Processing). It stores data in rows, which is perfect for small, frequent operations like "Update this user's email" or "Insert a new order."
+* **Redshift (Column-oriented):** Designed for **OLAP** (Online Analytical Processing). It stores data in columns, which is vastly superior for scanning massive datasets to find trends, such as "What was the average revenue per month for the last five years?"
+
+| Feature | PostgreSQL | Amazon Redshift |
+| --- | --- | --- |
+| **Primary Use** | App backend, transactions | Data warehousing, big data analytics |
+| **Storage Type** | Row-based | Column-based |
+| **Scaling** | Vertical (bigger servers) | Horizontal (more nodes in a cluster) |
+| **Integrations** | General purpose | Deeply integrated with AWS (S3, Glue, etc.) |
+
+2. Is it Serverless?
+
+Amazon offers a product called **Redshift Serverless**, which allows you to run analytical queries without managing clusters or nodes. However, this is still a **Data Warehouse**, not a general-purpose transactional database.
+
+If you are looking for a **Serverless PostgreSQL**, the actual AWS equivalent is **Amazon Aurora Serverless**.
+
+3. The "PostgreSQL" Connection
+
+Redshift still feels like Postgres in a few ways:
+
+* **Interface:** You can use standard Postgres JDBC/ODBC drivers to connect to it.
+* **Syntax:** Many SQL commands are the same, though Redshift has removed many Postgres features (like triggers, indexes, and certain constraints) that don't make sense for a massive data warehouse.
+* **Tooling:** Most BI tools that support Postgres can also connect to Redshift.
+
+What should you use?
+
+* Use **Aurora Serverless (PostgreSQL)** if you are building an app or a website and want a database that scales up and down based on user traffic.
+* Use **Redshift Serverless** if you have millions/billions of rows of data and need to run complex analytical reports or "big data" queries.
+
+#### Neon vs D1
+
+It is helpful to think of **Neon** and **Cloudflare D1** as competitors in the "Serverless SQL" space, but they aren't both PostgreSQL.
+
+Here is the breakdown of how they compare to each other and to Redshift:
+
+1. Neon: The True "Serverless Postgres"
+
+Neon is a direct competitor to **Amazon Aurora Serverless**.
+
+It is 100% PostgreSQL-compatible because it literally runs the Postgres engine, but it has a custom-built storage layer that allows it to "scale to zero" (shut down when not in use) and scale up instantly when a request comes in.
+
+* **Best for:** Application backends, SaaS products, and development environments.
+* **Key Feature:** **Branching.** You can "branch" your database like a Git repo, creating a perfect copy of your production data for testing in seconds.
+
+2. Cloudflare D1: The SQLite Alternative
+
+Cloudflare D1 is **not PostgreSQL**—it is built on **SQLite**. 
+
+While it is a "competitor" to Neon in the sense that it provides a serverless database for web developers, the underlying technology is different.
+
+* **Best for:** Developers already using **Cloudflare Workers**. It is designed to be geographically close to your users (at the "edge").
+* **The Trade-off:** SQLite has a different SQL dialect than Postgres. If your app relies on Postgres-specific features (like JSONB or specific extensions), you can't easily switch to D1.
+
+Comparison Table
+
+| Feature | Neon | Cloudflare D1 | Amazon Redshift |
+| --- | --- | --- | --- |
+| **Engine** | PostgreSQL | SQLite | Redshift (Postgres-derivative) |
+| **Type** | Transactional (OLTP) | Transactional (OLTP) | Analytical (OLAP) |
+| **Serverless?** | Yes | Yes | Yes (Redshift Serverless) |
+| **Scale to Zero?** | Yes (saves money) | Yes | Yes |
+| **Ideal Data Size** | GBs to TBs | Small (current limit ~10GB) | TBs to PBs |
+
+Are they Redshift competitors?
+
+**Generally, no.** * **Neon and Cloudflare D1** are built for **speedy, small operations** (e.g., "Log this user in," "Show this profile").
+
+* **Redshift** is built for **massive, heavy lifting** (e.g., "Calculate total revenue across 1 billion rows for the last 3 years").
+
+If you tried to run Redshift-style "Big Data" queries on Neon, it would get very expensive and likely slow down. 
+
+Conversely, if you tried to use Redshift as your website's primary database for user logins, your site would feel sluggish because Redshift isn't optimized for millisecond-fast individual row lookups.
+
+Which one should you choose?
+
+* **Choose Neon** if you want a powerful, modern **PostgreSQL** experience without managing servers.
+* **Choose Cloudflare D1** if you are already in the **Cloudflare ecosystem** and need a simple, fast SQL database for a global app.
+* **Choose Redshift** if you are doing **Data Science** or building a Business Intelligence dashboard.

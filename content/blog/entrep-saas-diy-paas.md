@@ -26,25 +26,68 @@ Not trying to do a:
 * https://railway.com/pricing
 * elestio
 
-But if you dont have the time to read/learn, neither willingness to pay a DFY:
+Specially after learning about the different [business games](#the-idea-side) and the full stack formula that rules them all: NP = P*V*GM*OM*F*T
+
+A PaaS can be an option if you dont have the time to read/learn, neither willingness to pay a DFY:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="SelfHosted Landing Repo" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
+Why?
 
-So im going to take one of these PaaS:
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+    classDef bridge fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1;
+
+    subgraph "Phase 1: Attraction"
+        L0("Free Content (Blog/YT/eBooks)"):::free
+    end
+
+    subgraph "Phase 2: The Audit Magnets"
+        L1_Web("Web/UI Audit 🛡️<br/>(Find UX Leaks)"):::free
+        AP_Pro("AuditPro Landing 🚀<br/>(Find Profit Leaks)"):::bridge
+    end
+
+    subgraph "Phase 3: Service Tiers"
+        L2("DIY Guides ($)"):::low
+        L3("Consulting (DWY) $$<br/>(Web Optimization)"):::mid
+        L4("Full Service (DFY) $$$<br/>(Data Analytics / Success Fee)"):::high
+    end
+
+    %% --- Connections ---
+    L0 --> L1_Web
+    L0 --> AP_Pro
+    
+    L1_Web --> L2
+    L1_Web --> L3
+    
+    AP_Pro --> L4
+    
+    %% Cross-sell
+    L3 -.-> |"Upsell"| L4
+```
+
+Because you need something generic, yet customizable with your time and definitely not configured by others.
+
+So im going to take one of these selfhosted PaaS that we covered previously:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/coolify" title="Coolify | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dokploy" title="Dokploy | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+**Get a server** and wrap it up with a landing via vibe coding.
 
-**Get a server** and wrap it up via vibe coding.
-
-https://jalcocert.github.io/JAlcocerT/docs/selfhosting/
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/" title="Https | Docs ↗" >}}
+{{< /cards >}}
 
 Simple, uh?
 
@@ -88,17 +131,14 @@ To *hopefully* move away from "selling time" (which caps your income) to "sellin
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-### Inspiration for the Idea
+#### Inspiration for the Idea
 
 For SaaS, there are OSS starter kits like: https://github.com/nextacular/nextacular
 
-https://nextacular.co/
+* https://nextacular.co/
+  * https://docs.nextacular.co/
 
-https://docs.nextacular.co/
-
-> MIT |  An open-source starter kit that will help you build full-stack **multi-tenant SaaS platforms efficiently** and help you focus on developing your core SaaS features. Built on top of popular and modern technologies such as Next JS, Tailwind, Prisma, and Stripe. 
-
-
+> **MIT** |  An open-source starter kit that will help you build full-stack **multi-tenant SaaS platforms efficiently** and help you focus on developing your core SaaS features. Built on top of popular and modern technologies such as Next JS, Tailwind, Prisma, and Stripe. 
 
 {{% steps %}}
 
@@ -107,6 +147,8 @@ https://docs.nextacular.co/
 ### Tinkered with MiniPCs
 
 And put together a KPI around: performance, volume, power
+
+### Covered SelfHosted PaaS few Times
 
 {{% /steps %}}
 

@@ -101,16 +101,7 @@ The **Tier of Service**: DIY (1a - *leverages on my knowledge & experience, not 
 
 The **customer segmentation**: B2C, for anyone...like YOU
 
-The **tech stack**:
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
-
+The **tech stack**: its mentioned on the repo, here.
 
 ## The journey to create N books
 
@@ -204,9 +195,9 @@ Sucks, *I know*.
 
 I created the first draft of an ebook on *how to create your cool website via DIY* - `diy.jalcocertech.com`
 
-But not only once. 
+That project was done [here](https://github.com/JAlcocerT/obfuscate).
 
-Also with the DIY Landing Boilerplate!
+But I tried more than once, with the [DIY Landing Boilerplate](https://github.com/JAlcocerT/diy-landing-boilerplate)!
 
 ### Noted down couple of Themes
 
@@ -222,11 +213,17 @@ What if launching ebooks was all about writing via DecapCMS?
 
 Because the landing part is so much clear.
 
-But the CMS part has let me down in few occasions
+But the CMS part has let me down in few occasions.
 
-Lets [create sth](#building-n-ebooks-for-a-webook)
+Like [recently for eayp](https://jalcocert.github.io/JAlcocerT/do-your-instagram/).
+
+So from now: no more integrations with existing CMS :)
+
 
 {{% /steps %}}
+
+Having said all this...Lets [create sth](#building-n-ebooks-for-a-webook)
+
 
 
 ## Building N ebooks for a web/ook
@@ -286,7 +283,7 @@ We got proof of that from ppts and diagrams
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slidev-editor" title="SliDev Editor and PPTs ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/Twilight" title="Twilight Astro x Decap Localhost ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Twilight" title="Twilight Astro x Decap Local ↗" icon="github" >}}
 {{< /cards >}}
 
 So if you know which tools to ask for, you get much better results.
@@ -299,22 +296,23 @@ But hey, if you want to still spend a weekend to get a *crappy looking* wordpres
   {{< card link="https://diy.jalcocertech.com" title="DIY webs via webook" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="A 101 Ive put together about building websites" >}}
 {{< /cards >}}
 
-### Servers
+[Whats included](#kb-ive-added-so-far) and What's coming next?
 
-As in...get a [homelab configured](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/) and working.
+Servers: As in...get a [homelab configured](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/) and working.
 
-### BiP
-
-See... `Z_ebooks/BiP-ebook.md`
-
+BiP: See... `Z_ebooks/BiP-ebook.md` to get an idea.
 
 ---
 
 ## Conclusions
 
-Im aware that 2026 might not be the year of info-products to bloom.
+Im aware that 2026 might not be the year of *info-products to bloom*.
+
+Specially if you havent worked your brand yet, neither want to pay ads.
 
 But I wanted to put this together to have a better structured *,passive'* service offering.
+
+Passive meaning: *ive put the effort to help the N people that want my help, yet are not aware of opportunity costs.*
 
 So, this is it *for now*.
 
@@ -335,12 +333,12 @@ A better structured *,passive'* service offering.
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="NEW - DIY eBooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="From md to n web/ooks for a better DIY service " >}}
 {{< /cards >}}
 
-These are **deployed at**:
+These are **deployed at**: *the boilerplate will have a one time fee btw*
 
 * https://ebooks.jalcocertech.com - If you have some idea and **dont know how to start** creating it, this is for you
 * https://boilerplate.jalcocertech.com - If you are creating and want to **do it faster**, this is for you
 
-This has been possible thanks to perplexity and notebookllm, together with a huge txt file of kindle notes I have:
+This has been possible thanks to perplexity and notebookllm, together with a huge txt file of kindle notes I have: *collected initially at*
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/ebook-ideas" title="eBook Ideas ↗" icon="github" >}}
@@ -354,6 +352,7 @@ The problem when you havent started building is that you dont know what you need
 That's why I have created a custom chatbot for registered users to do **QnA over the content** of the ebooks.
 
 Something like...what the claude code docs are having.
+
 Also the BAML docs: https://docs.boundaryml.com/home
 
 > Ill consider those examples as a reference in the future
@@ -450,40 +449,48 @@ If you'd need, you can always reach out:
 
 ### People Shipping ebooks
 
-* Fantastic landing page with a form, a way to get a goodie once you put an email, a product recommendation as per a form results and success stories (with video and photos) https://czasnatwojruch.pl/
+* Fantastic landing page with a form, a way to get a goodie once you put an email, a product recommendation as per a form results and success stories (with video and photos) `https://czasnatwojruch.pl/`
 
 
 ---
 
 ## Outro
 
-Creating a portfolio as a development, design or tech professional is a journey punctuated by complex choices.
+Creating a portfolio as a development, design or tech professional is a **journey punctuated by complex choices**.
 
 One of the most prevalent of these dilemmas lies in the delicate balance between striving for perfection and the need to launch quickly. 
 
 Explore with me the nuances of these contradictory perspectives.
 
-### The aspiration to perfection: an unattainable ideal?
+The aspiration to perfection: an unattainable ideal?
 
 The traditional vision of artistic creation encourages us to pursue perfection from the outset. 
 
 Every line of code, every element of design should converge towards absolute excellence.
 
-However, this dream of perfection can sometimes become a burden, a brake on progress. The relentless quest for perfection can paralyze the creative process, turning creation into an endless pursuit.
+However, this dream of perfection can sometimes become a burden, a brake on progress. 
 
-### The Perfectionism Trap: when the best becomes the enemy of the good
+The relentless quest for perfection can paralyze the creative process, turning creation into an endless pursuit.
 
-Perfectionism can turn into a subtle trap. Waiting for every detail to be impeccable can delay your portfolio indefinitely. This prolonged stalling can have implications for professional credibility, as the market often demands a fast, dynamic online presence.
+The Perfectionism Trap: when the best becomes the enemy of the good
 
-### The bold proposal to launch quickly: iterate rather than perfect
+Perfectionism can turn into a subtle trap. Waiting for every detail to be impeccable can delay your portfolio indefinitely.
+
+This prolonged stalling can have implications for professional credibility, as the market often demands a fast, dynamic online presence.
+
+The bold proposal to launch quickly: iterate rather than perfect
 
 The idea of launching quickly, even if the portfolio doesn't reach an immediate level of perfection, offers an alternative perspective. 
 
-It's about recognizing that each iteration can be an improvement on the previous one. This approach encourages a constant iteration mentality, where each version becomes a learning opportunity.
+It's about recognizing that each iteration can be an improvement on the previous one. 
 
-### Speed as a means of learning: create by doing
+This approach encourages a constant iteration mentality, where each version becomes a learning opportunity.
 
-Launching quickly thus becomes a means of learning. Speed doesn't mean compromising on quality, but rather accepting that perfection may initially be unattainable. 
+**Speed as a means of learning: create by doing**
+
+Launching quickly thus becomes a means of learning. 
+
+Speed doesn't mean compromising on quality, but rather accepting that perfection may initially be unattainable. 
 
 It's an invitation to learn by doing, to use each version of the portfolio as a testing ground.
 
@@ -518,14 +525,14 @@ To create a portfolio is to embrace the paradox, to consciously choose between p
 
 Some of the first people on doing SaaS are coming back to the product way of selling (pay once, own forever).
 
-Im talking about: https://once.com/writebook
+Im talking about: `https://once.com/writebook`
 
 **Info products** and one time payment artifacts are a thing today.
 
-* https://github.com/mrwyndham/pocketbase-stripe
-* https://www.fastpocket.dev/pricing
+* `https://github.com/mrwyndham/pocketbase-stripe`
+* `https://www.fastpocket.dev/pricing`
 
-also
+Also
 
 * https://quickdeploy.dev/
 * https://www.youtube.com/watch?v=Feauj4OaePg
@@ -557,9 +564,6 @@ Not going to lie: ive got inspired by `https://supersaas.dev/` and `https://ship
 * https://understanding-astro-webook.vercel.app/
 
 
-Im **launching my boilerplate**: https://boilerplate.jalcocertech.com
-
-> It has the look and feel of my latest [diy landing boilerplate](https://github.com/JAlcocerT/diy-landing-boilerplate) for a reason :)
 
 ###  Interesting Resources
 

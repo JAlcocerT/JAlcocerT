@@ -10,7 +10,7 @@ url: 'real-estate-landing'
 
 **TL;DR**
 
-I have launched recently a quick [e-book on web version and downloadable as PDF](https://diy.jalcocertech.com/api/book) as well.
+I have launched recently a quick [e-book web version and downloadable as PDF](https://diy.jalcocertech.com/api/book) as well.
 
 Also a simple waiting list.
 

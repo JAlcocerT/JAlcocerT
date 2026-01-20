@@ -968,3 +968,41 @@ def tick_timer(timer):
 timer1.init(freq=2,mode=Timer.PERIODIC,callback=tick_timer)
 
 ```
+
+# IoT - LangChain x PG
+
+This is coming up as some shape of tech talk this year.
+
+And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
+
+##### Offer Configuration
+
+
+The **launch strategy**: *aka, focus strategy*
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | |
+
+The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
+
+The **Tech Stack**:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+* Whats Working:
+* Whats not:
+* Whats next:

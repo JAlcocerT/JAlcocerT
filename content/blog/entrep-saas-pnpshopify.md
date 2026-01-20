@@ -158,6 +158,13 @@ With a **custom modern form** and integration with a cal meeting, *for the quali
 Whether you are analyzing **Microsoft** or starting your own **Shopify store**, the logic is identical: Use **CapEx** and **OpEx** to drive **Volume and Price**, then use **Operational Discipline** to make sure that growth doesn't get "eaten" by the internal drains of the business.
 {{< /callout >}}
 
+<!-- 
+https://youtu.be/eCvZxjSw6rE 
+-->
+
+{{< youtube "eCvZxjSw6rE" >}}
+
+
 #### Enabling Leads via Formbricks API
 
 ### The core analytics
@@ -181,20 +188,13 @@ Reserve **Audit Pro** for Shopify owners with >$10k revenue to feed your high-ti
 > [!TIP]
 > **AuditPro** isn't just a landing page; it's a Dis/**Qualification Filter** that protects your time (L3/L4) by ensuring only stores with >$10k revenue (where the 20% success fee is meaningful) get through to your calendar.
 
-
-
 ---
 
 ## Conclusions
 
 There are many efficiencies to be taken of when you run a business.
 
-<!-- 
-https://youtu.be/eCvZxjSw6rE 
--->
-
-{{< youtube "eCvZxjSw6rE" >}}
-
+{{< youtube "Wf0uwVaNnQ4" >}}
 
 Have a small team and constrain resources is not an excuse anymore to get your operations improving.
 
@@ -204,7 +204,6 @@ Have a small team and constrain resources is not an excuse anymore to get your o
   {{< card link="https://github.com/JAlcocerT/poc_shopify" title="NEW - Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB x UI | Github ↗" icon="github" >}}
 {{< /cards >}}
-
 
 ```sh
 git clone https://github.com/JAlcocerT/poc_shopify
@@ -275,6 +274,8 @@ To tie everything together, we’ll look at how different business models priori
 I have added a **Shopify E-commerce** model (like a brand selling coffee or apparel) to show how it differs from a pure SaaS or a giant like Walmart.
 
 ### Comparison Table: Strategic Levers & Optimization
+
+Because each game, is a different game:
 
 | Business Model | Primary Lever | Target Metric | Key Point to Optimize |
 | --- | --- | --- | --- |

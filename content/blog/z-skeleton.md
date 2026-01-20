@@ -34,7 +34,7 @@ The **tech stack**:
 | **Styling/UI Library** | | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
+| Others | Web Analytics / ads / Cal / Formbricks / ESP | Yes, via MailTrap |
 
 Existing competitors? or Needs PMF test?: No need of PMF, demand validated.
 

@@ -34,14 +34,14 @@ Even better if you do so around a well defined offer, so people know what to exp
 In this case, it has been a **success story** based on **github actions x containers best practices**
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#actions-cicd-for-python-projects" title="SelfHosted Landing Repo" image="/blog_img/dev/re-actions-container-built.png" subtitle="Tier of Service" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/github-actions-use-cases/#actions-cicd-for-python-projects" title="CI/CD done right" image="/blog_img/dev/re-actions-container-built.png" subtitle="Actions and CI/CD for Python Projects | Post" >}}
 {{< /cards >}}
 
 What we have done:
 
 1. Define the problem
 
-2. Solution proposal: container image versioning and automatic creation
+2. Solution proposal: *container image versioning and automatic creation*
 
 * Defining the workflow config: https://github.com/jlleongarcia/X-ray-imaging-analysis/commit/2a2eb68132834b39ce8ff3e9e77e8d7d87e801b5
 
@@ -109,7 +109,7 @@ On my latest projects, I try to differenciate the docker-compose for:
   * With Traefik - which i tend to call traefik version
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/streamlit-multichat" title="MultiChat x HomeLab | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/streamlit-multichat" title="MultiChat x HomeLab | 🐋 Config  ↗" >}}
 {{< /cards >}}
 
 

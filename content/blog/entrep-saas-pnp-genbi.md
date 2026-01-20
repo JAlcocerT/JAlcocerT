@@ -223,7 +223,7 @@ For which they provided the code: https://github.com/BoundaryML/baml-examples/tr
 
 Moving from `z-langchain2baml` to `z-baml-genbi`
 
-You guessed: this has been powered with antigravity.
+You guessed: *this has been powered with antigravity.*
 
 ```
 i have copied the logic to z-baml-genbi
@@ -288,7 +288,21 @@ mindmap
 
 ### BAML x PGSQL x Vite x Automatic Charts
 
-As this worked, how about go one step further at `Z_PGSQL-GenBI`.
+The initial setup described at the pnp D&A post, was quite simple and without UI:
+
+```mermaid
+graph LR
+    A[Question] --> B{LangChain}
+    B --> C[Retrieve Relevant Data - SQL Query]
+    C --> D[PGSql Database]
+    D --> B
+    B --> E[LLM Prompt with Data]
+    E --> F[LLM OpenAI API]
+    F --> G[LLM Response]
+    G --> H[User]
+```
+
+As [the BAML logic here](https://github.com/JAlcocerT/langchain-db-ui/tree/master/z-baml-genbi) worked, how about go one step further at `Z_PGSQL-GenBI`.
 
 All thats coming is thanks to `Gemini 3 Flash`
 
@@ -364,6 +378,14 @@ npm install
 npm run dev
 ```
 
+This is the first vibe coded version: *all you need, to sit less than 1h*
+
+{{< youtube "qf-oNNNDXS0" >}}
+
+<!-- 
+https://youtu.be/qf-oNNNDXS0 
+-->
+
 ![alt text](/blog_img/AIBI/vite-baml-genbi.png)
 
 Go to `http://localhost:5173/` and enjoy.
@@ -378,7 +400,7 @@ Looks cool, doesnt it? This has been the tech stack.
 | **AI Intelligence** | BAML (GPT-4o) | Type-safe inference for SQL generation and visualization classification. |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | Environment Secrets (`.env`) | Managed via local environment for isolated deployment; ready for JWT integration. |
 
-This project follows a 4-layer architecture for Modern Data Applications:
+[This project](https://github.com/JAlcocerT/langchain-db-ui/tree/master?tab=readme-ov-file#baml-x-pgsql) follows a **4-layer architecture** for Modern Data Applications:
 
 ```mermaid
 graph TD
@@ -554,9 +576,55 @@ A place with facts, dimensions, joins, measures...the building blocks to describ
 | **Output** | A clean, technical Warehouse schema. | A "Self-Service" model ready for business users. |
 
 
-### More Tools to Interact with DBs
+### Tools to Interact with DBs
+
+I was covering these in previous post, like
+
+1. ChartDB: https://github.com/chartdb/chartdb
+
+WHich I used [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater)
+
+![ChartDB](/blog_img/DA/sql/dbchart3.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
+{{< /cards >}}
+
+2. DBeaver
+
+![MySQL Dbeaver Chinook](/blog_img/GenAI/langchain-chinook-artiststable.png)
+
+3. DBGate https://github.com/dbgate/dbgate
+
+#### More Tools to Interact with DBs
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/stonks/" title="PyStonks Post sqlite section with DBChart" image="/blog_img/DA/sql/dbchart-sqlite-schema.png" subtitle="ChartDB x Working with the PyStonks Schema" >}}
 {{< /cards >}}
 
+**Vanna AI** (GitHub: vanna-ai/vanna): RAG-based SQL agent with viz. Train on your schema/docs, query in English → SQL + charts. Embed via Streamlit/API. Less semantic layer than Wren.[1][2][3]
+
+**MindsDB**: ML-integrated text-to-SQL + predictions. Natural language queries → SQL/models/charts. Docker-friendly, broad DB support. More ML-heavy.[1]
+
+**DB-GPT**: Multi-agent text-to-SQL framework. Complex workflows, AI security. Experimental but powerful for advanced BI.[1]
+
+**Chat2DB**: Desktop/web SQL client with built-in LLM text-to-SQL + charts. Multi-DB (Postgres/MySQL), no-code dashboards. Closest plug-and-play.[4][5]
+
+
+| Project | Stars (approx) | Key Strength | Viz/Dashboards | Self-Host | DBs |
+|---------|----------------|--------------|----------------|-----------|-----|
+| **Wren AI** | 13k [6] | Semantic layer, GenBI reports | ✅ Auto-charts | ✅ Docker | Postgres, BigQuery+ [7] |
+| **Vanna AI** | High [2] | Custom RAG training | ✅ Basic | ✅ Pip/Docker | Any SQL |
+| **MindsDB** | Large | ML predictions | ✅ Integrated | ✅ Docker | Wide |
+| **DB-GPT** | 11k [1] | Multi-agent | Partial | ✅ | SQL/NoSQL |
+| **Chat2DB** | Popular [4] | UI-first client | ✅ Dashboards | ✅ Docker | 10+ [5] |
+
+Quick Starts
+
+- **Vanna**: `pip install vanna`, `vn.init(remote='yourdb')`, ask "top sales pie".
+- **MindsDB**: Docker compose, `CREATE ML ENGINE`, natural queries.
+- **Chat2DB**: `docker run chat2db/chat2db`, connect DB → chat.
+
+All OSS, align with your Docker/PocketBase. 
+
+Vanna/Chat2DB for quickest Wren-like setup; MindsDB if dividends need forecasts.

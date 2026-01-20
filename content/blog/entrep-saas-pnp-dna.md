@@ -11,7 +11,7 @@ url: 'plug-and-play-data-analytics'
 
 Self-service seems to be a thing.
 
-Let's enable non tech people to extract insights from databases via direct qna within a UI.
+Let's enable non tech users to extract insights from databases via direct qna within a UI.
 
 **Intro**
 
@@ -292,11 +292,12 @@ While it lacks modern features like **SEO metadata** or **JSON blobs** for flexi
 **Typical Logic:** Almost every e-commerce system today still uses the core logic found in Northwind: Customers place Orders, which have Order Items linked to Products.
 
 **Typical Modern Implementation:** A real-world e-commerce DB today would include things Northwind is missing, such as:
-    - **User Authentication:** Password hashes, session tokens, and roles.
-    - **Variants:** Handling a single product with different sizes, colors, or materials.
-    - **Digital Goods:** Logic for download links and licenses.
-    - **Flexibility:** Modern databases often use `JSONB` columns to store arbitrary product specifications without needing a massive table.
-    - **Marketing:** Complexity like tiered discounts, coupon codes, and loyalty points.
+
+- **User Authentication:** Password hashes, session tokens, and roles.
+- **Variants:** Handling a single product with different sizes, colors, or materials.
+- **Digital Goods:** Logic for download links and licenses.
+- **Flexibility:** Modern databases often use `JSONB` columns to store arbitrary product specifications without needing a massive table.
+- **Marketing:** Complexity like tiered discounts, coupon codes, and loyalty points.
 
 | Feature | OLTP (Northwind) | OLAP (Data Warehouse) |
 | :--- | :--- | :--- |
@@ -895,7 +896,7 @@ Go from ~~problem~~ to solution proposal: *Get it done*
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
-![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+<!-- ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png) -->
 
 We have gone from:
 
@@ -930,80 +931,9 @@ From GenAI BI solutions, to those *Connect AI to your CRM*.
 
 > Agpl 3.0 | ⚡️ GenBI (Generative BI) queries any database in natural language, generates accurate SQL (Text-to-SQL), charts (Text-to-Chart), and AI-powered business intelligence in seconds.
 
-Several open-source projects mirror Wren AI's generative BI (GenBI) focus: natural language → text-to-SQL → auto-charts/dashboards, self-hosted for Postgres/DuckDB e-com stacks.
+Several open-source projects mirror Wren AI's generative BI (GenBI) focus: *natural language → text-to-SQL → auto-charts/dashboards, self-hosted for Postgres/DuckDB e-com stacks.*
 
-> Wren has a cool flow image that resonates with all a da should know
-
-**Vanna AI** (GitHub: vanna-ai/vanna): RAG-based SQL agent with viz. Train on your schema/docs, query in English → SQL + charts. Embed via Streamlit/API. Less semantic layer than Wren.[1][2][3]
-
-**MindsDB**: ML-integrated text-to-SQL + predictions. Natural language queries → SQL/models/charts. Docker-friendly, broad DB support. More ML-heavy.[1]
-
-**DB-GPT**: Multi-agent text-to-SQL framework. Complex workflows, AI security. Experimental but powerful for advanced BI.[1]
-
-**Chat2DB**: Desktop/web SQL client with built-in LLM text-to-SQL + charts. Multi-DB (Postgres/MySQL), no-code dashboards. Closest plug-and-play.[4][5]
-
-
-| Project | Stars (approx) | Key Strength | Viz/Dashboards | Self-Host | DBs |
-|---------|----------------|--------------|----------------|-----------|-----|
-| **Wren AI** | 13k [6] | Semantic layer, GenBI reports | ✅ Auto-charts | ✅ Docker | Postgres, BigQuery+ [7] |
-| **Vanna AI** | High [2] | Custom RAG training | ✅ Basic | ✅ Pip/Docker | Any SQL |
-| **MindsDB** | Large | ML predictions | ✅ Integrated | ✅ Docker | Wide |
-| **DB-GPT** | 11k [1] | Multi-agent | Partial | ✅ | SQL/NoSQL |
-| **Chat2DB** | Popular [4] | UI-first client | ✅ Dashboards | ✅ Docker | 10+ [5] |
-
-Quick Starts
-
-- **Vanna**: `pip install vanna`, `vn.init(remote='yourdb')`, ask "top sales pie".
-- **MindsDB**: Docker compose, `CREATE ML ENGINE`, natural queries.
-- **Chat2DB**: `docker run chat2db/chat2db`, connect DB → chat.
-
-All OSS, align with your Docker/PocketBase. Vanna/Chat2DB for quickest Wren-like setup; MindsDB if dividends need forecasts.
-
-
-
-##### IoT - LangChain x PG
-
-This is coming up as some shape of tech talk this year.
-
-And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
-
-##### Offer Configuration
-
-
-The **launch strategy**: *aka, focus strategy*
-
-| Element | Decision |
-| :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
-
-The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
-
-The **Tech Stack**:
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-* Whats Working:
-* Whats not:
-* Whats next:
-
-KPIs
-
-* https://jalcocert.github.io/JAlcocerT/selling-ideas-in-data-analytics/#what-is-ctor
-
-
+> Wren has a cool flow image that resonates with all a DA should know
 
 ---
 
@@ -1219,25 +1149,6 @@ The diagram ends with three primary ways users interact with this processed data
 
 Would you like me to dive deeper into how the **Semantic Layer** specifically helps the AI avoid making mistakes?
 
-### Tools to Interact with DBs
-
-I was covering these in previous post, like
-
-1. ChartDB: https://github.com/chartdb/chartdb
-
-WHich I used [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater)
-
-![ChartDB](/blog_img/DA/sql/dbchart3.png)
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
-{{< /cards >}}
-
-2. DBeaver
-
-![MySQL Dbeaver Chinook](/blog_img/GenAI/langchain-chinook-artiststable.png)
-
-3. DBGate https://github.com/dbgate/dbgate
 
 
 ### Whats a composable
