@@ -3,18 +3,14 @@ title: "[Gen-BI] The insights for a profitable Shopify"
 date: 2026-01-20T07:20:21+01:00
 #date: 2026-02-01T18:20:21+01:00
 draft: false
-tags: ["RoadMap26 x Tech Talk 5","Shopify API","BAML x Vite x Astro","RevOps x GTM"]
-description: 'Got en ecommerce? You are missing an AI Powered COO.'
+tags: ["RoadMap26","BAML x Vite x Astro","RevOps x GTM"]
+description: 'Got en ecommerce? You are missing an AI Powered COO. Trust this landing.'
 url: 'custom-analytics-for-shopify'
 ---
 
 **TL;DR**
 
-Building an engine for DFY services.
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/poc_shopify" title="Shopify Audit" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to Shopify API and unlock profit via hidden data insights" >}}
-{{< /cards >}}
+Building the engine behind DFY D&A services.
 
 +++ About [COO](#whats-a-coo) and [business efficiency](#about-business-efficiency)
 
@@ -43,7 +39,7 @@ We are coming from:
 2. [Querying pgsql via BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database)
 1. [PnP D&A with langchain x pgsql](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/)
 
-From Rill, I got to know the RevenueOperations RevOps concept: *they have an interesting page `https://www.brabble.io/speaking`*
+From Rill, I got to know the Revenue Operations RevOps concept: *they have an interesting page `https://www.brabble.io/speaking`*
 
 <!-- 
 https://www.youtube.com/watch?v=j7F6bzszITk 
@@ -157,6 +153,11 @@ With a **custom modern form** and integration with a cal meeting, *for the quali
 Whether you are analyzing **Microsoft** or starting your own **Shopify store**, the logic is identical: Use **CapEx** and **OpEx** to drive **Volume and Price**, then use **Operational Discipline** to make sure that growth doesn't get "eaten" by the internal drains of the business.
 {{< /callout >}}
 
+
+How hard was to create the landing?
+
+You tell me: *I was using the BRD trick again*
+
 <!-- 
 https://youtu.be/eCvZxjSw6rE 
 -->
@@ -164,15 +165,74 @@ https://youtu.be/eCvZxjSw6rE
 {{< youtube "eCvZxjSw6rE" >}}
 
 
-#### Enabling Leads via Formbricks API
-
 ### The core analytics
 
 The sauce of this comes from this [custom BI with BAMl and vite UI](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#building).
 
+Particularly, from its `Z_PGSQL-GenBI` folder, where Gemini 3.9 impressed my with [a Vite UI/X tech stack](https://github.com/JAlcocerT/langchain-db-ui/blob/master/Z_PGSQL-GenBI/tech-stack.md).
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB x UI | Github ↗" icon="github" >}}
 {{< /cards >}}
+
+The architecture has 4 layers: *Strategic Layer Mapping*
+
+```mermaid
+graph TD
+    RL[Representation Layer: React + Recharts]
+    AL[Agentic Layer: FastAPI + Python Engine]
+    SL[Semantic Layer: BAML Definitions]
+    DL[Data Layer: PostgreSQL]
+
+    RL <--> AL
+    AL <--> SL
+    AL <--> DL
+```
+
+| Layer | BAML Gen-BI Architecture | Traditional Role |
+| :--- | :--- | :--- |
+| **DL (Data Layer)** | **PostgreSQL** | Storage of raw event data. |
+| **SL (Semantic Layer)** | **BAML Types & Enums** | Logic for SQL translation & Chart Strategy. |
+| **AL (Agentic Layer)** | **FastAPI + BAML inference** | Automated Interpretation (instead of a human analyst). |
+| **RL (Representation Layer)** | **React + Recharts** | "Just-in-Time" dynamic visualization. |
+
+
+And the flow details are:
+
+```mermaid
+graph LR
+    U[User] -->|Natural Question| F(Vite Frontend)
+    F -->|POST /api/ask| B(FastAPI Backend)
+    B -->|get_table_info| LC[LangChain]
+    LC -->|Metadata| B
+    B -->|GenerateSQL| BA[BAML AI]
+    BA -->|SQL + Rationale + ChartType| B
+    B -->|read_sql| DB[(PostgreSQL)]
+    DB -->|DataFrame| B
+    B -->|Structured JSON| F
+    F -->|State Update| R[Recharts]
+    R -->|Live Interactive Chart| U
+```
+
+In the traditional BI world, insights are expensive and slow.
+
+Z_PGSQL-GenBI is designed to eliminate the "friction" between a business question and a data-driven answer.
+
+#### About Shopify API
+
+This has been all about the landing so far.
+
+Has it been the coolest if ever ,done'?
+
+Probably.
+
+While the leads are getting hot, Im actually looking to:
+
+* `https://www.shopify.com/`
+* `https://shopify.dev/docs`
+* `https://apps.shopify.com/`
+* `https://shopify.dev/changelog`
+
 
 ### Who is this for?
 
@@ -187,6 +247,11 @@ Reserve **Audit Pro** for Shopify owners with >$10k revenue to feed your high-ti
 > [!TIP]
 > **AuditPro** isn't just a landing page; it's a Dis/**Qualification Filter** that protects your time (L3/L4) by ensuring only stores with >$10k revenue (where the 20% success fee is meaningful) get through to your calendar.
 
+{{< callout type="info" >}}
+When vibe coding, thinking about who and how to package the code / [sales](https://github.com/JAlcocerT/langchain-db-ui/blob/master/Z_PGSQL-GenBI/sales.md), can be a thing
+{{< /callout >}}
+
+
 ---
 
 ## Conclusions
@@ -195,9 +260,8 @@ There are many efficiencies to be taken of when you run a business.
 
 {{< youtube "Wf0uwVaNnQ4" >}}
 
-Have a small team and constrain resources is not an excuse anymore to get your operations improving.
+Having a small team and constrain resources is not an excuse anymore to get your operations improving.
 
-`shopify-landing-prod:`
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_shopify" title="NEW - Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
@@ -209,6 +273,12 @@ git clone https://github.com/JAlcocerT/poc_shopify
 cd poc_shopify/landing
 #make help
 ```
+
+The landing is here: `shopify-landing-prod:4321` which is `genbi.jalcocertech.com`
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_shopify" title="Shopify Audit" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to Shopify API and unlock profit via hidden data insights" >}}
+{{< /cards >}}
 
 Ready to have an **agentic [COO](#whats-a-coo) working for you?
 

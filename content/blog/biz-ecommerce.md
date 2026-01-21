@@ -1,10 +1,11 @@
 ---
-title: "Creating an e-Commerce"
-date: 2026-10-01
+title: "An e-Commerce around OSS"
+#date: 2026-02-03
+date: 2026-01-21
 draft: false
-tags: ["SaaS","Drupal","User Clustering","RoadMap26","BlackFriday","OLTP vs OLAP"]
+tags: ["Shopify x SaaS","Drupal","User Clustering","RoadMap26","BlackFriday","OLTP vs OLAP"]
 description: 'Creating an eCommerce. Drupal vs DFY custom solutions'
-url: 'how-about-an-ecommerce'
+url: 'how-about-selfhosting-an-ecommerce'
 ---
 
 **Tl;DR**
@@ -27,25 +28,11 @@ But doing sth custom is much cooler.
 
 [Some people dare to create their own ecommerce](https://forocoches.com/foro/showthread.php?t=9707807) dont die trying.
 
-The **launch strategy**: *aka, focus strategy*
 
-| Element | Decision |
-| :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
-
-The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
-
-The **tech stack**:
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Data-Chat | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_shopify" title="Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
+{{< /cards >}}
 
 
 
@@ -54,7 +41,6 @@ petiteknit.com
 https://www.albertina.at/en/
 
 
-https://www.shopify.com/news/david-heinemeier-hansson-board
 
 https://juan.pl/en/
 
@@ -78,7 +64,7 @@ Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress
    Basada en Node.js, con arquitectura *headless*, Medusa permite crear tiendas con React, Vue o Next.js manteniendo el backend separado. Ofrece API REST y GraphQL, soporte para plugins y control total de datos y diseño.[1]
 
 2. **Bagisto**  
-   Construida sobre Laravel y Vue.js, ofrece multicanal, multi-almacén, API GraphQL y una interfaz moderna. Es ideal para proyectos personalizables y escalables a nivel empresarial.[2]
+   Construida sobre Laravel y Vue.js, ofrece multicanal, multi-almacén, API GraphQL y una interfaz moderna. Es ideal para proyectos personalizables y escalables a nivel empresarial.
 
 3. **Saleor**  
    Framework de eCommerce *headless* basado en GraphQL y Django (Python). Es utilizado para tiendas modernas con integraciones JAMstack y gran rendimiento.[1]
@@ -347,8 +333,6 @@ How I know it is a WP?
 
 See: `https://makemydream.pl/wp-login`
 
-
-
 * Hosting Costs:
   * https://banahosting.com/web-hosting ~5eur/month
   * https://webtolearn.pl/cennik ~20eur/month
@@ -418,12 +402,12 @@ flowchart LR
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
-![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+<!-- ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png) -->
+
+
 
 ### Next Steps
 
-Langchain with wordpress or ghost apis?
-Or to and from strapi cms?
 
 
 
@@ -513,7 +497,7 @@ But those...are not quite ecommerce.
 
 Didnt care and wrote via SSG.
 
-Created some custom CMS for people who were not willing to pay and fail.
+Created some custom CMS  / custom WebApps for people who were not willing to pay and failed *hard*.
 
 Tested Strapi and DirectusCMS
 

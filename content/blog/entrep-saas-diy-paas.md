@@ -325,3 +325,9 @@ See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/lead
 * https://github.com/atuinsh/atuin
 
 > MIT | ✨ Magical shell history
+
+### Status Page
+
+I like the shopify one: `https://www.shopifystatus.com/`
+
+See as reference the:
