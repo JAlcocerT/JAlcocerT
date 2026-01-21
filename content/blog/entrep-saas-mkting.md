@@ -1,11 +1,12 @@
 ---
-title: "A SaaS for Marketing Agencies: From bots to leads"
-date: 2026-02-01T23:20:21+01:00
+title: "Around Marketing for Agencies: Thoughts"
+date: 2026-01-29T23:20:21+01:00
 draft: false
-tags: ["Custom Dashboards","Marketing Analytics","Agency Leads","Side-Quest26","LaunchPad Check list"]
-description: 'Custom mkt solutions to feed your Analytics agency sales pipeline.'
+tags: ["Marketing Analytics","Agency Leads","Side-Quest26","LaunchPad Check list"]
+description: 'How effective is your marketing? Custom solutions to feed and improve your agency sales pipeline.'
 url: 'custom-marketing-analytics'
 ---
+
 
 * https://kit.com/use-cases/marketers
 
@@ -19,10 +20,7 @@ I mean, to build it with the end in mind.
 
 Generate cash flow.
 
-{{< cards >}}
-  {{< card link="https://github.com/clidey/leads-slubnechwile" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-{{< /cards >}}
+
 
 
 **Intro**
@@ -33,7 +31,12 @@ Yea, that stage of trying to sell to family friends and ~~fools~~
 
 Time to do some OpEx - in this case: **marketing**
 
+Do you want to go via ads? via organic posting/bip and social media? or via cold email?
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="WhoDB Github ↗" icon="github" >}}
+{{< /cards >}}
 
 
 ## Marketing Examples 
@@ -53,6 +56,8 @@ AI Business Assessment below.
 Spaces are limited
 ```
 
+Great, I qualify for your emails:
+
 ![alt text](/blog_img/entrepre/qualify.png)
 
 > Who could have guessed: * I qualify to enter your marketing list*
@@ -69,6 +74,14 @@ After placing your mail, you get: `https://mongemalo.com/rechazado/`
 And once you confirm it: `https://mongemalo.com/importante-mensaje/`
 
 You are already prompted to buy an info product: `https://youtu.be/kwIgobHPwxY`
+
+## From bots to leads
+
+Another service that can become a product?
+
+Who knows :)
+
+
 
 ---
 
@@ -105,6 +118,15 @@ If you dont, you could get it done:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
+
+### Selfhosted Marketing
+
+If you get to know enough from servers, you can always do:
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss" title="Marketing around OSS - Mautic" image="/blog_img/selfh/HomeLab/mautic/mautic-ui.png" subtitle="Mautic setup for a marketing agency" >}}
+{{< /cards >}}
 
 
 
@@ -272,6 +294,8 @@ This is the ultimate **[OPERATIONAL DISCIPLINE]** success story.
 
 From a business logic perspective, you have achieved a massive "Internal Efficiency" gain.
 
+> Based on [effectiveness workflows](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/#workflow-for-effectiveness) and more
+
 You are essentially a **high-margin entity** masquerading as two standard-margin employees.
 
 In our formula, you have successfully decoupled **Volume of Output** from **Volume of Time**.
@@ -372,7 +396,9 @@ This is where Path C sits compared to the giants and the solo-SaaS model.
 
 3. Why Path C is the "Arbitrage" Play
 
-You mentioned you can finish 16 hours of work in 10 hours. In Path C, you **weaponize** this efficiency:
+You mentioned you can finish 16 hours of work in 10 hours.
+
+In Path C, you **weaponize** this efficiency:
 
 * **In a Job:** If you work faster, you just get more work. Your  (hourly rate) effectively stays the same.
 * **In Path C:** If you work faster, your **Gross Margin ()** increases. If you can do a "Monthly Analytics Review" for a client in 2 hours instead of 10, your profit-per-hour skyrockets.

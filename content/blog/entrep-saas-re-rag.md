@@ -394,6 +394,8 @@ To boost Seo, I added a [**dream calculator** component](https://github.com/JAlc
 
 ![real estate calculator vibe coded](/blog_img/biz/RE/vibecoded-re-calc.png)
 
+See how cool the graphs regarding french amortization are rendered client side:
+
 ![Astro real estate CSR ChartJS](/blog_img/biz/RE/vibecoded-calc-chartjs.png)
 
 This is the full page look n feel:

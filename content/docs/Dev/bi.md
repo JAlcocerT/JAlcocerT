@@ -165,6 +165,8 @@ To create interactivity, we have the well known plotly, but also **ApexCharts an
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/node-js/chart-generator" title="Sample NodeJS x ApexChartJS Generator" image="/blog_img/DA/apexchartjs-nodejs.png" subtitle="Using NodeJS to generate ApexCharts" >}}
 {{< /cards >}}
 
+You can also vibe code such CSR'ed dashboards:
+
 ![Astro real estate CSR ChartJS](/blog_img/biz/RE/vibecoded-calc-chartjs.png)
 
 Both can be combined and create some [cool graphs within SSGs](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/#the-costs-of-a-car), like in HUGO components and also provide interactivity via CSR.

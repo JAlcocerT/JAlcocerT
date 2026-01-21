@@ -144,9 +144,7 @@ And just recently, I was showing you how to use AI to have *data driven conversa
 
 ## NoSQL
 
-
 NoSQL databases have become incredibly important in modern data management.
-
 
 **What is NoSQL?**
 
@@ -200,8 +198,6 @@ NoSQL databases have become incredibly important in modern data management.
 {{< callout type="info" >}}
 NoSQL databases provide a powerful and flexible **alternative to traditional relational databases**, enabling organizations to handle the increasing volume, variety, and velocity of modern data.
 {{< /callout >}}
-
-
 
 ### MongoDB
 

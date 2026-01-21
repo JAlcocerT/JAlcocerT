@@ -43,7 +43,7 @@ But doing sth custom is much cooler.
 
 Ive consolidated a list of ecommerce Ive encountered here.
 
-1.  `petiteknit.com`
+1.  `petiteknit.com` and `morecaknit.com` which are around [knitting](https://jalcocert.github.io/JAlcocerT/knitting-pattern-calculator/)
 
 2. `https://juan.pl/en/`
 
@@ -53,9 +53,7 @@ Ive consolidated a list of ecommerce Ive encountered here.
 
 
 
-
-https://awweso.me/e-commerce/
-
+You can always check more examples `https://awweso.me/e-commerce/`
 
 
 Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress con WooCommerce en 2025, cada una con distintos enfoques según la escala del negocio, el nivel técnico y la arquitectura deseada (monolítica o headless).
@@ -96,13 +94,6 @@ Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/odoo" title="Odoo HomeLab | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss" title="Marketing around OSS - Mautic" image="/blog_img/selfh/HomeLab/mautic/mautic-ui.png" subtitle="Mautic setup for a marketing agency" >}}
-{{< /cards >}}
-
-
 5. **Drupal Commerce**  
    Extiende el CMS Drupal para manejar eCommerce. Ideal si se requiere un sistema de contenido robusto junto con funcionalidades de tienda.[8]
 
@@ -123,17 +114,16 @@ En resumen, **Medusa.js**, **Bagisto** y **Saleor** representan la nueva generac
 
 #### Medusa 
 
-https://github.com/medusajs/medusa
+* https://github.com/medusajs/medusa
+  * https://medusajs.com/plugins/
+  * https://docs.medusajs.com/starters/nextjs-medusa-starter  
 
 > MIT |  The world's most flexible commerce platform. 
 
-https://medusajs.com/plugins/
-
-https://docs.medusajs.com/starters/nextjs-medusa-starter
 
 #### Thelia
 
-https://thelia.net
+* https://thelia.net
 
 #### Evershop
 
@@ -187,9 +177,12 @@ These platforms vary in technology stack (PHP, Node.js, Python/Django, .NET) and
 
 Yes, exactly. 
 
-With Medusa as your backend, you can use Astro static site generator to build your frontend storefront. Astro can pull product data dynamically from Medusa’s REST or GraphQL APIs.
+With Medusa as your backend, you can use Astro static site generator to build your frontend storefront.
+
+Astro can pull product data dynamically from Medusa’s REST or GraphQL APIs.
 
 Here’s how it works:
+
 - You manage your products, inventory, and orders in Medusa’s admin UI.
 - Your Astro front end fetches product data from Medusa’s API at build time or on-demand.
 - Astro renders static pages with the product info while allowing dynamic client-side interactions like cart updates or checkout using Medusa’s API.

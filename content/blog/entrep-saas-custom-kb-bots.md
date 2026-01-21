@@ -206,6 +206,7 @@ Same questions apply: web only? desktop app required? mobile?
 
 ## Conclusions
 
+![Astro real estate CSR ChartJS](/blog_img/biz/RE/vibecoded-calc-chartjs.png)
 
 
 ![alt text](/blog_img/data-experiments/aggresive-focus.png)

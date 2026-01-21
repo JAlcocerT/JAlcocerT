@@ -60,8 +60,29 @@ Crazy.
 
 Now, lets continue with [the core analytics](https://jalcocert.github.io/JAlcocerT/custom-analytics-for-shopify/#the-core-analytics) part.
 
-The logic initiated here: `https://github.com/JAlcocerT/langchain-db-ui/Z_PGSQL-GenBI` and waiting to be continued `here`
+The logic, initiated [here](https://jalcocert.github.io/JAlcocerT/custom-analytics-for-shopify/#the-core-analytics): `https://github.com/JAlcocerT/langchain-db-ui/Z_PGSQL-GenBI` and waiting to be continued `https://github.com/JAlcocerT/poc_shopify/`
 
+```mermaid
+graph TD
+    RL[Representation Layer: React + Recharts]
+    AL[Agentic Layer: FastAPI + Python Engine]
+    SL[Semantic Layer: BAML Definitions]
+    DL[Data Layer: PostgreSQL]
+
+    RL <--> AL
+    AL <--> SL
+    AL <--> DL
+```
+
+#### Shopify API
+
+As per their docs, this is going to be an adventure with GraphQL.
+
+
+* `https://www.shopify.com/`
+* `https://shopify.dev/docs`
+* `https://apps.shopify.com/`
+* `https://shopify.dev/changelog`
 
 
 ### OSS Selfhosted ecommerce
@@ -70,9 +91,39 @@ As covered recently [here](https://jalcocert.github.io/JAlcocerT/how-about-selfh
 
 Connecting with these ones is more similar to the extraction of insights from pgsql that got initiated here.
 
+For these, most likely, you are having some of these dbs as a companion of your container:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mariadb" title="MariaDB | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="PostgreSQL | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ---
 
 ## Conclusions
+
+
+
+
+
+
+### D&A Articles
+
+Ive consolidated and improved the D&A tech stack around the experience and clients ive had at [these **curated articles**](https://www.jalcocertech.com/support/articles/).
+
+
+They might sound familiar, but with another tone.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career D&A | Docs ↗" >}}
+{{< /cards >}}
+
+
+From Telecom, to FMCG, Healthcare...
+
+...and ecommerce also coming.
+
 
 
 
@@ -82,7 +133,7 @@ Connecting with these ones is more similar to the extraction of insights from pg
 
 ### How is this been shaped?
 
-This was all initiated with this BRD, around this tech stack, with this sales perspective, with this psyc engagement and such ~~4weeks~~ 7-days Launchpad Checklist.
+This was all initiated with this BRD, around this tech stack, with this sales perspective, with this psyc engagement and such ~~[4weeks](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#the-4-week-launchpad-checklist)~~ 7-days Launchpad Checklist.
 
 The place in the value ladder:
 

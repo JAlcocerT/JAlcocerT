@@ -25,6 +25,9 @@ But how to assess if you will be starting a non-sense journey to a path that goe
 
 Despite the fact that [*The How* is now more for agents and abstracted](#building-a-how-with-sense), why should you loose time?
 
+This all got initiated after going [to the wall several times](#conclusions).
+
+And thanks to asking *unconfortable questions* for which I have no replies [here](https://jalcocert.github.io/JAlcocerT/custom-analytics-for-shopify/#comparison-table-strategic-levers--optimization) and [here](https://jalcocert.github.io/JAlcocerT/custom-analytics-for-shopify/#faq)
 
 
 ## Business Idea Checklist
@@ -40,9 +43,10 @@ Tell them to send you these filled up.
   * Existing competitors? or Needs PMF test?: *Would recommend to go for No need of PMF, demand validated*.
 
 * Who is your client and how it will get to know you?
-  * BANT context
+  * The BANT context
 
 * Value proposition: *this must be clear for you, also in the landing*
+  * The value eqution: How much value you promise x % of happening / ( Time 2 value * Effort to get there ) 
 
 <!-- **Would you like me to help you refine the "Value Proposition" sentence for the WebApp landing page so it doesn't sound like just "another photo app"?** -->
 
@@ -86,16 +90,6 @@ flowchart LR
     L3 --> L44
 ```
 
-The **tech stack**:
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-| Others | Web Analytics / ads / Cal / Formbricks / ESP | Yes, via MailTrap |
-
 Existing competitors? or Needs PMF test?: No need of PMF, demand validated.
 
 The **launch strategy**: *aka, focus strategy*
@@ -108,14 +102,7 @@ The **launch strategy**: *aka, focus strategy*
 
 The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
 
-The **tech stack**:
 
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
 ---
 
@@ -141,7 +128,7 @@ The "Full Stack" Multiplicative Formula that works for *all the games*.
 
 The formula for Net Profit (NP) is: NP=(V×P)×GM×OE×IB×TB
 
-If we define:
+If we define: *see what are the profit levers*
 
 * V=Volume (Units Sold)
 * P=Price (Average Selling Price)
@@ -155,7 +142,7 @@ If we define:
 
 To get the most granular view, we start with the "Top Line" (Units and Price) and apply each "Survival Rate" (the margins and burdens) until we reach the "Bottom Line."
 
-### Case Study: The QR Guest Photo App
+#### Case Study: The QR Guest Photo App
 
 *Model: High Volume, Automated Execution.*
 
@@ -212,8 +199,7 @@ The Reality Check: Focus vs. Friction
 | **Fractional Consultant** | **High-Level Strategy.** Moving from "Pulling Levers" to "Directing the Machine." | **Arbitrage of Time.** Getting paid for the *outcome* of 2 hours that took everyone else 16 hours. | **Client Acquisition.** High-ticket sales require trust and networking. If you lose one client, you lose 20–30% of revenue. |
 | **P&G (FMCG Giant)** | **Market Share.** Defending the "Shelf Space" at Walmart and Target. | **Economies of Scale.** Squeezing a fraction of a cent out of a billion bottles of soap. | **Commoditization.** Generic "Store Brands" stealing  by undercutting the [BET] (Brand). |
 
-### The 4-Week "Launchpad" Checklist
-
+#### The 4-Week "Launchpad" Checklist
 
 **Week 1: The Operational Audit (Discipline)**
 
@@ -337,6 +323,17 @@ Together with a nice tech stack: *it always helps to know what to ask for*
 And the [human psyc](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/) considered to bundle everything.
 
 
+The **tech stack**:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+| Others | Web Analytics / ads / Cal / Formbricks / ESP | Yes, via MailTrap |
+
+
 ---
 
 
@@ -351,6 +348,8 @@ Hopefully, that helps you avoid going for ideas like:
 3. To expect people to consume your DIY/Infoproduct when you dont do ads, neither took the time to built a community. - Hopefully, I havent done that because I made the [1tonebooks here](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#conclusions) just to consolidate my knowledge and help for free.
 4. WIP Operational Discipline:  *high-ticket custom services alternative for the ones (to be found) who have great projects*
 5. WIP The growth bet: *via the QR photo app + the ads experiment* 
+
+> PS: The price is part of the product/service
 
 All that non sense preassure and expectations of the ideas that are supposed to work, but they wont do from their conception.
 

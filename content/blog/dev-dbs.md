@@ -106,16 +106,14 @@ In terms of write operations, **PostgreSQL is generally better than SQLite**, es
 
 {{< youtube "3JW732GrMdg" >}}
 
-
 <!-- 
 https://www.youtube.com/watch?v=3JW732GrMdg 
 -->
 
-
-
 But first...**Why Move to Postgres** if you have localstorage?
 
 **Concurrency Control:**
+
 - ✅ **ACID transactions** prevent race conditions
 - ✅ **Row-level locking** for concurrent updates
 - ✅ **Atomic operations** ensure data consistency
