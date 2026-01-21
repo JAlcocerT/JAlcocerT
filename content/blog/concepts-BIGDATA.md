@@ -1555,7 +1555,9 @@ Be open and look for clarifications in cross-domain [meetings](https://jalcocert
 
 #### 1. Google Cloud Platform (GCP) Stack
 
-This is a **fully managed, serverless**, and integrated stack. [Google Cloud Platform](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) handles all the underlying infrastructure, allowing users to focus on data and analytics.
+This is a **fully managed, serverless**, and integrated stack.
+
+[Google Cloud Platform](https://jalcocert.github.io/JAlcocerT/understanding-google-cloud-platform/) handles all the underlying infrastructure, allowing users to focus on data and analytics.
 
 | Layer | Component | Who Uses It | What They Do |
 | :--- | :--- | :--- | :--- |
@@ -1598,7 +1600,6 @@ Think of HDFS as a **file system** built for a specific purpose, while S3 is a *
     * **HDFS** was the original storage layer for the **Hadoop ecosystem** and is still used for on-premise big data processing. It's best suited for batch processing jobs that benefit from data locality.
     * **S3** has become the de-facto standard for **data lakes** in the cloud. Its decoupled architecture makes it the ideal storage for a wide range of modern data tools (like Spark, Trino, and dbt), as it allows you to easily switch compute engines without moving your data.
 
-In
 {{% /details %}}
 
 #### 3. Open-Source Cloud/Hybrid Stack
@@ -1634,7 +1635,9 @@ The key to this stack's portability is its decoupled and open-source nature.
 Each component can be swapped out or moved to a different environment, giving you complete control.
 
 1.  **Open Formats and APIs**: The stack is built on open standards. **Apache Iceberg** is an open table format, and **MinIO** uses the S3 API, which is an open standard for object storage. Nessie itself provides an open REST API for its catalog. This means your data is stored in non-proprietary formats and is accessible by any tool that understands these standards, regardless of the vendor.
+
 2.  **Separate Compute and Storage**: The architecture intentionally separates the storage layer (MinIO) from the query engine (Trino/PySpark). This is a stark contrast to monolithic, vendor-specific data warehouses like BigQuery or Snowflake, where compute and storage are tightly integrated and managed as a single service.
+
 3.  **Self-Hosted Components**: You have the option to host all the components yourself. While it's easier to run Trino on a managed service like GCP's Dataproc, you can also run it on a set of Virtual Machines on GCP or on your own on-premise servers. The same applies to Nessie, PySpark, and MinIO, which can all be run as Docker containers or on Kubernetes (k8s) clusters. 
 
 **Hosting the Nessie Stack on a Public Cloud**
@@ -1644,6 +1647,7 @@ Even when you choose to run this stack on a public cloud like GCP or Azure, you'
 You're simply using their infrastructure as a service (IaaS).
 
 * **Cloud Infrastructure**: You can use virtual machines (VMs) or container services (like GKE on GCP or AKS on Azure) to host the various components. This is similar to hosting a website on a VM; you're using the cloud provider's hardware, but the software running on it is your choice.
+
 * **Managed Services as a "Crutch"**: You can use managed services like Cloud Composer (GCP's managed Airflow) to reduce operational overhead, but you can always switch to a self-hosted Airflow instance on your own VMs if you decide to migrate away. This is a deliberate trade-off between convenience and portability.
 
 In summary, the Nessie data stack is designed to be **portable and anti-lock-in**.

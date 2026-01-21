@@ -113,7 +113,7 @@ For these, most likely, you are having some of these dbs as a companion of your 
 Ive consolidated and improved the D&A tech stack around the experience and clients ive had at [these **curated articles**](https://www.jalcocertech.com/support/articles/).
 
 
-They might sound familiar, but with another tone.
+They might [sound familiar](https://jalcocert.github.io/JAlcocerT/big-data-tools-for-data-analytics/#big-data-tech-stacks), but with another tone.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career D&A | Docs ↗" >}}

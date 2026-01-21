@@ -11,6 +11,54 @@ url: 'custom-re-rag'
 
 What it should have been the Real Estate project from its conception.
 
+
+**Intro**
+
+It all started with the QnA of streamlit over sample property data on `.md` files back in 2024.
+
+Then, the chat with a DB via LangChain.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="NEW - Real Estate BluePrint - Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Real Estate Web/App + Bot/RAG + Editor + Calculator" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+Then, Im talking about these series of RE related posts:
+
+* https://jalcocert.github.io/JAlcocerT/real-estate-landing/
+
+* https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#real-estate
+* https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#real-estate
+
+* https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#real-estate-with-reflex
+
+![Reflex PieChart](/blog_img/apps/reflex/reflex-piechart.png)
+
+* https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#streamlit-calculator-and-genai-re-agent
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
+  {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage" title="RE Streamlit App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the RE Calculator" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Streamlit PPT Creator and more" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev" title="SliDev JS App" image="/blog_img/biz/RE/slidev-re.png" subtitle="Presentations as a Code with SliDev" >}}
+{{< /cards >}}
+
+* https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#french-amortization-101
+
+![French Amortiz Example](/blog_img/data-experiments/french_amortiz.png) 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Web" image="/blog_img/GenAI/ai-real-estate.jpeg" subtitle="AI Ready Website for a RE Agency" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Data Chat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Real Estate Agent with LLamaIndex and Mem0" >}}
+{{< /cards >}}
+
+* https://jalcocert.github.io/JAlcocerT/real-estate-website/
+
+![Web Real Estate](/blog_img/web/WebsSnapshots/Web_realestate.png)
+
 The **launch strategy**: *aka, focus strategy* was not defined at all, neither from my side, neither my client.
 
 | Element | Decision |
@@ -48,7 +96,7 @@ The **tech stack**: *see more [below](#conclusions)*
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-As the why, what was very clear, its time to put together the final HOW:
+As the why, what was very clear, its time to put together the final HOW: *see the brd and dev plan*
 
 ```md
 # Project Name: [SaaS Name]
@@ -70,62 +118,11 @@ As the why, what was very clear, its time to put together the final HOW:
   - Data: id, user_id, content, timestamp
 ```
 
-**Intro**
-
-It all started with the QnA of streamlit over property data on `.md` files.
-
-and the chat with a DB via LangChain.
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="NEW - Real Estate BluePrint - Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for Real Estate Web/App + Bot/RAG + Editor + Calculator" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-{{< /cards >}}
-
-Then, Im talking about these series of RE related posts:
-
-* https://jalcocert.github.io/JAlcocerT/real-estate-landing/
-
-https://jalcocert.github.io/JAlcocerT/flask-cms-for-ssgs/#real-estate
-https://jalcocert.github.io/JAlcocerT/making-flask-cms-for-ssg/#real-estate
-
-https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#real-estate-with-reflex
-
-![Reflex PieChart](/blog_img/apps/reflex/reflex-piechart.png)
-
-https://jalcocert.github.io/JAlcocerT/streamlit-is-cool/#streamlit-calculator-and-genai-re-agent
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
-  {{< card link="https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage" title="RE Streamlit App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for the RE Calculator" >}}
-{{< /cards >}}
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#slides-creation-agent" title="AIssistant" image="/blog_img/apps/ai-assistant.png" subtitle="Streamlit PPT Creator and more" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/creating-presentations-with-ai/#slidev" title="SliDev JS App" image="/blog_img/biz/RE/slidev-re.png" subtitle="Presentations as a Code with SliDev" >}}
-{{< /cards >}}
-
-https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#french-amortization-101
-![French Amortiz Example](/blog_img/data-experiments/french_amortiz.png) 
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-setup/" title="Real Estate Web" image="/blog_img/GenAI/ai-real-estate.jpeg" subtitle="AI Ready Website for a RE Agency" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0" title="Data Chat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Real Estate Agent with LLamaIndex and Mem0" >}}
-{{< /cards >}}
-
-https://jalcocert.github.io/JAlcocerT/real-estate-website/
-![Web Real Estate](/blog_img/web/WebsSnapshots/Web_realestate.png)
-
-
-
 {{< cards cols="1" >}}
   {{< card link="https://dm-real-estate.com" title="Web UI Result" >}}
-  {{< card link="https://realestate.jalcocertech.com" title="RE Calculator and GenAI" >}}
+  {{< card link="https://realestate.jalcocertech.com" title="New RE Calculator and GenAI" >}}
 {{< /cards >}}
 
-{{< cards cols="2" >}}
-  {{< card link="https://realestate_tool.jalcocertech.com" title="Photo Tool" >}}
-  {{< card link="https://dashboard.litlyx.com" title="Web Analytics GDPR Compliant" >}}
-{{< /cards >}}
 
 
 {{< cards >}}
@@ -141,7 +138,7 @@ https://jalcocert.github.io/JAlcocerT/real-estate-website/
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/astro-web-setup/#real-estate-web---results
+* https://jalcocert.github.io/JAlcocerT/astro-web-setup/#real-estate-web---results
 
 
 {{< cards cols="2" >}}
@@ -243,6 +240,22 @@ Its crazy that one year ago it took me...a weekend to put together the streamlit
 
 And now **in 2/3h** you get the cool website UI, its editor and the real estate french amortization logic working....with the chatbot and the scrapper.
 
+```mermaid
+graph TD
+    User([External User]) <--> CF[Cloudflare Tunnel]
+    CF <--> Astro[Astro Web App - Node.js]
+    
+    subgraph "Internal Docker Network"
+        Astro <--> Scraper[FastAPI Scraper - Python]
+        Astro <--> OpenAI[OpenAI API]
+    end
+
+    subgraph "Data Layer"
+        Markdown[Content Collections - Markdown]
+        Astro --> Markdown
+    end
+```
+
 Again: CRAZY.
 
 Without the need to implement more complex [setups to chat with DBs](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/)
@@ -282,17 +295,21 @@ Vector Databases
 
 ### Whats working whats not and whats next
 
+Im telling this from the beginning of this post.
+
 1. Whats working: the product
 2. Whats not: the client acquisition - *nobody knows this exists*
 3. Whats next: scale the client acquisition by building a cold marketing machine
 
 Because selling such high ticker product is not valuable for everyone.
 
-Fortunately, you can fill your sales pipeline, target via mail and show on make them see on the get go **an automated demo with their listings** already there via the uploader.
+Fortunately, you can fill your [sales pipeline](https://jalcocert.github.io/JAlcocerT/apify/), target via mail and show on make them see on the get go **an automated demo with their listings** already there via the uploader.
 
 Some notes around there [here](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales.md) and [here](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md).
 
-You cant get to places that you dont know they exists.
+
+
+You can't get to places that you dont know they exists.
 
 To open your mind to new possibilities, you can always try these:
 
@@ -303,8 +320,14 @@ To open your mind to new possibilities, you can always try these:
 
 PS: you can also learn how to create a sales pipeline that gets you client.
 
-I have mine here for such projects: *because not everyone is ready to pay the value these solutions contain*
+I have mine here for such projects: *because not everyone is ready to pay the value these solutions contain, but [B2B do](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-b2b.md)*
 
+> If they name $100, you walk away with your code (and your pride), knowing they weren't the right partner for this level of tech.
+
+{{< cards cols="2" >}}
+  {{< card link="https://realestate_tool.jalcocertech.com" title="Photo Tool" >}}
+  {{< card link="https://dashboard.litlyx.com" title="Web Analytics GDPR Compliant" >}}
+{{< /cards >}}
 
 ---
 
@@ -494,17 +517,16 @@ Now its easier than ever to add the next casa paco from 1970 *now is better not 
 
 And hey...much better looking than: `https://efasolution.al`
 
-### Who can be interested in such websites?
-
-As this Real Estate is a great case study / success story, how about...letting others know about it?
-
-* `twojmetr2.pl`
 
 ### Next steps
 
 * Cloudflare Access
 * Http auth vs cookies
-* Crawlee x ApiFY
+* Crawlee x ApiFY: Who can be interested in such websites?
+
+As this Real Estate is a great case study / success story, how about...letting others know about it?
+
+* `twojmetr2.pl`
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#ai" title="AI | Docs ↗" icon="book-open" >}}
@@ -513,7 +535,7 @@ As this Real Estate is a great case study / success story, how about...letting o
 
 See also:
 
-* https://github.com/nikolovlazar/frontend-horse-ui?ref=statichunt.com
+* 1https://github.com/nikolovlazar/frontend-horse-ui1
 * web app ->> https://github.com/lazyfuhrer/Real-Estate-Web-App?tab=coc-ov-file#readme
 
 

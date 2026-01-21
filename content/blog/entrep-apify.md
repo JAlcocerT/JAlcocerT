@@ -35,18 +35,20 @@ If you read the social media automation post with n8n, you know that there are [
 
 And actually, [APIFY can do that](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#apify-can-do-that) and more than you imagine.
 
-https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Utils
+* https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Utils
 
-https://apexcharts.com/javascript-chart-demos/funnel-charts/funnel/
-https://www.chartjs.org/docs/latest/samples/information.html
+* https://apexcharts.com/javascript-chart-demos/funnel-charts/funnel/
+* https://www.chartjs.org/docs/latest/samples/information.html
 
 ![Streamlit Funnel with Plotly](/blog_img/apps/streamlit/streamlit-plotly-funnel.png)
-https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
 
-https://github.com/sgratzl/chartjs-chart-funnel
+* https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker
 
-https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#reflex-sample-apps
-https://reflex.dev/docs/library/graphing/charts/funnelchart/
+* https://github.com/sgratzl/chartjs-chart-funnel
+
+* https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#reflex-sample-apps
+* https://reflex.dev/docs/library/graphing/charts/funnelchart/
+
 ![alt text](/blog_img/apps/reflex/reflex-stocks-sample.png)
 
 
@@ -140,7 +142,7 @@ https://www.youtube.com/watch?v=L_FY6aW9cJ4
 
 The video "How to Use AI to Find a $1M Idea [Reddit, Claude]" features Steph France presenting the "Gold Mining Framework," a step-by-step method to discover a million-dollar business idea and create a high-converting landing page within 45 minutes using AI tools, no coding or copywriting skills required.
 
-### Key Highlights:
+Key Highlights
 
 - **Gold Mining Framework Overview:** This framework uses six AI tools and five prompts to mine data from online conversations and validate business ideas based on real customer pain points expressed on platforms like Reddit.
 
@@ -166,9 +168,6 @@ Additional Insights
 - The entire workflow showcases how AI can remove common mental blocks and biases in idea generation by automating research and validation.
 
 This method leverages AI's ability to absorb vast amounts of qualitative data, identify real customer needs, and create tailored marketing content quickly, dramatically accelerating the early stages of startup ideation and go-to-market preparation.[1]
-
-[1](https://www.youtube.com/watch?v=L_FY6aW9cJ4)
-
 
 
 {{< youtube "XI-iP-qk_Vk" >}}
@@ -197,6 +196,6 @@ Key Highlights:
 
 - **Security & Best Practices:** Demonstrates how to securely manage API keys with environment variables and Git ignore rules.
 
-This tutorial is aimed at developers looking to build advanced, AI-enhanced web scraping and social listening tools, particularly focused on Reddit, but concepts are expandable. It combines practical Python skills with modern AI libraries and cloud scraping services to automate data extraction for research and insights.[1]
+This tutorial is aimed at developers looking to build advanced, AI-enhanced web scraping and social listening tools, particularly focused on Reddit, but concepts are expandable.
 
-[1](https://www.youtube.com/watch?v=XI-iP-qk_Vk)
+ It combines practical Python skills with modern AI libraries and cloud scraping services to automate data extraction for research and insights.
