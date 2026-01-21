@@ -526,7 +526,7 @@ As a friend recommended me [last year](https://jalcocert.github.io/JAlcocerT/thi
 
 ### The Lead Magnet
 
-**The trick about leads magnet**: free stuff to potential customers / qualified prospects
+**The trick about leads magnet**: *free stuff to potential customers / qualified prospects*
 
 1. Then, get feedback from them
 2. Improve the product

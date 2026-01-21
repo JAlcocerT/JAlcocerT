@@ -23,8 +23,8 @@ A Micro-SaaS on Top of PaaS x (SSG + CMS + other services TBC).
 
 Not trying to do a:
 
-* https://railway.com/pricing
-* elestio
+* `https://railway.com/pricing`
+* `elestio`
 
 Specially after learning about the different [business games](#the-idea-side) and the full stack formula that rules them all: NP = P*V*GM*OM*F*T
 

@@ -39,7 +39,8 @@ Tell them to send you these filled up.
 * Is it a new product that needs evangelization?
   * Existing competitors? or Needs PMF test?: *Would recommend to go for No need of PMF, demand validated*.
 
-* BANT:
+* Who is your client and how it will get to know you?
+  * BANT context
 
 * Value proposition: *this must be clear for you, also in the landing*
 
@@ -116,8 +117,6 @@ The **tech stack**:
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
-To make this a definitive reference, I have polished the tables by integrating the **Strategic Tags** (Bet, Execution, Discipline, Structure), corrected the technical variables, and added the "Path C" (Fractional Consultant) column to show the high-ticket service alternative.
-
 ---
 
 ### The Strategic Game Board
@@ -144,12 +143,12 @@ The formula for Net Profit (NP) is: NP=(V×P)×GM×OE×IB×TB
 
 If we define:
 
-V=Volume (Units Sold)
-P=Price (Average Selling Price)
-GM=Gross Margin Ratio(RevenueGross Profit​)
-OE=Operating Efficiency Ratio(Gross ProfitEBITDA​)
-IB=Interest Burden(EBITPre-tax Income​)
-TB=Tax Burden(Pre-tax IncomeNet Income​)
+* V=Volume (Units Sold)
+* P=Price (Average Selling Price)
+* GM=Gross Margin Ratio(RevenueGross Profit​)
+* OE=Operating Efficiency Ratio(Gross ProfitEBITDA​)
+* IB=Interest Burden(EBITPre-tax Income​)
+* TB=Tax Burden(Pre-tax IncomeNet Income​)
 
 *Using the formula: . This maps the "Survival Rate" of every dollar earned.*
 
@@ -338,8 +337,6 @@ Together with a nice tech stack: *it always helps to know what to ask for*
 And the [human psyc](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/) considered to bundle everything.
 
 
-
-
 ---
 
 
@@ -352,20 +349,24 @@ Hopefully, that helps you avoid going for ideas like:
 1. A SaaS model to aim for V and low P, for a non well defined avatar, when you dont want OpEx and think it will all be GM - *Like Webifyer and all the web/CMS [I tried here](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#about-webifyer)*
 2. To provide custom D&A services to the wrong avatar (*that also have wrong avatar and pays you less than your opportunity cost*) - *Been there, done that, [here](https://jalcocert.github.io/JAlcocerT/custom-re-rag)*
 3. To expect people to consume your DIY/Infoproduct when you dont do ads, neither took the time to built a community. - Hopefully, I havent done that because I made the [1tonebooks here](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#conclusions) just to consolidate my knowledge and help for free.
+4. WIP Operational Discipline:  *high-ticket custom services alternative for the ones (to be found) who have great projects*
+5. WIP The growth bet: *via the QR photo app + the ads experiment* 
 
 All that non sense preassure and expectations of the ideas that are supposed to work, but they wont do from their conception.
 
-How about...getting things done?
+It would be great to go to the past with what you know now.
+
+But what you can do is to bring knowledge from the future to the present.
+
+How about: getting things done?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://genbi.jalcocertech.com" title="Generative BI" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="The insights that you could not afford to have until now" >}}
+  {{< card link="https://genbi.jalcocertech.com" title="Generative BI" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="The insights that you could not afford to have until now" >}}
 {{< /cards >}}
 
-{{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This DFY I have to refine it though" >}}
+<!-- {{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This DFY I have to refine it though" >}} -->
 
-
-https://img.youtube.com/vi/qf-oNNNDXS0/hqdefault.jpg
 
 ---
 

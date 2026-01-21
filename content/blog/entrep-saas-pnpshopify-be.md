@@ -64,8 +64,6 @@ The logic initiated here: `https://github.com/JAlcocerT/langchain-db-ui/Z_PGSQL-
 
 
 
-
-
 ### OSS Selfhosted ecommerce
 
 As covered recently [here](https://jalcocert.github.io/JAlcocerT/how-about-selfhosting-an-ecommerce), you can also run your online shop by choosing one of the selfhostable ecommerce.
@@ -84,7 +82,7 @@ Connecting with these ones is more similar to the extraction of insights from pg
 
 ### How is this been shaped?
 
-This was all initiated with this BRD, around this tech stack, with this sales perspective and with this
+This was all initiated with this BRD, around this tech stack, with this sales perspective, with this psyc engagement and such ~~4weeks~~ 7-days Launchpad Checklist.
 
 The place in the value ladder:
 

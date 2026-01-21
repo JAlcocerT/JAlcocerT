@@ -35,19 +35,21 @@ But doing sth custom is much cooler.
 {{< /cards >}}
 
 
-
-petiteknit.com
-
-https://www.albertina.at/en/
-
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
-https://juan.pl/en/
 
+Ive consolidated a list of ecommerce Ive encountered here.
 
-* ecommerce - https://outficik.pl/
+1.  `petiteknit.com`
 
-https://polkabikes.pl/ 
+2. `https://juan.pl/en/`
+
+3. `https://outficik.pl/`
+
+4. `https://polkabikes.pl/` This one was without SSL a full weekend
 
 
 
@@ -104,7 +106,7 @@ Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress
 5. **Drupal Commerce**  
    Extiende el CMS Drupal para manejar eCommerce. Ideal si se requiere un sistema de contenido robusto junto con funcionalidades de tienda.[8]
 
-### Comparativa general
+Comparativa general
 
 | Plataforma | Lenguaje base | Arquitectura | Ideal para | Observaciones |
 |-------------|----------------|----------------|----------------|----------------|
@@ -119,7 +121,7 @@ Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress
 En resumen, **Medusa.js**, **Bagisto** y **Saleor** representan la nueva generación de plataformas headless modernas, mientras que **Magento**, **PrestaShop** y **nopCommerce** siguen siendo las opciones más sólidas para quienes buscan ecosistemas maduros y autogestionados.
 
 
-## Medusa 
+#### Medusa 
 
 https://github.com/medusajs/medusa
 
@@ -129,27 +131,27 @@ https://medusajs.com/plugins/
 
 https://docs.medusajs.com/starters/nextjs-medusa-starter
 
-## Thelia
+#### Thelia
 
 https://thelia.net
 
-## Evershop
+#### Evershop
 
-https://github.com/evershopcommerce/evershop
+* https://github.com/evershopcommerce/evershop
 
 >  🛍️ NodeJS E-commerce Platform 
 
+#### Others
 
-https://github.com/shurco/litecart/
+* https://github.com/shurco/litecart/
 
 > MIT |  🛒 litecart - shopping cart in 1 file with card and cryptocurrency payment support 
 
-https://github.com/saleor/saleor
+* https://github.com/saleor/saleor
 
- Saleor Core: the high performance, composable, headless commerce API. 
+Saleor Core: the high performance, composable, headless commerce API. 
 
- * <https://github.com/JAlcocerT/Docker/blob/main/Web/posthog_docker-compose.md>
-
+* <https://github.com/JAlcocerT/Docker/blob/main/Web/posthog_docker-compose.md>
 
 
 Gumroad is an e-commerce platform that enables creators to sell products directly to consumers. 
@@ -183,10 +185,9 @@ There are several notable open source self-hostable e-commerce platforms availab
 
 These platforms vary in technology stack (PHP, Node.js, Python/Django, .NET) and complexity, from user-friendly to developer-centric, allowing you to pick one that fits your technical expertise and business needs.[8][15][9][3][2]
 
+Yes, exactly. 
 
-
-
-Yes, exactly. With Medusa as your backend, you can use Astro static site generator to build your frontend storefront. Astro can pull product data dynamically from Medusa’s REST or GraphQL APIs.
+With Medusa as your backend, you can use Astro static site generator to build your frontend storefront. Astro can pull product data dynamically from Medusa’s REST or GraphQL APIs.
 
 Here’s how it works:
 - You manage your products, inventory, and orders in Medusa’s admin UI.
@@ -257,8 +258,8 @@ You would need proper file connection and some decent auth:
 
 ### Competitors
 
-* zezam.io
-* https://sklepmakunki.pl/
+* `zezam.io`
+* `https://sklepmakunki.pl/`
 
 
 <!-- * https://outficik.pl/
@@ -268,24 +269,24 @@ https://www.instagram.com/outficik.secondhand/ -->
 
 
 * **Menu websites at ~500 eur/year**
-  * http://cartalia.org/
-    * http://ukelele.cartalia.org/
-  * https://www.upmenu.com/pricing/
-* https://www.covermanager.com/en
-* https://www.mojstolik.pl/dla-restauracji
+  * `http://cartalia.org/`
+    * `http://ukelele.cartalia.org/`
+  * `https://www.upmenu.com/pricing/`
+* `https://www.covermanager.com/en`
+* `https://www.mojstolik.pl/dla-restauracji`
 
 * Hosting Costs:
-  * https://banahosting.com/web-hosting ~5eur/month
-  * https://webtolearn.pl/cennik ~20eur/month
+  * `https://banahosting.com/web-hosting` ~5eur/month
+  * `https://webtolearn.pl/cennik` ~20eur/month
 
 * Customer management systems
-  * https://wakems.com/index.php
-  * https://clubspeed.com/pricing/
+  * `https://wakems.com/index.php`
+  * `https://clubspeed.com/pricing/`
 
 * Custom websites
-  * https://zeon.studio/estimate-project
-  * https://hormigasenlanube.com/
-  * https://lyk-website.pl/brief/
+  * `https://zeon.studio/estimate-project`
+  * `https://hormigasenlanube.com/`
+  * `https://lyk-website.pl/brief/`
 
 
 
@@ -342,9 +343,9 @@ See: `https://makemydream.pl/wp-login`
   * https://clubspeed.com/pricing/
 
 * Custom websites
-  * https://zeon.studio/estimate-project
-  * https://hormigasenlanube.com/
-  * https://lyk-website.pl/brief/
+  * `https://zeon.studio/estimate-project`
+  * `https://hormigasenlanube.com/`
+  * `https://lyk-website.pl/brief/`
 
 * https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known
 
