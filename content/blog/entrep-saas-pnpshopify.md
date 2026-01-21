@@ -274,7 +274,8 @@ cd poc_shopify/landing
 #make help
 ```
 
-The landing is here: `shopify-landing-prod:4321` which is `genbi.jalcocertech.com`
+The landing is here: `shopify-landing-prod:4321` which is `genbi.jalcocertech.com`.
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_shopify" title="Shopify Audit" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to Shopify API and unlock profit via hidden data insights" >}}

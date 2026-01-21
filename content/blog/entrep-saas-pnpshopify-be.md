@@ -103,9 +103,21 @@ For these, most likely, you are having some of these dbs as a companion of your 
 
 ## Conclusions
 
+People are doing similar *just not so cool* landings `https://genbi.co/home`
 
+### The Attraction and Conversion
 
+Conversion driven via landing:
 
+```sh
+git clone https://github.com/JAlcocerT/poc_shopify
+cd poc_shopify/landing
+#make help
+```
+
+### The Delivery
+
+Via the backend plugged that we have created on this post.
 
 
 ### D&A Articles
