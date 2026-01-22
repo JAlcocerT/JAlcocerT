@@ -2,7 +2,7 @@
 title: "How about getting leads for your SaaS?"
 date: 2026-01-22T19:20:21+01:00
 draft: false
-tags: ["BiP","APIFY x Sales Pipeline","Web Scrapping","RoadMap26"]
+tags: ["BiP","APIFY x Sales Pipeline","Scrapping","RoadMap26","Selfishness as virtue?"]
 description: 'Finding people that actually need your services. A story post the first ten.'
 url: 'how-to-get-customers-programmatically'
 ---
@@ -13,12 +13,21 @@ I let go most of my ,first ten' clients saying: *from next year you put the pric
 
 Guess what happened as I didnt put the effort to find the right avatar.
 
-Yes, I need to find new customers :)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
++++ About [Selfishness and business](#about-been-selfish)
 
 
 **Intro**
 
+Yes, I need to find new customers :)
+
 We come from the [sales pipeline *v1 post*](https://jalcocert.github.io/JAlcocerT/apify/), also with APIFY.
+
+Because sometimes when you listen to [what it works for others](#how-has-this-happened) your mind explodes.
 
 Knowing how to get clients is a must skill if you are building: *if you got more vibe coded webaps and repos in github than actual client, stay*
 
@@ -29,12 +38,9 @@ Knowing how to get clients is a must skill if you are building: *if you got more
 
 But also if you want to build sth that can help others: *ive met people doing $$$ ,just' by selling leads*
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/" title="Marketing | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
 
-And...I know, you can post on social media how great you are - Same as everybody does.
+
+And...I know, you can post on social media how great ❄️ you are - Same as everybody does.
 
 Including those that are 'all about frontend' and are LITERALLY one paycheck away from living under the bridge.
 
@@ -50,10 +56,16 @@ Like the ones you will be generating after getting leads right for your SaaS by 
 
 As always, a series of tinkering steps.
 
+This started at [this post](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/), with [this 123 session](https://youtu.be/qQ13MKLfqYQ)
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrap Tools ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads SlubneChwile x APIFY ↗" icon="github" >}}
 {{< /cards >}}
+
+I Got to know that Cool marketing agencies are using: `https://apify.com/`. 
+
+> Apify is the largest ecosystem where developers build, deploy, and **publish web scrapers**, AI agents, and automation tools.
 
 {{% steps %}}
 
@@ -62,7 +74,7 @@ As always, a series of tinkering steps.
 
 And APIFY has a good integration for n8n.
 
-![alt text](/blog_img/selfh/automation/n8n-apify.png)
+![n8n compatibility with apify](/blog_img/selfh/automation/n8n-apify.png)
 
 Check that out if you have an [automation agency](https://jalcocert.github.io/JAlcocerT/pro-agency-automation/#n8n-x-apify).
 
@@ -74,6 +86,26 @@ It was all thank to [a 123 meeting](https://jalcocert.github.io/JAlcocerT/softwa
 
 
 {{% /steps %}}
+
+## Building around APIFY
+
+This is not going to be with n8n.
+
+This is going to be built to last, without been fragile.
+
+And is not going to be as custom tool for anyone: *just for me*.
+
+So no business problem to be defined.
+
+This is aimed to solve the attraction and conversion bottlenecks for me.
+
+Lets get to it:
+
+* https://apify.com
+  * https://docs.apify.com/platform
+
+> Your full‑stack platform for web scraping
+
 
 
 --- 
@@ -152,13 +184,69 @@ graph LR
 I will use this mainly for two projects:
 
 1. [The weddings](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) B2B flow (B2C goes the ad route)
-2. The custom real estate web/app as a *high ticker* with [custom demo emailed to potential clients](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md) 
+2. The [custom real estate](https://jalcocert.github.io/JAlcocerT/custom-re-rag) web/app as a *high ticker* with [custom demo emailed to potential clients](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md) 
 3. The Gen-AIBI [on demand data analytics](https://github.com/JAlcocerT/langchain-db-ui/blob/master/Z_PGSQL-GenBI/sales.md) thats coming
 4. People need clients, so an UI wrapper around this will be valuable on its own :)
 
 Stay tuned. 
 
 The year has just started.
+
+### About been Selfish
+
+Some thoughts around: "A trader is a man who earns what he gets and does not give or take the undeserved."
+
+Many people assume Rand’s "selfishness" means being unkind. 
+
+However, she argued that if you truly self-respect, you will naturally value other independent, productive people.
+
+You might help a friend in need—not because it’s a "duty" to sacrifice yourself, but because that friend is a "value" to you and seeing them happy increases your own happiness.
+
+
+Before moving forward: *the free -100%ROI for my time investment to learn what I do and how?*
+
+{{< cards >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
+#### 1. The Randian Business Model: The "Productive Achievement"
+
+In business, Rand’s "non-sacrificial" concept manifests as **Rational Capitalism**.
+
+* **Self-Supporting (Profitability):** A business must be profitable to exist. Rand would argue that a company relying on government subsidies or "bailouts" is not a "self-supporting" entity—it is a "moocher." True self-respect in business comes from creating a product that people *want* to buy.
+* **Neither Sacrifices Others to Himself (Integrity):** This means no fraud, no lying to shareholders, and no "cronyism." You don’t get ahead by sabotaging competitors or lobbying for laws that hurt them. You get ahead by being **better**.
+* **Nor Sacrifices Himself to Others (Value-Based Employment):** This applies to the boss and the employee.
+* **The Boss:** Shouldn't feel guilty for being rich or "owe" a job to someone who isn't productive.
+* **The Employee:** Doesn't "sacrifice" their life for the company. They trade their time and talent for a paycheck and experience. If the trade isn't fair, a Randian walks away.
+
+
+**The Business Motto:** *"I don't work for you, and you don't work for me. We work with each other for our own separate benefits."*
+
+---
+
+#### 2. Could a Stoic be a "Trader"?
+
+**Yes, absolutely.** In fact, a Stoic might be the most effective trader you ever meet, but for different reasons than a Randian.
+
+While Rand values the **result** (the profit, the building), the Stoic values the **process** (doing the job correctly and ethically).
+
+How the Stoic "Trader" Operates:
+
+* **The Goal is "Internal":** A Randian trader is devastated if their business fails because they see it as a failure of their creative power. A Stoic trader thinks: *"I did my best to negotiate fairly and work hard. The market crashed—that was outside my control. I am still a man of character, so I am still successful."*
+* **The "Preferred Indifferent":** Stoics like Epictetus taught that wealth is a "Preferred Indifferent." It is better to have it than not, but it doesn't change your worth. Therefore, a Stoic can trade aggressively and earn millions, but they won't be "possessed" by their possessions.
+* **Justice as a Core Virtue:** Stoics believe in "Justice" (the duty to act fairly toward the human community). A Stoic trader wouldn't cheat a customer not because it's "irrational" (Rand's view), but because it violates the "social bond" of humanity.
+
+
+| Action | Randian Executive | Stoic Executive |
+| --- | --- | --- |
+| **Hiring** | Hires the "best" to maximize profit. | Hires the "best" to fulfill their duty well. |
+| **Losing a Client** | Frustration; loss of a "earned value." | Calm; the client was "not under my control." |
+| **Competition** | A battle of competence to prove who is superior. | An opportunity to practice excellence (Arete). |
+
+Which approach sounds more sustainable for a long-term career? 
+
+The high-octane drive of Rand, or the "unshakable" calm of the Stoic?
+
 
 ---
 

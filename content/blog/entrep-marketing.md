@@ -2,7 +2,7 @@
 title: "Leads and marketing automation"
 date: 2025-09-22T06:20:21+01:00
 draft: false
-tags: ["GHL CRM","Scrapping","Lead Enrichment Workflow","APIFy vs Firecrawl","leads-slubnechwile"]
+tags: ["GHL CRM","Scrapping","Lead Enrichment Workflow","APIFy vs Firecrawl"]
 url: 'software-for-marketing-agencies'
 description: 'Get clients, engage, sell. With facebook pages. A 1-2-3 working session with 2 marketers'
 ---
@@ -15,19 +15,13 @@ Today it seems all about [lead enrichment](https://www.firecrawl.dev/blog/fire-e
 
 +++ Getting [the right clients](#conclusions) is a thing!
 
-* https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#marketing
-
-* https://github.com/gomarble-ai/facebook-ads-mcp-server
-
-* https://github.com/goabstract/Marketing-for-Engineers
-
 **Intro**
 
 I started the day with a core believe: *wordpress sites are meh*
 
 After this sync with couple of marketers - That changed.
 
-See this landing done with elementor: https://genkinfy.com/
+See this landing done with elementor: `https://genkinfy.com/`
 
 
 <!-- https://youtu.be/qQ13MKLfqYQ -->
@@ -45,7 +39,11 @@ description: 'Discover how Firecrawl revolutionizes web crawling and data extrac
 url: 'firecrawl-web-scraping'
 --- -->
 
-**Tl;dr**
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrap Tools | Github ↗" icon="github" >}}
+{{< /cards >}}
+
+See [the repo for scrapping](https://github.com/JAlcocerT/Scrap_Tools) as seen at this post: https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap
 
 Firecrawl is a powerful web crawling and scraping solution that makes data extraction from websites simple and efficient, with excellent integration capabilities with n8n for automation workflows.
 
@@ -155,19 +153,27 @@ Firecrawl provides a powerful yet simple way to extract web data at scale. When 
   {{< card link="https://docs.firecrawl.dev" title="Documentation ↗" >}}
 {{< /cards >}}
 
-## Next Steps
+**Next Steps**
 
 1. Sign up for an API key at [Firecrawl](https://firecrawl.dev)
 2. Try the [quickstart guide](https://docs.firecrawl.dev/quickstart)
 3. Join the [community forum](https://community.firecrawl.dev) for support and ideas
 
+
+
 ---
 
 ## Conclusions
 
-It seems *,all'* you need to do to start a marketing agency is a proposal.
+It seems *,all'* you need to do to **start a marketing agency** is a proper offer, prospecting and proposal.
 
-Like ~1k/month for [Leads](#how-to-get-and-enrich-leads) + [CRM](#marketing-around-oss) + [ChatBot](#chatbots-for-marketing) *with an ad campaing proposal*.
+Like MRR at ~1k/month for [Leads](#how-to-get-and-enrich-leads) + [CRM](#marketing-around-oss) + [ChatBot](#chatbots-for-marketing) *with an ad campaing proposal*.
+
+If you need more shiny objects:
+
+* https://github.com/punkpeye/awesome-mcp-servers?tab=readme-ov-file#marketing
+* https://github.com/gomarble-ai/facebook-ads-mcp-server
+
 
 ### DIY vs DWY vs DFY
 
@@ -235,10 +241,6 @@ tb se puede conectar make a tu crm, como para poner contactos categorizados como
 > lead gen Jay, nick saraev (184 skool x 2600 members), kristian besser 1700 personas en slack de 92k pagando 4k
 manthan patel https://www.agentpass.ai/
 
-
-#### Tools
-
-See https://github.com/JAlcocerT/Scrap_Tools as seen https://jalcocert.github.io/JAlcocerT/how-to-browse/#scrapping-recap
 
 #### GHL
 
@@ -316,24 +318,20 @@ Apollo is priced per user with a proprietary database, simpler but less flexible
 
 Fire Enrich is self-hosted and free but you pay for external API usage as needed.
 
-[1](https://blog.revpartners.io/en/revops-articles/clay-vs-apollo-sales-platform)
-[2](https://smartreachai.com/clay-vs-apollo-2025-sales-intelligence-comparison/)
-[3](https://supademo.com/blog/data-enrichment-tools/)
-
 When self-hosting, you only pay for OpenAI API usage (typically $0.01-0.05 per enrichment).
 
 #### ApiFy can do that
 
-Just go here and get those **5$ monthly to test**: https://console.apify.com/
+Just go here and get those **5$ monthly to test**: `https://console.apify.com/`
 
-* https://n8n.io/integrations/apify/
+Integrate it with n8n if you want to: `https://n8n.io/integrations/apify/`
 
 
 ### More APIs
 
 To see how good is your web / performs vs others:
 
-* https://serpapi.com/pricing or or the hosted https://serper.dev/
+* `https://serpapi.com/pricing` or or the hosted `https://serper.dev/`
 
 Can a thing like this...Scrap google maps...?
 

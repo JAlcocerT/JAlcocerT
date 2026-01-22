@@ -36,7 +36,7 @@ How to pack the ideas so that they have a purpose to help people.
 
 You can always get ideas from people that have cool experiences, like from **their ebooks**:
 
-1. https://readmake.com/ for indehackers and builders
+1. `https://readmake.com/` for indehackers and builders
 
 
 2. 100M offers/leads/money models...
@@ -107,6 +107,10 @@ Aaaanyways.
 
 Last year, I was outputting a bunch of ideas to do with some kind of all in one Aissistant at [this post](https://jalcocert.github.io/JAlcocerT/ai-useful-yet-simple/#for-entrepreneurs).
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit-AIssistant" title="The AIssistant ↗" icon="github" >}}
+{{< /cards >}}
+
 One section was made for entrepreneurs: *some tips and tricks about neuromarketing etc*
 
 ![NeuroMKT2](/blog_img/outro/insurance-neuromarketing.png)
@@ -123,32 +127,9 @@ Time to put something together, for when you are about to build in public, creat
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/" title="Chat with Data" image="/blog_img/biz/RE/RE-Calc.png" subtitle="Simple Real Estate calculator POST" >}}
-  {{< card link="https://github.com/JAlcocerT/entrepre-AI" title="EntrepreAI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code EntrepreAI" >}}
 {{< /cards >}}
 
-* CTA's
-    * Quieres el premium? No, correre el riesgo!
-    * You don’t have to miss out
-    * They all laugh when…
-    * What sounds better than privacy?
-    * Is your Business performing at 100%? Here is the best/easiest way to find out
-        * Measure, Check, Act
-    * Blinded pa lazyness?
-    * A friend told me that this will fail as people on ig has really nothing to say
-      * Lets proove him wrong
-
-* Interesting catchy sentences:
-  * Pollo hecho en serio y no en serie
-  * Hay una casa para cada persona, hay una app para todas las casas.
-  * Lets sea
-  * We ve bean waiting for you (coffee)
-  * Make IT happen
-  * Fotografiamos historias de amor. 
-    * La historia la escribís vosotros; nosotros la contaremos con imágenes.
-
-
 ---
-
 
 ## Conclusions
 
@@ -221,13 +202,11 @@ Everything is so logical when you read/hear, but...so many variables though when
 3. Downsale
 4. Continuity
 
-### Entrepre-AI Quick Sping
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
-```sh
-git clone
-make container-build
-make container-up
-```
 
 ### Outro
 

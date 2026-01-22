@@ -1,7 +1,7 @@
 ---
 title: "How to analyze Business Opportunities"
 #date: 2026-01-30T07:20:21+01:00
-date: 2026-01-21T09:00:21+01:00
+date: 2026-01-22T07:00:21+01:00
 draft: false
 tags: ["BiP","Entrepreneuring","Focus"]
 description: 'Do you really want to do this...that way?'
@@ -42,11 +42,14 @@ Tell them to send you these filled up.
 * Is it a new product that needs evangelization?
   * Existing competitors? or Needs PMF test?: *Would recommend to go for No need of PMF, demand validated*.
 
-* Who is your client and how it will get to know you?
+* Who is your client (buyer persona) and how it will get to know you?
   * The BANT context
 
 * **Value proposition**: *this must be clear for you, also in the landing*
   * The value eqution: How much value you promise x % of happening / ( Time 2 value * Effort to get there ) 
+
+> The ICP focuses on the ideal company or customer segment, the value proposition communicates why the product matters, and the customer avatar embodies the individual persona within the ICP that marketers and sales teams aim to reach.
+
 
 <!-- **Would you like me to help you refine the "Value Proposition" sentence for the WebApp landing page so it doesn't sound like just "another photo app"?** -->
 
@@ -102,7 +105,26 @@ The **launch strategy**: *aka, focus strategy*
 
 The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
 
+**GTM Strategy:** The Master Plan *important if [you bootstrap](https://jalcocert.github.io/JAlcocerT/whats-boostrap/#gtm-vs-marketing)!*
 
+A GTM strategy is a cross-functional roadmap that answers the question: "How will we bring this new product to market successfully?" 
+
+It aligns all key business functions, including:
+
+* **Product:** What are we selling? What problem does it solve?
+* **Pricing:** How much will we charge?
+* **Distribution/Sales:** How will we get the product into the hands of customers? (e.g., direct sales team, e-commerce, third-party distributors).
+* **Marketing:** How will we generate awareness and demand?
+* **Customer Success/Support:** How will we onboard and support customers after they buy?
+
+| Aspect | Go-to-Market (GTM) Strategy | Marketing Strategy |
+| :--- | :--- | :--- |
+| **Purpose** | To successfully launch a **specific** product or enter a **new** market. | To achieve **overall** business and brand goals over the long term. |
+| **Scope** | Broader and more tactical. It encompasses sales, marketing, pricing, distribution, and more. | A focused component of the GTM strategy. It is concerned with brand awareness, communication, and demand generation. |
+| **Time Horizon** | Short-term and event-driven. It's typically a "sprint" for a specific launch. | Long-term and ongoing. It is continuously evolving to support the brand. |
+| **Responsibility** | Owned by the executive team, often led by a Product Marketing Manager (PMM) or a cross-functional GTM team. | Owned by the marketing team. |
+
+A strong GTM strategy ensures that your product is ready for the market, while your marketing strategy ensures that the market is ready for your product.
 
 ---
 
@@ -215,8 +237,6 @@ As you noted,  is where the company decides how much of "today’s profit" () to
 * **Attraction (Marketing):** This is your **S** in **SG&A** (Selling, General & Administrative). You spend this money to create a brand so that people *want* to work with you.
 * **Conversion (Sales/Account Management):** This is also in **SG&A**. These people take the leads from Attraction and turn them into contracts ( and ).
 * **Why it’s here:** These costs are usually *fixed* or *semi-fixed*. You pay your Head of Marketing and your Sales VP whether they close 1 deal or 10 deals this month.
-
----
 
 
 If we look at your specific company goals, here is how the "Spending" vs. "Earning" works:
@@ -486,3 +506,41 @@ How about: getting things done?
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+---
+
+### TBC
+
+WIP
+
+to go with boilerplate at some poiint (?) or as ebook
+
+  {{< card link="https://github.com/JAlcocerT/entrepre-AI" title="EntrepreAI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code EntrepreAI" >}}
+
+Entrepre-AI Quick Sping
+
+```sh
+git clone
+make container-build
+make container-up
+```
+
+* CTA's
+    * Quieres el premium? No, correre el riesgo!
+    * You don’t have to miss out
+    * They all laugh when…
+    * What sounds better than privacy?
+    * Is your Business performing at 100%? Here is the best/easiest way to find out
+        * Measure, Check, Act
+    * Blinded pa lazyness?
+    * A friend told me that this will fail as people on ig has really nothing to say
+      * Lets proove him wrong
+
+* Interesting catchy sentences:
+  * Pollo hecho en serio y no en serie
+  * Hay una casa para cada persona, hay una app para todas las casas.
+  * Lets sea
+  * We ve bean waiting for you (coffee)
+  * Make IT happen
+  * Fotografiamos historias de amor. 
+    * La historia la escribís vosotros; nosotros la contaremos con imágenes.

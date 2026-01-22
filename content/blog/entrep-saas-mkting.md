@@ -7,11 +7,6 @@ description: 'How effective is your marketing? Custom solutions to feed and impr
 url: 'custom-marketing-analytics'
 ---
 
-
-* https://kit.com/use-cases/marketers
-
-Convert kit versus MailChimp
-
 **Tl;DR**
 
 After [tinkering with APIFY](https://jalcocert.github.io/JAlcocerT/apify/), it was obvious I needed to built something.
@@ -21,11 +16,13 @@ I mean, to build it with the end in mind.
 Generate cash flow.
 
 
-
-
 **Intro**
 
-So you are done with the 3 F's?
+Your interest are often *potentially* benefitial to others.
+
+But most likely, you have started shipping/executing/just doing for free to *wrong prospects* if what you try to create is a business.
+
+So: you are done already with the 3 F's?
 
 Yea, that stage of trying to sell to family friends and ~~fools~~
 
@@ -37,6 +34,9 @@ Do you want to go via ads? via organic posting/bip and social media? or via cold
   {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="WhoDB Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
+
+
+
 
 
 ## Marketing Examples 
@@ -74,6 +74,13 @@ After placing your mail, you get: `https://mongemalo.com/rechazado/`
 And once you confirm it: `https://mongemalo.com/importante-mensaje/`
 
 You are already prompted to buy an info product: `https://youtu.be/kwIgobHPwxY`
+
+### What if I need a newsletter
+
+
+* https://kit.com/use-cases/marketers
+
+Convert kit versus MailChimp?
 
 ## From bots to leads
 
@@ -121,12 +128,31 @@ If you dont, you could get it done:
 
 ### Selfhosted Marketing
 
+This started at [this post](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/), with [this 123 session](https://youtu.be/qQ13MKLfqYQ)
+
+
 If you get to know enough from servers, you can always do:
 
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss" title="Marketing around OSS - Mautic" image="/blog_img/selfh/HomeLab/mautic/mautic-ui.png" subtitle="Mautic setup for a marketing agency" >}}
 {{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serpbear" title="SerpBear | Docker Config 🐋 ↗" >}}
+    {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postiz" title="PostIZ HomeLab | Docker Configs 🐋 ↗" >}}
+
+{{< /cards >}}
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="Postgres | Docker Config 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+### Marketing Resources
+
+* https://github.com/goabstract/Marketing-for-Engineers
 
 
 

@@ -50,6 +50,9 @@ cd poc_shopify/landing
 #make help
 ```
 
+> The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc.
+
+
 <!-- https://youtu.be/Wf0uwVaNnQ4 -->
 
 {{< youtube "Wf0uwVaNnQ4" >}}
@@ -103,7 +106,11 @@ For these, most likely, you are having some of these dbs as a companion of your 
 
 ## Conclusions
 
-People are doing similar *just not so cool* landings `https://genbi.co/home`
+People are doing similar *just not so cool* landings `https://genbi.co/home` so sth like `generativebi.pro` would not be crazy.
+
+```sh
+whois genbi.co | grep -i -E "(creation|created|registered)"
+```
 
 ### The Attraction and Conversion
 
@@ -117,8 +124,13 @@ cd poc_shopify/landing
 
 ### The Delivery
 
-Via the backend plugged that we have created on this post.
+A backend plugged to the landing that we have created on [this post](https://jalcocert.github.io/JAlcocerT).
 
+It needs manual on boarding, not focusing on automated on boarding.
+
+First finding prospects is a priority.
+
+Same as finding people interested in a tech talk is more important than doing a tech talk to an empty room
 
 ### D&A Articles
 

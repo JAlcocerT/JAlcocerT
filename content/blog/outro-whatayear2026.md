@@ -471,7 +471,7 @@ I finally uploaded some from last year, just with youtube music:
 * [Goose Desktop](https://youtu.be/ZW5eEocyrTU) 
 * [GrowChief](https://youtu.be/in8uTdLhFqI)
 
-Others from the vibe coding sessions.
+Others, from the vibe coding sessions: helped to bring quick demos to the product landing.
 
 17. I made **some animations** instead.
 
@@ -480,10 +480,11 @@ Others from the vibe coding sessions.
 
 ### Serverless
 
-Ive enjoyed using Cloudflare R2 for s3 compatible storage.
+Ive enjoyed using Cloudflare R2 for s3 compatible object storage.
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="CF R2 x PB" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Testing Cloudflare R2 | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="CF R2 x Weds" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Launching the wedding project this year with R2 integration | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="CF R2 x PB" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Previous year I tested Cloudflare R2 with PB| Post" >}}
 {{< /cards >}}
 
 Also creating invoices with json via the serverless SPA: https://github.com/JAlcocerT/serverless-invoices
@@ -505,9 +506,10 @@ Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?la
 ### Tech Talks
 
 1. About langchain connected to a database...v2
+2. 
 
 
-~33...now 46...56
+~33...now 46...60 and 16post/22 days january
 
 ```sh
 #du -sh .
@@ -702,6 +704,62 @@ Aka ~~,failed apps'~~: *projects where i just learnt*
 2. ~~btcmeet~~
 3. Trip-Planner - Yes, the one created on this thread that you can use!
 4. ~~financeinmotion.fyi~~
+
+Portfolio CreAItor
+CV CreAItor,Speech RAIter,AIssistant - PPT, ...
+EntrepreAI
+YT Tech Videos - JAlcocerTech
+YT Shorts/Videos 4K: Ufolding Data / IoTrack
+YT Videos with Streamlit // FinanceInMotion // visualAIzed
+Finance in Motion / Unfolding Data (YT + ChartJS / Matplotlib / Remotion)
+YT - GoPro/DJI Telemtry Overlay Python
+PyStocks - Publish it on X/Reddit (?) ? RStocks Re-Bump?
+LibrePortfolio.fyi (ES)
+PyVacAItions // TripAdvAIsor
+PyInsightChAIn (Understand crypto with AI)
+Real Estate Inv Calculator (Streamlit & Reflex)
+Real Estate Paint Estimaitor with AI
+app lista negra (orlandos)
+Wordpress MigrAItions
+
+			
+		AI Powered shorts ~ PyStocks	
+			
+Calculators (CSR based)			
+AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance blog ~ PyStocks | LiberoCompass/LiberoPortfolio - Web	Twitter/X
+	E-Comerce CozyKnittingClub		travelmap
+	knitting app para medidas - vs excel based		polar steps
+			countries been app / find penguins
+	Daily Stoic - AI Powered Web Podcast (Text2Audio + YT?)		
+	openengineer.ing		
+
+
+Bodas - SlubneChwile
+QR Restaurantes Free + Web if Pay
+Webifyer / Web CreAItor
+
+
+
+				
+Bodas - SlubneChwile				
+QR Restaurantes				
+Webifyer / Web CreAItor				
+Portfolio CreAItor	Wordpress MigrAItion			
+CV CreAItor,Speech RAIter,AIssistant - PPT, ...				
+EntrepreAI				
+YT Tech Videos - JAlcocerTech		https://www.vrsen.ai/		
+YT Shorts/Videos 4K: BeyondaJourney / IoTrack				
+YT Videos with Streamlit // FinanceInMotion // visualAIzed				
+Finance in Motion / Unfolding Data (YT + ChartJS / Matplotlib / Remotion)			AI Powered shorts ~ PyStocks	
+YT - GoPro/DJI Telemtry Overlay Python				
+PyStocks - Publish it on Reddit (?) ? RStocks Re-Bump?				
+LibrePortfolio.fyi (ES)	AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance blog ~ PyStocks | LiberoCompass/LiberoPortfolio - Web	
+PyVacAItions // TripAdvAIsor		E-Comerce CozyKnittingClub		travelmap
+PyInsightChAIn (Understand crypto with AI)		knitting app para medidas - vs excel based		polar steps
+Real Estate Inv Calculator (Streamlit & Reflex)				countries been app / find penguins
+Real Estate Paint Estimaitor with AI		Daily Stoic - AI Powered Web Podcast (Text2Audio + YT?)		
+app lista negra (orlandos)		openengineer.ing		
+Automations n8n chatbots etc				
 
 > Options to take into consideration when creating: brand colors, seo, check links, no 404
 
