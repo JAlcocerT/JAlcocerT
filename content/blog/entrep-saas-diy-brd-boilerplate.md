@@ -26,7 +26,7 @@ The ones that are going to get you to ship ideas. Fast.
 
 I changed my mind for the sake of simplicity: *last thing I created in this direction, is [inside the n ebooks post](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#building-n-ebooks-for-a-webook)*
 
-Previously I was thinking to have this in a separated repo
+Previously I was thinking to have this in a separated repo:
 
 * https://github.com/JAlcocerT/bip-boilerplate-saas
 * https://github.com/JAlcocerT/boilerplate
@@ -54,6 +54,7 @@ Well, before moving forward answer these questions:
 * Can you provide context? 
 * Can you divide up tasks?
 * Can you give feedback?
+* How good are you at articulating ideas?
 
 Wanna ship like an entire dev team?
 
@@ -161,6 +162,8 @@ I have proven that you can do [a DIY landing page in ~ 30 minutes](https://youtu
 ### The tech talk
 
 We can call this: *The Boilerplate brd prd frd tech talk.*
+
+Or the *From Business focused to Makers - Agentic BI Development*
 
 The idea is to show non tech business users couple success examples.
 

@@ -508,6 +508,10 @@ Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?la
 1. About langchain connected to a database...v2
 2. 
 
+I focused on articulating better my ideas, creating engaging presentations and authorated content.
+
+Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#psyco).
+
 
 ~33...now 46...60 and 16post/22 days january
 

@@ -331,3 +331,81 @@ See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/lead
 I like the shopify one: `https://www.shopifystatus.com/`
 
 See as reference the:
+
+
+### Competitors
+
+
+
+<!-- 
+https://issyinformatica.es/
+
+-->
+
+<!-- More ppl to help - future CLIENTS
+
+* you dont need to pay for wordpress themes, its already there and it works
+  * https://generatepress.com/pricing/
+
+* Pablo Couto - https://www.buildingfuturecapital.com/
+
+https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
+
+
+* Sofia - zofienkagram
+  * https://wnba.pl/ - another wordpress (good looking)
+  * monika ciolkowska - monikacio
+    * https://monikaciolkowska.portfoliobox.net/
+    * Using the low tier without domain of https://www.portfoliobox.net/pricing (46$/y)
+      * Interesting section with a table comparing services and faq (go below)
+
+* Gym Trainer - https://trenujswiadomie.pl/kokpit/
+
+* Gym Trainer - https://trenujswiadomie.pl/kokpit/
+
+
+
+-->
+
+
+<!-- 
+* Weddings...
+* bodas.net
+
+http://divephiphiisland.com/ 
+
+-->
+
+More ppl to help - future CLIENTS
+
+* you dont need to pay for wordpress themes, its already there and it works
+  * https://generatepress.com/pricing/
+
+* Pablo Couto - https://www.buildingfuturecapital.com/
+
+https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
+
+
+https://quadscadiz.com/
+
+* Sofia - zofienkagram
+  * https://wnba.pl/ - another wordpress (good looking)
+  * monika ciolkowska - monikacio
+    * https://monikaciolkowska.portfoliobox.net/
+    * Using the low tier without domain of https://www.portfoliobox.net/pricing (46$/y)
+      * Interesting section with a table comparing services and faq (go below)
+
+
+
+* Hosting Costs:
+  * https://banahosting.com/web-hosting ~5eur/month
+  * https://webtolearn.pl/cennik ~20eur/month
+
+* Customer management systems - CMS
+  * https://wakems.com/index.php
+  * https://clubspeed.com/pricing/
+
+* Custom websites
+  * https://zeon.studio/estimate-project
+  * https://hormigasenlanube.com/
+  * https://lyk-website.pl/brief/
