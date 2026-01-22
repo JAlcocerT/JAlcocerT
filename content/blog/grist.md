@@ -1,6 +1,6 @@
 ---
 title: "Creating with Open Spreadsheets"
-date: 2026-02-25T08:20:21+01:00
+date: 2026-02-05T08:20:21+01:00
 draft: false
 description: 'From excel to Grist.'
 tags: ["Grist","Web","Table Automation","Forms","OpenLTables vs GoRules"]

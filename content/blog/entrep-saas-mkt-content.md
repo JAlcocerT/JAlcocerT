@@ -18,6 +18,8 @@ Can we generate mass produced & quality information content?
 
 Educational content and *how to'* are not what they used to.
 
+You need to 
+
 ---
 
 ## Conclusions

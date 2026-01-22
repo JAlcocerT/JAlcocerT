@@ -1,6 +1,6 @@
 ---
-title: "[AIoT] How to use LangChain to Chat with Sensor Data"
-date: 2026-02-20T21:20:21+01:00
+title: "[AIoT] How to use LangChain to QnA Sensor Data"
+date: 2026-03-20T21:20:21+01:00
 draft: false
 tags: ["DB2Rest","ekuiper","Embeded Analytics","Roadmap26 x Tech Talk"]
 description: 'Using LangChain to get Temperature & Humidity data from a DHT22 sensor.'
@@ -28,7 +28,7 @@ You can also try [PandasAI](https://pypi.org/project/pandasai/) and [Sketch](htt
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/hardware/asrockx300-air-temp.jpg" subtitle="Source Code for DB Chat with Langchain" >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="Data Chat Repository" image="/blog_img/hardware/asrockx300-air-temp.jpg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
 <!-- 

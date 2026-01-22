@@ -508,7 +508,7 @@ Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?la
 1. About langchain connected to a database...v2
 2. 
 
-I focused on articulating better my ideas, creating engaging presentations and authorated content.
+I focused on [articulating better](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/articulated-vs-authorit.md) my ideas, creating [engaging presentations](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/authoritative-content.md) and [authorated](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/authoritative-content.md) content.
 
 Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#psyco).
 

@@ -322,6 +322,8 @@ If you have be smart and make so that your full micro-SaaS copy is in one file, 
 
 You can have inmediate feedback from any LLM, like gemini on how **and why** you can tweak a certain title/cta/whatever.
 
+Become [authoritative](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/authoritative-content.md) and [articulated](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/articulated-vs-authorit.md).
+
 #### Product emails
 
 Want to increase LTV?

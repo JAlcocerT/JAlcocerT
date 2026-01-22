@@ -19,10 +19,9 @@ We come from [here](https://jalcocert.github.io/JAlcocerT/custom-re-rag), where 
 This one starts with the end: *targeting sales for b2b real estate agencies.*
 
 - **Result**: You learn exactly what features they need. $1,000 - $3,000 per setup. See Pricing.
-- **Pricing**: **$1,000 - $3,000 (One-Time Setup Fee)** + **$100 - $300 (Monthly Maintenance)**.
+- **Pricing**: **$1,000 - $3,000 (One-Time Setup Fee)** + $100 - $300 (Monthly Maintenance).
 
-
-You guessed it: this is a white-labelling related post.
+You guessed it: *this is a white-labelling related post*.
 
 What else can you do when you have built something very good as a pet project or as custom DFY for the wrong avatar.
 

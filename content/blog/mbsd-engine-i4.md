@@ -1,6 +1,6 @@
 ---
 title: "Inline 4 Engines: Understanding the most popular engine once and for all"
-date: 2026-02-15T23:20:21+01:00
+date: 2026-03-15T23:20:21+01:00
 draft: false
 tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","Simulations"]
 description: 'back'

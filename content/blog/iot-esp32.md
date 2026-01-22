@@ -1,10 +1,12 @@
 ---
 title: "ESP32 x NodeRed"
-date: 2026-02-01T23:20:21+01:00
+date: 2026-03-01T23:20:21+01:00
 draft: false
 description: "A solar panel, winter and the ESP32 microcontroller"
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed","Tech Talk 5"]
 ---
+
+"Authelia vs Authentik","PocketID"
 
 
 

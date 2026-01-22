@@ -1,6 +1,6 @@
 ---
 title: "Mastering Social Media x InfoGraphics"
-date: 2026-02-01T11:20:21+01:00
+date: 2026-03-01T11:20:21+01:00
 draft: false
 tags: ["Twitter X vs Threads","Youtube","Latex vs Typst","Side-Quest26","YFinance"]
 description: 'Quality and automated content creation to build a community. Compared to just ads.'
@@ -18,6 +18,12 @@ Can you create quality content and build a community with social media (Twitter/
 What's the actual value of a follower?
 
 Hard to calculate, but not impossible.
+
+There is some LTV value behind each of them.
+
+And ofc, a CAC that you paid in the currency you value the least (is it t or $?)
+
+Let's focus.
 
 Can we say that 1 out of 1000 followers is a potential customer?
 

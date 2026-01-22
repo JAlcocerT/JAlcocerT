@@ -1,6 +1,6 @@
 ---
 title: "Self-Hosting a Firebase Alternative - Supabase vs Pocketbase"
-date: 2026-02-10T23:20:21+01:00
+date: 2026-03-01T23:20:21+01:00
 draft: false
 # cover:
 #   image: "https://socialify.git.ci/supabase/supabase/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
@@ -125,19 +125,15 @@ sh get-docker.sh && docker version
 
 {{< /dropdown >}}
 
-## 
-
-### What are Vector DBs?
-
 
 ## Conclusions
 
 Supabase can also be a Vector DB
 
-Same as postgres
+Same as postgres.
 
 
-https://github.com/postgresml/postgresml
+* https://github.com/postgresml/postgresml
 
 > Postgres with GPUs for ML/AI apps.
 
@@ -150,7 +146,8 @@ Firebase but F/OSS
 
 ### Algolia and ElasticSearch
 
-## Supabase Overview
+Supabase Overview
+
 - **Description**: Supabase is an open-source alternative to Firebase, offering backend services.
 - **Core Features**:
   - **Postgres Database**: Provided as a service.
@@ -159,7 +156,8 @@ Firebase but F/OSS
   - **API Tools**: Facilitates API development.
 - **Search Integration**: Lacks built-in search functionalities but supports integration with Algolia and Elasticsearch for enhanced search capabilities.
 
-## Search Integration Options
+Search Integration Options
+
 - **Algolia**:
   - **Type**: Cloud-based, managed service.
   - **Key Features**:
@@ -175,7 +173,8 @@ Firebase but F/OSS
     - Requires more technical expertise to set up and manage.
   - **Pricing**: Free to use; paid subscriptions available for additional features and support.
 
-## Choosing Between Algolia and Elasticsearch with Supabase
+Choosing Between Algolia and Elasticsearch with Supabase
+
 - **Algolia + Supabase**:
   - Combines Algolia's ease of use and speed with Supabase's robust database capabilities.
   - Ideal for projects needing seamless search experiences with minimal setup.
@@ -183,11 +182,6 @@ Firebase but F/OSS
   - Offers more control and customization in search configurations.
   - Suitable for projects requiring complex search functionalities and where technical setup is feasible.
 
-## Decision Tips
-- **Choose Algolia** if you prioritize a fast, user-friendly search solution and are open to a managed service.
-- **Choose Elasticsearch** if your project demands high flexibility, complex search capabilities, and you are equipped to handle technical configurations.
-
----
 
 ## FAQ
 <!-- 

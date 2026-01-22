@@ -1,6 +1,6 @@
 ---
 title: "Attraction Web Offer x Show a Problem"
-date: 2026-02-01T23:20:21+01:00
+date: 2026-03-01T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey"]
 description: 'A scalable way to provide DIY websites. With Free Web Audits!'
@@ -24,6 +24,8 @@ Time to put those together with a quick WebApp/SaaS to free my time and **enhanc
 **Intro**
 
 How about **improving CX** for DIYs websites?
+
+You know that you can reach `webaudit.jalcocertech.com`
 
 The thing is: Does it needs to be a trade of between a Wordpress/Ghost/Wix or a code driven cool SSG?
 

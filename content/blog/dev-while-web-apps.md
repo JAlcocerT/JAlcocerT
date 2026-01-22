@@ -9,6 +9,8 @@ url: 'learnt-while-building-web-apps'
 
 **Tl;DR**
 
+Just create.
+
 **Intro**
 
 
@@ -39,6 +41,9 @@ In the meantime, he built this https://github.com/LinkedInLearning/data-pipeline
 ---
 
 ## Conclusions
+
+
+
 
 ---
 

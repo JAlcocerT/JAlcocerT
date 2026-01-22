@@ -1,6 +1,6 @@
 ---
 title: "Estimating house work and capturing leads"
-date: 2026-02-01T23:20:21+01:00
+date: 2026-03-01T23:20:21+01:00
 draft: false
 tags: ["Lead testing","Painting Home","Side-Quest26"]
 description: 'Building a platform to match offer and demand for certain jobs.'
@@ -57,7 +57,7 @@ For exteriors?
 
 Careful with that estimate as it can be ~2k *of 2018* for 80m2 of exterior surface.
 
-Existing competitors? or Needs PMF test?: No need of PMF, demand validated.
+Existing competitors? or Needs PMF test?: *No need of PMF, demand validated.*
 
 The **launch strategy**: *aka, focus strategy*
 

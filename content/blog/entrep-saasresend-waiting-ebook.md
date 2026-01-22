@@ -2,7 +2,7 @@
 title: "Getting Leads with Resend and Pocketbase"
 date: 2026-02-01T23:20:21+01:00
 draft: false
-tags: ["Dashboards","Supabase Auth vs PB","Authelia vs Authentik","PocketID","Roadmap26"]
+tags: ["Dashboards","Supabase Auth vs PB","Roadmap26"]
 description: 'A waiting list that gets you leads'
 ---
 
