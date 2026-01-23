@@ -149,19 +149,7 @@ https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#the-result
 * https://cal.com/jalcocertech
 * https://app.cal.com/apps
 
-```mermaid
-graph TD
-    A[www.jalcocertech.com] --> B(blog/YT 0$);
-    A --> C(DIY 0/$);
-    A --> D(Consult via Cal.com - DWY $$);
-    A --> E(Services - DFY $$$);
-```
 
-
-
-<!-- ![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png) -->
-
-{{< youtube id="qFMN0oDeCFg" autoplay="false" >}}
 
 
 ### Integrate Stripe
@@ -173,11 +161,6 @@ You can enable so that before someone booking your time, they have to pay first:
 This increase friction - so you need to find the sweet spot.
 
 > No friction will never be the perfect one for converting leads.
-
-{{< details title="Stripe 101 Setup 📌" closed="true" >}}
-
-
-{{< /details >}}
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe" title="Using Stripe withing a Flask" image="/blog_img/entrepre/stripe/stripe-apps.png" subtitle="Stripe 101 withing a SaaS PoC" >}}
@@ -219,22 +202,6 @@ You can always [embed things](https://jalcocert.github.io/JAlcocerT/embed-that/)
   {{< card link="https://jalcocert.github.io/JAlcocerT/embed-that/#whatsap-bouble" title="Embedded WA / Cal Bouble" image="/blog_img/web/astro-whatsapp-bouble.png" subtitle="Creating an Astro WA Bouble" >}}  
 {{< /cards >}}
 
-### CRM's
-
-{{< dropdown title="Some Open Sourced CRM's you can Self-Host 👈 " closed="true" >}}
-
-* {{< newtab url="https://github.com/salesagility/SuiteCRM" text="SuiteCRM" >}}
-* {{< newtab url="https://github.com/odoo/odoo" text="Odoo" >}}
-* {{< newtab url="https://github.com/espocrm/espocrm" text="ESPOCRM" >}}
-
-{{< /dropdown >}}
-
-### ERP's
-
-* {{< newtab url="https://github.com/frappe/erpnext" text="ERP Next" >}}
-  * https://www.youtube.com/watch?v=X08dEN_rWyg
-    <!-- https://github.com/jmlcas/erpnext -->
-
 
 ## Ads
 
@@ -252,7 +219,7 @@ Social media ~~is where you think [you have a blog](https://jalcocert.github.io/
 ![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ | 101 Post ↗" image="blog_img/selfh/postiz/postiz-https-ui.png",subtitle="Setup Postiz while tinkering with photo and video" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ | 101 Post ↗" image="/blog_img/selfh/postiz/postiz-https-ui.png" subtitle="Setup Postiz while tinkering with photo and video" >}}
   {{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This is DFY only" >}}
 {{< /cards >}}
 

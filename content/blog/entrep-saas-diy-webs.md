@@ -227,6 +227,25 @@ mindmap
 ```
 
 
+```mermaid
+graph TD
+    A[www.jalcocertech.com] --> B(blog/YT 0$);
+    A --> C(DIY 0/$);
+    A --> D(Consult via Cal.com - DWY $$);
+    A --> E(Services - DFY $$$);
+```
+
+<!-- ![Cal.com stripe integration for booking a meeting](/blog_img/email/cal-email-stripe.png) -->
+
+{{< youtube id="qFMN0oDeCFg" autoplay="false" >}}
+
+Or formbricks....
+
+{{< youtube id="LWt0pV2FMHs" autoplay="false" >}}
+
+
+<!-- https://studio.youtube.com/video/LWt0pV2FMHs/edit -->
+
 
 ---
 

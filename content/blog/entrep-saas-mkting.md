@@ -150,6 +150,23 @@ If you get to know enough from servers, you can always do:
   {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+CRM's
+
+{{< dropdown title="Some Open Sourced CRM's you can Self-Host 👈 " closed="true" >}}
+
+* {{< newtab url="https://github.com/salesagility/SuiteCRM" text="SuiteCRM" >}}
+* {{< newtab url="https://github.com/odoo/odoo" text="Odoo" >}}
+* {{< newtab url="https://github.com/espocrm/espocrm" text="ESPOCRM" >}}
+
+{{< /dropdown >}}
+
+ERP's
+
+* {{< newtab url="https://github.com/frappe/erpnext" text="ERP Next" >}}
+
+  * https://www.youtube.com/watch?v=X08dEN_rWyg
+    <!-- https://github.com/jmlcas/erpnext -->
+
 ### Marketing Resources
 
 * https://github.com/goabstract/Marketing-for-Engineers
