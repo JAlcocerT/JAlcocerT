@@ -14,6 +14,14 @@ url: 'gopro-telemetry-desktop-python'
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+The **launch strategy**: *aka, focus strategy*
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | |
+
 **Intro**
 
 There are many things free *and open source* in life.

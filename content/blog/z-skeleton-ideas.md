@@ -1,6 +1,6 @@
 ---
 title: "How to analyze Business Opportunities"
-#date: 2026-01-30T07:20:21+01:00
+#date: 2026-01-31T07:20:21+01:00
 date: 2026-01-22T07:00:21+01:00
 draft: false
 tags: ["BiP","Entrepreneuring","Focus"]
@@ -68,6 +68,7 @@ Tell them to send you these filled up.
 
 * Is it a new product that needs evangelization?
   * Existing competitors? or Needs PMF test?: *Would recommend to go for No need of PMF, demand validated*.
+  * Example: No need of PMF, demand validated.
 
 * Who is your client (buyer persona) and how it will get to know you?
   * The BANT context
@@ -120,17 +121,34 @@ flowchart LR
     L3 --> L44
 ```
 
-Existing competitors? or Needs PMF test?: No need of PMF, demand validated.
+The **Tier of Service**: *because The value ladder is a thing*
 
-The **launch strategy**: *aka, focus strategy*
+Example: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
 
-| Element | Decision |
-| :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
 
-The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>(Blog/YT/Docs $0)"):::free
+    L1("AuditMagnet 🛡️<br/>(Free Web Audit $0)"):::free
+    L2("DIY<br/>(Optimization Guides) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Full Service) $$$"):::high
+
+    %% --- Connections ---
+    L0 --> L1
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+```
+
+
 
 **GTM Strategy:** The Master Plan *important if [you bootstrap](https://jalcocert.github.io/JAlcocerT/whats-boostrap/#gtm-vs-marketing)!*
 
@@ -175,7 +193,9 @@ the Business Model Canvas, which is a globally recognized framework that helps v
 
 splitting a business into Attraction, Conversion, and Delivery is an excellent way to view the "Engine" of a company. 
 
-While the profit formula ($P \times V \times GM \times OM \times IF \times T$) tells you what is happening to the money, this three-part framework tells you how the work is getting done.
+While the profit formula ($P \times V \times GM \times OM \times IF \times T$) tells you what is happening to the money.
+
+This three-part framework tells you how the work is getting done.
 
 [Zoom in](https://mermaid.live/edit#pako:eNqFVGtv2jAU_SuWp06bxCtAWsiHSdCiCqlpacsqbaGq3OQmWE3syHYolPLfd_MAske1fLD8OOc-To69pb4MgDo0Uixdkqu7hSD4nZyQqUgzo8mX-RLIONNcgNZk5Bu-4oaD_loCdfZcMkfGKIanUhDvOH8sUfnnvhjPZeoFDBcR-UzGiomgdj6aPt0jzXijKblU8tUsSbGGaFOhQAQL8UfacylWoHSR9jivhb1nMWivGMko5pFIQJh6Wtcb-b7MhCEuEyyC2vm_El5AzDHLhnj7WS3Y5GHmTZI0lhsA8sDiDMhMybSGuIBV3uAhylzKWP-dDvXPdZ-ICHXPmxRQ6KnL45rYzeY38r6gV8AC3Z7xFAMLWND3mjIlpxxrelXMHxziQOeMmTdT3IfH_yNvvduMCcPNpv0g4yzJOSVrVoBda7velRu31cYe4Fq4QRb0DlYgMqy0OL90n85Z7Hv449FlaBPsm-Q7WcxqPjqIc9Av4AqViTeEJykqoolB2XypDZEhiaQMKsUOhGarbGYShtznIPxN-7vhMX8r8uTNVbXUM1ZbZeVljfhfQ26q8m9c7yYFNGtu7ar6k6rmG7ekHQFT4ctk3_l07E2FAQXatMdSofFzyDl2UPGn45I_Gc8rynzszdkaL6UK4JhnXuGuwfxe3PXMG0tjZEKu0BqPNYvdmw26JaocjguoOyvkcex8CodhQxslX8D51Ov16tiaQ0rs8_OH2IP-JTIIg4-Q17ND5tM6ppo3X3lglk4_XdMGPlo8oI5RGTRoAiph-ZJu83ALik7IVXZwGuC7s6ALsUNOysRPKZM9TcksWlInZLHGVZYG-OJccIaX_QjBiwnqPH8jqDPsFSGos6Vr6jStznDQ6nW7Z3Zv2Dnt2g26oU7XHraGZ_2h1bftztnA6tq7Bn0rklqt_sCyB_Zg2O1aVqc36O1-AbVwvuI).
 
@@ -417,30 +437,6 @@ graph LR
     style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
 ```
 
-The value ladder is a thing:
-
-
-```mermaid
-flowchart LR
-    %% --- Styles ---
-    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
-    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
-    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
-    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
-
-    %% --- Nodes ---
-    L0("Free Content<br/>(Blog/YT/Docs $0)"):::free
-    L1("AuditMagnet 🛡️<br/>(Free Web Audit $0)"):::free
-    L2("DIY<br/>(Optimization Guides) $"):::low
-    L3("Done With You<br/>(Consulting) $$"):::mid
-    L4("Done For You<br/>(Full Service) $$$"):::high
-
-    %% --- Connections ---
-    L0 --> L1
-    L1 --> L2
-    L2 --> L3
-    L3 --> L4
-```
 
 
 ## Building a HOW with Sense

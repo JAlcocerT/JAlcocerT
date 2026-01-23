@@ -80,7 +80,7 @@ While the page is static, the complex logic and animations use React.
 | **Deployment** | Docker | Containerized deployment for easy scaling and isolation. |
 
 
-{{< details title="Vibe Coding a Modern Landing Page x Shadcn x AuthJS | Setup  📌" closed="true" >}}
+{{< details title="Vibe Coding | Setup  📌" closed="true" >}}
 
 Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
 
@@ -104,7 +104,9 @@ When it is completed, create a `z-walkthrough.md` with the steps to deploy the a
 
 Consider adding a Terms of Service / **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
 
-Add also a faq section, that instead of been controlled via a json, lets have it controlled as per the frontmatter and content of separated markdown files inside the folder `faq`. The logic should read them in order as per their file name and show them in the right component of the UI.
+Add also a faq section, that instead of been controlled via a json, lets have it controlled as per the frontmatter and content of separated markdown files inside the folder `faq`. 
+
+The logic should read them in order as per their file name and show them in the right component of the UI.
 
 > When these change, consider sending an email to your existing clients!
 
@@ -118,20 +120,6 @@ Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined a
 If it is clear define the `z-development-plan.md` and proceed with the development phases.
 
 As you will need to iterate across features, do it like a pro with change-requests:
-
-```md
-
-```
-
-```sh
-# git init
-# git branch -m main
-# git config user.name
-# git config --global user.name "JAlcocerT"
-# git config --global user.name
-# git add .
-# git commit -m "Initial commit: Starting simple make xyz platform"
-```
 
 ```sh
 #sudo apt install gh
@@ -377,16 +365,41 @@ Got a centralized repo with your presentations as text?
 
 There is no excuse not to write a psycologycal engaging email and/or [slack alert messages](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/langchain-postgres/z-tech-talk-advert.md) to get more people flowing to your funnel.
 
-I mean: assisting to your tech talk.
-
+I mean: *assisting to your tech talks*.
 
 ### Improving your Products
 
 Leave them be for a while to get volume/repetitions on their current state.
 
+
+```mermaid
+flowchart LR
+    %% Styles
+    classDef state fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+    classDef start fill:#43A047,stroke:#1B5E20,stroke-width:2px,color:white;
+
+    %% Nodes
+    Start((Start)):::start --> More
+    More(Doing MORE):::state
+    Better(Doing BETTER):::state
+    Newer(Doing NEWER):::state
+
+    %% Internal Feedback Loops (The Grind)
+    More -- "Scale Up" --> More
+    Better -- "Refine" --> Better
+    Newer -- "Test" --> Newer
+
+    %% The Progression Journey
+    More -- "Capacity Hit" --> Better
+    Better -- "Optimized" --> Newer
+    
+    %% The Upward Spiral
+    Newer -- "New Baseline" --> More
+```
+
 Done?
 
-Ok, now lets tweak with some sense that it sgoing to move into a better direction.
+Ok, now lets tweak with some sense of whats going to move into a better direction.
 
 ```mermaid
 graph LR
@@ -455,6 +468,6 @@ Not what they say.
 
 Not what you think.
 
-This helps: 
+This helps: *the best product tool*
 
 ![alt text](/blog_img/biz/posthog-eu.png)

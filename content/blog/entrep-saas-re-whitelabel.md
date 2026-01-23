@@ -1,6 +1,6 @@
 ---
 title: "White-Labelling the real estate solution"
-date: 2026-01-26T06:21:21+01:00
+date: 2026-01-29T06:21:21+01:00
 draft: false
 tags: ["Funnel Strategy x Landing x Glassmorphirms","RoadMap26","Cold email"]
 description: 'Building a custom BOT for real estate agencies. With CORS and OpenAI Rate Limiting.'

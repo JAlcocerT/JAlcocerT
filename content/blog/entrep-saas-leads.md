@@ -1,6 +1,6 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-22T19:20:21+01:00
+date: 2026-01-23T09:20:21+01:00
 draft: false
 tags: ["BiP","APIFY x Sales Pipeline","Scrapping","RoadMap26","Selfishness as virtue?"]
 description: 'Finding people that actually need your services. A story post the first ten.'

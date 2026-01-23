@@ -1,6 +1,6 @@
 ---
 title: "Improving a micro-SaaS Conversion"
-date: 2026-01-21T08:20:21+01:00
+date: 2026-01-24T08:20:21+01:00
 draft: false
 tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap ESP","ATF x Time2Value"]
 description: 'Iterating over an existing product to increase its LTV to CAC. Weddings 2026'
@@ -101,7 +101,7 @@ Pros say that every email should contain: diversion, information, Venta.
 
 Sell a transformation. Not the vehicle, but the pain removal and dream outcome destination.
 
-You should be able to query the registered at Firebase/Firestore:
+You should be able to query the registered at Firebase/Firestore: *same as done with this script*
 
 ```sh
 
