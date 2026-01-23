@@ -19,6 +19,7 @@ draft: false
 ![alt text](/blog_img/outro/kdenlive-zoom.png)
 
 1. Apply the Effect
+
 Open Kdenlive and drag your video clip onto the Timeline.
 
 Go to the Effects tab (usually in the top-left or middle-left panel).
@@ -47,6 +48,25 @@ Tip: You can also adjust the X and Y coordinates in the Effect Stack for more pr
 
 
 3. Others like: Shotcut
+
+{{< details title="Scaling video resolution with - Upscayl + Shotcut 📌" closed="true" >}}
+
+Delete the LRF files:
+
+```sh
+#rm *.LRF #clean just LRF files
+du -h --max-depth=1 #check space
+find . -name "*.LRF" -type f -delete #cleaning .LRF
+```
+
+And **get VLC** to see them:
+
+```sh
+sudo apt update
+sudo apt install vlc
+```
+
+{{< /details >}}
 
 <!-- https://www.youtube.com/shorts/ls_66dIM9-4 -->
 

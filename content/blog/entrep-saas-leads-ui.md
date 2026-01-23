@@ -102,6 +102,9 @@ git init && git add . && git commit -m "Initial commit: simple landing website" 
 
 #make help
 #docker builder prune	
+#sudo journalctl --vacuum-size=500M
+sudo apt-get clean
+sudo apt-get autoremove
 ```
 
 **Technical Stack and Design Requirements**

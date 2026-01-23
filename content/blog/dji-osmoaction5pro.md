@@ -200,23 +200,7 @@ And this is what I created so far...
 I decided to create [this repo with the **scripts**](https://github.com/JAlcocerT/YT-Video-Edition)
 {{< /callout >}}
 
-{{< details title="Scaling video resolution with - Upscayl + Shotcut 📌" closed="true" >}}
 
-Delete the LRF files:
-
-```sh
-du -h --max-depth=1 #check space
-find . -name "*.LRF" -type f -delete #cleaning .LRF
-```
-
-And **get VLC** to see them:
-
-```sh
-sudo apt update
-sudo apt install vlc
-```
-
-{{< /details >}}
 
 
 See **info about .MP4's** in your folder:

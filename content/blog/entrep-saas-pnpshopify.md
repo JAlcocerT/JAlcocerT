@@ -1,7 +1,6 @@
 ---
 title: "[Gen-BI] The insights for a profitable Shopify"
-date: 2026-01-20T07:20:21+01:00
-#date: 2026-02-01T18:20:21+01:00
+date: 2026-02-04T18:20:21+01:00
 draft: false
 tags: ["RoadMap26","BAML x Vite x Astro","RevOps x GTM"]
 description: 'Got en ecommerce? You are missing an AI Powered COO. Trust this landing.'

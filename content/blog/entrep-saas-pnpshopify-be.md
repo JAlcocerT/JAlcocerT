@@ -1,7 +1,6 @@
 ---
 title: "[Gen-BI] From Shopify to Profit"
-date: 2026-01-21T07:20:21+01:00
-#date: 2026-02-05T18:20:21+01:00
+date: 2026-02-05T18:20:21+01:00
 draft: false
 tags: ["RoadMap26","Shopify API","BAML x Vite x Astro"]
 description: 'Got en ecommerce? You are missing an AI Powered COO. Trust this landing.'

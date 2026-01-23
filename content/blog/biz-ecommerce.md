@@ -1,7 +1,6 @@
 ---
 title: "An e-Commerce around OSS"
-#date: 2026-02-03
-date: 2026-01-21
+date: 2026-02-03
 draft: false
 tags: ["Shopify x SaaS","Drupal","User Clustering","RoadMap26","BlackFriday","OLTP vs OLAP"]
 description: 'Creating an eCommerce. Drupal vs DFY custom solutions'
@@ -35,9 +34,7 @@ But doing sth custom is much cooler.
 {{< /cards >}}
 
 
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
+
 
 
 
@@ -75,7 +72,49 @@ Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress
 5. **PrestaShop**  
    Solución PHP madura con una comunidad muy activa y muchos módulos. Se instala fácilmente en cualquier hosting y ofrece gestión de catálogos, marketing y SEO.[4][2]
 
-### Alternativas autoalojadas a WooCommerce
+**Intro**
+
+As I have been learning how to do CSR related auth...
+
+How about bringing something more than a website: **an ecommerce**
+
+Creating a custom ecommerce from scratch is a lot of work, so you can also use a [OSS Selfhosted ecommerce](#selfhosted-ecommerce).
+
+## Astro as Ecommerce
+
+1. https://github.com/unfolding-io/nebulix
+
+> CC | Nebulix, a Fast & Green Theme Based on Astro + [Static CMS](https://www.staticcms.org/docs/backends-overview) + Snipcart
+
+2. https://github.com/CrystallizeAPI/dounut-astro
+
+3. https://github.com/lloydjatkinson/astro-snipcart
+
+> MIT | Allows for the creation of E-Commerce sites using the Astro framework and [Snipcart](https://snipcart.com/pricing). Start your e-commerce business in minutes!
+
+4. https://github.com/michael-andreuzza/microstore
+
+https://microstoretheme.netlify.app/#_
+
+5. https://github.com/jazsouf/astro-shopify-sanity
+
+
+
+### Streamlit as eCommerce
+
+You would need proper file connection and some decent auth:
+
+* https://github.com/streamlit/files-connection
+* https://github.com/bleumink/streamlit-keycloak
+
+## Selfhosted Ecommerce
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+Alternativas autoalojadas a WooCommerce
 
 1. **Magento Open Source (Adobe Commerce)**  
    Potente y personalizable, escrita en PHP. Ideal para empresas con desarrolladores internos o agencias. Ofrece multi-tienda, gestión avanzada de pedidos e integración ERP.[5][6]
@@ -173,9 +212,7 @@ There are several notable open source self-hostable e-commerce platforms availab
 
 - **CubeCart**: Template-driven, responsive store platform that is simpler than some others but less extensible.[3]
 
-These platforms vary in technology stack (PHP, Node.js, Python/Django, .NET) and complexity, from user-friendly to developer-centric, allowing you to pick one that fits your technical expertise and business needs.[8][15][9][3][2]
-
-Yes, exactly. 
+These platforms vary in technology stack (PHP, Node.js, Python/Django, .NET) and complexity, from user-friendly to developer-centric, allowing you to pick one that fits your technical expertise and business needs.
 
 With Medusa as your backend, you can use Astro static site generator to build your frontend storefront.
 
@@ -205,42 +242,6 @@ Hosting an eCommerce
 
 https://www.shoper.pl/premium like https://sklepmakunki.pl/ which theme comes from https://netplace.com.pl/ see https://netplace.com.pl/portfolio/magicznypokoik-pl/
 
-**Intro**
-
-As I have been learning how to do CSR related auth...
-
-How about bringing something more than a website: **an ecommerce**
-
-Creating a custom ecommerce from scratch is a lot of work, so you can also use a [OSS Selfhosted ecommerce](#selfhosted-ecommerce).
-
-## Astro as Ecommerce
-
-1. https://github.com/unfolding-io/nebulix
-
-> CC | Nebulix, a Fast & Green Theme Based on Astro + [Static CMS](https://www.staticcms.org/docs/backends-overview) + Snipcart
-
-2. https://github.com/CrystallizeAPI/dounut-astro
-
-3. https://github.com/lloydjatkinson/astro-snipcart
-
-> MIT | Allows for the creation of E-Commerce sites using the Astro framework and [Snipcart](https://snipcart.com/pricing). Start your e-commerce business in minutes!
-
-4. https://github.com/michael-andreuzza/microstore
-
-https://microstoretheme.netlify.app/#_
-
-5. https://github.com/jazsouf/astro-shopify-sanity
-
-
-
-### Streamlit as eCommerce
-
-You would need proper file connection and some decent auth:
-
-* https://github.com/streamlit/files-connection
-* https://github.com/bleumink/streamlit-keycloak
-
-## Selfhosted Ecommerce
 
 ### Drupal
 
