@@ -121,6 +121,25 @@ https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-codin
 
 You need to plug something to that cool UI/UX and backend with the bot logic.
 
+
+
+{{< details title="Interesting AI via APIs  📌" closed="true" >}}
+
+
+* Groq - https://console.groq.com/keys
+* OpenAI - https://platform.openai.com/account/api-keys
+* Anthropic - https://console.anthropic.com/api-keys
+
+
+```sh
+source .env
+#export OPENAI_API_KEY=sk-proj-...
+#
+```
+
+{{< /details >}}
+
+
 Like these LLM API endpoints:
 
 * Open AI - GPT APIs https://platform.openai.com/api-keys

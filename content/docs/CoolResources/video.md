@@ -111,7 +111,10 @@ But this guy takes FFMPEG to the next level:
 
 And I have a dedicated repository for ffmpeg video creation:
 
-https://github.com/JAlcocerT/YT-Video-Edition
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="YT Video Edition | Github ↗" icon="github" >}}
+{{< /cards >}}
+
 
 
 ### Converting Video
@@ -151,10 +154,4 @@ For crazy people that like [trackdays](https://jalcocert.github.io/JAlcocerT/tin
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro MetaData Magic 101 " image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 Firmware and comparison with GoPro" >}}
 {{< /cards >}}
 
-If you enjoy these kind of [geo/racing](https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction) analytics, ive placed particular docs for that:
-
-## AI Generated Video
-
-
-<!-- 
-* https://ltx.studio/ -->
+If you enjoy these kind of [geo/racing](https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction) analytics, ive placed particular [docs for that](https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/).

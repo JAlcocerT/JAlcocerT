@@ -8,6 +8,10 @@ draft: false
 
 For the ones who like to **B**uild **i**n **P**ublic.
 
+Think about BiP as a way to get *,free ($)'* impressions on what your product does.
+
+But before building, you need to articulate your ideas.
+
 Got a clear WHY, WHAT and how?
 
 | Document | **Core Question** | Focus | Responsibility |
@@ -111,24 +115,7 @@ graph TD
 
 If you are one of those entrepreneurs who has managed to learn how to code.
 
-
-{{< details title="Interesting AI via APIs  📌" closed="true" >}}
-
-
-* Groq - https://console.groq.com/keys
-* OpenAI - https://platform.openai.com/account/api-keys
-* Anthropic - https://console.anthropic.com/api-keys
-
-
-```sh
-source .env
-#export OPENAI_API_KEY=sk-proj-...
-#
-```
-
-{{< /details >}}
-
-Chances are that you are using AI/vibe coding techniques to build your next product.
+Chances are that you are using AI [models](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/#hosted-models)/vibe coding techniques to build your next product.
 
 ![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
 
@@ -143,101 +130,12 @@ If you are by yourself, I recommend you to brainstorm with your LLMs about your 
 
 The outcome should be a clear goals (like a [BRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/)) and execution plan for the agents to code for you.
 
-{{< details title="Vibe Coding a Modern Landing Page x Shadcn x AuthJS | Setup  📌" closed="true" >}}
-
-Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
-
-```md
-Create a sth sth sth like... a Landing Page based on NextJS with a cool and modern UI
-
-Include a `dockerfile` and `docker-compose.yml` that will control the title, description, open-graph image, favicon location and other global website variables via environment variables.
-
-Add also a docker-compose.portainer.yml to use assuming that the image has been built already.
-
-Create also a makefile with the following commands:
-
-* `make help` - Show available commands
-* `make install` - Prepare the dependencies for local development
-* `make dev` - Run development server
-* `make container` - Build and Run in Docker container
-
-Create the `z-development-plan.md` with independent and testable phases that can be completed sequentially.
-
-When it is completed, create a `z-walkthrough.md` with the steps to deploy the application and what each part of the tech stack does on a high level to bring the features to life.
-
-Consider adding a Terms of Service / **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
-
-Add also a faq section, that instead of been controlled via a json, lets have it controlled as per the frontmatter and content of separated markdown files inside the folder `faq`. The logic should read them in order as per their file name and show them in the right component of the UI.
-
-> When these change, consider sending an email to your existing clients!
-
-Consider adding **Umami web analytics capabilities** to the WebApp when using the container, by adding the possibility to feed the PUBLIC_UMAMI_SCRIPT_URL and PUBLIC_UMAMI_WEBSITE_ID to be used via <script defer src="" data-website-id=""></script>
-
-If you are using Python, design proper functions with docstrings, so that the codebase is understandable, scalable and self-documenting.
-```
-
-Then go to [AntiGravity IDE](#antigravity-ide) and ask if the `brd.md` refined already with Gemini is clear enough.
-
-If it is clear define the `z-development-plan.md` and proceed with the development phases.
-
-As you will need to iterate across features, do it like a pro with change-requests:
-
-```md
-
-```
-
-```sh
-# git init
-# git branch -m main
-# git config user.name
-# git config --global user.name "JAlcocerT"
-# git config --global user.name
-# git add .
-# git commit -m "Initial commit: Starting simple make xyz platform"
-```
-
-```sh
-#sudo apt install gh
-gh auth login
-#gh repo create make-xyz --private --source=. --remote=origin --push
-    
-git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create make-xyz --private --source=. --remote=origin --push
-###du -sh .
-#docker stop $(docker ps -a -q) #stop all
-#docker system df
-```
-
-**Technical Stack and Design Requirements**
-
-To develop a **modern, secure, and scalable web platform** for hosting and streaming a single-user podcast.
-
-The platform must offer a seamless, content-driven user interface and a flexible content management system supporting both web uploads and direct file system access.
-
-{{< /details >}}
-
-Before starting any project, specially with AI agents, you should have clarity on **the tech stack**:
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
-And if you need more:
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Deployment** | | |
-| **Content Management** | | |
-| **Analytics** | | |
-| **Interactivity** | | |
-| **External Integrations** | | |
+If you plug [human psyc to your tech stech](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/) from the beginning, you are increasing your chances to succeed.
 
 <!-- 
 ![Terms and Conditions / Privacy](/blog_img/entrepre/webify/flask-terms-privacy.png) -->
 
-Dont forget to add into every SaaS the Terms and Conditions and Privacy Policy: *you can do so markdown based and keep track of changes per date*
+Dont forget to add into every SaaS the `Terms and Conditions` and `Privacy Policy`: *you can do so markdown based and keep track of changes per date*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#tc-and-privacy" title="SaaS CYA" image="/blog_img/entrepre/webify/flask-terms-privacy.png" subtitle="Sample T&C and Priv Policy" >}}
@@ -279,14 +177,10 @@ Even [a simple waiting list](https://github.com/JAlcocerT/simple-waiting-list) c
   {{< card link="https://github.com/JAlcocerT/simple-waiting-list" title="Simple Waiting List ↗" icon="github" >}}
 {{< /cards >}}
 
-Bringing leads towards your sales pipeline is one of the crucial steps to succeed as an entrepreneur:
+Bringing leads towards your product / sales pipeline is one of the crucial steps to succeed as an entrepreneur.
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/micro-saas/#creating-a-quick-landing" title="NEW - Make landing" image="/blog_img/shipping/make-landing2.png" subtitle="Landing Page x TailWind x VanillaJS x email to SQLITE" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/#ssg-astro-waiting-list" title="NEW - Make landing" image="https://raw.githubusercontent.com/JAlcocerT/waiting-to-landing/main/screens/demoLight.webp" subtitle="Creating the Waiting2Landing Concept x Formbricks" >}}
-{{< /cards >}}
 
-Even your agentic IDE that you use to code your business, are using Stripe to bill you.
+Even the agentic IDE that you use to code your business, is probably using Stripe to bill you.
 
 This is all about the right answer to the right questions.
 

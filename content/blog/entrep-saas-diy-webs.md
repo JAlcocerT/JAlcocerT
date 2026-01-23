@@ -375,3 +375,46 @@ GitLab Pages is not just for serving static content. You can enhance site intera
 - **Client-Side JavaScript**: Enrich your site with dynamic content and interactive elements using JavaScript frameworks like React or Vue.js.
 - **Third-Party APIs**: Integrate APIs to bring dynamic data into your static site, such as e-commerce platforms, CMSes, or social media feeds.
 - **WebAssembly**: Use WebAssembly for high-performance web applications directly in the browser, which can be hosted as part of your static GitLab Pages site.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/micro-saas/#creating-a-quick-landing" title="NEW - Make landing" image="/blog_img/shipping/make-landing2.png" subtitle="Landing Page x TailWind x VanillaJS x email to SQLITE" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/#ssg-astro-waiting-list" title="NEW - Make landing" image="https://raw.githubusercontent.com/JAlcocerT/waiting-to-landing/main/screens/demoLight.webp" subtitle="Creating the Waiting2Landing Concept x Formbricks" >}}
+{{< /cards >}}
+
+---
+
+### TBC
+
+WIP
+
+to go with boilerplate at some poiint (?) or as ebook
+
+  {{< card link="https://github.com/JAlcocerT/entrepre-AI" title="EntrepreAI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code EntrepreAI" >}}
+
+Entrepre-AI Quick Sping
+
+```sh
+git clone
+make container-build
+make container-up
+```
+
+* CTA's
+    * Quieres el premium? No, correre el riesgo!
+    * You don’t have to miss out
+    * They all laugh when…
+    * What sounds better than privacy?
+    * Is your Business performing at 100%? Here is the best/easiest way to find out
+        * Measure, Check, Act
+    * Blinded pa lazyness?
+    * A friend told me that this will fail as people on ig has really nothing to say
+      * Lets proove him wrong
+
+* Interesting catchy sentences:
+  * Pollo hecho en serio y no en serie
+  * Hay una casa para cada persona, hay una app para todas las casas.
+  * Lets sea
+  * We ve bean waiting for you (coffee)
+  * Make IT happen
+  * Fotografiamos historias de amor. 
+    * La historia la escribís vosotros; nosotros la contaremos con imágenes.

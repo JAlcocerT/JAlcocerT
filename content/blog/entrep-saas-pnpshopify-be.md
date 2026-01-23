@@ -120,6 +120,7 @@ Conversion driven via landing:
 git clone https://github.com/JAlcocerT/poc_shopify
 cd poc_shopify/landing
 #make help
+#docker builder prune	
 ```
 
 ### The Delivery

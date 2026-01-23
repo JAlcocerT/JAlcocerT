@@ -17,20 +17,19 @@ For which we need:
 3. IoT / Telemetry setup
 4. Data based feedback on your racing like a PRO
 
-## Racing Data
-
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/BI/" title="BI | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-iot/" title="ioT | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-iot/" title="IoT | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+## Racing Data
+
+The following is based on the repositories: 
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker/overlay" title="Py Router Tracker | Overlay Section" icon="github" >}}
 {{< /cards >}}
-
 
 
 ### Geo Data
@@ -96,6 +95,8 @@ If you know a **circuit's geometry**, why not estimating the best path for a giv
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/kart-optimum-path" title="Optimum Path | part 1" image="/blog_img/data-experiments/kart/optimum-path.png" subtitle="Mass Point Model + G-circle" >}}
 {{< /cards >}}
+
+After a weekend, you can create such videos:
 
 {{< youtube "zm0OJcpuLV8" >}}
 

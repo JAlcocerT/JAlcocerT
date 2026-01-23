@@ -27,6 +27,8 @@ if you are [building a sales pipeline](https://jalcocert.github.io/JAlcocerT/api
 
 ### Newsletters
 
+The power of emails.
+
 #### MailerLite
 
 https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#mailerlite-api

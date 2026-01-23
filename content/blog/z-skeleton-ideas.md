@@ -19,7 +19,34 @@ Get to know them *to potentitally win*.
 
 Sometimes things dont work because you need to do more.
 
-Volume, repetitions, *or just...get started*.
+More Volume, repetitions, getting unconfortable.
+
+Other times, *its just about...get started*.
+
+```mermaid
+flowchart LR
+    %% Styles
+    classDef state fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+    classDef start fill:#43A047,stroke:#1B5E20,stroke-width:2px,color:white;
+
+    %% Nodes
+    Start((Start)):::start --> More
+    More(Doing MORE):::state
+    Better(Doing BETTER):::state
+    Newer(Doing NEWER):::state
+
+    %% Internal Feedback Loops (The Grind)
+    More -- "Scale Up" --> More
+    Better -- "Refine" --> Better
+    Newer -- "Test" --> Newer
+
+    %% The Progression Journey
+    More -- "Capacity Hit" --> Better
+    Better -- "Optimized" --> Newer
+    
+    %% The Upward Spiral
+    Newer -- "New Baseline" --> More
+```
 
 But how to assess if you will be starting a non-sense journey to a path that goes nowhere?
 
@@ -146,7 +173,11 @@ Know your sector
 
 the Business Model Canvas, which is a globally recognized framework that helps visualize how Attraction (Channels/Customer Relationships), Delivery (Key Activities/Resources), and Conversion (Revenue Streams) work together to create a profitable business.
 
-splitting a business into Attraction, Conversion, and Delivery is an excellent way to view the "Engine" of a company. While the profit formula ($P \times V \times GM \times OM \times IF \times T$) tells you what is happening to the money, this three-part framework tells you how the work is getting done.
+splitting a business into Attraction, Conversion, and Delivery is an excellent way to view the "Engine" of a company. 
+
+While the profit formula ($P \times V \times GM \times OM \times IF \times T$) tells you what is happening to the money, this three-part framework tells you how the work is getting done.
+
+[Zoom in](https://mermaid.live/edit#pako:eNqFVGtv2jAU_SuWp06bxCtAWsiHSdCiCqlpacsqbaGq3OQmWE3syHYolPLfd_MAske1fLD8OOc-To69pb4MgDo0Uixdkqu7hSD4nZyQqUgzo8mX-RLIONNcgNZk5Bu-4oaD_loCdfZcMkfGKIanUhDvOH8sUfnnvhjPZeoFDBcR-UzGiomgdj6aPt0jzXijKblU8tUsSbGGaFOhQAQL8UfacylWoHSR9jivhb1nMWivGMko5pFIQJh6Wtcb-b7MhCEuEyyC2vm_El5AzDHLhnj7WS3Y5GHmTZI0lhsA8sDiDMhMybSGuIBV3uAhylzKWP-dDvXPdZ-ICHXPmxRQ6KnL45rYzeY38r6gV8AC3Z7xFAMLWND3mjIlpxxrelXMHxziQOeMmTdT3IfH_yNvvduMCcPNpv0g4yzJOSVrVoBda7velRu31cYe4Fq4QRb0DlYgMqy0OL90n85Z7Hv449FlaBPsm-Q7WcxqPjqIc9Av4AqViTeEJykqoolB2XypDZEhiaQMKsUOhGarbGYShtznIPxN-7vhMX8r8uTNVbXUM1ZbZeVljfhfQ26q8m9c7yYFNGtu7ar6k6rmG7ekHQFT4ctk3_l07E2FAQXatMdSofFzyDl2UPGn45I_Gc8rynzszdkaL6UK4JhnXuGuwfxe3PXMG0tjZEKu0BqPNYvdmw26JaocjguoOyvkcex8CodhQxslX8D51Ov16tiaQ0rs8_OH2IP-JTIIg4-Q17ND5tM6ppo3X3lglk4_XdMGPlo8oI5RGTRoAiph-ZJu83ALik7IVXZwGuC7s6ALsUNOysRPKZM9TcksWlInZLHGVZYG-OJccIaX_QjBiwnqPH8jqDPsFSGos6Vr6jStznDQ6nW7Z3Zv2Dnt2g26oU7XHraGZ_2h1bftztnA6tq7Bn0rklqt_sCyB_Zg2O1aVqc36O1-AbVwvuI).
 
 ```mermaid
 graph LR
@@ -386,6 +417,7 @@ graph LR
     style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
 ```
 
+The value ladder is a thing:
 
 
 ```mermaid
@@ -506,41 +538,3 @@ How about: getting things done?
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
-
----
-
-### TBC
-
-WIP
-
-to go with boilerplate at some poiint (?) or as ebook
-
-  {{< card link="https://github.com/JAlcocerT/entrepre-AI" title="EntrepreAI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code EntrepreAI" >}}
-
-Entrepre-AI Quick Sping
-
-```sh
-git clone
-make container-build
-make container-up
-```
-
-* CTA's
-    * Quieres el premium? No, correre el riesgo!
-    * You don’t have to miss out
-    * They all laugh when…
-    * What sounds better than privacy?
-    * Is your Business performing at 100%? Here is the best/easiest way to find out
-        * Measure, Check, Act
-    * Blinded pa lazyness?
-    * A friend told me that this will fail as people on ig has really nothing to say
-      * Lets proove him wrong
-
-* Interesting catchy sentences:
-  * Pollo hecho en serio y no en serie
-  * Hay una casa para cada persona, hay una app para todas las casas.
-  * Lets sea
-  * We ve bean waiting for you (coffee)
-  * Make IT happen
-  * Fotografiamos historias de amor. 
-    * La historia la escribís vosotros; nosotros la contaremos con imágenes.

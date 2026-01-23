@@ -7,6 +7,13 @@ description: "Using Stable Difussion with DreamBooth"
 url: 'stable-difussion-free-generation'
 ---
 
+
+## AI Generated Video
+
+
+<!-- 
+* https://ltx.studio/ -->
+
 pwa
 https://github.com/kiri-art/stable-diffusion-react-nextjs-mui-pwa
 
