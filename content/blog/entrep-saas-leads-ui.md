@@ -22,7 +22,7 @@ Your product is NOT.
 
 **Intro**
 
-For custom ~~products~~ services: Im starting to let clients do their own quote.
+For custom ~~products~~ services: *Im starting to let clients do their own quote*.
 
 Shoot an unresonably low number and I already know that you are not making enough money with my solutions.
 
@@ -179,7 +179,7 @@ Not there yet?
 
 Too complex reasoning?
 
-Here is a solution to your problem: *When there is no risk for sure there is no opportunity*
+Here is a solution to your problem: *When there is no risk **for sure** there is no opportunity*
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

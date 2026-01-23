@@ -196,7 +196,9 @@ To integrate stripe properly, but not only technically, you need to have a look 
 
 ## In Touch with Clients
 
-**Messaging Automation** for All - Omni-channel marketing automation & transactional messaging. Embeddable, self-hostable, & infinitely flexible.
+**Messaging Automation** for All - Omni-channel marketing automation & transactional messaging. 
+
+Embeddable, self-hostable, & infinitely flexible.
 
 Dittofeed: Free Open Source Automated Communication Platform
 
@@ -242,29 +244,35 @@ You can always [embed things](https://jalcocert.github.io/JAlcocerT/embed-that/)
   {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known" title="Marketing  Example for Services" image="/blog_img/biz/leads/good-old-ad.png" subtitle="Guerrilla Marketing via PDFs!" >}}
 {{< /cards >}}
 
-### Social Media
+0. Social Media: *for those creating content / bip to grow an audience*
 
 Social media ~~is where you think [you have a blog](https://jalcocert.github.io/JAlcocerT/create-your-website/)~~ are big ad platforms:
 
-https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz
 
 ![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
 
-### GAds
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ | 101 Post ↗" image="blog_img/selfh/postiz/postiz-https-ui.png",subtitle="Setup Postiz while tinkering with photo and video" >}}
+  {{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This is DFY only" >}}
+{{< /cards >}}
 
-It's all about: https://ads.google.com/
+1. GAds
+
+It's all about: `https://ads.google.com/`
 
 Google ads plays well with GA4.
 
 You could also use Umami + PostHog to track your ads.
 
-### FaceBook Ads
+2. FaceBook Ads
 
+In theory, cheaper, but with less intent that gads.
+
+So you will potentially need more reps.
 
 ## Leads
 
 It was not obvious to me to understand what a lead is:
-
 
 * https://github.com/JAlcocerT/leads-slubnechwile
 

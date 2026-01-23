@@ -814,6 +814,8 @@ As part of my consulting repository: *the responsible for `consulting.jalcocerte
 git clone https://github.com/JAlcocerT/selfhosted-landing
 cd y2026-tech-talks/langchain-postgres
 #npm run dev 
+#npm i -D playwright-chromium
+#npm run export #default as pdf!
 ```
 
 ![alt text](/blog_img/AIBI/langchain-db-techtalk.png)
