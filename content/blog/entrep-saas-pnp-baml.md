@@ -1,6 +1,6 @@
 ---
 title: "The enterprise insights are behind T-SQL and OracleSQL"
-date: 2026-01-14T23:20:21+01:00
+date: 2026-01-15T23:20:21+01:00
 draft: false
 tags: ["BAML","AI Tech Talk 3","DuckDB vs ClickHouse vs SQlite","Malloy"]
 description: 'From LangChain to BAML for insights extraction reliability. Lets go get them.'

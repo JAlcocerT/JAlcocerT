@@ -590,11 +590,13 @@ sudo apt install proton-vpn-gnome-desktop
 
 But hey, this is just to do legal stuff, like sharing OSS images, like ubuntu.
 
-Dont dare to watch `f movies` with your `cat`. Not interesting [fmhy repo](https://github.com/fmhy/edit) https://fmhy.net/posts/sept-2025 
+Dont dare to watch `f movies` with your `cat`. 
+
+Not interesting [fmhy repo](https://github.com/fmhy/edit): `https://fmhy.net/posts/sept-2025`
 
 Neither read the anna's archive.
 
-Those might be down: https://www.isitdownrightnow.com/
+Those might be down: `https://www.isitdownrightnow.com/`
 
 You know, just in case your cool site gets **banned without a reason**:
 

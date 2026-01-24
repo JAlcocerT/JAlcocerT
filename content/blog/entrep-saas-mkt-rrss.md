@@ -119,7 +119,13 @@ Reports: Pandoc vs Typst vs LaTex
 |                 | Typst        | Clean, easy modern syntax, fast compile      | Newer, evolving            |
 |                 | LaTeX        | Powerful, rich ecosystem for academia        | Steep learning curve       |
 
-This selection depends on priorities: Slidev for modern web presentations, Reveal.js for flexible HTML slides; Pandoc for format conversions, Typst for newer simpler typesetting, and LaTeX for complex document mastery.
+This selection depends on priorities: 
+
+Slidev for modern web presentations
+Reveal.js for flexible HTML slides
+Pandoc for format conversions
+Typst for newer simpler typesetting
+and LaTeX for complex document mastery.
 
 
 
@@ -187,6 +193,11 @@ Social media be like: *100k views 1000 likes 100subs (1/1000 algo free)*
 {{< /cards >}}
 
 ![100k views in a year](/blog_img/data-experiments/yt-1y.png)
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
 ### PRO and automatic content
 

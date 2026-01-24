@@ -1,6 +1,6 @@
 ---
 title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
-date: 2026-01-28T06:20:21+01:00
+date: 2026-01-19T06:20:21+01:00
 draft: false
 tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story"]
 description: 'Building a custom BOT for real estate agencies. With CORS and OpenAI Rate Limiting.'

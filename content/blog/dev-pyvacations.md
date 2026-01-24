@@ -184,7 +184,7 @@ Currency:
 
 The currency in Morocco is the Moroccan Dirham (MAD). As of November 2023, the exchange rate is approximately 10 Moroccan Dirham to 1 US Dollar. However, exchange rates fluctuate, so it's best to check the current rate before your trip.
 
- -->
+-->
 
 
 ## Py-VacAItions

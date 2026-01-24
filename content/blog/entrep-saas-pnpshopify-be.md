@@ -2,7 +2,7 @@
 title: "[Gen-BI] From Shopify to Profit"
 date: 2026-02-05T18:20:21+01:00
 draft: false
-tags: ["RoadMap26","Shopify API","BAML x Vite x Astro"]
+tags: ["RoadMap26","Shopify API","BAML x Vite x Astro","UpTime Kuma x Status Pages"]
 description: 'Got en ecommerce? You are missing an AI Powered COO. Trust this landing.'
 url: 'shopify-business-data-analytics'
 ---
@@ -10,6 +10,9 @@ url: 'shopify-business-data-analytics'
 
 **TL;DR**
 
+
+
++++ Uptime [Status for my new services](#how-about-uptime)
 
 
 **Intro**
@@ -209,3 +212,13 @@ graph
     style Engine fill:#f0f4f8,stroke:#0056b3,stroke-width:2px
     style Goal fill:#f9f,stroke:#333,stroke-width:2px
 ```
+
+### How about UpTime?
+
+1. https://webaudit.jalcocertech.com/
+
+2. https://genbi.jalcocertech.com/
+
+3. https://realestate.jalcocertech.com/
+
+4. https://slubnechwile.com/

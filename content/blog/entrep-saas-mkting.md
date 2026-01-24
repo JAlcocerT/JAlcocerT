@@ -1,8 +1,8 @@
 ---
 title: "Around Marketing for Agencies: Thoughts"
-date: 2026-01-29T23:20:21+01:00
+date: 2026-01-20T23:20:21+01:00
 draft: false
-tags: ["Marketing Analytics","Agency Leads","Side-Quest26","LaunchPad Check list"]
+tags: ["Marketing Analytics","Agency Leads","Side-Quest26","LaunchPad Check List","TTM x LF8"]
 description: 'How effective is your marketing? Custom solutions to feed and improve your agency sales pipeline.'
 url: 'custom-marketing-analytics'
 ---
@@ -14,7 +14,6 @@ After [tinkering with APIFY](https://jalcocert.github.io/JAlcocerT/apify/), it w
 I mean, to build it with the end in mind.
 
 Generate cash flow.
-
 
 **Intro**
 
@@ -34,9 +33,6 @@ Do you want to go via ads? via organic posting/bip and social media? or via cold
   {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="WhoDB Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
-
-
-
 
 
 ## Marketing Examples 
@@ -133,15 +129,13 @@ This started at [this post](https://jalcocert.github.io/JAlcocerT/software-for-m
 
 If you get to know enough from servers, you can always do:
 
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss" title="Marketing around OSS - Mautic" image="/blog_img/selfh/HomeLab/mautic/mautic-ui.png" subtitle="Mautic setup for a marketing agency" >}}
 {{< /cards >}}
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serpbear" title="SerpBear | Docker Config 🐋 ↗" >}}
-    {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postiz" title="PostIZ HomeLab | Docker Configs 🐋 ↗" >}}
-
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postiz" title="PostIZ HomeLab | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
 
@@ -170,6 +164,7 @@ ERP's
 ### Marketing Resources
 
 * https://github.com/goabstract/Marketing-for-Engineers
+* https://fmhy.net/
 
 
 

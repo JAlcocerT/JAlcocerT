@@ -151,7 +151,6 @@ https://jalcocert.github.io/JAlcocerT/creating-landing-pages-astro/#the-result
 
 
 
-
 ### Integrate Stripe
 
 You can enable so that before someone booking your time, they have to pay first:
