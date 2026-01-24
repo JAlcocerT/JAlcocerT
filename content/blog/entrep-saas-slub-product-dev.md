@@ -2,7 +2,7 @@
 title: "Improving a micro-SaaS Conversion"
 date: 2026-01-21T08:20:21+01:00
 draft: false
-tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap ESP","ATF x Time2Value"]
+tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap ESP x DRIP","ATF x Time2Value"]
 description: 'Iterating over an existing product to increase its LTV to CAC. Weddings 2026'
 url: 'iterating-and-improving-a-micro-saas'
 ---
@@ -94,12 +94,22 @@ Or just friendly desins `https://kursy.ikliszcz.com/`
 
 ### A better FAQ
 
+In general, a better copy.
+
+You are paying ~1$ for 5 seconds of attention.
+
+At least get the email via signup.
+
 
 ### Emails to show that you are still there
 
-Pros say that every email should contain: diversion, information, Venta.
+Pros say that every email should contain: *diversion, information, Venta*.
 
-Sell a transformation. Not the vehicle, but the pain removal and dream outcome destination.
+Sell a transformation.
+
+Not the vehicle, but the pain removal and dream outcome destination.
+
+But send emails...to whom?
 
 You should be able to query the registered at Firebase/Firestore: *same as done with this script*
 
@@ -107,7 +117,17 @@ You should be able to query the registered at Firebase/Firestore: *same as done 
 
 ```
 
-I was doing so with the slidev Firebase version. Same here.
+> I was doing so first with the [slidev Firebase branch](https://github.com/JAlcocerT/slidev-editor/blob/firebaseauth/z-firebase-auth.md) version. Same here.
+
+Then, get to know email DRIP.
+
+It's a descriptive metaphor for the slow, steady "dripping" of automated email messages over time, like water from a faucet, rather than a sudden flood.
+
+The term evokes gradual nurturing of leads through timed sequences.
+
+> And anyone trying the free tier should have opt-in for this
+
+> > No email DRIP, unsubcribed and erased from DB. Simple.
 
 
 ---
@@ -142,7 +162,7 @@ Dare to get some goodies, as I have here:
 
 How did I came up with all this?
 
-
+Just doing.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf" title="QR CSR | Python static server ↗" icon="github" >}}

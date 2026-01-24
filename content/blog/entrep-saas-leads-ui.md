@@ -1,6 +1,6 @@
 ---
 title: "How about getting leads for your SaaS?"
-date: 2026-01-25T09:20:21+01:00
+date: 2026-01-24T09:20:21+01:00
 draft: false
 tags: ["BiP x GTM","APIFY x ESP Sales Pipeline","RoadMap26"]
 description: 'Forget about B2C, sell to B2B as they have the budget for whatever product helps.'
@@ -75,7 +75,9 @@ When it is completed, create a `z-walkthrough.md` with the steps to deploy the a
 
 Consider adding a Terms of Service / **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
 
-Add also a faq section, that instead of been controlled via a json, lets have it controlled as per the frontmatter and content of separated markdown files inside the folder `faq`. The logic should read them in order as per their file name and show them in the right component of the UI.
+Add also a faq section, that instead of been controlled via a json, lets have it controlled as per the frontmatter and content of separated markdown files inside the folder `faq`.
+
+The logic should read them in order as per their file name and show them in the right component of the UI.
 
 > When these change, consider sending an email to your existing clients!
 
@@ -132,7 +134,7 @@ And if you need more:
 
 {{< /details >}}
 
-> The BRD, tech stack, clarifications, dev phases and walkthough. With sales and psyc plugged in.
+> The BRD, tech stack, clarifications, dev phases and walkthough. With sales and psyc plugged in!
 
 ### Use APIFY to the Max
 
@@ -193,6 +195,17 @@ With that you get up to speed quickly with how to use your wishes to build:
 And how to do so, so that you build something that somebody wants: *not what you think they want*
 
 ![Vibe Coding - Wrong Product Output](/blog_img/dev/Simpson_Producto_La_escopeta_maquilladora.gif)
+
+
+###
+
+When you are done, you can clear up with:
+
+```sh
+#docker stop $(docker ps -a -q) #stop all
+#docker system df
+#docker system prune -a --volumes -f
+```
 
 ---
 

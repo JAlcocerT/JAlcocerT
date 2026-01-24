@@ -1,8 +1,8 @@
 ---
 title: "Mass produced information content"
-date: 2026-01-21T23:20:21+01:00
+date: 2026-03-01T23:20:21+01:00
 draft: false
-tags: ["Social Media Marketing","Side-Quest26","Youtube"]
+tags: ["Social Media Marketing","Side-Quest26","Youtube","Stonks"]
 description: 'Is value based content dead?'
 url: 'social-media-content'
 ---
@@ -20,13 +20,19 @@ Educational content and *how to'* are not what they used to.
 
 You need to 
 
+## From PyStonks
+
+Needs ideas from here and here?
+
+1. Gap between dividend yield and 10Y bond price.
+
 ---
 
 ## Conclusions
 
 We are moving forward a new state where: *Value its abstracted one layer*
 
-<!-- https://youtu.be/KjLT0DhE2fs?si=JFWHmWiw5xJCgy5h -->
+<!-- https://youtu.be/KjLT0DhE2fs -->
 
 {{< youtube "KjLT0DhE2fs" >}}
 

@@ -46,15 +46,135 @@ But first, a look to few popular storage for enterprises.
 
 ### TSQL
 
-Transact SQL - The one that
+Transact SQL - Tsql.
+
+T‑SQL is Microsoft’s extended SQL dialect with procedural extras like variables, loops, and TRY…CATCH for stored procs/triggers.
+
+Microsoft SQL Server is the RDBMS engine that runs T‑SQL (and standard SQL) for data storage/querying.
+​
+T‑SQL code isn’t fully portable to other DBs like Postgres, but SQL Server is the primary platform for it.
+​
+SQL Server self‑hosting
+Yes, fully legal for internal/on‑premises use via Per Core/Server+CAL licenses assigned to your hardware/VMs.
+
+Free Express/Developer editions work for small‑scale or dev; SaaS hosting needs special self‑hosted app rules or SPLA.
 
 ### Oracle SQL
+
+Oracle SQL refers to the SQL dialect used in Oracle Database, but the procedural extension is **PL/SQL** (Procedural Language/SQL), which is Oracle's equivalent to T-SQL. 
+
+PL/SQL seamlessly extends standard SQL with procedural constructs like loops, conditions (IF-THEN-ELSE), exception handling, variables, procedures, functions, packages, triggers, and collections (arrays). [en.wikipedia](https://en.wikipedia.org/wiki/PL/SQL)
+
+It's compiled and stored server-side in Oracle Database, enabling efficient data processing without app roundtrips. 
+
 
 ### DuckDB vs ClickHouse vs SQLite
 
 Some people say that duckdb is the opposity of redshift.
 
 The most common shorthand is: *DuckDB is to Redshift (both columnar, OLAP) what SQLite is to PostgreSQL.*
+
+SQLite and DuckDB are both embedded, but they target almost opposite workloads: SQLite is for small transactional apps, DuckDB is for local analytics on larger datasets. [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/)
+
+## Mental model (when to use which)
+
+- Use **SQLite** when you need:  
+  - A simple embedded OLTP store for apps (mobile, desktop, IoT, local cache). [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison)
+  - Lots of small inserts/updates, point lookups, and very low overhead. [sqlflash](https://sqlflash.ai/article/20251119_sqlite_vs_duckdb/)
+  - A stable, tiny dependency you can ship everywhere, with conservative resource usage. [sqlite](https://www.sqlite.org/about.html)
+
+- Use **DuckDB** when you need:  
+  - OLAP‑style queries: big scans, joins, aggregations over millions of rows. [duckdb](https://duckdb.org/why_duckdb.html)
+  - Columnar / vectorized execution, parallelism, and larger‑than‑memory analytical queries. [docs.kanaries](https://docs.kanaries.net/topics/DuckDB/duckdb-vs-sqlite)
+  - To query Parquet/CSV files or power local analytics / BI / data‑science workflows. [docs.rilldata](https://docs.rilldata.com/reference/olap-engines/duckdb)
+
+## Architecture and performance
+
+- **Storage model**: SQLite is row‑oriented, great for reading/writing whole rows quickly; DuckDB is columnar, great for scanning a few columns over many rows. [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/)
+- **Execution engine**: SQLite processes tuples row‑by‑row; DuckDB uses columnar‑vectorized batches, which radically reduces per‑value overhead on analytical workloads. [docs.kanaries](https://docs.kanaries.net/topics/DuckDB/duckdb-vs-sqlite)
+- **Parallelism**: SQLite uses a single thread per query and a single‑writer model; DuckDB parallelizes queries across cores and can spill to disk for out‑of‑core analytics. [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison)
+- **Typical result**: On big analytical queries DuckDB is often orders of magnitude faster; on small indexed lookups SQLite is very competitive or better. [motherduck](https://motherduck.com/learn-more/duckdb-vs-sqlite-databases/)
+
+Practical scenarios (for your kind of projects)
+
+- **Indie SaaS / web apps**  
+  - Primary OLTP DB: usually Postgres/MySQL; SQLite as a light embedded component or for single‑tenant local deployments. [sqlite](https://sqlite.org/features.html)
+  - For this, DuckDB is not a replacement; it’s more a companion for analytics.
+
+- **Local analytics / “Edge” or on‑device data work**  
+  - If you’re crunching logs, metrics, Parquet/CSV locally (ETL, dashboards, experiments), DuckDB is a sweet spot: embedded, but with warehouse‑like query power. [linkedin](https://www.linkedin.com/pulse/introduction-duckdb-embedded-analytical-revolution-rick-hightower-o21hf)
+  - Example: Your app writes events to files or SQLite, and a DuckDB process periodically loads them and produces aggregates.
+
+- **Hybrid pattern that maps well to libSQL/Turso**  
+  - OLTP: SQLite/libSQL/libSQL‑server (like in the video) for app state and transactional behavior. [sqlite](https://www.sqlite.org/about.html)
+  - OLAP: DuckDB reading replicated snapshots (or WAL‑derived files, or exported Parquet) for heavy analytics, without touching the hot OLTP path. [motherduck](https://motherduck.com/learn-more/duckdb-vs-sqlite-databases/)
+
+
+| Aspect | SQLite | DuckDB |
+| --- | --- | --- |
+| Workload focus | OLTP: small, frequent reads/writes, point lookups.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | OLAP: scans, joins, aggregations on large datasets.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) |
+| Storage | Row‑based, page‑oriented.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | Columnar storage.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) |
+| Execution | Tuple‑at‑a‑time, single‑threaded per query.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | Columnar‑vectorized, multi‑core parallel.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) |
+| Best use cases | Embedded app DB, config, cache, mobile/IoT, small web backends.  [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison) | Local analytics, data science, BI, ETL over Parquet/CSV/SQLite dumps.  [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison) |
+| Scalability style | Scales in simplicity and deployment ubiquity; limited for heavy analytics and concurrency.  [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison) | Scales in analytical throughput, can handle larger‑than‑memory datasets via out‑of‑core execution.  [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison) |
+
+ClickHouse, DuckDB, and SQLite form a nice spectrum: SQLite for embedded OLTP, DuckDB for local OLAP in‑process, ClickHouse for large, multi‑user OLAP clusters. [airbyte](https://airbyte.com/data-engineering-resources/clickhouse-vs-duckdb)
+
+Mental model in one line each
+
+- **SQLite**: Tiny, embeddable transactional store for apps (phones, desktop, IoT, small web backends). [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/)
+- **DuckDB**: Embeddable analytical engine for local, in‑process queries over files or small/medium datasets. [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison)
+- **ClickHouse**: Distributed columnar OLAP database for large‑scale, real‑time analytics and dashboards. [influxdata](https://www.influxdata.com/comparison/clickhouse-vs-duckdb/)
+
+Core roles
+
+- **SQLite**  
+  - OLTP focus: fast inserts/updates, point lookups, simple queries. [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/)
+  - Row‑based storage, single‑file deployment, minimal footprint. [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison)
+  - Great for configs, local data, offline‑first apps, small SaaS backends. [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison)
+
+- **DuckDB**  
+  - OLAP focus: scans, joins, aggregations on millions of rows. [duckdb](https://duckdb.org/why_duckdb.html)
+  - Columnar + vectorized engine, optimized for running inside your app / notebook. [influxdata](https://www.influxdata.com/comparison/clickhouse-vs-duckdb/)
+  - Ideal for data‑science workflows, querying Parquet/CSV, interactive local analytics. [docs.rilldata](https://docs.rilldata.com/reference/olap-engines/duckdb)
+
+- **ClickHouse**  
+  - OLAP focus at **cluster scale**: time‑series, logs, events, metrics, real‑time dashboards. [sqlflash](https://sqlflash.ai/article/20250902_duckdb_vs_clickhouse/)
+  - Distributed, columnar, massively parallel; designed for billions of rows and high write throughput. [datadope](https://datadope.io/en/clickhouse-a-columnar-database-for-large-scale-data-analysis/)
+  - Server‑based with many integrations and cloud offerings. [celerdata](https://celerdata.com/glossary/what-is-clickhouse)
+
+- **Choose SQLite** when:  
+  - You’re building a small web/desktop/mobile app and need a simple, reliable embedded DB. [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/)
+  - Data volume is modest, queries are simple, and you care about minimal ops and footprint. [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/)
+
+- **Choose DuckDB** when:  
+  - You want to run analytical queries inside the app or ETL job, without a separate DB server. [kestra](https://kestra.io/blogs/embedded-databases)
+  - You’re doing local exploration of logs/Parquet/CSV, interactive analytics, or notebook‑driven dev. [dev](https://dev.to/foxgem/duckdb-vs-clickhouse-local-a-comparative-analysis-for-analytical-workloads-4be5)
+
+- **Choose ClickHouse** when:  
+  - You need multi‑user analytics over very large, fast‑growing datasets (events, observability, billing, recommendations). [gocodeo](https://www.gocodeo.com/post/what-is-clickhouse-the-fastest-olap-database-for-real-time-analytics)
+  - You want real‑time dashboards and complex queries with low latency at high concurrency. [instaclustr](https://www.instaclustr.com/education/clickhouse/clickhouse-architecture-4-key-components-and-optimization-tips/)
+
+Architectural fit examples
+
+- **Indie SaaS with analytics inside the product**  
+  - App DB: Postgres/SQLite/libSQL. [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison)
+  - Analytics: DuckDB for in‑process aggregates over event dumps; ClickHouse only if you cross into billions of events and many tenants/viewers. [airbyte](https://airbyte.com/data-engineering-resources/clickhouse-vs-duckdb)
+
+- **Analytics platform / observability tool**  
+  - ClickHouse as primary OLAP store for ingestion and queries. [datadope](https://datadope.io/en/clickhouse-a-columnar-database-for-large-scale-data-analysis/)
+  - DuckDB for ad‑hoc local analysis, prototyping, or running heavy experiments on subsets or snapshots. [sqlflash](https://sqlflash.ai/article/20250902_duckdb_vs_clickhouse/)
+
+Side‑by‑side overview
+
+| Aspect | SQLite | DuckDB | ClickHouse |
+| --- | --- | --- | --- |
+| Primary workload | **OLTP** (app data, configs, caches).  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | **OLAP** (local analytics, ETL, data science).  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | **OLAP** (large‑scale, real‑time analytics).  [airbyte](https://airbyte.com/data-engineering-resources/clickhouse-vs-duckdb) |
+| Deployment | Embedded library, single file on disk.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | Embedded, in‑process; no server.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | Server/cluster, distributed nodes.  [airbyte](https://airbyte.com/data-engineering-resources/clickhouse-vs-duckdb) |
+| Storage model | Row‑based.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | Columnar.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | Columnar.  [airbyte](https://airbyte.com/data-engineering-resources/clickhouse-vs-duckdb) |
+| Scale sweet spot | MB–few GB, single‑user/small multi‑user.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | GB–tens/hundreds of GB on one machine.  [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison) | Hundreds of GB–TB+ across many nodes.  [airbyte](https://airbyte.com/data-engineering-resources/clickhouse-vs-duckdb) |
+| Typical use | App DB, offline storage.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | Notebook/ETL analytics, local dashboards.  [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison) | Logging, metrics, product analytics, BI.  [airbyte](https://airbyte.com/data-engineering-resources/clickhouse-vs-duckdb) |
+
 
 This is where it all connects [in the D&A space](https://jalcocert.github.io/JAlcocerT/career/):
 
@@ -545,7 +665,7 @@ Regardless of the approach, follow these rules to ensure your Power BI model is 
 
 If you are coming from the **Lloyd Tabb/Looker** world, Power BI feels different because the "Semantic" part is often bundled inside the report file. However, by using **Power BI Datasets (Live Connection)**, you can replicate that "Looker Vibe" where the logic is centralized and separated from the visuals.
 
-## SQL vs Malloy
+### SQL vs Malloy
 
 **Malloy** is a modern, open-source language for data modeling and querying, created by **Lloyd Tabb** (the founder of Looker) and a team at Google.
 
@@ -811,3 +931,47 @@ Which one should you choose?
 * **Choose Neon** if you want a powerful, modern **PostgreSQL** experience without managing servers.
 * **Choose Cloudflare D1** if you are already in the **Cloudflare ecosystem** and need a simple, fast SQL database for a global app.
 * **Choose Redshift** if you are doing **Data Science** or building a Business Intelligence dashboard.
+
+### More about BAML
+
+BAML and function calling
+
+- BAML is a framework/DSL that treats LLM prompts as **functions** with typed inputs and typed outputs, compiling them into regular code (TS, Python, etc.).[1][2]
+
+- OpenAI “function calling” (tools) lets you describe functions via JSON schemas so the model can return structured JSON that you then execute in your app.[3][4]
+
+#### How BAML implements LLM functions
+
+- In BAML you write definitions like `function ExtractResume(text: string) -> Resume { ... }` and BAML generates client bindings plus a prompt that injects the output schema via `{{ ctx.output_format }}`.[5][2]
+- It uses Schema‑Aligned Parsing (SAP) to repair and coerce the model’s output into the target schema quickly, improving reliability over raw JSON parsing.[6][5]
+
+#### How OpenAI function calling works
+
+- You pass a `tools` array describing your functions (name, description, JSON parameter schema) and the model responds with tool calls plus arguments in JSON when appropriate.[4][3]
+- Your code parses those arguments, calls your real functions or APIs, optionally feeds results back to the model, and continues until you have a final answer.[3]
+
+#### Routing to Astro components
+
+- Both approaches can be used as a “router” layer: the LLM chooses among logical actions like `show_homepage`, `show_product({ slug })`, etc., and your Astro server code maps those actions to pages/components.[7][8]
+- With OpenAI tools you expose these as functions; with BAML you might define a single `RouteQuery(query) -> RouteDecision` union type and switch on that to choose the Astro route.[9][5]
+
+Practical upshot for your use case
+
+- Yes, either OpenAI function calling or BAML can decide which Astro component/page to serve based on a user’s query; the difference is mostly ergonomics and robustness of structured output. 
+
+BAML gives you stronger typing and parsing; OpenAI tools are simpler if you’re already in that ecosystem.
+
+### LibSQL?
+
+This come from a YouTube video titled **“The Inevitable Evolution of SQLite”** from the DevOps Toolbox series, published on Jan 16, 2026, about an 11‑minute overview of libSQL and related tooling. 
+
+
+- Presents **libSQL** as an open‑source fork of SQLite that accepts external contributions and is designed for replication, distribution, and scale.   
+- Shows **LibSQL server (sqld)** providing remote access similar to PostgreSQL/MySQL, with a core in C and new server features in Rust.   
+- Mentions Turso’s in‑progress Rust rewrite (Torso, previously Limbo) as “next evolution of SQLite,” but that is left for another video. 
+
+
+Key ideas about SQLite vs libSQL
+
+- SQLite’s **limitations** called out: it is a single file on disk that is great for many workloads but not straightforward to cluster, shard, or distribute.   
+- libSQL adds **replication**, **remote access**, **vector types**, and nicer CLIs on top of SQLite semantics while still relying on a WAL file for write‑ahead logging and data integrity.   

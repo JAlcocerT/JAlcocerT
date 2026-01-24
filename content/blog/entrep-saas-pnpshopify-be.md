@@ -125,6 +125,12 @@ cd poc_shopify/landing
 #docker builder prune	
 ```
 
+Nobody hitting Umami Web Analytics?
+
+Time to bring eyes interested in shopify to your landing, consider:
+
+1. `https://www.storecensus.com/pricing`
+
 ### The Delivery
 
 A backend plugged to the landing that we have created on [this post](https://jalcocert.github.io/JAlcocerT).
@@ -133,7 +139,7 @@ It needs manual on boarding, not focusing on automated on boarding.
 
 First finding prospects is a priority.
 
-Same as finding people interested in a tech talk is more important than doing a tech talk to an empty room
+Same as finding people interested in a tech talk is more important than doing a tech talk to an empty room.
 
 ### D&A Articles
 

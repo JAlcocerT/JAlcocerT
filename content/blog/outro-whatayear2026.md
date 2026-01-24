@@ -667,6 +667,12 @@ For the very alergic to the risk...well...keep your ~0% at the bank. Its saaaaaf
 
 9. Collecting case studies / success stories
 
+10. Reading books - To act
+
+Like around marketing and sales.
+
+
+
 #### Stop Doing
 
 1. Opening more and more a shallow tech stack. 

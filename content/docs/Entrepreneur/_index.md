@@ -54,7 +54,7 @@ A SaaS be like:
 
 ### Formbricks
 
-It's all about this fantastic Service: https://app.formbricks.com/auth/login
+It's all about this fantastic Service: `https://app.formbricks.com/auth/login`
 
 {{< details title="Cool Things with FormBricks 📌" closed="true" >}}
 
@@ -124,6 +124,12 @@ Thats a killer feature to bring to your PoCs, specially when you have a low mark
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#ads" title="Marketing x Ads | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+You can see how users behave and validate your assumptions on your value equation:
+
+Also see how the offer and pricing make users flow through your full stack funnel: 
+
+P*V*GM*OM*F*T=Net_Profit
+
 
 ## Offers
 
@@ -167,11 +173,15 @@ graph TD
 
 Most people will NOT buy from you. 
 
-But they will judge you by the quality of your free give aways - Like FREE content, templates, audits...
+But they will judge you by the quality of your free give aways.
+
+Like FREE content, templates, audits...
 
 Then...How to sell? 
 
 *Aka, convince that you can solve problems*
+
+You need to gain authority and show enough parts *of your Trikini: attraction, conversion, delivery*.
 
 It's all about how valuable your clients perceive their time is compared to how good your offer is to solve their problems.
 
@@ -283,7 +293,7 @@ The best elements of a SaaS offer change dramatically depending on the customer 
 | **Support Model** | **Self-Serve:** Extensive Help Docs, Community Forums, Chatbots. | **Reactive:** Email/Chat Support with a guaranteed **Response Time**. | **Proactive:** Dedicated **Customer Success Manager (CSM)**, 24/7 Phone Support, shared Slack channels. |
 | **Sales Motion** | **Product-Led Growth (PLG):** Self-sign-up and conversion. | **Hybrid:** Self-serve up to a price point, then a light touch from Sales. | **Sales-Led:** Demos, custom quotes, long negotiation cycle involving legal/procurement. |
 
-{{< details title="High-Level SaaS Offer per Customer Segmentation |  📌" closed="true" >}}
+{{< details title="High-Level SaaS Offer per Customer Segmentation | B2C SMB B2B  📌" closed="true" >}}
 
 1. B2C (Business-to-Consumer)
 
@@ -398,7 +408,7 @@ By fleshing out these three feature categories, you turn a broad segment into a 
 
 Believe it 100% or not - Controversion alert:
 
-I think that stating that **value is subjective** is not a bad [starting point for a Pricing strategy](https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy).
+Stating that **value is subjective** is not a bad [starting point for a Pricing strategy](https://jalcocert.github.io/JAlcocerT/real-estate-website/#pricing-strategy).
 
 Get clarity on this (*your mission!*): Who are you helping (vs) who are you serving?
 

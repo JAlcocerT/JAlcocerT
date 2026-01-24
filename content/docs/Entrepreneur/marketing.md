@@ -214,8 +214,7 @@ You can always [embed things](https://jalcocert.github.io/JAlcocerT/embed-that/)
 
 Social media ~~is where you think [you have a blog](https://jalcocert.github.io/JAlcocerT/create-your-website/)~~ are big ad platforms:
 
-
-![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png)
+<!-- ![PostIZ working with https](/blog_img/selfh/postiz/postiz-https-ui.png) -->
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#how-to-setup-postiz" title="PostIZ | 101 Post ↗" image="/blog_img/selfh/postiz/postiz-https-ui.png" subtitle="Setup Postiz while tinkering with photo and video" >}}

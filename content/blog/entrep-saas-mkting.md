@@ -1,21 +1,23 @@
 ---
-title: "Around Marketing for Agencies: Thoughts"
+title: "Marketing and Agencies: Thoughts"
 date: 2026-01-20T23:20:21+01:00
 draft: false
-tags: ["Marketing Analytics","Agency Leads","Side-Quest26","LaunchPad Check List","TTM x LF8","Unit Economics 103"]
-description: 'How effective is your marketing? Custom solutions to feed and improve your agency sales pipeline.'
+tags: ["Selfhosted Marketing","Agency Leads","Side-Quest26","LaunchPad Check List","TTM x LF8","Unit Economics 103"]
+description: 'How effective is your marketing? Resources to improve your conversions.'
 url: 'custom-marketing-analytics'
 ---
 
 **Tl;DR**
 
-After [tinkering with APIFY](https://jalcocert.github.io/JAlcocerT/apify/), it was obvious I needed to built something.
+After [tinkering with APIFY](https://jalcocert.github.io/JAlcocerT/apify/), it was obvious I needed to built something around marketing and sales...
 
-I mean, to build it with the end in mind.
-
-Generate cash flow.
++++ and reading some [mkt resources / books](#marketing-resources)
 
 **Intro**
+
+...I mean, to build it with the end in mind.
+
+Generate cash flow.
 
 Your interest are often *potentially* benefitial to others.
 
@@ -38,7 +40,6 @@ Do you want to go via ads? via organic posting/bip and social media? or via cold
 ## Marketing Examples 
 
 In the end of last year I found this: *when looking for nextjs web apps on yt*
-
 
 Example 1: `https://lastcodebender.com/` and `https://www.youtube.com/@thecodebendermaster/videos`
 
@@ -63,7 +64,7 @@ Great, I qualify for your emails:
 
 ### Example 2
 
-* `https://mongemalo.com/`
+Need B2B sales ideas? See `https://mongemalo.com/`
 
 After placing your mail, you get: `https://mongemalo.com/rechazado/`
 
@@ -71,12 +72,10 @@ And once you confirm it: `https://mongemalo.com/importante-mensaje/`
 
 You are already prompted to buy an info product: `https://youtu.be/kwIgobHPwxY`
 
-### What if I need a newsletter
+### Example 3
 
+For copywriting, see Isra Bravo.
 
-* https://kit.com/use-cases/marketers
-
-Convert kit versus MailChimp?
 
 ## From bots to leads
 
@@ -135,6 +134,46 @@ If you get to know enough from servers, you can always do:
   {{< card link="https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#marketing-around-oss" title="Marketing around OSS - Mautic" image="/blog_img/selfh/HomeLab/mautic/mautic-ui.png" subtitle="Mautic setup for a marketing agency" >}}
 {{< /cards >}}
 
+Listmonk stands out as the top open-source alternative for self-hosted email capture and sequential campaigns.
+
+Recommended Tool: Listmonk
+
+Listmonk is a free, high-performance, self-hosted newsletter manager with SQL-based subscriber segmentation, drip campaigns, and templates using Go templating.
+
+It captures emails via opt-in forms/API, handles millions of subscribers, and supports multi-SMTP queues with analytics for opens/bounces.
+
+Other Strong Options
+
+| Tool       | Key Strengths                          | Tech Stack     | Best For                  |
+|------------|----------------------------------------|----------------|---------------------------|
+| Mautic    | Full marketing automation, workflows, landing pages  [gurkhatech](https://gurkhatech.com/self-hosted-drip-email-campaigns-guide/) | PHP/Symfony   | Complex sequences, CRM integration |
+| Mailtrain | RSS-triggered campaigns, MJML templates, segmentation  [gurkhatech](https://gurkhatech.com/self-hosted-drip-email-campaigns-guide/) | Node.js/MySQL | Balanced newsletters/drips |
+| SendPortal| API-first, segments, tracking  [sendportal](https://sendportal.io) | Laravel/PHP   | Developer-friendly extensibility |
+
+These fit indie/micro-SaaS needs like PocketBase but add native email marketing, all deployable via Docker on your self-hosted infra. [github](https://github.com/marcelkooi/awesome-newsletter-tools)
+
+Yes, you can skip Listmonk entirely if PocketBase (PB) handles email storage and your Python script manages drips via Mailtrap.
+
+Why Skip Listmonk
+
+With PB storing subscribers (e.g., in a "subscribers" collection with fields like email, signup_date, drip_stage), your cron script queries unsent stages (e.g., `pb.collection('subscribers').getList(1, 50, { filter: 'drip_stage = \"pending\"' })`), sends via Mailtrap API, then updates the record.
+
+No need for Listmonk's bulk/newsletter features if your focus is simple transactional drips—PB + Python is leaner for micro-SaaS. 
+
+When PB + Script Wins
+- **Customization**: Tailor logic (e.g., personalize by user data) without Listmonk's SQL segments. [pocketbase](https://pocketbase.io/docs/js-sending-emails/)
+- **Minimal stack**: Single binary PB + VPS cron, no extra Postgres/Docker for Listmonk. [listmonk](https://listmonk.app)
+- **Cost/privacy**: Full control, GDPR-friendly with PB rules.
+
+| Feature             | PB + Python Script             | Listmonk                       |
+|---------------------|--------------------------------|--------------------------------|
+| Drip Automation    | Full via cron/queries  [pocketbase](https://pocketbase.io/docs/js-sending-emails/) | External (n8n), no native  [github](https://github.com/knadh/listmonk/issues/2198) |
+| Bulk Newsletters   | Script it (low volume)        | Native queues/analytics  [listmonk](https://listmonk.app) |
+| UI Management      | PB admin + script logs        | Rich dashboard/forms  [listmonk](https://listmonk.app)   |
+| Scale              | Fine for <10k subs            | Millions optimized  [listmonk](https://listmonk.app)    |
+
+Stick with PB/script for your indie needs unless scaling newsletters. 
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serpbear" title="SerpBear | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postiz" title="PostIZ HomeLab | Docker Configs 🐋 ↗" >}}
@@ -162,6 +201,17 @@ ERP's
 
   * https://www.youtube.com/watch?v=X08dEN_rWyg
     <!-- https://github.com/jmlcas/erpnext -->
+
+    
+#### What if I need a newsletter
+
+You can try with `https://kit.com/use-cases/marketers`
+
+Convert kit versus MailChimp?
+
+Or...go ahead with formbricks surveys, a firebase signup with previous marketing opt-in accepted.
+
+Or.......pocketbase + ESP.
 
 ### Marketing Resources
 
