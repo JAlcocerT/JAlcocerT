@@ -2,7 +2,7 @@
 title: "A SaaS with 100% Churn, yet LTV > CAC"
 date: 2026-01-13T14:20:21+01:00
 draft: false
-tags: ["Landing x MVP SaaS","BiP x RoadMap26","MailTrap ESP x Firebase FireStore"]
+tags: ["Landing x MVP SaaS","BiP x RoadMap26","MailTrap ESP x Firebase x FireStore"]
 description: 'Ship and direct traffic via Google ads. Weddings 2026'
 url: 'bring-eyes-to-your-saas'
 ---
@@ -14,11 +14,8 @@ MVP first - *Tomate fuco y a toma pcul0*
 
 Get those eyes going via ads towards: `https://www.slubnechwile.com/`
 
-See what works and what not - PMF :)
+See what works and what not - PMF (?) :)
 
-```sh
-npm install stripe firebase-admin
-```
 
 **Intro**
 
@@ -252,7 +249,7 @@ Not all the content is indexed in the same way across engines and you can miss v
 
 ### Tinkered with Serverless
 
-And i dont mean static deploy to cloudflare pages this time
+And i dont mean static deploy to cloudflare pages this time.
 
 I mean about serverless s3 storage, via **cf R2**.
 
@@ -285,6 +282,12 @@ AUTH_TOKEN=
 
 # Note: Workers API method doesn't use these environment variables
 # It uses R2 bindings configured in wrangler.toml instead
+```
+
+And also: *serverless auth via firebase auth*
+
+```sh
+npm install stripe firebase-admin
 ```
 
 ### And ... more websites

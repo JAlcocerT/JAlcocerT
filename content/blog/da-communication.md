@@ -14,7 +14,7 @@ I understand that.
 But there are other options, paid ones, like slack or discord:
 
 ```sh
-sudo snap install slack --classic
+sudo snap install slack --classic #sudo snap remove slack
 #sudo snap install discord
 ```
 

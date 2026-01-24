@@ -11,8 +11,6 @@ url: 'custom-re-rag'
 
 What it should have been the Real Estate project from its conception.
 
-https://www.youtube.com/watch?v=cEfqonasQ0M
-
 **Intro**
 
 It all started with the QnA of streamlit over sample property data on `.md` files back in 2024.
@@ -308,8 +306,6 @@ Fortunately, you can fill your [sales pipeline](https://jalcocert.github.io/JAlc
 
 Some notes around there [here](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales.md) and [here](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md).
 
-
-
 You can't get to places that you dont know they exists.
 
 To open your mind to new possibilities, you can always try these:
@@ -332,9 +328,13 @@ I have mine here for such projects: *because not everyone is ready to pay the va
 
 ### PS
 
-Tired of scope creep eating your GM as a service agency?
+Tired of *scope creep* eating your GM as a service agency?
 
-Get better clients: they pay more and trust more your decisions :)
+Get better *high paying* clients: they pay more and trust more your decisions :)
+
+Dedicate time to prospect clients.
+
+Outbound (the one you choose) >>> Inbound
 
 ---
 
@@ -343,6 +343,12 @@ Get better clients: they pay more and trust more your decisions :)
 ### About RAG and BOTs
 
 RAG has 3 years, you get asked 5y experience if you are trying to land such jobs.
+
+<!-- 
+https://www.youtube.com/watch?v=cEfqonasQ0M 
+-->
+
+{{< youtube "cEfqonasQ0M" >}}
 
 But the good thing, is that you can vibe coded a cool chatwidget, which replies as per FASTApi in the backend.
 

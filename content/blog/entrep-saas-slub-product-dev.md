@@ -2,7 +2,7 @@
 title: "Improving a micro-SaaS Conversion"
 date: 2026-01-21T08:20:21+01:00
 draft: false
-tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap ESP x DRIP","ATF x Time2Value"]
+tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap API ESP x DRIP","ATF x Time2Value"]
 description: 'Iterating over an existing product to increase its LTV to CAC. Weddings 2026'
 url: 'iterating-and-improving-a-micro-saas'
 ---
@@ -111,11 +111,27 @@ Not the vehicle, but the pain removal and dream outcome destination.
 
 But send emails...to whom?
 
-You should be able to query the registered at Firebase/Firestore: *same as done with this script*
+You should be able to query the registered at Firebase/Firestore: *so I put together these scripts*
+
+> You will need the [firebase console SDK creds](https://console.firebase.google.com/project/slubnechwile-a3fd3/settings/serviceaccounts/adminsdk) to get the `service-account.json`
 
 ```sh
+git clone https://github.com/JAlcocerT/slubne-chwile-y26
+#git pull
+cd slubne-chwile-y26/slubnechwile
+#docker compose -f docker-compose.cloudflare.yml up -d --build
 
+# 1. Check Wedding Details (Firestore)
+node --env-file=.env scripts/list-users.mjs #--csv
+
+# 2. Check login accounts (Firebase Auth)
+node --env-file=.env scripts/list-auth-users.mjs
 ```
+
+│ (index) │ Email                     │ Names            │ Paid │ Storage   │ Created     │ Last Seen                │
+├─────────┼───────────────────────────┼──────────────────┼──────┼───────────┼─────────────┼──────────────────────────┤
+│ 0       │ '@gmail.com'      │ 'ba & do' │ '❌' │ '0.00 MB' │ '1/13/2026' │ 'Never'                  │
+│ 1       │ '@gmail.com'     │ 'Test1 & test2'  │ '❌' │ '0.00 MB' │ '1/13/2026' │ '1/24/2026, 11:02:59 PM' │
 
 > I was doing so first with the [slidev Firebase branch](https://github.com/JAlcocerT/slidev-editor/blob/firebaseauth/z-firebase-auth.md) version. Same here.
 
@@ -129,6 +145,43 @@ The term evokes gradual nurturing of leads through timed sequences.
 
 > > No email DRIP, unsubcribed and erased from DB. Simple.
 
+#### DRIP x Mailtrap ESP
+
+https://github.com/JAlcocerT/make-landing/tree/master/mjml-email I tested Mailtrap API x Python and some templating.
+
+<!--
+https://github.com/JAlcocerT/make-landing/blob/master/mailetrap-esp.ipynb
+ -->
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/make-landing/blob/master/mailetrap-esp.ipynb)
+
+Taking this to the project: *I needed some orchestrator, but it wont be driven by CRON, but via GHA with hourly checks.*
+
+```sh
+#node --env-file=.env scripts/orchestrate-drip.mjs
+node --env-file=.env scripts/orchestrate-drip.mjs --dry-run
+```
+
+
+Creating and testing the templates is simple:
+
+```sh
+node scripts/test-email.mjs --step welcome --name "JAlcocerT" --email "test@example.com" #this one creates a local html
+```
+
+
+```sh
+#node --env-file=.env scripts/test-email.mjs --send
+node --env-file=.env scripts/test-email.mjs --step welcome --name "Jul" --email "sometestmail@gmail.com" --send
+node --env-file=.env scripts/test-email.mjs --step social --name "Jul" --email "othertestemail@gmail.com" --send
+```
+
+Now just orchestrate the bulk sent, as per their current DRIP status:
+
+```sh
+#node --env-file=.env scripts/list-drip-status.mjs
+node --env-file=.env scripts/orchestrate-drip.mjs
+```
 
 ---
 

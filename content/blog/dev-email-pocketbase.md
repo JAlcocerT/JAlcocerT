@@ -168,9 +168,10 @@ await pb.collection('users').requestPasswordReset('test@example.com');
 ### MailTrap API
 
 * https://mailtrap.io/integrations?current_tab=API%20SDKs
+* https://mailtrap.io/blog/python-send-email/
 
- https://mailtrap.io/blog/python-send-email/
 
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/make-landing/blob/main/mailetrap-esp.ipynb)
 
 ---
 
