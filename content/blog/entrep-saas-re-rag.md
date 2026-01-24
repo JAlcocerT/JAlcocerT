@@ -326,9 +326,15 @@ I have mine here for such projects: *because not everyone is ready to pay the va
 > If they name $100, you walk away with your code (and your pride), knowing they weren't the right partner for this level of tech.
 
 {{< cards cols="2" >}}
-  {{< card link="https://realestate_tool.jalcocertech.com" title="Photo Tool" >}}
-  {{< card link="https://dashboard.litlyx.com" title="Web Analytics GDPR Compliant" >}}
+  {{< card link="https://realestate.jalcocertech.com" title="RE Services" >}}
+  {{< card link="https://realestate.jalcocertech.com" title="Web Audit Services" >}}
 {{< /cards >}}
+
+### PS
+
+Tired of scope creep eating your GM as a service agency?
+
+Get better clients: they pay more and trust more your decisions :)
 
 ---
 

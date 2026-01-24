@@ -2,7 +2,7 @@
 title: "Around Marketing for Agencies: Thoughts"
 date: 2026-01-20T23:20:21+01:00
 draft: false
-tags: ["Marketing Analytics","Agency Leads","Side-Quest26","LaunchPad Check List","TTM x LF8"]
+tags: ["Marketing Analytics","Agency Leads","Side-Quest26","LaunchPad Check List","TTM x LF8","Unit Economics 103"]
 description: 'How effective is your marketing? Custom solutions to feed and improve your agency sales pipeline.'
 url: 'custom-marketing-analytics'
 ---
@@ -94,7 +94,9 @@ Do you know **what game are you playing**?
 
 Then and only then, you will know how to win.
 
-But they all work with the same schema: P*V*GM*OM*F*T=NetProtift
+But they all work with the same schema: *P*V*GM*OM*F*T=NetProtift*
+
+Or the full stack formula as Ill call it from now.
 
 <!-- 
 https://youtu.be/qsXxckCbci0 
@@ -181,6 +183,8 @@ To compare these strategies effectively, we need to distinguish between the **Ed
 Here is the comparison table to help you decide which approach to use for your analytics offering.
 
 ### Strategy Comparison: Educational vs. Service Provider
+
+Thinking whats best for you?
 
 | Feature | Educational / Cohort Model (AI Agency) | Service / Agency Model (Analytics) |
 | :--- | :--- | :--- |
@@ -271,9 +275,11 @@ They use that high-cash-flow income to fund the **[GROWTH BET]** of building an 
 
 > **The Path:** Service (High P) - Education (High GM) - Software (High V).
 
-This is a classic "Indie Hacker" business model. It is a **Digital Product/SaaS hybrid** that bridges the gap between the Educational model (low touch) and the Agency model (high problem-solving).
+This is a classic "Indie Hacker" business model.
 
-In the **Multiplication String**, this business is designed to maximize the **[OPERATIONAL DISCIPLINE]** () variable through automation.
+It is a **Digital Product/SaaS hybrid** that bridges the gap between the Educational model (low touch) and the Agency model (high problem-solving).
+
+In the **Multiplication String**, this business is designed to maximize the **[OPERATIONAL DISCIPLINE]** variable through automation.
 
 ---
 

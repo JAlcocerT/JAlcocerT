@@ -116,7 +116,7 @@ whois genbi.co | grep -i -E "(creation|created|registered)"
 
 ### The Attraction and Conversion
 
-Conversion driven via landing:
+Conversion driven via landing: *yes, the one than here with glassmorphism!*
 
 ```sh
 git clone https://github.com/JAlcocerT/poc_shopify
