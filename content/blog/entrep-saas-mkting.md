@@ -23,17 +23,21 @@ Your interest are often *potentially* benefitial to others.
 
 But most likely, you have started shipping/executing/just doing for free to *wrong prospects* if what you try to create is a business.
 
-So: you are done already with the 3 F's?
+So: you are done already with the **3 F's**?
 
 Yea, that stage of trying to sell to family friends and ~~fools~~
 
 Time to do some OpEx - in this case: **marketing**
 
-Do you want to go via ads? via organic posting/bip and social media? or via cold email?
+Do you want to go via ads? 
+
+via organic posting/bip and social media? 
+
+Or via cold email?
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads x Slubne Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="Slubne 2026 Github ↗" icon="github" >}}
 {{< /cards >}}
 
 

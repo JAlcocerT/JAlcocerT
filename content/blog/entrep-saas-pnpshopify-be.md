@@ -2,7 +2,7 @@
 title: "[Gen-BI] From Shopify to Profit"
 date: 2026-02-05T18:20:21+01:00
 draft: false
-tags: ["RoadMap26","Shopify API","BAML x Vite x Astro","UpTime Kuma x Status Pages"]
+tags: ["RoadMap26","Shopify API","BAML x Vite x Astro","Services x UpTime Kuma x Status Pages"]
 description: 'Got en ecommerce? You are missing an AI Powered COO. Trust this landing.'
 url: 'shopify-business-data-analytics'
 ---
@@ -10,7 +10,7 @@ url: 'shopify-business-data-analytics'
 
 **TL;DR**
 
-
+A landing before having a closed product?!
 
 +++ Uptime [Status for my new services](#how-about-uptime)
 
@@ -157,8 +157,7 @@ From Telecom, to FMCG, Healthcare...
 
 ...and ecommerce also coming.
 
-
-
+For the businesses centered reader: **[HERE](https://www.jalcocertech.com/support/articles/)**
 
 ---
 
@@ -231,10 +230,17 @@ Having several public services with a backend means that you have to be responsi
 
 4. https://slubnechwile.com/
 
-I wanted to monitor all those automatically with my x300
+I wanted to monitor all those automatically with my x300.
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ```sh
 git clone https://github.com/JAlcocerT/Home-Lab
+#got pull
 cd Home-Lab/uptime-kuma
 #sudo docker compose up -d
 docker ps -a --filter "name=uptimekuma" #docker ps -a --filter "name=uptime"
@@ -245,3 +251,25 @@ docker compose stats #docker compose --help
 See that the config that not required an external DB.
 
 If you have followed the recents posts, you got it: uptimekuma uses SQLITE!
+
+In fact, when starting you see: `http://192.168.1.2:3001/setup-database`
+
+All with a ~600mb image and ~100mb RAM consumption
+
+Oh.
+
+And you can add new monitors programatically via python script: *all available in the repo*
+
+```sh
+uv run scripts/add_monitor.py
+```
+
+That works for one.
+
+This works for all:
+
+```sh
+uv run scripts/bulk_add_monitors.py
+```
+
+[![Star History Chart](https://api.star-history.com/svg?repos=louislam/uptime-kuma,bluewave-labs/checkmate,henrygd/beszel,0xfurai/peekaping&,type=Date)](https://star-history.com/louislam/uptime-kuma&bluewave-labs/checkmate&henrygd/beszel&0xfurai/peekaping&Date)

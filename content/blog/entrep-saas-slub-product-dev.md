@@ -180,10 +180,15 @@ node --env-file=.env scripts/orchestrate-drip.mjs
 ```
 
 
-> And anyone trying the free tier should have opt-in for this
+> And anyone trying the free tier should have opted-in for this
 
 ```sh
+#node --env-file=.env scripts/test-email.mjs --step welcome --name "Jul" --email "sometestmail@gmail.com" --send
+#every email contains a reference the the firebase UUID https://slubnechwile.com/unsubscribe?email=jesalctag%40gmail.com&uid=YOUR_REAL_FIREBASE_UID
+node --env-file=.env scripts/test-email.mjs --step welcome --uid YOUR_REAL_FIREBASE_UID --send #this connects them to the email autom
 node --env-file=.env scripts/toggle-unsubscribe.mjs --resubscribe
+###docker compose -f docker-compose.cloudflare.yml up -d --build
+#docker logs slubnechwile-app
 ```
 
 > > No email DRIP, unsubcribed and erased from DB. Simple.
