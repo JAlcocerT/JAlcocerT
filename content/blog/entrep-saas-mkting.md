@@ -3,7 +3,7 @@ title: "Marketing and Agencies: Thoughts"
 date: 2026-01-20T23:20:21+01:00
 draft: false
 tags: ["Selfhosted Marketing","Agency Leads","Side-Quest26","LaunchPad Check List","TTM x LF8","Unit Economics 103"]
-description: 'How effective is your marketing? Resources to improve your conversions.'
+description: 'How effective is your marketing? Resources to improve your microSaaS conversions.'
 url: 'custom-marketing-analytics'
 ---
 

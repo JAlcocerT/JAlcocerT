@@ -65,6 +65,10 @@ Maybe, try to build a brand *before its too late*.
 
 This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
 
+0. Audio TTS
+
+https://www.youtube.com/watch?v=dQ841Pd6YvQ
+
 0. CreAItive websites
 
 0. Delivery Analytics
@@ -480,14 +484,23 @@ Others, from the vibe coding sessions: helped to bring quick demos to the produc
 
 ### Serverless
 
-Ive enjoyed using Cloudflare R2 for s3 compatible object storage.
+Ive enjoyed using **Cloudflare R2** for s3 compatible object storage.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="CF R2 x Weds" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Launching the wedding project this year with R2 integration | Post" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="CF R2 x PB" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Previous year I tested Cloudflare R2 with PB| Post" >}}
 {{< /cards >}}
 
-Also creating invoices with json via the serverless SPA: https://github.com/JAlcocerT/serverless-invoices
+Combine with **firebase authentication + FireStore** for my first ever public launch.
+
+> Pulling registered users from those and setting automatic emails campaigns with Mailtrap and GHA was so cool
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slubnechwile-chwile-y26" title="Slubne-Chwile - Automated Sales Pipeline ↗" icon="github" >}}
+{{< /cards >}}
+
+
+Creating invoices with json via the serverless SPA: https://github.com/JAlcocerT/serverless-invoices
 
 Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?lang=en` at this [post](https://jalcocert.github.io/JAlcocerT/csr-and-js/#csr-examples).
 

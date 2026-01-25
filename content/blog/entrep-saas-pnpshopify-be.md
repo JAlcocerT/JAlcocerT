@@ -221,6 +221,8 @@ graph
 
 ### How about UpTime?
 
+Having several public services with a backend means that you have to be responsible for their uptime: *proving you can deliver!*
+
 1. https://webaudit.jalcocertech.com/
 
 2. https://genbi.jalcocertech.com/
@@ -228,3 +230,18 @@ graph
 3. https://realestate.jalcocertech.com/
 
 4. https://slubnechwile.com/
+
+I wanted to monitor all those automatically with my x300
+
+```sh
+git clone https://github.com/JAlcocerT/Home-Lab
+cd Home-Lab/uptime-kuma
+#sudo docker compose up -d
+docker ps -a --filter "name=uptimekuma" #docker ps -a --filter "name=uptime"
+docker compose stats #docker compose --help
+#docker stats uptimekuma
+```
+
+See that the config that not required an external DB.
+
+If you have followed the recents posts, you got it: uptimekuma uses SQLITE!

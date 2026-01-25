@@ -2,7 +2,7 @@
 title: "A SaaS for Real Estate Agencies: Custom RAG Solution"
 date: 2026-01-19T06:20:21+01:00
 draft: false
-tags: ["Astro Hybrid Rendering","AI Tech Talk","RoadMap26","Success Story"]
+tags: ["Astro Hybrid Rendering","RoadMap26","Success Story"]
 description: 'Building a custom BOT for real estate agencies. With CORS and OpenAI Rate Limiting.'
 url: 'custom-re-rag'
 ---
@@ -118,11 +118,11 @@ As the why, what was very clear, its time to put together the final HOW: *see th
 ```
 
 {{< cards cols="1" >}}
-  {{< card link="https://dm-real-estate.com" title="Web UI Result" >}}
-  {{< card link="https://realestate.jalcocertech.com" title="New RE Calculator and GenAI" >}}
+  {{< card link="https://dm-real-estate.com" title="Web Result for DM" >}}
+  {{< card link="https://realestate.jalcocertech.com" title="RE Calculator for realestate agencies that can afford it" >}}
 {{< /cards >}}
 
-
+Coming from here:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data" title="Chat with Data" image="/blog_img/GenAI/dbchat/langchain-AI.jpeg" subtitle="Other LangChain use cases" >}}
@@ -139,6 +139,7 @@ As the why, what was very clear, its time to put together the final HOW: *see th
 
 * https://jalcocert.github.io/JAlcocerT/astro-web-setup/#real-estate-web---results
 
+This was the very beginning: 
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/ScrewFastMoiRealEstate/" title="Source Code ScrewFast Astro" icon="github" tag= "Code" >}}
@@ -323,10 +324,17 @@ I have mine here for such projects: *because not everyone is ready to pay the va
 
 {{< cards cols="2" >}}
   {{< card link="https://realestate.jalcocertech.com" title="RE Services" >}}
-  {{< card link="https://realestate.jalcocertech.com" title="Web Audit Services" >}}
+  {{< card link="https://webaudit.jalcocertech.com" title="Web Audit Services" >}}
 {{< /cards >}}
 
-### PS
+<!-- 
+https://youtu.be/QCFhukC4rXI 
+-->
+
+{{< youtube "QCFhukC4rXI" >}}
+
+
+### PS ;)
 
 Tired of *scope creep* eating your GM as a service agency?
 

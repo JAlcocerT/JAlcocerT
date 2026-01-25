@@ -1,8 +1,8 @@
 ---
 title: "How to analyze Business Opportunities"
-date: 2026-01-22T07:00:21+01:00
+date: 2026-01-25T07:00:21+01:00
 draft: false
-tags: ["BiP","Entrepreneuring","Focus","Unit Economics 103"]
+tags: ["BiP","Entrepreneuring","Focus","Unit Economics 104"]
 description: 'Do you really want to do this...that way?'
 url: 'ideas-and-opportunities-health-check'
 ---
@@ -64,6 +64,7 @@ Someone coming to you for collaborations and partnerships?
 
 Tell them to send you these filled up.
 
+> It works even better if they do so programatically via forms
 
 * Is it a new product that needs evangelization?
   * Existing competitors? or Needs PMF test?: *Would recommend to go for No need of PMF, demand validated*.
@@ -146,8 +147,6 @@ flowchart LR
     L2 --> L3
     L3 --> L4
 ```
-
-
 
 **GTM Strategy:** The Master Plan *important if [you bootstrap](https://jalcocert.github.io/JAlcocerT/whats-boostrap/#gtm-vs-marketing)!*
 
@@ -528,6 +527,8 @@ How about: getting things done?
 ---
 
 ## FAQ
+
+More about building in public and shipping with AI?
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}

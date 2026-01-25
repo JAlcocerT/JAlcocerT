@@ -1,5 +1,5 @@
 ---
-title: "Improving a micro-SaaS Conversion"
+title: "Improving a micro-SaaS Conversion: Email Automation"
 date: 2026-01-21T08:20:21+01:00
 draft: false
 tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap API ESP x DRIP","ATF x Time2Value"]
@@ -141,10 +141,6 @@ It's a descriptive metaphor for the slow, steady "dripping" of automated email m
 
 The term evokes gradual nurturing of leads through timed sequences.
 
-> And anyone trying the free tier should have opt-in for this
-
-> > No email DRIP, unsubcribed and erased from DB. Simple.
-
 #### DRIP x Mailtrap ESP
 
 https://github.com/JAlcocerT/make-landing/tree/master/mjml-email I tested Mailtrap API x Python and some templating.
@@ -183,6 +179,38 @@ Now just orchestrate the bulk sent, as per their current DRIP status:
 node --env-file=.env scripts/orchestrate-drip.mjs
 ```
 
+
+> And anyone trying the free tier should have opt-in for this
+
+```sh
+node --env-file=.env scripts/toggle-unsubscribe.mjs --resubscribe
+```
+
+> > No email DRIP, unsubcribed and erased from DB. Simple.
+
+#### MailTrap Orchestrated via GHA
+
+So, am I going to be orchestrating who to send what?
+
+No way.
+
+This:
+
+```sh
+cd ./slubnechwile
+node --env-file=.env ./scripts/orchestrate-drip.mjs
+```
+
+Is going to be ran by github actions: *hourly and free, with [this config](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/drip.yml)*
+
+**Private Repositories**: GitHub provides **2,000 free minutes per month**.
+
+*   This script takes about 30-45 seconds to run.
+*   Running hourly (24 times/day) = ~720 runs per month.
+*   720 runs * 0.75 minutes = **540 minutes per month**.
+*   This is well within the 2,000-minute free allowance.
+
+
 ---
 
 ## Conclusions
@@ -191,6 +219,13 @@ I hope that you understand the rules of the game that you are playing.
 
 Talento vs perseverancia (But bee critic, dont hit the same wall 150 times *knowing the game helps*).
 
+Got your copy right?
+
+Did 2-3% of the people who entered the landing signed up?
+
+Most of them wont pay right away.
+
+But you can remember them  about your proposed value equation: 
 
 
 ### How can I Improve my MicroSaaS

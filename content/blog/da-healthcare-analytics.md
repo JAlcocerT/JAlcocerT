@@ -127,7 +127,7 @@ Among al [CI/CD Tools and processes](https://jalcocert.github.io/JAlcocerT/syste
 
 Fixing their bottleneck and major pain point with their [operations and maintainance](https://jalcocert.github.io/JAlcocerT/systems-engineering-and-infraestructure/#the-main-points-of-system-engineering).
 
-Regarding the what's next: I recommended to have a look for automated SSL certificates for their internal domain.
+Regarding the what's next: *I recommended to have a look for automated SSL certificates for their internal domain.*
 
 Knowing how to control infrastructure (servers/homelab) and providing SSL/https is a must.
 
@@ -135,6 +135,10 @@ Knowing how to control infrastructure (servers/homelab) and providing SSL/https 
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="Selfhosting | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/" title="Https | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+PS: You can use github actions not only to build and push images, but also your ssg powered websites
+
+PS2: combine GHA with email ESP like mailtrap to have code driven automatic email campaigns!
 
 
 **Healthcare Analytics** is a broad field, and it can be applied to many different areas of healthcare:

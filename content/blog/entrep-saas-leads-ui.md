@@ -1,5 +1,5 @@
 ---
-title: "How about getting leads for your SaaS?"
+title: "Any SaaS needs Leads and UI"
 date: 2026-01-24T09:20:21+01:00
 draft: false
 tags: ["BiP x GTM","APIFY x ESP Sales Pipeline","RoadMap26"]
