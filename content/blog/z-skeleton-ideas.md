@@ -491,10 +491,74 @@ The **tech stack**:
 | Others | Web Analytics / ads / Cal / Formbricks / ESP | Yes, via MailTrap |
 
 
+For me, working with antigravity and such tech stack
+
+
+{{< details title="Vibe Coding | Setup  📌" closed="true" >}}
+
+Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
+
+```md
+I need Landing Page based with a cool and modern UI.
+
+Create also a makefile with the following commands:
+
+* `make help` - Show available commands
+* `make install` - Prepare the dependencies for local development
+* `make dev` - Run development server
+
+Create the `z-development-plan.md` with independent and testable phases that can be completed sequentially.
+
+When it is completed, create a `z-walkthrough.md` with the steps to deploy the application and what each part of the tech stack does on a high level to bring the features to life.
+
+The full copy od the landing, has to be goberned by a single `site.md` file.
+
+Consider adding a Terms of Service / **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
+
+Add also a faq section, that instead of been controlled via a json, lets have it controlled as per the frontmatter and content of separated markdown files inside the folder `faq`. 
+
+```
+
+Go to [AntiGravity IDE] and ask if the `brd.md` refined already with Gemini is clear enough.
+
+If it is clear define the `z-development-plan.md` and proceed with the development phases.
+
+As you will need to iterate across features, do it like a pro with change-requests:
+
+```sh
+#sudo apt install gh
+gh auth login
+#gh repo create make-xyz --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create make-xyz --private --source=. --remote=origin --push
+###du -sh .
+#docker stop $(docker ps -a -q) #stop all
+#docker system df
+```
+
+**Technical Stack and Design Requirements**
+
+To develop a **modern, secure, and scalable landing page with modular astro components** for getting leads via formbricks.
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React (Astro/Vite) | Chosen for low latency and modern "Island" architecture. |
+| **Styling/UI Library** | Tailwind CSS v4 + Framer Motion | Custom "Deep Night" **glassmorphism theme** for a premium look. |
+| **Deployment** | Firebase hostin | Serverless. |
+
+
+{{< /details >}}
+
+
+```sh
+whois leadarchitect.org| grep -i -E "(creation|created|registered)"
+
+```
+
 ---
 
 
-# Conclusions
+## Conclusions
 
 Now that you have protected your mind and time from your *and other's* non discounted new ideas
 
