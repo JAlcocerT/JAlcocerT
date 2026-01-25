@@ -2,7 +2,7 @@
 title: "Improving a micro-SaaS Conversion: Email Automation"
 date: 2026-01-21T08:20:21+01:00
 draft: false
-tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap API ESP x DRIP","ATF x Time2Value"]
+tags: ["TAM vs CAC","BiP x RoadMap26","MailTrap API ESP x Lean DRIP","ATF x Time2Value"]
 description: 'Iterating over an existing product to increase its LTV to CAC. Weddings 2026'
 url: 'iterating-and-improving-a-micro-saas'
 ---
@@ -193,6 +193,18 @@ node --env-file=.env scripts/toggle-unsubscribe.mjs --resubscribe
 
 > > No email DRIP, unsubcribed and erased from DB. Simple.
 
+I needed to add a docker volume with the `` for the container to pull data from Firestore
+
+```sh
+cd slubnechwile/scripts
+nano service-account.json
+#git pull
+#node --env-file=.env scripts/list-drip-status.mjs #now you can see Unsubscribed as YES
+#node --env-file=.env scripts/orchestrate-drip.mjs --dry-run #and no action will be taken around email marketing for such user
+```
+
+![FireStore](/blog_img/biz/slubne/unsubscribed.png)
+
 #### MailTrap Orchestrated via GHA
 
 So, am I going to be orchestrating who to send what?
@@ -215,6 +227,33 @@ Is going to be ran by github actions: *hourly and free, with [this config](https
 *   720 runs * 0.75 minutes = **540 minutes per month**.
 *   This is well within the 2,000-minute free allowance.
 
+
+All working with this architecture around the email marketing.
+
+```mermaid
+graph LR
+    A[User Sign Up] --> B[Firebase Auth UID created]
+    B --> C[Wedding Doc created with ID = UID]
+    C --> D[marketing_status initialized]
+    E[GitHub Actions - Every 1h] --> F[orchestrate-drip.mjs]
+    F --> G[Query Firestore for pending leads]
+    G --> H[Check marketing_status]
+    H --> I[Send Email via Mailtrap API]
+    I --> J[Update Firestore marketing_status]
+```
+
+One of the biggest advantages of this custom approach is that **you own the logic**. 
+
+In traditional marketing SaaS:
+
+- When an email doesn't send, you don't know *why* (API limit? Filter? Logic error?).
+- You can't easily "dry run" how changes will affect 1,000 existing leads.
+
+In this Lean Drip:
+
+*   **Total Transparency**: Every decision made by the engine is logged. You can see exactly which condition was met (or not) in your GitHub Actions history.
+*   **Safe Testing**: The `--dry-run` flag allows you to test logic changes against your **real database** without actually sending a single email or changing a single record.
+*   **Easy Debugging**: If something breaks, you get a standard Node.js stack trace. You are debugging "code," not a proprietary UI tool.
 
 ---
 

@@ -495,6 +495,8 @@ Combine with **firebase authentication + FireStore** for my first ever public la
 
 > Pulling registered users from those and setting automatic emails campaigns with Mailtrap and GHA was so cool
 
+Plus a cool example of lean engineering. No need for glue when there are no data silos by design.
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slubnechwile-chwile-y26" title="Slubne-Chwile - Automated Sales Pipeline ↗" icon="github" >}}
 {{< /cards >}}
