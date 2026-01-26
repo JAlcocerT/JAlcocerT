@@ -115,6 +115,10 @@ You should be able to query the registered at Firebase/Firestore: *so I put toge
 
 > You will need the [firebase console SDK creds](https://console.firebase.google.com/project/slubnechwile-a3fd3/settings/serviceaccounts/adminsdk) to get the `service-account.json`
 
+This will also be useful to unsubcribe users:
+
+![alt text](/blog_img/biz/slubne/unsub-error.png)
+
 ```sh
 git clone https://github.com/JAlcocerT/slubne-chwile-y26
 #git pull
@@ -161,10 +165,15 @@ node --env-file=.env scripts/orchestrate-drip.mjs --dry-run
 
 Creating and testing the templates is simple:
 
+![alt text](/blog_img/biz/email-mkt-old.png)
+
 ```sh
 node scripts/test-email.mjs --step welcome --name "JAlcocerT" --email "test@example.com" #this one creates a local html
 ```
 
+But hey, make it match your web/product UI/X for consistency:
+
+![alt text](/blog_img/biz/email-mkt-uix.png)
 
 ```sh
 #node --env-file=.env scripts/test-email.mjs --send
@@ -296,11 +305,15 @@ How did I came up with all this?
 
 Just doing.
 
+![alt text](/blog_img/biz/slubne/sassify.png)
+
+And with some inspiration.
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf" title="QR CSR | Python static server ↗" icon="github" >}}
 {{< /cards >}}
 
-Even Reqable has one: Tools -> More QR-Code
+Even Reqable has one: `Tools -> More QR-Code`
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
@@ -310,3 +323,33 @@ Even with a [SliDev VUE Components like this one](https://github.com/JAlcocerT/s
 You got the code [here](https://github.com/JAlcocerT/Home-Lab/tree/main/py-static/qr-pdf)
 
 ![QR Code](https://raw.githubusercontent.com/JAlcocerT/Home-Lab/main/py-static/qr-pdf/qr-sample.png)
+
+#### Google TAG
+
+![alt text](/blog_img/biz/slubne/google-tag.png)
+
+![alt text](/blog_img/biz/slubne/g-ads.png)
+
+#### R2
+
+![alt text](/blog_img/biz/slubne/r2-eu-bucket.png)
+
+![alt text](/blog_img/biz/slubne/r2-eu.png)
+
+![alt text](/blog_img/biz/slubne/r2-public.png)
+
+![alt text](/blog_img/biz/slubne/r2-object-rw.png)
+
+![alt text](/blog_img/biz/slubne/r20object-storage.png)
+
+![alt text](/blog_img/biz/slubne/r2-testing.png)
+
+#### PostHog
+
+![alt text](/blog_img/biz/slubne/posthog-autocapture.png)
+
+![alt text](/blog_img/biz/slubne/posthog-reply-domains.png)
+
+Matches regex: `^https://slubnechwile\.com(/.*)?$`
+
+![alt text](/blog_img/biz/slubne/posthog-record-urls.png)

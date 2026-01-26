@@ -252,6 +252,8 @@ See that the config that not required an external DB.
 
 If you have followed the recents posts, you got it: uptimekuma uses SQLITE!
 
+![Uptime Kuma x SQLIte as DB](/blog_img/Monitoring/uptime-kuma-setup-db.png)
+
 In fact, when starting you see: `http://192.168.1.2:3001/setup-database`
 
 All with a ~600mb image and ~100mb RAM consumption

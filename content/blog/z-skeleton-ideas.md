@@ -1,6 +1,6 @@
 ---
 title: "How to analyze Business Opportunities"
-date: 2026-01-25T07:00:21+01:00
+date: 2026-01-26T07:00:21+01:00
 draft: false
 tags: ["BiP","Entrepreneuring","Focus","Unit Economics 104"]
 description: 'Do you really want to do this...that way?'
@@ -467,7 +467,9 @@ graph LR
 *   **PRD (Product Requirements):** Answers **"WHAT are we building?"** (The Features & Roadmap).
 *   **FRD (Functional Requirements):** Answers **"HOW does it work?"** (The Technical Logic & CRUDs).
 
-How can be taken care of:
+![alt text](/blog_img/biz/prod-development.png)
+
+The *,How'* can be taken care of: *yep, antigravity does the trick*
 
 ![how to is not that important](/blog_img/DA/why-what-how.png)
 

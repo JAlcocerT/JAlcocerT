@@ -464,6 +464,14 @@ See how people really interact *and what they want* from you.
 
 What they do.
 
+![PostHog Session Recording](/blog_img/biz/p0sthog-session-recording.png)
+
+<!-- 
+https://eu.posthog.com/project/15002/web?path_cleaning=false&filter_test_accounts=false&compare_filter=%7B%22compare%22%3Atrue%7D&domain=https%3A%2F%2Fslubnechwile.com&tile_visualizations=%7B%7D 
+
+https://eu.posthog.com/project/15002/replay/home
+-->
+
 Not what they say.
 
 Not what you think.
@@ -471,3 +479,7 @@ Not what you think.
 This helps: *the best product tool*
 
 ![alt text](/blog_img/biz/posthog-eu.png)
+
+Find the revealed preferences.
+
+Not the announced ones.
