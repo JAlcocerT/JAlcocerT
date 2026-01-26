@@ -54,8 +54,7 @@ Microsoft SQL Server is the RDBMS engine that runs T‑SQL (and standard SQL) fo
 ​
 T‑SQL code isn’t fully portable to other DBs like Postgres, but SQL Server is the primary platform for it.
 ​
-SQL Server self‑hosting
-Yes, fully legal for internal/on‑premises use via Per Core/Server+CAL licenses assigned to your hardware/VMs.
+SQL Server self‑hosting is fully legal for internal/on‑premises use via Per Core/Server+CAL licenses assigned to your hardware/VMs.
 
 Free Express/Developer editions work for small‑scale or dev; SaaS hosting needs special self‑hosted app rules or SPLA.
 

@@ -37,7 +37,7 @@ And build something.
 
 ## Existing GenBI Solutions
 
-I have seen couple very interesting ones: *that you can selfhost*
+I have seen couple very interesting ones: *that you can selfhost and use for inspiration*
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rill" title="Rill | Docker Config 🐋 ↗" >}}

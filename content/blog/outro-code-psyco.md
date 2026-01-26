@@ -140,7 +140,9 @@ The platform must offer a seamless, content-driven user interface and a flexible
 
 {{< /details >}}
 
-Before starting any project, specially with AI agents, you should have clarity on **the tech stack**:
+Before starting any project, specially with AI agents
+
+You should have clarity on **the tech stack**:
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
@@ -158,6 +160,8 @@ And if you need more:
 | **Analytics** | | |
 | **Interactivity** | | |
 | **External Integrations** | | |
+| **E-mail/ESP** |  | |
+| **Hosting** |  | |
 
 ### The Business side is clear
 
@@ -190,7 +194,9 @@ Comparison of the "Levers"
 | **Biggest Cost** | Inventory (COGS) | R&D & Salaries (OpEx) | Marketing / Ads (OpEx) |
 | **CapEx Role** | Massive (Warehouses) | High (Data Centers) | Low (A Laptop) |
 
-To make this a definitive reference, I have polished the tables by integrating the **Strategic Tags** (Bet, Execution, Discipline, Structure), corrected the technical variables, and added the "Path C" (Fractional Consultant) column to show the high-ticket service alternative.
+As a definitive reference, integrating the **Strategic Tags** (Bet, Execution, Discipline, Structure), corrected the technical variables
+
+*And added the "Path C" (Fractional Consultant) column to show the high-ticket service alternative.*
 
 1. The Strategic Game Board: Sector Comparison
 

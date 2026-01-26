@@ -29,6 +29,8 @@ We come from the [sales pipeline *v1 post*](https://jalcocert.github.io/JAlcocer
 
 Because sometimes when you listen to [what it works for others](#how-has-this-happened) your mind explodes.
 
+And when you are prepared to listen, sometime you also ready to [record the session](https://youtu.be/qQ13MKLfqYQ).
+
 Knowing how to get clients is a must skill if you are building: *if you got more vibe coded webaps and repos in github than actual client, stay*
 
 {{< cards >}}
@@ -246,9 +248,6 @@ How the Stoic "Trader" Operates:
 Which approach sounds more sustainable for a long-term career? 
 
 The high-octane drive of Rand, or the "unshakable" calm of the Stoic?
-
-
----
 
 ## FAQ
 

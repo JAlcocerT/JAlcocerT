@@ -62,15 +62,17 @@ With a very clear: Online marketing and an online delivery
 
 Imagine that [nice mermaid sankey](https://mermaid.live/edit#pako:eNptjjFvwjAQhf9KdFORLOTETuJ4K7AgdUBCXSovLr4mEcRGJmmbIv57HSpC1XTx-d29d9-dYecMgoSTtnvslX3S1tS2jDa6RLKtSxs9H0me0j-Tx9egnEUTPWzb0IjiGUkGl7K30LWuLckovTcnuWRG4l-54F83DZpatxhtOr-r9AkJS-l9vvDu4xQOufFGvcKD7sPmMRYP5HE8QbMR_Q9y6ew7-nZwL7oe_ezniAlj6gtUIFD62oBsfYcEGvSNHiSclY0iBW2FDSqQ4Wu03ytQ9hIyR21fnGtuMe-6sgL5pg-BA93RhANXtS69vlvQGvRL19kWZMquK0Ce4RNknBXzQtC44LSI8yITgkAPMqFsXjDBWJGw8AjOLwS-rlQ6z9KcU8oFy0TMeZJfvgHQMq7J) representing the conversion funnel of such web app
 
-and [this](https://mermaid.live/edit#pako:eNp9Vktu40YQvUqDwAwcQB_zpw8DJNBI4mAQ2WEs2QZEedEWy1LPkN1Es2lbEbwLkOwCJNnnAtllk31ukgskR0iRTcmkHUQrkap6VfXeq27tjbWIwPCMjaTpliwmK07w8-YNabfbZJ7flu8zcickGcdUMrUrftFRWfUzGYX__PrzD2QGNCLvgYOkiglO3pI5qDwlvgS40SnFZ2SGgRRZCmuFmGz9KSOj6AZhvyAj62RGecT4hgR0Ax65onEOBMNTkbEC9LPPa0CWTrL3gWQJlTsyXow8cr1L5Z-_3-YfyZKSCZWJ-PKpnmVjFjn_MNXJw3D6yFT3ncj5Gm5exS1GX-k45-QCNixT1Wy-kIlHzmkCLTJNKItbWEpBoz1HZ7on812mICmnYRFG6QzkZyyheByt11heNZJdndw7mdBseyuojLyKzisGD43Qng7th6N10ZtHZmL9iYzzTImEXF7MCHQ2nRbpUs4p-0g5tU6tXmPUvkYYHBHGIk9jIAvIVEYu01igsi4JtkIJMmMJU430QZm-NKt3wKMVf2GRJVrkl-8Ql9-DzEoGc86hICGguwS4qjlkaR4pKz11nkuVy8IV71ADntWnX5q6uLW32w45E1yhXQMJ7WuICiM1tF9alfZdDQll7tQMS0EOdntLFizN6hNOzeaEz1joj64eSukQ-4BVG3WCQ8SMA_n67g5kHXhp6yznhczkfY7UIzVZ9iBkVBi7MbS21tLdzyEu9qhksdzSBQPZnNk9zDyjaQaRzuwd2vQZpzGZPqascvY1lRx5a3SpHeabr2CL8QPKKtD-UbZK02Jz15Bh1Ub32m7LZ7td8riwbInk40qgMkf-_8tNQeGmn3T8HOQ9WxdLpNh9OULdSdqagRlWsFUpTXK1Ik2uG4NX6dar9KoaoI3jmMyVkHhedSfigZe7smBJU-jALDTSB1Zgh9V-oU9TirOSM4SSjMYZ-eaCjNEFDfsF2iWBEx741S1XixkIqVBDlj37BXlX6AtoTBNo1wTuvtoNPLJ2dasE-tAJekdhyjrHE6Dc_2Zn2hlB_9hZkwJkhkr1v1r64V-_ff_3Hz_iGJk6bC2SdYlmjeOalkG_cuH-RY3SvJA1XO-bB9eXSulF962D6_HC4Kp7xSIQVaHXu6khCofrAtrkvv0sAo1jwFunOG4h6o7keouVGpT71uvN8bWavrPXGShdvYXmGE79svLdcMqb-E79kvJ74QXcA8_x5jxi-wDlotQ0MFp437PI8JTMoWUgh8gKPhr7ImRlqC0ksDI8_BrBHc1jtTJW_AnTUsqXQiSHTCnyzdbw7tC4-JSnxeU2YRSFfQ7BeiDHxf1meG6JYHh749HwTNPuuMNTtz8YOD1nYA97LWNneO2-43YsG19aQ8sa2IPeU8v4tixqdoZDx3SG1ungtIcB_X7LgIjh8p3pfzHln5mnfwHbuaCF)
+and [this](https://mermaid.live/edit#pako:eNp9Vktu40YQvUqDwAwcQB_zpw8DJNBI4mAQ2WEs2QZEedEWy1LPkN1Es2lbEbwLkOwCJNnnAtllk31ukgskR0iRTcmkHUQrkap6VfXeq27tjbWIwPCMjaTpliwmK07w8-YNabfbZJ7flu8zcickGcdUMrUrftFRWfUzGYX__PrzD2QGNCLvgYOkiglO3pI5qDwlvgS40SnFZ2SGgRRZCmuFmGz9KSOj6AZhvyAj62RGecT4hgR0Ax65onEOBMNTkbEC9LPPa0CWTrL3gWQJlTsyXow8cr1L5Z-_3-YfyZKSCZWJ-PKpnmVjFjn_MNXJw3D6yFT3ncj5Gm5exS1GX-k45-QCNixT1Wy-kIlHzmkCLTJNKItbWEpBoz1HZ7on812mICmnYRFG6QzkZyyheByt11heNZJdndw7mdBseyuojLyKzisGD43Qng7th6N10ZtHZmL9iYzzTImEXF7MCHQ2nRbpUs4p-0g5tU6tXmPUvkYYHBHGIk9jIAvIVEYu01igsi4JtkIJMmMJU430QZm-NKt3wKMVf2GRJVrkl-8Ql9-DzEoGc86hICGguwS4qjlkaR4pKz11nkuVy8IV71ADntWnX5q6uLW32w45E1yhXQMJ7WuICiM1tF9alfZdDQll7tQMS0EOdntLFizN6hNOzeaEz1joj64eSukQ-4BVG3WCQ8SMA_n67g5kHXhp6yznhczkfY7UIzVZ9iBkVBi7MbS21tLdzyEu9qhksdzSBQPZnNk9zDyjaQaRzuwd2vQZpzGZPqascvY1lRx5a3SpHeabr2CL8QPKKtD-UbZK02Jz15Bh1Ub32m7LZ7td8riwbInk40qgMkf-_8tNQeGmn3T8HOQ9WxdLpNh9OULdSdqagRlWsFUpTXK1Ik2uG4NX6dar9KoaoI3jmMyVkHhedSfigZe7smBJU-jALDTSB1Zgh9V-oU9TirOSM4SSjMYZ-eaCjNEFDfsF2iWBEx741S1XixkIqVBDlj37BXlX6AtoTBNo1wTuvtoNPLJ2dasE-tAJekdhyjrHE6Dc_2Zn2hlB_9hZkwJkhkr1v1r64V-_ff_3Hz_iGJk6bC2SdYlmjeOalkG_cuH-RY3SvJA1XO-bB9eXSulF962D6_HC4Kp7xSIQVaHXu6khCofrAtrkvv0sAo1jwFunOG4h6o7keouVGpT71uvN8bWavrPXGShdvYXmGE79svLdcMqb-E79kvJ74QXcA8_x5jxi-wDlotQ0MFp437PI8JTMoWUgh8gKPhr7ImRlqC0ksDI8_BrBHc1jtTJW_AnTUsqXQiSHTCnyzdbw7tC4-JSnxeU2YRSFfQ7BeiDHxf1meG6JYHh749HwTNPuuMNTtz8YOD1nYA97LWNneO2-43YsG19aQ8sa2IPeU8v4tixqdoZDx3SG1ungtIcB_X7LgIjh8p3pfzHln5mnfwHbuaCF).
+
+But if you are one person, [simplify the user journey even more](https://mermaid.live/edit#pako:eNptVW1v4jgQ_iuj7O2V6ko3vBXIh5NoC3Ql2mWBXnUXqpVJhuBtYiPHKWVL__uNnYRCtf1Q_PLM4_EzjyevTiBDdDwnUmy9gtn1XAD9ff4MfaHVFsaSC52vTTVTulIZShnFCL3Qgz9q7peQbU9PoVr9e3cV8-BpB6OxP2Ii5CKCMYvQg5MhavhXZgoGChG-T04ec8L9Ud_EQjJlQ_6EMapUChbzX0xzKXLQaGyPmPJIwP3agwFXuGAppZHp1e6A4PWAayBV8pbHH6wanq9inWm4YwmmdOI107iDIYq-iLhAfyQjHkA-8cw6KkLANM6io8z3Efn1FRrUmJmEDNYnwTQR3U9GHnyhCwVYXchF9WcmsO5WX7o_64-_I-onCwxN1I60oi1_n8H3CWy4XsGVzNZUgkuV6_xRztkK4aS3YidwKxMsy2e5zAF033Tlm39WEyqQLc4DhlYfOoSnMEEWbstCGWyuW5JgyE0qvcAUZwczTPU0YMIvcjLj1HBoafcKhhJmWe7XsWQhTDFechJ-Uv8xU5zFfmVSh8sseELtgV2B2vDy9Oh2JbaoYqqZ0DBADBfMeo8_4z8cN37jwoUhi2NUW6-UK0Wqtl4hVzQ0RxfMZZDV5kFuKpXZTR96Nz24_Xbbv5udnn7Q90qKZzIp3d9WO1-nQJvUDY9W8FVo0n1H29sNZeHTrylE8SDq3W610ezCeHRXpFDgco9rxdckZBYEmKY7uBexDJ78_IeCW-7wEv6CWrN6zbZQaPnARSg3H40wYDzOFH7pv3D9m1TvJBSJ7cBAjGFJMvJeiqrgsqEGTA9NJlT5kLAJ8fpjmeobGZlKRREqjwyET_E234W7TGk6umSxa4ZmggmlimqvzVwc-bZ0oblbxSyQEWPoP1OSRRlyISzZO9g-4IxMNpJy7dtRar1orMh0SVu-txJ5YEfrw0EWH9vQLJDXTSVKIxYwG2psY-6SO6wwnD9W_Nm8kQMTFhyPh7dVZFmT_YhtUeXLabbI-3Ah7o89yO9RS9xSO0nfA21vTh8_drjjF3dksA_Xz6cowoO0pnob70lSmmDe-GHJ49j7tOwuz1Kt5BN6nxqNxiHM2KoALbuHoGJc3fBQr7zm-uWInDplEYa1ZWuJ-0i31mp3F4fYovQ5OujgRfB-Th3bYaN-iC4LlcNdNwiWR7k7Z_TR46HjaZXhmZOgIpfS1Hk1LHOHWkWCc8ejYYhLlsV67szFG4WtmfhPyqSMVDKLVo63ZHFKs2wdUvGvOaNKvkPQmJ5sIrTjtSyD4706L45Xu-ic15tuvd1yG67bdju0u3W8atttn3ddUqDRrnUvao3m25nzyx5aO--0Oo1Ord6uNS7qDbdJEdSVtVS3-afcftHf_gcJIYfA).
 
 The **launch strategy**: *aka, focus strategy*
 
 | Element | Decision |
 | :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
+| **One Avatar** | B2C Emotional / Aspirational|
+| **One Product** | Wed photo storage |
+| **One Channel** | GAds |
 
 The **Tier of Service**: A DFY that I made [here](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt) and Ive transformed into **DIY** *(thanks to leverage x tech)* with the cool serverless tech stack below.
 
@@ -87,14 +89,14 @@ The **tech stack**:
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
+| **Frontend Framework** | Astro | |
+| **Styling/UI Library** | Sassify MIT like theme | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)** | | |
-| **Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-| **E-mail/ESP** | | |
-| **Analytics** | | |
-| **Hosting** | | |
+| **Database** | FireStore | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | Firebase Auth | |
+| **E-mail/ESP** | MailTrap | |
+| **Analytics** | Posthog | |
+| **Hosting** | Container | |
 
 
 {{< details title="Choosing an UI tech stack 📌" closed="true" >}}

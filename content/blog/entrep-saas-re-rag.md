@@ -333,6 +333,10 @@ https://youtu.be/QCFhukC4rXI
 
 {{< youtube "QCFhukC4rXI" >}}
 
+The success story has been recorded [here](https://youtu.be/bCMs02nL2O4)
+<!-- 
+https://youtu.be/bCMs02nL2O4 -->
+
 
 ### PS ;)
 
@@ -545,7 +549,7 @@ And hey...much better looking than: `https://efasolution.al`
 * Http auth vs cookies
 * Crawlee x ApiFY: Who can be interested in such websites?
 
-As this Real Estate is a great case study / success story, how about...letting others know about it?
+As this Real Estate is a great [case study / success story](https://youtu.be/bCMs02nL2O4), how about...letting others know about it?
 
 * `twojmetr2.pl`
 

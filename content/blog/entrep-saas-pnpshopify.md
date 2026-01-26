@@ -215,7 +215,15 @@ graph LR
 
 In the traditional BI world, insights are expensive and slow.
 
-Z_PGSQL-GenBI is designed to eliminate the "friction" between a business question and a data-driven answer.
+`Z_PGSQL-GenBI` is designed to eliminate the "friction" between a business question and a data-driven answer.
+
+Kind of a niche [genbi tool](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#existing-genbi-solutions), like these:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rill" title="Rill | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wren-ai" title="WrenAI | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 #### About Shopify API
 

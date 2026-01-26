@@ -554,7 +554,7 @@ To develop a **modern, secure, and scalable landing page with modular astro comp
 
 ```sh
 whois leadarchitect.org| grep -i -E "(creation|created|registered)"
-
+#nslookup leadarchitect.org
 ```
 
 ---

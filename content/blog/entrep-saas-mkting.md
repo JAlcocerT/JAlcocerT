@@ -80,14 +80,7 @@ You are already prompted to buy an info product: `https://youtu.be/kwIgobHPwxY`
 
 For copywriting, see Isra Bravo.
 
-
-## From bots to leads
-
-Another service that can become a product?
-
-Who knows :)
-
-
+And the **book Cashvertising**.
 
 ---
 

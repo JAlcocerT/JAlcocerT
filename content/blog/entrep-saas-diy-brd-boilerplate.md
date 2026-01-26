@@ -309,7 +309,9 @@ Great questions.
 
 These terms are the building blocks of that "Payback Period" chart you liked.
 
-To understand them, think of your business as a **leaky bucket**. **Revenue** is the water coming in, and **Profit** is what stays in the bucket after it passes through different "filters" (expenses).
+To understand them, think of your business as a **leaky bucket**. 
+
+**Revenue** is the water coming in, and **Profit** is what stays in the bucket after it passes through different "filters" (expenses).
 
 1. Gross Profit: The "Core" Efficiency
 
@@ -364,7 +366,9 @@ Here is how the financial metrics map directly to your operations:
 
 1. Attract & Convert (The "CAC" Zone)
 
-This phase is everything you do to turn a stranger into a customer. It is the primary driver of your **Customer Acquisition Cost (CAC)**.
+This phase is everything you do to turn a stranger into a customer.
+
+It is the primary driver of your **Customer Acquisition Cost (CAC)**.
 
 * **Attract:** Costs include ad spend, content creation, and SEO efforts designed to bring people into your "Awareness" funnel.
 * **Convert:** Costs include sales team salaries, demos, and CRM tools needed to close the deal.

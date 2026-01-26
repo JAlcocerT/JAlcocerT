@@ -12,6 +12,8 @@ url: 'shopify-business-data-analytics'
 
 A landing before having a closed product?!
 
+You going crazy?
+
 +++ Uptime [Status for my new services](#how-about-uptime)
 
 
@@ -52,7 +54,7 @@ cd poc_shopify/landing
 #make help
 ```
 
-> The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc.
+> The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc. With its associated 1 week launchpad.
 
 
 <!-- https://youtu.be/Wf0uwVaNnQ4 -->

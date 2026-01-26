@@ -333,6 +333,10 @@ Which is a much better tool to leverage than trying to build your own flask base
   {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat" title="Traefik x TinyAuth Setup" image="/blog_img/selfh/https/TinyAuth/tinyauth-https-ui.png" subtitle="TinyAUth as WebApp authentication middleware with the Firebat MiniPC" >}}
 {{< /cards >}}
 
+{{< callout type="warning" >}}
+This is the last time I try to plug an existing CMS to one of my sites
+{{< /callout >}}
+
 
 ```mermaid
 graph TB
@@ -609,7 +613,7 @@ I was so tired of waiting for image uploads via: https://test.entreagujaypunto.c
 
 Upload speed....it is what it is.
 
-So...decided to try with [CF R2, as preparation](https://github.com/JAlcocerT/entreagujaypunto-next-gallery/blob/master/z-local-vs-r2.md) for the future.
+So...decided to try with [CF R2, as preparation](https://github.com/JAlcocerT/entreagujaypunto-next-gallery/blob/master/z-local-vs-r2.md) at some point in the future.
 
 ---
 

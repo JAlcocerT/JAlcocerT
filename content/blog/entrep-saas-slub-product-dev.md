@@ -43,15 +43,15 @@ Cant I get better?
 
 Of course you can.
 
-And its all about asking the questions:
+And its all about asking these **3 questions**:
 
 * Whats working
 * Whats not
-* ~~Whats next~~: whats the biggest blocker to make it better?
+* ~~Whats next~~: *whats the biggest blocker to make my idea better in reality?*
 
 ## Some math first
 
-Say your TAM is: 100k every year
+Say your TAM is: *100k people every year*
 
 Then, 1% of them get to know that you exist when they are on a **BANT state**: *that goes to...1k*
 
@@ -77,19 +77,19 @@ With proper [atf instructions to Gemini](https://github.com/JAlcocerT/poc_shopif
 
 ![landing page vite](/blog_img/AIBI/amazing-landing.png)
 
-To: *Your users on high-intent mobile searches will now see the headline + interactive input + video proof all in their first view*
-
-![alt text](/blog_img/AIBI/vite-baml-genbi-atf.png)
-
-You can have cool videos embeded into your site, like these:
+You can have **cool videos embeded** into your site, like these sites do:
 
 1. `https://www.okticket.es/`
 2. `https://www.zoho.com/mail/`
 3. `https://www.mrpresident.es/`
 4. `https://flashhub.io/`
+5. Thanks to these I also learnt to ask about this and got it working at my genbi.jalcocertech.com
 
+To: *Your users on high-intent mobile searches will now see the headline + interactive input + video proof all in their first view*
 
-Or just friendly desins `https://kursy.ikliszcz.com/`
+![alt text](/blog_img/AIBI/vite-baml-genbi-atf.png)
+
+Or just friendly and converting desins `https://kursy.ikliszcz.com/`
 
 
 ### A better FAQ
@@ -228,6 +228,21 @@ node --env-file=.env ./scripts/orchestrate-drip.mjs
 ```
 
 Is going to be ran by github actions: *hourly and free, with [this config](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/drip.yml)*
+
+
+> Whatever [your user journey](https://mermaid.live/edit#pako:eNp9Vktu40YQvUqDwAwcQLLMr2wGSKCRxMEgsoexZBsQ5UVbLEs9JruJZtO2Ing3QLILkGSfC2SXTfa5SS6QHCFFNiWTdhCtRKnqVdV7r7q5NZYiBsM3VpJmazIbLTjBz5s3pNvtkmlxU_2ek1shyTChkqlN-Y-Oyuu_ySD659effyAToDF5DxwkVUxw8pZMQRUZCSTAtU4pPwMzCqXIM1gqxGTLu5wM4muE_YoMrIMJ5THjKxLSFfjkkiYFEAzPRM5K0C--bABZOsnehpKlVG7IcDbwydUmk3_-flN8InNKRlSm4uunZpaNWeTsw1gnn0TjR6Z670TBl3D9Km42-EbHOQfnsGK5qmcLhEx9ckZT6JBxSlnSwVIKWu05OtM9mG5yBWk1DYsxSmcgP0MJ5eNgucTyqpXs6mTvYETz9Y2gMvZrOi8ZPLRCPR3ajwbLsjefTMTyjgyLXImUXJxPCByuDjukRzmn7BPl1DqyvNaofY1wvEcYiiJLgMwgVzm5yBKByrokXAslyISlTLXSj6v0uVn_Bjxe8BcWmaNFfvmMuPweZF4xWHAOJQkh3aTAVcMhc3NPWeWps0KqQpaueIca8Lw5_dzUxa2t3XXIqeAK7RpK6F5BXBqppf3cqrXvaUiocsdmVAmys9tbMmNZ3pxwbLYnfMZCf_T0UEqH2DusxqgjHCJhHMjH21uQTeC5rbOcFzKT9wVSj9Tk-YOQcWns1tDaWnN3O4Wk3KOKxWpLZwxke2Z3N_OEZjnEOtPbtRkwThMyfsxY7ewrKjny1upSOywwX8GW44eU1aD9vWy1puXmLiHHqq3utd3mz3a74Elp2QopwJVAZfb8_5ebwtJNP-n4Kch7tiyXSLH7aoSmk7Q1QzOqYetSmuR6Rdpctwav061X6XU1QBsnCZkqIfG86o3EA692ZcbSttChWWqkD6zQjur9Qp9mFGclpwglGU1y8u05GaILWvYLtUtCJ9rxq1uuFzMUUqGGLH_2C_Ku0BfQmibUrgndbb0beGRtmlYJ9aETenthqjr7E6Da_3Zn2hlhf99ZmwJkhkr1v1oG0V-_ff_3Hz_iGLnabS2SdYFmTZKGlmG_duH2RY3KvJC3XB-YO9dXSulFD6yd6_HC4Kp3yWIQdaHXu6khSofrAtrkgf0sAk0SwFunPG4h7g3kco2VWpQH1uvNCbSagbPVGShds4X2GE7zsgrcaMzb-E7zkgq86BzugRd4c-6xA4BqURoaGB2871ls-EoW0DGQQ2QFH41tGbIw1BpSWBg-fo2pvFsYC_6EORnlcyHSXZoUxWpt-LfoWnwqsvJmGzGKqj6HYDGQw_JyM3zL9SoMw98aj4bvWIf9I9dxzRPPtW3ryO4YG8Pvmp57dGif2K7reMd996ljfFfVxGjnpG-5x96J5fZdE8MhZrh3p_oFpnqPefoXd7yeuw) is, most likely than not you will send after a follow up.
+
+Same for upsales.
+
+| Workflow Stage | Primary Metric | Purpose |
+| --- | --- | --- |
+| **Attract & Convert** | **CAC** | Measuring the efficiency of your sales and marketing "engine". |
+| **Delivery** | **Gross Profit** | Measuring the efficiency of your production or service "engine". |
+| **Retention** | **LTV** | Measuring the long-term value of the customer relationship. |
+
+So consider this email DRIP orchestration as a way to keep CaC constant and move up the LTV.
+
+The Goal: You want a "Deliver" workflow so efficient (high Gross Profit) and a "Convert" workflow so effective (low CAC) that you reach the **Payback Point** as quickly as possible.
 
 **Private Repositories**: GitHub provides **2,000 free minutes per month**.
 

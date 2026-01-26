@@ -10,6 +10,7 @@ url: 'tech-recap-2026'
 
 **TL;DR**
 
+![alt text](/blog_img/data-experiments/life-flows-blured.png)
 
 <!-- 
 https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
@@ -484,27 +485,35 @@ Others, from the vibe coding sessions: helped to bring quick demos to the produc
 
 ### Serverless
 
-Ive enjoyed using **Cloudflare R2** for s3 compatible object storage.
+1. Ive enjoyed using **Cloudflare R2** for s3 compatible object storage.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="CF R2 x Weds" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Launching the wedding project this year with R2 integration | Post" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/hugo-pocketbase-and-r2/" title="CF R2 x PB" image="/blog_img/web/agujapunto-r2-firebase/r2-101.png" subtitle="Previous year I tested Cloudflare R2 with PB| Post" >}}
 {{< /cards >}}
 
-Combine with **firebase authentication + FireStore** for my first ever public launch.
+2. Combined with **firebase authentication + FireStore** for my first ever public launch.
 
-> Pulling registered users from those and setting automatic emails campaigns with Mailtrap and GHA was so cool
+> Pulling registered users from those tables and setting automatic emails campaigns *(lean DRIP)* with Mailtrap and GHA was so cool
 
-Plus a cool example of lean engineering. No need for glue when there are no data silos by design.
+Plus a cool example of lean engineering. 
+
+No need for glue when there are no data silos by design.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slubnechwile-chwile-y26" title="Slubne-Chwile - Automated Sales Pipeline ↗" icon="github" >}}
 {{< /cards >}}
 
+So there we have also the...
 
-Creating invoices with json via the serverless SPA: https://github.com/JAlcocerT/serverless-invoices
+3. Serverless Lean DRIP email sequences
+
+
+4. Creating invoices with json via the serverless SPA: https://github.com/JAlcocerT/serverless-invoices
 
 Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?lang=en` at this [post](https://jalcocert.github.io/JAlcocerT/csr-and-js/#csr-examples).
+
+
 
 1. https://github.com/neondatabase/neon
 
