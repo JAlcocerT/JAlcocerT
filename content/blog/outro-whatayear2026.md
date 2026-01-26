@@ -62,9 +62,22 @@ Comercial ones like: `https://www.lindy.ai/pricing`
 Maybe, try to build a brand *before its too late*.
 
 
+
+0. For social media outreach, `https://www.growchief.com/` was an inspiration.
+
+But also their discord bouble on the web for any BiP Project.
+
+> As the alternative i knew about `heyreach.io`
+
+0. 
+
 0. Strapi directus...Web CMS stuff
 
 This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
+
+But I said no more to custom CMS integrations.
+
+Not doing more websites for others.
 
 0. Audio TTS
 

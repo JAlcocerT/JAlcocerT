@@ -171,7 +171,7 @@ There are **people *(marketers)* doing cool things** with marketing agencies.
 
 They are implementing CRMs like GHL: `https://www.gohighlevel.com/`
 
-> Building The Digital Marketing Engine
+> Building The **Digital Marketing Engine**
 
 Also, `https://www.smartlead.ai/pricing` for cold emails.
 

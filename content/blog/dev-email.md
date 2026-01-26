@@ -3,7 +3,7 @@ title: "SMTP and e-mail stuff"
 date: 2025-11-24
 draft: false
 tags: ["EMPs vs ESPs","MailTrap API","Amazon SES vs Resend vs MailJet","GrowChief vs ListMonk"]
-description: 'Email is hard. Social Media OutReach, is not via Email Service Providers.'
+description: 'Email is hard. Social Media OutReach is not via Email Service Providers.'
 url: 'emails-101'
 ---
 
@@ -56,7 +56,7 @@ Before we get started, you might keep this close to you:
 * https://temp-mail.org/
 * https://mxroute.com/
 * https://ethereal.email/
-* See the web/app `millionverifier` to... verify/validate emails. Like [Knockmail](#knockmail) tries.
+* See the web/app `millionverifier` or `NeverBounce` to... verify/validate emails. Like [Knockmail](#knockmail) tries.
 
 Same as [auth is hard](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#conclusions), until [its not](https://jalcocert.github.io/JAlcocerT/social-signin-101/).
 
@@ -862,51 +862,17 @@ GrowChief and Postiz are both open-source tools aimed at **social media manageme
 
 Growchief is an open-source (and SelfHostable) social media automation tool (aka social scraper).
 
+GrowChief is primarily a **social media outreach automation tool** focused on automating actions like sending connection requests, follow-ups, liking, and profile visits on platforms like X (formerly Twitter) and LinkedIn.
+
 ![SelfHosted GrowChief](/blog_img/selfh/marketing/growchief-ui.png)
 
-It allows you to create a workflow (step-by-step) for interacting with different accounts on social media, such as sending a connection request, following up with a message, and so on. Perfect for API/n8n automations.
+It allows you to create a workflow (step-by-step) for interacting with different accounts on social media, such as sending a connection request, following up with a message, and so on.
+
+Perfect for API/n8n automations.
 
 * https://github.com/growchief/growchief
 
-> apg3.0 |  The Ultimate all-in social media automation (outreach) tool 🤖 
-
-> >  GrowChief: An alternative to: Phantom Buster, Expandi, Zopto, LinkedIn Helper, Meet Alfred, etc.
-
-- GrowChief is primarily a social media outreach automation tool focused on automating actions like sending connection requests, follow-ups, liking, and profile visits on platforms like X (formerly Twitter) and LinkedIn.
-
-It emphasizes human-like automation with stealth technology and proxies, making it well-suited for lead generation, engagement, and outreach workflows. 
-
-GrowChief **supports API triggers** and teams, targeting agencies, startups, and solopreneurs who want to automate social interactions.
-
-- Postiz, on the other hand, is an all-in-one social media scheduling and management platform with a strong focus on content creation, scheduling, team collaboration, and analytics. 
-
-In summary:
-
-| Feature            | GrowChief                                         | Postiz                                                  |
-|--------------------|--------------------------------------------------|---------------------------------------------------------|
-| Primary Focus      | Social media outreach automation (connect, follow, message) | Comprehensive social media scheduling, content creation, and management |
-| Supported Actions  | Connection requests, follow-ups, likes, visits  | Scheduling posts, content creation, analytics, team collaboration |
-| Platforms          | X (Twitter), LinkedIn                            | Facebook, Instagram, TikTok, LinkedIn, YouTube, Reddit, more |
-| AI Capabilities    | Limited (workflow-based automation)             | AI content & image generation, AI assistant             |
-| Audience           | Agencies, startups, solopreneurs for outreach   | Agencies, businesses, marketing teams for scheduling/content management |
-| Open Source        | Yes                                              | Yes                                                     |
-
-So, while they are similar as open-source social media tools, GrowChief focuses on outreach and engagement automation, whereas Postiz offers a broader social media management and scheduling experience with strong AI-driven content creation features.
-
-
-If you read the [sample.env](https://github.com/growchief/growchief/blob/main/.env.example), you might recognize:
-
-- Apollo leads: we are aware that [some marketers use apollo](https://jalcocert.github.io/JAlcocerT/software-for-marketing-agencies/#a-sample-marketer-workflow). Combined with APIfy to lower the cost!
-- OPENAI_API_KEY
-- RESEND_API_KEY=""
-- EMAIL_PROVIDER=""
-- EMAIL_FROM_NAME=""
-- EMAIL_FROM_ADDRESS=""
-- NEWSLETTER_PROVIDER=""
-
-If it does not already, Growchief should sounds to you to a lead enrichment and/or sales pipeline companion.
-
-
+> apg3.0 | The Ultimate all-in social media automation (outreach) tool 🤖 
 
 
 ### Selfhosting Email?
@@ -997,8 +963,7 @@ Self-hosted [Stalwart mail server](https://gist.github.com/chripede/99b7eaa1101e
 
 Does an email you logged into your new waiting/[ebook list with Pocketbase](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#ebooks-pdf-or-web-version) even exists?
 
-Unfortunately, [This](https://github.com/umuterturk/email-verifier) does not work anymore: https://github.com/umuterturk/email-verifier
-
+Unfortunately, [This](https://github.com/umuterturk/email-verifier) does not work anymore: `https://github.com/umuterturk/email-verifier`
 
 * But there is also: https://github.com/4w4k3/KnockMail
 

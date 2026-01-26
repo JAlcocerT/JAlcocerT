@@ -2,7 +2,7 @@
 title: "How about getting leads for your SaaS?"
 date: 2026-01-23T09:20:21+01:00
 draft: false
-tags: ["BiP","APIFY x Sales Pipeline","Scrapping","RoadMap26","Selfishness as virtue?"]
+tags: ["BiP","APIFY x Sales Pipeline","Scrapping x OutBound","RoadMap26","Selfishness as virtue?"]
 description: 'Finding people that actually need your services. A story post the first ten.'
 url: 'how-to-get-customers-programmatically'
 ---
@@ -140,6 +140,17 @@ whois genkinfy.com | grep -i -E "(creation|created|registered)"
 
 Want this implemented for your business?
 
+Depending on your technical skill and what you need the data for:
+
+| Alternative | Best For... | Type |
+| --- | --- | --- |
+| **Bright Data** | High-volume enterprise scraping and best-in-class proxy networks. | Infrastructure / No-code |
+| **Apollo.io** | Directly finding B2B contacts without building your own scraper. | Lead Database |
+| **PhantomBuster** | Social media automation (LinkedIn, Twitter, etc.) with a "set it and forget it" workflow. | No-code Automation |
+| **Octoparse** | Visual, point-and-click scraping for people who don't want to code. | No-code Tool |
+| **Clay** | Integrating scraped data with AI to write personalized outreach emails. | Data Enrichment |
+| **ScrapingBee** | Developers who want a simple API to handle proxies and headless browsers. | Developer API |
+
 Or prefer to keep your Ego safe vs take this bet and see if people/b2B want your services?
 
 {{< cards >}}
@@ -183,7 +194,7 @@ graph LR
 
 ### What are my plans around client adquisition
 
-I will use this mainly for two projects:
+I will use this mainly for a couple projects:
 
 1. [The weddings](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) B2B flow (B2C goes the ad route)
 2. The [custom real estate](https://jalcocert.github.io/JAlcocerT/custom-re-rag) web/app as a *high ticker* with [custom demo emailed to potential clients](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md) 
@@ -192,7 +203,62 @@ I will use this mainly for two projects:
 
 Stay tuned. 
 
+```mermaid
+graph 
+    %% Unit Economics Engine
+    subgraph Engine [Unit Economics Engine]
+        P[Price] --> M1{x}
+        Q[Quantity/Volume] --> M1
+        M1 -- "Revenue" --> GM[Gross Margin %]
+        GM -- "Gross Profit" --> OM[Operating Margin %]
+        OM -- "Operating Income" --> IB[Interest/Borrowing Cost]
+        IB -- "EBT" --> TB[Tax Burden %]
+        TB -- "Net Profit" --> Goal
+    end
+
+    %% Styling
+    style Engine fill:#f0f4f8,stroke:#0056b3,stroke-width:2px
+    style Goal fill:#f9f,stroke:#333,stroke-width:2px
+```
+
 The year has just started.
+
+```mermaid
+graph LR
+    A[Apify: Initial Discovery] -->|Scrapes| B(Directory/Social Platform)
+    B --> C{Data Storage}
+    C -->|Store Raw| D[(SQLite / CSV)]
+    D --> E[Firecrawl: Deep Enrichment]
+    E -->|Analyze Website| F[AI Processing / LLM]
+    F -->|Personalization Lines| G[(Final Lead Database)]
+    G --> H{Outreach Action}
+    H --> I[Cold Email: Instantly/Smartlead]
+    H --> J[LinkedIn: Social Automation]
+    H --> K[CRM: HubSpot/Pipedrive]
+    I --> L[Response Handling]
+    J --> L
+    L --> M[Closed Deal]
+```
+
+And I got a way to mirror what a high-growth sales teams do.
+
+```mermaid
+graph LR
+    A[(Lead Database)] --> B{Lead Scoring}
+    B -->|High Score| C[Sales Team / SDRs]
+    B -->|Low Score| D[Marketing / Nurture]
+    
+    C --> C1[Cold Calling]
+    C --> C2[1:1 LinkedIn]
+    C --> C3[Personalized Email]
+    
+    D --> D1[Newsletter / Content]
+    D --> D2[Retargeting Ads]
+    
+    C1 & C2 & C3 --> E{Interest?}
+    E -->|Yes| F[CRM: Sales Opportunity]
+    E -->|No| D
+```
 
 ### About been Selfish
 
@@ -250,6 +316,12 @@ Which approach sounds more sustainable for a long-term career?
 The high-octane drive of Rand, or the "unshakable" calm of the Stoic?
 
 ## FAQ
+
+### More Scrapping Ideas
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrap Tools ↗" icon="github" >}}
+{{< /cards >}}
 
 * https://github.com/browser-use/browser-use
 

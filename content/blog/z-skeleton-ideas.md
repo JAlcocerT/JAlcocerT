@@ -189,7 +189,7 @@ Know your sector
 
 the Business Model Canvas, which is a globally recognized framework that helps visualize how Attraction (Channels/Customer Relationships), Delivery (Key Activities/Resources), and Conversion (Revenue Streams) work together to create a profitable business.
 
-splitting a business into Attraction, Conversion, and Delivery is an excellent way to view the "Engine" of a company. 
+Splitting a business into Attraction, Conversion, and Delivery is an excellent way to view the "Engine" of a company. 
 
 While the profit formula ($P \times V \times GM \times OM \times IF \times T$) tells you what is happening to the money.
 
@@ -551,11 +551,19 @@ To develop a **modern, secure, and scalable landing page with modular astro comp
 
 {{< /details >}}
 
+Yep, there is something cooking up around a new agency that needed some help:
 
 ```sh
 whois leadarchitect.org| grep -i -E "(creation|created|registered)"
 #nslookup leadarchitect.org
 ```
+
+| Feature | Marketing Ops (MOPs) | Revenue Ops (RevOps) |
+| --- | --- | --- |
+| **Primary Goal** | Generate & Nurture Leads | Maximize Total Revenue |
+| **Focus Area** | The "Top" of the funnel | The **Entire** funnel (Sales + Marketing + Support) |
+| **Key Metric** | Cost Per Lead (CPL) | Customer Lifetime Value (LTV) / Revenue |
+| **Success looks like...** | A database full of "Hot" leads. | A predictable, growing bank account. |
 
 ---
 

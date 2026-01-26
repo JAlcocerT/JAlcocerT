@@ -233,13 +233,13 @@ smartlead tiene una zona de CRM, pero gohighlevel (GHL) tb se puede usar como CR
 smarlead tb categoriza la repsuesta y pueden cambiar los leads a interested x ej y tb hay ewbhooks... q conectan con make
 smartlead tb sp conectar a slack
 
-heyreach puede ser una opcion si no tienes el email y el flow de smartlead no funcionaria
+heyreach puede ser una opcion si no tienes el email, ya que el flow de smartlead no funcionaria
 
-tb se puede conectar make a tu crm, como para poner contactos categorizados como interesados segun el webhook
+tb se puede conectar make a tu CRM, como para poner contactos categorizados como interesados segun el webhook
 ```
 
-> lead gen Jay, nick saraev (184 skool x 2600 members), kristian besser 1700 personas en slack de 92k pagando 4k
-manthan patel https://www.agentpass.ai/
+> lead gen Jay, nick saraev ($184 skool x 2600 members), kristian besser 1700 personas en slack de 92k pagando 4k
+manthan patel `https://www.agentpass.ai/`
 
 
 #### GHL
