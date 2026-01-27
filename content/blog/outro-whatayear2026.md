@@ -69,7 +69,13 @@ But also their discord bouble on the web for any BiP Project.
 
 > As the alternative i knew about `heyreach.io`
 
-0. 
+0. When finding leads...
+
+This was an awsome example of data analytics.
+
+Specially after having some thoughts about analytical reflections of OLTP tables.
+
+For the ones that want to break the silos and get proper data lineage trazability to see what worked (what are the *features* of a prospect that actually bought from you) and feedback to the lead engine.
 
 0. Strapi directus...Web CMS stuff
 

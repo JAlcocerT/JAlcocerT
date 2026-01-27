@@ -284,8 +284,8 @@ In the **Value Ladder**, the difference is between **Efficiency (Save me effort)
 ##### **The Fractional Agency (Done-With-You / Done-For-You)**
 
 * **Position:** **Strategic Partner.**
-* **The Proposition:** You aren't selling "reports"; you are selling **alpha**. You are the person who finds the "leaks" in their  and .
-* **Logic:** This is high-customization. You are looking at *their* specific Shopify data and giving *their* COO specific orders.
+* **The Proposition:** You aren't selling "reports"; you are selling **alpha**. You are the person who finds the "leaks".
+* **Logic:** This is high-customization. You are looking at *their* specific Shopif data and giving *their* COO specific orders.
 * **Formula Focus:** Low ****, very high ****. You succeed because the ROI of your "brain" is worth 10x your retainer.
 
 ---
@@ -304,10 +304,10 @@ In the **Value Ladder**, the difference is between **Efficiency (Save me effort)
 
 #### 3. The "Moonlighter's" Strategic Advantage
 
-Because you have **$100k in assets** and **one stable job**, you have the luxury of "playing both sides" of the value ladder:
+Because you have **$100k+ in net assets** and **one stable job**, you have the luxury of "playing both sides" of the value ladder:
 
-1. **The WebApp** is your "Scaling Engine." It builds an asset that could eventually be worth a **7-figure exit** (based on a multiple of its ).
-2. **The Fractional Agency** is your "Expertise Engine." It keeps your skills sharp and provides high-ticket cash flow that you can dump into the WebApp's **[GROWTH BET]** (Ads).
+1. **The WebApp** is your "Scaling Engine." It builds an asset that could eventually be worth a **7-figure exit** (based on a multiple).
+2. **The Fractional Agency** is your "Expertise Engine." It keeps your skills sharp and provides *high-ticket cash flow* that you can dump into the WebApp's **[GROWTH BET]** (Ads).
 
 ---
 

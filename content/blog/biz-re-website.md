@@ -154,20 +154,8 @@ With very interesting components at `/src/content/project/crafting-the-perfect-c
 #mogrify -format jpg *.avif #the images have to be jpeg or jpg to be zoomable
 ```
 
-> http://localhost:4321/work/crafting-the-perfect-cosmic-mojito/
+> `http://localhost:4321/work/crafting-the-perfect-cosmic-mojito/`
 
-
-3. https://github.com/themefisher/astrofront-astro
-
-> MIT | AstroJS-Powered Shopify Storefront Boilerplate with TailwindCSS and Nanostores. With **Shopify e-commerce integration.**
-
-```sh
-git clone https://github.com/themefisher/astrofront-astro
-
-npm install
-#npm audit fix
-npm run dev #you will need shopify credentials for the .env
-```
 
 4. https://github.com/oxygenna-themes/foxi-astro-theme Which has an interesting /blog section with tags
 

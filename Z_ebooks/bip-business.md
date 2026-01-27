@@ -70,10 +70,13 @@ graph TD
 
 Final Takeaway
 
-Whether you are analyzing **Microsoft** or starting your own **Shopify store**, the logic is identical: Use **CapEx** and **OpEx** to drive **Volume and Price**, then use **Operational Discipline** to make sure that growth doesn't get "eaten" by the internal drains of the business.
+Whether you are analyzing **Microsoft** or starting your own **e-commerce store**, the logic is identical:
 
+Use **CapEx** and **OpEx** to drive **Volume and Price**, then use **Operational Discipline** to make sure that growth doesn't get "eaten" by the internal drains of the business.
 
-This is a great way to "label" the business from a leadership perspective. By assigning a **Strategic Tag** to each variable, you move from accounting terminology to **Management Action**.
+This is a great way to "label" the business from a leadership perspective.
+
+By assigning a **Strategic Tag** to each variable, you move from accounting terminology to **Management Action**.
 
 Here is how we can tag the levers to show who owns the "Bet," who owns the "Execution," and who owns the "Structure."
 

@@ -118,7 +118,7 @@ Once you have extracted, like from `compass/crawler-google-places`
 
 ```sh
 #git clone https://github.com/JAlcocerT/leads-slubnechwile
-!python apify/scrape_Wphotographers.py
+!python apify/scrape_photographers.py
 ```
 
 ### Lead Enrichment x FireCrawl
@@ -131,13 +131,35 @@ But what if you know scrapping?
   {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrap Tools ↗" icon="github" >}}
 {{< /cards >}}
 
-It happens that you can do your own enrichment to the pulled data
+It happens that you can do your own enrichment to the pulled data: *because with this one, you just have raw contact data*
 
 ```sh
 /home/jalcocert/Desktop/leads-slubnechwile/venv/bin/python apify/json_to_csv.py && ls -lh leads.csv && head -n 5 leads.csv
 #title;price;phone;categories;website
 ```
 
+Now, lets plug some cool stuff: *understand better potential prospects, to see if they qualify to your product/service*
+
+
+```sh
+
+```
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/apify-101.ipynb)
+
+
+I could not resist to try also with
+
+* ScrapeGraph
+
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/apify-101.ipynb)
+
+
+* Crawl4AI
+
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/apify-101.ipynb)
 --- 
 
 ## Conclusions

@@ -44,6 +44,20 @@ The same person who races, is a director and [ships omarchy](https://jalcocert.g
 
 ## Connecting to Ecommerce BackEnd
 
+If you have ever scrapper jobs, this is hot:
+
+```json
+        {
+            "job_title": "Lead Front-end Engineer with Shopify",
+            "company_name": "",
+            "location": "Cała Polska (praca zdalna)",
+            "job_type": "Remote",
+            "experience_level_required": "NA",
+            "direct_link": "",
+            "salary_range": "160–210 zł netto (+ VAT) / godz."
+        },
+```
+
 ### Shopify
 
 I made here the landing before having the product and the clients.

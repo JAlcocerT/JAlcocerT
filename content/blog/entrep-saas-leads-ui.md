@@ -2,9 +2,9 @@
 title: "Any SaaS needs this: Leads and a UI"
 date: 2026-01-24T09:20:21+01:00
 draft: false
-tags: ["BiP x GTM","APIFY vs Apollo vs Clay","ESP Sales Pipeline","RoadMap26","GrowChief x Social Media OutReach"]
+tags: ["BiP x GTM","APIFY vs Apollo vs Clay","Sales Pipeline","RoadMap26","GrowChief x Social Media OutReach"]
 description: 'Forget about B2C. Go B2B as they have a clear BANT. From MOps to RevOps'
-url: 'how-to-do-email-marketing'
+url: 'how-to-do-social-media-outreach'
 ---
 
 
@@ -354,6 +354,8 @@ graph TD
 ```
 
 And in the end: is a very clear information/**data silo problem**.
+
+> I know, you never thought about that data lineage yet :)
 
 To bridge the gap between "just scraping" and "RevOps excellence," you need a **Feedback Loop**.
 

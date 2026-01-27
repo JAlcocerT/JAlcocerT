@@ -167,7 +167,9 @@ It aligns all key business functions, including:
 | **Time Horizon** | Short-term and event-driven. It's typically a "sprint" for a specific launch. | Long-term and ongoing. It is continuously evolving to support the brand. |
 | **Responsibility** | Owned by the executive team, often led by a Product Marketing Manager (PMM) or a cross-functional GTM team. | Owned by the marketing team. |
 
-A strong GTM strategy ensures that your product is ready for the market, while your marketing strategy ensures that the market is ready for your product.
+A strong GTM strategy ensures that your product is ready for the market
+
+While your marketing strategy ensures that the market is ready for your product.
 
 ---
 
@@ -187,11 +189,23 @@ Know your sector
 | **Main Constraint** | **Demand (Marketing)** | **Demand (Attention)** | **Supply (Expert Hours)** |
 | **Macro Winner** | Low-cost luxury (Recession) | Upskilling (Recession) | Interest Rate Neutral |
 
-the Business Model Canvas, which is a globally recognized framework that helps visualize how Attraction (Channels/Customer Relationships), Delivery (Key Activities/Resources), and Conversion (Revenue Streams) work together to create a profitable business.
+The Business Model Canvas, which is a globally recognized framework that helps visualize how Attraction (Channels/Customer Relationships), Delivery (Key Activities/Resources), and Conversion (Revenue Streams) work together to create a profitable business.
 
-Splitting a business into Attraction, Conversion, and Delivery is an excellent way to view the "Engine" of a company. 
+Splitting a business into *Attraction, Conversion, and Delivery* is an excellent way to view the "Engine" of a company. 
 
-While the profit formula ($P \times V \times GM \times OM \times IF \times T$) tells you what is happening to the money.
+While the profit formula: ($P \times V \times GM \times OM \times IF \times T$) 
+
+$CAGR = \left( \frac{V_f}{V_i} \right)^{\frac{1}{t}} - 1$.
+
+$$
+NaOH(s) \xrightarrow{H_2O} Na^+(aq) + OH^-(aq) + \text{heat}
+$$
+
+$$
+P \times V \times GM \times OM \times IF \times T
+$$
+
+tells you what is happening to the money.
 
 This three-part framework tells you how the work is getting done.
 
@@ -245,7 +259,7 @@ Operating Margin ($OM$) acts as a "bridge" between today's work and tomorrow's g
 
 If we use that logic, we can define the relationship between the two margins as **Execution** vs. **Evolution**.
 
-1. Gross Margin (): The "Today" (Execution)
+1. Gross Margin: The "Today" (Execution)
 
 If OM is the bridge to tomorrow, **GM is the engine running today.** It measures the fundamental "profitability of the task." 
 
@@ -256,9 +270,9 @@ If you are an IT company,  answers the question: *"Can we deliver this AI projec
 * **The 2026 Strategy:** By focusing on "AI delivery tools," the company is trying to widen the . If they can do the same work in 50 hours that used to take 100, the  expands.
 
 
-2. Operating Margin (): The "Bridge" (Evolution)
+2. Operating Margin: The "Bridge" (Evolution)
 
-As you noted,  is where the company decides how much of "today’s profit" () to sacrifice for "tomorrow’s growth."
+The OM is where the company decides how much of "today’s profit" to sacrifice for "tomorrow’s growth."
 
 * **The Reinvestment Zone:** This is where you pay for the **Attraction** and **Conversion** we discussed. You take the money made in Delivery () and spend it on Sales, Marketing, and R&D.
 * **The Efficiency Test:**  also tests if the company is becoming a "bloated bureaucracy." If  is high but  is low, the company is great at the "work" but terrible at "running the business."
@@ -266,14 +280,14 @@ As you noted,  is where the company decides how much of "today’s profit" () to
 
 3. Comparing the Two (The "IT" View)
 
-| Feature | Gross Margin () | Operating Margin () |
+| Feature | Gross Margin | Operating Margin |
 | --- | --- | --- |
 | **Focus** | **Delivery & Production** | **Strategy & Infrastructure** |
 | **Primary Cost** | Billable Labor (Developers) | Non-billable Labor (Sales, HR, CEO) |
 
+**Delivery** is the "production line." 
 
-
-**Delivery** is the "production line." In an IT company, this is the act of turning human hours and cloud compute into a finished product for a client.
+In an IT company, this is the act of turning human hours and cloud compute into a finished product for a client.
 
 * **The Lever:** This is driven by **COGS (Cost of Goods Sold)**.
 * **Why it’s here:** Because the salaries of the developers and project managers are *variable*—if you have no clients, you (theoretically) don't need these specific delivery hours.
@@ -281,7 +295,9 @@ As you noted,  is where the company decides how much of "today’s profit" () to
 
 2. Attraction & Conversion = The  Level (Indirect Costs / OpEx)
 
-**Attraction** and **Conversion** are the "growth machinery." They sit in the OM  because they are **Operating Expenses (OpEx)**.
+**Attraction** and **Conversion** are the "growth machinery." 
+
+They sit in the OM  because they are **Operating Expenses (OpEx)**.
 
 * **Attraction (Marketing):** This is your **S** in **SG&A** (Selling, General & Administrative). You spend this money to create a brand so that people *want* to work with you.
 * **Conversion (Sales/Account Management):** This is also in **SG&A**. These people take the leads from Attraction and turn them into contracts ( and ).
@@ -315,10 +331,11 @@ If we define: *see what are the profit levers*
 * IB=Interest Burden(EBITPre-tax Income​)
 * TB=Tax Burden(Pre-tax IncomeNet Income​)
 
-*Using the formula: . This maps the "Survival Rate" of every dollar earned.*
+*Using the formula you get a map the "Survival Rate" of every dollar earned.*
 
+To get the most granular view, we start with the "Top Line" (Units and Price)
 
-To get the most granular view, we start with the "Top Line" (Units and Price) and apply each "Survival Rate" (the margins and burdens) until we reach the "Bottom Line."
+Then, apply each "Survival Rate" (the margins and burdens) until we reach the "Bottom Line."
 
 #### Case Study: The QR Guest Photo App
 
@@ -332,7 +349,6 @@ To get the most granular view, we start with the "Top Line" (Units and Price) an
 | **Op. Efficiency ()** | **[DISCIPLINE]** | **50%** | **OpEx:** 50% of revenue "leaks" to Customer Acquisition (Ads). |
 | **Solvency (Cash Flow)** | **[STRUCTURE]** | **Instant** | Payment is upfront. Zero "Payback Period" delay. |
 | **Net Profit** | **BOTTOM LINE** | **~$23/unit** | High-efficiency digital delivery. |
-
 
 3. The "Levers" Comparison: You vs. The Giants
 
@@ -357,9 +373,9 @@ To get the most granular view, we start with the "Top Line" (Units and Price) an
 
 Whenever you analyze a new business opportunity, drop it into the "Empty Column" of Table 1. 
 
-If it has a **Supply Constraint**, focus on raising your **Price ()**. 
+If it has a **Supply Constraint**, focus on raising your **Price**. 
 
-If it has a **Demand Constraint**, focus on increasing your **Volume ()**
+If it has a **Demand Constraint**, focus on increasing your **Volume**
 
 ![Supply and Demand for a SaaS](/blog_img/entrepre/bip-supply-demand.png)
 
@@ -402,7 +418,7 @@ The Reality Check: Focus vs. Friction
 
 * **Launch to a Small Cohort:** Post in wedding forums or local Facebook groups.
 * **The Feedback Loop:** Use your analyst skills to track the **Funnel Drop-off**. Where are people leaving the site? (Landing Page -> Upload -> Payment).
-* **The Pivot Point:** If the  (Volume) is low, adjust the **Price ()** or the **Growth Bet (Ad Creative)**.
+* **The Pivot Point:** If the Volume is low, adjust the **Price** or the **Growth Bet (Ad Creative)**.
 
 
 ```mermaid
@@ -439,7 +455,7 @@ graph LR
 
 ## Building a HOW with Sense
 
-A BRD is what works best for me now to ship fast [as described here](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk).
+A **BRD** is what works best for me now to ship fast [as described here](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk).
 
 Take time and define properly they why and what: *including what's out of scope, specially if you are just one person*
 
@@ -490,10 +506,10 @@ The **tech stack**:
 | **Styling/UI Library** | | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-| Others | Web Analytics / ads / Cal / Formbricks / ESP | Yes, via MailTrap |
+| Others | Web Analytics / ads / Cal / Formbricks / ESP |  |
 
 
-For me, working with antigravity and such tech stack
+For me, working with antigravity and such tech stack below does the trick.
 
 
 {{< details title="Vibe Coding | Setup  📌" closed="true" >}}
@@ -596,7 +612,6 @@ How about: getting things done?
 {{< /cards >}}
 
 <!-- {{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This DFY I have to refine it though" >}} -->
-
 
 ---
 

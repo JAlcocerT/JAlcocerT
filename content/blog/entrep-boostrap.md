@@ -254,7 +254,7 @@ The presenter explains that unlike large SaaS companies like Salesforce, microSa
   - PermitSync: Helps homeowners navigate city permit processes
   - PodScriptor: Automates podcast show notes and teaser clips creation
   - SpecSheet: Converts PDF specification sheets into sortable comparison tables
-  - CartSaver: Personalized AI video messages to recover abandoned Shopify carts
+  - CartSaver: Personalized AI video messages to recover abandoned Shopif carts
   - GrantGuru: AI-powered grant proposal generator for nonprofits
 
 - **Building and Scaling:** The key is starting small with a niche, iterating based on audience feedback, using SEO and social media marketing, and eventually growing recurring revenue streams with low capex.

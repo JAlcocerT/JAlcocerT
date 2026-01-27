@@ -416,3 +416,21 @@ Tested Strapi and DirectusCMS
 <!-- https://youtu.be/bREja-vW6fA -->
 
 {{< youtube "bREja-vW6fA" >}}
+
+
+## FAQ
+
+- **Burst by Shopify**  https://www.shopify.com/stock-photos  
+
+
+3. https://github.com/themefisher/astrofront-astro
+
+> MIT | AstroJS-Powered Shopif Storefront Boilerplate with TailwindCSS and Nanostores. With **Shopify e-commerce integration.**
+
+```sh
+git clone https://github.com/themefisher/astrofront-astro
+
+npm install
+#npm audit fix
+npm run dev #you will need shopif credentials for the .env
+```

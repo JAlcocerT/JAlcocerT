@@ -330,7 +330,14 @@ See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/lead
 
 I like the shopify one: `https://www.shopifystatus.com/`
 
-See as reference the:
+See as reference these others: *and also the latest uptime Kuma selfhosted + script setup*
+
+
+* [AWS](https://health.aws.amazon.com/health/status)
+* [Cloudflare](https://www.cloudflarestatus.com/)
+* and [Github](https://www.githubstatus.com/)
+
+Its curious that even X resisted the AWS outage, not the CF one.
 
 
 ### Competitors

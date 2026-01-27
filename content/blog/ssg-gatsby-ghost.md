@@ -122,7 +122,7 @@ They allow you to add various features, optimize performance, and integrate with
 
 12. **Localization and Internationalization**: To make your site multilingual, you can use plugins like `gatsby-plugin-i18n` or `gatsby-plugin-react-i18next`.
 
-13. **E-commerce Integration**: If you're building an e-commerce site, plugins like `gatsby-plugin-shopify` or `gatsby-source-stripe` can help you integrate with e-commerce platforms.
+13. **E-commerce Integration**: If you're building an e-commerce site, plugins like `gatsby-plugin-shopif` or `gatsby-source-stripe` can help you integrate with e-commerce platforms.
 
 14. **Serverless Functions**: Gatsby supports serverless functions through plugins like `gatsby-plugin-functions`. You can create serverless API endpoints for dynamic functionality.
 
@@ -402,8 +402,6 @@ If you need high‑quality, royalty‑free images, these sources offer excellent
 - **StockSnap**  https://stocksnap.io/  
 
 - **Pexels**  https://www.pexels.com/  
-
-- **Burst by Shopify**  https://www.shopify.com/stock-photos  
 
 - **Freerange**  https://freerangestock.com/  
 
