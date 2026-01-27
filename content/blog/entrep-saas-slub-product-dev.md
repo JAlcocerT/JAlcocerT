@@ -147,13 +147,15 @@ The term evokes gradual nurturing of leads through timed sequences.
 
 #### DRIP x Mailtrap ESP
 
-https://github.com/JAlcocerT/make-landing/tree/master/mjml-email I tested Mailtrap API x Python and some templating.
+Here https://github.com/JAlcocerT/make-landing/tree/master/mjml-email I tested Mailtrap API x Python and some templating.
 
 <!--
 https://github.com/JAlcocerT/make-landing/blob/master/mailetrap-esp.ipynb
  -->
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/make-landing/blob/master/mailetrap-esp.ipynb)
+
+But it was time to use it for: `/slubne-chwile-y26/z-emails`
 
 Taking this to the project: *I needed some orchestrator, but it wont be driven by CRON, but via GHA with hourly checks.*
 
@@ -344,6 +346,8 @@ You got the code [here](https://github.com/JAlcocerT/Home-Lab/tree/main/py-stati
 ![QR Code](https://raw.githubusercontent.com/JAlcocerT/Home-Lab/main/py-static/qr-pdf/qr-sample.png)
 
 #### Google TAG
+
+For GAds, you will need a DUN number if you are doing this is a company.
 
 ![alt text](/blog_img/biz/slubne/google-tag.png)
 

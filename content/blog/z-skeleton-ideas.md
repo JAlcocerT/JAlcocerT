@@ -1,6 +1,6 @@
 ---
 title: "How to analyze Business Opportunities"
-date: 2026-01-26T07:00:21+01:00
+date: 2026-01-27T07:00:21+01:00
 draft: false
 tags: ["BiP","Entrepreneuring","Focus","Unit Economics 104"]
 description: 'Do you really want to do this...that way?'

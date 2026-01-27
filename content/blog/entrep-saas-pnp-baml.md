@@ -669,13 +669,21 @@ If you are coming from the **Lloyd Tabb/Looker** world, Power BI feels different
 **Malloy** is a modern, open-source language for data modeling and querying, created by **Lloyd Tabb** (the founder of Looker) and a team at Google.
 
 * https://github.com/malloydata/malloy
+* https://www.malloydata.dev/
   * https://docs.malloydata.dev/documentation/user_guides/sql_experts1
+<!-- 
+  https://www.youtube.com/watch?v=fzb1Ez0bHCA
+
+  {{< youtube "fzb1Ez0bHCA" >}} -->
+
 
 > MIT | Malloy is a modern open source language for describing data relationships and transformations.
 
 If **LookML** was Lloyd Tabb’s first attempt to fix SQL, **Malloy** is his "clean slate" version. 
 
-It is designed to be for SQL what **TypeScript** is for JavaScript: *a more powerful, typed, and modular way to write code that ultimately "compiles" down to standard SQL.*
+It is designed to be for SQL what **TypeScript** is for JavaScript:
+
+*A more powerful, typed, and modular way to write code that ultimately "compiles" down to standard SQL.*
 
 What makes Malloy special?
 

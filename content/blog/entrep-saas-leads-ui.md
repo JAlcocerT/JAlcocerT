@@ -207,6 +207,10 @@ Why choose Apify?
 
 Somewhere.
 
+You can start with a `.csv`, or a google sheet.
+
+If the thing scales, probably you will need to think about integration to CRMs.
+
 
 ### Define the Lead Scoring Strategy
 
@@ -214,12 +218,25 @@ Somewhere.
 * **Sales (The "Validators"):** They define the **Intent**. They provide feedback like, *"Hey, the leads you sent me from that LinkedIn scrape were great, but only the ones who had 'Hiring' in their profile actually bought. Let's add +20 points for hiring signals."*
 * **Marketing Ops (You):** You are the one who actually writes the logic into the database or CRM to calculate these numbers automatically.
 
-### Choose your mailing ESP
+### The OutReach Strategy
+
+
+
+#### Choose your mailing
+
+Regular mailing ESP like mailtrap wont serve here.
+
+Those are for transactional ones, not for cold emails.
 
 People are using these: 
 
 * `https://loops.so/`
 * `https://www.zoho.com/mail/`
+
+#### Social Media Outreach
+
+If you go the B2B route, Linkedin will be one that you want to try.
+
 
 
 
@@ -266,13 +283,44 @@ But this one:
 ### What works what not and whats next
 
 
-Capturing leads with this workflow is great.
+Capturing leads with this workflow is great: Discovery & verification x Enrichment x Execution
+
+
+```mermaid
+graph TD
+    subgraph "Phase 1: Discovery & Cleaning"
+    A[Apify / Apollo / Directories] -->|Scrape Raw Leads| B[SQLite Database]
+    B -->|Export Emails| C{Email Verification}
+    C -->|Invalid/Catch-all| D[Discard / Manual Check]
+    C -->|Verified Safe| E[High-Quality Lead List]
+    end
+
+    subgraph "Phase 2: AI Enrichment"
+    E -->|URL List| F[Firecrawl: Deep Web Crawl]
+    F -->|Markdown Content| G[AI Agent / LLM]
+    G -->|Generate| H[Personalized Opening Lines]
+    H -->|Update| I[(Final Enriched SQLite DB)]
+    end
+
+    subgraph "Phase 3: Execution (Smartlead)"
+    I -->|CSV Upload| J[Smartlead Campaigns]
+    K[Secondary Domains] -->|Warmup 14 Days| J
+    J -->|Rotate Mailboxes| L[Prospect Inboxes]
+    L -->|Replies| M{AI Reply Labeling}
+    M -->|Interested| N[CRM: HubSpot/Pipedrive]
+    M -->|Not Now| O[Nurture Sequence]
+    end
+
+    style J fill:#f96,stroke:#333,stroke-width:2px
+    style F fill:#6cf,stroke:#333,stroke-width:2px
+```
 
 You can then do:
 
 1. Phone Call
 2. Social Media Outreach: like via linkedin *enhanced with other [tools, like these](#selfhosted-outreach-tools)*
 3. Cold email: similarly to the lean DRIP email automation with Mailtrap I set [here](https://jalcocert.github.io/JAlcocerT/iterating-and-improving-a-micro-saas/#mailtrap-orchestrated-via-gha)
+
 
 
 Thinking about MOps vs RevOps has been a thing.

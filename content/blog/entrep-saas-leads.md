@@ -2,7 +2,7 @@
 title: "How about getting leads for your SaaS?"
 date: 2026-01-23T09:20:21+01:00
 draft: false
-tags: ["BiP","APIFY x Sales Pipeline","Scrapping x OutBound","RoadMap26","Selfishness as virtue?"]
+tags: ["BiP","APIFY x Firecrawl","Sales Pipeline","Scrapping x OutBound","RoadMap26","Selfishness as virtue?"]
 description: 'Finding people that actually need your services. A story post the first ten.'
 url: 'how-to-get-customers-programmatically'
 ---
@@ -108,7 +108,35 @@ Lets get to it:
 
 > Your full‑stack platform for web scraping
 
+<!-- 
+https://github.com/JAlcocerT/leads-slubnechwile/blob/main/apify-101.ipynb 
+-->
 
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/apify-101.ipynb)
+
+Once you have extracted, like from `compass/crawler-google-places`
+
+```sh
+#git clone https://github.com/JAlcocerT/leads-slubnechwile
+!python apify/scrape_Wphotographers.py
+```
+
+### Lead Enrichment x FireCrawl
+
+Some people uses `hunter.io` to get an email.
+
+But what if you know scrapping?
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Scrap_Tools" title="Scrap Tools ↗" icon="github" >}}
+{{< /cards >}}
+
+It happens that you can do your own enrichment to the pulled data
+
+```sh
+/home/jalcocert/Desktop/leads-slubnechwile/venv/bin/python apify/json_to_csv.py && ls -lh leads.csv && head -n 5 leads.csv
+#title;price;phone;categories;website
+```
 
 --- 
 
