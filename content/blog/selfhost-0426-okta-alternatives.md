@@ -247,3 +247,9 @@ As **Free Alternatives for Okta** I would go for
 ### Authentication with SupaBase
 
 https://supabase.com/docs/guides/auth/auth-helpers/nextjs
+
+### Linux as OS
+
+I kept using Zorin, particularly the current version 18:
+
+* https://zorin.com/os/archive/

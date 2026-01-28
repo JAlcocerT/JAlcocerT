@@ -62,6 +62,16 @@ Comercial ones like: `https://www.lindy.ai/pricing`
 Maybe, try to build a brand *before its too late*.
 
 
+0. Type safe
+
+From JS we evolved to TS
+
+From regular openAI API calls, to do it via BAML
+
+and from SQL, to malloy: https://github.com/malloydata/malloy
+
+https://docs.malloydata.dev/documentation/user_guides/sql_experts1
+
 
 0. For social media outreach, `https://www.growchief.com/` was an inspiration.
 
@@ -295,6 +305,8 @@ It was a continuation of [this section for artists](https://jalcocert.github.io/
   {{< card link="https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/" title="DIY Landing BoilerPlate | Post ↗" >}}
   {{< card link="https://github.com/JAlcocerT/diy-landing-boilerplate" title="DIY Landing BoilerPlate Repo ↗" icon="github" >}}
 {{< /cards >}}
+
+Its all a matter of a cool UI with a demo video, a form and a calendar.
 
 4. Status Pages for services: Kener / UptimeKuma. 
 
@@ -550,6 +562,29 @@ Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?la
 
 1. About langchain connected to a database...v2
 2. 
+
+99. duckdb x motherduck
+
+https://ducklake.select/manifesto/
+
+which relates to rill gen bi andduckdb
+
+https://www.youtube.com/watch?v=dJMqeKEtW6w
+
+https://www.youtube.com/watch?v=dJMqeKEtW6w
+
+https://www.youtube.com/watch?v=hrTjvvwhHEQ
+
+https://www.youtube.com/watch?v=-PYLFx3FRfQ
+
+
+
+https://motherduck.com/docs/getting-started/
+
+Infrastructure 
+for Answers
+
+The data warehouse built for answers, in SQL or natural language.
 
 I focused on [articulating better](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/articulated-vs-authorit.md) my ideas, creating [engaging presentations](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/authoritative-content.md) and [authorated](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/authoritative-content.md) content.
 
