@@ -236,8 +236,11 @@ And [pgsql can do](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/
   {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+Even if you have a wood PC, this works, its just ~45mb of RAM consumption:
+
 ```sh
 docker compose up -d
+#sudo docker stats
 
 #docker exec postgres_container psql -U admin -d myapp -c "SELECT 1;"
 

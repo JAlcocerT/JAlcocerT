@@ -250,6 +250,23 @@ https://supabase.com/docs/guides/auth/auth-helpers/nextjs
 
 ### Linux as OS
 
-I kept using Zorin, particularly the current version 18:
+I kept using Zorin, particularly the current version 18: *so you are not forzed to through away good enough hardware*
 
-* https://zorin.com/os/archive/
+* `https://zorin.com/os/archive/`
+
+> You can expect to get it working with 2GB of RAM
+
+```sh
+sudo apt update && sudo apt install trash-cli
+trash-empty
+#rm -rf ~/.local/share/Trash/*
+#docker system df
+#sudo docker stats
+```
+
+So even my old ~400$ laptop from 2010 could handle this
+
+{{< youtube "t8LpwHygDfg" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=t8LpwHygDfg -->

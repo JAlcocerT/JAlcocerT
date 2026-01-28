@@ -257,13 +257,13 @@ docker exec -it postgres_container psql -U admin -d postgres -c "CREATE DATABASE
 cat northwind.sql | docker exec -i postgres_container psql -U admin -d northwind
 ```
 
-After doing that, see that we have now not only Chinook, but also NortWhind:
+After doing that, see that we have now *not only* Chinook, but also NorthWind available:
 
 ```sh
 docker exec postgres_container psql -U admin -d postgres -c "\l"
 ```
 
-```
+```md
    Name    | Owner | Encoding | Locale Provider |  Collate   |   Ctype    | ICU Locale | ICU Rules | Access privileges 
 -----------+-------+----------+-----------------+------------+------------+------------+-----------+-------------------
  chinook   | admin | UTF8     | libc            | en_US.utf8 | en_US.utf8 |            |           | 
@@ -317,26 +317,28 @@ DuckDB, PostgreSQL, and ClickHouse serve overlapping but distinct roles: *DuckDB
 | Aspect | DuckDB | PostgreSQL | ClickHouse |
 |--------|--------|------------|------------|
 | **Architecture** | In-process, embedded (no server), columnar OLAP | Client-server, row-based OLTP (OLAP via Citus/ TimescaleDB) | Distributed columnar OLAP server |
-| **Best For** | Local notebooks, prototyping, <50GB analytics [1][2] | Transactions + moderate analytics, e-com apps [4][3] | Massive real-time analytics (>TB), dashboards [1][5] |
-| **Query Speed (OLAP)** | Excels on complex joins/small-medium data; vectorized | Good with indexes/extensions; slower on pure analytics | 10-100x faster aggregations on large data [1][6][4] |
-| **Scalability** | Single-node only | Vertical + sharding (Citus) | Horizontal clustering, petabyte-scale [1][2] |
-| **Resource Use** | Ultra-light (MBs RAM), in-memory option | Heavier (server overhead) | Optimized compression, high concurrency [1][6] |
-| **Self-Hosting** | `pip install duckdb`; file-based | Docker Postgres | Docker cluster; steeper ops [7] |
-| **E-com Fit** | Quick sales analysis on exports | Full stack (Medusa.js DB) | High-volume orders/events [1] |
+| **Best For** | Local notebooks, prototyping, <50GB analytics  | Transactions + moderate analytics, e-com apps | Massive real-time analytics (>TB), dashboards |
+| **Query Speed (OLAP)** | Excels on complex joins/small-medium data; vectorized | Good with indexes/extensions; slower on pure analytics | 10-100x faster aggregations on large data  |
+| **Scalability** | Single-node only | Vertical + sharding (Citus) | Horizontal clustering, petabyte-scale  |
+| **Resource Use** | Ultra-light (MBs RAM), in-memory option | Heavier (server overhead) | Optimized compression, high concurrency |
+| **Self-Hosting** | `pip install duckdb`; file-based | Docker Postgres | Docker cluster; steeper ops |
+| **E-com Fit** | Quick sales analysis on exports | Full stack (Medusa.js DB) | High-volume orders/events |
 
-DuckDB beats Postgres on pure OLAP speed for local work but lacks transactions/HA. ClickHouse crushes both on scale but skips OLTP.[6][3][1]
+DuckDB beats Postgres on pure OLAP speed for local work but lacks transactions/HA.
+
+ClickHouse crushes both on scale but skips OLTP.
 
 Performance Benchmarks (OLAP Queries)
 
-- **Small-Medium Data (<10GB)**: DuckDB often fastest (e.g., JOINs 2-5x Postgres).[8][1]
-- **Large Data (TB+)**: ClickHouse dominates (9,000x JSON scans vs DuckDB/Postgres).[4][1]
-- **E-com Example** (orders aggregation): ClickHouse > DuckDB > Postgres.[1]
+- **Small-Medium Data (<10GB)**: DuckDB often fastest (e.g., JOINs 2-5x Postgres).
+- **Large Data (TB+)**: ClickHouse dominates (9,000x JSON scans vs DuckDB/Postgres).
+- **E-com Example** (orders aggregation): ClickHouse > DuckDB > Postgres.
 
 Use Cases for Your Stack
 
-- **DuckDB**: Prototype text-to-SQL/PyGWalker on Northwind dumps. Embed in Astro for static sites.[9][1]
-- **Postgres**: Production OSS e-com (control DB container), Metabase native.[3][4]
-- **ClickHouse**: Scale dividend analytics or high-traffic shop events.[5]
+- **DuckDB**: Prototype text-to-SQL/PyGWalker on Northwind dumps. Embed in Astro for static sites.
+- **Postgres**: Production OSS e-com (control DB container), Metabase native.
+- **ClickHouse**: Scale dividend analytics or high-traffic shop events.
 
 ##### Hybrid Pg OLTP to DuckDB
 
@@ -479,6 +481,8 @@ Like any of these services that you can [tinker with and selfhost](https://jalco
 These are 2 examples that are having [remote databases](https://github.com/JAlcocerT/langchain-db-ui/blob/master/z-extra-remote-dbs.md) we can connect to.
 
 > We will be connecting to copies of such dbs to the postgres instance we have spinned locally to avoid problems
+
+Or to have some marketing around this as: analytical reflection of the OLTP data
 
 ##### Umami
 
@@ -818,6 +822,12 @@ cd y2026-tech-talks/langchain-postgres
 #npm run export #default as pdf!
 ```
 
+<!-- 
+https://youtu.be/XS0vLK9x9nc -->
+
+{{< youtube "XS0vLK9x9nc" >}} 
+
+
 ![alt text](/blog_img/AIBI/langchain-db-techtalk.png)
 
 
@@ -835,6 +845,23 @@ npm install chart.js pg
 
 > > Also, as the db is not in the browser, I needed to fetch one time the data from pg *I didnt wanna create a be API for this*
 
+```mermaid
+mindmap
+  root((Data Concept))
+    OLTP
+      ::icon(fas fa-database)
+      Transactional
+      Normalized (3NF)
+      Real-time Updates
+      Row-based
+    OLAP
+      ::icon(fas fa-chart-bar)
+      Analytical
+      Denormalized
+      Batch Processing
+      Column-based
+```
+
 ```sh
 npm run prefetch  # Just fetch data
 #node scripts/fetch-data.js #http://localhost:3030/db-data.json
@@ -842,7 +869,9 @@ npm run prefetch  # Just fetch data
 
 See how API vs database driven component differs in [this diagram](https://mermaid.live/edit#pako:eNqNk1FvmzAUhf8Kcl9aKURgcAJompQEMWmatFTsadAHJ1wCG9iRMd2yKP-9BtJAG9qVF2zf7x4fDvYRbXkCyEM7QfeZ9mMZM009Vb3pFmIUrolhrDIqpHa7KnJgUg_zBLTvrDjcxajjmycs1LIZtS_tTy4zrW996LEVL_ecKRmFXurTxxoGzBdgIKjkItp1I_Ch5D6VVAtqtpU5Z0PFRuFraEad1K9qUHttT9P1zwMLY7Za5OJgxNRHNZ59dQCwpBtcJexv1jmcE26-cUMr0H2RPwK7DhgPA-47xwLGUV9_FXDLVHRTQFRXsOaV3Amo7msQh5f5-cvo9lwO77_dXaeOP5A6fpkYHvPaI62tMavap4bxl2-3ny2NBy4PSqL_iWleFN5NECzmeDbZ8oIL7yZN0yE82Lqj7dUiIMYbtL-8aLqOYbyn2Z2RsyZekID8j8ZnGpvuLLAGNJqoq5snyJOihgkqQZS0maJjoxMjmUEJMfLUMKHid3OeTqpnT9lPzsvnNsHrXYa8lBaVmtX7pLlyOVUntEdUniBWvGYSeaRVQN4R_UWebmIyneG5Mzcd18bmzJ2gA_Iwsae2WrDnjk1cw8DWaYL-tZuaU4tYJnEsYs-Jqzqs0xMmaF_R)
 
-Next time? There [will be](#iot---langchain-x-pg) a better setup for this.
+Next time? 
+
+There [will be](#iot---langchain-x-pg) a better setup for this.
 
 <!-- 
 You can see the video:

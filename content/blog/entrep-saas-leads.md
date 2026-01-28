@@ -142,26 +142,25 @@ Now, lets plug some cool stuff: *understand better potential prospects, to see i
 
 
 ```sh
-
+!python3 
 ```
 
 I could not resist to combine firecrawl with BAML and OpenAI for the **ultimate lead enchrichment flow**.
 
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/apify-101.ipynb)
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/101-firecrawl.ipynb)
 
 
 I could not resist to try also with
 
 * ScrapeGraph
 
-
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/apify-101.ipynb)
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/101-scrapegraph.ipynb)
 
 
 * Crawl4AI
 
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/101-crawl4ai.ipynb)
 
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/apify-101.ipynb)
 --- 
 
 ## Conclusions
