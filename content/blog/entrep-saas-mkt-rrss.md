@@ -1,6 +1,6 @@
 ---
 title: "Mastering Social Media x InfoGraphics"
-date: 2026-03-01T11:20:21+01:00
+date: 2026-04-01T11:20:21+01:00
 draft: false
 tags: ["Twitter X vs Threads","Youtube","Latex vs Typst","Side-Quest26","YFinance"]
 description: 'Quality and automated content creation to build a community. Compared to just ads.'
@@ -25,7 +25,7 @@ And ofc, a CAC that you paid in the currency you value the least (is it t or $?)
 
 Let's focus.
 
-Can we say that 1 out of 1000 followers is a potential customer?
+Can we say that 1 out of 1000 followers (0,1%) is a potential customer?
 
 Then...the hard question comes.
 
@@ -40,7 +40,9 @@ A brand helps offset some part of the CAC.
 
 So for the [artists](https://jalcocert.github.io/JAlcocerT/link-artists/) around: the first C stands for *customer*
 
-Question: Do you have a product, so tht you can effectively opt to have customers? :)
+Question: *Do you have a product/service, so that you can effectively opt to have customers?* :)
+
+If ou are in social media for ego feeding: you can skip now.
 
 ## Programmatic Social Media
 

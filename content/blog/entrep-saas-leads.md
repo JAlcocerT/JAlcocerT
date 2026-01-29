@@ -150,7 +150,7 @@ I could not resist to combine firecrawl with BAML and OpenAI for the **ultimate 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/101-firecrawl.ipynb)
 
 
-I could not resist to try also with
+I could not resist to try also with **these scrapping frameworks**
 
 * ScrapeGraph
 
@@ -181,9 +181,9 @@ This will potentially fill my *DWY pipeline*.
 
 The one created [here](https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#conclusions).
 
-One year *aka 12 months* is what you need to change your business and life.
+One year *aka 12 months* is what you need to change your business (and life).
 
-Ive seen it happen: *Programming marketing and sales is all you need*
+Ive seen it happen: *Programming, marketing and sales is all you need*
 
 ```sh
 whois genkinfy.com | grep -i -E "(creation|created|registered)"
@@ -321,7 +321,6 @@ However, she argued that if you truly self-respect, you will naturally value oth
 
 You might help a friend in need—not because it’s a "duty" to sacrifice yourself, but because that friend is a "value" to you and seeing them happy increases your own happiness.
 
-
 Before moving forward: *the free -100%ROI for my time investment to learn what I do and how?*
 
 {{< cards >}}
@@ -337,7 +336,6 @@ In business, Rand’s "non-sacrificial" concept manifests as **Rational Capitali
 * **Nor Sacrifices Himself to Others (Value-Based Employment):** This applies to the boss and the employee.
 * **The Boss:** Shouldn't feel guilty for being rich or "owe" a job to someone who isn't productive.
 * **The Employee:** Doesn't "sacrifice" their life for the company. They trade their time and talent for a paycheck and experience. If the trade isn't fair, a Randian walks away.
-
 
 **The Business Motto:** *"I don't work for you, and you don't work for me. We work with each other for our own separate benefits."*
 
@@ -355,7 +353,6 @@ How the Stoic "Trader" Operates:
 * **The "Preferred Indifferent":** Stoics like Epictetus taught that wealth is a "Preferred Indifferent." It is better to have it than not, but it doesn't change your worth. Therefore, a Stoic can trade aggressively and earn millions, but they won't be "possessed" by their possessions.
 * **Justice as a Core Virtue:** Stoics believe in "Justice" (the duty to act fairly toward the human community). A Stoic trader wouldn't cheat a customer not because it's "irrational" (Rand's view), but because it violates the "social bond" of humanity.
 
-
 | Action | Randian Executive | Stoic Executive |
 | --- | --- | --- |
 | **Hiring** | Hires the "best" to maximize profit. | Hires the "best" to fulfill their duty well. |
@@ -365,6 +362,8 @@ How the Stoic "Trader" Operates:
 Which approach sounds more sustainable for a long-term career? 
 
 The high-octane drive of Rand, or the "unshakable" calm of the Stoic?
+
+---
 
 ## FAQ
 

@@ -61,6 +61,15 @@ Comercial ones like: `https://www.lindy.ai/pricing`
 
 Maybe, try to build a brand *before its too late*.
 
+0. Interesting Recipes
+
+How could I not offer something very special to entreagujaypunto: *to capture all those recipes*
+
+```sh
+
+```
+
+With
 
 0. Type safe
 
@@ -607,7 +616,7 @@ xargs -0 awk '
   /^date:/ && !printed {
     gsub(/^date:[[:space:]]*/, "", $0)
     post_date = substr($0, 1, 10)
-    if (post_date >= "2026-01-01" && post_date <= "2026-12-31") {
+    if (post_date >= "2026-02-01" && post_date <= "2026-12-31") {
       print FILENAME ": " post_date
       printed=1
       count++

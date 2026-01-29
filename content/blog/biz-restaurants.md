@@ -1,8 +1,8 @@
 ---
 title: "[Prototyping] Restaurants x Astro SSR."
-date: 2026-03-01
+date: 2026-04-01
 draft: false
-tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26"]
+tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads"]
 description: "MultiTenant Websites for Restaurants. Million dollar idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
@@ -11,6 +11,16 @@ url: "webs-for-restaurants"
 
 
 **Intro**
+
+For B2B only.
+
+Scrap on google maps some potential interested business: leads.
+
+
+
+
+
+## The business side
 
 
 The **launch strategy**: *aka, focus strategy*
@@ -141,19 +151,6 @@ A set of **sites themes** that will take a while to get outdated:
 4. Photo Galleries / "Pretending Sites"
 5. [Wedding Sites](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) (and related [software for weddings](https://jalcocert.github.io/JAlcocerT/software-for-weddings/))
 
-
----
-
-
-### Interesting Recipes
-
-How could I not offer something very special to entreagujaypunto: *to capture all those recipes*
-
-```sh
-
-```
-
-With
 
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Grafana Monitoring: Prometheus"
-date: 2026-10-09
+date: 2026-10-01
 draft: false
 tags: ["Homelab","Docker","Self-Hosting","Iotawatt","Prometheus vs Graphite","Grafana vs TelemetryHarbour"]
 description: 'Grafana works for IoT Same as for Monitoring a HomeLab'
@@ -312,9 +312,15 @@ mqttx bench pub -c 5000 -t bench/%i
 
 
 ## EMQX (instead of mosquitto)
-<https://mqttx.app/docs/get-started>
-docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p 18083:18083 emqx/emqx
 
+
+
+
+<https://mqttx.app/docs/get-started>
+
+```sh
+docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p 18083:18083 emqx/emqx
+```
 
 
 <https://www.emqx.io/>
@@ -472,10 +478,8 @@ MQTT provides a light-weight, efficient protocol for communicating between devic
 
 ### Observability Platform for LLMs
 
-
-  https://github.com/traceloop/openllmetry
-  https://github.com/langfuse/langfuse
+* https://github.com/traceloop/openllmetry
+* https://github.com/langfuse/langfuse
   
   Or with LangSmith
 Also DataDog - https://docs.datadoghq.com/llm_observability/ 
-

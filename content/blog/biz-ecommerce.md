@@ -1,9 +1,9 @@
 ---
 title: "An e-Commerce around OSS"
-date: 2026-02-03
+date: 2026-02-01
 draft: false
 tags: ["Shopify x SaaS","Drupal","User Clustering","RoadMap26","BlackFriday","OLTP vs OLAP"]
-description: 'Creating an eCommerce. Drupal vs DFY custom solutions'
+description: 'Creating an eCommerce with OSS. Drupal vs DFY custom solutions.'
 url: 'how-about-selfhosting-an-ecommerce'
 ---
 
@@ -25,20 +25,23 @@ PBi had a panel that could do the trick...to some extent.
 
 But doing sth custom is much cooler.
 
-[Some people dare to create their own ecommerce](https://forocoches.com/foro/showthread.php?t=9707807) dont die trying.
+[Some people dare to create their own ecommerce](https://forocoches.com/foro/showthread.php?t=9707807).
+
+Dont die trying.
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Data-Chat | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="HomeLab | Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/poc_shopify" title="Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
 {{< /cards >}}
 
+As I have been learning how to do CSR related auth...
 
+How about bringing something more than a website: **an ecommerce**
 
+Creating a custom ecommerce from scratch is a lot of work, so you can also use a [OSS Selfhosted ecommerce](#selfhosted-ecommerce).
 
-
-
-Ive consolidated a list of ecommerce Ive encountered here.
+Ive consolidated a list of ecommerce Ive encountered around the world:
 
 1.  `petiteknit.com` and `morecaknit.com` which are around [knitting](https://jalcocert.github.io/JAlcocerT/knitting-pattern-calculator/)
 
@@ -49,72 +52,30 @@ Ive consolidated a list of ecommerce Ive encountered here.
 4. `https://polkabikes.pl/` This one was without SSL a full weekend
 
 
-
 You can always check more examples `https://awweso.me/e-commerce/`
 
 
 Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress con WooCommerce en 2025, cada una con distintos enfoques según la escala del negocio, el nivel técnico y la arquitectura deseada (monolítica o headless).
 
-### Principales alternativas open source a Shopify
 
-1. **Medusa.js**  
-   Basada en Node.js, con arquitectura *headless*, Medusa permite crear tiendas con React, Vue o Next.js manteniendo el backend separado. Ofrece API REST y GraphQL, soporte para plugins y control total de datos y diseño.[1]
-
-2. **Bagisto**  
-   Construida sobre Laravel y Vue.js, ofrece multicanal, multi-almacén, API GraphQL y una interfaz moderna. Es ideal para proyectos personalizables y escalables a nivel empresarial.
-
-3. **Saleor**  
-   Framework de eCommerce *headless* basado en GraphQL y Django (Python). Es utilizado para tiendas modernas con integraciones JAMstack y gran rendimiento.[1]
-
-4. **Spree Commerce**  
-   Plataforma Ruby on Rails pensada para desarrolladores. Es estable, modular y permite integraciones B2B o B2C sin coste de licencia.[3]
-
-5. **PrestaShop**  
-   Solución PHP madura con una comunidad muy activa y muchos módulos. Se instala fácilmente en cualquier hosting y ofrece gestión de catálogos, marketing y SEO.[4][2]
-
-**Intro**
-
-As I have been learning how to do CSR related auth...
-
-How about bringing something more than a website: **an ecommerce**
-
-Creating a custom ecommerce from scratch is a lot of work, so you can also use a [OSS Selfhosted ecommerce](#selfhosted-ecommerce).
-
-## Astro as Ecommerce
-
-1. https://github.com/unfolding-io/nebulix
-
-> CC | Nebulix, a Fast & Green Theme Based on Astro + [Static CMS](https://www.staticcms.org/docs/backends-overview) + Snipcart
-
-2. https://github.com/CrystallizeAPI/dounut-astro
-
-3. https://github.com/lloydjatkinson/astro-snipcart
-
-> MIT | Allows for the creation of E-Commerce sites using the Astro framework and [Snipcart](https://snipcart.com/pricing). Start your e-commerce business in minutes!
-
-4. https://github.com/michael-andreuzza/microstore
-
-https://microstoretheme.netlify.app/#_
-
-5. https://github.com/jazsouf/astro-shopify-sanity
+You can understand how these works to be able to sell them D&A services for business optimization.
 
 
-
-### Streamlit as eCommerce
-
-You would need proper file connection and some decent auth:
-
-* https://github.com/streamlit/files-connection
-* https://github.com/bleumink/streamlit-keycloak
 
 ## Selfhosted Ecommerce
 
+
+
+```sh
+git clone https://github.com/JAlcocerT/Home-Lab
+```
+
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/typebot" title="TypeBot | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 
-Alternativas autoalojadas a WooCommerce
+As WooCommerce alternative:
 
 1. **Magento Open Source (Adobe Commerce)**  
    Potente y personalizable, escrita en PHP. Ideal para empresas con desarrolladores internos o agencias. Ofrece multi-tienda, gestión avanzada de pedidos e integración ERP.[5][6]
@@ -136,8 +97,6 @@ Alternativas autoalojadas a WooCommerce
 5. **Drupal Commerce**  
    Extiende el CMS Drupal para manejar eCommerce. Ideal si se requiere un sistema de contenido robusto junto con funcionalidades de tienda.[8]
 
-Comparativa general
-
 | Plataforma | Lenguaje base | Arquitectura | Ideal para | Observaciones |
 |-------------|----------------|----------------|----------------|----------------|
 | Medusa.js [1] | Node.js | Headless | Desarrolladores modernos | Integración con React, Next.js |
@@ -151,26 +110,35 @@ Comparativa general
 En resumen, **Medusa.js**, **Bagisto** y **Saleor** representan la nueva generación de plataformas headless modernas, mientras que **Magento**, **PrestaShop** y **nopCommerce** siguen siendo las opciones más sólidas para quienes buscan ecosistemas maduros y autogestionados.
 
 
-#### Medusa 
+### Drupal
+
+![Drupal Ecommerce Setup](/blog_img/biz/ecommerce/drupal.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/drupal" title="Drupal | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+### Medusa 
 
 * https://github.com/medusajs/medusa
   * https://medusajs.com/plugins/
   * https://docs.medusajs.com/starters/nextjs-medusa-starter  
 
-> MIT |  The world's most flexible commerce platform. 
+> MIT | The world's most flexible **commerce platform**. 
 
 
-#### Thelia
+### Thelia
 
 * https://thelia.net
 
-#### Evershop
+### Evershop
 
 * https://github.com/evershopcommerce/evershop
 
 >  🛍️ NodeJS E-commerce Platform 
 
-#### Others
+### Others
 
 * https://github.com/shurco/litecart/
 
@@ -243,9 +211,46 @@ Hosting an eCommerce
 https://www.shoper.pl/premium like https://sklepmakunki.pl/ which theme comes from https://netplace.com.pl/ see https://netplace.com.pl/portfolio/magicznypokoik-pl/
 
 
-### Drupal
+#### Astro as Ecommerce
 
-![Drupal Ecommerce Setup](/blog_img/biz/ecommerce/drupal.png)
+1. https://github.com/unfolding-io/nebulix
+
+> CC | Nebulix, a Fast & Green Theme Based on Astro + [Static CMS](https://www.staticcms.org/docs/backends-overview) + Snipcart
+
+2. https://github.com/CrystallizeAPI/dounut-astro
+
+3. https://github.com/lloydjatkinson/astro-snipcart
+
+> MIT | Allows for the creation of E-Commerce sites using the Astro framework and [Snipcart](https://snipcart.com/pricing). Start your e-commerce business in minutes!
+
+4. https://github.com/michael-andreuzza/microstore
+
+https://microstoretheme.netlify.app/#_
+
+5. https://github.com/jazsouf/astro-shopify-sanity
+
+
+6. https://github.com/themefisher/astrofront-astro
+
+> MIT | AstroJS-Powered Shopif Storefront Boilerplate with TailwindCSS and Nanostores. With **Shopify e-commerce integration.**
+
+```sh
+git clone https://github.com/themefisher/astrofront-astro
+
+npm install
+#npm audit fix
+npm run dev #you will need shopif credentials for the .env
+```
+
+
+#### Streamlit as eCommerce
+
+You would need proper file connection and some decent auth:
+
+* https://github.com/streamlit/files-connection
+* https://github.com/bleumink/streamlit-keycloak
+
+And be a proper geek to get this running.
 
 
 ---
@@ -417,20 +422,26 @@ Tested Strapi and DirectusCMS
 
 {{< youtube "bREja-vW6fA" >}}
 
+---
 
 ## FAQ
 
+
+Principales alternativas open source a Shopify
+
+1. **Medusa.js**  
+   Basada en Node.js, con arquitectura *headless*, Medusa permite crear tiendas con React, Vue o Next.js manteniendo el backend separado. Ofrece API REST y GraphQL, soporte para plugins y control total de datos y diseño.[1]
+
+2. **Bagisto**  
+   Construida sobre Laravel y Vue.js, ofrece multicanal, multi-almacén, API GraphQL y una interfaz moderna. Es ideal para proyectos personalizables y escalables a nivel empresarial.
+
+3. **Saleor**  
+   Framework de eCommerce *headless* basado en GraphQL y Django (Python). Es utilizado para tiendas modernas con integraciones JAMstack y gran rendimiento.[1]
+
+4. **Spree Commerce**  
+   Plataforma Ruby on Rails pensada para desarrolladores. Es estable, modular y permite integraciones B2B o B2C sin coste de licencia.[3]
+
+5. **PrestaShop**  
+   Solución PHP madura con una comunidad muy activa y muchos módulos. Se instala fácilmente en cualquier hosting y ofrece gestión de catálogos, marketing y SEO.[4][2]
+
 - **Burst by Shopify**  https://www.shopify.com/stock-photos  
-
-
-3. https://github.com/themefisher/astrofront-astro
-
-> MIT | AstroJS-Powered Shopif Storefront Boilerplate with TailwindCSS and Nanostores. With **Shopify e-commerce integration.**
-
-```sh
-git clone https://github.com/themefisher/astrofront-astro
-
-npm install
-#npm audit fix
-npm run dev #you will need shopif credentials for the .env
-```

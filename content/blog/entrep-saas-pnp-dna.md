@@ -823,7 +823,8 @@ cd y2026-tech-talks/langchain-postgres
 ```
 
 <!-- 
-https://youtu.be/XS0vLK9x9nc -->
+https://youtu.be/XS0vLK9x9nc 
+-->
 
 {{< youtube "XS0vLK9x9nc" >}} 
 

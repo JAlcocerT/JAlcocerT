@@ -1,6 +1,6 @@
 ---
 title: "[Gen-BI] From Shopify to Profit"
-date: 2026-02-05T18:20:21+01:00
+date: 2026-02-03T18:20:21+01:00
 draft: false
 tags: ["RoadMap26","Shopify API","BAML x Vite x Astro","Services x UpTime Kuma x Status Pages"]
 description: 'Got en ecommerce? You are missing an AI Powered COO. Trust this landing.'
@@ -19,7 +19,6 @@ You going crazy?
 
 **Intro**
 
-
 When I said to people to try things, is because I started with:
 
 {{< cards >}}
@@ -33,6 +32,10 @@ And then, Im working towards this: *the landing was tinkered [here](https://jalc
   {{< card link="https://github.com/JAlcocerT/poc_shopify" title="Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
 {{< /cards >}}
 
+I also put together a post [about selfhosted ecommerce](https://jalcocert.github.io/JAlcocerT/how-about-selfhosting-an-ecommerce).
+
+Just in case you want to build your own / use OSS.
+
 I admit it: *it was not part of a master plan*.
 
 Im just embracing the chaos of my journey.
@@ -44,7 +47,7 @@ The same person who races, is a director and [ships omarchy](https://jalcocert.g
 
 ## Connecting to Ecommerce BackEnd
 
-If you have ever scrapper jobs, this is hot:
+If you have ever scrapped jobs, this is hot: *50$/h for someone who wil...tweak the UI/X, imagine the revenue for stores that can afford so*
 
 ```json
         {

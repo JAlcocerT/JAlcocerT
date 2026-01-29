@@ -1,13 +1,11 @@
 ---
 title: "The RevOps you always dreamt about"
-date: 2026-02-01T09:20:21+01:00
+date: 2026-02-04T09:20:21+01:00
 draft: false
-tags: ["BiP x GTM Platform","APIFY x FireCrawl","Sales Pipeline","RoadMap26"]
+tags: ["BiP x GTM Platform","APIFY x FireCrawl","Sales Pipeline","RoadMap26","LaunchPad"]
 description: 'Go B2B as they have a clear BANT. From MOps to RevOps'
 url: 'how-to-do-social-media-outreach'
 ---
-
-
 
 **TL;DR**
 
@@ -15,7 +13,7 @@ Building around what every business needs: *finding clients*
 
 **Intro**
 
-We are coming from
+We are coming from the latest apify / sales / leads related post.
 
 So if you are a pro sales person, you can drop here.
 
@@ -44,4 +42,10 @@ Or that I gave up too quickly :)
 ---
 
 ## Conclusions
+
+
+
+---
+
+## FAQ
 

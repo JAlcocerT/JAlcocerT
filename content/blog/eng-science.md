@@ -15,6 +15,8 @@ url: 'cool-science'
 
 A post about...Simply science.
 
+For those who appreciate reality more than models.
+
 **Intro**
 
 <!-- https://youtu.be/FPvFHcQEEj0?si=-ZnOycL8qsgJ4xKN -->

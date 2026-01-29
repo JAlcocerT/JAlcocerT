@@ -1,15 +1,39 @@
 ---
-title: "Self-Hosting a Firebase Alternative - Supabase vs Pocketbase"
+title: "Getting Leads with Pocketbase"
 date: 2026-03-01T23:20:21+01:00
 draft: false
-# cover:
-#   image: "https://socialify.git.ci/supabase/supabase/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-#   alt: "" # alt text
-#   caption: "." # display caption under cover
-tags: ["Self-Hosting","Docker","Dev","BackEnd"]
-description: '.'   
-url: 'selfhosting-Supabase-with-Docker'
+tags: ["Dashboards","Supabase Auth vs PB","Roadmap26"]
+description: 'A waiting list that gets you leads.'
 ---
+
+**TL;DR**
+
+* https://resend.com/docs/api-reference/emails/send-email
+
+**Intro**
+
+Using Resend mail API, together with Pocketbase to:
+
+1. Get leads
+2. Validate their mail
+3. Send them an ebook
+
+
+
+---
+
+## Conclusions
+
+Want this implemented for your ideas?
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
+
+---
+
 
 
 <!-- https://github.com/appwrite/appwrite

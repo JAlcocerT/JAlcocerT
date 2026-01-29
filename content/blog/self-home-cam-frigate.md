@@ -1,6 +1,6 @@
 ---
 title: "Frigate - Cam with object detection"
-date: 2026-09-21T23:20:21+01:00
+date: 2026-09-01T23:20:21+01:00
 draft: false
 tags: ["Dashboards","NVR","Self-Hosting","Pi-Camera","Side-Quest26"]
 description: 'Computer vision'
