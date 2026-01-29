@@ -16,7 +16,7 @@ For B2B only.
 
 Scrap on google maps some potential interested business: leads.
 
-
+    The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc
 
 
 

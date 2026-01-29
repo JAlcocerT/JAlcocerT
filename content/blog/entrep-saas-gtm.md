@@ -43,6 +43,8 @@ Or that I gave up too quickly :)
 
 ## Conclusions
 
+> The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc
+
 
 
 ---

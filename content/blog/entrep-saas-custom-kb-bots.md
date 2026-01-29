@@ -13,6 +13,8 @@ url: 'custom-bots-kb'
 
 What if having a **custom cool looking chatbot for your site** was a matter of copy-paste one snippet and configuring an UI the data sources?
 
+    The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc
+
 The **launch strategy**: *aka, focus strategy*:
 
 | Element | Decision |

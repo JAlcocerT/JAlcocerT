@@ -1,8 +1,8 @@
 ---
-title: "White-Labelling the real estate solution"
-date: 2026-01-29T06:21:21+01:00
+title: "White-Labelling the Real Estate solution"
+date: 2026-01-28T06:21:21+01:00
 draft: false
-tags: ["Funnel Strategy x Landing x Glassmorphirms","RoadMap26","Cold email"]
+tags: ["Funnel Strategy x Landing x GlassMorphirms","RoadMap26","Cold email"]
 description: 'Building a custom BOT for real estate agencies. With CORS and OpenAI Rate Limiting.'
 url: 'white-label-real-estate-solution'
 ---
@@ -101,6 +101,17 @@ https://youtu.be/QCFhukC4rXI
 ---
 
 ## Conclusions
+
+So that's it.
+
+The service is public and ready for anyone that has the need and can provide the signal.
+
+Here: <https://realestate.jalcocertech.com/>
+
+<!-- {{< youtube "QCFhukC4rXI" >}} -->
+<!-- 
+https://www.youtube.com/watch?v=QCFhukC4rXI&t=1s -->
+
 
 ```mermaid
 flowchart LR
