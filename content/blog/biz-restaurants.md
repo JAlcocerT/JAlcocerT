@@ -37,6 +37,8 @@ Initially, I thought aboyt a DIY product (1b - *leveraging on actual tech stack 
 
 But as I dont want to build without real clients asking for it, this starts a a **DFY service**, for those who actually want it.
 
+Plus: validated active income >>> theoretical 'passive income' without OpEx.
+
 For more details like the focus/launch strategy: go [here](#the-how-behind-the-idea).
 
 The **tech stack**:

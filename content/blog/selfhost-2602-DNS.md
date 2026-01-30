@@ -2,8 +2,8 @@
 title: "Improving a HomeLab Privacy with Open Source DNS "
 date: 2026-02-16T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting","Pihole x UnboundDNS","DNS as Distributed DB"]
-description: 'How to change DNS Servers and why it matters'
+tags: ["Self-Hosting","Pihole x UnboundDNS","DNS as Distributed DB","Privacy x Euria"]
+description: 'How to change DNS Servers and why it matters.'
 url: 'private-dns-with-docker'
 ---
 
@@ -240,6 +240,16 @@ How to **test your ad-blocks** - https://d3ward.github.io/toolz/ -->>> https://d
 * NetBird - wireguard based
 * Netmaker  - https://www.netmaker.io
 * Tailscale or headscale
+
+
+If you are concern about privacy an use LLMs, consider:
+
+* Proton
+* `https://euria.infomaniak.com/`
+* Go with Ollama x Goose
+
+
+
 
 
 ### Business OSS Driven

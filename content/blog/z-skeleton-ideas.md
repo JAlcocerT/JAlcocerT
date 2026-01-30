@@ -809,8 +809,9 @@ mindmap
         [Economic Goals]
             CFA :: Client Financed Acquisition
             The Salted Pretzel Cycle
-
 ```
+
+Expand it [here](https://mermaid.live/edit#pako:eNptU9tO3DAQ_ZWR1QeQFpqQvRBLrUQXaCuxsOpuX8ry4NqzWQtfUseBBsS_dxIWwYb6IRlrZnzOnGM_MukVMs6sdsqKcuUAgvdxb--bD9Y_aPhSV9phVcGZKyjY329LAPYutdwgh-UG4dzXTomovdsm23XdZobw3SktRfShunnNtWsmqkrfIcyFdruZeR3kRhBqAXN_j2E3eyaqBqKHpQgFxt3c1-Dv27aZCLdvc9eLGETEQsuuJG5u-ohKGYTPhOcU_S7Ebbu7kih63NqhuslhYUQJnMPUW6ujRdfjsihR6jUhfoJ5QKtrS38tcSvfUsioZcXhQ5okM7hAoaq-ehm88l42JfYl_IF3KAxEKp0H_9ugfU92IWxpsEctYgkp-DVc9hAnB12OTpNkeV-lZwwSZuFN3dpN4SkacjE0FF4K-zLdlnfzMt7MO2zoq9BU7-_I1XqN4b8TnkQ6SHZQJHUrEnlbOIzVbt3UB9wew_lbk7ZEd6t_lhUaAx-pzUXtah2bN5zOpHfetlfFC9MnND0_6Uw3mgyHc-2Ek6jgRP6pdaXfQz1bYCLV0C2ID2hg2kiDbMCKoBXjMdQ4YBaDFe2WPbb9K0aekpiMU6hwLWoTV2zlnqitFO6X9_alM_i62DC-Jqq0q0t6h3iqRRHEawk6hWFKjzQynmbdEYw_sr-MH4ySw3E6HA_HeZqOj9IkHw5Yw3ieHE4meZ4Oj0ejfDRJsqcBe-hQk8M8Gw-TLJuk2XGeJUfZ0z83yjxy)
 
 Understand that **who** you sell to (Niche) dictates **what** you sell (Offer) and **how** you find them (Leads).
 

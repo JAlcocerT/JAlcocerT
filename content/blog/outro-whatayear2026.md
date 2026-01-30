@@ -799,6 +799,8 @@ graph LR
 * Options -> Things and not controlable
 * Choices -> Actions and are controlable
 
+2. Again: active >>>>> passive
+
 
 #### Interesting Posts
 
@@ -848,11 +850,11 @@ For the very alergic to the risk...well...keep your ~0% at the bank.
 
 Its very safe there.
 
-8. Order/clean papers / old tech. Donate.
+8. Order/clean papers / old tech. Donate. ✅ 
 
-9. Collecting case studies / success stories
+9. Collecting case studies / success stories ✅ 
 
-10. Reading books - To act
+10. Reading books - To act *not just archive knowledge, but learn, which means different behaviour to same inputs*
 
 Like around marketing and sales: Cashvertising, ...
 
