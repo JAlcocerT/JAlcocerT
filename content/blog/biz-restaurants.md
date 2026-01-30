@@ -9,6 +9,8 @@ url: "webs-for-restaurants"
 
 **TL;DR**
 
+QR Restaurantes Free + Web if Pay
+
 
 **Intro**
 

@@ -158,10 +158,44 @@ And put together a KPI around: performance, volume, power
 
 ## Conclusions
 
+This was supposed to be a: `CreAItive websites` kind of project.
+
+Because there are many old looking and laggy websites.
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit" title="Web Audits 101 x BlogSpot | Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="POC Web Magnet | Repo ↗" icon="github" >}}
+{{< /cards >}}
+
+What there are not are so many people looking forward for a change.
+
+So this remains as a platform to enable people to run websites or services that they want.
+
+Hence, an enhanced DIY we could say.
+
+Because Im not playing the SaaS game here.
+
+I dont have the distribution, nor the OpEx strategy in place for attract and convert the volume of people that would make sense for such a tool to even exists.
+
+But, [I learnt](#1---stopping-low-value-commitments).
+
+And you can also do so:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://genbi.jalcocertech.com" title="Generative BI - For You" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="The insights that you could not afford to have until now" >}}
+{{< /cards >}}
 
 ### 1 - Stopping Low value commitments
 
-From the [stop doing](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#stop-doing) section for this year: *For the hard to sell people: it needs to be fully scalable or nothing - accounting for my opportunity cost. *
+From the [stop doing](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#stop-doing) section for the last year:
+
+*For the hard to sell people: it needs to be fully scalable or nothing - accounting for my opportunity cost.*
+
+In other words: if you dont want to pay for customization, you dont get customization.
+
+
 
 ```sh
 git clone https://github.com/JAlcocerT/ourika

@@ -1,16 +1,15 @@
 ---
 title: "What a Year...2026"
-date: 2026-01-30
+date: 2026-02-28
 draft: false
-tags: ["Year-Review","FY26",""]
-description: 'Looking back to the learnings of the year 2026.'
+tags: ["Year-Review","FY26"]
+description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
 
 
 **TL;DR**
 
-![alt text](/blog_img/data-experiments/life-flows-blured.png)
 
 <!-- 
 https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
@@ -71,7 +70,10 @@ How could I not offer something very special to entreagujaypunto: *to capture al
 
 With
 
-0. Type safe
+
+**Side Quests**
+
+0. About Type safe
 
 From JS we evolved to TS
 
@@ -86,7 +88,7 @@ https://docs.malloydata.dev/documentation/user_guides/sql_experts1
 
 But also their discord bouble on the web for any BiP Project.
 
-> As the alternative i knew about `heyreach.io`
+> As the alternative i knew about `heyreach.io` for Linkedin
 
 0. When finding leads...
 
@@ -94,26 +96,33 @@ This was an awsome example of data analytics.
 
 Specially after having some thoughts about analytical reflections of OLTP tables.
 
-For the ones that want to break the silos and get proper data lineage trazability to see what worked (what are the *features* of a prospect that actually bought from you) and feedback to the lead engine.
+For the ones that want to break the silos
 
-0. Strapi directus...Web CMS stuff
+get proper data lineage trazability to see what worked (what are the *features* of a prospect that actually bought from you)
+
+and feedback to the lead engine.
+
+0. Web CMS stuff: *Strapi directus...*
 
 This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
 
 But I said no more to custom CMS integrations.
 
-Not doing more websites for others.
+Actually: Not doing more (DFY) websites for others.
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com/" title="Consulting | DWY ↗" icon="book-open" >}}
+{{< /cards >}}
 
 0. Audio TTS
 
 https://www.youtube.com/watch?v=dQ841Pd6YvQ
 
-0. CreAItive websites
 
 0. Delivery Analytics
 
 
-0. promote in subreddit to get feedback?
+0. Promote in subreddit to get feedback?
 
 
 0. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
@@ -134,22 +143,30 @@ I thought that Id do for this year a separated `blog.jalc...` based on this [can
 
 But I Just continued here.
 
-0. for the ones that dont want to read an ebook neither to pay consulting or the DFY, I offered a *1 to many* free session, aka webinar
+The same blog as last year, public and even clonable :)
+
+0. For the ones that dont want to read an ebook neither to pay consulting or the DFY...
+
+I offered a *1 to many* free session, aka Webinar.
+
+At my schedule convenience, ofc.
 
 People are using these platforms to do so: *and you have to place your email for later use*
 
 * `https://webinarjam.com/`
 
-0. Improved FOSS from blog to doc like. Multilanguage and all that stuff. Still as HUGO.
+0. Improved FOSS from blog to doc like.
 
+Multilanguage and all that stuff. 
 
+Still as HUGO.
 
 ```sh
-#dig fossengineer.com any
+dig fossengineer.com any
 #ping fossengineer.com
 ```
 
-Not [with codex cli](https://github.com/JAlcocerT/docs-testing/tree/master) this time, but directly with ide:
+Not [with codex cli](https://github.com/JAlcocerT/docs-testing/tree/master) this time, but directly with IDE:
 
 ```sh
 git init && git add . && git commit -m "Initial commit: better ai docs" && gh repo create fossengineer-hugo --private --source=. --remote=origin --push
@@ -171,7 +188,9 @@ To offer this via fossengineer, I can try: *these are next steps*
 
 With that remota data (yaml) fetching from the home-alb repo.
 
-0. Create individual pages on `jalcocertech.com` with stripe plugged, share on social media / ads and do draft:true when old, but history will be kept on code `.mdx`
+0. Create individual pages on `jalcocertech.com` with stripe plugged.
+
+Share on social media / ads and do `draft:true` when old, but history will be kept on code `.mdx`
 
 0. BiP user flows around newsletter layers
 
@@ -179,17 +198,21 @@ With that remota data (yaml) fetching from the home-alb repo.
 
 0. IoDoctor reloaded
 
-* a second opinion
-* no kyc, no receta
+* A second opinion
+* No kyc, no receta
 
 * with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
 can find out existing interface
 
 0. Blogspot vs Wordpress Migrations *with Free web Audits plugged in*
 
+The free web audit is a thing: <https://webaudit.jalcocertech.com/>
+
+Which I put together [here](https://github.com/JAlcocerT/poc_webs_magnet).
+
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Web Audits 101 x Gallery Improvement | Post ↗" >}}
-  {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit" title="Web Audits 101 x BlogSpot | Post ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="POC Web Magnet | Repo ↗" icon="github" >}}
 {{< /cards >}}
 
 Which got enhanced: *after I focused on it*
@@ -200,14 +223,14 @@ Which got enhanced: *after I focused on it*
 {{< /cards >}}
 
 
-0. DIY website enhancements around a PaaS Website Hosting.
+0. DIY website enhancements: *around a PaaS Website Hosting.*
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Web Audits 101 x Gallery | Post ↗" >}}
   {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-0. Restaurant SaaS: aka Multi tenant Astro Apps with protected routes
+0. Restaurant SaaS: *aka Multi tenant Astro Apps with protected routes*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/webs-for-restaurants" title="Restaurants micro-SaaS ↗" >}}
@@ -217,17 +240,31 @@ Which got enhanced: *after I focused on it*
 
 0. Embeded Chatbots for a business website x [Business Knowledge Base setup](https://jalcocert.github.io/JAlcocerT/custom-bots-kb/)!.
 
+This is going to hit hard in the upcoming years.
+
+Account for the bast amount of silos that there are in every industry that can be improved.
+
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/" title=" | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/custom-bots-kb" title=" | Post ↗" >}}
   {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
 {{< /cards >}}
 
 0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/). A Success Story!.
 
+Another example of why you need to know the business game you are playing.
+
+Build what it makes sense to build.
+
+Consider if you are supply or demand constrain.
+
+Then prospect your clients and create the proper offer:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/custom-re-rag" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="Real Estate x Astro x ChatBot ↗" icon="github" >}}
 {{< /cards >}}
+
+No effort to get the right clients = dont complain and learn.
 
 0. I did not know that **creating an/N ebook/s** was that simple.
 
@@ -240,7 +277,7 @@ One of the start doing goals from last year. And that I quickly put together [he
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks/" title="From 1 to n Ebooks | Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-0. Publishing ebooks be like: https://www.amazon.es/sendtokindle
+0. Publishing ebooks be like: `https://www.amazon.es/sendtokindle`
 
 > Want a website? DIY your own with this free ebook when subscribed / DWY with consulting / contact for a DFY.
 
@@ -250,12 +287,15 @@ One of the start doing goals from last year. And that I quickly put together [he
 
 > > Similar to ~tiiny.host
 
+Again: if you dont have a distribution, expect that nobody will care.
+
 0. A better CV: *because being a [pro D&A professional](https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/) is a little bit harder nowadays*
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
 {{< /cards >}}
 
+Ive also added some D&A industry use cases: https://www.jalcocertech.com/support/articles/
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="Ebooks Repo- D&A ↗" icon="github" >}}
@@ -280,10 +320,11 @@ MMM marketing analytics
 
 0. Data driven stories
 
-<https://viborc.com/>
+* https://viborc.com/
 
+0. About Posthog: *I used it for the wedding thingy*
 
-0. About Posthog: Post an ebook page post on IG, then web session will be recorded and a YT video can be made out of that
+Another idea was: Post an ebook page post on IG, then, the web session will be recorded and a YT video can be made out of that
 
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
@@ -294,16 +335,20 @@ MMM marketing analytics
 
 0. Web Analytics x Link Analytics: *GDPR compliant*
 
+I still go fo Umami for Web Analytics.
+
+But in case you need the link analytics:
+
+
 * https://jalcocert.github.io/JAlcocerT/t3-like-chat/#selfhosted-webanalytics
 
 * https://github.com/idhamsy/openshortlink
 
 > OpenShort.link is the all-in-one, open-source, serverless URL shortener. It runs 100% on Cloudflare and offers one-click installation.
 
-1. Weddings and ads 101.
+1. Weddings and ads 101: *a micro-SaaS ,game' has great GM, it just needs OpEx to get rolling!*
 
 ![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
-
 
 
 1. Landing Page essentials *a DIY boilerplate way with most sections you might need*
@@ -315,17 +360,31 @@ It was a continuation of [this section for artists](https://jalcocert.github.io/
   {{< card link="https://github.com/JAlcocerT/diy-landing-boilerplate" title="DIY Landing BoilerPlate Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-Its all a matter of a cool UI with a demo video, a form and a calendar.
+A nice landing is a matter of: a cool responsive UI with a demo video, a form and a calendar.
+
+This is awsome to validate ideas: *a part of which dis-qualifying prospects is key.*
 
 4. Status Pages for services: Kener / UptimeKuma. 
 
-SLA matters and [some people need that status pages](https://jalcocert.github.io/JAlcocerT/link-artists/#status-pages) or the information tat it exists.
+SLA matters and [some people need that status pages](https://jalcocert.github.io/JAlcocerT/link-artists/#status-pages) or the information that it exists.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+They wont probably want to pay for it.
+
+But you can do some quick scripts around uptime kuma to get started quicker.
+
+```sh
+git clone https://github.com/JAlcocerT/Home-Lab
+#git pull
+cd Home-Lab/uptime-kuma
+#sudo docker compose up -d
+#docker ps -a --filter "name=uptimekuma"
+uv run scripts/bulk_add_monitors.py #tweak the json and the .env to add your monitors
+```
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" icon="book-open" >}}
@@ -333,25 +392,31 @@ SLA matters and [some people need that status pages](https://jalcocert.github.io
 
 6. Client adquisition data pipeline: *APIFY to rule them all*
 
-To be tested with *,artists,designers and wannabe's'* from social media.
+I thought that this is a: To be tested with *,artists,designers and wannabe's'* from social media.
 
-If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#scaling-ideas), is a potential candidate.
+But before you even try.
+
+Consider that: If someone [has a linktree free](https://jalcocert.github.io/JAlcocerT/websites-themes-2024/#scaling-ideas), is a potential candidate.
 
 > But if someone is not paying 10$/m to a company, guess how much is willing to pay you :)
 
+So actually, I skipped that one.
+
+And use APIFY x FireCrawl to find B2B clients at scale:
+
 {{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads | Repo ↗" icon="github" >}}
+  {{< card link="https://github.com/clidey/whodb" title="Lead Architect ↗" icon="github" >}}
 {{< /cards >}}
 
 7. Boiler plate / **blueprint for vibe coders**: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
 
-Im **launching my boilerplate**: https://boilerplate.jalcocertech.com
+I also **launched my boilerplate**: https://boilerplate.jalcocertech.com
 
 > It has the look and feel of my latest [diy landing boilerplate](https://github.com/JAlcocerT/diy-landing-boilerplate) for a reason :)
 
 {{< cards >}}
-  {{< card link="adwadwadwad" title="Boilerplate for Builders ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT" title="Boilerplate for Builders ↗" icon="github" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/" title="DIY BRD artifacts BoilerPlate  ↗" icon="github" >}}
 {{< /cards >}}
 
@@ -406,16 +471,25 @@ Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#c
 
 10. Data driven agentic COO: *or should i call this [plug and play D&A](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics)?*
 
-Initially, I thought about to write about Analytics with Graphic Walker
+Initially, I thought about to write about Analytics with Graphic Walker.
 
-Then, this happened:
+Then, this happened: *actually, a series of posts*
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/" title="PlugnPlay D&A | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/" title="PlugnPlay D&A | Post ↗" >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB + UI QnA ↗" icon="github" >}}
 {{< /cards >}}
 
 Which I used for the first **tech [talk](#tech-talks)** of this year.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT" title="SliDev Repo | Pre Y26 Tech Talks ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT" title="Consulting / Landing Repo | Y26 Tech Talks ↗" icon="github" >}}
+{{< /cards >}}
+
+10. Thanks to those series of doing things: the D&A / Agentic COO / for Shopify came into my mind.
+
+
 
 {{< cards >}}
   {{< card link="https://github.com/" title="SliDev Repo | Pre Y26 Tech Talks ↗" icon="github" >}}
@@ -423,11 +497,30 @@ Which I used for the first **tech [talk](#tech-talks)** of this year.
 {{< /cards >}}
 
 
+
 10. IoT: *From sensors, to databases and QnA*
 
-Should i call this Embeded analytics?
+Should I call this Embeded analytics?
 
-11. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and video overlays.
+11. Mechanisms reloaded. *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) back in place*
+
+Simulations are back.
+
+But not in [matlab, nor octave](https://jalcocert.github.io/JAlcocerT/matlab-vs-octave/).
+
+For racers, see how to estimate the [**optimum circuit path** based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and gradient descent.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+And not only for mechanism.
+
+12. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and HUD video overlays.
+
+This was huge.
+
+From the initial public repo, I created another one:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Py Route Tracker ↗" icon="github" >}}
@@ -441,19 +534,6 @@ I made some **HUD overlays for GoPro videos** to have their telemetry in place, 
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-13. Mechanisms reloaded. *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) back in place*
-
-Simulations are back.
-
-But not in [matlab, nor octave](https://jalcocert.github.io/JAlcocerT/matlab-vs-octave/).
-
-For racers, see how to estimate the [**optimum circuit path** based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and gradient descent.
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-And not only for mechanism.
 
 14. Racing *best lap* optimizer / simulator.
 
@@ -511,12 +591,16 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
 
 16. Tech videos were not a priority this year.
 
+Basically: Im not focusing on building a B2C tech audience.
+
 I finally uploaded some from last year, just with youtube music:
 
 * [Goose Desktop](https://youtu.be/ZW5eEocyrTU) 
 * [GrowChief](https://youtu.be/in8uTdLhFqI)
 
-Others, from the vibe coding sessions: helped to bring quick demos to the product landing.
+Others, from the vibe coding sessions: helped to bring quick demos to their related product landing.
+
+
 
 17. I made **some animations** instead.
 
@@ -546,13 +630,19 @@ No need for glue when there are no data silos by design.
 
 So there we have also the...
 
-3. Serverless Lean DRIP email sequences
+3. Serverless **Lean DRIP email** sequences
 
+Who would have thought that you can use GHA to send automatical emails for people who opt-in into your micro-SaaS.
 
-4. Creating invoices with json via the serverless SPA: https://github.com/JAlcocerT/serverless-invoices
+With a cool template and API based.
 
-Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?lang=en` at this [post](https://jalcocert.github.io/JAlcocerT/csr-and-js/#csr-examples).
+4. Creating invoices with `.json` via the serverless SPA: https://github.com/JAlcocerT/serverless-invoices
 
+Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?lang=en` 
+
+At this [post](https://jalcocert.github.io/JAlcocerT/csr-and-js/#csr-examples).
+
+It just keeps working with the power of CSR behind.
 
 
 1. https://github.com/neondatabase/neon
@@ -569,10 +659,11 @@ Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?la
 
 ### Tech Talks
 
-1. About langchain connected to a database...v2
+1. About langchain connected to a database...v2. [Post](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/). [Video](https://youtu.be/XS0vLK9x9nc).
+
 2. 
 
-99. duckdb x motherduck
+99. Duckdb x motherduck
 
 https://ducklake.select/manifesto/
 
@@ -590,8 +681,7 @@ https://www.youtube.com/watch?v=-PYLFx3FRfQ
 
 https://motherduck.com/docs/getting-started/
 
-Infrastructure 
-for Answers
+Infrastructure for Answers
 
 The data warehouse built for answers, in SQL or natural language.
 
@@ -672,7 +762,7 @@ A certain Negative cash flow year one then...uncertainty
 
 #### Open Questions
 
-* Whats freedom: Possibility of acting or the absence of obstacles?
+* Whats freedom?: Possibility of acting or the absence of obstacles?
 * Will we ever get to value the spark more than the shadow it casts?
 * is blockchain the ultimate database?
 * Is some official/certified the prohibition of any other alternative?
@@ -740,15 +830,23 @@ The fwk: keep / stop / start.
 * https://selfhosted.show
 * https://selfh.st/
 
-6. Keep writting, but less and MORE QUALITY: < 2/week **AND <60/year** <<< 170
+6. Keep writting, but less and MORE QUALITY.
 
-7. Keep far (far away), from people that: say that want X, do Z.
+I said: < 2/week **AND <60/year** <<< 170
+
+Which has not happened at all.
+
+7. Keep far (far away), from people that: *say that want X, do Z instead*.
 
 Special mention to the ones that pay more in car insurance that what they spend in finding new clients.
 
-And for the ones who say that will do things, but the thing they do post 9-5 is nothing.
+Yes, those also state that have a business about to be started. Always.
 
-For the very alergic to the risk...well...keep your ~0% at the bank. Its saaaaafe.
+For the ones who say that will do things, but the thing they do post 9-5 is nothing.
+
+For the very alergic to the risk...well...keep your ~0% at the bank. 
+
+Its very safe there.
 
 8. Order/clean papers / old tech. Donate.
 
@@ -756,7 +854,7 @@ For the very alergic to the risk...well...keep your ~0% at the bank. Its saaaaaf
 
 10. Reading books - To act
 
-Like around marketing and sales.
+Like around marketing and sales: Cashvertising, ...
 
 
 
@@ -764,11 +862,22 @@ Like around marketing and sales.
 
 1. Opening more and more a shallow tech stack. 
 2. Keeping 50+ tabs on chrome. *Not watching content on the phone and commet for summaries should help*.
-4. Stop building w/o a focus strategy, like with **random avatars** - Like I did In the AIssistant example
+3. Stop building w/o a focus strategy.
+
+Like with **random avatars** - Like I did In the AIssistant example
+
+Or been supply constrained and offer below market quotes for DFY products/services.
+
+Been there. Done that.
+
+
 
 #### Start Doing
 
 1. Promoting what I do via youtube/jalcocertech.com/fossengineer. *Curated niche posts, expanding knowledge I already gained here*
+
+Like these articles: 
+
 2. Share interesting animations as a code on reddit/twitter/youtube/whatever forums. Its not ycombinator, nor producthunt but its sth
 2. x30>x24 youtube tech videos, more elaborated, *probably without AI voice*
 3. Go all-in to find new clients
@@ -799,12 +908,14 @@ Aka ~~,failed apps'~~: *projects where i just learnt*
 
 1. ~~ CyClingThere~~
 2. ~~btcmeet~~
-3. Trip-Planner - Yes, the one created on this thread that you can use!
+3. ~~Trip-Planner~~ - Yes, the one created [here](https://github.com/JAlcocerT/Py_Trip_Planner/) that you can SelfHost and use!
 4. ~~financeinmotion.fyi~~
+5. ~~EntrepreAI~~, with all those: CV CreAItor,Speech RAIter,AIssistant - PPT, ...
+6. ~~Webifyer / Web CreAItor~~ : DFY/DWY websites for those with the right signal. Else, use a PaaS or watch a yt tutorial to setup wordpress.
+
 
 Portfolio CreAItor
-CV CreAItor,Speech RAIter,AIssistant - PPT, ...
-EntrepreAI
+
 YT Tech Videos - JAlcocerTech
 YT Shorts/Videos 4K: Ufolding Data / IoTrack
 YT Videos with Streamlit // FinanceInMotion // visualAIzed
@@ -831,19 +942,12 @@ AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance bl
 	openengineer.ing		
 
 
-Bodas - SlubneChwile
-QR Restaurantes Free + Web if Pay
-Webifyer / Web CreAItor
-
-
 
 				
 Bodas - SlubneChwile				
-QR Restaurantes				
-Webifyer / Web CreAItor				
 Portfolio CreAItor	Wordpress MigrAItion			
 CV CreAItor,Speech RAIter,AIssistant - PPT, ...				
-EntrepreAI				
+
 YT Tech Videos - JAlcocerTech		https://www.vrsen.ai/		
 YT Shorts/Videos 4K: BeyondaJourney / IoTrack				
 YT Videos with Streamlit // FinanceInMotion // visualAIzed				

@@ -2,9 +2,10 @@
 title: "How to analyze Business Opportunities"
 date: 2026-01-30T07:00:21+01:00
 draft: false
-tags: ["BiP","Entrepreneuring","Focus","Unit Economics 104"]
+tags: ["BiP","Entrepreneuring","Focus","Unit Economics 104","SLO x CFA"]
 description: 'Do you really want to do this...that way?'
 url: 'ideas-and-opportunities-health-check'
+math: true
 ---
 
 
@@ -87,7 +88,133 @@ The **launch strategy**: *aka, focus strategy*
 | :--- | :--- |
 | **One Avatar** | |
 | **One Product** | |
-| **One Channel** | |
+| **One Channel** | One of the ,Core-4': Warm OutReach / Free Content / Cold OutReach / Paid Ads |
+| The Lead Magnet | Strategy Type: , Delivery Method: |
+
+```mermaid
+mindmap
+  root((Hormozi Business Engine))
+    (Tactics: $100M Leads)
+        [The 3 Strategic Types]
+            Reveal the Problem :: Diagnosis
+            The Sample :: Trial
+            Step 1 of N :: First Step
+        [The 4 Delivery Methods]
+            Software :: High Value Tools
+            Information :: PDF/Video/Webinar
+            Service :: Free Audits/Consults
+            Physical :: Samples/Books
+        [The 7-Step Process]
+            1. Define the Problem
+            2. Define the Solution
+            3. Choose Delivery Method
+            4. Name the Magnet
+            5. Create the Value
+            6. Test the Title
+            7. Distribute
+    (Strategy: $100M Money Models)
+        [The 4 Offer Types]
+            Attraction :: Lead Magnets & SLOs
+            Core Offer :: The Primary Solution
+            Upsell :: Increased Value/Speed
+            Continuity :: Recurring Revenue
+        [Psychological Tools]
+            The Salted Pretzel :: Problem/Solution Cycle
+            Decoy Offer :: Anchoring Value
+            Goodwill :: Giving the Secrets
+        [Economic Goals]
+            Client Financed Acquisition :: CFA
+            Self-Liquidating Offers :: SLO
+            Zero Cost Per Lead
+```
+
+Expand it [here](https://mermaid.live/edit#pako:eNptVNFO4zAQ_BXLOp1AKm3SllLyVloKSBQq2uMkKA8m2bTWJd6e7cAFxL_f2m0FCc1TYo_XM7OzeecxJsAjnkuV5GK9UIxpRHtwcIk6xzfJzgojFRjDztWSXg4PHYSxg7mIrYxNxH6EQTBh1yASs91zz-N8BazDZlYLC0sZs3m5BvP0CXDPHbyAyJgl6FTjcwY5iyI2kmKp0EhTBbuCM5GvM3CguZYiqwJmFtYsZJiyG4cYS22sX6yx6rIRZPIFdMkmYFeY1GnNMLWvQvt7LuVyxe5FVgCbI2Y1TlcqJZuElagceDoat-5lAtj6Dc9SCV2rC_pFxr7sWAOwQZFIa1pDVKbIbK30dFUaGZM7hN7INq0zxD-mpubkyOsm_2LqUk1J2CStKbXtq8dVSLsCmWFWODVVTKfJhitEA3XnqrBuk92IfFNoQj0EW90_pjIaKA8e4U2tAnpNNgdqmtueS5vVtk-IqjRWy-fCbrcOtgErdzmcoAJiR6HOvsWxy27TFPTeKA4sFYp3jXRp3kow7CebXd_WujNEisemmgujN1fmgozZ7-CvtYHM9_JKxeSBgWRjQGu2BkjqxZWVqpC2dAfuIC60lmrpx0V99exxasp4hRkufVJ8QJ_2TU1m6b6pBvsGnsQ2Ca0dWTYs47rbI4ix_NQ4UHSTp7GncReIyavcCLyQLw7l0wSk9WuwH89jVJjT7-ACxTeuw0yCsjS4SqiYCA_iv4U0cteU4XhQn6csPbqWBEpoBOlOT9b4ibm-rWIfQCMZS-Gakh7XX97gSy0THlldQIPnQIPsPvm7O7ngJCCHBY_oNYFU0IQu-EJ90LG1UA-I-e6kxmK54lFKguirWBMZcP8wLT4hoBLQQyyU5VG_d-pr8Oid_-PRUTsImkEQ9Dun7U6nc9rvdhu8pPVu87Td64RhEPaCfvuk1_1o8Dd_b9gMe2233u8FYb97ctz--A8v864V).
+
+You have to look at the "Lead Magnet" and the "Offer" as two gears in the same machine. 
+
+A Lead Magnet is about **finding** the person; the SLO is about **funding** the search.
+
+Here is the breakdown of the types and how they plug together.
+
+1. The 3 Functional Lead Magnet Types
+
+According to *$100M Leads*, every effective magnet fits into one of these three categories:
+
+| Type | How it Works | Example | Best Pair with (Offer) |
+| --- | --- | --- | --- |
+| **Reveal the Problem (Diagnosis)** | Show them a hidden pain they didn't know they had. | Website Speed Test, Posture Assessment, Credit Score Check. | **Implementation Services:** "We found 10 errors; pay us to fix them." |
+| **The Sample / Trial** | Give them a "taste" of the actual solution. | Costco sample, 7-day Gym Pass, Free First Chapter. | **Continuity / Subscription:** "Enjoyed the week? Join the monthly membership." |
+| **Step 1 of N (The First Step)** | Solve the first micro-problem of a complex process. | A "House Cleaning Checklist" for someone wanting to sell their home. | **High-Ticket Core Offer:** "Now that the house is clean, let us handle the $20k staging/sale." |
+
+2. Delivery Formats (How they get it)
+
+Once you pick the *type* of magnet, you choose the *vehicle*:
+
+* **Software:** Calculators, spreadsheets, or mini-apps (the most valuable because they do the work *for* the user).
+* **Information:** eBooks, "cheat sheets," or webinars (easiest to make, hardest to make "unique").
+* **Service:** Free 15-minute audit or a "Look-over-your-shoulder" call.
+* **Physical:** Free-plus-shipping book or a physical sample.
+
+3. Where does the SLO plug in?
+
+This is the most misunderstood part. 
+
+The **SLO (Self-Liquidating Offer)** is a low-priced product (usually **$7 to $97**) that is pitched **immediately after** someone grabs the free Lead Magnet.
+
+The Funnel Flow:
+
+1. **Ad/Traffic:** You spend money to get clicks.
+2. **Lead Magnet (Free):** They give you their email to get the "Salted Pretzel."
+3. **The SLO (Thank You Page):** Instead of a standard "Check your email," you show a video (VSL) saying: *"Since you're interested in X, you'll love Y. It's normally $200, but it's $27 right now."*
+4. **The Goal:** The money from the $27 sales pays for the ads from Step 1.
+
+> **Hormozi’s Rule:** If you spend $100 on ads and get 50 leads + $100 in SLO sales, your **Lead Cost is $0**. You can now scale to infinity because your leads are "free."
+
+4. Matching Magnets to Offers
+
+To maximize conversion, the "problem" the magnet solves must perfectly "pre-frame" the offer:
+
+* **Magnet:** A calculator that shows how much money you're losing on taxes.
+  * **SLO:** A $47 "Tax-Saving Quick-Start Toolkit."
+  * **Core Offer:** $5,000/year Accounting Services.
+
+* **Magnet:** A free workout video for busy moms.
+  * **SLO:** A $19 recipe book for 15-minute healthy meals.
+  * **Core Offer:** $200/month 1-on-1 Online Coaching.
+
+You’ve got the logic down: the **3 Types** are the *strategy* (why it works), and the **4 Deliveries** are the *medium* (how they get it).
+
+Think of it like a restaurant: the **Type** is the flavor profile (Salty, Sweet, Savory) designed to make you hungry for more, while the **Delivery** is how it's served (Appetizer, Drink, Buffet, Takeout).
+
+Here is how they intersect to create a high-converting "Salted Pretzel":
+
+The Matrix: Strategy vs. Medium
+
+| Strategy (The 3 Types) | Software Delivery | Information Delivery | Service Delivery | Physical Delivery |
+| --- | --- | --- | --- | --- |
+| **1. Reveal the Problem** | A "Profit Leak" Calculator. | A "Red Flag" PDF Checklist. | A Free 5-Min Security Audit. | A "Water Hardness" Testing Kit. |
+| **2. Give a Sample** | 7-Day Trial of a CRM. | A Free Masterclass Lesson. | A 15-Min Mini-Consult. | A Trial-Sized Supplement. |
+| **3. Step 1 of N** | A template pre-loaded in an app. | A "How to Set Up Your LLC" Guide. | A "Done-for-you" Website Header. | A "Starter Tool" (e.g., a free brush for a paint kit). |
+
+Critical Nuance: The "Valued-Based" Hierarchy
+
+Hormozi points out that not all deliveries are equal in the eyes of the customer.
+
+Usually, the value is perceived in this order:
+
+1. **Software/Tools (Highest Value):** It does the work *for* them. People will pay for tools, so getting them for free feels like a "steal."
+2. **Services:** You are giving them your (or your team's) labor. Very high trust-builder.
+3. **Physical Goods:** There is a "real" cost to shipping a box. It feels more substantial than a link.
+4. **Information (Lowest Value):** Because information is everywhere, your "Info" magnet must be **extremely specific** and **immediately actionable** to avoid being ignored.
+
+Where most people fail:
+
+They create an **Information** magnet that is too broad (e.g., "How to be Happy") and deliver it as a 50-page eBook. No one reads it.
+
+**The Winner:** A **Software** magnet (e.g., "The Happiness Scorecard Spreadsheet") that **Reveals a Problem** (e.g., "Your Social Connection Score is dangerously low").
+
+This creates a massive "itch" that only your **Core Offer** can scratch.
+
 
 The **Tier of Service**: *this fits at DIY / DWY / DFY in the value ladder*.
 
@@ -175,9 +302,9 @@ While your marketing strategy ensures that the market is ready for your product.
 
 ### The Strategic Game Board
 
-Know your sector
+Know your sector/game!
 
-*This table identifies the fundamental nature of the business model and its primary bottleneck.*
+*This table identifies the **fundamental nature of the business model** and its primary bottleneck.*
 
 | Feature | **Guest Photo WebApp** | **Educational Model** | **Fractional Consultant** |
 | --- | --- | --- | --- |
@@ -207,7 +334,7 @@ $$
 
 tells you what is happening to the money.
 
-This three-part framework tells you how the work is getting done.
+This **three-part framework** tells you how the work is getting done:
 
 [Zoom in](https://mermaid.live/edit#pako:eNqFVGtv2jAU_SuWp06bxCtAWsiHSdCiCqlpacsqbaGq3OQmWE3syHYolPLfd_MAske1fLD8OOc-To69pb4MgDo0Uixdkqu7hSD4nZyQqUgzo8mX-RLIONNcgNZk5Bu-4oaD_loCdfZcMkfGKIanUhDvOH8sUfnnvhjPZeoFDBcR-UzGiomgdj6aPt0jzXijKblU8tUsSbGGaFOhQAQL8UfacylWoHSR9jivhb1nMWivGMko5pFIQJh6Wtcb-b7MhCEuEyyC2vm_El5AzDHLhnj7WS3Y5GHmTZI0lhsA8sDiDMhMybSGuIBV3uAhylzKWP-dDvXPdZ-ICHXPmxRQ6KnL45rYzeY38r6gV8AC3Z7xFAMLWND3mjIlpxxrelXMHxziQOeMmTdT3IfH_yNvvduMCcPNpv0g4yzJOSVrVoBda7velRu31cYe4Fq4QRb0DlYgMqy0OL90n85Z7Hv449FlaBPsm-Q7WcxqPjqIc9Av4AqViTeEJykqoolB2XypDZEhiaQMKsUOhGarbGYShtznIPxN-7vhMX8r8uTNVbXUM1ZbZeVljfhfQ26q8m9c7yYFNGtu7ar6k6rmG7ekHQFT4ctk3_l07E2FAQXatMdSofFzyDl2UPGn45I_Gc8rynzszdkaL6UK4JhnXuGuwfxe3PXMG0tjZEKu0BqPNYvdmw26JaocjguoOyvkcex8CodhQxslX8D51Ov16tiaQ0rs8_OH2IP-JTIIg4-Q17ND5tM6ppo3X3lglk4_XdMGPlo8oI5RGTRoAiph-ZJu83ALik7IVXZwGuC7s6ALsUNOysRPKZM9TcksWlInZLHGVZYG-OJccIaX_QjBiwnqPH8jqDPsFSGos6Vr6jStznDQ6nW7Z3Zv2Dnt2g26oU7XHraGZ_2h1bftztnA6tq7Bn0rklqt_sCyB_Zg2O1aVqc36O1-AbVwvuI).
 
@@ -538,6 +665,7 @@ The **tech stack**:
 
 For me, working with antigravity and such tech stack below does the trick.
 
+Also for reference, I like to add a clear: *BRD, tech stack, dev phases, sales, more sales and landing psyc*
 
 {{< details title="Vibe Coding | Setup  📌" closed="true" >}}
 
