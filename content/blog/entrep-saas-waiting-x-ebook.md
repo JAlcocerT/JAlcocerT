@@ -2,15 +2,21 @@
 title: "Getting Leads with Pocketbase"
 date: 2026-03-01T23:20:21+01:00
 draft: false
-tags: ["Dashboards","Supabase Auth vs PB","Roadmap26"]
+tags: ["Info Product","Dashboards","Supabase Auth vs PB","Roadmap26"]
 description: 'A waiting list that gets you leads.'
 ---
 
 **TL;DR**
 
-* https://resend.com/docs/api-reference/emails/send-email
+What happenes after doing the n ebooks here and this tech about BRD development.
 
 **Intro**
+
+Lifetime products are fine.
+
+Providing that someone is interested in what you create.
+
+
 
 Using Resend mail API, together with Pocketbase to:
 
@@ -18,6 +24,8 @@ Using Resend mail API, together with Pocketbase to:
 2. Validate their mail
 3. Send them an ebook
 
+
+* https://resend.com/docs/api-reference/emails/send-email
 
 
 ---

@@ -239,7 +239,7 @@ graph
 
 ### How about UpTime?
 
-Having several public services with a backend means that you have to be responsible for their uptime: *proving you can deliver!*
+Having several **public services** with a backend means that you have to be responsible for their uptime: *proving you can deliver!*
 
 1. https://webaudit.jalcocertech.com/
 
@@ -259,7 +259,7 @@ I wanted to monitor all those automatically with my x300.
 
 ```sh
 git clone https://github.com/JAlcocerT/Home-Lab
-#got pull
+#git pull
 cd Home-Lab/uptime-kuma
 #sudo docker compose up -d
 docker ps -a --filter "name=uptimekuma" #docker ps -a --filter "name=uptime"

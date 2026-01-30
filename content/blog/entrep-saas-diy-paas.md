@@ -338,14 +338,18 @@ See as reference these others: *and also the latest uptime Kuma selfhosted + scr
 
 * [AWS](https://health.aws.amazon.com/health/status)
 * [Cloudflare](https://www.cloudflarestatus.com/)
+* The cool OSS Selfhosted GenBI has one too: `https://wrenaicloud.statuspage.io/`
 * and [Github](https://www.githubstatus.com/)
 
 Its curious that even X resisted the AWS outage, not the CF one.
 
+Remember that you can use uptime Kuma with my script to get started fast: *as seen [here](https://jalcocert.github.io/JAlcocerT/shopify-business-data-analytics)*
 
-### Competitors
 
 
+### Web Competitors?
+
+Or not really, as they are not selling to the same audience.
 
 <!-- 
 https://issyinformatica.es/

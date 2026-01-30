@@ -2,8 +2,8 @@
 title: "Any SaaS needs this: Leads and a UI"
 date: 2026-01-24T09:20:21+01:00
 draft: false
-tags: ["BiP x GTM","APIFY vs Apollo vs Clay","Sales Pipeline","RoadMap26","GrowChief x Social Media OutReach"]
-description: 'Forget about B2C. Go B2B as they have a clear BANT. From MOps to RevOps'
+tags: ["BiP x GTM","APIFY vs Apollo vs Clay","RoadMap26","GrowChief x Social Media OutReach"]
+description: 'Forget about B2C. Go find B2B clients.'
 url: 'how-to-do-social-media-outreach'
 ---
 
@@ -57,6 +57,11 @@ But, what is this for?
 3. Perform a [Lead Score process](#define-the-lead-scoring-strategy)
 
 
+And to potentially, to move away for unconnected excel sheets, comments, CRMs that are pure silos.
+
+Lets start building the foundation of proper P*V growth as DevOps would.
+
+Actually, the idea around this is called: **RevOps**.
 
 
 {{< details title="Vibe Coding | Setup  📌" closed="true" >}}

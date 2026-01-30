@@ -71,6 +71,17 @@ Also, with **Uptime Kuma**, you can get quickly an uptime pages for your service
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+```sh
+git clone https://github.com/JAlcocerT/Home-Lab
+#git pull
+cd Home-Lab/uptime-kuma
+#sudo docker compose up -d
+#docker ps -a --filter "name=uptimekuma"
+uv run scripts/bulk_add_monitors.py #tweak the json and the .env to add your monitors
+```
+
+See details for the script [here](https://jalcocert.github.io/JAlcocerT/shopify-business-data-analytics)
+
 Uptime Kuma status pages example: `https://status.tromsite.com/status`
 
 {{< cards >}}

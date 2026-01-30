@@ -2,7 +2,7 @@
 title: "How about getting leads for your SaaS?"
 date: 2026-01-23T09:20:21+01:00
 draft: false
-tags: ["BiP","APIFY x Firecrawl","Sales Pipeline","Scrapping x OutBound","RoadMap26","Selfishness as virtue?"]
+tags: ["BiP","APIFY x Firecrawl","Sales Pipeline","Scrapping x OutBound","Selfishness as virtue?"]
 description: 'Finding people that actually need your services. A story post the first ten.'
 url: 'how-to-get-customers-programmatically'
 ---
@@ -39,8 +39,6 @@ Knowing how to get clients is a must skill if you are building: *if you got more
 {{< /cards >}}
 
 But also if you want to build sth that can help others: *ive met people doing $$$ ,just' by selling leads*
-
-
 
 And...I know, you can post on social media how great ❄️ you are - Same as everybody does.
 

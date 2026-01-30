@@ -363,7 +363,7 @@ Yeeea: its here: <https://consulting.jalcocertech.com/>
 
 ##### Status Pages
 
-If you have few SaaS within your offer: you will want to prove the uptime status of your services
+If you have few SaaS within your offer: *you will want to prove the uptime status of your services*
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/" title="Monitoring | Docs ↗" >}}
@@ -371,7 +371,7 @@ If you have few SaaS within your offer: you will want to prove the uptime status
 
 ![UpTime Kuma Monitoring](/blog_img/web/success3-realestate/uptime-realestate-demo.png)
 
-See also https://betterstack.com/status-page 
+See also `https://betterstack.com/status-page`
 
 
 

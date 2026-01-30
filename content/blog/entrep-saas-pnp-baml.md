@@ -2,7 +2,7 @@
 title: "The enterprise insights are behind T-SQL and OracleSQL"
 date: 2026-01-15T23:20:21+01:00
 draft: false
-tags: ["BAML","AI Tech Talk 3","DuckDB vs ClickHouse vs SQlite","Malloy"]
+tags: ["BAML","AI Tech Talk 3","MindWendell x SliDev","DuckDB vs ClickHouse vs SQlite","Malloy"]
 description: 'From LangChain to BAML for insights extraction reliability. Lets go get them.'
 url: 'using-baml-to-query-a-database'
 ---
@@ -430,6 +430,14 @@ If there was any doubt, if put together a ppt, taking into consideration [these 
 git clone https://github.com/JAlcocerT/selfhosted-landing
 cd y2026-tech-talks/4-baml-db-insights
 ```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/claper" title="Claper | 🐋 Config ↗" >}}
+{{< /cards >}}
+
+* https://www.mindwendel.com/
+  * https://github.com/b310-digital/mindwendel
+
 
 ---
 

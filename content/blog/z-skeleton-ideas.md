@@ -1,6 +1,6 @@
 ---
 title: "How to analyze Business Opportunities"
-date: 2026-01-29T07:00:21+01:00
+date: 2026-01-30T07:00:21+01:00
 draft: false
 tags: ["BiP","Entrepreneuring","Focus","Unit Economics 104"]
 description: 'Do you really want to do this...that way?'
@@ -304,17 +304,17 @@ They sit in the OM  because they are **Operating Expenses (OpEx)**.
 * **Why it’s here:** These costs are usually *fixed* or *semi-fixed*. You pay your Head of Marketing and your Sales VP whether they close 1 deal or 10 deals this month.
 
 
-If we look at your specific company goals, here is how the "Spending" vs. "Earning" works:
+With a specific company goals, here is how the "Spending" vs. "Earning" works:
 
 | Stage | Activity | Margin Level | Strategic Goal |
 | --- | --- | --- | --- |
-| **Attraction** | AI Marketing / Branding | ** (OpEx)** | Build the "AI Expert" reputation so you can charge a higher **Price ()**. |
-| **Conversion** | Sales & Account Mgmt | ** (OpEx)** | Increase the **Volume ()** of AI-specific contracts. |
-| **Delivery** | Developers + AI Tools | ** (COGS)** | Use AI tools to increase efficiency, keeping the **Gross Margin** high even after giving **Pay Raises**. |
+| **Attraction** | AI Marketing / Branding | OpEx | Build the "AI Expert" reputation so you can charge a higher **Price ()**. |
+| **Conversion** | Sales & Account Mgmt | OpEx | Increase the **Volume ()** of AI-specific contracts. |
+| **Delivery** | Developers + AI Tools | COGS | Use AI tools to increase efficiency, keeping the **Gross Margin** high even after giving **Pay Raises**. |
 
 
-1. *GM* is the cost of doing the work.** (Delivery)
-2. *OM* is the cost of getting the work and managing the growth.** (Attraction & Conversion)
+1. *GM* is the cost of doing the work. (Delivery)
+2. *OM* is the cost of getting the work and managing the growth. (Attraction & Conversion)
 
 ### The Unit Economics
 
@@ -343,20 +343,20 @@ Then, apply each "Survival Rate" (the margins and burdens) until we reach the "B
 
 | Variable | Tag | Value | Logic / The "Drain" |
 | --- | --- | --- | --- |
-| **Price ()** | **[BET]** | **$49** | One-time "Event Pass." Low  requires high  to cover ads. |
-| **Volume ()** | **[BET]** | **High** | Scaling via Pinterest/TikTok virality and "Event Flywheels." |
-| **Gross Margin ()** | **[EXECUTION]** | **95%** | **COGS:** S3 Storage/API. Almost zero production cost. |
-| **Op. Efficiency ()** | **[DISCIPLINE]** | **50%** | **OpEx:** 50% of revenue "leaks" to Customer Acquisition (Ads). |
+| **Price** | **[BET]** | **$49** | One-time "Event Pass." Low  requires high  to cover ads. |
+| **Volume** | **[BET]** | **High** | Scaling via Pinterest/TikTok virality and "Event Flywheels." |
+| **Gross Margin** | **[EXECUTION]** | **95%** | **COGS:** S3 Storage/API. Almost zero production cost. |
+| **Op. Efficiency** | **[DISCIPLINE]** | **50%** | **OpEx:** 50% of revenue "leaks" to Customer Acquisition (Ads). |
 | **Solvency (Cash Flow)** | **[STRUCTURE]** | **Instant** | Payment is upfront. Zero "Payback Period" delay. |
 | **Net Profit** | **BOTTOM LINE** | **~$23/unit** | High-efficiency digital delivery. |
 
 3. The "Levers" Comparison: You vs. The Giants
 
-*How your 1-person model compares to global industry leaders.*
+*How a 1-person model compares to global industry leaders?*
 
 | Component | **Walmart** | **Microsoft** | **Indie Hacker / Fractional** |
 | --- | --- | --- | --- |
-| **Main Lever** | **Volume ()** | **Price () & Scale** | **Efficiency ()** |
+| **Main Lever** | **Volume** | **Price & Scale** | **Efficiency** |
 | **Biggest Cost** | Inventory (COGS) | R&D & Salaries (OpEx) | Marketing (B2C) or Time (B2B) |
 | **CapEx Role** | Massive (Physical Assets) | High (Data Centers) | Zero (Intellectual Property) |
 | **Inventory Logic** | High Turnover (Flow) | Zero Marginal Cost | **High Unit Value (Filter)** |
@@ -366,9 +366,9 @@ Then, apply each "Survival Rate" (the margins and burdens) until we reach the "B
 
 *When a specific part of the formula is "broken," use these tags to identify the fix.*
 
-* **If Net Profit is low despite high sales ():** You have a **[DISCIPLINE]** problem (). Your ads are too expensive or your software bloat is too high.
-* **If customers are complaining about the product:** You have an **[EXECUTION]** problem (). Your "factory" (code or service quality) is failing.
-* **If the market doesn't know you exist:** You have a **[BET]** problem (). You aren't spending enough on the "Awareness Lever."
+* **If Net Profit is low despite high sales:** You have a **[DISCIPLINE]** problem (OpEx). Your ads are too expensive or your software bloat is too high.
+* **If customers are complaining about the product:** You have an **[EXECUTION]** problem (GM). Your "factory" (code or service quality) is failing.
+* **If the market doesn't know you exist:** You have a **[BET]** problem (OpEx). You aren't spending enough on the "Awareness Lever."
 * **If you are "profitable" but have $0 in the bank:** You have a **[STRUCTURE]** problem (Solvency). You are paying suppliers faster than customers pay you.
 
 Whenever you analyze a new business opportunity, drop it into the "Empty Column" of Table 1. 
@@ -376,6 +376,15 @@ Whenever you analyze a new business opportunity, drop it into the "Empty Column"
 If it has a **Supply Constraint**, focus on raising your **Price**. 
 
 If it has a **Demand Constraint**, focus on increasing your **Volume**
+
+
+{{< callout type="warning" >}}
+If you are selling the scarcest resource on earth (YOUR TIME), you are SUPPLY CONSTRAIN. Focus on DIS-qualify potential clients.
+{{< /callout >}}
+
+This contrast when the cases where you built a SaaS, which has a potentially infinite supply.
+
+In this case, you are demand constrain and thats why you wont go far without proper OpEx bet:
 
 ![Supply and Demand for a SaaS](/blog_img/entrepre/bip-supply-demand.png)
 
@@ -385,7 +394,7 @@ It helps you identify where the "friction" will be in your daily life depending 
 
 Here is the **Opportunity & Pain Point Matrix** for your reference.
 
-The Reality Check: Focus vs. Friction
+The Reality Check: *Focus vs. Friction for each of the games*
 
 | Model | Biggest Focus (Daily Action) | Biggest Opportunity (The "Win") | Biggest Pain Point (The "Squeeze") |
 | --- | --- | --- | --- |
@@ -411,7 +420,7 @@ The Reality Check: Focus vs. Friction
 **Week 3: The Growth Bet (Marketing)**
 
 * **Asset Creation:** Create 5–10 "Aesthetic" videos showing how the QR code looks on a wedding table. (Pinterest and TikTok are your high- levers).
-* **The Ad Budget:** Allocate **$2,000** (only 2% of your assets) for a "Learning Phase" on Meta/TikTok ads.
+* **The Ad Budget:** Allocate ~$2,000 (around 1/2% of your net assets) for a "Learning Phase" on Meta/TikTok ads.
 * **Goal:** Find your **Initial CAC** (Customer Acquisition Cost). If you spend $100 and get 2 customers at $49 each, you are at break-even.
 
 **Week 4: The "Solvency" Check & Launch**
@@ -451,13 +460,27 @@ graph LR
     style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
 ```
 
+Expand it [here](https://mermaid.live/edit#pako:eNp9lGtv2jAUhv-K5Ympk6DNhVyIpkoEaIdW1svYJi3hg0kcsBrsyHZKGOK_zyGBwIaaT9jnfd732DlkCyMWY-jBBUfZEjy8hBSop9UCPyiRYBQxylYkEmBEF4TiqiryeSWvNkFwUTurxOXzFDxxEuEZ6HRuwUTfFrum9hw854hKIjc3P1mar46qRjLR1RYI4Qt-wzTHIdwr7ifBPWdCgAniKg-0TgLvJxVRCZ44S4isscdJ8JhhjiShi0voY402ojGN2OqQOvaDMZWYYyFvfMY5W5eSARPyxGPsVx4jf1pjUz-YogL4OY_xed601n7D8rzRfqXBNA7p8a1MkGr3LmXraqcf-LlQd60O2fCf5_zm9o5FuZhV1lYBHkiCwajIMBVY1AH-tp-mLFKHZBR8yee7k5whEZKTeb6v-RzRaKm4fbXutzCuLXBlaa1Ptd0gCOFXjDPwEahrX4NfGKVyuW_makjeMBck2Sjx7NxGL23MxmZYXtR_Gg1cGY1mFJTnEXKTllN2bPq72lBvox7SsnqY0ISkqfch0ZJu4rbVydgr9j5ommXPzXrZWZNYLj0jK07x_oHsJUfMNN9n_AOTXGRiJJaIc7TxgAWsU3BQg3EXxzE6soaLnK71buTwEOnGzgkZR6b1L6mfk6OmWTOKj2SSRLrmXCBhW30pSAw9yXPchivMV6hcwm3pGkK5xOVfxVM_Y8RfQxjSnWIyRH8ztjpgnOWLJfQSlAq1yrMYSTwkSH1UGomae8wHLKcSeoZj7T2gt4UF9DqGrtvXds-xtJ5jW7ahqhvo2fq1Yfe6bs9wXdPUNHfXhn_2qWpUHd1RWrdrm7rRtezdXzrGgLE).
+
 
 
 ## Building a HOW with Sense
 
 A **BRD** is what works best for me now to ship fast [as described here](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk).
 
-Take time and define properly they why and what: *including what's out of scope, specially if you are just one person*
+Take time and define properly the why and what: *including what's out of scope, specially if you are just one person*
+
+It's all about doing *spec-driven development* with AI agents and ship your vision.
+
+Call it SRS: software requirement speficication, whatever.
+
+Just **provide clear instructions of your vision** and be ready to deploy to your server.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="Selfhosting | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/" title="Https | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 
 ```mermaid
 graph LR
@@ -484,6 +507,10 @@ graph LR
 *   **FRD (Functional Requirements):** Answers **"HOW does it work?"** (The Technical Logic & CRUDs).
 
 ![alt text](/blog_img/biz/prod-development.png)
+
+See how if you are an [indie-dev doing boostrap](https://jalcocert.github.io/JAlcocerT/whats-boostrap/), you can simplify further the flow.
+
+The WHY can be your main concern, that you can refine via a `z-brd.md`
 
 The *,How'* can be taken care of: *yep, antigravity does the trick*
 
@@ -567,19 +594,12 @@ To develop a **modern, secure, and scalable landing page with modular astro comp
 
 {{< /details >}}
 
-Yep, there is something cooking up around a new agency that needed some help:
+Yep, there is something cooking up **around a new agency** that needed some help:
 
 ```sh
 whois leadarchitect.org| grep -i -E "(creation|created|registered)"
 #nslookup leadarchitect.org
 ```
-
-| Feature | Marketing Ops (MOPs) | Revenue Ops (RevOps) |
-| --- | --- | --- |
-| **Primary Goal** | Generate & Nurture Leads | Maximize Total Revenue |
-| **Focus Area** | The "Top" of the funnel | The **Entire** funnel (Sales + Marketing + Support) |
-| **Key Metric** | Cost Per Lead (CPL) | Customer Lifetime Value (LTV) / Revenue |
-| **Success looks like...** | A database full of "Hot" leads. | A predictable, growing bank account. |
 
 ---
 
@@ -608,10 +628,12 @@ How about: getting things done?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://genbi.jalcocertech.com" title="Generative BI" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="The insights that you could not afford to have until now" >}}
+  {{< card link="https://genbi.jalcocertech.com" title="Generative BI - For You" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="The insights that you could not afford to have until now" >}}
 {{< /cards >}}
 
-<!-- {{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This DFY I have to refine it though" >}} -->
+<!--
+ {{< card link="https://www.jalcocertech.com" title="JAlcocerTech Custom Solutions" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="This DFY I have to refine it though" >}} 
+-->
 
 ---
 

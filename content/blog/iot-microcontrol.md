@@ -409,7 +409,7 @@ https://github.com/neeraj95575/Temperature-sensor-connect-to-raspberry-pi-pico
 
 ## MQTT With MicroControllers
 
-UpTime Kuma can also monitor MQTT
+UpTime Kuma can also **monitor MQTT**:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}

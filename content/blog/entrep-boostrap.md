@@ -231,8 +231,6 @@ The presenter explains that unlike large SaaS companies like Salesforce, microSa
 
 <!-- [1](https://www.youtube.com/watch?v=ndqX4vbR7Rc) -->
 
-
-
 - **MicroSaaS Definition and Benefits:** MicroSaaS products serve very specific niches with high-margin (80-90%) and manageable workloads, often developed by solo founders or small teams, typically generating $10K to $50K monthly profit with lifestyle flexibility.
 
 - **Examples of Successful MicroSaaS:** Real businesses making $20K-$40K/month include:
@@ -310,8 +308,6 @@ Within the GTM strategy, the marketing strategy defines:
 * **Timeline and Budget:** The schedule and resources for marketing activities.
 * **KPIs:** The metrics you will use to measure marketing success (e.g., website traffic, lead generation, brand awareness).
 
-Key Differences Summarized
-
 | Aspect | Go-to-Market (GTM) Strategy | Marketing Strategy |
 | :--- | :--- | :--- |
 | **Purpose** | To successfully launch a **specific** product or enter a **new** market. | To achieve **overall** business and brand goals over the long term. |
@@ -319,4 +315,6 @@ Key Differences Summarized
 | **Time Horizon** | Short-term and event-driven. It's typically a "sprint" for a specific launch. | Long-term and ongoing. It is continuously evolving to support the brand. |
 | **Responsibility** | Owned by the executive team, often led by a Product Marketing Manager (PMM) or a cross-functional GTM team. | Owned by the marketing team. |
 
-In a nutshell, a strong GTM strategy ensures that your product is ready for the market, while your marketing strategy ensures that the market is ready for your product.
+A strong GTM strategy ensures that your product is ready for the market
+
+While your marketing strategy ensures that the market is ready for your product.
