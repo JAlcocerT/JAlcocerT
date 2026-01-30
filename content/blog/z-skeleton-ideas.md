@@ -79,8 +79,9 @@ Tell them to send you these filled up.
 
 > The ICP focuses on the ideal company or customer segment, the value proposition communicates why the product matters, and the customer avatar embodies the individual persona within the ICP that marketers and sales teams aim to reach.
 
-
 <!-- **Would you like me to help you refine the "Value Proposition" sentence for the WebApp landing page so it doesn't sound like just "another photo app"?** -->
+
+The "Puddle" must fit the **4 Indicators** (Pain, Money, Targetable, Growing).
 
 The **launch strategy**: *aka, focus strategy*
 
@@ -90,6 +91,7 @@ The **launch strategy**: *aka, focus strategy*
 | **One Product** | |
 | **One Channel** | One of the ,Core-4': Warm OutReach / Free Content / Cold OutReach / Paid Ads |
 | The Lead Magnet | Strategy Type: , Delivery Method: |
+
 
 ```mermaid
 mindmap
@@ -505,8 +507,8 @@ If it has a **Supply Constraint**, focus on raising your **Price**.
 If it has a **Demand Constraint**, focus on increasing your **Volume**
 
 
-{{< callout type="warning" >}}
-If you are selling the scarcest resource on earth (YOUR TIME), you are SUPPLY CONSTRAIN. Focus on DIS-qualify potential clients.
+{{< callout type="info" >}}
+If you are selling the scarcest resource on earth (YOUR TIME), you are SUPPLY CONSTRAINED. Focus on DIS-qualify potential clients.
 {{< /callout >}}
 
 This contrast when the cases where you built a SaaS, which has a potentially infinite supply.
@@ -728,6 +730,89 @@ Yep, there is something cooking up **around a new agency** that needed some help
 whois leadarchitect.org| grep -i -E "(creation|created|registered)"
 #nslookup leadarchitect.org
 ```
+
+### Any Business Who What How
+
+This makes perfect sense and completes the "holy trinity" of the Hormozi framework. 
+
+This connects the **Market** (Who), the **Offer** (What), and the **Leads** (How).
+
+Your synthesis of the "Hot Dog" analogy and the "Niche Slap" is critical because it highlights a counter-intuitive truth: **Constraint creates profit.**
+
+Most people fear that narrowing their focus will limit their income, but as you correctly pointed out, it actually increases the **Value Per Customer.**
+
+
+1. The Value-Specificity Correlation
+
+You hit the nail on the head with the Time Management example. This is the **Expertise Premium**.
+
+* When you are a generalist, you are a **commodity** (priced by the market).
+* When you are a specialist, you are a **monopoly** (priced by you).
+
+By narrowing the niche, you aren't just changing the name; you are changing the **perceived certainty** that the product will work for that specific person. 
+
+In Hormozi’s *Value Equation*, "Perceived Likelihood of Achievement" goes up when the solution feels tailor-made.
+
+2. The "Four Indicators" as a Filter
+
+Your summary of the indicators (Pain, Purchasing Power, Targeting, Growth) is the ultimate "Go/No-Go" checklist.
+
+* Many entrepreneurs find a niche with **Massive Pain** (e.g., struggling artists) but zero **Purchasing Power**.
+* Others find **Purchasing Power** but no **Targeting** (e.g., "rich people" is not a targetable niche; "Orthodontists in Florida" is).
+
+A business only scales if it hits **all four**!
+
+3. The "Puddle to Ocean" Evolution
+
+This is a sophisticated takeaway from *$100M Leads*. It prevents the "Generalist Trap."
+
+* **The Puddle:** You become the "Facebook Ad Guy for Local Pizza Shops." (Easy to dominate).
+* **The Pond:** You become the "Ad Guy for Local Restaurants."
+* **The Lake:** You become the "Marketing Consultant for Franchise Food Brands."
+* **The Ocean:** You are "Alex Hormozi," advising all businesses.
+
+If you skip the Puddle and go straight to the Ocean, the giants (who have more ad spend) will simply outbid you for attention.
+
+This "Niche" concept plugs into what we discussed earlier:
+
+* **Lead Magnet:** Instead of a generic "How to get leads" PDF, a niched magnet would be "How to get 5 new patients for your Dental Practice this week." (Higher conversion).
+* **Attraction Offer:** Instead of a "Business Audit," you offer a "Patient Flow Audit."
+* **SLO:** The niche allows you to create a specific tool (Software Delivery) that solves a niche problem, making the self-liquidating offer feel like a "must-have."
+
+I have added the **Niche & Market** layer to our map to show how it sits at the foundation of everything else.
+
+```mermaid
+mindmap
+  root((Hormozi Business Engine))
+    (Niche: The Foundation)
+        [The 4 Indicators]
+            Massive Pain
+            Purchasing Power
+            Easy to Target
+            Growing Market
+        [Strategic Growth]
+            Puddle > Pond > Lake > Ocean
+            The Niche Slap :: Commitment
+            Specific = Premium Price
+    (Tactics: $100M Leads)
+        [The 3 Strategic Types]
+            Reveal the Problem
+            The Sample
+            Step 1 of N
+        [The 7-Step Process]
+            Problem > Solution > Delivery > Name
+    (Strategy: $100M Money Models)
+        [The 4 Offer Types]
+            Attraction :: Lead Magnets
+            Core Offer :: The Niche Solution
+            Upsell / Continuity
+        [Economic Goals]
+            CFA :: Client Financed Acquisition
+            The Salted Pretzel Cycle
+
+```
+
+Understand that **who** you sell to (Niche) dictates **what** you sell (Offer) and **how** you find them (Leads).
 
 ---
 

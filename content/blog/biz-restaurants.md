@@ -2,38 +2,42 @@
 title: "[Prototyping] Restaurants x Astro SSR."
 date: 2026-04-01
 draft: false
-tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads"]
+tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads x APIFY x Web Audit"]
 description: "MultiTenant Websites for Restaurants. Million dollar idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
 
+
 **TL;DR**
 
-QR Restaurantes Free + Web if Pay
+QR Restaurantes Free + Web if Pay.
 
 
 **Intro**
 
-For B2B only.
+For B2B only as per [this section](#the-how-behind-the-idea).
 
 Scrap on google maps some potential interested business: leads.
 
-    The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc
+The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc
+
+Before you ask: yes, this is using my latest APIFY workflow to find leads and my free web audit.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads x APIFY x FireCrawl| Github ↗" icon="github" >}}
+{{< /cards >}}
 
 
+**The Business side**
 
-## The business side
+The **Tier of Service**: 
 
+Initially, I thought aboyt a DIY product (1b - *leveraging on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
 
-The **launch strategy**: *aka, focus strategy*
+But as I dont want to build without real clients asking for it, this starts a a **DFY service**, for those who actually want it.
 
-| Element | Decision |
-| :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
-
-The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
+For more details like the focus/launch strategy: go [here](#the-how-behind-the-idea).
 
 The **tech stack**:
 
@@ -153,7 +157,50 @@ A set of **sites themes** that will take a while to get outdated:
 4. Photo Galleries / "Pretending Sites"
 5. [Wedding Sites](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/) (and related [software for weddings](https://jalcocert.github.io/JAlcocerT/software-for-weddings/))
 
+### The HOW behind the idea
 
+Starting with my latest [business skeleton here](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/).
+
+Understand that **who** you sell to (Niche) dictates **what** you sell (Offer) and **how** you find them (Leads).
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | One of the ,Core-4': Warm OutReach / Free Content / Cold OutReach / Paid Ads |
+| The Lead Magnet | Strategy Type: , Delivery Method: |
+
+The Matrix: *Strategy vs. Medium for leads*
+
+| Strategy (The 3 Types) | Software Delivery | Information Delivery | Service Delivery | Physical Delivery |
+| --- | --- | --- | --- | --- |
+| **1. Reveal the Problem** | A "Profit Leak" Calculator. | A "Red Flag" PDF Checklist. | A Free 5-Min Security Audit. | A "Water Hardness" Testing Kit. |
+| **2. Give a Sample** | 7-Day Trial of a CRM. | A Free Masterclass Lesson. | A 15-Min Mini-Consult. | A Trial-Sized Supplement. |
+| **3. Step 1 of N** | A template pre-loaded in an app. | A "How to Set Up Your LLC" Guide. | A "Done-for-you" Website Header. | A "Starter Tool" (e.g., a free brush for a paint kit). |
+
+The **Tier of Service**: DFY *because The value ladder is a thing*
+
+The **fundamental nature of the business model** and its primary bottleneck
+
+| Feature | **Guest Photo WebApp** | **Educational Model** | **The Lead Architect Agency** |
+| --- | --- | --- | --- |
+| **Business Archetype** | B2C Indie Hacker (SaaS-Lite) | Info-Product / Course |  |
+| **Primary Lever** | **Volume** | **Volume** | **Price** |
+| **Strategic Tag** | **[GROWTH BET]** | **[GROWTH BET]** | |
+| **Customer Intent** | Emotional (Memories) | Aspirational (Success) |  |
+| **Execution Risk** | Technical/Server Downtime | Content Obsolescence |  |
+| **Main Constraint** | **Demand (Marketing, ads)** | **Demand (Attention)** | **Supply (Expert Hours)** |
+| **Macro Winner** | Low-cost luxury (Recession) | Upskilling (Recession) |  |
+
+The **GTM strategy** is a cross-functional roadmap that answers the question: *How will we bring this new product to market successfully?* 
+
+It aligns all key business functions, including:
+
+* **Product:** What are we selling? What problem does it solve?
+* **Pricing:** How much will we charge?
+* **Distribution/Sales:** How will we get the product into the hands of customers? (e.g., direct sales team, e-commerce, third-party distributors).
+* **Marketing:** How will we generate awareness and demand?
+* **Customer Success/Support:** How will we onboard and support customers after they buy?
 
 ---
 
@@ -216,10 +263,9 @@ Free Hosting Options with Free domain:
 * https://www.mojstolik.pl/dla-restauracji
 
 
-
-* https://elarboltapas.com/
-* https://restaurantealbores.com/
-* https://mojamabeach.com/
+* `https://elarboltapas.com/`
+* `https://restaurantealbores.com/`
+* `https://mojamabeach.com/`
 
 * https://gusti.pl/oV8S1gQ
 * https://tandoorolsztyn.pl/
