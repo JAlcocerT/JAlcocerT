@@ -11,6 +11,8 @@ description: 'A Science recap with LLMs'
 url: 'cool-science'
 ---
 
+https://www.youtube.com/watch?v=71e6xfxrIRs - Understanding Gaussian Processes | Part 1 - What are Gaussian Processes?
+
 **Tl;DR**
 
 A post about...Simply science.

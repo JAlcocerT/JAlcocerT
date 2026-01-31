@@ -1,8 +1,8 @@
 ---
 title: "[Learning] Interesting Image & Backup Tools"
-date: 2026-02-15
+date: 2026-02-08
 draft: false
-tags: ["Link Shortener","No Code DBs x BaseRow","Jellyfin"]
+tags: ["Link Shortener","No Code DBs x BaseRow","Jellyfin x HW Acceleration"]
 description: 'Testing some NoCode Tools. A recap of media.'
 url: 'image-backup-tools'
 ---
@@ -67,28 +67,6 @@ https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
 https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
 <https://github.com/JAlcocerT/Docker/tree/main/Media> 
 -->
-
-
-<!-- https://gitlab.com/Linuxserver.io/docker-jellyfin/container_registry
-https://quay.io/repository/linuxserver.io/jellyfin
-https://hub.docker.com/r/linuxserver/jellyfin
-https://github.com/linuxserver/docker-jellyfin/pkgs/container/jellyfin -->
-
-
-
-<!-- ## FAQ
-
-### What is oobabooga?
-
-https://gist.github.com/mberman84/45545e48040ef6aafb6a1cb3442edb83
-
-#### More about RAGs
-
-https://www.youtube.com/watch?v=_cDRrSAKSnY
-https://mer.vin/2024/01/rag-with-chromadb-llama-index-ollama-csv/
-
-
-https://www.youtube.com/watch?v=71e6xfxrIRs - Understanding Gaussian Processes | Part 1 - What are Gaussian Processes? -->
 
 
 
@@ -157,17 +135,68 @@ https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka -->
 
 ### More Media
 
+I set again Jellyfin *and company* at: `192.168.1.2:8096`
+
 ```sh
 #git clone https://github.com/JAlcocerT/Home-Lab
-cd ~/Home-Lab/jellyfin
+#cd ~/Home-Lab/jellyfin
 #sudo docker compose up -d
+
+##cd ~/Home-Lab
+#git pull
+#sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d jellyfin
+
 docker ps -a | grep -i jellyfin
+#udo docker stats jellyfin #~135mb idle
 ```
+
+If you see very high CPU consumption for nothing, try:
+
+1. Subtitles Burn-in
+
+* Click your User Icon (top right) > Settings.
+* Go to Subtitles.
+* Set Subtitle playback mode to None.
+* Click Save.
+
+I just required to move my OA5 videos to:
+
+```sh
+#ls -d CAM1-04-14 CAM1-04-16 CAM1-04-17 CAM2
+mv CAM1-04-14 CAM1-04-16 CAM1-04-17 CAM2 /home/jalcocert/Desktop/YoutubeVideos/
+```
+
+2. Jellyfin Dashboard Settings
+
+Go to **Dashboard > Playback** and set: `https://jellyfin.org/docs/general/post-install/transcoding/hardware-acceleration/amd`
+
+*   **Hardware acceleration**: `Video Acceleration API (VAAPI)`
+*   **VA-API Device**: `/dev/dri/renderD128`
+*   **Hardware decoding**: Enable H.264, HEVC, VC1, VP9.
+*   **Hardware encoding**: Enabled.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+```sh
+#sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent
+docker logs qbittorrent
+#sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d prowlarr
+#sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d metube
+```
+
+![alt text](/blog_img/selfh/Jellyfin/prowlarr-indexers.png)
+
+![alt text](/blog_img/selfh/Jellyfin/prowlarr-qbittorrent.png)
+
+Try searching for: `1337x, The Pirate Bay, LimeTorrents, or EZTV`.
+
+![Simpsons Clouds](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)
+
+
+Just go to `192.168.1.2:8081`...
 
 
 ### No Code Tools

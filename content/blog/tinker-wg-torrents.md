@@ -56,7 +56,7 @@ I have been collecting some [similar interesting Services to spin with Docker](h
 We will need **Docker/Portainer** - So get ready with this [SelfHosting Script](https://raw.githubusercontent.com/JAlcocerT/Linux/main/Z_Linux_Installations_101/Selfhosting_101.sh) as **described [here](https://jalcocert.github.io/Linux/docs/linux__cloud/selfhosting/)**
 {{< /callout >}}
 
-You have many alternatives, among them: QBittorrent, Transmission,...
+You have many alternatives, among them: *QBittorrent, Transmission,...*
 
 ### Qbittorrent with the Raspberry Pi
 
@@ -67,6 +67,7 @@ You need this **docker-compose config** file:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/transmission" title="Transmission Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+Consider using with them:
 
 {{< cards cols="2" >}}
   {{< card link="https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/" title="QBittorrent + Traefik" >}}
