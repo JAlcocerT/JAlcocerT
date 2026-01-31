@@ -23,7 +23,41 @@ You already know everything and got nothing to learn.
 For the rest of you: *here we go with a new [agency business idea](#the-how-behind-this-idea)*.
 
 
+```mermaid
+graph TD
+    %% Layer 1: Sourcing
+    subgraph "1. Sourcing (The Wide Net)"
+        A[Google Maps / Instagram] -->|Apify Scraper| B(Raw Lead List: URLs & Names)
+    end
 
+    %% Layer 2: Enrichment
+    subgraph "2. Enrichment (Data Cleaning)"
+        B --> C{Verification Path}
+        C -->|Find Contact| D[Hunter.io]
+        C -->|Find Personal Hooks| E[Firecrawl + AI]
+        D -->|Verified Email| F(Enriched Lead Profile)
+        E -->|Bio/Style Details| F
+    end
+
+    %% Layer 3: Outreach
+    subgraph "3. Outreach (The Engine)"
+        F --> G[Smartlead / HeyReach]
+        G -->|Sequence 1| H[Personalized Cold Email]
+        G -->|Sequence 2| I[LinkedIn Connection]
+    end
+
+    %% Layer 4: Conversion
+    subgraph "4. Conversion"
+        H --> J[Interested Response]
+        I --> J
+        J --> K[B2B Bulk Sale / Partnership]
+    end
+
+    %% Styling
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style G fill:#bbf,stroke:#333,stroke-width:2px
+    style K fill:#bfb,stroke:#333,stroke-width:4px
+```
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/leads-slubnechwile/blob/main/apify-101.ipynb)
 

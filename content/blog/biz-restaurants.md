@@ -3,7 +3,7 @@ title: "[Prototyping] Restaurants x Astro SSR."
 date: 2026-04-01
 draft: false
 tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads x APIFY x Web Audit"]
-description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranean x OpenClaw."
+description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranean x OpenClaw x Gems."
 url: "webs-for-restaurants"
 ---
 
@@ -30,7 +30,12 @@ Before you ask: yes, this is using my latest APIFY workflow to find leads and my
 
 I also used notebookLLM: https://notebooklm.google.com/notebook/  and https://aistudio.google.com/
 
+When refined, with clear insturctions: https://gemini.google.com/gems/create
+
 * https://arena.ai/leaderboard
+* https://prompts.chat/
+* https://ai.google.dev/gemini-api/docs/prompting-strategies
+* https://developers.openai.com/codex/pricing
 
 https://www.youtube.com/watch?v=Lnkv0-GLU3w&t=808s
 
@@ -78,6 +83,12 @@ jalcocert@BYOD-00335:~$ codex --version
 gemini --version
 #0.1.7
 ```
+
+https://marketplace.visualstudio.com/items?itemName=openai.chatgpt
+
+https://developers.openai.com/codex/ide/
+
+
 
 And now its full of alternatives, like OpenCode or ~~clawdbot~~ openclaw. 
 

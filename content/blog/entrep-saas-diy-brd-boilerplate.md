@@ -246,44 +246,47 @@ Task → JSON Output — helps you clearly define role, goal, context, and outpu
   }
 }
 
-1. discovery: Let’s start by exploring the Discovery stage, where research and requirements gathering set the foundation for the project.
+{
+  "role": "Business Analyst",
+  "context": "Meeting transcript (anonymized)",
+  "task": "Extract backlog",
+  "output": [
+    {
+      "id": "US-<number>",
+      "title": "string",
+      "description": "string",
+      "acceptance_criteria": ["string"],
+      "dependencies": ["string"],
+      "risks": ["string"],
+      "open_questions": ["string"]
+    }
+  ]
+}
+> “Can I use AI to make this task faster or better?”
 
-Where AI Helps:
-AI supports requirements gathering, competitor and risk analysis, and backlog creation by summarizing inputs and identifying gaps.
 
-Key Artifacts:
-Deliverables include a Problem Statement, Vision, High-Level Requirements (HLR), User Stories, and a Risk Register.
+before sending to AI
 
-Tool Types:
-Use text-based LLMs, retrieval systems (RAG), and web research tools to collect and analyze relevant information.
+- Context minimized, no PII/secrets
+- Clear goal, constraints, output format
+- Request sources/evidence where needed
 
-1. Problem Statement
+Prompt Template: HLD → ADR
 
-A clear, one-page summary of the core problem — concise and unambiguous.
+Role: System Architect
+Task: Analyze non-functional requirements
+Output: table with [Quality Attribute | Metric/Target | Risks | Validation]
 
-2. Backlog v1
+Prompt Template: Mermaid Sequence
 
-An initial backlog of up to 30 User Stories, prioritized using MoSCoW (Must have, Should have, Could have, Won’t have) and WSJF (Weighted Shortest Job First) methods.
+Role: Architect
+Task: Generate Mermaid sequence for “authentication + purchase”
+Constraints: show SLA points, retries, timeouts
 
-3. Risk Register v1
-
-A draft risk log listing each risk’s category, probability, potential impact, and mitigation plan
-
-Metrics
-
-- TTR (Time to Requirements): Average time from project start to validated requirements.
-
-- Rework Rate: Percentage of items requiring rework after the first validation.
-
-- Backlog Quality: Completeness of Acceptance Criteria (AC) and percentage of User Stories with clearly defined Definition of Ready (DoR) and Definition of Done (DoD).
-
-Risk and control
-
-- Hallucinations → require references, label hypotheses.
-- Confidentiality → anonymization, approved channels.
-
-2. 
-
+Role: UX Lead
+Task: Create 3 payment screen variants (mobile-first)
+Constraints: WCAG AA
+Output: list [elements | hierarchy | states | KPI for A/B testing]
 
 Just do what you know, The Planning and contex: *with proper context, you make agents outputs more predictable*
 
