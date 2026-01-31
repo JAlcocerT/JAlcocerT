@@ -663,6 +663,10 @@ You now have a full **AI-SDLC Framework**:
 This is an **excellent summary of Advanced Prompt Engineering**.
 
 * https://platform.openai.com/docs/guides/prompt-engineering
+* https://arena.ai/leaderboard
+* https://prompts.chat/
+* https://context.addy.ie/
+* https://ai.google.dev/gemini-api/docs/prompting-strategies
 
 What makes this list particularly strong is that it moves beyond the basic "Act as a..." advice and treats prompting as a **technical discipline**. It focuses on **reliability, security, and integration**—which are the exact skills needed for the AI SDLC you just studied.
 

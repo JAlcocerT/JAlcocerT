@@ -10,7 +10,9 @@ url: 'building-a-revops-center-agency'
 
 **TL;DR**
 
-Building around what every business needs: *finding clients*
+Building around what every business needs: *a [reliable flow](#the-flow) for finding clients*
+
++++ [Fireflies](#fireflies-ai) x 
 
 **Intro**
 
@@ -156,6 +158,46 @@ Prompt Template: Meeting → Backlog (JSON)
   ]
 }
 ```
+
+#### FireFlies AI
+
+Why fireflies and not minutes AI?
+
+Because I like to have **web app access** to the actions.
+
+As simple as that.
+
+Also, because I tried it some time back, [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings).
+
+Plus, it allows to feed a `.mp3`: `https://fireflies.ai/`
+
+```sh
+ffmpeg -i "2026-01-29 18-04-26.mp4" -q:a 0 -map a "2026-01-29 18-04-26.mp3"
+```
+
+So im also considering all the integrations: https://fireflies.ai/integrations
+
+
+I could have also tried `https://github.com/thepersonalaicompany/amurex`
+
+> AGPL3 |  World's first AI meeting copilot → The Invisible Companion for Work + Life 
+
+But I need results fast: so pragmatism mode turned ON, tinkering mode OFF.
+
+
+#### My Phoner or Zoom
+
+* https://www.zoom.com/en/products/voip-phone/features/integrations/
+* 
+
+Or...others like:
+
+* https://www.quo.com/pricing - ex openphone
+
+
+
+
+
 
 
 ---
@@ -497,3 +539,4 @@ You don't buy leads; you earn the right to talk to them.
 Which is exactly what this person does in the first seconds of each call:
 
 {{< youtube "1Q_MDOWaljk" >}}
+

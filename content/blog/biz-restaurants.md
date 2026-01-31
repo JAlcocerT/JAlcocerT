@@ -32,9 +32,7 @@ I also used notebookLLM: https://notebooklm.google.com/notebook/  and https://ai
 
 When refined, with clear insturctions: https://gemini.google.com/gems/create
 
-* https://arena.ai/leaderboard
-* https://prompts.chat/
-* https://ai.google.dev/gemini-api/docs/prompting-strategies
+
 * https://developers.openai.com/codex/pricing
 
 https://www.youtube.com/watch?v=Lnkv0-GLU3w&t=808s
@@ -84,14 +82,20 @@ gemini --version
 #0.1.7
 ```
 
-https://marketplace.visualstudio.com/items?itemName=openai.chatgpt
+Still, there is not an official claude desktop for linux: https://snapcraft.io/claudeai-desktop
 
-https://developers.openai.com/codex/ide/
-
-
+* https://marketplace.visualstudio.com/items?itemName=openai.chatgpt
+* https://developers.openai.com/codex/ide/
+* https://github.com/anthropics/claude-code
+* https://code.claude.com/docs/en/vs-code
 
 And now its full of alternatives, like OpenCode or ~~clawdbot~~ openclaw. 
 
+<!-- 
+https://www.youtube.com/watch?v=_6h_4XQUV3g 
+-->
+
+{{< youtube "_6h_4XQUV3g" >}}
 
 ### Ideas Collected
 
