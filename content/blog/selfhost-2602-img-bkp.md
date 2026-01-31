@@ -2,8 +2,8 @@
 title: "[Learning] Interesting Image & Backup Tools"
 date: 2026-02-15
 draft: false
-tags: ["Link Shortener","No Code DBs","BaseRow"]
-description: 'Testing the NoCode Tools'
+tags: ["Link Shortener","No Code DBs x BaseRow","Jellyfin"]
+description: 'Testing some NoCode Tools. A recap of media.'
 url: 'image-backup-tools'
 ---
 
@@ -152,6 +152,21 @@ https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka -->
 ---
 
 ## Conclusions
+
+
+
+### More Media
+
+```sh
+#git clone https://github.com/JAlcocerT/Home-Lab
+cd ~/Home-Lab/jellyfin
+#sudo docker compose up -d
+docker ps -a | grep -i jellyfin
+```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 

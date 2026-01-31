@@ -10,11 +10,11 @@ math: true
 ---
 
 
-
 **TL;DR**
 
-Just read this, if an idea does not fit: next.
+Just read this, if an idea does not fit this framework: NEXT.
 
++++ COnsider using formbricks for people that claim to want to build with you and avoid non-sense
 
 **Intro**
 
@@ -119,31 +119,11 @@ mindmap
 
 This makes perfect sense and is likely the most "complete" mental model for a founder or product manager.
 
-By structuring it this way, you’ve created a **System of Alignment**. Every technical detail in your **FRD** or step in your **SOP** can be traced vertically back up to the **Solution**, which is designed for a specific **Niche**. If a task doesn't move that needle, it’s waste.
+By structuring it this way, you’ve created a **System of Alignment**.
 
-Here is the finalized Mermaid code based on your exact structure:
+Every technical detail in your **FRD** or step in your **SOP** can be traced vertically back up to the **Solution**, which is designed for a specific **Niche**. 
 
-```mermaid
-mindmap
-  root((Business Framework))
-    Niche (WHO)
-      Target Audience
-      Pain Points
-    Offer (WHAT)
-      The Solution
-        Product Development (Product Dev)
-          BRD (Why - BRD)
-          PRD (What - PRD)
-          FRD (How - FRD)
-        Service Delivery (Service Delivery)
-          SOW (Scope - SOW)
-          SLA (Quality - SLA)
-          SOP (Process - SOP)
-      Value Proposition
-    Leads (HOW)
-      Distribution
-      Sales Channels
-```
+If a task doesn't move that needle, it’s waste.
 
 Why this works so well: *and can be expanded [here](https://mermaid.live/edit#pako:eNpdkkFv4jAQhf_KyKcgURRImjS5sUWoh7Zkl2orVbm4yUAsOXbWsWkp4r_vJCxlw83vfTNvxpYPrNAlspTVQpU1b3IFYLS2nrfUTpVo4AmV5RKeqEyORh0HeBZFheC9Pqzg5iT-AYAXbrZoYe5KgarAs51xoSDTQtn2ZK02GwqniPkLZfTqkkHhay2dFVqdPYowunSFhQXuUOqmpr3A-88cXUoBfvxaUHi1p2w6DlB2QtwSy67YsmMP-oPQcoDWaHaiQJojxQ7NHrxrZ5CzXr1SRaEbpCQSQ_g4B--n41LYbj-SV71Zf68C27bvzr7xby4ddg_R6FZcXucRednS3jT0BubFHydO9LtvIVprxPvgQddcYgv3FVcKZcvGbGtEyVJrHI5ZjabmnWSHrj5ntsIac5bSscQNd9LmLFdHamu4etO6Pnca7bYVSzdctqRcU3KLC8G3hl9KsPtY9_S_LEtns6jPYOmBfbJ0GkST4O42iPx4GsdxEIZjtu_sSRwnyW0SxXdRmCT-7DhmX_1Yf5IEUegHYRD7QTCNjn8BY43Rcw)*
 
@@ -210,43 +190,6 @@ The most successful leaders in big companies are the ones who try to act like fo
 They force the engineers to talk to the customers and force the sales team to understand the technical constraints. 
 
 They try to rebuild the "Business Framework" map you just created within their own department.
-
-
-```mermaid
-mindmap
-  root((Business & Delivery
-    Frameworks))
-    Strategic Foundation
-      Niche (WHO)
-        Target Audience
-        Pain Points
-      Offer (WHAT)
-        The Solution
-        Value Proposition
-      Leads (HOW)
-        Distribution
-        Sales Channels
-    Product Development
-      BRD (WHY)
-        Business Goals
-        ROI & Vision
-      PRD (WHAT)
-        Features
-        User Stories
-      FRD (HOW)
-        Logic & CRUD
-        System Behavior
-    Service Delivery
-      SOW (SCOPE)
-        Legal Boundaries
-        Milestones
-      SLA (QUALITY)
-        Performance Metrics
-        Uptime/Response
-      SOP (PROCESS)
-        Human Steps
-        Standard Operations
-```
 
 
 # Creating with AI
@@ -1046,6 +989,8 @@ You now have a full **AI-SDLC Framework**:
 
 ## FAQ
 
+### Prompt Engineering
+
 This is an **excellent summary of Advanced Prompt Engineering**.
 
 * https://platform.openai.com/docs/guides/prompt-engineering
@@ -1058,7 +1003,7 @@ What makes this list particularly strong is that it moves beyond the basic "Act 
 
 Here is my breakdown of why these specific points matter, organized into a clear framework.
 
-### 1. The "Power Tools" (Techniques to Boost Quality)
+1. The "Power Tools" (Techniques to Boost Quality)
 
 These are strategies to force the model out of "lazy mode" and into "analytical mode."
 
@@ -1079,7 +1024,7 @@ These are strategies to force the model out of "lazy mode" and into "analytical 
 
 
 
-### 2. The "Anti-Patterns" (Mistakes to Avoid)
+2. The "Anti-Patterns" (Mistakes to Avoid)
 
 These are the most common reasons why AI projects fail in the enterprise.
 
@@ -1087,7 +1032,7 @@ These are the most common reasons why AI projects fail in the enterprise.
 * **No Quality Criteria:** If you don't tell the model what "Good" looks like, it will optimize for "Average."
 * **Invented Facts (Hallucination):** This usually happens when you force the model to answer even if it doesn't know. The fix is explicitly telling it: *"If you don't know, say UNKNOWN."*
 
-### 3. The "Definition of Ready" (Checklist)
+3. The "Definition of Ready" (Checklist)
 
 This is your final sanity check before hitting "Run."
 
@@ -1095,19 +1040,19 @@ This is your final sanity check before hitting "Run."
 * **Goal:** Defines success.
 * **Constraints:** Defines the boundaries (e.g., "JSON only," "No external libs").
 
----
 
-### Practical Application: The "Before & After"
+
+Practical Application: The "Before & After"
 
 Let's apply your list to a real SDLC task to see the difference.
 
-#### ❌ The Bad Prompt (Unstructured, Unsafe)
+❌ The Bad Prompt (Unstructured, Unsafe)
 
 > "Write me some code to connect to our database. Make sure it's secure. Here is the schema: [paste schema]."
 
 * **Why it fails:** No language specified, no error handling criteria, no security context, mix of instruction and data.
 
-#### ✅ The "Engineered" Prompt (Using your list)
+✅ The "Engineered" Prompt (Using your list)
 
 *Applying: Role, Plan, Delimiters, Constraints, Structured Output.*
 
@@ -1136,10 +1081,7 @@ The database schema is provided in the `Schema` section below.
 """
 [Paste Schema Here]
 """
-
 ```
-
-### Final Verdict on your Course Notes
 
 You have successfully covered the entire ecosystem:
 

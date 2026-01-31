@@ -169,7 +169,7 @@ Or...the spec-driven development guide: *all about the role, context, task, with
 
 The idea is to show non tech business users couple success examples.
 
-Let’s explore the core principles that make AI your powerful and safe teammate: the ai mindset
+Let’s explore the core principles that make AI your powerful and safe teammate: **the AI mindset**
 
 1. Default to Assist: Before starting any task, think about how AI can support you, for example, by creating drafts, exploring ideas, or checking content.
 2. Human in the Loop: Humans always make the final decisions.
@@ -262,6 +262,7 @@ Task → JSON Output — helps you clearly define role, goal, context, and outpu
     }
   ]
 }
+
 > “Can I use AI to make this task faster or better?”
 
 

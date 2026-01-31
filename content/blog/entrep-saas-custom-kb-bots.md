@@ -1,7 +1,6 @@
 ---
 title: "KB and Local Bots to end Silos for good"
 date: 2026-03-01T23:20:21+01:00
-#date: 2025-12-21T23:20:21+01:00
 draft: false
 tags: ["Custom Chatbots x Local AI and KB","Tech Talk 99","RoadMap26","Docs Bot","Scribbly"]
 description: 'Building a custom BOT platform to end with silos. HUGO FOSS rebuild.'
@@ -30,7 +29,29 @@ The **Tier of Service**:
 
 The **customer segmentation**: SMB
 
-The **tech stack**:
+The **tech stack**: *this solution can start as a consulting / setup service, then and only when there are PxV signals...a potential product*
+
+```mermaid
+mindmap
+  root((Business Framework))
+    Niche (WHO)
+      Target Audience
+      Pain Points
+    Offer (WHAT)
+      The Solution
+        Product Development (Product Dev)
+          BRD (Why - BRD)
+          PRD (What - PRD)
+          FRD (How - FRD)
+        Service Delivery (Service Delivery)
+          SOW (Scope - SOW)
+          SLA (Quality - SLA)
+          SOP (Process - SOP)
+      Value Proposition
+    Leads (HOW)
+      Distribution
+      Sales Channels
+```
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |

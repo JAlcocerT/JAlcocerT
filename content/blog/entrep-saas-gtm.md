@@ -187,12 +187,12 @@ But I need results fast: so pragmatism mode turned ON, tinkering mode OFF.
 
 #### My Phoner or Zoom
 
-* https://www.zoom.com/en/products/voip-phone/features/integrations/
-* 
+* `https://www.zoom.com/en/products/voip-phone/features/integrations/`
+* `https://www.myphoner.com/pricing/`
 
 Or...others like:
 
-* https://www.quo.com/pricing - ex openphone
+* `https://www.quo.com/pricing` - ex openphone
 
 
 

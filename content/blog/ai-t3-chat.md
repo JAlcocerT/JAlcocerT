@@ -75,9 +75,11 @@ make help
 
 make docker-build
 make docker-up
+#sudo docker stats
 #docker stop $(docker ps -a -q) #stop all
 #docker system df
 #docker system prune -a --volumes -f
+#docker volume rm $(docker volume ls -q)
 ```
 
 In this case, the vibe coding journey starts from this repository, so no need for the initial prompt.

@@ -67,6 +67,43 @@ The **tech stack**:
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
+
+```mermaid
+mindmap
+  root((Business & Delivery
+    Frameworks))
+    Strategic Foundation
+      Niche (WHO)
+        Target Audience
+        Pain Points
+      Offer (WHAT)
+        The Solution
+        Value Proposition
+      Leads (HOW)
+        Distribution
+        Sales Channels
+    Product Development
+      BRD (WHY)
+        Business Goals
+        ROI & Vision
+      PRD (WHAT)
+        Features
+        User Stories
+      FRD (HOW)
+        Logic & CRUD
+        System Behavior
+    Service Delivery
+      SOW (SCOPE)
+        Legal Boundaries
+        Milestones
+      SLA (QUALITY)
+        Performance Metrics
+        Uptime/Response
+      SOP (PROCESS)
+        Human Steps
+        Standard Operations
+```
+
 > The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc
 
 > > MoSCoW (Must have, Should have, Could have, Won’t have *aka Out of scope* ) 
