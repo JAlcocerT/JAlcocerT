@@ -2,7 +2,7 @@
 title: "Interesting NLP Tools: PII, Sentiment Analysis..."
 date: 2024-08-03T23:20:21+01:00
 draft: false
-tags: ["Dev"]
+tags: ["Dev","PII x PHI"]
 description: 'How to use SpaCy with Python as NER. Compared with LLMs and Detoxify.'
 url: 'nlp-tools'
 ---

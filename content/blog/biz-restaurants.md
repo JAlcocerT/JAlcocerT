@@ -3,7 +3,7 @@ title: "[Prototyping] Restaurants x Astro SSR."
 date: 2026-04-01
 draft: false
 tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads x APIFY x Web Audit"]
-description: "MultiTenant Websites for Restaurants. Million dollar idea in the Mediterranean."
+description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranean x OpenClaw."
 url: "webs-for-restaurants"
 ---
 
@@ -28,6 +28,20 @@ Before you ask: yes, this is using my latest APIFY workflow to find leads and my
   {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads x APIFY x FireCrawl| Github ↗" icon="github" >}}
 {{< /cards >}}
 
+I also used notebookLLM: https://notebooklm.google.com/notebook/  and https://aistudio.google.com/
+
+* https://arena.ai/leaderboard
+
+https://www.youtube.com/watch?v=Lnkv0-GLU3w&t=808s
+
+<!-- db325dfd-b354-4ffb-b399-45623c7887f2 -->
+
+Las fuentes concuerdan en que el éxito no proviene de servir a todos, sino de servir a un grupo específico con un dolor intenso y la capacidad de pagar.
+
+1. Identifica un subgrupo dentro de Salud, Riqueza o Relaciones que tenga dolor y dinero.
+2. Crea una Oferta Grand Slam específica para ellos que te permita cobrar precios altos ($100M Offers).
+3. Utiliza los "Core Four" (Publicidad) para dirigir tu mensaje específicamente a ese grupo, comenzando por el "charco" antes de intentar nadar en el océano ($100M Leads).
+
 
 **The Business side**
 
@@ -50,6 +64,22 @@ The **tech stack**:
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 
+> The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc
+
+> > MoSCoW (Must have, Should have, Could have, Won’t have *aka Out of scope* ) 
+
+One year ago I was: *finally moving from copy pasting from web to vscode*
+
+```sh
+claude --version
+#0.2.126 (Claude Code)
+jalcocert@BYOD-00335:~$ codex --version
+#0.1.2504211509
+gemini --version
+#0.1.7
+```
+
+And now its full of alternatives, like OpenCode or ~~clawdbot~~ openclaw. 
 
 
 ### Ideas Collected

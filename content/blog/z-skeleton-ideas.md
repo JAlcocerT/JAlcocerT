@@ -1,6 +1,6 @@
 ---
 title: "How to analyze Business Opportunities"
-date: 2026-01-30T07:00:21+01:00
+date: 2026-01-31T07:00:21+01:00
 draft: false
 tags: ["BiP","Entrepreneuring","Focus","Unit Economics 104","SLO x CFA"]
 description: 'Do you really want to do this...that way?'
@@ -664,6 +664,7 @@ The **tech stack**:
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
 | Others | Web Analytics / ads / Cal / Formbricks / ESP |  |
 
+> > MoSCoW (Must have, Should have, Could have, Won’t have *aka Out of scope* )
 
 For me, working with antigravity and such tech stack below does the trick.
 
@@ -816,7 +817,6 @@ Expand it [here](https://mermaid.live/edit#pako:eNptU9tO3DAQ_ZWR1QeQFpqQvRBLrUQX
 Understand that **who** you sell to (Niche) dictates **what** you sell (Offer) and **how** you find them (Leads).
 
 ---
-
 
 ## Conclusions
 

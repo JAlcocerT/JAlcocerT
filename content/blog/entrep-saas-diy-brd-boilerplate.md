@@ -165,11 +165,127 @@ We can call this: *The Boilerplate brd prd frd tech talk.*
 
 Or the *From Business focused to Makers - Agentic BI Development*
 
-Or...the spec-driven development guide.
+Or...the spec-driven development guide: *all about the role, context, task, with up to date superpowers.*
 
 The idea is to show non tech business users couple success examples.
 
-Just do what you know, The Planning and contex:
+Let’s explore the core principles that make AI your powerful and safe teammate: the ai mindset
+
+1. Default to Assist: Before starting any task, think about how AI can support you, for example, by creating drafts, exploring ideas, or checking content.
+2. Human in the Loop: Humans always make the final decisions.
+All deliverables — whether committed to repositories or shared with clients — must be reviewed by a person before submission.
+3. Small Iterations:Work in short cycles: break the task down → write a focused prompt → review the quick result → refine as needed.
+4. Reproducibility: Save and version your effective prompts and context (as templates or collections) just like code, so others can reuse and improve them.
+5. Source Validation: When using AI-generated content, ask for references and clearly separate facts from AI-generated assumptions in your reports or documents.
+6. Effectiveness Over Magic: Focus on measurable impact (time saved, fewer defects, better coverage) rather than on the “wow” effect of AI output.
+
+Let’s explore how to craft effective prompts for AI, so you get accurate, structured, and actionable outputs. The key is to think of prompting as a flow:
+
+Goal -> Context -> Instruction -> Contrains -> Output Format
+
+Remember these principles:
+
+Use short, iterative prompts rather than overloading a single one.
+
+Require reasoning or references when applicable.
+
+Prefer structured outputs like JSON or tables for clarity and consistency.
+
+So, use Structured prompts when you need precise, machine-readable outputs (configs, data extraction, or templates). 
+
+And use Natural-Language prompts for open-ended, creative, or exploratory tasks (like explanations, brainstorming, or translations).
+
+The context window is the amount of information an AI model can “hold in memory” and use when generating a response. Think of it as the model’s workspace: everything placed there (your prompt, open files, conversation history, or documentation) affects the accuracy and relevance of its output.
+
+
+
+For example, in Cursor, if you have index.js open alongside config.json, the model can “see” both files within its context window and, for example, suggest the correct environment variable setup. However, if a file is too large to fit entirely, some information may fall outside the context window, and the model could make mistakes.
+
+
+
+Each model has its own limit for how much information it can process at once. Here are some examples:
+
+GPT-4-Turbo: up to 128k tokens (~100–200 pages of text)
+
+Claude 3 Opus: up to 200k tokens
+
+GPT-3.5: up to 16k tokens (~10–15 pages)
+
+LLaMA 2 70B: ~65k tokens
+
+Include only relevant information — keep files, snippets, and docs focused; minimize noise.
+Work iteratively — avoid dumping entire repos or huge logs at once.
+Use RAG or indexing for large projects — load only necessary data into the context on demand.
+Be aware of limits — information beyond the model’s context window is “forgotten.”
+Summarize or checkpoint — preserve reasoning and important details in long sessions.
+
+```json
+[
+  {
+    "id": "US-1",
+    "title": "string",
+    "description": "string",
+    "acceptance_criteria": ["string"],
+    "risks": ["string"],
+    "open_questions": ["string"]
+  }
+]
+```
+
+Task → JSON Output — helps you clearly define role, goal, context, and output format.
+
+{
+  "role": "Business Analyst",
+  "goal": "Transform meeting notes into backlog",
+  "context": "Minimal, no PII",
+  "constraints": "Company standards, deadline",
+  "output": {
+    "summary": "string",
+    "actions": ["string"],
+    "risks": [{"name": "string", "mitigation": "string"}]
+  }
+}
+
+1. discovery: Let’s start by exploring the Discovery stage, where research and requirements gathering set the foundation for the project.
+
+Where AI Helps:
+AI supports requirements gathering, competitor and risk analysis, and backlog creation by summarizing inputs and identifying gaps.
+
+Key Artifacts:
+Deliverables include a Problem Statement, Vision, High-Level Requirements (HLR), User Stories, and a Risk Register.
+
+Tool Types:
+Use text-based LLMs, retrieval systems (RAG), and web research tools to collect and analyze relevant information.
+
+1. Problem Statement
+
+A clear, one-page summary of the core problem — concise and unambiguous.
+
+2. Backlog v1
+
+An initial backlog of up to 30 User Stories, prioritized using MoSCoW (Must have, Should have, Could have, Won’t have) and WSJF (Weighted Shortest Job First) methods.
+
+3. Risk Register v1
+
+A draft risk log listing each risk’s category, probability, potential impact, and mitigation plan
+
+Metrics
+
+- TTR (Time to Requirements): Average time from project start to validated requirements.
+
+- Rework Rate: Percentage of items requiring rework after the first validation.
+
+- Backlog Quality: Completeness of Acceptance Criteria (AC) and percentage of User Stories with clearly defined Definition of Ready (DoR) and Definition of Done (DoD).
+
+Risk and control
+
+- Hallucinations → require references, label hypotheses.
+- Confidentiality → anonymization, approved channels.
+
+2. 
+
+
+Just do what you know, The Planning and contex: *with proper context, you make agents outputs more predictable*
 
 * **BRD (Business Requirements):** Answers **"WHY build this?"** (The Vision & Goals).
 * **PRD (Product Requirements):** Answers **"WHAT are we building?"** (The Features & Roadmap).

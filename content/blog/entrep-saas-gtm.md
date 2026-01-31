@@ -2,10 +2,11 @@
 title: "The RevOps you always dreamt about"
 date: 2026-02-04T09:20:21+01:00
 draft: false
-tags: ["BiP x GTM Platform","APIFY x FireCrawl","Sales Pipeline","RoadMap26","LaunchPad"]
+tags: ["GTM Platform","APIFY x FireCrawl x MyPhoner x Fireflies","Sales Pipeline","LaunchPad"]
 description: 'Go B2B, they have a clear BANT. From MOps to RevOps with cold calling.'
 url: 'building-a-revops-center-agency'
 ---
+
 
 **TL;DR**
 
@@ -44,7 +45,6 @@ Or that I gave up too quickly :)
 | **Focus Area** | The "Top" of the funnel | The **Entire** funnel (Sales + Marketing + Support) |
 | **Key Metric** | Cost Per Lead (CPL) | Customer Lifetime Value (LTV) / Revenue |
 | **Success looks like...** | A database full of "Hot" leads. | A predictable, growing bank account. |
-
 
 
 ---
@@ -99,6 +99,29 @@ But you can bring knowledge from the future to the present, simplifying and acce
 
 
 Remember: *We pay in the currency you value the least* ;)
+
+### The flow
+
+Prompt Template: Meeting → Backlog (JSON)
+
+```json
+{
+  "role": "Business Analyst",
+  "context": "Meeting transcript (anonymized)",
+  "task": "Extract backlog",
+  "output": [
+    {
+      "id": "US-<number>",
+      "title": "string",
+      "description": "string",
+      "acceptance_criteria": ["string"],
+      "dependencies": ["string"],
+      "risks": ["string"],
+      "open_questions": ["string"]
+    }
+  ]
+}
+```
 
 
 ---

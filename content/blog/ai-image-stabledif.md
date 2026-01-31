@@ -751,6 +751,8 @@ https://github.com/AUTOMATIC1111/stable-diffusion-webui?tab=AGPL-3.0-1-ov-file#r
 
 --->> /selfhosting-stable-difussion-docker
 
+https://www.midjourney.com/explore?tab=video_top
+
 https://www.youtube.com/watch?v=QEbI6v2oPvQ
  How to use Stable Diffusion XL locally with AMD ROCm. With AUTOMATIC1111 WebUI and ComfyUI on Linux. 
 

@@ -915,6 +915,9 @@ Aka ~~,failed apps'~~: *projects where i just learnt*
 5. ~~EntrepreAI~~, with all those: CV CreAItor,Speech RAIter,AIssistant - PPT, ...
 6. ~~Webifyer / Web CreAItor~~ : DFY/DWY websites for those with the right signal. Else, use a PaaS or watch a yt tutorial to setup wordpress.
 
+The good thing about closing projects, is that you realise that they were not ment to be from its conception.
+
+Maybe you were trying to jump with a not so efficient method: See https://en.wikipedia.org/wiki/Dick_Fosbury for inspiration
 
 Portfolio CreAItor
 
