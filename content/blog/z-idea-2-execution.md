@@ -1,8 +1,9 @@
 ---
-title: "How to analyze Business Opportunities | v2"
-date: 2026-02-01T07:00:21+01:00
+title: "How to (Dis)qualify Business Opportunities | v2"
+#date: 2026-02-01T07:00:21+01:00
+date: 2026-01-31T11:00:21+01:00
 draft: false
-tags: ["ADR x HLD to Prototype","CPC vs CPA vs CaC"]
+tags: ["ADR x HLD to Prototype","The Business HOW - CPC vs CPA vs CaC"]
 description: 'AI powered SDLC x Unit Economics 105'
 url: 'ideas-to-execution'
 math: true
@@ -12,19 +13,404 @@ math: true
 
 **TL;DR**
 
+Just read this, if an idea does not fit: next.
+
 
 **Intro**
 
+Every idea can be a potential business game.
+
+And every game, follows the *full stack business formula* from top line, to net profit:
+
+$$
+P \times V \times GM \times OM \times IF \times T
+$$
+
+tells you what is happening to the money.
 
 # The Business Side
 
 If you want to just create, [go below](#creating-with-ai).
 
-If you want to create with some monetary goal in mind, keep reading.
+If you want to create with some monetary goal in mind, keep reading here.
+
+
+| Stage | Activity | Margin Level | Strategic Goal |
+| --- | --- | --- | --- |
+| **Attraction** | AI Marketing / Branding | OpEx | Build the "AI Expert" reputation so you can charge a higher **Price**. |
+| **Conversion** | Sales & Account Mgmt | OpEx | Increase the **Volume** of AI-specific contracts. |
+| **Delivery** | Developers + AI Tools | COGS | Use AI tools to increase efficiency, keeping the **Gross Margin** high even after giving **Pay Raises**. |
+
+
+1. *GM* is the cost of doing the work. (Delivery)
+2. *OM* is the cost of getting the work and managing the growth. (Attraction & Conversion)
+
+
+## Who How and What
+
+Understand that WHO you sell to (Niche) dictates WHAT you sell (Offer) and HOW you find them (Leads).
+
+The what can be a service, or a product that you [create with AI](#creating-with-ai).
+
+It’s the foundational logic of a successful business—if you get the **Niche** wrong, the rest of the chain collapses like a house of cards.
+
+This is essentially the **"Product-Market Fit"** sequence, but simplified into an actionable workflow. 
+
+Here is why that specific order matters:
+
+1. The Niche (The Who)
+
+The niche isn't just a category; it's a specific **problem** felt by a specific **person**.
+
+* **The Logic:** You cannot craft a solution if you don't know the pain.
+* **Example:** "Small law firms" is a niche. "Small law firms struggling with manual billing" is a *profitable* niche.
+
+2. The Offer (The What)
+
+The offer is the **bridge** between the niche and the transformation they want.
+
+* **The Logic:** If you know exactly who your niche is, the offer writes itself. You aren't "selling software"; you are selling "The Automated Billing System for Law Firms that saves 10 hours a week."
+* **If you flip it:** If you build the offer first, you end up with a "solution in search of a problem," which is where most startups fail.
+
+3. The Leads (The How)
+
+This is your **distribution channel**.
+
+* **The Logic:** Once you know who they are (lawyers) and what you’re giving them (billing automation), you know exactly where to find them. You don't go to TikTok; you go to LinkedIn, Bar Association events, or legal trade journals.
+* **The Efficiency:** When the Niche and Offer are sharp, your "Leads" strategy becomes much cheaper and more effective because your messaging is laser-targeted.
+
+Why this is a "Chain"
+
+* **Weak Niche:** Your Offer is too generic, and your Leads are too expensive to convert.
+* **Weak Offer:** You find the right Leads, but they don't buy because they don't see the value.
+* **Weak Lead Gen:** You have a great Niche and a killer Offer, but nobody knows you exist.
+
+The "Service" Angle
+
+Bringing this back to our previous talk about **SOWs and SOPs**:
+
+In a service business, your **SOPs** (How you do the work) are actually part of your **Offer**. 
+
+If your niche is "High-speed delivery," your SOPs *must* be built for speed, or your offer is a lie.
+
+**Would you like to try to "stress-test" a specific niche you have in mind to see if the Offer and Lead strategy follow logically?**
+
+```mermaid
+mindmap
+  root((Founder Mental Model))
+    Niche (WHO - Niche)
+      Target Audience
+      Pain Points
+    Offer (WHAT - Offer)
+      The Solution
+        Product Development (Product Dev)
+          BRD (Why - BRD)
+          PRD (What - PRD)
+          FRD (How - FRD)
+        Service Delivery (Service Delivery)
+          SOW (Scope - SOW)
+          SLA (Quality - SLA)
+          SOP (Process - SOP)
+      Value Proposition
+    Leads (HOW - Acquisition)
+      Distribution
+      Sales Channels
+```
+
+This makes perfect sense and is likely the most "complete" mental model for a founder or product manager.
+
+By structuring it this way, you’ve created a **System of Alignment**. Every technical detail in your **FRD** or step in your **SOP** can be traced vertically back up to the **Solution**, which is designed for a specific **Niche**. If a task doesn't move that needle, it’s waste.
+
+Here is the finalized Mermaid code based on your exact structure:
+
+```mermaid
+mindmap
+  root((Business Framework))
+    Niche (WHO)
+      Target Audience
+      Pain Points
+    Offer (WHAT)
+      The Solution
+        Product Development (Product Dev)
+          BRD (Why - BRD)
+          PRD (What - PRD)
+          FRD (How - FRD)
+        Service Delivery (Service Delivery)
+          SOW (Scope - SOW)
+          SLA (Quality - SLA)
+          SOP (Process - SOP)
+      Value Proposition
+    Leads (HOW)
+      Distribution
+      Sales Channels
+```
+
+Why this works so well: *and can be expanded [here](https://mermaid.live/edit#pako:eNpdkkFv4jAQhf_KyKcgURRImjS5sUWoh7Zkl2orVbm4yUAsOXbWsWkp4r_vJCxlw83vfTNvxpYPrNAlspTVQpU1b3IFYLS2nrfUTpVo4AmV5RKeqEyORh0HeBZFheC9Pqzg5iT-AYAXbrZoYe5KgarAs51xoSDTQtn2ZK02GwqniPkLZfTqkkHhay2dFVqdPYowunSFhQXuUOqmpr3A-88cXUoBfvxaUHi1p2w6DlB2QtwSy67YsmMP-oPQcoDWaHaiQJojxQ7NHrxrZ5CzXr1SRaEbpCQSQ_g4B--n41LYbj-SV71Zf68C27bvzr7xby4ddg_R6FZcXucRednS3jT0BubFHydO9LtvIVprxPvgQddcYgv3FVcKZcvGbGtEyVJrHI5ZjabmnWSHrj5ntsIac5bSscQNd9LmLFdHamu4etO6Pnca7bYVSzdctqRcU3KLC8G3hl9KsPtY9_S_LEtns6jPYOmBfbJ0GkST4O42iPx4GsdxEIZjtu_sSRwnyW0SxXdRmCT-7DhmX_1Yf5IEUegHYRD7QTCNjn8BY43Rcw)*
+
+* **The Validation Loop:** You can "stress-test" the map from bottom to top.
+
+Does this **SOP** actually deliver the **Value Proposition**? If not, the process is broken.
+
+* **Clarity of Ownership:** It clearly shows where a **Product Manager** (Product Dev branch) needs to coordinate with an **Operations Manager** (Service Delivery branch) to ensure the **Solution** is cohesive.
+
+* **The "Why" is Grounded:** Many teams write a **BRD** in a vacuum. In your map, the **BRD** is explicitly a child of the **Solution**, which is a child of the **Niche**.
+
+This ensures you aren't just building for the sake of building—you're building to solve a pain point.
+
+One Small Pro-Tip for Execution:
+
+In a high-growth environment, the **SOPs** from your Service Delivery branch often become the "requirements" for your **PRD** in the Product Dev branch.
+
+*Example:* If your **SOP** says "Manually email the client a report every Monday," that eventually becomes a feature request in your **PRD** to "Automate weekly report emails."
+
+## The Founder vs. The Corporate Employee
+
+This is absolutely a **founder/entrepreneur mindset**. 
+
+You’ve touched on the "Core Truth" of business that often gets buried under layers of corporate bureaucracy.
+
+In a startup, this connection is a matter of survival. In a massive corporation, it often becomes a game of "telephone."
+
+| Aspect | The Founder Mindset (Your Map) | The Corporate Mindset (Silofication) |
+| --- | --- | --- |
+| **Perspective** | **Holistic:** Knows that a bug in the FRD leads to a churned Lead and lower Volume. | **Fragmented:** The dev cares about the FRD; the salesperson cares about the Leads. Neither sees the bridge. |
+| **The "Why"** | **Problem-Led:** "We are building this to solve X pain for Y person." | **Process-Led:** "We are building this because it’s on the Q3 roadmap." |
+| **Feedback Loop** | **Immediate:** If the Solution doesn't work, the bank account empties. | **Delayed:** Failure is hidden by quarterly budgets and "reorgs." |
+
+Why Big Companies Lose the "Price * Volume" Signal
+
+You hit the nail on the head regarding **Price * Volume**. 
+
+In a small business, that signal is loud. In big companies, it gets muffled by three main things:
+
+1. The Proximity Gap
+
+In a big company, the person writing the **FRD** (the How) has likely never spoken to the person in the **Niche** (the Who). When you lose proximity to the customer, you start building "cool tech" that nobody actually wants to pay for.
+
+2. Optimization vs. Innovation
+
+Big companies are often built to **optimize** an existing Niche. They focus on squeezing 2% more efficiency out of an **SOP**.
+
+Founders, however, are looking to **disrupt** the Niche. They are willing to tear up the SOP and rewrite the PRD to capture a new market.
+
+3. Metric Displacement
+
+In your mind map, the ultimate success metric is the **Solution** solving the **Pain Point** (leading to Sales). 
+
+In big companies, people often start optimizing for "proxy metrics":
+
+* The Dev optimizes for "Lines of Code" or "Sprint Velocity."
+* The Marketer optimizes for "Clicks" or "Impressions."
+* **Result:** You get a lot of "activity" but no "Price * Volume" growth.
+
+The "Intrapreneur" Bridge
+
+The most successful leaders in big companies are the ones who try to act like founders by **reconnecting these dots**. 
+
+They force the engineers to talk to the customers and force the sales team to understand the technical constraints. 
+
+They try to rebuild the "Business Framework" map you just created within their own department.
+
+
+```mermaid
+mindmap
+  root((Business & Delivery
+    Frameworks))
+    Strategic Foundation
+      Niche (WHO)
+        Target Audience
+        Pain Points
+      Offer (WHAT)
+        The Solution
+        Value Proposition
+      Leads (HOW)
+        Distribution
+        Sales Channels
+    Product Development
+      BRD (WHY)
+        Business Goals
+        ROI & Vision
+      PRD (WHAT)
+        Features
+        User Stories
+      FRD (HOW)
+        Logic & CRUD
+        System Behavior
+    Service Delivery
+      SOW (SCOPE)
+        Legal Boundaries
+        Milestones
+      SLA (QUALITY)
+        Performance Metrics
+        Uptime/Response
+      SOP (PROCESS)
+        Human Steps
+        Standard Operations
+```
+
 
 # Creating with AI
 
-I have refined the terminology to align with industry standards for an **AI-Augmented SDLC** (using AI to build software faster). I also added a few "Pro Tips" to clarify *why* certain metrics or methods are used.
+I have refined the terminology to align with industry standards for an **AI-Augmented SDLC** (using AI to build software faster). 
+
+I also added a few "Pro Tips" to clarify *why* certain metrics or methods are used.
+
+If you come from the business header, there is a WHAT: in this case, the product or service **enhanced with AI**
+
+![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
+
+The **Tech Stack**:
+
+
+{{< details title="Vibe Coding | Setup  📌" closed="true" >}}
+
+Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
+
+```md
+I need Landing Page based with a cool and modern UI.
+
+Create also a makefile with the following commands:
+
+* `make help` - Show available commands
+* `make install` - Prepare the dependencies for local development
+* `make dev` - Run development server
+
+Create the `z-development-plan.md` with independent and testable phases that can be completed sequentially.
+
+When it is completed, create a `z-walkthrough.md` with the steps to deploy the application and what each part of the tech stack does on a high level to bring the features to life.
+
+The full copy od the landing, has to be goberned by a single `site.md` file.
+
+Consider adding a Terms of Service / **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
+
+Add also a faq section, that instead of been controlled via a json, lets have it controlled as per the frontmatter and content of separated markdown files inside the folder `faq`. 
+
+```
+
+Go to [AntiGravity IDE] and ask if the `brd.md` refined already with Gemini is clear enough.
+
+If it is clear define the `z-development-plan.md` and proceed with the development phases.
+
+As you will need to iterate across features, do it like a pro with change-requests:
+
+```sh
+#sudo apt install gh
+gh auth login
+#gh repo create make-xyz --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: simple landing website" && gh repo create make-xyz --private --source=. --remote=origin --push
+###du -sh .
+#docker stop $(docker ps -a -q) #stop all
+#docker system df
+```
+
+**Technical Stack and Design Requirements**
+
+To develop a **modern, secure, and scalable landing page with modular astro components** for getting leads via formbricks.
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React (Astro/Vite) | Chosen for low latency and modern "Island" architecture. |
+| **Styling/UI Library** | Tailwind CSS v4 + Framer Motion | Custom "Deep Night" **GlassMorphism theme** for a premium look. |
+| **Deployment** | Firebase hosting | Serverless. |
+
+{{< /details >}}
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+| Others | Web Analytics / ads / Cal / Formbricks / ESP |  |
+
+> The [human psyc](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/) considered to bundle everything.
+
+> > MoSCoW (Must have, Should have, Could have, Won’t have *aka Out of scope* )
+
+To link it with the business side:
+
+While the **BRD/PRD/FRD** framework is designed for the "Build" phase of a product, the **SOW/SLA/SOP** framework is designed for the "Execution" phase of a service.
+
+Think of it this way: 
+
+The first group is about **creation** (getting to the finish line of a project)
+
+While the second group is about **delivery** (running the race every single day).
+
+It’s a clean, logical way to categorize documentation, though in modern agile environments, the lines between them can get a bit blurry.
+
+Here is a slightly deeper look at how those three layers connect to ensure nothing gets lost in translation:
+
+The Documentation Hierarchy
+
+| Document | Primary Audience | Key Focus | Output Example |
+| --- | --- | --- | --- |
+| **BRD** | Executives, Stakeholders | **Value & ROI.** It identifies the market problem and the business opportunity. | "We need to reduce churn by 15%." |
+| **PRD** | Product Managers, Designers | **User Experience.** It defines the user journey and the specific features needed to solve the problem. | "A 'One-Click Unsubscribe' button on the dashboard." |
+| **FRD** | Developers, QA Engineers | **System Behavior.** It specifies the inputs, outputs, and logic required to make the feature function. | "When clicked, the API must send a POST request to `/cancel` and return a 200 OK status." |
+
+A Few Nuances to Keep in Mind:
+
+* **The "How" of the FRD:** You mentioned "Technical Logic," which is spot on. However, be careful not to confuse the **FRD** with a **Technical Design Document (TDD)**. The FRD says how the *product* behaves (Functional), while the TDD says how the *code* is structured (Architecture).
+* **The Evolution:** Many companies now combine the BRD and PRD into a single "Living Document" to avoid redundancy, especially when moving fast.
+* **The "CRUD" Factor:** You’re right to put CRUD (Create, Read, Update, Delete) in the FRD. That’s where you define the specific data constraints—like "The username must be at least 8 characters"—that the PRD usually glosses over.
+
+
+Direct Comparison: Product vs. Service Frameworks
+
+| Aspect | Product Development (BRD / PRD / FRD) | Service Delivery (SOW / SLA / SOP) |
+| --- | --- | --- |
+| **The "Why"** | **BRD:** Justifies the investment and business goal (e.g., "Build a CRM to increase sales"). | **SOW:** Defines the purpose of the engagement (e.g., "Provide 24/7 IT support to ensure uptime"). |
+| **The "What"** | **PRD:** Lists features and user stories (e.g., "Must have a login screen and a dashboard"). | **SLA:** Defines the quality and performance levels (e.g., "Must respond to tickets within 30 minutes"). |
+| **The "How"** | **FRD:** Details the system logic and data flows (e.g., "If user clicks X, then database does Y"). | **SOP:** Step-by-step manual for humans (e.g., "Step 1: Greet customer; Step 2: Open ticket in Jira"). |
+
+```mermaid
+graph LR
+    %% 1. The Split
+    Start[Define] -->|Why| B[BRD]
+    Start -->|How| C[FRD]
+    Start -->|What| D[PRD]
+
+    %% 2. The Join
+    B & C & D --> E(Clarify)
+
+    %% 3. The Linear Flow
+    E --> F[Development Plan]
+    F --> G[Finished PoC]
+
+    %% Styling
+    style G fill:#f96,stroke:#333,stroke-width:4px
+    style Start fill:#bbf
+    style F fill:#e1f5fe
+```
+
+How They Differ in Purpose?
+
+1. SOW (Statement of Work) vs. BRD
+
+The SOW is often a **legally binding contract**. While a BRD is an internal "wishlist" or vision, an SOW is an external agreement between a client and a provider.
+
+It includes the "Who, What, Where, and When" of the project, including payment milestones and legal boundaries.
+
+2. SLA (Service Level Agreement) vs. PRD
+
+A PRD defines **static features** (the product should have a search bar). An SLA defines **dynamic performance** (the search bar must return results in under 500ms, 99% of the time).
+
+In services, you don't "build" a feature once; you "maintain" a standard continuously.
+
+3. SOP (Standard Operating Procedure) vs. FRD
+
+An FRD tells a **machine** what to do (logic, APIs, CRUD). An SOP tells a **human** what to do.
+
+If you have an outsourced customer support team, they don't need an FRD; they need an SOP that tells them exactly how to handle a refund request.
+
+If you are building a **SaaS (Software-as-a-Service)**, you actually use all of them:
+
+* You use **BRD/PRD/FRD** to build the software.
+* You use **SOW/SLA/SOP** to sell and support the software once it's live.
+
+
 
 ## Phase 1: AI-Augmented Discovery
 

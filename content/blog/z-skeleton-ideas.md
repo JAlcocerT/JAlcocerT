@@ -432,13 +432,12 @@ They sit in the OM  because they are **Operating Expenses (OpEx)**.
 * **Conversion (Sales/Account Management):** This is also in **SG&A**. These people take the leads from Attraction and turn them into contracts ( and ).
 * **Why it’s here:** These costs are usually *fixed* or *semi-fixed*. You pay your Head of Marketing and your Sales VP whether they close 1 deal or 10 deals this month.
 
-
 With a specific company goals, here is how the "Spending" vs. "Earning" works:
 
 | Stage | Activity | Margin Level | Strategic Goal |
 | --- | --- | --- | --- |
-| **Attraction** | AI Marketing / Branding | OpEx | Build the "AI Expert" reputation so you can charge a higher **Price ()**. |
-| **Conversion** | Sales & Account Mgmt | OpEx | Increase the **Volume ()** of AI-specific contracts. |
+| **Attraction** | AI Marketing / Branding | OpEx | Build the "AI Expert" reputation so you can charge a higher **Price**. |
+| **Conversion** | Sales & Account Mgmt | OpEx | Increase the **Volume** of AI-specific contracts. |
 | **Delivery** | Developers + AI Tools | COGS | Use AI tools to increase efficiency, keeping the **Gross Margin** high even after giving **Pay Raises**. |
 
 
@@ -615,8 +614,8 @@ Just **provide clear instructions of your vision** and be ready to deploy to you
 graph LR
     %% 1. The Split
     Start[Define] -->|Why| B[BRD]
-    Start -->|What| C[FRD]
-    Start -->|How| D[PRD]
+    Start -->|How| C[FRD]
+    Start -->|What| D[PRD]
 
     %% 2. The Join
     B & C & D --> E(Clarify)
@@ -725,7 +724,7 @@ To develop a **modern, secure, and scalable landing page with modular astro comp
 
 {{< /details >}}
 
-Yep, there is something cooking up **around a new agency** that needed some help:
+Yep, there is something cooking up **around an agency** that needed some help:
 
 ```sh
 whois leadarchitect.org| grep -i -E "(creation|created|registered)"
