@@ -721,6 +721,10 @@ xargs -0 awk '
 
 ### Quotes
 
+Every business is a game and you can see how many of them play: `https://wyszukiwarka-krs.ms.gov.pl/`
+
+`https://rar.ms.gov.pl/rar/dane-podmiotu/0000053665?strona=1`
+
 1. Choose your hard
 2. What a priviledge is to choose what challenge make you struggle
 3. Attention is all you need
@@ -759,6 +763,13 @@ A certain Negative cash flow year one then...uncertainty
 17. Kaczka kura aby dzura
 
 18. Riesgos del juego o mediocrity garantizada?
+
+19. Consistency beats talent
+
+20. Time is most scarce resource. And more important the younger you are. Would you loose it?
+
+21. Everything is priced in: `https://www.reddit.com/r/wallstreetbets/comments/eberem/everything_is_priced_in/`
+
 
 #### Open Questions
 

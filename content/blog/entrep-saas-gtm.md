@@ -178,9 +178,11 @@ ffmpeg -i "2026-01-29 18-04-26.mp4" -q:a 0 -map a "2026-01-29 18-04-26.mp3"
 So im also considering all the integrations: https://fireflies.ai/integrations
 
 
-I could have also tried `https://github.com/thepersonalaicompany/amurex`
+I could have also tried: https://github.com/thepersonalaicompany/amurex
 
 > AGPL3 |  World's first AI meeting copilot → The Invisible Companion for Work + Life 
+
+Or https://github.com/chaskiq/chaskiq`
 
 But I need results fast: so pragmatism mode turned ON, tinkering mode OFF.
 
@@ -195,8 +197,13 @@ Or...others like:
 * `https://www.quo.com/pricing` - ex openphone
 
 
+https://youtu.be/UVeXMTIpCB0
 
+Some people make seem easy to cold call:
 
+https://youtu.be/tdYvRKVr0pk?
+
+https://youtu.be/jvFLW5EClgk?si=bbVnbpjqPEB6R-hw
 
 
 

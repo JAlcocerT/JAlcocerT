@@ -984,6 +984,13 @@ You now have a full **AI-SDLC Framework**:
 
 
 
+# Conclusions
+
+Seem people make this: Only if you bought X can opt to buy Z
+
+So you qualify to buy something, when previously bought from me.
+
+I have heard that from some youtubers selling 121, but before that you need to buy the info course.
 
 ---
 
@@ -998,6 +1005,8 @@ This is an **excellent summary of Advanced Prompt Engineering**.
 * https://prompts.chat/
 * https://context.addy.ie/
 * https://ai.google.dev/gemini-api/docs/prompting-strategies
+* Groq - https://console.groq.com/keys
+* https://theresanaiforthat.com/most-saved/
 
 What makes this list particularly strong is that it moves beyond the basic "Act as a..." advice and treats prompting as a **technical discipline**. It focuses on **reliability, security, and integration**—which are the exact skills needed for the AI SDLC you just studied.
 

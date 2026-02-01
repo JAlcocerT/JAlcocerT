@@ -187,17 +187,195 @@ docker logs qbittorrent
 #sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d metube
 ```
 
+These dont take much space:
+
+```sh
+docker ps -s --format "table {{.Names}}\t{{.Image}}\t{{.Size}}"
+#docker system df -v
+```
+
 ![alt text](/blog_img/selfh/Jellyfin/prowlarr-indexers.png)
+
+But some of your folders might: *like if you used UmbrelOS via container to sync the full BTC chain with ~837GB and 929k blocks as of today*
+
+```sh
+#sudo du -h --max-depth=2 /mnt/data1tb/umbrel/app-data/bitcoin | sort -hr
+du -sh .
+#sudo apt install ncdu -y
+sudo ncdu .
+```
+
+Specially after connecting these 2: `192.168.1.2:6011`
 
 ![alt text](/blog_img/selfh/Jellyfin/prowlarr-qbittorrent.png)
 
 Try searching for: `1337x, The Pirate Bay, LimeTorrents, or EZTV`.
 
-![Simpsons Clouds](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)
+This can be a good test of your internet speed: *Im getting ~60mb/s*
 
+![Simpsons Clouds](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)
 
 Just go to `192.168.1.2:8081`...
 
+### Server Maintainance
+
+Im thinking to use one instance of PGsql with all the services for now and just change the db name used.
+
+For now, im doing some clean up:
+
+```sh
+docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}" | (read -r; printf "%s\n" "$REPLY"; sort -hk 3 -r)
+#sudo docker system df
+docker stop node portainer mermaidjs-openai-editor listmonk_app listmonk_db traefik sftpgo-sftpgo-1 kreuzberg botpress-botpress-1 n8ncesar n8ncesar-db-1 n8ntest n8ntest-db-1 n8n-n8n-1 freshrss docker-flowise-1 moirealestate-flaskcms n8n-db-1 node portainer
+#docker rm node portainer mermaidjs-openai-editor listmonk_app listmonk_db traefik sftpgo-sftpgo-1 kreuzberg botpress-botpress-1 n8ncesar n8ncesar-db-1 n8ntest n8ntest-db-1 n8n-n8n-1 freshrss docker-flowise-1 moirealestate-flaskcms n8n-db-1
+sudo docker image prune -a
+```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/commento" title="Commento | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Have somebody spam in my **commento instance**?
+
+```sh
+docker exec -it commento_db-foss psql -U commento -d commento
+#SELECT * FROM comments;
+#SELECT creationdate, markdown FROM comments ORDER BY creationdate DESC LIMIT 2;
+```
+
+How is the **uptime** looking?
+
+```sh
+#sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d uptimekuma
+
+docker ps -a | grep -i uptimekuma
+#sudo docker stats uptimekuma 
+uv run scripts/bulk_add_monitors.py
+```
+
+![alt text](/blog_img/selfh/HomeLab/statuspages/uptimekuma.png)
+
+Any...**unconnected disk**?
+
+```sh
+lsblk
+#lsblk -f
+sudo mount -t exfat /dev/nvme0n1p1 /mnt/data2tb
+#echo 'UUID=a123-567b /mnt/data2tb exfat defaults,uid=1000,gid=1000,umask=000 0 0' | sudo tee -a /etc/fstab
+```
+
+```sh
+sudo apt update && sudo apt install ncdu -y
+sudo ncdu /mnt/data2tb
+```
+
+
+
+
+---
+
+## FAQ
+
+### Selfhost Postgres
+
+I read this fantastic [post about selfhosting postgres](https://pierce.dev/notes/go-ahead-self-host-postgres?ref=selfh.st).
+
+And how could I not addit to the mix.
+
+As PG is [one of the DBs](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/) that you can set in your servers to do D&A or as a companion to many services.
+
+And [pgsql can do](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/#postgresql) several parts of a tech stack all together
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="Postgres | Docker Config 🐋 ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+Even if you have a wood PC, this works, its just ~45mb of RAM consumption:
+
+```sh
+docker compose up -d
+#sudo docker stats
+
+#docker exec postgres_container psql -U admin -d myapp -c "SELECT 1;"
+
+docker exec -it postgres_container psql -U admin -d myapp
+#SELECT version();
+#\dt       -- List tables (empty for now)
+#\q        -- Quit
+```
+
+Let's use it with [the sample **chinook DB**](https://github.com/lerocha/chinook-database/releases): *yes, im cooking sth on top of LangChain+DBs again*
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database" title="Chat with DBs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/" title="Chat with CSVs ↗" icon="book-open" >}}  
+{{< /cards >}}
+
+This is all you need to ***plug* an existing database** into your just created **PGSQL container instance**:
+
+```sh
+curl -L -O https://github.com/lerocha/chinook-database/releases/download/v1.4.5/Chinook_PostgreSql.sql
+cat Chinook_PostgreSql.sql | docker exec -i postgres_container psql -U admin -d myapp
+
+docker exec postgres_container psql -U admin -d myapp -c "\l"
+
+docker exec postgres_container psql -U admin -d chinook -c "\dt"
+
+docker exec -it postgres_container psql -U admin -d chinook
+#\dt
+#SELECT * FROM artist LIMIT 5;
+```
+
+We will be using this very soon :)
+
+> In the mentioned article, Pierce Freeman argues that the fear surrounding self-hosting PostgreSQL is largely a marketing narrative pushed by cloud providers. 
+
+> > He suggests that for many developers, self-hosting is not only more cost-effective but also provides better performance and control.
+
+The Case for Self-Hosting
+
+1. The "Cloud Myth"
+
+Cloud providers (like AWS RDS) pitch reliability and expertise as their main value. However, Freeman points out:
+
+* **Identical Engines:** Managed services usually run the same open-source Postgres you can download yourself.
+* **False Security:** Managed services also experience outages. When they do, you have fewer tools to fix the problem than if you owned the infrastructure.
+* **Cost Gap:** As of 2025, cloud pricing has become aggressive. A mid-tier RDS instance can cost over $300/month, while a dedicated server for the same price offers vastly superior hardware (e.g., 32 cores vs. 4 vCPUs).
+
+2. Operational Reality
+
+Freeman shares his experience running a self-hosted DB for two years, serving millions of queries daily. He notes that maintenance is surprisingly low-effort:
+
+* **Weekly:** 10 mins (Checking backups and logs).
+* **Monthly:** 30 mins (Security updates and capacity planning).
+* **Quarterly:** 2 hours (Optional tuning and disaster recovery tests).
+
+3. When to Self-Host (and When Not To)
+
+* **Self-Host If:** You are past the "vibe coding" startup phase but aren't a massive enterprise yet. It’s the "sweet spot" for most apps.
+* **Stick to Managed If:** You are a total beginner, a massive corporation with enough budget to outsource the labor, or you have strict regulatory compliance needs (HIPAA, FedRAMP).
+
+
+If you choose to self-host, Freeman emphasizes that standard Docker defaults aren't enough. 
+
+You must tune these three areas:
+
+Memory & Performance Tuning
+
+* **`shared_buffers`**: Set to ~25% of RAM.
+* **`effective_cache_size`**: Set to ~75% of RAM to help the query planner.
+* **`work_mem`**: Be conservative to avoid running out of memory during complex sorts.
+
+Connection Management
+
+* **Avoid Direct Connections:** Postgres connections are "expensive."
+* **Use PgBouncer:** Use a connection pooler by default to handle parallelism efficiently, especially for Python or async applications.
+
+Storage Optimization
+
+* **NVMe Settings:** Modern SSDs change the math on query planning. You should lower `random_page_cost` (to ~1.1) to tell Postgres that random reads are nearly as fast as sequential ones.
 
 ### No Code Tools
 
@@ -211,18 +389,19 @@ Just go to `192.168.1.2:8081`...
 
 
 
-
----
-
-## FAQ
-
 ### Setup Containers
 
+New to this?
 
-* A Quick [Container setup guide](https://fossengineer.com/understanding-containers-for-selfhosting/)
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
+A Quick [Container setup guide](https://fossengineer.com/understanding-containers-for-selfhosting/)
 <!-- https://www.youtube.com/shorts/ox3IsWH-o7g -->
 
-* Or just get ready for SelfHosting:
+Or just get ready for SelfHosting:
 
 {{< youtube "ox3IsWH-o7g" >}}
 
@@ -230,133 +409,13 @@ Just go to `192.168.1.2:8081`...
 * https://github.com/tensorchord/Awesome-LLMOps
 
 
-<!-- The primary smart contract address for Polymarket on the Ethereum network is:
-
-0x0d08db747095e91780711724267a183e8522aa64 
-
-Additionally, Polymarket uses proxy wallet contracts and multisig safes for user accounts, which are deployed on the Polygon network. For example, a Polymarket proxy wallet factory address on Polygon is:
-
-0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
-
-These proxy wallet contracts hold users' positions and USDC used within Polymarket's ecosystem, facilitating a smooth user experience.
-
--->
-
-
-<!-- 
-SOME NAMES for the AI APP
-
-inspired by CryptaIQ and keeping that intelligent, AI-powered vibe:
-
-ProtocolAI – Simple and clear, focusing on AI-powered protocol insights.
-DeCryptIQ – Emphasizing crypto and intelligent insights with a "decryption" feel.
-BlockWise – Suggests wisdom and understanding of blockchain protocols.
-CryptoLens – Implies a clear view or “lens” into understanding crypto.
-ChainSage – Conveys expertise and guidance in blockchain.
-Protocolize – Playful and suggests simplifying protocols with AI.
-InsightChain – Focuses on providing deep insights into blockchain protocols.
-CryptoCompass – Implies navigating and understanding the crypto landscape.
-IntelliChain – A combination of intelligence and blockchain, emphasizing smart analysis.
-BlockIQ – Short, catchy, and focused on intelligent blockchain insights. 
--->
-
-**Interesting Posts**
-
-1. https://darko.io/posts/but-auth-is-hard
-
-
-### Authentication
-
-This one will require your focus: https://darko.io/posts/but-auth-is-hard
-
-As per my [recent post](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/), you have few options, like:
-
-1. [TinaAuth](#tinyauth)
-2. [LogTo](#logto)
-
-But dont worry, its a solved problem.
-
-The article, titled **"BuT, aUtH iS HaRd,"** argues against the prevalent industry narrative that building authentication (Auth) is inherently difficult.
-
-The author contends that **Auth is not hard, but rather "boring, red-tapey, and a solved problem."**
-
-**Auth Basics Are Simple**
-
-The author recalls that "rolling your own" basic email/password authentication in the past (e.g., with PHP/MD5) was a straightforward process of hashing, salting, storing credentials, and setting a cookie.
-
-To demonstrate this, the author provides a **150-line Proof-of-Concept (PoC)** using Express and Passport, showing that basic features like email/password login and adding a social provider (GitHub OAuth2) are **dull and repetitive, but not complex** to implement at a toy level.
-
-
-Complexity Lies in the Extras
-
-The real challenge with authentication isn't the core login logic, but the surrounding features, which the author calls **"death by a thousand cuts."**
-
-These include:
-
-* **Security and Maintenance:** Staying up-to-date with security standards, standards bodies (RfCs), and potential breaches.
-* **User Experience (UX):** Implementing 2FA/MFA, password resets, and user management features.
-* **Integration:** Handling the complexity of connecting to hundreds of different OAuth providers, each with specific requirements, and managing account merges.
-
-When to Roll Your Own vs. Use a Service
-
-The author's core **takeaway is that Auth is a commodity** and reinventing the wheel is usually a waste of time. 
-
-They offer clear guidance on when developers should build their own solution:
-
-| Project Type | Recommendation | Rationale |
-| :--- | :--- | :--- |
-| **Toy Project / Indie / Educational** | **Roll Your Own** | It's a great way to learn the basics. |
-| **Startups, Scaleups, and Above** | **Do NOT Roll Your Own** | Time is better spent building the actual product; Auth is a solved, boring problem. |
-
-Open-Source Alternatives
-
-The article concludes by promoting the robust **self-hosted and FOSS (Free and Open Source Software) landscape** for authentication, offering various choices for developers who prefer to own their stack:
-
-* **Auth Libraries:** Passport.js, Lucia, Auth.js.
-* **Auth Servers:** Keycloak, SuperTokens, FusionAuth, Authelia.
-* **Storage + Auth Platforms:** Supabase, Pocketbase.
-
-The final message is to **educate, not gatekeep**, and to recognize that while Auth is essential, its implementation is a **"red tape"** task best handled by existing solutions rather than rebuilt from scratch.
-
-https://libraries.io/pypi/embedchain
-
-* Groq - https://console.groq.com/keys
-
-<!-- * https://github.com/mckaywrigley/chatbot-ui - MIT Licensed
-
->  AI chat for every model. 
-
-https://github.com/mckaywrigley/chatbot-ui?tab=readme-ov-file#local-quickstart with supabase -->
-<!-- 
-https://theroamingworkshop.cloud/b/2429/%F0%9F%90%B8coqui-ai-tts-ultra-rapida-generacion-y-clonacion-de-voz-a-partir-de-texto-multilenguaje/
-https://www.restack.io/p/coqui-tts-answer-spanish-cat-ai
-https://www.yeschat.ai/es/t/coqui-tts -->
-
-https://pytorch.org/get-started/locally/
-
-https://theresanaiforthat.com/most-saved/
-
-* **Others:** [LibreChat](https://www.youtube.com/watch?v=0BRnK5BGZHU), Autogen + AutogenStudio https://microsoft.github.io/autogen/blog/2023/12/01/AutoGenStudio/ or [Quivir](https://github.com/StanGirard/quivr) with great [docs](https://docs.quivr.app/home/intro) or [LocalGPT](https://github.com/PromtEngineer/localGPT).
-  * Bindings:
-    * https://github.com/abetlen/llama-cpp-python
-* https://github.com/khoj-ai/khoj
-
-
-
 The goal of **this post** is:
 
 1. To review some of the [AI projects](#ai-apps) that are helpful on my workflow
 2. To learn how to use [Caddy](#how-to-setup-caddy) as [NGINX](#how-to-install-nginx)/[Traefik](#how-to-install-traefik) alternative to get HTTPs certificates
 
-
 <!-- https://www.youtube.com/watch?v=XH9XgiVM_z4 -->
 {{< youtube "XH9XgiVM_z4" >}}
-
-{{< details title="DNS challenge | PorkBun 📌" closed="true" >}}
-
-
-
-{{< /details >}}
 
 ### Voice to Text
 
@@ -392,9 +451,9 @@ You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcoc
 
 ## Web x AI
 
-Ive been using a lot vibe coding, like windsurf and CLI tools like gemini this year.
+Ive been using a lot vibe coding, like windsurf and CLI tools like gemini since last year.
 
-There were interesting tools: scrapegraph, firecrawl, crawl4ai...
+There were interesting tools: *scrapegraph, firecrawl, crawl4ai...*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web" title="Tinkering with Scrapping Tools" image="/videos/job_offers.png" subtitle="Scrapped Job Offers Analytics" >}}

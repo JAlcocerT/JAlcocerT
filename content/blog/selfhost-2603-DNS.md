@@ -14,6 +14,12 @@ https://www.youtube.com/watch?v=U9NgRShXFgk
 * [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
 * SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
 
+{{< details title="DNS challenge | PorkBun 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
 **Cloudflare alternatives?**
 
 * https://github.com/rapiz1/rathole

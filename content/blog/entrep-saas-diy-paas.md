@@ -255,109 +255,10 @@ graph TD
 
 ## FAQ
 
-### Selfhost Postgres
-
-I read this fantastic [post about selfhosting postgres](https://pierce.dev/notes/go-ahead-self-host-postgres?ref=selfh.st).
-
-And how could I not addit to the mix.
-
-As PG is [one of the DBs](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/) that you can set in your servers to do D&A or as a companion to many services.
-
-And [pgsql can do](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/#postgresql) several parts of a tech stack all together
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="Postgres | Docker Config 🐋 ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-Even if you have a wood PC, this works, its just ~45mb of RAM consumption:
-
-```sh
-docker compose up -d
-#sudo docker stats
-
-#docker exec postgres_container psql -U admin -d myapp -c "SELECT 1;"
-
-docker exec -it postgres_container psql -U admin -d myapp
-#SELECT version();
-#\dt       -- List tables (empty for now)
-#\q        -- Quit
-```
-
-Let's use it with [the sample **chinook DB**](https://github.com/lerocha/chinook-database/releases): *yes, im cooking sth on top of LangChain+DBs again*
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database" title="Chat with DBs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/" title="Chat with CSVs ↗" icon="book-open" >}}  
-{{< /cards >}}
-
-This is all you need to ***plug* an existing database** into your just created **PGSQL container instance**:
-
-```sh
-curl -L -O https://github.com/lerocha/chinook-database/releases/download/v1.4.5/Chinook_PostgreSql.sql
-cat Chinook_PostgreSql.sql | docker exec -i postgres_container psql -U admin -d myapp
-
-docker exec postgres_container psql -U admin -d myapp -c "\l"
-
-docker exec postgres_container psql -U admin -d chinook -c "\dt"
-
-docker exec -it postgres_container psql -U admin -d chinook
-#\dt
-#SELECT * FROM artist LIMIT 5;
-```
-
-We will be using this very soon :)
-
-> In the mentioned article, Pierce Freeman argues that the fear surrounding self-hosting PostgreSQL is largely a marketing narrative pushed by cloud providers. 
-
-> > He suggests that for many developers, self-hosting is not only more cost-effective but also provides better performance and control.
-
-The Case for Self-Hosting
-
-1. The "Cloud Myth"
-
-Cloud providers (like AWS RDS) pitch reliability and expertise as their main value. However, Freeman points out:
-
-* **Identical Engines:** Managed services usually run the same open-source Postgres you can download yourself.
-* **False Security:** Managed services also experience outages. When they do, you have fewer tools to fix the problem than if you owned the infrastructure.
-* **Cost Gap:** As of 2025, cloud pricing has become aggressive. A mid-tier RDS instance can cost over $300/month, while a dedicated server for the same price offers vastly superior hardware (e.g., 32 cores vs. 4 vCPUs).
-
-2. Operational Reality
-
-Freeman shares his experience running a self-hosted DB for two years, serving millions of queries daily. He notes that maintenance is surprisingly low-effort:
-
-* **Weekly:** 10 mins (Checking backups and logs).
-* **Monthly:** 30 mins (Security updates and capacity planning).
-* **Quarterly:** 2 hours (Optional tuning and disaster recovery tests).
-
-3. When to Self-Host (and When Not To)
-
-* **Self-Host If:** You are past the "vibe coding" startup phase but aren't a massive enterprise yet. It’s the "sweet spot" for most apps.
-* **Stick to Managed If:** You are a total beginner, a massive corporation with enough budget to outsource the labor, or you have strict regulatory compliance needs (HIPAA, FedRAMP).
-
-
-If you choose to self-host, Freeman emphasizes that standard Docker defaults aren't enough. 
-
-You must tune these three areas:
-
-Memory & Performance Tuning
-
-* **`shared_buffers`**: Set to ~25% of RAM.
-* **`effective_cache_size`**: Set to ~75% of RAM to help the query planner.
-* **`work_mem`**: Be conservative to avoid running out of memory during complex sorts.
-
-Connection Management
-
-* **Avoid Direct Connections:** Postgres connections are "expensive."
-* **Use PgBouncer:** Use a connection pooler by default to handle parallelism efficiently, especially for Python or async applications.
-
-Storage Optimization
-
-* **NVMe Settings:** Modern SSDs change the math on query planning. You should lower `random_page_cost` (to ~1.1) to tell Postgres that random reads are nearly as fast as sequential ones.
 
 ### Building Webs with AI
 
-See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/leaderboard
+See which are the top LLMs as per their *ELO fights*: `https://web.lmarena.ai/leaderboard`
 
 * https://github.com/atuinsh/atuin
 
@@ -368,7 +269,6 @@ See which are the top LLMs as per their *ELO fights* https://web.lmarena.ai/lead
 I like the shopify one: `https://www.shopifystatus.com/`
 
 See as reference these others: *and also the latest uptime Kuma selfhosted + script setup*
-
 
 * [AWS](https://health.aws.amazon.com/health/status)
 * [Cloudflare](https://www.cloudflarestatus.com/)

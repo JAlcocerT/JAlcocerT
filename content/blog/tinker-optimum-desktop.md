@@ -2,8 +2,8 @@
 title: "Optimum Path for Karting x CustomTkinter"
 date: 2026-02-28
 draft: false
-tags: ["GoPro GPS Telemetry","GD Simulation","G-Elypse","Racing","Sodis Series"]
-description: 'A Python CustomTkinter Desktop App.'
+tags: ["GoPro GPS Telemetry","GD Simulation","G-Elypse","Racing","Sodis Series","F1 x PolyMarket"]
+description: 'A first Python CustomTkinter Desktop App. With GPX tools recap.'
 url: 'gopro-telemetry-desktop-python'
 ---
 
@@ -206,3 +206,32 @@ Here's a breakdown of some of the most popular options: **Key Python GUI Framewo
 * **Complexity:** Consider the complexity of your application and choose a framework that matches your needs. Tkinter is suitable for simple applications, while PyQt/PySide and wxPython are better for more complex ones.
 * **Appearance:** If you want your application to have a modern and visually appealing interface, PyQt/PySide or Kivy might be good choices.
 * **Licensing:** Be aware of the licensing terms of the framework you choose, especially if you plan to distribute your application commercially.
+
+### Who will win F1 2026?
+
+Nobody knows.
+
+But people bet on that: see that people in Polymarket gave Mercedes a premium even before the winter tests.
+
+`https://polymarket.com/event/fed-decision-in-april`
+
+The primary smart contract address for Polymarket on the Ethereum network is:
+
+0x0d08db747095e91780711724267a183e8522aa64 
+
+https://etherscan.io/address/0x0d08db747095e91780711724267a183e8522aa64
+
+Additionally, Polymarket uses proxy wallet contracts and multisig safes for user accounts, which are deployed on the Polygon network. For example, a Polymarket proxy wallet factory address on Polygon is:
+
+0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
+
+https://polygonscan.com/address/0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
+
+These proxy wallet contracts hold users' positions and USDC used within Polymarket's ecosystem, facilitating a smooth user experience.
+
+### Selfhosted GPX?
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
+{{< /cards >}}

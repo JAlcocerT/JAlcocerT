@@ -275,7 +275,7 @@ If you have followed the recents posts, you got it: uptimekuma uses SQLITE!
 
 In fact, when starting you see: `http://192.168.1.2:3001/setup-database`
 
-All with a ~600mb image and ~100mb RAM consumption
+All with a ~600mb image and ~100mb RAM consumption.
 
 Oh.
 

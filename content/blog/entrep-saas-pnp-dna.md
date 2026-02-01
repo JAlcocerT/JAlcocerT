@@ -665,7 +665,6 @@ Use the `-x` flag or `\x on;` to flip the table 90 degrees:
 ssh -t jalcocert@192.168.1.2 "docker exec -it commento_db-foss psql -U commento -d commento -c 'SELECT * FROM comments;' -x"
 ```
 
-
 Do a copy of the production commento database to see the magic in action: 
 
 **Step 1: Create the target database locally**

@@ -126,7 +126,9 @@ Still, there is not an official claude desktop for linux: https://snapcraft.io/c
 * https://github.com/anthropics/claude-code
 * https://code.claude.com/docs/en/vs-code
 
-And now its full of alternatives, like OpenCode or ~~clawdbot~~ openclaw. 
+And now its full of alternatives, like OpenCode or ~~clawdbot~~ OpenClaw.
+
+* https://github.com/openclaw/openclaw
 
 <!-- 
 https://www.youtube.com/watch?v=_6h_4XQUV3g 
