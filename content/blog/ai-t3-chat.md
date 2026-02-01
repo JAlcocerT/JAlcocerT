@@ -78,6 +78,7 @@ make docker-up
 #sudo docker stats
 #docker stop $(docker ps -a -q) #stop all
 #docker system df
+#docker system prune -a
 #docker system prune -a --volumes -f
 #docker volume rm $(docker volume ls -q)
 ```

@@ -1,8 +1,8 @@
 ---
-title: "[Learning] Interesting Image & Backup Tools"
+title: "[SelfHosting] Image & Backup Tools"
 date: 2026-02-08
 draft: false
-tags: ["Link Shortener","No Code DBs x BaseRow","Jellyfin x HW Acceleration"]
+tags: ["Link Shortener","Immich vs PiGallery vs NextCloud","Jellyfin x HW Acceleration"]
 description: 'Testing some NoCode Tools. A recap of media.'
 url: 'image-backup-tools'
 ---
@@ -43,57 +43,13 @@ And they are **no code**.
 
 ## SelfHostable Image Tools
 
+Mind your attention, stop auto engaging.
 
-Mind your attention, stop auto engage and keep the important things at life first.
+Keep the important things at life first.
 
 {{< youtube id="ydG5EtQat_I" autoplay="false" >}}
 
-
-
-Concerned about container backups?
-
-<!-- 
-mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
-
-sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
--->
-
-<!-- 
-https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
-
-https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
-<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
-
-https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
-<https://github.com/JAlcocerT/Docker/tree/main/Media> 
--->
-
-
-
-<!-- #### How to Select the Right Model?
-
-https://www.choosellm.com/ -->
-
-<!-- 
-https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms -->
-
-<!-- 
-https://www.youtube.com/watch?v=lBsv-ssPJpo -->
-
-<!-- 
-https://x.com/tom_doerr/status/1979894065400263086?
-
-* https://libreselfhosted.com/project/fluxbb/
-* https://awesome-docker-compose.com/apps/photo-server/pigallery-2
-
- -->
-
-
-<!-- ### How to backup data?
-
-3-2-1
-
-### How does this solution replaces Google Photos?
+How does this solution replaces Google Photos?
 
 You can use it together with F/OSS photo services like:
 
@@ -101,21 +57,66 @@ You can use it together with F/OSS photo services like:
 * Piwigo
 * ... https://awweso.me/photo-and-video-galleries/ 
 
-
-immage
 https://www.youtube.com/watch?v=h_inF-ypMls
 
 https://www.opensourcealternative.to/project/Photprism
 
 Don't Let Apple & Google Harvest Your Photos, Use Immich to Self-Host Your Own Cloud!
+
 https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
 
 Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
+
 https://www.youtube.com/watch?v=sIpt4u03mXc
 
 https://opensource.com/alternatives/google-photos
--->
 
+
+
+
+
+### PiGallery
+
+
+https://x.com/tom_doerr/status/1979894065400263086?
+
+* https://libreselfhosted.com/project/fluxbb/
+* https://awesome-docker-compose.com/apps/photo-server/pigallery-2
+
+
+```sh
+sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d pigallery2
+```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pigallery" title="PiGallery | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+### NC vs Immich
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="Jellyfin | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="QBittorrent Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+https://github.com/immich-app/immich/releases/tag/v2.5.0?ref=selfh.st
+
+```sh
+
+```
+
+### How to backup data?
+
+3-2-1!
+
+Concerned about container backups?
+
+```sh
+mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
+sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
+```
 
 
 <!-- ### Other F/OSS Backup solutions
@@ -123,13 +124,15 @@ Kopia: An Automatic Backup Solution for Your Self-Hosted App Data or Documents
 https://www.youtube.com/watch?v=a6GfQy9wZfA
 -->
 
-<!-- ### How to Detect Duplicates files in the system
+### How to Detect Duplicates files in the system
 
-https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka -->
+https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka
 
 ---
 
 ## Conclusions
+
+Just do something.
 
 
 
@@ -376,16 +379,6 @@ Connection Management
 Storage Optimization
 
 * **NVMe Settings:** Modern SSDs change the math on query planning. You should lower `random_page_cost` (to ~1.1) to tell Postgres that random reads are nearly as fast as sequential ones.
-
-### No Code Tools
-
-#### No Code Data Tools
-
-* https://github.com/glideapps/glide-data-grid
-
-* Baserow
-
-![BaseRow](/blog_img/apps/baserow.png)
 
 
 

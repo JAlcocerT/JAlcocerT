@@ -8,6 +8,10 @@ url: 'custom-bots-kb'
 ---
 
 
+https://www.privategpt.io/
+https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms 
+
+
 **Tl;DR**
 
 What if having a **custom cool looking chatbot for your site** was a matter of copy-paste one snippet and configuring an UI the data sources?

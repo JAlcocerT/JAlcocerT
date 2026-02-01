@@ -3,7 +3,7 @@ title: "How I spin local LLMs"
 date: 2026-05-01
 draft: false
 description: "How to use Ollama - Ollama WebUI Setup"
-tags: ["Home-Lab","Gen-AI"]
+tags: ["Home-Lab","Gen-AI","Proton vs Euria vs Kimi vs Deepseek"]
 ---
 
 **Tl;DR**
@@ -208,6 +208,17 @@ print(llm.complete("What is a vector database?"))
 ---
 
 ## FAQ
+
+<!-- 
+https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
+
+https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
+<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
+
+https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
+
+-->
+
 
 ### How to Enhance a Raspberry Pi for AI
 

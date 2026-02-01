@@ -309,9 +309,9 @@ deeper Power BI expertise, particularly in BI semantic model design and self-ser
 consumer analytics - fmcg - consumer insights
 -->
 
-<!-- 
-MMM marketing analytics 
--->
+Forget about MMM marketing analytics, personalized outreach is the next big thing.
+
+If you are a data engineer with some imagination: *become a GTM engineer*.
 
 0. Tinkered with **new APIs**
 
@@ -651,6 +651,7 @@ It just keeps working with the power of CSR behind.
 
 2. Cloudflare D1: *An interesting companion for CF R2*
 
+https://blog.cloudflare.com/serverless-matrix-homeserver-workers/?ref=selfh.st/
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}

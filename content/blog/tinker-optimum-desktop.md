@@ -235,3 +235,5 @@ These proxy wallet contracts hold users' positions and USDC used within Polymark
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+https://github.com/itskovacs/trip
