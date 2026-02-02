@@ -522,12 +522,13 @@ sudo snap install ytdownloader
 
 > Go visit them at `http://jalcocert-x300-1:4747/` and `http://jalcocert-x300-1:8096`
 
-Notice that with Gonic you can also add podcasts via their RSS feed, like in the [astropod](https://github.com/manuelernestog/astropod) theme that provides `https://getastropod.netlify.app/rss.xml`
+Notice that with Gonic you can also add podcasts via their RSS feed.
+
+Like in the [astropod](https://github.com/manuelernestog/astropod) theme that provides: `https://getastropod.netlify.app/rss.xml`
 
 You have cool desktop clients: [Sonixd](https://github.com/jeffvli/sonixd/releases/tag/v0.15.5)
 
 ![Sonixd](/blog_img/selfh/HomeLab/gonic-sonixd.png)
-
 
 And even a newer: https://github.com/jeffvli/feishin
 

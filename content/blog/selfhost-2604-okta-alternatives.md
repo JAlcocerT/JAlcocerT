@@ -235,8 +235,60 @@ As **Free Alternatives for Okta** I would go for
   * https://github.com/logto-io/logto?tab=MPL-2.0-1-ov-file#readme
 
 ---
+---
+
+{{% details title="How to Secure my Services?" closed="true" %}}
+
+* [NGINX](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/)
+* [Cloudflare](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/)
+  * It allows: Authelia / Zitadel / Authentik
+
+{{% /details %}}
+
+Thanks To:
+
+* https://akashrajpurohit.com/blog/setup-caddy-with-automatic-ssl-certificates-with-cloudflare/
+* https://akashrajpurohit.com/blog/setup-authelia-for-sso-authentication/
+### Audio Book Player
+
+* https://github.com/TortugaPower/BookPlayer
+
+## Web x AI
+
+Ive been using a lot vibe coding, like windsurf and CLI tools like gemini since last year.
+
+There were interesting tools: *scrapegraph, firecrawl, crawl4ai...*
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web" title="Tinkering with Scrapping Tools" image="/videos/job_offers.png" subtitle="Scrapped Job Offers Analytics" >}}
+{{< /cards >}}
+
+
+### Voice to Text
+
+* [Piper](https://github.com/rhasspy/piper) - Also works [Text to Voice](https://www.youtube.com/watch?v=SzRF50UwzYk)
+  * [Voices at HF](https://huggingface.co/rhasspy/piper-voices/tree/main)
+
+See https://github.com/mumble-voip/mumble:
+
+>  Mumble is an open-source, low-latency, high quality voice chat software. 
+
+---
 
 ## FAQ
+
+* https://github.com/tensorchord/Awesome-LLMOps
+
+
+The goal of **this post** is:
+
+1. To review some of the [AI projects](#ai-apps) that are helpful on my workflow
+2. To learn how to use [Caddy](#how-to-setup-caddy) as [NGINX](#how-to-install-nginx)/[Traefik](#how-to-install-traefik) alternative to get HTTPs certificates
+
+<!-- https://www.youtube.com/watch?v=XH9XgiVM_z4 -->
+
+{{< youtube "XH9XgiVM_z4" >}}
+
 
 
 **Interesting Posts**

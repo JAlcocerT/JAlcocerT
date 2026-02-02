@@ -469,7 +469,7 @@ sudo chown -R 1000:1000 /home/docker/neko
 
 > Remember to do `ctrl+c` to copy from neko to your main desktop
 
-BTW, How cool is to use perplexity and have a reference to your own website:
+BTW: How cool is to use perplexity and have a reference to your own website:
 
 ![Perplexity Neko Search](/blog_img/selfh/Internet/perplexity-neko.png)
 
@@ -549,10 +549,7 @@ SSR content is easier to scrape compared to CSR, which demands JavaScript execut
 
 ### What it is Puppeteer?
 
-<!-- 
-Puppeteer what?
--->
-
+Puppeteer...what?
 
 - **Puppeteer** is a **Node.js library** developed by Google, used for **automating and interacting with web pages** using a headless Chrome or Chromium browser.
 - **Key functionalities** include:
@@ -567,7 +564,11 @@ Puppeteer what?
 
 ### What is KASM?
 
-Kasm is a container streaming platform that delivers browser-based access to secure, isolated workspaces such as desktops, applications, and web browsers via Docker containers. It essentially provides containerized virtual desktops or browser sessions accessible through a web browser, designed for security, scalability, and ease of access without heavy traditional VM overhead. Kasm workspaces are ephemeral, isolated, and can run full desktops or just apps within containers, allowing quick spin-up and destruction with robust access control and security features.
+Kasm is a container streaming platform that delivers browser-based access to secure, isolated workspaces such as desktops, applications, and web browsers via Docker containers. 
+
+It essentially provides containerized virtual desktops or browser sessions accessible through a web browser, designed for security, scalability, and ease of access without heavy traditional VM overhead.
+
+Kasm workspaces are ephemeral, isolated, and can run full desktops or just apps within containers, allowing quick spin-up and destruction with robust access control and security features.
 
 #### How Kasm compares with a Virtual Machine (VM)
 

@@ -2,8 +2,8 @@
 title: "How to create music with AI Tools"
 date: 2025-11-27T07:20:21+01:00
 draft: false
-tags: ["Docker","Gen-AI","SunoAI"]
-description: 'Tryign to Make music with AI'
+tags: ["Gen-AI","SunoAI vs CoquiTTS","Gonic vs Navidrome"]
+description: 'Tryign to Make music with AI.'
 url: 'music-with-ai-tools'
 ---
 
@@ -35,25 +35,27 @@ You have multiple options to create music with AI, including ready-to-use platfo
   {{< card link="https://jalcocert.github.io/JAlcocerT/interesting-apis/#11labs" title="Tinkering with 11labs - Post ↗" image="/blog_img/GenAI/elevenlabs/11labs-download-tts.png" subtitle="ElevenLabs music creation via API" >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/audio-recap/#the-speech-rater-stack
+* https://jalcocert.github.io/JAlcocerT/audio-recap/#the-speech-rater-stack
+
 ![Fast API WebApp with audio recording capabilities](/blog_img/GenAI/audio/fastapi-audio-rec.png)
 
-https://jalcocert.github.io/JAlcocerT/interesting-apis/#audio-apis
+* https://jalcocert.github.io/JAlcocerT/interesting-apis/#audio-apis
+
 ![alt text](/blog_img/GenAI/elevenlabs/onboard-11labs2.png)
 
 Some of the [AI audio tools](https://jalcocert.github.io/JAlcocerT/local-ai-audio/#tts) can be installed locally.
 
-I particularly enjoyed CoquiTTS
-https://jalcocert.github.io/JAlcocerT/local-ai-audio/#tts
-![Coqui TTS UI](/blog_img/GenAI/audio/coqui-tts.png)
+I particularly enjoyed CoquiTTS: https://jalcocert.github.io/JAlcocerT/local-ai-audio/#tts
 
+![Coqui TTS UI](/blog_img/GenAI/audio/coqui-tts.png)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/py-speech-rater" title="NEW OpenAI TTS and Transcription Project 🐍" image="/blog_img/GenAI/audio/speechraiter.png" subtitle="Speech rAIter" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-Speech" title="Streamlit Speech Raiter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Streamlit Speech rater - Source Code on Github" >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater
+* https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater
+
 ![Fast API x Astro Theme Connected Showing Admin Panel to record or TTS or S2T](/blog_img/GenAI/audio/fastapi-astro-signedin-dash.png)
 
 {{< cards cols="1" >}}
@@ -61,7 +63,7 @@ https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
 {{< /cards >}}
 
-Some people mention `https://lucida.to/`, but I prefer to have my own music server:
+Some people mention `https://lucida.to/`, but I prefer to have my own music server: *spotify is also great too!*
 
 ```sh
 #snap install spotify
@@ -71,7 +73,7 @@ Gonic is one of the options:
 
 ![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
 
-Navidrome is other OSS selfhostable music server:
+Navidrome is other OSS **selfhostable music server**:
 
 ![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
 
@@ -79,9 +81,7 @@ And they both get on pretty well with Metube: *specially if you are [building a 
 
 ![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
 
-You can add more services to the stack, like other [youtube front-ends](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#youtube-fe) and create a: metube + jdownloader + qbit
-
-
+You can add more services to the stack, like other [youtube front-ends](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#youtube-fe) and create a: *metube + jdownloader + qbit stack*
 
 
 ### Python-Based AI Music Creation Libraries and Frameworks
@@ -114,8 +114,6 @@ In summary, for quick music creation, use ready AI platforms; for deeper program
 
 
 ## Open Source AI Tools for Music Creation
-
-
 
 This AI Makes you a PRO Singer !
 
@@ -176,6 +174,10 @@ This can be cool as background music for youtube tech videos.
 
 ## Conclusions
 
+
+AI generated audio (and songs) is getting crazy.
+
+And this seems to just be the beginning.
 
 ### Lyrics with AI?
 

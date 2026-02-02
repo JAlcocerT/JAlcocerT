@@ -3,7 +3,7 @@ title: "How I spin local LLMs"
 date: 2026-05-01
 draft: false
 description: "How to use Ollama - Ollama WebUI Setup"
-tags: ["Home-Lab","Gen-AI","Proton vs Euria vs Kimi vs Deepseek"]
+tags: ["Home-Lab","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","Link Shortener"]
 ---
 
 **Tl;DR**

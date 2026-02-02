@@ -2,7 +2,7 @@
 title: "[SelfHosting] Image & Backup Tools"
 date: 2026-02-07
 draft: false
-tags: ["Link Shortener","Immich vs PiGallery vs NextCloud","Jellyfin x HW Acceleration"]
+tags: ["Immich vs PiGallery vs NextCloud","Jellyfin x HW Acceleration"]
 description: 'Testing some NoCode Tools. A recap of media.'
 url: 'image-backup-tools'
 ---
@@ -43,12 +43,29 @@ Keep the important things at life first.
 After testing few of them, I would recommend:
 
 
+Together with: 
 
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reubah" title="Reubah | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/upscayl/upscayl" title="Upscayl to enhance images" >}}
+{{< /cards >}}
+
+
+Because at some point, you will need more than just a quick share: *or sth more than [syncthing](https://github.com/JAlcocerT/Home-Lab/tree/main/syncthing)*
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/filebrowser" title="Filebrowser | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pairdrop" title="PairDrop | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### PiGallery
 
+<!-- 
+https://x.com/tom_doerr/status/1979894065400263086 
+-->
 
-https://x.com/tom_doerr/status/1979894065400263086?
+{{< tweet user="tom_doerr" id="1979894065400263086" >}}
+
 
 * https://libreselfhosted.com/project/fluxbb/
 * https://awesome-docker-compose.com/apps/photo-server/pigallery-2
@@ -65,13 +82,16 @@ sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d
 
 ### NC vs Immich
 
+We have some fresh releases since the last time:
+
+* https://github.com/immich-app/immich/releases/tag/v2.5.0
+* https://github.com/nextcloud/desktop/releases/tag/v4.0.6
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="Jellyfin | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="QBittorrent Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="NextCloud | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-https://github.com/immich-app/immich/releases/tag/v2.5.0?ref=selfh.st
 
 ```sh
 
@@ -182,12 +202,17 @@ Go to **Dashboard > Playback** and set: `https://jellyfin.org/docs/general/post-
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+Adding also metube, so that you can upload your action camera videos in 4k to youtube and if needed download the back:
+
 ```sh
 #sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent
 docker logs qbittorrent
 #sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d prowlarr
 #sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d metube
 ```
+
+![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
+
 
 These dont take much space:
 
@@ -218,6 +243,45 @@ This can be a good test of your internet speed: *Im getting ~60mb/s*
 ![Simpsons Clouds](/blog_img/outro/old-man-yells-at-cloud-yelling.gif)
 
 Just go to `192.168.1.2:8081`...
+
+If you are creating your own [(AI) music](https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/)...
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/navidrome" title="Navidrome Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
+
+Since both Navidrome and Gonic share the Subsonic API (and the newer OpenSubsonic standard), any Subsonic-compatible client will work with them.
+
+
+```sh
+#sudo chown -R 1000:1000 /home/jalcocert/Home-Lab/navidrome/data
+sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d navidrome
+sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml logs -f navidrome
+```
+
+* https://github.com/jeffvli/feishin
+
+```sh
+##sudo apt install appimagelauncher
+
+#https://github.com/jeffvli/feishin
+#https://github.com/jeffvli/feishin/releases
+wget -P ~/Applications https://github.com/jeffvli/feishin/releases/download/v1.4.2/Feishin-linux-x86_64.AppImage
+
+#sonixd
+#winget install sonixd
+#wget -P ~/Applications https://github.com/jeffvli/sonixd/releases/download/v0.15.5/Sonixd-0.15.5-linux-x86_64.AppImage
+
+#See also Euphonica: https://github.com/htkhiem/euphonica
+#flatpak install https://dl.flathub.org/repo/appstream/io.github.htkhiem.Euphonica.flatpakref
+```
+
+You can play from navidrome itself, or with Feishin Desktop, or...UltraSonic on Android, amperify on iOS.
+
+For desktop: [Aonsoku](https://github.com/victoralvesf/aonsoku) 
+
+> See also https://github.com/betsha1830/navispot to Export Spotify playlists to Navidrome. 
 
 ### Server Maintainance
 
@@ -279,106 +343,6 @@ sudo ncdu /mnt/data2tb
 
 ## FAQ
 
-### Selfhost Postgres
-
-I read this fantastic [post about selfhosting postgres](https://pierce.dev/notes/go-ahead-self-host-postgres?ref=selfh.st).
-
-And how could I not addit to the mix.
-
-As PG is [one of the DBs](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/) that you can set in your servers to do D&A or as a companion to many services.
-
-And [pgsql can do](https://jalcocert.github.io/JAlcocerT/setup-databases-docker/#postgresql) several parts of a tech stack all together
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="Postgres | Docker Config 🐋 ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-Even if you have a wood PC, this works, its just ~45mb of RAM consumption:
-
-```sh
-docker compose up -d
-#sudo docker stats
-
-#docker exec postgres_container psql -U admin -d myapp -c "SELECT 1;"
-
-docker exec -it postgres_container psql -U admin -d myapp
-#SELECT version();
-#\dt       -- List tables (empty for now)
-#\q        -- Quit
-```
-
-Let's use it with [the sample **chinook DB**](https://github.com/lerocha/chinook-database/releases): *yes, im cooking sth on top of LangChain+DBs again*
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database" title="Chat with DBs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/" title="Chat with CSVs ↗" icon="book-open" >}}  
-{{< /cards >}}
-
-This is all you need to ***plug* an existing database** into your just created **PGSQL container instance**:
-
-```sh
-curl -L -O https://github.com/lerocha/chinook-database/releases/download/v1.4.5/Chinook_PostgreSql.sql
-cat Chinook_PostgreSql.sql | docker exec -i postgres_container psql -U admin -d myapp
-
-docker exec postgres_container psql -U admin -d myapp -c "\l"
-
-docker exec postgres_container psql -U admin -d chinook -c "\dt"
-
-docker exec -it postgres_container psql -U admin -d chinook
-#\dt
-#SELECT * FROM artist LIMIT 5;
-```
-
-We will be using this very soon :)
-
-> In the mentioned article, Pierce Freeman argues that the fear surrounding self-hosting PostgreSQL is largely a marketing narrative pushed by cloud providers. 
-
-> > He suggests that for many developers, self-hosting is not only more cost-effective but also provides better performance and control.
-
-The Case for Self-Hosting
-
-1. The "Cloud Myth"
-
-Cloud providers (like AWS RDS) pitch reliability and expertise as their main value. However, Freeman points out:
-
-* **Identical Engines:** Managed services usually run the same open-source Postgres you can download yourself.
-* **False Security:** Managed services also experience outages. When they do, you have fewer tools to fix the problem than if you owned the infrastructure.
-* **Cost Gap:** As of 2025, cloud pricing has become aggressive. A mid-tier RDS instance can cost over $300/month, while a dedicated server for the same price offers vastly superior hardware (e.g., 32 cores vs. 4 vCPUs).
-
-2. Operational Reality
-
-Freeman shares his experience running a self-hosted DB for two years, serving millions of queries daily. He notes that maintenance is surprisingly low-effort:
-
-* **Weekly:** 10 mins (Checking backups and logs).
-* **Monthly:** 30 mins (Security updates and capacity planning).
-* **Quarterly:** 2 hours (Optional tuning and disaster recovery tests).
-
-3. When to Self-Host (and When Not To)
-
-* **Self-Host If:** You are past the "vibe coding" startup phase but aren't a massive enterprise yet. It’s the "sweet spot" for most apps.
-* **Stick to Managed If:** You are a total beginner, a massive corporation with enough budget to outsource the labor, or you have strict regulatory compliance needs (HIPAA, FedRAMP).
-
-
-If you choose to self-host, Freeman emphasizes that standard Docker defaults aren't enough. 
-
-You must tune these three areas:
-
-Memory & Performance Tuning
-
-* **`shared_buffers`**: Set to ~25% of RAM.
-* **`effective_cache_size`**: Set to ~75% of RAM to help the query planner.
-* **`work_mem`**: Be conservative to avoid running out of memory during complex sorts.
-
-Connection Management
-
-* **Avoid Direct Connections:** Postgres connections are "expensive."
-* **Use PgBouncer:** Use a connection pooler by default to handle parallelism efficiently, especially for Python or async applications.
-
-Storage Optimization
-
-* **NVMe Settings:** Modern SSDs change the math on query planning. You should lower `random_page_cost` (to ~1.1) to tell Postgres that random reads are nearly as fast as sequential ones.
-
 
 ### Setup Containers
 
@@ -396,61 +360,8 @@ Or just get ready for SelfHosting:
 
 {{< youtube "ox3IsWH-o7g" >}}
 
-
-* https://github.com/tensorchord/Awesome-LLMOps
-
-
-The goal of **this post** is:
-
-1. To review some of the [AI projects](#ai-apps) that are helpful on my workflow
-2. To learn how to use [Caddy](#how-to-setup-caddy) as [NGINX](#how-to-install-nginx)/[Traefik](#how-to-install-traefik) alternative to get HTTPs certificates
-
-<!-- https://www.youtube.com/watch?v=XH9XgiVM_z4 -->
-
-{{< youtube "XH9XgiVM_z4" >}}
-
-### Voice to Text
-
-* [Piper](https://github.com/rhasspy/piper) - Also works [Text to Voice](https://www.youtube.com/watch?v=SzRF50UwzYk)
-  * [Voices at HF](https://huggingface.co/rhasspy/piper-voices/tree/main)
-
-See https://github.com/mumble-voip/mumble
-
->  Mumble is an open-source, low-latency, high quality voice chat software. 
-
----
-
-{{% details title="How to Secure my Services?" closed="true" %}}
-
-* [NGINX](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/)
-* [Cloudflare](https://fossengineer.com/selfhosting-cloudflared-tunnel-docker/)
-  * It allows
-* Authelia / Zitadel / Authentik
-
-{{% /details %}}
-
-Thanks To:
-
-* https://akashrajpurohit.com/blog/setup-caddy-with-automatic-ssl-certificates-with-cloudflare/
-* https://akashrajpurohit.com/blog/setup-authelia-for-sso-authentication/
-
 ### How to Back Up my Server?
 
 Duplicati to other location (HD / Mega, One drive, s3...)
 
 You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/):
-
-
-## Web x AI
-
-Ive been using a lot vibe coding, like windsurf and CLI tools like gemini since last year.
-
-There were interesting tools: *scrapegraph, firecrawl, crawl4ai...*
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web" title="Tinkering with Scrapping Tools" image="/videos/job_offers.png" subtitle="Scrapped Job Offers Analytics" >}}
-{{< /cards >}}
-
-### Audio Book Player
-
-* https://github.com/TortugaPower/BookPlayer

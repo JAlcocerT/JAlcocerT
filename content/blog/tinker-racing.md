@@ -250,11 +250,11 @@ And will also create a Matplotlib png with the speed profile and the max and min
 
 Together with the video of the fastest lap.
 
-To share your videos without loosing metadata, use localsend, [snapdrop](https://github.com/SnapDrop/snapdrop) or **[pairdrop](https://github.com/schlagmichdoch/pairdrop)**
+To share your videos **without loosing metadata**, use localsend, [snapdrop](https://github.com/SnapDrop/snapdrop) or **[pairdrop](https://github.com/schlagmichdoch/pairdrop)**
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Fe vs BE | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Racing | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="Video | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
 After all: *this has been so much fun*

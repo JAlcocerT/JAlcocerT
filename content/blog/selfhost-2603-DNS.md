@@ -1,11 +1,14 @@
 ---
 title: "Improving a HomeLab Privacy with Open Source DNS "
-date: 2026-02-16T23:20:21+01:00
+date: 2026-03-01T23:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Pihole x UnboundDNS","DNS as Distributed DB","Privacy x Euria"]
-description: 'How to change DNS Servers and why it matters.'
+description: 'How to change DNS Servers and why it matters. Portainer to Homepage-Lite.'
 url: 'private-dns-with-docker'
 ---
+
+
+
 
 link checker https://github.com/JAlcocerT/JAlcocerT/actions/runs/20968565017/job/60265649025
 
@@ -42,6 +45,7 @@ Wireguard Server
 <!-- Tailscale -->
 
 <https://jalcocert.github.io/RPi/projects/rpi_wifi_ethernet_bridge/>
+
 RPi DHCP Server
 
 url: 'selfhosting-PiHole-docker'
@@ -254,6 +258,46 @@ If you are concern about privacy an use LLMs, consider:
 * `https://euria.infomaniak.com/`
 * Go with Ollama x Goose
 
+### From Portainer to homepage-lite
+
+I got issues with Portainer couple of times.
+
+So, gave it a shot to HomePage-Lite: *I like that it can be configured via yaml :)*
+
+```sh
+#git clone https://github.com/JAlcocerT/Home-Lab
+#cd ~/Home-Lab/homepage-lite
+#sudo docker compose up -d
+
+##cd ~/Home-Lab
+#git pull
+#sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d homepage-lite
+
+docker ps -a | grep -i homepage-lite
+#sudo docker stats homepage-lite
+sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml logs -f homepage-lite
+```
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/homepage-lite" title="Serverless Invoices | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+--- 
+
+
+## FAQ
+
+1. https://github.com/hagezi/dns-blocklists
+2. https://github.com/blacklanternsecurity/baddns
+
+**Programmatic DNS updates**
+
+* https://developers.cloudflare.com/api/resources/dns/
+* https://github.com/cloudflare/cloudflare-python
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="CF x Porkbun DNS API Py Scripts ↗" >}}
+{{< /cards >}}
 
 
 
@@ -269,15 +313,21 @@ Make sure to understand the licenses.
 
 MIT, Apache v2 will work.
 
+Some examples?
+
 You can get around with open source for:
 
 1. Creating Invoices: There are [several ways to](https://fossengineer.com/open-source-invoice-creator) do so, but I like the simplicity of serverless-invoices.
 
-Your invoices can be backed up with their PDF or the JSON.
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serverless-invoices" title="Serverless Invoices | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+Your invoices can be backed up with their PDF or just the JSON to save space.
 
 * Remember about: https://jsonformatter.org/
 
-2. Receiving payments: Stripe API is great and simplify a lot of things.
+2. Receiving payments: *Stripe API is great and simplify a lot of things.*
 
 * https://github.com/BillaBear/billabear
 
@@ -301,6 +351,8 @@ Monitoring for your servers, vendors, and infrastructure.
 
 #### Chats
 
+Just see this dedicated post.
+
 
 #### Project Management
 
@@ -314,8 +366,6 @@ If you are already a [BA](https://jalcocert.github.io/JAlcocerT/business-analyti
 * https://github.com/nfoert/cardie - GPL 3.0
 
 > An open source business card designer and sharing platform
-
-
 
 #### Billing
 
@@ -334,31 +384,15 @@ Why not doing [billing with OSS](https://fossengineer.com/open-source-invoice-cr
 
 >  A simple URL based **digital business card creation** and sharing system 
 
---- 
-
-
-## FAQ
-
-1. https://github.com/hagezi/dns-blocklists
-2. https://github.com/blacklanternsecurity/baddns
-
-**Programmatic DNS updates**
-
-* https://developers.cloudflare.com/api/resources/dns/
-* https://github.com/cloudflare/cloudflare-python
-
-{{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="CF x Porkbun DNS API Py Scripts ↗" >}}
-{{< /cards >}}
-
 
 ### Browsers
 
-1. Librewolf vs zen
-2. chromium vs brave vs hellium vs Tor browser
+1. Librewolf vs Zen
+2. Chromium vs brave vs Hellium vs Tor browser
 
 TightVNC
 Remote Ripple VNC Viewer
+
 **Extensions**
 
 * Kanban board with our bookmarks: <https://github.com/d3ward/b2ntp>
@@ -391,6 +425,7 @@ https://docs.linuxserver.io/images/docker-wireshark/
 ### Interesting Security Tools
 
 * 2fas - https://github.com/twofas/2fas-android
+* Proton Auth
 
 ### What do I like to bring to my HomeLab?
 

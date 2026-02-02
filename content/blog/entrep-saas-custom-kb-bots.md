@@ -14,6 +14,15 @@ https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms
 
 **Tl;DR**
 
+Document Intelligence
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reubah" title="Reubah | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/stirlingpdf" title="stirlingpdf | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+PrivateGPT
+
 What if having a **custom cool looking chatbot for your site** was a matter of copy-paste one snippet and configuring an UI the data sources?
 
     The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc

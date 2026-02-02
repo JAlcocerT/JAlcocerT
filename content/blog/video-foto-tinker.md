@@ -567,7 +567,7 @@ sudo snap install pinta
 {{< /cards >}}
 
 
-To remove photo backgrounds with OSS:
+To **remove photo backgrounds** with OSS:
 
 1. https://github.com/withoutbg/withoutbg
 2. Reubah
@@ -575,6 +575,7 @@ To remove photo backgrounds with OSS:
 ![SelfHosting Reubah](/blog_img/selfh/Photo/reubah.png)
 
 {{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reubah" title="Reubah | Docker Configs 🐋 ↗" >}}
   {{< card link="https://github.com/upscayl/upscayl" title="Upscayl to enhance images" >}}
 {{< /cards >}}
 

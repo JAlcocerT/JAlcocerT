@@ -2,10 +2,12 @@
 title: "[Learning] Selfhosted IoT"
 date: 2026-02-08
 draft: false
-tags: ["Home Assistant"]
+tags: ["Home Assistant","Sonoff x Zigbee"]
 description: 'IoT.'
 url: 'iot-home-lab-tools'
 ---
+
+https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-humidity-sensor
 
 
 ## Protocols
