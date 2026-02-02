@@ -2,7 +2,7 @@
 title: "[Learning] Selfhosted IoT"
 date: 2026-02-08
 draft: false
-tags: ["HA"]
+tags: ["Home Assistant"]
 description: 'IoT.'
 url: 'iot-home-lab-tools'
 ---
@@ -24,7 +24,7 @@ url: 'iot-home-lab-tools'
 
 https://github.com/homeassistant-ai/ha-mcp/
 
-
+https://www.home-assistant.io/integrations/mcp_server/
 
 ```sh
 #git clone https://github.com/JAlcocerT/Home-Lab

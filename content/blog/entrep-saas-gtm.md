@@ -339,6 +339,16 @@ No Code DBs x BaseRow
 ![BaseRow](/blog_img/apps/baserow.png)
 
 
+https://www.quadratichq.com/
+
+> Source Open | Infinite spreadsheet with Python, SQL, and AI.
+
+https://github.com/quadratichq/quadratic/tree/main
+https://github.com/quadratichq/quadratic/issues/416
+docker build -t quadratic --platform=linux/amd64 .
+
+
+
 ---
 
 ## FAQ

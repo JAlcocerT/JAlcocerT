@@ -1,6 +1,6 @@
 ---
 title: "Frigate - Cam with object detection"
-date: 2026-09-01T23:20:21+01:00
+date: 2026-07-01T23:20:21+01:00
 draft: false
 tags: ["Dashboards","NVR","Self-Hosting","Pi-Camera","Side-Quest26"]
 description: 'Computer vision'
@@ -16,22 +16,21 @@ If you like computer vision and homelabs, you will enjoy this one :)
 
 **Intro**
 
-The **computer vision** is an interesting topic that I have just tinkered superficially:
+The **computer vision** is an interesting topic that I have just tinkered with superficially...*two years ago*.
 
-* With plain python on [this repo](https://gitlab.com/fossengineer1/cv) and with the DJI Dron on this one: [DJI Tello Python](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/)
+With plain python on [this repo](https://gitlab.com/fossengineer1/cv) and with the DJI Dron on this one: [DJI Tello Python](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/)
+
+It kind of related to the dji drone as well, as I also played with its camera.
+
+And Im aware that there are dron deployed on fields even during the night with some sort of vision recognition.
 
 But there are cool projects for computer vision that combine
 
 https://frigate.video/
 <https://github.com/blakeblackshear/frigate>
-https://github.com/blakeblackshear/frigate?tab=MIT-1-ov-file#readme
+* https://docs.frigate.video/
 
-* {{< newtab url="https://.github.io//" text="The  Official Site" >}}
-* {{< newtab url="https://github.com//" text="The  Source Code at Github" >}}
-    * License: {{< newtab url="https://github.com//?tab=AGPL-3.0-1-ov-file#readme" text="aGPL 3.0" >}} ❤️
-
-> NVR with realtime local object detection for IP cameras
-
+> MIT | NVR with realtime local object detection for IP cameras
 
 
 <https://www.youtube.com/watch?v=sCkswrK0G3I>
@@ -100,9 +99,6 @@ FRIGATE_RTSP_PASSWORD=dontlookatmekameras
 
 ### Scrypted
 
-* {{< newtab url="https://.github.io//" text="The  Official Site" >}}
-* {{< newtab url="https://github.com//" text="The  Source Code at Github" >}}
-    * License: {{< newtab url="https://github.com//?tab=AGPL-3.0-1-ov-file#readme" text="aGPL 3.0" >}} ❤️
 
 ---
 
@@ -110,4 +106,4 @@ FRIGATE_RTSP_PASSWORD=dontlookatmekameras
 
 ### Other
 
-https://github.com/ispysoftware/iSpy
+* https://github.com/ispysoftware/iSpy

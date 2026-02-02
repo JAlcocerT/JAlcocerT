@@ -2,7 +2,7 @@
 title: A Camera for the Raspberry Pi
 date: 2024-07-19T23:20:21+01:00
 draft: false
-tags: ["Tinkering","CV"]
+tags: ["Tinkering","CV","NVR"]
 description: SimpleCV and OpenCV + Scrypted & HA. Computer Vision with a PI making the Pi camera work.
 url: 'raspberry-pi-camera-setup'
 ---
@@ -249,7 +249,7 @@ docker run --name="motioneye" \
 
 Now, you will access MotionEye at `localhost:8765` with default user: `admin` and blank (no password).
 
-> motionEyeOS is a Linux distribution that turns a single-board computer into a video surveillance system. 
+> MotionEyeOS is a Linux distribution that turns a single-board computer into a video surveillance system. 
 
 ### Frigate
 

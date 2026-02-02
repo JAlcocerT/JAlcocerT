@@ -1,30 +1,21 @@
 ---
 title: "[SelfHosting] Image & Backup Tools"
-date: 2026-02-08
+date: 2026-02-07
 draft: false
 tags: ["Link Shortener","Immich vs PiGallery vs NextCloud","Jellyfin x HW Acceleration"]
 description: 'Testing some NoCode Tools. A recap of media.'
 url: 'image-backup-tools'
 ---
 
-<!-- 
-
-https://www.quadratichq.com/
-
-> Source Open | Infinite spreadsheet with Python, SQL, and AI.
-
-https://github.com/quadratichq/quadratic/tree/main
-https://github.com/quadratichq/quadratic/issues/416
-docker build -t quadratic --platform=linux/amd64 .
-
--->
-
-Ente....
-
-
 **Tl;DR**
 
+Get your photos in place.
+
++++ Jellyfin and backups.
+
 **Intro**
+
+Some say: *dont rent what you should own*.
 
 
 {{< cards cols="1" >}}
@@ -49,28 +40,7 @@ Keep the important things at life first.
 
 {{< youtube id="ydG5EtQat_I" autoplay="false" >}}
 
-How does this solution replaces Google Photos?
-
-You can use it together with F/OSS photo services like:
-
-* https://fossengineer.com/selfhosting-Photoview-docker/
-* Piwigo
-* ... https://awweso.me/photo-and-video-galleries/ 
-
-https://www.youtube.com/watch?v=h_inF-ypMls
-
-https://www.opensourcealternative.to/project/Photprism
-
-Don't Let Apple & Google Harvest Your Photos, Use Immich to Self-Host Your Own Cloud!
-
-https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
-
-Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
-
-https://www.youtube.com/watch?v=sIpt4u03mXc
-
-https://opensource.com/alternatives/google-photos
-
+After testing few of them, I would recommend:
 
 
 
@@ -107,6 +77,40 @@ https://github.com/immich-app/immich/releases/tag/v2.5.0?ref=selfh.st
 
 ```
 
+### Others
+
+How does this solution replaces Google Photos?
+
+You can use it together with F/OSS photo services like:
+
+* https://fossengineer.com/selfhosting-Photoview-docker/
+* Piwigo
+* ... https://awweso.me/photo-and-video-galleries/ 
+
+https://www.youtube.com/watch?v=h_inF-ypMls
+
+https://www.opensourcealternative.to/project/Photprism
+
+Don't Let Apple & Google Harvest Your Photos, Use Immich to Self-Host Your Own Cloud!
+
+https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
+
+Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
+
+https://www.youtube.com/watch?v=sIpt4u03mXc
+
+https://opensource.com/alternatives/google-photos
+
+Ente....
+
+
+
+---
+
+## Conclusions
+
+Just do something.
+
 ### How to backup data?
 
 3-2-1!
@@ -128,11 +132,6 @@ https://www.youtube.com/watch?v=a6GfQy9wZfA
 
 https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka
 
----
-
-## Conclusions
-
-Just do something.
 
 
 
@@ -381,10 +380,9 @@ Storage Optimization
 * **NVMe Settings:** Modern SSDs change the math on query planning. You should lower `random_page_cost` (to ~1.1) to tell Postgres that random reads are nearly as fast as sequential ones.
 
 
-
 ### Setup Containers
 
-New to this?
+New to all this?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
@@ -408,6 +406,7 @@ The goal of **this post** is:
 2. To learn how to use [Caddy](#how-to-setup-caddy) as [NGINX](#how-to-install-nginx)/[Traefik](#how-to-install-traefik) alternative to get HTTPs certificates
 
 <!-- https://www.youtube.com/watch?v=XH9XgiVM_z4 -->
+
 {{< youtube "XH9XgiVM_z4" >}}
 
 ### Voice to Text
