@@ -163,13 +163,15 @@ Prompt Template: Meeting → Backlog (JSON)
 
 Why fireflies and not minutes AI?
 
-Because I like to have **web app access** to the actions.
+Because I like to have **web app access** to the actions points
 
-As simple as that.
+As simple as that: `https://app.fireflies.ai/`
 
 Also, because I tried it some time back, [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings).
 
 Plus, it allows to feed a `.mp3`: `https://fireflies.ai/`
+
+So you can have a workflow: obs - ffmpeg - fireflies:
 
 ```sh
 ffmpeg -i "2026-01-29 18-04-26.mp4" -q:a 0 -map a "2026-01-29 18-04-26.mp3"
@@ -188,7 +190,12 @@ Main Points from the 2026 AI Marketing Summit
 Key Discussions
 
 1. **Buyer Journey Transformation**
-The customer journey has fundamentally changed from a traditional funnel to a non-linear path. Buyers now conduct extensive research inside AI chatbots (17x longer conversations than traditional search) rather than clicking through multiple brand touchpoints[^1]. This means brands must optimize for Answer Engine Optimization (AEO) rather than traditional SEO.
+
+The customer journey has fundamentally changed from a traditional funnel to a non-linear path.
+
+Buyers now conduct extensive research inside AI chatbots (17x longer conversations than traditional search) rather than clicking through multiple brand touchpoints[^1]. 
+
+This means brands must optimize for Answer Engine Optimization (AEO) rather than traditional SEO.
 
 2. **Brand Power in the AI Era**
 Brand importance hasn't diminished but has shifted. Traditional mass-market branding has given way to focus on product quality, distribution, and leadership narrative. AI commoditizes generic content, making authentic creative voice and design more valuable than ever[^1].
@@ -298,6 +305,7 @@ Medium-term Actions (2026)
 
 So im also considering all the integrations: https://fireflies.ai/integrations
 
+And the possibility to pay more to get that API: https://fireflies.ai/api
 
 I could have also tried: https://github.com/thepersonalaicompany/amurex
 
@@ -326,26 +334,12 @@ https://youtu.be/tdYvRKVr0pk?
 
 https://youtu.be/jvFLW5EClgk?si=bbVnbpjqPEB6R-hw
 
-#### No Code Tools
-
-No Code DBs x BaseRow
-
-##### No Code Data Tools
-
-* https://github.com/glideapps/glide-data-grid
-
-* Baserow
-
-![BaseRow](/blog_img/apps/baserow.png)
+#### The full Workflow?
 
 
-https://www.quadratichq.com/
+Check this post :) 
 
-> Source Open | Infinite spreadsheet with Python, SQL, and AI.
-
-https://github.com/quadratichq/quadratic/tree/main
-https://github.com/quadratichq/quadratic/issues/416
-docker build -t quadratic --platform=linux/amd64 .
+https://jalcocert.github.io/JAlcocerT/no-code-tools-for-business
 
 
 

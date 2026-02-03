@@ -938,9 +938,9 @@ Along the way, Ive made my life easier by based the video content on a **simpler
 
 > I had to make sure to create **better thumbnails** to get some views
 
-> > Canva and https://selfh.st/icons/ helped a lot [see repo](https://github.com/selfhst/icons?ref=selfh.st)
+> > Canva and `https://selfh.st/icons/` helped a lot [see repo](https://github.com/selfhst/icons)
 
-I need to think whats next, bc fast fast fast content seem to rule: https://www.youtube.com/watch?v=9yb4o2IwkqM
+I need to think whats next, bc fast fast fast content seems to rule: https://www.youtube.com/watch?v=9yb4o2IwkqM
 
 If this was too much content, you can always use a LLMs to summarize the YT Videos.
 

@@ -12,13 +12,18 @@ https://www.privategpt.io/
 https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms 
 
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="KreuzBerg | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bentopdf" title="Bento PDF Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 **Tl;DR**
 
 Document Intelligence
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reubah" title="Reubah | Docker Configs 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/stirlingpdf" title="stirlingpdf | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/stirling-pdf" title="Stirling PDF | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 PrivateGPT

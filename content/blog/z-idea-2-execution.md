@@ -1,7 +1,7 @@
 ---
 title: "How to (Dis)qualify Business Opportunities | v2"
 #date: 2026-02-15T07:00:21+01:00
-date: 2026-02-01T08:00:21+01:00
+date: 2026-02-03T08:00:21+01:00
 draft: false
 tags: ["ADR x HLD to Prototype","The Business HOW - CPC vs CPA vs CaC"]
 description: 'AI powered SDLC x Unit Economics 105'
@@ -14,7 +14,7 @@ math: true
 
 Just read this, if an idea does not fit this framework: NEXT.
 
-+++ COnsider using formbricks for people that claim to want to build with you and avoid non-sense
++++ Consider using formbricks for people that claim to want to build with you and avoid non-sense
 
 **Intro**
 

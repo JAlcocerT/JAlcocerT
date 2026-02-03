@@ -340,7 +340,7 @@ InVideo -
 
 ![Capcut Desktop Transition Example](/blog_img/outro/capcut.png)
 
-> If you use capcut on iphone, you will just export to `mov`, so use [vert](https://vert.sh/convert/)
+> If you use CapCut on an iphone, you will just export to `mov`, so use [Vert](https://vert.sh/convert/) to convert to MP4.
 
 * https://www.youtube.com/@XSynop
     * https://www.youtube.com/shorts/Nb_Lpq_5KVc

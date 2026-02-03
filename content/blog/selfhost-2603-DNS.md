@@ -1,56 +1,14 @@
 ---
-title: "Improving a HomeLab Privacy with Open Source DNS "
+title: "Improving a HomeLab Privacy with OSS DNS"
 date: 2026-03-01T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting","Pihole x UnboundDNS","DNS as Distributed DB","Privacy x Euria"]
+tags: ["Self-Hosting x ProtonDrive","Pihole x UnboundDNS","DNS as Distributed DB","Privacy x Euria"]
 description: 'How to change DNS Servers and why it matters. Portainer to Homepage-Lite.'
 url: 'private-dns-with-docker'
 ---
 
 
 
-
-link checker https://github.com/JAlcocerT/JAlcocerT/actions/runs/20968565017/job/60265649025
-
-https://www.youtube.com/watch?v=U9NgRShXFgk
-
-* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
-* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
-
-{{< details title="DNS challenge | PorkBun 📌" closed="true" >}}
-
-
-
-{{< /details >}}
-
-**Cloudflare alternatives?**
-
-* https://github.com/rapiz1/rathole
-
-> A lightweight and high-performance reverse proxy for NAT traversal, written in Rust. An alternative to frp and ngrok.
-
-* https://noted.lol/cgnat-and-rathole/
-
-```sh
-dig guideventuretour.com
-```
-
-https://jalcocert.github.io/JAlcocerT/web-domain-basics/
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/listmonk/listmonk-api-py/Ebook-cover-SSGs.pdf" title="Get an ebook with all Data Analytics concepts you need" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to land a job in D&A" >}}
-{{< /cards >}}
-
-Wireguard Server
-<!-- Tailscale -->
-
-<https://jalcocert.github.io/RPi/projects/rpi_wifi_ethernet_bridge/>
-
-RPi DHCP Server
-
-url: 'selfhosting-PiHole-docker'
-
-https://radar.cloudflare.com/dns
 
 **Tl;DR**
 
@@ -97,6 +55,50 @@ https://github.com/mmotti/pihole-regex -->
 https://docs.linuxserver.io/images/docker-wireshark/
 
  -->
+
+
+link checker https://github.com/JAlcocerT/JAlcocerT/actions/runs/20968565017/job/60265649025
+
+https://www.youtube.com/watch?v=U9NgRShXFgk
+
+* [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
+* SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
+
+{{< details title="DNS challenge | PorkBun 📌" closed="true" >}}
+
+
+
+{{< /details >}}
+
+**Cloudflare alternatives?**
+
+* https://github.com/rapiz1/rathole
+
+> A lightweight and high-performance reverse proxy for NAT traversal, written in Rust. An alternative to frp and ngrok.
+
+* https://noted.lol/cgnat-and-rathole/
+
+```sh
+dig guideventuretour.com
+```
+
+https://jalcocert.github.io/JAlcocerT/web-domain-basics/
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/listmonk/listmonk-api-py/Ebook-cover-SSGs.pdf" title="Get an ebook with all Data Analytics concepts you need" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to land a job in D&A" >}}
+{{< /cards >}}
+
+Wireguard Server
+<!-- Tailscale -->
+
+<https://jalcocert.github.io/RPi/projects/rpi_wifi_ethernet_bridge/>
+
+RPi DHCP Server
+
+url: 'selfhosting-PiHole-docker'
+
+https://radar.cloudflare.com/dns
+
 
 
 <!-- 
@@ -254,15 +256,15 @@ How to **test your ad-blocks** - https://d3ward.github.io/toolz/ -->>> https://d
 
 If you are concern about privacy an use LLMs, consider:
 
-* Proton
+* [Proton](#proton-for-all) Apps, like [LumoAI](https://lumo.proton.me/u/0/)
 * `https://euria.infomaniak.com/`
-* Go with Ollama x Goose
+* Go with Ollama x Goose fully local :)
 
 ### From Portainer to homepage-lite
 
 I got issues with Portainer couple of times.
 
-So, gave it a shot to HomePage-Lite: *I like that it can be configured via yaml :)*
+So, gave a shot to HomePage-Lite: *I like that it can be configured via yaml :)*
 
 ```sh
 #git clone https://github.com/JAlcocerT/Home-Lab
@@ -279,8 +281,87 @@ sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml logs 
 ```
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/homepage-lite" title="Serverless Invoices | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/homepage-lite" title="HomePage Lite | Docker Configs 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dockge" title="Dockge | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
+
+### Proton for all?
+
+Well, not for all as they dont have a proton drive linux desktop app....yet.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rclone" title="Rclone | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+They have managed to integrate several apps: *proton mail, authenticator, proton vpn...*
+
+* https://github.com/orgs/protonpass/repositories
+    * https://github.com/protonpass/proton-pass-common/releases
+
+```sh
+curl -LO https://proton.me/download/authenticator/linux/ProtonAuthenticator_1.0.0_amd64.deb
+sudo dpkg -i ProtonAuthenticator_1.0.0_amd64.deb
+sudo apt-get install -f
+#rm ProtonAuthenticator_1.0.0_amd64.deb
+```
+
+* https://account.proton.me/u/0/vpn/vpn-apps
+    * https://protonvpn.com/download-linux
+    * https://github.com/ProtonVPN/proton-vpn-gtk-app
+
+```sh
+#https://protonvpn.com/support/official-linux-vpn-debian/
+wget https://repo.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.8_all.deb
+sudo dpkg -i ./protonvpn-stable-release_1.0.8_all.deb && sudo apt update
+#echo "0b14e71586b22e498eb20926c48c7b434b751149b1f2af9902ef1cfe6b03e180 protonvpn-stable-release_1.0.8_all.deb" | sha256sum --check -
+sudo apt install proton-vpn-gnome-desktop
+```
+
+```sh
+sudo apt update  
+sudo apt install thunderbird
+
+# wget https://proton.me/download/mail/linux/1.9.0/ProtonMail-desktop-beta.deb
+# sudo dpkg -i ProtonMail-desktop-beta.deb
+# sudo apt-get install -f
+```
+
+### Privacy and OS
+
+How could I not mention this.
+
+If you dont want random CPU spikes because someone has decided to record your screen 
+
+Or that your hardware is too old to allow for browsing the web.
+
+Just...*avoid been forced to generate electronical waste, try linux*
+
+0. [ZorinOS](https://zorin.com/) - If you come from Windows
+
+1. [Lubuntu](https://cdimage.ubuntu.com/lubuntu/releases/noble/release/) - *It requires just ~700mb of RAM with UI*
+
+2. Ubuntu if you want the same, but with GNOME :)
+
+> You can have ubuntu without UI, if you plan to use your server's terminal only
+
+3. If you want to say I use ARCH BTW. 
+
+* [Garuda](https://garudalinux.org/editions)
+
+> Mind the steep*er* learning curve.
+
+4. A Gamer?
+
+* SteamOS
+* [CachyOS](https://cachyos.org/) 
+
+{{< callout type="info" >}}
+Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-Boots**
+{{< /callout >}}
+
+{{< youtube "hTw9DBEksx4" >}}
+
+
 
 --- 
 

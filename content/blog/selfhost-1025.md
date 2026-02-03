@@ -475,7 +475,7 @@ unzip Termix-Linux-Portable.zip -d Termix-App
 
 An **RSS** is always good to be uptodate with [outages, like the *recent AWS* one](https://health.aws.amazon.com/health/status):
 
-Also, apps like [signal might be secure by design](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps), at least for now.
+Also, apps like [signal *might be* secure by design](https://jalcocert.github.io/JAlcocerT/homelab-security/#privacy-apps), at least for now.
 
 But that does not mean that they are not still centralized ans **subject to fail** when their infrastructure is not in place:
 
@@ -483,7 +483,7 @@ But that does not mean that they are not still centralized ans **subject to fail
 
 <!-- https://x.com/elonmusk/status/1980342034318962881 -->
 
-With **thunderbird** you can connect to both, plus have a local mail client:
+With **thunderbird** you can connect to both: *plus have a local mail client*
 
 ```sh
 sudo apt update  

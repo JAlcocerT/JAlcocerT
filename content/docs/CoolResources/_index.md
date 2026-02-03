@@ -77,11 +77,21 @@ These web-apps are cool and selfhostable:
 
 > > A self-hosted local image optimizer that runs in your browser.
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/vert" title="Vert | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mazanoke" title="Mazanoke Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 2. Various: 
 
 * https://it-tools.tech and https://omnitools.app/ 
 
-*Feel the power of [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/)!*
+Just *Feel the power of [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/)!*
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/it-tools" title="IT-Tools | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/omnitools" title="Omni-Tools Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 * https://gchq.github.io/CyberChef/ 
 * https://emn178.github.io/online-tools
@@ -91,6 +101,11 @@ These web-apps are cool and selfhostable:
 
 You can also **sign PDFS** with: https://github.com/docusealco/docuseal
 
-> agpl 3.0 | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️ 
+> Agpl 3.0 | Open source DocuSign alternative. Create, fill, and sign digital documents ✍️
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/stirling-pdf" title="Stirling PDF | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bentopdf" title="Bento PDF Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 4. Diagrams with: https://excalidraw.com/

@@ -556,17 +556,19 @@ Not to talk about the subscribe then see some info models:
 
 You can host it on your own servers or cloud infrastructure, providing control over your data, security, and updates. 
 
-It requires a compatible environment like Docker and supports various SQL databases such as PostgreSQL, MySQL, SQLite, and more.[1][2]
+It requires a compatible environment like Docker and supports various SQL databases such as PostgreSQL, MySQL, SQLite, and more.
 
 > Design your data model, build powerful APIs, and manage content for anything from simple websites to complex applications.
 
-Baserow also offers a self-hosted version alongside their cloud option.
+**Baserow** also offers a self-hosted version alongside their cloud option.
 
-The self-hosted deployment gives full control over infrastructure but requires installation and server maintenance, suitable for teams with IT resources.[3][4]
+The self-hosted deployment gives full control over infrastructure but requires installation and server maintenance, suitable for teams with IT resources.
 
-NocoDB supports both cloud and self-hosted variants as well. When self-hosted, you have complete control over your data and can customize and secure the deployment on your own infrastructure.[5][6]
+**NocoDB** supports both cloud and self-hosted variants as well. 
 
-DreamFactory can be self-hosted to build and manage REST APIs on your own infrastructure, offering full control over security and deployment.[9]
+When self-hosted, you have complete control over your data and can customize and secure the deployment on your own infrastructure.
+
+**DreamFactory** can be self-hosted to build and manage REST APIs on your own infrastructure, offering full control over security and deployment.
 
 
 | Tool        | Self-Hostable   | Notes                                   |

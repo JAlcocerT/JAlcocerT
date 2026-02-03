@@ -313,6 +313,10 @@ Forget about MMM marketing analytics, personalized outreach is the next big thin
 
 If you are a data engineer with some imagination: *become a GTM engineer*.
 
+0. ecommerce
+
+Selfhost it, provide an AI driven COO or do D&A to cluster users for proper recommendation and revenue optimization
+
 0. Tinkered with **new APIs**
 
 * https://github.com/agustinusnathaniel/pub-apis

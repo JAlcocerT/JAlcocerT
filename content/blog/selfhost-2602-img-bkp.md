@@ -79,6 +79,13 @@ sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pigallery" title="PiGallery | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+If its too much space, you can always:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/vert" title="Vert | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mazanoke" title="Mazanoke Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ### NC vs Immich
 
@@ -92,6 +99,9 @@ We have some fresh releases since the last time:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+If you are tired of having these behind home / VPN access only...
+
+You can make sure to harden the installation and expose via CF tunnel: *adding WAF protecction along the way*
 
 ```sh
 
@@ -208,7 +218,10 @@ Adding also metube, so that you can upload your action camera videos in 4k to yo
 #sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent
 docker logs qbittorrent
 #sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d prowlarr
-#sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d metube
+sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d metube
+
+#choco install ytdownloader
+sudo snap install ytdownloader
 ```
 
 ![MeTube UI](/blog_img/selfh/HomeLab/metube.png)

@@ -254,7 +254,7 @@ Check out the live instance at `vert.sh`.
 
 >> VERT is built in Svelte and [TypeScript](https://jalcocert.github.io/JAlcocerT/whats-typescript/).
 
-You can try VERT at: https://vert.sh
+You can **try VERT** at: https://vert.sh
 
 This can even convert video *(but not in the browser)* with FFMPEG and RUST: https://github.com/VERT-sh/VERT/blob/main/docs/VIDEO_CONVERSION.md
 

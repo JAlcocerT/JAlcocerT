@@ -796,7 +796,7 @@ The curl and [the NextJS ways](https://github.com/JAlcocerT/Home-Lab/tree/main/l
 
 You can use ProtonMail together with your domain.
 
-But this wont work from transactional nor marketing emails.
+*This wont work from transactional nor marketing emails!*
 
 ![DNS Config for ProtonMail](/blog_img/email/dns-protonmail.png)
 
@@ -805,6 +805,8 @@ For Google this trick used to work for the same:
 ![GMAIL custom domain for google](/blog_img/email/dns-gmail.png)
 
 But since google domains migrated for squarespace, I stopped receiving emails from my domain.
+
+So I just configured my domains at proton and thats it.
 
 #### MailTrap x Marketing and Automation
 

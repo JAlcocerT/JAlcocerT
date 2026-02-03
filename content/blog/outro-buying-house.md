@@ -393,6 +393,7 @@ I can imagine DIY home owners have a sense of priorities like any other.
 Like...should you get those **adidas GN3530** you like?
 
 <!-- 
+https://modivo.pl/p/adidas-spodnie-dresowe-3-stripes-ke2428-szary-slim-fit-0000305639509
 https://modivo.pl/p/nike-spodnie-dresowe-park-20-cw6907-szary-regular-fit?snrai_campaign=LCFgc0mr3lDv&snrai_id=5dcd438a-658e-4c80-bbef-beda953933d5 -->
 
 Or are you fine with the ones you were so excited to buy few months ago?

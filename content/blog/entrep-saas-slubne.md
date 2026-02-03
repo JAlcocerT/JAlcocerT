@@ -358,9 +358,9 @@ Your entire flow is strategically built to identify, filter, and cater to the fo
 
 Here is how the *Ślubne Chwile* flow addresses and converts leads based on BANT criteria:
 
-## 🎯 Matching the Flow to the BANT Sales Criteria
+🎯 Matching the Flow to the BANT Sales Criteria
 
-### 1. **Need (The Problem Solver)**
+1. **Need (The Problem Solver)**
 
 * **Definition:** Does the prospect have a legitimate problem that your service solves? (Losing guest photos/videos).
 * **Flow Mechanism:**
@@ -368,7 +368,7 @@ Here is how the *Ślubne Chwile* flow addresses and converts leads based on BANT
     * **Free Test:** Allowing them to upload 5 photos and see the Admin Panel validates the need for collection and organization.
 * **Verdict:** **Need is established upon Landing Page conversion.** If they register, they confirm they have this problem.
 
-### 2. **Timing (The Time-Driven Nudge)**
+2. **Timing (The Time-Driven Nudge)**
 
 * **Definition:** When does the prospect need the solution? (Tied to the wedding date).
 * **Flow Mechanism:**
@@ -377,7 +377,7 @@ Here is how the *Ślubne Chwile* flow addresses and converts leads based on BANT
     * **Paid Duration:** Tiers are based on post-wedding access (1, 3, or 12 months), making the time/urgency a central conversion factor.
 * **Verdict:** **Timing is acquired at registration (A4) and utilized throughout the sales cycle (Z2).**
 
-### 3. **Authority (The Decision Maker)**
+3. **Authority (The Decision Maker)**
 
 * **Definition:** Is this the person who can make the purchase decision? (The Bride and Groom).
 * **Flow Mechanism:**
@@ -385,7 +385,7 @@ Here is how the *Ślubne Chwile* flow addresses and converts leads based on BANT
     * **Password Security:** The **"Set Guest Password"** feature (Z4) is a core control function that only the Authority would care about, forcing their attention to the paywall.
 * **Verdict:** **Authority is verified by the commitment to the customized link (A7).**
 
-### 4. **Budget (The Price/Value Match)**
+4. **Budget (The Price/Value Match)**
 
 * **Definition:** Can the prospect afford your service, and do they agree with the value?
 * **Flow Mechanism:**
@@ -396,17 +396,13 @@ Here is how the *Ślubne Chwile* flow addresses and converts leads based on BANT
     * **Feature Stacking:** The Silver and Premium features (**Live Preview, Pre-Wedding Memories, 12-Month Access**) are carefully stacked to provide disproportionately higher value than the simple price difference, forcing the customer to **choose based on value, not just cost.**
 * **Verdict:** **Budget is addressed at the point of conversion (Z5) after Need, Timing, and Authority have been established, making the pricing easier to accept.**
 
-
 {{% /details %}}
-
-
----
 
 The entire *Ślubne Chwile* flow is designed as a **BANT qualification machine**.
 
-It uses free access to gather the necessary data (Need, Timing, Authority) before presenting the Budget, ensuring that by the time a couple sees the price, they are already highly qualified, emotionally invested, and ready to convert.
+It uses free access to gather the necessary data (Need, Timing, Authority) before presenting the Budget
 
-
+Ensuring that by the time a couple sees the price, they are already highly qualified, emotionally invested, and ready to convert.
 
 
 
