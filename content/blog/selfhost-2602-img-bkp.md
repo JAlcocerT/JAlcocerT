@@ -93,6 +93,15 @@ We have some fresh releases since the last time:
 * https://github.com/immich-app/immich/releases/tag/v2.5.0
 * https://github.com/nextcloud/desktop/releases/tag/v4.0.6
 
+
+```sh
+./setup-env.sh #chmod +x ./evolution/setup-env.sh
+cd z-homelab-setup/evolution/
+sudo docker compose -f 2602_docker-compose.yml up -d nextcloud-app nextclouddb #nextcloud:80
+sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml config
+#sudo docker compose -f 2602_docker-compose.yml logs -f nextcloud-app nextclouddb
+```
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="NextCloud | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich Docker Config 🐋 ↗" >}}
@@ -107,15 +116,78 @@ You can make sure to harden the installation and expose via CF tunnel: *adding W
 #lsblk -f | grep /mnt/data2tb && df -h /mnt/data2tb
 ```
 
+Videos from the action cam are too big?
+
+```sh
+du -h --max-depth=1 2>/dev/null | sort -hr | head -n 6
+#sudo apt update && sudo apt install ffmpeg
+ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
+```
+
+Why dont you just upload them to YT?
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video Docs Section with consolidated info ↗" >}}
+{{< /cards >}}
+
+
+Remember about backups!
+
+```sh
+#sudo rsync -rlptvP --no-owner --no-group /home/jalcocert/Docker/nextcloud/html/data /mnt/data2tb/nc/
+root@jalcocert-x300:/home/jalcocert/Docker/nextcloud/html/data/....
+
+#same for immich
+```
+
+And about security of you open those to the internet
+
+#### CF WAF vs Zero Trust Access
+
+1. The "Allow List" (Recommended)
+
+This blocks every country in the world **except** yours. 
+
+*   **Location**: Security > WAF > Custom Rules
+*   **Rule Name**: "Allow Home Country Only"
+*   **Field**: `Country`
+*   **Operator**: `does not equal`
+*   **Value**: `Spain` (or your country)
+*   **Action**: `Block`
+
+Via UI: `not (ip.src.country in {"ES" "PL"})` as per [this md](https://github.com/JAlcocerT/Home-Lab/blob/main/cf-security.md).
+
+But that would work all the domain and sub-domains.
+
+So you can be more specific with: `(http.host eq "nc.jalcocertech.com" and not ip.src.country in {"ES" "PL"})`
+
+
+```sh
+curl -X PUT \
+	"https://api.cloudflare.com/client/v4/zones/abcdef123456/rulesets/phases/http_request_firewall_custom/entrypoint" \
+	-H "Authorization: Bearer $CF_AUTH_TOKEN" \
+	-d '{
+    "rules": [
+        {
+            "description": "allow countries",
+            "expression": "(ip.src.country ne \"PL\") or (ip.src.country ne \"ES\")",
+            "action": "block"
+        }
+    ]
+}'
+```
+
 ### Others
 
-How does this solution replaces Google Photos?
+How does these solutions replaces Google Photos?
 
-You can use it together with F/OSS photo services like:
+You can use it together with F/OSS photo services like: https://awweso.me/photo-and-video-galleries/
 
 * https://fossengineer.com/selfhosting-Photoview-docker/
 * Piwigo
-* ... https://awweso.me/photo-and-video-galleries/ 
+* https://opensource.com/alternatives/google-photos
 
 https://www.youtube.com/watch?v=h_inF-ypMls
 
@@ -128,11 +200,6 @@ https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
 Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
 
 https://www.youtube.com/watch?v=sIpt4u03mXc
-
-https://opensource.com/alternatives/google-photos
-
-Ente....
-
 
 
 ---
@@ -154,16 +221,15 @@ sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /
 
 
 <!-- ### Other F/OSS Backup solutions
+
 Kopia: An Automatic Backup Solution for Your Self-Hosted App Data or Documents
 https://www.youtube.com/watch?v=a6GfQy9wZfA
+
 -->
 
 ### How to Detect Duplicates files in the system
 
-https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka
-
-
-
+* https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka
 
 ### More Media
 

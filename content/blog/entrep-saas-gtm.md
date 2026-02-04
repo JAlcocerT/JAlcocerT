@@ -336,11 +336,9 @@ https://youtu.be/jvFLW5EClgk?si=bbVnbpjqPEB6R-hw
 
 #### The full Workflow?
 
+Check [this previous post](https://jalcocert.github.io/JAlcocerT/no-code-tools-for-business/#crm) :) 
 
-Check this post :) 
-
-https://jalcocert.github.io/JAlcocerT/no-code-tools-for-business
-
+With all the business tools you might ever need to grow.
 
 
 ---
@@ -920,7 +918,13 @@ To command those **€2.5k - €5k retainers**, you need to position your agency
 
 You mentioned the **Competitor Shipment Audit** as a lead magnet. This is your "Trojan Horse."
 
-In logistics, everyone wants to know who their competitors are hauling for. If you can use **Apify/Firecrawl** to aggregate public data (customs records, bill of lading data, or even LinkedIn hiring trends of competitors), you provide "Market Intelligence" that no generic agency can match.
+In logistics, everyone wants to know who their competitors are hauling for. 
+
+If you can use **Apify/Firecrawl** to aggregate public data (customs records, bill of lading data, or even LinkedIn hiring trends of competitors), you provide "Market Intelligence" that no generic agency can match.
+
+* https://docs.firecrawl.dev/features/scrape
+* https://console.apify.com/
+* https://app.fireflies.ai/integrations
 
 ### **The Roadmap to Your First €5k Retainer**
 

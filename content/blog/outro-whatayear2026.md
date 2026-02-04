@@ -588,6 +588,13 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
 {{< /cards >}}
 
+Because the datainmotion libreportfolio branch with gweiss method and so on was cool
+
+```sh
+uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+
+```
+
 ![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 
 > Fundamental, Fun, Future [the 3 f's :)](#open-questions)

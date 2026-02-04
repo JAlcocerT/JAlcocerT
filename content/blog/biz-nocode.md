@@ -2,7 +2,7 @@
 title: "CRM and No Code Tools for Business"
 date: 2026-02-04
 draft: false
-tags: ["BaseRow x Glide","TwentyCRM vs Close","Notion vs Affine","OSS Business x RevOps"]
+tags: ["BaseRow x Glide","Odoo vs TwentyCRM vs Close","Notion vs Affine","OSS Business x RevOps"]
 description: 'Tools to grow x GTM Engineering. From unstructured signals to personalized outreach.'
 url: 'no-code-tools-for-business'
 ---

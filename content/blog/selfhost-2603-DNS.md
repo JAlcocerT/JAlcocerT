@@ -7,6 +7,7 @@ description: 'How to change DNS Servers and why it matters. Portainer to Homepag
 url: 'private-dns-with-docker'
 ---
 
+httpie
 
 **Tl;DR**
 
@@ -292,7 +293,7 @@ Well, not for all as they dont have a proton drive linux desktop app....yet.
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/sftp-go" title="STFP-Go | HomeLab Config 🐳 ↗"  >}}
 {{< /cards >}}
 
-Dont confuse Rclone *which can help you sync local to ProtonDrive*, with rsync:
+Dont confuse Rclone *which can help you sync local to ProtonDrive*, with rsync: *same that to [pull from weddings](https://youtu.be/h6-3X60QHR8)*
 
 ```sh
 #sudo ncdu /mnt/data2tb/testftp
@@ -300,6 +301,8 @@ Dont confuse Rclone *which can help you sync local to ProtonDrive*, with rsync:
 rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/testftp/DJI_20250117084726_0009_D.MP4 ~/Downloads/ #~15MB/s
 rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/IoT ~/Downloads/ #~15MB/s
 rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/2tbe ~/Downloads/ #~15MB/s
+#ot back to the server
+rsync -avzP /home/jalcocert/Downloads/Music/ jalcocert@192.168.1.2:/home/jalcocert/Desktop/YoutubeMusic
 ```
 
 They have managed to integrate several apps: *proton mail, authenticator, proton vpn...*
@@ -363,6 +366,12 @@ Just...*avoid been forced to generate electronical waste, try linux*
 
 * SteamOS
 * [CachyOS](https://cachyos.org/) 
+
+Try with a VM: like gnome boxes
+
+```sh
+
+```
 
 {{< callout type="info" >}}
 Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-Boots**
