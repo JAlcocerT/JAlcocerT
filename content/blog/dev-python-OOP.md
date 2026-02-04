@@ -17,6 +17,8 @@ What I needed to get this going for good: https://github.com/JAlcocerT/MultiBody
 
 Object oriented programming!
 
+Its been a while since i used DevCpp for C programming.
+
 I was trying for long to avoid such concept.
 
 But not any more.

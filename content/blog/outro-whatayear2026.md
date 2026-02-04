@@ -60,6 +60,10 @@ Comercial ones like: `https://www.lindy.ai/pricing`
 
 Maybe, try to build a brand *before its too late*.
 
+0. Android
+
+PrimeOS was nice
+
 0. Interesting Recipes
 
 How could I not offer something very special to entreagujaypunto: *to capture all those recipes*

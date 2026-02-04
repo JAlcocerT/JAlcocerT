@@ -2,7 +2,7 @@
 title: "First Look to Flutter Apps via Flet"
 date: 2026-11-29
 draft: false
-tags: ["Dev","Ente Photos","Desktop Apps","Flutter x Python Flet","FlutterFlow"]
+tags: ["Dev","Ente Photos","wger","Desktop Apps","Flutter x Python Flet","FlutterFlow"]
 description: 'Flutter Apps. Created with Python via Flet and more'
 url: 'flutter-flet-python'
 ---

@@ -70,9 +70,7 @@ Files will be reflected at `/home/jalcocert/Desktop`, particularly: `./sftpgo/da
 
 ![SFTP-GO verification check](/blog_img/selfh/media/sftpgo.png)
 
-
 And to connect with your Linux Files, you can add `sftp://jalcocert@192.168.0.12:2022` As the 2022 is the **SFTP Port** and your username. 
-
 
 ![SFTP GO server checked via UI from a laptop](/blog_img/selfh/media/sftpgo-check.png)
 
@@ -80,7 +78,7 @@ And to connect with your Linux Files, you can add `sftp://jalcocert@192.168.0.12
 > **aGPL 3.0** | Full-featured and highly configurable SFTP, HTTP/S, FTP/S and WebDAV server - S3, Google Cloud Storage, Azure Blob
 
 * `http://192.168.0.12:8011/web/admin/users`
-* http://192.168.0.12:8011/web/client/profile
+* `http://192.168.0.12:8011/web/client/profile`
 
 To add SFTPGo to ubuntu as a space to browse files:
 
@@ -105,7 +103,6 @@ SFTP is a secure way to transfer files over a network. It uses SSH (Secure Shell
 apt-get install iperf3
 iperf3 -s #server
 iperf3 -c <server IP address> #on the client
-
 ```
 
 ![alt text](/blog_img/selfh/Sync/iperf3-eth.png)

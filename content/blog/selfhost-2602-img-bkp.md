@@ -50,7 +50,6 @@ Together with:
   {{< card link="https://github.com/upscayl/upscayl" title="Upscayl to enhance images" >}}
 {{< /cards >}}
 
-
 Because at some point, you will need more than just a quick share: *or sth more than [syncthing](https://github.com/JAlcocerT/Home-Lab/tree/main/syncthing)*
 
 {{< cards cols="2" >}}
@@ -104,7 +103,8 @@ If you are tired of having these behind home / VPN access only...
 You can make sure to harden the installation and expose via CF tunnel: *adding WAF protecction along the way*
 
 ```sh
-
+#ssh jalcocert@192.168.1.2
+#lsblk -f | grep /mnt/data2tb && df -h /mnt/data2tb
 ```
 
 ### Others
@@ -202,6 +202,15 @@ mv CAM1-04-14 CAM1-04-16 CAM1-04-17 CAM2 /home/jalcocert/Desktop/YoutubeVideos/
 
 Go to **Dashboard > Playback** and set: `https://jellyfin.org/docs/general/post-install/transcoding/hardware-acceleration/amd`
 
+```sh
+lsblk -d | grep nvme && lspci | grep -i vga
+#03:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Cezanne [Radeon Vega Series / Radeon Vega Mobile Series] (rev c9)
+#cat /sys/class/drm/card0/device/gpu_busy_percent
+
+#sudo apt install radeontop
+sudo radeontop
+```
+
 *   **Hardware acceleration**: `Video Acceleration API (VAAPI)`
 *   **VA-API Device**: `/dev/dri/renderD128`
 *   **Hardware decoding**: Enable H.264, HEVC, VC1, VP9.
@@ -236,20 +245,36 @@ docker ps -s --format "table {{.Names}}\t{{.Image}}\t{{.Size}}"
 
 ![alt text](/blog_img/selfh/Jellyfin/prowlarr-indexers.png)
 
-But some of your folders might: *like if you used UmbrelOS via container to sync the full BTC chain with ~837GB and 929k blocks as of today*
+But some of your folders might be huge: *like... if you used UmbrelOS via container to sync the full BTC chain with ~837GB and 929k blocks as of today*
 
 ```sh
 #sudo du -h --max-depth=2 /mnt/data1tb/umbrel/app-data/bitcoin | sort -hr
 du -sh .
 #sudo apt install ncdu -y
 sudo ncdu .
+sudo ncdu /mnt/data2tb/testftp
 ```
 
-Specially after connecting these 2: `192.168.1.2:6011`
+```sh
+# Using ncdu
+ncdu --exclude /mnt/data2tb/Z_BackUP_HD-SDD /mnt/data2tb
+
+# Using standard du (if ncdu is not installed)
+sudo du -h --max-depth=1 /mnt/data2tb --exclude="/mnt/data2tb/PATH_TO_EXCLUDE" | sort -hr
+```
+
+See:
+
+```sh
+iostat -xz 1 5
+#sudo iotop -o #show processes using the disk
+```
+
+Even more, after connecting these 2: `192.168.1.2:6011`
 
 ![alt text](/blog_img/selfh/Jellyfin/prowlarr-qbittorrent.png)
 
-Try searching for: `1337x, The Pirate Bay, LimeTorrents, or EZTV`.
+*Try searching for: `1337x, The Pirate Bay, LimeTorrents, or EZTV`.*
 
 This can be a good test of your internet speed: *Im getting ~60mb/s*
 

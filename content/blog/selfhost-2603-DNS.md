@@ -8,8 +8,6 @@ url: 'private-dns-with-docker'
 ---
 
 
-
-
 **Tl;DR**
 
 Pros tend to say `its always DNS`
@@ -291,7 +289,18 @@ Well, not for all as they dont have a proton drive linux desktop app....yet.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rclone" title="Rclone | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/sftp-go" title="STFP-Go | HomeLab Config 🐳 ↗"  >}}
 {{< /cards >}}
+
+Dont confuse Rclone *which can help you sync local to ProtonDrive*, with rsync:
+
+```sh
+#sudo ncdu /mnt/data2tb/testftp
+#du -sh * | sort -rn #du -sh * | sort -h
+rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/testftp/DJI_20250117084726_0009_D.MP4 ~/Downloads/ #~15MB/s
+rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/IoT ~/Downloads/ #~15MB/s
+rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/2tbe ~/Downloads/ #~15MB/s
+```
 
 They have managed to integrate several apps: *proton mail, authenticator, proton vpn...*
 
