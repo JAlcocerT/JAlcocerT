@@ -385,6 +385,8 @@ gnome-boxes
 Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-Boots**
 {{< /callout >}}
 
+Time to go to the x13 bios with `F12`?
+
 Once you are done: *there are some goodies waiting for you [here](https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab), from [the old big list](https://github.com/JAlcocerT/Linux/blob/main/Z_Linux_Installations_101/Ubuntu_installations_bash)*
 
 ```sh
