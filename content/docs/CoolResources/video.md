@@ -141,7 +141,7 @@ And I have a dedicated repository for ffmpeg video creation:
 
 If people around you have iphones...
 
-The main difference between iPhone .mov and .mp4 files is the format, compatibility, and intended use: .mov is Apple's native format designed for high-quality video editing on Apple devices, while .mp4 is a globally accepted standard optimized for compatibility and efficient sharing across platforms.
+The main difference between iPhone `.mov` and `.mp4` files is the format, compatibility, and intended use: .mov is Apple's native format designed for high-quality video editing on Apple devices, while `.mp4` is a globally accepted standard optimized for compatibility and efficient sharing across platforms.
 
 
 | Feature           | .mov                | .mp4                  |
@@ -154,7 +154,7 @@ The main difference between iPhone .mov and .mp4 files is the format, compatibil
 | Editing Ease      | Easier (Apple)[5]| Harder[5]         |
 
 
-**Lossless Container Conversion (no re-encoding):** This transmuxes your MOV to MP4 instantly if both audio and video codecs are already compatible with MP4, preserving quality.[3][5]
+**Lossless Container Conversion (no re-encoding):** This transmuxes your MOV to MP4 instantly if both audio and video codecs are already compatible with MP4, preserving quality.
 
 ```sh
 ffmpeg -i input.mov -c:v copy -c:a copy output.mp4

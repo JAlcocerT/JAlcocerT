@@ -1,6 +1,6 @@
 ---
 title: "Improving a HomeLab Privacy with OSS DNS"
-date: 2026-03-01T23:20:21+01:00
+date: 2026-03-01T07:20:21+01:00
 draft: false
 tags: ["Self-Hosting x ProtonDrive","Pihole x UnboundDNS","DNS as Distributed DB","Privacy x Euria"]
 description: 'How to change DNS Servers and why it matters. Portainer to Homepage-Lite.'
@@ -15,8 +15,11 @@ emqx
 
 **Tl;DR**
 
-Pros tend to say `its always DNS`
+Pros tend to say `its always DNS`...
 
+```sh
+resolvectl status #here is how you check yours
+```
 
 **Intro**
 
@@ -27,12 +30,6 @@ But DNS is a rabbithole of its own.
 https://github.com/TechnitiumSoftware/DnsServer
 
 > agpl 3 | Technitium DNS Server
-
-<!-- Interested to discover similar services that you can self-host with Docker? - Check this out:
-
-* {{< gist jalcocert 302f787db6f6d75e978674e0e18d1185
-"Docker-Security-ConfigFiles">}}
-* <https://fossengineer.com/tags/self-hosting/> -->
 
 <!-- ### Choosing a DNS for PiHole
 
@@ -389,17 +386,44 @@ Time to go to the x13 bios with `F12`?
 
 Once you are done: *there are some goodies waiting for you [here](https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab), from [the old big list](https://github.com/JAlcocerT/Linux/blob/main/Z_Linux_Installations_101/Ubuntu_installations_bash)*
 
+
 ```sh
-##pkill -9 brave #brave was not behaving properly lately...
+sudo apt install git
+git config --global user.name "JAlcocerT"
+git config --global user.email "JAlcocerT"
+
 #flatpak install flathub app.zen_browser.zen
 git clone https://github.com/JAlcocerT/Home-Lab
 
-sudo ./z-benchmarks/Benchmark_101.sh
-sudo ./z-benchmarks/Benchmark_101.sh
-wget -P ~/Applications https://github.com/jeffvli/feishin/releases/download/v1.4.2/Feishin-linux-x86_64.AppImage
+#sudo ./z-benchmarks/Benchmark_101.sh
+sudo ./z-desktop-x-homelab/Linux_Setup_101.sh #You are good to go with browsers OBS tailscale etc https://brave.com/linux/
+#wget -P ~/Applications https://github.com/jeffvli/feishin/releases/download/v1.4.2/Feishin-linux-x86_64.AppImage
+
+sudo apt update && sudo apt install -y vlc mpv
+rm -rf ~/.cache/gstreamer-1.0
 ```
 
-No longer using localsend, just pairdrop via web
+It shouldnt take you *not more than* 30 min and check that you need just ~15gb for the OS and typical software.
+
+You can be back to business quickly:
+
+```sh
+git clone https://github.com/JAlcocerT/selfhosted-landing
+cd ./selfhosted-landing/y2026-tech-talks/langchain-postgres
+#sudo apt install npm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm install 22
+node -v # Should show v22.x.x
+
+npm install
+npm run build
+#npm i -D playwright-chromium
+#npm run export #default as pdf! http://localhost:3030/export
+```
+
+No longer using localsend via app image, just pairdrop via web :)
 
 
 {{< youtube "hTw9DBEksx4" >}}
