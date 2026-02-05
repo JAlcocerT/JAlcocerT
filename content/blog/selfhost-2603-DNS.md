@@ -394,7 +394,7 @@ git clone https://github.com/JAlcocerT/Home-Lab
 
 sudo ./z-benchmarks/Benchmark_101.sh
 sudo ./z-benchmarks/Benchmark_101.sh
-
+wget -P ~/Applications https://github.com/jeffvli/feishin/releases/download/v1.4.2/Feishin-linux-x86_64.AppImage
 ```
 
 No longer using localsend, just pairdrop via web

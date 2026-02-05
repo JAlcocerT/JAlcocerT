@@ -1,6 +1,6 @@
 ---
 title: "The RevOps you always dreamt about"
-date: 2026-02-04T09:20:21+01:00
+date: 2026-02-05T09:20:21+01:00
 draft: false
 tags: ["GTM Platform x Freight","APIFY x FireCrawl x MyPhoner x Fireflies","Sales Pipeline","LaunchPad"]
 description: 'Go B2B, they have a clear BANT. From MOps to RevOps with cold calling.'
@@ -923,8 +923,8 @@ In logistics, everyone wants to know who their competitors are hauling for.
 If you can use **Apify/Firecrawl** to aggregate public data (customs records, bill of lading data, or even LinkedIn hiring trends of competitors), you provide "Market Intelligence" that no generic agency can match.
 
 * https://docs.firecrawl.dev/features/scrape
-* https://console.apify.com/
-* https://app.fireflies.ai/integrations
+   * https://console.apify.com/
+   * https://app.fireflies.ai/integrations
 
 ### **The Roadmap to Your First €5k Retainer**
 
