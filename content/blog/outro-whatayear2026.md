@@ -592,8 +592,11 @@ Because the datainmotion libreportfolio branch with gweiss method and so on was 
 
 ```sh
 uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
-
 ```
+
+efecto cantillon for inflation and entrepreneur mindset
+
+Cantillon defined the entrepreneur as someone who buys at a certain price and sells at an uncertain price. To him, the entrepreneur is the "risk-bearer" who stabilizes the market by taking on the gamble of the future.
 
 ![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 
@@ -633,7 +636,10 @@ Others, from the vibe coding sessions: helped to bring quick demos to their rela
 
 2. Combined with **firebase authentication + FireStore** for my first ever public launch.
 
-> Pulling registered users from those tables and setting automatic emails campaigns *(lean DRIP)* with Mailtrap and GHA was so cool
+> Pulling registered users from those tables and setting automatic emails campaigns *(lean DRIP)* [with Mailtrap and GHA](https://jalcocert.github.io/JAlcocerT/iterating-and-improving-a-micro-saas/#mailtrap-orchestrated-via-gha) was so cool
+
+> > The magic happens at [this gha workflow](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/drip.yml)
+
 
 Plus a cool example of lean engineering. 
 
@@ -680,6 +686,8 @@ https://blog.cloudflare.com/serverless-matrix-homeserver-workers/?ref=selfh.st/
 2. 
 
 99. Duckdb x motherduck
+
+DuckDB as been very interesting. And gen bi tools like Rill rely on it.
 
 https://ducklake.select/manifesto/
 

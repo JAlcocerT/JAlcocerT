@@ -7,6 +7,16 @@ description: 'Tools to grow x GTM Engineering. From unstructured signals to pers
 url: 'no-code-tools-for-business'
 ---
 
+https://skills.sh/
+
+https://www.youtube.com/watch?v=qfWpPEgea2A&t=191s
+
+https://www.youtube.com/watch?v=rlLwSr-wIAg&t=431s
+
+https://github.com/martingaido/ai-prompt-engineering-docs/blob/main/gemini-for-google-workspace-prompting-guide-101.pdf
+
+https://www.youtube.com/watch?v=tYg6T_DAP-k
+
 **Tl;DR**
 
 Tired of spreadsheets?
@@ -44,16 +54,21 @@ No Code DBs x BaseRow?
 
 GHL?
 
-https://www.close.com/pricing#solo
+* https://www.close.com/pricing#solo
 
 Overkill with salesforce or hubspot?
 
+* https://twenty.com/releases
+    * https://github.com/twentyhq/twenty
+
+https://www.youtube.com/watch?v=UZBy_n4XjGs
 
 ### Note Tools
 
 [Notion](https://www.notion.com/product/notion-for-product-development)? Obsidian?
 
 Or...
+
 
 
 
@@ -65,6 +80,64 @@ Or...
 ### A cool workflow from a landing?
 
 1. Get a landing or service and collect qualified leads
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slubnechwile-chwile-y26" title="Slubne-Chwile - Email OutReach System x DRIP ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/slubnechwile-chwile-y26" title="Slubne-Chwile  Leads - Enriched Sales Pipeline ↗" icon="github" >}}
+{{< /cards >}}
+
+> The magic happens at [this gha workflow](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/drip.yml)
+
+```mermaid
+graph TD
+    %% Entry Point
+    Start((Google Ad: $10/day)) -->|Click| LP[Landing Page: 'Get Your Free QR']
+    
+    %% Onboarding & Personalization
+    LP -->|Sign Up: Firebase Auth| Onboarding{Onboarding Form}
+    Onboarding -->|Input Names & Date| GenEngine[Logic Engine: Generate Slug]
+    
+    GenEngine -->|Create Path| Slug[Static URL: /alice-bob-june20-x9j2]
+    GenEngine -->|Embed URL| QRGen[Generate QR with Couple Branding]
+    
+    %% The 'Aha' Moment
+    QRGen --> Dash[Dashboard: 'Your Wedding QR is Ready']
+    Dash -->|Immediate Action| TestScan[Couple Scans QR to Test]
+    TestScan -->|Upload Selfie| R2_Trial[(R2 Bucket: Trial 1GB)]
+    
+    R2_Trial -->|Instant Feedback| LiveView[360 Gallery: Couple sees their selfie]
+    LiveView --> Wow((THE AHA MOMENT))
+    
+    %% Conversion Path
+    Wow -->|High Intent| Paywall[Payment Page: 299-349 PLN]
+    Paywall -->|Stripe Success| Unlock[Unlock: 250GB + 14-Day Upload Window]
+    
+    %% Failure/Exit Path
+    Wow -->|No Payment| Exit[Stalled User]
+    Exit -->|Automated| Email[PostHog Trigger: Weekly Email Nurture]
+    Email -->|Reminder| Paywall
+
+    %% The Wedding Day (The Real Event)
+    Unlock -->|Wedding Date| GuestLoop[Guests Scan QR at Wedding]
+    GuestLoop -->|Upload| R2_Full[(R2 Bucket: Full Access)]
+    R2_Full -->|Viewer| CoupleGallery[Private 360 Gallery Access]
+
+    %% Tracking Layer
+    subgraph PostHog_Tracking [Analytics Tracking Points]
+    Onboarding
+    TestScan
+    Paywall
+    GuestLoop
+    end
+
+    %% Styling
+    style Start fill:#f9f,stroke:#333
+    style Wow fill:#ff9,stroke:#333,stroke-width:4px
+    style Slug fill:#e1f5fe,stroke:#01579b
+    style Unlock fill:#c8e6c9,stroke:#2e7d32
+    style R2_Full fill:#00ccff,stroke:#333
+```
+
 2. With the information they provided do the following...
 3. ...move water through your sales pipeline!
 

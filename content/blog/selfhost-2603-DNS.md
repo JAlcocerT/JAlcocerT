@@ -9,6 +9,10 @@ url: 'private-dns-with-docker'
 
 httpie
 
+reqable
+
+emqx 
+
 **Tl;DR**
 
 Pros tend to say `its always DNS`
@@ -245,15 +249,19 @@ It is great for Docker: https://www.youtube.com/watch?v=tE9YjEV1T4E
 
 ## Conclusions
 
-How to **test your ad-blocks** - https://d3ward.github.io/toolz/ -->>> https://d3ward.github.io/toolz/adblock.html
+Im sure that you are already using qb and prowlarr at `6011` and `9696`.
+
+How to **test your ad-blocks?**
+
+* https://d3ward.github.io/toolz/ and https://d3ward.github.io/toolz/adblock.html
 
 
 * NetBird - wireguard based
 * Netmaker  - https://www.netmaker.io
-* Tailscale or headscale
+* Tailscale or Headscale
 
 
-If you are concern about privacy an use LLMs, consider:
+If you are concerned about privacy and the use of LLMs, consider:
 
 * [Proton](#proton-for-all) Apps, like [LumoAI](https://lumo.proton.me/u/0/)
 * `https://euria.infomaniak.com/`
@@ -302,7 +310,7 @@ rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/testftp/DJI_20250117084726_0009_D
 rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/IoT ~/Downloads/ #~15MB/s
 rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/2tbe ~/Downloads/ #~15MB/s
 #ot back to the server
-rsync -avzP /home/jalcocert/Downloads/Music/ jalcocert@192.168.1.2:/home/jalcocert/Desktop/YoutubeMusic
+rsync -avzP /home/jalcocert/Downloads/Music/ jalcocert@192.168.1.2:/home/jalcocert/Desktop/YoutubeMusic #https://lucida.to/
 ```
 
 They have managed to integrate several apps: *proton mail, authenticator, proton vpn...*
@@ -348,7 +356,7 @@ Or that your hardware is too old to allow for browsing the web.
 
 Just...*avoid been forced to generate electronical waste, try linux*
 
-0. [ZorinOS](https://zorin.com/) - If you come from Windows
+0. [ZorinOS](https://zorin.com/) - If you come from Windows, this is for you. *Zorin 18 requires >1.6GB of RAM*
 
 1. [Lubuntu](https://cdimage.ubuntu.com/lubuntu/releases/noble/release/) - *It requires just ~700mb of RAM with UI*
 
@@ -370,12 +378,27 @@ Just...*avoid been forced to generate electronical waste, try linux*
 Try with a VM: like gnome boxes
 
 ```sh
-
+gnome-boxes
 ```
 
 {{< callout type="info" >}}
 Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-Boots**
 {{< /callout >}}
+
+Once you are done: *there are some goodies waiting for you [here](https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab), from [the old big list](https://github.com/JAlcocerT/Linux/blob/main/Z_Linux_Installations_101/Ubuntu_installations_bash)*
+
+```sh
+##pkill -9 brave #brave was not behaving properly lately...
+#flatpak install flathub app.zen_browser.zen
+git clone https://github.com/JAlcocerT/Home-Lab
+
+sudo ./z-benchmarks/Benchmark_101.sh
+sudo ./z-benchmarks/Benchmark_101.sh
+
+```
+
+No longer using localsend, just pairdrop via web
+
 
 {{< youtube "hTw9DBEksx4" >}}
 

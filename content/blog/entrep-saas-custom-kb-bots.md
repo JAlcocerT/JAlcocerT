@@ -7,6 +7,7 @@ description: 'Building a custom BOT platform to end with silos. HUGO FOSS rebuil
 url: 'custom-bots-kb'
 ---
 
+Joplin has a cool desktop app
 
 https://www.privategpt.io/
 https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms 

@@ -281,6 +281,8 @@ In this Lean Drip:
 *   **Safe Testing**: The `--dry-run` flag allows you to test logic changes against your **real database** without actually sending a single email or changing a single record.
 *   **Easy Debugging**: If something breaks, you get a standard Node.js stack trace. You are debugging "code," not a proprietary UI tool.
 
+> The magic happens at [this gha workflow](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/drip.yml)
+
 ---
 
 ## Conclusions

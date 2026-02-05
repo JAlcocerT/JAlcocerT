@@ -333,7 +333,7 @@ For more photo/video tricks, see also:
 
 3. IT/Toos + OmniTools
 
-4. Specters: Some kind of ~ filebrowser, but better?
+4. Specters: *Some kind of ~ filebrowser, but better?*
 
 * https://github.com/Phantom8015/Specters
 
