@@ -236,4 +236,9 @@ These proxy wallet contracts hold users' positions and USDC used within Polymark
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+https://github.com/tess1o/geopulse
+
+tess1o/geopulse: A self-hosted, privacy-first location tracking platform. The perfect open-source alternative to Google Timeline with automatic trip detection, Immich integration, and detailed analytics.
+https://github.com/tess1o/geopulse
+
 https://github.com/itskovacs/trip

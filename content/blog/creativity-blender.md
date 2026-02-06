@@ -2,7 +2,7 @@
 title: "Using Blender"
 date: 2026-12-17
 draft: false
-tags: ["Gen-AI","Python","Design Patterns"]
+tags: ["Gen-AI","Python","Design Patterns","OpenSCAD"]
 description: 'Creating is easier than ever (?)'
 url: 'using-blender-with-ai'
 ---
@@ -281,7 +281,9 @@ Code editor: You'll need a code editor of your choice to write and edit your Mot
 
 {{< /details >}}
 
+### Python x OpenSCAD
 
+* https://github.com/SolidCode/SolidPython
 
 ---
 

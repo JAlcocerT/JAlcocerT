@@ -1,6 +1,6 @@
 ---
 title: "[SelfHosting] Image & Backup Tools"
-date: 2026-02-07
+date: 2026-02-06
 draft: false
 tags: ["Immich vs PiGallery vs NextCloud","Jellyfin x HW Acceleration"]
 description: 'Testing some NoCode Tools. A recap of media.'

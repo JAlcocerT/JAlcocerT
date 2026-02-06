@@ -19,7 +19,9 @@ https://www.youtube.com/watch?v=tYg6T_DAP-k
 
 **Tl;DR**
 
-Tired of spreadsheets?
+Tired of spreadsheets?https://youtu.be/mSgmiUwZjrY?is=BX0DayhahV5g0fh4
+
+Aiming for High*er* ltv, high*er* cac?
 
 **Intro**
 
@@ -70,11 +72,26 @@ https://www.youtube.com/watch?v=UZBy_n4XjGs
 Or...
 
 
+https://youtu.be/jyzcDIudczA
+
 
 
 ---
 
 ## Conclusions
+
+As long as u understand consumer...u see how much **risk/uncertainty averse** we are
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
+Tu dinero es una commodity, mi tiempo no.
+
+Plus: Si atiendes a cualquiera = no escasez = eres malo.
+
+
 
 
 ### A cool workflow from a landing?
@@ -180,6 +197,16 @@ How this maps to RevOps (The "Business Speak")
 | **Fireflies Integration** | **Closing the Feedback Loop:** Sales insights are automatically fed back into marketing copy, ensuring the "Brand Voice" stays human. |
 
 
+https://youtu.be/mSgmiUwZjrY?is=BX0DayhahV5g0fh4
+
 ---
 
+
+
 ## FAQ
+
+
+You can give it a try to pocketbase as well
+
+
+https://youtu.be/p7U24YSFrW4?is=6Refm-LlVTokBeug

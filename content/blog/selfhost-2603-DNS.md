@@ -116,7 +116,9 @@ https://awweso.me/dns/ -->
 <!-- {{< gist jalcocert 302f787db6f6d75e978674e0e18d1185
 "Docker-Security-Pihole.yml">}} -->
 
+### DuckDNS vs Traefikme
 
+https://traefik.me/
 
 #### PiHole
 
@@ -247,6 +249,15 @@ It is great for Docker: https://www.youtube.com/watch?v=tE9YjEV1T4E
 ## Conclusions
 
 Im sure that you are already using qb and prowlarr at `6011` and `9696`.
+
+```sh
+## For Tinkering with more video parts from your action cam
+ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
+#Clean the LRF
+##rm *.LRF #clean (if needed) all LRF files
+#Generate a video from few parts and share it :)
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
+```
 
 How to **test your ad-blocks?**
 
@@ -399,8 +410,9 @@ git clone https://github.com/JAlcocerT/Home-Lab
 sudo ./z-desktop-x-homelab/Linux_Setup_101.sh #You are good to go with browsers OBS tailscale etc https://brave.com/linux/
 #wget -P ~/Applications https://github.com/jeffvli/feishin/releases/download/v1.4.2/Feishin-linux-x86_64.AppImage
 
-sudo apt update && sudo apt install -y vlc mpv
-rm -rf ~/.cache/gstreamer-1.0
+#flatpak install -y flathub org.telegram.desktop
+#flatpak install -y flathub org.kde.kdenlive
+#flatpak install flathub org.electrum.electrum #BTC
 ```
 
 It shouldnt take you *not more than* 30 min and check that you need just ~15gb for the OS and typical software.
@@ -424,6 +436,8 @@ npm run build
 ```
 
 No longer using localsend via app image, just pairdrop via web :)
+
+And after all this, you go to ~22gb taken, which I believe is what W11 takes for starters.
 
 
 {{< youtube "hTw9DBEksx4" >}}
@@ -497,6 +511,15 @@ Figure that out with these OSS Monitoring Tools:
 
 Monitoring for your servers, vendors, and infrastructure.
 
+And for **status pages**, like the pros have:
+
+* ps://health.aws.amazon.com/health/status
+* https://www.cloudflarestatus.com
+* https://www.37status.com/
+* https://pocketbitcoin.com/status
+
+You can also with Uptime Kuma pages or kener!
+
 #### Chats
 
 Just see this dedicated post.
@@ -535,7 +558,7 @@ Why not doing [billing with OSS](https://fossengineer.com/open-source-invoice-cr
 
 ### Browsers
 
-1. Librewolf vs Zen
+1. Librewolf vs Zen vs waterfox vs firefox
 2. Chromium vs brave vs Hellium vs Tor browser
 
 TightVNC

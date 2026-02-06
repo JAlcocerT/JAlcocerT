@@ -1,8 +1,8 @@
 ---
-title: "How I spin local LLMs"
+title: "Selfhosting local LLMs x GenBI"
 date: 2026-05-01
 draft: false
-description: "How to use Ollama - Ollama WebUI Setup"
+description: "How to use Ollama - With WrenAI, Rill and Vanna."
 tags: ["Home-Lab","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","Link Shortener","TTS"]
 ---
 
@@ -220,6 +220,23 @@ https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
 
 -->
 
+### AI x Data
+
+* https://github.com/chartbrew/chartbrew
+
+* https://github.com/vanna-ai/vanna
+
+vanna-ai/vanna: 🤖 Chat with your SQL database 📊. Accurate Text-to-SQL Generation via LLMs using Agentic Retrieval 🔄.
+https://github.com/vanna-ai/vanna
+
+Rill or WrenAI
+
+
+### Custom Chats
+
+* https://github.com/assistant-ui/assistant-ui
+
+> MIT | Typescript/React Library for AI Chat💬🚀
 
 ### TTS
 

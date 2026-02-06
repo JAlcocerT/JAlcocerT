@@ -28,6 +28,8 @@ Not trying to do a:
 
 Specially after learning about the different [business games](#the-idea-side) and the full stack formula that rules them all: NP = P*V*GM*OM*F*T
 
+But hey, there are many business with improvable webs, like `https://efasolution.al/`
+
 A PaaS can be an option if you dont have the time to read/learn, neither willingness to pay a DFY:
 
 {{< cards >}}
@@ -95,7 +97,7 @@ Simple, uh?
 
 ### The Idea Side
 
-The **launch strategy**: *aka, focus strategy*
+The **launch strategy**: *aka, focus strategy, 1 channel 1 avatar 1 product*
 
 | Element | Decision |
 | :--- | :--- |
@@ -255,6 +257,7 @@ graph TD
 
 ## FAQ
 
+No need for more `https://nitropack.io/` for web optimization checks
 
 ### Building Webs with AI
 

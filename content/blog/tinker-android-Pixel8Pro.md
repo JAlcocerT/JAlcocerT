@@ -201,7 +201,7 @@ You can also **emulate Linux inside Android**, like I did [with Termux, here](ht
 
 #### Running Android on Linux
 
-**Waydroid** is a software application that allows users to run Android operating systems within a Linux environment.
+**Waydroid** is a software application that allows users to **run Android operating systems** within a Linux environment.
 
 Here's a breakdown of what it is and its relationship to Wayland:
 

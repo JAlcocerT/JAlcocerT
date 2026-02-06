@@ -56,11 +56,13 @@ FRIGATE_RTSP_PASSWORD=dontlookatmekameras
 
 ### Others
 
+https://tldraw.dev/
 
 ---
 
 ## Conclusions
 
+Perseverencia (el talento de los que no tenemos talento ) sin autocritica es worthless.
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
@@ -94,3 +96,13 @@ FRIGATE_RTSP_PASSWORD=dontlookatmekameras
 ### Other
 
 * https://github.com/ispysoftware/iSpy
+
+### Uptime Kuma x Gotify
+
+Talking about monitoring...
+
+how about getting notified when some service goes down?
+
+https://github.com/BigBoot/AutoKuma
+
+> MIT | AutoKuma is a utility that automates the creation of Uptime Kuma monitors based on Docker container labels. With AutoKuma, you can eliminate the need for manual monitor creation in the Uptime Kuma UI.
