@@ -203,13 +203,12 @@ https://www.youtube.com/watch?v=GxVIa3eDdnM -->
 
 
 
-##
+## Blocky
 
-https://0xerr0r.github.io/blocky/latest/?ref=selfh.st
+* https://0xerr0r.github.io/blocky/latest/?ref=selfh.st
+* https://github.com/0xERR0R/blocky
 
-https://github.com/0xERR0R/blocky
-
- Fast and lightweight DNS proxy as ad-blocker for local network with many features 
+Fast and lightweight DNS proxy as ad-blocker for local network with many features 
 
 > Blocky is a DNS proxy and ad-blocker for the local network **written in Go** with following features:
 
@@ -462,6 +461,8 @@ And after all this, you go to ~22gb taken, which I believe is what W11 takes for
 
 1. https://github.com/hagezi/dns-blocklists
 2. https://github.com/blacklanternsecurity/baddns
+
+Before LLMs, you might have needed: https://github.com/composerize/composerize  🏃→🎼 docker run asdlksjfksdf > docker-composerize up 
 
 **Programmatic DNS updates**
 

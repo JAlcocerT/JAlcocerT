@@ -136,6 +136,8 @@ https://www.youtube.com/watch?v=_6h_4XQUV3g
 
 {{< youtube "_6h_4XQUV3g" >}}
 
+Later https://github.com/gavrielc/nanoclaw/tree/main
+
 ### Ideas Collected
 
 
