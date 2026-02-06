@@ -74,7 +74,40 @@ Or...
 
 https://youtu.be/jyzcDIudczA
 
+Why not just **Affine**?
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Or the good old Joplin or LogSeq?
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/joplin" title="Joplin | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+If you are starting out some new business adventure: *logseq + markdown + git* can be your friend.
+
+Plus, you can use it via Nekko in few environment via web.
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nekko" title="Nekko | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+And get away with firefliesAI syncing your meeting notes/sales speech feedback right into it.
+
+Some people use Logseq export x GHA x HUGO to make their websites :)
+
+```sh
+git clone https://github.com/JAlcocerT/my-logseq-notes
+
+```
+
+From there you can have a part for: book ideas, business requirements, sales, daily notes / journal...
+
+https://www.youtube.com/watch?v=RzT20ejft3c
 
 ---
 
@@ -90,9 +123,6 @@ As long as u understand consumer...u see how much **risk/uncertainty averse** we
 Tu dinero es una commodity, mi tiempo no.
 
 Plus: Si atiendes a cualquiera = no escasez = eres malo.
-
-
-
 
 ### A cool workflow from a landing?
 
@@ -210,3 +240,5 @@ You can give it a try to pocketbase as well
 
 
 https://youtu.be/p7U24YSFrW4?is=6Refm-LlVTokBeug
+
+### Which no

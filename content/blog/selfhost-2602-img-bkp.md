@@ -116,17 +116,18 @@ You can make sure to harden the installation and expose via CF tunnel: *adding W
 #lsblk -f | grep /mnt/data2tb && df -h /mnt/data2tb
 ```
 
-Videos from the action cam are too big?
+Videos from the action cam *like the oa5 pro* are too big?
 
 ```sh
 du -h --max-depth=1 2>/dev/null | sort -hr | head -n 6
 #sudo apt update && sudo apt install ffmpeg
 ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
+#Get-ChildItem -Filter "*.MP4" | ForEach-Object { "file '$($_.Name)'" } | Set-Content file_list.txt
+#ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
 ```
 
 Why dont you just upload them to YT?
-
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video Docs Section with consolidated info ↗" >}}

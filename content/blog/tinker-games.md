@@ -3,8 +3,7 @@ title: "Take a Break - Gaming with OSS"
 date: 2026-12-23T23:20:21+01:00
 draft: true
 tags: ["Self-Hosting","Emulation","Nintendo","Yatch x EmulatorJS"]
-description: '.'
-summary: 'The , my new toy.'
+description: 'Are games playable in Linux?'
 url: 'open-source-gaming'
 ---
 
@@ -20,6 +19,9 @@ description: GPU passthrough
 
 **Intro**
 
+Card games?
+
+Magic workstation is gone, but the OSS took over: https://cockatrice.github.io/
 
 Rewriting My Game Engine based off GTA 3 Source Code
 https://www.youtube.com/watch?v=99vXxyJtXeQ

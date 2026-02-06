@@ -126,6 +126,17 @@ This service has been with my [for a while](https://jalcocert.github.io/RPi/post
 
 But now *PiHole is reloaded* with its **v6**.
 
+```sh
+#git clone https://github.com/JAlcocerT/Home-Lab
+
+##cd ~/Home-Lab
+#git pull
+#sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d jellyfin
+
+sudo docker compose -f ./z-homelab-setup/evolution/2603_docker-compose.yml up -d pihole
+sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml logs -f pihole
+```
+
 > Replacing any v5 image (2024.07.0 and earlier) with a v6 image will result in updated configuration files.
 
 > > These changes are irreversible.
