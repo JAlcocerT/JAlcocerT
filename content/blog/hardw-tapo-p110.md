@@ -25,7 +25,16 @@ And it **helps me monitor** such things:
 
 ![Tapo Monitoring W](/blog_img/hardware/energy/tapo-p110-1.jpg)
 
+Like how much it cost you to operate a homelab.
+
 ![Tapo Monitoring](/blog_img/hardware/energy/tapo-p110-2.jpg)
+
+To **configure the Tapo**, I pressed the button for 5 seconds and when the green and orange is blinking, I **connected to the wifi** it generated.
+
+For all this, you need to connect via the android Tapo application and this requires an account setup.
+
+Then, you just need to say whats your home wifi and provide the pwd for it.
+
 
 <!--
  https://www.youtube.com/watch?v=Mbzdlxxn3cw

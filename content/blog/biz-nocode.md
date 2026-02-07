@@ -93,6 +93,18 @@ wget -P ~/Applications https://github.com/logseq/logseq/releases/download/0.10.1
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+| Aspect | Logseq | Affine | Joplin  |
+|--------|--------|--------|--------------------------|
+| **Storage** | Flat Markdown files (git-native) | Database/blocks (export MD) | SQLite (export MD)  [slashdot](https://slashdot.org/software/comparison/Joplin-vs-Logseq/) |
+| **Paradigm** | Block outliner, bi-links, queries | Canvas + docs + DBs (Notion-like) | Hierarchical notebooks/tags  [zblesk](https://zblesk.net/blog/tried-and-ditched-logseq-and-affine/) |
+| **Web Access** | Docker/self-host (limited plugins) | Native web/self-host (full) | No native web editor  [discuss.logseq](https://discuss.logseq.com/t/anything-going-on-with-web-version/15390) |
+| **Integrations** | 500+ plugins, HTTP API, Readwise | API/collab focus | Plugins, E2E sync (Dropbox)  [logseq.github](https://logseq.github.io/marketplace/) |
+| **Self-Host** | Docker + git volume | Full Docker/server | Server CLI (no UI)  [discuss.logseq](https://discuss.logseq.com/t/local-on-server-storage-for-self-hosted-logseq/6613) |
+| **Best For** | PKM graphs, solo dev (you) | Visual teams/projects | Simple encrypted notes  [youtube](https://www.youtube.com/watch?v=C7kx5X3PxU0) |
+| **Mobile** | Good Android/iOS | Beta web/mobile | Strong cross-platform  [slashdot](https://slashdot.org/software/comparison/Joplin-vs-Logseq/) |
+| **Learning Curve** | Medium (queries/templates) | Low-medium | Low  [zblesk](https://zblesk.net/blog/tried-and-ditched-logseq-and-affine/) |
+
+
 If you are starting out some new business adventure: *logseq + markdown + git* can be your friend.
 
 Plus, you can use it via Nekko in few environment via web.
@@ -106,6 +118,7 @@ And get away with firefliesAI webhooks syncing your meeting notes/sales speech f
 
 * https://app.fireflies.ai/settings
   * https://docs.fireflies.ai/graphql-api/webhooks
+  * https://docs.fireflies.ai/graphql-api/query/transcripts
 
 ```sh
 #https://github.com/JAlcocerT/my-logseq-notes
