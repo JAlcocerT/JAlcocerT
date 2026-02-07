@@ -571,10 +571,19 @@ Why not doing [billing with OSS](https://fossengineer.com/open-source-invoice-cr
 ### Browsers
 
 1. Librewolf vs Zen vs waterfox vs firefox
-2. Chromium vs brave vs Hellium vs Tor browser
+2. Chromium vs brave vs [Helium](https://github.com/imputnet/helium) vs Tor browser
 
-TightVNC
-Remote Ripple VNC Viewer
+```sh
+flatpak install flathub app.zen_browser.zen -y
+#https://github.com/imputnet/helium-linux/releases
+wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/download/0.8.5.1/helium-0.8.5.1-x86_64.AppImage
+```
+
+> Version 0.8.5.1 allowed me to use logseq via browser, unlike Brave 1.86.148 Chromium: 144.0.7559.133
+
+
+* TightVNC
+* Remote Ripple VNC Viewer
 
 **Extensions**
 
@@ -583,7 +592,7 @@ Remote Ripple VNC Viewer
 * ublock origin
 * bitwarden
 
-**Add-ons**
+**Add-ons** for firefox that I tried
 
 * Privacy Badger
 * https everywhere
@@ -591,7 +600,7 @@ Remote Ripple VNC Viewer
 
 ### How can I Check my DNS?
 
-https://dnsprivacy.org/dns_privacy_daemon_-_stubby/
+* https://dnsprivacy.org/dns_privacy_daemon_-_stubby/
 
 ### ControlD (Windscribe DNS)
 
@@ -600,10 +609,9 @@ https://dnsprivacy.org/dns_privacy_daemon_-_stubby/
 
 
 * Monitoring Internet quality
-* Wireshark
+* Wireshark - https://docs.linuxserver.io/images/docker-wireshark/
 * PiHole
 
-https://docs.linuxserver.io/images/docker-wireshark/
 
 ### Interesting Security Tools
 
@@ -641,3 +649,5 @@ HomeLab Essentials - https://jalcocert.github.io/JAlcocerT/docs/selfhosting/
 > The docker related files are [here 🐳](https://github.com/JAlcocerT/Docker/tree/main/Backups/Photos)
 
 10. [SSGs](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro) combined with a headlessCMS and [selfhosted static server](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-static-hosting) 🐳 
+
+But if you are starting, just use static hosting for those and forget about servers.
