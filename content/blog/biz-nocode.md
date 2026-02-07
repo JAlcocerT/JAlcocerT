@@ -31,13 +31,12 @@ You can just use spreadsheets
 
 > Source Open | Infinite spreadsheet with Python, SQL, and AI.
 
-https://github.com/quadratichq/quadratic/tree/main
-https://github.com/quadratichq/quadratic/issues/416
+* https://github.com/quadratichq/quadratic/tree/main
+  * https://github.com/quadratichq/quadratic/issues/416
 
 ```sh
 docker build -t quadratic --platform=linux/amd64 .
 ```
-
 
 You can go for a full fledge CRM.
 
@@ -60,12 +59,20 @@ GHL?
 
 Overkill with salesforce or hubspot?
 
+Why dont you try Twenty?
+
 * https://twenty.com/releases
     * https://github.com/twentyhq/twenty
 
 https://www.youtube.com/watch?v=UZBy_n4XjGs
 
 ### Note Tools
+
+For PDFs you have:
+
+* https://github.com/freedomofpress/dangerzone
+
+> agpl |  Take potentially dangerous PDFs, office documents, or images and convert them to safe PDFs 
 
 [Notion](https://www.notion.com/product/notion-for-product-development)? Obsidian?
 
@@ -77,10 +84,10 @@ https://youtu.be/jyzcDIudczA
 Why not just **Affine**?
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/n8n" title="N8N | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/affine" title="Affine | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Or the good old Joplin or LogSeq?
+Or the good old Joplin or **LogSeq**?
 
 * https://github.com/logseq/logseq/pkgs/container/logseq-webapp
 
@@ -103,6 +110,12 @@ wget -P ~/Applications https://github.com/logseq/logseq/releases/download/0.10.1
 | **Best For** | PKM graphs, solo dev (you) | Visual teams/projects | Simple encrypted notes  [youtube](https://www.youtube.com/watch?v=C7kx5X3PxU0) |
 | **Mobile** | Good Android/iOS | Beta web/mobile | Strong cross-platform  [slashdot](https://slashdot.org/software/comparison/Joplin-vs-Logseq/) |
 | **Learning Curve** | Medium (queries/templates) | Low-medium | Low  [zblesk](https://zblesk.net/blog/tried-and-ditched-logseq-and-affine/) |
+
+See also [memos](https://usememos.com/): https://github.com/usememos/memos which is also markdown native **and MIT**.
+
+And be prepared for more vibe coded tools to appear, like: https://github.com/OlaProeis/ironPad
+
+>  Ironpad is a local-first, file-based project management system I've been building with AI. Rust backend (Axum), Vue 3 frontend, markdown files as the database, Git integration for versioning 
 
 
 If you are starting out some new business adventure: *logseq + markdown + git* can be your friend.

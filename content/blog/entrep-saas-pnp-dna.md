@@ -989,8 +989,6 @@ Several open-source projects mirror Wren AI's generative BI (GenBI) focus: *natu
 
 
 ### D&A Career
-
-
 When designing your Star Schema in the `northwind_warehouse`, here is how you classify the tables we just moved:
 
 1. The Fact Table: `order_details`
@@ -1161,6 +1159,7 @@ This is one of the most critical parts of the WrenAI workflow.
 In raw databases, column names are often cryptic (e.g., `cust_rev_2023`).
 
 * **Role:** It acts as a "translator" that defines business logic in human terms. It maps technical data to business concepts (e.g., defining exactly how "Monthly Recurring Revenue" is calculated).
+
 * **Why it matters:** It ensures that when an AI or a human asks a question, the system uses a single, consistent definition of truth.
 
 3. Agentic Layer

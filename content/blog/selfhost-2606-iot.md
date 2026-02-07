@@ -1,6 +1,6 @@
 ---
-title: "[Learning] Selfhosted IoT"
-date: 2026-02-08
+title: "[Learning] Selfhosted IoT x HA"
+date: 2026-06-08
 draft: false
 tags: ["Home Assistant","Sonoff x Zigbee"]
 description: 'IoT.'
@@ -8,6 +8,13 @@ url: 'iot-home-lab-tools'
 ---
 
 https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-humidity-sensor
+
+
+**TL;DR**
+
+**Intro**
+
+
 
 
 ## Protocols
@@ -23,6 +30,10 @@ https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-
 
 
 ### HA
+
+There has been few releases since the last time:
+
+https://www.youtube.com/watch?v=QwCR0h8_KyE
 
 https://github.com/homeassistant-ai/ha-mcp/
 
@@ -41,3 +52,8 @@ docker ps -a | grep -i home-assistant
 #udo docker stats home-assistant
 ```
 
+
+
+---
+
+## Conclusions

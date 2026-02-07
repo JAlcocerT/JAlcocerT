@@ -118,7 +118,7 @@ https://awweso.me/dns/ -->
 
 ### DuckDNS vs Traefikme
 
-https://traefik.me/
+* https://traefik.me/
 
 #### PiHole
 

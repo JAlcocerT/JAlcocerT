@@ -288,6 +288,15 @@ sudo radeontop
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+When using jellyfin with the x300 with the VA-API enabled, the cpu does almost nothing.
+
+```sh
+docker stats
+#lazydocker
+```
+
+Yet you see the consumption go from ~13W to ~20W!
+
 Adding also **metube**, so that you can upload your action camera videos in 4k to youtube and if needed download the back:
 
 ```sh
