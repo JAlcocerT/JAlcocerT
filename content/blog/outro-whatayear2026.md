@@ -596,16 +596,21 @@ uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePo
 
 efecto cantillon for inflation and entrepreneur mindset
 
-Cantillon defined the entrepreneur as someone who buys at a certain price and sells at an uncertain price. To him, the entrepreneur is the "risk-bearer" who stabilizes the market by taking on the gamble of the future.
+Cantillon defined the entrepreneur as someone who buys at a certain price and sells at an uncertain price.
+
+To him, the entrepreneur is the "risk-bearer" who stabilizes the market by taking on the gamble of the future.
 
 ![alt text](/blog_img/data-experiments/matplotlib-oil.png)
 
 > Fundamental, Fun, Future [the 3 f's :)](#open-questions)
 
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/creating-curated-and-automated-content" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
 {{< /cards >}}
+
+Talking about trends, what happened with crypto?
+
+The sha256 still holds strong, it was all about hashing https://www.devtoolbox.co/tools/hash-generator
 
 16. Tech videos were not a priority this year.
 

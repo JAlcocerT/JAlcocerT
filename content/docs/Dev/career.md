@@ -307,6 +307,7 @@ Make sure to master json and timestamps: *specially when working with [telecom d
 
 * https://it-tools.tech/date-converter
 * https://it-tools.tech/json-prettify
+* https://www.devtoolbox.co/tools/regex-checker
 
 {{< dropdown title="How can I understand & filter JSON? | Tools ⏬" closed="true" >}}
 

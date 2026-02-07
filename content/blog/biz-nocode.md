@@ -82,6 +82,12 @@ Why not just **Affine**?
 
 Or the good old Joplin or LogSeq?
 
+* https://github.com/logseq/logseq/pkgs/container/logseq-webapp
+
+```sh
+wget -P ~/Applications https://github.com/logseq/logseq/releases/download/0.10.15/Logseq-linux-x64-0.10.15.AppImage
+```
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/joplin" title="Joplin | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Config 🐋 ↗" >}}
@@ -96,13 +102,36 @@ Plus, you can use it via Nekko in few environment via web.
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nekko" title="Nekko | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-And get away with firefliesAI syncing your meeting notes/sales speech feedback right into it.
+And get away with firefliesAI webhooks syncing your meeting notes/sales speech feedback right into it.
+
+* https://app.fireflies.ai/settings
+  * https://docs.fireflies.ai/graphql-api/webhooks
+* https://tailscale.com/docs/features/tailscale-funnel
+
+<!-- https://www.youtube.com/watch?v=MpxmfpCl20c&t=10s -->
+
+```sh
+#~/Desktop/my-logseq-notes/scripts$ docker compose up -d
+sudo tailscale set --operator=$USER
+#tailscale funnel 5000
+tailscale funnel --https=443 localhost:5000
+#openssl rand -base64 12 #for webhook secret
+```
+
+You will get some `https://tailscaleuserdevice.tail123456.ts.net/` to connect to fireflies AI webhooks.
+
+{{< youtube "MpxmfpCl20c" >}}
+
 
 Some people use Logseq export x GHA x HUGO to make their websites :)
 
 ```sh
 git clone https://github.com/JAlcocerT/my-logseq-notes
+sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d logseq
 
+#https://github.com/imputnet/helium-linux/releases
+sudo docker compose -f 2602_docker-compose.yml up -d neko
+#sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d neko
 ```
 
 From there you can have a part for: book ideas, business requirements, sales, daily notes / journal...

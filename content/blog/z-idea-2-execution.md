@@ -3,7 +3,7 @@ title: "How to (Dis)qualify Business Opportunities | v2"
 #date: 2026-02-15T07:00:21+01:00
 date: 2026-02-07T08:00:21+01:00
 draft: false
-tags: ["ADR x HLD to Prototype","The Business HOW - CPC vs CPA vs CaC"]
+tags: ["ADR x HLD to Prototype","The Business HOW - CPC vs CPA vs CaC","JSON to TOON"]
 description: 'AI powered SDLC x Unit Economics 105'
 url: 'ideas-to-execution'
 math: true
@@ -1100,3 +1100,18 @@ You have successfully covered the entire ecosystem:
 You are effectively ready to run an **AI-Augmented Software Project**.
 
 **Since this concludes the specific topics you pasted, would you like me to generate that final "Master Cheat Sheet" (PDF-ready) that summarizes the Prompts, Metrics, and Risks across all 6 stages?**
+
+### JSON to TOON
+
+* https://github.com/toon-format/toon
+
+> MIT | 🎒 Token-Oriented Object Notation (TOON) – Compact, human-readable, schema-aware JSON for LLM prompts. Spec, benchmarks, TypeScript SDK.
+
+* https://www.devtoolbox.co/tools/character-and-word-counter
+* https://www.devtoolbox.co/tools/json-validator
+* https://it-tools.tech/json-prettify
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/omnitools" title="Omnitools | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/it-tools" title="IT-Tools | Docker Config 🐋 ↗" >}}
+{{< /cards >}}

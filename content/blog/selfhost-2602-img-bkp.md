@@ -288,7 +288,7 @@ sudo radeontop
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Adding also metube, so that you can upload your action camera videos in 4k to youtube and if needed download the back:
+Adding also **metube**, so that you can upload your action camera videos in 4k to youtube and if needed download the back:
 
 ```sh
 #sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent

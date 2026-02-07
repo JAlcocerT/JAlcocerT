@@ -376,6 +376,10 @@ Just...*avoid been forced to generate electronical waste, try linux*
 
 0. [ZorinOS](https://zorin.com/) - If you come from Windows, this is for you. *Zorin 18 requires >1.6GB of RAM*
 
+```sh
+lsb_release -a #noble or the 24.04!
+```
+
 1. [Lubuntu](https://cdimage.ubuntu.com/lubuntu/releases/noble/release/) - *It requires just ~700mb of RAM with UI*
 
 2. Ubuntu if you want the same, but with GNOME :)
@@ -423,13 +427,22 @@ sudo ./z-desktop-x-homelab/Linux_Setup_101.sh #You are good to go with browsers 
 #flatpak install -y flathub org.telegram.desktop
 #flatpak install -y flathub org.kde.kdenlive
 #flatpak install flathub org.electrum.electrum #BTC
+sudo snap install ytdownloader
 ```
 
 It shouldnt take you *not more than* 30 min and check that you need just ~15gb for the OS and typical software.
 
-You can be back to business quickly:
+You can be **back to business** quickly:
 
 ```sh
+##flatpak install flathub it.mijorus.gearlever
+#git clone https://github.com/JAlcocerT/my-logseq-notes
+
+#as antigravity companion
+sudo rm /etc/apt/sources.list.d/appimagelauncher-team-ubuntu-stable-noble.sources && \
+sudo apt update && \
+sudo apt install -y /home/jalcocert/Downloads/google-chrome-stable_current_amd64.deb
+
 git clone https://github.com/JAlcocerT/selfhosted-landing
 cd ./selfhosted-landing/y2026-tech-talks/langchain-postgres
 #sudo apt install npm

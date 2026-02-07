@@ -481,19 +481,24 @@ For example, when you "Sign in with Google" to a new website, you're using OAuth
 
 ### JWT: The Token Format 📄
 
-A **JSON Web Token (JWT)** is a specific, compact, and self-contained **token format** that is often used within the OAuth framework. A JWT isn't a protocol itself, but a standardized way of securely transmitting information between parties as a JSON object.
+A **JSON Web Token (JWT)** is a specific, compact, and self-contained **token format** that is often used within the OAuth framework. 
 
-A JWT has three parts:
+A JWT isn't a protocol itself, but a standardized way of securely transmitting information between parties as a JSON object.
+
+A JWT has three parts: https://www.devtoolbox.co/tools/jwt-viewer
+
 * **Header:** Specifies the type of token (JWT) and the signing algorithm.
 * **Payload:** Contains "claims," which are statements about the user or resource. These can include user ID, roles, and expiration time.
 * **Signature:** A cryptographic signature that verifies the token's integrity and authenticity. This signature ensures the token hasn't been tampered with.
 
-Because a JWT is self-contained, a resource server can validate the token's signature without needing to communicate with the authorization server, which is why it's a popular choice for building stateless APIs.
+Because a JWT is self-contained, a resource server can validate the token's signature without needing to communicate with the authorization server, which is why it's a **popular choice for building stateless APIs**.
 
 
 ### Bearer Token: The Token Type 🔑
 
-A **bearer token** is a type of **access token** that grants access to anyone who "bears" or possesses it. It's the most common type of access token used in OAuth 2.0. When an application receives a bearer token, it includes it in the `Authorization` header of subsequent requests to access protected resources.
+A **bearer token** is a type of **access token** that grants access to anyone who "bears" or possesses it.
+
+It's the most common type of access token used in OAuth 2.0. When an application receives a bearer token, it includes it in the `Authorization` header of subsequent requests to access protected resources.
 
 The key characteristic of a bearer token is that it's a "possession-based" key. 
 
@@ -521,7 +526,11 @@ They relate to the security concepts we've discussed by defining **where** and *
 
 #### 1. Components
 
-A **component** is the fundamental building block of a front-end application. It's a self-contained, reusable piece of code (often a JavaScript function or class) that renders a part of the user interface (UI). Think of a component as a LEGO brick: it can be a button, a form, a user profile card, or an entire page. Components handle the visual representation of your data and respond to user actions.
+A **component** is the fundamental building block of a front-end application. 
+
+It's a self-contained, reusable piece of code (often a JavaScript function or class) that renders a part of the user interface (UI). 
+
+Think of a component as a LEGO brick: it can be a button, a form, a user profile card, or an entire page. Components handle the visual representation of your data and respond to user actions.
 
 * **Example:** A `<LoginButton>` component that renders a button to initiate the login process.
 * **Security Relation:** Components are where you might **display** a UI based on a user's authorization. For example, a `<Dashboard>` component might check if a user is an admin before rendering a "Manage Users" button.
@@ -529,7 +538,9 @@ A **component** is the fundamental building block of a front-end application. It
 
 #### 2. Services
 
-A **service** (or a "utility" or "helper") is a piece of code that encapsulates a specific function or responsibility, usually for interacting with a back-end API. Services don't handle UI; their job is to abstract away complex logic like making HTTP requests, managing data, or in our case, handling security flows.
+A **service** (or a "utility" or "helper") is a piece of code that encapsulates a specific function or responsibility, usually for interacting with a back-end API.
+
+Services don't handle UI; their job is to abstract away complex logic like making HTTP requests, managing data, or in our case, handling security flows.
 
 * **Example:** A `AuthService` that contains methods like `login()`, `logout()`, `getToken()`, and `isLoggedIn()`. This service would be responsible for sending the username and password to your back-end API or handling the OAuth redirect and token storage.
 * **Security Relation:** This is where the core authentication and authorization logic should reside. Instead of every component making its own API calls, they all rely on the `AuthService`. This promotes the **separation of concerns** and makes your code more secure and easier to manage.
@@ -537,7 +548,9 @@ A **service** (or a "utility" or "helper") is a piece of code that encapsulates 
 
 #### 3. Hooks
 
-A **hook** (specific to React, but a similar concept exists in other frameworks) is a function that lets you "hook into" a component's lifecycle and state. Hooks allow you to reuse stateful logic without changing your component hierarchy. They are a powerful way to make your components "smarter" without cluttering them.
+A **hook** (specific to React, but a similar concept exists in other frameworks) is a function that lets you "hook into" a component's lifecycle and state. 
+
+Hooks allow you to reuse stateful logic without changing your component hierarchy. They are a powerful way to make your components "smarter" without cluttering them.
 
 * **Example:** A `useAuth()` hook that provides components with the current user's login status (`isLoggedIn`), their profile data, and methods for login/logout. This hook might internally use the `AuthService` we mentioned.
 * **Security Relation:** Hooks are the most modern way to connect your components to your services. A component might call `const { isLoggedIn, userRole } = useAuth();` to get the user's status. It then uses this information to determine what to display. This keeps the component's code clean and focused on rendering, while the hook handles the complex security logic by interacting with the `AuthService`.

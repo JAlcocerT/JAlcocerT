@@ -678,7 +678,7 @@ Firebase Authentication
 **PocketBase SDK Authentication**
 
 - PocketBase is an open-source backend framework with built-in lightweight authentication supporting password, OTP, OAuth2 providers, and multi-factor authentication.
-- Uses stateless JWT tokens sent with requests; no traditional server sessions.
+- Uses **stateless JWT tokens** sent with requests; no traditional server sessions.
 - Authentication state is managed client-side with token storage and refresh.
 - Supports superusers with impersonation and token generation for server-to-server use.
 - SDKs provide direct API calls for auth flows and user management.
