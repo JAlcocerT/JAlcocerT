@@ -2,7 +2,7 @@
 title: "CRM and No Code Tools for Business"
 date: 2026-02-04
 draft: false
-tags: ["BaseRow x Glide","Odoo vs TwentyCRM vs Close","Notion vs Affine","OSS Business x RevOps"]
+tags: ["BaseRow x Glide","Odoo vs TwentyCRM vs Close","Notion vs Affine vs Logseq x Fireflies","OSS Business x RevOps"]
 description: 'Tools to grow x GTM Engineering. From unstructured signals to personalized outreach.'
 url: 'no-code-tools-for-business'
 ---
@@ -106,6 +106,14 @@ And get away with firefliesAI webhooks syncing your meeting notes/sales speech f
 
 * https://app.fireflies.ai/settings
   * https://docs.fireflies.ai/graphql-api/webhooks
+
+```sh
+#https://github.com/JAlcocerT/my-logseq-notes
+#cd scripts
+python3 verify_connection.py
+python3 backfill_meeting.py 01Kabcdef12446579
+```
+
 * https://tailscale.com/docs/features/tailscale-funnel
 
 <!-- https://www.youtube.com/watch?v=MpxmfpCl20c&t=10s -->
@@ -115,6 +123,7 @@ And get away with firefliesAI webhooks syncing your meeting notes/sales speech f
 sudo tailscale set --operator=$USER
 #tailscale funnel 5000
 tailscale funnel --https=443 localhost:5000
+tailscale serve status
 #openssl rand -base64 12 #for webhook secret
 ```
 
