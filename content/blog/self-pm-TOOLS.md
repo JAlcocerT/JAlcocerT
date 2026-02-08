@@ -50,25 +50,13 @@ The thing is that you needs this in the information era.
 
 > > Built with Flutter and Rust.
 
-Install appflowy is per: <https://docs.appflowy.io/docs/appflowy/install-appflowy/installation-methods/installing-with-docker>
+Install appflowy is per: 
 
-```yml
-#version: '3'
-services:
-  appflowy:
-    image: appflowyio/appflowy_client:main
-    volumes:
-      - $HOME/.Xauthority:/root/.Xauthority:rw
-      - /tmp/.X11-unix:/tmp/.X11-unix
-      - /dev/dri:/dev/dri
-      - /var/run/dbus/system_bus_socket:/var/run/dbus/system_bus_socket
-      - appflowy-data:/home/appflowy
-    environment:
-      - DISPLAY=${DISPLAY}
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/appflowy" title="AppFlowy | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
-volumes:
-  appflowy-data:
-```
+![alt text](/blog_img/selfh/nocode/apflowy-signup.png)
 
 AppFlowy, an open source project mgmt, documentation, and note-taking app for extreme productivity
 

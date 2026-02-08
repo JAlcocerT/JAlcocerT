@@ -227,6 +227,21 @@ https://github.com/ory/hydra?tab=readme-ov-file#run-the-docker-compose-quickstar
 
 As **Free Alternatives for Okta** I would go for
 
+You can clean up with:
+
+```sh
+#docker stop $(docker ps -a -q) #stop all
+```
+
+And for questions:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
+
+
 
 ### LogTo
 
@@ -249,9 +264,7 @@ Thanks To:
 
 * https://akashrajpurohit.com/blog/setup-caddy-with-automatic-ssl-certificates-with-cloudflare/
 * https://akashrajpurohit.com/blog/setup-authelia-for-sso-authentication/
-### Audio Book Player
 
-* https://github.com/TortugaPower/BookPlayer
 
 ## Web x AI
 

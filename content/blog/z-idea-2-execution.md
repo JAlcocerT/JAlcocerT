@@ -983,14 +983,27 @@ You now have a full **AI-SDLC Framework**:
 6. **Operations:** RCA & Incident Management.
 
 
+---
 
 # Conclusions
 
-Seem people make this: Only if you bought X can opt to buy Z
+Seem people make this: *Only if you bought X can opt to buy Z*
 
 So you qualify to buy something, when previously bought from me.
 
-I have heard that from some youtubers selling 121, but before that you need to buy the info course.
+I have heard that from some youtubers selling 121, but before that you need to buy their 1:n info course.
+
+Interesting way to do it.
+
+Anyways, if you are going to plan some kind of business, make sure that it make sense in any of the games and with the general rules seen.
+
+If someone wants to book some of your time to propose you executing an idea together: make sure they know what they are seen by doing same checks.
+
+For the rest:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+{{< /cards >}}
 
 ---
 

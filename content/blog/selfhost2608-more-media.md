@@ -58,3 +58,10 @@ Also, you can use:
 
 * Audiobookshelf
 
+Audiobookshelf is the top open-source recommendation for self-hosted audiobook listening and streaming. 
+
+It goes beyond basic MP3 players like Navidrome by offering audiobook-specific features such as chapter navigation, per-user progress syncing, and multi-device support.
+
+* https://github.com/TortugaPower/BookPlayer
+
+

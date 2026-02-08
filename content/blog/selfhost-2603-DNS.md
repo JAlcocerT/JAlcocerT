@@ -385,6 +385,10 @@ lsb_release -a #noble or the 24.04!
 2. Ubuntu if you want the same, but with GNOME :)
 
 > You can have ubuntu without UI, if you plan to use your server's terminal only
+> You can have Ubuntu without UI, if you plan to use your server's terminal only
+
+> > For server, id recommend to have the [previous to latest LTS release](https://releases.ubuntu.com/), as of now that 'd be `22.04`, but `26.04` is coming soon
+
 
 3. If you want to say I use ARCH BTW. 
 
@@ -396,6 +400,17 @@ lsb_release -a #noble or the 24.04!
 
 * SteamOS
 * [CachyOS](https://cachyos.org/) 
+
+
+Plus, your home server / miniPC will consume less than if you keep it with W11.
+
+Arent you eco yet?
+
+The Tapo P100 shows you
+
+Scared?
+
+Try linux with a VM: *like gnome boxes*
 
 Try with a VM: like gnome boxes
 
@@ -435,14 +450,26 @@ It shouldnt take you *not more than* 30 min and check that you need just ~15gb f
 You can be **back to business** quickly:
 
 ```sh
-##flatpak install flathub it.mijorus.gearlever
+flatpak install flathub it.mijorus.gearlever #great for appimages
+lazydocker
 #git clone https://github.com/JAlcocerT/my-logseq-notes
 
 #as antigravity companion
 sudo rm /etc/apt/sources.list.d/appimagelauncher-team-ubuntu-stable-noble.sources && \
 sudo apt update && \
 sudo apt install -y /home/jalcocert/Downloads/google-chrome-stable_current_amd64.deb
+```
 
+You can do `ctrl+shift+P` write user settings JSON and paste:
+
+```json
+{
+    "git.autofetch": true,
+    "terminal.integrated.defaultProfile.linux": "bash"
+}
+```
+
+```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing
 cd ./selfhosted-landing/y2026-tech-talks/langchain-postgres
 #sudo apt install npm

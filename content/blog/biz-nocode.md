@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=tYg6T_DAP-k
 
 **Tl;DR**
 
-Tired of spreadsheets?https://youtu.be/mSgmiUwZjrY?is=BX0DayhahV5g0fh4
+Tired of spreadsheets? https://youtu.be/mSgmiUwZjrY?is=BX0DayhahV5g0fh4
 
 Aiming for High*er* ltv, high*er* cac?
 
@@ -169,9 +169,13 @@ sudo docker compose -f 2602_docker-compose.yml up -d neko
 #sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d neko
 ```
 
-From there you can have a part for: book ideas, business requirements, sales, daily notes / journal...
+From there you can have a part for: *book ideas, business requirements, sales, daily notes / journal...*
 
-https://www.youtube.com/watch?v=RzT20ejft3c
+<!-- 
+https://www.youtube.com/watch?v=RzT20ejft3c 
+-->
+
+{{< youtube "RzT20ejft3c" >}}
 
 ---
 
@@ -250,6 +254,7 @@ graph TD
 ```
 
 2. With the information they provided do the following...
+
 3. ...move water through your sales pipeline!
 
 To articulate this effectively, you need to pivot from "I'm writing scripts" to "I'm building an **Autonomous Revenue Engine**."
@@ -290,19 +295,20 @@ How this maps to RevOps (The "Business Speak")
 | **Programmatic API Drips** | **Hyper-Personalization at Scale:** Moving beyond "Hi [First_Name]" to "Hi [Name], I saw your recent comment on Reddit regarding [Topic]..." |
 | **Fireflies Integration** | **Closing the Feedback Loop:** Sales insights are automatically fed back into marketing copy, ensuring the "Brand Voice" stays human. |
 
+<!-- 
+https://youtu.be/mSgmiUwZjrY 
+-->
 
-https://youtu.be/mSgmiUwZjrY?is=BX0DayhahV5g0fh4
+{{< youtube "mSgmiUwZjrY" >}}
 
 ---
 
-
-
 ## FAQ
-
 
 You can give it a try to pocketbase as well
 
+{{< youtube "p7U24YSFrW4" >}}
 
-https://youtu.be/p7U24YSFrW4?is=6Refm-LlVTokBeug
-
-### Which no
+<!-- 
+https://youtu.be/p7U24YSFrW4?is=6Refm-LlVTokBeug 
+-->

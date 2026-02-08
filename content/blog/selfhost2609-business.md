@@ -7,6 +7,10 @@ description: 'Computer'
 url: 'selfhosting-business'
 ---
 
+**TL;DR**
+
+**Intro**
+
 
 ## Notes
 
@@ -23,7 +27,29 @@ python3 backfill_meeting.py 01K...abcdef12446579
 {{< /cards >}}
 
 
+Miro? Nah, just excalidraw or MermaidJS for diagrams.
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/appflowy" title="AppFlowy | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![alt text](/blog_img/selfh/nocode/apflowy-signup.png)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nocodb" title="NocoDB | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/baserow" title="BaseRow | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![alt text](/blog_img/selfh/nocode/nocodb-table.png)
+
+
 ## No Code
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nocodb" title="NocoDB | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/baserow" title="BaseRow | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ## Marketing
 
@@ -43,3 +69,11 @@ But these selfhosting ones.
 
  A lightweight consent management platform. Handle email consent states independently from any ERP, CRM or platform.
 
+---
+
+## Conclusions
+
+
+---
+
+## FAQ

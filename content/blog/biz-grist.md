@@ -2,8 +2,8 @@
 title: "Creating with Open Spreadsheets"
 date: 2026-02-07T08:20:21+01:00
 draft: false
-description: 'From excel to Grist. With some no code.'
-tags: ["Grist","Web","Table Automation","Forms","OpenLTables vs GoRules"]
+description: 'From excel to Grist. And some no code with nocoDB and BaseRow.'
+tags: ["Grist","Table Automation","Forms","OpenLTables vs GoRules"]
 ---
 
 **Tl:DR**
@@ -56,7 +56,6 @@ A grist document is both, a db and a spreadsheet. Contains all the data and the 
 
 The data in Grist is stored in **SQLite** databases, which is a key part of its design for portability.
 
----
 
 ### Data Storage 💾
 
@@ -65,8 +64,6 @@ Grist's approach to data storage is unique and what makes it so portable.
 * **Document-based SQLite**: Each Grist document (`.grist` file) is a **self-contained SQLite database**. This means all your tables, records, formulas, and even the layout of your document are stored within a single file. This is why you can easily move, back up, and share Grist documents.
 * **Central SQLite database**: In addition to the individual document files, Grist also uses a central SQLite database to manage user accounts, team sites, and other metadata.
 * **Persistence**: When you use Docker, your data is stored in the volume you specify. Inside that volume, Grist creates and manages these `.grist` and `.sqlite` files, ensuring your data is safe even if the container is stopped or removed.
-
----
 
 ### Technology Stack 💻
 
@@ -80,7 +77,7 @@ The Grist platform is built with a modern, full-stack architecture.
 
 ### Grist API
 
-Yes, Grist has a robust **REST API**, and you can definitely use it as a backend for a *waiting list*. 
+Grist has a robust **REST API**, and you can definitely use it as a backend for a *waiting list*. 
 
 This is one of the key use cases for its "headless" mode, where Grist acts as the data management system for a custom front-end application.
 
@@ -99,6 +96,15 @@ Grist's API is fully documented and includes endpoints for not only adding recor
 
 You can use it to build a full-featured waiting list management system, including adding a dashboard within Grist to see sign-ups in real-time.
 
+
+## Alternatives
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nocodb" title="NocoDB | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/baserow" title="BaseRow | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+### AirTable
 
 Imagine a **spreadsheet on steroids** that's also secretly a **lightweight database**. 
 
@@ -121,54 +127,72 @@ Each page (table) can hold different types of information, and you can create li
 In short, **Airtable is a user-friendly platform that offers the intuitive interface of a spreadsheet with the structured power and relational capabilities of a database, making it a versatile tool for organizing and collaborating on all kinds of information.**
 
 
-## Alternatives
-
 Some open source alternatives to Airtable are: 
 
 
 ### NocoDB
 
-* https://www.nocobase.com/en/blog/the-top-12-open-source-no-code-tools-with-the-most-github-stars
 
 * NocoDB: a low-code collaborative web-based platform that can replace Airtable.
 
 * https://www.nocodb.com/
+* https://nocodb.com/docs/self-hosting/installation/docker-compose
 * https://mariushosting.com/how-to-install-nocodb-on-your-synology-nas/
+* https://www.nocobase.com/en/blog/the-top-12-open-source-no-code-tools-with-the-most-github-stars
+* https://github.com/nocodb/nocodb
+
+* https://noted.lol/nocodb-contact-form-gmail-smtp/
 
 * Baserow: a low-code/no-code data platform that lets you create your own online database without any technical experience.
 * Mathesar: an open-source data platform that supports PostgreSQL and provides a user-friendly interface for data manipulation.
 * Metabase: an open-source business intelligence tool that connects to any database and lets you create charts and dashboards.
 * Grist: an open-source spreadsheet-like tool that allows you to work with data in a structured and flexible way.
 
-### NoCode DBs
+![alt text](/blog_img/selfh/nocode/nocodb-signup.png)
+
+You can import excel, json or databases to nocodb tables: *locally will be at localhost:8080*
+
+![alt text](/blog_img/selfh/nocode/nocodb-table.png)
+
+* `http://localhost:8080/dashboard/#/nc/integrations`
+* And use scripts as well: https://nocodb.com/docs/scripts
+
+
+Then, query programatically if required: *also allows for webhooks to get notified when sth happens*
+
+```sh
+curl --request GET \
+	--url 'http://localhost:8080/api/v2/tables/abcdef13456/records?offset=0&limit=25&where=&viewId=vw1by9186ibupwxq' \
+	--header 'xc-token: CREATE_YOUR_API_TOKEN_FROM http://localhost:8080/dashboard/#/account/tokens'
+```
+
+### BaseRow
 
 And again, if you feel like its enough code...
 
-**Airtable alternatives:**
-
-1. https://github.com/nocodb/nocodb
-
-* https://noted.lol/nocodb-contact-form-gmail-smtp/
-
-
-2. https://github.com/bram2w/baserow
+**Airtable alternatives:** https://github.com/bram2w/baserow
 
 ---
 
-
 ## Conclusions
 
-If you just need a way to collaborate with your colleagues you can try:
-
-* NextCloud
+If you just need a way to collaborate with your colleagues you can try: NextCloud
 
 See also:
+
 
 1. https://github.com/harishdeivanayagam/rowfill
 
 >  Open-source spreadsheets platform for deep research and document processing 
 
+2. Appflowy
 
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/appflowy" title="AppFlowy | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![alt text](/blog_img/selfh/nocode/apflowy-signup.png)
 
 ---
 
