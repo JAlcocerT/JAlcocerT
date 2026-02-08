@@ -1,6 +1,6 @@
 ---
 title: "SelfHosted Data Analytics"
-date: 2026-08-01T23:20:21+01:00
+date: 2026-10-01T23:20:21+01:00
 draft: false
 tags: ["Self-Hosting","D&A","Rill vs WrenAI vs Vanna","WhoDB vs DBCode"]
 description: 'Computer'
@@ -20,3 +20,17 @@ url: 'selfhosting-data-analytics'
 
 Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check their [notebooks for DBs](https://dbcode.io/docs/notebooks/getting-started)
 
+---
+
+## Conclusions
+
+
+
+
+---
+
+## FAQ
+
+JSON, YML or TooN?
+
+* https://github.com/toon-format/toon

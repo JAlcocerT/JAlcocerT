@@ -8,6 +8,8 @@ tags: ["Grist","Table Automation","Forms","OpenLTables vs GoRules"]
 
 **Tl:DR**
 
+Spreadsheets for all.
+
 **Intro**
 
 From excel to grist.
@@ -47,7 +49,7 @@ docker compose up -d #Grist will be at
 {{< youtube "xnNn1TkS7Pc" >}}
 
 {{< callout type="warning" >}}
-A grist document is both, a db and a spreadsheet. Contains all the data and the views. Pages contains views of the spreadsheet data.
+A grist document is **both**, a db and a spreadsheet. Contains all the data and the views. Pages contains views of the spreadsheet data.
 {{< /callout >}}
 
 * https://support.getgrist.com/widget-form/
@@ -99,10 +101,13 @@ You can use it to build a full-featured waiting list management system, includin
 
 ## Alternatives
 
+These are the 2 most popular:
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nocodb" title="NocoDB | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/baserow" title="BaseRow | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
 
 ### AirTable
 
@@ -172,14 +177,27 @@ And again, if you feel like its enough code...
 
 **Airtable alternatives:** https://github.com/bram2w/baserow
 
+* Baserow: https://baserow.io/user-docs
+
+Its way lighter than nocoDB, needing only one service on your docker stack.
+
+![BaseRow](/blog_img/apps/baserow.png)
+
+And you also have the API access: `http://localhost:82/api-docs/database/134`
+
+![alt text](/blog_img/selfh/nocode/baserow-signup.png)
+
+![alt text](/blog_img/selfh/nocode/baserow-lead-template.png)
+
 ---
 
 ## Conclusions
 
 If you just need a way to collaborate with your colleagues you can try: NextCloud
 
-See also:
+> See also 
 
+0. https://github.com/glideapps/glide-data-grid
 
 1. https://github.com/harishdeivanayagam/rowfill
 

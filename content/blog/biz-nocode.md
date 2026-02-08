@@ -2,32 +2,22 @@
 title: "CRM and No Code Tools for Business"
 date: 2026-02-04
 draft: false
-tags: ["BaseRow x Glide","Odoo vs TwentyCRM vs Close","Notion vs Affine vs Logseq x Fireflies","OSS Business x RevOps"]
+tags: ["Odoo vs TwentyCRM vs Close","Notion vs Affine vs Logseq x Fireflies","OSS Business x RevOps"]
 description: 'Tools to grow x GTM Engineering. From unstructured signals to personalized outreach.'
 url: 'no-code-tools-for-business'
 ---
 
-https://skills.sh/
-
-https://www.youtube.com/watch?v=qfWpPEgea2A&t=191s
-
-https://www.youtube.com/watch?v=rlLwSr-wIAg&t=431s
-
-https://github.com/martingaido/ai-prompt-engineering-docs/blob/main/gemini-for-google-workspace-prompting-guide-101.pdf
-
-https://www.youtube.com/watch?v=tYg6T_DAP-k
-
 **Tl;DR**
 
-Tired of spreadsheets? https://youtu.be/mSgmiUwZjrY?is=BX0DayhahV5g0fh4
+Tired of spreadsheets? 
 
 Aiming for High*er* ltv, high*er* cac?
 
 **Intro**
 
-You can just use spreadsheets
+You can just use classic spreadsheets.
 
-* https://www.quadratichq.com/
+Or level up with: https://www.quadratichq.com/
 
 > Source Open | Infinite spreadsheet with Python, SQL, and AI.
 
@@ -40,20 +30,12 @@ docker build -t quadratic --platform=linux/amd64 .
 
 You can go for a full fledge CRM.
 
-No Code DBs x BaseRow?
-
-### No Code Data Tools
-
-* https://github.com/glideapps/glide-data-grid
-
-* Baserow
-
-![BaseRow](/blog_img/apps/baserow.png)
+> Or...with No Code DBs x BaseRow?
 
 
 ### CRM
 
-GHL?
+Should you use GHL? Close?
 
 * https://www.close.com/pricing#solo
 
@@ -61,10 +43,18 @@ Overkill with salesforce or hubspot?
 
 Why dont you try Twenty?
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/twentycrm" title="Twenty CRM | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/baserow" title="BaseRow | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 * https://twenty.com/releases
     * https://github.com/twentyhq/twenty
 
-https://www.youtube.com/watch?v=UZBy_n4XjGs
+<!-- https://www.youtube.com/watch?v=UZBy_n4XjGs -->
+
+{{< youtube "UZBy_n4XjGs" >}}
+
 
 ### Note Tools
 
@@ -78,18 +68,28 @@ For PDFs you have:
 
 Or...
 
+<!-- 
+https://youtu.be/jyzcDIudczA 
+-->
 
-https://youtu.be/jyzcDIudczA
+{{< youtube "jyzcDIudczA" >}}
+
 
 Why not just **Affine**?
+
+![alt text](/blog_img/selfh/nocode/affine-welcome.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/affine" title="Affine | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Or the good old Joplin or **LogSeq**?
+You can also try the official one *even w/o an account*: `https://app.affine.pro/`
 
-* https://github.com/logseq/logseq/pkgs/container/logseq-webapp
+![alt text](/blog_img/selfh/nocode/affine-local.png)
+
+Or the good old note apps like: Joplin or **LogSeq**?
+
+* https://github.com/logseq/logseq/pkgs/container/logseq-webapp - *This will be very light weight*
 
 ```sh
 wget -P ~/Applications https://github.com/logseq/logseq/releases/download/0.10.15/Logseq-linux-x64-0.10.15.AppImage
@@ -113,7 +113,7 @@ wget -P ~/Applications https://github.com/logseq/logseq/releases/download/0.10.1
 
 See also [memos](https://usememos.com/): https://github.com/usememos/memos which is also markdown native **and MIT**.
 
-And be prepared for more vibe coded tools to appear, like: https://github.com/OlaProeis/ironPad
+And be prepared for **more vibe coded tools** to appear, like: https://github.com/OlaProeis/ironPad
 
 >  Ironpad is a local-first, file-based project management system I've been building with AI. Rust backend (Axum), Vue 3 frontend, markdown files as the database, Git integration for versioning 
 

@@ -225,12 +225,15 @@ https://github.com/ory/hydra?tab=readme-ov-file#run-the-docker-compose-quickstar
 
 ## Conclusions
 
-As **Free Alternatives for Okta** I would go for
+As **Free Alternatives for Okta** I would go for: firebase auth and Logto
 
 You can clean up with:
 
 ```sh
+lazydocker
+docker system df
 #docker stop $(docker ps -a -q) #stop all
+#docker system prune -a
 ```
 
 And for questions:
