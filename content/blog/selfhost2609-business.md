@@ -1,15 +1,37 @@
 ---
-title: "Business Tools x Selfhosting"
+title: "Selfhosting Business Tools vs Coasean Ceiling "
 date: 2026-09-01T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting","Notes","Marketing","No Code"]
+tags: ["Self-Hosting","Notes","Marketing","No Code","Link Shortener x Web Analytics"]
 description: 'Computer'
 url: 'selfhosting-business'
 ---
 
 **TL;DR**
 
+Avoid silos and the Coasean Ceiling.
+
 **Intro**
+
+Tools to avoid silos in your business.
+
+Im not going to talk about communication tools for business.
+
+Neither invoices/billing:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/invoice-ninja" title="Invoice Ninja | Docker Config for HomeLab 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serverless-invoices" title="Serverless Invoices | Docker Config for HomeLab 🐋 ↗" >}}
+{{< /cards >}}
+
+But more on:
+
+Business Cards
+
+* https://github.com/kyaustad/cardyo
+
+>  A simple URL based **digital business card creation** and sharing system 
+
 
 
 ## Notes
@@ -110,6 +132,24 @@ But these selfhosting ones.
 
 > A lightweight consent management platform. Handle email consent states independently from any ERP, CRM or platform.
 
+## E-Commerce
+
+There is a full post here.
+
+
+But basically, 
+
+
+## Tech Businesses
+
+You will probably need monitoring
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ---
 
 ## Conclusions
@@ -136,6 +176,22 @@ And for questions:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
+
+
+Not doing business yet, but selling your time in the job market?
+
+https://github.com/JAlcocerT/cv-laitex
+https://github.com/JAlcocerT/Job-Trends
+
+Consider overleaf or these:
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/open-resume" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/yamlresume" title="Kener | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+
 
 ---
 

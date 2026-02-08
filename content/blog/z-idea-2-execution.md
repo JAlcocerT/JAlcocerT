@@ -1,6 +1,5 @@
 ---
 title: "How to (Dis)qualify Business Opportunities | v2"
-#date: 2026-02-15T07:00:21+01:00
 date: 2026-02-08T00:00:21+01:00
 draft: false
 tags: ["ADR x HLD to Prototype","The Business HOW - CPC vs CPA vs CaC","JSON to TOON"]
@@ -25,9 +24,7 @@ https://www.youtube.com/watch?v=rlLwSr-wIAg&t=431s
 
 https://github.com/martingaido/ai-prompt-engineering-docs/blob/main/gemini-for-google-workspace-prompting-guide-101.pdf
 
-https://www.youtube.com/watch?v=tYg6T_DAP-k
 
-https://youtu.be/mSgmiUwZjrY?is=BX0DayhahV5g0fh4
 
 **Intro**
 

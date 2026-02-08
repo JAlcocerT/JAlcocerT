@@ -23,7 +23,9 @@ And Im aware that there are dron deployed on fields even during the night with s
 
 But there are cool projects for computer vision that combine
 
-
+```sh
+sudo docker compose -f ./z-homelab-setup/evolution/2607_docker-compose.yml logs -f frigate
+```
 
 ##
 

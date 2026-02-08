@@ -384,7 +384,6 @@ lsb_release -a #noble or the 24.04!
 
 2. Ubuntu if you want the same, but with GNOME :)
 
-> You can have ubuntu without UI, if you plan to use your server's terminal only
 > You can have Ubuntu without UI, if you plan to use your server's terminal only
 
 > > For server, id recommend to have the [previous to latest LTS release](https://releases.ubuntu.com/), as of now that 'd be `22.04`, but `26.04` is coming soon
@@ -401,22 +400,22 @@ lsb_release -a #noble or the 24.04!
 * SteamOS
 * [CachyOS](https://cachyos.org/) 
 
-
 Plus, your home server / miniPC will consume less than if you keep it with W11.
 
 Arent you eco yet?
 
-The Tapo P100 shows you
+The [Tapo P100](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/) shows you nicely.
 
 Scared?
 
 Try linux with a VM: *like gnome boxes*
 
-Try with a VM: like gnome boxes
-
 ```sh
+#sudo apt install gnome-boxes
 gnome-boxes
 ```
+
+Once you are happy:
 
 {{< callout type="info" >}}
 Have a look to [Ventoy](https://github.com/ventoy/Ventoy) to create **ISO Multi-Boots**
@@ -600,13 +599,12 @@ Why not doing [billing with OSS](https://fossengineer.com/open-source-invoice-cr
 
 > Open Source Metering and Usage Based Billing API ⭐️ Consumption tracking, Subscription management, Pricing iterations, Payment orchestration & Revenue analytics
 
+See also
 
-#### Business Cards
-
-* https://github.com/kyaustad/cardyo
-
->  A simple URL based **digital business card creation** and sharing system 
-
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/invoice-ninja" title="Invoice Ninja | Docker Config for HomeLab 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serverless-invoices" title="Serverless Invoices | Docker Config for HomeLab 🐋 ↗" >}}
+{{< /cards >}}
 
 ### Browsers
 

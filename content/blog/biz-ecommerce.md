@@ -64,8 +64,6 @@ You can understand how these works to be able to sell them D&A services for busi
 
 ## Selfhosted Ecommerce
 
-
-
 ```sh
 git clone https://github.com/JAlcocerT/Home-Lab
 ```

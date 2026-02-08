@@ -8,6 +8,15 @@ url: 'selfhosting-data-analytics'
 ---
 
 
+**Tl;DR**
+
+**Intro**
+
+```sh
+sudo docker compose -f ./z-homelab-setup/evolution/2610_docker-compose.yml logs -f frigate
+```
+
+
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}

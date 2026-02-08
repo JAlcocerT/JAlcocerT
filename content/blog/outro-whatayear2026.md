@@ -190,7 +190,21 @@ To offer this via fossengineer, I can try: *these are next steps*
 3. The webpage offer
 4. Finally remodel the webpage to avoid the shape of a blog, as is more a news/docs one - vibe coding ofc.
 
-With that remota data (yaml) fetching from the home-alb repo.
+With that remota data (yaml) fetching from the home-lab repo.
+
+0. Talking about Home-Lab and selfhosting: I keep admiring the work that selfh.st puts weekly
+
+I have done a ~monthly series on stuff Ive tried or actively used.
+
+Also, have upgraded the x300 and x13 OS'es with a better backup strategy.
+
+Oh, and Im quite happy with proton mail and custom domains.
+
+Cloudflare tunnels keep been great, but I was surprised by tailscale funnels for those very quick PoC that might require exposing some we/app or webhooks.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="repo↗" >}}
+{{< /cards >}}
 
 0. Create individual pages on `jalcocertech.com` with stripe plugged.
 
@@ -259,9 +273,9 @@ Another example of why you need to know the business game you are playing.
 
 Build what it makes sense to build.
 
-Consider if you are supply or demand constrain.
+Consider if you are supply or demand constrain!
 
-Then prospect your clients and create the proper offer:
+Then prospect your clients and create a proper offer:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/custom-re-rag" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
@@ -628,8 +642,6 @@ Others, from the vibe coding sessions: helped to bring quick demos to their rela
 17. I made **some animations** instead.
 
 
-
-
 ### Serverless
 
 1. Ive enjoyed using **Cloudflare R2** for s3 compatible object storage.
@@ -892,12 +904,13 @@ Its very safe there.
 
 8. Order/clean papers / old tech. Donate. ✅ 
 
-9. Collecting case studies / success stories ✅ 
+9. Collecting case studies / success stories ✅
 
 10. Reading books - To act *not just archive knowledge, but learn, which means different behaviour to same inputs*
 
 Like around marketing and sales: Cashvertising, ...
 
+11. Review these tech notes monthly ✅
 
 
 #### Stop Doing

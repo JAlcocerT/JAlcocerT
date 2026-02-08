@@ -2,13 +2,19 @@
 title: "Selfhosting local LLMs x GenBI"
 date: 2026-05-01
 draft: false
-description: "How to use Ollama - With WrenAI, Rill and Vanna."
-tags: ["Home-Lab","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","Link Shortener","TTS"]
+description: "How to use Ollama - With WrenAI, Rill and Vanna in Ubuntu 26 LTS"
+tags: ["Home-Lab","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","TTS","Docker Model Run"]
 ---
 
 **Tl;DR**
 
 LocalModels: with Docker
+
+<!-- 
+https://www.youtube.com/watch?v=tYg6T_DAP-k
+-->
+
+{{< youtube "tYg6T_DAP-k" >}}
 
 
 **Intro**
@@ -16,6 +22,10 @@ LocalModels: with Docker
 Running LLMs locally, even on a [PI](#how-to-enhance-a-raspberry-pi-for-ai), should not be a problem in 2025.
 
 https://jalcocert.github.io/JAlcocerT/where-to-deploy/
+
+```sh
+sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml logs -f ollama
+```
 
 ## Large Language Models (LLMs)
 
@@ -202,7 +212,36 @@ print(llm.complete("What is a vector database?"))
 
 > AGPLv3 |  Jan is an open source alternative to ChatGPT that runs 100% offline on your computer 
 
+### 
 
+
+
+
+## Conclusions
+
+For a daily driver OS, ZORIN 18 is working nicely for me.
+
+But it was about time to do a format C to [my x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/).
+
+So...why not trying ubuntu `26.04 LTS` that has recently been [released](https://releases.ubuntu.com)?
+
+* https://ubuntu.com/about/release-cycle
+* https://releases.ubuntu.com
+
+I gave it a try first via: *then, added to my usb drive with Ventoy and the other OS's*
+
+```sh
+#sudo apt install gnome-boxes
+gnome-boxes
+```
+
+You can check these selfhosted and Linux docs.
+
+Or reach out for doubts:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+{{< /cards >}}
 
 
 ---
