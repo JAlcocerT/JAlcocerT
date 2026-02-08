@@ -621,6 +621,13 @@ wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/downloa
 
 > Version 0.8.5.1 allowed me to use logseq via browser, unlike Brave 1.86.148 Chromium: 144.0.7559.133
 
+If you want Chromium, minimal UI, and no crypto/ads stack: Helium is closer to your taste than Brave, as long as you accept rough edges and a smaller project.
+
+If you want “it just works” privacy with maximal site compatibility and do not mind the BAT model existing: Brave is the pragmatic choice.
+
+If you prefer Gecko and Firefox’s ecosystem with a nicer UI and no Mozilla telemetry: Zen is a good daily driver, but not a hardcore anonymity tool.
+
+If you want the strictest privacy and are OK with friction and some breakage: LibreWolf is the strongest stance of the four.
 
 * TightVNC
 * Remote Ripple VNC Viewer

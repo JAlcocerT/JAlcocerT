@@ -83,6 +83,14 @@ AirTable..or...?
 
 ![alt text](/blog_img/selfh/nocode/baserow-lead-template.png)
 
+People use tools like baserow as an overpowered spreadsheet or custom CRM.
+
+You can also try with:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/twenty" title="Twenty CRM | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ## Marketing
 

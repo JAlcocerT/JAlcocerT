@@ -43,10 +43,14 @@ Overkill with salesforce or hubspot?
 
 Why dont you try Twenty?
 
+![alt text](/blog_img/selfh/nocode/twentycrm-signup.png)
+
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/twentycrm" title="Twenty CRM | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/twenty" title="Twenty CRM | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/baserow" title="BaseRow | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+![alt text](/blog_img/selfh/nocode/twentycrm-workspace.png)
 
 * https://twenty.com/releases
     * https://github.com/twentyhq/twenty
@@ -144,6 +148,8 @@ python3 backfill_meeting.py 01Kabcdef12446579
 
 <!-- https://www.youtube.com/watch?v=MpxmfpCl20c&t=10s -->
 
+![alt text](/blog_img/dev/tailscale-funnel.png)
+
 ```sh
 #~/Desktop/my-logseq-notes/scripts$ docker compose up -d
 sudo tailscale set --operator=$USER
@@ -152,6 +158,7 @@ tailscale funnel --https=443 localhost:5000
 tailscale serve status
 #openssl rand -base64 12 #for webhook secret
 ```
+
 
 You will get some `https://tailscaleuserdevice.tail123456.ts.net/` to connect to fireflies AI webhooks.
 
@@ -191,6 +198,15 @@ As long as u understand consumer...u see how much **risk/uncertainty averse** we
 Tu dinero es una commodity, mi tiempo no.
 
 Plus: Si atiendes a cualquiera = no escasez = eres malo.
+
+Just clean up:
+
+```sh
+lazydocker
+docker system df
+#docker stop $(docker ps -a -q) #stop all
+#docker system prune -a
+```
 
 ### A cool workflow from a landing?
 
