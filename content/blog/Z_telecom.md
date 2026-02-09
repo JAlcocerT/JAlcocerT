@@ -644,9 +644,12 @@ Specialized VoIP Adapters and Routers
 - **Integrated VoIP Routers**: Some routers come with built-in VoIP support, allowing direct connection of traditional phones and routing of VoIP calls alongside normal internet traffic.
 
 Not Typically VoIP Devices
+
 - **Smart TVs**: While smart TVs are capable of internet connectivity and can support apps for streaming services like Netflix, they are generally not used for VoIP communications. Their primary function is media consumption rather than voice communication.
 
-VoIP technology is versatile and can be implemented across various devices, but it primarily revolves around voice communication capabilities rather than media streaming. Devices used for VoIP need to support audio input and output, have a stable internet connection, and be equipped with the necessary software to manage voice data packets.
+VoIP technology is versatile and can be implemented across various devices, but it primarily revolves around voice communication capabilities rather than media streaming.
+
+Devices used for VoIP need to support audio input and output, have a stable internet connection, and be equipped with the necessary software to manage voice data packets.
 
 {{< /details >}}
 

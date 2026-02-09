@@ -99,7 +99,7 @@ sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml confi
 ```
 
 {{< callout type="warning" >}}
-You will need ext4 format in your drive to have NC configured on another drive different than your OS!
+You will need **ext4 format** in your drive to have NC configured on another drive different than your OS!
 {{< /callout >}}
 
 ```sh
@@ -183,7 +183,18 @@ root@jalcocert-x300:/home/jalcocert/Docker/nextcloud/html/data/....
 #same for immich
 ```
 
-And about security of you open those to the internet
+And about security if you open those to the internet!
+
+To stop nicely:
+
+```sh
+#docker compose -f 2602_docker-compose.yml stop
+docker stop nextcloud nextclouddb #docker compose stop nextclouddb nextcloud-app
+
+sudo umount /mnt/data1tb
+#mount | grep /mnt/data1tb
+lsblk -o NAME,SIZE,MODEL,TYPE,FSTYPE,MOUNTPOINT | grep -v loop #see that its not mounted
+```
 
 #### CF WAF vs Zero Trust Access
 
@@ -255,6 +266,7 @@ Concerned about container backups?
 ```sh
 mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer
 sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
+#also with rsync :)
 ```
 
 

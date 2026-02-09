@@ -258,7 +258,7 @@ This was also an opportunity to do a format on the 1TB drive [where I tried umbr
 
 > Umbrel (the btc node mostly) took ~837GB!
 
-Lets make some space: *formatting a 1TB drive as ext4*
+Lets make some space: *formatting a 1TB drive as ext4 and adding it to [my x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/) as permanent additional storage*
 
 ```sh
 lsblk -o NAME,SIZE,MODEL,TYPE,FSTYPE

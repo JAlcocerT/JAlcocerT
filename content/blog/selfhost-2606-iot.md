@@ -9,6 +9,12 @@ url: 'iot-home-lab-tools'
 
 https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-humidity-sensor
 
+httpie
+
+reqable
+
+emqx 
+
 
 **TL;DR**
 

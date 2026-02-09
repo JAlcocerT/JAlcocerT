@@ -7,18 +7,12 @@ description: 'How to change DNS Servers and why it matters. Portainer to Homepag
 url: 'private-dns-with-docker'
 ---
 
-httpie
-
-reqable
-
-emqx 
-
 **Tl;DR**
 
 Pros tend to say `its always DNS`...
 
 ```sh
-resolvectl status #here is how you check yours
+resolvectl status #here is how you check yours (DNS)
 ```
 
 **Intro**
@@ -26,6 +20,8 @@ resolvectl status #here is how you check yours
 AdguardHome is a good starter for any homelab.
 
 But DNS is a rabbithole of its own.
+
+With this post, I want to explore the latests on PiHole and use it as the default DNS for a smart TV.
 
 https://github.com/TechnitiumSoftware/DnsServer
 
@@ -54,7 +50,7 @@ https://github.com/mmotti/pihole-regex -->
 ## Wireshark - Checking which adds are going through
 https://docs.linuxserver.io/images/docker-wireshark/
 
- -->
+-->
 
 
 link checker https://github.com/JAlcocerT/JAlcocerT/actions/runs/20968565017/job/60265649025
@@ -278,7 +274,7 @@ curl -sS http://ip-api.com/json/ #provides info about country, ISP, ...
 #curl -6 ifconfig.me #ipv6 info 
 ```
 
-And check your uptime kuma monitoring.
+And check your uptime kuma monitoring: `http://192.168.1.2:3001/dashboard/`
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
