@@ -15,7 +15,7 @@ Avoid silos and the Coasean Ceiling.
 
 Tools to avoid silos in your business.
 
-Im not going to talk about communication tools for business.
+Im not going to talk [about communication tools](#communicating-with-colleagues) for business.
 
 Neither invoices/billing:
 
@@ -128,10 +128,52 @@ But these selfhosting ones.
 
 ## E-Commerce
 
-There is a full post here.
+Because Im not going to even mention about plain websites.
+
+There is a full [post here](https://jalcocert.github.io/JAlcocerT/how-about-selfhosting-an-ecommerce/).
 
 
-But basically, 
+But basically,you can try:
+
+![Drupal Ecommerce Setup](/blog_img/biz/ecommerce/drupal.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/drupal" title="Drupal | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+<!-- 
+* Weddings...
+* bodas.net
+
+http://divephiphiisland.com/ -->
+
+<!-- 
+ecommerce
+https://polkabikes.pl/ -->
+
+<!-- More ppl to help - future CLIENTS
+
+* you dont need to pay for wordpress themes, its already there and it works
+  * https://generatepress.com/pricing/
+
+* Pablo Couto - https://www.buildingfuturecapital.com/
+
+https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
+
+Registry Expiry Date - 26 April 2025
+
+* Sofia - zofienkagram
+  * https://wnba.pl/ - another wordpress (good looking)
+  * monika ciolkowska - monikacio
+    * https://monikaciolkowska.portfoliobox.net/
+    * Using the low tier without domain of https://www.portfoliobox.net/pricing (46$/y)
+      * Interesting section with a table comparing services and faq (go below)
+
+* Gym Trainer - https://trenujswiadomie.pl/kokpit/
+
+
+-->
+
 
 
 ## Tech Businesses
@@ -163,7 +205,7 @@ Just try:
 
 >  A simple URL based **digital business card creation** and sharing system 
 
-You can clean up the mess with:
+You can clean up the mess with: *see `OSS Business` in my home-lab repo for more ideas.
 
 ```sh
 lazydocker
@@ -201,3 +243,20 @@ Consider overleaf or these:
 ---
 
 ## FAQ
+
+### Communicating with colleagues
+
+```sh
+#sudo snap install slack --classic #sudo snap remove slack
+#sudo snap install discord
+#flatpak install flathub org.telegram.desktop
+#flatpak install flathub im.riot.Riot #element
+#flatpak install flathub org.signal.Signal
+```
+
+* https://github.com/permissionlesstech/bitchat
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/matrix" title="Matrix | Docker Config for HomeLab 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serverless-invoices" title="Serverless Invoices | Docker Config for HomeLab 🐋 ↗" >}}
+{{< /cards >}}

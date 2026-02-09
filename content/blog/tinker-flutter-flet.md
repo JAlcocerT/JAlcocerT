@@ -7,7 +7,9 @@ description: 'Flutter Apps. Created with Python via Flet and more'
 url: 'flutter-flet-python'
 ---
 
+Affine and Appflowy are having web and desktop apps.
 
+not sure if those are done with flutter, but they are cool
 
 **Tl;DR**
 

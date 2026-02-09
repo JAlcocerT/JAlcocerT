@@ -40,6 +40,8 @@ You can create your own torrent of your joined `.MP4` with:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+Because this it not intended for you to use go to `wolfmax4k`, nor visiting [Anna](https://open-slum.pages.dev/).
+
 ### IPTV
 
 * https://github.com/ardoviniandrea/ViniPlay

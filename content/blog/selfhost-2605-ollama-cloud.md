@@ -256,9 +256,25 @@ sudo ./z-desktop-x-homelab/Linux_Setup_101.sh #You are good to go with browsers 
 
 This was also an opportunity to do a format on the 1TB drive [where I tried umbrelOS](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#selfhosted-adventures) with a [btc node](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#big-data-analytics-with-on-chain-data).
 
+> Umbrel (the btc node mostly) took ~837GB!
+
+Lets make some space: *formatting a 1TB drive as ext4*
 
 ```sh
-#for just linux drive, ext4 seems to be the best option and will allow for nextcloud to have its data folder there
+lsblk -o NAME,SIZE,MODEL,TYPE,FSTYPE
+#lsblk -d -o NAME,SIZE,MODEL,TYPE
+#lsblk -f
+du -sh /media/jalcocert/1234-fb02-4e46-948d-abcdef134567/* #see those 837gb
+#for just a linux drive, ext4 seems to be the best option and will allow for nextcloud to have its data folder there
+#sudo umount /dev/sda1
+## different tool, 'parted' is easier for scripting/one-liners than fdisk
+#sudo parted /dev/sda --script mklabel gpt
+#sudo parted /dev/sda --script mkpart primary ext4 0% 100%
+# -L assigns a label
+# /dev/sda1 is the new partition we just made
+#sudo mkfs.ext4 -L data1tb /dev/sda1
+lsblk -f /dev/sda
+sudo mkdir -p /mnt/data1tb/nextcloud/db && sudo chown -R 1000:1000 /mnt/data1tb/nextcloud/db
 ```
 
 If you dont know who are you connected to:
@@ -334,6 +350,8 @@ I just got to know recently about:
 
 ### How to Enhance a Raspberry Pi for AI
 
+You can do same thing I explain with my x300 in your Pis, miniPCs or cloud/VPS.
+
 * Edge TPU on RPi - Coral Edge TPU (Tensor Processing Unit - an USB acccelerator )
 
 TPU (Tensor Processing Unit)?
@@ -355,7 +373,8 @@ They are particularly well-suited for **various AI applications**, including:
 - 💬 Natural language processing
 - 🗣️ Speech recognition
 
-
 NPUs typically utilize a manycore architecture with specialized instructions and data formats optimized for AI algorithms. This allows them to handle complex neural networks efficiently.
 
-NPUs are often integrated into mobile processors from companies like Apple, Huawei, and Samsung. They are also available as standalone chips from some manufacturers.
+NPUs are often integrated into mobile processors from companies like Apple, Huawei, and Samsung. 
+
+They are also available as standalone chips from some manufacturers.

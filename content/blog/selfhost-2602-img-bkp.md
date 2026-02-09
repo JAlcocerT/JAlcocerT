@@ -59,11 +59,6 @@ Because at some point, you will need more than just a quick share: *or sth more 
 
 ### PiGallery
 
-<!-- 
-https://x.com/tom_doerr/status/1979894065400263086 
--->
-
-{{< tweet user="tom_doerr" id="1979894065400263086" >}}
 
 
 * https://libreselfhosted.com/project/fluxbb/
@@ -95,11 +90,56 @@ We have some fresh releases since the last time:
 
 
 ```sh
-./setup-env.sh #chmod +x ./evolution/setup-env.sh
+./setup-env.sh #chmod +x ./evolution/setup-env.sh #there are the environment variables that are created randomly for the homelab container deployment
+#docker compose -f 2602_docker-compose.yml config | grep -E "MYSQL_|NEXTCLOUD_" #check that these will be used
 cd z-homelab-setup/evolution/
 sudo docker compose -f 2602_docker-compose.yml up -d nextcloud-app nextclouddb #nextcloud:80
 sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml config
 #sudo docker compose -f 2602_docker-compose.yml logs -f nextcloud-app nextclouddb
+```
+
+{{< callout type="warning" >}}
+You will need ext4 format in your drive to have NC configured on another drive different than your OS!
+{{< /callout >}}
+
+```sh
+sudo mount /dev/sda1 /mnt/data1tb #one time
+#cat /etc/fstab #here is where persistency happens
+#sudo chown -R 1000:1000 /mnt/data1tb/nextcloud
+#sudo mkdir -p /mnt/data1tb/nextcloud/db && sudo chown -R 1000:1000 /mnt/data1tb/nextcloud/db
+
+sudo docker compose -f /home/jalcocert/Desktop/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml up -d nextcloud-app nextclouddb #nextcloud:80
+#docker compose -f 2602_docker-compose.yml logs nextcloud-app --tail 50
+sudo docker compose -f /home/jalcocert/Desktop/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml logs nextcloud-app nextclouddb
+#docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | grep nextcloud
+#lazydocker
+docker compose -f 2602_docker-compose.yml up -d --force-recreate nextclouddb
+du -sh /mnt/data1tb/* #see the space taken
+```
+
+Go to `http://localhost:8099/settings/user`
+
+![alt text](/blog_img/selfh/media/NC-traefik/nc-32.png)
+
+With that, you should have Nextcloud 32 image working, which bring all in [Nextcloud Hub 25 Autumn](https://nextcloud.com/hub25-autumn/) 🚀
+
+Verify that is all OK with your trusted domains:
+
+```sh
+#docker exec nextcloud php occ config:system:get trusted_domains
+cd /mnt/data1tb/nextcloud/html/config
+cat config.php | grep -A 10 trusted_domains
+docker exec nextcloud php occ config:system:set trusted_domains 1 --value=your.new.domain.com
+docker exec nextcloud php occ config:system:set trusted_domains 1 --value=192.168.1.12
+docker exec nextcloud php occ config:system:get trusted_domains #see that now is added
+```
+
+Remember that it brings WebDav support: *in fact, im skipping using nextcloud desktop in linux this time as I want to be able to format without thinking on data on my x13 laptop*
+
+```sh
+#dav://your_nc_user@localhost:8099/remote.php/webdav
+#dav://your_nc_user@192.168.1.12:8080/remote.php/webdav
+#davs://your_nc_user@nextcloud.yourdomain.duckdns.org/remote.php/webdav
 ```
 
 {{< cards cols="2" >}}
@@ -164,7 +204,6 @@ But that would work all the domain and sub-domains.
 
 So you can be more specific with: `(http.host eq "nc.jalcocertech.com" and not ip.src.country in {"ES" "PL"})`
 
-
 ```sh
 curl -X PUT \
 	"https://api.cloudflare.com/client/v4/zones/abcdef123456/rulesets/phases/http_request_firewall_custom/entrypoint" \
@@ -190,24 +229,22 @@ You can use it together with F/OSS photo services like: https://awweso.me/photo-
 * Piwigo
 * https://opensource.com/alternatives/google-photos
 
-https://www.youtube.com/watch?v=h_inF-ypMls
-
-https://www.opensourcealternative.to/project/Photprism
+* https://www.youtube.com/watch?v=h_inF-ypMls
+* https://www.opensourcealternative.to/project/Photprism
 
 Don't Let Apple & Google Harvest Your Photos, Use Immich to Self-Host Your Own Cloud!
 
-https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
+* https://www.youtube.com/watch?v=URJiQb8PwWo&t=1179s
 
 Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
 
-https://www.youtube.com/watch?v=sIpt4u03mXc
-
+* https://www.youtube.com/watch?v=sIpt4u03mXc
 
 ---
 
 ## Conclusions
 
-Just do something.
+Just do something!
 
 ### How to backup data?
 
@@ -221,17 +258,31 @@ sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /
 ```
 
 
-<!-- ### Other F/OSS Backup solutions
+Other F/OSS Backup solutions
 
-Kopia: An Automatic Backup Solution for Your Self-Hosted App Data or Documents
-https://www.youtube.com/watch?v=a6GfQy9wZfA
+Kopia: An Automatic Backup Solution for Your Self-Hosted App Data or Documents: https://www.youtube.com/watch?v=a6GfQy9wZfA
 
--->
 
 ### How to Detect Duplicates files in the system
 
 * https://www.linuxfordevices.com/tutorials/linux/install-use-czkawka
 
+Do I have some duplicates on the nextcloud folder `/mnt/data1tb/nextcloud/html`?
+
+
+```sh
+flatpak install czkawka
+flatpak override --filesystem=/mnt/data1tb com.github.qarmin.czkawka
+flatpak run com.github.qarmin.czkawka
+```
+
+Superseeded by Krokiet: https://github.com/qarmin/czkawka/releases/tag/10.0.0
+
+```sh
+#https://github.com/qarmin/czkawka/releases/download/10.0.0/linux_krokiet_x86_64
+wget -O krokiet https://github.com/qarmin/czkawka/releases/download/10.0.0/linux_krokiet_x86_64 && chmod +x krokiet
+./krokiet # Krokiet is just an alternative GUI frontend for Czkawka (using Slint instead of GTK). 
+```
 ### More Media
 
 I set again Jellyfin *and company* at: `192.168.1.2:8096`
@@ -249,7 +300,7 @@ docker ps -a | grep -i jellyfin
 #udo docker stats jellyfin #~135mb idle
 ```
 
-If you see very high CPU consumption for nothing, try:
+If you see very high CPU consumption due to Jellyfin doing nothing, try:
 
 1. Subtitles Burn-in
 

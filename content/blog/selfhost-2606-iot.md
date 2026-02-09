@@ -59,3 +59,8 @@ docker ps -a | grep -i home-assistant
 ---
 
 ## Conclusions
+
+
+---
+
+## FAQ

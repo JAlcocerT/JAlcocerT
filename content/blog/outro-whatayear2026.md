@@ -202,6 +202,13 @@ Oh, and Im quite happy with proton mail and custom domains.
 
 Cloudflare tunnels keep been great, but I was surprised by tailscale funnels for those very quick PoC that might require exposing some we/app or webhooks.
 
+<!-- 
+https://x.com/tom_doerr/status/1979894065400263086 
+-->
+
+{{< tweet user="tom_doerr" id="1979894065400263086" >}}
+
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="repo↗" >}}
 {{< /cards >}}

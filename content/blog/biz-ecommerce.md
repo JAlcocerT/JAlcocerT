@@ -1,5 +1,5 @@
 ---
-title: "An e-Commerce around OSS"
+title: "An e-Commerce around Selfhosted OSS"
 date: 2026-02-01
 draft: false
 tags: ["Shopify x SaaS","MedusaJS x BlackFriday","Postgres x OLTP vs OLAP","OSS Business"]
@@ -110,6 +110,8 @@ En resumen, **Medusa.js**, **Bagisto** y **Saleor** representan la nueva generac
 
 ### Drupal
 
+This one makes the trick:
+
 ![Drupal Ecommerce Setup](/blog_img/biz/ecommerce/drupal.png)
 
 {{< cards cols="2" >}}
@@ -191,11 +193,9 @@ Here’s how it works:
 - Astro renders static pages with the product info while allowing dynamic client-side interactions like cart updates or checkout using Medusa’s API.
 - This JAMstack pattern offers great performance, SEO, and developer flexibility, decoupling the frontend and backend.
 
-So, you create and update products in Medusa, and your Astro static site reflects those products by calling Medusa’s API.[1][2][3]
+So, you create and update products in Medusa, and your Astro static site reflects those products by calling Medusa’s API.
 
 [1](https://medusajs.com/product-module/)
-[2](https://kvytechnology.com/blog/software/product-management-with-medusa-js/)
-[3](https://statichunt.com/jamstack-ecommerce)
 
 Hosting an eCommerce
 
@@ -286,41 +286,6 @@ https://www.instagram.com/outficik.secondhand/ -->
   * `https://lyk-website.pl/brief/`
 
 
-
-
-
-<!-- 
-* Weddings...
-* bodas.net
-
-http://divephiphiisland.com/ -->
-
-<!-- 
-ecommerce
-https://polkabikes.pl/ -->
-
-<!-- More ppl to help - future CLIENTS
-
-* you dont need to pay for wordpress themes, its already there and it works
-  * https://generatepress.com/pricing/
-
-* Pablo Couto - https://www.buildingfuturecapital.com/
-
-https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
-
-Registry Expiry Date - 26 April 2025
-
-* Sofia - zofienkagram
-  * https://wnba.pl/ - another wordpress (good looking)
-  * monika ciolkowska - monikacio
-    * https://monikaciolkowska.portfoliobox.net/
-    * Using the low tier without domain of https://www.portfoliobox.net/pricing (46$/y)
-      * Interesting section with a table comparing services and faq (go below)
-
-* Gym Trainer - https://trenujswiadomie.pl/kokpit/
-
-
--->
 ---
 
 ### Competitors
