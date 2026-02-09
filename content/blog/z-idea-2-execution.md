@@ -1,6 +1,6 @@
 ---
 title: "How to (Dis)qualify Business Opportunities | v2"
-date: 2026-02-08T00:00:21+01:00
+date: 2026-02-08T14:00:21+01:00
 draft: false
 tags: ["ADR x HLD to Prototype","The Business HOW - CPC vs CPA vs CaC","JSON to TOON"]
 description: 'AI powered SDLC x Unit Economics 105'
@@ -1138,3 +1138,15 @@ You are effectively ready to run an **AI-Augmented Software Project**.
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/omnitools" title="Omnitools | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/it-tools" title="IT-Tools | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+{{< tabs items="JSON,YAML,TOML" >}}
+
+  {{< tab >}}**JSON**: JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax.
+  * https://jsonformatter.org/
+  * https://github.com/josdejong/jsoneditor
+  * https://github.com/AykutSarac/jsoncrack.com
+  {{< /tab >}}
+  {{< tab >}}**YAML**: YAML is a human-readable data serialization language.{{< /tab >}}
+  {{< tab >}}**TOML**: TOML aims to be a minimal configuration file format that's easy to read due to obvious semantics.{{< /tab >}}
+
+{{< /tabs >}}

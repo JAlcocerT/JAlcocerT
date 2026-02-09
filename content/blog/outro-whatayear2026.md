@@ -214,6 +214,10 @@ Share on social media / ads and do `draft:true` when old, but history will be ke
 
 0. Creating D&A Reports with AI
 
+Because power BI and looker might not be enough
+
+
+
 0. IoDoctor reloaded
 
 * A second opinion

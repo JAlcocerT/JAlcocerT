@@ -3,7 +3,7 @@ title: "Selfhosting local LLMs x GenBI"
 date: 2026-05-01
 draft: false
 description: "How to use Ollama - With WrenAI, Rill and Vanna in Ubuntu 26 LTS"
-tags: ["Home-Lab","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","TTS","Docker Model Run"]
+tags: ["Home-Lab x x300 x ext4","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","TTS","Docker Model Run"]
 ---
 
 **Tl;DR**
@@ -235,7 +235,52 @@ I gave it a try first via: *then, added to my usb drive with Ventoy and the othe
 gnome-boxes
 ```
 
+Once ready, you can use the scripts at my repo to install all the goodies for your server:
+
+```sh
+sudo apt install git
+git config --global user.name "JAlcocerT"
+git config --global user.email "JAlcocerT"
+
+#flatpak install flathub app.zen_browser.zen
+git clone https://github.com/JAlcocerT/Home-Lab
+
+#sudo ./z-benchmarks/Benchmark_101.sh
+#for a homelab that you wont use desktop, you are good to go with this
+sudo ./z-desktop-x-homelab/Linux_Setup_101.sh #You are good to go with browsers OBS tailscale etc
+```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/home-lab" title="home-lab | Repo ↗" icon="github" >}}
+{{< /cards >}}
+
+This was also an opportunity to do a format on the 1TB drive [where I tried umbrelOS](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#selfhosted-adventures) with a [btc node](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#big-data-analytics-with-on-chain-data).
+
+
+```sh
+#for just linux drive, ext4 seems to be the best option and will allow for nextcloud to have its data folder there
+```
+
+If you dont know who are you connected to:
+
+
+```sh
+ip route | grep default
+#default via 192.168.0.1 dev wlp3s0 proto dhcp metric 600 
+```
+
+See other *local devices* connected to the same router:
+
+```sh
+ip neigh
+```
+
 You can check these selfhosted and Linux docs.
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit" title="Web Audits 101 x BlogSpot | Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit" title="Web Audits 101 x BlogSpot | Post ↗" >}}
+{{< /cards >}}
 
 Or reach out for doubts:
 
@@ -279,7 +324,13 @@ Rill or WrenAI
 
 ### TTS
 
-https://huggingface.co/kyutai/pocket-tts
+TTS is always interesting.
+
+But I dont have much time to act on it.
+
+I just got to know recently about:
+
+* https://huggingface.co/kyutai/pocket-tts
 
 ### How to Enhance a Raspberry Pi for AI
 

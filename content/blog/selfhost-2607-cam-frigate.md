@@ -27,7 +27,9 @@ But there are cool projects for computer vision that combine
 sudo docker compose -f ./z-homelab-setup/evolution/2607_docker-compose.yml logs -f frigate
 ```
 
-##
+## Tools
+
+Beyond the ,DIY' with the Pi camera.
 
 ### Frigate
 
@@ -72,6 +74,8 @@ Perseverencia (el talento de los que no tenemos talento ) sin autocritica es wor
 {{< /cards >}}
 
 
+
+
 ---
 
 ## FAQ
@@ -89,11 +93,6 @@ Perseverencia (el talento de los que no tenemos talento ) sin autocritica es wor
 > Self-hosted, **local only NVR and AI Computer Vision software**. With features such as object detection, motion detection, face recognition and more, it gives you the power to keep an eye on your home, office or any other place you want to monitor.
 
 ### Scrypted
-
-
----
-
-## FAQ
 
 ### Other
 

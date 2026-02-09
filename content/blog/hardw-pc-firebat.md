@@ -862,7 +862,7 @@ speedtest-cli #speedtest-cli --simple
 ```
 
 ```sh
-curl -sS https://ipinfo.io/json #the command to use
+curl -sS https://ipinfo.io/json #the command to use to see your IP
 curl -sS http://ip-api.com/json/ #provides info about country, ISP, ...
 curl -6 ifconfig.me #ipv6 info 
 ```

@@ -12,6 +12,8 @@ https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-
 
 **TL;DR**
 
+Isnt it time to do some upgrades to IoT, HA and the solar panel?
+
 **Intro**
 
 

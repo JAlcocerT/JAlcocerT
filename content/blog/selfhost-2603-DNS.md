@@ -258,6 +258,33 @@ It is great for Docker: https://www.youtube.com/watch?v=tE9YjEV1T4E
 
 ## Conclusions
 
+To configure your domains, you know you had: https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#programmatic-dns-updates
+
+See that everything is fine with your network:
+
+```sh
+sudo apt-get install dnsutils -y #dns resolution
+nslookup github.com 
+dig google.com
+
+ip route | grep default #see your CM
+ping -c 4 192.168.1.1 #gateway
+#ip neigh #and other devices connected to the same CM
+ping 9.9.9.9 #quad9
+
+sudo apt-get install speedtest-cli
+#curl -sS https://ipinfo.io/json #the command to use to see your IP
+curl -sS http://ip-api.com/json/ #provides info about country, ISP, ...
+#curl -6 ifconfig.me #ipv6 info 
+```
+
+And check your uptime kuma monitoring.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 Im sure that you are already using qb and prowlarr at `6011` and `9696`.
 
 ```sh

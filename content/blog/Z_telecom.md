@@ -73,7 +73,7 @@ See how they compare:
 
 ### Fiber vs Coax
 
-
+Two different technologies to achieve the same: provide you internet connection at home.
 
 #### Fiber
 
@@ -765,7 +765,13 @@ Impact and Trends
 - **Regulatory Attention**: The growth of OTT services has attracted regulatory scrutiny regarding issues like data privacy, net neutrality, and fair competition practices.
 - **Innovation and Competition**: The OTT space is highly competitive and drives continuous innovation in content delivery technologies, such as improved compression algorithms and adaptive streaming techniques.
 
-OTT services in telecommunications represent a significant shift in how content is delivered and consumed. They bypass traditional broadcast methods to provide direct-to-consumer streaming services via the internet. This shift not only affects consumer preferences and behaviors but also influences the strategic operations and infrastructure development of telecom companies. As OTT continues to grow, it remains a critical area for innovation, investment, and regulation in the telecom sector.
+OTT services in telecommunications represent a significant shift in how content is delivered and consumed.
+
+They bypass traditional broadcast methods to provide direct-to-consumer streaming services via the internet. 
+
+This shift not only affects consumer preferences and behaviors but also influences the strategic operations and infrastructure development of telecom companies.
+
+As OTT continues to grow, it remains a critical area for innovation, investment, and regulation in the telecom sector.
 
 {{< /details >}}
 
@@ -774,7 +780,6 @@ OTT services in telecommunications represent a significant shift in how content 
 {{< callout type="info" >}}
 While RDK-B is focused on software standardization for broadband devices, OFT (Open Field Test) is a method for testing the performance of these devices in an open environment. 
 {{< /callout >}}
-
 
 ---
 

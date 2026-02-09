@@ -231,6 +231,8 @@ These proxy wallet contracts hold users' positions and USDC used within Polymark
 
 ### Selfhosted GPX?
 
+As you might know, [gpx is great](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#gpx-is-great).
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}

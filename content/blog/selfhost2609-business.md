@@ -26,12 +26,6 @@ Neither invoices/billing:
 
 But more on:
 
-Business Cards
-
-* https://github.com/kyaustad/cardyo
-
->  A simple URL based **digital business card creation** and sharing system 
-
 
 
 ## Notes
@@ -161,7 +155,15 @@ I'd keep it simple with: *nocodb, affine are great, but require more services ru
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-You can clean up with:
+Business Cards?
+
+Just try:
+
+* https://github.com/kyaustad/cardyo
+
+>  A simple URL based **digital business card creation** and sharing system 
+
+You can clean up the mess with:
 
 ```sh
 lazydocker
@@ -180,8 +182,11 @@ And for questions:
 
 Not doing business yet, but selling your time in the job market?
 
-https://github.com/JAlcocerT/cv-laitex
-https://github.com/JAlcocerT/Job-Trends
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="home-lab | Repo ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Job-Trends" title="home-lab | Repo ↗" icon="github" >}}
+{{< /cards >}}
 
 Consider overleaf or these:
 

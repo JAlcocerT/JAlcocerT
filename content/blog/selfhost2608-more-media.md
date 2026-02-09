@@ -1,5 +1,5 @@
 ---
-title: "Frigate - Cam with object detection"
+title: "Selfhosted Media"
 date: 2026-08-01T23:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr"]
@@ -7,6 +7,12 @@ description: 'Computer'
 url: 'selfhosting-more-media'
 ---
 
+
+**TL;DR**
+
+Is there a reliable way not to loose photos for good?
+
+**Intro**
 
 
 

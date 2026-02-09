@@ -1,9 +1,9 @@
 ---
-title: "Okta Alternatives? SSO Tools"
+title: "Okta Alternatives? Selfhosted SSO Tools"
 date: 2026-04-01T23:20:21+01:00
 draft: false
 tags: ["Dashboards","Supabase Auth vs PB","Authelia vs Authentik","PocketID"]
-description: 'A look to F/OSS Single Sign On Tools'
+description: 'A look to F/OSS Single Sign On and authentication Tools'
 url: 'open-source-sso-tools'
 ---
 
@@ -15,13 +15,17 @@ url: 'open-source-sso-tools'
 
 **Intro**
 
-Some time back, when working at a popular ecommerce, they were using Okta everywhere.
+Some time back, when working at a popular *,ecommerce'*, they were using Okta everywhere.
 
 I was wondering why they were not using OSS alternatives for business SSO.
+
+I got TInyAuth working with Traefik sometime back with the homelab.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/home-lab" title="HomeLab Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Reviewing Selfhosted SSO Tools for business" >}}
 {{< /cards >}}
+
+But there are few more options out there.
 
 So lets cover some pros and cons and selfhost whatever is possible.
 
