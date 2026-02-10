@@ -343,7 +343,51 @@ ADL only covers static definition, not runtime behavior: [nextmoca](https://www.
 
 It is meant to sit alongside A2A, MCP, OpenAPI, and workflow systems as the **definition layer** of the agent stack. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 
+ADL is a spec for describing an agent; RAG and similar tools are mechanisms an agent can use. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 
+## Role in the stack
+
+- ADL is a **definition layer**: it declares an agent’s goal, tools, RAG sources, permissions, and model config in a portable, vendor‑neutral file. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- RAG, MCP, workflows, OpenAPI, etc., are **implementation layers**: they govern how the agent actually retrieves data, calls tools, or runs steps at runtime. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+## ADL vs RAG
+
+- RAG is a pattern: chunk, embed, and retrieve documents/code/images to augment prompts, implemented via vector DBs and retrieval libraries. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- ADL does not replace RAG; instead, it describes which RAG indices/corpora an agent may access, where they live, and with what metadata and constraints. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- Put differently: RAG answers “how do we fetch context at runtime?”, while ADL answers “which RAG sources is this agent allowed to use and under what configuration?”. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+## ADL vs tool protocols (e.g., MCP)
+
+- Tool protocols like MCP define **how** an agent talks to tools: streaming, message formats, error handling. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- ADL defines **what** tools exist for a given agent: names, parameter schemas, invocation mode (python_function, http, mcp), and categories. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- You can use MCP and RAG under the hood, while ADL sits above them as the declarative contract that a security or platform team can inspect and version‑control. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+## Governance advantage
+
+- Existing RAG setups and tool registries are often scattered across YAML, code, and infra; ADL centralizes all that into one inspectable artifact. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- This makes it easier to audit “what can this agent possibly do or access?” than with ad‑hoc RAG configs or per‑framework agent definitions. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+
+# AI agents
+
+**Semantic Kernel** (likely what you meant by "symantec kernal," as no Symantec product matches this term) is Microsoft's open-source SDK for building AI agents and integrating large language models (LLMs) into apps using C#, Python, or Java. It uses a central "kernel" to orchestrate semantic functions (natural language prompts), native code functions, memory, and planners for tasks like chaining prompts or agent workflows. [leanware](https://www.leanware.co/insights/langchain-vs-semantic-kernel-which-ai-framework-is-right-for-your-next-project)
+
+## Core Features
+- Supports prompt engineering, retrieval-augmented generation (RAG), memory stores, and multi-agent collaboration. [nuget](https://www.nuget.org/packages/Microsoft.SemanticKernel)
+- Enterprise-focused with Azure integrations, telemetry, dependency injection, and strong .NET support. [zenvanriel](https://zenvanriel.nl/ai-engineer-blog/semantic-kernel-vs-langchain/)
+- Lightweight and modular for production apps, including streaming and planning. [leanware](https://www.leanware.co/insights/langgraph-vs-semantic-kernel)
+
+## Framework Comparison
+
+| Aspect          | Semantic Kernel  [zenvanriel](https://zenvanriel.nl/ai-engineer-blog/semantic-kernel-vs-langchain/) | LangChain  [turing](https://www.turing.com/resources/ai-agent-frameworks) | LangGraph  [turing](https://www.turing.com/resources/ai-agent-frameworks) | AutoGen  [bravent](https://www.bravent.net/en/news/revolutionizing-ai-development-microsofts-agentic-frameworks-autogen-and-semantic-kernel/) |
+|-----------------|----------------------------------|--------------------------|---------------------------|--------------------------|
+| **Primary Languages** | C#, Python, Java | Python (JS/TS) | Python, JS | Python |
+| **Architecture** | Kernel-centric plugins, planners | Chains/expressions (LCEL) | Graph-based nodes/edges | Multi-agent conversations |
+| **Strengths** | Enterprise .NET/Azure, governance | Vast integrations, RAG tools | Stateful workflows, checkpoints | Agent collaboration, code execution |
+| **Best For** | Copilots in Microsoft ecosystems  [leanware](https://www.leanware.co/insights/langchain-vs-semantic-kernel-which-ai-framework-is-right-for-your-next-project) | Rapid prototyping, diverse LLMs  [zenvanriel](https://zenvanriel.nl/ai-engineer-blog/semantic-kernel-vs-langchain/) | Complex, visual agent graphs  [leanware](https://www.leanware.co/insights/langgraph-vs-semantic-kernel) | Autonomous multi-agent teams  [bravent](https://www.bravent.net/en/news/revolutionizing-ai-development-microsofts-agentic-frameworks-autogen-and-semantic-kernel/) |
+| **Weaknesses** | Fewer community examples | Can be complex/heavy  [zenvanriel](https://zenvanriel.nl/ai-engineer-blog/semantic-kernel-vs-langchain/) | Steeper for simple tasks | Less structured for single agents  [linkedin](https://www.linkedin.com/pulse/unlocking-ai-orchestration-exploring-semantic-kernel-its-choudhury-patnc) |
+
+Semantic Kernel suits structured enterprise apps, while LangChain/LangGraph excel in flexible Python workflows, and AutoGen in collaborative agents. [zenml](https://www.zenml.io/blog/semantic-kernel-alternatives)
 
 ---
 

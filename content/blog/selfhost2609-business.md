@@ -90,12 +90,28 @@ Nah, just excalidraw or MermaidJS for diagrams.
 
 ## No Code
 
-AirTable..or...?
+
+Smartsheet is similar to Airtable and NocoDB as a flexible, spreadsheet-database hybrid for no-code work management, data organization, and team collaboration. 
+
+All three blend spreadsheets with relational databases, supporting views (grids, Kanban, calendars), automations, forms, and integrations.
+
+Airtable and NocoDB emphasize database-like apps with bases/tables; Smartsheet leans toward project/portfolio management with Gantt/dependencies. 
+
+| Tool       | Type                  | Hosting/Price                  | Key Strengths  [productive](https://productive.io/blog/airtable-alternatives/) |
+|------------|-----------------------|--------------------------------|---------------------------------------|
+| **Smartsheet** | Cloud (paid tiers)   | Starts ~$7/user/mo            | PM features, enterprise security |
+| **Airtable**  | Cloud (free tier)    | Free limited, ~$20/user/mo    | Polished UI, templates, apps |
+| **NocoDB**    | Open-source/self-host| Free, enterprise paid         | SQL backend, unlimited scalability |
+
+
+So, smartsheet, AirTable..or...?
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nocodb" title="NocoDB | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/baserow" title="BaseRow | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+Baseraw is just one service to get it selfhosted:
 
 ![alt text](/blog_img/selfh/nocode/baserow-lead-template.png)
 
@@ -171,7 +187,6 @@ Registry Expiry Date - 26 April 2025
 
 * Gym Trainer - https://trenujswiadomie.pl/kokpit/
 
-
 -->
 
 
@@ -195,10 +210,10 @@ These are very cool all in one to selfhost:
 ### D&A Tech
 
 Sqlite is pretty much everywhere: *from pi-hole v6 to pocketbase*
+
 ```sh
 choco install dbeaver
 ```
-
 
 ---
 
