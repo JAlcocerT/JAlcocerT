@@ -138,7 +138,7 @@ Remember: *We pay in the currency you value the least* ;)
 
 ### The flow
 
-Prompt Template: Meeting → Backlog (JSON)
+Prompt Template: *Meeting → Backlog (JSON)*
 
 ```json
 {

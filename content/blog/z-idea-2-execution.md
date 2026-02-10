@@ -1069,8 +1069,46 @@ You are effectively ready to run an **AI-Augmented Software Project**.
 ### JSON to TOON
 
 * https://github.com/toon-format/toon
+  * https://toonformat.dev/
 
 > MIT | 🎒 Token-Oriented Object Notation (TOON) – Compact, human-readable, schema-aware JSON for LLM prompts. Spec, benchmarks, TypeScript SDK.
+
+So something like:
+
+```json
+{
+  "role": "Business Analyst",
+  "context": "Meeting transcript (anonymized)",
+  "task": "Extract backlog",
+  "output": [
+    {
+      "id": "US-<number>",
+      "title": "string",
+      "description": "string",
+      "acceptance_criteria": ["string"],
+      "dependencies": ["string"],
+      "risks": ["string"],
+      "open_questions": ["string"]
+    }
+  ]
+}
+```
+
+Goes to TOON like:
+
+```yml
+role: Business Analyst
+context: Meeting transcript (anonymized) #avoids de-railment
+task: Extract backlog
+output[1]:
+  - id: US-<number>
+    title: string
+    description: string
+    acceptance_criteria[1]: string
+    dependencies[1]: string
+    risks[1]: string
+    open_questions[1]: string
+```
 
 * https://www.devtoolbox.co/tools/character-and-word-counter
 * https://www.devtoolbox.co/tools/json-validator

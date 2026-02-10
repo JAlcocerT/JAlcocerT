@@ -178,12 +178,26 @@ Registry Expiry Date - 26 April 2025
 
 ## Tech Businesses
 
-You will probably need monitoring
+You will probably need monitoring:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+These are very cool all in one to selfhost:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/it-tools" title="IT-Tools | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/omnitools" title="Omni-Tools Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+### D&A Tech
+
+Sqlite is pretty much everywhere: *from pi-hole v6 to pocketbase*
+```sh
+choco install dbeaver
+```
 
 
 ---
@@ -245,6 +259,8 @@ Consider overleaf or these:
 ## FAQ
 
 ### Communicating with colleagues
+
+Do you really need M365 with teams?
 
 ```sh
 #sudo snap install slack --classic #sudo snap remove slack

@@ -171,7 +171,6 @@ Why dont you just upload them to YT?
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video Docs Section with consolidated info ↗" >}}
 {{< /cards >}}
 
-
 Remember about backups!
 
 ```sh
@@ -310,7 +309,7 @@ docker ps -a | grep -i jellyfin
 #udo docker stats jellyfin #~135mb idle
 ```
 
-If you see very high CPU consumption due to Jellyfin doing nothing, try:
+If you see very **high CPU consumption** due to Jellyfin doing nothing, try:
 
 1. Subtitles Burn-in
 

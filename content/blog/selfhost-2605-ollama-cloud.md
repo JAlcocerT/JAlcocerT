@@ -304,21 +304,50 @@ Or reach out for doubts:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
 {{< /cards >}}
 
+### About Protocols
+
+Is ADL the next big thing after MCP eating the context windows?
+
+* https://github.com/nextmoca/adl
+* https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents
+
+ADL (Agent Definition Language) is an open source, vendor‑neutral spec for describing what an AI agent is and is allowed to do, so the same agent definition can be inspected, versioned, audited, and reused across different platforms and runtimes. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+## Core idea
+
+- ADL solves fragmentation where each team or vendor defines “agents” differently (YAML, ad‑hoc JSON, in‑code configs), which hurts governance, security, portability, and audits. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- It provides a single declarative file that captures an agent’s purpose, tools, retrieval (RAG) sources, LLM config, permissions, dependencies, and governance metadata. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+What ADL is
+
+An ADL file describes, in JSON/JSON‑compatible form: [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+- **Agent metadata**: name, description, role, owner, version, lifecycle timestamps. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- **LLM configuration**: provider, model, temperature, max tokens, provider‑specific params. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- **Tools**: callable functions with names, params, types, invocation mode (python_function, http, mcp, etc.), optional return schemas and categories. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- **RAG inputs**: indices/corpora (docs, code, images) with paths, types, locations, and metadata. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- **Permissions**: allowed file paths, network domains, env vars, sandbox limits. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- **Dependencies**: packages and versions, referenced code. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- **Governance & audit**: who created/updated it, when, and why, aligned with SemVer. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+Analogy: OpenAPI defines HTTP APIs and Terraform defines infra; **ADL is the contract for agents**. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+What ADL is not
+
+ADL only covers static definition, not runtime behavior: [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+- Not agent‑to‑agent protocol (A2A) for messaging/coordination. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- Not a runtime tool protocol like MCP (how tools are called/streamed). [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- Not OpenAPI (HTTP interface spec) and not a workflow engine (Airflow, Temporal, etc.). [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+- Not a prompt format or wire/RPC protocol. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+It is meant to sit alongside A2A, MCP, OpenAPI, and workflow systems as the **definition layer** of the agent stack. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+
+
 
 ---
 
 ## FAQ
-
-
-<!-- 
-https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
-
-https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
-<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
-
-https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
-
--->
 
 ### AI x Data
 
@@ -327,7 +356,6 @@ https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
 * https://github.com/vanna-ai/vanna
 
 vanna-ai/vanna: 🤖 Chat with your SQL database 📊. Accurate Text-to-SQL Generation via LLMs using Agentic Retrieval 🔄.
-https://github.com/vanna-ai/vanna
 
 Rill or WrenAI
 

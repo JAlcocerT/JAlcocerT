@@ -10,11 +10,8 @@ url: 'tech-recap-2026'
 
 **TL;DR**
 
-
 <!-- 
 https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
-
-
 
 
 **Intro**
@@ -926,11 +923,15 @@ Like around marketing and sales: Cashvertising, ...
 
 11. Review these tech notes monthly ✅
 
-12. F/OSS Migration *and supporting at least one project*
+> And thx to logseq x repo, I said by to my monthly personal review that I was doing for years on one-note
+
+12. F/OSS Migration *and supporting at least one project* ✅
+
+> Pretty happy with Ubuntu/Zorin and OSS :)
 
 #### Stop Doing
 
-1. Opening more and more a shallow tech stack. 
+1. Opening *more and more* a shallow tech stack. 
 2. Keeping 50+ tabs on chrome. *Not watching content on the phone and commet for summaries should help*.
 3. Stop building w/o a focus strategy.
 
@@ -956,13 +957,13 @@ Like these articles:
 
 #### Discovery of the Years
 
-Wait...how many years already?!
+Wait...how many years already?!?!
 
 [2020](https://jalcocert.github.io/JAlcocerT/blog/summary20/) - R *together with sql*
 
-[2021](https://jalcocert.github.io/JAlcocerT/blog/summary21/) - Containers *with the Pi*
+[2021](https://jalcocert.github.io/JAlcocerT/blog/summary21/) - Selfhosting / Containers *and the Pi*
 
-[2022](https://jalcocert.github.io/JAlcocerT/blog/summary22/) - PySpark *and big data*
+[2022](https://jalcocert.github.io/JAlcocerT/blog/summary22/) - PySpark *and ~~pig~~ Big Data*
 
 [2023](https://jalcocert.github.io/JAlcocerT/blog/summary23/) - SSGs *and static hosting*
 
@@ -983,7 +984,7 @@ Aka ~~,failed apps'~~: *projects where i just learnt*
 5. ~~EntrepreAI~~, with all those: CV CreAItor,Speech RAIter,AIssistant - PPT, ...
 6. ~~Webifyer / Web CreAItor~~ : DFY/DWY websites for those with the right signal. Else, use a PaaS or watch a yt tutorial to setup wordpress.
 
-The good thing about closing projects, is that you realise that they were not ment to be from its conception.
+The good thing about closing projects, is that you realise that *they were not meant to be* from its conception.
 
 Maybe you were trying to jump with a not so efficient method: See https://en.wikipedia.org/wiki/Dick_Fosbury for inspiration
 

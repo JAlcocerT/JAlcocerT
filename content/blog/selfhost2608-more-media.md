@@ -47,6 +47,18 @@ You can create your own torrent of your joined `.MP4` with:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+
+<!-- 
+https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
+
+https://www.nodinrogers.com/post/2021-12-10-transmission-in-docker-with-openvpn/
+<https://www.youtube.com/watch?v=5y1z_I_HnoA&t=208s>
+
+https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
+
+-->
+
+
 Because this it not intended for you to use go to `wolfmax4k`, nor visiting [Anna](https://open-slum.pages.dev/).
 
 ### IPTV
@@ -80,3 +92,8 @@ It goes beyond basic MP3 players like Navidrome by offering audiobook-specific f
 * https://github.com/TortugaPower/BookPlayer
 
 
+---
+
+## Conclusions
+
+## FAQ
