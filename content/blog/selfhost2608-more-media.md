@@ -14,11 +14,18 @@ Is there a reliable way not to loose photos for good?
 
 **Intro**
 
+I know you might be already familiar with **PairDrop**
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pairdrop" title="PairDrop | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ## Video Media
 
 Im sure that you are already using qb and prowlarr at `6011` and `9696`.
+
+And that you know how to create your videos via FFMPEG:
 
 ```sh
 sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d prowlarr

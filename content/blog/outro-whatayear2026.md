@@ -633,9 +633,11 @@ To him, the entrepreneur is the "risk-bearer" who stabilizes the market by takin
   {{< card link="https://jalcocert.github.io/JAlcocerT/creating-curated-and-automated-content" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
 {{< /cards >}}
 
-Talking about trends, what happened with crypto?
+Talking about trends, what happened with crypto bros?
 
 The sha256 still holds strong, it was all about hashing https://www.devtoolbox.co/tools/hash-generator
+
+And electrum, metamask and mymonero keep working.
 
 16. Tech videos were not a priority this year.
 
@@ -806,7 +808,7 @@ A certain Negative cash flow year one then...uncertainty
 
 13. Cuando buscas la perfection antes de ship, buscas q los demas no t critiquen
 
-14. Las personas q tienen un estilo de vida feugal disfrutan de una libertad que los que estan ocupados para mantener su lofestyle se pueden inaginar
+14. Las personas q tienen un estilo de vida frugal disfrutan de una libertad que los que estan ocupados para mantener su lifestyle no se pueden imaginar
 
 15. Can we all be a hunter aka entrepreneur? Or Que nivel the comodidad atrofia tu ambicion?
 
@@ -822,6 +824,7 @@ A certain Negative cash flow year one then...uncertainty
 
 21. Everything is priced in: `https://www.reddit.com/r/wallstreetbets/comments/eberem/everything_is_priced_in/`
 
+22. An endless cup can never be filled 
 
 #### Open Questions
 
@@ -923,6 +926,7 @@ Like around marketing and sales: Cashvertising, ...
 
 11. Review these tech notes monthly ✅
 
+12. F/OSS Migration *and supporting at least one project*
 
 #### Stop Doing
 
@@ -1011,7 +1015,17 @@ AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance bl
 	openengineer.ing		
 
 
+Intentar venta en allegro de 3dprints 
 
+Cajas para PCs 
+
+Utiles para cocina 
+
+Utiles para bicicletas 
+
+Cursos udemy 
+
+Impresion 3d con python?? 
 				
 Bodas - SlubneChwile				
 Portfolio CreAItor	Wordpress MigrAItion			

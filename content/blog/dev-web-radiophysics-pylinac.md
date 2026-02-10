@@ -104,6 +104,7 @@ JLL was involved in the crearion of [RStocks](https://jalcocert.github.io/JAlcoc
 Right-click on "Windows PowerShell" and select "Run as administrator."
 
 ```sh
+#wsl
 wsl --install #this install linux
 ```
 

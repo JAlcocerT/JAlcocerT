@@ -10,13 +10,15 @@ url: about-powerbi
 
 **TL;DR**
 
-
-I collected some DAX and M formulas to make your Power BI development easier.
+I collected some *DAX and M formulas* to make your Power BI development easier.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PBi" title="PowerBI DAX/M Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Some useful DAX and M formulas - Source Code on Github" >}}
 {{< /cards >}}
 
+```sh
+#git clone https://github.com/JAlcocerT/PBi
+```
 
 **Intro**
 

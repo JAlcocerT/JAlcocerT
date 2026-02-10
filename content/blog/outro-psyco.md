@@ -30,6 +30,8 @@ Cash flows discount
 
 ## Biases
 
+* https://en.wikipedia.org/wiki/List_of_cognitive_biases 
+
 * *Conclusion Biases*: they bypass evidence. Shortcuts that the brains form for quick decidions.
     * Anchoring: we rely too much in pre-existing information or the first information when making decisions. Important in negotiations.
     * Pre-judgment: inclunation to reach a particular conclusion

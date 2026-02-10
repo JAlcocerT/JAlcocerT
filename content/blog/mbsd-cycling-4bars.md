@@ -115,7 +115,13 @@ Because from 2023 it has all been learn/do/learn/do around AI.
 
 ## Conclusions
 
+Some time ago, I was wondering if: Julia: optimization, eq solver, symbolic algebra, jump library would be the way to go.
 
+Would Python be the best approach to find the math behind mechanism that cant block along their movement?
+
+Some kind of automated mechanism synthesis.
+
+Matlab ---> a python – programa sintesis mec generalizado.
 
 ---
 
