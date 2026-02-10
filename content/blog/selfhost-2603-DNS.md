@@ -2,7 +2,7 @@
 title: "Improving a HomeLab Privacy with OSS DNS"
 date: 2026-03-01T07:20:21+01:00
 draft: false
-tags: ["Self-Hosting x ProtonDrive","Pihole x UnboundDNS","DNS as Distributed DB","Privacy x Euria"]
+tags: ["Self-Hosting x ProtonDrive","Pihole v6 x UnboundDNS","DNS as Distributed DB","Privacy x Euria"]
 description: 'How to change DNS Servers and why it matters. Portainer to Homepage-Lite.'
 url: 'private-dns-with-docker'
 ---
@@ -23,37 +23,132 @@ But DNS is a rabbithole of its own.
 
 With this post, I want to explore the latests on PiHole and use it as the default DNS for a smart TV.
 
+https://www.youtube.com/watch?v=mnry95ay0Bk
+
+* https://hub.docker.com/r/pihole/pihole/tags
+
+```sh
+ss -tulpn | grep :53 #most likely, you have sth running
+```
+
+Let me tell you a secret: whatever you have at `/run/systemd/resolve/stub-resolv.conf`
+
+```sh
+sudo nano /etc/resolv.conf #say algo hi to tailscale, the reason why you can go to uptime kuma via http://jalcocert-x300-1:3001
+```
+
+Is the one resolving this:
+
+```sh
+nslookup google.com #see that you have systemd doing this for you by default
+```
+
+You can change from nameserver 127.0.0.1 to nameserver 1.1.1.1 to free the port 53
+
+```sh
+docker pull pihole/pihole:2025.11.0
+sudo docker compose -f 2603_docker-compose.yml up -d pihole
+docker compose -f piholev6-docker-compose.yml logs -f
+```
+
+Then just go to `http://localhost:500/admin/login`, use the `FTLCONF_webserver_api_password` as password.
+
+
+Once you are done:
+
+
+```sh
+#dig @9.9.9.9 google.com
+dig @localhost google.com #this is using pihole right now, not the 1.1.1.1 or whatever is in the .config
+
+; <<>> DiG 9.18.39-0ubuntu0.24.04.2-Ubuntu <<>> @localhost google.com
+; (1 server found)
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 42021
+;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;google.com.                    IN      A
+
+;; ANSWER SECTION:
+google.com.             196     IN      A       142.250.120.113
+google.com.             196     IN      A       142.250.120.138
+google.com.             196     IN      A       142.250.120.101
+google.com.             196     IN      A       142.250.120.100
+google.com.             196     IN      A       142.250.120.102
+google.com.             196     IN      A       142.250.120.139
+
+;; Query time: 107 msec
+;; SERVER: 127.0.0.1#53(localhost) (UDP)
+;; WHEN: Mon Feb 09 15:15:33 CET 2026
+;; MSG SIZE  rcvd: 135
+```
+
+Btw, now your tailscale ip number:port will work, but not the `http://jalcocert-x300-1:3001/`
+
+Withing the dashboard, you will see queries done via: unless you change back to `127.0.0.1` which now is pihole
+
+```sh
+dig @localhost youtube.com
+```
+
 https://github.com/TechnitiumSoftware/DnsServer
 
 > agpl 3 | Technitium DNS Server
 
-<!-- ### Choosing a DNS for PiHole
+### Choosing a DNS for PiHole
+
+Will you keep cloudflare 1.1.1.1, or wanna try sth?
 
 * Unbound
 * Bind9
 * Other resolvers:
     * Quad9
-    * CLoudflare/Google... -->
+    * CLoudflare/Google...
 
-<!-- * How to use Raspberry Pi as WIFI **A**ccess **P**oint: https://jalcocert.github.io/RPi/posts/rpi-raspap/
-* How to use a RPi as a Wifi 2 Ethernet + VPN: https://jalcocert.github.io/RPi/posts/rpi-wifi-ethernet-bridge/ -->
 
-<!-- ### Best DNS to use with PiHole -->
+* How to use Raspberry Pi as WIFI **A**ccess **P**oint: https://jalcocert.github.io/RPi/posts/rpi-raspap/
+* How to use a RPi as a Wifi 2 Ethernet + VPN: https://jalcocert.github.io/RPi/posts/rpi-wifi-ethernet-bridge/
 
-<!-- 
+
+ 
 ## Pihole regexp
-https://github.com/mmotti/pihole-regex
-https://avoidthehack.com/best-pihole-blocklists
-https://github.com/mmotti/pihole-regex -->
 
-<!-- 
-## Wireshark - Checking which adds are going through
-https://docs.linuxserver.io/images/docker-wireshark/
+Not blocking all you'd like to?
 
--->
+* https://docs.pi-hole.net/database/domain-database/?h=adlist#list-table-adlist
+* https://github.com/mmotti/pihole-regex
+* https://avoidthehack.com/best-pihole-blocklists
+* https://github.com/mmotti/pihole-regex
+
+| Category      | Source URL                                                                                                    | Notes discourse.pi-hole+2                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| Ads/Trackers  | https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts                                              | Reliable starter list.                         |
+| Malware       | https://mirror1.malwaredomains.com/files/justdomains                                                          | Pi-hole default.                               |
+| Comprehensive | https://blocklistproject.github.io/Lists/everything.txt                                                       | Full (ads + malware + NSFW); overlaps heavily. |
+| Adult         | https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_top1m.list | Family-friendly option.                        |
+| YouTube       | https://raw.githubusercontent.com/anudeepND/youtubeadsblacklist/master/domainlist.txt                         | Blocks YouTube ads.                            |
 
 
-link checker https://github.com/JAlcocerT/JAlcocerT/actions/runs/20968565017/job/60265649025
+Surprise, surprise, sqlite is around:
+
+```sh
+sudo apt install sqlite3
+sqlite3 ./pihole/gravity.db "INSERT INTO adlist (address, enabled, comment) VALUES ('https://example.com/list.txt', 1, 'Scripted List');"
+#docker exec pihole sqlite3 /etc/pihole/gravity.db "INSERT INTO adlist (address, enabled, comment) VALUES ('https://example.com/list.txt', 1, 'Scripted List');"
+docker exec pihole pihole -g #update
+```
+
+
+```sh
+sqlite3 ./pihole/gravity.db "SELECT * FROM adlist;" #list all
+sqlite3 ./pihole/gravity.db "DELETE FROM adlist WHERE address = 'https://example.com/list.txt';" #remove the fake
+```
+
+Link checker https://github.com/JAlcocerT/JAlcocerT/actions/runs/20968565017/job/60265649025
 
 https://www.youtube.com/watch?v=U9NgRShXFgk
 
@@ -491,6 +586,33 @@ You can do `ctrl+shift+P` write user settings JSON and paste:
 }
 ```
 
+
+Amazon AWS workspace? not a problem via `https://clients.amazonworkspaces.com/linux-install`
+
+```sh
+Ubuntu 22.04 (amd64) - DCV only
+
+wget -q -O - https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc | sudo tee /etc/apt/trusted.gpg.d/amazon-workspaces-clients.asc > /dev/null
+
+echo "deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu jammy main" | sudo tee /etc/apt/sources.list.d/amazon-workspaces-clients.list
+
+sudo apt-get update
+
+Ubuntu 24.04 (amd64) - DCV only
+
+wget -q -O - https://workspaces-client-linux-public-key.s3-us-west-2.amazonaws.com/ADB332E7.asc | sudo tee /etc/apt/trusted.gpg.d/amazon-workspaces-clients.asc > /dev/null
+
+echo "deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu noble main" | sudo tee /etc/apt/sources.list.d/amazon-workspaces-clients.list
+
+sudo apt-get update
+
+2. Install Amazon Workspaces
+
+Once the deb file has been downloaded, you can install Amazon Workspaces with the following command.
+
+sudo apt-get install workspacesclient
+```
+
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing
 cd ./selfhosted-landing/y2026-tech-talks/langchain-postgres
@@ -534,6 +656,10 @@ Before LLMs, you might have needed: https://github.com/composerize/composerize  
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="CF x Porkbun DNS API Py Scripts ↗" >}}
 {{< /cards >}}
+
+### Wireshark - Checking which adds are going through
+
+https://docs.linuxserver.io/images/docker-wireshark/
 
 
 
