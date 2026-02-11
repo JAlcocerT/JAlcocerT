@@ -177,7 +177,9 @@ In a small business, that signal is loud. In big companies, it gets muffled by t
 
 1. The Proximity Gap
 
-In a big company, the person writing the **FRD** (the How) has likely never spoken to the person in the **Niche** (the Who). When you lose proximity to the customer, you start building "cool tech" that nobody actually wants to pay for.
+In a big company, the person writing the **FRD** (the How) has likely never spoken to the person in the **Niche** (the Who).
+
+When you lose proximity to the customer, you start building "cool tech" that nobody actually wants to pay for.
 
 2. Optimization vs. Innovation
 
@@ -739,8 +741,6 @@ However, that feature was removed from the scope in Stage 1 (Discovery) but the 
 2. Context Hallucination
 3. Over-fitting
 
-*(The answer is **2. Context Hallucination**. The AI is assuming features exist based on general knowledge or old data, lacking current project context.)*
-
 ### Next Step
 
 You now have a complete **AI-SDLC Operational Map**!
@@ -755,9 +755,13 @@ You now have a complete **AI-SDLC Operational Map**!
 ## Phase 5: AI-Augmented Deployment & Ops
 
 
-Yes, you are exactly right. **Stage 5 is Deployment & Operations (DevOps).**
+Yes, you are exactly right.
 
-This is the phase where the code meets the real world. AI's role here is to automate the "plumbing"—the pipelines, infrastructure, and release logs—so engineers can focus on reliability.
+**Stage 5 is Deployment & Operations (DevOps).**
+
+This is the phase where the code meets the real world. 
+
+AI's role here is to automate the "plumbing"—the pipelines, infrastructure, and release logs—so engineers can focus on reliability.
 
 *Goal: Automate the path to production and reduce "deployment anxiety."*
 
