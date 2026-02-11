@@ -38,7 +38,7 @@ $$
 
 tells you what is happening to the money.
 
-# The Business Side
+## The Business Side
 
 If you want to just create, [go below](#creating-with-ai).
 
@@ -56,7 +56,7 @@ If you want to create with some monetary goal in mind, keep reading here.
 2. *OM* is the cost of getting the work and managing the growth. (Attraction & Conversion)
 
 
-## Who How and What
+### Who How and What
 
 Understand that WHO you sell to (Niche) dictates WHAT you sell (Offer) and HOW you find them (Leads).
 
@@ -143,7 +143,9 @@ Does this **SOP** actually deliver the **Value Proposition**? If not, the proces
 
 * **Clarity of Ownership:** It clearly shows where a **Product Manager** (Product Dev branch) needs to coordinate with an **Operations Manager** (Service Delivery branch) to ensure the **Solution** is cohesive.
 
-* **The "Why" is Grounded:** Many teams write a **BRD** in a vacuum. In your map, the **BRD** is explicitly a child of the **Solution**, which is a child of the **Niche**.
+* **The "Why" is Grounded:** Many teams write a **BRD** in a vacuum.
+
+In your map, the **BRD** is explicitly a child of the **Solution**, which is a child of the **Niche**.
 
 This ensures you aren't just building for the sake of building—you're building to solve a pain point.
 
@@ -153,7 +155,7 @@ In a high-growth environment, the **SOPs** from your Service Delivery branch oft
 
 *Example:* If your **SOP** says "Manually email the client a report every Monday," that eventually becomes a feature request in your **PRD** to "Automate weekly report emails."
 
-## The Founder vs. The Corporate Employee
+### The Founder vs. The Corporate Employee
 
 This is absolutely a **founder/entrepreneur mindset**. 
 
@@ -202,7 +204,7 @@ They force the engineers to talk to the customers and force the sales team to un
 They try to rebuild the "Business Framework" map you just created within their own department.
 
 
-# Creating with AI
+## Creating with AI
 
 I have refined the terminology to align with industry standards for an **AI-Augmented SDLC** (using AI to build software faster). 
 
@@ -303,6 +305,8 @@ The Documentation Hierarchy
 | **PRD** | Product Managers, Designers | **User Experience.** It defines the user journey and the specific features needed to solve the problem. | "A 'One-Click Unsubscribe' button on the dashboard." |
 | **FRD** | Developers, QA Engineers | **System Behavior.** It specifies the inputs, outputs, and logic required to make the feature function. | "When clicked, the API must send a POST request to `/cancel` and return a 200 OK status." |
 
+> See also [a project charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md) if you want one
+
 A Few Nuances to Keep in Mind:
 
 * **The "How" of the FRD:** You mentioned "Technical Logic," which is spot on. However, be careful not to confuse the **FRD** with a **Technical Design Document (TDD)**. The FRD says how the *product* behaves (Functional), while the TDD says how the *code* is structured (Architecture).
@@ -363,7 +367,7 @@ If you are building a **SaaS (Software-as-a-Service)**, you actually use all of 
 * You use **BRD/PRD/FRD** to build the software.
 * You use **SOW/SLA/SOP** to sell and support the software once it's live.
 
-
+# SDLC AI Driven
 
 ## Phase 1: AI-Augmented Discovery
 

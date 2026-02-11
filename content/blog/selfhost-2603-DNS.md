@@ -587,7 +587,9 @@ You can do `ctrl+shift+P` write user settings JSON and paste:
 ```
 
 
-Amazon AWS workspace? not a problem via `https://clients.amazonworkspaces.com/linux-install`
+Amazon AWS workspace?
+
+Not a problem via `https://clients.amazonworkspaces.com/linux-install`
 
 ```sh
 Ubuntu 22.04 (amd64) - DCV only

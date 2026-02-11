@@ -3,7 +3,7 @@ title: "SelfHosted Data Analytics"
 date: 2026-10-01T23:20:21+01:00
 draft: false
 tags: ["D&A","Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver"]
-description: 'Selfhosting D&A Tools. DevOps x DORA.'
+description: 'Selfhosting D&A Tools. DevOps x DORA x Apache DevLake.'
 url: 'selfhosting-data-analytics'
 ---
 
@@ -215,17 +215,25 @@ DORA is a **metrics framework** (not a rigid toolset)—a set of four standard K
 
 > DORA = *how good are companies at shipping software?*
 
-There are two key clusters of data inside DORA: Velocity and Stability. The DORA framework is focused on keeping them in context with each other, as a whole, rather than as independent variables, making the data more challenging to misinterpret or abuse.
+There are two key clusters of data inside DORA: Velocity and Stability.
 
-Within velocity are two core metrics:
+The DORA framework is focused on keeping them in context with each other, as a whole, rather than as independent variables, making the data more challenging to misinterpret or abuse.
 
-Deployment Frequency: Number of successful deployments to production, how rapidly is your team releasing to users?
-Lead Time for Changes: How long does it take from commit to the code running in production? This is important, as it reflects how quickly your team can respond to user requirements.
-Stability is composed of two core metrics:
+Within **velocity** are two core metrics:
 
-Change Failure Rate: How often are your deployments causing a failure?
-Median Time to Restore Service (MTTR): How long does it take the team to properly recover from a failure once it is identified?
-However, MTTR is replaced by Failed Deployment Recovery Time from the 2023 DORA report. This metric measures the finish time of a deployment to the resolution of the incident caused by the deployment.
+* Deployment Frequency (DF): *Number of successful deployments to production, how rapidly is your team releasing to users?*
+* Lead Time for Changes (LTC): *How long does it take from commit to the code running in production? 
+
+This is important, as it reflects how quickly your team can respond to user requirements.
+
+**Stability** is composed of two core metrics:
+
+* Change Failure Rate (Change Success Rate): *How often are your deployments causing a failure?*
+* Median Time to Restore Service (MTTR): *How long does it take the team to properly recover from a failure once it is identified?*
+
+However, MTTR is replaced by Failed Deployment Recovery Time from the 2023 DORA report. 
+
+This metric measures the finish time of a deployment to the resolution of the incident caused by the deployment.
 
 https://devlake.apache.org/assets/images/dora-intro-e3847646d8dbe47220e6c8347ab14f7b.png
 

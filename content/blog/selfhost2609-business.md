@@ -207,12 +207,28 @@ These are very cool all in one to selfhost:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/omnitools" title="Omni-Tools Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+Remote desktops?
+
+Not a problem via `https://clients.amazonworkspaces.com/linux-install`
+
+Or via `mstsc` to connect to windows RDP
+
+I also tried azure desktops and those Citrix ones.
+
+But...you can also have the linux way: *with webtops and with dockur*
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/" title="IT-Tools | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/" title="Omni-Tools Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ### D&A Tech
 
 Sqlite is pretty much everywhere: *from pi-hole v6 to pocketbase*
 
 ```sh
-choco install dbeaver
+#choco install dbeaver
+flatpak install flathub io.dbeaver.DBeaverCommunity
 ```
 
 ---
