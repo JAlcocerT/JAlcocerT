@@ -1,6 +1,6 @@
 ---
 title: "Making an enhanced DIY offering via PaaS"
-date: 2026-03-01T09:20:21+01:00
+date: 2026-05-01T09:20:21+01:00
 draft: false
 tags: ["DIY Platform Service","RoadMap26","PostgreSQL"]
 description: 'A platform service offering for B2C to get up to speed with services that dont require any customization.'

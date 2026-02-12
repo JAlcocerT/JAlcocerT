@@ -2,7 +2,7 @@
 title: "Everything I enjoy about Streamlit. With AI as RE Agent."
 date: 2025-04-03T19:20:21+01:00
 draft: false
-tags: ["Dev","SliDevJS","Tech Talk"]
+tags: ["Dev","SliDevJS","Tech Talk 2025"]
 description: 'Quick PoC Web Apps with Python and Streamlit. Applied to a Real Estate Calculator with GenAI Powered recommentations.'
 url: 'streamlit-is-cool'
 ---

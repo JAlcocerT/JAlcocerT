@@ -1,6 +1,6 @@
 ---
 title: "If I would have known - Web Apps edition"
-date: 2026-03-05
+date: 2026-03-15
 draft: false
 tags: ["BiP x Dev","BluePrint x BoilerPlate","N ebooks"]
 description: 'The learnings of shipping a few web/apps.'
@@ -49,7 +49,11 @@ In the meantime, he built this https://github.com/LinkedInLearning/data-pipeline
 
 ## FAQ
 
-### How can I contribute?
+### What have you created?
+
+Some time ago, I made this one with a friend: my very first published web app with R Shiny.
+
+How can you contribute?
 
 The code is accesible from [my Github Repository of R/Stocks](https://github.com/JAlcocerT/R_Stocks "R Stocks Github {rel='nofollow'}")
 

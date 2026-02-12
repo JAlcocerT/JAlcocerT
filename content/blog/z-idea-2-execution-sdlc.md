@@ -2,7 +2,7 @@
 title: "Going all in Business via AI Assisted SDLC"
 date: 2026-02-11T08:00:21+01:00
 draft: false
-tags: ["ADR x HLD to Prototype","Jevons Paradox"]
+tags: ["Charter x ADR x HLD for Prototypes","Jevons Paradox","Speed vs Stability"]
 description: 'The AI Driven SDLC x Unit Economics 106'
 url: 'ideas-to-execution-via-sdlc'
 math: true
@@ -10,13 +10,15 @@ math: true
 
 **Tl;DR**
 
+https://app.fireflies.ai/perks
+
 Will code been cheap increase the demand for code from businesses?
 
 +++ [Jevons](#about-jevons)
 
 **Intro**
 
-Every game, follows the *full stack business formula* from top line, to net profit:
+Every business game, follows the *full stack business formula* from top line, to net profit:
 
 $$
 P \times V \times GM \times OM \times IF \times T
@@ -46,7 +48,7 @@ mindmap
 ```
 
 
-https://jalcocert.github.io/JAlcocerT/ideas-to-execution/#creating-with-ai
+We come from this section: https://jalcocert.github.io/JAlcocerT/ideas-to-execution/#creating-with-ai
 
 Product vs. Service Frameworks
 
@@ -76,9 +78,43 @@ graph LR
     style F fill:#e1f5fe
 ```
 
+
 ---
 
 ## Conclusions
+
+### Evaluating Business Ideas
+
+How can we measure how good an existing idea is?
+
+People say ratios and discounted FCF.
+
+For ratios you have many flavours.
+
+For Discounted FCF you need a cristal ball to imagine the future and also to be right with the discounted rate.
+
+Others go with the *gweiss* method: *and just look at trends / thresholds*
+
+It seems that due to SDLC changing, software driven companies are having headwinds on their valuations.
+
+The cristal balls dont see that much revenue coming up in the future, or at least, there are more uncertainties.
+
+```sh
+#git clone https://github.com/JAlcocerT/DataInMotion.git
+#cd DataInMotion && branch libreportfolio
+#uv run tests/plot_historical_yield.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --monthly
+uv run tests/plot_historical_gweiss.py ADP --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+```
+
+Other companies have explosive PER ~300 that in theory say that people expect massive growth of earnings.
+
+Again, all based on hypothesis that only time will put to test.
+
+Do you think its time to go and create a micro-SaaS? 
+
+Or better to level up and catch the wave to max out that active income?
+
+
 
 ## FAQ
 
@@ -94,3 +130,8 @@ Efficiency lowers a resource's effective price, making demand more elastic; if r
 
 
 
+### About BDD
+
+Behaviour driven development - Gherkins 
+
+Given -> When -> Then

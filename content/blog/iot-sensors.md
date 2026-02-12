@@ -1,8 +1,8 @@
 ---
 title: "[IoT] Sensors x Home Assistant"
-date: 2026-03-10
+date: 2026-03-01
 draft: false
-tags: ["Tinkering","Polanduino x Arduino","DHT","MLX","Robotics"]
+tags: ["Tinkering","Polanduino x Arduino","Solar x DHT","MLX","Robotics"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
@@ -24,24 +24,27 @@ The Arduino Integrated Development Environment (IDE) and associated libraries ar
 
 {{< details title="AI Asisted Web Search... 📌" closed="true" >}}
 
-
 **Arduino and Open-Source Principles**
 
 - Arduino's hardware schematics and PCB layouts are open-source.
 - The firmware and Arduino IDE are licensed permissively, fostering widespread community modification and distribution.
-- This open stance has led to a vast ecosystem of compatible clones, embedded projects, and community innovations.[1]
+- This open stance has led to a vast ecosystem of compatible clones, embedded projects, and community innovations.
 
 **RISC-V and Open-Source**
 
-RISC-V, an open instruction set architecture (ISA), is also fully open. It was designed to be a free and open standard, allowing anyone to develop compatible chips, tools, and implementations without licensing fees. 
+RISC-V, an open instruction set architecture (ISA), is also fully open. 
 
-This openness aims to promote innovation and democratize access to processor design, similar to Arduino’s ethos in hardware and firmware.[2]
+It was designed to be a free and open standard, allowing anyone to develop compatible chips, tools, and implementations without licensing fees. 
+
+This openness aims to promote innovation and democratize access to processor design, similar to Arduino’s ethos in hardware and firmware.
 
 **Similarities and Differences**
 
 - Both Arduino and RISC-V embody open-source principles, but they operate in different layers of hardware design: **Arduino in microcontroller boards and firmware, RISC-V at the processor architecture level.**
+
 - RISC-V's openness is in the ISA itself, encouraging a broad ecosystem of CPUs and chips, while Arduino’s openness is in the hardware and development tools for embedded devices.
-- The recent Qualcomm-Arduino deal may impact Arduino's traditional open-source stance, especially if proprietary chips and closed support ecosystems become more prominent, whereas RISC-V remains fully open by design and community advocacy.[3]
+
+- The recent Qualcomm-Arduino deal may impact Arduino's traditional open-source stance, especially if proprietary chips and closed support ecosystems become more prominent, whereas RISC-V remains fully open by design and community advocacy.
 
 In summary, both Arduino's hardware/software and RISC-V are open-source principles, but with different scopes—Arduino in microcontroller hardware and software, and RISC-V in CPU architecture.
 

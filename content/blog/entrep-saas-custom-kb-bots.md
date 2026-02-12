@@ -1,6 +1,6 @@
 ---
 title: "KB and Local Bots to end Silos for good"
-date: 2026-03-01T23:20:21+01:00
+date: 2026-05-01T23:20:21+01:00
 draft: false
 tags: ["Custom Chatbots x Local AI and KB","Tech Talk 99","RoadMap26","Docs Bot","Scribbly"]
 description: 'Building a custom BOT platform to end with silos. HUGO FOSS rebuild.'

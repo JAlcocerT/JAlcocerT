@@ -1,6 +1,6 @@
 ---
 title: "[AIoT] How to use LangChain to QnA Sensor Data"
-date: 2026-03-20T21:20:21+01:00
+date: 2026-04-10T21:20:21+01:00
 draft: false
 tags: ["DB2Rest","ekuiper","Embeded Analytics","Roadmap26 x Tech Talk"]
 description: 'Using LangChain to get Temperature & Humidity data from a DHT22 sensor.'
@@ -11,6 +11,8 @@ url: 'langchain-chat-with-sensor-data'
 **TL;DR**
 
 Coming from the pgsql x langchain post...
+
+How about some IoT as a companion?
 
 <!-- A compute framework for turning complex data into vectors.
 https://github.com/superlinked/superlinked -->

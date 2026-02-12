@@ -1,6 +1,6 @@
 ---
 title: "Getting Leads with Pocketbase"
-date: 2026-03-01T23:20:21+01:00
+date: 2026-04-01T23:20:21+01:00
 draft: false
 tags: ["Info Product","Dashboards","Supabase Auth vs PB","Roadmap26"]
 description: 'A waiting list that gets you leads.'

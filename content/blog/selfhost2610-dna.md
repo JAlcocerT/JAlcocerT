@@ -195,6 +195,7 @@ Your summary is perfect:
 * **Semantic Kernel** = The "Boring" (in a good way) Enterprise Choice. It follows rules.
 * **LangGraph** = The "Architect's" Choice. It follows a map.
 * **AutoGen** = The "Researcher's" Choice. It follows a conversation.
+* And...how about Google **ADK**?!
 
 ---
 
