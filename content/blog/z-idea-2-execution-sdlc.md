@@ -1,9 +1,9 @@
 ---
 title: "Going all in Business via AI Assisted SDLC"
-date: 2026-02-11T08:00:21+01:00
+date: 2026-02-13T08:00:21+01:00
 draft: false
 tags: ["Charter x ADR x HLD for Prototypes","Jevons Paradox","Speed vs Stability"]
-description: 'The AI Driven SDLC x Unit Economics 106'
+description: 'The AI Driven SDLC x Unit Economics 106 with EBITDA'
 url: 'ideas-to-execution-via-sdlc'
 math: true
 ---
@@ -11,6 +11,7 @@ math: true
 **Tl;DR**
 
 * https://app.fireflies.ai/perks
+* Perplexity and commet (from W11 only on the desktop) 
 
 Will code been cheap increase the demand for code from businesses?
 
@@ -23,6 +24,65 @@ Every business game, follows the *full stack business formula* from top line, to
 $$
 P \times V \times GM \times OM \times IF \times T
 $$
+
+Yes, we come from the ~ unit economics [105 post](https://jalcocert.github.io/JAlcocerT/ideas-to-execution/) and the psyc.
+
+In case that you come from a physics and engineering world, this can be your new F=ma for businesses.
+
+Something so simple, yet so powerful.
+
+And if you are stilled confused with **EBITDA**
+
+Just call it "Earnings **BEFORE SUBTRACTING** Interest, Taxes, Depreciation, and Amortization."
+
+Exactly! **EBIT** (Operating Profit) is the number used to calculate the **Operating Margin**.
+
+The formula is:
+
+$$\text{Operating Margin \%} = \frac{\text{EBIT (Operating Profit)}}{\text{Revenue}} \times 100$$
+
+Why this is the "Golden Ratio"
+
+Investors prefer this margin over the EBITDA margin because it tells the truth about **efficiency**.
+
+* **EBITDA Margin:** "How much cash do we generate from sales?" (Good for paying debt).
+* **Operating Margin (EBIT):** "How profitable is our actual business model *after* accounting for the cost of maintaining our products?" (Good for long-term health).
+
+Yes, that is **100% correct**. You have perfectly reconstructed the formula for Operating Margin.
+
+$$\frac{(\text{EBITDA} - \text{Depreciation} - \text{Amortization})}{\text{Revenue}} = \text{Operating Margin \%}$$
+
+By taking **EBITDA** and subtracting **D&A** (Depreciation & Amortization), you are converting "Raw Cash Flow" into "True Accounting Profit" (EBIT).
+
+Yes, that is exactly right. You have perfectly summarized the fundamental difference between **OpEx** and **CapEx**.
+
+Here is the "Cheat Sheet" to keep them straight:
+
+. OpEx (Operating Expenditure) = "The Burn Rate"
+
+* **What it is:** Money spent on day-to-day operations.
+* **Examples:** Salaries, rent, cloud server bills, marketing ads, travel.
+* **Accounting Treatment:** **Immediate Expense.**
+* If you pay a salary in March, it subtracts from March's profit *immediately*.
+* *Effect:* It hits the **EBITDA** and **Operating Profit** lines instantly.
+
+
+
+2. CapEx (Capital Expenditure) = "The Investment"
+
+* **What it is:** Money spent on buying or creating assets that will last for more than one year.
+* **Examples:** Buying a building, purchasing trucks, or **paying developers to write code** (for software companies).
+* **Accounting Treatment:** **Deferred Expense (Capitalized).**
+* If you spend $1M on software code in March, the profit in March does *not* drop by $1M.
+* Instead, the cost sits on the **Balance Sheet** as an asset.
+* *Effect:* It slowly "leaks" onto the Profit & Loss statement over 3–5 years as **Amortization** (for software) or **Depreciation** (for physical stuff).
+
+Why this matters for your Formula
+
+* **High OpEx** (like a service business with lots of staff) hurts your **Operating Margin (OM)** *today*.
+* **High CapEx** (like a factory or software startup) hurts your **Cash Flow** today, but only hurts your **Operating Margin** *tomorrow* (via Depreciation).
+
+So, when you look at a company's **Operating Margin**, remember: **It includes the "ghosts" of CapEx past (Depreciation), plus the reality of OpEx present.**
 
 
 ```mermaid
@@ -104,9 +164,15 @@ The cristal balls dont see that much revenue coming up in the future, or at leas
 #cd DataInMotion && branch libreportfolio
 #uv run tests/plot_historical_yield.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --monthly
 uv run tests/plot_historical_gweiss.py ADP --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+uv run tests/plot_historical_gweiss.py WK --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+#ticker = yf.Ticker("WKL.AS")
 ```
 
 Other companies have explosive PER ~300 that in theory say that people expect massive growth of earnings.
+
+Companies which P*V is selling software seems to have a lot of moat.
+
+The ones that are helping others to do software / digital transformation, some of it (but not as heavily for now)
 
 Again, all based on hypothesis that only time will put to test.
 

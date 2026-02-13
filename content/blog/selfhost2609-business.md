@@ -294,14 +294,16 @@ Consider overleaf or these:
 Do you really need M365 with teams?
 
 ```sh
-#sudo snap install slack --classic #sudo snap remove slack
+sudo snap install slack --classic #sudo snap remove slack
 #sudo snap install discord
 #flatpak install flathub org.telegram.desktop
 #flatpak install flathub im.riot.Riot #element
 #flatpak install flathub org.signal.Signal
 ```
 
-* https://github.com/permissionlesstech/bitchat
+Or just via bluetooth: https://github.com/permissionlesstech/bitchat
+
+> Back to sending texts in a classroom like in 2007? :)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/matrix" title="Matrix | Docker Config for HomeLab 🐋 ↗" >}}

@@ -2,13 +2,15 @@
 title: "SelfHosted Data Analytics"
 date: 2026-10-01T23:20:21+01:00
 draft: false
-tags: ["D&A","Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver"]
+tags: ["D&A","Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver","GCP VWB"]
 description: 'Selfhosting D&A Tools. DevOps x DORA x Apache DevLake.'
 url: 'selfhosting-data-analytics'
 ---
 
 
 **Tl;DR**
+
+JHub is great. Is there [anything else](#different-ways-to-jhub)?
 
 **Intro**
 
@@ -109,9 +111,21 @@ Which should you choose?
 
 ### Agentic Orchestration Layer
 
-Yes, they are essentially the "nervous system" for AI. While a Large Language Model (LLM) acts as the "brain," these **Agentic Orchestration Layers** provide the structure, memory, and routing logic required to turn a static model into a functional, autonomous agent.
+The article says the Zvec team’s ecosystem roadmap targets integrations with:
 
-However, they each approach "orchestration" from a very different architectural philosophy. Here is how they stack up in 2026:
+- **LangChain**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+- **LlamaIndex**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+- **DuckDB**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+- **PostgreSQL**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+- “Real device deployments” (i.e., on-device / edge environments, not a specific framework, but mentioned as a target). [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+
+They are essentially the "nervous system" for AI.
+
+While a Large Language Model (LLM) acts as the "brain," these **Agentic Orchestration Layers** provide the structure, memory, and routing logic required to turn a static model into a functional, autonomous agent.
+
+However, they each approach "orchestration" from a very different architectural philosophy. 
+
+Here is how they stack up in 2026:
 
 ## 1. LangGraph (The "State Machine" Approach)
 
@@ -250,3 +264,71 @@ Delta Lake: Open-format (Databricks-led, Apache-compatible via Spark) for ACID t
 | **Change Failure Rate**  | % of deploys causing failures    | 0-15%                           |
 | **Time to Restore**     | MTTR from failure                | <1 hour                         |
 
+### Different ways to JHUB
+
+Typical ways to connect to a PySpark cluster include managed notebooks like Databricks or Google Vertex AI Workbench, programmatic drivers via SparkSession, and job submission tools. [spark.apache](https://spark.apache.org/docs/latest/api/python/getting_started/quickstart_connect.html)
+
+Managed Notebook Interfaces
+
+These provide browser-based JupyterLab-like environments directly on the cluster.
+- Databricks notebooks: Collaborative, integrated with Spark clusters and Delta Lake.[ from prior]
+- Google Vertex AI Workbench: Managed JupyterLab instances with PySpark pre-configured for Google Cloud. [docs.cloud.google](https://docs.cloud.google.com/vertex-ai/docs/workbench/introduction)
+- Amazon EMR Notebooks (SageMaker Studio or EMR Studio): Interactive PySpark shells on EMR clusters. [stackoverflow](https://stackoverflow.com/questions/40920313/how-can-i-connect-pyspark-local-machine-to-my-emr-cluster)
+- Azure Synapse/Fabric notebooks: Spark pools with PySpark support.[ from prior]
+
+Programmatic Connections
+
+Connect remotely from local IDEs (VS Code, Jupyter) or scripts using PySpark client.
+- **SparkSession with master URL**: `SparkSession.builder.remote("sc://host:15002")` via Spark Connect (Spark 3.4+), or `master("spark://master:7077")` for standalone. [secoda](https://www.secoda.co/learn/what-are-the-methods-to-connect-apache-spark-to-spark-clusters)
+  - Supports remote DataFrame/SQL API over gRPC (Spark Connect) or traditional driver.
+- Configure `PYSPARK_PYTHON` and driver paths for cluster compatibility. [back2code](https://www.back2code.me/2018/11/configure-pyspark-to-connect-to-a-standalone-spark-cluster/)
+
+Job Submission
+
+Submit non-interactive scripts to run on the cluster.
+- `spark-submit --master yarn/cluster/k8s --deploy-mode cluster script.py`: Client mode (driver local) vs cluster mode (driver on cluster). [sparkbyexamples](https://sparkbyexamples.com/spark/spark-deploy-modes-client-vs-cluster/amp/)
+- Common on YARN (Hadoop), Kubernetes, Mesos. [secoda](https://www.secoda.co/learn/what-are-the-methods-to-connect-apache-spark-to-spark-clusters)
+
+Popular Managed Clusters
+| Platform | Connection Methods | Notes |
+|----------|--------------------|-------|
+| **Databricks** | Notebooks, SQL warehouses, Spark Connect, ODBC/JDBC. [secoda](https://www.secoda.co/learn/what-are-the-methods-to-connect-apache-spark-to-spark-clusters) | Lakehouse focus. |
+| **Google Vertex AI Workbench/Dataproc** | Notebooks, `gcloud dataproc jobs submit pyspark`. [cloud.google](https://cloud.google.com/vertex-ai-notebooks) | Integrates BigQuery. |
+| **AWS EMR/EMR Serverless** | Notebooks, `spark-submit` via SSH/Livy, EMR Studio. [stackoverflow](https://stackoverflow.com/questions/40920313/how-can-i-connect-pyspark-local-machine-to-my-emr-cluster) | S3-native. |
+| **Azure Synapse/Fabric** | Notebooks, pipelines.[ prior] | ADLS integration. |
+| **Self-Hosted (Standalone/K8s/YARN)** | Spark Connect, spark-submit. [spark.apache](https://spark.apache.org/docs/latest/api/python/getting_started/quickstart_connect.html) | Full control. |
+
+Spark Connect is increasingly standard for thin-client remote access without full driver submission. [dataengineeringcentral.substack](https://dataengineeringcentral.substack.com/p/spark-connect-what-is-this-madness)
+
+Databricks shares some analytics capabilities with Azure Synapse and Microsoft Fabric but differs significantly in focus and architecture. [datacamp](https://www.datacamp.com/blog/azure-synapse-vs-databricks)
+
+Core Similarities
+All three platforms handle big data processing, ETL pipelines, and Spark-based compute. They integrate with Azure services like Data Lake Storage and support notebooks for SQL, Python, and Spark jobs. [learn.microsoft](https://learn.microsoft.com/en-us/answers/questions/2258999/choosing-the-right-azure-data-platform-synapse-fab)
+
+Key Differences
+| Feature | Databricks | Azure Synapse | Microsoft Fabric |
+|---------|------------|---------------|------------------|
+| **Primary Strength** | Optimized Apache Spark for ML, data engineering, and lakehouse (Delta Lake). [powerdobs](https://powerdobs.nl/blog/is-azure-databricks-an-alternative-for-synapse-or-ms-fabric/) | Unified analytics with SQL pools for warehousing and serverless querying. [datacamp](https://www.datacamp.com/blog/azure-synapse-vs-databricks) | SaaS end-to-end platform combining lakehouse, warehouse, pipelines, and Power BI. [emergentsoftware](https://www.emergentsoftware.net/blog/microsoft-fabric-vs-azure-synapse-vs-databricks-what-should-you-use-and-when/) |
+| **Best For** | Complex transformations, real-time streaming, multi-cloud flexibility. [datacamp](https://www.datacamp.com/blog/azure-synapse-vs-databricks) | Structured BI reporting, integrated ETL via pipelines. [learn.microsoft](https://learn.microsoft.com/en-us/answers/questions/2258999/choosing-the-right-azure-data-platform-synapse-fab) | Microsoft-centric unified analytics replacing Synapse parts. [mainri](https://mainri.ca/2025/07/10/comparison-of-microsoft-fabric-azure-synapse-analytics-asa-azure-data-factory-adf-and-azure-databricks-adb/) |
+| **Compute Engine** | High-performance Spark clusters with autoscaling. [test-king](https://www.test-king.com/blog/a-side-by-side-comparison-azure-synapse-vs-azure-databricks/) | Dedicated/serverless SQL + Spark pools. [datacamp](https://www.datacamp.com/blog/azure-synapse-vs-databricks) | OneLake-based Spark and SQL engines. [emergentsoftware](https://www.emergentsoftware.net/blog/microsoft-fabric-vs-azure-synapse-vs-databricks-what-should-you-use-and-when/) |
+
+Databricks excels in code-driven, scalable data science workloads, while Synapse (now evolving into Fabric) prioritizes Azure-integrated warehousing and simpler governance. [learn.microsoft](https://learn.microsoft.com/en-us/answers/questions/587071/differnce-between-synapse-and-databricks)
+
+#### GCP VWB
+
+#### Databricks
+
+Databricks is similar to Google Vertex AI Workbench (likely what you mean by "Google Workbench") in providing managed JupyterLab-based notebook environments for data science and ML workflows. Both support scalable compute, integrations with cloud storage and big data tools, and collaborative coding, though neither is built directly on JupyterHub (a multi-user server spawner). [cloudbank](https://www.cloudbank.org/tool/google-vertex-ai-workbench)
+
+## Core Similarities
+Databricks notebooks and Vertex AI Workbench offer Jupyter-compatible interfaces with multi-language support (Python, SQL, Scala), built-in visualizations, and enterprise features like Git integration and scheduling. They both enable seamless access to cloud services—Databricks with Delta Lake/Spark, Workbench with BigQuery/Cloud Storage—for ETL, ML model training, and deployment. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks)
+
+## Key Differences
+| Feature | Databricks | Vertex AI Workbench |
+|---------|------------|---------------------|
+| **Focus** | Lakehouse analytics, Spark-optimized big data/ML at scale. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks) | ML-centric development with Vertex AI pipelines, AutoML integration. [cloudbank](https://www.cloudbank.org/tool/google-vertex-ai-workbench) |
+| **Compute** | Unified Spark clusters, multi-cloud support. [qwak](https://www.qwak.com/compare/vertex-ai-vs-databricks) | GPU/TPU instances, fully managed JupyterLab on Google Cloud. [cloud.google](https://cloud.google.com/vertex-ai-notebooks) |
+| **Collaboration** | Real-time editing, version control in notebooks. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks) | Single-user instances with IAM access sharing; no native real-time multi-user like JupyterHub. [docs.cloud.google](https://docs.cloud.google.com/vertex-ai/docs/workbench/instances/manage-access-jupyterlab) |
+| **Self-Hosting** | Possible but primarily managed. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks) | Fully managed; customizable via user-managed instances. [i636c6f7564o676f6f676c65o636f6dz.oszar](https://i636c6f7564o676f6f676c65o636f6dz.oszar.com/vertex-ai/docs/workbench/introduction) |
+
+Databricks emphasizes data engineering and unified analytics beyond notebooks, while Workbench prioritizes streamlined ML experimentation in Google's ecosystem. [deepnote](https://deepnote.com/compare/databricks-vs-vertexai)
