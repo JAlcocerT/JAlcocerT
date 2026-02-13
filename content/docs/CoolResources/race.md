@@ -49,8 +49,6 @@ If you got a GoPro with GPS, you can have lot of fun:
 
 
 
-
-
 ### F1 Data
 
 This is one of the cool ones that you can get [via API](https://jalcocert.github.io/JAlcocerT/interesting-apis/#formula-1)
@@ -77,9 +75,6 @@ https://www.youtube.com/watch?v=TiQEElXyY2w
 
 ## Improving your Racing with Data
 
-
-
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/" title="Webs 101 | Docs ↗" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
@@ -96,16 +91,15 @@ If you know a **circuit's geometry**, why not estimating the best path for a giv
   {{< card link="https://jalcocert.github.io/JAlcocerT/kart-optimum-path" title="Optimum Path | part 1" image="/blog_img/data-experiments/kart/optimum-path.png" subtitle="Mass Point Model + G-circle" >}}
 {{< /cards >}} -->
 
-After a weekend, you can create such videos: *see [how](https://jalcocert.github.io/JAlcocerT/kart-optimum-path)*
+After a weekend of racing, you can create such videos: *see [how](https://jalcocert.github.io/JAlcocerT/kart-optimum-path)*
 
 {{< youtube "zm0OJcpuLV8" >}}
 
-
 This is also a chance to try more complex algorithms:
 
-1. GA
-2. RL
-3. GD
+1. [GA](https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing)
+2. [RL](https://jalcocert.github.io/JAlcocerT/reinforce-learning-racing-simulator)
+3. [GD](https://jalcocert.github.io/JAlcocerT)
 
 ### Optimum Gears
 

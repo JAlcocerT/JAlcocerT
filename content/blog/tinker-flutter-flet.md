@@ -2,7 +2,7 @@
 title: "First Look to Flutter Apps via Flet"
 date: 2026-11-29
 draft: false
-tags: ["Dev","Ente Photos","wger","Desktop Apps","Flutter x Python Flet","FlutterFlow"]
+tags: ["Android","Ente Photos","wger","Desktop Apps","Flutter x Python Flet","FlutterFlow"]
 description: 'Flutter Apps. Created with Python via Flet and more'
 url: 'flutter-flet-python'
 ---
@@ -415,3 +415,69 @@ main.dart -> run -> run without debugging
 <https://medevel.com/19-os-flutter-projects-samples/>
 
 
+## FAQ
+
+
+### My Fav Android Apps
+
+* Syncthing *see also Localsend*
+* Nextcloud
+* SatStat
+* Sensor Server
+* PhyPhox
+* Immich
+* F-Droid
+* CAPod
+* *RacheChrono*
+* *Tello FPV*
+
+[Audio recorder](https://play.google.com/store/apps/details?id=com.dimowner.audiorecorder&hl=en_US), [ultrasonic](https://play.google.com/store/apps/details?id=org.moire.ultrasonic&pli=1), [readdrops](https://play.google.com/store/search?q=readdrops&c=apps&hl=en_US), fluffy chat, organic maps, nophonespam
+
+2fas auth, bitwarden, signal, rvnc viewer, element, tailscale, mullvad vpn
+
+<!-- 
+<https://itsfoss.com/open-source-android-apps/>
+
+Use android from linux with: waydroid
+
+Tablet like screen: https://github.com/H-M-H/Weylus
+
+https://xdaforums.com/t/app-1-6-1-tap-tap-double-tap-on-back-of-device-gesture-from-android-12-port.4140573/
+
+* F-DROID: <https://www.youtube.com/watch?v=MnNm-o0yfZw>
+
+1) Go to https://f-droid.org/en/
+2) download fdroid apk
+2) Allow install from unknow source (just one time)
+
+* Obtanium - https://f-droid.org/packages/dev.imranr.obtainium.fdroid/
+    * Install Android Apps directly from Source
+* Add the repo - https://apt.izzysoft.de/fdroid/
+
+https://f-droid.org/en/packages/org.breezyweather/
+
+    * <https://f-droid.org/packages/com.github.mobile/>
+    * <https://f-droid.org/en/packages/nodomain.freeyourgadget.gadgetbridge>
+    * screentime
+* Organic Maps: <https://www.opensourcealternative.to/project/Organic-Maps>
+    * <https://f-droid.org/en/packages/app.organicmaps/>
+* Photos
+    * Piwigo NG
+    * Photonix
+
+BTC MAP Android
+
+https://f-droid.org/en/packages/org.btcmap/
+https://f-droid.org/en/packages/eu.darken.capod/
+
+* FluffyChat
+* Element
+
+* Zettel Notes
+* Xournal++
+* Butterfly
+
+* Bitwarden
+* vaultwarden
+* Aegis
+    * <https://www.opensourcealternative.to/project/Aegis> -->

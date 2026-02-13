@@ -38,7 +38,7 @@ Try new desktop [apps for your linux system](https://jalcocert.github.io/Linux/d
 
 ## Analytics vs Dev Careers
 
-Despite working with a computer, your journey and tools will be different if you are a **pure developer *versus* a data and analytics professional:
+Despite working with a computer, your journey and tools will be different if you are a pure developer *versus* a data and analytics professional:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="D&A Career | Docs ↗" icon="book-open" >}}

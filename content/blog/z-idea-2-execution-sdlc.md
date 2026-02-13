@@ -10,7 +10,7 @@ math: true
 
 **Tl;DR**
 
-https://app.fireflies.ai/perks
+* https://app.fireflies.ai/perks
 
 Will code been cheap increase the demand for code from businesses?
 
@@ -135,3 +135,21 @@ Efficiency lowers a resource's effective price, making demand more elastic; if r
 Behaviour driven development - Gherkins 
 
 Given -> When -> Then
+
+### The magic business formula
+
+Imagine arrive somewhere, creating a mindmap and saying after:
+
+```md
+perfect, now id like to to what each division does, what are their external and internal clients, what are their main products and how does they fit individually the net profit formula with detail stages: P*V*GM*OM*Financial*tax
+```
+
+### Coding in the Cloud
+
+Some time ago I was interested at making work: How to use VSCode from Android?
+
+* https://dev.to/dotnetdreamer/using-android-phone-as-a-development-machine-3f39
+
+The thing is that now we ar ejust sending requests to agents to do the code for us in the cloud and push the changes to our repositories automatically.
+
+Crazy.

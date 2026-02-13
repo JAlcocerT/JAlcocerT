@@ -955,6 +955,7 @@ Like these articles:
 4. Not scalable but clients want it? Sell w high gross margin to the ones who can benefit
 
 
+
 #### Discovery of the Years
 
 Wait...how many years already?!?!

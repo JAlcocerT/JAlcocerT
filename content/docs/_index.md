@@ -3,11 +3,11 @@ title: Documentation
 next: about
 ---
 
-The day by day journey from the [blog section](https://jalcocert.github.io/JAlcocerT/blog/) might not be from everyone.
+The *day by day journey* from the [blog section](https://jalcocert.github.io/JAlcocerT/blog/) might not be from everyone.
 
 So created these docs as a curated higher level version of the technologies Ive used.
 
-For some posts, ill assume that you are not scared about Linux:
+For some posts, i'll assume that you are not scared about Linux:
 
 ```sh
 sudo apt update && sudo apt install flatpak gnome-software-plugin-flatpak -y
@@ -28,4 +28,4 @@ choco install zen
 
 But in general this section is beginner friendly and aimed to give you a range of options/tools to consider for your own jouney.
 
-From your [tech career](https://jalcocert.github.io/JAlcocerT/docs/dev/) to your [entrepreneurial journey](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/), going in between for the geek one with [HomeLabs and IoT](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/).
+From your [tech career](https://jalcocert.github.io/JAlcocerT/docs/dev/) to your [entrepreneurial journey](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/), going in between for the geek ones with [HomeLabs and IoT](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/).
