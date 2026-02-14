@@ -1,6 +1,6 @@
 ---
 title: "Take a Break - Gaming with OSS"
-date: 2026-12-23T23:20:21+01:00
+date: 2026-11-23T23:20:21+01:00
 draft: true
 tags: ["Self-Hosting","Emulation","Nintendo","Yatch x EmulatorJS"]
 description: 'Are games playable in Linux?'
@@ -18,6 +18,14 @@ tags: ["Tinkering","Battle City NES",""]
 description: GPU passthrough
 
 **Intro**
+
+People are going crazy with gaming on Linux.
+
+Specially after W11 is not all they expect for performance.
+
+So...has anyone here tried SteamOS?
+
+Someone?
 
 Card games?
 

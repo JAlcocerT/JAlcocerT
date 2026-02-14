@@ -1,11 +1,7 @@
 ---
 title: "Science is so Cool!"
-date: 2026-12-10T23:20:21+01:00
+date: 2026-12-01T23:20:21+01:00
 draft: false
-# cover:
-#   image: "https://socialify.git.ci/jalcocert/streamlit-multichat/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-#   alt: "What about science?" # alt text
-#   caption: "Science Recap with LLMs" # display caption under cover
 tags: ["Heat Transfer vs Electrical Engineering","Atopile","3 Bodies vs SliDer Crank"]
 description: 'A Science recap with LLMs'
 url: 'cool-science'
@@ -18,6 +14,8 @@ https://www.youtube.com/watch?v=71e6xfxrIRs - Understanding Gaussian Processes |
 A post about...Simply science.
 
 For those who appreciate reality more than models.
+
+And not the other way around.
 
 **Intro**
 

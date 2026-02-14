@@ -3,18 +3,15 @@ title: "OSS-AI Generated Videos with Remotion"
 date: 2026-12-11T23:20:21+01:00
 draft: true
 tags: ["Outro"]
-# cover:
-#     image: "https://socialify.git.ci/remotion-dev/remotion/image?description=1&language=1&name=1&pattern=Brick%20Wall&stargazers=1&theme=Auto" # image path/url 
-#     alt: "Videos with Remotion" # alt text
-#     caption: "Videos as a code with Remotion Framework" # display caption under cover
 description: 'How to use Remotion to create videos'
 url: 'video-creation-with-remotion'
-isPinned: false
 ---
 
 **Tl;DR**
 
 From code to video with Remotion
+
+*(Not just animations)*
 
 **Intro**
 
@@ -57,6 +54,13 @@ npm init video
 * https://github.com/wcandillon/remotion-fireship
     * https://www.youtube.com/watch?v=deg8bOoziaE&t=58s
 
+
+---
+
+## Conclusions
+
+
+
 ---
 
 ## FAQ
@@ -64,5 +68,7 @@ npm init video
 ### Related RemotionJS Video
 
 {{< youtube id="deg8bOoziaE" autoplay="false" >}}
+
+
 <!-- 
 https://www.youtube.com/watch?v=deg8bOoziaE&pp=ygUKcmVtb3Rpb25qcw%3D%3D -->

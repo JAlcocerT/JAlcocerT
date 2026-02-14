@@ -1,6 +1,6 @@
 ---
 title: "OOP 101 for Engineers"
-date: 2026-10-01
+date: 2026-03-10
 draft: false
 tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD","Infographics"]
 description: 'Object Oriented Programming for Python users and better mechanism simulations.'

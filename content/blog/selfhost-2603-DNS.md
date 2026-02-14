@@ -3,7 +3,7 @@ title: "Improving a HomeLab Privacy with OSS DNS"
 date: 2026-03-01T07:20:21+01:00
 draft: false
 tags: ["Self-Hosting x ProtonDrive","Pihole v6 x UnboundDNS","DNS as Distributed DB","Privacy x Euria"]
-description: 'How to change DNS Servers and why it matters. Portainer to Homepage-Lite.'
+description: 'How to change DNS Servers and why it matters. From Portainer to Homepage-Lite.'
 url: 'private-dns-with-docker'
 ---
 
@@ -21,7 +21,7 @@ AdguardHome is a good starter for any homelab.
 
 But DNS is a rabbithole of its own.
 
-With this post, I want to explore the latests on PiHole and use it as the default DNS for a smart TV.
+With this post, I want to explore the [latests on PiHole v6](#pihole) and use it as the default DNS for a smart TV.
 
 https://www.youtube.com/watch?v=mnry95ay0Bk
 
@@ -95,7 +95,7 @@ Withing the dashboard, you will see queries done via: unless you change back to 
 dig @localhost youtube.com
 ```
 
-https://github.com/TechnitiumSoftware/DnsServer
+* https://github.com/TechnitiumSoftware/DnsServer
 
 > agpl 3 | Technitium DNS Server
 
@@ -114,10 +114,11 @@ Will you keep cloudflare 1.1.1.1, or wanna try sth?
 * How to use a RPi as a Wifi 2 Ethernet + VPN: https://jalcocert.github.io/RPi/posts/rpi-wifi-ethernet-bridge/
 
 
- 
-## Pihole regexp
+### Pihole regexp
 
 Not blocking all you'd like to?
+
+Not a problem, you can add more domains so that they dont resolve:
 
 * https://docs.pi-hole.net/database/domain-database/?h=adlist#list-table-adlist
 * https://github.com/mmotti/pihole-regex
@@ -133,7 +134,7 @@ Not blocking all you'd like to?
 | YouTube       | https://raw.githubusercontent.com/anudeepND/youtubeadsblacklist/master/domainlist.txt                         | Blocks YouTube ads.                            |
 
 
-Surprise, surprise, sqlite is around:
+Surprise, surprise, **sqlite** is around:
 
 ```sh
 sudo apt install sqlite3
@@ -142,6 +143,7 @@ sqlite3 ./pihole/gravity.db "INSERT INTO adlist (address, enabled, comment) VALU
 docker exec pihole pihole -g #update
 ```
 
+You can interact with pihole sqlite with:
 
 ```sh
 sqlite3 ./pihole/gravity.db "SELECT * FROM adlist;" #list all
@@ -155,12 +157,6 @@ https://www.youtube.com/watch?v=U9NgRShXFgk
 * [Redis](https://www.youtube.com/watch?v=qucL1F2YEKE)
 * SandStorm [SelfHost WebApps](https://docs.sandstorm.io/en/latest/)
 
-{{< details title="DNS challenge | PorkBun 📌" closed="true" >}}
-
-
-
-{{< /details >}}
-
 **Cloudflare alternatives?**
 
 * https://github.com/rapiz1/rathole
@@ -169,53 +165,82 @@ https://www.youtube.com/watch?v=U9NgRShXFgk
 
 * https://noted.lol/cgnat-and-rathole/
 
+When creating websites for you and others, you have to learn about some basic DNS config:
+
 ```sh
 dig guideventuretour.com
 ```
 
-https://jalcocert.github.io/JAlcocerT/web-domain-basics/
+We can say that some domain name and their [DNS management is the 101 basic for webs](https://jalcocert.github.io/JAlcocerT/web-domain-basics/)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/listmonk/listmonk-api-py/Ebook-cover-SSGs.pdf" title="Get an ebook with all Data Analytics concepts you need" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to land a job in D&A" >}}
 {{< /cards >}}
 
-Wireguard Server
-<!-- Tailscale -->
+You can blame the raspberry Pi on how ive started learning about DNS
+You also learn a lot about DNS when tinkering with networking and setting your own VPN - wireguard server
 
-<https://jalcocert.github.io/RPi/projects/rpi_wifi_ethernet_bridge/>
+https://jalcocert.github.io/RPi/projects/rpi_wifi_ethernet_bridge/
+
+> Even Tailscale has its DNS so you can communicate with your devices appearing at `tailscale status` w/o their IP, but their name
 
 RPi DHCP Server
 
-url: 'selfhosting-PiHole-docker'
-
 https://radar.cloudflare.com/dns
 
+https://awweso.me/dns/ 
 
-
-<!-- 
-https://awweso.me/dns/ -->
-
-
-<!-- 
- https://hub.docker.com/r/pihole/pihole
  
- DNSMASQ_LISTENING
+DNSMASQ_LISTENING
  
- https://github.com/pi-hole/docker-pi-hole/?tab=readme-ov-file#environment-variables
-     -->
+https://github.com/pi-hole/docker-pi-hole/?tab=readme-ov-file#environment-variables
 
-<!-- {{< gist jalcocert 302f787db6f6d75e978674e0e18d1185
-"Docker-Security-Pihole.yml">}} -->
+{{< gist jalcocert 302f787db6f6d75e978674e0e18d1185 "Docker-Security-Pihole.yml">}}
 
 ### DuckDNS vs Traefikme
 
+The **DuckDNS** service is pretty cool.
+
+You can learn how domain and DNS works with it for free.
+
+Even getting https on them is possible with NGINX.
+
+And that setup can work together with your nextcloud.
+
+```sh
+docker exec nextcloud php occ config:system:set trusted_domains 1 --value=somesub.duckdns.org
+```
+
+That one I knew for some time, but I also heard about **TraefikMe**
+
 * https://traefik.me/
+
+#### Traefik
+
+I havent talked about Traefik for a while.
+
+But so far is my favourite way of having local https on my sub/domains.
+
+{{< details title="DNS challenge | PorkBun 📌" closed="true" >}}
+
+
+{{< /details >}}
+
+With Traefik, you can also learn about protecting your web/apps:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tiny-auth" title="Tiny Auth Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 #### PiHole
 
 This service has been with my [for a while](https://jalcocert.github.io/RPi/posts/selfh-internet-better/).
 
 But now *PiHole is reloaded* with its **v6**.
+
+*  https://hub.docker.com/r/pihole/pihole
 
 ```sh
 #git clone https://github.com/JAlcocerT/Home-Lab
@@ -259,13 +284,12 @@ https://www.youtube.com/watch?v=aRbKFCY4tjE -->
 
 
 https://github.com/plaintextpackets/netprobe_lite
+
 Simple internet performance tester written in Python
-
-
 
 * quad9
 * cloudflare
-* adguar
+* adguard
 * google
 * PiDNS - url: 'selfhosting-PiHole-docker'
 
@@ -274,15 +298,18 @@ Simple internet performance tester written in Python
 
 Verify DNS Server Functionality:
 
-Test if the DNS server is reachable and functioning properly. You can ping the DNS server:
+Test if the DNS server is reachable and functioning properly. 
+
+You can ping the DNS server:
 
 ```sh
-ping 192.168.3.1
+ping 192.168.1.1
 ```
 
 If the ping is successful, try using a direct DNS query to see if DNS resolution is working:
 
 ```sh
+#sudo apt-get install dnsutils
 dig @192.168.3.1 google.com
 ```
 
@@ -293,8 +320,7 @@ Is Your VPN Leaking?
 https://www.youtube.com/watch?v=GxVIa3eDdnM -->
 
 
-
-## Blocky
+### Blocky
 
 * https://0xerr0r.github.io/blocky/latest/?ref=selfh.st
 * https://github.com/0xERR0R/blocky
@@ -305,30 +331,31 @@ Fast and lightweight DNS proxy as ad-blocker for local network with many feature
 
 {{< dropdown_docker title="Really, Just Get Docker 🐋" closed="true" >}}
 
-https://github.com/getdnsapi/stubby
+* https://github.com/getdnsapi/stubby
 
-## Stubby DNS
-
-DNS over TLS
-
-https://www.youtube.com/watch?v=VCTiR_Ny4Sc
-
-
-### DNSCrypt
-
-https://github.com/DNSCrypt/dnscrypt-proxy
-
-## Unbound DNS
-
-## Pi-Hole DNS
+## Pi-Hole and DNS
 
 PiHole + Wireguard - https://www.youtube.com/watch?v=R29YBmYxXAk
 
 https://www.youtube.com/watch?v=-5Fwyl73C7g
 
-## Bind9
 
-https://hub.docker.com/r/ubuntu/bind9#!
+### Stubby DNS
+
+DNS over TLS
+
+* https://www.youtube.com/watch?v=VCTiR_Ny4Sc
+
+
+### DNSCrypt
+
+* https://github.com/DNSCrypt/dnscrypt-proxy
+
+### Unbound DNS
+
+### Bind9
+
+* https://hub.docker.com/r/ubuntu/bind9#!
 
 https://www.youtube.com/watch?v=4IuNKK2y49s
 
@@ -340,8 +367,7 @@ https://www.youtube.com/watch?v=syzwLwE3Xq4
 https://www.youtube.com/watch?v=syzwLwE3Xq4&t=745s
 > You want a real DNS Server at home? (bind9 + docker)
 
-
-## CoreDNS
+### CoreDNS
 
 It is great for Docker: https://www.youtube.com/watch?v=tE9YjEV1T4E
 
@@ -424,6 +450,8 @@ docker ps -a | grep -i homepage-lite
 #sudo docker stats homepage-lite
 sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml logs -f homepage-lite
 ```
+
+If you are not 100% confortable with the terminal yet or need some place to bookmark your containers, these are good options.
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/homepage-lite" title="HomePage Lite | Docker Configs 🐋 ↗" >}}
@@ -633,7 +661,6 @@ You can do `ctrl+shift+P` write user settings JSON and paste:
 }
 ```
 
-
 Amazon AWS workspace?
 
 Not a problem via `https://clients.amazonworkspaces.com/linux-install`
@@ -657,7 +684,7 @@ sudo apt-get update
 
 2. Install Amazon Workspaces
 
-Once the deb file has been downloaded, you can install Amazon Workspaces with the following command.
+#Once the deb file has been downloaded, you can install Amazon Workspaces with the following command.
 
 sudo apt-get install workspacesclient
 ```
@@ -721,9 +748,7 @@ Before LLMs, you might have needed: https://github.com/composerize/composerize  
 
 ### Wireshark - Checking which adds are going through
 
-https://docs.linuxserver.io/images/docker-wireshark/
-
-
+* https://docs.linuxserver.io/images/docker-wireshark/
 
 
 ### Business OSS Driven
@@ -731,7 +756,6 @@ https://docs.linuxserver.io/images/docker-wireshark/
 The year has just started and you might be motivated to finally launch your business.
 
 <!-- tags: ["OSS for Business","Serverless-Invoices","Payments","BillaBear"] -->
-
 
 Make sure to understand the licenses.
 
@@ -820,6 +844,7 @@ See also
 ### Browsers
 
 1. Librewolf vs Zen vs waterfox vs firefox
+
 2. Chromium vs brave vs [Helium](https://github.com/imputnet/helium) vs Tor browser
 
 ```sh
@@ -878,13 +903,15 @@ If you want the strictest privacy and are OK with friction and some breakage: Li
 
 HomeLab Essentials - https://jalcocert.github.io/JAlcocerT/docs/selfhosting/
 
+These have been apps that I have used at some point at my homelab and might also be of your interest
+
 1. Container UI's 🐳: [Portainer](https://github.com/JAlcocerT/Home-Lab/tree/main/portainer), Rancher, Dockge...
 
 2. Syncing 🐳: [Syncthing](https://github.com/JAlcocerT/Home-Lab/tree/main/syncthing)
 
 3. Tools 🐳: [IT-Tools](https://github.com/JAlcocerT/Home-Lab/tree/main/it-tools), CosmosServer, [OmniTools](https://github.com/JAlcocerT/Home-Lab/tree/main/omni-tools)
 
-4. [Webs 🐳](https://github.com/JAlcocerT/Docker/tree/main/Web/CMS): Wordpress, Ghost, LinkInBio selfhosted alternatives...
+4. [Webs 🐳](https://github.com/JAlcocerT/Docker/tree/main/Web/CMS): *Wordpress, Ghost, LinkInBio selfhosted alternatives...*
 
 > Wrote a post about the most popular CMS's [here](https://jalcocert.github.io/JAlcocerT/no-code-websites/) and about LinkStack [here](https://jalcocert.github.io/JAlcocerT/linktree-web-alternative/#selfhosted-solutions-for-linkinbio)
 
