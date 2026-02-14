@@ -83,7 +83,23 @@ If its too much space, you can always:
 
 ### NC vs Immich
 
-We have some fresh releases since the last time:
+We have some fresh releases since the last time: *and im adding to the x300 a drive :)*
+
+```sh
+lsblk
+sudo mkdir -p /mnt/data1tb
+sudo blkid /dev/sdb1 #this gets the UUID
+#sudo nano /etc/fstab #edit the file to make it mount persistently
+echo "UUID=123abc-1234-abcd-dddd-abchfhfhfh /mnt/data1tb ext4 defaults 0 2" | sudo tee -a /etc/fstab
+
+sudo mount -a
+#df -h | grep sdb1
+#df -h | grep ^/dev
+sudo docker compose -f /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml up -d nextcloud-app nextclouddb
+#sudo docker ps -f "name=nextcloud"
+nano /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml
+nano /home/jalcocert/Home-Lab/z-homelab-setup/evolution/.env
+```
 
 * https://github.com/immich-app/immich/releases/tag/v2.5.0
 * https://github.com/nextcloud/desktop/releases/tag/v4.0.6
@@ -255,6 +271,12 @@ Self Hosted Photo Backups - Photoprism & Photosync - Let's ditch iCloud...
 ## Conclusions
 
 Just do something!
+
+Jellyfin is waiting for you and you can run your 4k videos in any small computer nowadays.
+
+Make sure to activate the GPU properly instead of leaving the CPU do the work.
+
+I got the x300 to be ~idle of less than 5% and ~+20C of ambient temperature with that trick.
 
 ### How to backup data?
 

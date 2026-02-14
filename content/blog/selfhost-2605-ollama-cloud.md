@@ -287,8 +287,8 @@ sudo mkdir -p /mnt/data1tb/nextcloud/db && sudo chown -R 1000:1000 /mnt/data1tb/
 
 If you dont know who are you connected to:
 
-
 ```sh
+#ip neigh #see other devices connected to the same router
 ip route | grep default
 #default via 192.168.0.1 dev wlp3s0 proto dhcp metric 600 
 ```

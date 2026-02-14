@@ -143,6 +143,13 @@ graph LR
 
 ## Conclusions
 
+Some tell that returns are constant (apparently).
+
+Others, will tell you that if you are still getting increasing returns, you have just got started and that you should keep moving beyond diminishin returns, because even those are returns.
+
+The main question could be: are you playing the game? are you even trying? 
+
+
 ### Evaluating Business Ideas
 
 How can we measure how good an existing idea is?

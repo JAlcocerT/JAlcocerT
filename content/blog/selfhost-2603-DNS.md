@@ -484,6 +484,51 @@ sudo apt install thunderbird
 # sudo apt-get install -f
 ```
 
+If you are not sure, you can also go with Nextcloud in your homelab, as I [covered last month](https://jalcocert.github.io/JAlcocerT/image-backup-tools/):
+
+```sh
+#sudo docker compose -f /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml exec nextclouddb env
+#sudo docker compose -f /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml config
+sudo docker compose -f /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml up -d nextcloud-app nextclouddb
+#sudo docker compose -f /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml stop nextcloud-app nextclouddb
+#sudo docker compose -f /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml rm -s -v nextcloud-app nextclouddb
+nano /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml
+nano /home/jalcocert/Home-Lab/z-homelab-setup/evolution/.env
+docker exec nextcloud php occ config:system:get trusted_domains #see that now is added
+#cd /mnt/data1tb/nextcloud/html/config
+#cat config.php | grep -A 10 trusted_domains
+docker exec nextcloud php occ config:system:set trusted_domains 2 --value=your.new.domain.com
+```
+
+You should see at `192.168.1.2:8099` or your configured domain in the `.env`
+
+> If you are going to expose it to the open internet, make sure is at least accesible by one country with cloudflare WAF
+
+> > Expose it via `nextcloud-app:80` and give access to your family with `https://wha.tever.com/settings/users`
+
+```sh
+du -sh /mnt/data1tb/* #see the space taken
+du -sh /mnt/data1tb/nextcloud/html/data/jelimoreli
+#which user is taking how much space
+```
+
+So you can be more specific with: `(http.host eq "nc.jalcocertech.com" and not ip.src.country in {"ES" "PL"})`
+
+```sh
+curl -X PUT \
+	"https://api.cloudflare.com/client/v4/zones/abcdef123456/rulesets/phases/http_request_firewall_custom/entrypoint" \
+	-H "Authorization: Bearer $CF_AUTH_TOKEN" \
+	-d '{
+    "rules": [
+        {
+            "description": "allow countries",
+            "expression": "(ip.src.country ne \"PL\") or (ip.src.country ne \"ES\")",
+            "action": "block"
+        }
+    ]
+}'
+```
+
 ### Privacy and OS
 
 How could I not mention this.
@@ -650,9 +695,12 @@ And after all this, you go to ~22gb taken, which I believe is what W11 takes for
 I wouldnt have done this without: Termix, UptimeKuma and
 
 ```sh
+sudo apt install glances
 #uv tool install glances
 glances
+
 lazydocker
+
 #sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-amd64 -O /usr/local/bin/ctop && sudo chmod +x /usr/local/bin/ctop
 ctop
 ```
