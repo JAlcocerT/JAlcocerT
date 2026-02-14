@@ -369,6 +369,8 @@ curl -sS http://ip-api.com/json/ #provides info about country, ISP, ...
 #curl -6 ifconfig.me #ipv6 info 
 ```
 
+Optionally, have  alook to **Portmaster**: *just be aware that it might cause issues with tailscale*
+
 And check your uptime kuma monitoring: `http://192.168.1.2:3001/dashboard/`
 
 {{< cards cols="2" >}}
@@ -644,6 +646,16 @@ And after all this, you go to ~22gb taken, which I believe is what W11 takes for
 
 
 ## FAQ
+
+I wouldnt have done this without: Termix, UptimeKuma and
+
+```sh
+#uv tool install glances
+glances
+lazydocker
+#sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-amd64 -O /usr/local/bin/ctop && sudo chmod +x /usr/local/bin/ctop
+ctop
+```
 
 1. https://github.com/hagezi/dns-blocklists
 2. https://github.com/blacklanternsecurity/baddns

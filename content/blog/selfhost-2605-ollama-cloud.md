@@ -250,6 +250,14 @@ git clone https://github.com/JAlcocerT/Home-Lab
 sudo ./z-desktop-x-homelab/Linux_Setup_101.sh #You are good to go with browsers OBS tailscale etc
 ```
 
+Get back to work with:
+
+```sh
+#curl -LsSf https://astral.sh/uv/install.sh | sh
+uv --version
+uv python list #https://docs.astral.sh/uv/guides/install-python/
+```
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/home-lab" title="home-lab | Repo ↗" icon="github" >}}
 {{< /cards >}}

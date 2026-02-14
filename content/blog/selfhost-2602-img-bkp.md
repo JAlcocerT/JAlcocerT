@@ -59,6 +59,8 @@ Because at some point, you will need more than just a quick share: *or sth more 
 
 ### PiGallery
 
+PiGallery and ~~snapdrop~~ pairdrop are great companions
+
 * https://libreselfhosted.com/project/fluxbb/
 * https://awesome-docker-compose.com/apps/photo-server/pigallery-2
 

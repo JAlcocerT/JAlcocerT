@@ -161,12 +161,21 @@ The cristal balls dont see that much revenue coming up in the future, or at leas
 
 ```sh
 #git clone https://github.com/JAlcocerT/DataInMotion.git
-#cd DataInMotion && branch libreportfolio
-#uv run tests/plot_historical_yield.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --monthly
-uv run tests/plot_historical_gweiss.py ADP --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
-uv run tests/plot_historical_gweiss.py WK --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+cd DataInMotion && git checkout libreportfolio #git branch -a
+#git branch --show-current
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+#uv run tests/plot_historical_yield.py CAT --start 2000-01-01 --brand "@LibrePortfolio" --monthly
+uv run tests/plot_historical_gweiss.py ADP --start 2000-01-01 --brand "@LibrePortfolio" --warmup-days 400
 #ticker = yf.Ticker("WKL.AS")
 ```
+
+<!-- 
+https://www.youtube.com/shorts/7VHE6kNgRUU 
+-->
+
+{{< youtube "7VHE6kNgRUU" >}}
 
 Other companies have explosive PER ~300 that in theory say that people expect massive growth of earnings.
 
@@ -186,13 +195,20 @@ Or better to level up and catch the wave to max out that active income?
 
 ### About Jevons
 
-The Jevons paradox describes how technological improvements in resource efficiency can lead to increased, rather than decreased, overall consumption of that resource. Named after economist William Stanley Jevons, who observed this with 19th-century coal-powered steam engines, it shows that cheaper effective costs spur greater demand, often outweighing per-unit savings. [en.wikipedia](https://en.wikipedia.org/wiki/Jevons_paradox)
+The Jevons paradox describes how technological improvements in resource efficiency can lead to increased, rather than decreased, overall consumption of that resource.
 
-Jevons noted in 1865 that James Watt's more efficient steam engines expanded coal's industrial use across sectors, boosting total coal consumption despite lower fuel per task. He argued efficiency gains inherently widen a resource's applications, countering expectations of conservation. [sciencedirect](https://www.sciencedirect.com/science/article/pii/S0921800905001084)
+Named after economist William Stanley Jevons, who observed this with 19th-century coal-powered steam engines, it shows that cheaper effective costs spur greater demand, often outweighing per-unit savings.
+
+
+Jevons noted in 1865 that James Watt's more efficient steam engines expanded coal's industrial use across sectors, boosting total coal consumption despite lower fuel per task. 
+
+He argued efficiency gains inherently widen a resource's applications, countering expectations of conservation. 
 
 Mechanism
 
-Efficiency lowers a resource's effective price, making demand more elastic; if rebound exceeds 100%, total use rises (Jevons paradox) versus partial offsets (rebound effect under 100%). Macro effects include boosted economic growth and incomes, amplifying economy-wide demand. [bonpote](https://bonpote.com/en/jevons-paradox-and-rebound-effect/)
+Efficiency lowers a resource's effective price, making demand more elastic; if rebound exceeds 100%, total use rises (Jevons paradox) versus partial offsets (rebound effect under 100%). 
+
+Macro effects include boosted economic growth and incomes, amplifying economy-wide demand. [bonpote](https://bonpote.com/en/jevons-paradox-and-rebound-effect/)
 
 
 
