@@ -512,7 +512,7 @@ sudo apt install thunderbird
 # sudo apt-get install -f
 ```
 
-If you are not sure, you can also go with Nextcloud in your homelab, as I [covered last month](https://jalcocert.github.io/JAlcocerT/image-backup-tools/):
+If you are not sure, you can also go with NextCloud in your homelab, as I [covered last month](https://jalcocert.github.io/JAlcocerT/image-backup-tools/):
 
 ```sh
 #sudo docker compose -f /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml exec nextclouddb env
@@ -526,6 +526,7 @@ docker exec nextcloud php occ config:system:get trusted_domains #see that now is
 #cd /mnt/data1tb/nextcloud/html/config
 #cat config.php | grep -A 10 trusted_domains
 docker exec nextcloud php occ config:system:set trusted_domains 2 --value=your.new.domain.com
+docker exec nextcloud php occ config:system:set trusted_domains 1 --value=192.168.1.2
 ```
 
 You should see at `192.168.1.2:8099` or your configured domain in the `.env`
@@ -534,10 +535,24 @@ You should see at `192.168.1.2:8099` or your configured domain in the `.env`
 
 > > Expose it via `nextcloud-app:80` and give access to your family with `https://wha.tever.com/settings/users`
 
+
 ```sh
 du -sh /mnt/data1tb/* #see the space taken
 du -sh /mnt/data1tb/nextcloud/html/data/jelimoreli
 #which user is taking how much space
+```
+
+Btw, surprise surpsie when trying to connect via the https one to a nextcloud desktop:
+
+```sh
+#docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | grep nextcloud
+docker exec -u www-data nextcloud php occ config:system:set overwriteprotocol --value="https"
+
+docker exec -u www-data nextcloud php occ config:system:set overwrite.cli.url --value="https://nube.jalcocertech.com"
+#docker logs --tail 100 nextcloud
+grep data1tb /etc/fstab
+docker compose -f /home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml down
+
 ```
 
 So you can be more specific with: `(http.host eq "nc.jalcocertech.com" and not ip.src.country in {"ES" "PL"})`
@@ -718,6 +733,23 @@ And after all this, you go to ~22gb taken, which I believe is what W11 takes for
 
 
 ## FAQ
+
+What else am I running?
+
+Syncthing or sftpgo where nice, but...
+
+```sh
+docker compose -f 2602_docker-compose.yml up -d
+docker compose -f 2602_docker-compose.yml up -d nextcloud-app nextclouddb
+#sudo du -sh /mnt/data1tb/nextcloud/html/data/jelimoreli
+```
+
+See `httops://what.ever.jalcocertech.com/status.php`
+
+```sh
+docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | grep jellyfin
+docker compose -f 2602_docker-compose.yml up -d jellyfin metube navidrome qbittorrent prowlarr homepage-lite termix pigallery2 uptimekuma-monitoring neko logseq
+```
 
 I wouldnt have done this without: Termix, UptimeKuma and
 

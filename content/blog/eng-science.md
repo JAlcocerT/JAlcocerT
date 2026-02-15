@@ -3,7 +3,7 @@ title: "Science is so Cool!"
 date: 2026-12-01T23:20:21+01:00
 draft: false
 tags: ["Heat Transfer vs Electrical Engineering","Atopile","3 Bodies vs SliDer Crank"]
-description: 'A Science recap with LLMs'
+description: 'A Science recap with LLMs.'
 url: 'cool-science'
 ---
 
@@ -15,7 +15,7 @@ A post about...Simply science.
 
 For those who appreciate reality more than models.
 
-And not the other way around.
+And not [the other way around](#conclusions).
 
 **Intro**
 
@@ -234,6 +234,15 @@ Tanto la mezcla de nitrato de potasio y azúcar como la reacción de ácido nít
 
 **Intro**
 
+
+---
+
+## Conclusions
+
+Whatever you do...
+
+Forget about *Toy Models*, please.
+
 THis year i discovered that for simple calculations some JS vibe coded and shipped statically into your browser can do.
 
 You can get [your MRR](https://libreportfolio.pages.dev/recursos/calculadora-mrr/) *super complex* operation done.
@@ -244,10 +253,6 @@ But what happens when you need something more complex?
 
 I used Wolfram and Matlab during my studies.
 
-
-
-
-
 3. Wolfram alfa, but FOSS calculator: <https://www.opensourcealternative.to/project/Kalker>
 
 * https://kalker.xyz
@@ -257,6 +262,7 @@ I used Wolfram and Matlab during my studies.
 4. See also the [Sympy](https://pypi.org/project/sympy/) Python library for symbolic mathematics
 
 > Matlab had a similar feature, which I used on [this thesis](https://github.com/JAlcocerT/Bike_dynamic_simulator)
+
 
 ### SelfHosted Calculators
 
