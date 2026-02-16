@@ -1,5 +1,5 @@
 ---
-title: "PowerBI 101"
+title: "PowerBI 101 for D&A"
 date: 2020-12-07T19:20:21+01:00
 draft: false
 tags: ["Business Intelligence","pbiviz","D3js","DAX vs M","Semantic Model"]
@@ -454,3 +454,38 @@ If you embed complex logic (e.g., a 300-line SQL query with 5 joins and a CTE) i
 1.  **Push it to the Database View (Gold Layer):** The absolute most efficient and governable method is to have a Data Engineer create a materialized **View** in the SQL database that contains exactly the data you need, already joined and cleaned. Then, Power BI just does `SELECT * FROM ThatPerfectView`.
 2.  **Use Power Query folding:** If a view isn't possible, use the standard Power Query steps and ensure they fold. This is transparent and maintainable.
 3.  **Last Resort - Custom SQL:** Only paste custom SQL if the logic is so complex that M cannot generate an efficient query for it (e.g., very specific database-proprietary window functions or hints), AND you guarantee no further transformation steps will be added in Power Query.
+
+### More PBi
+
+How to manage your **reports across environments** without causing confusion for the end users.
+
+1. Understanding the Workspace vs. The App
+
+It is critical to distinguish between the **Workspace** (where you work) and the **App** (what the client sees).
+
+* **Workspaces** are collaborative areas for developers to store, manage, and refine reports and dashboards.
+* **Apps** are curated packages of content designed for end-users to consume insights easily.
+* **The "Safety Buffer":** When you update a report in the **DevSecOps-Prod** workspace, the changes do **not** immediately appear for the clients in the App. This allows you to deploy from Dev to Prod in the background, verify the data, and only "go live" when you are ready.
+
+2. Promoting Changes Silently
+
+When you are ready to move your work from Dev to the Production environment, follow these steps to maintain your "invisible" status:
+
+* **Selective Inclusion:** In your workspace screenshot, notice the **"Included in app"** column. You can toggle this to "No" for any report that is not yet ready for the client.
+* **Hiding Pages within a Report:** If you have a single report (like the *DevSecOps Dashboard* shown in your second screenshot) and want to hide specific tabs (e.g., *CSR Matrix*), you must right-click the tab in Power BI Desktop and select **"Hide Page"** before publishing.
+* **Update App Button:** Your changes to report structures or new visuals will only become visible to end-users after you click the **"Update app"** button in the top right of the workspace.
+* **Target Audiences:** You can use the **Audience** feature in the App settings to show different reports or pages to different groups of users.
+
+3. Key Observations from a Workspace in a Prod environment:
+
+* **Current "Live" Content:** Only reports marked with **"Yes"** in the `Included in app` column (like the *DevSecOps Dashboard*, *IaC Consumption Matrix*, and *Onboarding 2025 Tracking*) are visible to your clients right now.
+
+* **WIP Reports:** Reports like *expeditedChanges* and *TAA - MTTI Report* are set to **"No,"** meaning they are safely tucked away in the workspace where only you and your fellow developers can see them.
+
+* **Orphaned Semantic Models:** You have several semantic models (like *2025 Goal - IaC & CE Adoption Report*) that haven't refreshed successfully or have no next refresh scheduled. This is a good place for you to "audit" without the client ever knowing, as they only see the finished report visuals, not the underlying model list.
+
+4. Deployment Strategy Recommendations
+
+* **Staged Rollout:** Deploy your `.pbix` to the **Dev** workspace first. Once it looks right, use the **Deployment Pipeline** to push it to **UAT**, and finally to **Prod**.
+* **Final App Update:** Only after you have verified the data in the **DevSecOps-Prod** workspace should you click **"Update App."** This ensures the client only sees a "finished" product.
+* **Metadata Changes:** Remember that manual "Update App" is mandatory for metadata changes (new pages, renamed columns, new charts).

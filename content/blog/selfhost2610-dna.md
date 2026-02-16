@@ -129,7 +129,9 @@ Here is how they stack up in 2026:
 
 ## 1. LangGraph (The "State Machine" Approach)
 
-LangGraph is currently the industry favorite for **complex, reliable agents**. Unlike standard LangChain (which is more linear), LangGraph treats an agent like a "cycle" or a flow chart.
+LangGraph is currently the industry favorite for **complex, reliable agents**. 
+
+Unlike standard LangChain (which is more linear), LangGraph treats an agent like a "cycle" or a flow chart.
 
 * **Philosophy:** Everything is a **Directed Acyclic Graph (DAG)** or a state machine.
 * **Best for:** Tasks where the agent needs to loop back, retry, or follow a very specific "plan-act-check" cycle.

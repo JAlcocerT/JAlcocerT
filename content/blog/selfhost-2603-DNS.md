@@ -481,6 +481,12 @@ rsync -avzP /home/jalcocert/Downloads/Music/ jalcocert@192.168.1.2:/home/jalcoce
 
 They have managed to integrate several apps: *proton mail, authenticator, proton vpn...*
 
+```sh
+choco install protonauth
+choco install protonmail
+choco install protondrive #maybe one day it will be so simple at Linux (maybe...)
+```
+
 * https://github.com/orgs/protonpass/repositories
     * https://github.com/protonpass/proton-pass-common/releases
 
