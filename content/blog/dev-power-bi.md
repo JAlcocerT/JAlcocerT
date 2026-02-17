@@ -2,8 +2,8 @@
 title: "Agents are coming to Workspaces"
 date: 2026-02-01T09:20:21+01:00
 draft: false
-tags: ["D&A x BI","DAX vs M","Fabric"]
-description: About PBi concepts like Query Folding.
+tags: ["D&A x BI","DAX vs M","Fabric","PBix vs PBiP vs PBiT"]
+description: 'About PBi concepts like Query Folding.'
 url: 'about-powerbi-and-fabric'
 ---
 
@@ -11,11 +11,18 @@ url: 'about-powerbi-and-fabric'
 
 Havent done PowerBi dashboards yet?
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/PBi" title="PowerBI DAX/M Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Some useful DAX and M formulas - Source Code on Github" >}}
+{{< /cards >}}
+
+
 Well...agents are coming.
 
 **Intro**
 
 Things...have changed a little bit for [Power Bi](https://jalcocert.github.io/JAlcocerT/about-powerbi/).
+
+The url is same though: `app.powerbi.com`
 
 ```mermaid
 graph TD
@@ -125,9 +132,28 @@ Here is the reality of what stays and what goes:
 
 ### 2. Service Accounts: Replaced by "Managed Identities"
 
-* **What goes away:** You no longer need to use "Alexey’s login" or create a fake user account (like `service_account_pbi@company.com`) that needs a password reset every 90 days.
+* **What goes away:** You no longer need to use "someone’s login" or create a fake user account (like `service_account_pbi@company.com`) that needs a password reset every 90 days.
 * **What stays:** You use **Service Principals** or **System-Assigned Managed Identities (SAMI)**.
 * *The benefit:* Fabric identifies itself to your database using an Azure-native identity. No passwords to leak, and it’s much harder to "break" the connection.
+
+```mermaid
+graph LR
+    User((You)) -- Logs in as --> SA{Service Account}
+    SA -- Owns --> SemanticModel[The Dashboard]
+    SemanticModel -- Uses --> DB[(MySQL DB)]
+    
+    subgraph "Visible to Client"
+    SemanticModel
+    end
+    
+    subgraph "Hidden from Client"
+    User
+    SA
+    end
+    
+    style User fill:#f9f,stroke:#333,stroke-width:2px
+    style SA fill:#bbf,stroke:#333,stroke-width:4px
+```
 
 
 
@@ -136,7 +162,9 @@ Here is the reality of what stays and what goes:
 This is where the real "skipping" happens.
 
 * **Old Way:** You write a Dataflow → It queries MySQL → It converts data → It saves to Power BI.
+
 * **New Way (Mirroring):** You point Fabric at your MySQL database. Fabric **continuously "mirrors"** the data into OneLake in the background.
+
 * *The result:* You skip the configuration of refresh schedules. The data is just "there" whenever you open your report.
 
 
@@ -153,6 +181,53 @@ This is where the real "skipping" happens.
 | **Logic** | DAX + Power Query M | **AI** + OneLake Shortcuts |
 | **Refresh** | Scheduled (e.g., 8x per day) | **Direct Lake** (Real-time) |
 
+## A new Era
+
+Yes, you've hit on two of the biggest changes in the Microsoft data world. They aren't just name changes; they represent a massive shift in how you'll work as a Power BI developer in the "Fabric era."
+
+### 1. Semantic Models (Formerly "Datasets")
+
+Microsoft renamed **Datasets** to **Semantic Models** to better reflect what they actually are: a "logic layer" rather than just a "bucket of data."
+
+* **Why the change?** A "dataset" sounds like a static CSV or table. A **Semantic Model** includes your relationships, DAX measures, hierarchies, and security (RLS). It’s the "meaning" (semantics) you give to the raw data.
+* **The Benefit:** It aligns Power BI with the rest of the industry. When a Data Scientist talks about a "model," they mean a structured set of logic—now Power BI speaks that same language.
+
+
+### 2. OneLake: The "OneDrive for Data"
+
+If the Semantic Model is the **brain**, **OneLake** is the **nervous system** for your entire company.
+
+Before Fabric, every team had their own "Data Lake" (ADLS Gen2 storage).
+
+It was a mess of silos. **OneLake** fixes this by giving your entire organization **one single, logical lake**.
+
+* **The "OneDrive" Analogy:** Just like everyone in your company has a folder in one big OneDrive tenant, every department now has a "Workspace" in **OneLake**.
+
+* **No More Duplication (Shortcuts):** This is the "killer feature." If the finance team has data in their folder, you don't copy it to your folder. You create a **Shortcut**. It looks like the data is in your folder, but it’s still living in theirs. No more "fucking" around with multiple copies of the same truth.
+
+* **One Format (Delta Parquet):** Everything in OneLake is stored in an open format called **Delta**. 
+
+This means your **AKS** microservices (using Python/Spark) and your **Power BI** reports can read the exact same file at the same time.
+
+
+### 3. How they work together (Direct Lake)
+
+This is the most important part for you. There is a new way to connect your **Semantic Model** to **OneLake** called **Direct Lake mode**.
+
+* **Import Mode (Old):** You had to "load" data into the Semantic Model. It was fast but needed refreshing.
+* **DirectQuery (Old):** You didn't load data, so it was always fresh, but it was slow as hell.
+* **Direct Lake (New):** The Semantic Model reads the Delta files in **OneLake** directly, as if they were already in memory. You get the **speed of Import** with the **freshness of DirectQuery**, and you **don't need a Gateway** because it's all cloud-native.
+
+{{< callout type="info" >}}
+You might still see Import Mode and Gateway to connect to your onpremise / private data sources like MySQL
+{{< /callout >}}
+
+Updated One-Liner Summary:
+
+* **Semantic Model:** The logic, measures, and "brain" of your report.
+* **OneLake:** The single, unified "storage tank" where all company data lives without being copied.
+
+> **Next Step:** Would you like to see how to enable **Direct Lake** in a Power BI report so you can stop worrying about refresh schedules and gateways for your Fabric data?
 
 ---
 
@@ -180,7 +255,11 @@ Clients and IT departments hate PATs because they expire and leak. If you can se
 
 2. Performance (Fabric & SQL)
 
-A bad Power BI developer loads millions of rows into the report and makes it slow. A great developer uses **SSMS** to write a view in **Azure SQL** or **Fabric** that does the heavy lifting first. This keeps the report snappy.
+A bad Power BI developer loads millions of rows into the report and makes it slow.
+
+A great developer uses **SSMS** (SQL SERVER MANAGEMENT STUDIO) to write a view in **Azure SQL** or **Fabric** that does the heavy lifting first. 
+
+This keeps the report snappy.
 
 Summary: The "Power BI Pro" One-Liners
 
@@ -196,8 +275,27 @@ choco install mysql.workbench -y #or...dbeaver
 #choco install dbeaver
 ```
 
+```sh
+SELECT * FROM information_schema.columns 
+WHERE table_name = '_dora_csr_metric_details';
+
+#SHOW TABLES like '%_dora%'; ###if using MySQL, this is as simple as
+```
+
 * **Gateways** act as a secure bridge that allows the Power BI cloud service to "reach back" into your private network to refresh data from on-premises databases like MySQL.
 
+## PBIX vs PBIP vs PBIT
+
+You like things as code, right?
+
+Then, you will like to save as the `pbix` as `pbip` to get:
+
+File	Role	What's inside
+modelbim.txt	🧠 Semantic Model	All 37 tables, columns, DAX measures, M queries, MySQL connection strings, and DORA classification thresholds. This is the brains of the report.
+
+report.json	🎨 Report Layout	The 2 report pages (Summary + Details), ~20 KPI cards, ~8 slicers, ~6 detail tables, bookmark groups (DORA/WK CTO toggle), dark theme config, and all visual positioning. This is the face of the report.
+
+diagramLayout.json	📐 Diagram Canvas	Just the x/y positions of the 36 table nodes in Power BI's model diagram view. Purely cosmetic — doesn't affect the report behavior at all.
 
 ---
 
@@ -382,6 +480,7 @@ Here is the "No-BS" breakdown of everything we've covered, one line at a time:
 
 In the Power BI world, the **Gateway** is the "Secure Bridge" that connects the Microsoft Cloud (where your reports live) to data that is hidden behind a firewall (like your `10.1.x.x` MySQL servers).
 
+
 If you didn't have a gateway, the Power BI cloud service would try to reach your internal MySQL server, hit your company's firewall, and get blocked.
 
 1. Who uses it?
@@ -413,6 +512,14 @@ Summary: Do YOU need one?
 * **For Azure SQL (`zuse2...`):** Usually **No**. Power BI can talk to it directly through the cloud, and you use **Managed Identity** (or your work email) to log in.
 * **For MySQL (`10.1...`):** **Yes, 100%**. Because those IPs are private, your reports will never refresh in the cloud without a **Standard Gateway** acting as the bridge.
 
+The confusion usually comes from people thinking "Import Mode" is what triggers the need for a gateway. 
+
+In reality, the location of the data is what matters most.
+
+The "Gateway Rule of Thumb"
+
+* On-Premises / Private Source (10.179.x.x): Gateway Required (whether you use Import or DirectQuery).
+* Cloud-Native Source (database.windows.net): No Gateway Required (Power BI talks to it cloud-to-cloud).
 
 ### Whats AKS?
 
@@ -473,9 +580,7 @@ In Power BI, the **Semantic Model** (formerly known as the "Dataset") is the "br
 
 Here is how they interact in your specific world of **Azure SQL** and **MySQL**.
 
----
-
-### 1. The Relationship: Brain vs. Bridge
+1. The Relationship: Brain vs. Bridge
 
 * **The Semantic Model (The Brain):** This lives in the Power BI Cloud. It contains your tables, the relationships between them (Most likely...Star Schema), your DAX measures (like `Total Sales`), and a copy of the data if you are using "Import Mode".
 
@@ -504,3 +609,147 @@ When you click "Refresh" on a report in the cloud, this happens:
 As a developer, you design the **Semantic Model** in Power BI Desktop (building the logic). 
 
 But once you publish, you must go into the **Settings** of that Semantic Model in the web portal and "map" it to a **Gateway** so it doesn't die the moment it needs new data.
+
+### PBi vs Grafana
+
+To introduce an analyst familiar with the "Open Source" or "Observability" stack (PySpark, Graphite, Grafana) to Power BI, the most effective approach is to frame Power BI as a **Semantic Layer and Business Governance platform** rather than just a visualization tool.
+
+While Grafana is built for "what just happened" (real-time telemetry), Power BI is built for "what it means" (long-term business trends).
+
+1. Conceptual Mapping (The "Rosetta Stone")
+
+For an engineer, the hardest part of Power BI is the terminology. Use this table to bridge the gap:
+
+| Concept | Grafana / PySpark Stack | Power BI Ecosystem |
+| --- | --- | --- |
+| **Compute Engine** | PySpark / Spark SQL | **VertiPaq** (In-memory columnar engine) |
+| **Data Logic** | Python / SQL transforms | **DAX** (Data Analysis Expressions) |
+| **ETL Pipeline** | Spark Jobs / Airflow | **Power Query (M language)** / Dataflows |
+| **Data Model** | Flat tables / Star schema in DB | **Tabular Model** (The Semantic Layer) |
+| **Visualization** | Panels & Dashboards | **Reports** (Interactive) vs **Dashboards** (KPI pins) |
+| **Alerting** | Grafana Alerts / Graphite | **Data Alerts** / Power Automate integration |
+| **Real-time** | Direct Push / Streaming | **DirectQuery** or **Streaming Datasets** |
+
+2. The Power BI Architecture
+
+Power BI isn't just one app. It’s a distributed system.
+
+* **Power BI Desktop (The "IDE"):** Where you do the heavy lifting—data modeling, writing DAX, and designing reports. Think of this as your local development environment.
+* **Power BI Service (The "Production Server"):** The cloud platform (SaaS) where you publish reports, manage security (RLS), and schedule refreshes.
+* **Power BI Gateway (The "Bridge"):** The agent that allows the cloud Service to securely reach back into your on-prem databases or VPCs.
+
+3. Key Differences in Mindset
+
+An analyst moving from PySpark and Grafana needs to adjust to these three technical "shifts":
+
+A. From "Query-on-the-Fly" to "The Semantic Model"
+
+In Grafana, you often write a SQL/PromQL query for every single panel. 
+
+In Power BI, you build **one robust Data Model** (the Semantic Layer) first. 
+
+Once that model is built with established relationships, you simply drag and drop fields into visuals. 
+
+You aren't writing a new query for every chart; you are querying the model you already built.
+
+B. DAX vs. PySpark
+
+* **PySpark** is procedural/functional. You tell the computer *how* to transform the data step-by-step.
+* **DAX** is functional and context-aware. It feels like Excel formulas on steroids, but its power comes from **Filter Context**. For example, a single "Total Sales" measure will automatically calculate differently whether it's placed in a "Region" chart or a "Year" chart.
+
+C. Data Freshness
+
+* **Grafana/Graphite:** Optimized for sub-second/real-time telemetry.
+* **Power BI:** Primarily uses **Import Mode** (snapshots of data cached in RAM). While it supports **DirectQuery** (live connection to the DB), it is usually used for historical analysis where data is refreshed on a schedule (e.g., every hour).
+4. How to Transition (First Steps)
+
+1. **Stop "Flattening" Data:** In PySpark, we often create one giant wide table for training or reporting. In Power BI, use a **Star Schema** (Fact and Dimension tables). It is significantly faster for the VertiPaq engine.
+2. **Learn Power Query for ETL:** If the data isn't "clean" in your warehouse, use Power Query (M) to transform it. It’s the "Pandas" of the Microsoft world.
+3. **Use Python/R integration:** If you have a complex PySpark script that handles proprietary logic, you can actually run Python scripts directly inside Power BI to import data or create custom visuals.
+
+### Workspaces and Apps
+
+In 2026, the way you organize and share your work has become even more integrated thanks to Microsoft Fabric.
+
+Think of **Workspaces** and **Apps** as the "Kitchen" and the "Dining Room" of your data world.
+
+1. Workspaces vs. Apps (The Kitchen vs. The Dining Room)
+
+The distinction between where you *build* and where you *consume* is critical for a developer.
+
+* **Workspaces (The Kitchen):**
+* This is the collaborative area where you and other developers live.
+* It's where the **Semantic Models** (datasets), reports, and **OneLake** items (like Lakehouses) are stored and edited.
+* In the Fabric era, every Workspace is essentially a folder in **OneLake**.
+
+
+* **Apps (The Dining Room):**
+* This is the finished product you "publish" for your end-users.
+* Users in an App cannot see your "messy" work-in-progress reports or the underlying Semantic Model. They only see what you’ve chosen to include.
+* **Pro Tip:** You can now create multiple audiences within a single App, so the "Sales" team sees different reports than the "Finance" team, even though they are in the same App.
+
+2. Dashboards vs. Reports: Still Different?
+
+**Yes, absolutely.** This is the most common point of confusion. In 2026, they serve two very different psychological purposes for the user.
+
+| Feature | **Power BI Report** | **Power BI Dashboard** |
+| --- | --- | --- |
+| **Purpose** | **Analysis & Exploration.** Used to find out "Why" something happened. | **Monitoring & Awareness.** Used to see "What" is happening at a glance. |
+| **Pages** | Can be many pages. | **Single page only** (a "Canvas"). |
+| **Sources** | Built on **one** Semantic Model. | Can pin visuals from **many** different reports/models. |
+| **Interactivity** | High (Slicers, filters, drill-throughs). | Low (Clicking a "tile" usually just takes you to the underlying report). |
+| **Creation** | Built in Power BI Desktop or Web. | **Only** created in the Power BI Service (Web). |
+
+3. How it all connects to OneLake
+
+The "modern" workflow looks like this:
+
+1. **Data** lives in **OneLake** (in a Lakehouse or Warehouse).
+2. You build a **Semantic Model** that points to that OneLake data (using **Direct Lake** mode for speed).
+3. You create multiple **Reports** in your **Workspace** to analyze that data.
+4. You "pin" the most important charts (KPIs) from those reports onto a single **Dashboard** for your boss.
+5. You package the reports and the dashboard into an **App** and distribute it to the whole company.
+
+One-Liner Review:
+
+* **Workspace:** Your private dev area (The Kitchen).
+* **App:** Your public delivery tool (The Dining Room).
+* **Report:** Deep-dive, multi-page analysis.
+* **Dashboard:** High-level, single-page summary.
+
+You’re right—if you’ve been in the Power BI world for a few years, **Workspace**, **App**, and **Dashboard** feel like old news.
+
+But Microsoft has done a "stealth upgrade" on them.
+
+While the *names* stayed the same, the *engine* under the hood was completely replaced when **Fabric** arrived in 2024/2025.
+
+What actually changed? (The "Then vs. Now")
+
+| Concept | The "Old" Way (Pre-2024) | The "Fabric" Way (2026) |
+| --- | --- | --- |
+| **Workspace** | Just a folder for reports and datasets. | **A logical container in OneLake.** It now holds Notebooks, Lakehouses, and Spark jobs alongside reports. |
+| **Dataset** | A siloed file you had to "Refresh" manually. | **Semantic Model.** A shared logic layer that can use **Direct Lake** to read data instantly without a refresh. |
+| **Storage** | Every workspace had its own hidden storage. | **OneLake.** All workspaces share one massive "OneDrive for Data." No more duplicating data between teams. |
+| **Apps** | A way to share a collection of reports. | **Audience-driven portals.** You can show different reports to different people within the *same* App. |
+
+The Big Shift: Direct Lake
+
+This is the one concept that definitely **wasn't** there before.
+
+Previously, you had to choose between **Import** (Fast but needs refresh) and **DirectQuery** (Slow but real-time). **Direct Lake** is the "Holy Grail" that only exists because of Fabric and OneLake. 
+
+It allows the Power BI engine to reach into OneLake and read the data files directly—giving you the speed of Import with the freshness of DirectQuery.
+
+So, are Dashboards still different?
+
+Yes, but their role has shrunk.
+
+* **In the past:** Dashboards were the only way to combine data from two different datasets.
+* **Now:** You can just use **Shortcuts in OneLake** to bring data from different teams into one Semantic Model.
+* **Result:** Most pros now build **"Executive Summary" Reports** that look like dashboards but have more features. Real "Dashboards" are now mostly used for **Data Alerts** (e.g., "Email me if sales drop below 10%").
+
+One-Liner Summary of the "Evolution":
+
+* **Workspaces:** Now the headquarters for your entire data engineering team, not just Power BI.
+* **Semantic Models:** The same "Dataset" brain, but now shared across the whole company via OneLake.
+* **Direct Lake:** The new "instant-speed" connection that didn't exist in the old Power BI.

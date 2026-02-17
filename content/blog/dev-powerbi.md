@@ -176,9 +176,13 @@ Think of the data pipeline in Power BI as having two main stages:
 
 Power Query vs. DAX
 
-* **Power Query (M Language):** This is a powerful, visual tool with a backend language called **M**. It's used for **data manipulation at rest**. Transformations performed here are applied when the data is refreshed. This includes tasks like merging tables, pivoting, unpivoting, filtering rows, and changing data types. The results are physical changes to the data model. If you use Power Query to create a new column, the new column and its values are physically stored in your data model, taking up space. It is a very **ETL-focused language**.
+* **Power Query (M Language):** This is a powerful, visual tool with a backend language called **M**. It's used for **data manipulation at rest**. Transformations performed here are applied when the data is refreshed. This includes tasks like merging tables, pivoting, unpivoting, filtering rows, and changing data types.
 
-* **DAX (Data Analysis Expressions):** This is a formula language used for **in-memory calculations and analysis**. It's similar to Excel formulas but with more power for relational data. DAX is used to create **measures** and **calculated columns** that compute values based on the data in your model. DAX calculations are performed on the data model that is already loaded and ready for analysis. It is an **analytical language**.
+The results are physical changes to the data model. If you use Power Query to create a new column, the new column and its values are physically stored in your data model, taking up space. It is a very **ETL-focused language**.
+
+* **DAX (Data Analysis Expressions):** This is a formula language used for **in-memory calculations and analysis**. It's similar to Excel formulas but with more power for relational data. DAX is used to create **measures** and **calculated columns** that compute values based on the data in your model.
+
+DAX calculations are performed on the data model that is already loaded and ready for analysis. It is an **analytical language**.
 
 Calculated Columns and Measures
 
@@ -464,7 +468,9 @@ How to manage your **reports across environments** without causing confusion for
 It is critical to distinguish between the **Workspace** (where you work) and the **App** (what the client sees).
 
 * **Workspaces** are collaborative areas for developers to store, manage, and refine reports and dashboards.
+
 * **Apps** are curated packages of content designed for end-users to consume insights easily.
+
 * **The "Safety Buffer":** When you update a report in the **DevSecOps-Prod** workspace, the changes do **not** immediately appear for the clients in the App. This allows you to deploy from Dev to Prod in the background, verify the data, and only "go live" when you are ready.
 
 2. Promoting Changes Silently
