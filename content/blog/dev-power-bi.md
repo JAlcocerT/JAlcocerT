@@ -24,6 +24,36 @@ Things...have changed a little bit for [Power Bi](https://jalcocert.github.io/JA
 
 The url is same though: `app.powerbi.com`
 
+But now, you have the power of LLMs/agents.
+
+Imaging few years back been able to ask to `claude.ai` or to Gemini.
+
+Got out of free tokens from antigravity? 
+
+```sh
+curl -fsSL https://github.com/block/goose/releases/download/stable/download_cli.sh | bash
+
+#choco install python -y
+#choco install python --version=3.12.0 --force -y
+#refreshenv
+python --version
+python -m pip install --user pipx
+#pipx install goose-ai
+```
+
+```sh
+node --version
+npm install -g @openai/codex
+codex --version #codex-cli 0.104.0
+```
+
+```sh
+RooVeterinaryInc.roo-cline #https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline
+```
+
+Havent I mentioned also how cool...Goose or Codex CLI are combined with a **HITL**?
+
+
 ```mermaid
 graph TD
     %% Data Sources

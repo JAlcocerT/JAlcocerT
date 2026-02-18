@@ -72,6 +72,7 @@ Its primary function is to perform calculations on the prepared data, providing 
 The key distinction between M and DAX lies in the **stage of the workflow** where they are used:
 
 * **M is for the "E" and "T" of ETL.** You use it **before** the data is loaded into the model to clean, shape, and combine your source data. M queries are run only when you refresh the data.
+
 * **DAX is for the "Analysis" and "Modeling" after the "L" of ETL.** You use it **on top of** the loaded data model to perform calculations and create insights. DAX formulas are evaluated on the fly as a user interacts with a report, making them dynamic and responsive to filters.
 
 {{< callout type="warning" >}}
@@ -212,18 +213,25 @@ This is the most efficient way to work.
 
 #### Sample Workflow
 
-1.  **Use SQL for Initial Transformations:** This is the ideal first step. By using a well-crafted SQL query against your PostgreSQL database, you let the powerful database engine handle the heavy lifting of filtering, joining, and aggregating data. This process is called **query folding**, where Power BI translates your Power Query M steps into native SQL queries and pushes the computation to the source.
-    * **Pros:** This dramatically reduces the amount of data transferred over the network, leading to faster data refreshes and better performance. It leverages the database's optimized processing capabilities, which are typically far more efficient than your local machine's.
-    * **Cons:** It requires a good understanding of SQL. Some complex transformations in M may not "fold" back to SQL, meaning the process will break and the remaining steps will be executed locally in Power Query, which can be inefficient.
+1.  **Use SQL for Initial Transformations:** This is the ideal first step. By using a well-crafted SQL query against your PostgreSQL database, you let the powerful database engine handle the heavy lifting of filtering, joining, and aggregating data. 
+
+This process is called **query folding**, where Power BI translates your Power Query M steps into native SQL queries and pushes the computation to the source.
+
+* **Pros:** This dramatically reduces the amount of data transferred over the network, leading to faster data refreshes and better performance. It leverages the database's optimized processing capabilities, which are typically far more efficient than your local machine's.
+* **Cons:** It requires a good understanding of SQL. Some complex transformations in M may not "fold" back to SQL, meaning the process will break and the remaining steps will be executed locally in Power Query, which can be inefficient.
 
 
 2.  **Use Power Query (M) for Additional Cleaning:** After the initial SQL query, you can use the Power Query Editor to perform any final cleaning steps that are not easily done in SQL. This includes tasks like splitting columns, pivoting/unpivoting data, handling null values, and merging data from different sources (like a CSV file or an Excel sheet).
-    * **Pros:** Power Query provides a user-friendly, step-by-step interface for transformations, making it accessible even without deep coding knowledge. It's excellent for data shaping tasks that are visual and not performance-critical.
-    * **Cons:** Transformations performed here are executed locally on your machine (or in the cloud if you publish the report) after the data has been loaded. If you're working with a large dataset and you can't push the logic back to the database, this can be slow and consume a lot of memory.
 
-3.  **Use DAX for Final Metrics and Aggregations:** DAX is the language for the final analysis layer. It's used for creating dynamic calculations that respond to user interactions in the report, like slicers and filters.
-    * **Pros:** DAX is highly optimized for creating measures and calculated columns on the in-memory data model. It's essential for time intelligence functions (e.g., Year-to-Date sales) and dynamic aggregations that can't be pre-calculated.
-    * **Cons:** You should avoid using DAX for data cleaning or for creating calculated columns that could have been created in Power Query. Why? Because DAX calculated columns are stored in the data model and increase file size, while Power Query computed columns are processed during data refresh and don't take up space in the model itself. 
+* **Pros:** Power Query provides a user-friendly, step-by-step interface for transformations, making it accessible even without deep coding knowledge. It's excellent for data shaping tasks that are visual and not performance-critical.
+* **Cons:** Transformations performed here are executed locally on your machine (or in the cloud if you publish the report) after the data has been loaded. If you're working with a large dataset and you can't push the logic back to the database, this can be slow and consume a lot of memory.
+
+3.  **Use DAX for Final Metrics and Aggregations:** DAX is the language for the final analysis layer. 
+
+It's used for creating dynamic calculations that respond to user interactions in the report, like slicers and filters.
+
+* **Pros:** DAX is highly optimized for creating measures and calculated columns on the in-memory data model. It's essential for time intelligence functions (e.g., Year-to-Date sales) and dynamic aggregations that can't be pre-calculated.
+* **Cons:** You should avoid using DAX for data cleaning or for creating calculated columns that could have been created in Power Query. Why? Because DAX calculated columns are stored in the data model and increase file size, while Power Query computed columns are processed during data refresh and don't take up space in the model itself. 
 
 ### Why is my pbix using that much space?
 
@@ -307,6 +315,7 @@ You can import the `.pbiviz` file directly into a specific Power BI report.
 For enterprise use, Power BI administrators can upload and manage custom visuals in a **centralized organizational repository**.
 
 * **How it works:** An admin uses the Power BI Admin Portal to add the `.pbiviz` file to the organization's approved visuals list. Once there, users in the organization can easily find and import it from the "Organizational visuals" tab in the **Get more visuals** dialog, making it available to everyone.
+
 * **Pros:** This provides a secure, consistent, and scalable way to distribute custom visuals. Admins can control which visuals are available and ensure they meet security and quality standards.
 * **Cons:** This requires admin-level privileges and is a more formal process than a simple local import.
 
@@ -314,7 +323,9 @@ For enterprise use, Power BI administrators can upload and manage custom visuals
 
 Yes, there are many open-source custom visuals available on GitHub. You can find these repositories by searching for topics like `powerbi-visuals`, `powerbi-custom-visuals`, and `d3-powerbi`. These repositories often contain the full source code (written in TypeScript) as well as the compiled `.pbiviz` file.
 
-* **How to import them:** You typically download the `.pbiviz` file from the GitHub repository's releases page or a dedicated assets folder. Once you have the file, you can import it into Power BI Desktop using the **Import a visual from a file** option as described above. Some repositories, like the official Microsoft `powerbi-visuals` repository, are dedicated to providing the SDK and samples, rather than a large library of pre-built visuals.
+* **How to import them:** You typically download the `.pbiviz` file from the GitHub repository's releases page or a dedicated assets folder. Once you have the file, you can import it into Power BI Desktop using the **Import a visual from a file** option as described above. 
+
+Some repositories, like the official Microsoft `powerbi-visuals` repository, are dedicated to providing the SDK and samples, rather than a large library of pre-built visuals.
 
 #### Creating pbiviz
 
@@ -471,7 +482,7 @@ It is critical to distinguish between the **Workspace** (where you work) and the
 
 * **Apps** are curated packages of content designed for end-users to consume insights easily.
 
-* **The "Safety Buffer":** When you update a report in the **DevSecOps-Prod** workspace, the changes do **not** immediately appear for the clients in the App. This allows you to deploy from Dev to Prod in the background, verify the data, and only "go live" when you are ready.
+* **The "Safety Buffer":** When you update a report in the **Prod** workspace, the changes do **not** immediately appear for the clients in the App. This allows you to deploy from Dev to Prod in the background, verify the data, and only "go live" when you are ready.
 
 2. Promoting Changes Silently
 
@@ -488,10 +499,14 @@ When you are ready to move your work from Dev to the Production environment, fol
 
 * **WIP Reports:** Reports like *expeditedChanges* and *TAA - MTTI Report* are set to **"No,"** meaning they are safely tucked away in the workspace where only you and your fellow developers can see them.
 
-* **Orphaned Semantic Models:** You have several semantic models (like *2025 Goal - IaC & CE Adoption Report*) that haven't refreshed successfully or have no next refresh scheduled. This is a good place for you to "audit" without the client ever knowing, as they only see the finished report visuals, not the underlying model list.
+* **Orphaned Semantic Models:** You have several semantic models (like *2025 Goal - IaC & CE Adoption Report*) that haven't refreshed successfully or have no next refresh scheduled. 
+
+This is a good place for you to "audit" without the client ever knowing, as they only see the finished report visuals, not the underlying model list.
 
 4. Deployment Strategy Recommendations
 
 * **Staged Rollout:** Deploy your `.pbix` to the **Dev** workspace first. Once it looks right, use the **Deployment Pipeline** to push it to **UAT**, and finally to **Prod**.
-* **Final App Update:** Only after you have verified the data in the **DevSecOps-Prod** workspace should you click **"Update App."** This ensures the client only sees a "finished" product.
+
+* **Final App Update:** Only after you have verified the data in the **Prod** workspace should you click **"Update App."** This ensures the client only sees a "finished" product.
+
 * **Metadata Changes:** Remember that manual "Update App" is mandatory for metadata changes (new pages, renamed columns, new charts).
