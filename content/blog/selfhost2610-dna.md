@@ -12,6 +12,8 @@ url: 'selfhosting-data-analytics'
 
 JHub is great. Is there [anything else](#different-ways-to-jhub)?
 
+Data -> Decision -> Delivery
+
 **Intro**
 
 Your career might have started with MySQL and Dbeaver.

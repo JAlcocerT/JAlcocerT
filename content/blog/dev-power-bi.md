@@ -3,7 +3,7 @@ title: "Agents are coming to Workspaces"
 date: 2026-02-01T09:20:21+01:00
 draft: false
 tags: ["D&A x BI","DAX vs M","Fabric","PBix vs PBiP vs PBiT"]
-description: 'About PBi concepts like Query Folding.'
+description: 'About PowerBI.'
 url: 'about-powerbi-and-fabric'
 ---
 
@@ -14,7 +14,6 @@ Havent done PowerBi dashboards yet?
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PBi" title="PowerBI DAX/M Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Some useful DAX and M formulas - Source Code on Github" >}}
 {{< /cards >}}
-
 
 Well...agents are coming.
 
@@ -48,8 +47,15 @@ codex --version #codex-cli 0.104.0
 ```
 
 ```sh
+#https://github.com/RooCodeInc/Roo-Code
 RooVeterinaryInc.roo-cline #https://marketplace.visualstudio.com/items?itemName=RooVeterinaryInc.roo-cline
 ```
+
+I can deliver a concise overview of Sample-DevSecOps-UAT3 now. How deep should the summary go?
+
+High-level: pages/sections, key tables and relationships, and notable measures only
+Detailed model: include main tables, relationships, and key DAX measures/logic summaries
+Full deep dive: exhaustive model inventory and DAX measure notes
 
 Havent I mentioned also how cool...Goose or Codex CLI are combined with a **HITL**?
 
@@ -783,3 +789,167 @@ One-Liner Summary of the "Evolution":
 * **Workspaces:** Now the headquarters for your entire data engineering team, not just Power BI.
 * **Semantic Models:** The same "Dataset" brain, but now shared across the whole company via OneLake.
 * **Direct Lake:** The new "instant-speed" connection that didn't exist in the old Power BI.
+
+### You Better Have Questions
+
+To provide a "360-degree" discovery for any new dashboard, you need to look beyond the code. A successful discovery bridge the gap between **what is technically possible** and **what the business actually needs**.
+
+Here is the distilled list of existing questions from your specific report, followed by a **Strategic Discovery Framework** for any future dashboard projects.
+
+---
+
+## ✅ Part 1: The "Legacy" Questions (Existing)
+
+*These are the 18 questions already answered in your "Architect Q&A" for the Onboarding 2025 Dashboard.*
+
+### **Technical Origin**
+
+1. Where does the data come from? (Sources)
+2. How is data refreshed? (Import vs. Direct)
+3. Who owns the gateway? (On-premise dependencies)
+4. Are there dataflows upstream? (ETL pipeline)
+
+### **Data Model**
+
+5. What is the grain of the main table (`BIT Details`)?
+6. How do the secondary tables relate to the hub?
+7. What populates specific checkpoints (`ORR Data`)?
+8. Why are there separate measure tables?
+
+### **Report & UX**
+
+9. How many report pages are there?
+10. Are there any custom visuals?
+11. How are bookmarks used for navigation?
+12. Who is the target audience (CTO vs. Ops)?
+
+### **Security & Governance**
+
+13. Is Row-Level Security (RLS) configured?
+14. Who has edit vs. view access?
+15. Is it published to a workspace or an App?
+
+### **Project Context**
+
+16. Who is the current owner?
+17. Is there a change management process?
+18. What is the specific business definition of "Onboarding"?
+
+---
+
+## 🚀 Part 2: The "Discovery" Framework (New Questions)
+
+*Use these questions when starting **any** new dashboard project to ensure it doesn't become "shelf-ware."*
+
+### **1. The "So What?" (Purpose & Action)**
+
+* **"In one sentence, what is the single purpose of this dashboard?"** (Avoid scope creep).
+* **"What specific decision will you change based on a number turning Red?"** (If no action is taken, the visual is useless).
+* **"What were you using before this, and why did it fail?"** (Identify pain points with Excel or old reports).
+
+### **2. Persona & Storytelling**
+
+* **"Who is the primary 'Persona' (the Busy Exec, the Deep-Dive Analyst, or the Front-line Lead)?"**
+* **"What is the first question they ask when they wake up and check this data?"**
+* **"Do we need a 'Drill-through' path?"** (Start at the bird's eye view, end at the specific ticket/row).
+
+### **3. Data Quality & Trust**
+
+* **"Is there a 'Golden Source' for these metrics?"** (Avoid "Data Brawls" where two reports show different numbers).
+* **"What is the 'Threshold of Truth'?"** (At what % of data accuracy are users willing to trust the report? 90%? 100%?).
+* **"How should we handle 'Nulls' or missing data?"** (Hide them, or flag them as an operational error?).
+
+### **4. Design & Performance**
+
+* **"Is this 'Mobile-First' or 'Desktop-First'?"** (Execs often want to see KPIs on their phones).
+* **"What is the '8-Second Rule'?"** (If a report takes longer than 8 seconds to load, will users abandon it? If so, we must prioritize performance over complex visuals).
+* **"Do we need 'Snapshotting'?"** (Do you need to see what the data looked like *last Tuesday*, or only as it is *now*?).
+
+### **5. Lifecycle & Adoption**
+
+* **"What does 'Success' look like 6 months from now?"** (e.g., "15% reduction in MTTR" or "100% app coverage").
+* **"Who is the Subject Matter Expert (SME) who signs off on the logic?"**
+* **"What is the 'Sunset Plan'?"** (When is this dashboard no longer relevant? e.g., "End of 2025 Onboarding cycle").
+
+---
+
+### **💡 Pro-Tip for Architects**
+
+When conducting a discovery, always ask: **"If this dashboard disappeared tomorrow, who would complain the loudest?"** That person is your true stakeholder.
+
+
+## Discovery Template
+
+## Wiki That
+
+To build a "full-proof" **Technical Core**, you need to document the dashboard as if you were handing it over to a stranger who has to fix it at 3 AM.
+
+Here are the essential sections for a comprehensive **Technical Specification (The What)**:
+
+1. Data Architecture & Lineage
+
+*Goal: Visualize the flow from raw data to the user’s screen.*
+
+* **Source Inventory:** List of all source systems (APIs, SQL Servers, Files, Cloud Sheets), their regions, and connection protocols (Service Principal, OAuth2, Windows Auth).
+* **Connectivity Map:** Identification of the **Data Gateway** (Standard vs. Personal), the specific cluster name, and the "Ground-to-Cloud" path.
+* **Upstream Dependencies:** Documentation of any Dataflows (Gen1/Gen2), Lakehouses, or Data Warehouses that process data before it hits the Power BI model.
+
+2. Extraction & Transformation (ETL/Power Query)
+
+*Goal: Explain how the data was cleaned and combined.*
+
+* **Query Dependencies:** A "Reference Tree" showing which queries are "Load Enabled" and which are "Staging" (intermediate steps).
+* **Custom Functions:** Documentation for any M-code functions used for repetitive tasks (e.g., a function to clean column headers).
+* **Data Type Standards:** Definition of key formats (e.g., all Date/Time columns must be in UTC, all Currencies in USD).
+
+3. Data Model (The Semantic Layer)
+
+*Goal: Define the "Brain" of the dashboard.*
+
+* **Schema Diagram:** A star-schema or snowflake-schema diagram (Fact vs. Dimension tables).
+* **Grain Definition:** A table-by-table list defining what **one row** represents (e.g., "One row = One App ID per Checkpoint Date").
+* **Key Relationships:** List of Active vs. Inactive relationships and Cross-filter directions (Single vs. Both).
+* **Storage Mode:** Documentation of Import, DirectQuery, or Dual/Hybrid modes.
+
+4. DAX & Calculation Logic
+
+*Goal: Centralize the math.*
+
+* **Core Measures Catalog:** A table of all major DAX measures, their code, and a plain-English explanation of the logic.
+* **Calculation Groups:** Details on any items used for Time Intelligence (YTD, YoY) or Currency switching.
+* **Static Tables:** List of any manually entered "Enter Data" tables used for RAG thresholds or slicer headers.
+
+5. Report Layer & UX
+
+*Goal: Document the interface mechanics.*
+
+* **Visual Inventory:** List of any **Custom Visuals** (.pbiviz) used and their licensing status.
+* **Navigation Logic:** Documentation of **Bookmarks**, **Page Navigators**, and **Tooltips** (especially "Report Page Tooltips").
+* **Theme & Branding:** The JSON theme file used (Colors, Fonts, Spacing) and where the original logo/image assets are stored.
+
+6. Refresh & Performance
+
+*Goal: Ensure the report stays alive and fast.*
+
+* **Refresh Schedule:** Specific times and days of refresh, including "Success/Failure" notification recipients.
+* **Incremental Refresh:** Logic for any large tables where only new data is added (RangeStart/RangeEnd parameters).
+* **Performance Benchmarking:** Results from the **Power BI Performance Analyzer** (e.g., "Main Page load time: 1.2s").
+
+7. Security & Governance
+
+*Goal: Define who sees what.*
+
+* **Row-Level Security (RLS):** Table-name, DAX filter used, and the Active Directory (AD) groups assigned to each role.
+* **Workspace Strategy:** Where the report is published (Dev/Test/Prod) and if it is part of a Power BI App.
+* **Version Control:** The location of the `.pbip` or `.pbix` files (e.g., GitHub, Azure DevOps, SharePoint Version History).
+
+8. Data Dictionary (Linguistic Metadata)
+
+*Goal: Explain the jargon.*
+
+* **Term Mapping:** Mapping of technical column names to business labels (e.g., `sys_created_on` → `Incident Date`).
+* **Synonyms:** List of synonyms for Q&A (Natural Language) queries.
+
+ The "Architect's Checklist"
+
+If you are missing any of these sections, you have a **Technical Debt** risk.
