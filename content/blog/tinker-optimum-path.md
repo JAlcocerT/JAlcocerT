@@ -1,7 +1,6 @@
 ---
 title: "Optimum Path in Karting x ApexSim"
 date: 2026-02-25
-#date: 2026-01-02
 draft: false
 tags: ["GoPro GPS Telemetry","Cars","Simulations","Gradient Descent","G-Circle","Pacejka"]
 description: 'A GP2 engine or need to improve your driving?'

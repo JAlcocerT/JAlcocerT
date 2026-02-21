@@ -2,7 +2,7 @@
 title: "Are agents and DAOs the inevitable future?"
 date: 2026-02-28T08:00:21+01:00
 draft: false
-tags: ["Crypto","LLMs"]
+tags: ["Crypto","LLMs","Gresham"]
 description: 'The AI Driven Business x Unit Economics 107'
 url: 'ideas-to-execution-with-dao'
 math: true
@@ -104,8 +104,15 @@ codex
 
 > Are websites development [skills a commodity](#for-vibe-coders) already?
 
+> > Its clear that your clients money is a commodity, but...so seems to be web dev and in general any ~~digital tech~~ skill
+
+
 
 ### Agentic Delivery
+
+Are we ready for destruction creative?
+
+It doesnt matter.
 
 
 #### Crypto and DAO
@@ -126,11 +133,25 @@ With digital employees / co-workers or even...pure digital agent driven companie
 
 I just can say that at this point of interacting for few years with LLMs **I have more questions than answers**.
 
+Some part because im stepping back and reviewing concepts like: whats basic? whats a cool website? whats learning?
+
 But as I see it: these questions are having higher quality.
 
 Or at least: im more aware of my hypothesis and blinds spots / converging logics
 
 > After all...those ,failed' vibe coded PoCs were just a miss from my initial ask and clarifications
+
+
+### Services
+
+If you haven't realized yet: there is no passive income, just active *and deferred active is just active*
+
+One of the ways You can scale your active income with knowledge: *pay with money, or with time, depending which you value the least* #Gresham
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
 ---
 
@@ -160,8 +181,9 @@ The so called the order books: an ever evolving match between buyers and sellers
 ![Aave v3 lending ETH and USDT](/blog_img/crypto/defi/aave-eth-and-usdt.png)
 
 
-There are people who try to build models to explain reality
+There are people who try to build **models** to explain reality
 
+* [Power Law](https://jalcocert.github.io/JAlcocerT/powerlaw-and-series-with-python/) based: `https://timetobuybitcoin.com/`
 * https://forocoches.com/foro/showthread.php?t=10597594
 * https://x.com/0xAralez/status/2020233840258945291
 
@@ -172,6 +194,16 @@ Not sure if the order of the things is right though
 ### For Vibe Coders
 
 People have a different BRD/PRD/FRD approach, that just works:
+
+```sh
+#sudo apt install gh
+gh auth login
+#gh repo create btc-powerlaw --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: simple btc-powerlaw" && gh repo create btc-powerlaw --private --source=. --remote=origin --push
+codex
+#/resume
+```
 
 <!-- https://www.youtube.com/watch?v=czLrUyA_Bh4 -->
 

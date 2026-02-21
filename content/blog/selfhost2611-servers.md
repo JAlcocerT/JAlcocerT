@@ -2,7 +2,7 @@
 title: "Just SelfHosted"
 date: 2026-10-01T23:20:21+01:00
 draft: false
-tags: ["DNS","Glances","BackUps x P2P"]
+tags: ["DNS x SSL","Glances","BackUps x P2P"]
 description: 'Selfhosting.'
 url: 'selfhosting-and-servers'
 ---
@@ -18,6 +18,25 @@ Put the time and the digital world is yours.
 All those backups, monitoring, IoT...
 
 Yes, all that.
+
+
+## HomeLab x OSS
+
+This has been my route towards OSS.
+
+Some are still paiting OSS as mad max.
+
+With chaos and things breaking all the time.
+
+The truth is that I have had such situations, but after the transition phase you arrive to stability.
+
+I coudldnt be happier with these daily drivers:
+
+```sh
+#wget -P ~/Applications https://github.com/imputnet/helium-linux/releases/download/0.5.7.1/Helium-0.5.7.1-x86_64.AppImage
+flatpak install flathub app.zen_browser.zen -y
+```
+
 
 
 ### PaaS
@@ -38,6 +57,8 @@ Request logs + proxy	Cloudflare ($0-200/mo)
 Total with Temps	$0 (self-hosted)
 
 ### DNS
+
+#### SSL x https
 
 
 ### BackUps
@@ -83,3 +104,6 @@ In the end P2P is a pretty amazing distributed backup tool!
 Selfhosting and self-learning about servers have opened my mind by brute force these years.
 
 
+---
+
+## FAQ

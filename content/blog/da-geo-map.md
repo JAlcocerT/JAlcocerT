@@ -52,6 +52,19 @@ Which sounds like some how to reitti that we covered [here](https://jalcocert.gi
 ![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
 
 
+## Geo and R
+
+Some time ago I was impressed but R language and its amazing maps analytics toolset.
+
+When working around consumer intelligence and FMCG, I was mapping population to consumptions patterns.
+
+Quite interesting stuff.
+
+Luckily, the population part is open information for the public.
+
+So here we go again and building around it:
+
+
 ---
 
 ## Conclusions

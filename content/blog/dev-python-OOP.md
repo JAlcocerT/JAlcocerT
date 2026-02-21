@@ -574,13 +574,50 @@ How about creating couple of examples Python app that apply OOP?
 
 ### Pendulum
 
-https://youtu.be/T58lGKREubo?is=yO5NxEWvrU31VrR8
+I wanted to combine couple things:
 
+1. My old pendulum repo
+2. Theo boilerplate: https://github.com/t3-oss/create-t3-app *The best way to start a full-stack, typesafe Next.js app*
+3. Leveling up the physics
+
+{{< youtube "T58lGKREubo" >}}
+
+<!-- 
+https://youtu.be/T58lGKREubo 
+-->
+
+
+
+```sh
+#sudo apt install gh
+gh auth login
+#gh repo create btc-powerlaw --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: oop pendulum" && gh repo create oop-pendulum --private --source=. --remote=origin --push
+```
 
 ### Three Bodies
 
 
+
+```sh
+#sudo apt install gh
+gh auth login
+#gh repo create btc-powerlaw --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: oop 3 bodies" && gh repo create oop-three-bodies --private --source=. --remote=origin --push
+```
+
+---
+
 ## Conclusions
+
+Few years ago I was quite advance with Matlab models.
+
+I gave it a thought to migrate to Octave.
+
+But what for now having Python and many OSS goodies.
+
 
 ---
 
