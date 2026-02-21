@@ -8,6 +8,9 @@ tags: ["Self-Hosting","IoT","MicroControllers","NodeRed","Tech Talk 5"]
 
 "Authelia vs Authentik","PocketID"
 
+{{< youtube "x4tzWt6-I7c" >}}
+
+
 https://github.com/gsampallo/mqtt_valvula
 
 **TL;DR**

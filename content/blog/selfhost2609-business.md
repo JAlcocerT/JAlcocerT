@@ -275,6 +275,10 @@ Not doing business yet, but selling your time in the job market?
   {{< card link="https://github.com/JAlcocerT/Job-Trends" title="home-lab | Repo ↗" icon="github" >}}
 {{< /cards >}}
 
+* https://github.com/Manan-Santoki/Backslash
+
+> Self-hostable, open-source LaTeX editor with live PDF preview and a full REST API.
+
 Consider overleaf or these:
 
 {{< cards cols="1" >}}

@@ -42,6 +42,10 @@ You can use mermaidJS for free at: https://mermaid.live/edit
 
 > I discovered **mermaidJS diagrams** thanks to [HUGO SSG Hextra Theme](https://jalcocert.github.io/JAlcocerT/create-your-website/)
 
+If you are not using diagrams as a code yet, with a tool like Mermaid
+
+you are leaving *learning points* on the table for you and the team
+
 ### Excalidraw
 
 A game changer to create quick diagrams to showcase your [D&A architectural ideas](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/) with the team:

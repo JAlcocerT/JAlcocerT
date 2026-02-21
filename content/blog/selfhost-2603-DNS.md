@@ -27,7 +27,10 @@ With this post, I want to explore the [latests on PiHole v6](#pihole) and use it
 
 https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#programmatic-dns-updates
 
-https://www.youtube.com/watch?v=mnry95ay0Bk
+<!-- https://www.youtube.com/watch?v=mnry95ay0Bk -->
+
+{{< youtube "mnry95ay0Bk" >}}
+
 
 * https://hub.docker.com/r/pihole/pihole/tags
 

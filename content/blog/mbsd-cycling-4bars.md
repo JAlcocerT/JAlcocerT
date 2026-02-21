@@ -123,6 +123,12 @@ Some kind of automated mechanism synthesis.
 
 Matlab ---> a python – programa sintesis mec generalizado.
 
+The passion of your live is to create such systems?
+
+https://www.youtube.com/shorts/bJBk09S7HQM
+
+Stay with me for the series about MBSD.
+
 ---
 
 ## FAQ

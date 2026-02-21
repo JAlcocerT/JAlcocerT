@@ -26,13 +26,19 @@ On top of:
 PostGIS: Free Open Source Spatial Database
 
 
-https://www.youtube.com/watch?v=e3XG_A2KUhg
+<!-- https://www.youtube.com/watch?v=e3XG_A2KUhg -->
+
+{{< youtube "e3XG_A2KUhg" >}}
+
 
 
 
 Openrouteservice: Free Open Source Geo-services API
 
-https://www.youtube.com/watch?v=iW_bSdwom2c
+<!-- https://www.youtube.com/watch?v=iW_bSdwom2c -->
+
+{{< youtube "iW_bSdwom2c" >}}
+
 
 Which sounds like some how to reitti that we covered [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#gpx-is-great)
 
@@ -55,3 +61,8 @@ Few years ago with R I enjoyed their geo capabilities.
 Maps and data are cool, lets agree on that.
 
 And in the upcoming days, I will be sharing few posts about geo + time = motion data :)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}

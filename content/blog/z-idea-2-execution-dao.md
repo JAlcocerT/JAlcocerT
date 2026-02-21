@@ -62,17 +62,25 @@ Or if it is, there is [a trace of what happened](#for-crypto-bros).
 
 ### Agentic Stories
 
+Who could have guessed that models with 1M context tokens are already exceeding most BA's.
+
+Specially those who dont take notes, or if anything, write a comment in teams chat while taking requirements.
+
+![Meme - Fantastic](/blog_img/memes/bertin-osborne-incredible.gif)
+
+
 ### Agentic SDLC
 
 Generating UIs is a joke already.
 
 And Gemini 3.1 takes it to the next level.
 
-Will this stop been a joke? No.
+Will this stop been a joke? 
 
-In fact...
+No. In fact...
 
 * https://www.pencil.dev/
+* https://www.reddit.com/r/ClaudeAI/comments/1q403xw/claude_code_for_noncoding_projectswork_a_complete/
 * https://polymarket.com/event/which-company-has-the-best-ai-model-end-of-february
 
 ```sh
@@ -114,7 +122,9 @@ This gets crazy when we put together all previous points.
 
 Are we moving forward to such future?
 
-I just can say that at this point of interacting for few years with LLMs I have more questions than answers.
+With digital employees / co-workers or even...pure digital agent driven companies?
+
+I just can say that at this point of interacting for few years with LLMs **I have more questions than answers**.
 
 But as I see it: these questions are having higher quality.
 
@@ -133,6 +143,10 @@ The context to move forward comes from:
 
 
 ### For crypto bros
+
+This is how some explain Prices: https://data.bitcoinity.org/markets/books/USD
+
+The so called the order books: an ever evolving match between buyers and sellers
 
 * https://blockdyor.com/why-running-a-lightning-node/
 * https://github.com/besoeasy/yantr - It should remind you to UmbrelOS
@@ -159,7 +173,10 @@ Not sure if the order of the things is right though
 
 People have a different BRD/PRD/FRD approach, that just works:
 
-https://www.youtube.com/watch?v=czLrUyA_Bh4
+<!-- https://www.youtube.com/watch?v=czLrUyA_Bh4 -->
+
+{{< youtube "czLrUyA_Bh4" >}}
+
 
 One shot web UIs with `GEMINI.md`
 

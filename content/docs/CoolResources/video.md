@@ -91,7 +91,6 @@ Manim is the tool for deep mathematical visualization with powerful programmatic
 | Community & Docs       | Growing, good docs                 | Strong community & documentation | Mature community, rich resources  |
 
 
-{{< youtube "x4tzWt6-I7c" >}}
 
 
 * https://github.com/mifi/lossless-cut

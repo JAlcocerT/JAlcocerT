@@ -1,17 +1,19 @@
 ---
-title: "OOP 101 for Engineers"
+title: "OOP 101 for Engineers - Pendulum x 3Bodies"
 date: 2026-03-10
 draft: false
-tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD","Infographics"]
+tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD","InfoGraphics"]
 description: 'Object Oriented Programming for Python users and better mechanism simulations.'
 url: 'object-oriented-programming-101'
 ---
 
 **Tl;DR**
 
-Long overdue topic: *WTF is OOP?*
+Long overdue topic: *WT& is OOP?*
 
 What I needed to get this going for good: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
+
++++ With [examples](#applying-oop): [pendulum](#pendulum) + [3 bodies](#three-bodies)
 
 **Intro**
 
@@ -558,6 +560,27 @@ Let's delve deeper into each of these aspects of inheritance:
     * A class inherits from multiple parent classes. (A,B->C)
     * Some languages, like Java and C#, do not directly support multiple inheritance of classes (they use interfaces instead), due to the complexities and potential ambiguities it can introduce (the "diamond problem"). Python does support multiple inheritance.
 
+## Applying OOP
+
+How about creating couple of examples Python app that apply OOP?
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
+{{< /cards >}}
+
+![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
+
+
+### Pendulum
+
+https://youtu.be/T58lGKREubo?is=yO5NxEWvrU31VrR8
+
+
+### Three Bodies
+
+
+## Conclusions
 
 ---
 
