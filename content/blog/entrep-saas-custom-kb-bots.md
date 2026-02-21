@@ -5,22 +5,30 @@ draft: false
 tags: ["Custom Chatbots x Local AI and KB","Tech Talk 99","RoadMap26","Docs Bot","Scribbly"]
 description: 'Building a custom BOT platform to end with silos. HUGO FOSS rebuild.'
 url: 'custom-bots-kb'
+math: true
 ---
 
-Joplin has a cool desktop app
 
-https://www.privategpt.io/
-https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms 
-
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="KreuzBerg | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bentopdf" title="Bento PDF Docker Config 🐋 ↗" >}}
-{{< /cards >}}
 
 **Tl;DR**
 
-Document Intelligence
+Delete before you Automate.
+
+Data first, before AI.
+
+**Intro**
+
+How about some Document Intelligence?
+
+How about breaking the most likely inevitable silos between department collaboration?
+
+How about knowing where do you sit in [the business *game*](#the-business-game)?
+
+$$
+P \times V \times GM \times OM \times IF \times T
+$$
+
+
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/reubah" title="Reubah | Docker Configs 🐋 ↗" >}}
@@ -32,87 +40,6 @@ PrivateGPT
 What if having a **custom cool looking chatbot for your site** was a matter of copy-paste one snippet and configuring an UI the data sources?
 
     The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc
-
-The **launch strategy**: *aka, focus strategy*:
-
-| Element | Decision |
-| :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
-
-The **Tier of Service**: 
-
-* Enhanced DIY when you claim the free tier where you bring your own key and data + using built in functions
-* DFY for custom logics like calling functions, calendar, forms...
-
-The **customer segmentation**: SMB
-
-The **tech stack**: *this solution can start as a consulting / setup service, then and only when there are PxV signals...a potential product*
-
-```mermaid
-mindmap
-  root((Business Framework))
-    Niche (WHO)
-      Target Audience
-      Pain Points
-    Offer (WHAT)
-      The Solution
-        Product Development (Product Dev)
-          BRD (Why - BRD)
-          PRD (What - PRD)
-          FRD (How - FRD)
-        Service Delivery (Service Delivery)
-          SOW (Scope - SOW)
-          SLA (Quality - SLA)
-          SOP (Process - SOP)
-      Value Proposition
-    Leads (HOW)
-      Distribution
-      Sales Channels
-```
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
-
-* Supply - DFY, finite *on demand basis*
-* Demand - constrained
-  * *Visitors of FossEngineer that are potential interested into OSS, but will be leaning more towards a DIY offer*
-  * *Targeted users via APIFY google maps scrapping + cold emails / social media reach*
-
-But it does not apply, as the goal of this is more closing a long chapter and making the final learnings with it.
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-As the why, what was very clear, its time to put together the final HOW:
-
-```md
-# Project Name: [SaaS Name]
-
-## 1. The Why (BRD)
-- **Problem:** [Describe the pain point]
-- **Value Prop:** [How I solve it]
-- **Monetization:** [e.g., $9/mo Subscription via Stripe]
-
-## 2. The What (PRD)
-- **Primary User Flow:** Landing -> Auth -> Core Feature -> Payment.
-- **V1 Features:** - [ ] Auth (Google/Email)
-  - [ ] Feature A (The core value)
-  - [ ] Settings (Billing/Delete account)
-
-## 3. The How (FRD)
-- **Stack:** T3 Stack (Next.js, Prisma, TRPC)
-- **DB Schema:** - User: id, email, stripe_id
-  - Data: id, user_id, content, timestamp
-```
 
 **Intro**
 
@@ -133,6 +60,33 @@ Is very pleasent to navigate though projects docs with AI assistances to do QnA 
 {{< /cards >}}
 
 And as [commented during xmas with a friend](https://jalcocert.github.io/JAlcocerT/calculus-101/#helping-others), this can become a thing for SMB and mid companies that power the world, just that you havent heard of them.
+
+https://github.com/Sharkord/sharkord
+
+> Lightweight, self-hosted, open-source chat server with voice, video, text, and screen sharing. Built for small groups who want privacy, simplicity, and full control over their data.
+
+* https://github.com/ZhengJiawen44/tatsu
+
+> Tatsu – The Ultimate Todo App A Next.js productivity app with a twist: evolving avatars, long-term goal tracking, a Notion-like editor, and end-to-end encrypted file storage.
+
+* https://github.com/redimp/otterwiki
+
+> A minimalistic wiki powered by python, markdown and git.
+
+* https://github.com/basecamp/fizzy?tab=readme-ov-file
+
+> Kanban as it should be. Not as it has been.
+
+Joplin has a cool desktop app
+
+https://www.privategpt.io/
+https://docs.privategpt.dev/recipes/choice-of-llm/list-of-ll-ms 
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="KreuzBerg | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/bentopdf" title="Bento PDF Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ## The Process to build a ChatBot Platform
 
@@ -248,6 +202,12 @@ Same questions apply: web only? desktop app required? mobile?
 
 ## Conclusions
 
+Are u the only one in the team who cares about the big picture? 
+
+Most likely your team works in silos
+
+And that's not a free ride.
+
 ![Astro real estate CSR ChartJS](/blog_img/biz/RE/vibecoded-calc-chartjs.png)
 
 
@@ -318,6 +278,90 @@ graph TD
 ---
 
 ## FAQ
+
+### The Business Game
+
+
+The **launch strategy**: *aka, focus strategy*:
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | |
+
+The **Tier of Service**: 
+
+* Enhanced DIY when you claim the free tier where you bring your own key and data + using built in functions
+* DFY for custom logics like calling functions, calendar, forms...
+
+The **customer segmentation**: SMB
+
+The **tech stack**: *this solution can start as a consulting / setup service, then and only when there are PxV signals...a potential product*
+
+```mermaid
+mindmap
+  root((Business Framework))
+    Niche (WHO)
+      Target Audience
+      Pain Points
+    Offer (WHAT)
+      The Solution
+        Product Development (Product Dev)
+          BRD (Why - BRD)
+          PRD (What - PRD)
+          FRD (How - FRD)
+        Service Delivery (Service Delivery)
+          SOW (Scope - SOW)
+          SLA (Quality - SLA)
+          SOP (Process - SOP)
+      Value Proposition
+    Leads (HOW)
+      Distribution
+      Sales Channels
+```
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
+
+* Supply - DFY, finite *on demand basis*
+* Demand - constrained
+  * *Visitors of FossEngineer that are potential interested into OSS, but will be leaning more towards a DIY offer*
+  * *Targeted users via APIFY google maps scrapping + cold emails / social media reach*
+
+But it does not apply, as the goal of this is more closing a long chapter and making the final learnings with it.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+As the why, what was very clear, its time to put together the final HOW:
+
+```md
+# Project Name: [SaaS Name]
+
+## 1. The Why (BRD)
+- **Problem:** [Describe the pain point]
+- **Value Prop:** [How I solve it]
+- **Monetization:** [e.g., $9/mo Subscription via Stripe]
+
+## 2. The What (PRD)
+- **Primary User Flow:** Landing -> Auth -> Core Feature -> Payment.
+- **V1 Features:** - [ ] Auth (Google/Email)
+  - [ ] Feature A (The core value)
+  - [ ] Settings (Billing/Delete account)
+
+## 3. The How (FRD)
+- **Stack:** T3 Stack (Next.js, Prisma, TRPC)
+- **DB Schema:** - User: id, email, stripe_id
+  - Data: id, user_id, content, timestamp
+```
 
 
 

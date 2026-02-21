@@ -10,9 +10,6 @@ math: true
 
 **Tl;DR**
 
-* https://app.fireflies.ai/perks
-* Perplexity and commet (from W11 only on the desktop) 
-
 Will code been cheap increase the demand for code from businesses?
 
 +++ [Jevons](#about-jevons)

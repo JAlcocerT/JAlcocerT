@@ -285,6 +285,8 @@ lsblk -f /dev/sda
 sudo mkdir -p /mnt/data1tb/nextcloud/db && sudo chown -R 1000:1000 /mnt/data1tb/nextcloud/db
 ```
 
+> Once this is done, download the mobile nc app and `More -> settings -> auto upload`
+
 If you dont know who are you connected to:
 
 ```sh

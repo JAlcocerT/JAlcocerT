@@ -15,6 +15,8 @@ Pros tend to say `its always DNS`...
 resolvectl status #here is how you check yours (DNS)
 ```
 
+Agents from: stories, dev and deployment...and DAO?
+
 **Intro**
 
 AdguardHome is a good starter for any homelab.
@@ -22,6 +24,8 @@ AdguardHome is a good starter for any homelab.
 But DNS is a rabbithole of its own.
 
 With this post, I want to explore the [latests on PiHole v6](#pihole) and use it as the default DNS for a smart TV.
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#programmatic-dns-updates
 
 https://www.youtube.com/watch?v=mnry95ay0Bk
 
@@ -757,12 +761,12 @@ docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | grep jellyfin
 docker compose -f 2602_docker-compose.yml up -d jellyfin metube navidrome qbittorrent prowlarr homepage-lite termix pigallery2 uptimekuma-monitoring neko logseq
 ```
 
-I wouldnt have done this without: Termix, UptimeKuma and
+I wouldnt have done this without: *Termix, UptimeKuma and...*
 
 ```sh
 sudo apt install glances
 #uv tool install glances
-glances
+glances #https://github.com/nicolargo/glances
 
 lazydocker
 

@@ -1,8 +1,8 @@
 ---
 title: "Learning about 3D Printing"
-date: 2027-12-31
+date: 2026-12-31
 draft: true
-tags: ["Tinkering"]
+tags: ["Tinkering","FreeCad vs OpenSCad","Blender"]
 description: abcd
 url: 'starting-with-3dprinting'
 ---
@@ -10,6 +10,10 @@ url: 'starting-with-3dprinting'
 <!-- 
 https://youtu.be/d6PyYCBft44?si=vsgHCiL2k2Fswwxd 
 -->
+
+* https://github.com/fluidd-core/fluidd
+
+> gpl 3.0 | Fluidd, the klipper UI.
 
 {{< youtube d6PyYCBft44 >}}
 
