@@ -184,8 +184,14 @@ The so called the order books: an ever evolving match between buyers and sellers
 There are people who try to build **models** to explain reality
 
 * [Power Law](https://jalcocert.github.io/JAlcocerT/powerlaw-and-series-with-python/) based: `https://timetobuybitcoin.com/`
+
+> That reminded me somehow to the GWeiss method. Somehow.
+
 * https://forocoches.com/foro/showthread.php?t=10597594
 * https://x.com/0xAralez/status/2020233840258945291
+
+{{< tweet user="0xAralez" id="2020233840258945291" >}}
+
 
 
 Not sure if the order of the things is right though
@@ -193,7 +199,10 @@ Not sure if the order of the things is right though
 
 ### For Vibe Coders
 
-People have a different BRD/PRD/FRD approach, that just works:
+People have a different BRD/PRD/FRD approach, that just works: 
+
+* https://code.claude.com/docs
+
 
 ```sh
 #sudo apt install gh
@@ -204,6 +213,10 @@ git init && git add . && git commit -m "Initial commit: simple btc-powerlaw" && 
 codex
 #/resume
 ```
+
+Get an idea/PoC, plug the prompt below and let your eyes enjoy:
+
+![alt text](/blog_img/crypto/btc/cycles-data.png)
 
 <!-- https://www.youtube.com/watch?v=czLrUyA_Bh4 -->
 
@@ -217,7 +230,9 @@ One shot web UIs with `GEMINI.md`
 
 ## Role
 
-Act as a World-Class Senior Creative Technologist and Lead Frontend Engineer. You build high-fidelity, cinematic "1:1 Pixel Perfect" landing pages. Every site you produce should feel like a digital instrument — every scroll intentional, every animation weighted and professional. Eradicate all generic AI patterns.
+Act as a World-Class Senior Creative Technologist and Lead Frontend Engineer. You build high-fidelity, cinematic "1:1 Pixel Perfect" landing pages. 
+
+Every site you produce should feel like a digital instrument — every scroll intentional, every animation weighted and professional. Eradicate all generic AI patterns.
 
 ## Agent Flow — MUST FOLLOW
 

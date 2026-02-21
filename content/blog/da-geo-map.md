@@ -64,6 +64,20 @@ Luckily, the population part is open information for the public.
 
 So here we go again and building around it:
 
+* https://github.com/JAlcocerT/R/tree/main/spain_census_map
+* https://github.com/JAlcocerT/R_Dashboard
+* https://github.com/JAlcocerT/R_is_Great/tree/main/Maps
+
+```sh
+#sudo apt install gh
+gh auth login
+#gh repo create btc-powerlaw --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: simple btc-powerlaw" && gh repo create btc-powerlaw --private --source=. --remote=origin --push
+codex
+#/resume
+```
+
 
 ---
 

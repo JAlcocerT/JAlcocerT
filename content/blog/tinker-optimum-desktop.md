@@ -99,6 +99,9 @@ Want to build something similar?
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Reach out via my Consulting Service Tier and Calendar" >}}
 {{< /cards >}}
 
+The time spent in building can calm the stress by the upcoming F1:
+
+* https://github.com/JAlcocerT/f1-race-replay
 
 ### About Sodis Series
 

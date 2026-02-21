@@ -566,7 +566,7 @@ How about creating couple of examples Python app that apply OOP?
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo" title="Three Bodies Web App Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth and compare it with LogTo" >}}
 {{< /cards >}}
 
 ![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
