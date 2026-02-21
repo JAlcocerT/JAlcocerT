@@ -9,7 +9,7 @@ url: 'f1-data-animated'
 
 **Tl;DR**
 
-The season has just started.
+The season has just started: How much slower the cars are?
 
 How about looking at some data?
 
@@ -18,3 +18,24 @@ How about looking at some data?
 After talking about geo recently
 
 and creating HUDs overlays for my action cam videos...
+
+
+```sh
+#sudo apt install gh
+gh auth login
+#gh repo create eda-geospatial --private --source=. --remote=origin --push
+    
+git init && git add . && git commit -m "Initial commit: simple eda-f1" && gh repo create eda-geospatial --private --source=. --remote=origin --push
+```
+
+
+
+
+---
+
+## Conclusions
+
+
+Coming from the geospatial eda and some oa5 x hud...
+
+It was about time to make some use of this fantastic api.s

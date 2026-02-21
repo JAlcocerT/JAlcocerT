@@ -566,7 +566,7 @@ How about creating couple of examples Python app that apply OOP?
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
-  {{< card link="https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo" title="Three Bodies Web App Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth and compare it with LogTo" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo" title="Three Bodies Web App Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
 {{< /cards >}}
 
 ![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
@@ -578,6 +578,7 @@ I wanted to combine couple things:
 
 1. My old pendulum repo
 2. Theo boilerplate: https://github.com/t3-oss/create-t3-app *The best way to start a full-stack, typesafe Next.js app*
+3. COmbined with the latest prompt for cool UIs tested on this post and [this repo](https://github.com/JAlcocerT/btc-powerlaw)
 3. Leveling up the physics
 
 {{< youtube "T58lGKREubo" >}}
@@ -641,9 +642,9 @@ If we are ready...what are those cool use cases?
   {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
 {{< /cards >}}
 
-For editing video, i prefer to use directly FFMPEG.
+For editing video, I prefer to use directly FFMPEG.
 
-TO create videos with Python, for now, I have tried [data driven animations](#animations), which can be exported to .mp4
+TO create videos with Python, for now, I have tried [data driven animations](#animations), which can be exported to `.mp4`
 
 ### WebApps
 
@@ -665,7 +666,6 @@ You can also bring to your Python Apps: ChartJS, ApexCharts...as seen [here](htt
 ### QR Generation
 
 To generate [**QR's with logo** thanks to Python](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb) 
-
 
 And your QR generator can be embedded into WebApps, as seen [here](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py)
 
@@ -719,6 +719,5 @@ That I could not resist to tinker with:
 
 * https://github.com/JAlcocerT/mechanism
 * https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations - Just some **matplotlib animations** for various use cases
-
 
 ![Sample animation Gif](/blog_img/dev/503.gif)
