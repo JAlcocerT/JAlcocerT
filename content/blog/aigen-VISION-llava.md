@@ -2,17 +2,14 @@
 title: "AI with Vision - Image2Text"
 date: 2025-04-09T00:20:21+01:00
 draft: false
-tags: ["Gen-AI","Self-Hosting","Docker"]
+tags: ["Gen-AI","Self-Hosting","Docker","RoomGPT"]
 description: 'LLaVa, OpenAI Vision Models compared with T2I. Ask questions about images or design your perfect room with roomGPT.'
 url: 'ai-vision-models'
 ---
 
+**TL;DR**
 
-<!-- * {{< newtab url="https://.github.io//" text="The  Official Site" >}}
-* {{< newtab url="https://github.com//" text="The  Source Code at Github" >}}
-    * License: {{< newtab url="https://github.com//?tab=AGPL-3.0-1-ov-file#readme" text="aGPL 3.0" >}} ❤️ -->
-
-
+Using AI with vision is a thing now.
 
 ## Vision with AI
 

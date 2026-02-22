@@ -855,6 +855,8 @@ graph LR
 * Is doing x6 in something the last 2 years a matter of: luck, effort, merit? a combination of those? none of those?
   * And x4 in 3 years?
 
+* How can w etalk about resilience without been grateful for critics?
+
 #### Interesting Concepts
 
 1. Nonchalant
