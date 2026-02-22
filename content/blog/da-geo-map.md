@@ -39,9 +39,6 @@ PostGIS: Free Open Source Spatial Database
 
 {{< youtube "e3XG_A2KUhg" >}}
 
-
-
-
 Openrouteservice: Free Open Source Geo-services API
 
 <!-- https://www.youtube.com/watch?v=iW_bSdwom2c -->
@@ -200,6 +197,25 @@ uv run animate_french_market.py
 {{< youtube "vySA02B8SLE" >}}
 
 > Once again: do you see **how cheap code is now**?
+
+## FAQ
+
+### PL 
+
+This is the thing that triggered this post:
+
+```sh
+cd pl
+#uv init
+
+#uv add geopandas
+uv add -r requirements.txt
+# Custom bounding box
+python gugik_rcn_explorer.py --mode fetch --bbox "20.9,52.1,21.1,52.3" --layer ms:transakcje
+
+# See all city shortcuts
+python gugik_rcn_explorer.py --list-cities
+```
 
 ### DK take it to the next level
 

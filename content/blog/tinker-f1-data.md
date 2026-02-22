@@ -98,6 +98,10 @@ uv run plot_telemetry.py
 
 Was there any doubt that new regulations make the ones learning faster be way ahead of the rest?
 
+<!-- https://www.youtube.com/watch?v=Ujb1Vrjlo8k -->
+
+{{< youtube "Ujb1Vrjlo8k" >}}
+
 Ops
 
 I mean, Im came to this post after the geospatial eda and some oa5 x hud...

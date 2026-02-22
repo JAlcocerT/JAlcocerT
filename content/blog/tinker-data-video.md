@@ -3,7 +3,7 @@ title: "Just Data Animations"
 date: 2026-03-07
 draft: false
 tags: ["Telemetry x F1","Geo x Statistics","YFinance","Real Estate"]
-description: 'Unfolding Data'
+description: 'Unfolding Data this time with some order and gitlab.'
 url: 'ai-scripts-and-animated-data'
 ---
 
@@ -77,7 +77,14 @@ But as I formatted recently, I needed to do the Gitlab Setup again: *all powered
 
 ```sh
 ssh-keygen -t ed25519 -C "your_email@example.com"
+#ssh -T git@gitlab.com #Preferences -> SSH Keys -> Paste public key -> you are in!
+sudo apt install glab # For Debian/Ubuntu
+glab auth login
+glab repo create my-awesome-project --public
+#git push --set-upstream git@gitlab.com:fossengineer/unfolding-data.git main
 ```
+
+
 
 > See how to do so with this file
 

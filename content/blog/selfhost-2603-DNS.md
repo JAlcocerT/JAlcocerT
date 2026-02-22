@@ -378,6 +378,16 @@ https://www.youtube.com/watch?v=syzwLwE3Xq4&t=745s
 
 It is great for Docker: https://www.youtube.com/watch?v=tE9YjEV1T4E
 
+```sh
+ip route | grep default #see your CM/GW
+```
+
+See other *local devices* connected to the same router:
+
+```sh
+ip neigh
+```
+
 ---
 
 ## Conclusions
@@ -620,6 +630,7 @@ lsb_release -a #noble or the 24.04!
 
 * SteamOS
 * [CachyOS](https://cachyos.org/) 
+* [Bazzite](https://bazzite.gg/)
 
 Plus, your home server / miniPC will consume less than if you keep it with W11.
 
@@ -752,9 +763,18 @@ What else am I running?
 Syncthing or sftpgo where nice, but...
 
 ```sh
+#du -sh .
 docker compose -f 2602_docker-compose.yml up -d
 docker compose -f 2602_docker-compose.yml up -d nextcloud-app nextclouddb
 #sudo du -sh /mnt/data1tb/nextcloud/html/data/jelimoreli
+```
+
+> When you delete `Nextcloud Manual.pdf` or `Nextcloud into.mp4`...
+
+They will be 
+
+```sh
+sudo find /mnt/data1tb/nextcloud/html/data -iname "*Nextcloud intro.mp4*"
 ```
 
 See `httops://what.ever.jalcocertech.com/status.php`

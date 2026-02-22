@@ -2,12 +2,16 @@
 title: "Whats an FPV?"
 date: 2027-12-31T23:20:21+01:00
 draft: true
-tags: ["Tinkering","Ardupilot vs "]
+tags: ["Tinkering","Ardupilot vs ","DJi Tello"]
 description: Drone.
 url: 'fpv-programming'
 ---
 
 https://www.youtube.com/watch?v=uC9hVyqGvDE
+
+**TL;DR**
+
+At this point, whats stopping you to create a cool app four the tello DJI?
 
 **Intro**
 

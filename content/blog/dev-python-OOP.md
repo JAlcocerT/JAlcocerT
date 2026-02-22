@@ -566,7 +566,7 @@ How about creating couple of examples Python app that apply OOP?
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
-  {{< card link="https://github.com/JAlcocerT/ThreeBodies/tree/main/LogTo" title="Three Bodies Web App Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies/" title="Three Bodies Web App Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
 {{< /cards >}}
 
 ![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
@@ -588,6 +588,14 @@ https://youtu.be/T58lGKREubo
 -->
 
 
+I already created this, but it cant explain whats going on with the video:
+
+```sh
+git clone https://github.com/JAlcocerT/Slider-Crank
+
+```
+
+Where that does syncing comes from?
 
 ```sh
 #sudo apt install gh
@@ -597,9 +605,20 @@ gh auth login
 git init && git add . && git commit -m "Initial commit: oop pendulum" && gh repo create oop-pendulum --private --source=. --remote=origin --push
 ```
 
+
+
 ### Three Bodies
 
+The initial 3 bodies web app I created last year was nice:
 
+```sh
+git clone https://github.com/JAlcocerT/Slider-Crank
+
+```
+
+But it was more a quick example to try tiny auth and logto.
+
+Now, how about creating another quick PoC around tat physics, but with a better looking UI and OOP?
 
 ```sh
 #sudo apt install gh
@@ -609,11 +628,41 @@ gh auth login
 git init && git add . && git commit -m "Initial commit: oop 3 bodies" && gh repo create oop-three-bodies --private --source=. --remote=origin --push
 ```
 
+
+
+### Mechanism
+
+This can be better, right?
+
+https://youtube.com/shorts/2xMOxiRz6F4
+
+```sh
+git clone https://github.com/JAlcocerT/Slider-Crank
+
+
+```
+
+I could now avoid reviewing these and use uv:
+
+```sh
+uv run
+```
+
+* https://github.com/JAlcocerT/Slider-Crank
+* https://github.com/JAlcocerT/mechanism
+
+Down the line, there is nothing stopping me merging the physically accurate movements with nice looking animations:
+
+* https://github.com/JAlcocerT/3Design
+* FreeCad and OpenScad are waiting
+
 ---
 
 ## Conclusions
 
 Few years ago I was quite advance with Matlab models.
+
+Advance as in doing this: https://github.com/JAlcocerT/Bike_dynamic_simulator
 
 I gave it a thought to migrate to Octave.
 
@@ -721,3 +770,12 @@ That I could not resist to tinker with:
 * https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations - Just some **matplotlib animations** for various use cases
 
 ![Sample animation Gif](/blog_img/dev/503.gif)
+
+
+### About Desktop Apps
+
+Does making desktop apps with Python makes sense?
+
+Or for some one who hasnt done one could RUST be the way?
+
+https://youtu.be/WhjEL817Onw?si=uBhfxuuQhwRA0Ufe

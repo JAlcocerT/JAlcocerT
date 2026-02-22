@@ -3,7 +3,7 @@ title: "Are agents and DAOs the inevitable future?"
 date: 2026-02-22T07:00:21+01:00
 #date: 2026-02-28T07:00:21+01:00
 draft: false
-tags: ["Crypto","LLMs","Gresham","Cinematic Landing Prompt"]
+tags: ["Crypto","LLMs","Gresham","Cinematic Landing Prompt","Ikigai"]
 description: 'The AI Driven Business x Unit Economics 107'
 url: 'ideas-to-execution-with-dao'
 math: true
@@ -143,7 +143,51 @@ Or at least: im more aware of my hypothesis and blinds spots / converging logics
 > After all...those ,failed' vibe coded PoCs were just a miss from my initial ask and clarifications
 
 
-### Services
+### About Ikigai
+
+**Ikigai** (pronounced ee-key-guy) is a Japanese concept that translates roughly to "a reason for being" or "the thing that gets you out of bed in the morning."
+
+In the West, it is often visualized as a Venn diagram where four main circles overlap.
+
+Your *ikigai* is the sweet spot right in the center where your: passions, skills, and the world’s needs converge.
+
+The Four Pillars of Ikigai
+
+To find your center, you must explore the intersection of these four areas:
+
+| Pillar | Focus | The Internal Query |
+| --- | --- | --- |
+| **What you love** | Passion & Mission | What would you do even if you weren't paid? |
+| **What you are good at** | Passion & Profession | What comes naturally to you or what have you mastered? |
+| **What the world needs** | Mission & Vocation | What problems can you help solve for others? |
+| **What you can be paid for** | Profession & Vocation | What service or skill has market value? |
+
+1. What do you love? (Passion)
+
+* What activities make you lose track of time?
+* If you had a completely free Saturday, how would you spend it?
+* What topics do you find yourself constantly reading about or researching?
+
+2. What are you good at? (Vocation)
+
+* What do people consistently ask you for help with?
+* What skills have you spent the most time refining?
+* In which areas of your life do you feel most confident and capable?
+
+3. What does the world need? (Mission)
+
+* What is a problem in your community (or the world) that frustrates you?
+* How can you contribute to the wellbeing of others?
+* What is missing in the lives of the people around you?
+
+4. What can you be paid for? (Profession)
+
+* What skills do you have that people are currently paying for?
+* Is there a demand for the things you are good at?
+* What are you doing—or could you do—that provides a sustainable income?
+
+> **Pro Tip:** Ikigai isn't necessarily a destination you reach and stay at forever. It’s an evolving balance that changes as you grow and as the world changes.
+
 
 If you haven't realized yet: there is no passive income, just active *and deferred active is just active*
 

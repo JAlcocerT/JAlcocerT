@@ -225,14 +225,11 @@ Created this simpler version with python, for anyone just starting with mechanic
 
 Dont worry, I said simpler :)
 
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Slider Crank Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Understanding SliderCrank Mechanism with Python - The Source Code" >}}
-  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
 And working on the **symbolic Python**: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
-
 
 * Optimum Gears - https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
 
