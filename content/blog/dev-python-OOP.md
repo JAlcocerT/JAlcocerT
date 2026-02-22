@@ -2,7 +2,7 @@
 title: "OOP 101 for Engineers - Pendulum x 3Bodies"
 date: 2026-03-10
 draft: false
-tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD","InfoGraphics"]
+tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD","Rust x Desktop Apps"]
 description: 'Object Oriented Programming for Python users and better mechanism simulations.'
 url: 'object-oriented-programming-101'
 ---
@@ -14,6 +14,8 @@ Long overdue topic: *WT& is OOP?*
 What I needed to get this going for good: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
 
 +++ With [examples](#applying-oop): [pendulum](#pendulum) + [3 bodies](#three-bodies)
+
++++ [Rust x Desktop](#about-desktop-apps)
 
 **Intro**
 
@@ -656,6 +658,10 @@ Down the line, there is nothing stopping me merging the physically accurate move
 * https://github.com/JAlcocerT/3Design
 * FreeCad and OpenScad are waiting
 
+https://youtube.com/shorts/TLROAYXxkvA?is=ywPjLN7C87Vk3yON
+
+For that video, the autor provides the files in the description!
+
 ---
 
 ## Conclusions
@@ -668,6 +674,9 @@ I gave it a thought to migrate to Octave.
 
 But what for now having Python and many OSS goodies.
 
+Anyways, if you provide digital services and think [that claude code](https://www.reddit.com/r/ClaudeAI/comments/1q403xw/claude_code_for_noncoding_projectswork_a_complete/) wont be cause deflation there soon because 'Im not a programmer'...
+
+Better be finding your Ikigai (?)
 
 ---
 

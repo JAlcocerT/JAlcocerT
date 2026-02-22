@@ -564,6 +564,19 @@ I made some **HUD overlays for GoPro videos** to have their telemetry in place, 
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+13. So was coming back to maps, but with animations this time:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="Py Route Tracker ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
+{{< /cards >}}
+
+
+```sh
+git clone https://github.com/JAlcocerT/eda-geospatial
+uv run animate_spain_pop.py
+uv run animate_french_market.py
+```
 
 14. Racing *best lap* optimizer / simulator.
 
@@ -586,6 +599,20 @@ Surprise, surprise: simple mode + realistic assumptions wins the day
 
 {{< youtube "zm0OJcpuLV8" >}}
 
+15. Talking about racing...whats going on with F1 this year?
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="Py Route Tracker ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/eda-f1" title="Py Route Tracker ↗" icon="github" >}}
+{{< /cards >}}
+
+```sh
+git clone https://github.com/JAlcocerT/eda-f1
+cd eda-f1
+uv run f1_q3_short.py #Interactive Q3 animation video (15s Short)
+
+```
+
 
 14. Twitter / X powered by pystocks / stonks / libreportfolio.
 
@@ -605,15 +632,20 @@ cd DataInMotion && branch libreportfolio
 uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
 ```
 
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
-{{< /cards >}}
-
 Because the datainmotion libreportfolio branch with gweiss method and so on was cool
 
 ```sh
 uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+```
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
+  {{< card link="https://gitlab.com/fossengineer1/unfolding-data" title="Unfolding Data | NEW Repo" icon="github" >}}
+{{< /cards >}}
+
+
+```sh
+
 ```
 
 efecto cantillon for inflation and entrepreneur mindset

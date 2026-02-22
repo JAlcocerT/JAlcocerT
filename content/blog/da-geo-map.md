@@ -193,8 +193,10 @@ And we go from: https://explore.data.gouv.fr/fr/immobilier?onglet=carte&filtre=t
 ```sh
 uv run animate_french_market.py
 ```
+<!-- 
+https://www.youtube.com/shorts/lRIWm1oQI54 -->
 
-{{< youtube "vySA02B8SLE" >}}
+{{< youtube "lRIWm1oQI54" >}}
 
 > Once again: do you see **how cheap code is now**?
 
@@ -205,6 +207,7 @@ uv run animate_french_market.py
 This is the thing that triggered this post:
 
 ```sh
+#git clone /eda-geospatial
 cd pl
 #uv init
 
@@ -216,6 +219,8 @@ python gugik_rcn_explorer.py --mode fetch --bbox "20.9,52.1,21.1,52.3" --layer m
 # See all city shortcuts
 python gugik_rcn_explorer.py --list-cities
 ```
+
+Just that data gathering...seems to be slow.
 
 ### DK take it to the next level
 
@@ -231,7 +236,15 @@ Its interesting to see inflation going down, despite same wars that caused it ar
 
 * Overview - https://www.dst.dk/en/Statistik/temaer/overblik-dansk-oekonomi
 * The avg Dane - https://www.dst.dk/en/Statistik/laer-om-statistik/gennemsnitsdanskeren
+* Some map with abg price of m2: https://rkr.statbank.dk/statbank5a/Graphics/mapanalyser.asp?maintable=BM010&lang=1 coming from https://rkr.statbank.dk/BM010
 
 > Interesting to see that MEDIAN net assets are ~1y+ of earnings before tax
 
 Also interesting to see higher inflation 0.8% than gdp growth 0.2%
+
+```sh
+cd dk && uv run animate_dk_pop.py
+uv run animate_dk_pop_delta.py
+uv run animate_dk_pop_pct.py
+uv run animate_dk_pop_pct_ytshort.py
+```

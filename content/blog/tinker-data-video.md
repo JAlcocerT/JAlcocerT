@@ -50,6 +50,29 @@ So: which explanation do we give to the rising housing prices ($/m2)?
 
 Before that, lets look how housing prices are changing per region and time.
 
+Because real estate...kind of relates with population...
+
+right?
+
+```sh
+cd dk && uv run animate_dk_pop.py
+uv run animate_dk_pop_delta.py
+```
+
+Maybe other factors like: credits have sth to do?
+
+```sh
+
+```
+
+Specially for those booms?
+
+Just asking: bring your own theory of how the world works here
+
+
+## Financial Data x YFinance
+
+Because its too simple and too cool to make such graphs.
 
 ---
 

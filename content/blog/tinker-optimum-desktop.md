@@ -14,13 +14,10 @@ url: 'gopro-telemetry-desktop-python'
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-The **launch strategy**: *aka, focus strategy*
+~~The launch strategy: aka, focus strategy~~
 
-| Element | Decision |
-| :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
+This is not full Ikigai as I dont [get paid](#conclusions), but its the part of it that I just do because I want to.
+
 
 **Intro**
 
