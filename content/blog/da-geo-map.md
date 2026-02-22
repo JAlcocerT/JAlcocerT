@@ -55,7 +55,7 @@ Which sounds like some how to reitti that we covered [here](https://jalcocert.gi
 ![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
 
 
-## Geo and R
+## Geo from R to Py
 
 Some time ago I was impressed but R language and its amazing maps analytics toolset.
 
@@ -136,6 +136,9 @@ Generating outlier scatter plot...
 Scatter plot saved as french_price_scatter.png
 ```
 
+```sh
+uv run map_french_communes.py
+```
 
 ![french communes 2024 price per squared meter](/blog_img/data-experiments/french_communes_median_price_m2.png)
 
@@ -156,4 +159,57 @@ And in the upcoming days, I will be sharing few posts about geo + time = motion 
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-If you were expecting a post about the geometric series of improvements of LLMs, this was not your post.
+Today Ive been **impressed with the French DVF** with transaction property sale data per year.
+
+The dataset is massive and can serve for learning data analytics :)
+
+Its just a shame that data older than 5y is scrapped.
+
+> If you were expecting a post about the **geometric series** of improvements of LLMs, this was not your post.
+
+> > But stay tuned
+
+### Animated Videos
+
+If you have read me for a while, you already know I could not avoid this:
+
+```sh
+uv run animate_spain_pop.py
+```
+
+So I went to pairdrop and:
+
+<!-- 
+https://youtube.com/shorts/3dCNyaLYziA 
+-->
+
+{{< youtube "3dCNyaLYziA" >}}
+
+And we go from: https://explore.data.gouv.fr/fr/immobilier?onglet=carte&filtre=tous&lat=46.36971&lng=2.30288&zoom=4.80
+
+```sh
+uv run animate_french_market.py
+```
+
+{{< youtube "vySA02B8SLE" >}}
+
+> Once again: do you see **how cheap code is now**?
+
+### DK take it to the next level
+
+I was impressed years ago with the 'gob BI' in Denmark.
+
+And they have keep it up: https://www.dst.dk/en
+
+Specially compared with the UI/X of the other options we have seen.
+
+In fact, DKK publish their statistical data via R packages.
+
+Its interesting to see inflation going down, despite same wars that caused it are still going on:
+
+* Overview - https://www.dst.dk/en/Statistik/temaer/overblik-dansk-oekonomi
+* The avg Dane - https://www.dst.dk/en/Statistik/laer-om-statistik/gennemsnitsdanskeren
+
+> Interesting to see that MEDIAN net assets are ~1y+ of earnings before tax
+
+Also interesting to see higher inflation 0.8% than gdp growth 0.2%
