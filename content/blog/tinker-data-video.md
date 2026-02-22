@@ -16,8 +16,9 @@ url: 'ai-scripts-and-animated-data'
 
 **Intro**
 
+This is going to be a Python master class.
 
-
+Or a sneek into the future on how cheap*er* information will be
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
@@ -41,7 +42,13 @@ url: 'ai-scripts-and-animated-data'
 
 ## Real Estate
 
+Asking questions is important.
 
+Because inside the questions we have implicit hypothesis, not only in the answers.
+
+So: which explanation do we give to the rising housing prices ($/m2)?
+
+Before that, lets look how housing prices are changing per region and time.
 
 
 ---
@@ -58,3 +65,24 @@ Or in other words, how good are you at making questions.
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
 {{< /cards >}}
+
+
+### About Gitlab
+
+I have created all this consolidation in Gitlab.
+
+Mainly bc I wanted to save the French DVF data somwhere and Github just allows for 100mb files.
+
+But as I formatted recently, I needed to do the Gitlab Setup again: *all powered by [sha256](https://jalcocert.github.io/JAlcocerT/encryption-101/#the-sha256-algorithm) under the hood!*
+
+```sh
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+> See how to do so with this file
+
+| Protocol | Hashing (SHA-256) | Actual Encryption |
+| :--- | :--- | :--- |
+| **Purpose** | Verification & Integrity | Privacy & Secrecy |
+| **SSH** | Fingerprints & MACs | AES, ChaCha20 |
+| **HTTPS** | Certificates & Handshakes | AES |

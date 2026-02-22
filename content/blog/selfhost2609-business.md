@@ -9,7 +9,9 @@ url: 'selfhosting-business'
 
 **TL;DR**
 
-Avoid silos and the Coasean Ceiling.
+Avoid silos and the [Coasean Ceiling](#about-the-coasean-ceiling).
+
+* https://github.com/uvdesk/community-skeleton
 
 **Intro**
 
@@ -313,3 +315,5 @@ Or just via bluetooth: https://github.com/permissionlesstech/bitchat
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/matrix" title="Matrix | Docker Config for HomeLab 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serverless-invoices" title="Serverless Invoices | Docker Config for HomeLab 🐋 ↗" >}}
 {{< /cards >}}
+
+### About The Coasean Ceiling

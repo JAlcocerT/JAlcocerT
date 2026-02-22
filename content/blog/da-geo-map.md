@@ -2,16 +2,22 @@
 title: "Just maps"
 date: 2026-02-21T08:00:21+01:00
 draft: false
-tags: ["Real Estate","GeoJSON","PostGis","OpenRoute","Reitti vs Wanderer"]
+tags: ["Real Estate","GeoJSON","PostGis","OpenRoute","Reitti vs Wanderer","Py vs R"]
 description: 'About GeoSpatial analysis'
-url: 'geo'
+url: 'geo-maps-and-data'
 math: true
 ---
 
+
 **TL;DR**
 
+Doing analytics on top of maps was not as easy 5y ago...
 
 **Intro**
+
+Few years ago I was impressed by charts like those from Kartografia ekstremalna on fb.
+
+Not sure how that project goes, but...
 
 I just got to know these:
 
@@ -148,7 +154,7 @@ uv run map_french_communes.py
 
 ## Conclusions
 
-Few years ago with R I enjoyed their geo capabilities.
+Few years ago with the R language I enjoyed their geo capabilities.
 
 Maps and data are cool, lets agree on that.
 
@@ -165,9 +171,9 @@ The dataset is massive and can serve for learning data analytics :)
 
 Its just a shame that data older than 5y is scrapped.
 
-> If you were expecting a post about the **geometric series** of improvements of LLMs, this was not your post.
+> If you were expecting a post about the **[geometric](https://jalcocert.github.io/JAlcocerT/powerlaw-and-series-with-python/#geometric-series) series** of improvements of LLMs, this was not your post.
 
-> > But stay tuned
+> > But stay tuned. Because its obvious that the improvements are there. 
 
 ### Animated Videos
 
