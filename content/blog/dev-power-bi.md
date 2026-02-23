@@ -1,9 +1,9 @@
 ---
 title: "Agents are coming to Workspaces"
-date: 2026-02-01T09:20:21+01:00
+date: 2026-02-19T09:20:21+01:00
 draft: false
 tags: ["D&A x BI","DAX vs M","Fabric","PBix vs PBiP vs PBiT"]
-description: 'About PowerBI.'
+description: 'About PowerBI and the future of drag and drop tools.'
 url: 'about-powerbi-and-fabric'
 ---
 

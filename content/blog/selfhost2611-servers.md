@@ -2,7 +2,7 @@
 title: "Just SelfHosted"
 date: 2026-10-01T23:20:21+01:00
 draft: false
-tags: ["DNS x SSL","Glances","BackUps x P2P"]
+tags: ["DNS x SSL","Glances","BackUps x P2P","Nala"]
 description: 'Selfhosting.'
 url: 'selfhosting-and-servers'
 ---
@@ -56,6 +56,20 @@ Transactional email + DKIM	Resend / SendGrid ($20-100/mo)
 Request logs + proxy	Cloudflare ($0-200/mo)
 Total with Temps	$0 (self-hosted)
 
+#### Package Management
+
+If you want to be the owner of the infra, you better know these.
+
+For debian based `apt` should be familiar.
+
+Now, you can also get away with **nala**.
+
+#### Monitoring
+
+On top of htop, btop...
+
+Glances has been a great discovery.
+
 ### DNS
 
 #### SSL x https
@@ -82,6 +96,15 @@ In the end P2P is a pretty amazing distributed backup tool!
 
 ### Local AI
 
+I was too strict in the beginning with just use local LLMs:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Ollama | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Now I dont care much if OpenAI knows what am I vibe coding.
+
+Pragmatism some may call it.
 
 ### Local Dev Tools
 

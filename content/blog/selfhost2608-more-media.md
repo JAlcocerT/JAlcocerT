@@ -7,7 +7,6 @@ description: 'Computer'
 url: 'selfhosting-more-media'
 ---
 
-
 **TL;DR**
 
 Is there a reliable way not to loose photos for good?
