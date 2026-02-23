@@ -2,7 +2,7 @@
 title: "Learning with/from agents"
 date: 2026-03-01T07:00:21+01:00
 draft: false
-tags: ["Unit Economics 108","Prompt"]
+tags: ["Unit Economics 108","Prompt","Back Propagation"]
 description: 'What is learning?'
 url: 'ideas-to-execution-after-learning'
 math: true
@@ -20,6 +20,10 @@ What is learning?
 
 ## Conclusions
 
+Not been eager today feels like:
+
+![alt text](/blog_img/memes/bike.png)
+
 
 ### Attract Convert Deliver
 
@@ -32,6 +36,9 @@ follows the *full stack business formula* from top line, to net profit:
 $$
 P \times V \times GM \times OM \times IF \times T
 $$
+
+
+To deliver, you better start learning/doing agentic delivery.
 
 
 

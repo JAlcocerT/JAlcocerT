@@ -222,7 +222,7 @@ python gugik_rcn_explorer.py --list-cities
 
 Just that data gathering...seems to be slow.
 
-### DK take it to the next level
+### DK takes it to the next level
 
 I was impressed years ago with the 'gob BI' in Denmark.
 

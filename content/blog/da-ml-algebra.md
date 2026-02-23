@@ -86,7 +86,7 @@ Have migrated some of them [here](https://github.com/JAlcocerT/canvas/tree/main/
 
 ```
 
-Yes, i mean the `blog.jalcocertech` thing.
+Yes, I mean the `blog.jalcocertech` thing.
 
 But before starting that, all the content that Ive created here has to go properly to the `/docs` and from there to the `web/ooks` / ebooks or whatever name ill put in place.
 

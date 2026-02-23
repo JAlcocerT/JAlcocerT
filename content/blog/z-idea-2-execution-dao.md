@@ -94,6 +94,7 @@ codex
 #wget https://github.com/Cuperino/QPrompt-Teleprompter/releases/download/v1.1.6/qprompt-v1.1.6-51788eb-linux-gcc-x86_64.AppImage
 ```
 
+The bar for creating keeps going lower and lower:
 
 | Feature | **Claude Code** | **Gemini CLI** | **Codex CLI** | **OpenCode CLI** | **Kiro CLI** |
 | --- | --- | --- | --- | --- | --- |
@@ -113,8 +114,9 @@ codex
 
 Are we ready for destruction creative?
 
-It doesnt matter.
+It doesnt really matter.
 
+![dont cry for me](/blog_img/memes/barney.gif)
 
 #### Crypto and DAO
 

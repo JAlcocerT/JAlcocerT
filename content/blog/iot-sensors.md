@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Sensors x Home Assistant"
-date: 2026-03-01
+date: 2026-03-05
 draft: false
 tags: ["Tinkering","Polanduino x Arduino","Solar x DHT","MLX","Robotics"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.

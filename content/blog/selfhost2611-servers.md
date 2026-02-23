@@ -75,12 +75,24 @@ Glances has been a great discovery.
 #### SSL x https
 
 
+#### Webs and Apps
+
+You can try these: [wp](https://github.com/JAlcocerT/Home-Lab/tree/main/wordpress), [ghost](https://github.com/JAlcocerT/Home-Lab/tree/main/ghost)...
+
+But do you really have to?
+
+Monitor your pages anytime with:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami Web Analytics | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ### BackUps
 
 #### Your Videos and Media
 
 Just telling, if you like going karting and recording with an action cam:
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
