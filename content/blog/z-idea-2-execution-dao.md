@@ -239,8 +239,6 @@ There are people who try to build **models** to explain reality
 
 {{< tweet user="0xAralez" id="2020233840258945291" >}}
 
-
-
 Not sure if the order of the things is right though
 
 
@@ -261,9 +259,11 @@ codex
 #/resume
 ```
 
-Get an idea/PoC, plug the prompt below and let your eyes enjoy:
+Get an idea/PoC: like validating the tweet above with powerlaw
 
-![alt text](/blog_img/crypto/btc/cycles-data.png)
+Plug the prompt below and let your eyes enjoy of that beautiful UI experience created with `Gemini 3.0 Fash`
+
+![Sample Cinematic Landing](/blog_img/crypto/btc/cycles-data.png)
 
 <!-- https://www.youtube.com/watch?v=czLrUyA_Bh4 -->
 

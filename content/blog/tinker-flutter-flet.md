@@ -1,9 +1,9 @@
 ---
-title: "First Look to Flutter Apps via Flet"
+title: "Flutter Apps and Flet"
 date: 2026-11-29
 draft: false
 tags: ["Android","Ente Photos","wger","Desktop Apps","Flutter x Python Flet","FlutterFlow"]
-description: 'Flutter Apps. Created with Python via Flet and more'
+description: 'Flutter Apps. Created with Python via Flet.'
 url: 'flutter-flet-python'
 ---
 
@@ -32,6 +32,9 @@ https://www.youtube.com/watch?v=ibNzG1tMblE
 
 **Intro**
 
+Flutter is used in many places.
+
+Actually even some smartTV apps from your favourite telecom provider might have been built with it.
 
 <!-- * Flutter
         * Counter knitting
@@ -144,6 +147,12 @@ https://flet.dev/docs/guides/python/deploying-web-app/progressive-web-apps
 ---
 
 ## FAQ
+
+### Flutter OSS Examples
+
+1. 
+2. 
+3. 
 
 ### Desktop Alternatives in Python
 

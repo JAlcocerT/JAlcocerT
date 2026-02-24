@@ -918,6 +918,7 @@ The fwk: keep / stop / start.
 
 #### Keep Doing
 
+0. Not flight schedules at 6am, no stupid commitments
 1. Vibe Coding and BiP
 2. Sharing what I know with people around me. In person.
 3. Slowly getting better at action cam videos and ffmpeg / kdenlive. *Just for fun.*
@@ -959,7 +960,7 @@ Like around marketing and sales: Cashvertising, ...
 
 11. Review these tech notes monthly ✅
 
-> And thx to logseq x repo, I said by to my monthly personal review that I was doing for years on one-note
+> And thx to the `logseq x repo`, I said by to my monthly personal review that I was doing for years on one-note
 
 12. F/OSS Migration *and supporting at least one project* ✅
 
