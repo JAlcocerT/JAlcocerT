@@ -3,14 +3,14 @@ title: "Just Data Animations"
 date: 2026-03-07
 draft: false
 tags: ["Telemetry x F1 vs Kart","Geo x Statistics","YFinance","Real Estate","Mechanism x MBSD"]
-description: 'Unfolding Data this time with some order and gitlab.'
+description: 'Unfolding Data this time with some order and gitlab x Roo x Zed.'
 url: 'ai-scripts-and-animated-data'
 ---
 
 
 **Tl;DR**
 
-Time to put all those animations together.
+Time to put all those **animations** together.
 
 {{< cards >}}
   {{< card link="https://gitlab.com/fossengineer1/unfolding-data" title="Unfolding Data | NEW Gitlab Repo" icon="github" >}}
@@ -59,6 +59,12 @@ But you can also create overlay HUDs with data from GoPro GPS and accelerometer
 ```
 
 {{< youtube "ctfGunPZwJ4" >}}
+
+No need to overcomplicate it with PhyPhox as your action cam already detects 3 axis acceleration for estabilization purposes.
+
+{{< youtube "ctfGunPZwJ4" >}}
+
+You just wont get real time speeds to get the track references right.
 
 And for pure animation part, you can make assumptions and model a faster path for next sessions:
 
@@ -212,3 +218,5 @@ glab repo create my-awesome-project --public
 | **Purpose** | Verification & Integrity | Privacy & Secrecy |
 | **SSH** | Fingerprints & MACs | AES, ChaCha20 |
 | **HTTPS** | Certificates & Handshakes | AES |
+
+When doing some scripts, lately I have tried `Roo Code` extension and Zed: `https://zed.dev/pricing`

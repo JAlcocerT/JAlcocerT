@@ -2,10 +2,6 @@
 title: "[Review]ing a TPlink 4G Router Archer MR200"
 date: 2024-12-07
 draft: false
-# cover:
-#     image: "https://socialify.git.ci/alejandro-ao/ask-multiple-pdfs/image?description=1&font=Inter&language=1&name=1&stargazers=1&theme=Auto"
-#     alt: "ChatPDF" # alt text
-#     caption: "SelfHosting A RAG App to chat with PDFs." # display caption under cover
 tags: ["Networking","ArcherMR200","OpenSpeedTest vs SpeedTestTracker"]
 description: 'Using 4G internet. Few years of use review.'
 url: 'tplink-archer-mr200-router-review'

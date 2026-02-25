@@ -1,8 +1,8 @@
 ---
 title: "People do crazy RC stuff!"
-date: 2027-12-30T23:20:21+01:00
+date: 2026-12-30T23:20:21+01:00
 draft: true
-tags: ["Tinkering","PulseJet"]
+tags: ["Tinkering","PulseJet","Flutter","Desktop vs Mobile"]
 description: 'Radio Control.'
 url: 'rc-tinkering'
 ---

@@ -42,7 +42,6 @@ But this is going to focus on putting together the HUD *for gopros based on gps 
 
 {{< youtube "zm0OJcpuLV8" >}}
 
-
 {{< cards cols="1" >}}
   {{< card link="https://www.firecrawl.dev" title="ApexSim | GD Post ↗ " >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/" title="GoPro GPS Custom HUD ↗" >}}
@@ -176,7 +175,6 @@ Here's a breakdown of some of the most popular options: **Key Python GUI Framewo
     * Good for simple applications.
     * Ive tinkered with it [here](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/VideoApp_tkinter)
 
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="Python Web apps with DASH" image="/blog_img/apps/TripPlanner/TripPlanner.JPG" subtitle="Python Trip Planner with DASh" >}}
   {{< card link="https://github.com/JAlcocerT/YT-Video-Edition" title="Youtube Video Edition" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Quick Vlogs with ffmpeg and Tkinter 101" >}}
@@ -219,13 +217,13 @@ The primary smart contract address for Polymarket on the Ethereum network is:
 
 0x0d08db747095e91780711724267a183e8522aa64 
 
-https://etherscan.io/address/0x0d08db747095e91780711724267a183e8522aa64
+* https://etherscan.io/address/0x0d08db747095e91780711724267a183e8522aa64
 
 Additionally, Polymarket uses proxy wallet contracts and multisig safes for user accounts, which are deployed on the Polygon network. For example, a Polymarket proxy wallet factory address on Polygon is:
 
 0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
 
-https://polygonscan.com/address/0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
+* https://polygonscan.com/address/0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
 
 These proxy wallet contracts hold users' positions and USDC used within Polymarket's ecosystem, facilitating a smooth user experience.
 
@@ -238,9 +236,8 @@ As you might know, [gpx is great](https://jalcocert.github.io/JAlcocerT/selfhost
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-https://github.com/tess1o/geopulse
+* https://github.com/tess1o/geopulse
 
 tess1o/geopulse: A self-hosted, privacy-first location tracking platform. The perfect open-source alternative to Google Timeline with automatic trip detection, Immich integration, and detailed analytics.
-https://github.com/tess1o/geopulse
 
-https://github.com/itskovacs/trip
+* https://github.com/itskovacs/trip

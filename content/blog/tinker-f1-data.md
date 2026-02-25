@@ -17,7 +17,7 @@ How about looking at some data?
 
 After talking about geo recently
 
-and creating HUDs overlays for my action cam videos...
+creating HUDs overlays for my action cam videos...
 
 Today, its about F1.
 
@@ -119,7 +119,6 @@ uv run f1_q3_plots.py
 
 Was there any surprise that keeping a rule long enough is what makes teams be closer to each other?
 
-
 Diminishing returns....anyone?
 
 ```sh
@@ -139,9 +138,7 @@ And this is not a debate whether making drivers race with less dispair cars is g
 
 Neither if F1 should be similar to e-f1.
 
-
 ### About Unfolding Data
-
 
 It was about time to make some use of this fantastic api.
 

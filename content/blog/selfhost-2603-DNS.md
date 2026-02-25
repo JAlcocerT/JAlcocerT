@@ -968,6 +968,12 @@ If you want the strictest privacy and are OK with friction and some breakage: Li
 
 HomeLab Essentials - https://jalcocert.github.io/JAlcocerT/docs/selfhosting/
 
+As of now Im using:
+
+```sh
+sudo docker compose -f 2603_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
+```
+
 These have been apps that I have used at some point at my homelab and might also be of your interest
 
 1. Container UI's 🐳: [Portainer](https://github.com/JAlcocerT/Home-Lab/tree/main/portainer), Rancher, Dockge...
@@ -998,4 +1004,4 @@ These have been apps that I have used at some point at my homelab and might also
 
 10. [SSGs](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro) combined with a headlessCMS and [selfhosted static server](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-static-hosting) 🐳 
 
-But if you are starting, just use static hosting for those and forget about servers.
+If you are starting, just use static web hosting for those and forget about servers.

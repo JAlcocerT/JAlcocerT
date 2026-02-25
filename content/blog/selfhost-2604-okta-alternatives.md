@@ -229,15 +229,22 @@ https://github.com/ory/hydra?tab=readme-ov-file#run-the-docker-compose-quickstar
 
 ## Conclusions
 
-As **Free Alternatives for Okta** I would go for: firebase auth and Logto
+As **Free Alternatives for Okta** I would go for: *firebase auth and Logto*
 
-You can clean up with:
+You can see/clean up the mess in your homelab with:
 
 ```sh
+glances
 lazydocker
 docker system df
 #docker stop $(docker ps -a -q) #stop all
 #docker system prune -a
+```
+
+These are the services im using as of now:
+
+```sh
+sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
 ```
 
 And for questions:
@@ -256,7 +263,7 @@ And for questions:
   * https://github.com/logto-io/logto
   * https://github.com/logto-io/logto?tab=MPL-2.0-1-ov-file#readme
 
----
+
 ---
 
 {{% details title="How to Secure my Services?" closed="true" %}}
@@ -275,7 +282,7 @@ Thanks To:
 
 ## Web x AI
 
-Ive been using a lot vibe coding, like windsurf and CLI tools like gemini since last year.
+Ive been using a lot vibe coding, like windsurf/cursor/antigravity and CLI tools like Codex since last year.
 
 There were interesting tools: *scrapegraph, firecrawl, crawl4ai...*
 
@@ -297,12 +304,6 @@ See https://github.com/mumble-voip/mumble:
 
 ## FAQ
 
-
-What else am I running?
-
-```sh
-
-```
 
 * https://github.com/tensorchord/Awesome-LLMOps
 

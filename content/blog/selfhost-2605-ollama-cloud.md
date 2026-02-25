@@ -321,7 +321,7 @@ Is ADL the next big thing after MCP eating the context windows?
 * https://github.com/nextmoca/adl
 * https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents
 
-ADL (Agent Definition Language) is an open source, vendor‑neutral spec for describing what an AI agent is and is allowed to do, so the same agent definition can be inspected, versioned, audited, and reused across different platforms and runtimes. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
+ADL (Agent Definition Language) is an open source, vendor‑neutral spec for describing what an AI agent is and is allowed to do, so the same agent definition can be inspected, versioned, audited, and reused across different platforms and runtimes. 
 
 ## Core idea
 
