@@ -1,6 +1,6 @@
 ---
 title: "Are agents and DAOs the inevitable future?"
-date: 2026-02-22T07:00:21+01:00
+date: 2026-02-26T07:00:21+01:00
 #date: 2026-02-28T07:00:21+01:00
 draft: false
 tags: ["Crypto","LLMs","Gresham","Cinematic Landing Prompt","Ikigai"]
@@ -80,7 +80,7 @@ Will this stop been a joke?
 
 No. In fact...
 
-* https://www.pencil.dev/
+* https://www.pencil.dev/ - You can  now define pixel perfect UIs as a Code in your repository
 * https://www.reddit.com/r/ClaudeAI/comments/1q403xw/claude_code_for_noncoding_projectswork_a_complete/
 * https://polymarket.com/event/which-company-has-the-best-ai-model-end-of-february
 
@@ -88,13 +88,19 @@ No. In fact...
 #https://5ykymftd1soethh5.public.blob.vercel-storage.com/Pencil-linux-x86_64.AppImage
 wget -P ~/Applications https://5ykymftd1soethh5.public.blob.vercel-storage.com/Pencil-linux-x86_64.AppImage #thanks to appimage launcher
 
-npm i -g @openai/codex
-codex
+npm i -g @openai/codex 
+codex #https://platform.openai.com/settings/organization/billing/overview
 
 #wget https://github.com/Cuperino/QPrompt-Teleprompter/releases/download/v1.1.6/qprompt-v1.1.6-51788eb-linux-gcc-x86_64.AppImage
 ```
 
-The bar for creating keeps going lower and lower:
+The bar for creating keeps going lower and lower: *see `./claude/skills`*
+
+```sh
+npm install -g @anthropic-ai/claude-code #https://claude.ai/new
+claude #sonet4.6 is amazing
+#claude --dangerously-skip-permissions -p "promptwhateverrrr" #yolo
+```
 
 | Feature | **Claude Code** | **Gemini CLI** | **Codex CLI** | **OpenCode CLI** | **Kiro CLI** |
 | --- | --- | --- | --- | --- | --- |

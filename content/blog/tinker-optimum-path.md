@@ -203,6 +203,8 @@ Im **impressed** on how a simple model can provide realistic results.
 
 ### The results
 
+After few iterations to get the components rendered in a nicer way:
+
 <!-- https://youtu.be/zm0OJcpuLV8 -->
 
 {{< youtube "zm0OJcpuLV8" >}}
@@ -224,12 +226,19 @@ Just...a point with a **good enough model** and parameters that can be validated
 },
 ```
 
-Plot twist: whatever happens in [the circuit in real life](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) prevails to the model results are 🤯
+Plot twist 🤯: whatever happens in [the circuit in real life](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) prevails to ANY model results 
 
 <!-- https://studio.youtube.com/video/c0YkQhsUNrg/edit -->
 
 {{< youtube "c0YkQhsUNrg" >}}
 
+Its all on this repo: https://github.com/JAlcocerT/optimum-path
+
+Unfortunately, you wont have access, but can get some of my time if you want to learn how to create:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting 121 - Tier of Service" >}}
+{{< /cards >}}
 
 
 ### What else?

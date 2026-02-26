@@ -171,6 +171,14 @@ flowchart LR
 
 3. RSP vs SP500
 
+4. Prices are a reflection of future cashflows corrected by....these:
+
+```
+=GOOGLEFINANCE("INDEXCBOE:TYX")/1000
+=GOOGLEFINANCE("INDEXCBOE:TNX";"price")/1000
+=GOOGLEFINANCE("INDEXCBOE:IRX")/1000
+```
+
 
 ## Physics
 

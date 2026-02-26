@@ -8,7 +8,6 @@ url: 'geo-maps-and-data'
 math: true
 ---
 
-
 **TL;DR**
 
 Doing analytics on top of maps was not as easy 5y ago...
@@ -27,8 +26,7 @@ I just got to know these:
 * https://explore.data.gouv.fr/fr/immobilier?onglet=carte&filtre=tous
 * https://www.ine.es/buscar/searchResults.do?searchString=Censo+anual+de+poblaci%C3%B3n&Menu_botonBuscador=&searchType=DEF_SEARCH&startat=0&L=0
 
-
-On top of:
+On top of: *avg household income in ES*
 
 * https://www.ine.es/ADRH/?config=config_ADRH_2023.json&showLayers=ADRH_2023_Renta_media_por_hogar_cache&level=5
 

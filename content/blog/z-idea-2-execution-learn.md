@@ -14,7 +14,18 @@ What is learning?
 
 **Intro**
 
-Innovate, imitate or stay incompetent?
+Context windows and context rotting is a thing.
+
+* https://github.com/simon125
+
+> MIT | Ralph is an autonomous AI agent loop that runs repeatedly until all PRD items are complete.
+
+PRDs? where have I heard about thos?
+
+* https://www.atlassian.com/agile/product-management/requirements
+* PRD/BRD/FRD
+
+Innovate, imitate or... stay incompetent?
 
 ---
 
