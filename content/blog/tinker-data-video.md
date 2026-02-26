@@ -182,6 +182,8 @@ flowchart LR
 
 ## Physics
 
+How about 3 bodies?
+
 ### Mechanism
 
 {{< youtube "2xMOxiRz6F4" >}}

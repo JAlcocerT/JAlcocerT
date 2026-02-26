@@ -17,6 +17,8 @@ What is learning?
 Context windows and context rotting is a thing.
 
 * https://github.com/simon125
+* https://github.com/snarktank/ralph
+* https://github.com/trailofbits/claude-code-devcontainer
 
 > MIT | Ralph is an autonomous AI agent loop that runs repeatedly until all PRD items are complete.
 

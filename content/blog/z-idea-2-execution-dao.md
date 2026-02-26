@@ -1,6 +1,6 @@
 ---
 title: "Are agents and DAOs the inevitable future?"
-date: 2026-02-26T07:00:21+01:00
+date: 2026-02-23T07:00:21+01:00
 #date: 2026-02-28T07:00:21+01:00
 draft: false
 tags: ["Crypto","LLMs","Gresham","Cinematic Landing Prompt","Ikigai"]
@@ -123,6 +123,36 @@ Are we ready for destruction creative?
 It doesnt really matter.
 
 ![dont cry for me](/blog_img/memes/barney.gif)
+
+This is coming also for data engineers, which might be moving forward for architectural roles:
+
+```sh
+git clone https://github.com/JAlcocerT/selfhosted-landing
+cd y2026-tech-talks/3-genbi-langchain
+#npm run dev 
+```
+
+* https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/
+
+```sh
+git clone https://github.com/Canner/WrenAI.git
+#https://github.com/JAlcocerT/WrenAI
+cd WrenAI/docker
+cp .env.example .env
+docker-compose up -d
+```
+
+
+![alt text](/blog_img/AIBI/wrenai-sources.png)
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="NEW - LangChain x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Wrapping LangChain DB Queries into a custom UI to get insights" >}}
+{{< /cards >}}
+
+```sh
+git clone https://github.com/JAlcocerT/langchain-db-ui
+```
 
 #### Crypto and DAO
 

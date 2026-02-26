@@ -855,6 +855,8 @@ A certain Negative cash flow year one then...uncertainty
 
 22. An endless cup can never be filled 
 
+23. Innovate, imitate or... stay incompetent?
+
 #### Open Questions
 
 * Whats freedom?: Possibility of acting or the absence of obstacles?

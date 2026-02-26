@@ -167,6 +167,10 @@ Or the *From Business focused to Makers - Agentic BI Development*
 
 Or...the spec-driven development guide: *all about the role, context, task, with up to date superpowers.*
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="Example - LangChain x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Wrapping LangChain DB Queries into a custom UI to get insights" >}}
+{{< /cards >}}
+
 The idea is to show non tech business users couple success examples.
 
 Let’s explore the core principles that make AI your powerful and safe teammate: **the AI mindset**

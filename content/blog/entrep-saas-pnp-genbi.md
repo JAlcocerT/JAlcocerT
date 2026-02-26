@@ -201,7 +201,6 @@ Now, time to continue where I left the repository: *yes, its going to be the sam
 
 ```sh
 git clone https://github.com/JAlcocerT/langchain-db-ui
-
 ```
 
 I got couple of ideas on how to do this.
