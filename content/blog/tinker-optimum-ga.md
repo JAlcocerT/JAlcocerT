@@ -41,23 +41,23 @@ It should be the **Control Inputs**.
 
 This makes the result "real."
 
-What's Happening in Gen 0: The ga_converter.py converts gradient results to steering/pedal:
+What's Happening in Gen 0: The `ga_converter.py` converts gradient results to steering/pedal:
 
 Goes off-track → fitness = 100s penalty + remaining distance ≈ 1000s+
 
 What WILL Happen: the GA will learn from scratch:
 
-Gen 1-10: Random mutations stumble upon "stay on track" strategies
-Gen 10-30: Evolution finds basic control patterns that complete laps
-Gen 30-100: Refinement toward optimal ~80s
+* Gen 1-10: Random mutations stumble upon "stay on track" strategies
+* Gen 10-30: Evolution finds basic control patterns that complete laps
+* Gen 30-100: Refinement toward optimal ~80s
+
 The gradient seeds aren't helping much due to the physics mismatch, but that's OK - the GA will evolve its own solution! 🧬
 
 Let it run - you should see improvement soon!
 
-
 ### The initial genes
 
-From...the gradient seeds!
+From...the [gradient](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) seeds!
 
 ```sh
 cd 1-pointmass-lap-gradient-based/

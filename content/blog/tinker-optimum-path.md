@@ -94,7 +94,11 @@ Option A: Minimum Curvature Path (MCP)
 
 * **Hypothesis:** The fastest way is the "smoothest" way (maximizing radius), hence with higher speed throughout the corner and better grip utilization.
 * **Pros:** Mathematically elegant; very fast to solve; much better than a centerline.
-* **Cons:** Ignores the "Late Apex" advantage. It treats a 10m straight and a 100m straight the same way.
+* **Cons:** Ignores the "Late Apex" advantage. It treats a 10m straight and a 100m straight the same way, which is not true!
+
+<!-- https://youtu.be/6IAm_-uQpn4 -->
+
+{{< youtube "6IAm_-uQpn4" >}}
 
 Option B: Late Apex (Momentum/Time Bias)
 

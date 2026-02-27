@@ -102,17 +102,15 @@ The moment of truth.
 
 If you are delivering services, you better be excellent at them.
 
+You can become excepcionally good by bringing knowledge from the future, to today:
+
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting 121 - Tier of Service" >}}
 {{< /cards >}}
 
-
-
 ---
 
-
 ## FAQ
-
 
 ### Back Propagation vs Human Brain
 
@@ -120,7 +118,9 @@ With gradient descent we can do cool stuff.
 
 What in particular?
 
-Figuring out a model to get the best route for karting
+{{< youtube "3A6fIKeBTRo" >}}
+
+Like...Figuring out a model to get the best route for karting tracks
 
 > Mind the hypothesis!
 
@@ -189,8 +189,6 @@ Ask:
 *   What are the data refresh requirements? (real-time, daily, weekly)
 *   Are there any data quality or data governance constraints?
 
-
-
 **5. Explore the Desired User Experience (UX)**
 
 What users *see* and *interact with*.
@@ -203,7 +201,6 @@ Ask:
 *   What devices will be used? (desktop, mobile, wall monitor)
 *   Should users export data/reports?
 
-
 **6. Identify Security & Access Requirements**
 
 Important in most organizations.
@@ -214,8 +211,6 @@ Ask:
 *   Are there role‑based visibility differences?
 *   Should any data be restricted or anonymized?
 
-
-
 **7. Establish Technical & Operational Requirements**
 
 Ask:
@@ -225,8 +220,6 @@ Ask:
 *   Performance expectations? (load time, max data volume)
 *   Do we need versioning or audit logs?
 
-
-
 **8. Validate with Examples**
 
 Ask the stakeholder:
@@ -235,7 +228,6 @@ Ask the stakeholder:
 *   What dashboards do you currently use, and what do you like/dislike about them?
 
 This speeds up alignment.
-
 
 ⭐ **Must‑Ask Questions (Cheat Sheet)**
 
@@ -275,7 +267,5 @@ This speeds up alignment.
 17. When is the dashboard needed?
 18. Who maintains it after delivery?
 19. How often will requirements change?
-
-***
 
 # Want me to create a **requirements checklist**, **interview script**, or a **dashboard requirements document template** for you?

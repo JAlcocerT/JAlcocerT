@@ -17,9 +17,6 @@ url: 'chaos-theory-and-the-double-pendulum-with-python'
 math: true
 ---
 
-<!-- N95 vs iphone
-https://forocoches.com/foro/showthread.php?t=995246 -->
-
 <!-- # Chaos Theory: Understanding Non-Linearity with Python -->
 
 It became a dream of mine to encapsulate the wonder of **Chaos Theory into something tangible**, something that wasn't confined to the pages of a physics textbook.

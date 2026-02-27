@@ -7,11 +7,13 @@ description: 'LOGTO vs (Traefik + TinyAuth) Authentication Setup. Together with 
 url: 'testing-tinyauth'
 ---
 
-**TL;DR** Getting Traefik v3.3 to work reliably and plugging [TinyAuth with GH auth](#traefik-x-tinyauth-x-flask)
+**TL;DR** 
+
+Getting Traefik v3.3 to work reliably and plugging [TinyAuth with GH auth](#traefik-x-tinyauth-x-flask)
 
 **Intro**
 
-I was having a look to https://selfh.st/newsletter/2025-02-07/ and found out about **TinuAuth**
+I was having a look to https://selfh.st/newsletter/2025-02-07/ and found out about **TinyAuth**
 
 Which seems to integrate with https services and provide an **auth layer**:
 
@@ -369,6 +371,14 @@ Traefik has been a really interesting setup, what I liked:
 4. The rabbithole of middlewares...like for Authentication purpuses (as we will see below with [TinyAuth](#traefik-x-tinyauth-x-flask))
 
 With Traefik working, its time to combine it with a sample Flask Web App and **Tinyauth**
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies/" title="NEW ThreeBodies Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
+```sh
+git clone https://github.com/JAlcocerT/ThreeBodies
+```
 
 ### Traefik x TinyAuth x Flask
 

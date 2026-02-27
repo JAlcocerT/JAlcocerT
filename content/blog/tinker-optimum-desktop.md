@@ -98,26 +98,26 @@ Want to build something similar?
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Reach out via my Consulting Service Tier and Calendar" >}}
 {{< /cards >}}
 
-The time spent in building can calm the stress by the upcoming F1:
+The time spent in building can calm the stress by the upcoming F1 season:
 
 * https://github.com/JAlcocerT/f1-race-replay
 
 ### Learnt with The ApexSim Concept
 
-
 For the pure animation part, you can make assumptions and model a faster path for next sessions.
 
 ```sh
-#git clone
+git clone https://github.com/JAlcocerT/optimum-path
 
 ```
 
-You can try different models and see what works best for you: *min curvature wont be the fastest!*
+You can try different models and see what works best for you: *[see how](https://youtu.be/6IAm_-uQpn4) min curvature wont be the fastest!*
 
 ![Min Curv Path Speed distribution](/blog_img/karting/min_curvature_performance_viz.png)
 
+[Gradient descent based](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) can possibly surprise you:
 
-{{< youtube "ctfGunPZwJ4" >}}
+{{< youtube "3A6fIKeBTRo" >}}
 
 {{< youtube "ctfGunPZwJ4" >}}
 
@@ -139,7 +139,9 @@ How **GA (Genetic Algorithms)** and **RL (Reinforcement Learning)** store their 
 
 While a GA uses "survival of the fittest" (random mutation and crossover) to find the best chromosome, Gradient Descent uses **calculus** to find the fastest way "downhill" to the lowest error.
 
-Imagine you are standing on a rugged mountain in a thick fog. You want to reach the very bottom of the valley (the **Minimum Error** or **Maximum Reward**).
+Imagine you are standing on a rugged mountain in a thick fog. 
+
+You want to reach the very bottom of the valley (the **Minimum Error** or **Maximum Reward**).
 
 1. **The Gradient:** You can’t see the valley, but you can feel the slope under your boots. The "Gradient" is simply the direction and steepness of that slope.
 2. **The Descent:** You take a step in the direction that goes down the most.

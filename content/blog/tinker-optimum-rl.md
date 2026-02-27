@@ -11,7 +11,7 @@ math: true
 
 **Tl;DR**
 
-In RL, the model doesn't learn a "sequence" like the GA.
+In RL, the model doesn't learn a "sequence" [like the GA does](https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/).
 
 It learns a **Policy**.
 
@@ -190,7 +190,11 @@ In RL, you are evolving a **Function**.
 
 Since your goal is to **estimate the fastest lap time** for a specific track using your CSV data:
 
-**Stick with the GA (or your current Gradient-based solver).** **Why?** Because you don't need the kart to be "smart." You just need it to be **fast**. 
+**Stick with the GA (or your current Gradient-based solver).** 
+
+Why?
+
+Because you don't need the kart to be "smart." You just need it to be **fast**. 
 
 A GA chromosome is much better at squeezing out that last 0.001s of lap time because it can optimize the entry into Turn 1 without affecting how it handles Turn 10. 
 

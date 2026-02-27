@@ -14,6 +14,14 @@ JHub is great. Is there [anything else](#different-ways-to-jhub)?
 
 Data -> Decision -> Delivery
 
+Speed matters
+
+- **Apache DevLake** = DevOps/SDLC Analytics & Metrics
+- **Delta Lake** = Data Storage Layer for Data Lakes
+
+> https://devlake.apache.org/docs/Metrics/DeploymentFrequency/
+
+
 **Intro**
 
 Your career might have started with MySQL and Dbeaver.

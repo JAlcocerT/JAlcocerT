@@ -71,6 +71,8 @@ You just wont get real time speeds to get the track references right.
 
 ### Karts x Optimal Track Models
 
+{{< youtube "3A6fIKeBTRo" >}}
+
 
 ## Real Estate
 
@@ -90,6 +92,8 @@ Asking questions is important.
 Because inside the questions we have implicit hypothesis, not only in the answers.
 
 So: which explanation do we give to the rising housing prices ($/m2)?
+
+{{< youtube "lRIWm1oQI54" >}}
 
 Before that, lets look how housing prices are changing per region and time.
 
@@ -137,6 +141,10 @@ Plus you can get some insights in between the noise: *does it really matter when
 
 Or is it just about getting started?
 
+In case you thought the volatility was because of ~2010, let me show you that is just because of the beginnings:
+
+Again: *do we have to just start?*
+
 ```mermaid
 flowchart LR
     %% Styles
@@ -179,14 +187,26 @@ flowchart LR
 =GOOGLEFINANCE("INDEXCBOE:IRX")/1000
 ```
 
+5. Whats going on with software? `IGV` tells us
+
 
 ## Physics
 
 How about 3 bodies?
 
+```sh
+https://github.com/JAlcocerT/ThreeBodies/
+```
+
+
 ### Mechanism
 
 {{< youtube "2xMOxiRz6F4" >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Animations as a Code | Post" image="/blog_img/mechanics/fourbarlinkage.gif" subtitle="Mechanism Animation" >}}
+{{< /cards >}}
+
 
 ---
 

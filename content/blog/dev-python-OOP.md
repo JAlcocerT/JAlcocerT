@@ -92,7 +92,9 @@ Let's dive into Object-Oriented Programming (OOP).
 
 **What is OOP?**
 
-OOP is a programming paradigm (a style of programming) that revolves around the concept of "objects." Instead of focusing purely on functions and procedures, OOP organizes code into reusable, self-contained units that represent real-world entities or abstract concepts.
+OOP is a programming paradigm (a style of programming) that revolves around the concept of "objects."
+
+Instead of focusing purely on functions and procedures, OOP organizes code into reusable, self-contained units that represent real-world entities or abstract concepts.
 
 **Key Concepts:**
 
@@ -578,9 +580,9 @@ How about creating couple of examples Python app that apply OOP?
 
 I wanted to combine couple things:
 
-1. My old pendulum repo
+1. My old [pendulum repo](https://github.com/JAlcocerT/Py_Double_Pendulum) and [post](https://jalcocert.github.io/JAlcocerT/chaos-theory-and-the-double-pendulum-with-python/)
 2. Theo boilerplate: https://github.com/t3-oss/create-t3-app *The best way to start a full-stack, typesafe Next.js app*
-3. COmbined with the latest prompt for cool UIs tested on this post and [this repo](https://github.com/JAlcocerT/btc-powerlaw)
+3. Combined with the latest prompt for cool UIs tested on this post and [this repo](https://github.com/JAlcocerT/btc-powerlaw)
 3. Leveling up the physics
 
 {{< youtube "T58lGKREubo" >}}
@@ -611,10 +613,10 @@ git init && git add . && git commit -m "Initial commit: oop pendulum" && gh repo
 
 ### Three Bodies
 
-The initial 3 bodies web app I created last year was nice:
+The [initial 3 bodies web app](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#conclusions) I created last year was nice:
 
 ```sh
-git clone https://github.com/JAlcocerT/Slider-Crank
+git clone https://github.com/JAlcocerT/ThreeBodies/
 
 ```
 

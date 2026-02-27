@@ -1,6 +1,6 @@
 ---
 title: "F1 Data Animations"
-date: 2026-03-06
+date: 2026-02-28
 draft: false
 tags: ["Telemetry x Racing","F1 x PolyMarket","Landing CRO"]
 description: 'A landing and f1 data. How will you ever want to leave such site?'
@@ -135,7 +135,7 @@ https://youtube.com/shorts/BVqQdhvKe5o
 
 And this is not a debate whether making drivers race with less dispair cars is good or not.
 
-Neither if F1 should be similar to e-f1.
+Neither if F1 should be similar to e-f1...or just going close to the limit each lap.
 
 ### About Unfolding Data
 

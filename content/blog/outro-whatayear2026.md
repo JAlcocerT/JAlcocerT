@@ -7,6 +7,8 @@ description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
 
+<!-- N95 vs iphone
+https://forocoches.com/foro/showthread.php?t=995246 -->
 
 **TL;DR**
 
@@ -584,7 +586,7 @@ It all started with the *Optimum Path* Idea.
 
 Then I put together a repo that leveraged the existing Go Pro extraction / overlays to get the circuit path.
 
-And tinkered with few algorithms to optimize the path: minimum curvature (obviously not the fastest), a [GD with a mass point model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) that brought very interesting results, plus the [Genetic Algorithm](https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/) and [Reinforced Learning](https://jalcocert.github.io/JAlcocerT/reinforce-learning-racing-simulator/) (for fun!).
+And tinkered with few algorithms to optimize the path: [minimum curvature](https://youtu.be/6IAm_-uQpn4) (obviously not the fastest), a [GD with a mass point model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) that brought very interesting results, plus the [Genetic Algorithm](https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/) and [Reinforced Learning](https://jalcocert.github.io/JAlcocerT/reinforce-learning-racing-simulator/) (for fun!).
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
@@ -610,7 +612,6 @@ Surprise, surprise: simple mode + realistic assumptions wins the day
 git clone https://github.com/JAlcocerT/eda-f1
 cd eda-f1
 uv run f1_q3_short.py #Interactive Q3 animation video (15s Short)
-
 ```
 
 
@@ -640,7 +641,7 @@ uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePo
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
-  {{< card link="https://gitlab.com/fossengineer1/unfolding-data" title="Unfolding Data | NEW Repo" icon="github" >}}
+  {{< card link="https://gitlab.com/fossengineer1/unfolding-data" title="Unfolding Data | NEW Repo with all my animations to date" icon="github" >}}
 {{< /cards >}}
 
 
