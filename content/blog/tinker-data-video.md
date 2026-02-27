@@ -195,7 +195,7 @@ flowchart LR
 How about 3 bodies?
 
 ```sh
-https://github.com/JAlcocerT/ThreeBodies/
+git clone https://github.com/JAlcocerT/ThreeBodies/
 ```
 
 

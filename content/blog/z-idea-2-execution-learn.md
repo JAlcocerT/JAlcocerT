@@ -30,8 +30,15 @@ PRDs? where have I heard about thos?
 
 Innovate, imitate or... stay incompetent?
 
----
+Are you one of those that choses stay incompotent, because learning and doing is just getting easier?
 
+Like, I could have skipped doing all those astro clones and directly vibe coded with [this cool UI prompt](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)
+
+But...have you ever tried?
+
+How much deflation is enough?
+
+---
 
 ## Conclusions
 

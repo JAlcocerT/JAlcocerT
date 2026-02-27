@@ -622,7 +622,15 @@ git clone https://github.com/JAlcocerT/ThreeBodies/
 
 But it was more a quick example to try tiny auth and logto.
 
-Now, how about creating another quick PoC around tat physics, but with a better looking UI and OOP?
+Now, how about creating another quick PoC around tat physics, but with [a better looking UI](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders) and OOP?
+
+```md
+do you understand the current three bodies web app?
+
+can you have a look to GEMINI.md and tell me if we could re-use current logic of python for the backend and bring to a cinematic landing page the three body problem described and animated?
+
+in a landing + webapp format where people would love to learn abou it
+```
 
 ```sh
 #sudo apt install gh
