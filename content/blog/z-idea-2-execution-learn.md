@@ -16,6 +16,7 @@ What is learning?
 
 Context windows and context rotting is a thing.
 
+* https://github.com/thedotmack/claude-mem
 * https://github.com/simon125
 * https://github.com/snarktank/ralph
 * https://github.com/trailofbits/claude-code-devcontainer

@@ -78,7 +78,9 @@ And Gemini 3.1 takes it to the next level.
 
 Will this stop been a joke? 
 
-No. In fact...
+No. 
+
+In fact...
 
 * https://www.pencil.dev/ - You can  now define pixel perfect UIs as a Code in your repository
 * https://www.reddit.com/r/ClaudeAI/comments/1q403xw/claude_code_for_noncoding_projectswork_a_complete/
@@ -139,9 +141,10 @@ git clone https://github.com/Canner/WrenAI.git
 #https://github.com/JAlcocerT/WrenAI
 cd WrenAI/docker
 cp .env.example .env
-docker-compose up -d
+## Update the OPENAI_API_KEY value in docker/.env
+sed -i 's/^OPENAI_API_KEY=.*/OPENAI_API_KEY=sk-proj-whaaaatever/' docker/.env
+docker compose up -d #http://localhost:3000/setup/connection
 ```
-
 
 ![alt text](/blog_img/AIBI/wrenai-sources.png)
 
@@ -152,6 +155,9 @@ docker-compose up -d
 
 ```sh
 git clone https://github.com/JAlcocerT/langchain-db-ui
+make help
+echo "OPENAI_API_KEY=sk-proj-whatever" > .env
+#make docker-up #go to localhost:5173
 ```
 
 #### Crypto and DAO
@@ -257,6 +263,7 @@ The so called the order books: an ever evolving match between buyers and sellers
 
 > YANTR is a cross-platform Docker App Store that makes server-grade self-hosting easy and flexible. It gives you ready-to-run apps — from Bitcoin nodes to file converters and privacy tools — all in lightweight Docker containers.
 
+* https://btcmempool.org/
 * https://dune.com/home
 * https://defillama.com/yields?project=Aave%20V3
 * https://aavescan.com/ethereum-v3/usdc
