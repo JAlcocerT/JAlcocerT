@@ -38,7 +38,10 @@ Or a sneek into the future on how cheap*er* information will be.
   {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-f1 Github ↗" icon="github" >}}
 {{< /cards >}}
 
+```sh
+#git clone
 
+```
 
 ### Kart On Boards
 
