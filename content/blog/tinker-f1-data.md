@@ -48,7 +48,6 @@ Lets build some data stories that can *potentially* be more interesting than rac
 
 ### The Data
 
-
 * https://github.com/IAmTomShaw/f1-race-replay 
     * https://github.com/JAlcocerT/f1-race-replay
 

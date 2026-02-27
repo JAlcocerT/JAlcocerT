@@ -275,14 +275,14 @@ sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml logs 
 
 > If you are looking for other Selfhosted DNS, see: GoAdblock
 
-https://blog.foxxmd.dev/posts/redundant-lan-dns/
+* https://blog.foxxmd.dev/posts/redundant-lan-dns/
 
 Pi-Hole can even be running into lower power SBCs
 
 {{< youtube "IapRcHzIFZ0" >}}
 
 
-https://awesome-docker-compose.com/apps/dns
+* https://awesome-docker-compose.com/apps/dns
 
 <!-- https://www.youtube.com/@TokinPrivacy/videos
 

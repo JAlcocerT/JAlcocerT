@@ -1,9 +1,9 @@
 ---
 title: "Just Data Animations"
-date: 2026-03-07
+date: 2026-02-28
 draft: false
 tags: ["Telemetry x F1 vs Kart","Geo x Statistics","YFinance","Real Estate","Mechanism x MBSD"]
-description: 'Unfolding Data this time with some order and gitlab x Roo x Zed.'
+description: 'Unfolding Data this time with some order. WIth gitlab x Roo x Zed.'
 url: 'ai-scripts-and-animated-data'
 ---
 
@@ -51,7 +51,7 @@ Uploading you action cam session is nice.
 
 Specially when you use ffmpeg to join parts and ship fast.
 
-But you can also create overlay HUDs with data from GoPro GPS and accelerometer
+But you can also create **overlay HUDs** with data from GoPro GPS and accelerometer
 
 ```sh
 #git clone
@@ -66,14 +66,8 @@ No need to overcomplicate it with PhyPhox as your action cam already detects 3 a
 
 You just wont get real time speeds to get the track references right.
 
-And for pure animation part, you can make assumptions and model a faster path for next sessions:
+### Karts x Optimal Track Models
 
-```sh
-#git clone
-
-```
-
-{{< youtube "ctfGunPZwJ4" >}}
 
 ## Real Estate
 
@@ -114,6 +108,9 @@ Maybe other factors like: *ease of credit have sth to do?*
 Specially for those booms?
 
 Just asking: bring your own theory of how the world works here
+
+## Geospatial
+
 
 
 ## Financial Data x YFinance
@@ -203,6 +200,8 @@ Or in other words, how good are you at making questions.
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
 {{< /cards >}}
 
+Roo code extension has been interesting to use together with OpenAI API.
+
 
 ### About Gitlab
 
@@ -230,3 +229,18 @@ glab repo create my-awesome-project --public
 | **HTTPS** | Certificates & Handshakes | AES |
 
 When doing some scripts, lately I have tried `Roo Code` extension and Zed: `https://zed.dev/pricing`
+
+---
+
+## FAQ
+
+* https://github.com/GPSBabel/gpsbabel
+
+>  GPSBabel: convert, manipulate, and transfer data from GPS programs or GPS receivers. Open Source and supported on MacOS, Windows, Linux, and more. Pointy clicky GUI or a command line version... 
+
+
+### PhyPhox
+
+* You can also save GPS data thanks to the [F/OSS PhyPhox](https://github.com/phyphox/phyphox-android) - An app that allow us to use phone's sensors for physics experiments:
+  * Also available for [ESP32 with micropython](https://github.com/phyphox/phyphox-micropython)
+  * And [for the Arduino microcontroller](https://github.com/phyphox/phyphox-arduino)

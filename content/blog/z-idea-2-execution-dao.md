@@ -142,12 +142,10 @@ cp .env.example .env
 docker-compose up -d
 ```
 
-
 ![alt text](/blog_img/AIBI/wrenai-sources.png)
 
-
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="NEW - LangChain x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Wrapping LangChain DB Queries into a custom UI to get insights" >}}
+  {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Wrapping LangChain DB Queries into a custom UI to get insights" >}}
 {{< /cards >}}
 
 ```sh

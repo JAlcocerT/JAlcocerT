@@ -13,29 +13,24 @@ math: true
 
 In RL, the model doesn't learn a "sequence" like the GA.
 
-It learns a **Policy ()**.
-
+It learns a **Policy**.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
 
+
+**Intro**
+
+To compare **Genetic Algorithms (GA)** and **Reinforcement Learning (RL)** for the optimum karting project
+
+it helps to see them as two different ways to solve the same mystery: **"What is the fastest way around this track?"**
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Py Route Tracker ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
 {{< /cards >}}
-
-<!-- 
-https://youtu.be/-fY5OpiBNjI
--->
-
-{{< youtube "-fY5OpiBNjI" >}}
-
-
-**Intro**
-
-To compare **Genetic Algorithms (GA)** and **Reinforcement Learning (RL)** for your karting project, it helps to see them as two different ways to solve the same mystery: **"What is the fastest way around this track?"**
 
 While both will eventually find a fast lap, the process and the "final product" they produce are very different.
 
@@ -51,7 +46,9 @@ While both will eventually find a fast lap, the process and the "final product" 
 
 2. How they handle the G-G Ellipse
 
-This is where the math gets interesting for your **AMD 5600G** implementation. Both must respect your **1.0g (lat) / 0.5g (brk) / 0.4g (acc)** limits, but they "feel" them differently.
+This is where the math gets interesting for your **AMD 5600G** implementation.
+
+Both must respect your **1.0g (lat) / 0.5g (brk) / 0.4g (acc)** limits, but they "feel" them differently.
 
 The GA Approach: The "Physics Filter"
 
@@ -73,9 +70,11 @@ In RL, the agent "feels" the G-load through its *,sensors'*.
 
 ## The RL Specifics
 
-To answer simply: **Yes**, both require specific inputs, but they look at those inputs through different lenses.
+Both models require specific inputs, but they look at those inputs through different lenses.
 
-For the **GA**, your "inputs" are the **instructions** for the lap. For **RL**, your "inputs" are the **senses** the agent uses to drive.
+For the **GA**, your "inputs" are the **instructions** for the lap.
+
+For **RL**, your "inputs" are the **senses** the agent uses to drive.
 
 ```sh
 cd 3-pointmass-rl && python3 kart_env.py
@@ -93,7 +92,9 @@ The Genetic Algorithm doesn't "see" the track in real-time; it just follows a sc
 
 ### 2. Data Requirements for RL (The "Sensors")
 
-The RL agent doesn't need a "script" of the lap. It needs to know its **State** at every millisecond so it can make a decision. This is called the **Observation Space**:
+The RL agent doesn't need a "script" of the lap.
+
+It needs to know its **State** at every millisecond so it can make a decision. This is called the **Observation Space**:
 
 | Input Category | Specific Data Points |
 | --- | --- |
@@ -102,7 +103,12 @@ The RL agent doesn't need a "script" of the lap. It needs to know its **State** 
 | **Look-Ahead** | The curvature of the track 10m, 20m, and 50m ahead. (This is how the AI "sees" a corner coming). |
 
 **Do you need "Training Data" for RL?**
-No. Unlike a typical AI that learns from photos, an RL agent learns by **interacting** with your physics engine. You don't give it a log of a pro driver; you give it a **Reward Function** (e.g., `+1` point for every meter traveled, `-100` points for hitting a wall).
+
+No.
+
+Unlike a typical AI that learns from photos, an **RL agent learns by interacting** with your physics engine.
+
+You don't give it a log of a pro driver; you give it a **Reward Function** (e.g., `+1` point for every meter traveled, `-100` points for hitting a wall).
 
 ### 3. Summary of "Inputs"
 
@@ -116,14 +122,9 @@ Which one should you build first?
 
 If you want to use the **track limits (CSV)** you already have, the **GA** is much easier to set up because you are just optimizing a "shape" (the sequence of inputs).
 
-For **RL**, you would have to build a "Gym Environment"—essentially a mini-game where the AI can reset every time it crashes. This takes more coding "plumbing" before you see any results.
+For **RL**, you would have to build a "Gym Environment"—essentially a mini-game where the AI can reset every time it crashes. 
 
-**Would you like me to generate the "Observation Space" logic in Python for the RL version, or should we stick to the GA "Chromosome" structure first?**
-
-
-To answer simply: **Yes**, both require specific inputs, but they look at those inputs through different lenses.
-
-For the **GA**, your "inputs" are the **instructions** for the lap. For **RL**, your "inputs" are the **senses** the agent uses to drive.
+This takes more coding "plumbing" before you see any results.
 
 
 ---
@@ -132,8 +133,17 @@ For the **GA**, your "inputs" are the **instructions** for the lap. For **RL**, 
 
 I didnt manage to bring a complete lap for both GA nor RL setups.
 
-But this was quite interesting anyways.
+But this was quite interesting anyways:
 
+* For the **GA**, your "inputs" are the **instructions** for the lap. 
+* For **RL**, your "inputs" are the **senses** the agent uses to drive.
+
+
+<!-- 
+https://youtu.be/-fY5OpiBNjI
+-->
+
+{{< youtube "-fY5OpiBNjI" >}}
 
 ### RL Compared to GA
 
@@ -141,9 +151,13 @@ That is the fundamental distinction between the two.
 
 You have isolated the "memory" of the system in both cases:
 
-* **GA (Genetic Algorithm):** The memory is the **Chromosome**. It is a fixed "tape" of commands. If the kart is at 50 meters, the GA looks at "Slot 50" on the tape and executes that specific steering and pedal % regardless of what is happening.
+1. **GA (Genetic Algorithm):** The memory is the **Chromosome**.
 
-* **RL (Reinforcement Learning):** The memory is the **Neural Network**. It is a set of "synapses" (weights). The AI looks at its current speed and the track, and the network "fires" to decide the best steering and pedal % based on the situation.
+It is a fixed "tape" of commands. If the kart is at 50 meters, the GA looks at "Slot 50" on the tape and executes that specific steering and pedal % regardless of what is happening.
+
+2. **RL (Reinforcement Learning):** The memory is the **Neural Network**. It is a set of "synapses" (weights).
+
+The AI looks at its current speed and the track, and the network "fires" to decide the best steering and pedal % based on the situation.
 
 1. The GA Chromosome (A "Static Script")
 
@@ -195,7 +209,9 @@ Whether you use a Chromosome or a Neural Network, the **Ellipse (1.0g / 0.5g / 0
 
 **Genetic Algorithm (GA) is the winner for your current goal.**
 
-Since you want to estimate the fastest lap, the GA is much more direct. You can use all 12 threads of your 5600G to run hundreds of "virtual karts" in parallel.
+Since you want to estimate the fastest lap, the GA is much more direct.
+
+You can use all 12 threads of your 5600G to run hundreds of "virtual karts" in parallel.
 
 Because a GA doesn't require a complex Neural Network to be updated every millisecond, it will likely reach the "optimal" lap time much faster than an RL agent would.
 
@@ -210,9 +226,6 @@ Many professional racing simulations actually use a **Hybrid Approach**:
 
 This gives you a driver that is as fast as the math, but as flexible as an AI.
 
-
-
-
 ### Next Steps
 
 1. A desktop app to boundle the best working optimum path seen so far. *And the HUD overlay for the mp4*.
@@ -225,7 +238,6 @@ This gives you a driver that is as fast as the math, but as flexible as an AI.
 
 >  A new, customizable Arduino NMEA parsing library 
 
-
 Put together at some point this year the MBSD simulator for good. Cool animations and mechanism synthesis *coming up?*
 
 {{< cards >}}
@@ -234,53 +246,6 @@ Put together at some point this year the MBSD simulator for good. Cool animation
 
 <!-- 
 ![Matplotlib GIF Animation of a mechanism](/blog_img/mechanics/fourbarlinkage.gif) -->
-
-
-
----
-
-
-
-## GPS RPi IoT Project - GPS Data (VK-162) with Apache Superset
-
-* <https://www.youtube.com/watch?v=Z7cJ59sixpk&t=197s>
-<https://www.youtube.com/watch?v=3ysOqliO6F8>
-
-### ToDo list
-
-- [ ] Job Done!
-  + [ ] Setup BI - Superset
-  + [ ] Hardware Checks
-  + [ ] Connecting everything
-
-<https://www.youtube.com/watch?v=Z7cJ59sixpk>
-
-### Apache Superset Setup
-
-Apache Superset is a [Free BI Web Tool](https://superset.apache.org/docs/intro/) that we can [use with our RPi projects locally](https://superset.apache.org/docs/installation/installing-superset-using-docker-compose/).
-
-
-```sh
-git clone https://github.com/apache/superset.git
-cd superset
-
-docker compose -f docker-compose-non-dev.yml up -d
-
-#git checkout 3.0.0
-#TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up
-```
-
-Then, just use Superset with its UI at: **http://localhost:8088/login/**
-
-<!-- ![Desktop View](/img/superset-working.png){: width="972" height="589" }
-_DHT22 connection to a Raspberry Pi 4_ -->
-
-*Default credentials are: admin/admin*
-
-- [ ] Job Done!
-  + [x] Setup BI - Superset
-  + [ ] Hardware Checks
-  + [ ] Connecting everything
 
 
 ### Sensors
@@ -304,23 +269,3 @@ _DHT22 connection to a Raspberry Pi 4_ -->
 * tag heuer transponders
 
 * https://www.reddit.com/r/rccars/comments/15iukhz/made_my_own_lap_timer_that_reads_mylaps/
-
----
-
-## FAQ
-
-* https://github.com/GPSBabel/gpsbabel
-
->  GPSBabel: convert, manipulate, and transfer data from GPS programs or GPS receivers. Open Source and supported on MacOS, Windows, Linux, and more. Pointy clicky GUI or a command line version... 
-
-
-### Apache Supserset DS's and API
-
-* Data Sources: <https://superset.apache.org/docs/databases/db-connection-ui>
-* API info: <https://superset.apache.org/docs/api>
-
-### PhyPhox
-
-* You can also save GPS data thanks to the [F/OSS PhyPhox](https://github.com/phyphox/phyphox-android) - An app that allow us to use phone's sensors for physics experiments:
-  * Also available for [ESP32 with micropython](https://github.com/phyphox/phyphox-micropython)
-  * And [for the Arduino microcontroller](https://github.com/phyphox/phyphox-arduino)

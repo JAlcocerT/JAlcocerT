@@ -198,9 +198,13 @@ From this point, I wanted to test how good the continuum was.
 
 #### MCP as better seed?
 
-So actually made a **side quest** to create the Minimum curvature path *but with a continuum, not a discrete circuit*
+No, not the model context protocol!
 
-The idea here is to provide a better seed for the genetic algorithm chromosome.
+This is...different.
+
+So just made a **side quest** to create the Minimum curvature path *but with a continuum, not a discrete circuit*
+
+The idea here is to provide **a better seed** for the genetic algorithm chromosome.
 
 ```sh
 #cd 0
@@ -250,7 +254,7 @@ And...it crashed at around 68m/1300m.
 
 Interesting, but if that trajectory...was smooth (?)
 
-So...given that the MCP path was smootha and i got the actions: how about creating the path that those actions create given the current physics engine?
+So...given that the MCP path was smootha and i got the actions: *how about creating the path that those actions create given the current physics engine?*
 
 ```sh
 python3 simulate_and_check_path.py
@@ -266,9 +270,12 @@ The physic engine simulator paid off.
 
 This is a fundamental physics difference - it models power-limited acceleration (like a real engine) rather than force-limited acceleration.
 
-After getting inspired by
+I got inspired by:
 
-https://www.youtube.com/watch?v=60FV5vpZYPQ
+<!-- https://www.youtube.com/watch?v=60FV5vpZYPQ -->
+
+{{< youtube "60FV5vpZYPQ" >}}
+
 
 and its code https://github.com/kleberandrade/evolve-kart-unity
 
@@ -293,6 +300,7 @@ Cubic splines use many small cubic polynomials connected smoothly
 Key difference:
 
 Taylor: $f(x) = a_0 + a_1x + a_2x^2 + a_3x^3 + ...$ (one polynomial, many terms)
+
 Cubic Spline: Many cubic polynomials $p_i(s) = a_i + b_is + c_is^2 + d_is^3$ connected at "knots"
 
 Why splines are better for tracks:

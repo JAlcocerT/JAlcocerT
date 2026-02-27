@@ -201,6 +201,10 @@ https://youtu.be/81wY9E29x-E
 
 Im **impressed** on how a simple model can provide realistic results.
 
+A point with all the mass of the kart and the driver.
+
+Some Newton and G-circle...and the gradient descent does the trick.
+
 ### The results
 
 After few iterations to get the components rendered in a nicer way:

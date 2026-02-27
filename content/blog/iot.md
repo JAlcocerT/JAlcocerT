@@ -563,3 +563,52 @@ HOWTO Raspberry Pi + LCD 16x2 i2c
 
 
 https://github.com/the-raspberry-pi-guy/lcd
+
+
+---
+
+## GPS RPi IoT Project - GPS Data (VK-162) with Apache Superset
+
+* <https://www.youtube.com/watch?v=Z7cJ59sixpk&t=197s>
+<https://www.youtube.com/watch?v=3ysOqliO6F8>
+
+### ToDo list
+
+- [ ] Job Done!
+  + [ ] Setup BI - Superset
+  + [ ] Hardware Checks
+  + [ ] Connecting everything
+
+<https://www.youtube.com/watch?v=Z7cJ59sixpk>
+
+### Apache Superset Setup
+
+Apache Superset is a [Free BI Web Tool](https://superset.apache.org/docs/intro/) that we can [use with our RPi projects locally](https://superset.apache.org/docs/installation/installing-superset-using-docker-compose/).
+
+
+```sh
+git clone https://github.com/apache/superset.git
+cd superset
+
+docker compose -f docker-compose-non-dev.yml up -d
+
+#git checkout 3.0.0
+#TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up
+```
+
+Then, just use Superset with its UI at: `http://localhost:8088/login/`
+
+<!-- ![Desktop View](/img/superset-working.png){: width="972" height="589" }
+_DHT22 connection to a Raspberry Pi 4_ -->
+
+*Default credentials are: admin/admin*
+
+- [ ] Job Done!
+  + [x] Setup BI - Superset
+  + [ ] Hardware Checks
+  + [ ] Connecting everything
+
+#### Apache Supserset DS's and API
+
+* Data Sources: <https://superset.apache.org/docs/databases/db-connection-ui>
+* API info: <https://superset.apache.org/docs/api>

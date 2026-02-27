@@ -246,3 +246,19 @@ uv run animate_dk_pop_delta.py
 uv run animate_dk_pop_pct.py
 uv run animate_dk_pop_pct_ytshort.py
 ```
+
+
+### Selfhosted GPX?
+
+As you might know, [gpx is great](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#gpx-is-great).
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+* https://github.com/tess1o/geopulse
+
+tess1o/geopulse: A self-hosted, privacy-first location tracking platform. The perfect open-source alternative to Google Timeline with automatic trip detection, Immich integration, and detailed analytics.
+
+* https://github.com/itskovacs/trip
