@@ -27,8 +27,6 @@ I was trying for long to avoid such concept.
 
 But not any more.
 
-
-
 * https://mermaid.js.org/syntax/classDiagram.html
 
 ```mermaid
@@ -615,9 +613,11 @@ git init && git add . && git commit -m "Initial commit: oop pendulum" && gh repo
 
 The [initial 3 bodies web app](https://jalcocert.github.io/JAlcocerT/testing-tinyauth/#conclusions) I created last year was nice:
 
+* https://burtleburtle.net/bob/physics/eight.html
+
 ```sh
 git clone https://github.com/JAlcocerT/ThreeBodies/
-
+#cd ThePoincareLab
 ```
 
 But it was more a quick example to try tiny auth and logto.
@@ -629,7 +629,7 @@ do you understand the current three bodies web app?
 
 can you have a look to GEMINI.md and tell me if we could re-use current logic of python for the backend and bring to a cinematic landing page the three body problem described and animated?
 
-in a landing + webapp format where people would love to learn abou it
+in a landing + webapp format where people would love to learn about it
 ```
 
 ```sh

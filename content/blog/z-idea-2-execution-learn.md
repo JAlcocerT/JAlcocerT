@@ -10,7 +10,13 @@ math: true
 
 **TL;DR**
 
-What is learning?
+What is learning? 
+
+[How do we learn](#back-propagation-vs-human-brain)?
+
+
+* https://app.fireflies.ai/perks
+* Perplexity and commet (from W11 only on the desktop) 
 
 **Intro**
 
@@ -79,9 +85,9 @@ flowchart LR
 
 To attract, you can use tools like `https://www.clay.com/`
 
+be aware of the value equation:
 
-
-follows the *full stack business formula* from top line, to net profit:
+and follow the *full stack business formula* from top line, to net profit of your business idea:
 
 $$
 P \times V \times GM \times OM \times IF \times T
@@ -130,6 +136,19 @@ What in particular?
 Like...Figuring out a model to get the best route for karting tracks
 
 > Mind the hypothesis!
+
+But...what is gradient descent?
+
+{{< youtube "3A6fIKeBTRo" >}}
+
+And how do we learn?
+
+<!-- 
+https://www.youtube.com/watch?v=l-OLgbdZ3kk 
+-->
+
+{{< youtube "l-OLgbdZ3kk" >}}
+
 
 ### Questions
 

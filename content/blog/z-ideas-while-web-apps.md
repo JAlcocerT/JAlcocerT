@@ -1,6 +1,6 @@
 ---
 title: "If I would have known - Web Apps edition"
-date: 2026-03-15
+date: 2026-04-01
 draft: false
 tags: ["BiP x Dev","BluePrint x BoilerPlate","N ebooks"]
 description: 'The learnings of shipping a few web/apps.'
@@ -75,6 +75,10 @@ which basically mean you learn how to aks for things to get done by algorithms c
 ---
 
 ## Conclusions
+
+Creating (supply digital products) is easier than ever.
+
+Distribution is most likely your constrain today - aka demand for what you create.
 
 
 

@@ -177,6 +177,8 @@ flowchart LR
 
 2. Nominal CAGR vs Real CAGR vs in EUR vs in GOLD
 
+https://youtu.be/ctfGunPZwJ4
+
 3. RSP vs SP500
 
 4. Prices are a reflection of future cashflows corrected by....these:
@@ -189,6 +191,10 @@ flowchart LR
 
 5. Whats going on with software? `IGV` tells us
 
+6. There are some interesting indexes: `^VIX`, `^Move`
+
+
+As someone said: you dont understand stock market if you dont understand first the bonds
 
 ## Physics
 
@@ -201,29 +207,47 @@ git clone https://github.com/JAlcocerT/ThreeBodies/
 
 ### Mechanism
 
+
+```sh
+#git clone https://github.com/JAlcocerT/Slider-Crank
+git clone https://github.com/JAlcocerT/mechanism
+
+```
+
 {{< youtube "2xMOxiRz6F4" >}}
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Animations as a Code | Post" image="/blog_img/mechanics/fourbarlinkage.gif" subtitle="Mechanism Animation" >}}
 {{< /cards >}}
 
+Synthesis is a thing...
+
+https://youtube.com/shorts/9b19b7SmovU
+
+
+https://youtube.com/shorts/ipi437M6g5A
+
+https://youtube.com/shorts/r8G3XRBn24s?is=sDOxquD4fxU6yKns
 
 ---
 
 ## Conclusions
 
-What if I told you that all these is very cheap to do nowadays?
+Roo code extension has been interesting to use together with OpenAI API.
+
+So...What if I told you that all this is very cheap to do nowadays?
 
 It is if you have the right knowledge: *part of today's know-how are [prompts](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)* 
 
 Or in other words, how good are you at making questions.
+
+Questions like the ones you can have solved:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
 {{< /cards >}}
 
-Roo code extension has been interesting to use together with OpenAI API.
 
 
 ### About Gitlab

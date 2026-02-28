@@ -137,6 +137,13 @@ And this is not a debate whether making drivers race with less dispair cars is g
 
 Neither if F1 should be similar to e-f1...or just going close to the limit each lap.
 
+<!-- 
+https://youtu.be/DCHhpNX6EYM
+ -->
+
+{{< youtube "DCHhpNX6EYM" >}}
+
+
 ### About Unfolding Data
 
 It was about time to make some use of this fantastic api.

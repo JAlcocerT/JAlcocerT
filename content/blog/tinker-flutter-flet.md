@@ -11,6 +11,8 @@ Affine and Appflowy are having web and desktop apps.
 
 not sure if those are done with flutter, but they are cool
 
+https://youtu.be/bhPHwVsrTo0
+
 **Tl;DR**
 
 Couple years ago I tried to do some Flet Apps with chatGPT, but the LLM knowledge was not there.

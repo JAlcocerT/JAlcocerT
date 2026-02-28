@@ -13,8 +13,6 @@ math: true
 
 Is this what future will look like?
 
-* https://app.fireflies.ai/perks
-* Perplexity and commet (from W11 only on the desktop) 
 
 **Intro**
 
@@ -144,6 +142,7 @@ cp .env.example .env
 ## Update the OPENAI_API_KEY value in docker/.env
 sed -i 's/^OPENAI_API_KEY=.*/OPENAI_API_KEY=sk-proj-whaaaatever/' docker/.env
 docker compose up -d #http://localhost:3000/setup/connection
+####docker stop $(docker ps -a -q) #stop all
 ```
 
 ![alt text](/blog_img/AIBI/wrenai-sources.png)
@@ -174,6 +173,14 @@ This gets crazy when we put together all previous points.
 Are we moving forward to such future?
 
 With digital employees / co-workers or even...pure digital agent driven companies?
+
+Will AGI be the last human invention?
+
+What have been so far the best human invations of all times?
+
+The ability to write, to print, control of electricity and...internet?
+
+(?)
 
 I just can say that at this point of interacting for few years with LLMs **I have more questions than answers**.
 
