@@ -80,7 +80,7 @@ With
 
 From JS we evolved to TS
 
-From regular openAI API calls, to do it via BAML
+From regular openAI API calls, to do have them [done via BAML](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#baml-x-pgsql-x-matplotlib)
 
 and from SQL, to malloy: https://github.com/malloydata/malloy
 
@@ -541,6 +541,8 @@ Simulations are back.
 But not in [matlab, nor octave](https://jalcocert.github.io/JAlcocerT/matlab-vs-octave/).
 
 For racers, see how to estimate the [**optimum circuit path** based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and gradient descent.
+
+{{< youtube "3A6fIKeBTRo" >}}
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}

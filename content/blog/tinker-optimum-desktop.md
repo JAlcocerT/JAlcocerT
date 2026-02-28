@@ -9,6 +9,7 @@ url: 'gopro-telemetry-desktop-python'
 
 **Tl;DR**
 
+Putting some racing stuff together and testing desktop apps via Python.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
@@ -119,7 +120,9 @@ You can try different models and see what works best for you: *[see how](https:/
 
 {{< youtube "3A6fIKeBTRo" >}}
 
-{{< youtube "ctfGunPZwJ4" >}}
+Both, [RL](https://jalcocert.github.io/JAlcocerT/reinforce-learning-racing-simulator/) and [GA](https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/) are cool concepts, but tricky in practice to get something solid and realistic:
+
+<!-- {{< youtube "ctfGunPZwJ4" >}} -->
 
 {{< youtube "-fY5OpiBNjI" >}}
 
@@ -176,7 +179,7 @@ I got to know about: `https://www.sodiwseries.com/es-es/tracks/`
 * Prices 70/90 pln aka 20$ per 8 min
 * Versus 45eur aka 50$ 30 min
 
-https://www.sodiwseries.com/es-es/tracks/karting-sevilla-699.html
+* https://www.sodiwseries.com/es-es/tracks/karting-sevilla-699.html
 
 <!-- https://www.youtube.com/watch?v=KyhZhERS2XE -->
 
@@ -289,7 +292,9 @@ The primary smart contract address for Polymarket on the Ethereum network is:
 
 * https://etherscan.io/address/0x0d08db747095e91780711724267a183e8522aa64
 
-Additionally, Polymarket uses proxy wallet contracts and multisig safes for user accounts, which are deployed on the Polygon network. For example, a Polymarket proxy wallet factory address on Polygon is:
+Additionally, Polymarket uses proxy wallet contracts and multisig safes for user accounts, which are deployed on the Polygon network.
+
+For example, a Polymarket proxy wallet factory address on Polygon is:
 
 0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
 

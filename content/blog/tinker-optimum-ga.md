@@ -262,6 +262,8 @@ python3 simulate_and_check_path.py
 
 ![alt text](/blog_img/karting/path_simulation_check.png)
 
+![alt text](/blog_img/karting/path_simulation_check.png)
+
 ---
 
 ## Conclusions

@@ -71,6 +71,10 @@ You just wont get real time speeds to get the track references right.
 
 ### Karts x Optimal Track Models
 
+From the tinkering around karting sessions, where I extracted GoPro GPS telemtry and play with it
+
+This has been the most practical model among the ones I tried:
+
 {{< youtube "3A6fIKeBTRo" >}}
 
 
@@ -132,7 +136,7 @@ Because its too simple and too cool to make such graphs.
 Plus you can get some insights in between the noise: *does it really matter when you start doing sth?*
 
 ```sh
-#git clone
+#git clone DataInMotion
 
 ```
 
@@ -141,9 +145,30 @@ Plus you can get some insights in between the noise: *does it really matter when
 
 Or is it just about getting started?
 
-In case you thought the volatility was because of ~2010, let me show you that is just because of the beginnings:
+In case you thought the volatility was because of ~2010
 
-Again: *do we have to just start?*
+Let me show you that is just because of beginnings being inherently volatile:
+
+<!-- 
+https://youtu.be/8sToNvTpwVQ -->
+
+{{< youtube "8sToNvTpwVQ" >}}
+
+Again: *do we have to just get started?*
+
+```sh
+uv run tests/plot_year_end_close_cagr_to_date_animated_rolling_start.py ^GSPC ^DJI ^IXIC ^N225 ^GDAXI ^FTSE --start 2005-01-01 \
+  --num-years 20 --duration-per-year 3 --fps 30 --brand "@UnfoldingData" --preset twitter_hd
+
+  uv run tests/plot_year_end_close_cagr_to_date_table.py ^GSPC ^DJI ^IXIC --start 2010-01-01 --out tests/cagr_stats_test.png
+```
+
+<!-- 
+https://youtu.be/4zE-mYMefak 
+-->
+
+{{< youtube "4zE-mYMefak" >}}
+
 
 ```mermaid
 flowchart LR
@@ -179,6 +204,12 @@ flowchart LR
 
 https://youtu.be/ctfGunPZwJ4
 
+What else does gold have to say?
+
+{{< youtube "xqtzYbHIrMo" >}}
+<!-- 
+https://youtu.be/xqtzYbHIrMo -->
+
 3. RSP vs SP500
 
 4. Prices are a reflection of future cashflows corrected by....these:
@@ -198,26 +229,39 @@ As someone said: you dont understand stock market if you dont understand first t
 
 ## Physics
 
-How about 3 bodies?
+How about...3 bodies?
 
 ```sh
 git clone https://github.com/JAlcocerT/ThreeBodies/
+#cd ThePoincareLab #for the cool webapp
+./renderer_env/bin/python3 generate_animation.py --vel 0.2 -0.2 0.2 0.2 -0.3 0.0 --duration 300.0 --output simulation3.mp4
 ```
+
+Initially, I thought about creating a separated repo.
+
+But what for, if it can be a sub-folder and use one of the latest ways to do cool UIs I have got to know:
+
+{{< youtube "b35XuJI98kI" >}}
+<!-- 
+https://youtu.be/b35XuJI98kI -->
+
 
 
 ### Mechanism
 
 
+Gabe's mechanism project was an inspiriration to me to come back at some point to mechanical engineering with python:
+
 ```sh
 #git clone https://github.com/JAlcocerT/Slider-Crank
-git clone https://github.com/JAlcocerT/mechanism
+git clone https://github.com/JAlcocerT/mechanism #this is my fork of his original project
 
 ```
 
 {{< youtube "2xMOxiRz6F4" >}}
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Animations as a Code | Post" image="/blog_img/mechanics/fourbarlinkage.gif" subtitle="Mechanism Animation" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Animations as a Code | Post" >}}
 {{< /cards >}}
 
 Synthesis is a thing...
@@ -228,6 +272,16 @@ https://youtube.com/shorts/9b19b7SmovU
 https://youtube.com/shorts/ipi437M6g5A
 
 https://youtube.com/shorts/r8G3XRBn24s?is=sDOxquD4fxU6yKns
+
+From 3 bodies you can jump to the 4 bar mechanism quite easily:
+
+
+In fact, for cinematics...you just need geometry and time. 
+
+
+Forget about forces *at least for now*
+
+The sympy and https://github.com/KmolYuan/Pyslvs-UI will be for another post :)
 
 ---
 
