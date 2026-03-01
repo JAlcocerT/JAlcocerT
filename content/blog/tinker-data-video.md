@@ -103,6 +103,37 @@ Before that, lets look how housing prices are changing per region and time.
 
 Because real estate...kind of relates with population...
 
+```mermaid
+graph TD
+    subgraph Input_Files
+        CSV["Censuses2011_2.csv (Census Data)"]
+        SHP_P["Municipios ETRS89 (Peninsula)"]
+        SHP_C["Municipios REGCAN95 (Canary Islands)"]
+    end
+
+    subgraph Processing_Logic
+        EXT_CSV["Extract 5-digit INE Code from Name"]
+        EXT_SHP["Extract 5-digit INE Code from NATCODE"]
+        CRS["Align CRS (EPSG:4326) & Shift Canarias"]
+        JOIN["PD Merge (Join on Code)"]
+    end
+
+    subgraph Visualization
+        MAP["GeoPandas Plot (Magma Map)"]
+    end
+
+    CSV --> EXT_CSV
+    SHP_P --> EXT_SHP
+    SHP_C --> EXT_SHP
+    
+    EXT_CSV --> JOIN
+    EXT_SHP --> CRS
+    CRS --> JOIN
+    
+    JOIN --> MAP
+    MAP --> PNG["high_res_census_map.png"]
+```
+
 right?
 
 ```sh
@@ -118,7 +149,7 @@ Maybe other factors like: *ease of credit have sth to do?*
 
 Specially for those booms?
 
-Just asking: bring your own theory of how the world works here
+Just asking: *bring your own theory of how the world works here*
 
 ## Geospatial
 

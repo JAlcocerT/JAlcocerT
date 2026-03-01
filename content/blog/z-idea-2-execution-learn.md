@@ -85,6 +85,8 @@ flowchart LR
 
 To attract, you can use tools like `https://www.clay.com/`
 
+just brings eyes to your landing page.
+
 be aware of the value equation:
 
 and follow the *full stack business formula* from top line, to net profit of your business idea:

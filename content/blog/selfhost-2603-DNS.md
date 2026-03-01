@@ -565,7 +565,7 @@ du -sh /mnt/data1tb/nextcloud/html/data/jelimoreli
 #which user is taking how much space
 ```
 
-Btw, surprise surpsie when trying to connect via the https one to a nextcloud desktop:
+Btw, surprise surpsie when trying to connect via the https one to a [nextcloud desktop](#faq):
 
 ```sh
 #docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | grep nextcloud
@@ -760,6 +760,40 @@ And after all this, you go to ~22gb taken, which I believe is what W11 takes for
 
 What else am I running?
 
+```mermaid
+graph TD
+    %% Nodes
+    FIREBAT[Firebat Mini PC<br/>Nextcloud Desktop Client]
+    LAPTOP[Laptop<br/>Nextcloud Desktop Client]
+    BROWSER[Web Browser<br/>User Interface]
+    
+    subgraph Cloudflare_Infrastructure [Cloudflare Edge]
+        TUNNEL[Cloudflare Tunnel<br/>Cloudflared]
+    end
+
+    subgraph Home_Network [Local Network / X300]
+        X300[ASRock X300 Server<br/>Nextcloud Instance]
+    end
+
+    %% Connections
+    FIREBAT <== "HTTPS (Sync)" ==> TUNNEL
+    TUNNEL <== "Secure Pipe" ==> X300
+    
+    LAPTOP <== "Local/Remote Sync" ==> X300
+    BROWSER <== "Web Access" ==> X300
+
+    %% Styling
+    style FIREBAT fill:#f9f,stroke:#333,stroke-width:2px
+    style X300 fill:#0082c9,stroke:#fff,stroke-width:2px,color:#fff
+    style TUNNEL fill:#f38020,stroke:#333,stroke-width:2px,color:#fff
+```
+
+```sh
+sudo add-apt-repository ppa:nextcloud-devs/client
+sudo apt update
+sudo apt install nautilus-nextcloud
+```
+
 Syncthing or sftpgo where nice, but...
 
 ```sh
@@ -771,7 +805,7 @@ docker compose -f 2602_docker-compose.yml up -d nextcloud-app nextclouddb
 
 > When you delete `Nextcloud Manual.pdf` or `Nextcloud into.mp4`...
 
-They will be 
+They will be at:
 
 ```sh
 sudo find /mnt/data1tb/nextcloud/html/data -iname "*Nextcloud intro.mp4*"
@@ -793,6 +827,7 @@ glances #https://github.com/nicolargo/glances
 
 lazydocker
 
+#htop #btop
 #sudo wget https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-amd64 -O /usr/local/bin/ctop && sudo chmod +x /usr/local/bin/ctop
 ctop
 ```
