@@ -760,6 +760,10 @@ And after all this, you go to ~22gb taken, which I believe is what W11 takes for
 
 What else am I running?
 
+```sh
+docker compose -f 2603_docker-compose.yml up -d nextcloud-app nextclouddb jellyfin qbittorrent
+```
+
 ```mermaid
 graph TD
     %% Nodes
@@ -792,6 +796,8 @@ graph TD
 sudo add-apt-repository ppa:nextcloud-devs/client
 sudo apt update
 sudo apt install nautilus-nextcloud
+# sudo chown -R $USER:$USER /media/casa/Datos_copia_2/nube-jesusaa
+# sudo chmod -R 755 /media/casa/Datos_copia_2/nube-jesusaa
 ```
 
 Syncthing or sftpgo where nice, but...
@@ -818,10 +824,13 @@ docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}" | grep jellyfin
 docker compose -f 2602_docker-compose.yml up -d jellyfin metube navidrome qbittorrent prowlarr homepage-lite termix pigallery2 uptimekuma-monitoring neko logseq
 ```
 
+> Watching and sharing my oa5pro at `:8096` is been great!
+
 I wouldnt have done this without: *Termix, UptimeKuma and...*
 
 ```sh
 sudo apt install glances
+#sudo snap install astral-uv --classic
 #uv tool install glances
 glances #https://github.com/nicolargo/glances
 

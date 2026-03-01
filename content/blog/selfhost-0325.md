@@ -255,7 +255,7 @@ Maybe, together with: https://fmhy.net/posts/june-2025
   {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Video/jellyfin_docker-compose.yml" title="Jellyfin Config File 🐳 ↗" >}}
 {{< /cards >}}
 
-If you have a smart tv, probably those are already installed, or you can add them: 
+If you have a smart tv, probably those are already installed, or you can add them: *`:8096` is waiting for you*
 
 ![Jellyfin SmartTV](/blog_img/selfh/media/jellyfin-smarttv.png)
 

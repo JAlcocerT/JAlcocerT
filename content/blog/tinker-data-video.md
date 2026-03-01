@@ -153,6 +153,10 @@ Just asking: *bring your own theory of how the world works here*
 
 ## Geospatial
 
+nuts2 arcgis
+
+https://www.arcgis.com/home/item.html?id=48f0d1a2006c4e89a85712a618fcff89
+
 
 
 ## Financial Data x YFinance

@@ -219,6 +219,10 @@ print(llm.complete("What is a vector database?"))
 
 ## Conclusions
 
+```sh
+sudo docker compose -f 2605_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
+```
+
 For a daily driver OS, ZORIN 18 is working nicely for me.
 
 But it was about time to do a format C to [my x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/).

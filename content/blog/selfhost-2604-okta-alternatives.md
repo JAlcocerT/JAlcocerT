@@ -241,7 +241,7 @@ docker system df
 #docker system prune -a
 ```
 
-These are the services im using as of now:
+These are the **services** im using as of now:
 
 ```sh
 sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
@@ -389,13 +389,11 @@ The final message is to **educate, not gatekeep**, and to recognize that while A
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-### Authentication with SupaBase
-
-https://supabase.com/docs/guides/auth/auth-helpers/nextjs
+* Authentication with SupaBase: https://supabase.com/docs/guides/auth/auth-helpers/nextjs
 
 ### Linux as OS
 
-I kept using Zorin, particularly the current version 18: *so you are not forzed to through away good enough hardware*
+I kept using Zorin, particularly the current **version 18**: *so you are not forzed to through away good enough hardware*
 
 * `https://zorin.com/os/archive/`
 

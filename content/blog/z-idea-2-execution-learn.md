@@ -1,6 +1,6 @@
 ---
 title: "Learning with/from agents"
-date: 2026-03-01T07:00:21+01:00
+date: 2026-03-07T07:00:21+01:00
 draft: false
 tags: ["Unit Economics 108","Prompts x Requirements","Back Propagation"]
 description: 'What is learning?'
