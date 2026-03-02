@@ -17,6 +17,10 @@ url: 'open-source-sso-tools'
 
 Some time back, when working at a popular *,ecommerce'*, they were using Okta everywhere.
 
+"Authelia vs Authentik","PocketID"
+
+{{< youtube "x4tzWt6-I7c" >}}
+
 I was wondering why they were not using OSS alternatives for business SSO.
 
 I got TInyAuth working with Traefik sometime back with the homelab.

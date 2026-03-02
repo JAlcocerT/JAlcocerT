@@ -6,9 +6,7 @@ description: "A solar panel, winter and the ESP32 microcontroller"
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed","Tech Talk 5"]
 ---
 
-"Authelia vs Authentik","PocketID"
 
-{{< youtube "x4tzWt6-I7c" >}}
 
 
 https://github.com/gsampallo/mqtt_valvula
@@ -982,6 +980,20 @@ And will be using a db2rest setup finally, to avoid the complexities of pulling 
 
 ##### Offer Configuration
 
+This has been just for pleasure.
+
+* Whats Working:
+* Whats not:
+* Whats next:
+
+So all below is not applicable.
+
+---
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 The **launch strategy**: *aka, focus strategy*
 
@@ -1001,13 +1013,3 @@ The **Tech Stack**:
 | **Styling/UI Library** | | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-* Whats Working:
-* Whats not:
-* Whats next:

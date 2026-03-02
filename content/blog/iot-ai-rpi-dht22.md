@@ -12,6 +12,9 @@ url: 'langchain-chat-with-sensor-data'
 
 Coming from the pgsql x langchain post...
 
+https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
+together with langchain RAG + db queries
+
 How about some IoT as a companion?
 
 <!-- A compute framework for turning complex data into vectors.

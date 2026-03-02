@@ -1,6 +1,6 @@
 ---
 title: "[Prototyping] Restaurants x Astro SSR."
-date: 2026-06-01
+date: 2026-03-20
 draft: false
 tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads x APIFY x Web Audit"]
 description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranean x OpenClaw x Gems."
@@ -12,6 +12,7 @@ url: "webs-for-restaurants"
 
 QR Restaurantes Free + Web if Pay.
 
+Only for TOP clients :)
 
 **Intro**
 
@@ -108,7 +109,7 @@ mindmap
 
 > > MoSCoW (Must have, Should have, Could have, Won’t have *aka Out of scope* ) 
 
-One year ago I was: *finally moving from copy pasting from web to vscode*
+Approximately ~ One year ago I was: *finally moving from copy pasting from web to vscode*
 
 ```sh
 claude --version
@@ -119,12 +120,16 @@ gemini --version
 #0.1.7
 ```
 
-Still, there is not an official claude desktop for linux: https://snapcraft.io/claudeai-desktop
+Still, there is NOT an official **claude desktop** for linux: https://snapcraft.io/claudeai-desktop
 
 * https://marketplace.visualstudio.com/items?itemName=openai.chatgpt
 * https://developers.openai.com/codex/ide/
 * https://github.com/anthropics/claude-code
 * https://code.claude.com/docs/en/vs-code
+
+The one for W11 works pretty nicely though...
+
+I mean, most of the times: https://status.claude.com/
 
 And now its full of alternatives, like OpenCode or ~~clawdbot~~ OpenClaw.
 
@@ -140,6 +145,7 @@ Later https://github.com/gavrielc/nanoclaw/tree/main
 
 ### Ideas Collected
 
+IT's all about UI/X:
 
 ![alt text](/blog_img/web/restaurant-astro-speed.png)
 
@@ -156,48 +162,9 @@ Later https://github.com/gavrielc/nanoclaw/tree/main
 
 > > Combining the power of Astro, **Storyblok CMS**, Vue, and Tailwind, AstroRante delivers an unparalleled online presence for your restaurant.
 
-
 * https://github.com/hydra-billing/homs
 
 > Apache v2 |  Hydra Order Management System 
-
-
-
-<!-- 
-### Useful Resources for a Better Website
-
-* Adding the project details as a post image thanks to https://socialify.git.ci/vercel/next.js/image?language=1&name=1&theme=Auto
-  * https://socialify.git.ci/
-
-Use fonts
-
-https://wowchemy.com/docs/getting-started/customization/
-
-Forms / Pop Ups
-
-/how-to-customize-a-hugo-website/#including-leaflet-map-as-html
-
--->
-
-<!-- https://github.com/steven-tey/precedent -->
-<!-- https://github.com/shadcn-ui/taxonomy 
-https://tx.shadcn.com/
--->
-
-
-<!-- PUBLIC APIs!!!
-https://github.com/sozonome/pub-apis
-https://publicapis.sznm.dev/all
-also good to filter cards -->
-
-<!-- filter cards for fossengineer - daisy UI??
-https://github.com/steamwebapi/steam-inventory-next.js?ref=statichunt.com 
-https://github.com/hassonor/apps-play?ref=statichunt.com
--->
-
-
-
-
 
 In the end, people like `portalmainfo.com` are creating such websites:
 
@@ -290,6 +257,32 @@ It aligns all key business functions, including:
 * **Marketing:** How will we generate awareness and demand?
 * **Customer Success/Support:** How will we onboard and support customers after they buy?
 
+
+### Lately I...
+
+Have done another tech talk.
+
+The content of it was ideated on this post.
+
+So now I *just* had to:
+
+```sh
+git clone
+
+```
+
+There are people shipping projects and projects as side their thing.
+
+Ideas were already cheap, everyone had few.
+
+Now...code is cheap.
+
+So the difference between MRR>0 and not seems to go more into distribution
+
+You name it: *social media communities / ads....*
+
+
+
 ---
 
 ## FAQ
@@ -355,5 +348,38 @@ Free Hosting Options with Free domain:
 * `https://restaurantealbores.com/`
 * `https://mojamabeach.com/`
 
-* https://gusti.pl/oV8S1gQ
-* https://tandoorolsztyn.pl/
+* `https://gusti.pl/oV8S1gQ`
+* `https://tandoorolsztyn.pl/`
+
+
+<!-- 
+### Useful Resources for a Better Website
+
+* Adding the project details as a post image thanks to https://socialify.git.ci/vercel/next.js/image?language=1&name=1&theme=Auto
+  * https://socialify.git.ci/
+
+Use fonts
+
+https://wowchemy.com/docs/getting-started/customization/
+
+Forms / Pop Ups
+
+/how-to-customize-a-hugo-website/#including-leaflet-map-as-html
+
+-->
+
+<!-- https://github.com/steven-tey/precedent -->
+<!-- https://github.com/shadcn-ui/taxonomy 
+https://tx.shadcn.com/
+-->
+
+
+<!-- PUBLIC APIs!!!
+https://github.com/sozonome/pub-apis
+https://publicapis.sznm.dev/all
+also good to filter cards -->
+
+<!-- filter cards for fossengineer - daisy UI??
+https://github.com/steamwebapi/steam-inventory-next.js?ref=statichunt.com 
+https://github.com/hassonor/apps-play?ref=statichunt.com
+-->

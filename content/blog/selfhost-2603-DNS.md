@@ -761,7 +761,7 @@ And after all this, you go to ~22gb taken, which I believe is what W11 takes for
 What else am I running?
 
 ```sh
-docker compose -f 2603_docker-compose.yml up -d nextcloud-app nextclouddb jellyfin qbittorrent
+docker compose -f 2603_docker-compose.yml up -d nextcloud-app nextclouddb jellyfin qbittorrent umami umamidb....
 ```
 
 ```mermaid
@@ -912,6 +912,7 @@ And for **status pages**, like the pros have:
 * https://www.cloudflarestatus.com
 * https://www.37status.com/
 * https://pocketbitcoin.com/status
+* https://status.claude.com/
 
 You can also with Uptime Kuma pages or kener!
 

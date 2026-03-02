@@ -14,7 +14,6 @@ What is learning?
 
 [How do we learn](#back-propagation-vs-human-brain)?
 
-
 * https://app.fireflies.ai/perks
 * Perplexity and commet (from W11 only on the desktop) 
 

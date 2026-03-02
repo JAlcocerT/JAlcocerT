@@ -4,29 +4,16 @@ date: 2026-03-05
 draft: false
 tags: ["Tech Talk","IoT ebook","From obfuscaste towards 1toN eBooks","Roadmap26"]
 description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'
-url: 'just-iot'
+url: 'just-about-iot'
 ---
-
-https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
-together with langchain RAG + db queries
-
-
 
 **TL;DR:** 
 
 Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
 
-BTW, this is the last ebook of the DIY series that I will be publishing!
-
-`interesting-books`
-
-
-https://ko-fi.com/s/86175d7928
-
 +++ Destiling knowledge to ebooks - IoT edition
 
-
-
+BTW, this is the [last ebook](#conclusions) of [the DIY series](https://jalcocert.github.io/JAlcocerT/interesting-books) that I will be publishing!
 
 ## From IoT Data to LangChAIn
 
@@ -307,9 +294,19 @@ or 4.7k 10k resistor between data and 3.3v
 
 ## Conclusions
 
-Have you ever wanted to work in the IoT industry?
+Have you ever wanted to work in the **IoT industry**?
 
 After this post,you should be closer than before.
+
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
+
+
+* This got me nothing so far: https://ko-fi.com/s/86175d7928
+
 
 With this post, I pretend to 
 

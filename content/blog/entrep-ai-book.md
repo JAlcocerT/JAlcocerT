@@ -114,7 +114,7 @@ docker network connect cloudflared_tunnel astro-prod #connect
 
 ![eBook Astro and Cloudflare Tunnels](/blog_img/entrepre/product/ebook-astro-cftunnel.png)
 
-Aaaand this is it: https://ebook.jalcocertech.com/
+Aaaand this is it: https://ebooks.jalcocertech.com/
 
 ![Ebook Landing + Umami Web Analytics](/blog_img/entrepre/product/ebook-umami.png)
 
