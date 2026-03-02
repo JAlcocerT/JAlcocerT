@@ -259,8 +259,9 @@ https://youtu.be/xqtzYbHIrMo -->
 
 6. There are some interesting indexes: `^VIX`, `^Move`
 
-
 As someone said: you dont understand stock market if you dont understand first the bonds
+
+7. How about other commodities like `CL.F` oil?
 
 ## Physics
 

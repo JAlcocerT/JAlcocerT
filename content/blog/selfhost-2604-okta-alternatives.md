@@ -248,7 +248,7 @@ docker system df
 These are the **services** im using as of now:
 
 ```sh
-sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
+sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx
 ```
 
 And for questions:

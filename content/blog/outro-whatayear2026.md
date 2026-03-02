@@ -862,6 +862,10 @@ A certain Negative cash flow year one then...uncertainty
 
 #### Open Questions
 
+Most likely, you can get away and have an answer for your BA questions or for the BI dashboarding ones.
+
+There are questions
+
 * Whats freedom?: Possibility of acting or the absence of obstacles?
 * Will we ever get to value the spark more than the shadow it casts?
 * is blockchain the ultimate database?
@@ -893,6 +897,7 @@ graph LR
   * And x4 in 3 years?
 
 * How can w etalk about resilience without been grateful for critics?
+* Can we be free without fear?
 
 #### Interesting Concepts
 

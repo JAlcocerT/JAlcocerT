@@ -79,6 +79,39 @@ flowchart LR
 
 ### Attract Convert Deliver
 
+Domain expertise and stickiness of core products/services will be key in the world is coming up.
+
+How do we measure productivity and value now?
+
+Reality have changed, so should KPIs and...teams
+
+Maybe, innovation teams are coming for faster GTM?
+
+How about [forward deploy engineers](https://www.youtube.com/watch?v=Iu80Io2cNYw)?
+
+Yea, including if you do [BI dashboard](#dashboarding-requirements-gathering)
+
+```sh
+git clone https://github.com/JAlcocerT/PBi
+cd Sample...
+#curl -fsSL https://claude.ai/install.sh | bash
+claude #https://claude.ai/recents
+#/terminal-setup
+#claude --continue or claude --resume to resume a conversation  
+```
+
+Do you feel **tech deflation** coming?
+
+```md
+could you create a unambigous-tasks.md with the step by step guidance on how to create those?
+from data modelling if required, to where to drag and drop the elements in the UI as if a 15 year old had to build it  
+```
+
+I do.
+
+Will [AGI come in the next 36m](https://www.youtube.com/watch?v=zeHTTXAWDUA)?
+
+If so, none of this will probably matter :)
 
 #### Attracting Clients
 
@@ -108,7 +141,6 @@ Tools that will help you convert:
 
 1. Emails + Newsletters
 2. Lean DRIP email campaigns
-3. 
 
 #### Delivering
 
@@ -159,6 +191,55 @@ If you are trying to build without such signals because you are not so pro for p
 
 At least be good at asking questions / prepare good forms: *DISqualifying ideas/clients is the goal*
 
+> There are some technical/structural questions, others are business & operational
+
+🟢 What the Wiki replies to PROPERLY
+Your current documentation is excellent at answering technical and structural questions:
+
+How is it built? (PBIP format, Canvas size, Visual IDs).
+
+What is the logic? (DAX formulas for KPIs).
+
+Where is the data? (MySQL, APIs...).
+
+How do I use it? (Slicers, Sync groups, and Bookmark toggles).
+
+What are the rules? (for filters...).
+
+🟡 What could be BETTER (or is currently unresolved)
+There are a few "Business & Operational" gaps that the technical summary doesn't quite hit yet:
+
+The "So What?" Factor: While you define the metrics, the Wiki doesn't explicitly state the action a user should take if a metric is Red.
+
+Data Latency: You list the sources, but not the refresh schedule. Users will ask if the data is "Live" or "Yesterday's."
+
+Exception Edge Cases: You mention "Exception Management" in your definitions, but the Power BI Wiki doesn't show how those exceptions are reflected in the data (e.g., does an approved exception turn a Red "R" into a Gray "N/A"?).
+
+Historical Context: Does the report keep 2 years of data or only the "Last 6 Months" mentioned in the slicer?
+
+🔵 Should you include the "Requirements Gathering" section?
+Yes, but with a twist. Don't just list the questions; list the Answers specifically for this dashboard.
+
+In Confluence, I recommend adding a section called "Project Context & Design Intent" using your requirements framework. Here is how it would look specifically for your Sample-DevSecOps report:
+
+Section: Design Intent (The "Why")
+Primary Decision Supported: Identifying which applications are "Wave-ready" and which are failing security guardrails.
+
+Target Audience: CTOs (High-level summary) and App Leads (Table drill-down).
+
+Refresh Requirement: Daily sync at 06:00 AM to support morning stand-ups.
+
+Security: RLS is applied based on the Division field to ensure managers only see their own portfolio.
+
+Refresh Frequency: 4x Daily (06:00, 10:00, 14:00, 18:00 EST)
+
+RLS Status: Active (Filtered by Division)
+
+Data Retention: 24 Months rolling
+
+Point of Contact: [Your Name/Team Alias]
+
+You have successfully bridged the gap between technical implementation (DAX/SQL) and business logic.
 
 #### Dashboarding Requirements Gathering
 

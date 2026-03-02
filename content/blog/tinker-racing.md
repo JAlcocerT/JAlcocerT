@@ -439,6 +439,7 @@ You can buy (or not) the Pro version.
 
 I did so to support the project and see what else can i get from the OBD2.
 
+> Maybe one day...Dash from Torque Pro to PC?
 
 ### CANBUS with UBUNTU
 

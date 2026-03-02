@@ -760,8 +760,14 @@ And after all this, you go to ~22gb taken, which I believe is what W11 takes for
 
 What else am I running?
 
+Via Termix: `http://jalcocert-x300-1:8090`
+
 ```sh
 docker compose -f 2603_docker-compose.yml up -d nextcloud-app nextclouddb jellyfin qbittorrent umami umamidb....
+
+docker ps -a --filter "name=umami"
+#docker ps --filter "name=umami"
+docker stop umamiweban-umami-1 umamiweban-db-1 #https://weban...#https://jsx-7jp.pages.dev/index1
 ```
 
 ```mermaid
