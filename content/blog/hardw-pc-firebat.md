@@ -881,7 +881,7 @@ curl -6 ifconfig.me #ipv6 info
 
 ## ThrowBack on Hardware
 
-Its crazy to see how much PCs have evolved in few decades.
+Its crazy to see how much **PCs have evolved** in few decades.
 
 {{< details title="These are the ones I could try so far 📌" closed="true" >}}
 

@@ -309,7 +309,13 @@ https://youtube.com/shorts/ipi437M6g5A
 
 https://youtube.com/shorts/r8G3XRBn24s?is=sDOxquD4fxU6yKns
 
-From 3 bodies you can jump to the 4 bar mechanism quite easily:
+From **3 bodies** you can jump to the 4 bar mechanism quite easily:
+
+<!-- 
+https://www.youtube.com/watch?v=b35XuJI98kI 
+-->
+
+{{< youtube "b35XuJI98kI" >}}
 
 
 In fact, for cinematics...you just need geometry and time. 

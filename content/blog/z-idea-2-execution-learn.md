@@ -98,7 +98,10 @@ cd Sample...
 claude #https://claude.ai/recents
 #/terminal-setup
 #claude --continue or claude --resume to resume a conversation  
+/model
 ```
+
+> The vscode extension is also very cool!
 
 Do you feel **tech deflation** coming?
 
