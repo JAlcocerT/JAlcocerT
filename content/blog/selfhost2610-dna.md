@@ -2,7 +2,7 @@
 title: "SelfHosted Data Analytics"
 date: 2026-10-01T23:20:21+01:00
 draft: false
-tags: ["D&A","Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver","GCP VWB"]
+tags: ["D&A","Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver","GCP VWB","mssql"]
 description: 'Selfhosting D&A Tools. DevOps x DORA x Apache DevLake.'
 url: 'selfhosting-data-analytics'
 ---
@@ -80,6 +80,13 @@ Combine storage + table format + catalog + query engine for Fabric-like function
 
 ## Conclusions
 
+It doesnt matter if you stack is: powerbi+dbeaver+mssql extension at vscode...
+
+* https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction
+
+Or the Grafana+Pypsark+graphite/ES one...
+
+.....
 
 Not all of them are 100% Open Source Software (OSS). While many have an open-source "heart," several follow a **"Freemium"** or **"Open Core"** model where the most advanced features are locked behind a paid license.
 
@@ -231,6 +238,10 @@ JSON, YML or TooN?
 
 * https://github.com/toon-format/toon
 
+* https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql
+
+The MSSQL Extension for Visual Studio Code is designed to empower developers by providing a seamless and modern database development experience. Our goal is to make SQL development more productive and intuitive by integrating essential features such as schema management, query execution, and AI-powered assistance.
+
 
 ### Whats Open DevOps?
 
@@ -333,6 +344,7 @@ Databricks excels in code-driven, scalable data science workloads, while Synapse
 Databricks is similar to Google Vertex AI Workbench (likely what you mean by "Google Workbench") in providing managed JupyterLab-based notebook environments for data science and ML workflows. Both support scalable compute, integrations with cloud storage and big data tools, and collaborative coding, though neither is built directly on JupyterHub (a multi-user server spawner). [cloudbank](https://www.cloudbank.org/tool/google-vertex-ai-workbench)
 
 ## Core Similarities
+
 Databricks notebooks and Vertex AI Workbench offer Jupyter-compatible interfaces with multi-language support (Python, SQL, Scala), built-in visualizations, and enterprise features like Git integration and scheduling. They both enable seamless access to cloud services—Databricks with Delta Lake/Spark, Workbench with BigQuery/Cloud Storage—for ETL, ML model training, and deployment. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks)
 
 ## Key Differences

@@ -99,10 +99,19 @@ claude #https://claude.ai/recents
 #/terminal-setup
 #claude --continue or claude --resume to resume a conversation  
 /model
+
+  From the terminal:                                                                                                   - claude --continue / claude -c — resumes your most recent conversation
+  - claude --resume / claude -r — opens an interactive picker to browse and select past sessions                     
+
+From inside an active session:
+  - /resume — opens the session picker to switch to a different conversation
+#/init
+
 ```
 
 > The vscode extension is also very cool!
 
+> > Consider that [some are depricating all UIs](https://ampcode.com/news/the-coding-agent-is-dead), as the aim is for agents to use these and UI are just dragging them
 Do you feel **tech deflation** coming?
 
 ```md
@@ -115,6 +124,28 @@ I do.
 Will [AGI come in the next 36m](https://www.youtube.com/watch?v=zeHTTXAWDUA)?
 
 If so, none of this will probably matter :)
+
+ Wiki Structure
+
+Audience: VP/CTO, Portfolio Leads, Steerco
+Reading time: 5–7 minutes for the front page
+Tone: Outcome‑first, sourced, low jargon 
+
+One‑liner: “Sourced answers in ≤3s, proactive alerts in ≤15m, and actionable ‘what to change’ guidance—reducing time‑to‑detect by 50% and time‑to‑explain to ≤30s.”
+Status: 🟢 Discovery | 🟡 Build | 🔵 Pilot | 🔴 Blocked
+Owner / Contact: Product Owner, Tech Lead
+Last updated: {auto-populated}
+
+FAQ (Exec‑friendly)
+Can it be wrong? Yes—so every answer shows sources, last refresh, and confidence.
+Who sees what? Access is scoped to your portfolio; raw rows aren’t exposed across divisions.
+Will this replace dashboards? No. Dashboards remain the system of record; the agent accelerates discovery and explanation.
+When do we get automation? After trust is established (Phase 3) and with human approvals.
+
+Problem. Leaders see what is off-track but not why or what to change.
+Approach. Agent layer that answers portfolio questions with sources (≤3s), pushes anomaly alerts (≤15m), and recommends peer‑proven actions.
+Outcomes (90 days). Time‑to‑detect ↓50%; time‑to‑explain ≤30s; ≥95% sourced accuracy.
+Decision needed. Approve Phase 1 pilot.
 
 #### Attracting Clients
 

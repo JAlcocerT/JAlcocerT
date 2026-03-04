@@ -798,12 +798,20 @@ graph TD
     style TUNNEL fill:#f38020,stroke:#333,stroke-width:2px,color:#fff
 ```
 
+If you have some permissions complication for the sync on your external drive:
+
 ```sh
 sudo add-apt-repository ppa:nextcloud-devs/client
 sudo apt update
 sudo apt install nautilus-nextcloud
 # sudo chown -R $USER:$USER /media/casa/Datos_copia_2/nube-jesusaa
 # sudo chmod -R 755 /media/casa/Datos_copia_2/nube-jesusaa
+```
+
+If you want nextcloud desktop to start with your laptop automatically:
+
+```sh
+
 ```
 
 Syncthing or sftpgo where nice, but...
