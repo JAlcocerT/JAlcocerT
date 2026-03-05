@@ -76,6 +76,19 @@ flowchart LR
     Newer -- "New Baseline" --> More
 ```
 
+Will the future of OSS be affected by agents?
+
+I think its quite evident.
+
+It might be also an opportunity to finance directly features that many wants to be implemented.
+
+The code stays open, people group and place crypto money inside a smartcontract, as long as a dev *or agent* see that the signal is > the effort, it will get implemented.
+
+When validated by users - payment will flow.
+
+Isnt it similar to what polymarket does already?
+
+Imagine how many projects/features can be completed and be available for anyone...forever.
 
 ### Attract Convert Deliver
 
@@ -100,13 +113,12 @@ claude #https://claude.ai/recents
 #claude --continue or claude --resume to resume a conversation  
 /model
 
-  From the terminal:                                                                                                   - claude --continue / claude -c — resumes your most recent conversation
-  - claude --resume / claude -r — opens an interactive picker to browse and select past sessions                     
+                                                  - claude --continue / claude -c — resumes your most recent conversation
+- claude --resume / claude -r — opens an interactive picker to browse and select past sessions                     
 
 From inside an active session:
-  - /resume — opens the session picker to switch to a different conversation
+- /resume — opens the session picker to switch to a different conversation
 #/init
-
 ```
 
 > The vscode extension is also very cool!

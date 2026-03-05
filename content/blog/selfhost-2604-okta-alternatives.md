@@ -251,9 +251,16 @@ These are the **services** im using as of now:
 sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx
 ```
 
-Got finally FTTH?
+* http://jalcocert-x300-1:3001/dashboard/4 #uptime
+* http://jalcocert-x300-1:8090 #termix
+
+
+Got finally [FTTH](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/#docsis-vs-fiber)?
 
 * https://speed.cloudflare.com/
+* MySpeed or SpeedTest are also fine
+
+
 * https://github.com/Litlyx/litlyx
 
 And for questions:

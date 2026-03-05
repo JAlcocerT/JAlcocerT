@@ -80,7 +80,19 @@ Combine storage + table format + catalog + query engine for Fabric-like function
 
 ## Conclusions
 
-It doesnt matter if you stack is: powerbi+dbeaver+mssql extension at vscode...
+It doesnt matter if you stack is: powerbi+dbeaver+mssql/dbcode extensions at vscode...
+
+```sql
+SELECT TOP 10 * FROM INFORMATION_SCHEMA.TABLES;
+
+SELECT [EaId], [Name], [LifecycleState]
+FROM [Stg].[Snowflake]
+WHERE [EaId] LIKE 'sth123%';
+```
+
+```sh
+
+```
 
 * https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction
 
@@ -287,13 +299,59 @@ Delta Lake: Open-format (Databricks-led, Apache-compatible via Spark) for ACID t
 | **Change Failure Rate**  | % of deploys causing failures    | 0-15%                           |
 | **Time to Restore**     | MTTR from failure                | <1 hour                         |
 
+### Argo and Jenkins?
+
+Think of it this way: Jenkins is the **builder**, and Argo CD is the **delivery driver** who makes sure the house stays exactly as the blueprint intended.
+
+What is Argo CD?
+
+Argo CD is a **declarative, GitOps continuous delivery (CD) tool** specifically built for Kubernetes.
+
+The core idea is simple: You define what your application environment should look like (the "Desired State") in a Git repository. Argo CD monitors that repository and compares it to what is actually running in your Kubernetes cluster (the "Live State").
+
+* **Syncing:** If you change your code in Git, Argo CD automatically updates Kubernetes to match.
+* **Self-Healing:** If someone accidentally deletes a component in Kubernetes, Argo CD notices the "drift" and automatically recreates it to match Git.
+
+Does it relate to Jenkins?
+
+Yes, but they aren't competitors; they are usually **teammates**.
+
+While Jenkins is a "do-it-all" automation engine, it wasn't originally built for the cloud-native, containerized world of Kubernetes. Here is how they relate:
+
+1. The Hand-off (The CI/CD Pipeline)
+
+In a typical workflow, Jenkins handles the **Continuous Integration (CI)** and Argo CD handles the **Continuous Delivery (CD)**.
+
+* **Jenkins:** Takes your source code, runs tests, and builds a Docker image. It then pushes that image to a registry and updates a YAML file in your Git repo.
+* **Argo CD:** Sees that the YAML file has changed and pulls that new Docker image into your Kubernetes cluster.
+
+2. Push vs. Pull
+
+* **Jenkins (Push Model):** Jenkins usually "reaches out" and tells Kubernetes to run a command. This requires Jenkins to have high-level security credentials for your cluster.
+* **Argo CD (Pull Model):** Argo CD sits *inside* your cluster. It watches Git and "pulls" changes in. This is generally considered more secure and stable for Kubernetes environments.
+
+| Feature | Jenkins | Argo CD |
+| --- | --- | --- |
+| **Primary Goal** | General automation & CI (Building/Testing) | Kubernetes Deployment & CD (Deploying) |
+| **Philosophy** | Script-based (Jenkinsfile) | GitOps-based (Declarative YAML) |
+| **Environment** | Runs anywhere | Runs on Kubernetes |
+| **Best Used For** | Compiling code, running unit tests | Ensuring the cluster matches the Git repo |
+
+> **The Bottom Line:** Use Jenkins to turn your code into an image, and use Argo CD to put that image into production.
+
+> > Both can be helpful for HFAD which relate with DORA metrics!!
+
+
 ### Different ways to JHUB
 
-Typical ways to connect to a PySpark cluster include managed notebooks like Databricks or Google Vertex AI Workbench, programmatic drivers via SparkSession, and job submission tools. [spark.apache](https://spark.apache.org/docs/latest/api/python/getting_started/quickstart_connect.html)
+Typical ways to connect to a PySpark cluster include managed notebooks like Databricks or Google Vertex AI Workbench, programmatic drivers via SparkSession, and job submission tools. 
+
+[spark.apache](https://spark.apache.org/docs/latest/api/python/getting_started/quickstart_connect.html)
 
 Managed Notebook Interfaces
 
-These provide browser-based JupyterLab-like environments directly on the cluster.
+These provide browser-based JupyterLab-like environments directly on the cluster:
+
 - Databricks notebooks: Collaborative, integrated with Spark clusters and Delta Lake.[ from prior]
 - Google Vertex AI Workbench: Managed JupyterLab instances with PySpark pre-configured for Google Cloud. [docs.cloud.google](https://docs.cloud.google.com/vertex-ai/docs/workbench/introduction)
 - Amazon EMR Notebooks (SageMaker Studio or EMR Studio): Interactive PySpark shells on EMR clusters. [stackoverflow](https://stackoverflow.com/questions/40920313/how-can-i-connect-pyspark-local-machine-to-my-emr-cluster)
@@ -326,7 +384,10 @@ Spark Connect is increasingly standard for thin-client remote access without ful
 Databricks shares some analytics capabilities with Azure Synapse and Microsoft Fabric but differs significantly in focus and architecture. [datacamp](https://www.datacamp.com/blog/azure-synapse-vs-databricks)
 
 Core Similarities
-All three platforms handle big data processing, ETL pipelines, and Spark-based compute. They integrate with Azure services like Data Lake Storage and support notebooks for SQL, Python, and Spark jobs. [learn.microsoft](https://learn.microsoft.com/en-us/answers/questions/2258999/choosing-the-right-azure-data-platform-synapse-fab)
+
+All three platforms handle big data processing, ETL pipelines, and Spark-based compute.
+
+They integrate with Azure services like Data Lake Storage and support notebooks for SQL, Python, and Spark jobs. [learn.microsoft](https://learn.microsoft.com/en-us/answers/questions/2258999/choosing-the-right-azure-data-platform-synapse-fab)
 
 Key Differences
 | Feature | Databricks | Azure Synapse | Microsoft Fabric |
@@ -341,7 +402,9 @@ Databricks excels in code-driven, scalable data science workloads, while Synapse
 
 #### Databricks
 
-Databricks is similar to Google Vertex AI Workbench (likely what you mean by "Google Workbench") in providing managed JupyterLab-based notebook environments for data science and ML workflows. Both support scalable compute, integrations with cloud storage and big data tools, and collaborative coding, though neither is built directly on JupyterHub (a multi-user server spawner). [cloudbank](https://www.cloudbank.org/tool/google-vertex-ai-workbench)
+Databricks is similar to Google Vertex AI Workbench (likely what you mean by "Google Workbench") in providing managed JupyterLab-based notebook environments for data science and ML workflows.
+
+Both support scalable compute, integrations with cloud storage and big data tools, and collaborative coding, though neither is built directly on JupyterHub (a multi-user server spawner). [cloudbank](https://www.cloudbank.org/tool/google-vertex-ai-workbench)
 
 ## Core Similarities
 
