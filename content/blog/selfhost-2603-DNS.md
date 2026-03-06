@@ -1030,6 +1030,8 @@ HomeLab Essentials - https://jalcocert.github.io/JAlcocerT/docs/selfhosting/
 As of now Im using:
 
 ```sh
+#btop #glances
+#lazydocker
 sudo docker compose -f 2603_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
 ```
 

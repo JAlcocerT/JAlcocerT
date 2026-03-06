@@ -116,8 +116,8 @@ claude #https://claude.ai/recents
                                                   - claude --continue / claude -c — resumes your most recent conversation
 - claude --resume / claude -r — opens an interactive picker to browse and select past sessions                     
 
-From inside an active session:
-- /resume — opens the session picker to switch to a different conversation
+#From inside an active session:
+/resume #— opens the session picker to switch to a different conversation
 #/init
 ```
 

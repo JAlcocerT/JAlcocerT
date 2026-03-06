@@ -329,7 +329,21 @@ The sympy and https://github.com/KmolYuan/Pyslvs-UI will be for another post :)
 
 ## Conclusions
 
-Roo code extension has been interesting to use together with OpenAI API.
+[Roo code](https://github.com/RooCodeInc/Roo-Code) extension has been interesting to use together with OpenAI API.
+
+```md
+ i have made a pbip export and brought to this files 3 files, would those be enough for you to infer all the goodies of the data model, ui, transformations etc? 
+```
+
+| File | Contents |
+|---|---|
+| `model.bim` | Full semantic model — tables, Power Query (M) transformations, DAX measures, calculated columns, relationships, hierarchies |
+| `report.json` | Report layout — pages, visuals, positions, filters, slicers, bookmarks, field bindings |
+| `diagramlayout.json` | Visual positioning of tables in the model relationship diagram (cosmetic only) |
+
+These three files are sufficient to fully reconstruct the data model, all transformations, all DAX logic, all report visuals, and all relationships.
+
+> Same with [Kilo Code](https://kilo.ai/pricing)!
 
 So...What if I told you that all this is very cheap to do nowadays?
 
