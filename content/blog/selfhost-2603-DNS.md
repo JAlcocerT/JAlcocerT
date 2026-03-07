@@ -808,11 +808,8 @@ sudo apt install nautilus-nextcloud
 # sudo chmod -R 755 /media/casa/Datos_copia_2/nube-jesusaa
 ```
 
-If you want nextcloud desktop to start with your laptop automatically:
+If you want nextcloud desktop to start with your laptop automatically: *go to settings and hit that config box to do so*
 
-```sh
-
-```
 
 Syncthing or sftpgo where nice, but...
 

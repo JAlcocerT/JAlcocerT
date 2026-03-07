@@ -201,7 +201,7 @@ In the West, it is often visualized as a Venn diagram where four main circles ov
 
 Your *ikigai* is the sweet spot right in the center where your: passions, skills, and the world’s needs converge.
 
-The Four Pillars of Ikigai
+The **Four Pillars of Ikigai**:
 
 To find your center, you must explore the intersection of these four areas:
 

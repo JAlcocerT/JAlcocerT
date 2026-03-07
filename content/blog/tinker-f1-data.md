@@ -97,6 +97,19 @@ uv run plot_telemetry.py
 
 Was there any doubt that new regulations make the ones learning faster be way ahead of the rest?
 
+```sh
+uv run check_sessions.py
+# [Oldest Data Check]
+# Oldest schedule data found for: 1950
+# First event of 1950: British Grand Prix (1950-05-13)
+
+# [Current 2026 Season Status]
+# ✅ Last Session: Australian Grand Prix - Qualifying (2026-03-07 05:00 UTC)
+#    Finished: 0 days, 5 hours ago
+# 🚀 Next Session: Australian Grand Prix - Race (2026-03-08 04:00 UTC)
+#    Starts in: 0 days, 17 hours
+```
+
 <!-- https://www.youtube.com/watch?v=Ujb1Vrjlo8k -->
 
 {{< youtube "Ujb1Vrjlo8k" >}}
@@ -133,15 +146,45 @@ https://youtube.com/shorts/BVqQdhvKe5o
 
 > AUS 2025 Q3 P1 to P10 gap ~1s (+0.835s)
 
+> > AUS 2026 Q3 P1 to P10 gap >1s [(+1.453s)](https://youtube.com/shorts/ERqGNyEpMJk)
+
 And this is not a debate whether making drivers race with less dispair cars is good or not.
 
-Neither if F1 should be similar to e-f1...or just going close to the limit each lap.
+Neither if F1 should be similar to e-f1...or just going [closer to the limit](https://www.youtube.com/watch?v=4vstWEvjW18) each lap.
 
 <!-- 
 https://youtu.be/DCHhpNX6EYM
  -->
 
 {{< youtube "DCHhpNX6EYM" >}}
+
+
+```sh
+#printf "2025\n1\nNOR\n2\n" | uv run f1_deep_analysis.py
+uv run f1_deep_analysis.py #coasting x2 versus 2025 :)
+# ========================================
+# 📊 PERFORMANCE SUMMARY: RUS @ Australian Grand Prix
+# ========================================
+# 🟢 Full Throttle:  63.0% of lap
+# 🔴 Braking:       12.5% of lap
+# 🟡 Coasting:      4.2% of lap
+# 🔵 DRS Active:    0.0% of lap
+# ⚡ Max G-Force:   2.75 G (Accel)
+# 🛑 Min G-Force:   -4.01 G (De-accel)
+# ========================================
+
+
+# ✅ Analysis complete! Visualization saved as: deep_analysis_2026_1_RUS.png
+printf "2026\n1\nRUS\n2\ny\n" | uv run f1_deep_analysis.py
+aristotel onassis
+
+#printf "file 'deep_analysis_2026_1_RUS_hud.mp4'\nfile 'deep_analysis_2025_1_1_hud.mp4'" > concat_list.txt && ffmpeg -f concat -safe 0 -i concat_list.txt -c copy deep_analysis_joined.mp4
+uv run f1_session_summary.py
+printf "file 'deep_analysis_2026_1_RUS_hud.mp4'\nfile 'outro_2026.mp4'\nfile 'deep_analysis_2025_1_NOR_hud.mp4'\nfile 'outro_2025.mp4'" > cinematic_review_list.txt
+ffmpeg -f concat -safe 0 -i cinematic_review_list.txt -c copy f1_cinematic_review.mp4
+```
+
+With nice [results](https://youtu.be/LUMbYYZOn-g)!
 
 
 ### About Unfolding Data

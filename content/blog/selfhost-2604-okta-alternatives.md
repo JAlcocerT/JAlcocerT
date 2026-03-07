@@ -260,6 +260,11 @@ Got finally [FTTH](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/#d
 * https://speed.cloudflare.com/
 * MySpeed or SpeedTest are also fine
 
+```sh
+sudo apt-get install speedtest-cli
+speedtest-cli #speedtest-cli --simple
+```
+
 
 * https://github.com/Litlyx/litlyx
 
