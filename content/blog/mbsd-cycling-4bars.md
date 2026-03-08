@@ -2,7 +2,7 @@
 title: "The Mechanism behind Cyclying"
 date: 2026-04-10T23:20:21+01:00
 draft: false
-tags: ["DA","MBSD","Sympy","MatterJS"]
+tags: ["DA","MBSD","Sympy","MatterJS","Double Wishbone"]
 description: 'Im Back.'
 url: 'cycling-and-the-4-bars-mechanism'
 ---
@@ -109,7 +109,26 @@ Because from 2023 it has all been learn/do/learn/do around AI.
 
 
 
+## Suspension
 
+Long ago I was reading the book:
+
+Among the suspension types, you can understand Double Wishbone Suspension System with the 4B:
+
+<!-- 
+https://www.youtube.com/watch?v=XTM4Mqa617o 
+-->
+
+{{< youtube "XTM4Mqa617o" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=_wUSd-OVZX8 
+-->
+
+
+{{< youtube "_wUSd-OVZX8" >}}
+
+Which is much cooler [than mcpherson](https://www.youtube.com/watch?v=X6JejXjGQiQ), isnt it?
 
 ---
 
@@ -125,7 +144,10 @@ Matlab ---> a python – programa sintesis mec generalizado.
 
 The passion of your live is to create such systems?
 
-https://www.youtube.com/shorts/bJBk09S7HQM
+<!-- https://www.youtube.com/shorts/bJBk09S7HQM -->
+
+{{< youtube "bJBk09S7HQM" >}}
+
 
 Stay with me for the series about MBSD.
 

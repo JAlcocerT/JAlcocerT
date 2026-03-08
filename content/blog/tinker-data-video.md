@@ -86,14 +86,24 @@ Uploading you action cam session is nice.
 
 Specially when you use ffmpeg to join parts and ship fast.
 
-But you can also create **overlay HUDs** with data from GoPro GPS and accelerometer
+But you can also create **overlay HUDs** with data from GoPro GPS and accelerometer: *jump out of the kart and do this*
 
 ```sh
+rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #speeds of ~32mb/s
+sudo apt install mpv
+mpv "DJI_20260308T3031.0002.0.MP4"
+
 #git clone
 
 ```
 
-{{< youtube "ctfGunPZwJ4" >}}
+Trust me that [karting after raining](https://youtu.be/cQULovJU3Uc) is fun.
+
+But so much is to embed te telemetry.
+
+<!-- {{< youtube "ctfGunPZwJ4" >}} -->
+
+{{< youtube "c0YkQhsUNrg" >}}
 
 No need to overcomplicate it with PhyPhox as your action cam already detects 3 axis acceleration for estabilization purposes.
 

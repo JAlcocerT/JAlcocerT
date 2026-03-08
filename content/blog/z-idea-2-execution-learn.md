@@ -94,6 +94,14 @@ Imagine how many projects/features can be completed and be available for anyone.
 
 Domain expertise and stickiness of core products/services will be key in the world is coming up.
 
+I have been polishing my service offering UI/X with a CRQ and [this nice prompt](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders):
+
+```sh
+git clone
+git clone
+jalcocertech-services
+```
+
 How do we measure productivity and value now?
 
 Reality have changed, so should KPIs and...teams
@@ -224,7 +232,11 @@ Like...Figuring out a model to get the best route for karting tracks
 
 But...what is gradient descent?
 
-{{< youtube "3A6fIKeBTRo" >}}
+<!-- 
+https://www.youtube.com/watch?v=IHZwWFHWa-w 
+-->
+
+{{< youtube "IHZwWFHWa-w" >}}
 
 And how do we learn?
 
@@ -428,4 +440,5 @@ This speeds up alignment.
 18. Who maintains it after delivery?
 19. How often will requirements change?
 
-# Want me to create a **requirements checklist**, **interview script**, or a **dashboard requirements document template** for you?
+
+> Want me to create a **requirements checklist**, **interview script**, or a **dashboard requirements document template** for you?
