@@ -1,6 +1,6 @@
 ---
 title: "Just Data Animations"
-date: 2026-02-28
+date: 2026-03-06
 draft: false
 tags: ["Telemetry x F1 vs Kart","Geo x Statistics","YFinance","Real Estate","Mechanism x MBSD"]
 description: 'Unfolding Data this time with some order. WIth gitlab x Roo x Zed.'
@@ -34,6 +34,8 @@ Or a sneek into the future on how cheap*er* information will be.
 
 ## F1
 
+Let's continue where I left this at [the previous post](https://jalcocert.github.io/JAlcocerT/f1-data-animated/): `read-wiki.md`
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-f1 Github ↗" icon="github" >}}
 {{< /cards >}}
@@ -41,7 +43,37 @@ Or a sneek into the future on how cheap*er* information will be.
 ```sh
 #git clone
 
+
+uv run f1_head_to_head.py
 ```
+
+I could not resist to add a **clipping detector**:
+
+```sh
+#printf "2026\n1\nR\nA\nRUS,VER,HAM\n" | uv run f1_clipping_session.py
+printf "2026\n1\nRUS\n" | uv run f1_clipping_detector.py
+#uv run f1_clipping_detector.py
+uv run f1_clipping_session.py
+uv run f1_clipping_animated.py
+```
+<!-- 
+https://youtu.be/MoP8R_aQrPI 
+-->
+
+{{< youtube "MoP8R_aQrPI" >}}
+
+And...lift and coast?
+
+```sh
+uv run f1_lc_session.py
+uv run f1_lc_animated.py
+
+printf "file 'lc_trends_2025_1_shorts_6s.mp4'\nfile 'lc_trends_2026_1_shorts_6s.mp4'" | ffmpeg -f concat -safe 0 -protocol_whitelist file,pipe -i - -c copy lc_trends_multi_year.mp4
+
+
+```
+
+
 
 ### Kart On Boards
 

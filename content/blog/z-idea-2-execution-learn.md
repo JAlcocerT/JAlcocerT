@@ -181,6 +181,12 @@ To deliver solid products/services, you better start learning/doing agentic deli
 
 Because the speed is coming there as well.
 
+Dont forget about the **value equation**:
+
+$$Value = \frac{\text{Dream Outcome} \times \text{Perceived Likelihood of Achievement}}{\text{Time Delay} \times \text{Effort \& Sacrifice}}$$
+
+And that in most cases, price is not the problem, is the perceived P > Value!
+
 #### Converting
 
 Tools that will help you convert:

@@ -1,6 +1,6 @@
 ---
 title: "F1 Data Animations"
-date: 2026-02-28
+date: 2026-03-05
 draft: false
 tags: ["Telemetry x Racing","F1 x PolyMarket","Landing CRO"]
 description: 'A landing and f1 data. How will you ever want to leave such site?'
@@ -15,7 +15,13 @@ How about looking at some data?
 
 **Intro**
 
-After talking about geo recently
+Sometime back I wrote [about F1 data APIs](https://jalcocert.github.io/JAlcocerT/interesting-apis/#formula-1): https://docs.fastf1.dev/
+
+https://www.f1-tempo.com/ and https://www.gp-tempo.com/
+
+* https://f1-dash.com/dashboard/track-map
+
+After talking [about geo recently](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/)
 
 creating HUDs overlays for my action cam videos...
 

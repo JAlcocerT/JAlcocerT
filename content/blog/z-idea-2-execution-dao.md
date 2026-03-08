@@ -476,3 +476,5 @@ After receiving answers to the 4 questions:
 
 **Execution Directive:** "Do not build a website; build a digital instrument. Every scroll should feel intentional, every animation should feel weighted and professional. Eradicate all generic AI patterns."
 ```
+
+> Bottom line: The spec is a "greenfield build" tool. Your project already has 80% of the hard functional work done. The right remodel is a visual and copy upgrade applied to what you have — not a rewrite that trades your working architecture for animations.
