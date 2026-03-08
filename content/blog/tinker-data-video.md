@@ -97,7 +97,7 @@ mpv "DJI_20260308T3031.0002.0.MP4"
 
 ```
 
-Trust me that [karting after raining](https://youtu.be/cQULovJU3Uc) is fun.
+Trust me that [karting after raining](https://youtu.be/cQULovJU3Uc) is fun. [Trust me :)](https://www.youtube.com/watch?v=0oBr9mLWfL8)
 
 But so much is to embed te telemetry.
 
@@ -276,6 +276,11 @@ flowchart LR
 
 
 1. GWeiss
+
+```sh
+git clone datainmotion
+uv run tests/plot_historical_gweiss.py ADM --start 2000-01-01 --brand "@LibrePortfolio" --warmup-days 400
+```
 
 2. Nominal CAGR vs Real CAGR vs in EUR vs in GOLD
 
