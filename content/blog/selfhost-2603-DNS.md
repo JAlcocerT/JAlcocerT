@@ -1030,6 +1030,7 @@ As of now Im using:
 #btop #glances
 #lazydocker
 sudo docker compose -f 2603_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
+docker ps -f "name=nextcloud|uptimekuma"
 ```
 
 These have been apps that I have used at some point at my homelab and might also be of your interest

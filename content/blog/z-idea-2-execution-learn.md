@@ -3,7 +3,7 @@ title: "Learning with/from agents"
 date: 2026-03-07T07:00:21+01:00
 draft: false
 tags: ["Unit Economics 108","Prompts x Requirements","Back Propagation"]
-description: 'What is learning?'
+description: 'What is learning? Take feedback from the value equation.'
 url: 'ideas-to-execution-after-learning'
 math: true
 ---
@@ -13,6 +13,8 @@ math: true
 What is learning? 
 
 [How do we learn](#back-propagation-vs-human-brain)?
+
+Hows going with your [value prop](#the-right-value-prop)?
 
 * https://app.fireflies.ai/perks
 * Perplexity and commet (from W11 only on the desktop) 
@@ -167,6 +169,8 @@ Approach. Agent layer that answers portfolio questions with sources (≤3s), pus
 Outcomes (90 days). Time‑to‑detect ↓50%; time‑to‑explain ≤30s; ≥95% sourced accuracy.
 Decision needed. Approve Phase 1 pilot.
 
+> After your first ten, you should [have learnt](#back-propagation-vs-human-brain) sth about whats working, whats not with your [initial value proposition](#the-right-value-prop)
+
 #### Attracting Clients
 
 To attract, you can use tools like `https://www.clay.com/`
@@ -180,7 +184,7 @@ and follow the *full stack business formula* from top line, to net profit of you
 $$
 P \times V \times GM \times OM \times IF \times T
 $$
-
+> 
 If you dont like crazy speed, most likely operations *most likely* wont be for you.
 
 Forget about marketing, SCM, DataOps...
@@ -213,6 +217,8 @@ You can become excepcionally good by bringing knowledge from the future, to toda
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting 121 - Tier of Service" >}}
 {{< /cards >}}
+
+
 
 ---
 
@@ -442,3 +448,47 @@ This speeds up alignment.
 
 
 > Want me to create a **requirements checklist**, **interview script**, or a **dashboard requirements document template** for you?
+
+#### The right value prop?
+
+Based on the framework from the text and the **Hormozi Value Equation**, your "failure" wasn't in the technical delivery—you clearly provided a functional, high-performance product. 
+
+Instead, it was a misalignment between your **Conviction**, your **Target Audience**, and the **Value Perception** you created.
+
+Here is the breakdown of your main strategic errors:
+
+1. The "Conviction" Gap (Self-Devaluation)
+
+The very first page of the text warns: *"If you are not convinced of your own merchandise... consider yourself ready for failure"*.
+
+* **The Error**: By charging 0.1 while earning 100+, you signaled that you didn't value your own time.
+* **The Result**: If you aren't "sold" on the idea that your work is worth a premium, you cannot answer the buyer's internal question: *"Why should they pay more for what you offer instead of looking for something cheaper?"*.
+
+2. Attracting "Price-Sensitive" instead of "Value-Sensitive" Clients
+
+The text explains that when a client objects to price, they are often hiding deeper doubts about whether the product is the **right decision**.
+
+* **The Error**: By positioning yourself as a "cooler WordPress competitor" at a lower price, you attracted clients who only care about the $100 cost, not the business outcome.
+* **The Framework**: As the author notes, showing a more expensive product helps a client think in **qualitative terms**. By staying at the bottom, you never allowed your clients to see the "Scenario Ideal" where your AI-dev skills solve their real problems.
+
+3. Mismanaging the Value Equation
+
+$$Value = \frac{\text{Dream Outcome} \times \text{Perceived Likelihood}}{\text{Time Delay} \times \text{Effort & Sacrifice}}$$
+
+* **Perceived Likelihood**: Because you are a new brand compared to Wix or WordPress, your "Likelihood of Achievement" is naturally lower in a stranger's mind.
+* **The Error**: You tried to compensate for lower trust by lowering the **Price**, but you kept the **Effort & Sacrifice** high for yourself by doing custom work.
+* **The Fix**: To beat Wix, you shouldn't be cheaper; you should be **easier**. Wix is "Do It Yourself" (High Effort). You should have sold "Done For You" (Zero Effort) at a premium price to offset the brand risk.
+
+4. Conversion vs. Attraction
+
+Your "failure" in conversion was likely caused by not answering the **Internal Questions** mentioned in the text:
+
+* *"Will this company really take care of me and my problems?"*.
+* At 0.1/year, the answer feels like "No," because a professional can't afford to care for that price.
+* You weren't "selling the person," you were selling the "merchandise".
+
+**The Lesson**: You used your first 10 clients to learn the *tech* (automation/AI), which is great. But the framework suggests you missed learning the *psychology*—that people don't buy code; **they buy the certainty that their problem will go away 👌**
+
+> Doing the [hosting of nextcloud](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#nc-vs-immich) for friends and family its just fine to me because i dont expect any monetary signaling :)
+
+> > btw, when was the last time you said that you care about others? and the last time you made it for free?

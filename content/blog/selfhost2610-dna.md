@@ -252,7 +252,9 @@ JSON, YML or TooN?
 
 * https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql
 
-The MSSQL Extension for Visual Studio Code is designed to empower developers by providing a seamless and modern database development experience. Our goal is to make SQL development more productive and intuitive by integrating essential features such as schema management, query execution, and AI-powered assistance.
+The MSSQL Extension for Visual Studio Code is designed to empower developers by providing a seamless and modern database development experience. 
+
+Our goal is to make SQL development more productive and intuitive by integrating essential features such as schema management, query execution, and AI-powered assistance.
 
 
 ### Whats Open DevOps?
