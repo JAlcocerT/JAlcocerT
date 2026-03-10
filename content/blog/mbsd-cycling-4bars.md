@@ -12,7 +12,7 @@ url: 'cycling-and-the-4-bars-mechanism'
 
 Is the 4 bar mechanism everywhere?
 
-Or is it just my head?
+Or is it just ~~my head~~ deployed at [this CSR](https://multibodysystemdynamics.pages.dev/)?
 
 **Intro**
 

@@ -16,6 +16,7 @@ Lifetime products are fine.
 
 Providing that someone is interested in what you create.
 
+DIS TRI BU TION
 
 
 Using Resend mail API, together with Pocketbase to:
@@ -41,8 +42,6 @@ Want this implemented for your ideas?
 
 
 ---
-
-
 
 <!-- https://github.com/appwrite/appwrite
 https://appwrite.io/docs/advanced/self-hosting

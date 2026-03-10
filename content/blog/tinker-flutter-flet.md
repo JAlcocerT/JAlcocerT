@@ -327,8 +327,13 @@ If you are into [stonks](http://localhost:1313/py-stonks/#other-foss-apps-for-fi
 * Cashew is a full-fledged, feature-rich application designed to empower users in managing their finances effectively. Built using Flutter - with Drift's SQL package, and Firebase - this app offers a seamless and intuitive user experience across various devices. Development started in September 2021.
 
 
-### About desktop apps
+### About Desktop Apps
 
+Does making desktop apps with Python makes sense?
+
+Or for some one who hasnt done one could RUST be the way?
+
+https://youtu.be/WhjEL817Onw?si=uBhfxuuQhwRA0Ufe
 
 <!-- 
 

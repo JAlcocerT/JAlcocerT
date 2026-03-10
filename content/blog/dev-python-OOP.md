@@ -377,7 +377,9 @@ I hope this clarifies the distinctions between aggregation and association.
 
 #### Encapsulation
 
-You've hit on a crucial aspect of encapsulation in Python with the double underscore (`__`) prefix. Let's break down how it works and why it's used.
+You've hit on a crucial aspect of encapsulation in Python with the double underscore (`__`) prefix. 
+
+Let's break down how it works and why it's used.
 
 **Double Underscore (Name Mangling):**
 
@@ -676,7 +678,7 @@ For that video, the autor provides the files in the description!
 
 ## Conclusions
 
-Few years ago I was quite advance with Matlab models.
+Few years ago I was quite advanced with Matlab models.
 
 Advance as in doing this: https://github.com/JAlcocerT/Bike_dynamic_simulator
 
@@ -687,114 +689,3 @@ But what for now having Python and many OSS goodies.
 Anyways, if you provide digital services and think [that claude code](https://www.reddit.com/r/ClaudeAI/comments/1q403xw/claude_code_for_noncoding_projectswork_a_complete/) wont be cause deflation there soon because 'Im not a programmer'...
 
 Better be finding your Ikigai (?)
-
----
-
-## FAQ
-
-Python and its 288 use cases
-
-This year I have been surprised by Python language (one more time).
-
-And using uv as package manager has been a revelation:
-
-If we are ready...what are those cool use cases?
-
-### Photo
-
-* https://www.geeksforgeeks.org/python-pillow-creating-a-watermark/
-
-### Video
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
-{{< /cards >}}
-
-For editing video, I prefer to use directly FFMPEG.
-
-TO create videos with Python, for now, I have tried [data driven animations](#animations), which can be exported to `.mp4`
-
-### WebApps
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/web-apps-with-python" title="Streamlit 101 ↗" >}}
-{{< /cards >}}
-
-Flask
-
-### Plots
-
-For WebApps, I try to go with Plotly, to get interactivity out of the box.
-
-You can also bring to your Python Apps: ChartJS, ApexCharts...as seen [here](https://github.com/JAlcocerT/Streamlit_PoC)
-
-* https://handhikayp.medium.com/real-time-data-visualizations-using-python-library-plotly-12e0e5b48240
-
-### QR Generation
-
-To generate [**QR's with logo** thanks to Python](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb) 
-
-And your QR generator can be embedded into WebApps, as seen [here](https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py)
-
-> It can be done as well with Inkscape, or [with QR-Code-Generator](https://github.com/nayuki/QR-Code-generator) or with [emn178](https://emn178.github.io/online-tools/qr-code/generator/)
-
-[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
-
-I got to learn this during [this wedding post](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt)!
-
-
-### Infographics
-
-<!-- ![alt text](/blog_img/karting/track_top_curvature_peaks.png) -->
-
-Infographics are one of those things can be [done as code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#infographics-as-a-code): *with python ofc*
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks/#infographics" title="Infographics | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/" title="Entrepreneur | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment" title="Animating yfinance" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="YFinance for Python, cool plots and animations | Post" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/#discrete-to-continuum" title="Track Infographic" image="/blog_img/karting/track_top_curvature_peaks.png" subtitle="Matplotlib x Race track x Curvature | GA Post" >}}
-{{< /cards >}}
-
-See this sample script: https://github.com/JAlcocerT/DataInMotion/blob/main/tests/plot_total_return_from_yfinance.py
-
-```sh
-#git clone https://github.com/JAlcocerT/DataInMotion.git
-#cd DataInMotion && branch libreportfolio
-uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
-```
-
-But for *not just yfinance* based, I created:
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
-{{< /cards >}}
-
-
-### Animations
-
-I got very much surprised couple of years ago with [the mechanism project](https://github.com/gabemorris12/mechanism).
-
-Which I finally got the change to write about on [this post](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/).
-
-The project has a great application of Python animations.
-
-That I could not resist to tinker with:
-
-* https://github.com/JAlcocerT/mechanism
-* https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations - Just some **matplotlib animations** for various use cases
-
-![Sample animation Gif](/blog_img/dev/503.gif)
-
-
-### About Desktop Apps
-
-Does making desktop apps with Python makes sense?
-
-Or for some one who hasnt done one could RUST be the way?
-
-https://youtu.be/WhjEL817Onw?si=uBhfxuuQhwRA0Ufe
