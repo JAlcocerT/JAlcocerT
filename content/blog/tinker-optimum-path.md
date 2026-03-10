@@ -32,7 +32,7 @@ Brake up to: ~0.5g and turn up to: ~1G
 
 > Sodikart RX250 typically weighs approximately 135 kg to 150 kg
 
-No need to get a mycron 5s so far, just lets do some simulations to understand the potential flying laps.
+No need to get a mycron 5s *so far*, just lets do some simulations to understand the potential flying laps.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/" title="Tinkering with Racing and GoPro GPS" image="/blog_img/data-experiments/kart/matplotlib-driver-comparison.png" subtitle="Using GPS data to compare karting laps and generate HUD overlay videos" >}}

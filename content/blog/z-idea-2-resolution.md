@@ -100,7 +100,11 @@ Combined with the best BRD / PRD / FRD / Project Charter / CRQ practices ever...
 
 You can build your PoC in an afternoon and the [MVP in a week with some sense](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#building-a-how-with-sense)
 
-Focus on define a proper why and what.
+When interested on creating with potential financial incentives, focus on prospecting, then define a proper why and what.
+
+If you just care about creating for the sake of it / tinkering, you are good to go with the why and what to get a working how.
+
+In that case, just enjoy dont expect money to flow.
 
 Around those concepts, Ive been playing with:
 
@@ -119,7 +123,8 @@ The good thing about 'not caring' about people churning, is that you can **white
 #https://realestate.jalcocertech.com
 #https://genbi.jalcocertech.com
 #https://webaudit.jalcocertech.com/
-#mbsd.
+#mbsd...
+# f1...
 ```
 
 Most likely objections are not about pricing, but perceived value.

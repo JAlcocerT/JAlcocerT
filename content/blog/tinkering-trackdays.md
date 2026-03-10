@@ -183,7 +183,7 @@ You can also open it with **Google Colab**: [![Open in Google Colab](https://col
 
 For your racing, you can get a **Mycrons 5s**.
 
-But I know you want something more and feel like you are in a **f1 car on board**, with cool telemetry overlay, as given by: `https://multiviewer.app/`
+But I know you want something more and feel like you are in a **f1 car on board**, with cool telemetry overlay, as given by: `https://multiviewer.app`
 
 <!-- https://www.youtube.com/watch?v=GeDPIKZq0eg -->
 
@@ -194,7 +194,6 @@ But I know you want something more and feel like you are in a **f1 car on board*
 ---
 
 ## FAQ
-
 
 **CANBUS VS ETHERLOOP**
 

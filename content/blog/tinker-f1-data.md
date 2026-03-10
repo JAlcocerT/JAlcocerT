@@ -2,7 +2,7 @@
 title: "F1 Data Animations"
 date: 2026-03-05
 draft: false
-tags: ["Telemetry x Racing","F1 x PolyMarket","Landing CRO"]
+tags: ["GoPro x Telemetry x Racing","F1 x PolyMarket","Landing CRO","RaceCapture"]
 description: 'A landing and f1 data. How will you ever want to leave such site?'
 url: 'f1-data-animated'
 ---
@@ -54,6 +54,10 @@ Lets build some data stories that can *potentially* be more interesting than rac
 
 ### The Data
 
+No data = no fun :)
+
+Its all coming from this awsome project i got to know [a while back](https://jalcocert.github.io/JAlcocerT/interesting-apis/#formula-1):
+
 * https://github.com/IAmTomShaw/f1-race-replay 
     * https://github.com/JAlcocerT/f1-race-replay
 
@@ -100,6 +104,14 @@ uv run plot_telemetry.py
 ---
 
 ## Conclusions
+
+Ive published this as a webapp: *thx to [this cool prompt](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)*
+
+```sh
+
+```
+
+But before going there...
 
 Was there any doubt that new regulations make the ones learning faster be way ahead of the rest?
 
@@ -192,6 +204,7 @@ ffmpeg -f concat -safe 0 -i cinematic_review_list.txt -c copy f1_cinematic_revie
 
 With nice [results](https://youtu.be/LUMbYYZOn-g)!
 
+{{< youtube "LUMbYYZOn-g" >}}
 
 ### About Unfolding Data
 
@@ -223,3 +236,56 @@ And yep: making those animated stories of points per seasons is possible thanks 
 uv run extract_results.py #race classification
 #uv run extract_qualifying.py #saturday qualifying results
 ```
+
+### Sodis Prep?
+
+How much are these kind of analysis useful for an [amateur 3h endurance preparation](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-python/#about-sodis-series)?
+
+Getting the results post race from the [GoPro GPS](#more-gopro-gps-telemetry) is nice.
+
+But probably a mycrhon 5s (propietary file formats and better for offline analysis)
+
+or RaceCapture for pro data adquisition, that seems to allow mqtt/csv's/wifi out of the box 
+
+<!-- 
+https://www.youtube.com/watch?v=8vMJuyT3bo4 
+-->
+
+{{< youtube "8vMJuyT3bo4" >}}
+
+#### More GoPro GPS Telemetry
+
+The kind of thing you do after a karting session:
+
+```sh
+#git clone https://github.com/JAlcocerT/Py_RouteTracker
+git clone https://github.com/JAlcocerT/
+#rsync -avP *.MP4 /home/jalcocert/Desktop/gopro/
+```
+
+It’s a classic "Convenience vs. Freedom" trade-off
+
+| Feature | **AiM MyChron 5S / 6** | **RaceCapture/Track MK4** |
+| --- | --- | --- |
+| **Out-of-the-Box** | **All-in-one.** Screen, battery, and GPS are one physical unit. | **Brain only.** You need a separate phone/tablet to see data while driving. |
+| **Data Format** | **Proprietary.** Uses `.XRK` files; requires AiM software to "unlock" them. | **Open.** Logs directly to `.CSV`. You can open it in Excel or Python instantly. |
+| **Live Data** | **No.** Pit crew only sees data *after* you finish and download it via Wi-Fi. | **Yes.** Streams live to the web (Podium.live) via your phone's hotspot. |
+| **Software** | **Industrial.** Powerful but looks like Windows 95; very rigid ecosystem. | **Modern/Hacker.** Cross-platform app; Lua scripting; community-driven. |
+| **Setup for Rental** | Mount 1 device. Done. | Mount the "brain" + Mount a phone + Connect power bank. |
+
+Is the "Separate Dashboard" a Dealbreaker?
+
+For many rental racers, the MK4's lack of a screen is the biggest hurdle. Here is how people usually handle it:
+
+* **The "Cheap" Screen:** You use your existing smartphone. You mount it to the steering wheel or windshield using a RAM mount and run the RaceCapture App. It connects to the MK4 via Bluetooth/Wi-Fi and becomes your dashboard.
+* **The "Clean" Way:** You buy a cheap, ruggedized Android tablet ($80) and leave it dedicated to the car.
+* **The "Invisible" Way:** If you don't care about seeing your lap times while driving (and only care that your **colleagues** see the data and you get the CSV later), you can just tuck the MK4 and a power bank into a seat pocket or velcro it to the frame. It will log everything silently.
+
+
+Since you're trying to solve a physical handling issue:
+
+* **MyChron 5S:** You’ll be looking at "wobbly" lines in Race Studio 3. It’s effective, but you’re stuck in their interface.
+* **RaceCapture:** You can take that CSV, head over to a Jupyter Notebook or even a Google Sheet, and overlay the $Z$-axis (vertical) vibration against your $X/Y$ (lateral/longitudinal) G-forces. If you like "making the download yourself," this is the only one that won't make you pull your hair out.
+
+* **Choose MyChron 5S** if you want the "Standard." Every kart shop knows how to fix it, and you don't want to mess with phone mounts and power banks before a race.
+* **Choose RaceCapture MK4** if you want to **stream to your friends** and want to own your data without "permission" from a manufacturer. It is the superior tool for a "hacker" mindset, especially for diagnosing that lateral jump.

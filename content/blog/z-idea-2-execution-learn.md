@@ -124,12 +124,13 @@ claude #https://claude.ai/recents
 #claude --continue or claude --resume to resume a conversation  
 /model
 
-                                                  - claude --continue / claude -c — resumes your most recent conversation
+- claude --continue / claude -c — resumes your most recent conversation
 - claude --resume / claude -r — opens an interactive picker to browse and select past sessions                     
 
-#From inside an active session:
+#From inside an active claude session:
 /resume #— opens the session picker to switch to a different conversation
 #/init
+claude "Analyze the Power BI files (model.bim, report.json, daxqueries.json) and create a jira-123.md file explaining how abcd is implemented." -y
 ```
 
 > The vscode extension is also very cool!
