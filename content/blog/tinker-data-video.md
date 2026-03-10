@@ -284,15 +284,21 @@ uv run tests/plot_historical_gweiss.py ADM --start 2000-01-01 --brand "@LibrePor
 
 2. Nominal CAGR vs Real CAGR vs in EUR vs in GOLD
 
-https://youtu.be/ctfGunPZwJ4
+<!-- https://youtu.be/ctfGunPZwJ4 -->
+
+{{< youtube "ctfGunPZwJ4" >}}
+
 
 What else does gold have to say?
 
 {{< youtube "xqtzYbHIrMo" >}}
+
 <!-- 
 https://youtu.be/xqtzYbHIrMo -->
 
 3. RSP vs SP500
+
+
 
 4. Prices are a reflection of future cashflows corrected by....these:
 

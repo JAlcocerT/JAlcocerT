@@ -254,8 +254,8 @@ Case Study: The QR Guest Photo App
 
 Whenever you analyze a new business opportunity, drop it into the "Empty Column" of Table 1. 
 
-* If it has a **Supply Constraint**, focus on raising your **Price ()**. 
-* If it has a **Demand Constraint**, focus on increasing your **Volume ()**.
+* If it has a **Supply Constraint**, focus on raising your **Price**. 
+* If it has a **Demand Constraint**, focus on increasing your **Volume**.
 
 ### After Shipping
 

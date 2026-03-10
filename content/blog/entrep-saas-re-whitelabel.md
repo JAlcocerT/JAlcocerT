@@ -104,7 +104,7 @@ https://youtu.be/QCFhukC4rXI
 
 So that's it.
 
-The service is public and ready for anyone that has the need and can provide the signal.
+The service is public and ready for anyone that has the need *and can provide the monetary signal*.
 
 Here: <https://realestate.jalcocertech.com/>
 
@@ -143,7 +143,7 @@ flowchart LR
     L3 --> L4
     L44 -->|Enhancing| L4
     L45 -->|Enhancing| L4
-  ```
+```
 
 
 ---

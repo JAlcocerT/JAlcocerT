@@ -186,7 +186,7 @@ For the businesses centered reader: **[HERE](https://www.jalcocertech.com/suppor
 
 This was all initiated with this BRD, around this tech stack, with this sales perspective, with this psyc engagement and such ~~[4weeks](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#the-4-week-launchpad-checklist)~~ 7-days Launchpad Checklist.
 
-The place in the value ladder:
+The place in **the value ladder**:
 
 ```mermaid
 flowchart LR

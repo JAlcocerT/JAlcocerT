@@ -2,7 +2,7 @@
 title: "Learning with/from agents"
 date: 2026-03-07T07:00:21+01:00
 draft: false
-tags: ["Unit Economics 108","Prompts x Requirements","Back Propagation"]
+tags: ["Unit Economics 108","Prompts x Requirements","Back Propagation","Questions"]
 description: 'What is learning? Take feedback from the value equation.'
 url: 'ideas-to-execution-after-learning'
 math: true
@@ -15,9 +15,6 @@ What is learning?
 [How do we learn](#back-propagation-vs-human-brain)?
 
 Hows going with your [value prop](#the-right-value-prop)?
-
-* https://app.fireflies.ai/perks
-* Perplexity and commet (from W11 only on the desktop) 
 
 **Intro**
 
@@ -53,6 +50,8 @@ Not been eager to learn today feels like:
 
 ![alt text](/blog_img/memes/bike.png)
 
+At least, you got the time to know yourself by [asking questions](#questions), like these of [ikigai](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#about-ikigai)?
+
 ```mermaid
 flowchart LR
     %% Styles
@@ -78,7 +77,7 @@ flowchart LR
     Newer -- "New Baseline" --> More
 ```
 
-Will the future of OSS be affected by agents?
+Will the future of OSS be affected [by agents](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/)?
 
 I think its quite evident.
 
@@ -99,8 +98,10 @@ Domain expertise and stickiness of core products/services will be key in the wor
 I have been polishing my service offering UI/X with a CRQ and [this nice prompt](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders):
 
 ```sh
-git clone
-git clone
+git clone #consulting.
+git clone #ebook.
+ #diy.
+ #www.
 jalcocertech-services
 ```
 
@@ -184,8 +185,8 @@ and follow the *full stack business formula* from top line, to net profit of you
 $$
 P \times V \times GM \times OM \times IF \times T
 $$
-> 
-If you dont like crazy speed, most likely operations *most likely* wont be for you.
+
+> If you dont like crazy speed, most likely operations *most likely* wont be for you.
 
 Forget about marketing, SCM, DataOps...
 
@@ -195,7 +196,9 @@ Because the speed is coming there as well.
 
 Dont forget about the **value equation**:
 
-$$Value = \frac{\text{Dream Outcome} \times \text{Perceived Likelihood of Achievement}}{\text{Time Delay} \times \text{Effort \& Sacrifice}}$$
+$$
+Value = \frac{\text{Dream Outcome} \times \text{Perceived Likelihood of Achievement}}{\text{Time Delay} \times \text{Effort \& Sacrifice}}
+$$
 
 And that in most cases, price is not the problem, is the perceived P > Value!
 
@@ -255,13 +258,19 @@ https://www.youtube.com/watch?v=l-OLgbdZ3kk
 
 ### Questions
 
+Any business has to go [through some questions](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#any-business-who-what-how), same as the [ideas](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#business-idea-checklist).
+
+Wrong execution = nothing happened.
+
 The ultimate answer is a possitive money signal.
 
-If you are trying to build without such signals because you are not so pro for people to pay you to just join a waiting list
+If you are trying to build without such signals because you are not so PRO for people to pay you to just join a waiting list.
 
-At least be good at asking questions / prepare good forms: *DISqualifying ideas/clients is the goal*
+At least...be good at asking questions / prepare good forms: *DISqualifying ideas/clients is the goal*
 
 > There are some technical/structural questions, others are business & operational
+
+> > The idea is to have [all expectations in sync](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#syncing-expectations)!
 
 🟢 What the Wiki replies to PROPERLY
 Your current documentation is excellent at answering technical and structural questions:
@@ -486,6 +495,11 @@ Your "failure" in conversion was likely caused by not answering the **Internal Q
 * *"Will this company really take care of me and my problems?"*.
 * At 0.1/year, the answer feels like "No," because a professional can't afford to care for that price.
 * You weren't "selling the person," you were selling the "merchandise".
+
+5. The COO view: Whenever you analyze a new business opportunity... 
+
+* If it has a **Supply Constraint**, focus on raising your **Price**. 
+* If it has a **Demand Constraint**, focus on increasing your **Volume**.
 
 **The Lesson**: You used your first 10 clients to learn the *tech* (automation/AI), which is great. But the framework suggests you missed learning the *psychology*—that people don't buy code; **they buy the certainty that their problem will go away 👌**
 

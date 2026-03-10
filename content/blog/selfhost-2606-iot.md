@@ -1,6 +1,6 @@
 ---
 title: "[Learning] Selfhosted IoT x HA"
-date: 2026-06-08
+date: 2026-04-01
 draft: false
 tags: ["Home Assistant","Sonoff x Zigbee"]
 description: 'IoT.'

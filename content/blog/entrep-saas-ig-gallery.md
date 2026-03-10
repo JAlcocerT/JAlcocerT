@@ -215,6 +215,7 @@ Here is a breakdown of why Next.js fits your "Admin + Gallery" vision better tha
 Astro is built with a **"Content-First"** philosophy (optimized for reading). Next.js is **"Application-First"** (optimized for doing).
 
 * **Next.js:** Has built-in **API Routes** and **Server Actions**. This makes the "Upload" and "Edit Text" parts of your `/editor` route feel like a native part of the framework. You can handle the password check and the image upload logic in a single file.
+
 * **Astro:** While it *can* do SSR (Server-Side Rendering), its strength is shipping zero JavaScript to the user. Building a protected admin dashboard in Astro often requires more "wiring up" of external backends or complex middleware configurations compared to the "batteries-included" nature of Next.js.
 
 2. Image Optimization: On-Demand vs. Build-Time
@@ -222,6 +223,7 @@ Astro is built with a **"Content-First"** philosophy (optimized for reading). Ne
 This is the biggest technical difference for a gallery:
 
 * **Astro:** Its built-in image optimization usually happens at **build time**. If you upload a new photo through your `/editor` route, Astro might not "see" it or optimize it until you trigger a full rebuild of the entire site.
+
 * **Next.js:** The `next/image` component (and `next-cloudinary`) optimizes images **on-demand**. The moment you upload an image, it is available and optimized for the next visitor without needing to rebuild the code. This is essential for an admin-driven gallery.
 
 3. Authentication Ecosystem
@@ -300,8 +302,6 @@ Summary Table: Your Next.js Gallery
 | **Uploads** | `CldUploadWidget` from `next-cloudinary` (Supports folders). |
 | **Content** | Server Actions to update a JSON file or KV store. |
 | **Performance** | ISR (Static speed with dynamic updates). |
-
-
 
 ### Decap x Existing Astro x LocalHost
 

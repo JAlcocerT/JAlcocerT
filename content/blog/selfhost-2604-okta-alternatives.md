@@ -2,8 +2,8 @@
 title: "Okta Alternatives? Selfhosted SSO Tools"
 date: 2026-04-01T23:20:21+01:00
 draft: false
-tags: ["Dashboards","Supabase Auth vs PB","Authelia vs Authentik","PocketID"]
-description: 'A look to F/OSS Single Sign On and authentication Tools'
+tags: ["TinyAuth v","Supabase Auth vs PB","Authelia vs Authentik","PocketID"]
+description: 'A look to F/OSS Selfhosted Single Sign On and authentication Tools'
 url: 'open-source-sso-tools'
 ---
 
@@ -257,6 +257,10 @@ sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud 
 
 Got finally [FTTH](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/#docsis-vs-fiber)?
 
+No more [4g](https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/), which lately was a blocker to [upload to R2](https://jalcocert.github.io/JAlcocerT/do-your-instagram/#r2)
+
+![alt text](/blog_img/web/agujapunto-r2-firebase/4g-speed-test.png)
+
 * https://speed.cloudflare.com/
 * MySpeed or SpeedTest are also fine
 
@@ -268,10 +272,10 @@ speedtest-cli #speedtest-cli --simple
 
 * https://github.com/Litlyx/litlyx
 
-And for questions:
+And for questions...
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="DWY Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
