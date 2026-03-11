@@ -2,8 +2,8 @@
 title: "SelfHosted Data Analytics"
 date: 2026-10-01T23:20:21+01:00
 draft: false
-tags: ["D&A","Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver","GCP VWB","mssql"]
-description: 'Selfhosting D&A Tools. DevOps x DORA x Apache DevLake.'
+tags: ["D&A","Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql"]
+description: 'Selfhosting D&A Tools. .'
 url: 'selfhosting-data-analytics'
 ---
 
@@ -257,91 +257,6 @@ The MSSQL Extension for Visual Studio Code is designed to empower developers by 
 Our goal is to make SQL development more productive and intuitive by integrating essential features such as schema management, query execution, and AI-powered assistance.
 
 
-### Whats Open DevOps?
-
-Ive heard these year about DORA.
-
-Which maps with Lean (via VSM) and DevOps: https://www.atlassian.com/devops/frameworks/dora-metrics
-
-DORA is a **metrics framework** (not a rigid toolset)—a set of four standard KPIs from Google's **DevOps Research and Assessment** team to benchmark software delivery.
-
-> DORA = *how good are companies at shipping software?*
-
-There are two key clusters of data inside DORA: Velocity and Stability.
-
-The DORA framework is focused on keeping them in context with each other, as a whole, rather than as independent variables, making the data more challenging to misinterpret or abuse.
-
-Within **velocity** are two core metrics:
-
-* Deployment Frequency (DF): *Number of successful deployments to production, how rapidly is your team releasing to users?*
-* Lead Time for Changes (LTC): *How long does it take from commit to the code running in production? 
-
-This is important, as it reflects how quickly your team can respond to user requirements.
-
-**Stability** is composed of two core metrics:
-
-* Change Failure Rate (Change Success Rate): *How often are your deployments causing a failure?*
-* Median Time to Restore Service (MTTR): *How long does it take the team to properly recover from a failure once it is identified?*
-
-However, MTTR is replaced by Failed Deployment Recovery Time from the 2023 DORA report. 
-
-This metric measures the finish time of a deployment to the resolution of the incident caused by the deployment.
-
-https://devlake.apache.org/assets/images/dora-intro-e3847646d8dbe47220e6c8347ab14f7b.png
-
-DevLake: Incubating Apache project for SDLC metrics (e.g., DORA), data ingestion/visualization from dev tools; uses Go, Grafana; no relation to big data storage.
-
-Delta Lake: Open-format (Databricks-led, Apache-compatible via Spark) for ACID transactions, time travel in data lakes; unrelated to engineering metrics.
-
-
-| Metric                  | What It Measures                  | Elite Benchmark  [atlassian](https://www.atlassian.com/devops/frameworks/dora-metrics) |
-|-------------------------|-----------------------------------|----------------------------------|
-| **Deployment Frequency** | How often code deploys to prod   | Multiple per day                |
-| **Lead Time for Changes**| Commit to deploy time            | <1 day                          |
-| **Change Failure Rate**  | % of deploys causing failures    | 0-15%                           |
-| **Time to Restore**     | MTTR from failure                | <1 hour                         |
-
-### Argo and Jenkins?
-
-Think of it this way: Jenkins is the **builder**, and Argo CD is the **delivery driver** who makes sure the house stays exactly as the blueprint intended.
-
-What is Argo CD?
-
-Argo CD is a **declarative, GitOps continuous delivery (CD) tool** specifically built for Kubernetes.
-
-The core idea is simple: You define what your application environment should look like (the "Desired State") in a Git repository. Argo CD monitors that repository and compares it to what is actually running in your Kubernetes cluster (the "Live State").
-
-* **Syncing:** If you change your code in Git, Argo CD automatically updates Kubernetes to match.
-* **Self-Healing:** If someone accidentally deletes a component in Kubernetes, Argo CD notices the "drift" and automatically recreates it to match Git.
-
-Does it relate to Jenkins?
-
-Yes, but they aren't competitors; they are usually **teammates**.
-
-While Jenkins is a "do-it-all" automation engine, it wasn't originally built for the cloud-native, containerized world of Kubernetes. Here is how they relate:
-
-1. The Hand-off (The CI/CD Pipeline)
-
-In a typical workflow, Jenkins handles the **Continuous Integration (CI)** and Argo CD handles the **Continuous Delivery (CD)**.
-
-* **Jenkins:** Takes your source code, runs tests, and builds a Docker image. It then pushes that image to a registry and updates a YAML file in your Git repo.
-* **Argo CD:** Sees that the YAML file has changed and pulls that new Docker image into your Kubernetes cluster.
-
-2. Push vs. Pull
-
-* **Jenkins (Push Model):** Jenkins usually "reaches out" and tells Kubernetes to run a command. This requires Jenkins to have high-level security credentials for your cluster.
-* **Argo CD (Pull Model):** Argo CD sits *inside* your cluster. It watches Git and "pulls" changes in. This is generally considered more secure and stable for Kubernetes environments.
-
-| Feature | Jenkins | Argo CD |
-| --- | --- | --- |
-| **Primary Goal** | General automation & CI (Building/Testing) | Kubernetes Deployment & CD (Deploying) |
-| **Philosophy** | Script-based (Jenkinsfile) | GitOps-based (Declarative YAML) |
-| **Environment** | Runs anywhere | Runs on Kubernetes |
-| **Best Used For** | Compiling code, running unit tests | Ensuring the cluster matches the Git repo |
-
-> **The Bottom Line:** Use Jenkins to turn your code into an image, and use Argo CD to put that image into production.
-
-> > Both can be helpful for HFAD which relate with DORA metrics!!
 
 
 ### Different ways to JHUB

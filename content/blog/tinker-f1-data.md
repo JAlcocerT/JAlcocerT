@@ -3,7 +3,7 @@ title: "F1 Data Animations"
 date: 2026-03-05
 draft: false
 tags: ["GoPro x Telemetry x Racing","F1 x PolyMarket","Landing CRO","RaceCapture"]
-description: 'A landing and f1 data. How will you ever want to leave such site?'
+description: 'UnfoldingData landing and f1 data. How will you ever want to leave such site?'
 url: 'f1-data-animated'
 ---
 
@@ -82,6 +82,40 @@ uv run extract_telemetry.py
 uv run plot_telemetry.py
 ```
 
+### The Animations
+
+
+```sh
+#git clone
+
+
+uv run f1_head_to_head.py
+```
+
+I could not resist to add a **clipping detector**:
+
+```sh
+#printf "2026\n1\nR\nA\nRUS,VER,HAM\n" | uv run f1_clipping_session.py
+printf "2026\n1\nRUS\n" | uv run f1_clipping_detector.py
+#uv run f1_clipping_detector.py
+uv run f1_clipping_session.py
+uv run f1_clipping_animated.py
+```
+<!-- 
+https://youtu.be/MoP8R_aQrPI 
+-->
+
+{{< youtube "MoP8R_aQrPI" >}}
+
+And...lift and coast?
+
+```sh
+uv run f1_lc_session.py
+uv run f1_lc_animated.py
+
+printf "file 'lc_trends_2025_1_shorts_6s.mp4'\nfile 'lc_trends_2026_1_shorts_6s.mp4'" | ffmpeg -f concat -safe 0 -protocol_whitelist file,pipe -i - -c copy lc_trends_multi_year.mp4
+```
+
 ### The Look and Feel
 
 1. With the BRD -> Development plan approach
@@ -100,6 +134,7 @@ uv run plot_telemetry.py
 
 > See https://github.com/petervdpas/goop2 Goop² is an ephemeral, peer-to-peer system for personal web spaces.
 
+### The Results
 
 ---
 
@@ -289,3 +324,15 @@ Since you're trying to solve a physical handling issue:
 
 * **Choose MyChron 5S** if you want the "Standard." Every kart shop knows how to fix it, and you don't want to mess with phone mounts and power banks before a race.
 * **Choose RaceCapture MK4** if you want to **stream to your friends** and want to own your data without "permission" from a manufacturer. It is the superior tool for a "hacker" mindset, especially for diagnosing that lateral jump.
+
+#### More Software
+
+* https://github.com/GPSBabel/gpsbabel
+
+>  GPSBabel: convert, manipulate, and transfer data from GPS programs or **GPS receivers**. Open Source and supported on MacOS, Windows, Linux, and more. Pointy clicky GUI or a command line version... 
+
+PhyPhox? No Problem
+
+* You can also save GPS data thanks to the [F/OSS PhyPhox](https://github.com/phyphox/phyphox-android) - An app that allow us to use phone's sensors for physics experiments:
+  * Also available for [ESP32 with micropython](https://github.com/phyphox/phyphox-micropython)
+  * And [for the Arduino microcontroller](https://github.com/phyphox/phyphox-arduino)

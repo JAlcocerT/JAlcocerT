@@ -1,10 +1,11 @@
 ---
 title: "Just Data Animations"
-date: 2026-03-06
+date: 2026-03-10
 draft: false
 tags: ["Telemetry x F1 vs Kart","Geo x Statistics","YFinance","Real Estate","Mechanism x MBSD"]
 description: 'Unfolding Data this time with some order. WIth gitlab x Roo x Zed.'
 url: 'ai-scripts-and-animated-data'
+math: true
 ---
 
 
@@ -40,38 +41,6 @@ Let's continue where I left this at [the previous post](https://jalcocert.github
   {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-f1 Github ↗" icon="github" >}}
 {{< /cards >}}
 
-```sh
-#git clone
-
-
-uv run f1_head_to_head.py
-```
-
-I could not resist to add a **clipping detector**:
-
-```sh
-#printf "2026\n1\nR\nA\nRUS,VER,HAM\n" | uv run f1_clipping_session.py
-printf "2026\n1\nRUS\n" | uv run f1_clipping_detector.py
-#uv run f1_clipping_detector.py
-uv run f1_clipping_session.py
-uv run f1_clipping_animated.py
-```
-<!-- 
-https://youtu.be/MoP8R_aQrPI 
--->
-
-{{< youtube "MoP8R_aQrPI" >}}
-
-And...lift and coast?
-
-```sh
-uv run f1_lc_session.py
-uv run f1_lc_animated.py
-
-printf "file 'lc_trends_2025_1_shorts_6s.mp4'\nfile 'lc_trends_2026_1_shorts_6s.mp4'" | ffmpeg -f concat -safe 0 -protocol_whitelist file,pipe -i - -c copy lc_trends_multi_year.mp4
-
-
-```
 
 
 
@@ -99,7 +68,7 @@ mpv "DJI_20260308T3031.0002.0.MP4"
 
 Trust me that [karting after raining](https://youtu.be/cQULovJU3Uc) is fun. [Trust me :)](https://www.youtube.com/watch?v=0oBr9mLWfL8)
 
-But so much is to embed te telemetry.
+But so much is to embed the telemetry.
 
 <!-- {{< youtube "ctfGunPZwJ4" >}} -->
 
@@ -328,7 +297,9 @@ git clone https://github.com/JAlcocerT/ThreeBodies/
 
 Initially, I thought about creating a separated repo.
 
-But what for, if it can be a sub-folder and use one of the latest ways to do cool UIs I have got to know:
+But...what for?
+
+This can be a sub-folder and use one of the latest ways to do [cool greenfield UIs](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders) I have got to know:
 
 {{< youtube "b35XuJI98kI" >}}
 <!-- 
@@ -339,7 +310,9 @@ https://youtu.be/b35XuJI98kI -->
 ### Mechanism
 
 
-Gabe's mechanism project was an inspiriration to me to come back at some point to mechanical engineering with python:
+[Gabe's mechanism project](https://github.com/gabemorris12/mechanism) was an inspiriration to me to come back at some point to mechanical engineering.
+
+This time with python, not with Matlab:
 
 ```sh
 #git clone https://github.com/JAlcocerT/Slider-Crank
@@ -347,13 +320,26 @@ git clone https://github.com/JAlcocerT/mechanism #this is my fork of his origina
 
 ```
 
+There is no problem to [deploy statically a cool page](https://multibodysystemdynamics.pages.dev/) that uses JS via CSR to solve the slider-crank simple and beautiful loop equations:
+
+The Loop Equation: *there are 2 equations inside here, as these are 2D vectors!*
+
+$$\vec{r}_2 + \vec{r}_3 - \vec{d} = 0$$
+
+The Scalar equivalent Breakdown:
+
+Horizontal: $r_2 \cos(\theta_2) + r_3 \cos(\theta_3) - d = 0
+
+$Vertical: $r_2 \sin(\theta_2) + r_3 \sin(\theta_3) = 0$
+
+
 {{< youtube "2xMOxiRz6F4" >}}
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Animations as a Code | Post" >}}
 {{< /cards >}}
 
-Synthesis is a thing...
+Synthesis has always been a thing...
 
 https://youtube.com/shorts/9b19b7SmovU
 
@@ -361,6 +347,12 @@ https://youtube.com/shorts/9b19b7SmovU
 https://youtube.com/shorts/ipi437M6g5A
 
 https://youtube.com/shorts/r8G3XRBn24s?is=sDOxquD4fxU6yKns
+
+I just have not been focusing on mechanism for long time.
+
+But shortly will be allocating some time to tinker back :)
+
+### The 3 Body problem
 
 From **3 bodies** you can jump to the 4 bar mechanism quite easily:
 
@@ -371,8 +363,7 @@ https://www.youtube.com/watch?v=b35XuJI98kI
 {{< youtube "b35XuJI98kI" >}}
 
 
-In fact, for cinematics...you just need geometry and time. 
-
+In fact, for kinematics: you just need geometry and time. 
 
 Forget about forces *at least for now*
 
@@ -382,10 +373,26 @@ The sympy and https://github.com/KmolYuan/Pyslvs-UI will be for another post :)
 
 ## Conclusions
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video-animations/" title="Racing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+### Animations or Dashboards?
+
 [Roo code](https://github.com/RooCodeInc/Roo-Code) extension has been interesting to use together with OpenAI API.
 
+> When doing some scripts, lately I have tried `Roo Code` extension and Zed: `https://zed.dev/pricing`
+
+You guessed it.
+
+Currently making animations is simple.
+
+So is to understand and create dashboards: *including with PBi*
+
 ```md
- i have made a pbip export and brought to this files 3 files, would those be enough for you to infer all the goodies of the data model, ui, transformations etc? 
+i have made a pbip export and brought to this files 3 files, would those be enough for you to infer all the goodies of the data model, ui, transformations etc? 
 ```
 
 | File | Contents |
@@ -402,7 +409,7 @@ So...What if I told you that all this is very cheap to do nowadays?
 
 It is if you have the right knowledge: *part of today's know-how are [prompts](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)* 
 
-Or in other words, how good are you at making questions.
+Or in other words, how good are you at [making questions](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-after-learning/#questions).
 
 Questions like the ones you can have solved:
 
@@ -410,8 +417,6 @@ Questions like the ones you can have solved:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
 {{< /cards >}}
-
-
 
 ### About Gitlab
 
@@ -438,19 +443,42 @@ glab repo create my-awesome-project --public
 | **SSH** | Fingerprints & MACs | AES, ChaCha20 |
 | **HTTPS** | Certificates & Handshakes | AES |
 
-When doing some scripts, lately I have tried `Roo Code` extension and Zed: `https://zed.dev/pricing`
 
 ---
 
 ## FAQ
 
-* https://github.com/GPSBabel/gpsbabel
+### What are Loop Equations?
 
->  GPSBabel: convert, manipulate, and transfer data from GPS programs or GPS receivers. Open Source and supported on MacOS, Windows, Linux, and more. Pointy clicky GUI or a command line version... 
+Loop equations (also known as vector loop equations) are a fundamental tool in kinematics used to analyze the position, velocity, and acceleration of interconnected bodies in a mechanism.
 
+In mechanical engineering, a mechanism is essentially a "closed loop" of links connected by joints. If you follow the path from one joint, through all the links, and back to the starting point, the total displacement must be zero.
 
-### PhyPhox
+Mathematically, we represent each link as a **vector** with a specific magnitude (length) and direction (angle). The loop equation is the vector sum of these links:
 
-* You can also save GPS data thanks to the [F/OSS PhyPhox](https://github.com/phyphox/phyphox-android) - An app that allow us to use phone's sensors for physics experiments:
-  * Also available for [ESP32 with micropython](https://github.com/phyphox/phyphox-micropython)
-  * And [for the Arduino microcontroller](https://github.com/phyphox/phyphox-arduino)
+$$\sum_{i=1}^{n} \vec{r}_i = 0$$
+
+To solve these for specific positions, the vector equation is typically broken down into two scalar algebraic equations using trigonometry:
+
+* **X-component:** $\sum r_i \cos(\theta_i) = 0$
+* **Y-component:** $\sum r_i \sin(\theta_i) = 0$
+
+Application to the Slider-Crank
+
+**Yes, loop equations apply directly to the slider-crank mechanism.** In fact, they are the standard method for determining the piston's position relative to the crank angle.
+
+Why do they apply?
+
+The slider-crank is considered a "closed" kinematic chain. Even though the slider moves linearly, we can treat the distance from the ground origin to the slider pin as a "link" of varying length.
+
+1. **Geometric Constraint:** The physical connection between the crank, the connecting rod, and the slider creates a fixed geometric relationship.
+2. **Solvability:** A standard slider-crank has one degree of freedom (the crank angle $\theta$). By using the loop equations, you can solve for the unknown variables: the angle of the connecting rod and the linear position of the slider.
+3. **Vector Closure:** If you define a vector for the crank ($\vec{r}_2$), the connecting rod ($\vec{r}_3$), and the slider position ($\vec{r}_d$), the loop is closed by the "ground" distance.
+
+The Equation for a Slider-Crank
+
+For a typical slider-crank where the crank is $r_2$, the rod is $r_3$, and the slider displacement is $d$, the vector loop looks like this:
+
+$$\vec{r}_2 + \vec{r}_3 - \vec{d} = 0$$
+
+By solving the $y$-component equation ($r_2 \sin \theta_2 + r_3 \sin \theta_3 = 0$), you can find the rod angle. Then, using the $x$-component, you find the exact position of the piston.

@@ -2,8 +2,8 @@
 title: "If I would have known - Web Apps edition"
 date: 2026-03-16
 draft: false
-tags: ["BiP x Dev","BluePrint x BoilerPlate","N ebooks"]
-description: 'The learnings of shipping a few web/apps.'
+tags: ["BiP x Dev","BluePrint x BoilerPlate","N ebooks","MBSD x Vite x CSR"]
+description: 'The learnings of shipping a few web/apps. How is this so easy?'
 url: 'learnt-while-building-web-apps'
 ---
 
@@ -73,7 +73,7 @@ Which basically mean you learn how to aks for things to get done by algorithms c
 
 The outcome?
 
-See how this 3 bodies web app looks and this data driven formula one web app feels.
+See how this 3 bodies web app looks and this data driven formula one web app feels:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="ThreeBodies Github ↗" icon="github" >}}
@@ -90,9 +90,9 @@ Just that this time im aware of:
 
 ```sh
 codex
-#3bodies OSS
-git clone https://github.com/JAlcocerT/ThreeBodies/
-#cd ThePoincareLab
+#3bodies OSS!
+git clone https://github.com/JAlcocerT/ThreeBodies/ #root has a DASH version
+#cd ThePoincareLab #here there is sth more interesting :)
 ```
 
 Until that point I got it working here as you can see on [this video](https://www.youtube.com/watch?v=b35XuJI98kI).
@@ -123,7 +123,6 @@ ping multibodysystemdynamics.pages.dev
 
 
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-repo-readme.ipynb)
-
 
 Enjoy the static deployment: https://multibodysystemdynamics.pages.dev/
 
