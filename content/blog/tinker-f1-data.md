@@ -175,7 +175,7 @@ I mean, Im came to this post after the geospatial eda and some oa5 x hud...
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path x GoPro HUDs| Repo" icon="github" >}}
 {{< /cards >}}
 
 This is what reality shows it happens after an aggresive change of rules:
@@ -282,7 +282,9 @@ Getting the results post race from the [GoPro GPS](#more-gopro-gps-telemetry) is
 
 But probably a mycrhon 5s (propietary file formats and better for offline analysis)
 
-or RaceCapture for pro data adquisition, that seems to allow mqtt/csv's/wifi out of the box 
+or RaceCapture for pro data adquisition
+
+that seems to allow mqtt/csv's/wifi out of the box 
 
 <!-- 
 https://www.youtube.com/watch?v=8vMJuyT3bo4 
@@ -292,13 +294,33 @@ https://www.youtube.com/watch?v=8vMJuyT3bo4
 
 #### More GoPro GPS Telemetry
 
-The kind of thing you do after a karting session:
+The kind of thing you do after a karting session: *understanding [this public repo folder](https://github.com/JAlcocerT/Py_RouteTracker/tree/main/overlay)*
 
 ```sh
 #git clone https://github.com/JAlcocerT/Py_RouteTracker
-git clone https://github.com/JAlcocerT/
-#rsync -avP *.MP4 /home/jalcocert/Desktop/gopro/
+#time python3.10 ./Py_RouteTracker/overlay/racing_hud_v7.py 
+#make sure to tweak the Lap Logic session and your MP4 names accordingly
+
+git clone https://github.com/JAlcocerT/optimum-path #get inspired to create or schedule a consultation
+#rsync -avP *.MP4 /home/jalcocert/Desktop/optimum-path/overlay
+cd optimum-path
+python -m venv venv
+#python3 -m venv venv
+#pip install -r requirements.txt
+.\venv\Scripts\activate
+#source venv/bin/activate
+pip install opencv-python numpy pandas
+python gopro_racing_hud.py
+#deactivate
 ```
+
+And generating some **magic**: *and without [race chrono](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) pro :)*
+
+{{< youtube "MoP8R_aQrPI" >}}
+
+{{< callout type="info" >}}
+Make sure you do this before deleting the original MP4 files, it wont work with the joined files, neither with what you upload to youtube
+{{< /callout >}}
 
 It’s a classic "Convenience vs. Freedom" trade-off
 

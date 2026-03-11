@@ -24,6 +24,15 @@ Later I tried windsurf, cursor and finally antigravity.
 
 Lately, Im paying claude PRO and im quite happy with it.
 
+```sh
+#
+claude install #it recently migrated from npm
+```
+
+```md
+❯ given the pbip exported files and the data-lineage.md, can you put together a data-sources.md with all the the sources listed one by one, their paths and what data do they contain based on the context you have? some use case would also be great as per the dashboard context 
+```
+
 The productivity change [and learnings](#what-i-have-shipped) has been massive.
 
 Who could have guessed, the more repetitions you do, the more architecture you understand and the more predictable things become.

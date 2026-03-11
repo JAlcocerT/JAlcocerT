@@ -3,7 +3,7 @@ title: "Just Data Animations"
 date: 2026-03-10
 draft: false
 tags: ["Telemetry x F1 vs Kart","Geo x Statistics","YFinance","Real Estate","Mechanism x MBSD"]
-description: 'Unfolding Data this time with some order. WIth gitlab x Roo x Zed.'
+description: 'Unfolding Data this time with some order. With gitlab x Roo x Zed.'
 url: 'ai-scripts-and-animated-data'
 math: true
 ---
@@ -330,7 +330,7 @@ The Loop Equation: *there are 2 equations inside here, as these are 2D vectors!*
 
 $$\vec{r}_2 + \vec{r}_3 - \vec{d} = 0$$
 
-The Scalar equivalent Breakdown:
+The Scalar equivalent Breakdown: *no complex [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) nor [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) here!*
 
 This \(\sigma(z) = \frac{1}{1 + e^{-z}}\) is an inline expression.
 

@@ -17,6 +17,8 @@ Could not avoid thinking on the GoPro GPS Telemetry *again* for those **Racing a
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+~~Fake it~~ tinker til you [make it](#conclusions).
+
 **Intro**
 
 ~~Karting~~ racing is expensive.
@@ -300,7 +302,7 @@ The result has been:
 
 <!-- https://youtu.be/Cv0-m9B3l_Y -->
 
-As you can see, the code is completely free and open.
+As you can see, the code is completely **free and open**.
 
 If you got doubts or need a custom implementation, you can reach out:
 
