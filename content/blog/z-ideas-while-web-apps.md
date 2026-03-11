@@ -1,6 +1,6 @@
 ---
 title: "If I would have known - Web Apps edition"
-date: 2026-03-16
+date: 2026-03-14
 draft: false
 tags: ["BiP x Dev","BluePrint x BoilerPlate","N ebooks","MBSD x Vite x CSR"]
 description: 'The learnings of shipping a few web/apps. How is this so easy?'
@@ -147,7 +147,9 @@ Reality: now you have a greenfield full stack web app with one shot prompt that 
 
 How will this look in a year?
 
-Im not, sure, what I know is that I will be adding interesting stuff:
+Im not sure.
+
+What I know is that I will be adding interesting stuff:
 
 ```mermaid
 flowchart LR
@@ -181,13 +183,29 @@ flowchart LR
     L45 -->|Enhancing| L4
 ```
 
-And that you can get things moving:
+Wanna see how good is what you create?
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet | Github ↗" icon="github" >}}
+{{< /cards >}}
+
+You can get things moving:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
+
+
+### Collecting cool prompts for BluePrints
+
+As I have been collecting nice BRDs, tech stacks and green field prompts, im placing them all at:
+
+```sh
+#git clone
+
+```
 
 ---
 
@@ -262,6 +280,8 @@ And your QR generator can be embedded into WebApps, as seen [here](https://githu
 
 > It can be done as well with Inkscape, or [with QR-Code-Generator](https://github.com/nayuki/QR-Code-generator) or with [emn178](https://emn178.github.io/online-tools/qr-code/generator/)
 
+> > And applied with [slubne](https://jalcocert.github.io/JAlcocerT/building-in-public-wedding-photo-galleries/) :)
+
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 I got to learn this during [this wedding post](https://jalcocert.github.io/JAlcocerT/software-for-weddings/#what-i-learnt)!
@@ -306,8 +326,9 @@ Which I finally got the change to write about on [this post](https://jalcocert.g
 
 The project has a great application of Python animations.
 
-That I could not resist to tinker with:
+That I could not resist to tinker with some time back
 
+* https://github.com/JAlcocerT/Slider-Crank
 * https://github.com/JAlcocerT/mechanism
 * https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations - Just some **matplotlib animations** for various use cases
 

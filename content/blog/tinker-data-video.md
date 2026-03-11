@@ -23,10 +23,7 @@ This is going to be a Python master class.
 
 Or a sneek into the future on how cheap*er* information will be.
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
-{{< /cards >}}
+
 
 
 
@@ -41,7 +38,10 @@ Let's continue where I left this at [the previous post](https://jalcocert.github
   {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-f1 Github ↗" icon="github" >}}
 {{< /cards >}}
 
-
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
+{{< /cards >}}
 
 
 ### Kart On Boards
@@ -279,19 +279,23 @@ https://youtu.be/xqtzYbHIrMo -->
 
 5. Whats going on with software? `IGV` tells us
 
-6. There are some interesting indexes: `^VIX`, `^Move`
+6. There are some interesting indexes: `^VIX`, `^Move` or `^OVX` for oil!
 
-As someone said: you dont understand stock market if you dont understand first the bonds
+As someone said: *you dont understand stock market if you dont understand bonds first*
 
 7. How about other commodities like `CL.F` oil?
 
 ## Physics
 
-How about...3 bodies?
+How about...3 bodies, mechanism and a double pendulum?
+
+It's always a good time to refresh what [loop equations](#what-are-loop-equations) and the [lagrangian](#what-it-is-the-lagrangian) are.
+
+But lets have some fun:
 
 ```sh
 git clone https://github.com/JAlcocerT/ThreeBodies/
-#cd ThePoincareLab #for the cool webapp
+#cd ThePoincareLab #for the cool new webapp!
 ./renderer_env/bin/python3 generate_animation.py --vel 0.2 -0.2 0.2 0.2 -0.3 0.0 --duration 300.0 --output simulation3.mp4
 ```
 
@@ -328,9 +332,24 @@ $$\vec{r}_2 + \vec{r}_3 - \vec{d} = 0$$
 
 The Scalar equivalent Breakdown:
 
+This \(\sigma(z) = \frac{1}{1 + e^{-z}}\) is an inline expression.
+
+$$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
+
+$$
+\begin{aligned}
+  \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+  \nabla \cdot \mathbf{B} &= 0 \\
+  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+  \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
+\end{aligned}
+$$
+
 Horizontal: $r_2 \cos(\theta_2) + r_3 \cos(\theta_3) - d = 0
 
 $Vertical: $r_2 \sin(\theta_2) + r_3 \sin(\theta_3) = 0$
+
+> Yea, [katex](https://katex.org/docs/supported.html) x [Hugo Hextra](https://imfing.github.io/hextra/docs/guide/latex/) is great
 
 
 {{< youtube "2xMOxiRz6F4" >}}
@@ -352,6 +371,54 @@ I just have not been focusing on mechanism for long time.
 
 But shortly will be allocating some time to tinker back :)
 
+### Double Pendulum
+
+The double pendulum is the "chaotic cousin" of the slider-crank. While it looks like a simple linkage, its motion is governed by **energy and dynamics** rather than just static geometry.
+
+Unlike the slider-crank, where you use simple algebraic loop equations, the double pendulum requires **Lagrangian mechanics** to describe how it evolves over time.
+
+The Lagrangian Equations
+
+To find the equations of motion, we define the system by its kinetic energy ($T$) and potential energy ($V$). The Lagrangian ($L$) is:
+
+
+$$L = T - V$$
+
+For two masses ($m_1, m_2$) and two lengths ($l_1, l_2$) at angles ($\theta_1, \theta_2$), the resulting equations of motion are a pair of coupled, non-linear second-order differential equations.
+
+1. Equation for $\theta_1$
+
+This describes the acceleration of the top arm:
+
+
+$$(m_1 + m_2) l_1 \ddot{\theta}_1 + m_2 l_2 \ddot{\theta}_2 \cos(\theta_1 - \theta_2) + m_2 l_2 \dot{\theta}_2^2 \sin(\theta_1 - \theta_2) + (m_1 + m_2) g \sin \theta_1 = 0$$
+
+2. Equation for $\theta_2$
+
+This describes the acceleration of the bottom arm:
+
+
+$$l_2 \ddot{\theta}_2 + l_1 \ddot{\theta}_1 \cos(\theta_1 - \theta_2) - l_1 \dot{\theta}_1^2 \sin(\theta_1 - \theta_2) + g \sin \theta_2 = 0$$
+
+Why is it so different from the Slider-Crank?
+
+While both involve links and pins, the double pendulum is a **dynamic system**, not a **kinematic mechanism**:
+
+* **Degrees of Freedom:** In a slider-crank, if you move the crank $1^\circ$, the piston moves a specific, predictable distance. In a double pendulum, the arms are free to swing; their position depends on gravity and momentum, not just the "input" angle.
+* **Coupling:** Notice the $\cos(\theta_1 - \theta_2)$ terms. This means the movement of the bottom arm physically "tugs" on the top arm and vice-versa.
+* **Chaos:** At high energies, the double pendulum is famously chaotic. A change of $0.001^\circ$ in the starting position will result in a completely different path after just a few swings.
+
+Comparison at a Glance
+
+| Feature | Slider-Crank | Double Pendulum |
+| --- | --- | --- |
+| **Equation Type** | Algebraic (Trig) | Differential (Calculus) |
+| **Input** | Forced (Motor/Crank) | Gravity/Initial Push |
+| **Path** | Fixed (Circular/Linear) | Chaotic/Unpredictable |
+| **Goal** | Position Mapping | Predicting Motion over Time |
+
+Would you like to see the **State-Space** version of these equations? (That's what you'd use if you wanted to write a Python or MATLAB simulation to animate it).
+
 ### The 3 Body problem
 
 From **3 bodies** you can jump to the 4 bar mechanism quite easily:
@@ -362,16 +429,67 @@ https://www.youtube.com/watch?v=b35XuJI98kI
 
 {{< youtube "b35XuJI98kI" >}}
 
-
 In fact, for kinematics: you just need geometry and time. 
 
 Forget about forces *at least for now*
 
 The sympy and https://github.com/KmolYuan/Pyslvs-UI will be for another post :)
 
+The "Three-Body Problem" is a massive jump in complexity from the slider-crank. While the slider-crank is a **constrained kinematic chain** (predictable movement), the three-body problem is a **dynamical system** governed by gravity.
+
+In this case, "loop equations" don't apply because the bodies aren't physically linked by rods or joints—they are linked by the invisible force of gravity.
+
+The Equations of Motion
+
+To describe the motion of three masses ($m_1, m_2, m_3$) at positions ($\vec{r}_1, \vec{r}_2, \vec{r}_3$), we use Newton's Second Law combined with the Law of Universal Gravitation.
+
+The acceleration of the first body ($m_1$) is determined by the gravitational pull from the other two:
+
+$$\ddot{\vec{r}}_1 = -G m_2 \frac{\vec{r}_1 - \vec{r}_2}{|\vec{r}_1 - \vec{r}_2|^3} - G m_3 \frac{\vec{r}_1 - \vec{r}_3}{|\vec{r}_1 - \vec{r}_3|^3}$$
+
+The System of Equations
+
+Because each body affects every other body, you have a system of three second-order differential equations:
+
+1. **For Body 1:** $\ddot{\vec{r}}_1 = G \sum_{j \neq 1}^{3} \frac{m_j (\vec{r}_j - \vec{r}_1)}{|\vec{r}_j - \vec{r}_1|^3}$
+2. **For Body 2:** $\ddot{\vec{r}}_2 = G \sum_{j \neq 2}^{3} \frac{m_j (\vec{r}_j - \vec{r}_2)}{|\vec{r}_j - \vec{r}_2|^3}$
+3. **For Body 3:** $\ddot{\vec{r}}_3 = G \sum_{j \neq 3}^{3} \frac{m_j (\vec{r}_j - \vec{r}_3)}{|\vec{r}_j - \vec{r}_3|^3}$
+
+Why is it so famous?
+
+Unlike the slider-crank, where you can easily solve for the piston's position with basic trig, the Three-Body Problem is **analytically unsolvable** for the general case.
+
+* **Chaos:** Small changes in the starting positions lead to wildly different results (the "Butterfly Effect").
+* **No General Solution:** There is no simple formula (like $d = \dots$) that tells you where the bodies will be at any time $t$.
+* **Special Cases:** We only have solutions for specific setups, like the **Lagrange Points** or specific periodic orbits (like the "Figure-8" orbit).
+
+
+| Feature | Slider-Crank | Three-Body Problem |
+| --- | --- | --- |
+| **Connection** | Physical links/joints | Gravitational fields |
+| **Math Tool** | Algebraic Loop Equations | Differential Equations |
+| **Predictability** | Deterministic/Periodic | Often Chaotic |
+| **Solution** | Closed-form (exact) | Numerical (simulated) |
+
+
+
 ---
 
 ## Conclusions
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-geospatial Github ↗" icon="github" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="eda-geospatial Github ↗" icon="github" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="eda-geospatial Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/mechanism" title="eda-geospatial Github ↗" icon="github" >}}
+{{< /cards >}}
 
 
 {{< cards >}}
@@ -452,9 +570,13 @@ glab repo create my-awesome-project --public
 
 Loop equations (also known as vector loop equations) are a fundamental tool in kinematics used to analyze the position, velocity, and acceleration of interconnected bodies in a mechanism.
 
-In mechanical engineering, a mechanism is essentially a "closed loop" of links connected by joints. If you follow the path from one joint, through all the links, and back to the starting point, the total displacement must be zero.
+In mechanical engineering, a mechanism is essentially a "closed loop" of links connected by joints. 
 
-Mathematically, we represent each link as a **vector** with a specific magnitude (length) and direction (angle). The loop equation is the vector sum of these links:
+If you follow the path from one joint, through all the links, and back to the starting point, the total displacement must be zero.
+
+Mathematically, we represent each link as a **vector** with a specific magnitude (length) and direction (angle). 
+
+The loop equation is the vector sum of these links:
 
 $$\sum_{i=1}^{n} \vec{r}_i = 0$$
 
@@ -465,11 +587,15 @@ To solve these for specific positions, the vector equation is typically broken d
 
 Application to the Slider-Crank
 
-**Yes, loop equations apply directly to the slider-crank mechanism.** In fact, they are the standard method for determining the piston's position relative to the crank angle.
+**Yes, loop equations apply directly to the slider-crank mechanism.** 
+
+In fact, they are the standard method for determining the piston's position relative to the crank angle.
 
 Why do they apply?
 
-The slider-crank is considered a "closed" kinematic chain. Even though the slider moves linearly, we can treat the distance from the ground origin to the slider pin as a "link" of varying length.
+The slider-crank is considered a "closed" kinematic chain.
+
+Even though the slider moves linearly, we can treat the distance from the ground origin to the slider pin as a "link" of varying length.
 
 1. **Geometric Constraint:** The physical connection between the crank, the connecting rod, and the slider creates a fixed geometric relationship.
 2. **Solvability:** A standard slider-crank has one degree of freedom (the crank angle $\theta$). By using the loop equations, you can solve for the unknown variables: the angle of the connecting rod and the linear position of the slider.
@@ -482,3 +608,9 @@ For a typical slider-crank where the crank is $r_2$, the rod is $r_3$, and the s
 $$\vec{r}_2 + \vec{r}_3 - \vec{d} = 0$$
 
 By solving the $y$-component equation ($r_2 \sin \theta_2 + r_3 \sin \theta_3 = 0$), you can find the rod angle. Then, using the $x$-component, you find the exact position of the piston.
+
+### What it is the Lagrangian?
+
+It's a kind of magic.
+
+Only that its not magic, its Physics.

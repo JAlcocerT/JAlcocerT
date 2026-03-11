@@ -1,8 +1,8 @@
 ---
 title: "Attraction Web Offer x Show a Problem"
-date: 2026-05-01T23:20:21+01:00
+date: 2026-04-01T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey"]
+tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey x EAyP v3"]
 description: 'A scalable way to provide DIY websites. With Free Web Audits!'
 url: 'diy-webs-via-paas'
 ---
@@ -97,13 +97,15 @@ https://www.mangomedia.pl/pl/portfolio.html
 
 ### Build some flask/next webapps as CMS and fail
 
-### Tried Nuxt Content, was nice, BUT
+### Tried Nuxt Content
+
+And it was nice. But.
 
 * Canvas Nuxt ContentCMS
 
 * https://github.com/bloggrify/bloggrify
 
-### DecapCMS finally did the trick
+### And DecapCMS
 
 With the [Twilight](https://github.com/JAlcocerT/Twilight) astro Theme first and the double terminal working in local mode:
 
@@ -133,7 +135,13 @@ make dev-all
 
 The last round was very recently, on [this post](https://jalcocert.github.io/JAlcocerT/interesting-books/#decap-x-existing-astro-x-localhost).
 
+Got to know about via selfh.st
+
+But...didnt tried it yet.
+
 {{% /steps %}}
+
+
 
 ## The journey of the infra side
 
@@ -300,6 +308,8 @@ WIP
 
 Beyond a journey...
 
+A project that I phased out for now, but with interesting learnings around astro and static websites.
+
 
 ### Other Static CMS
 
@@ -359,8 +369,11 @@ One of the distinguishing features of **GitLab is its open-source nature** and t
 This contrasts significantly with services like GitHub Pages, Firebase, and Cloudflare Pages, where you do not control the underlying infrastructure.
 
 **Key Comparisons:**
+
 - **Open Source**: GitLab is fully open source, which allows users to inspect, modify, and enhance the source code, providing a level of transparency and customization that is not available in proprietary platforms like Firebase or fully managed environments like GitHub Pages and Cloudflare Pages.
+
 - **Self-Hosting**: With GitLab, you have the **option to self-host** your entire DevOps platform using Docker. This offers complete control over your data and the infrastructure, which is particularly important for organizations with strict data sovereignty or privacy requirements.
+
 - **Infrastructure Control**: While platforms like GitHub Pages and Cloudflare Pages offer convenience and ease of use, they do not allow for infrastructure control. This means you rely entirely on their managed services, which can be a limitation if you need more control over performance optimizations, security settings, or compliance measures.
 
 By choosing **GitLab**, you leverage the benefits of an **open ecosystem** and the flexibility to host your own instance, ensuring that you have full authority over your development and hosting environment.
@@ -389,7 +402,9 @@ Getting Started with GitLab Pages
 
 Enhancing Your Static Site with GitLab Pages
 
-GitLab Pages is not just for serving static content. You can enhance site interactivity and functionality using modern web development approaches:
+GitLab Pages is not just for serving static content.
+
+You can enhance site interactivity and functionality using modern web development approaches:
 
 - **Client-Side JavaScript**: Enrich your site with dynamic content and interactive elements using JavaScript frameworks like React or Vue.js.
 - **Third-Party APIs**: Integrate APIs to bring dynamic data into your static site, such as e-commerce platforms, CMSes, or social media feeds.

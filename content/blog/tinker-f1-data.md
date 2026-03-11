@@ -132,9 +132,11 @@ printf "file 'lc_trends_2025_1_shorts_6s.mp4'\nfile 'lc_trends_2026_1_shorts_6s.
 {{< /cards >}}
 
 
-> See https://github.com/petervdpas/goop2 Goop² is an ephemeral, peer-to-peer system for personal web spaces.
-
 ### The Results
+
+Back in the days this would have been enough for me to buy a domain that results in nothing.
+
+Im holding that fake urgency :)
 
 ---
 

@@ -7,6 +7,8 @@ description: 'A look to F/OSS Selfhosted Single Sign On and authentication Tools
 url: 'open-source-sso-tools'
 ---
 
+> See https://github.com/petervdpas/goop2 Goop² is an ephemeral, peer-to-peer system for personal web spaces.
+
 **TL;DR**
 
 * https://www.awesome-homelab.com/item/pocket-id
@@ -251,9 +253,8 @@ These are the **services** im using as of now:
 sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx
 ```
 
-* http://jalcocert-x300-1:3001/dashboard/4 #uptime
+* http://jalcocert-x300-1:3001/dashboard/4 #uptime kuma is amazing
 * http://jalcocert-x300-1:8090 #termix
-
 
 Got finally [FTTH](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/#docsis-vs-fiber)?
 

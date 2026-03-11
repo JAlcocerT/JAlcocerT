@@ -1,6 +1,6 @@
 ---
 title: "[Prototyping] Restaurants x Astro SSR."
-date: 2026-03-20
+date: 2026-04-01
 draft: false
 tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads x APIFY x Web Audit"]
 description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranean x OpenClaw x Gems."
@@ -10,7 +10,7 @@ url: "webs-for-restaurants"
 
 **TL;DR**
 
-QR Restaurantes Free + Web if Pay.
+QR Restaurantes Free + Web if ~~Pay~~ you qualify.
 
 Only for TOP clients :)
 
@@ -20,9 +20,13 @@ For B2B only as per [this section](#the-how-behind-the-idea).
 
 Scrap on google maps some potential interested business: leads.
 
-The Related: BRD, tech stack, dev phases, sales, more sales and landing psyc
+The Related: *BRD, tech stack, dev phases, sales, more sales and landing psyc*
 
-Before you ask: yes, this is using my latest APIFY workflow to find leads and my free web audit.
+Before you ask: yes, this is using my latest APIFY workflow to find leads and checked it via [my free web audit repo](https://github.com/JAlcocerT/poc_webs_magnet).
+
+Is it for price sensitive clients?
+
+Not really, just value and ROI focused minds :)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet | Github ↗" icon="github" >}}

@@ -310,14 +310,13 @@ codex
 
 Get an idea/PoC: like validating the tweet above with powerlaw
 
-Plug the prompt below and let your eyes enjoy of that beautiful UI experience created with `Gemini 3.0 Fash`
+Plug the prompt below and let your eyes enjoy of that **beautiful UI experience** created with `Gemini 3.0 Fash`
 
 ![Sample Cinematic Landing](/blog_img/crypto/btc/cycles-data.png)
 
 <!-- https://www.youtube.com/watch?v=czLrUyA_Bh4 -->
 
 {{< youtube "czLrUyA_Bh4" >}}
-
 
 One shot web UIs with `GEMINI.md`
 

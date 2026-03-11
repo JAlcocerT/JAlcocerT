@@ -22,7 +22,13 @@ Isnt it time to do some upgrades to IoT, HA and the solar panel?
 
 **Intro**
 
+Spring is here!
 
+Last year I was able to put together HA with a DHT connected to the Pico W powered by a solar panel.
+
+But I left some few loose ends while documenting how great that setup was.
+
+Its time to make that better.
 
 
 ## Protocols
@@ -69,8 +75,12 @@ docker ps -a | grep -i home-assistant
 What else am I running?
 
 ```sh
-
+sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx jellyfin
 ```
+
+I removed the services for my ebooks and consulting subdomains.
+
+They are now...static!
 
 ---
 
