@@ -297,11 +297,35 @@ https://www.youtube.com/watch?v=8vMJuyT3bo4
 The kind of thing you do after a karting session: *understanding [this public repo folder](https://github.com/JAlcocerT/Py_RouteTracker/tree/main/overlay)*
 
 ```sh
-#git clone https://github.com/JAlcocerT/Py_RouteTracker
-#time python3.10 ./Py_RouteTracker/overlay/racing_hud_v7.py 
-#make sure to tweak the Lap Logic session and your MP4 names accordingly
+#choco install ffmpeg
+git clone https://github.com/JAlcocerT/Py_RouteTracker
+time python3.10 ./Py_RouteTracker/overlay/racing_hud_v7.py 
+#make sure to tweak the Lap Logic session and your MP4 names accordingly!
+deactivate #go out of the python venv and just join the HUD with the original video
+# ffmpeg -f concat -safe 0 \
+#   -i <(printf "file '$PWD/GX010411.MP4'\nfile '$PWD/GX020411.MP4'") \
+#   -c copy \
+#   racing_session2.mp4
+  
+#for linux
+# ffmpeg -i ./GX010009.MP4 \
+#        -i ./output/HUD_v7_Session.mp4 \
+#        -filter_complex "[1:v]format=rgba,colorkey=0x000000:0.1:0.1[ckout];[0:v][ckout]overlay=W-w-50:H-h-50" \
+#        -codec:a copy \
+#        -preset superfast \
+#        racing_v7_output.mp4
+ffmpeg -i ./GX010009.MP4 `
+       -i ./output/HUD_v7_Session.mp4 `
+       -filter_complex "[1:v]format=rgba,colorkey=0x000000:0.1:0.1[ckout];[0:v][ckout]overlay=W-w-50:H-h-50" `
+       -codec:a copy `
+       -preset superfast `
+       racing_v7_output.mp4
+```
 
-git clone https://github.com/JAlcocerT/optimum-path #get inspired to create or schedule a consultation
+Get inspired to create or schedule a [consultation](#conclusions): *bc this is not OSS :)*
+
+```sh
+git clone https://github.com/JAlcocerT/optimum-path #
 #rsync -avP *.MP4 /home/jalcocert/Desktop/optimum-path/overlay
 cd optimum-path
 python -m venv venv
@@ -311,12 +335,14 @@ python -m venv venv
 #source venv/bin/activate
 pip install opencv-python numpy pandas
 python gopro_racing_hud.py
+#python gopro_racing_hud_simple.py --t=2
 #deactivate
 ```
 
 And generating some **magic**: *and without [race chrono](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) pro :)*
 
-{{< youtube "MoP8R_aQrPI" >}}
+<!-- https://youtu.be/rW-E9L5bQdw -->
+{{< youtube "rW-E9L5bQdw" >}}
 
 {{< callout type="info" >}}
 Make sure you do this before deleting the original MP4 files, it wont work with the joined files, neither with what you upload to youtube
@@ -348,6 +374,31 @@ Since you're trying to solve a physical handling issue:
 
 * **Choose MyChron 5S** if you want the "Standard." Every kart shop knows how to fix it, and you don't want to mess with phone mounts and power banks before a race.
 * **Choose RaceCapture MK4** if you want to **stream to your friends** and want to own your data without "permission" from a manufacturer. It is the superior tool for a "hacker" mindset, especially for diagnosing that lateral jump.
+
+But hey...im not leaving yet.
+
+```md
+ thats amazing, could you take some ideas from gopro_racing_hud.py? particularly, the possibility to     bring the map with the position of the kart in the circuit (it would be great to have that on the top     right) Also id like that when the flying lap finishes it will write the lap time, we have a section       already in that script that made it indicating BEST and DELTA (id like that to appear in the middle of    the screen when crossing the finish line and until the end of the 5 seconds remaining (because we are     taking 5s before and after right?) also, make some tweaks so that this is implemented to the _fastlap.py script and that we can choose via parameters which of the 4 elements we want to be            displayed (velocimeter, g force, map and lap time info) 
+```
+
+```sh
+#python gopro_racing_hud_fastlap.py --t=10
+#python gopro_racing_hud_fastlap.py --png=5 
+python gopro_racing_hud_fastlap.py
+
+ffmpeg -i flying_lap_82_40s.mp4 \
+       -i output\hud_simple_flying_lap.mp4 \
+       -filter_complex "[1:v]format=rgba,colorkey=0x000000:0.1:0.1[ck];[0:v][ck]overlay=W-w-10:H-h-10" \  
+       -codec:a copy -preset superfast \
+       output\fast_output_with_hud.mp4
+```
+
+<!-- https://youtu.be/0OShcnJFGSY -->
+
+{{< youtube "0OShcnJFGSY" >}}
+
+
+
 
 #### More Software
 

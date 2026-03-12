@@ -1,5 +1,5 @@
 ---
-title: "Just Data Animations"
+title: "Just Data Animations x Kilo Code"
 date: 2026-03-10
 draft: false
 tags: ["Telemetry x F1 vs Kart","Geo x Statistics","YFinance","Real Estate","Mechanism x MBSD"]

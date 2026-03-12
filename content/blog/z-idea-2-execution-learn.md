@@ -131,11 +131,13 @@ claude #https://claude.ai/recents
 /resume #— opens the session picker to switch to a different conversation
 #/init
 claude "Analyze the Power BI files (model.bim, report.json, daxqueries.json) and create a jira-123.md file explaining how abcd is implemented." -y
+#/btw
 ```
 
 > The vscode extension is also very cool!
 
 > > Consider that [some are depricating all UIs](https://ampcode.com/news/the-coding-agent-is-dead), as the aim is for agents to use these and UI are just dragging them
+
 Do you feel **tech deflation** coming?
 
 ```md
@@ -143,7 +145,7 @@ could you create a unambigous-tasks.md with the step by step guidance on how to 
 from data modelling if required, to where to drag and drop the elements in the UI as if a 15 year old had to build it  
 ```
 
-I do.
+[I do](https://github.com/JAlcocerT/PBi/tree/main/z-prompt-collection.md).
 
 Will [AGI come in the next 36m](https://www.youtube.com/watch?v=zeHTTXAWDUA)?
 
