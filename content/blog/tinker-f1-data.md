@@ -138,6 +138,8 @@ Back in the days this would have been enough for me to buy a domain that results
 
 Im holding that fake urgency :)
 
+You can enjoy the [kart videos](#more-gopro-gps-telemetry) anyways!
+
 ---
 
 ## Conclusions
@@ -397,16 +399,64 @@ ffmpeg -i flying_lap_82_40s.mp4 \
 
 {{< youtube "0OShcnJFGSY" >}}
 
+Luckily i write about what I do.
 
+Or I would have forgot about:
 
+```sh
+python3.10 ./overlay/lap-analysis/lap_timer_v7.py #possibility to compare 2 laps
+```
+
+![alt text](/blog_img/karting/laps_delta_L4_vs_L5_maxonly.png)
+
+Which I have integrated the fast lap thingy: *how could I doubt that claude will [make it happen](https://youtu.be/UG2Sn0gzaS8)*
+
+```sh
+python gopro_racing_hud_fastlap.py --extrema --t=10
+```
+
+![alt text](../../static/blog_img/karting/laps_delta_L4_vs_L5_maxonly.png)
+
+```sh
+python gopro_racing_hud_fastlap.py --delta
+python gopro_racing_hud_fastlap.py --extrema --delta #to bring all the goodies
+```
+
+So, after all this tinkering...
+
+If you got a GoProH9 its all about declarative knowledge: *this is possible if you ask :)*
+
+```sh
+#pip install scipy
+
+# all laps individually + auto best-vs-second-best
+python lap-analysis/longitudinal_g.py
+# single lap
+python lap-analysis/longitudinal_g.py --lap 4
+# specific comparison
+python lap-analysis/longitudinal_g.py --laps 4 5
+#  python lap-analysis/lateral_g.py
+```
+
+![alt text](/blog_img/karting/long_g_trace_L4.png)
 
 #### More Software
+
+Will I make possible to upload GoPro mp4 to my server and get back the overlays?
+
+Hmmmm, im not sure of that.
+
+A desktop app with paywall?
+
+Hmmmmmmmmmmm... not for now.
+
+In the meantime, you can enjoy these:
 
 * https://github.com/GPSBabel/gpsbabel
 
 >  GPSBabel: convert, manipulate, and transfer data from GPS programs or **GPS receivers**. Open Source and supported on MacOS, Windows, Linux, and more. Pointy clicky GUI or a command line version... 
 
-PhyPhox? No Problem
+PhyPhox? No Problem, its OSS.
 
 * You can also save GPS data thanks to the [F/OSS PhyPhox](https://github.com/phyphox/phyphox-android) - An app that allow us to use phone's sensors for physics experiments:
   * Also available for [ESP32 with micropython](https://github.com/phyphox/phyphox-micropython)
