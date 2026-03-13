@@ -1033,7 +1033,14 @@ sudo docker compose -f 2603_docker-compose.yml up -d uptime....pihole nextcloud 
 docker ps -f "name=nextcloud|uptimekuma"
 ```
 
-These have been apps that I have used at some point at my homelab and might also be of your interest
+Just for reference, with uptime kuma you can see that:
+
+* DNS tend to reply with ~5ms
+* A static website can be ~50ms
+* A web app goes to ~150/200ms
+* WP/Wix official sites goes to ~700ms
+
+These have been apps that I have used **at some point at my homelab** and might also be of your interest
 
 1. Container UI's 🐳: [Portainer](https://github.com/JAlcocerT/Home-Lab/tree/main/portainer), Rancher, Dockge...
 
@@ -1063,4 +1070,4 @@ These have been apps that I have used at some point at my homelab and might also
 
 10. [SSGs](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro) combined with a headlessCMS and [selfhosted static server](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-static-hosting) 🐳 
 
-If you are starting, just use static web hosting for those and forget about servers.
+If you are starting, just use [static web hosting](https://jalcocert.github.io/JAlcocerT/create-your-website/) for those and forget about servers.

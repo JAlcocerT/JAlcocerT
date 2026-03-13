@@ -218,6 +218,12 @@ The moment of truth.
 
 If you are delivering services, you better be excellent at them.
 
+Anything counts, as you know, some people get paid to create ppts.
+
+Im not sure how they will treat deflation driven by tech, because literally I pasted [this markdown of a slidev](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/2-ba-brd-development/ppt-notebookllm.md) presentation to [notebookLLM](https://notebooklm.google.com/) and got a [really nice pptx](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/2-ba-brd-development/The_Agentic_Builder.pptx) by pressing a button.
+
+If this sounds strange or sth that you could do arbitrage, thats right.
+
 You can become excepcionally good by bringing knowledge from the future, to today:
 
 {{< cards >}}

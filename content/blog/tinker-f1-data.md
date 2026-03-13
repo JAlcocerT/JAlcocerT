@@ -144,7 +144,14 @@ You can enjoy the [kart videos](#more-gopro-gps-telemetry) anyways!
 
 ## Conclusions
 
-Ive published this as a webapp: *thx to [this cool prompt](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)*
+What it started with the [route tracker](https://github.com/JAlcocerT/optimum-path) and continued as:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-f1 Github ↗" icon="github" >}}
+{{< /cards >}}
+
+Can be shaped as a webapp: *thx to [this cool prompt](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)*
 
 ```sh
 
@@ -439,6 +446,18 @@ python lap-analysis/longitudinal_g.py --laps 4 5
 ```
 
 ![alt text](/blog_img/karting/long_g_trace_L4.png)
+
+#### GoProH9 vs H13
+
+Both have GPS, yea
+
+But!
+
+Who could I have known that the way they store telemetry is different...
+
+```sh
+
+```
 
 #### More Software
 

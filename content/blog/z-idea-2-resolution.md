@@ -59,7 +59,12 @@ As illustrated brilliantly by [this article](https://www.latent.space/p/reviews-
 
 > The site UI/X and how it makes you go through the story is amazing!
 
+Questions like the ones you can have solved:
 
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
+{{< /cards >}}
 
 
 ### What I have shipped

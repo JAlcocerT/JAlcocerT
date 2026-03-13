@@ -1,6 +1,6 @@
 ---
 title: "Just Data Animations x Kilo Code"
-date: 2026-03-10
+date: 2026-03-13
 draft: false
 tags: ["Telemetry x F1 vs Kart","Geo x Statistics","YFinance","Real Estate","Mechanism x MBSD"]
 description: 'Unfolding Data this time with some order. With gitlab x Roo x Zed.'
@@ -11,7 +11,7 @@ math: true
 
 **Tl;DR**
 
-Time to put all those **animations** together.
+Does this count as one of those things that you do *even if nobody pays you*?
 
 {{< cards >}}
   {{< card link="https://gitlab.com/fossengineer1/unfolding-data" title="Unfolding Data | NEW Gitlab Repo" icon="github" >}}
@@ -23,11 +23,7 @@ This is going to be a Python master class.
 
 Or a sneek into the future on how cheap*er* information will be.
 
-
-
-
-
-
+Time to put all those **animations** together.
 
 
 ## F1
@@ -35,13 +31,15 @@ Or a sneek into the future on how cheap*er* information will be.
 Let's continue where I left this at [the previous post](https://jalcocert.github.io/JAlcocerT/f1-data-animated/): `read-wiki.md`
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-f1 Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
 {{< /cards >}}
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-f1 Github ↗" icon="github" >}}
 {{< /cards >}}
+
+
 
 
 ### Kart On Boards
@@ -529,7 +527,11 @@ It is if you have the right knowledge: *part of today's know-how are [prompts](h
 
 Or in other words, how good are you at [making questions](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-after-learning/#questions).
 
-Questions like the ones you can have solved:
+### The last time that
+
+I cant reply questions like: whats the thing that you love
+
+But if you have interests, just that are blocked to make them happen:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
