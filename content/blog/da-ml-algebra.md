@@ -33,7 +33,7 @@ Until today.
 
 These were pretty crazy concepts.
 
----
+But they just make sense when you focus on the what, not on the how to calculate them.
 
 <!-- https://www.youtube.com/watch?v=e50Bj7jn9IQ -->
 
@@ -45,6 +45,9 @@ These were pretty crazy concepts.
 
 ## Conclusions
 
+Dont tell me that algebra is not cool
+
+When is the one that made my real time bike simulator alive.
 
 ### Outro
 

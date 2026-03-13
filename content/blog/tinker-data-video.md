@@ -8,7 +8,6 @@ url: 'ai-scripts-and-animated-data'
 math: true
 ---
 
-
 **Tl;DR**
 
 Does this count as one of those things that you do *even if nobody pays you*?
@@ -31,14 +30,17 @@ Time to put all those **animations** together.
 Let's continue where I left this at [the previous post](https://jalcocert.github.io/JAlcocerT/f1-data-animated/): `read-wiki.md`
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
-{{< /cards >}}
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-f1 Github ↗" icon="github" >}}
 {{< /cards >}}
 
+This weekend we have a F1 GP going on.
+
+So lets continue the analysis on how the new season regulations manifest.
+
+```sh
+#git clone
+
+```
 
 
 
@@ -53,18 +55,27 @@ Uploading you action cam session is nice.
 
 Specially when you use ffmpeg to join parts and ship fast.
 
-But you can also create **overlay HUDs** with data from GoPro GPS and accelerometer: *jump out of the kart and do this*
-
 ```sh
 rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #speeds of ~32mb/s
 sudo apt install mpv
 mpv "DJI_20260308T3031.0002.0.MP4"
+```
 
+But you can also create **overlay HUDs** with data from [GoPro GPS and accelerometer](https://jalcocert.github.io/JAlcocerT/f1-data-animated/#more-gopro-gps-telemetry): *jump out of the kart session and do this*
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
+{{< /cards >}}
+
+```sh
 #git clone
-
+# python gopro_h13_hud_f1.py
+# python hud_embed.py --video output\flying_lap_81.13s.mp4 --hud output\hud_h13_f1_flying_lap.mp4 --out output\flying_lap_h13_with_new_hud.mp4
 ```
 
 Trust me that [karting after raining](https://youtu.be/cQULovJU3Uc) is fun. [Trust me :)](https://www.youtube.com/watch?v=0oBr9mLWfL8)
+
+Specially when the grip is not enough for those [22cv from the 460cc](https://www.kartingsevilla.com/#tarifas-grupo)
 
 But so much is to embed the telemetry.
 
@@ -78,6 +89,11 @@ No need to overcomplicate it with PhyPhox as your action cam already detects 3 a
 
 You just wont get real time speeds to get the track references right.
 
+And yep, it works from GPH9 as well as GPH13:
+
+{{< youtube "ctfGunPZwJ4" >}}
+
+
 ### Karts x Optimal Track Models
 
 From the tinkering around karting sessions, where I extracted GoPro GPS telemtry and play with it
@@ -90,6 +106,9 @@ This has been the most practical model among the ones I tried:
 ## Real Estate
 
 This is a snapshot in time of real estate situation in France:
+
+{{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
+
 
 ```sh
 #git clone
@@ -415,7 +434,7 @@ Comparison at a Glance
 | **Path** | Fixed (Circular/Linear) | Chaotic/Unpredictable |
 | **Goal** | Position Mapping | Predicting Motion over Time |
 
-Would you like to see the **State-Space** version of these equations? (That's what you'd use if you wanted to write a Python or MATLAB simulation to animate it).
+Would you like to see the **State-Space** version of these equations?
 
 ### The 3 Body problem
 
@@ -529,7 +548,7 @@ Or in other words, how good are you at [making questions](https://jalcocert.gith
 
 ### The last time that
 
-I cant reply questions like: whats the thing that you love
+I cant reply questions like: *whats the thing that you really love*
 
 But if you have interests, just that are blocked to make them happen:
 

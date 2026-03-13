@@ -222,6 +222,42 @@ Anything counts, as you know, some people get paid to create ppts.
 
 Im not sure how they will treat deflation driven by tech, because literally I pasted [this markdown of a slidev](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/2-ba-brd-development/ppt-notebookllm.md) presentation to [notebookLLM](https://notebooklm.google.com/) and got a [really nice pptx](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/2-ba-brd-development/The_Agentic_Builder.pptx) by pressing a button.
 
+
+In the end, its all about: *the goal, not...the tools*
+
+| Step | Phase | Activity |
+|------|-------|----------|
+| **1** | Discovery | Understand client needs, goals, challenges, and expectations |
+| **2** | Data | Gather and analyze relevant data, perform cleaning and exploration |
+| **3** | Hypothesis | Develop initial hypotheses based on client needs and data |
+| **4** | Method | Select appropriate analytical methods and tools |
+| **5** | Analysis | Perform the analysis, document process and results |
+| **6** | Insights | Identify key patterns, trends, and findings |
+| **7** | Design | Organize insights into a coherent narrative |
+| **8** | Iterate | Share with client, gather feedback, refine |
+| **9** | Present | Deliver the final data story with clear visuals |
+| **10** | Follow-up | Measure success, determine next steps |
+
+
+Every KPI should follow the **SMART framework**: *which is [different to INVEST](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/#smart-vs-invest)*
+
+| Criterion | Description | Example |
+|-----------|-------------|---------|
+| **S**pecific | Clear and well-defined goals | "Develop a KPI dashboard for sales" vs "improve analysis" |
+| **M**easurable | Quantifiable metrics or observable outcomes | Track user engagement increase, time saved |
+| **A**chievable | Realistic given resources, skills, and time | Challenging but within reach |
+| **R**elevant | Aligned with business objectives | Direct impact on key business areas |
+| **T**ime-bound | Specific deadline or timeframe | "Complete by Q2" creates urgency |
+
+You will be building KPI across Categories:
+
+| Category | Focus | Examples |
+|----------|-------|----------|
+| **Financial** | Revenue, profitability | Revenue growth, profit margin, ROI |
+| **Customer** | Satisfaction, retention | NPS, churn rate, customer lifetime value |
+| **Operational** | Efficiency, quality | Processing time, error rate, throughput |
+| **Growth** | Expansion, reach | Market share, new customers, lead conversion |
+
 If this sounds strange or sth that you could do arbitrage, thats right.
 
 You can become excepcionally good by bringing knowledge from the future, to today:
@@ -229,8 +265,6 @@ You can become excepcionally good by bringing knowledge from the future, to toda
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting 121 - Tier of Service" >}}
 {{< /cards >}}
-
-
 
 ---
 
@@ -271,7 +305,7 @@ Any business has to go [through some questions](https://jalcocert.github.io/JAlc
 
 Wrong execution = nothing happened.
 
-The ultimate answer is a possitive money signal.
+The ultimate business answer is a possitive money signal.
 
 If you are trying to build without such signals because you are not so PRO for people to pay you to just join a waiting list.
 

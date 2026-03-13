@@ -296,8 +296,17 @@ or 4.7k 10k resistor between data and 3.3v
 
 Have you ever wanted to work in the **IoT industry**?
 
-After this post,you should be closer than before.
+After this post, you should be closer than before.
 
+Clos**er**, not necessarily close.
+
+There are options to bridge the gaps between current state and future desired state.
+
+Some say that: *price is what you get, value is what you get*
+
+Others: *solo el necio confunde valor y precio*
+
+If you got that:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

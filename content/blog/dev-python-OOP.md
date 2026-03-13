@@ -689,3 +689,16 @@ But what for now having Python and many OSS goodies.
 Anyways, if you provide digital services and think [that claude code](https://www.reddit.com/r/ClaudeAI/comments/1q403xw/claude_code_for_noncoding_projectswork_a_complete/) wont be cause deflation there soon because 'Im not a programmer'...
 
 Better be finding your Ikigai (?)
+
+I mean...
+
+As we have been talking about [3 bodies and ~ gravity](#three-bodies)
+
+If you want to go away from the gravitational pull of the masses
+
+You have to get enough speed to make your great escape:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
+{{< /cards >}}

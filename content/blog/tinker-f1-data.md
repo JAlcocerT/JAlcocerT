@@ -447,6 +447,40 @@ python lap-analysis/longitudinal_g.py --laps 4 5
 
 ![alt text](/blog_img/karting/long_g_trace_L4.png)
 
+
+```sh
+#python gopro_racing_hud_sectors.py # -> hud_sectors_flying_lap.mp4
+#python gopro_racing_hud_fastlap.py --corners #this one shows deceleration zones
+python gopro_h9_racing_hud.py #I ended up putting it all together here
+#Get-ChildItem -Filter "*.MP4" | ForEach-Object { "file '$($_.Name)'" } | Set-Content file_list.txt
+#ffmpeg -f concat -safe 0 -i file_list.txt -c copy output.mp4 #simple join
+
+
+# defaults (output.mp4 + output/session_hud.mp4)                
+python hud_embed.py
+
+# explicit paths
+python hud_embed.py --video output.mp4 --hud output/session_hud.mp4 --out output/final.mp4
+
+# 4K source but want a smaller 1080p output file
+python hud_embed.py --scale 1080
+
+# H13 flying lap
+python hud_embed.py --video flying_lap_82.40s.mp4 --hud output/hud_h13_flying_lap.mp4 --out
+output/h13_final.mp4
+```
+
+After the questionaire, its just [a matter of ffmpeg](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#ffmpeg-video-workflow-for-windows) to plug all the parts together
+
+
+{{< youtube "17Oh7-Ud6Ig" >}}
+
+<!-- 
+https://youtu.be/17Oh7-Ud6Ig -->
+
+
+> Powered by Claude Opus 4.6...and the right questions :)
+
 #### GoProH9 vs H13
 
 Both have GPS, yea
@@ -456,14 +490,39 @@ But!
 Who could I have known that the way they store telemetry is different...
 
 ```sh
-
+python gopro_h13_hud_fastlap.py                  # everything including sectors
+#python gopro_h13_hud_fastlap.py --no-sectors      # sectors hidden
+#python gopro_h13_hud_fastlap.py --t=10 --png=7    # quick preview
+python hud_embed.py --video output\flying_lap_81.13s.mp4 --hud output\hud_h13_flying_lap.mp4 --out output\flying_lap_h13_with_hud.mp4
 ```
+
+{{< youtube "n__LLlIa_0g" >}}
+
+<!-- 
+https://youtu.be/n__LLlIa_0g 
+-->
+
+To do you own f1 :)
+
+```sh
+python gopro_h13_hud_f1.py
+python hud_embed.py --video output\flying_lap_81.13s.mp4 --hud output\hud_h13_f1_flying_lap.mp4 --out output\flying_lap_h13_with_new_hud.mp4
+```
+
+{{< youtube "Hu1owmUMpto" >}}
+
+<!-- 
+https://youtu.be/Hu1owmUMpto 
+-->
+
+> For the next time, live timing: `https://www.kartingsevilla.com/RKSLIVE/`
+
 
 #### More Software
 
 Will I make possible to upload GoPro mp4 to my server and get back the overlays?
 
-Hmmmm, im not sure of that.
+Hmmmm, im not sure about that.
 
 A desktop app with paywall?
 
