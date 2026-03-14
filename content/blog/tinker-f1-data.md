@@ -66,7 +66,10 @@ Its all coming from this awsome project i got to know [a while back](https://jal
 The cool telemetry data is from 2018+, but there is lap timing from 1950 :
 
 ```sh
-uv init
+#git clone https://github.com/JAlcocerT/eda-f1
+#pip install uv
+
+#uv init
 
 uv add -r requirements.txt
 uv run check_sessions.py
@@ -84,6 +87,9 @@ uv run plot_telemetry.py
 
 ### The Animations
 
+Talk is cheap.
+
+So is making nice animations nowadays.
 
 ```sh
 #git clone
@@ -334,9 +340,10 @@ ffmpeg -i ./GX010009.MP4 `
 Get inspired to create or schedule a [consultation](#conclusions): *bc this is not OSS :)*
 
 ```sh
-git clone https://github.com/JAlcocerT/optimum-path #
+git clone https://github.com/JAlcocerT/optimum-path #yep, this one
 #rsync -avP *.MP4 /home/jalcocert/Desktop/optimum-path/overlay
 cd optimum-path
+
 python -m venv venv
 #python3 -m venv venv
 #pip install -r requirements.txt

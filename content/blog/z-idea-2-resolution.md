@@ -42,6 +42,38 @@ Who could have guessed, the more repetitions you do, the more architecture you u
 This is when I started moving from streamlit, to pure web apps.
 
 
+## Key Concepts for solving problems
+
+1. Repetitions.
+
+```mermaid
+flowchart LR
+    %% Styles
+    classDef state fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+    classDef start fill:#43A047,stroke:#1B5E20,stroke-width:2px,color:white;
+
+    %% Nodes
+    Start((Start)):::start --> More
+    More(Doing MORE):::state
+    Better(Doing BETTER):::state
+    Newer(Doing NEWER):::state
+
+    %% Internal Feedback Loops (The Grind)
+    More -- "Scale Up" --> More
+    Better -- "Refine" --> Better
+    Newer -- "Test" --> Newer
+
+    %% The Progression Journey
+    More -- "Capacity Hit" --> Better
+    Better -- "Optimized" --> Newer
+    
+    %% The Upward Spiral
+    Newer -- "New Baseline" --> More
+```
+
+Because with repetitions you go from a so so vibed coded web/app to other that can impress.
+
+2. 
 
 ---
 
