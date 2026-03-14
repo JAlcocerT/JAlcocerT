@@ -151,7 +151,7 @@ Will [AGI come in the next 36m](https://www.youtube.com/watch?v=zeHTTXAWDUA)?
 
 If so, none of this will probably matter :)
 
- Wiki Structure
+Wiki Structure
 
 Audience: VP/CTO, Portfolio Leads, Steerco
 Reading time: 5–7 minutes for the front page
@@ -163,6 +163,7 @@ Owner / Contact: Product Owner, Tech Lead
 Last updated: {auto-populated}
 
 FAQ (Exec‑friendly)
+
 Can it be wrong? Yes—so every answer shows sources, last refresh, and confidence.
 Who sees what? Access is scoped to your portfolio; raw rows aren’t exposed across divisions.
 Will this replace dashboards? No. Dashboards remain the system of record; the agent accelerates discovery and explanation.

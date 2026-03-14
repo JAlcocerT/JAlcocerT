@@ -38,10 +38,59 @@ This weekend we have a F1 GP going on.
 So lets continue the analysis on how the new season regulations manifest.
 
 ```sh
-#git clone
+#git clone https://github.com/JAlcocerT/eda-f1
+make help
 
+uv run f1_head_to_head.py
 ```
 
+I could not resist to add a **clipping detector**:
+
+```sh
+#printf "2026\n1\nR\nA\nRUS,VER,HAM\n" | uv run f1_clipping_session.py
+printf "2026\n1\nRUS\n" | uv run f1_clipping_detector.py
+#uv run f1_clipping_detector.py
+uv run f1_clipping_session.py
+uv run f1_clipping_animated.py
+```
+<!-- 
+https://youtu.be/MoP8R_aQrPI 
+-->
+
+{{< youtube "MoP8R_aQrPI" >}}
+
+And...lift and coast?
+
+```sh
+uv run f1_lc_session.py
+uv run f1_lc_animated.py
+
+printf "file 'lc_trends_2025_1_shorts_6s.mp4'\nfile 'lc_trends_2026_1_shorts_6s.mp4'" | ffmpeg -f concat -safe 0 -protocol_whitelist file,pipe -i - -c copy lc_trends_multi_year.mp4
+```
+
+You just [pairdrop this](https://pairdrop.net/):
+
+```sh
+make head_to_head ARGS="2026 2 ANT RUS"
+#uv run f1_head_to_head.py 2026 2 ANT RUS
+
+#make head_to_head
+#make lc_animated
+```
+
+<!-- 
+https://youtube.com/shorts/u9S50DobDmI 
+-->
+
+{{< youtube "u9S50DobDmI" >}}
+
+
+```sh
+make deep analysis
+printf "file 'lc_trends_2025_1_shorts_6s.mp4'\nfile 'lc_trends_2026_1_shorts_6s.mp4'" | ffmpeg -f concat -safe 0 -protocol_whitelist file,pipe -i - -c copy lc_trends_multi_year.mp4
+```
+
+Or just go an enjoy the race with: https://github.com/slowlydev/f1-dash or https://www.gp-tempo.com/
 
 
 ### Kart On Boards
@@ -56,28 +105,66 @@ Uploading you action cam session is nice.
 Specially when you use ffmpeg to join parts and ship fast.
 
 ```sh
+#git clone https://github.com/JAlcocerT/optimum-path
+cd optimum-path/overlay
+# pip install uv
+#uv --version
+uv add opencv-python
+sudo apt-get install exiftool
+##exiftool -ee ./GH020417.MP4 > output-GH020417.txt
+mpv "GH010417.MP4" #get the second where you cross the finish line 
+uv run gopro_h9_h13_hud_fastlap.py
+#mpv "flying_lap_79.50s.mp4"
+#mpv "hud_flying_lap.mp4"
+#all looking good? just join them
+
+ffmpeg -i output/flying_lap_79.50s.mp4 \
+       -i output/hud_flying_lap.mp4 \
+       -filter_complex "[1:v]scale=3840:2160,format=rgba,colorkey=0x000000:0.1:0.1[ck];[0:v][ck]overlay=0:0" \
+       -codec:a copy -preset superfast \
+       output/flying_lap_with_hud.mp4
+
+
+mpv "flying_lap_with_hud.mp4"
+```
+
+https://youtu.be/7CakQjcs_vE
+https://youtu.be/cta_dY9X8n4
+https://youtu.be/Pyk8ZDKaWnc
+
+
+{{< youtube "c0YkQhsUNrg" >}}
+
+{{< youtube "Pyk8ZDKaWnc" >}}
+
+
+Or just join them and ship that, in case you dont have gps:
+
+```sh
 rsync -avP *.MP4 /home/jalcocert/Desktop/oa5pro/ #speeds of ~32mb/s
 sudo apt install mpv
 mpv "DJI_20260308T3031.0002.0.MP4"
 ```
 
-But you can also create **overlay HUDs** with data from [GoPro GPS and accelerometer](https://jalcocert.github.io/JAlcocerT/f1-data-animated/#more-gopro-gps-telemetry): *jump out of the kart session and do this*
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
-{{< /cards >}}
-
-```sh
-#git clone
-# python gopro_h13_hud_f1.py
-# python hud_embed.py --video output\flying_lap_81.13s.mp4 --hud output\hud_h13_f1_flying_lap.mp4 --out output\flying_lap_h13_with_new_hud.mp4
-```
-
 Trust me that [karting after raining](https://youtu.be/cQULovJU3Uc) is fun. [Trust me :)](https://www.youtube.com/watch?v=0oBr9mLWfL8)
 
-Specially when the grip is not enough for those [22cv from the 460cc](https://www.kartingsevilla.com/#tarifas-grupo)
+But so much is to embed the telemetry: for gph9 or gph13 you better get the right exif
 
-But so much is to embed the telemetry.
+```sh
+wget https://exiftool.org/Image-ExifTool-13.52.tar.gz
+tar -xf Image-ExifTool-13.52.tar.gz
+cd Image-ExifTool-13.52
+
+perl Makefile.PL
+make
+sudo make install
+
+exiftool -ver
+
+#uv run gopro_h9_h13_hud_fastlap.py
+uv run 
+```
+
 
 <!-- {{< youtube "ctfGunPZwJ4" >}} -->
 
@@ -111,7 +198,7 @@ This is a snapshot in time of real estate situation in France:
 
 
 ```sh
-#git clone
+#git clone https://github.com/JAlcocerT/eda-geospatial
 
 ```
 

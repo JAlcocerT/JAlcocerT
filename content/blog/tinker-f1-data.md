@@ -66,9 +66,6 @@ Its all coming from this awsome project i got to know [a while back](https://jal
 The cool telemetry data is from 2018+, but there is lap timing from 1950 :
 
 ```sh
-#git clone https://github.com/JAlcocerT/eda-f1
-#pip install uv
-
 #uv init
 
 uv add -r requirements.txt
