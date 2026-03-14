@@ -161,8 +161,18 @@ sudo make install
 
 exiftool -ver
 
-#uv run gopro_h9_h13_hud_fastlap.py
+#uv run gopro_h9_h13_hud_fastlap.py #now allows for full session hud creation
 uv run 
+─── Composite command (full session) ───────────────────
+  (HUD 1920×1080 → scaled to 3840×2160 to match video)
+ffmpeg -i ./GX010010.MP4 \
+       -i output/hud_full_session.mp4 \
+       -filter_complex "[1:v]scale=3840:2160,format=rgba,colorkey=0x000000:0.1:0.1[ck];[0:v][ck]overlay=0:0" \
+       -codec:a copy -preset superfast \
+       output/full_session_with_hud.mp4
+─────────────────────────────────────────────────────────
+
+mpv "full_session_with_hud.mp4"
 ```
 
 
