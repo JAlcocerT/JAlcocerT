@@ -128,12 +128,12 @@ ffmpeg -i output/flying_lap_79.50s.mp4 \
 mpv "flying_lap_with_hud.mp4"
 ```
 
-https://youtu.be/7CakQjcs_vE
+<!-- https://youtu.be/7CakQjcs_vE
 https://youtu.be/cta_dY9X8n4
 https://youtu.be/Pyk8ZDKaWnc
+https://youtu.be/KpkugCOI1rE -->
 
-
-{{< youtube "c0YkQhsUNrg" >}}
+{{< youtube "KpkugCOI1rE" >}}
 
 {{< youtube "Pyk8ZDKaWnc" >}}
 
@@ -187,6 +187,7 @@ mpv "output.mp4"
 
 {{< youtube "KpkugCOI1rE" >}}
 
+Or just the fast lap:
 
 <!-- {{< youtube "ctfGunPZwJ4" >}} -->
 
@@ -194,13 +195,10 @@ mpv "output.mp4"
 
 No need to overcomplicate it with PhyPhox as your action cam already detects 3 axis acceleration for estabilization purposes.
 
-{{< youtube "ctfGunPZwJ4" >}}
-
 You just wont get real time speeds to get the track references right.
 
 And yep, it works from GPH9 as well as GPH13:
 
-{{< youtube "ctfGunPZwJ4" >}}
 
 
 ### Karts x Optimal Track Models
@@ -525,6 +523,10 @@ mpv "output.mp4"
 <!-- https://youtu.be/WfgIy6KeZTY -->
 
 {{< youtube "WfgIy6KeZTY" >}}
+
+
+<!-- https://youtu.be/hCOSqf4dXqc -->
+{{< youtube "hCOSqf4dXqc" >}}
 
 
 There is no problem to [deploy statically a cool page](https://multibodysystemdynamics.pages.dev/) that uses JS via CSR to solve the slider-crank simple and beautiful loop equations:

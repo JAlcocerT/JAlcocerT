@@ -1,6 +1,6 @@
 ---
 title: "If I would have known - Web Apps edition"
-date: 2026-03-19
+date: 2026-03-17
 draft: false
 tags: ["BiP x Dev","BluePrint x BoilerPlate","N ebooks","MBSD x Vite x CSR"]
 description: 'The learnings of shipping a few web/apps. How is this so easy?'
@@ -195,6 +195,37 @@ You can get things moving:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
+
+If you were lucky, you saw me presenting what I wrote [here](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/):
+
+```sh
+#git clone https://github.com/JAlcocerT/selfhosted-landing
+#cd y2026-tech-talks/2- ba-brd-development
+#npm run dev 
+git clone https://github.com/JAlcocerT/langchain-db-ui
+cd langchain-db-ui
+#cd langchain-db-ui/Z_PGSQL-GenBI #not foooor now
+#make help
+#cd langchain-db-ui/Z_PGSQL-GenBI
+
+make install
+make demo-db
+#duckdb /home/jalcocert/Desktop/langchain-db-ui/backend/demo.duckdb
+#./venv/bin/duckdb /home/jalcocert/Desktop/langchain-db-ui/backend/demo.duckdb
+#SELECT * FROM customers;
+# Then in the prompt:
+# SELECT * FROM customers;
+make dev #curl http://localhost:8000/docs
+
+```
+
+I showed the **Vite x fast api** one, but there will be more coming [with BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database/) and [PGSQL:)](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/)
+
+In the meantime, things are getting interesting:
+<!-- 
+https://www.youtube.com/watch?v=Ii99RU3mOJM -->
+
+{{< youtube "Ii99RU3mOJM" >}}
 
 
 

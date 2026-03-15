@@ -1,6 +1,6 @@
 ---
 title: "The Mechanism behind Cyclying"
-date: 2026-04-10T23:20:21+01:00
+date: 2026-04-05T23:20:21+01:00
 draft: false
 tags: ["DA","MBSD","Sympy","MatterJS","Double Wishbone","2D Simulation"]
 description: 'Im Back.'
@@ -167,8 +167,103 @@ Stay with me for the series about MBSD.
 ```sh 
 git clone https://github.com/JAlcocerT/mbsd
 cd mbsd/2D-Kinematics
-python examples/slider_crank.py
+#python examples/slider_crank.py
+python examples/four_bar.py
 ```
+
+<!-- https://youtu.be/AgXeUzNkarM -->
+
+{{< youtube "AgXeUzNkarM" >}}
+
+
+```sh
+python examples/four_bar_bicycle.py
+```
+
+e. The new four_bar_bicycle.py models a cyclist's right leg as a four-bar linkage with realistic dimensions:
+
+Link	Part	Length
+Crank	Pedal arm	170 mm
+Coupler	Lower leg (ankle → knee)	440 mm
+Rocker	Upper leg (knee → hip)	400 mm
+Ground	Frame (BB → hip)	618 mm
+Grashof check passes (0.788 ≤ 0.840) so the crank makes full rotations
+60 RPM cadence (comfortable pedaling speed)
+Tracks pedal, knee, and shin midpoint for velocity/acceleration analysis
+Generates all 7 outputs (2 PNGs + 5 MP4s) including the combined video
+
+
+{{< youtube "lx4uvi-Aa40" >}}
+
+<!-- https://youtu.be/lx4uvi-Aa40 -->
+
+
+### All Those 2D Moving
+
+In mechanical engineering, a **2D (planar) mechanism** is a collection of rigid bodies (links) connected by joints that constrain their motion to a single plane. 
+
+These are the fundamental "building blocks" of machines, from car engines to window wipers.
+
+Here are the top 10 most popular 2D mechanisms based on their prevalence in industrial design and daily life:
+
+1. The Four-Bar Linkage
+
+The "king" of mechanisms. It consists of four links connected in a loop by four pin joints. By varying the lengths of the links, it can perform a massive variety of tasks, from opening a car hood to stabilizing a camera.
+
+2. Slider-Crank Mechanism
+
+This is the heart of the internal combustion engine. It converts **rotary motion** (the crankshaft) into **reciprocating linear motion** (the piston) or vice versa. You’ll find it in air compressors, pumps, and steam engines.
+
+4. Geneva Drive (Maltese Cross)
+
+This mechanism converts continuous rotation into **intermittent** rotary motion. It’s famously used in movie projectors to advance the film frame-by-frame and in automated assembly lines for indexing parts.
+
+```sh
+python examples/geneva_drive.py
+```
+
+
+5. Scotch Yoke
+
+Similar to the slider-crank but produces a **purely sinusoidal** motion. It’s often used in control valve actuators and high-pressure gas compressors where smooth, harmonic motion is required.
+
+
+```sh
+python examples/four_bar_bicycle.py
+```
+
+7. Pantograph
+
+Based on a parallelogram linkage, the pantograph is used to **scale motion**. If you move one point, another point follows the exact same path but larger or smaller. It’s used in engraving machines and for power collection on electric trains.
+
+```sh
+python examples/pantograph.py
+```
+
+8. Quick-Return Mechanism (Whitworth)
+
+Designed for machines like shapers or grinders, this mechanism allows a tool to move slowly during a "working stroke" and then snap back quickly during the "return stroke" to save time and increase efficiency.
+
+9. Bell Crank
+
+A simple but vital three-link mechanism that **changes the direction** of a force, usually by 90°. You see these in bicycle brake systems, aircraft flight controls, and throttle linkages.
+
+10. Ratchet and Pawl
+
+This mechanism allows motion in only **one direction** while preventing it in the other. It is the core of every socket wrench, zip tie, and heavy-duty winch.
+
+Comparison Table: Motion Types
+
+| Mechanism | Input | Output | Common Use |
+| --- | --- | --- | --- |
+| **Four-Bar** | Rotation | Oscillation/Path | Windshield wipers |
+| **Slider-Crank** | Rotation | Linear | Car pistons |
+| **Cam & Follower** | Rotation | Custom Linear | Engine valves |
+| **Geneva Drive** | Rotation | Intermittent | Watchmaking |
+| **Rack & Pinion** | Rotation | Linear | Steering |
+
+**Would you like me to explain the math behind a specific one, or perhaps generate an image showing how one of these moves?**
+
 
 ---
 

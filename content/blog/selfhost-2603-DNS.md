@@ -448,6 +448,28 @@ If you are concerned about privacy and the use of LLMs, consider:
 * `https://euria.infomaniak.com/`
 * Go with Ollama x Goose fully local :)
 
+And hey...agents?
+
+you might need:
+
+```sh
+#cd Home-Lab/filebrowser
+#sudo docker compose up -d
+docker ps -a --filter "name=filebrowser"
+docker run -d \
+  --name filebrowser \
+  --user 1000:1000 \
+  -p 8037:80 \
+  -v /root/Docker/FileBrowser/config:/config \
+  -v /root/Docker/FileBrowser/data:/srv \
+  --restart unless-stopped \
+  filebrowser/filebrowser
+docker logs filebrowser #go to http://192.168.1.2:8037/files/
+```
+
+In your local network, together with `claude` :)
+
+
 ### From Portainer to homepage-lite
 
 I got issues with Portainer couple of times.
