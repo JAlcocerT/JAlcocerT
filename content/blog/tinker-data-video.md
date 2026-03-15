@@ -161,8 +161,7 @@ sudo make install
 
 exiftool -ver
 
-#uv run gopro_h9_h13_hud_fastlap.py #now allows for full session hud creation
-uv run 
+uv run gopro_h9_h13_hud_fastlap.py #now allows for full session hud creation
 ─── Composite command (full session) ───────────────────
   (HUD 1920×1080 → scaled to 3840×2160 to match video)
 ffmpeg -i ./GX010010.MP4 \
@@ -173,7 +172,20 @@ ffmpeg -i ./GX010010.MP4 \
 ─────────────────────────────────────────────────────────
 
 mpv "full_session_with_hud.mp4"
+#mv full_session_with_hud.mp4 p1.mp4
+#mv full_session_with_hud.mp4 p2.mp4 #for the second part
+
+# 1. Create a file list
+echo -e "file 'p1.mp4'\nfile 'p2.mp4'" > list.txt
+
+# 2. Join them
+ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4
+mpv "output.mp4"
 ```
+
+<!-- https://youtu.be/KpkugCOI1rE -->
+
+{{< youtube "KpkugCOI1rE" >}}
 
 
 <!-- {{< youtube "ctfGunPZwJ4" >}} -->
@@ -590,6 +602,16 @@ Unlike the slider-crank, where you can easily solve for the piston's position wi
 ---
 
 ## Conclusions
+
+Any ideas to animate?
+
+Maybe a bicycle?
+
+As I did [here](https://ereding.etsi.us.es/bibing/proyectos/abreproy/90128/) https://github.com/JAlcocerT/Bike_dynamic_simulator
+
+That was a **real time** challenge: https://link.springer.com/book/10.1007/978-1-4612-2600-0
+
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/eda-f1" title="eda-geospatial Github ↗" icon="github" >}}

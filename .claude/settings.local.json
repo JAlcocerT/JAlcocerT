@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git stash)",
+      "Bash(git config pull.rebase true)",
+      "Bash(git pull)",
+      "Bash(git stash pop)",
+      "Bash(git rebase --abort)",
+      "Bash(git pull --rebase origin main --strategy-option=theirs)"
+    ]
+  }
+}

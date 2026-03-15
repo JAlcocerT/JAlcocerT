@@ -240,7 +240,7 @@ Its interesting to see inflation going down, despite same wars that caused it ar
 
 > Interesting to see that MEDIAN net assets are ~1y+ of earnings before tax
 
-Also interesting to see higher inflation 0.8% than gdp growth 0.2%
+Also interesting to see a higher inflation of 0.8% than the gdp growth 0.2%
 
 ```sh
 cd dk && uv run animate_dk_pop.py

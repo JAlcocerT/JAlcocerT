@@ -2,9 +2,10 @@
 title: "The Mechanism behind Cyclying"
 date: 2026-04-10T23:20:21+01:00
 draft: false
-tags: ["DA","MBSD","Sympy","MatterJS","Double Wishbone"]
+tags: ["DA","MBSD","Sympy","MatterJS","Double Wishbone","2D Simulation"]
 description: 'Im Back.'
 url: 'cycling-and-the-4-bars-mechanism'
+math: true
 ---
 
 
@@ -19,6 +20,18 @@ Or is it just ~~my head~~ deployed at [this CSR](https://multibodysystemdynamics
 Some math, some physics, some mechanics.
 
 And some [personal journey](#about-mbsd) for starters before going all in with MBSD.
+
+Some economist say that time does not matter.
+
+In this post, [times does matter for the model](#from-concepts-to-equations).
+
+{{< callout type="info" >}}
+It also assumes that solids are infinitely rigid!
+{{< /callout >}}
+
+Otherwise...how could we describe reality?
+
+In fact, this can be simulated in real-time without problems: https://link.springer.com/book/10.1007/978-1-4612-2600-0
 
 4 bars: leg-leg-biela bicicleta
 
@@ -168,5 +181,33 @@ You can demonstrate it step by step:
 https://youtu.be/EhOl9Uh_nyw?t=83
 
 Or...simulate it: *under the hood its just same hypothesis and equations*
+
+### From Concepts to Equations
+
+
+```sh
+cd jalon
+# Extract text from any file to text format
+#uvx kreuzberg extract Chapter01.pdf > output.txt
+#uvx 'kreuzberg[cli]' extract jira-estimation.pdf > output.txt
+for f in Chapter*.pdf; do
+  uvx kreuzberg extract "$f" > "${f%.pdf}.txt"
+done
+
+###with container even better!
+#docker run -p 8027:8000 goldziher/kreuzberg
+#curl -X POST -F "file=@jira-estimation.pdf" http://localhost:8027/extract
+
+```
+
+```sh
+#curl -fsSL https://claude.ai/install.sh | bash
+claude --help
+```
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ### About python SymPy

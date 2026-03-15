@@ -1,6 +1,6 @@
 ---
 title: "If I would have known - Web Apps edition"
-date: 2026-03-14
+date: 2026-03-19
 draft: false
 tags: ["BiP x Dev","BluePrint x BoilerPlate","N ebooks","MBSD x Vite x CSR"]
 description: 'The learnings of shipping a few web/apps. How is this so easy?'
