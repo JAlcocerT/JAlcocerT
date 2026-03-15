@@ -164,6 +164,12 @@ The passion of your live is to create such systems?
 
 Stay with me for the series about MBSD.
 
+```sh 
+git clone https://github.com/JAlcocerT/mbsd
+cd mbsd/2D-Kinematics
+python examples/slider_crank.py
+```
+
 ---
 
 ## FAQ
@@ -205,9 +211,41 @@ done
 claude --help
 ```
 
+The work i put in the prompts:
+
+
+see the bicycle simulator inside the matlab folder, do you understand how it works?
+could you make an equivalent of that in python on the other folder of the repository?
+
+
+quote again: AI does not apply to me / my industry
+
+
+```sh
+cd ~/Desktop/Bike_dynamic_simulator/Python_version #migrated from matlab in 2 prompts
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+python3 main.py --keyboard
+```
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+<!-- https://youtu.be/0CLNWADDrtY -->
+
+{{< youtube "0CLNWADDrtY" >}}
+
+
 
 ### About python SymPy
+
+
+```sh
+#rm -rf .git
+
+git init && git add . && git commit -m "Initial commit: MultiBody" && gh repo create mbsd --private --source=. --remote=origin --push
+
+#make install && make dev #requires .env.local
+```

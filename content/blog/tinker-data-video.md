@@ -373,8 +373,21 @@ flowchart LR
 1. GWeiss
 
 ```sh
-git clone datainmotion
+#git clone https://github.com/JAlcocerT/DataInMotion.git
+cd DataInMotion && git checkout libreportfolio #git branch -a
+#git branch --show-current
+
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
 uv run tests/plot_historical_gweiss.py ADM --start 2000-01-01 --brand "@LibrePortfolio" --warmup-days 400
+```
+
+Dividends? no problem
+
+```sh
+#uv run tests/plot_historical_yield.py CAT --start 2000-01-01 --brand "@LibrePortfolio" --monthly
+uv run tests/plot_historical_yield.py NVO --start 2000-01-01 --brand "@LibrePortfolio" --monthly
+uv run tests/plot_historical_gweiss.py NVO --start 2000-01-01 --brand "@LibrePortfolio" --warmup-days 400
 ```
 
 2. Nominal CAGR vs Real CAGR vs in EUR vs in GOLD
@@ -384,7 +397,7 @@ uv run tests/plot_historical_gweiss.py ADM --start 2000-01-01 --brand "@LibrePor
 {{< youtube "ctfGunPZwJ4" >}}
 
 
-What else does gold have to say?
+What else does **gold** have to say?
 
 {{< youtube "xqtzYbHIrMo" >}}
 
@@ -393,6 +406,13 @@ https://youtu.be/xqtzYbHIrMo -->
 
 3. RSP vs SP500
 
+```sh
+uv run tests/plot_year_end_close_cagr_to_date_animated_sequential.py ^GSPC RSP --start 2004-01-01 --preset twitter_hd --duration-seconds 60 --fps 30 --brand "@UnfoldingData"
+```
+
+<!-- https://youtu.be/Jqr5ADapnfA -->
+
+{{< youtube "Jqr5ADapnfA" >}}
 
 
 4. Prices are a reflection of future cashflows corrected by....these:
@@ -403,13 +423,55 @@ https://youtu.be/xqtzYbHIrMo -->
 =GOOGLEFINANCE("INDEXCBOE:IRX")/1000
 ```
 
+```sh
+uv run tests/plot_year_end_close_cagr_to_date_animated_sequential.py ^TNX ^TYX ^IRX --start 2000-01-01 --preset twitter_hd --duration-seconds 60 --fps 30 --brand "@UnfoldingData"
+uv run tests/plot_price_change_from_start.py ^TNX ^TYX ^IRX --start 2000-01-01 --brand "@UnfoldingData"
+uv run tests/plot_price.py ^TNX --start 2000-01-01 --brand "@UnfoldingData"
+
+uv run tests/plot_price_change_from_start_animated_sequential.py ^TNX ^TYX ^IRX --start 2000-01-01 --brand "@UnfoldingData" --duration-seconds 60 --fps 30
+
+# uv run tests/plot_price_change_from_start.py ^TNX --start 2000-01-01 --brand "@UnfoldingData"
+# uv run tests/plot_price_change_from_start.py ^TYX --start 2000-01-01 --brand "@UnfoldingData"
+# uv run tests/plot_price_change_from_start.py ^IRX --start 2000-01-01 --brand "@UnfoldingData"
+
+```
+
+As someone said: *you dont understand stock market if you dont understand bonds first*
+
+<!-- https://youtu.be/B_nymykHmE4 -->
+
+{{< youtube "B_nymykHmE4" >}}
+
+
 5. Whats going on with software? `IGV` tells us
 
 6. There are some interesting indexes: `^VIX`, `^Move` or `^OVX` for oil!
 
-As someone said: *you dont understand stock market if you dont understand bonds first*
+
+```sh
+uv run tests/plot_year_end_close_cagr_to_date_animated_sequential.py ^VIX ^OVX --start 2008-01-01 --preset twitter_hd --duration-seconds 60 --fps 30 --brand "@UnfoldingData"
+
+uv run tests/plot_price_change_from_start_animated_sequential.py ^TNX ^VIX ^OVX --start 2000-01-01 --brand "@UnfoldingData" --duration-seconds 60 --fps 30
+```
+
+MOVE (ICE BofA MOVE Index for bond volatility) — not available on Yahoo Finance. It's a proprietary index from ICE/BofA. You'd need a Bloomberg or FRED data source for it.
+
+{{< youtube "B_nymykHmE4" >}}
+
+<!-- https://youtu.be/B_nymykHmE4 -->
+
 
 7. How about other commodities like `CL.F` oil?
+
+```sh
+uv run tests/plot_price_change_from_start_animated_sequential.py CL=F GC=F HG=F --start 2000-01-01 --brand "@UnfoldingData" --duration-seconds 60 --fps 30
+```
+<!-- 
+https://youtu.be/XgFHIrFSvpE
+-->
+
+{{< youtube "XgFHIrFSvpE" >}}
+
 
 ## Physics
 
@@ -446,9 +508,24 @@ This time with python, not with Matlab:
 
 ```sh
 #git clone https://github.com/JAlcocerT/Slider-Crank
-git clone https://github.com/JAlcocerT/mechanism #this is my fork of his original project
+#git clone https://github.com/JAlcocerT/mechanism #this is my fork of his original project
 
+git clone https://github.com/JAlcocerT/mbsd
+cd mbsd/2D-Kinematics
+python examples/slider_crank.py
+
+cd examples
+echo -e "file 'p1.mp4'\nfile 'p2.mp4'" > list.txt
+
+# 2. Join them
+ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4
+mpv "output.mp4"
 ```
+
+<!-- https://youtu.be/WfgIy6KeZTY -->
+
+{{< youtube "WfgIy6KeZTY" >}}
+
 
 There is no problem to [deploy statically a cool page](https://multibodysystemdynamics.pages.dev/) that uses JS via CSR to solve the slider-crank simple and beautiful loop equations:
 
