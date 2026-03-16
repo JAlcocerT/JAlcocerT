@@ -540,15 +540,22 @@ Simulations are back.
 
 But not in [matlab, nor octave](https://jalcocert.github.io/JAlcocerT/matlab-vs-octave/).
 
+Just pure Python.
+
+{{< youtube "3A6fIKeBTRo" >}}
+
+Migrated with Claude Code btw.
+
 For racers, see how to estimate the [**optimum circuit path** based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and gradient descent.
 
 {{< youtube "3A6fIKeBTRo" >}}
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
 {{< /cards >}}
 
-And not only for mechanism.
+And not only for mechanisms.
 
 12. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and HUD video overlays.
 
@@ -648,7 +655,7 @@ uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePo
 
 
 ```sh
-
+git clone https://
 ```
 
 efecto cantillon for inflation and entrepreneur mindset
@@ -682,9 +689,10 @@ I finally uploaded some from last year, just with youtube music:
 
 Others, from the vibe coding sessions: helped to bring quick demos to their related product landing.
 
-
-
 17. I made **some animations** instead.
+
+
+
 
 
 ### Serverless
@@ -745,7 +753,9 @@ https://blog.cloudflare.com/serverless-matrix-homeserver-workers/?ref=selfh.st/
 
 1. About langchain connected to a database...v2. [Post](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/). [Video](https://youtu.be/XS0vLK9x9nc).
 
-2. 
+2. Langchain Chat with a DB via web UI x BRD x DuckDB x OpenAI
+
+
 
 99. Duckdb x motherduck
 
@@ -807,9 +817,9 @@ xargs -0 awk '
 
 ### Quotes
 
-Every business is a game and you can see how many of them play: `https://wyszukiwarka-krs.ms.gov.pl/`
+Every business is a kind of game and you can see how many of them play: `https://wyszukiwarka-krs.ms.gov.pl/`
 
-`https://rar.ms.gov.pl/rar/dane-podmiotu/0000053665?strona=1`
+* `https://rar.ms.gov.pl/rar/dane-podmiotu/0000053665?strona=1`
 
 1. Choose your hard
 2. What a priviledge is to choose what challenge make you struggle
@@ -896,7 +906,7 @@ graph LR
 * Is doing x6 in something the last 2 years a matter of: luck, effort, merit? a combination of those? none of those?
   * And x4 in 3 years?
 
-* How can w etalk about resilience without been grateful for critics?
+* How can we talk about resilience without been grateful for critics?
 * Can we be free without fear?
 
 #### Interesting Concepts

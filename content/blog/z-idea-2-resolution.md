@@ -1,5 +1,5 @@
 ---
-title: "Idea to resolution"
+title: "From Idea to Resolution"
 date: 2026-04-01T07:00:21+01:00
 draft: false
 tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3","DevOps x DORA x Apache DevLake"]
@@ -25,9 +25,15 @@ Later I tried windsurf, cursor and finally antigravity.
 Lately, Im paying claude PRO and im quite happy with it.
 
 ```sh
-#
+#irm https://claude.ai/install.ps1 | iex
 claude install #it recently migrated from npm
 ```
+
+The key is to think of prompting as a flow:
+
+Goal -> Context -> Instruction -> Contrains -> Output Format
+
+As we say here, its all about [the AI mindset](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk).
 
 ```md
 ❯ given the pbip exported files and the data-lineage.md, can you put together a data-sources.md with all the the sources listed one by one, their paths and what data do they contain based on the context you have? some use case would also be great as per the dashboard context 
@@ -39,7 +45,7 @@ Who could have guessed, the more repetitions you do, the more architecture you u
 
 ![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
 
-This is when I started moving from streamlit, to pure web apps.
+> This is when I started moving from streamlit, to pure web apps.
 
 
 ## Key Concepts for solving problems
@@ -71,7 +77,7 @@ flowchart LR
     Newer -- "New Baseline" --> More
 ```
 
-Because with repetitions you go from a so so vibed coded web/app to other that can impress.
+Because with repetitions you go from a *so so* [vibed coded web/app](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps) to others that can really impress.
 
 2. 
 

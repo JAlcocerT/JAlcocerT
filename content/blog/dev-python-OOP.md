@@ -158,9 +158,9 @@ In this example:
 
 Let me know if you'd like to explore any of these concepts in more detail or see examples in other programming languages!
 
+Yes, Python is known for its dynamic nature, and this extends to how it handles object properties.
 
-
-Yes, Python is known for its dynamic nature, and this extends to how it handles object properties. In essence, Python allows you to add or modify object properties at runtime, giving you a lot of flexibility.
+In essence, Python allows you to add or modify object properties at runtime, giving you a lot of flexibility.
 
 Here's a breakdown:
 
@@ -352,7 +352,8 @@ Let's break down these points about class relationships, aggregation, and associ
 * **Ownership:** In aggregation, one class (the "whole") contains or "has" another class (the "part"). For example, a "Library" might have "Book" objects.
 * **Independent Lifecycles:** The key feature of aggregation is that the "part" objects can exist independently of the "whole" object. If the "Library" is deleted, the "Book" objects still exist.
 * **Diamond Symbol:** In UML class diagrams (and sometimes in MermaidJS with modifications), aggregation is represented by a hollow diamond at the "whole" end of the relationship line. This visually distinguishes it from composition.
-* **Example:** A "Department" has "Employees." If the "Department" is dissolved, the "Employees" still exist.
+
+**Example:** A "Department" has "Employees." If the "Department" is dissolved, the "Employees" still exist.
 
 **3. Association: A General "Uses-A" Relationship:**
 
@@ -360,7 +361,8 @@ Let's break down these points about class relationships, aggregation, and associ
 * **Local Variable Use:** If an object of one class is used only as a local variable within a method of another class, this is considered an association. This signifies a weak, temporary relationship.
 * **No Strict Representation:** Because association is so general and often temporary, it's not always explicitly represented in class diagrams. It might be implied by method calls or attribute usage.
 * **Class Variable/Method Usage:** Association also occurs when one class uses the class variables or methods of another class. This is a form of interaction that doesn't necessarily imply ownership or a strong lifecycle dependency.
-* **Example:** A "Calculator" class might use a "Math" class to perform calculations. This is an association, but the "Calculator" doesn't "own" the "Math" class.
+
+**Example:** A "Calculator" class might use a "Math" class to perform calculations. This is an association, but the "Calculator" doesn't "own" the "Math" class.
 
 **Key Differences Between Aggregation and Association:**
 
@@ -423,7 +425,9 @@ In essence, the double underscore is a Pythonic way to provide a level of data h
 
 #### Inheritance
 
-Inheritance is a fundamental concept in Object-Oriented Programming (OOP) that allows you to create new classes based on existing classes. It establishes an "is-a" relationship, meaning a subclass (or derived class) is a specialized type of its superclass (or base class).
+Inheritance is a fundamental concept in Object-Oriented Programming (OOP) that allows you to create new classes based on existing classes.
+
+It establishes an "is-a" relationship, meaning a subclass (or derived class) is a specialized type of its superclass (or base class).
 
 **The Core Idea:**
 
@@ -456,7 +460,7 @@ Inheritance is a fundamental concept in Object-Oriented Programming (OOP) that a
 
 **Example (Conceptual):**
 
-```
+```js
 // Superclass
 class Animal {
     String name;
@@ -673,6 +677,14 @@ Down the line, there is nothing stopping me merging the physically accurate move
 https://youtube.com/shorts/TLROAYXxkvA?is=ywPjLN7C87Vk3yON
 
 For that video, the autor provides the files in the description!
+
+But I will articulate it around:
+
+```sh
+git clone https://github.com/JAlcocerT/mbsd
+
+
+```
 
 ---
 

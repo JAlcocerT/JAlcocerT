@@ -176,14 +176,21 @@ The idea is to show non tech business users couple success examples.
 Let’s explore the core principles that make AI your powerful and safe teammate: **the AI mindset**
 
 1. Default to Assist: Before starting any task, think about how AI can support you, for example, by creating drafts, exploring ideas, or checking content.
+
 2. Human in the Loop: Humans always make the final decisions.
 All deliverables — whether committed to repositories or shared with clients — must be reviewed by a person before submission.
+
 3. Small Iterations:Work in short cycles: break the task down → write a focused prompt → review the quick result → refine as needed.
+
 4. Reproducibility: Save and version your effective prompts and context (as templates or collections) just like code, so others can reuse and improve them.
+
 5. Source Validation: When using AI-generated content, ask for references and clearly separate facts from AI-generated assumptions in your reports or documents.
+
 6. Effectiveness Over Magic: Focus on measurable impact (time saved, fewer defects, better coverage) rather than on the “wow” effect of AI output.
 
-Let’s explore how to craft effective prompts for AI, so you get accurate, structured, and actionable outputs. The key is to think of prompting as a flow:
+Let’s explore how to craft effective prompts for AI, so you get accurate, structured, and actionable outputs.
+
+The key is to think of prompting as a flow:
 
 Goal -> Context -> Instruction -> Contrains -> Output Format
 
@@ -199,28 +206,31 @@ So, use Structured prompts when you need precise, machine-readable outputs (conf
 
 And use Natural-Language prompts for open-ended, creative, or exploratory tasks (like explanations, brainstorming, or translations).
 
-The context window is the amount of information an AI model can “hold in memory” and use when generating a response. Think of it as the model’s workspace: everything placed there (your prompt, open files, conversation history, or documentation) affects the accuracy and relevance of its output.
+The context window is the amount of information an AI model can “hold in memory” and use when generating a response. 
 
+Think of it as the model’s workspace: everything placed there (your prompt, open files, conversation history, or documentation) affects the accuracy and relevance of its output.
 
+For example, in Cursor, if you have index.js open alongside config.json, the model can “see” both files within its context window and, for example, suggest the correct environment variable setup. 
 
-For example, in Cursor, if you have index.js open alongside config.json, the model can “see” both files within its context window and, for example, suggest the correct environment variable setup. However, if a file is too large to fit entirely, some information may fall outside the context window, and the model could make mistakes.
-
-
+However, if a file is too large to fit entirely, some information may fall outside the context window, and the model could make mistakes.
 
 Each model has its own limit for how much information it can process at once. Here are some examples:
 
-GPT-4-Turbo: up to 128k tokens (~100–200 pages of text)
+* GPT-4-Turbo: up to 128k tokens (~100–200 pages of text)
 
-Claude 3 Opus: up to 200k tokens
+* Claude 3 Opus: up to 200k tokens
 
-GPT-3.5: up to 16k tokens (~10–15 pages)
+* GPT-3.5: up to 16k tokens (~10–15 pages)
 
-LLaMA 2 70B: ~65k tokens
+* LLaMA 2 70B: ~65k tokens
 
 Include only relevant information — keep files, snippets, and docs focused; minimize noise.
+
 Work iteratively — avoid dumping entire repos or huge logs at once.
 Use RAG or indexing for large projects — load only necessary data into the context on demand.
+
 Be aware of limits — information beyond the model’s context window is “forgotten.”
+
 Summarize or checkpoint — preserve reasoning and important details in long sessions.
 
 ```json
@@ -238,6 +248,7 @@ Summarize or checkpoint — preserve reasoning and important details in long ses
 
 Task → JSON Output — helps you clearly define role, goal, context, and output format.
 
+```json
 {
   "role": "Business Analyst",
   "goal": "Transform meeting notes into backlog",
@@ -266,16 +277,18 @@ Task → JSON Output — helps you clearly define role, goal, context, and outpu
     }
   ]
 }
+```
 
 > “Can I use AI to make this task faster or better?”
 
 
-before sending to AI
+Before sending to AI:
 
 - Context minimized, no PII/secrets
 - Clear goal, constraints, output format
 - Request sources/evidence where needed
 
+```md
 Prompt Template: HLD → ADR
 
 Role: System Architect
@@ -292,6 +305,7 @@ Role: UX Lead
 Task: Create 3 payment screen variants (mobile-first)
 Constraints: WCAG AA
 Output: list [elements | hierarchy | states | KPI for A/B testing]
+```
 
 Just do what you know, The Planning and contex: *with proper context, you make agents outputs more predictable*
 
