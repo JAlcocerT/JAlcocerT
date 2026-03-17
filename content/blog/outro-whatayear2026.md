@@ -909,6 +909,8 @@ graph LR
 * How can we talk about resilience without been grateful for critics?
 * Can we be free without fear?
 
+* Can sth defined by humans justice? does the concept of justice makes sense in the nature/universe?
+
 #### Interesting Concepts
 
 1. Nonchalant

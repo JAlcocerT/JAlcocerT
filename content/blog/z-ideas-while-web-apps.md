@@ -216,8 +216,19 @@ make demo-db
 # Then in the prompt:
 # SELECT * FROM customers;
 make dev #curl http://localhost:8000/docs
-
 ```
+
+With containers just:
+
+```sh
+cp .env.sample .env
+make docker-up
+
+docker ps -a --filter "name=langchain-db-ui-frontend-1" #vite 5173 or 5175 if you have kenering
+docker ps -a --filter "name=langchain-db-ui-backend-1"
+```
+
+> `http://192.168.1.2:5175/`
 
 I showed the **Vite x fast api** one, but there will be more coming [with BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database/) and [PGSQL:)](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/)
 

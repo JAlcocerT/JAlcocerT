@@ -774,7 +774,6 @@ And after all this, you go to ~22gb taken, which I believe is what W11 takes for
 {{< youtube "hTw9DBEksx4" >}}
 
 
-
 --- 
 
 
@@ -785,8 +784,11 @@ What else am I running?
 Via Termix: `http://jalcocert-x300-1:8090`
 
 ```sh
-docker compose -f 2603_docker-compose.yml up -d nextcloud-app nextclouddb jellyfin qbittorrent umami umamidb....
+docker compose -f 2603_docker-compose.yml up -d nextcloud-app nextclouddb jellyfin qbittorrent prowlarr umami umamidb pocketbase cloudflared commento....
 
+#docker ps -a --filter "name=prowlarr"
+#docker restart prowlarr
+docker ps -a --filter "name=qbittorrent"
 docker ps -a --filter "name=umami"
 #docker ps --filter "name=umami"
 docker stop umamiweban-umami-1 umamiweban-db-1 #https://weban...#https://jsx-7jp.pages.dev/index1
@@ -946,6 +948,10 @@ And for **status pages**, like the pros have:
 * https://www.37status.com/
 * https://pocketbitcoin.com/status
 * https://status.claude.com/
+
+![selfhosted kenering](/blog_img/Monitoring/kenering-systemstatus.png)
+
+> This goes to the port 5173, like a pro vite apP!
 
 You can also with Uptime Kuma pages or kener!
 
