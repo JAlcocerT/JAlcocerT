@@ -218,6 +218,43 @@ make demo-db
 make dev #curl http://localhost:8000/docs
 ```
 
+
+```sh
+#git clone https://github.com/JAlcocerT/selfhosted-landing
+#cd y2026-tech-talks/2- ba-brd-development
+#npm run dev 
+git clone https://github.com/JAlcocerT/langchain-db-ui
+cd langchain-db-ui
+#cd langchain-db-ui/Z_PGSQL-GenBI #not foooor now
+#make help
+#cd langchain-db-ui/Z_PGSQL-GenBI
+
+make install
+make demo-db
+
+#./venv/bin/duckdb /home/jalcocert/Desktop/langchain-db-ui/backend/demo.duckdb
+#SELECT * FROM customers;
+# Then in the prompt:
+# SELECT * FROM customers;
+#.tables
+make dev #curl http://localhost:8000/docs
+#./venv/bin/uvicorn main:app --reload --port 8000 #./venv/bin/uvicorn main:app --reload --port 8000
+#npm run dev
+docker compose up --build
+```
+
+Use `duckdb:////home/jalcocert/Desktop/langchain-db-ui/backend/demo.duckdb` or `duckdb:////app/data/demo.duckdb` for container
+
+I showed the **Vite x fast api** one, but there will be more coming [with BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database/) and [PGSQL:)](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/)
+
+In the meantime, things are getting interesting:
+
+<!-- 
+https://www.youtube.com/watch?v=Ii99RU3mOJM -->
+
+{{< youtube "Ii99RU3mOJM" >}}
+
+
 With containers just:
 
 ```sh
