@@ -1,6 +1,6 @@
 ---
 title: "OOP 101 for Engineers - Pendulum x 3Bodies"
-date: 2026-03-28
+date: 2026-03-25
 draft: false
 tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD","Rust x Desktop Apps"]
 description: 'Object Oriented Programming for Python users and better mechanism simulations.'
@@ -696,7 +696,11 @@ Advance as in doing this: https://github.com/JAlcocerT/Bike_dynamic_simulator
 
 I gave it a thought to migrate to Octave.
 
-But what for now having Python and many OSS goodies.
+But what for now, having Python available and many OSS goodies.
+
+```sh
+git clone /mbsd
+```
 
 Anyways, if you provide digital services and think [that claude code](https://www.reddit.com/r/ClaudeAI/comments/1q403xw/claude_code_for_noncoding_projectswork_a_complete/) wont be cause deflation there soon because 'Im not a programmer'...
 
@@ -706,9 +710,9 @@ I mean...
 
 As we have been talking about [3 bodies and ~ gravity](#three-bodies)
 
-If you want to go away from the gravitational pull of the masses
+If you want to go away from the gravitational pull of the masses...
 
-You have to get enough speed to make your great escape:
+You have to get enough speed to make your *great escape*:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}

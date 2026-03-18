@@ -1,7 +1,6 @@
 ---
 title: "A [BRD] BoilerPlate so that you finally Ship"
 date: 2026-01-14T07:20:21+01:00
-#date: 2026-01-12T07:20:21+01:00
 draft: false
 tags: ["LifeTime Products","RoadMap26 x Tech Talk 2","Unit Economics 101","Gross vs net profit"]
 description: 'Building a micro-SaaS is just a matter of framing. UI Wrapper around Langchain DB QnA that any BA can ship.'

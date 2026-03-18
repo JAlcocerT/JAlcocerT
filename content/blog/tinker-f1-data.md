@@ -63,6 +63,8 @@ Its all coming from this awsome project i got to know [a while back](https://jal
 
 > Uses fastf1 package to [source the data via API](https://jalcocert.github.io/JAlcocerT/interesting-apis/#formula-1)
 
+> > An interactive Formula 1 race visualisation and data analysis tool built with Python! 🏎️
+
 The cool telemetry data is from 2018+, but there is lap timing from 1950 :
 
 ```sh

@@ -1,6 +1,6 @@
 ---
 title: "Using Blender"
-date: 2026-12-17
+date: 2026-03-20T08:00:21+01:00
 draft: false
 tags: ["Gen-AI","Python","Design Patterns","OpenSCAD"]
 description: 'Creating is easier than ever (?)'
@@ -15,6 +15,11 @@ Blender vs FreeCAD vs OpenSCAD
 <!-- https://youtu.be/r7H60u0kHRA?si= -->
 
 {{< youtube "r7H60u0kHRA" >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
+{{< /cards >}}
 
 
 **Intro**
@@ -58,6 +63,48 @@ By using the [Phi Data YT Summarizer](https://jalcocert.github.io/JAlcocerT/summ
 {{< /details >}}
 
 ## Using Blender
+
+Blender is an absolute powerhouse for "design-as-code," but it is a **mesh-based** tool, which makes it fundamentally different from the **CAD-based** tools like CadQuery or OpenSCAD.
+
+Here is the breakdown of how Blender fits into an "agentic" workflow:
+
+1. Can Blender be driven by Python?
+
+**Yes, deeply.** Blender is essentially a Python application with a C++ kernel. Almost every button you click in the UI triggers a Python command behind the scenes.
+* **The `bpy` Module:** This is the main API. An agent can create objects, move vertices, apply textures, and set up lighting entirely through code.
+* **The "Info" Panel Trick:** If you want to see what code an agent needs to write, you can open the "Info" editor in Blender. It logs the Python equivalent of every manual action you take, making it a great "cheat sheet" for training agents.
+* **Agent Advantage:** Blender allows agents to do things CAD tools can't easily do, like **procedural textures, physics simulations, and high-end rendering.**
+
+2. Blender vs. CAD (The "Topology" Problem)
+
+While an agent *can* design a mechanical part in Blender using Python, there is a catch:
+* **CAD (CadQuery/OpenSCAD):** Uses mathematical solids (BREP/CSG). If an agent tells a CAD tool to "drill a hole," the hole is a perfect circle.
+* **Blender:** Uses a "mesh" (vertices and faces). If an agent tells Blender to "drill a hole," it has to cut into a grid of triangles or quads. This often creates "messy" geometry that is hard for an agent to fix if things go wrong.
+
+> **The Verdict:** If your agent is designing **mechanical/precision parts**, use **CadQuery**. If your agent is designing **visual assets, characters, or environments**, use **Blender**.
+
+---
+
+3. Using CAD Outputs in Blender (The "Hybrid" Workflow)
+
+The most sophisticated AI agent setups actually use **both**. You let the agent design the "skeleton" in a CAD tool and then "beautify" it in Blender.
+
+| Workflow Step | Tool Used | Why? |
+| :--- | :--- | :--- |
+| **1. Precision Modeling** | CadQuery / OpenSCAD | Agent writes code to define exact dimensions and holes. |
+| **2. Export** | **STL** or **STEP** | Standard formats that bridge the two worlds. |
+| **3. Import to Blender** | `bpy.ops.import_mesh.stl` | The agent uses Python to bring the CAD file into a Blender scene. |
+| **4. Rendering & FX** | Blender (Python) | The agent applies materials, adds "wear and tear," and renders a photo-realistic image. |
+
+4. Recent Innovations (2026 Context)
+
+* **Blender MCP (Model Context Protocol):** There are now "MCP Servers" for Blender. These allow an AI agent to "live" inside Blender, seeing the viewport and executing code in real-time rather than just generating a script and hoping it works.
+* **Geometry Nodes:** This is Blender's version of "visual coding." Agents are becoming very good at generating "Geo Nodes" trees, which are parametric and much more "CAD-like" than traditional mesh editing.
+
+---
+
+**What is your end goal for the agent?**
+If you want it to **manufacture** something (3D print, CNC), I can show you a **CadQuery-to-STL** script. If you want it to create **game assets or art**, I can show you a **Blender `bpy`** starter script.
 
 ### Installing Blender
 
@@ -284,6 +331,66 @@ Code editor: You'll need a code editor of your choice to write and edit your Mot
 ### Python x OpenSCAD
 
 * https://github.com/SolidCode/SolidPython
+
+## CAD for Agents
+
+For developing AI agents that design "as-code," the best open-source CAD program is **CadQuery**, with **OpenSCAD** being a strong runner-up depending on the complexity of your geometry.
+
+While many traditional CAD tools (like FreeCAD) have Python APIs, they are often "wrappers" around a visual interface. 
+
+For an agent to "think" in code, you want a library where the code *is* the model.
+
+---
+
+1. Top Recommendation: CadQuery https://github.com/cadquery/cadquery
+
+CadQuery is a Python-based library that treats CAD like a standard software engineering task. It is currently the "gold standard" for programmatic design because it uses a **BREP (Boundary Representation)** kernel (OpenCASCADE), the same high-end engine used by professional tools like SolidWorks.
+
+* **Why it's best for Agents:**
+    * **Standard Python:** Agents can use standard Python libraries (math, NumPy, etc.) and IDE features like linting and debugging.
+    * **"Fluent" API:** It uses a chainable syntax (e.g., `.box(10,10,10).faces(">Z").hole(2)`) which is highly readable and easy for LLMs to generate accurately.
+    * **Design Intent:** You can select parts of a model by their features (e.g., "the top face" or "all edges longer than 5mm") rather than hard-coding coordinates.
+    * **STEP Support:** Unlike simpler tools, it exports to STEP files, which are required for professional manufacturing and CNC.
+
+
+
+2. Best for Simple Geometry: OpenSCAD
+OpenSCAD is the "original" code-based CAD. It uses a custom functional language and a **CSG (Constructive Solid Geometry)** approach.
+
+* **Pros:** It is extremely lightweight and has a massive library of community-made parts (like "BOSL2"). It is very stable and difficult to "break" with bad code.
+* **Cons:** It is famously bad at fillets (rounded edges) and chamfers. It also doesn't support STEP export natively (it mostly exports STL), making it less "professional" for engineering.
+* **Agent Fit:** Use this if your agent is doing simple 3D printing tasks or grid-based modular designs.
+
+---
+
+Comparison at a Glance
+
+| Feature | **CadQuery** | **OpenSCAD** | **FreeCAD (Python)** |
+| :--- | :--- | :--- | :--- |
+| **Language** | Python (Standard) | Custom (OpenSCAD) | Python (API Wrapper) |
+| **Kernel** | OpenCASCADE (Professional) | CGAL (Basic) | OpenCASCADE |
+| **Philosophy** | Selection & Feature based | Adding/Subtracting Shapes | Visual-first, Scriptable |
+| **Best For** | Complex engineering/Agents | Hobbyist 3D printing | Manual design + Automation |
+| **Export Formats** | STEP, STL, GLTF, DXF | STL, OFF, DXF | All standard formats |
+
+---
+
+3. The "Deep Learning" Alternative: Build123d https://github.com/gumyr/build123d
+
+If you want the absolute latest tech, check out **Build123d**. It is a successor/alternative to CadQuery that is designed to be even more "Pythonic" and solves some of the internal complexities of CadQuery. It is gaining a lot of traction in the "CAD as Code" developer community.
+
+Summary for your Agent
+
+If you want your agent to produce **manufacturable, professional-grade parts**, build your agent's toolset around **CadQuery**. If you want the agent to quickly "sketch" **simple 3D printable objects**, **OpenSCAD** is easier to implement and has more training data available in LLMs.
+
+I saw recently this video:
+
+https://www.youtube.com/watch?v=8n7LfHpgn2M
+
+
+And could not resist to try that with the 2D mechanism that I have ready in Python.
+
+
 
 ---
 
