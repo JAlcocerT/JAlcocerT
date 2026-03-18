@@ -2,7 +2,7 @@
 title: "If I would have known - Web Apps edition"
 date: 2026-03-17
 draft: false
-tags: ["BiP x Dev","BluePrint x BoilerPlate","N ebooks","MBSD x Vite x CSR"]
+tags: ["BiP x Dev x Tech Talk","BluePrint x BoilerPlate","N ebooks","MBSD x Vite x CSR"]
 description: 'The learnings of shipping a few web/apps. How is this so easy?'
 url: 'learnt-while-building-web-apps'
 ---
@@ -15,13 +15,16 @@ It's easier than ever.
 
 **Intro**
 
+Let me start with a story.
+
+About my steps into the ITsunami.
 
 {{% steps %}}
 
 
 ### R Shiny
 
-Thanks to a yearly subscription I got to datacamp
+Thanks to a yearly subscription I got to datacamp.
 
 and to be very much invested with R language for consumer intelligence application back in the days
 
@@ -230,15 +233,30 @@ docker ps -a --filter "name=langchain-db-ui-backend-1"
 
 > `http://192.168.1.2:5175/`
 
+The tech talk?
+
+<!-- https://youtu.be/PMw83OwFbGg -->
+
+{{< youtube "PMw83OwFbGg" >}}
+
+Finally after 2 months of the concept creation: *and after a funnel manifesting as 100 > 15 > 2 > ...1 person acting on the discussed content?*
+<!-- 
+https://www.youtube.com/watch?v=qf-oNNNDXS0 -->
+
+{{< youtube "qf-oNNNDXS0" >}}
+
+For this one, Ive been using notebookLLM as a ppt creator, from my slidev prepared .md.
+
+
+
 I showed the **Vite x fast api** one, but there will be more coming [with BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database/) and [PGSQL:)](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/)
 
 In the meantime, things are getting interesting:
+
 <!-- 
 https://www.youtube.com/watch?v=Ii99RU3mOJM -->
 
 {{< youtube "Ii99RU3mOJM" >}}
-
-
 
 ### Collecting cool prompts for BluePrints
 
@@ -248,6 +266,8 @@ As I have been collecting nice BRDs, tech stacks and green field prompts, im pla
 #git clone
 
 ```
+
+a veeeery secret place.
 
 ---
 
@@ -357,6 +377,7 @@ But for *not just yfinance* based, I created:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
+  {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
 {{< /cards >}}
 
 
@@ -375,3 +396,10 @@ That I could not resist to tinker with some time back
 * https://github.com/JAlcocerT/Streamlit_PoC/tree/main/Animations - Just some **matplotlib animations** for various use cases
 
 ![Sample animation Gif](/blog_img/dev/503.gif)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post with animated F1, Real Estate, yfinance..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/f1-data-animated/" title="F1 Animated Data" image="/blog_img/karting/long_g_trace_L4.png" subtitle="Creating animations around F1 Data | Post" >}}
+{{< /cards >}}
+
+{{< youtube "hCOSqf4dXqc" >}}

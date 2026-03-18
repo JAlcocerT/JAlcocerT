@@ -79,7 +79,7 @@ flowchart LR
 
 Because with repetitions you go from a *so so* [vibed coded web/app](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps) to others that can really impress.
 
-2. 
+2. Where are you bringing value? PV*OM....
 
 ---
 
