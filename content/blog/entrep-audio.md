@@ -187,7 +187,7 @@ docker run -e OPENAI_API_KEY=<YOUR_OPEN_AI_KEY> -p 8080:80 ghcr.io/chartdb/chart
 {{< /cards >}}
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartdb" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
 {{< /cards >}}
 
 The setup FastApi Web App even works with container thanks to [this compose](https://github.com/JAlcocerT/py-speech-rater/blob/main/fastapi-speech-rater/docker-compose.dev.yml) and it brings the UI looks of [the Astro Idol Theme](https://github.com/JAlcocerT/py-speech-rater/tree/main/fastapi-speech-rater/Astro-idol).

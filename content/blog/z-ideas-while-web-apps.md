@@ -304,7 +304,28 @@ As I have been collecting nice BRDs, tech stacks and green field prompts, im pla
 
 ```
 
-a veeeery secret place.
+A veeeery *secret* place.
+
+### Creating PoCs as of 2026
+
+Less than a year ago Id tell you to go with Python Streamlit for PoCs.
+
+But if you are going to let the vibe flow...
+
+FastAPI + VITE is a very reasonable approach.
+
+Whether you are in OPS, in fmcg, healthcare or within telco environment.
+
+Oh, and how cool is to:
+
+1. get requirements + fireflies
+2. idea definition + vibe with claude code
+3. generate a slides.md with the creation
+4. feed the .md to notebookllm and get a ppt created
+
+If you got the request by 10am, at 1pm you can be done with that PoC
+
+Or, you can still wait for this to be easier.
 
 ---
 
@@ -438,5 +459,7 @@ That I could not resist to tinker with some time back
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post with animated F1, Real Estate, yfinance..." >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/f1-data-animated/" title="F1 Animated Data" image="/blog_img/karting/long_g_trace_L4.png" subtitle="Creating animations around F1 Data | Post" >}}
 {{< /cards >}}
+
+And...animations of mechanisms are also getting cooked:
 
 {{< youtube "hCOSqf4dXqc" >}}

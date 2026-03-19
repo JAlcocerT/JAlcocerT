@@ -22,12 +22,14 @@ I stopped copy pasting from Gemini web UI and start using codex CLI, gemini cli 
 
 Later I tried windsurf, cursor and finally antigravity.
 
-Lately, Im paying claude PRO and im quite happy with it.
+Lately, Im paying claude PRO and im quite happy with the decision.
 
 ```sh
 #irm https://claude.ai/install.ps1 | iex
 claude install #it recently migrated from npm
 ```
+
+> You arent using this yet to create technical breakdowns and architectural design records?
 
 The key is to think of prompting as a flow:
 

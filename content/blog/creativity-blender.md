@@ -45,19 +45,9 @@ I belive you would agree that the 911 design is one of those.
 
 But...I want to create stuff.
 
+Real stuff.
+
 {{< details title="📌" closed="true" >}}
-
-
-{{< /details >}}
-
-
-{{< callout type="info" >}}
-By using the [Phi Data YT Summarizer](https://jalcocert.github.io/JAlcocerT/summarize-yt-videos/)... 💻
-{{< /callout >}}
-
-
-{{< details title="These are the Key Video take aways 📌" closed="true" >}}
-
 
 
 {{< /details >}}
@@ -70,7 +60,11 @@ Here is the breakdown of how Blender fits into an "agentic" workflow:
 
 1. Can Blender be driven by Python?
 
-**Yes, deeply.** Blender is essentially a Python application with a C++ kernel. Almost every button you click in the UI triggers a Python command behind the scenes.
+**Yes, deeply.** Blender is essentially a Python application with a C++ kernel. 
+
+Almost every button you click in the UI triggers a Python command behind the scenes.
+
+
 * **The `bpy` Module:** This is the main API. An agent can create objects, move vertices, apply textures, and set up lighting entirely through code.
 * **The "Info" Panel Trick:** If you want to see what code an agent needs to write, you can open the "Info" editor in Blender. It logs the Python equivalent of every manual action you take, making it a great "cheat sheet" for training agents.
 * **Agent Advantage:** Blender allows agents to do things CAD tools can't easily do, like **procedural textures, physics simulations, and high-end rendering.**
@@ -78,6 +72,7 @@ Here is the breakdown of how Blender fits into an "agentic" workflow:
 2. Blender vs. CAD (The "Topology" Problem)
 
 While an agent *can* design a mechanical part in Blender using Python, there is a catch:
+
 * **CAD (CadQuery/OpenSCAD):** Uses mathematical solids (BREP/CSG). If an agent tells a CAD tool to "drill a hole," the hole is a perfect circle.
 * **Blender:** Uses a "mesh" (vertices and faces). If an agent tells Blender to "drill a hole," it has to cut into a grid of triangles or quads. This often creates "messy" geometry that is hard for an agent to fix if things go wrong.
 
@@ -87,7 +82,9 @@ While an agent *can* design a mechanical part in Blender using Python, there is 
 
 3. Using CAD Outputs in Blender (The "Hybrid" Workflow)
 
-The most sophisticated AI agent setups actually use **both**. You let the agent design the "skeleton" in a CAD tool and then "beautify" it in Blender.
+The most sophisticated AI agent setups actually use **both**. 
+
+You let the agent design the "skeleton" in a CAD tool and then "beautify" it in Blender.
 
 | Workflow Step | Tool Used | Why? |
 | :--- | :--- | :--- |
@@ -104,6 +101,7 @@ The most sophisticated AI agent setups actually use **both**. You let the agent 
 ---
 
 **What is your end goal for the agent?**
+
 If you want it to **manufacture** something (3D print, CNC), I can show you a **CadQuery-to-STL** script. If you want it to create **game assets or art**, I can show you a **Blender `bpy`** starter script.
 
 ### Installing Blender
@@ -122,7 +120,6 @@ sudo snap install blender --classic #right now it is 4.3.1
 You can always download your desired blender versions from: <https://www.blender.org/download/>
 
 ### Blender as a Code
-
 
 I know i might sound lazy.
 
@@ -144,7 +141,7 @@ Image generations models are really interesting.
 
 With controlnet and flux
 
-https://www.reddit.com/r/comfyui/comments/1ekv3tx/poseable_humans_with_flux_blender_playbook/
+* https://www.reddit.com/r/comfyui/comments/1ekv3tx/poseable_humans_with_flux_blender_playbook/
 
 #### ControlNet vs
 
@@ -152,12 +149,9 @@ With Control net, we can provide more than a text prompt to get the desired resu
 
 I mean, we can provide images as prompts!
 
-
 {{< youtube "o7N6Fbtg84E" >}}
 
-
 Can we do such animations with blender?
-
 
 https://youtu.be/58C8dWL36GM?si=SgD6JzwCimgEvkuf
 
@@ -248,8 +242,6 @@ sphere.data.materials.append(material)
 {{< /dropdown >}}
 
 ### BLENDER RIGID BODY SCRIPTING
-
-
 
 
 
@@ -352,8 +344,6 @@ CadQuery is a Python-based library that treats CAD like a standard software engi
     * **Design Intent:** You can select parts of a model by their features (e.g., "the top face" or "all edges longer than 5mm") rather than hard-coding coordinates.
     * **STEP Support:** Unlike simpler tools, it exports to STEP files, which are required for professional manufacturing and CNC.
 
-
-
 2. Best for Simple Geometry: OpenSCAD
 OpenSCAD is the "original" code-based CAD. It uses a custom functional language and a **CSG (Constructive Solid Geometry)** approach.
 
@@ -389,7 +379,6 @@ https://www.youtube.com/watch?v=8n7LfHpgn2M
 
 
 And could not resist to try that with the 2D mechanism that I have ready in Python.
-
 
 
 ---
