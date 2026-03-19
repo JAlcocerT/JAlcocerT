@@ -136,11 +136,29 @@ Would you like me to generate a **CadQuery script** for a specific precision par
 
 So here you have the pipeline.
 
-Not a data pipeline [this time](#outro).
+```sh
+choco install blender --version=4.2.2 -y                                      
+#5.1.0                               
+```
+
+Oh, not a data pipeline [this time](#outro).
 
 There is "Pro" way to handle this.
 
 We have the **Logic** (Simulator), now you need the **Geometry** (CAD), and finally the **Cinematics** (Blender).
+
+```sh
+
+cd z-cadquery
+& "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe" --python blender_scene.py                
+& "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe" --background slider_crank.blend
+```
+
+If you dont have a powerful GPU, you can consider [such colab x blender combo](https://www.youtube.com/watch?v=D0vvWMbur_o)
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/Data-Chat/blob/main/LangChain/web/langchain-chroma-repo-readme.ipynb)
+
+{{< youtube "hCOSqf4dXqc" >}}
 
 Since the kinematics are already resolved in Python, **CadQuery** is your best bridge because it lives in the same Python ecosystem.
 

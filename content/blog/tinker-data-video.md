@@ -520,10 +520,14 @@ ffmpeg -f concat -safe 0 -i list.txt -c copy output.mp4
 mpv "output.mp4"
 ```
 
+Why to have just positions:
+
 <!-- https://youtu.be/WfgIy6KeZTY -->
 
 {{< youtube "WfgIy6KeZTY" >}}
 
+
+When you can have augmented reality with velocities and accelerations:
 
 <!-- https://youtu.be/hCOSqf4dXqc -->
 {{< youtube "hCOSqf4dXqc" >}}

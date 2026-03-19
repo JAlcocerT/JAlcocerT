@@ -81,11 +81,15 @@ flowchart LR
 
 Because with repetitions you go from a *so so* [vibed coded web/app](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps) to others that can really impress.
 
-2. Where are you bringing value?
+2. Where are you bringing value? Net Profit and the value equation
 
 $$
 P \times V \times GM \times OM \times IF \times T
 $$
+
+
+
+> B2C is extremely sensitive to the ,security/guarantees' part
 
 ---
 

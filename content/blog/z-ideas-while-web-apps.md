@@ -3,7 +3,7 @@ title: "If I would have known - Web Apps edition"
 date: 2026-03-17
 draft: false
 tags: ["BiP x Dev x Tech Talk","BluePrint x BoilerPlate","N ebooks","MBSD x Vite x CSR"]
-description: 'The learnings of shipping a few web/apps. How is this so easy?'
+description: 'The learnings of shipping a few web/apps. Slubny was so easy?'
 url: 'learnt-while-building-web-apps'
 ---
 
@@ -300,7 +300,7 @@ https://www.youtube.com/watch?v=Ii99RU3mOJM -->
 As I have been collecting nice BRDs, tech stacks and green field prompts, im placing them all at:
 
 ```sh
-#git clone
+#git clone /pbi
 
 ```
 
@@ -326,6 +326,23 @@ Oh, and how cool is to:
 If you got the request by 10am, at 1pm you can be done with that PoC
 
 Or, you can still wait for this to be easier.
+
+### Rewritting SLubnyChwile
+
+Because for the initial version I used an astro theme and made it a web app.
+
+But...claude code has 1M tokens.
+
+What if i tell it to understand the logic...
+
+and re-implement it with a cool modern Vite UI?
+
+```sh
+git clone
+
+```
+
+And now: *time to do more calls to B2B :)*
 
 ---
 
