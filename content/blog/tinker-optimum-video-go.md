@@ -39,6 +39,15 @@ claude --remote-control "Go Karting"
 #/mobile
 ```
 
+I made this one with claude code.
+
+But I guess you could have with Kilo Code, [Zed](https://github.com/zed-industries/zed), Antigravity, Void...
+
+```sh
+#curl -f https://zed.dev/install.sh | sh 
+#wget https://github.com/voideditor/binaries/releases/download/v1.0.2/Void-x86_64.AppImage ~./Applications
+```
+
 Why not Python desktop?
 
 I tried it [here with tkinter](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-python/), but was not convinced about the concept.
@@ -46,8 +55,22 @@ I tried it [here with tkinter](https://jalcocert.github.io/JAlcocerT/gopro-telem
 The feature of the optimum path given the telemetry and [the Gradient descent](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) would be a nice thing to have also in GO, isnt it?
 
 ```sh
-cd
+(snap info go 2>/dev/null | grep "latest/stable" || echo "snap not available or no go snap" apt-cache show golang-go 2>/dev/null | grep Version | head -3)                                                                                                          
+sudo snap install go --classic    
+echo 'export PATH=/snap/bin:$HOME/go/bin:$PATH' >> ~/.bashrc                                                                                                                
+source ~/.bashrc                                                                                                                                                            
+go version         
+```
 
+```sh
+cd ./go-karting
+
+
+sudo apt install -y libgtk-3-dev libwebkit2gtk-4.1-dev build-essential
+go install github.com/wailsapp/wails/v3/cmd/wails3@latest
+
+echo 'export PATH=$PATH:$HOME/go/bin' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 

@@ -146,17 +146,19 @@ So here you have the working pipeline.
 
 ```sh
 choco install blender --version=4.2.2 -y                                      
-#5.1.0                               
+#5.1.0                       
+#wget https://download.blender.org/release/Blender4.2/blender-4.2.2-linux-x64.tar.xz        
 ```
 
 Oh, not a data pipeline [this time](#outro).
 
 There is "Pro" way to handle this.
 
-We have the **Logic** (Simulator), now you need the **Geometry** (CAD), and finally the **Cinematics** (Blender).
+We have the **Logic** (Simulator)
+
+Wow you need the **Geometry** (CAD), and finally the **Cinematics** (Blender).
 
 ```sh
-
 cd z-cadquery
 & "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe" --python blender_scene.py                
 & "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe" --background slider_crank.blend
@@ -223,7 +225,7 @@ Why would you be doing D&A when agents are taking over?
 
 Not sure if you are aware, but any of the ones in the leaderboard understand perfectly pbip files, lookML or simply...create awsome full stack web apps with FastAPI and Vite if you care enough just to put clear requirements.
 
-https://github.com/JAlcocerT/PBi
+* https://github.com/JAlcocerT/PBi
 
 No more excuses with DBs...Please
 

@@ -134,6 +134,74 @@ And I heard about **Blender with Python Scripting**.
 
 Thanks to <https://github.com/CGArtPython/blender_plus_python/tree/main>
 
+
+Not only heard, but actually...just did sth [with it and a slider crank here](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/):
+
+```sh
+snap info blender
+#choco install blender --version=4.2.2 -y                                      
+
+git clone https://github.com/JAlcocerT/3Design
+cd z-cadquery
+make all
+#make render   # renders all 180 PNGs
+#make video    # assembles them into render/output.mp4 via ffmpeg
+```
+
+
+Telling blender what to run on its internal engine can be a thing:
+
+```sh
+blender -b --python my_script.py
+```
+
+To install **Blender 4.2.2** (or the latest patch in the 4.2 LTS series) using the portable "Tarball" method, follow these exact steps in your terminal. 
+
+This approach is perfect for your HUD project because it keeps Blender's Python isolated and fully customizable.
+
+1. Create the Directory
+
+First, let's create a clean home for this specific version so it doesn't get mixed up with other apps.
+
+```bash
+mkdir -p ~/Applications/Blender4.2
+cd ~/Applications/Blender4.2
+```
+
+2. Download Blender 4.2.2
+We'll use `wget` to pull the specific Linux 64-bit archive directly from the official Blender foundation servers.
+
+```bash
+wget https://download.blender.org/release/Blender4.2/blender-4.2.2-linux-x64.tar.xz
+```
+
+3. Extract the Archive
+Now we unpack it. We'll use the `--strip-components=1` flag so that the files go directly into your `Blender4.2` folder instead of creating *another* sub-folder inside it.
+
+```bash
+tar -xvf blender-4.2.2-linux-x64.tar.xz --strip-components=1
+```
+
+4. Clean Up (Optional)
+
+```bash
+rm blender-4.2.2-linux-x64.tar.xz
+```
+
+5. Launch and Verify
+
+
+```bash
+./blender
+```
+
+To check which **Python version** this specific Blender is using (important for your script imports), run this:
+
+```bash
+./4.2/python/bin/python3.11 --version
+```
+
+
 ### Blender with AI
 
 Image generations models are really interesting.
