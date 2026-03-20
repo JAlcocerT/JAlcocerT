@@ -31,8 +31,12 @@ Basically to close the features, just bring me those GPH9 or GPH13 videos and le
 ```sh
 #git clone https://github.com/JAlcocerT/optimum-path
 #cd optimum-path/overlay
-git clone https://github.com/JAlcocerT/go-karting
 
+git init && git add . && git commit -m "Initial commit: simple go desktop app for karting videos" && gh repo create go-karting --private --source=. --remote=origin --push
+
+git clone https://github.com/JAlcocerT/go-karting
+claude --remote-control "Go Karting"
+#/mobile
 ```
 
 Why not Python desktop?

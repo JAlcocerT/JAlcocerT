@@ -331,9 +331,14 @@ If you are into [stonks](http://localhost:1313/py-stonks/#other-foss-apps-for-fi
 
 Does making desktop apps with Python makes sense?
 
-Or for some one who hasnt done one could RUST be the way?
+Like this TKInter test that I made [here for karting](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-python/).
+
+Or for some one who hasnt done one: could RUST be the way?
 
 https://youtu.be/WhjEL817Onw?si=uBhfxuuQhwRA0Ufe
+
+Or just go all in for flutter?
+
 
 <!-- 
 

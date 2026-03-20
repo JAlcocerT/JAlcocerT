@@ -47,10 +47,7 @@ But...I want to create stuff.
 
 Real stuff.
 
-{{< details title="📌" closed="true" >}}
 
-
-{{< /details >}}
 
 ## Using Blender
 
@@ -112,7 +109,7 @@ I was consolidating [here](https://jalcocert.github.io/Linux/docs/debian/foss_en
 Among them, Blender, we just need:
 
 ```sh
-choco install blender --version=4.2.2 -y                              
+#choco install blender --version=4.2.2 -y                              
 #5.1.0  >4.0.0
 
 #https://www.blender.org/download/release/Blender4.3/blender-4.3.1-linux-x64.tar.xz/
@@ -146,6 +143,21 @@ Image generations models are really interesting.
 With controlnet and flux
 
 * https://www.reddit.com/r/comfyui/comments/1ekv3tx/poseable_humans_with_flux_blender_playbook/
+
+But i want control on the generation.
+
+That it can be achieved via:
+
+```sh
+claude
+
+```
+
+If you still got a live, its over: https://code.claude.com/docs/en/remote-control#interactive-session
+
+```sh
+claude --remote-control "My Project"
+```
 
 #### ControlNet vs
 

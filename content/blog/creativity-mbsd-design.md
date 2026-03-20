@@ -379,8 +379,28 @@ The first 2 steps are pretty straight forward on my x13 laptop.
 
 But the rendering was taking ~8 min per image, despite dropping the resolution from 4k to 1080p at the script calling blender.
 
-Luckily, a friend recently got a mac and I put the hands on it:
+Luckily, a friend recently got a mac and I put the hands on it.
+
+Like a geek, first thing I learn was how to open the terminal: ~~`CTRL+T`~~ `cmd`
+
+Then I installed brew:
 
 ```sh
 
+```
+
+Node and Python followed:
+
+```sh
+
+```
+
+And...
+
+```sh
+#npm install -g @anthropic-ai/claude-code #https://claude.ai/new
+#claude
+/login
+/resume
+#claude --dangerously-skip-permissions -p "promptwhateverrrr" #yolo
 ```
