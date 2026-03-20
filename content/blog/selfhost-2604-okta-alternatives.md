@@ -1,18 +1,20 @@
 ---
 title: "Okta Alternatives? Selfhosted SSO Tools"
-date: 2026-06-01T23:20:21+01:00
+date: 2026-04-01T23:20:21+01:00
 draft: false
-tags: ["TinyAuth v","Supabase Auth vs PB","Authelia vs Authentik","PocketID"]
+tags: ["TinyAuth v6","Supabase Auth vs PB","Authelia vs Authentik","PocketID"]
 description: 'A look to F/OSS Selfhosted Single Sign On and authentication Tools'
 url: 'open-source-sso-tools'
 ---
 
-> See https://github.com/petervdpas/goop2 Goop² is an ephemeral, peer-to-peer system for personal web spaces.
+
 
 **TL;DR**
 
 * https://www.awesome-homelab.com/item/pocket-id
   * https://pocket-id.org/
+
+  > See https://github.com/petervdpas/goop2 Goop² is an ephemeral, peer-to-peer system for personal web spaces.
 
 
 **Intro**

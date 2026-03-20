@@ -1,5 +1,5 @@
 ---
-title: "Bringing Mechanism to Life"
+title: "Bringing Mechanisms to Life"
 date: 2026-03-20T07:00:21+01:00
 draft: false
 tags: ["Gen-AI","Python","3D Design","OpenSCAD x Blender","CadQuery","Euler Angles"]
@@ -9,7 +9,7 @@ url: 'cad-design-mbsd'
 
 **Tl;DR**
 
-A workflow around Python 2D mbsd + CadQuery
+A workflow around: Python 2D ~ mbsd + CadQuery + blender
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/engineering/" title="Engineering | Docs ↗" icon="book-open" >}}
@@ -17,6 +17,10 @@ A workflow around Python 2D mbsd + CadQuery
 {{< /cards >}}
 
 **Intro**
+
+Its been a while since I read/studied *Ingenieria del automovil: sistemas y comportamiento dinamico*.
+
+How about making a come back?
 
 ```sh
 git clone https://github.com/JAlcocerT/3Design
@@ -242,7 +246,9 @@ docker run -e OPENAI_API_KEY=<YOUR_OPEN_AI_KEY> -p 8080:80 ghcr.io/chartdb/chart
 
 And specially:
 
+* https://background-agents.com/ - Individual speed !+ organizational velocity :)
 * https://arena.ai/leaderboard
+* https://status.claude.com/ - Imagine the day that you'd be obsolete when this is down
 
 ```sh
 claude

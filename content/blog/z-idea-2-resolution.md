@@ -341,3 +341,18 @@ In a typical workflow, Jenkins handles the **Continuous Integration (CI)** and A
 > **The Bottom Line:** Use Jenkins to turn your code into an image, and use Argo CD to put that image into production.
 
 > > Both can be helpful for HFAD which relate with DORA metrics!!
+
+
+A great article: You rolled out coding agents. Engineers are faster. PRs flood in.
+
+Yet, cycle time doesn't budge. DORA metrics are flat. The backlog grows.
+
+* https://background-agents.com/
+* https://www.latent.space/p/reviews-dead
+
+And an awsome web UI/X that now you can simply clone with google stitch
+
+* https://blog.google/innovation-and-ai/technology/developers-tools/full-stack-vibe-coding-google-ai-studio/
+* https://stitch.withgoogle.com/
+
+Isnt it this already CONTEXT ENGINEERING?

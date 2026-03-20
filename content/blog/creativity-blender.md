@@ -410,6 +410,8 @@ Blender Add-ons
 https://github.com/agmmnn/awesome-blender
 https://awesome-blender.netlify.app/
 
+https://github.com/benrugg/AI-Render
+
 ### Blender Ad-ons
 
 BlendAI: A versatile suite of AI tools, including image-to-3D, text-to-3D, and more.   

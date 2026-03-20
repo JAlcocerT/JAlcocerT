@@ -78,6 +78,9 @@ What else am I running?
 sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx jellyfin
 ```
 
+* https://jellyfin.org/posts/state-of-the-fin-2026-01-06/
+* https://github.com/jellyfin/jellyfin-desktop
+
 I removed the services for my ebooks and consulting subdomains.
 
 They are now...static!
