@@ -118,7 +118,7 @@ claude #sonet4.6 is amazing
 
 ### Agentic Delivery
 
-Are we ready for destruction creative?
+Are we ready for creative destruction?
 
 It doesnt really matter.
 

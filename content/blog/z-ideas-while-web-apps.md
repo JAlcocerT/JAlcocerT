@@ -314,7 +314,24 @@ But if you are going to let the vibe flow...
 
 FastAPI + VITE is a very reasonable approach.
 
-Whether you are in OPS, in fmcg, healthcare or within telco environment.
+Whether you are in OPS, in [fmcg](https://jalcocert.github.io/JAlcocerT/fmcg-concepts-101/), [healthcare](https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics/) or within [telco](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/) environment.
+
+
+```sh
+git clone https://github.com/JAlcocerT/poc
+
+```
+
+A place to go from streamlit pocs to full stack ones, with concepts like graph databases or with context for agents like https://github.com/volcengine/OpenViking
+
+> OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc" title="Proof of Concepts ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Streamlit_PoC" title="Streamlit PoCs ↗" icon="github" >}}
+{{< /cards >}}
+
 
 Oh, and how cool is to:
 
@@ -327,22 +344,56 @@ If you got the request by 10am, at 1pm you can be done with that PoC
 
 Or, you can still wait for this to be easier.
 
-### Rewritting SLubnyChwile
+We are past the point of AI assisted delivery
+
+Would full AI delivery would be enough?
+
+### Rewritting SlubneChwile
 
 Because for the initial version I used an astro theme and made it a web app.
 
-But...claude code has 1M tokens.
+I mean here and here
+
+But...[claude code](https://code.claude.com/docs/en/cli-reference) (Opus 4.6) has 1M tokens.
 
 What if i tell it to understand the logic...
 
 and re-implement it with a cool modern Vite UI?
 
-```sh
-git clone
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads x Slubne Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="Slubne 2026 Github ↗" icon="github" >}}
+{{< /cards >}}
+
+
+```sh
+
+git clone https://github.com/JAlcocerT/slubne-chwile-y26 #https://www.slubnechwile.com/
+#git pull
+#cd slubne-chwile-y26/slubnechwile
 ```
 
 And now: *time to do more calls to B2B :)*
+
+> Just sell to survive (Grant Cardone)
+
+You just need [eyes](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) and be clear that [the why and what are your responsability](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/) for now.
+
+
+Things are moving into a direction where human are the blockers:
+
+* https://github.com/HKUDS/CLI-Anything
+
+> CLI-Anything: Making ALL Software Agent-Native
+
+* https://github.com/agentscope-ai/CoPaw
+
+> Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.
+
+* https://github.com/openai/symphony
+
+> Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents.
 
 ---
 
@@ -351,6 +402,9 @@ And now: *time to do more calls to B2B :)*
 ### What have you created?
 
 Some time [ago](https://jalcocert.github.io/JAlcocerT/R-Stocks/), I made this one [with a friend](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/): *my very first published web app with R Shiny*.
+
+https://jalcocert.github.io/JAlcocerT/useful-r-stuff/
+https://jalcocert.github.io/JAlcocerT/useful-python-stuff/
 
 How can you contribute?
 

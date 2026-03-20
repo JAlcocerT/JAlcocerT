@@ -3,7 +3,7 @@ title: "A SaaS with 100% Churn, yet LTV > CAC"
 date: 2026-01-13T14:20:21+01:00
 draft: false
 tags: ["Landing x MVP SaaS","BiP x RoadMap26","MailTrap ESP x Firebase x FireStore"]
-description: 'Ship and direct traffic via Google ads. Weddings 2026'
+description: 'Ship and direct traffic via Google ads. Weddings 2026 Slubne Chwile.'
 url: 'bring-eyes-to-your-saas'
 ---
 
@@ -425,7 +425,7 @@ Show the products ads for those that apply.
 They get the free thing / trial and we are happy to get your feedback :)
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="NEW - SlubneChwile 2026" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code that brings OpenAI/Groq options" >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="NEW - SlubneChwile 2026" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SlubnyChwile options" >}}
 {{< /cards >}}
 
 

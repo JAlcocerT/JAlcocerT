@@ -24,7 +24,7 @@ Blender vs FreeCAD vs OpenSCAD
 
 **Intro**
 
-Early this year, I saw a very cool video about **design patterns**.
+Last year, I saw a very cool video about **design patterns**.
 
 <!-- https://www.youtube.com/watch?v=8UAsN9wvePE -->
 
@@ -96,6 +96,7 @@ You let the agent design the "skeleton" in a CAD tool and then "beautify" it in 
 4. Recent Innovations (2026 Context)
 
 * **Blender MCP (Model Context Protocol):** There are now "MCP Servers" for Blender. These allow an AI agent to "live" inside Blender, seeing the viewport and executing code in real-time rather than just generating a script and hoping it works.
+
 * **Geometry Nodes:** This is Blender's version of "visual coding." Agents are becoming very good at generating "Geo Nodes" trees, which are parametric and much more "CAD-like" than traditional mesh editing.
 
 ---
@@ -111,9 +112,12 @@ I was consolidating [here](https://jalcocert.github.io/Linux/docs/debian/foss_en
 Among them, Blender, we just need:
 
 ```sh
+choco install blender --version=4.2.2 -y                              
+#5.1.0  >4.0.0
+
 #https://www.blender.org/download/release/Blender4.3/blender-4.3.1-linux-x64.tar.xz/
 
-sudo snap install blender --classic #right now it is 4.3.1
+sudo snap install blender --classic #it might be lower, like 4.3.1
 #sudo snap install blender --channel=4.3/stable --classic
 ```
 

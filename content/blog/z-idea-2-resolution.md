@@ -88,6 +88,26 @@ P \times V \times GM \times OM \times IF \times T
 $$
 
 
+```mermaid
+graph LR
+    %% 1. The Split
+    Start[Define] -->|Why| B[BRD]
+    Start -->|What| C[FRD]
+    Start -->|How| D[PRD]
+
+    %% 2. The Join
+    B & C & D --> E(Clarify)
+
+    %% 3. The Linear Flow
+    E --> F[Development Plan]
+    F --> G[Finished PoC]
+
+    %% Styling
+    style G fill:#f96,stroke:#333,stroke-width:4px
+    style Start fill:#bbf
+    style F fill:#e1f5fe
+```
+
 
 > B2C is extremely sensitive to the ,security/guarantees' part
 
@@ -209,6 +229,10 @@ Make sure to understand that selling is 20% about the thing and [80% about peopl
 It just the right time to admit that [wrong client selection has consequences](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-after-learning/#the-right-value-prop) and despite *paying with my own pocket* B2C tend to see costs (instead of potential ROI when a problem is solved for B2B) and chances of churning are high.
 
 You should now the drill by now: [attract, convert, deliver](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-after-learning/#attract-convert-deliver).
+
+### Interesting Articles
+
+* https://knowledge.insead.edu/strategy/who-killed-nokia-nokia-did
 
 ---
 
@@ -353,6 +377,19 @@ Yet, cycle time doesn't budge. DORA metrics are flat. The backlog grows.
 And an awsome web UI/X that now you can simply clone with google stitch
 
 * https://blog.google/innovation-and-ai/technology/developers-tools/full-stack-vibe-coding-google-ai-studio/
-* https://stitch.withgoogle.com/
+* https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-ai-ui-design/
+* https://stitch.withgoogle.com/ - Figman but better
+* https://github.com/pbakaus/impeccable - The design language that makes your AI harness better at design.
+* https://aistudio.google.com/app/apps?source=
+
+Just in case you dont want to vibe code in [the *old fashion way* from last month](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders).
+
+I guess...Web devs be like:
+
+![dont cry for me](/blog_img/memes/barney.gif)
+
+Well, at least those that dont work for the public sector and [bill 250k for a website](https://www.youtube.com/watch?v=hKFB3pUNefE)
 
 Isnt it this already CONTEXT ENGINEERING?
+
+![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
