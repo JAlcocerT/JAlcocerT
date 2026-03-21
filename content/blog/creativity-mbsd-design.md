@@ -63,14 +63,22 @@ graph TD
 ```
 
 ```sh
-blender --background --python blender_scene_creative.py
-#Runs the Python script to build the scene — imports STLs, sets up materials, lighting, camera, bakes keyframes, and saves slider_crank_creative.blend. This is equivalent to make
-  scene.
-blender --background slider_crank_creative.blend --render-anim
+###make creative #read the post to understand this :)
+# Step 1 — build the scene
+~/Applications/Blender4.2/blender --background --python blender_scene_creative.py
+#Runs the Python script to build the scene — imports STLs, sets up materials, lighting, camera, bakes keyframes, and saves slider_crank_creative.blend. This is equivalent to make scene.
+  
+# Step 2 — render it
+~/Applications/Blender4.2/blender --background slider_crank_creative.blend --render-anim
+#blender --background slider_crank_creative.blend --render-anim
 #Opens the already-built .blend file and renders all frames to video. This is equivalent to make render.
+#rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/z-cadquery/render/slider_crank_creative.mp4 .
+mpv slider_crank_creative.mp4
 ```
 
-{{< youtube "1WzRJM8HVKg" >}}
+<!-- https://youtu.be/0fmFl3hVgaA
+ -->
+{{< youtube "0fmFl3hVgaA" >}}
 
 
 This workflow replies to:

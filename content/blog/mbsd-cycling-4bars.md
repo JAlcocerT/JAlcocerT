@@ -1,6 +1,6 @@
 ---
 title: "The Mechanism behind Cyclying"
-date: 2026-04-08T23:20:21+01:00
+date: 2026-03-22T23:20:21+01:00
 draft: false
 tags: ["DA","MBSD","Sympy","MatterJS","Double Wishbone","2D Simulation"]
 description: 'Im Back.'
@@ -197,6 +197,8 @@ Generates all 7 outputs (2 PNGs + 5 MP4s) including the combined video
 
 <!-- https://youtu.be/lx4uvi-Aa40 -->
 
+I know, its cycling reversed.
+
 
 ### All Those 2D Moving
 
@@ -328,6 +330,8 @@ python3 main.py --keyboard
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+This is also...**REAL TIME!**
+
 <!-- https://youtu.be/0CLNWADDrtY -->
 
 {{< youtube "0CLNWADDrtY" >}}
@@ -339,8 +343,6 @@ python3 main.py --keyboard
 
 ```sh
 #rm -rf .git
-
-git init && git add . && git commit -m "Initial commit: MultiBody" && gh repo create mbsd --private --source=. --remote=origin --push
-
+#git init && git add . && git commit -m "Initial commit: MultiBody" && gh repo create mbsd --private --source=. --remote=origin --push
 #make install && make dev #requires .env.local
 ```

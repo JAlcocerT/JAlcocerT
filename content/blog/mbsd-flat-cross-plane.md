@@ -35,6 +35,12 @@ There is a ''power silence'', but also power overlap due to the 90 and 270 degre
 
 ## Conclusions
 
+No worries I6 V10 and V12 will also come.
+
+https://www.youtube.com/watch?v=hjsrqMe0B3s
+
+---
+
 ### FAQ
 
 #### Big Bang Engines

@@ -1,6 +1,7 @@
 ---
 title: "Optimum Path x HUD - Desktop"
 date: 2026-03-21
+#date: 2026-05-31
 draft: false
 tags: ["GoPro GPS Telemetry","Go Language x Wails x Vue","Racing"]
 description: 'From CustomTkinter to a GoLang Desktop App for Karting HUDs.'
@@ -8,6 +9,8 @@ url: 'gopro-telemetry-desktop-with-go'
 ---
 
 **TL;DR**
+
+I was not expecting to do cool desktop apps.
 
 **Intro**
 
@@ -31,6 +34,8 @@ Basically to close the features, just bring me those GPH9 or GPH13 videos and le
 ```sh
 #git clone https://github.com/JAlcocerT/optimum-path
 #cd optimum-path/overlay
+uv run gopro_h9_h13_hud_fastlap.py
+#mpv "flying_lap_79.50s.mp4"
 
 git init && git add . && git commit -m "Initial commit: simple go desktop app for karting videos" && gh repo create go-karting --private --source=. --remote=origin --push
 
@@ -39,7 +44,7 @@ claude --remote-control "Go Karting"
 #/mobile
 ```
 
-I made this one with claude code.
+I made this one alive with claude code.
 
 But I guess you could have with Kilo Code, [Zed](https://github.com/zed-industries/zed), Antigravity, Void...
 
@@ -63,8 +68,6 @@ go version
 ```
 
 ```sh
-cd ./go-karting
-
 
 sudo apt install -y libgtk-3-dev libwebkit2gtk-4.1-dev build-essential
 go install github.com/wailsapp/wails/v3/cmd/wails3@latest
@@ -79,15 +82,37 @@ source ~/.bashrc
 
 
 ```sh
-cd glasshud
-make dev
+cd ./go-karting/glasshud
+make dev #this spins the Go Desktop App
 ```
 
 ![GoLang gopro telemetry extractor](/blog_img/karting/go-desktop-glasshud.png)
 
+After a while....
+
+You can just join them: *this was ~x3 slower than real time for my x13*
+
+```sh
+ffmpeg -i output/flying_lap_78.47s.mp4 \
+       -i output/hud_flying_lap.mp4 \
+       -filter_complex "[1:v]scale=3840:2160,format=rgba,colorkey=0x000000:0.1:0.1[ck];[0:v][ck]overlay=0:0" \
+       -codec:a copy -preset superfast \
+       output/flying_lap_with_hud_go_desktop.mp4
+
+
+mpv "flying_lap_with_hud_go_desktop.mp4"
+```
+
+<!-- https://youtu.be/M03HU4DWhyE -->
+
+{{< youtube "M03HU4DWhyE" >}}
+
+
 ### Why Go and Wails
 
-In 2026, **Go (Golang)** occupies a very specific niche in the desktop world. While it isn't the first choice for high-end creative suites (like Photoshop) or flashy consumer apps (like Airbnb), it is the **unrivaled king of "Developer Tools" and Infrastructure Apps.**
+In 2026, **Go (Golang)** occupies a very specific niche in the desktop world. 
+
+While it isn't the first choice for high-end creative suites (like Photoshop) or flashy consumer apps (like Airbnb), it is the **unrivaled king of "Developer Tools" and Infrastructure Apps.**
 
 If you are building something that "does work" in the background—like a local server, a file-syncing tool, or a cloud management dashboard—Go is your best friend.
 
@@ -125,18 +150,14 @@ In a **Go + Vue** (Wails) or **Rust + Vue** (Tauri) setup, you have access to th
 
 Here is how you would use Vue to create those visuals in 2026:
 
-### 1. The Best Libraries for Vue Graphs
+1. The Best Libraries for Vue Graphs
 Depending on what kind of "cool" you're looking for, you have three main paths:
 
 * **ApexCharts (The "Easy & Modern" Choice):** Best for clean, interactive dashboards. It has beautiful animations out of the box and a very simple Vue wrapper (`vue3-apexcharts`).
 * **Apache ECharts (The "Powerful" Choice):** If you need to show **thousands of data points** or complex 3D globes and heatmaps without the app lagging, this is the industry standard.
 * **Chart.js (The "Lightweight" Choice):** Perfect for simple, elegant line or bar charts that just need to look professional and load instantly.
 
-
-
----
-
-### 2. How the "Go + Vue" Workflow Works
+2. How the "Go + Vue" Workflow Works
 In a desktop app, the data usually lives in **Go** (your backend), but the "drawing" happens in **Vue** (your frontend).
 
 1.  **Go** fetches the data (e.g., from a local SQLite database or a system sensor).
@@ -147,19 +168,21 @@ In a desktop app, the data usually lives in **Go** (your backend), but the "draw
 > "Hey Go, give me the CPU usage for the last 60 seconds."  
 > *Go sends back a list of numbers.* > **Vue** instantly updates a smooth, flowing line graph.
 
----
 
-### 3. Why Vue is better than "Native" for Graphs
-If you were using **Pure C** or **Pure Go** (without Vue), making a graph look "cool" is incredibly difficult. You would have to manually calculate where every line and pixel goes. 
+3. Why Vue is better than "Native" for Graphs
+
+If you were using **Pure C** or **Pure Go** (without Vue), making a graph look "cool" is incredibly difficult. 
+
+You would have to manually calculate where every line and pixel goes. 
 
 With **Vue**, you get:
+
 * **Interactivity:** Users can hover over bars to see tooltips, zoom into timeframes, or click legends to hide data.
 * **Theming:** You can easily match your graphs to the "Dark Mode" of the user's operating system using CSS.
 * **Responsiveness:** If the user resizes the desktop window, the graphs will automatically scale to fit the new size.
 
----
 
-### Summary Table: Which Charting Library?
+Summary Table: Which Charting Library?
 
 | Library | Best For | "Cool" Factor | Performance |
 | :--- | :--- | :--- | :--- |
@@ -168,7 +191,6 @@ With **Vue**, you get:
 | **Chart.js** | Simple, clean reports | ⭐⭐⭐ | 🚀 Good |
 | **D3.js** | Custom-built art/visuals | ⭐⭐⭐⭐⭐+ | 🐢 Hard to learn |
 
-**Would you like me to give you a small code snippet showing how a Vue component talks to a Go function to get data for a chart?**
 
 
 
@@ -231,6 +253,41 @@ Fyne is a toolkit where everything—even the buttons—is written in Go.
 If you want to build a **local database manager**, a **custom file backup utility**, or a **VPN client**, Go is arguably better than Rust because you will finish the project 3x faster with 95% of the same performance.
 
 **Would you like me to show you a 10-line "Hello World" in Fyne so you can see how simple the code looks?**
+
+---
+
+## Conclusions
+
+
+### Packing Go
+
+```sh
+make help
+make deb 
+#make appimage (will require the deps installed)   build/linux/appimage/build/glasshud-x86_64.AppImage
+cp bin/glasshud-x86_64.AppImage ~/Applications/ #this is picked up by appimagelauncher
+```
+
+The size difference is the key trade-off in practice: the AppImage bundles GTK + shared libraries (118 MB), while the .deb is tiny (4.4 MB) because it relies on the system 
+  having those libraries already.                                                                                                                                             
+                                                                                                                                                                              
+  For your friend:                                                                                                                                                            
+  - Send glasshud-x86_64.AppImage → they run chmod +x glasshud-x86_64.AppImage && ./glasshud-x86_64.AppImage, then install ffmpeg + exiftool if missing
+  - Send glasshud.deb → they run sudo apt install ./glasshud.deb and apt handles everything including ffmpeg and exiftool automatically           
+
+```sh
+time make exe
+```
+
+ bin/glasshud.exe — 11 MB, built from Linux with no Docker needed.                       
+                                                                                                                                                                              
+  make exe is ready. What your Windows friend needs to do:                                                                                                                    
+                                                                                                                                                                              
+  1. Install ffmpeg and exiftool (one-time):                                                                                                                                  
+  winget install Gyan.FFmpeg                                                                                                                                                  
+  winget install OliverBetz.ExifTool                                                                                                                                          
+  2. Double-click glasshud.exe — WebView2 (Edge) is already built into Windows 10/11 so the UI works out of the box.  
+
 
 
 --- 

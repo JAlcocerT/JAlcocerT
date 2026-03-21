@@ -280,19 +280,18 @@ It's one of the most comprehensive open-source animation suites available, offer
 
 ## Blender API - With Python
 
-https://www.youtube.com/watch?v=cyt0O7saU4Q&list=PLFtLHTf5bnym_wk4DcYIMq1DkjqB7kDb-
+* https://www.youtube.com/watch?v=cyt0O7saU4Q&list=PLFtLHTf5bnym_wk4DcYIMq1DkjqB7kDb-
 
 {{< youtube "cyt0O7saU4Q" >}}
 
 
-https://docs.blender.org/api/current/
-https://docs.blender.org/api/current/info_overview.html
+* https://docs.blender.org/api/current/
+* https://docs.blender.org/api/current/info_overview.html
 
 
 
-https://docs.blender.org/manual/en/dev/advanced/blender_directory_layout.html#blender-directory-layout
-
-https://pypi.org/project/bpy/
+* https://docs.blender.org/manual/en/dev/advanced/blender_directory_layout.html#blender-directory-layout
+* https://pypi.org/project/bpy/
 
 ### Examples
 
@@ -470,6 +469,11 @@ And could not resist to try that with the 2D mechanism that I have ready in Pyth
 ---
 
 ## Conclusions
+
+
+The level of some people creating animations:
+
+https://www.youtube.com/watch?v=_nR1-J676ao
 
 
 
