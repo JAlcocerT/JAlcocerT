@@ -145,7 +145,161 @@ What would be the problem? :)
 
 ## FAQ
 
-### The lagrangian is awsome
+### The Lagrangian is Awesome
 
+The Lagrangian is one of the most elegant concepts in physics. Here's why it's genius for obtaining equations of motion:
 
-L = T - V
+#### What is the Lagrangian?
+
+The Lagrangian **L** is defined as:
+
+$$L = T - V$$
+
+where **T** is kinetic energy and **V** is potential energy.
+
+#### Why It's Genius
+
+**1. Unified Framework**
+
+Instead of tracking forces directly (which requires vector decomposition and can get messy with constraints), the Lagrangian uses *energy*—a scalar quantity. Scalars are simpler to work with than vectors.
+
+**2. Automatic Handling of Constraints**
+
+This is the real power. When you have constraints (like a pendulum fixed at one point, or a bead sliding on a wire), the Lagrangian naturally incorporates them through your choice of **generalized coordinates**.
+
+You don't need to calculate constraint forces explicitly—they disappear from the equations.
+
+**3. Elegant Mathematical Structure**
+
+The equations of motion come from the **Euler-Lagrange equation**:
+
+$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) - \frac{\partial L}{\partial q} = 0$$
+
+This works for *any* coordinate system. Cartesian, polar, spherical, or some weird generalized coordinate—same equation.
+
+**4. Works in Any Reference Frame**
+
+Since energy is frame-independent (more precisely, frame-invariant for the dynamics we care about), you get equations of motion that are valid regardless of your choice of coordinates.
+
+Simple Example: Pendulum
+
+- **Force approach**: Calculate tension T, gravity components, resolve perpendicular to the rod → complicated
+- **Lagrangian approach**: Use angle θ as your coordinate, write $L = \frac{1}{2}m\ell^2\dot{\theta}^2 - mg\ell(1-\cos\theta)$, apply Euler-Lagrange → done, you get the equation immediately
+
+#### Why for Constrained Systems?
+
+When you have constraints, the Lagrangian automatically "knows" which degrees of freedom matter.
+
+You only have as many equations as you have actual degrees of freedom—constraint forces never appear in the equations. 
+
+This is exactly what makes it perfect for multibody dynamics like MBSD.
+
+### Systematic Choices for Computer Implementation
+
+The Lagrangian is genius, but it can't be fully automated—**a human must choose the generalized coordinates and define the system**. 
+
+A computer can't magically know what degrees of freedom matter.
+
+#### Generalized Coordinates: The Key Choice
+
+For every rigid body in your system, you need to choose coordinates that describe its configuration. Some examples:
+
+- **Slider-crank mechanism**: Use crank angle θ, slider position x, or maybe just θ if you enforce the kinematic constraint
+- **Pendulum**: Use angle θ (1 DOF instead of 2 for x, y)
+- **Free-falling box**: Use center of mass position (x, y) and orientation angle φ
+
+#### What About Kinetic and Potential Energy?
+
+Once you've chosen your coordinates, the rule is actually systematic:
+
+- **Kinetic Energy T**: Always comes from the *center of mass* velocity of each body, plus rotational motion
+$$T = \sum_i \left(\frac{1}{2}m_i v_{cm,i}^2 + \frac{1}{2}I_i \omega_i^2\right)$$
+
+- **Potential Energy V**: Comes from the *center of mass* height in gravity field, plus any other potential fields
+$$V = \sum_i m_i g h_{cm,i} + V_{springs}$$
+
+So **yes, always center of gravity** (center of mass). This is not a choice—it's the only systematic way that works for rigid bodies.
+
+#### What the Computer Does
+
+Once you've defined:
+1. Which generalized coordinates to use
+2. The mass and inertia of each body
+3. The constraints (if any)
+
+Then the computer can:
+1. Express T and V in terms of your coordinates
+2. Compute the Lagrangian L = T - V symbolically
+3. Apply Euler-Lagrange to get the differential equations automatically
+
+This is exactly what tools like **SymPy** do in MBSD—you describe the system structure, and the computer derives the equations.
+
+---
+
+### Equations of Motion: What They Are and How to Solve Them
+
+#### What Makes an Equation an "Equation of Motion"?
+
+An equation of motion is any differential equation that describes how a system evolves in time. More specifically:
+
+**1st order**: $\frac{dx}{dt} = f(x, t)$ (velocity defined by position)
+
+**2nd order**: $\frac{d^2x}{dt^2} = f(x, \dot{x}, t)$ (acceleration defined by position and velocity)
+
+For mechanical systems, Newton's 2nd law gives us **2nd-order differential equations**:
+$$m\ddot{x} = F(x, \dot{x}, t)$$
+
+The Lagrangian approach gives us these same equations, but derived automatically from energy rather than force:
+$$\frac{d}{dt}\left(\frac{\partial L}{\partial \dot{q}}\right) - \frac{\partial L}{\partial q} = 0$$
+
+This is still a **2nd-order differential equation** in disguise.
+
+#### Why 2nd Order?
+
+Physics requires two initial conditions: **position** and **velocity**. 
+
+Once you know where something is and how fast it's moving, the future is determined.
+
+Hence: 2nd-order equations.
+
+Methods to Solve Equations of Motion
+
+**1. Analytical (Symbolic)**
+- **Use**: Simple systems (pendulum, spring-mass)
+- **Method**: Solve the differential equations by hand or with SymPy
+- **Pro**: Exact closed-form solutions
+- **Con**: Only works for special cases (linear, simple geometries)
+- **Example**: $\ddot{\theta} + \frac{g}{\ell}\sin\theta = 0$ → solution involves elliptic integrals
+
+**2. Numerical Integration**
+- **Use**: Complex systems, nonlinear dynamics, constraints
+- **Methods**:
+  - **Runge-Kutta (RK4)**: Good balance of accuracy and speed
+  - **Symplectic integrators**: Preserve energy over long simulations (important for mechanics!)
+  - **Implicit methods**: For stiff systems where explicit methods become unstable
+- **Pro**: Works for any system
+- **Con**: Accumulates numerical error, requires small timesteps
+- **Example**: MBSD uses numerical integration to simulate your mechanisms frame-by-frame
+
+**3. Linearization (for Small Motions)**
+- **Use**: When oscillations are small (θ ≈ 0)
+- **Method**: $\sin\theta \approx \theta$, solve the simplified linear system
+- **Pro**: Analytical solutions possible
+- **Con**: Only valid near equilibrium
+
+**4. Energy Conservation (Special Cases)**
+- **Use**: Systems without friction or external damping
+- **Method**: Use $E = T + V = \text{constant}$ to reduce problem dimension
+- **Pro**: Reduces 2nd-order to 1st-order
+- **Con**: Only works when energy is actually conserved
+
+Why MBSD Uses Numerical Integration
+
+For multibody systems with **constraints, multiple degrees of freedom, and complex geometries**, analytical solutions are impossible. Numerical integration is the only practical approach:
+
+1. Lagrangian formulation gives you the differential equations
+2. Numerical integrator steps through time: $q(t+\Delta t) = q(t) + \Delta t \cdot \dot{q}(t) + \ldots$
+3. At each timestep, you evaluate accelerations from the equations of motion
+4. Blender renders each timestep as a frame
+
+This pipeline is why MBSD + Blender can animate any 2D mechanism you throw at it.
