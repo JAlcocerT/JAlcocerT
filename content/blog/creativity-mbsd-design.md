@@ -2,7 +2,7 @@
 title: "Bringing Mechanisms to Life"
 date: 2026-03-20T07:00:21+01:00
 draft: false
-tags: ["Gen-AI","3D Design","OpenSCAD x Blender","CadQuery","Euler Angles"]
+tags: ["3D Design","OpenSCAD x Blender","CadQuery","Euler Angles"]
 description: 'A Hybrid pipeline - From Python to Blender and a mac M2'
 url: 'cad-design-mbsd'
 ---

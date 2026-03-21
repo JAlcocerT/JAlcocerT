@@ -1,9 +1,9 @@
 ---
-title: "Inline 4 Engines: Understanding the most popular engine once and for all"
-date: 2026-04-09T23:20:21+01:00
+title: "Inline 4 Engines: Balance and Vibrations"
+date: 2026-04-03T06:20:21+01:00
 draft: false
-tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","Simulations"]
-description: 'back'
+tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","MBSD x Simulations"]
+description: 'Understanding the most popular engine once and for all'
 url: 'inline-4-engine-balance'
 math: true
 ---
@@ -31,6 +31,22 @@ $$
 \end{aligned}
 $$
 
+
+## Engine Balance
+
+Balance...what is it?
+
+Vibrations? Forces?
+
+This channel has awsome [videos explaining engine balance](#about-engine-balance)
+
+I just wanted to create my engine balance simulations as proof:
+
+```sh
+git clone
+cd ./mbsd
+
+```
 
 ---
 

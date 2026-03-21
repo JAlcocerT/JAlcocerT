@@ -2,7 +2,7 @@
 title: "The hidden Mechanism behind Cyclying"
 date: 2026-03-22T23:20:21+01:00
 draft: false
-tags: ["DA","MBSD","Sympy","MatterJS","2D Simulation"]
+tags: ["MBSD","Sympy","MatterJS","2D Simulation"]
 description: 'The physics of pedaling with your bicycle.'
 url: 'cycling-and-the-4-bars-mechanism'
 math: true
@@ -35,36 +35,14 @@ In fact, this can be simulated in real-time without problems: https://link.sprin
 
 4 bars: leg-leg-biela bicicleta
 
-
-<!-- 
-https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
+Its all about 4 bars and... being a 100% Rigid Solid.
 
 
-Its all about 4 bars and a Rigid Solid.
-
-https://jalcocert.github.io/JAlcocerT/slider-crank-mechanism/
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
   {{< card link="https://github.com/JAlcocerT/" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
 {{< /cards >}}
-
-
-<!-- engine starting
-https://www.youtube.com/shorts/mzWr2ZGf7OU -->
-
-<!-- 
-
-
-derivatives
-The Trillion Dollar Equation
-https://www.youtube.com/watch?v=A5w-dEgIU1M
- -->
-
-<!-- 
-<https://www.youtube.com/watch?v=ABzKNvJCl28>
-<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html>
-<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html> -->
 
 
 ## About MBSD
@@ -223,7 +201,6 @@ This mechanism converts continuous rotation into **intermittent** rotary motion.
 ```sh
 python examples/geneva_drive.py
 ```
-
 
 5. Scotch Yoke
 

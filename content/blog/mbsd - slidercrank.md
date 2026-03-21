@@ -39,7 +39,7 @@ services:
 ```
 
 
-## The Slider-Crank Mechanism: A Cornerstone of Modern Engineering
+## The Slider-Crank Mechanism
 
 The slider-crank mechanism may not be a household name, but it plays a crucial role in our everyday lives. 
 
@@ -86,9 +86,6 @@ Content like the one that this channel provide, are really motivating:
 
 
 Would definitely watch the full video (and explore his channel).
-
-
-## Slider and Crank Representation
 
 
 ## Interacting with a Slider and Crank Mechanism
