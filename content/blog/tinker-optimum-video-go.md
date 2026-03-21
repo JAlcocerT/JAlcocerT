@@ -1,9 +1,9 @@
 ---
-title: "Optimum Path Desktop"
-date: 2026-05-31
+title: "Optimum Path x HUD - Desktop"
+date: 2026-03-21
 draft: false
 tags: ["GoPro GPS Telemetry","Go Language x Wails x Vue","Racing"]
-description: 'From CustomTkinter to a GO Desktop App.'
+description: 'From CustomTkinter to a GoLang Desktop App for Karting HUDs.'
 url: 'gopro-telemetry-desktop-with-go'
 ---
 
@@ -76,6 +76,14 @@ source ~/.bashrc
 
 * github.com/u2takey/ffmpeg-go
 * https://wails.io/docs/introduction
+
+
+```sh
+cd glasshud
+make dev
+```
+
+![GoLang gopro telemetry extractor](/blog_img/karting/go-desktop-glasshud.png)
 
 ### Why Go and Wails
 

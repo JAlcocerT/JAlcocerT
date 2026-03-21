@@ -1,13 +1,17 @@
 ---
 title: "Flat > Boxer"
-date: 2026-04-21T23:20:21+01:00
+date: 2026-04-11T23:20:21+01:00
 draft: false
 tags: ["DA","Career","Volumetric Efficiency"]
-description: ''
+description: 'Comparing two popular engines'
 url: 'flat-boxer'
 ---
 
+**Tl;DR**
 
+
+
+**Intro**
 
 All Boxer are flat 180, but not viceversa.
 

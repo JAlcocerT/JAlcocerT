@@ -1,8 +1,8 @@
 ---
 title: "[Learning] Selfhosted IoT x HA"
-date: 2026-04-01
+date: 2026-04-15
 draft: false
-tags: ["Home Assistant","Sonoff x Zigbee"]
+tags: ["Home Assistant","Sonoff x Zigbee","Solar Panel"]
 description: 'IoT.'
 url: 'iot-home-lab-tools'
 ---

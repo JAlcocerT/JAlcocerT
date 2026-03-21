@@ -62,6 +62,17 @@ graph TD
     style PRINT fill:#bfb,stroke:#333,stroke-width:4px
 ```
 
+```sh
+blender --background --python blender_scene_creative.py
+#Runs the Python script to build the scene — imports STLs, sets up materials, lighting, camera, bakes keyframes, and saves slider_crank_creative.blend. This is equivalent to make
+  scene.
+blender --background slider_crank_creative.blend --render-anim
+#Opens the already-built .blend file and renders all frames to video. This is equivalent to make render.
+```
+
+{{< youtube "1WzRJM8HVKg" >}}
+
+
 This workflow replies to:
 
 1. How does the mechanism move and what are the forces involved? Aka will it break while it operates?
@@ -163,6 +174,11 @@ cd z-cadquery
 & "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe" --python blender_scene.py                
 & "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe" --background slider_crank.blend
 ```
+
+<!-- https://youtu.be/1WzRJM8HVKg -->
+
+{{< youtube "1WzRJM8HVKg" >}}
+
 
 If you dont have a powerful GPU, you can consider [such colab x blender combo](https://www.youtube.com/watch?v=D0vvWMbur_o)
 

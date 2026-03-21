@@ -555,6 +555,10 @@ For racers, see how to estimate the [**optimum circuit path** based with a simpl
   {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
 {{< /cards >}}
 
+Dont ask me how, but I managed to plug Blender into this.
+
+All as a code with CadQuery doing the bridge.
+
 And not only for mechanisms.
 
 12. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and HUD video overlays.
@@ -609,6 +613,15 @@ And tinkered with few algorithms to optimize the path: [minimum curvature](https
 Surprise, surprise: simple mode + realistic assumptions wins the day
 
 {{< youtube "zm0OJcpuLV8" >}}
+
+15. GoPro and...Go Karting, desktop app to extract your racing days telemetry in a package.
+
+Taking the learnings of optimum path and the route tracker, I just put this together in GoLang
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/go-larting" title="Py Route Tracker ↗" icon="github" >}}
+{{< /cards >}}
+
 
 15. Talking about racing...whats going on with F1 this year?
 

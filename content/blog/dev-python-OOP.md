@@ -1,8 +1,8 @@
 ---
 title: "OOP 101 for Engineers - Pendulum x 3Bodies"
-date: 2026-03-25
+date: 2026-04-25
 draft: false
-tags: ["Python vs C vs Java","Mechanical Engineering","Multi-Body","MBSD","Rust x Desktop Apps"]
+tags: ["Python vs C vs Java","Mechanical Engineering","MBSD","Rust x Desktop Apps"]
 description: 'Object Oriented Programming for Python users and better mechanism simulations.'
 url: 'object-oriented-programming-101'
 ---

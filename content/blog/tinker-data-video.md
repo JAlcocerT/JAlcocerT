@@ -582,13 +582,17 @@ But shortly will be allocating some time to tinker back :)
 
 ### Double Pendulum
 
-The double pendulum is the "chaotic cousin" of the slider-crank. While it looks like a simple linkage, its motion is governed by **energy and dynamics** rather than just static geometry.
+The double pendulum is the "chaotic cousin" of the slider-crank.
+
+While it looks like a simple linkage, its motion is governed by **energy and dynamics** rather than just static geometry.
 
 Unlike the slider-crank, where you use simple algebraic loop equations, the double pendulum requires **Lagrangian mechanics** to describe how it evolves over time.
 
 The Lagrangian Equations
 
-To find the equations of motion, we define the system by its kinetic energy ($T$) and potential energy ($V$). The Lagrangian ($L$) is:
+To find the equations of motion, we define the system by its kinetic energy ($T$) and potential energy ($V$). 
+
+The Lagrangian ($L$) is:
 
 
 $$L = T - V$$
@@ -614,7 +618,9 @@ Why is it so different from the Slider-Crank?
 While both involve links and pins, the double pendulum is a **dynamic system**, not a **kinematic mechanism**:
 
 * **Degrees of Freedom:** In a slider-crank, if you move the crank $1^\circ$, the piston moves a specific, predictable distance. In a double pendulum, the arms are free to swing; their position depends on gravity and momentum, not just the "input" angle.
+
 * **Coupling:** Notice the $\cos(\theta_1 - \theta_2)$ terms. This means the movement of the bottom arm physically "tugs" on the top arm and vice-versa.
+
 * **Chaos:** At high energies, the double pendulum is famously chaotic. A change of $0.001^\circ$ in the starting position will result in a completely different path after just a few swings.
 
 Comparison at a Glance
@@ -680,8 +686,6 @@ Unlike the slider-crank, where you can easily solve for the piston's position wi
 | **Predictability** | Deterministic/Periodic | Often Chaotic |
 | **Solution** | Closed-form (exact) | Numerical (simulated) |
 
-
-
 ---
 
 ## Conclusions
@@ -692,7 +696,11 @@ Maybe a bicycle?
 
 As I did [here](https://ereding.etsi.us.es/bibing/proyectos/abreproy/90128/) https://github.com/JAlcocerT/Bike_dynamic_simulator
 
+
 That was a **real time** challenge: https://link.springer.com/book/10.1007/978-1-4612-2600-0
+
+
+{{< youtube "b35XuJI98kI" >}}
 
 
 

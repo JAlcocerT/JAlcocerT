@@ -1,8 +1,8 @@
 ---
 title: "Programmatic Mechanisms"
-date: 2026-03-24T23:20:21+01:00
+date: 2026-03-21T06:20:21+01:00
 draft: false
-tags: ["DA","MBSD","Sympy","2D Simulations","Blender x Tmux"]
+tags: ["DA","MBSD","Sympy","2D Simulations","Blender x Tmux","Lagrangian"]
 description: 'Im Back.'
 url: 'about-constrained-mechanism'
 math: true
@@ -67,15 +67,85 @@ tmux new-session -d -s cad "make all" #if you will be leaving this for the night
 #tmux attach-session -t cad #to see hows going
 ```
 
-Then just some rsync magic to bring the generated files home:
+After having the x300 processing at 100% and consuming 80-90W...
+
+Then just some rsync magic will bring the generated files home:
 
 ```sh
-
+rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/z-cadquery/render/slider_crank.mp4 .
+#Then play it:
+mpv slider_crank.mp4
 ```
 
+https://youtu.be/1WzRJM8HVKg
+
+{{< youtube "1WzRJM8HVKg" >}}
+
+
+So...
+
+
+How hard is to make this work for any of the 2D kinematics I got ready?
+
+## 2D Kinematics x Blender
+
+As mentioned before, its about bridging the 2 worlds.
+
+Why would this be impossible, if we are just stating:
+
+1. A solid is infinitely rigid and 2 points always keep their distance constant
+2. ~~F=ma~~ actually not yet. [But later](#2d-dynamics-for-mbsd)
+
+The `blender_scene.py` is the one doing the cool rendered end result
+
+ One line to rule them all: change PRESET = "preview" to PRESET = "final" and the whole render pipeline switches (resolution, samples, motion blur, quality)
+  - FPS and FRAME_COUNT are now top-level variables alongside the file paths
+  - The render settings section now just reads from _p[...] — no more buried comments saying "change this for final render"
+  - Added a print line so you can confirm what preset is active when the script runs
+
+Three presets now:
+
+  ┌────────────┬────────────┬─────────┬─────────────┬───────────────────┐
+  │   Preset   │ Resolution │ Samples │ Motion blur │     Use case      │
+  ├────────────┼────────────┼─────────┼─────────────┼───────────────────┤
+  │ preview    │ 1280×720   │ 8       │ off         │ Quick local test  │
+  ├────────────┼────────────┼─────────┼─────────────┼───────────────────┤
+  │ production │ 1920×1080  │ 16      │ off         │ Overnight on x300 │
+  ├────────────┼────────────┼─────────┼─────────────┼───────────────────┤
+  │ final      │ 3840×2160  │ 64      │ on          │ Cinematic 4K   
+
+
+## 2D Dynamics for MBSD
+
+Its time for some: F=ma
+
+
+
+
+
+---
+
 ## Conclusions
+
+No 3D speeds and forces for the mbsd.
+
+But dont worry, they are coming.
+
+<!-- https://www.youtube.com/watch?v=fO_4eN-IyOo -->
+
+{{< youtube "fO_4eN-IyOo" >}}
+
+That one even has some fluid mechanics going on...
+
+What would be the problem? :)
+
 
 
 ---
 
 ## FAQ
+
+### The lagrangian is awsome
+
+
+L = T - V

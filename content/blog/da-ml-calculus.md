@@ -117,7 +117,7 @@ The motion of a double pendulum is described by how the angles θ₁ and θ₂ c
 
 There's no other independent variable involved.
 
-The equations of motion are derived from Newton's laws or Lagrangian mechanics, and they result in a set of coupled second-order ODEs:
+The **equations of motion** are derived from Newton's laws or Lagrangian mechanics, and they result in a set of coupled second-order ODEs:
 
 ```
 d²θ₁/dt² = f₁(θ₁, θ₂, dθ₁/dt, dθ₂/dt)
@@ -175,8 +175,8 @@ Material science, diesel injectors, math and piano notes...
 
 Again, I really **cant wait**:
 
-1. Post embrittelment acero h2
-2. Hyundai heavy industries dfy subscription making possible a company to thrive
+1. Post embrittelment about steel and H2
+2. Hyundai heavy industries dfy subscription making possible a company to thrive *or to go bankrupt*
 3. Stocastic vs unpredictable effects
 4. How about a progressive tax ob beauty?
 5. Models that work, compared to others with interesting assumptions
@@ -199,8 +199,6 @@ https://www.youtube.com/watch?v=upyUzShzIVo
 -->
 
 {{< youtube "upyUzShzIVo" >}}
-
-
 
 In the meantime: *you can also get your website going*
 

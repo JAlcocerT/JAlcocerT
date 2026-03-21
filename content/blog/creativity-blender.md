@@ -63,7 +63,9 @@ Almost every button you click in the UI triggers a Python command behind the sce
 
 
 * **The `bpy` Module:** This is the main API. An agent can create objects, move vertices, apply textures, and set up lighting entirely through code.
+
 * **The "Info" Panel Trick:** If you want to see what code an agent needs to write, you can open the "Info" editor in Blender. It logs the Python equivalent of every manual action you take, making it a great "cheat sheet" for training agents.
+
 * **Agent Advantage:** Blender allows agents to do things CAD tools can't easily do, like **procedural textures, physics simulations, and high-end rendering.**
 
 2. Blender vs. CAD (The "Topology" Problem)
@@ -71,6 +73,7 @@ Almost every button you click in the UI triggers a Python command behind the sce
 While an agent *can* design a mechanical part in Blender using Python, there is a catch:
 
 * **CAD (CadQuery/OpenSCAD):** Uses mathematical solids (BREP/CSG). If an agent tells a CAD tool to "drill a hole," the hole is a perfect circle.
+
 * **Blender:** Uses a "mesh" (vertices and faces). If an agent tells Blender to "drill a hole," it has to cut into a grid of triangles or quads. This often creates "messy" geometry that is hard for an agent to fix if things go wrong.
 
 > **The Verdict:** If your agent is designing **mechanical/precision parts**, use **CadQuery**. If your agent is designing **visual assets, characters, or environments**, use **Blender**.
@@ -96,11 +99,6 @@ You let the agent design the "skeleton" in a CAD tool and then "beautify" it in 
 
 * **Geometry Nodes:** This is Blender's version of "visual coding." Agents are becoming very good at generating "Geo Nodes" trees, which are parametric and much more "CAD-like" than traditional mesh editing.
 
----
-
-**What is your end goal for the agent?**
-
-If you want it to **manufacture** something (3D print, CNC), I can show you a **CadQuery-to-STL** script. If you want it to create **game assets or art**, I can show you a **Blender `bpy`** starter script.
 
 ### Installing Blender
 
@@ -237,7 +235,9 @@ I mean, we can provide images as prompts!
 
 Can we do such animations with blender?
 
-https://youtu.be/58C8dWL36GM?si=SgD6JzwCimgEvkuf
+https://youtu.be/58C8dWL36GM
+
+{{< youtube "58C8dWL36GM" >}}
 
 
 * <https://docs.linuxserver.io/images/docker-cura/>
@@ -420,7 +420,9 @@ For an agent to "think" in code, you want a library where the code *is* the mode
 
 1. Top Recommendation: CadQuery https://github.com/cadquery/cadquery
 
-CadQuery is a Python-based library that treats CAD like a standard software engineering task. It is currently the "gold standard" for programmatic design because it uses a **BREP (Boundary Representation)** kernel (OpenCASCADE), the same high-end engine used by professional tools like SolidWorks.
+CadQuery is a Python-based library that treats CAD like a standard software engineering task.
+
+It is currently the "gold standard" for programmatic design because it uses a **BREP (Boundary Representation)** kernel (OpenCASCADE), the same high-end engine used by professional tools like SolidWorks.
 
 * **Why it's best for Agents:**
     * **Standard Python:** Agents can use standard Python libraries (math, NumPy, etc.) and IDE features like linting and debugging.
@@ -470,6 +472,12 @@ And could not resist to try that with the 2D mechanism that I have ready in Pyth
 ## Conclusions
 
 
+
+{{< callout type="info" >}}
+With Python **MoviePy**, as covered on [this post](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#quick-vlogs-as-a-code)
+{{< /callout >}}
+
+
 ### Using Blender with AI for Home Design
 
 Can Blender be some kind of **homestyler, but F/OSS**?
@@ -483,23 +491,24 @@ Other Design Resources
 * Great video comparing [western vs eastern design](https://www.youtube.com/watch?v=8UAsN9wvePE&t=645s)
 
 
-https://blendermarket.com/
+* https://blendermarket.com/
 
-https://www.blender.org/
+* https://www.blender.org/
+  * https://github.com/blender/blender
 
-https://github.com/blender/blender
+* https://github.com/gd3kr/BlenderGPT
+* Blender Add-ons 
+* https://github.com/agmmnn/awesome-blender
+* https://awesome-blender.netlify.app/
 
-https://github.com/gd3kr/BlenderGPT
-Blender Add-ons 
-https://github.com/agmmnn/awesome-blender
-https://awesome-blender.netlify.app/
-
-https://github.com/benrugg/AI-Render
+* https://github.com/benrugg/AI-Render
 
 ### Blender Ad-ons
 
 BlendAI: A versatile suite of AI tools, including image-to-3D, text-to-3D, and more.   
+
 BlendAI Library Pro: Another powerful collection of AI tools, offering features like image-to-3D, text-to-HDRI, and text-to-PBR.   
+
 Autodepth AI: Creates depth maps from images, crucial for many AI-powered 3D workflows.   
 
 3D AI Studio: A comprehensive suite of AI tools for 3D artists, covering a wide range of tasks.   
@@ -507,16 +516,9 @@ Autodepth AI: Creates depth maps from images, crucial for many AI-powered 3D wor
 
 ### Benchmarks with Blender
 
-https://opendata.blender.org/
+* https://opendata.blender.org/
 
 
 ### More Design as a Code
 
 * https://wiki.freecad.org/Python_scripting_tutorial
-
-
-#### Video as a Code
-
-{{< callout type="info" >}}
-With Python **MoviePy**, as covered on [this post](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#quick-vlogs-as-a-code)
-{{< /callout >}}

@@ -1,6 +1,6 @@
 ---
 title: "Attraction Web Offer x Show a Problem"
-date: 2026-04-01T23:20:21+01:00
+date: 2026-04-28T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey x EAyP v3"]
 description: 'A scalable way to provide DIY websites. With Free Web Audits!'
@@ -9,6 +9,8 @@ url: 'diy-webs-via-paas'
 
 
 **Tl;DR**
+
+If I ever talked with you about how to build your website: its obsolete.
 
 Last year I completed all these pieces of the puzzle: [PaaS](https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/) + [DecapCMS x Astro](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms)
 
