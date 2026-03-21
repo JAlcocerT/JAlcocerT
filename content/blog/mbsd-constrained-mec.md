@@ -2,8 +2,8 @@
 title: "Programmatic Mechanisms"
 date: 2026-03-21T06:20:21+01:00
 draft: false
-tags: ["DA","MBSD","Sympy","2D Simulations","Blender x Tmux","Lagrangian"]
-description: 'Im Back.'
+tags: ["MBSD","Sympy","2D Simulations","Blender x Tmux","Lagrangian x Reference Coordinates"]
+description: 'Im Back with 2D Dynamics.'
 url: 'about-constrained-mechanism'
 math: true
 ---
@@ -119,6 +119,11 @@ Three presets now:
 
 Its time for some: F=ma
 
+```sh
+cd ./mbsd/2D-Dynamics
+#make help
+make run-four-bar #make run-all
+```
 
 
 
@@ -127,7 +132,7 @@ Its time for some: F=ma
 
 ## Conclusions
 
-No 3D speeds and forces for the mbsd.
+No 3D speeds and 3D forces for the mbsd model so far.
 
 But dont worry, they are coming.
 
@@ -139,6 +144,16 @@ That one even has some fluid mechanics going on...
 
 What would be the problem? :)
 
+Upcoming questions to be resolved:
+
+1. Whats the best angle for each V shape engine based on the vibrations?
+
+V8 tend to be at 90 degrees, why?
+
+2. The dynamics of the hip thrust exercise....
+
+![V* engine with AI](/blog_img/mechanics/v8.jpg)
+
 
 
 ---
@@ -149,7 +164,7 @@ What would be the problem? :)
 
 The Lagrangian is one of the most elegant concepts in physics. Here's why it's genius for obtaining equations of motion:
 
-#### What is the Lagrangian?
+What is the Lagrangian?
 
 The Lagrangian **L** is defined as:
 
@@ -157,7 +172,7 @@ $$L = T - V$$
 
 where **T** is kinetic energy and **V** is potential energy.
 
-#### Why It's Genius
+Why It's Genius
 
 **1. Unified Framework**
 
@@ -234,7 +249,13 @@ Then the computer can:
 
 This is exactly what tools like **SymPy** do in MBSD—you describe the system structure, and the computer derives the equations.
 
----
+### Why Reference Coordinates?
+
+Simply: because they are sistematic.
+
+I dont want to leave the program subject to human errors of mechanism understanding
+
+At the cost of having to resolve more coordinates *and equations*.
 
 ### Equations of Motion: What They Are and How to Solve Them
 

@@ -920,8 +920,6 @@ Tested with:
 * https://github.com/JAlcocerT/local-deep-researcher/
 * https://github.com/JAlcocerT/Claper
 
-<!-- * https://github.com/JAlcocerT/mechanism -->
-
 
 * https://github.com/qatrackplus/qatrackplus/
   * https://github.com/jlleongarcia/qatrackplus

@@ -1,9 +1,9 @@
 ---
-title: "The Mechanism behind Cyclying"
+title: "The hidden Mechanism behind Cyclying"
 date: 2026-03-22T23:20:21+01:00
 draft: false
-tags: ["DA","MBSD","Sympy","MatterJS","Double Wishbone","2D Simulation"]
-description: 'Im Back.'
+tags: ["DA","MBSD","Sympy","MatterJS","2D Simulation"]
+description: 'The physics of pedaling with your bicycle.'
 url: 'cycling-and-the-4-bars-mechanism'
 math: true
 ---
@@ -335,6 +335,8 @@ This is also...**REAL TIME!**
 <!-- https://youtu.be/0CLNWADDrtY -->
 
 {{< youtube "0CLNWADDrtY" >}}
+
+![alt text](/blog_img/mechanics/simulation_results_bicycle.png)
 
 
 

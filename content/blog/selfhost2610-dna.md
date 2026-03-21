@@ -257,6 +257,14 @@ The MSSQL Extension for Visual Studio Code is designed to empower developers by 
 Our goal is to make SQL development more productive and intuitive by integrating essential features such as schema management, query execution, and AI-powered assistance.
 
 
+### Data Modelling Approaches
+
+Yea...again.
+
+1. ER - 3NF - OLTP - normalized schemas: + tables, - redundancy
+2. Dimensional Modelling - OLAP - denormalized: + query speed but more space taken
+
+trazability matrix, dependencies...
 
 
 ### Different ways to JHUB

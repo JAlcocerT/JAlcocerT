@@ -8,7 +8,7 @@ tags: ["Home-Lab x x300 x ext4","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","
 
 **Tl;DR**
 
-LocalModels: with Docker
+LocalModels: with Docker and [Ubuntu 26.04](#about-ubuntu-2604-lts)
 
 <!-- 
 https://www.youtube.com/watch?v=tYg6T_DAP-k
@@ -464,3 +464,16 @@ NPUs typically utilize a manycore architecture with specialized instructions and
 NPUs are often integrated into mobile processors from companies like Apple, Huawei, and Samsung. 
 
 They are also available as standalone chips from some manufacturers.
+
+### About Ubuntu 2604 LTS
+
+* https://winboat.app/
+
+With VM you dont have GPU passthrough and hardware acceleration.
+
+https://www.youtube.com/watch?v=qEI95GIRKaU
+
+
+https://apps.gnome.org/Maps/
+
+There are interesting things going on: https://agelesslinux.org/map.html

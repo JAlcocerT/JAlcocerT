@@ -614,13 +614,15 @@ Surprise, surprise: simple mode + realistic assumptions wins the day
 
 {{< youtube "zm0OJcpuLV8" >}}
 
-15. GoPro and...Go Karting, desktop app to extract your racing days telemetry in a package.
+15. GoPro and...**Go Karting, desktop app** to extract your racing days telemetry in a single package.
 
 Taking the learnings of optimum path and the route tracker, I just put this together in GoLang
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/go-larting" title="Py Route Tracker ↗" icon="github" >}}
 {{< /cards >}}
+
+
 
 
 15. Talking about racing...whats going on with F1 this year?
@@ -923,6 +925,10 @@ graph LR
 * Can we be free without fear?
 
 * Can sth defined by humans justice? does the concept of justice makes sense in the nature/universe?
+
+* Is social media promoting 1 way thoughts / mono dimensional thinking? Where is The people and real wisdom of crowds?
+
+* How can we build resilience with censorship to critics?
 
 #### Interesting Concepts
 

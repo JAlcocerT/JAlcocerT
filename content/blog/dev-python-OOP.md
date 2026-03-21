@@ -1,8 +1,8 @@
 ---
 title: "OOP 101 for Engineers - Pendulum x 3Bodies"
-date: 2026-04-25
+date: 2026-03-24
 draft: false
-tags: ["Python vs C vs Java","Mechanical Engineering","MBSD","Rust x Desktop Apps"]
+tags: ["Python vs C vs Java","MBSD"]
 description: 'Object Oriented Programming for Python users and better mechanism simulations.'
 url: 'object-oriented-programming-101'
 ---
@@ -15,7 +15,6 @@ What I needed to get this going for good: https://github.com/JAlcocerT/MultiBody
 
 +++ With [examples](#applying-oop): [pendulum](#pendulum) + [3 bodies](#three-bodies)
 
-+++ [Rust x Desktop](#about-desktop-apps)
 
 **Intro**
 
@@ -26,6 +25,10 @@ Its been a while since i used DevCpp for C programming.
 I was trying for long to avoid such concept.
 
 But not any more.
+
+In fact, just recently Ive been doing a come back to MBSD from Matlab to Python...
+
+and OOP has been very helpful!
 
 * https://mermaid.js.org/syntax/classDiagram.html
 
@@ -599,7 +602,7 @@ https://youtu.be/T58lGKREubo
 I already created this, but it cant explain whats going on with the video:
 
 ```sh
-git clone https://github.com/JAlcocerT/Slider-Crank
+git clone https://github.com/JAlcocerT/Py_Double_Pendulum
 
 ```
 
@@ -669,6 +672,10 @@ uv run
 * https://github.com/JAlcocerT/Slider-Crank
 * https://github.com/JAlcocerT/mechanism
 
+```sh
+git clone https://github.com/JAlcocerT/mechanism
+```
+
 Down the line, there is nothing stopping me merging the physically accurate movements with nice looking animations:
 
 * https://github.com/JAlcocerT/3Design
@@ -698,9 +705,6 @@ I gave it a thought to migrate to Octave.
 
 But what for now, having Python available and many OSS goodies.
 
-```sh
-git clone /mbsd
-```
 
 Anyways, if you provide digital services and think [that claude code](https://www.reddit.com/r/ClaudeAI/comments/1q403xw/claude_code_for_noncoding_projectswork_a_complete/) wont be cause deflation there soon because 'Im not a programmer'...
 

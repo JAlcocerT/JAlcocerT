@@ -12,6 +12,8 @@ url: 'gopro-telemetry-desktop-with-go'
 
 I was not expecting to do cool desktop apps.
 
+Nor using Go Lang.
+
 **Intro**
 
 You forgot about LRV and THM already.
@@ -43,6 +45,10 @@ git clone https://github.com/JAlcocerT/go-karting
 claude --remote-control "Go Karting"
 #/mobile
 ```
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/go-karting" title="NEW Go Karting" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Go desktop app for HUD overlays for GoPros" >}}
+{{< /cards >}}
 
 I made this one alive with claude code.
 
