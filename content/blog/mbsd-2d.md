@@ -2,7 +2,7 @@
 title: "2D Kinematics and Dynamics"
 date: 2026-03-24
 draft: false
-tags: ["MBSD x 2D Simulation","Point Reference Coordinates","ThreeJS"]
+tags: ["MBSD x 2D Simulation","Point Reference Coordinates","ThreeJS x AR"]
 description: 'The physics of pedaling with your bicycle.'
 url: '2d-mbsd'
 math: true
@@ -26,6 +26,7 @@ I mean, same physics.
 
 But...
 
+Lets say that now migration from Matlab to Python is waaay faster.
 
 ## About MBSD
 
@@ -46,6 +47,14 @@ git clone git clone https://github.com/JAlcocerT/mbsd
 ### Kinematics
 
 
+With *just kinematics* and the learnings inside the 3D-Design repository...
+
+You can do cool stuff already.
+
+```sh
+cd ./3D-Design/mbsd-to-render/bicycle-leg
+#make help
+```
 
 
 ### Dynamics
@@ -140,7 +149,7 @@ python3 visualize_json.py viewer/data/slider-crank.json --frame 100 --output gra
 ```
 
 
-Now to visualize it:
+Now to visualize it: *thanks to threeJS we have some kind of augmented reality :)*
 
 ```sh
 cd ./mbsd/2D-Simulator
@@ -157,7 +166,31 @@ npm run dev
 ```
 
 
+Yes, we already capture all that data in the JSON! Looking at lines 247-262 of the export function:
 
+```json
+trajectory_data = {
+    "time": [float(t) for t in t_dyn],
+    "positions": [...],
+    "velocities": [...],        # ← Already have this
+    "accelerations": [...],     # ← Already have this
+    "tau_applied": [...],       # ← Constraint forces at joints
+    "energy": {                 # ← Already computing
+        "kinetic": [...],
+        "potential": [...],
+        "total": [...]
+    }
+}
+```
+
+What we could visualize (Phase 2):
+
+Velocity vectors — arrows at joints showing speed magnitude/direction
+Acceleration vectors — arrows showing acceleration at points
+Force vectors — arrows at constraint points showing internal forces
+Color-coded bars — bars colored by velocity/acceleration magnitude
+Energy flow — animate kinetic↔potential energy transfers
+Vector trails — show historical path of joint motion
 
 
 ---
@@ -188,6 +221,10 @@ Enjoy!
 ---
 
 ## FAQ
+
+* https://brm.io/matter-js/
+
+>  Matter.js is a 2D physics engine for the web 
 
 
 

@@ -1,6 +1,6 @@
 ---
 title: "The physics of Mechanism in the space"
-date: 2026-03-26
+date: 2026-04-01
 draft: false
 tags: ["MBSD x 3D Simulation","Dynamics x Kinematics","CADQuery x Blender Rendering"]
 description: 'The physics of Mechanism in the space.'
@@ -10,11 +10,8 @@ math: true
 
 
 <!-- engine starting
-https://www.youtube.com/shorts/mzWr2ZGf7OU -->
-
-<!-- 
-
-
+https://www.youtube.com/shorts/mzWr2ZGf7OU
+https://www.youtube.com/watch?v=gmV4qwLfOMY
 derivatives
 The Trillion Dollar Equation
 https://www.youtube.com/watch?v=A5w-dEgIU1M

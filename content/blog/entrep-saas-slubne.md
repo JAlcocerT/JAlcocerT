@@ -342,7 +342,7 @@ These kind of **micro-SaaS** are so so cool:
 
 > MIT |  Angie is a free, open-source portfolio template featuring a bold, brutalist design that helps you stand out and showcase your work with style. 
 
-Why couldnt SlubnyChwile be inspired in one of those cool UIs? :)
+Why couldnt SlubneChwile be inspired in one of those cool UIs? :)
 
 {{% /steps %}}
 
@@ -425,7 +425,7 @@ Show the products ads for those that apply.
 They get the free thing / trial and we are happy to get your feedback :)
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="NEW - SlubneChwile 2026" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SlubnyChwile options" >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="NEW - SlubneChwile 2026" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for SlubneChwile options" >}}
 {{< /cards >}}
 
 

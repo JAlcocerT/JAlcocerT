@@ -1,6 +1,6 @@
 ---
 title: "The hidden Mechanism behind Cyclying"
-date: 2026-03-22T23:20:21+01:00
+date: 2026-03-22T08:20:21+01:00
 draft: false
 tags: ["MBSD","Sympy","MatterJS","2D Simulation"]
 description: 'The physics of pedaling with your bicycle.'
@@ -67,6 +67,8 @@ Again: understanding, not operating.
 
 ### Love for physics
 
+When it became something morethan vomiting non-sense formulas
+
 ### Bike Dynamics Thesis
 
 How could i not go all in on real time 3d motion simulation for bicycles?
@@ -129,7 +131,7 @@ Some time ago, I was wondering if: Julia: optimization, eq solver, symbolic alge
 
 Would Python be the best approach to find the math behind mechanism that cant block along their movement?
 
-Some kind of automated mechanism synthesis.
+Some kind of automated mechanism synthesis....
 
 Matlab ---> a python – programa sintesis mec generalizado.
 
@@ -141,6 +143,10 @@ The passion of your live is to create such systems?
 
 
 Stay with me for the series about MBSD.
+
+Because this is no longer about wondering.
+
+Just about shipping and sharing:
 
 ```sh 
 git clone https://github.com/JAlcocerT/mbsd
@@ -177,6 +183,10 @@ Generates all 7 outputs (2 PNGs + 5 MP4s) including the combined video
 
 I know, its cycling reversed.
 
+Imagine its the same vectors...just going back in time. 
+
+You get the idea :)
+
 
 ### All Those 2D Moving
 
@@ -192,11 +202,17 @@ The "king" of mechanisms. It consists of four links connected in a loop by four 
 
 2. Slider-Crank Mechanism
 
-This is the heart of the internal combustion engine. It converts **rotary motion** (the crankshaft) into **reciprocating linear motion** (the piston) or vice versa. You’ll find it in air compressors, pumps, and steam engines.
+This is the heart of the internal combustion engine.
+
+It converts **rotary motion** (the crankshaft) into **reciprocating linear motion** (the piston) or vice versa. 
+
+You’ll find it in air compressors, pumps, and steam engines.
 
 4. Geneva Drive (Maltese Cross)
 
-This mechanism converts continuous rotation into **intermittent** rotary motion. It’s famously used in movie projectors to advance the film frame-by-frame and in automated assembly lines for indexing parts.
+This mechanism converts continuous rotation into **intermittent** rotary motion. 
+
+It’s famously used in movie projectors to advance the film frame-by-frame and in automated assembly lines for indexing parts.
 
 ```sh
 python examples/geneva_drive.py
@@ -204,7 +220,9 @@ python examples/geneva_drive.py
 
 5. Scotch Yoke
 
-Similar to the slider-crank but produces a **purely sinusoidal** motion. It’s often used in control valve actuators and high-pressure gas compressors where smooth, harmonic motion is required.
+Similar to the slider-crank but produces a **purely sinusoidal** motion. 
+
+It’s often used in control valve actuators and high-pressure gas compressors where smooth, harmonic motion is required.
 
 
 ```sh
@@ -213,7 +231,11 @@ python examples/four_bar_bicycle.py
 
 7. Pantograph
 
-Based on a parallelogram linkage, the pantograph is used to **scale motion**. If you move one point, another point follows the exact same path but larger or smaller. It’s used in engraving machines and for power collection on electric trains.
+Based on a parallelogram linkage, the pantograph is used to **scale motion**. 
+
+If you move one point, another point follows the exact same path but larger or smaller. 
+
+It’s used in engraving machines and for power collection on electric trains.
 
 ```sh
 python examples/pantograph.py
@@ -225,11 +247,15 @@ Designed for machines like shapers or grinders, this mechanism allows a tool to 
 
 9. Bell Crank
 
-A simple but vital three-link mechanism that **changes the direction** of a force, usually by 90°. You see these in bicycle brake systems, aircraft flight controls, and throttle linkages.
+A simple but vital three-link mechanism that **changes the direction** of a force, usually by 90°. 
+
+You see these in bicycle brake systems, aircraft flight controls, and throttle linkages.
 
 10. Ratchet and Pawl
 
-This mechanism allows motion in only **one direction** while preventing it in the other. It is the core of every socket wrench, zip tie, and heavy-duty winch.
+This mechanism allows motion in only **one direction** while preventing it in the other.
+
+It is the core of every socket wrench, zip tie, and heavy-duty winch.
 
 Comparison Table: Motion Types
 
@@ -241,17 +267,10 @@ Comparison Table: Motion Types
 | **Geneva Drive** | Rotation | Intermittent | Watchmaking |
 | **Rack & Pinion** | Rotation | Linear | Steering |
 
-**Would you like me to explain the math behind a specific one, or perhaps generate an image showing how one of these moves?**
-
 
 ---
 
 ## FAQ
-
-* https://brm.io/matter-js/
-
->  Matter.js is a 2D physics engine for the web 
-
 
  
 ### Maximum piston speed with formula
@@ -266,7 +285,8 @@ Or...simulate it: *under the hood its just same hypothesis and equations*
 
 
 ```sh
-cd jalon
+
+cd ./mbsd/jalon-theory
 # Extract text from any file to text format
 #uvx kreuzberg extract Chapter01.pdf > output.txt
 #uvx 'kreuzberg[cli]' extract jira-estimation.pdf > output.txt
@@ -288,12 +308,14 @@ claude --help
 The work i put in the prompts:
 
 
+```md
 see the bicycle simulator inside the matlab folder, do you understand how it works?
 could you make an equivalent of that in python on the other folder of the repository?
+```
 
+Quote again: AI does not apply to me / my industry
 
-quote again: AI does not apply to me / my industry
-
+Yea...sure :)
 
 ```sh
 cd ~/Desktop/Bike_dynamic_simulator/Python_version #migrated from matlab in 2 prompts
@@ -314,7 +336,6 @@ This is also...**REAL TIME!**
 {{< youtube "0CLNWADDrtY" >}}
 
 ![alt text](/blog_img/mechanics/simulation_results_bicycle.png)
-
 
 
 ### About python SymPy

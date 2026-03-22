@@ -3,7 +3,7 @@ title: "If I would have known - Web Apps edition"
 date: 2026-03-17
 draft: false
 tags: ["BiP x Dev x Tech Talk","BluePrint x BoilerPlate","N ebooks","MBSD x Vite x CSR"]
-description: 'The learnings of shipping a few web/apps. Slubny was so easy?'
+description: 'The learnings of shipping a few web/apps. Slubne was so easy?'
 url: 'learnt-while-building-web-apps'
 ---
 
@@ -358,14 +358,12 @@ But...[claude code](https://code.claude.com/docs/en/cli-reference) (Opus 4.6) ha
 
 What if i tell it to understand the logic...
 
-and re-implement it with a cool modern Vite UI?
-
+and re-implement it with a cool **modern Vite UI**?
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads x Slubne Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="Slubne 2026 Github ↗" icon="github" >}}
 {{< /cards >}}
-
 
 ```sh
 

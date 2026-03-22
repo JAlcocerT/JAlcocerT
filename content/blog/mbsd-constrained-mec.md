@@ -71,7 +71,7 @@ tmux new-session -d -s cad "make all" #if you will be leaving this for the night
 
 After having the x300 processing at 100% and consuming 80-90W...
 
-Then just some rsync magic will bring the generated files home:
+Then just some **rsync magic** will bring the generated files home:
 
 ```sh
 rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/z-cadquery/render/slider_crank.mp4 .
@@ -120,8 +120,73 @@ After some tinkering with blender, this was quite easy to do wit the fwk im buil
 
 ```sh
 #git clone https://github.com/JAlcocerT/3D-Design
-
+cd ./3D-Design/mbsd-to-render
+#claude
 ```
+
+```md
+i love this workflow and it works great for one example that we have for the slider crank. Could you now look at the folder mbsd-to-render where I have brought a 2d
+  kinematics simulator for any mechanism and write a wiki-integration-cadquery.md with your understanding on how it works and what would be required to make there
+  equivalents scripts that will interact with cadquery and blender programatically?
+```
+
+. How mbsd works — coordinate system, constraint types, solving pipeline, all 6 example mechanisms
+  2. The existing slider-crank pipeline — what data.json contract looks like today
+  3. What needs to be built per mechanism — 3 scripts each:
+    - export_<name>.py — runs the mbsd solver, converts 2D coords to 3D and writes data.json
+    - cad_parts_<name>.py — CadQuery parametric parts → STLs
+    - blender_scene_<name>.py — Blender scene builder (mostly copy of existing one)
+  4. Per-mechanism notes — four-bar, Geneva drive, Scotch yoke, pantograph specifics
+  5. Suggested folder layout and a shared/blender_utils.py idea to avoid duplication
+  6. The data contract — the data.json schema everything must agree on
+  7. Gap analysis table — what exists vs what needs building
+
+  The key insight is that the mbsd solver is already generic — you just need the 3 glue scripts per mechanism, using slider-crank as the template.
+
+Will it work for any mechanism? Yes, with one caveat per mechanism type:
+
+  ┌─────────────────────────┬───────────────────────────────────────────────────┐
+  │         Aspect          │                      Status                       │
+  ├─────────────────────────┼───────────────────────────────────────────────────┤
+  │ Kinematics solving      │ ✅ fully generic, no changes needed               │
+  ├─────────────────────────┼───────────────────────────────────────────────────┤
+  │ Velocity + acceleration │ ✅ same                                           │
+  ├─────────────────────────┼───────────────────────────────────────────────────┤
+  │ data.json export        │ ✅ same loop, just different body names           │
+  ├─────────────────────────┼───────────────────────────────────────────────────┤
+  │ CadQuery parts          │ ⚠️  manual per mechanism — each body needs a shape │
+  ├─────────────────────────┼───────────────────────────────────────────────────┤
+  │ Blender scene           │ ⚠️  mostly copy-paste, just tune camera/lighting   │
+  ├─────────────────────────┼───────────────────────────────────────────────────┤
+  │ 2D → 3D mapping         │ ⚠️  same formula for all planar mechanisms         │
+  └─────────────────────────┴───────────────────────────────────────────────────┘
+
+So the only creative work per mechanism is:
+
+1. Defining the geometry (link lengths, cross sections) for CadQuery
+2. Tuning the camera in Blender to frame it well
+
+```sh
+cd ./3D-Design/mbsd-to-render/four-bar
+#make help
+make scene-ui #just to open blender UI and see whats coming on the laptop
+```
+
+And this also worked at the x300, generating:
+
+```sh
+cd ./3D-Design
+#git pull
+cd ./mbsd-to-render/four-bar
+make all
+rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/mbsd-to-render/four-bar/render/four_bar.mp4 .
+mpv four_bar.mp4
+```
+
+<!-- https://youtu.be/B1OhJFeKmqU -->
+
+
+{{< youtube "B1OhJFeKmqU" >}}
 
 
 ## 2D Dynamics for MBSD
