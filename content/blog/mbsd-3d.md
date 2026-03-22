@@ -2,12 +2,30 @@
 title: "The physics of Mechanism in the space"
 date: 2026-03-25
 draft: false
-tags: ["MBSD x 3D Simulation","Dynamics x Kinematics"]
+tags: ["MBSD x 3D Simulation","Dynamics x Kinematics","CADQuery x Blender Rendering"]
 description: 'The physics of Mechanism in the space.'
 url: '3d-mbsd'
 math: true
 ---
 
+
+<!-- engine starting
+https://www.youtube.com/shorts/mzWr2ZGf7OU -->
+
+<!-- 
+
+
+derivatives
+The Trillion Dollar Equation
+https://www.youtube.com/watch?v=A5w-dEgIU1M
+ -->
+
+<!-- 
+<https://www.youtube.com/watch?v=ABzKNvJCl28>
+<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html>
+<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html> -->
+<!-- 
+https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
 
 **TL;DR**
 
@@ -23,7 +41,7 @@ git clone git clone https://github.com/JAlcocerT/mbsd
 ```
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/mbsd" title="NEW MBSD" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Go desktop app for HUD overlays for GoPros" >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="NEW MBSD" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Python fwk to simulate mechanisms" >}}
 {{< /cards >}}
 
 The next sections will be theoretical, but they will be a [base to simulate cool thingies](#conclusions).
@@ -43,8 +61,25 @@ I was using a simple slider-crank to test that its possible to go from a ~mbsd t
 
 Call it [blender as a code](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/#blender-as-a-code) or [how to bring mechanisms to life](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/).
 
+```sh
+git clone https://github.com/JAlcocerT/3Design
+cd ./3Design/z-cadquery
+make check #make help
+#make scene-ui #this starts blender UI
+#make all
+tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+#tmux attach-session -t cad #to see hows going
+#rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/z-cadquery/render/slider_crank.mp4 .
+#mpv slider_crank.mp4
+```
 
 Even though...bringing them to life would be to manufacture them, right?
+
+```sh
+#git clone git clone https://github.com/JAlcocerT/mbsd
+cd ./mbsd/z-cad-render
+
+```
 
 Well...give me some time for that :)
 
@@ -142,6 +177,31 @@ The Python code is [a direct port](#bike-multibody-model) of the original MATLAB
 
 You see how I write about many different stuff?
 
+```sh
+find ./content/blog -maxdepth 1 -type f -name "*.md" | wc -l #this post is 350+ and 80+ expected for this year!
+
+find content/blog -name '*.md' -print0 |
+xargs -0 awk '
+  FNR==1 { 
+    post_date=""; 
+    printed=0 
+  }
+
+  /^date:/ && !printed {
+    gsub(/^date:[[:space:]]*/, "", $0)
+    post_date = substr($0, 1, 10)
+    if (post_date >= "2019-01-01" && post_date <= "2026-03-31") {
+      print FILENAME ": " post_date
+      printed=1
+      count++
+    }
+  }
+
+  END {
+    print "TOTAL:", count+0
+  }'
+```
+
 If any of the things I wrote about catches your attention and you want my time:
 
 {{< cards >}}
@@ -153,7 +213,9 @@ Upcoming topics with 3D mechanics:
 
 
 1. Engine configuration analysis
-2. Suspensions: Double Wishbone
+2. Suspensions: Double Wishbone, macpherson...
+
+https://youtu.be/y-ANdaUthxg
 
 
 ---

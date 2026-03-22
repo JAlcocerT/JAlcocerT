@@ -1,5 +1,5 @@
 ---
-title: "Programmatic Mechanisms"
+title: "Programatic Mechanisms"
 date: 2026-03-21T06:20:21+01:00
 draft: false
 tags: ["MBSD","Sympy","2D Simulations","Blender x Tmux","Lagrangian x Reference Coordinates"]
@@ -11,7 +11,9 @@ math: true
 
 **Tl;DR**
 
+Same inputs, same outputs.
 
+What's stopping you to do programmatic mechanism analysis?
 
 **Intro**
 
@@ -77,13 +79,12 @@ rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/z-cadquery/render/slide
 mpv slider_crank.mp4
 ```
 
-https://youtu.be/1WzRJM8HVKg
+<!-- https://youtu.be/1WzRJM8HVKg -->
 
 {{< youtube "1WzRJM8HVKg" >}}
 
 
 So...
-
 
 How hard is to make this work for any of the 2D kinematics I got ready?
 
@@ -99,9 +100,10 @@ Why would this be impossible, if we are just stating:
 The `blender_scene.py` is the one doing the cool rendered end result
 
  One line to rule them all: change PRESET = "preview" to PRESET = "final" and the whole render pipeline switches (resolution, samples, motion blur, quality)
-  - FPS and FRAME_COUNT are now top-level variables alongside the file paths
-  - The render settings section now just reads from _p[...] — no more buried comments saying "change this for final render"
-  - Added a print line so you can confirm what preset is active when the script runs
+
+- FPS and FRAME_COUNT are now top-level variables alongside the file paths
+- The render settings section now just reads from _p[...] — no more buried comments saying "change this for final render"
+- Added a print line so you can confirm what preset is active when the script runs
 
 Three presets now:
 
@@ -114,6 +116,12 @@ Three presets now:
   ├────────────┼────────────┼─────────┼─────────────┼───────────────────┤
   │ final      │ 3840×2160  │ 64      │ on          │ Cinematic 4K   
 
+After some tinkering with blender, this was quite easy to do wit the fwk im building:
+
+```sh
+#git clone 3D-Design
+```
+
 
 ## 2D Dynamics for MBSD
 
@@ -123,9 +131,42 @@ Its time for some: F=ma
 cd ./mbsd/2D-Dynamics
 #make help
 make run-four-bar #make run-all
+#cd /home/jalcocert/Desktop/mbsd/2D-Dynamics && timeout 120 bash -c 'cd examples && ../venv/bin/python dynamic_slider_crank.py 2>&1' | head -80
 ```
 
+![Slider Speeds and Accelerations](/blog_img/mechanics/dynamic_slider_crank_detailed_analysis.png)
 
+Just at 60rpm or 1 rev per second, the slider goes as fast as ~23km/h for some instants of time. 
+
+This one uses Lagrange, particularly: Constrained Lagrangian Mechanics
+
+The Equation We Solve: M(q) @ a + ∇V(q) = Q_ext + C_q^T @ λ
+
+Where:
+
+- **M(q)** = Mass matrix (constant in reference coordinates)
+- **a** = Acceleration vector (what we compute)
+- **∇V(q)** = Potential energy gradient (gravity effects)
+- **Q_ext** = External forces (torques, springs, user input)
+- **C_q^T @ λ** = Constraint reaction forces (the hidden part!)
+- **λ** = Lagrange multipliers (automatic, varies with config)
+
+Having said that, how about we forget about gravity for a sec?
+
+```sh
+#uv init --no-readme .
+
+# Add packages from requirements.txt one-shot
+uv pip install -r requirements.txt
+#uv sync
+make run-slider-crank-no-gravity
+```
+
+<!-- 
+https://youtu.be/iNl3s09BLoA -->
+
+
+{{< youtube "iNl3s09BLoA" >}}
 
 
 ---
@@ -251,7 +292,7 @@ This is exactly what tools like **SymPy** do in MBSD—you describe the system s
 
 ### Why Reference Coordinates?
 
-Simply: because they are sistematic.
+Simple: because they are sistematic.
 
 I dont want to leave the program subject to human errors of mechanism understanding
 

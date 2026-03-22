@@ -11,7 +11,7 @@ math: true
 
 **Tl;DR**
 
-Is the 4 bar mechanism everywhere?
+Is the **4 bar mechanism** everywhere?
 
 Or is it just ~~my head~~ deployed at [this CSR](https://multibodysystemdynamics.pages.dev/)?
 

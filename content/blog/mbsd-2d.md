@@ -2,7 +2,7 @@
 title: "2D Kinematics and Dynamics"
 date: 2026-03-23
 draft: false
-tags: ["MBSD x 2D Simulation","Point Reference Coordinates"]
+tags: ["MBSD x 2D Simulation","Point Reference Coordinates","ThreeJS"]
 description: 'The physics of pedaling with your bicycle.'
 url: '2d-mbsd'
 math: true
@@ -105,6 +105,36 @@ C_q @ a = -dC_q @ v - d²C/dt²   ← Acceleration constraint
 ```
 
 
+## A 2D MBSD Simulator
+
+As Im preparing for 3D, just thought that matplotlib could be insufficient.
+
+I got to know about: https://threejs.org/
+
+Just tweaked the architecture and made it hybrid...
+
+```sh
+#git clone git clone https://github.com/JAlcocerT/mbsd
+cd /home/jalcocert/Desktop/mbsd/2D-Dynamics && source venv/bin/activate && python3 examples/export_for_viewer.py 
+```
+
+That will generate a JSON export with what the mechanism do.
+
+Now to visualize it:
+
+```sh
+cd ./mbsd/2D-Simulator
+npm install
+```
+
+This installs:
+- **Three.js** - 3D WebGL rendering library
+- **Vite** - Fast development server
+- **dat.gui** - UI controls (for future enhancements)
+
+```bash
+npm run dev
+```
 
 
 
@@ -137,20 +167,74 @@ Enjoy!
 
 ## FAQ
 
-<!-- engine starting
-https://www.youtube.com/shorts/mzWr2ZGf7OU -->
-
-<!-- 
 
 
-derivatives
-The Trillion Dollar Equation
-https://www.youtube.com/watch?v=A5w-dEgIU1M
- -->
+### Phase Portrait Analysis
 
-<!-- 
-<https://www.youtube.com/watch?v=ABzKNvJCl28>
-<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html>
-<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html> -->
-<!-- 
-https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
+In the context of your bicycle simulator—or any complex dynamical system—a **phase portrait** is a visual map of all possible behaviors of the system. 
+
+Instead of plotting a variable (like lean angle) against **time**, you plot the state variables against **each other** (typically position vs. velocity).
+
+### 1. The State Space
+
+For a bicycle, the "state" at any second is defined by its coordinates $q$ and their rates of change $\dot{q}$. 
+
+A phase portrait usually picks two critical variables to show stability. 
+
+* **X-axis:** Position (e.g., Lean Angle $\phi$)
+* **Y-axis:** Velocity (e.g., Lean Rate $\dot{\phi}$)
+
+### 2. Key Components of the Map
+
+When you look at a phase portrait, you aren't just looking at one simulation run; you are looking at the "flow" of the entire mathematical universe of that system:
+
+* **Trajectories:** The lines or curves. Each line represents one possible "story" of the bicycle from a specific starting point.
+* **Equilibrium Points (Fixed Points):** These are the "resting" spots where the system doesn't change ($\dot{q} = 0$).
+    * **Stable (Sink):** If the trajectories spiral inward toward the center, the bike is self-stabilizing.
+    * **Unstable (Source/Saddle):** If the trajectories veer away, the bike is falling over.
+* **Limit Cycles:** A closed loop. In a bicycle, this might represent a steady, wobbling "weave" where the bike doesn't fall but oscillates forever.
+
+### 3. Why it Matters for Your Simulator
+
+Phase portraits are the ultimate "litmus test" for your physics engine. 
+
+1.  **Stability Detection:** You mentioned the bike is stable at 10 m/s. In a phase portrait of $\phi$ vs. $\dot{\phi}$, you would see a "basin of attraction"—a region where, even if you push the bike, the lines eventually curve back to $(0,0)$ (upright and still).
+2.  **Bifurcations:** As you lower the speed in your simulator from 10 m/s to 2 m/s, the phase portrait will physically change. The stable "sink" at the center might split or vanish, visually showing you exactly at what speed the gyroscopic and caster effects are no longer enough to keep the bike upright.
+3.  **Sensitivity to Initial Conditions:** It helps you see how much "lean" is too much. The portrait will show a clear boundary (a **separatrix**) where one trajectory leads back to upright and the one right next to it leads to a crash.
+
+### 4. Mathematical Connection
+
+In your documentation, you solve for $\ddot{q} = M(q)^{-1} \cdot Q(q, \dot{q})$. To create the phase portrait, you take that $\ddot{q}$ and use it to draw the **vector field** (the little arrows) that tell the state which way to move at every point in the graph.
+
+In common conversation, people often use the terms interchangeably, but in technical physics and engineering, they actually refer to two different things.
+
+### The Key Difference
+
+* **Phase Portrait (Dynamics):** This is what relates to your bicycle simulator. it maps the **state** of a system (position vs. velocity) over time. It shows how a single system moves, oscillates, or crashes.
+    
+* **Phase Diagram (Thermodynamics/Chemistry):** This maps the **state of matter** (Solid, Liquid, Gas) based on external conditions like Pressure and Temperature.
+    
+
+---
+
+### Why the confusion happens
+
+In the broader field of **Non-linear Dynamics**, some researchers use the term "Phase Diagram" to describe a map of **Stability Regions**. 
+
+For your bicycle model, a "Phase Diagram" might look like this:
+* **X-axis:** Forward Velocity ($v$)
+* **Y-axis:** Lean Angle ($\phi$)
+* **The Map:** Shows colored regions where the bike is "Self-Stable," "Unstable (Capsize)," or "Unstable (Weave)."
+
+In this specific context, the diagram isn't showing a single "trip" or trajectory; it’s showing the **boundary** where the physics of the bike changes fundamentally.
+
+### Summary Table
+
+| Feature | Phase Portrait | Phase Diagram |
+| :--- | :--- | :--- |
+| **Primary Use** | Mechanical/Dynamical Systems | Materials Science/Thermodynamics |
+| **Axes** | Position vs. Velocity ($q$ vs. $\dot{q}$) | Pressure vs. Temperature ($P$ vs. $T$) |
+| **What it shows** | A "Path" or "Trajectory" | A "Region" or "State" |
+| **Bicycle Context** | Does *this specific* bike fall over? | At *what speeds* is this bike design stable? |
+
+**Would you like to see how the "Self-Stability" region of your bicycle changes if you alter the mass of the front wheel ($m_5$)?**

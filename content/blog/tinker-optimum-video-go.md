@@ -12,7 +12,7 @@ url: 'gopro-telemetry-desktop-with-go'
 
 I was not expecting to do cool desktop apps.
 
-Nor using Go Lang.
+Nor using **Go Lang**.
 
 **Intro**
 
