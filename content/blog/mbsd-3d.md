@@ -1,6 +1,6 @@
 ---
 title: "The physics of Mechanism in the space"
-date: 2026-03-25
+date: 2026-03-26
 draft: false
 tags: ["MBSD x 3D Simulation","Dynamics x Kinematics","CADQuery x Blender Rendering"]
 description: 'The physics of Mechanism in the space.'
@@ -31,13 +31,29 @@ https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
 
 **Intro**
 
+The kind of thing that you put together in few afternoons nowadays.
+
+You thought that your 9-5 is killing you?
+
+Is your 5pm-9pm giving you some life?
+
+Have you ever thought about whats Ikigai for you?
+
+Ops, wrong post to talk about this.
+
+Let me go back: 3D mechanisms! YES!
+
+Here it goes all that unseen talent that the world was [eager to consume](#mbsd-x-web-dev).
+
+##
+
 
 ## About MBSD
 
 Code is law, specially for multibody system dynamics.
 
 ```sh
-git clone git clone https://github.com/JAlcocerT/mbsd
+#git clone https://github.com/JAlcocerT/mbsd
 ```
 
 {{< cards >}}
@@ -216,6 +232,18 @@ Upcoming topics with 3D mechanics:
 2. Suspensions: Double Wishbone, macpherson...
 
 https://youtu.be/y-ANdaUthxg
+
+### MBSD x Web Dev
+
+Because if mechanism 3D dynamics its kind of trivial now.
+
+So is web development.
+
+```sh
+#git clone https://github.com/JAlcocerT/Slider-Crank
+cd ./Slider-Crank/landing #https://multibodysystemdynamics.pages.dev/
+```
+
 
 
 ---

@@ -324,7 +324,7 @@ git clone https://github.com/JAlcocerT/poc
 
 A place to go from streamlit pocs to full stack ones, with concepts like graph databases or with context for agents like https://github.com/volcengine/OpenViking
 
-> OpenViking is an open-source context database designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.
+> OpenViking is an **open-source context database** designed specifically for AI Agents(such as openclaw). OpenViking unifies the management of context (memory, resources, and skills) that Agents need through a file system paradigm, enabling hierarchical context delivery and self-evolving.
 
 
 {{< cards >}}

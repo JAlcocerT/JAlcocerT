@@ -119,7 +119,8 @@ Three presets now:
 After some tinkering with blender, this was quite easy to do wit the fwk im building:
 
 ```sh
-#git clone 3D-Design
+#git clone https://github.com/JAlcocerT/3D-Design
+
 ```
 
 

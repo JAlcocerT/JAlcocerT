@@ -1,6 +1,6 @@
 ---
 title: "2D Kinematics and Dynamics"
-date: 2026-03-23
+date: 2026-03-24
 draft: false
 tags: ["MBSD x 2D Simulation","Point Reference Coordinates","ThreeJS"]
 description: 'The physics of pedaling with your bicycle.'
@@ -114,11 +114,31 @@ I got to know about: https://threejs.org/
 Just tweaked the architecture and made it hybrid...
 
 ```sh
-#git clone git clone https://github.com/JAlcocerT/mbsd
+#git clone https://github.com/JAlcocerT/mbsd
 cd /home/jalcocert/Desktop/mbsd/2D-Dynamics && source venv/bin/activate && python3 examples/export_for_viewer.py 
+#cp /home/jalcocert/Desktop/mbsd/2D-Dynamics/viewer/data/slider-crank*.json /home/jalcocert/Desktop/mbsd/2D-Simulator/viewer/data/ && ls -lh /home/jalcocert/Desktop/mbsd/2D-Simulator/viewer/data/*.json
 ```
 
 That will generate a JSON export with what the mechanism do.
+
+To visualize whats coming: *and debug*
+
+```sh
+#cd ./mbsd/2D-Dynamics
+
+cd /home/jalcocert/Desktop/mbsd/2D-Simulator
+python3 visualize_json.py viewer/data/slider-crank-no-gravity.json --frame 0 --output reference_frame_0.png
+
+# Visualize frame 0 (initial position)
+python3 visualize_json.py viewer/data/slider-crank-no-gravity.json
+
+# Visualize a specific frame and save as PNG
+python3 visualize_json.py viewer/data/slider-crank-no-gravity.json --frame 50 --output frame_50.png
+
+# Works with any mechanism JSON
+python3 visualize_json.py viewer/data/slider-crank.json --frame 100 --output gravity_frame.png
+```
+
 
 Now to visualize it:
 
@@ -135,6 +155,8 @@ This installs:
 ```bash
 npm run dev
 ```
+
+
 
 
 

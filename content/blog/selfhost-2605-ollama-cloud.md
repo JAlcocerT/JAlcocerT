@@ -474,6 +474,6 @@ With VM you dont have GPU passthrough and hardware acceleration.
 https://www.youtube.com/watch?v=qEI95GIRKaU
 
 
-https://apps.gnome.org/Maps/
+* https://apps.gnome.org/Maps/
 
 There are interesting things going on: https://agelesslinux.org/map.html

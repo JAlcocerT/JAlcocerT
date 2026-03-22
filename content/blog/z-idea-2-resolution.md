@@ -393,3 +393,27 @@ Well, at least those that dont work for the public sector and [bill 250k for a w
 Isnt it this already CONTEXT ENGINEERING?
 
 ![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
+
+### Whats left for us?
+
+Coding is gone.
+
+Mech engineering is gone.
+
+Enabling others via showing / teaching / on boarding ?
+
+Simple with markdown and notebookLLM.
+
+Marketing?
+
+All those customer life cycle value, ROIs, hypothesis formation of:
+
+* How each factor affects peformance (conversions)? 
+What contributes more to the win?
+what are the relatibe contributions? paid ads? promotions? webinars?
+
+* Data exploration: base line & seasonality/holidays, external factors  like salary week,competitor activities or internal activieis like channel distribution, product changes...
+
+All that need to know important variables for the business. Gone.
+
+I mean...you can do them assisted by AI.
