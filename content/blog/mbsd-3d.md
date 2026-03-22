@@ -59,13 +59,59 @@ Code is law, specially for multibody system dynamics.
 
 The next sections will be theoretical, but they will be a [base to simulate cool thingies](#conclusions).
 
+### 2D MBSD is cool but
+
+
+With *just* 2D kinematics in place you can create very nice 3D renders.
+
+For example, this geneva drive:
+
+```sh
+cd ./3Design/mbsd-to-render/geneva-drive
+#make help
+make all
+rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/mbsd-to-render/geneva-drive/render/geneva_drive.mp4 .
+mpv geneva_drive.mp4
+```
+
+Or this Scotch...the pantograph...you name it:
+
+```sh
+cd ./3Design/mbsd-to-render/scotch-yoke
+make all
+rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/mbsd-to-render/scotch-yoke/render/scotch_yoke.mp4 .
+mpv scotch_yoke.mp4
+cd ./3Design/mbsd-to-render/pantograph
+make all
+rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/mbsd-to-render/pantograph/render/pantograph.mp4 .
+mpv scotch_yoke.mp4
+```
+
+```sh
+cd /home/jalcocert/Desktop/3Design/mbsd-to-render
+printf "file '%s'\n" *.mp4 > concat.txt
+ffmpeg -f concat -safe 0 -i concat.txt -c copy all_mechanisms.mp4
+mpv all_mechanisms.mp4
+```
+
+<!-- https://youtu.be/KA7HloE6IQY -->
+
+{{< youtube "KA7HloE6IQY" >}}
 
 ### 3D Kinematics
+
+But if you want to do 3D mechanics, you need to get 3D kinematics right first.
+
+
+There are many interesting effects in 3D that simply dont exist in 2D.
 
 
 
 
 ### 3D Dynamics
+
+
+
 
 
 ### CAD x Blender

@@ -114,6 +114,8 @@ https://www.youtube.com/watch?v=XTM4Mqa617o
 
 {{< youtube "XTM4Mqa617o" >}}
 
+Another fantastic rendering of the suspension:
+
 <!-- 
 https://www.youtube.com/watch?v=_wUSd-OVZX8 
 -->
@@ -186,6 +188,10 @@ I know, its cycling reversed.
 Imagine its the same vectors...just going back in time. 
 
 You get the idea :)
+
+Another idea that you should get is: stay, because renders are coming:
+
+{{< youtube "PBFRIEC9aB8" >}}
 
 
 ### All Those 2D Moving
@@ -332,6 +338,8 @@ python3 main.py --keyboard
 This is also...**REAL TIME!**
 
 <!-- https://youtu.be/0CLNWADDrtY -->
+
+Only that this time, than with python, not with Matlab:
 
 {{< youtube "0CLNWADDrtY" >}}
 

@@ -52,10 +52,19 @@ With *just kinematics* and the learnings inside the 3D-Design repository...
 You can do cool stuff already.
 
 ```sh
-cd ./3D-Design/mbsd-to-render/bicycle-leg
+cd ./3D-Design/mbsd-to-render/bicycle_leg
 #make help
 ```
 
+```sh
+make all
+rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/mbsd-to-render/bicycle-leg/render/bicycle_leg.mp4 .
+mpv bicycle_leg.mp4
+```
+
+{{< youtube "PBFRIEC9aB8" >}}
+
+<!-- https://youtu.be/PBFRIEC9aB8 -->
 
 ### Dynamics
 
