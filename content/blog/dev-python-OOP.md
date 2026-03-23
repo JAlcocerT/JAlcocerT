@@ -1,9 +1,9 @@
 ---
 title: "OOP 101 for Engineers - Pendulum x 3Bodies"
-date: 2026-03-25
+date: 2026-03-26
 draft: false
 tags: ["Python vs C vs Java","MBSD"]
-description: 'Object Oriented Programming for Python users and better mechanism simulations.'
+description: 'Object Oriented Programming for Python users.'
 url: 'object-oriented-programming-101'
 ---
 

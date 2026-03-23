@@ -1,6 +1,6 @@
 ---
 title: "Attraction Web Offer x Show a Problem"
-date: 2026-04-28T23:20:21+01:00
+date: 2026-04-15T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey x EAyP v3"]
 description: 'A scalable way to provide DIY websites. With Free Web Audits!'
@@ -58,14 +58,7 @@ The **tech stack**:
   {{< card link="https://github.com/JAlcocerT/diy-landing-boilerplate" title="DIY Landing x Astro Components x Chatbot ↗" icon="github" >}}
 {{< /cards >}}
 
-<!-- FIRST SUMMARY POST OF SGG'S
-THEN THIS ONE REFERENCES TO ALL OF THEM -> ALL SSG'S + FIREBASE + CLOUDFLARE + gh pAGES... -->
 
-<!-- 
-forget about this costs
-https://generatepress.com/pricing/
-https://www.mangomedia.pl/pl/portfolio.html
--->
 
 
 {{< cards >}}
@@ -91,13 +84,17 @@ https://www.mangomedia.pl/pl/portfolio.html
 
 ### Being amazed by Astro
 
+This was less than 3 years ago on a bus!
+
 ### Think I could tweak them
 
-### FrontMatterCMS was not enough
+### Tried few CMS and fail
 
-### Try few CMS and fail
+FrontMatterCMS was not enough
 
-### Build some flask/next webapps as CMS and fail
+### Build some flask/next webapps as CMS
+
+And failed
 
 ### Tried Nuxt Content
 
@@ -137,12 +134,11 @@ make dev-all
 
 The last round was very recently, on [this post](https://jalcocert.github.io/JAlcocerT/interesting-books/#decap-x-existing-astro-x-localhost).
 
-Got to know about via selfh.st
+Got to know about via `selfh.st`
 
 But...didnt tried it yet.
 
 {{% /steps %}}
-
 
 
 ## The journey of the infra side
@@ -153,17 +149,21 @@ Because not everything is code.
 
 ### Played with Ubuntu
 
+Inside VMs
+
 ### Got a Pi
 
 ### Liked containers
 
 ### Got a VPS
 
-### Liked Docker
-
 ### Tried VPSs
 
 ### Consolidated docker configs
+
+In one public repository
+
+Then at one with some order
 
 ### Understood Proxies for HTTPs
 

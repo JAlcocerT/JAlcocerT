@@ -1,9 +1,121 @@
 ---
 title: "Which ideas are left?"
-date: 2026-05-01T07:00:21+01:00
+date: 2026-04-25T07:00:21+01:00
 draft: false
-tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3","DevOps x DORA x Apache DevLake"]
-description: 'What is learning? Take feedback from the value equation.'
+tags: ["Unit Economics 202","JAlcocerTech Services"]
+description: 'What is learning?'
 url: 'the-ideas-bucket-can-be-empty'
 math: true
 ---
+
+
+**TL;DR**
+
+Pretending to be a polymath and charging you for caring about solving your problems.
+
+**Intro**
+
+When the ideas bucket stops filling up, I got clarity.
+
+
+
+---
+
+## Conclusions
+
+If you have ever thoughts about Ikigai
+
+or tried to understand the psyc under your decision making
+
+you might have done a TOP/BOT 10 actions life to date.
+
+I did that.
+
+And do you know what was surprising?
+
+That the Bottom 10 moments had one thing in common.
+
+They were all: NOT done this/that in this/that situation
+
+Until now you might have [waited for the right moment](#the-market-of-time) to start shipping that project.
+
+You dont need to wait anymore:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
+{{< /cards >}}
+
+### My Current Value Ladder
+
+Active income >>> ~~passive income~~ delayed active income.
+
+```sh
+git clone /jalcocertech-services
+```
+
+How does my **value ladder** looks like as of today?
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>($0)"):::free
+    L1("AuditMagnet 🛡️<br/>(Free Web Audit )"):::free
+    L11(" Blog/Youtube"):::free
+    L12(" ebooks"):::free
+    L2("DIY<br/>(Optimization Guides) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Full Service) $$$"):::high
+
+    %% --- Connections ---
+    L0 --> L1
+    L0 --> L2
+    L0 --> L11
+    L0 --> L12
+    L2 --> L3
+    L3 --> L4
+```
+
+### Whats next?
+
+1/3 of the year is gone...
+
+where am I?
+
+#### Keep Doing
+
+Following my roadmap for this year
+
+Yea, im not considering `Side-Quests26` nor `Tech talks`.
+
+Oh, also not the monthly selfhosted/homelab recaps.
+
+#### Stop Doing
+
+#### Start Doing
+
+
+---
+
+## FAQ
+
+### The market of time
+
+Some people think that two of the most important factors to predict success are:
+
+1. The RISK that you allow yourselv to take
+2. The amount of TIME that you can wait without possitive rewards to keep going in a certain direction (~persistency)
+3. The number of times that you *ROLL the dice*
+
+The good thing about tracking that daily new action ~~since ~wk40y24~~ for some time is that you can see how non-sense previous things were
+
+Meaning: that those actions were not meant to make yo be closer to where you want to be
+
+This idea might suggest you [open questions](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#outro--random)
+

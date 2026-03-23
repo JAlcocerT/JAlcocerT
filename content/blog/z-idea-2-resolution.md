@@ -139,20 +139,63 @@ Questions like the ones you can have solved:
 
 Ive shipped and learn many what to do and several NOT to do.
 
-They all plugged into these 2 lovely equations:
+
+{{< details title="RoadMap26 | As of 0323 📌" closed="true" >}}
+
+Coming from [last year end review](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#for-next-year)
+
+1. Weddings serverless + ads - [WIP](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) ⚙️
+
+8. Get back to mech simulations - *for fun :)* - [MBSD 2D](https://jalcocert.github.io/JAlcocerT/2d-mbsd) ✅
+
+7. Prepare the DIY/DWY/DFY based on the ebooks and blog content ~ *Wiki efforts* - WIP ⚙️
+
+5. Books *from D&A to web and concepts from kindle notes* - WIP ⚙️
+
+3. AIoT *end to end flow from solar panels to dashboarding & langchain*
+
+4. Custom Marketing analytics *from custom high signal content creation to funnels*
+
+6. ~~Scaling PRO Webs creation via PaaS~~ - A better DIY website with free (programmatic) audit - Free web audits [show problems here](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/) ✅
+
+* https://webaudit.jalcocertech.com/
+
+2. ~~Real Estate Custom RAG and WebApp via DecapCMS~~ | Cancelled and [whitelabelled](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/) 
+
+* https://realestate.jalcocertech.com/
+
+{{< /details >}}
+
+
+They all plugged into these **2 lovely equations**:
 
 $$
 P \times V \times GM \times OM \times IF \times T
 $$
 
+The value equation
+
+> What needs to happen or which % do people assign to some obvious offers? or why do they go for clear non-go ones?
+
+> > Dont explain it from rationallity or you'll be lost. Consider psyc!
+
 From where you can create a tier of services with *some sort of sense*: *yea, the [value ladder](https://jalcocert.github.io/JAlcocerT/shopify-business-data-analytics/#how-is-this-been-shaped)!*
 
 ```sh
-
+git clone /slubnechwile
 #3bodies OSS
-#slider crank OSS / mbsd 
+#slider crank OSS / mbsd
+#git clone /poc #with prompts and ctas :)
+#git clone /jalcocertech-services #all in one repo :)
+#https://webaudit.jalcocertech.com/
+#entreagujaypunto eaypv3
 ```
 
+Life is short.
+
+So is your audience attention.
+
+Dont waste it with the wrong website:
 
 ```mermaid
 flowchart LR
@@ -230,6 +273,46 @@ It just the right time to admit that [wrong client selection has consequences](h
 
 You should now the drill by now: [attract, convert, deliver](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-after-learning/#attract-convert-deliver).
 
+If you got here from a technical background: dont overcomplicate
+
+You'll probably know how to deliver
+
+And most likely dont know how to attract and convert.
+
+Thats why some people have 10k ig followers - 2k in a telegram group - and 200 into a smaller tg group ready to buy them a vibe/life mentory which gross delivery is 1k+ $/h (only for 30 lucky selected ppl who can pay 500$ each for 10h, ofc)
+
+Pretty interesting value proposition, ah?
+
+It works, our opinion doesnt really matter.
+
+Curioous about how does my **value ladder** looks like as of today?
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>($0)"):::free
+    L1("AuditMagnet 🛡️<br/>(Free Web Audit )"):::free
+    L11(" Blog/Youtube"):::free
+    L12(" ebooks"):::free
+    L2("DIY<br/>(Optimization Guides) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Full Service) $$$"):::high
+
+    %% --- Connections ---
+    L0 --> L1
+    L0 --> L2
+    L0 --> L11
+    L0 --> L12
+    L2 --> L3
+    L3 --> L4
+```
+
 ### Interesting Articles
 
 * https://knowledge.insead.edu/strategy/who-killed-nokia-nokia-did
@@ -280,7 +363,7 @@ So for the v3...
 
 Ive heard this year about DORA.
 
-Which maps with Lean (via VSM) and DevOps: https://www.atlassian.com/devops/frameworks/dora-metrics
+Which maps with [Lean](https://jalcocert.github.io/JAlcocerT/lean/) (via VSM) and DevOps: https://www.atlassian.com/devops/frameworks/dora-metrics
 
 DORA is a **metrics framework** (not a rigid toolset)—a set of four standard KPIs from Google's **DevOps Research and Assessment** team to benchmark software delivery.
 

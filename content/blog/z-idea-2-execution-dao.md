@@ -13,7 +13,6 @@ math: true
 
 Is this what future will look like?
 
-
 **Intro**
 
 Imagine whats next when LLMs/Agents can go from general ideas to epic/tasks

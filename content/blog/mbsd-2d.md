@@ -3,12 +3,10 @@ title: "2D Kinematics and Dynamics"
 date: 2026-03-24
 draft: false
 tags: ["MBSD x 2D Simulation","Point Reference Coordinates","ThreeJS x AR"]
-description: 'The physics of pedaling with your bicycle.'
+description: 'The physics of bodies moving at 2D.'
 url: '2d-mbsd'
 math: true
 ---
-
-
 
 **Tl;DR**
 
@@ -55,6 +53,8 @@ You can do cool stuff already.
 cd ./3D-Design/mbsd-to-render/bicycle_leg
 #make help
 ```
+
+Once rendered at my x300, I bring it to my x13 via:
 
 ```sh
 make all

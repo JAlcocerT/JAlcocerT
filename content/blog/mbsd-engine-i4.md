@@ -2,8 +2,8 @@
 title: "Inline 4 Engines: Balance and Vibrations"
 date: 2026-04-03T06:20:21+01:00
 draft: false
-tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","MBSD x Simulations"]
-description: 'Understanding the most popular engine once and for all'
+tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","MBSD"]
+description: 'Understanding the most popular engine once and for all.'
 url: 'inline-4-engine-balance'
 math: true
 ---
@@ -20,6 +20,9 @@ Getting right the slider-crank mechanism (2D) via MBSD to later form a 3D ICE I4
 
 
 **Intro**
+
+Some time ago I recorded this video in a restaurant:
+
 
 
 $$
@@ -117,3 +120,5 @@ You have ~2007 units for ~10k$ as shown [here](https://www.youtube.com/watch?v=5
 {{< /cards >}}
 
 Im well aware that some people do cool stuff on the tracks with their bmw (BMW e86).
+
+### Holonomic vs Non Holonomic Constrains

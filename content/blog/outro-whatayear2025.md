@@ -1411,11 +1411,11 @@ Sth like: https://github.com/masterkram/minted-directory-astro, where you can ea
 
 ### Improving the HomeLab
 
-There were some recents downtime status on popular services:
+There were some **downtime status** recently on popular services:
 
 ![alt text](/blog_img/dev/github-status.png)
 
-Also, mandatory services :)
+Also, mandatory *,services'* that you never signed up for :)
 
 ![alt text](/blog_img/dev/apache-webserver.png)
 
@@ -1455,7 +1455,7 @@ Thanks to this sites, I get to know more cool apps:
 
 3. https://youmightnotneed.co/
 
-4. selfhst.st
+4. selfh.st
 
 ### New Tech Im using
 
@@ -1683,6 +1683,6 @@ I know that this is like... 0+0=0
 
 But...how could we expect to be closer to excellent w/ot even trying?
 
-![Porsche design](/blog_img/outro/porsche.png)
+<!-- ![Porsche design](/blog_img/outro/porsche.png) -->
 
 Enjoy.
