@@ -265,6 +265,10 @@ The good thing about 'not caring' about people churning, is that you can **white
 # f1...
 ```
 
+```sh
+#programmatic uptime kuma monitoring of my services
+```
+
 Most likely objections are not about pricing, but perceived value.
 
 Make sure to understand that selling is 20% about the thing and [80% about people and psyco](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#psyco)
@@ -316,6 +320,7 @@ flowchart LR
 ### Interesting Articles
 
 * https://knowledge.insead.edu/strategy/who-killed-nokia-nokia-did
+* https://newsletter.pragmaticengineer.com/p/ai-tooling-2026
 
 ---
 

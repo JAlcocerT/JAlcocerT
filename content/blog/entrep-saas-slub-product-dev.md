@@ -195,7 +195,7 @@ node --env-file=.env scripts/orchestrate-drip.mjs
 
 ```sh
 #node --env-file=.env scripts/test-email.mjs --step welcome --name "Jul" --email "sometestmail@gmail.com" --send
-#every email contains a reference the the firebase UUID https://slubnechwile.com/unsubscribe?email=jesalctag%40gmail.com&uid=YOUR_REAL_FIREBASE_UID
+#every email contains a reference the the firebase UUID https://slubnechwile.com/unsubscribe?email=some-nice%40gmail.com&uid=YOUR_REAL_FIREBASE_UID
 node --env-file=.env scripts/test-email.mjs --step welcome --uid YOUR_REAL_FIREBASE_UID --send #this connects them to the email autom
 node --env-file=.env scripts/toggle-unsubscribe.mjs --resubscribe
 ###docker compose -f docker-compose.cloudflare.yml up -d --build

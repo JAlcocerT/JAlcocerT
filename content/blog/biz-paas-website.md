@@ -59,7 +59,7 @@ curl -sSL https://dokploy.com/install.sh | sh #will need ~300mb to get started
 
 > This automatically spins: Dokploy + PostgreSQL + Redis + [Traefik](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/#traefik)
 
-You will authorize dokploy as Github App: https://github.com/apps/dokploy-jesalctag
+You will authorize dokploy as Github App: `https://github.com/apps/dokploy-abcdefg`
 
 <!-- https://www.youtube.com/watch?v=kwVNpfru6pk -->
 

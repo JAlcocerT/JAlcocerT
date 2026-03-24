@@ -84,21 +84,55 @@ flowchart LR
 
 ### Whats next?
 
-1/3 of the year is gone...
+~1/3 of the year is gone...
+
+where do i wanted to be?
 
 where am I?
 
 #### Keep Doing
 
-Following my roadmap for this year
+1. Following my roadmap for this year, as planned here.
 
 Yea, im not considering `Side-Quests26` nor `Tech talks`.
 
 Oh, also not the monthly selfhosted/homelab recaps.
 
+2. Monthly Life ~ IKIGAI Checks: *just that not done in onenote, [but in .md](https://github.com/JAlcocerT/my-logseq-notes)*
+
+```sh
+git clone 
+```
+
 #### Stop Doing
 
+1. Collaborations with people/ideas/projects who dont have a clear*er* (>=) than what I expect before executing my ideas.
+
+
+{{% details title="Ideas Checklist 🚀" closed="true" %}}
+
+For this I dedicated a full post few weeks ago.
+
+The general idea checklist is as follows:
+
+
+
+{{% /details %}}
+
+{{% details title="Prospects/Clients Checklist 🚀" closed="true" %}}
+
+
+
+
+{{% /details %}}
+
+When you have certain volume, this is the kind of thing that you put into a *dis*qualification form.
+
+
+
 #### Start Doing
+
+1. 
 
 
 ---
