@@ -15,6 +15,8 @@ https://youtu.be/bhPHwVsrTo0
 
 **Tl;DR**
 
+At an ecommerce they were using Swift for the code base of iOS
+
 Couple years ago I tried to do some Flet Apps with chatGPT, but the LLM knowledge was not there.
 
 At least not to compensate for my lack of mobile app development (0).

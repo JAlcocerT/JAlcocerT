@@ -2,7 +2,7 @@
 title: "OSS-AI Generated Videos with Remotion"
 date: 2026-03-28T23:20:21+01:00
 draft: false
-tags: ["Outro","Claude Code"]
+tags: ["Outro","Claude Code","Motion Design"]
 description: 'How to use RemotionJS to create videos as a code.'
 url: 'video-creation-with-remotion'
 ---
@@ -36,6 +36,9 @@ Remotion is a framework for creating videos programmatically using React.
 
 > 🎥 Make videos programmatically with React
 
+If we can use web tech to make presentations or CVs...
+
+How come the same tech would not be able to make `mp4` videos.
 
 * https://www.remotion.dev/docs
 * https://www.npmjs.com/package/remotion
@@ -79,8 +82,39 @@ Not care to read the docs.
 
 Im going to use CC for this, as im paying the PRO sub right now.
 
+<!-- https://www.youtube.com/watch?v=y-pxNV0IyTY -->
+
+{{< youtube "y-pxNV0IyTY" >}}
+
+
+Claude skills...its just about `SKILL.md` and the remotion team has put one together at `claude-code-remotion`
+
+```sh
+npx skills add remotion-dev/skills
+```
+
+**The remotion App**:will help you make edits via UI if you'd want to.
+
+```sh
+npx create-video@latest .
+npm i
+npm run dev
+```
+
+Go to `localhost:3000`
 
 #### YFinance x RemotionJS
+
+
+<!-- https://www.youtube.com/watch?v=NTfXwQ85suw -->
+
+{{< youtube "NTfXwQ85suw" >}}
+
+
+React Three Fiber ~ Three JS?
+
+https://r3f.docs.pmnd.rs/getting-started/introduction
+https://r3f.docs.pmnd.rs/getting-started/examples
 
 #### Mechanisms x RemotionJS
 
@@ -95,6 +129,14 @@ But maybe...there is a better way to just create videos about mechanisms?
 By any chance can this videos/shorts get more traction?
 
 
+#### Websites to...RemotionJS?
+
+We said that remotionJS uses react.
+
+Does that mean that if your website already uses React then Claude Code has a much easier job to undertand your branding?
+
+This is resonating a lot for me to promote all those `realestate.`, `webaudit.` etc etc etc services :) 
+
 ---
 
 ## Conclusions
@@ -105,6 +147,14 @@ Now you have three options: all as a code.
 1. Keep matplotlib with cool custom logic
 2. Go the python - blender route
 3. NEW: Use...remotion to create videos as a code!
+
+
+Now clear yet on the how to?
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
 
 ---
@@ -120,3 +170,11 @@ Now you have three options: all as a code.
 https://www.youtube.com/watch?v=deg8bOoziaE&pp=ygUKcmVtb3Rpb25qcw%3D%3D -->
 
 ### Adding AI Generated Audio to RemotionJS Videos
+
+### What's Motion Desing?
+
+{{< youtube "MAhkbZHcbLA" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=MAhkbZHcbLA
+ -->

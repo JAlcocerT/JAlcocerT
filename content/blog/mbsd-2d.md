@@ -3,7 +3,7 @@ title: "2D Kinematics and Dynamics"
 date: 2026-03-24
 draft: false
 tags: ["MBSD x 2D Simulation","Point Reference Coordinates","ThreeJS x AR"]
-description: 'The physics of bodies moving at 2D.'
+description: 'The physics of bodies moving at 2D becoming Claude Skills.'
 url: '2d-mbsd'
 math: true
 ---
@@ -194,12 +194,12 @@ trajectory_data = {
 
 What we could visualize (Phase 2):
 
-Velocity vectors — arrows at joints showing speed magnitude/direction
-Acceleration vectors — arrows showing acceleration at points
-Force vectors — arrows at constraint points showing internal forces
-Color-coded bars — bars colored by velocity/acceleration magnitude
-Energy flow — animate kinetic↔potential energy transfers
-Vector trails — show historical path of joint motion
+* Velocity vectors — arrows at joints showing speed magnitude/direction
+* Acceleration vectors — arrows showing acceleration at points
+* Force vectors — arrows at constraint points showing internal forces
+* Color-coded bars — bars colored by velocity/acceleration magnitude
+* Energy flow — animate kinetic↔potential energy transfers
+* Vector trails — show historical path of joint motion
 
 
 ---
@@ -221,11 +221,30 @@ And if you want my time you can rent it below: *for that price signal i'd stop d
 
 Selfish?
 
-Other people would thank you for the compliment!
+There are people who would thank you for the compliment!
 
 If you are here for the free goodies, you can have them at the time of writing at the ebooks site.
 
 Enjoy!
+
+
+### MBSD 2D x CC Skills
+
+How about...documenting the framework in a way that claude code or any other agent could understand it from now on?
+
+
+According 
+
+### MBSD 2D x Excalidraw and MermaidJS
+
+Both can be generating diagrams as a code.
+
+I thought that excalidraw accepted mermaid code and that was it.
+
+But actually...it has its own json that can be understood.
+
+
+
 
 ---
 

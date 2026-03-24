@@ -1,6 +1,6 @@
 ---
 title: "From Idea to Resolution"
-date: 2026-04-01T07:00:21+01:00
+date: 2026-03-29T07:00:21+01:00
 draft: false
 tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3","DevOps x DORA x Apache DevLake"]
 description: 'What is learning? Taking feedback from the value equation.'
@@ -190,6 +190,17 @@ git clone /slubnechwile
 #https://webaudit.jalcocertech.com/
 #entreagujaypunto eaypv3
 ```
+
+<!-- 
+https://www.youtube.com/watch?v=TZUTe7s11-I 
+-->
+
+{{< youtube "TZUTe7s11-I" >}}
+
+<!-- https://www.youtube.com/watch?v=1aI7pAlkz4w -->
+
+
+{{< youtube "1aI7pAlkz4w" >}}
 
 Life is short.
 

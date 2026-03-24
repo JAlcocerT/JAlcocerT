@@ -470,10 +470,17 @@ And could not resist to try that with the 2D mechanism that I have ready in Pyth
 
 ## Conclusions
 
+If you dont like KDEnlive for video editing
+
+You can also use Blender:
+{{< youtube "99ZdOuJMrao" >}}
+
+<!-- https://www.youtube.com/watch?v=99ZdOuJMrao -->
 
 The level of some people creating animations:
 
-https://www.youtube.com/watch?v=_nR1-J676ao
+<!-- https://www.youtube.com/watch?v=_nR1-J676ao -->
+{{< youtube "_nR1-J676ao" >}}
 
 
 
