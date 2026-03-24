@@ -10,7 +10,7 @@ url: matlab-vs-octave
 
 **TL;DR**
 
-It's all about the m language (not the M one from PowerBI).
+It's all about the `.m` files and Matlab language (not the M one from PowerBI).
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Bike_dynamic_simulator" title="Bicycle Dynamic Simulator Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Matlab powered real time simulation - Source Code on Github" >}}

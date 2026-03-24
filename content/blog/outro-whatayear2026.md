@@ -930,6 +930,7 @@ graph LR
 
 * How can we build resilience with censorship to critics?
 
+* Where is the line between being flexible and being chaotic?
 #### Interesting Concepts
 
 1. Nonchalant

@@ -3,7 +3,7 @@ title: "From Idea to Resolution"
 date: 2026-04-01T07:00:21+01:00
 draft: false
 tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3","DevOps x DORA x Apache DevLake"]
-description: 'What is learning? Take feedback from the value equation.'
+description: 'What is learning? Taking feedback from the value equation.'
 url: 'take-ideas-to-their-digital-resolution'
 math: true
 ---
@@ -264,6 +264,12 @@ The good thing about 'not caring' about people churning, is that you can **white
 #mbsd...
 # f1...
 ```
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kener" title="Kener | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ```sh
 #programmatic uptime kuma monitoring of my services

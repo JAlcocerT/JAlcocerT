@@ -243,7 +243,7 @@ Have deployed couple of services?
 
 Get that **cool status pages** for your clients: https://github.com/rajnandan1/kener
 
-> **MIT** |Stunning status pages, batteries included!
+> **MIT** | Stunning status pages, batteries included!
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}

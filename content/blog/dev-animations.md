@@ -140,6 +140,7 @@ Something very similar, but [with mechanisms](https://jalcocert.github.io/JAlcoc
 But same as it can be done for mechanism, it can be done for time series data, like this SP500 returns which is powered by [this script](https://github.com/JAlcocerT/DataInMotion/blob/main/tests/animate_total_return_from_csv.py)
 
 {{< youtube "I46bPuSdrqk" >}}
+
 <!-- https://youtu.be/I46bPuSdrqk -->
 
 Then, your imagination is the limit, as you can do scripts to compare few stocks returns and placing some [OpenAI APi TTS audio](https://github.com/JAlcocerT/DataInMotion/tree/main/OpenAI-Audio) that describes them:
@@ -154,7 +155,7 @@ uv run animate_sequential_compare_price_evolution_flex_custom.py MC.PA RMS.PA 20
 #ffprobe -v error -select_streams v:0 -show_entries stream=width,height -of csv=s=x:p=0 animated_yt_short.mp4
 ```
 
-> Creating a "full circle" or cyclical narrative can be incredibly impactful for youtube shorts (1080x1920)
+> Creating a *"full circle" or cyclical narrative* can be incredibly impactful for youtube shorts (1080x1920)
 
 * https://www.youtube.com/watch?v=XrQliJX-e8A
 * https://www.youtube.com/watch?v=GrVIJ6Xb_I0
