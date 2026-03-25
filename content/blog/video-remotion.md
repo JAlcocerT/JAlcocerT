@@ -148,8 +148,11 @@ Now you have three options: all as a code.
 2. Go the python - blender route
 3. NEW: Use...remotion to create videos as a code!
 
-
 Now clear yet on the how to?
+
+You dont have to run to make your dream project.
+
+You can get it done:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

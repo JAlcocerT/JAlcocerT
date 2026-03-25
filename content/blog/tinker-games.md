@@ -1,7 +1,7 @@
 ---
 title: "Take a Break - Gaming with OSS"
 date: 2026-11-23T23:20:21+01:00
-draft: true
+draft: false
 tags: ["Self-Hosting","Emulation","Nintendo","Yatch x EmulatorJS"]
 description: 'Are games playable in Linux?'
 url: 'open-source-gaming'
@@ -12,7 +12,11 @@ url: 'open-source-gaming'
 
 What about gaming?
 
-https://www.youtube.com/watch?v=LZUhBRJwp4M
+<!-- 
+https://www.youtube.com/watch?v=LZUhBRJwp4M -->
+
+{{< youtube "LZUhBRJwp4M" >}}
+
 
 tags: ["Tinkering","Battle City NES",""]
 description: GPU passthrough
@@ -32,7 +36,13 @@ Card games?
 Magic workstation is gone, but the OSS took over: https://cockatrice.github.io/
 
 Rewriting My Game Engine based off GTA 3 Source Code
-https://www.youtube.com/watch?v=99vXxyJtXeQ
+
+<!-- 
+https://www.youtube.com/watch?v=99vXxyJtXeQ 
+-->
+
+{{< youtube "99vXxyJtXeQ" >}}
+
 
 * Install yatch - a Portainer alternative
 

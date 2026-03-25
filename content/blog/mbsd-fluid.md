@@ -1,9 +1,9 @@
 ---
 title: "3D MBSD and Fluid Mechanics"
 date: 2026-12-31
-draft: false
+draft: true
 tags: ["MBSD x 3D Simulation","Fluid Dynamics"]
-description: 'The physics .'
+description: 'The physics of a real engine.'
 url: 'fluid-dynamics-ice'
 math: true
 ---
@@ -18,8 +18,20 @@ A constant torque at the crank?
 
 What kind of model was that?
 
-Reality is: intermitent forces driven by combustions that pushes the slider down!
+Reality is: intermitent forces driven by combustions are the ones pushing the slider down!
 
+<!-- 
+https://www.youtube.com/watch?v=2bJTkBsiTPc 
+-->
+
+{{< youtube "2bJTkBsiTPc" >}}
+
+
+<!-- 
+https://www.youtube.com/watch?v=7xwODOr-xTo 
+-->
+
+{{< youtube "7xwODOr-xTo" >}}
 
 ---
 
@@ -28,3 +40,9 @@ Reality is: intermitent forces driven by combustions that pushes the slider down
 This has been the year of bridging concepts.
 
 I would have never guessed how, where and when I would be coming back to them.
+
+
+Will I write about heat transfer and electrical engineering next?
+
+who knows :)
+

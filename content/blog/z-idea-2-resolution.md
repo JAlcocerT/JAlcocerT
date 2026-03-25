@@ -111,11 +111,31 @@ graph LR
 
 > B2C is extremely sensitive to the ,security/guarantees' part
 
+
+3. Value stream mapping [VSM](https://jalcocert.github.io/JAlcocerT/lean/#vsm) x [Pareto](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/)
+
+Because 80% of what you do is non-sense for your client
+
+Just ship de 20% that matters, for the 20% of clients
+
+Yea, avoid the 80% of clients that will give you the most headaches and pay the least.
+
+4. Value is subjective: *for you, your time is not a commodity, your client money is*.
+
+This implies that given a product, client A is as good as client B.
+
+For a fee: you can create a loop to iterate across N clients via ads.
+
+
+
+
 ---
 
 ## Conclusions
 
 If you are one and have excuses to create: find another ones.
+
+Specially while ai monthly subs are giving so much inference for the current price.
 
 Come on, Codex is even as [desktop for windows](https://apps.microsoft.com/detail/9plm9xgg6vks).
 
@@ -154,7 +174,7 @@ Coming from [last year end review](https://jalcocert.github.io/JAlcocerT/tech-re
 
 3. AIoT *end to end flow from solar panels to dashboarding & langchain*
 
-4. Custom Marketing analytics *from custom high signal content creation to funnels*
+4. Custom Marketing analytics *from custom high signal content creation to funnels* Matplotlib, remotion stuff...
 
 6. ~~Scaling PRO Webs creation via PaaS~~ - A better DIY website with free (programmatic) audit - Free web audits [show problems here](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/) ✅
 
@@ -352,6 +372,10 @@ I tried to migrate [eayp from HUGO v1](https://jalcocert.github.io/JAlcocerT/web
   {{< card link="https://github.com/JAlcocerT/entreagujaypunto-astro-payload" title="EAyP v2b Astro Gallery ↗" icon="github" >}}
 {{< /cards >}}
 
+The World Still Belongs To The Builders.
+
+As im proving with the [eayp v3 at this section](#eayp-v3).
+
 
 {{% details title=" 🚀" closed="true" %}}
 
@@ -371,7 +395,7 @@ So for the v3...
 
 ```
 
-{{% details title="All my requirements for a website 🚀" closed="true" %}}
+{{% details title="All my BRD / requirements for a website 🚀" closed="true" %}}
 
 1. Editor in one subdomain, delivery static if possible and in another
 
@@ -522,3 +546,19 @@ what are the relatibe contributions? paid ads? promotions? webinars?
 All that need to know important variables for the business. Gone.
 
 I mean...you can do them assisted by AI.
+
+
+### EayP v3
+
+Lately I got to know:
+
+```sh
+git clone https://github.com/JAlcocerT/foldergram
+
+```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/foldergram" title="Foldergram | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+How hard would be to make finally a one time editable, cool, **photo gallery** that superseeds eayp HUGO v1 and both v2 failed trials at the end of last year?

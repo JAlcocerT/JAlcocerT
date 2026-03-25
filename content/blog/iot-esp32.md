@@ -1014,3 +1014,14 @@ The **Tech Stack**:
 | **Styling/UI Library** | | |
 | **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
 | **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | Astro | |
+| **Styling/UI Library** | Sassify MIT like theme | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)** | | |
+| **Database** | FireStore | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | Firebase Auth | |
+| **E-mail/ESP** | MailTrap | |
+| **Analytics** | Posthog | |
+| **Hosting** | Container | |

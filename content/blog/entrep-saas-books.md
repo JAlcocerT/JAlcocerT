@@ -1,7 +1,6 @@
 ---
 title: "We/Books so that you DIY"
 date: 2026-01-06T07:20:21+01:00
-#date: 2025-12-27T23:20:21+01:00
 draft: false
 tags: ["Info Products","DIY 1toN ebooks x BiP","SaaS vs LifeTime Products","RoadMap26"]
 description: 'Making Kindle clippings and learnings of years actionable and sharing via web/ooks'

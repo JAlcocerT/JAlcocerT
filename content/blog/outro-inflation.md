@@ -9,7 +9,9 @@ url: 'about-inflation'
 
 **TL;DR**
 
-Is inflation a number we read from a report or something we can take action on?
+Is inflation a number we read from a report
+
+or some information we can take action on?
 
 
 **Intro**
