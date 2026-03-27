@@ -1,9 +1,9 @@
 ---
 title: "2D Mechanism Synthesis"
-date: 2026-03-23
+date: 2026-03-25
 draft: false
-tags: ["MBSD x 2D Simulation",]
-description: 'Which mechanism can do what?.'
+tags: ["MBSD x 2D Simulation","Grashof"]
+description: 'Which mechanism can do what?'
 url: '2d-mechanism-synthesis'
 math: true
 ---
@@ -28,6 +28,8 @@ cd ./mbsd/2D-Synthesis
 
 ### Optimizing equations
 
+
+
 ### Where does a mechanism block?
 
 ---
@@ -35,8 +37,9 @@ cd ./mbsd/2D-Synthesis
 ## Conclusions
 
 
+### I want a mech that does A, B and C
 
-
+Years ago I had to make a practice
 
 ---
 

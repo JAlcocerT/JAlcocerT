@@ -289,9 +289,9 @@ Or...simulate it: *under the hood its just same hypothesis and equations*
 
 ### From Concepts to Equations
 
+I extracted knowledge from pdf to txt so that models can play with it:
 
 ```sh
-
 cd ./mbsd/jalon-theory
 # Extract text from any file to text format
 #uvx kreuzberg extract Chapter01.pdf > output.txt
@@ -306,13 +306,14 @@ done
 
 ```
 
+Yep, using claude:
+
 ```sh
 #curl -fsSL https://claude.ai/install.sh | bash
 claude --help
 ```
 
-The work i put in the prompts:
-
+The work I put in the prompts: *not huge, i know*
 
 ```md
 see the bicycle simulator inside the matlab folder, do you understand how it works?
@@ -348,6 +349,9 @@ Only that this time, than with python, not with Matlab:
 
 ### About python SymPy
 
+When I was using matlab back in the days, their simbolic extension was a killer feature.
+
+Now, we have it in python for free:
 
 ```sh
 #rm -rf .git

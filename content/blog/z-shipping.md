@@ -38,6 +38,52 @@ Surprising
 {{< /cards >}}
 
 
+### Rewritting SlubneChwile
+
+Because for the initial version I used an astro theme and made it a web app.
+
+I mean here and here
+
+But...[claude code](https://code.claude.com/docs/en/cli-reference) (Opus 4.6) has 1M tokens.
+
+What if i tell it to understand the logic...
+
+and re-implement it with a cool **modern Vite UI**?
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads x Slubne Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="Slubne 2026 Github ↗" icon="github" >}}
+{{< /cards >}}
+
+```sh
+
+git clone https://github.com/JAlcocerT/slubne-chwile-y26 #https://www.slubnechwile.com/
+#git pull
+#cd slubne-chwile-y26/slubnechwile
+```
+
+And now: *time to do more calls to B2B :)*
+
+> Just sell to survive (Grant Cardone)
+
+You just need [eyes](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) and be clear that [the why and what are your responsability](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/) for now.
+
+
+Things are moving into a direction where human are the blockers:
+
+* https://github.com/HKUDS/CLI-Anything
+
+> CLI-Anything: Making ALL Software Agent-Native
+
+* https://github.com/agentscope-ai/CoPaw
+
+> Your Personal AI Assistant; easy to install, deploy on your own machine or on the cloud; supports multiple chat apps with easily extensible capabilities.
+
+* https://github.com/openai/symphony
+
+> Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents.
+
+
 
 ---
 

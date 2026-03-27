@@ -1,6 +1,6 @@
 ---
 title: "2D Kinematics and Dynamics"
-date: 2026-03-24
+date: 2026-03-25
 draft: false
 tags: ["MBSD x 2D Simulation","Point Reference Coordinates","ThreeJS x AR"]
 description: 'The physics of bodies moving at 2D becoming Claude Skills.'

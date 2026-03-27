@@ -61,6 +61,8 @@ How come the same tech would not be able to make `mp4` videos.
 
 [![Star History Chart](https://api.star-history.com/svg?repos=remotion-dev/remotion&type=Date)](https://star-history.com/remotion-dev/remotion&Date)
 
+Wonder what has happened to get that spike in stars?
+
 ### How to Setup Remotion Project
 
 I have been wondering around RemotionJS for some posts already:
@@ -145,6 +147,11 @@ By any chance can this videos/shorts get more traction?
 
 Like...2026 cars are clipping so hard
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post with animated F1, Real Estate, yfinance..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/f1-data-animated/" title="F1 Animated Data" image="/blog_img/karting/long_g_trace_L4.png" subtitle="Creating animations around F1 Data | Post" >}}
+{{< /cards >}}
+
 Why are my F1 shorts not getting the hate they deserve?
 
 
@@ -207,7 +214,17 @@ https://www.youtube.com/watch?v=deg8bOoziaE&pp=ygUKcmVtb3Rpb25qcw%3D%3D -->
 
 ### Adding AI Generated Audio to RemotionJS Videos
 
+Because a video without a nice audio is half a video.
+
+
 ### What's Motion Desing?
+
+No, nothing to do with mechanisms and blender
+
+{{< youtube "1WzRJM8HVKg" >}}
+
+
+But...
 
 {{< youtube "MAhkbZHcbLA" >}}
 

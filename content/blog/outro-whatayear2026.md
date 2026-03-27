@@ -52,7 +52,7 @@ How about building like they've done?
 
 ### Curated Posts / Videos
 
-AI...employees?
+AI...employees coming?
 
 Comercial ones like: `https://www.lindy.ai/pricing`
 
@@ -83,7 +83,7 @@ From regular openAI API calls, to do have them [done via BAML](https://jalcocert
 
 and from SQL, to malloy: https://github.com/malloydata/malloy
 
-https://docs.malloydata.dev/documentation/user_guides/sql_experts1
+* https://docs.malloydata.dev/documentation/user_guides/sql_experts1
 
 
 0. For social media outreach, `https://www.growchief.com/` was an inspiration.
@@ -554,9 +554,11 @@ For racers, see how to estimate the [**optimum circuit path** based with a simpl
   {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
 {{< /cards >}}
 
-Dont ask me how, but I managed to plug Blender into this.
+Dont ask me how, but I managed to [plug Blender](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/) into [mbsd](https://jalcocert.github.io/JAlcocerT/2d-mbsd/).
 
-All as a code with CadQuery doing the bridge.
+All as a code, with [CadQuery as the bridge](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/).
+
+{{< youtube "1WzRJM8HVKg" >}}
 
 And not only for mechanisms.
 
@@ -578,6 +580,13 @@ I made some **HUD overlays for GoPro videos** to have their telemetry in place, 
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+The results?
+
+Well, a first [Go Desktop App](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails) that makes this: *with Wails*
+
+{{< youtube "M03HU4DWhyE" >}}
+
+
 13. So was coming back to maps, but with animations this time:
 
 {{< cards >}}
@@ -591,6 +600,9 @@ git clone https://github.com/JAlcocerT/eda-geospatial
 uv run animate_spain_pop.py
 uv run animate_french_market.py
 ```
+
+{{< youtube "lRIWm1oQI54" >}}
+
 
 14. Racing *best lap* optimizer / simulator.
 
@@ -662,6 +674,8 @@ Because the datainmotion libreportfolio branch with gweiss method and so on was 
 uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
 ```
 
+All powered via:
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
   {{< card link="https://gitlab.com/fossengineer1/unfolding-data" title="Unfolding Data | NEW Repo with all my animations to date" icon="github" >}}
@@ -711,6 +725,16 @@ Others, from the vibe coding sessions: helped to bring quick demos to their rela
 
 ### Serverless
 
+Im not forgetting the CSR learnings from last year.
+
+And its great that ideas like `multibodysystemdynamics.pages.dev` or `aegis-freedom.pages.dev` can be shipped in ~1h.
+
+But...there is more to serverless.
+
+Is in not just static things, but services that need a server, somewhere.
+
+Just that you dont manage it for once.
+
 1. Ive enjoyed using **Cloudflare R2** for s3 compatible object storage.
 
 {{< cards >}}
@@ -725,9 +749,9 @@ Others, from the vibe coding sessions: helped to bring quick demos to their rela
 > > The magic happens at [this gha workflow](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/drip.yml)
 
 
-Plus a cool example of lean engineering. 
+Plus a cool example of [lean engineering](https://jalcocert.github.io/JAlcocerT/lean/). 
 
-No need for glue when there are no data silos by design.
+No need for glue when there are no *data silos* by design.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/slubnechwile-chwile-y26" title="Slubne-Chwile - Automated Sales Pipeline ↗" icon="github" >}}
@@ -747,8 +771,7 @@ Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?la
 
 At this [post](https://jalcocert.github.io/JAlcocerT/csr-and-js/#csr-examples).
 
-It just keeps working with the power of CSR behind.
-
+It just keeps working with the power of CSR under the hood.
 
 1. https://github.com/neondatabase/neon
 
@@ -773,7 +796,11 @@ https://blog.cloudflare.com/serverless-matrix-homeserver-workers/?ref=selfh.st/
 
 99. Duckdb x motherduck
 
-DuckDB as been very interesting. And gen bi tools like Rill rely on it.
+DuckDB as been very interesting.
+
+Ive eben managed to plug it to langchain with a dummy db for a [tech talk here](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps/#conclusions).
+
+And gen bi tools like Rill rely on it.
 
 https://ducklake.select/manifesto/
 
@@ -801,6 +828,10 @@ Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/
 
 
 ~33...now 46...60 and 16post/22 days january
+
+And ending Q1 of 2026...89.
+
+Ok, its cooked.
 
 ```sh
 #du -sh .

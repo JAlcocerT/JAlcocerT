@@ -191,6 +191,7 @@ And we go from: https://explore.data.gouv.fr/fr/immobilier?onglet=carte&filtre=t
 ```sh
 uv run animate_french_market.py
 ```
+
 <!-- 
 https://www.youtube.com/shorts/lRIWm1oQI54 -->
 
