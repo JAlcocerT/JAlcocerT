@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-03-26
+date: 2026-03-27
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -668,7 +668,7 @@ cd DataInMotion && branch libreportfolio
 uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
 ```
 
-Because the datainmotion libreportfolio branch with gweiss method and so on was cool
+Because the datainmotion `libreportfolio` branch with gweiss method and so on was cool:
 
 ```sh
 uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
@@ -785,6 +785,20 @@ https://blog.cloudflare.com/serverless-matrix-homeserver-workers/?ref=selfh.st/
   {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
+
+#### Server HomeLab Selfhosting
+
+I have been still using my homelab
+
+Just that the focus this year has been stability.
+
+Specially around nextcloud for the family
+
+I kept enjoying termix and since recently, also tmux:
+
+```sh
+sudo apt update && sudo apt install tmux -y
+```
 
 ### Tech Talks
 
@@ -961,6 +975,7 @@ graph LR
 * How can we build resilience with censorship to critics?
 
 * Where is the line between being flexible and being chaotic?
+
 #### Interesting Concepts
 
 1. Nonchalant
@@ -1087,35 +1102,40 @@ Wait...how many years already?!?!
 
 Aka ~~,failed apps'~~: *projects where i just learnt*
 
-1. ~~ CyClingThere~~
-2. ~~btcmeet~~
+1. ~~ClingThere~~ and ~~BaJ~~
+2. ~~btcmeet~~ you artists can serve yourself [here](https://jalcocert.github.io/JAlcocerT/link-artists/)
 3. ~~Trip-Planner~~ - Yes, the one created [here](https://github.com/JAlcocerT/Py_Trip_Planner/) that you can SelfHost and use!
-4. ~~financeinmotion.fyi~~
+4. ~~financeinmotion.fyi~~ superseeded by Unfolding Data *(YT + ChartJS / Matplotlib / Remotion)*
 5. ~~EntrepreAI~~, with all those: CV CreAItor,Speech RAIter,AIssistant - PPT, ...
-6. ~~Webifyer / Web CreAItor~~ : DFY/DWY websites for those with the right signal. Else, use a PaaS or watch a yt tutorial to setup wordpress.
+6. ~~Webifyer / Web CreAItor~~ : DFY/DWY websites for those with the right signal.
+7. ~~Wordpress MigrAItions~~ same with ~~Portfolio CreAItor~~
+8. ~~Cursos udemy ~~
+9. ~~PyInsightChAIn~~ Understand crypto with AI> Just copy paste the code yourself
+
+Else, use a PaaS or watch a yt tutorial to setup wordpress.
 
 The good thing about closing projects, is that you realise that *they were not meant to be* from its conception.
 
-Maybe you were trying to jump with a not so efficient method: See https://en.wikipedia.org/wiki/Dick_Fosbury for inspiration
+Maybe you were trying to jump with a not so efficient method
 
-Portfolio CreAItor
+See https://en.wikipedia.org/wiki/Dick_Fosbury for inspiration
+
 
 YT Tech Videos - JAlcocerTech
+
 YT Shorts/Videos 4K: Ufolding Data / IoTrack
 YT Videos with Streamlit // FinanceInMotion // visualAIzed
-Finance in Motion / Unfolding Data (YT + ChartJS / Matplotlib / Remotion)
+
 YT - GoPro/DJI Telemtry Overlay Python
 PyStocks - Publish it on X/Reddit (?) ? RStocks Re-Bump?
 LibrePortfolio.fyi (ES)
 PyVacAItions // TripAdvAIsor
-PyInsightChAIn (Understand crypto with AI)
 Real Estate Inv Calculator (Streamlit & Reflex)
 Real Estate Paint Estimaitor with AI
 app lista negra (orlandos)
-Wordpress MigrAItions
 
 			
-		AI Powered shorts ~ PyStocks	
+AI Powered shorts ~ PyStocks	
 			
 Calculators (CSR based)			
 AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance blog ~ PyStocks | LiberoCompass/LiberoPortfolio - Web	Twitter/X
@@ -1134,7 +1154,6 @@ Utiles para cocina
 
 Utiles para bicicletas 
 
-Cursos udemy 
 
 Impresion 3d con python?? 
 				
@@ -1142,7 +1161,7 @@ Bodas - SlubneChwile
 Portfolio CreAItor	Wordpress MigrAItion			
 CV CreAItor,Speech RAIter,AIssistant - PPT, ...				
 
-YT Tech Videos - JAlcocerTech		https://www.vrsen.ai/		
+YT Tech Videos - JAlcocerTech. You dont need that much tech skills, but marketing skills `https://www.vrsen.ai/`		
 YT Shorts/Videos 4K: BeyondaJourney / IoTrack				
 YT Videos with Streamlit // FinanceInMotion // visualAIzed				
 Finance in Motion / Unfolding Data (YT + ChartJS / Matplotlib / Remotion)			AI Powered shorts ~ PyStocks	
@@ -1160,7 +1179,11 @@ Automations n8n chatbots etc
 
 That moment when you realized that you have been doing service all the time.
 
-And that R&D was your skills upgrades.
+And that R&D was all that time dedicated to skills upgrades.
+
+Using time...to enhance the human capital you got.
+
+Crazy.
 
 Marketing with `cold emails` where the applications you sent to companies with BANT.
 

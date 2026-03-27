@@ -2,8 +2,8 @@
 title: "From Idea to Resolution"
 date: 2026-03-27T07:00:21+01:00
 draft: false
-tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3","DevOps x DORA x Apache DevLake"]
-description: 'What is learning? Taking feedback from the value equation.'
+tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3"]
+description: 'Faster, better either obsolete. DevOps x DORA x Apache DevLake'
 url: 'take-ideas-to-their-digital-resolution'
 math: true
 ---
@@ -54,7 +54,7 @@ Who could have guessed, the more repetitions you do, the more architecture you u
 
 ## Key Concepts for solving problems
 
-1. Repetitions.
+1. Repetitions
 
 ```mermaid
 flowchart LR
@@ -262,18 +262,22 @@ git clone /slubnechwile
 #entreagujaypunto eaypv3
 ```
 
+Let it be CC + nanobanana
+
 <!-- 
 https://www.youtube.com/watch?v=TZUTe7s11-I 
 -->
 
 {{< youtube "TZUTe7s11-I" >}}
 
+Or CC with google stitch 2.0:
+
 <!-- https://www.youtube.com/watch?v=1aI7pAlkz4w -->
 
 
 {{< youtube "1aI7pAlkz4w" >}}
 
-Life is short.
+**Life is short.**
 
 So is your audience attention.
 
@@ -320,7 +324,7 @@ Combined with the best BRD / PRD / FRD / Project Charter / CRQ practices ever...
 
 You can build your PoC in an afternoon and the [MVP in a week with some sense](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#building-a-how-with-sense)
 
-When interested on creating with potential financial incentives, focus on prospecting, then define a proper why and what.
+When interested on creating with potential financial incentives, **focus on prospecting**, then define a proper WHY and WHAT.
 
 If you just care about creating for the sake of it / tinkering, you are good to go with the why and what to get a working how.
 
@@ -410,6 +414,34 @@ flowchart LR
 * https://knowledge.insead.edu/strategy/who-killed-nokia-nokia-did
   * Old post about N95 vs iphone: `https://forocoches.com/foro/showthread.php?t=995246`
 * https://newsletter.pragmaticengineer.com/p/ai-tooling-2026
+
+This all relates with [speed and stability](#whats-open-devops) of the upcoming software.
+
+
+### Whats left for us?
+
+Coding is gone.
+
+Mech engineering is gone.
+
+Enabling others via showing / teaching / on boarding ?
+
+Simple with markdown and notebookLLM.
+
+Marketing?
+
+All those customer life cycle value, ROIs, hypothesis formation of:
+
+* How each factor affects peformance (conversions)? 
+What contributes more to the win?
+what are the relatibe contributions? paid ads? promotions? webinars?
+
+* Data exploration: base line & seasonality/holidays, external factors  like salary week,competitor activities or internal activieis like channel distribution, product changes...
+
+All that need to know important variables for the business. Gone.
+
+I mean...you can do them assisted by AI.
+
 
 ---
 
@@ -574,30 +606,6 @@ Well, at least those that dont work for the public sector and [bill 250k for a w
 Isnt it this already CONTEXT ENGINEERING?
 
 ![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
-
-### Whats left for us?
-
-Coding is gone.
-
-Mech engineering is gone.
-
-Enabling others via showing / teaching / on boarding ?
-
-Simple with markdown and notebookLLM.
-
-Marketing?
-
-All those customer life cycle value, ROIs, hypothesis formation of:
-
-* How each factor affects peformance (conversions)? 
-What contributes more to the win?
-what are the relatibe contributions? paid ads? promotions? webinars?
-
-* Data exploration: base line & seasonality/holidays, external factors  like salary week,competitor activities or internal activieis like channel distribution, product changes...
-
-All that need to know important variables for the business. Gone.
-
-I mean...you can do them assisted by AI.
 
 
 ### EayP v3

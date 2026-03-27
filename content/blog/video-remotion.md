@@ -2,7 +2,7 @@
 title: "OSS-AI Generated Videos with Remotion"
 date: 2026-03-27T11:20:21+01:00
 draft: false
-tags: ["Outro","Claude Code","Motion Design","D3js vs Matplotlib"]
+tags: ["CC Skills","Claude Code","Motion Design","D3js vs Matplotlib"]
 description: 'How to use RemotionJS to create videos as a code.'
 url: 'video-creation-with-remotion'
 ---
@@ -93,7 +93,7 @@ There are **Examples**:
 
 But Im not going to use pre-made examples.
 
-Not care to read the docs.
+Neither to care about reading the docs: https://www.remotion.dev/docs/ai/claude-code
 
 Im going to use CC for this, as im paying the PRO sub right now.
 
@@ -101,17 +101,30 @@ Im going to use CC for this, as im paying the PRO sub right now.
 
 {{< youtube "y-pxNV0IyTY" >}}
 
+Just that this old repo that I tried in Q42024...
+
+```sh
+git clone https://github.com/JAlcocerT/VideoEditingRemotion
+cd remotion-cc
+```
+
+Is going to have a new friend.
 
 Claude skills...its just about `SKILL.md` and the remotion team has put one together at `claude-code-remotion`
 
+* https://www.remotion.dev/docs/ai/skills
+* https://github.com/vercel-labs/skills
+
 ```sh
+npx create-video@latest
 npx skills add remotion-dev/skills
+#npx skills list
 ```
 
-**The remotion App**:will help you make edits via UI if you'd want to.
+**The remotion App**: will help you make edits via UI if you'd want to.
 
 ```sh
-npx create-video@latest .
+#npx create-video@latest .
 npm i
 npm run dev
 ```
@@ -125,19 +138,37 @@ How about...
 
 <!-- https://www.youtube.com/watch?v=NTfXwQ85suw -->
 
-{{< youtube "NTfXwQ85suw" >}}
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
+{{< /cards >}}
 
+
+```sh
+git clone https://github.com/JAlcocerT/DataInMotion.git
+cd DataInMotion && branch libreportfolio
+#uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+```
+
+{{< youtube "NTfXwQ85suw" >}}
 
 React Three Fiber ~ Three JS?
 
-https://r3f.docs.pmnd.rs/getting-started/introduction
-https://r3f.docs.pmnd.rs/getting-started/examples
+* https://r3f.docs.pmnd.rs/getting-started/introduction
+* https://r3f.docs.pmnd.rs/getting-started/examples
 
 #### Mechanisms x RemotionJS
 
-Having the Python + CadQuery + Blender way is amazing.
+Having the Python + [CadQuery](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/) + [Blender](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/) way is amazing.
 
-But maybe...there is a better way to just create videos about mechanisms?
+But maybe...
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
+{{< /cards >}}
+
+is there a better way to just create videos about mechanisms?
 
 
 
