@@ -1,6 +1,6 @@
 ---
 title: "Inline 4 Engines: Balance and Vibrations"
-date: 2026-04-03T06:20:21+01:00
+date: 2026-04-04T06:20:21+01:00
 draft: false
 tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","MBSD"]
 description: 'Understanding the most popular engine once and for all.'

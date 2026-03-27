@@ -2,7 +2,7 @@
 title: "OSS-AI Generated Videos with Remotion"
 date: 2026-03-27T11:20:21+01:00
 draft: false
-tags: ["Outro","Claude Code","Motion Design"]
+tags: ["Outro","Claude Code","Motion Design","D3js vs Matplotlib"]
 description: 'How to use RemotionJS to create videos as a code.'
 url: 'video-creation-with-remotion'
 ---
@@ -17,6 +17,18 @@ From code to video with Remotion.
 
 A video is just a function of **images over time**.
 
+Lately, I have been doing a come back to mechanism
+
+Matplotlib impressed me last year, but being able to use ThreeJS to create even nicer augmented reality simulators is fantastic.
+
+Also, for D&A we have D3js to bring cool data driven graphs alive
+
+We also have blender for the renders...
+
+But what if you just want a pure video?
+
+Does it need to be that complex?
+
 React can describe UI's that change overtime.
 
 We already saw how to create presentations and CV's with React...
@@ -26,11 +38,13 @@ We already saw how to create presentations and CV's with React...
 <!-- open-source-curriculum
 create-ppt-with-code -->
 
-> So why not using **React to create videos**?
+So... WHY NOT using **React to create videos**?
 
 ## The Remotion Project
 
-Remotion is a framework for creating videos programmatically using React.
+Remotion is a framework for creating **videos programmatically** using React.
+
+Because you know, video is one of th emany things that you can make as a code.
 
 * https://github.com/remotion-dev/remotion
 
@@ -50,7 +64,6 @@ How come the same tech would not be able to make `mp4` videos.
 ### How to Setup Remotion Project
 
 I have been wondering around RemotionJS for some posts already:
-
 
 But so far, what it worked best for me to create animations was Matplotlib.
 
@@ -106,6 +119,8 @@ Go to `localhost:3000`
 #### YFinance x RemotionJS
 
 
+How about...
+
 <!-- https://www.youtube.com/watch?v=NTfXwQ85suw -->
 
 {{< youtube "NTfXwQ85suw" >}}
@@ -128,6 +143,17 @@ But maybe...there is a better way to just create videos about mechanisms?
 
 By any chance can this videos/shorts get more traction?
 
+Like...2026 cars are clipping so hard
+
+Why are my F1 shorts not getting the hate they deserve?
+
+
+Lets have a look whats going on at Suzuka:
+
+```sh
+
+```
+
 
 #### Websites to...RemotionJS?
 
@@ -135,7 +161,14 @@ We said that remotionJS uses react.
 
 Does that mean that if your website already uses React then Claude Code has a much easier job to undertand your branding?
 
-This is resonating a lot for me to promote all those `realestate.`, `webaudit.` etc etc etc services :) 
+This is resonating a lot for me to promote all those `realestate.`, `webaudit.` etc etc etc services :)
+
+
+You can make quick promo videos or showcase of the web/apps you ~~create~~ vibe code:
+
+```sh
+
+```
 
 ---
 
@@ -181,3 +214,9 @@ https://www.youtube.com/watch?v=deg8bOoziaE&pp=ygUKcmVtb3Rpb25qcw%3D%3D -->
 <!-- 
 https://www.youtube.com/watch?v=MAhkbZHcbLA
  -->
+
+### My Fav ways to create video animations
+
+1. Matplotlib ~~plotly~~ - Because its more custom and quicker than you thought
+
+2. 

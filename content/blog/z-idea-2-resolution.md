@@ -12,6 +12,8 @@ math: true
 
 Thoughts after one year of vibe coding.
 
++++ [EayP v3](#eayp-v3)
+
 * https://app.fireflies.ai/perks
 * Perplexity and commet (from W11 only on the desktop) 
 
@@ -38,7 +40,7 @@ Goal -> Context -> Instruction -> Contrains -> Output Format
 As we say here, its all about [the AI mindset](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk).
 
 ```md
-❯ given the pbip exported files and the data-lineage.md, can you put together a data-sources.md with all the the sources listed one by one, their paths and what data do they contain based on the context you have? some use case would also be great as per the dashboard context 
+given the pbip exported files and the data-lineage.md, can you put together a data-sources.md with all the the sources listed one by one, their paths and what data do they contain based on the context you have? some use case would also be great as per the dashboard context 
 ```
 
 The productivity change [and learnings](#what-i-have-shipped) has been massive.
@@ -585,6 +587,8 @@ Lately I got to know:
 git clone https://github.com/JAlcocerT/foldergram
 
 ```
+
+Some people still have my free time to get this kind of things running:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/foldergram" title="Foldergram | Docker Config 🐋 ↗" >}}
