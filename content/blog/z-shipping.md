@@ -13,7 +13,7 @@ Hora de mercantilizar mi vida otra vez :(
 
 **Intro**
 
-A quick rewrite and improvements of the previous slubnychwile for B2B.
+A quick rewrite and improvements of the previous slubnychwile *for B2B*.
 
 Because Ive been writting about multi-body mechanism lately
 
@@ -22,8 +22,8 @@ And surprise: those niche posts/ideas dont get as much traction as posts as this
 Surprising
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads x Slubne Github ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="Slubne 2026 Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/leads-slubnechwile" title="Leads x Slubne ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="Slubne 2026 v1 B2C ↗" icon="github" >}}
 {{< /cards >}}
 
 ```sh

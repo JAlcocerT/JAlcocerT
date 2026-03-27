@@ -1,6 +1,6 @@
 ---
 title: "OSS-AI Generated Videos with Remotion"
-date: 2026-03-28T23:20:21+01:00
+date: 2026-03-27T11:20:21+01:00
 draft: false
 tags: ["Outro","Claude Code","Motion Design"]
 description: 'How to use RemotionJS to create videos as a code.'

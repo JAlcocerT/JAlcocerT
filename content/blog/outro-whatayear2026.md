@@ -1,19 +1,18 @@
 ---
 title: "What a Year...2026"
-date: 2026-03-27
+date: 2026-03-26
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
 
-<!-- N95 vs iphone
-https://forocoches.com/foro/showthread.php?t=995246 -->
+<!-- 
+https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
 
 **TL;DR**
 
-<!-- 
-https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
+
 
 
 **Intro**
@@ -28,7 +27,7 @@ https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktow
 
 ## Inspiring Apps
 
-Inspiring apps: all those pwa like that just...work
+Inspiring apps: all those `pwa` like that just...work
 
 * https://bentopdf.com/index.html
 * Docuseal

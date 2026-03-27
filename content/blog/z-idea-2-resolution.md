@@ -1,6 +1,6 @@
 ---
 title: "From Idea to Resolution"
-date: 2026-03-29T07:00:21+01:00
+date: 2026-03-27T07:00:21+01:00
 draft: false
 tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3","DevOps x DORA x Apache DevLake"]
 description: 'What is learning? Taking feedback from the value equation.'
@@ -126,8 +126,36 @@ This implies that given a product, client A is as good as client B.
 
 For a fee: you can create a loop to iterate across N clients via ads.
 
+5. Risk avoidance is huge in us.
+
+Particularly for B2C >> B2B (business tend to calculate ROIs and try to assign % somehow...)
+
+> when was the last time that you account for your *human capital* (vital energy as a function of your time alive) getting depleted each day?
+
+Is estability seeking killing our real nature?
+
+what are our real needs?
+
+how would we behave if they'd be satisfied?
+
+https://github.com/JAlcocerT/Slider-Crank/blob/main/prompt-blueprint.md applied also to [threebodies here](https://github.com/JAlcocerT/ThreeBodies/blob/main/ThePoincareLab/z-tech-stack.md) and...around [the power law](https://github.com/JAlcocerT/btc-powerlaw/blob/master/GEMINI.md) :)
 
 
+Because there are several ways to vibe code, but [some prompts + BRDs are gold](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)
+
+```sh
+git clone https://github.com/JAlcocerT/poc
+#cd aegis-freedom  #savings+monetary system = partial/total freedom
+#this is not the rstocks / retirement facts, but somehow similar :)
+```
+
+are we numb?
+
+are we so asleep to be avoiding so hard to put few k$ into ads?
+
+ops, these questions are out of the scope for this post :)
+
+6. 
 
 ---
 
@@ -357,6 +385,7 @@ flowchart LR
 ### Interesting Articles
 
 * https://knowledge.insead.edu/strategy/who-killed-nokia-nokia-did
+  * Old post about N95 vs iphone: `https://forocoches.com/foro/showthread.php?t=995246`
 * https://newsletter.pragmaticengineer.com/p/ai-tooling-2026
 
 ---
