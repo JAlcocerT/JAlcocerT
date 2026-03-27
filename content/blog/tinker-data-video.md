@@ -423,6 +423,8 @@ uv run tests/plot_year_end_close_cagr_to_date_animated_sequential.py ^GSPC RSP -
 =GOOGLEFINANCE("INDEXCBOE:IRX")/1000
 ```
 
+You can pull these indexes from yfinance too:
+
 ```sh
 uv run tests/plot_year_end_close_cagr_to_date_animated_sequential.py ^TNX ^TYX ^IRX --start 2000-01-01 --preset twitter_hd --duration-seconds 60 --fps 30 --brand "@UnfoldingData"
 uv run tests/plot_price_change_from_start.py ^TNX ^TYX ^IRX --start 2000-01-01 --brand "@UnfoldingData"
@@ -433,7 +435,6 @@ uv run tests/plot_price_change_from_start_animated_sequential.py ^TNX ^TYX ^IRX 
 # uv run tests/plot_price_change_from_start.py ^TNX --start 2000-01-01 --brand "@UnfoldingData"
 # uv run tests/plot_price_change_from_start.py ^TYX --start 2000-01-01 --brand "@UnfoldingData"
 # uv run tests/plot_price_change_from_start.py ^IRX --start 2000-01-01 --brand "@UnfoldingData"
-
 ```
 
 As someone said: *you dont understand stock market if you dont understand bonds first*
@@ -466,6 +467,7 @@ MOVE (ICE BofA MOVE Index for bond volatility) — not available on Yahoo Financ
 ```sh
 uv run tests/plot_price_change_from_start_animated_sequential.py CL=F GC=F HG=F --start 2000-01-01 --brand "@UnfoldingData" --duration-seconds 60 --fps 30
 ```
+
 <!-- 
 https://youtu.be/XgFHIrFSvpE
 -->
@@ -494,8 +496,8 @@ But...what for?
 This can be a sub-folder and use one of the latest ways to do [cool greenfield UIs](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders) I have got to know:
 
 {{< youtube "b35XuJI98kI" >}}
-<!-- 
-https://youtu.be/b35XuJI98kI -->
+
+<!-- https://youtu.be/b35XuJI98kI -->
 
 
 

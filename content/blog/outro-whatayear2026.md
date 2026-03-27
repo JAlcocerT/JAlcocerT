@@ -528,7 +528,6 @@ Which I used for the first **tech [talk](#tech-talks)** of this year.
 {{< /cards >}}
 
 
-
 10. IoT: *From sensors, to databases and QnA*
 
 Should I call this Embeded analytics?
@@ -873,8 +872,9 @@ xargs -0 awk '
   }'
 ```
 
+### Outro
 
-### Quotes
+#### Quotes
 
 Every business is a kind of game and you can see how many of them play: `https://wyszukiwarka-krs.ms.gov.pl/`
 
@@ -933,7 +933,13 @@ A certain Negative cash flow year one then...uncertainty
 
 Most likely, you can get away and have an answer for your BA questions or for the BI dashboarding ones.
 
-There are questions
+There are questions that dont have a single reply:
+
+1. **What you love:** Your passions, hobbies, and things that bring you pure joy.
+2. **What you are good at:** Your skills, talents, and natural strengths.
+3. **What the world needs:** Problems you can help solve or value you can provide to society.
+4. **What you can be paid for:** The market demand or career paths that provide financial stability.
+
 
 * Whats freedom?: Possibility of acting or the absence of obstacles?
 * Will we ever get to value the spark more than the shadow it casts?
@@ -1162,17 +1168,29 @@ Portfolio CreAItor	Wordpress MigrAItion
 CV CreAItor,Speech RAIter,AIssistant - PPT, ...				
 
 YT Tech Videos - JAlcocerTech. You dont need that much tech skills, but marketing skills `https://www.vrsen.ai/`		
+
 YT Shorts/Videos 4K: BeyondaJourney / IoTrack				
+
 YT Videos with Streamlit // FinanceInMotion // visualAIzed				
+
 Finance in Motion / Unfolding Data (YT + ChartJS / Matplotlib / Remotion)			AI Powered shorts ~ PyStocks	
+
 YT - GoPro/DJI Telemtry Overlay Python				
+
 PyStocks - Publish it on Reddit (?) ? RStocks Re-Bump?				
+
 LibrePortfolio.fyi (ES)	AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance blog ~ PyStocks | LiberoCompass/LiberoPortfolio - Web	
+
 PyVacAItions // TripAdvAIsor		E-Comerce CozyKnittingClub		travelmap
+
 PyInsightChAIn (Understand crypto with AI)		knitting app para medidas - vs excel based		polar steps
+
 Real Estate Inv Calculator (Streamlit & Reflex)				countries been app / find penguins
+
 Real Estate Paint Estimaitor with AI		Daily Stoic - AI Powered Web Podcast (Text2Audio + YT?)		
+
 app lista negra (orlandos)		openengineer.ing		
+
 Automations n8n chatbots etc				
 
 > Options to take into consideration when creating: brand colors, seo, check links, no 404

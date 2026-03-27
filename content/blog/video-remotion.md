@@ -2,10 +2,11 @@
 title: "OSS-AI Generated Videos with Remotion"
 date: 2026-03-27T11:20:21+01:00
 draft: false
-tags: ["CC Skills","Claude Code","Motion Design","D3js vs Matplotlib"]
-description: 'How to use RemotionJS to create videos as a code.'
+tags: ["CC Skills","Claude Code","Motion Design","D3js vs Matplotlib","YFinance x F1"]
+description: 'How to use RemotionJS to create videos as a code with React!'
 url: 'video-creation-with-remotion'
 ---
+
 
 **Tl;DR**
 
@@ -17,7 +18,11 @@ From code to video with Remotion.
 
 A video is just a function of **images over time**.
 
-Lately, I have been doing a come back to mechanism
+Some time ago I got to know about remotion:
+
+{{< youtube id="deg8bOoziaE" autoplay="false" >}}
+
+But lately, I have been doing a come back to mechanisms.
 
 Matplotlib impressed me last year, but being able to use ThreeJS to create even nicer augmented reality simulators is fantastic.
 
@@ -72,8 +77,7 @@ But so far, what it worked best for me to create animations was Matplotlib.
 Which kind?
 
 ```sh
-#git clone
-
+#git clone /DataInMotion
 #uv run animate_sequential_compare_price_evolution_flex_custom.py MC.PA RMS.PA 2010-01-01 10 short
 ```
 
@@ -121,6 +125,8 @@ npx skills add remotion-dev/skills
 #npx skills list
 ```
 
+The magic happens at `.claude/skills/remotion-best-practices`
+
 **The remotion App**: will help you make edits via UI if you'd want to.
 
 ```sh
@@ -131,6 +137,21 @@ npm run dev
 
 Go to `localhost:3000`
 
+When you are done with it...you render it
+
+```sh
+time npx remotion render GoldPrice gold-price.mp4 #just 20seconds
+```
+
+Going from [this skeleton video](https://youtu.be/xqtzYbHIrMo), to something way more pro:
+
+<!--
+https://youtu.be/hTz2J4EgNOs
+-->
+ 
+{{< youtube "hTz2J4EgNOs" >}}
+
+
 #### YFinance x RemotionJS
 
 
@@ -139,23 +160,81 @@ How about...
 <!-- https://www.youtube.com/watch?v=NTfXwQ85suw -->
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="DataInMotion | Repo" icon="github" >}}
 {{< /cards >}}
 
 
 ```sh
-git clone https://github.com/JAlcocerT/DataInMotion.git
-cd DataInMotion && branch libreportfolio
-#uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
+#git clone https://github.com/JAlcocerT/DataInMotion.git
+#cd DataInMotion && branch libreportfolio
+uv run tests/plot_historical_gweiss.py mc.pa --start 2000-01-01 --brand "@LibrePortfolio" --warmup-days 400
 ```
 
 {{< youtube "NTfXwQ85suw" >}}
 
-React Three Fiber ~ Three JS?
+After this one, you learn [about **compositions**](https://www.remotion.dev/docs/the-fundamentals#compositions):
 
-* https://r3f.docs.pmnd.rs/getting-started/introduction
-* https://r3f.docs.pmnd.rs/getting-started/examples
+```sh
+uv init
+uv add yfinance
+#python scripts/fetch_ticker.py --ticker BTC-USD --name btc --start 2015-01-01                                                                                                                                                        
+uv run scripts/fetch_ticker.py --ticker BTC-USD --name btc --start 2015-01-01
+
+python scripts/generate_ts_data.py --name btc                                                                                                                                                                                               
+# → creates src/btcData.ts with BTC_ANNUAL, KEY_EVENTS, COMMENTARY      
+# → then create src/BtcComposition.tsx (copy GoldComposition, swap imports + props)                                           
+# → add <Series.Sequence> in MarketRecapComposition.tsx                
+# Render only bitcoin (once added)
+npx remotion render Bitcoin bitcoin.mp4
+
+# Render the full sequential reel
+npx remotion render MarketRecap market-recap.mp4
+```
+
+<!-- 
+https://youtu.be/VMuCkckE5fw 
+-->
+
+{{< youtube "VMuCkckE5fw" >}}
+
+
+And then...you just bring whatever matplotlib logic you had for the magic to happen:
+
+```sh
+
+```
+
+
+#### F1 Data x RemotionJS
+
+By any chance can this videos/shorts get more traction?
+
+Like...2026 cars are clipping so hard
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post with animated F1, Real Estate, yfinance..." >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/f1-data-animated/" title="F1 Animated Data" image="/blog_img/karting/long_g_trace_L4.png" subtitle="Creating animations around F1 Data | Post" >}}
+{{< /cards >}}
+
+Why are my F1 shorts not getting *the hate* they deserve?
+
+
+Lets have a look whats going on at Suzuka:
+
+```sh
+#git clone https://github.com/JAlcocerT/eda-f1
+#cd eda-f1
+uv run f1_q3_short.py #Interactive Q3 animation video (15s Short)
+```
+
+I could not resist to add a remotion folder to this project:
+
+```sh
+cd remotion-f1
+
+```
+
+
 
 #### Mechanisms x RemotionJS
 
@@ -170,30 +249,21 @@ But maybe...
 
 is there a better way to just create videos about mechanisms?
 
+Remotion has integration with https://www.remotion.dev/docs/videos/as-threejs-texture
+
+And...
 
 
-#### F1 Data x RemotionJS
+React Three Fiber ~ Three JS?
 
-By any chance can this videos/shorts get more traction?
+* https://r3f.docs.pmnd.rs/getting-started/introduction
+* https://r3f.docs.pmnd.rs/getting-started/examples
 
-Like...2026 cars are clipping so hard
+You can also add: https://www.remotion.dev/docs/captions/displaying
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post with animated F1, Real Estate, yfinance..." >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/f1-data-animated/" title="F1 Animated Data" image="/blog_img/karting/long_g_trace_L4.png" subtitle="Creating animations around F1 Data | Post" >}}
-{{< /cards >}}
+And add video sequences: https://www.remotion.dev/docs/videos/
 
-Why are my F1 shorts not getting the hate they deserve?
-
-
-Lets have a look whats going on at Suzuka:
-
-```sh
-
-```
-
-
-#### Websites to...RemotionJS?
+##### Websites to...RemotionJS?
 
 We said that remotionJS uses react.
 
@@ -205,8 +275,10 @@ This is resonating a lot for me to promote all those `realestate.`, `webaudit.` 
 You can make quick promo videos or showcase of the web/apps you ~~create~~ vibe code:
 
 ```sh
-
+#git clone slider-crank
 ```
+
+
 
 ---
 
@@ -223,6 +295,26 @@ Now clear yet on the how to?
 
 You dont have to run to make your dream project.
 
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#F57F17;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#E65100;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#B71C1C;
+
+    %% --- Nodes ---
+    L1("Free Content<br/>(Blog/YT $0)"):::free
+    L2("DIY<br/>(Templates / Platform) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Services) $$$"):::high
+
+    %% --- Connections ---
+    L1 --> L2
+    L2 --> L3
+    L3 --> L4
+```
+
 You can get it done:
 
 {{< cards >}}
@@ -235,13 +327,6 @@ You can get it done:
 
 ## FAQ
 
-### Related RemotionJS Video
-
-{{< youtube id="deg8bOoziaE" autoplay="false" >}}
-
-
-<!-- 
-https://www.youtube.com/watch?v=deg8bOoziaE&pp=ygUKcmVtb3Rpb25qcw%3D%3D -->
 
 ### Adding AI Generated Audio to RemotionJS Videos
 

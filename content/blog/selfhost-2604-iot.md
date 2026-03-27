@@ -9,11 +9,6 @@ url: 'iot-home-lab-tools'
 
 https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-humidity-sensor
 
-httpie
-
-reqable
-
-emqx 
 
 
 **TL;DR**
@@ -22,7 +17,7 @@ Isnt it time to do some upgrades to IoT, HA and the solar panel?
 
 **Intro**
 
-Spring is here!
+Spring has come!
 
 Last year I was able to put together HA with a DHT connected to the Pico W powered by a solar panel.
 
@@ -39,7 +34,14 @@ Its time to make that better.
 2. Mqtt Explorer
 3. MQTTy
 
-## Tools
+## Tools for MQTT
+
+httpie
+
+reqable
+
+emqx 
+
 
 
 

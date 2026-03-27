@@ -16,6 +16,9 @@ What I needed to get this going for good: https://github.com/JAlcocerT/MultiBody
 +++ With [examples](#applying-oop): [pendulum](#pendulum) + [3 bodies](#three-bodies)
 
 
+{{< youtube "b35XuJI98kI" >}}
+
+
 **Intro**
 
 Object oriented programming!
