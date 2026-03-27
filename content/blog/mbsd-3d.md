@@ -1,9 +1,9 @@
 ---
-title: "The physics of Mechanism in the space"
+title: "The physics of Mechanisms in the space"
 date: 2026-04-03
 draft: false
-tags: ["MBSD x 3D Simulation","Dynamics x Kinematics","CADQuery x Blender Rendering"]
-description: 'The physics of Mechanism in the space.'
+tags: ["MBSD x 3D Simulation","","CADQuery x Blender Rendering"]
+description: 'The Dynamics x Kinematics of youve been waiting for.'
 url: '3d-mbsd'
 math: true
 ---
@@ -97,6 +97,7 @@ mpv all_mechanisms.mp4
 <!-- https://youtu.be/KA7HloE6IQY -->
 
 {{< youtube "KA7HloE6IQY" >}}
+
 
 ### 3D Kinematics
 
@@ -234,6 +235,16 @@ The Python code is [a direct port](#bike-multibody-model) of the original MATLAB
 ## Conclusions
 
 
+```sh
+#git clone https://github.com/JAlcocerT/VideoEditingRemotion
+#cd remotion-cc
+```
+
+```sh
+#git clone https://github.com/JAlcocerT/3Design
+cd ./3Design/mbsd-to-render
+```
+
 You see how I write about many different stuff?
 
 ```sh
@@ -319,6 +330,13 @@ The **Tech Stack**:
 | **Analytics** | Posthog | |
 | **Hosting** | Container | |
 
+### Interactivity
+
+* https://brm.io/matter-js/
+
+>  Matter.js is a 2D physics engine for the web 
+
+* ThreeJS and D3JS
 
 ### Bike MultiBody Model
 

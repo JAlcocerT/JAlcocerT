@@ -1,6 +1,6 @@
 ---
 title: "2D Kinematics and Dynamics"
-date: 2026-03-25
+date: 2026-03-26
 draft: false
 tags: ["MBSD x 2D Simulation","Point Reference Coordinates","ThreeJS x AR"]
 description: 'The physics of bodies moving at 2D becoming Claude Skills.'
@@ -74,7 +74,8 @@ Understand **constrained dynamics** and how to simulate real mechanisms with 2D 
 cd ./mbsd/2D-Dynamics
 ```
 
-Video Sequence in _all.mp4
+`Video Sequence in _all.mp4`
+
 The combined video now shows the complete causality chain:
 
 Forces (gravity + applied torque)
@@ -84,6 +85,7 @@ Velocities (∫a dt)
 Energy Flow (validation)
 
 What This Proves
+
 The constraint forces visualization will make it crystal clear:
 
 Gravity is indeed constant (red arrows barely move)
@@ -206,8 +208,6 @@ What we could visualize (Phase 2):
 
 ## Conclusions
 
-
-
 Some people say that we could be doing our passions only if there would be some kind of magic that pay for it.
 
 Not sure about you, but I dont believe in magic.
@@ -244,17 +244,9 @@ I thought that excalidraw accepted mermaid code and that was it.
 But actually...it has its own json that can be understood.
 
 
-
-
 ---
 
 ## FAQ
-
-* https://brm.io/matter-js/
-
->  Matter.js is a 2D physics engine for the web 
-
-
 
 ### Phase Portrait Analysis
 
@@ -262,7 +254,7 @@ In the context of your bicycle simulator—or any complex dynamical system—a *
 
 Instead of plotting a variable (like lean angle) against **time**, you plot the state variables against **each other** (typically position vs. velocity).
 
-### 1. The State Space
+1. The State Space
 
 For a bicycle, the "state" at any second is defined by its coordinates $q$ and their rates of change $\dot{q}$. 
 
@@ -271,7 +263,7 @@ A phase portrait usually picks two critical variables to show stability.
 * **X-axis:** Position (e.g., Lean Angle $\phi$)
 * **Y-axis:** Velocity (e.g., Lean Rate $\dot{\phi}$)
 
-### 2. Key Components of the Map
+2. Key Components of the Map
 
 When you look at a phase portrait, you aren't just looking at one simulation run; you are looking at the "flow" of the entire mathematical universe of that system:
 
@@ -281,7 +273,7 @@ When you look at a phase portrait, you aren't just looking at one simulation run
     * **Unstable (Source/Saddle):** If the trajectories veer away, the bike is falling over.
 * **Limit Cycles:** A closed loop. In a bicycle, this might represent a steady, wobbling "weave" where the bike doesn't fall but oscillates forever.
 
-### 3. Why it Matters for Your Simulator
+3. Why it Matters for Your Simulator
 
 Phase portraits are the ultimate "litmus test" for your physics engine. 
 
@@ -289,22 +281,20 @@ Phase portraits are the ultimate "litmus test" for your physics engine.
 2.  **Bifurcations:** As you lower the speed in your simulator from 10 m/s to 2 m/s, the phase portrait will physically change. The stable "sink" at the center might split or vanish, visually showing you exactly at what speed the gyroscopic and caster effects are no longer enough to keep the bike upright.
 3.  **Sensitivity to Initial Conditions:** It helps you see how much "lean" is too much. The portrait will show a clear boundary (a **separatrix**) where one trajectory leads back to upright and the one right next to it leads to a crash.
 
-### 4. Mathematical Connection
+4. Mathematical Connection
 
 In your documentation, you solve for $\ddot{q} = M(q)^{-1} \cdot Q(q, \dot{q})$. To create the phase portrait, you take that $\ddot{q}$ and use it to draw the **vector field** (the little arrows) that tell the state which way to move at every point in the graph.
 
 In common conversation, people often use the terms interchangeably, but in technical physics and engineering, they actually refer to two different things.
 
-### The Key Difference
+The Key Difference
 
 * **Phase Portrait (Dynamics):** This is what relates to your bicycle simulator. it maps the **state** of a system (position vs. velocity) over time. It shows how a single system moves, oscillates, or crashes.
     
 * **Phase Diagram (Thermodynamics/Chemistry):** This maps the **state of matter** (Solid, Liquid, Gas) based on external conditions like Pressure and Temperature.
     
 
----
-
-### Why the confusion happens
+Why the confusion happens
 
 In the broader field of **Non-linear Dynamics**, some researchers use the term "Phase Diagram" to describe a map of **Stability Regions**. 
 
@@ -315,8 +305,6 @@ For your bicycle model, a "Phase Diagram" might look like this:
 
 In this specific context, the diagram isn't showing a single "trip" or trajectory; it’s showing the **boundary** where the physics of the bike changes fundamentally.
 
-### Summary Table
-
 | Feature | Phase Portrait | Phase Diagram |
 | :--- | :--- | :--- |
 | **Primary Use** | Mechanical/Dynamical Systems | Materials Science/Thermodynamics |
@@ -324,4 +312,4 @@ In this specific context, the diagram isn't showing a single "trip" or trajector
 | **What it shows** | A "Path" or "Trajectory" | A "Region" or "State" |
 | **Bicycle Context** | Does *this specific* bike fall over? | At *what speeds* is this bike design stable? |
 
-**Would you like to see how the "Self-Stability" region of your bicycle changes if you alter the mass of the front wheel ($m_5$)?**
+> You can potentially see how the "Self-Stability" region of your bicycle changes if you alter the mass of the front wheel ($m_5$)

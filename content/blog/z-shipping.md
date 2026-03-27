@@ -3,13 +3,15 @@ title: "Spring is here, so are weddings"
 date: 2026-03-28
 draft: false
 tags: ["RoadMap26","SlubneChwile","DRIP","Google Stitch"]
-description: 'The '
+description: 'The . With inspiring apps.'
 url: 'quick-weddings-poc'
 ---
 
 **Tl;DR**
 
 Hora de mercantilizar mi vida otra vez :(
+
++++ [Inspiring Apps](#apps-that-inspire)
 
 **Intro**
 
@@ -91,6 +93,12 @@ Things are moving into a direction where human are the blockers:
 
 
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
 ```sh
 git clone
 #make help
@@ -159,3 +167,19 @@ dig slubnechwile.com
 Whats interesting?
 
 That you can get inspired by these webs UI/X with google stitch nowadays.
+
+Inspiring apps: all those `pwa` like that just...work
+
+* https://bentopdf.com/index.html
+* Docuseal
+* it-tools
+* Vert - https://jalcocert.github.io/JAlcocerT/wasm/
+* Pairdrop...
+
+
+* https://github.com/scio-labs/inkathon
+ 
+Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
+
+
+How about building like they've done?

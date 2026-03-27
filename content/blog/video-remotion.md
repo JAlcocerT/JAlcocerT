@@ -2,7 +2,7 @@
 title: "OSS-AI Generated Videos with Remotion"
 date: 2026-03-27T11:20:21+01:00
 draft: false
-tags: ["CC Skills","Claude Code","Motion Design","D3js vs Matplotlib","YFinance x F1"]
+tags: ["CC Skills","Claude Code","Motion Design","D3js vs Matplotlib","YFinance x F1 x mech"]
 description: 'How to use RemotionJS to create videos as a code with React!'
 url: 'video-creation-with-remotion'
 ---
@@ -152,6 +152,7 @@ https://youtu.be/hTz2J4EgNOs
 {{< youtube "hTz2J4EgNOs" >}}
 
 
+
 #### YFinance x RemotionJS
 
 
@@ -175,6 +176,7 @@ uv run tests/plot_historical_gweiss.py mc.pa --start 2000-01-01 --brand "@LibreP
 After this one, you learn [about **compositions**](https://www.remotion.dev/docs/the-fundamentals#compositions):
 
 ```sh
+#npx remotion compositions
 uv init
 uv add yfinance
 #python scripts/fetch_ticker.py --ticker BTC-USD --name btc --start 2015-01-01                                                                                                                                                        
@@ -197,19 +199,94 @@ https://youtu.be/VMuCkckE5fw
 
 {{< youtube "VMuCkckE5fw" >}}
 
-
 And then...you just bring whatever matplotlib logic you had for the magic to happen:
 
-```sh
 
+```sh
+npx remotion render AdpGweiss adp_gweiss.mp4 
+                                                                      
+# Add another ticker (e.g. Coca-Cola)                     
+#python3 scripts/compute_gweiss.py --ticker KO --name ko --start 1990-01-01
 ```
+
+<!-- https://youtu.be/JkDwY4onep4 -->
+
+{{< youtube "JkDwY4onep4" >}}
+
+
+Oh, Yep, its happenning.
+
+```mermaid
+flowchart LR
+    %% Styles
+    classDef state fill:#E3F2FD,stroke:#1565C0,stroke-width:2px,color:#0D47A1;
+    classDef start fill:#43A047,stroke:#1B5E20,stroke-width:2px,color:white;
+
+    %% Nodes
+    Start((Start)):::start --> More
+    More(Doing MORE):::state
+    Better(Doing BETTER):::state
+    Newer(Doing NEWER):::state
+
+    %% Internal Feedback Loops (The Grind)
+    More -- "Scale Up" --> More
+    Better -- "Refine" --> Better
+    Newer -- "Test" --> Newer
+
+    %% The Progression Journey
+    More -- "Capacity Hit" --> Better
+    Better -- "Optimized" --> Newer
+    
+    %% The Upward Spiral
+    Newer -- "New Baseline" --> More
+```
+
+Also that.
+
+My videos are not so horrible.
+
+But I mean...
+
+```sh
+npx remotion render SoftwareDrawdown software-drawdown.mp4
+```
+
+<!-- https://youtu.be/MZTt8ICeF0Y -->
+
+{{< youtube "MZTt8ICeF0Y" >}}
+
+how could you think that making this kind of ~~video as a ~~code so cheap had no deflationary consecuencies?
+
+PS: price is not current earnings, but current + estimated discounted cash flows
+
+Will the future hold so stable?
+
+
+```sh
+#npx remotion render DividendRace renders/dividend-race.mp4 
+#make help
+make render-dividend-race
+```
+<!-- 
+https://youtu.be/OL5UQaZc97E -->
+
+{{< youtube "OL5UQaZc97E" >}}
+
+The big insight: entry price matters as much as dividend growth
+
+O and TROW were cheap in 2000 and bought many more shares, which amplified every subsequent dividend raise :)
+
 
 
 #### F1 Data x RemotionJS
 
 By any chance can this videos/shorts get more traction?
 
-Like...2026 cars are clipping so hard
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/eda-f1" title="Py EDA F1 ↗" icon="github" >}}
+{{< /cards >}}
+
+Like...2026 cars are [clipping so hard](https://jalcocert.github.io/JAlcocerT/f1-data-animated/#conclusions).
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post with animated F1, Real Estate, yfinance..." >}}
@@ -217,7 +294,6 @@ Like...2026 cars are clipping so hard
 {{< /cards >}}
 
 Why are my F1 shorts not getting *the hate* they deserve?
-
 
 Lets have a look whats going on at Suzuka:
 
@@ -249,7 +325,14 @@ But maybe...
 
 is there a better way to just create videos about mechanisms?
 
+```sh
+git clone https://github.com/JAlcocerT/mbsd
+cd mbsd/
+```
+
 Remotion has integration with https://www.remotion.dev/docs/videos/as-threejs-texture
+
+Which I have been convering recently
 
 And...
 

@@ -455,7 +455,9 @@ uv run tests/plot_year_end_close_cagr_to_date_animated_sequential.py ^VIX ^OVX -
 uv run tests/plot_price_change_from_start_animated_sequential.py ^TNX ^VIX ^OVX --start 2000-01-01 --brand "@UnfoldingData" --duration-seconds 60 --fps 30
 ```
 
-MOVE (ICE BofA MOVE Index for bond volatility) — not available on Yahoo Finance. It's a proprietary index from ICE/BofA. You'd need a Bloomberg or FRED data source for it.
+MOVE (ICE BofA MOVE Index for bond volatility) — not available on Yahoo Finance. 
+
+It's a proprietary index from ICE/BofA. You'd need a Bloomberg or FRED data source for it.
 
 {{< youtube "B_nymykHmE4" >}}
 
@@ -571,18 +573,6 @@ $Vertical: $r_2 \sin(\theta_2) + r_3 \sin(\theta_3) = 0$
   {{< card link="https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code" title="Animations as a Code | Post" >}}
 {{< /cards >}}
 
-Synthesis has always been a thing...
-
-https://youtube.com/shorts/9b19b7SmovU
-
-
-https://youtube.com/shorts/ipi437M6g5A
-
-https://youtube.com/shorts/r8G3XRBn24s?is=sDOxquD4fxU6yKns
-
-I just have not been focusing on mechanism for long time.
-
-But shortly will be allocating some time to tinker back :)
 
 ### Double Pendulum
 

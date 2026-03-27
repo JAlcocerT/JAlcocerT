@@ -24,25 +24,6 @@ https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktow
 
 
 
-
-## Inspiring Apps
-
-Inspiring apps: all those `pwa` like that just...work
-
-* https://bentopdf.com/index.html
-* Docuseal
-* it-tools
-* Vert - https://jalcocert.github.io/JAlcocerT/wasm/
-* Pairdrop...
-
-
-* https://github.com/scio-labs/inkathon
- 
-Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
-
-
-How about building like they've done?
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
@@ -118,7 +99,9 @@ Actually: Not doing more (DFY) websites for others.
 
 0. Audio TTS
 
-https://www.youtube.com/watch?v=dQ841Pd6YvQ
+<!-- https://www.youtube.com/watch?v=dQ841Pd6YvQ -->
+
+{{< youtube "dQ841Pd6YvQ" >}}
 
 
 0. Delivery Analytics
@@ -629,7 +612,7 @@ Surprise, surprise: simple mode + realistic assumptions wins the day
 Taking the learnings of optimum path and the route tracker, I just put this together in GoLang
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/go-larting" title="Py Route Tracker ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/go-karting" title="Go Desktop x Karting ↗" icon="github" >}}
 {{< /cards >}}
 
 
@@ -638,8 +621,8 @@ Taking the learnings of optimum path and the route tracker, I just put this toge
 15. Talking about racing...whats going on with F1 this year?
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="Py Route Tracker ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/eda-f1" title="Py Route Tracker ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="Py GeoSpatial ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/eda-f1" title="Py EDA F1 ↗" icon="github" >}}
 {{< /cards >}}
 
 ```sh
@@ -719,6 +702,12 @@ Others, from the vibe coding sessions: helped to bring quick demos to their rela
 17. I made **some animations** instead.
 
 
+{{< youtube "MZTt8ICeF0Y" >}}
+
+
+I mean...several animations.
+
+{{< youtube "OL5UQaZc97E" >}}
 
 
 
