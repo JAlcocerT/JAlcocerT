@@ -266,6 +266,10 @@ Will the future hold so stable?
 #npx remotion render DividendRace renders/dividend-race.mp4 
 #make help
 make render-dividend-race
+#make data-marketcap-race 
+#make render-marketcap-race-short
+make data-sector-race # re-fetch                                              
+make render-sector-race-short   # full render (~55 s) 
 ```
 <!-- 
 https://youtu.be/OL5UQaZc97E -->
@@ -276,7 +280,8 @@ The big insight: entry price matters as much as dividend growth
 
 O and TROW were cheap in 2000 and bought many more shares, which amplified every subsequent dividend raise :)
 
-
+{{< youtube "G7u_KuvKK24" >}}
+<!-- https://youtube.com/shorts/G7u_KuvKK24 -->
 
 #### F1 Data x RemotionJS
 

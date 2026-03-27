@@ -2,7 +2,7 @@
 title: "Attraction Web Offer x Show a Problem"
 date: 2026-04-15T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS","BiP x DIY enhanced","VPS x DecapCMS","RoadMap26","My Web Journey x EAyP v3"]
+tags: ["NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey x EAyP v3"]
 description: 'A scalable way to provide DIY websites. With Free Web Audits!'
 url: 'diy-webs-via-paas'
 ---
@@ -32,6 +32,40 @@ You know that you can reach `webaudit.jalcocertech.com`
 The thing is: Does it needs to be a trade of between a Wordpress/Ghost/Wix or a code driven cool SSG?
 
 Cant we go ECO and green and have websites that respect the environment?
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+    classDef bridge fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>($0)"):::free
+    L1("AuditMagnet 🛡️<br/>(Free Web Audit )"):::free
+    L11(" Blog/Youtube"):::free
+    L12(" ebooks"):::free
+    L2("DIY<br/>(Optimization Guides) $"):::low
+    L3("Done With You<br/>(Consulting) $$"):::mid
+    L4("Done For You<br/>(Full Service) $$$"):::high
+    L44("GenBI<br/>Shopify PoC"):::bridge
+    L45("Real Estate<br/>Funnel Bot"):::bridge
+
+
+    %% --- Connections ---
+    L0 --> L1
+    L0 --> L2
+    L0 --> L11
+    L0 --> L12
+    L2 --> L3
+    L3 --> L4
+    L44 -->|Enhancing| L4
+    L45 -->|Enhancing| L4
+```
+
+As per my service, you can at least be aware how good your site is:
 
 The **launch strategy**: *aka, focus strategy*
 

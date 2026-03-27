@@ -6,7 +6,7 @@ tags: ["Tinkering","Polanduino x Arduino","Solar x DHT","MLX","Robotics"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
-
+https://github.com/855princekumar/sense-hive
 
 **Tl;DR**
 

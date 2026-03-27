@@ -1,9 +1,9 @@
 ---
 title: "Which ideas are left?"
-date: 2026-04-25T07:00:21+01:00
+date: 2026-04-26T07:00:21+01:00
 draft: false
-tags: ["Unit Economics 202","JAlcocerTech Services"]
-description: 'What is learning?'
+tags: ["Unit Economics 202","JAlcocerTech Services","Data Animations"]
+description: 'what?'
 url: 'the-ideas-bucket-can-be-empty'
 math: true
 ---
@@ -17,7 +17,20 @@ Pretending to be a polymath and charging you for caring about solving your probl
 
 When the ideas bucket stops filling up, I got clarity.
 
+Making dividend or market cap race, is no longer a problem.
 
+{{< youtube "G7u_KuvKK24" >}}
+
+GoPro overlays? Nah, past
+
+{{< youtube "G7u_KuvKK24" >}}
+
+
+Mechanisms...
+
+{{< youtube "G7u_KuvKK24" >}}
+
+Is it time to go back to the real world?
 
 ---
 
@@ -66,7 +79,7 @@ flowchart LR
 
     %% --- Nodes ---
     L0("Free Content<br/>($0)"):::free
-    L1("AuditMagnet 🛡️<br/>(Free Web Audit )"):::free
+    L1("AuditMagnet 🛡️<br/>(Web Audit )"):::free
     L11(" Blog/Youtube"):::free
     L12(" ebooks"):::free
     L2("DIY<br/>(Optimization Guides) $"):::low

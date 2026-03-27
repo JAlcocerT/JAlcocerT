@@ -48,7 +48,7 @@ PrimeOS was nice
 How could I not offer something very special to entreagujaypunto: *to capture all those recipes*
 
 ```sh
-
+#eayp v3
 ```
 
 With
@@ -58,7 +58,7 @@ With
 
 0. About Type safe
 
-From JS we evolved to TS
+From [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/) we evolved to [TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/)
 
 From regular openAI API calls, to do have them [done via BAML](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#baml-x-pgsql-x-matplotlib)
 
