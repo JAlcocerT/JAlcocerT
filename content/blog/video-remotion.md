@@ -302,7 +302,8 @@ Oh, the racing data charts are already in the yfinance section above
 #To use a different stock:
   #python3 scripts/compute_ticker_invest.py --ticker AAPL --start 2005-01-01 --label "Apple" --color "#3b82f6"
   #npx remotion render TickerInvest renders/ticker-invest-short.mp4
-
+#make render-yield-curve
+#make render-inflation-fedrate
 ```
 
 {{< youtube "G7u_KuvKK24" >}}
@@ -378,6 +379,29 @@ And add video sequences: https://www.remotion.dev/docs/videos/
 ##### Websites to...RemotionJS?
 
 We said that remotionJS uses react.
+
+Like...that quick Vite+FastAPI quick btc power law thingy you can create to test a gemini prompt
+
+Can it be static?
+
+```md
+this has been amazing and im impressed about the UI/X im just questioning if we really need this FE and BE, as the data is a snapshot. So could we do a folder that makes the static-website with same look and feel just that CSR? we should not touch current functionality
+```
+
+```sh
+cd static-app
+#npm run preview
+make static-build
+make static-deploy #npx wrangler@latest pages deploy static-app/dist/ --project-name btc-powerlaw
+```
+
+And...here it goes: `http://btc-powerlaw.pages.dev/`
+
+Yep, Vite+React nice look and feel thanks to this prompt and the power law idea.
+
+Even beter, can it generate a video with remotion out of it as it used react?
+
+
 
 Does that mean that if your website already uses React then Claude Code has a much easier job to undertand your branding?
 

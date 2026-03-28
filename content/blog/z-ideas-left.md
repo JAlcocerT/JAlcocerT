@@ -13,6 +13,8 @@ math: true
 
 Pretending to be a *polymath* and charging you for caring about solving your problems.
 
++++ With [quick content creation](#quick-content-creation).
+
 **Intro**
 
 When the ideas bucket stops filling up, I got clarity.
@@ -110,6 +112,9 @@ What if promoting your new web app features is already one prompt away?
 
 {{< youtube "OL5UQaZc97E" >}}
 
+If code is cheap and you can do videos as a code
+
+Isnt it the math telling you that videos are also cheap now?
 
 ### Whats next?
 
