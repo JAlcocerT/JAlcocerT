@@ -323,14 +323,24 @@ Or so it was...until 2026 cars are [clipping so hard](https://jalcocert.github.i
   {{< card link="https://jalcocert.github.io/JAlcocerT/f1-data-animated/" title="F1 Animated Data" image="/blog_img/karting/long_g_trace_L4.png" subtitle="Creating animations around F1 Data | Post" >}}
 {{< /cards >}}
 
-Why are my F1 shorts not getting *the hate* they deserve?
+Why are my [amazing F1 shorts](https://jalcocert.github.io/JAlcocerT/f1-data-animated/) not getting *the hate* they deserve?
 
-Lets have a look whats going on at Suzuka:
+Lets have a look whats going on at **Suzuka**: *and compare it with last year, just to trol a litte bit*
 
 ```sh
 #git clone https://github.com/JAlcocerT/eda-f1
 #cd eda-f1
-uv run f1_q3_short.py #Interactive Q3 animation video (15s Short)
+make help
+#uv run f1_q3_short.py #Interactive Q3 animation video (15s Short)
+```
+
+```sh
+printf "2026\n1\nRUS\n2\ny\n" | uv run f1_deep_analysis.py
+
+#printf "file 'deep_analysis_2026_1_RUS_hud.mp4'\nfile 'deep_analysis_2025_1_1_hud.mp4'" > concat_list.txt && ffmpeg -f concat -safe 0 -i concat_list.txt -c copy deep_analysis_joined.mp4
+uv run f1_session_summary.py
+printf "file 'deep_analysis_2026_1_RUS_hud.mp4'\nfile 'outro_2026.mp4'\nfile 'deep_analysis_2025_1_NOR_hud.mp4'\nfile 'outro_2025.mp4'" > cinematic_review_list.txt
+ffmpeg -f concat -safe 0 -i cinematic_review_list.txt -c copy f1_cinematic_review.mp4
 ```
 
 I could not resist to add a remotion folder to this project:
@@ -380,7 +390,7 @@ And add video sequences: https://www.remotion.dev/docs/videos/
 
 We said that remotionJS uses react.
 
-Like...that quick Vite+FastAPI quick btc power law thingy you can create to test a gemini prompt
+Like...that [quick **Vite+FastAPI** stack](https://github.com/JAlcocerT/btc-powerlaw/blob/master/tech-stack.md) that generates this [btc power law thingy](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders) you can create to test a [gemini prompt](https://github.com/JAlcocerT/btc-powerlaw/blob/master/GEMINI.md)
 
 Can it be static?
 
@@ -397,13 +407,22 @@ make static-deploy #npx wrangler@latest pages deploy static-app/dist/ --project-
 
 And...here it goes: `http://btc-powerlaw.pages.dev/`
 
-Yep, Vite+React nice look and feel thanks to this prompt and the power law idea.
+Yep, Vite+React nice look and feel thanks to this prompt and [the power law idea](https://jalcocert.github.io/JAlcocerT/powerlaw-and-series-with-python/).
 
 Even beter, can it generate a video with remotion out of it as it used react?
 
-
+```sh
+#cd ../remotion-promo-video
+#make data-btc-powerlaw                                                                                             
+make render-btc-powerlaw
+```
 
 Does that mean that if your website already uses React then Claude Code has a much easier job to undertand your branding?
+
+```sh
+git clone /slider-crank #this is exactly what im talking about
+
+```
 
 This is resonating a lot for me to promote all those `realestate.`, `webaudit.` etc etc etc services :)
 
@@ -411,8 +430,14 @@ This is resonating a lot for me to promote all those `realestate.`, `webaudit.` 
 You can make quick promo videos or showcase of the web/apps you ~~create~~ vibe code:
 
 ```sh
-#git clone slider-crank
+#
 ```
+
+does this mean...that in one year we have gone from repository to docs...
+
+to a repository to explanatory video with the look and feel plugged in?
+
+ok...we are done then :)
 
 
 
@@ -421,15 +446,15 @@ You can make quick promo videos or showcase of the web/apps you ~~create~~ vibe 
 ## Conclusions
 
 
-Now you have three options: all as a code.
+Now you have three options: [everything as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/).
 
-1. Keep matplotlib with cool custom logic
-2. Go the python - blender route
-3. NEW: Use...remotion to create videos as a code!
+1. [Keep matplotlib](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/) with certain cool custom logic
+2. Go the [python - blender](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/) route
+3. NEW: Use...remotion to create videos as a code based on your existing code base!
 
 Now clear yet on the how to?
 
-You dont have to run to make your dream project.
+You dont have to run anywhere to make your dream project.
 
 ```mermaid
 flowchart LR
@@ -457,6 +482,8 @@ You can get it done:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
+
+Or just keep reading to get more ideas :)
 
 
 ---

@@ -217,6 +217,10 @@ https://youtube.com/shorts/BVqQdhvKe5o
 
 > > AUS 2026 Q3 P1 to P10 gap >1s [(+1.453s)](https://youtube.com/shorts/ERqGNyEpMJk)
 
+<!-- 
+https://www.youtube.com/shorts/ERqGNyEpMJk
+ -->
+
 And this is not a debate whether making drivers race with less dispair cars is good or not.
 
 Neither if F1 should be similar to e-f1...or just going [closer to the limit](https://www.youtube.com/watch?v=4vstWEvjW18) each lap.
@@ -245,7 +249,6 @@ uv run f1_deep_analysis.py #coasting x2 versus 2025 :)
 
 # ✅ Analysis complete! Visualization saved as: deep_analysis_2026_1_RUS.png
 printf "2026\n1\nRUS\n2\ny\n" | uv run f1_deep_analysis.py
-aristotel onassis
 
 #printf "file 'deep_analysis_2026_1_RUS_hud.mp4'\nfile 'deep_analysis_2025_1_1_hud.mp4'" > concat_list.txt && ffmpeg -f concat -safe 0 -i concat_list.txt -c copy deep_analysis_joined.mp4
 uv run f1_session_summary.py

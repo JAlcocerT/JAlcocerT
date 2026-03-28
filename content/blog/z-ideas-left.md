@@ -2,11 +2,13 @@
 title: "Which ideas are left?"
 date: 2026-04-26T07:00:21+01:00
 draft: false
-tags: ["Unit Economics 202","JAlcocerTech Services x Remotion","Data Animations"]
+tags: ["Unit Economics 202","JAlcocerTech Services x Remotion","Video x Data Animations"]
 description: 'what?'
 url: 'the-ideas-bucket-can-be-empty'
 math: true
 ---
+
+aristotel onassis
 
 
 **TL;DR**
@@ -105,7 +107,7 @@ If you have watched a vidoe like [this one](https://www.youtube.com/watch?v=M4cm
 You are aware that you are one step away to blow social media with spam videos of what you ship.
 
 ```sh
-cd ./remotion-content
+cd ./remotion-content #get your core offer well defined, then just create promo videos with your defined UI/X
 ```
 
 What if promoting your new web app features is already one prompt away?
@@ -135,7 +137,31 @@ Oh, also not the monthly selfhosted/homelab recaps.
 2. Monthly Life ~ IKIGAI Checks: *just that not done in onenote, [but in .md](https://github.com/JAlcocerT/my-logseq-notes)*
 
 ```sh
-git clone 
+git clone /my-logseq-notes
+```
+
+
+3. Generating random data animated videos & rendres: *is probably time to unify these...*
+
+```sh
+git clone /VideoEditingRemotion
+cd remotion-cc #ideas.md is a gold mine
+```
+
+```sh
+git clone /mbsd
+
+```
+
+```sh
+git clone /3Design
+```
+
+Yea, its time:
+
+```sh
+eda-f1
+eda-geospatial
 ```
 
 #### Stop Doing
@@ -166,7 +192,9 @@ When you have certain volume, this is the kind of thing that you put into a *dis
 
 #### Start Doing
 
-1. 
+1. As code is cheap and so are videos...
+
+I need to think about the FOSS/JAlcocerTech yt videos rebump - TBC though
 
 
 ---

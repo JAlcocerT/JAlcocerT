@@ -26,9 +26,11 @@ https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
 
 **TL;DR**
 
+Some [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/), [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/), physics put together to create.
+
 **Intro**
 
-The kind of thing that you put together in few afternoons nowadays.
+The kind of thing that you put together in *few afternoons* nowadays.
 
 You thought that your 9-5 is killing you?
 
@@ -40,7 +42,7 @@ Ops, wrong post to talk about this.
 
 Let me go back: 3D mechanisms! YES!
 
-Here it goes all that unseen talent that the world was [eager to consume](#mbsd-x-web-dev).
+Here it goes all that *unseen talent* that the world was [eager to consume](#mbsd-x-web-dev).
 
 ##
 

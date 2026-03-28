@@ -313,6 +313,10 @@ Plug the prompt below and let your eyes enjoy of that **beautiful UI experience*
 
 ![Sample Cinematic Landing](/blog_img/crypto/btc/cycles-data.png)
 
+> There you go `https://btc-powerlaw.pages.dev/` *you can make it static later*
+
+> > Claude desktop helped by generating a `docx` validating the gemini.md prompt - Build a digital instrument. Not a dashboard. Every scroll intentional. Every number weighted. Every animation earned.
+
 <!-- https://www.youtube.com/watch?v=czLrUyA_Bh4 -->
 
 {{< youtube "czLrUyA_Bh4" >}}
