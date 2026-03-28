@@ -1,6 +1,6 @@
 ---
 title: "From Idea to Resolution"
-date: 2026-03-27T07:00:21+01:00
+date: 2026-03-28T07:00:21+01:00
 draft: false
 tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3"]
 description: 'Faster and better or obsolete. DevOps x DORA x Apache DevLake'
@@ -256,10 +256,17 @@ From where you can create a tier of services with *some sort of sense*: *yea, th
 git clone /slubnechwile
 #3bodies OSS
 #slider crank OSS / mbsd
+#git clone /VideoEditionRemotion
 #git clone /poc #with prompts and ctas :)
 #git clone /jalcocertech-services #all in one repo :)
 #https://webaudit.jalcocertech.com/
 #entreagujaypunto eaypv3
+```
+
+Some videos...
+
+```sh
+
 ```
 
 Let it be CC + nanobanana

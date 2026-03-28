@@ -1,7 +1,6 @@
 ---
 title: "Optimum Path x HUD - Desktop"
 date: 2026-03-21
-#date: 2026-05-31
 draft: false
 tags: ["GoPro GPS Telemetry","Go Language x Wails x Vue","Racing"]
 description: 'From CustomTkinter to a GoLang Desktop App for Karting HUDs.'
@@ -285,14 +284,15 @@ The size difference is the key trade-off in practice: the AppImage bundles GTK +
 time make exe
 ```
 
- bin/glasshud.exe — 11 MB, built from Linux with no Docker needed.                       
+bin/glasshud.exe — 11 MB, built from Linux with no Docker needed.                       
                                                                                                                                                                               
-  make exe is ready. What your Windows friend needs to do:                                                                                                                    
-                                                                                                                                                                              
-  1. Install ffmpeg and exiftool (one-time):                                                                                                                                  
-  winget install Gyan.FFmpeg                                                                                                                                                  
-  winget install OliverBetz.ExifTool                                                                                                                                          
-  2. Double-click glasshud.exe — WebView2 (Edge) is already built into Windows 10/11 so the UI works out of the box.  
+make exe is ready. What your Windows friend needs to do:                                                                             
+                                                                                                                                                                  
+1. Install ffmpeg and exiftool (one-time)
+winget install Gyan.FFmpeg                                                                                                                                                  
+winget install OliverBetz.ExifTool                                                                                                                                          
+
+2. Double-click glasshud.exe — WebView2 (Edge) is already built into Windows 10/11 so the UI works out of the box.  
 
 
 
@@ -303,7 +303,9 @@ time make exe
 
 Yes, absolutely. In 2026, all four languages—**Rust, Python, Go, and C**—can be shipped cross-platform (Windows, macOS, and Linux) from a single codebase.
 
-However, "how" they achieve this varies significantly. Some feel like a natural part of the OS, while others feel like a "web page in a box."
+However, "how" they achieve this varies significantly. 
+
+Some feel like a natural part of the OS, while others feel like a "web page in a box."
 
 ### Cross-Platform Comparison (2026)
 

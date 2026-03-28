@@ -1,9 +1,9 @@
 ---
 title: "Desktop Apps with RUST"
-date: 2026-05-01
+date: 2026-05-16
 draft: false
-tags: ["Rust x Vue"]
-description: 'Using rust instead of CustomTkinter and GoLang Wails.'
+tags: ["Rust x Vue","RemotionJS"]
+description: 'Using Rust instead of CustomTkinter and GoLang Wails.'
 url: 'desktop-apps-with-rust'
 ---
 
@@ -102,6 +102,13 @@ If you are already leaning toward **Vue**, here is why you might pick the Rust v
 --- 
 
 ## Conclusions
+
+
+### Why not just RemotionJS
+
+```sh
+
+```
 
 ---
 

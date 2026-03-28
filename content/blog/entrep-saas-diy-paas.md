@@ -1,6 +1,6 @@
 ---
 title: "Making an enhanced DIY offering via PaaS"
-date: 2026-05-01T09:20:21+01:00
+date: 2026-07-01T09:20:21+01:00
 draft: false
 tags: ["DIY Platform Service","RoadMap26","PostgreSQL"]
 description: 'A platform service offering for B2C to get up to speed with services that dont require any customization.'
@@ -311,11 +311,6 @@ https://web-check.xyz/check/https%3A%2F%2Fwww.buildingfuturecapital.com%2F
       * Interesting section with a table comparing services and faq (go below)
 
 * Gym Trainer - https://trenujswiadomie.pl/kokpit/
-
-* Gym Trainer - https://trenujswiadomie.pl/kokpit/
-
-
-
 -->
 
 

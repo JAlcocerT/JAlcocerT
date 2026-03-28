@@ -424,7 +424,9 @@ make data-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=ALO
 make render-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=ALO #generated in ~1min 20s
 ```
 
-{{< youtube "G7u_KuvKK24" >}}
+<!-- https://youtu.be/QiTwSpgumwQ -->
+
+{{< youtube "QiTwSpgumwQ" >}}
 
 Or a race lap instead of qualifying:
 
@@ -457,10 +459,33 @@ make data-f1-championship && make render-f1-championship
 
 
 ```sh
+# F1-D: Sector delta duel                                                                                          
+make data-f1-delta F1_YEAR=2024 F1_ROUND=1 F1_D1=VER F1_D2=NOR                                                   
+make render-f1-delta-short F1_YEAR=2024 F1_ROUND=1 F1_D1=VER F1_D2=NOR                                             
 
+# F1-D: Sector delta duel                                                                                          
+make data-f1-delta F1_YEAR=2026 F1_ROUND=3 F1_D1=ANT F1_D2=RUS && make render-f1-delta-short F1_YEAR=2026 F1_ROUND=3 F1_D1=ANT F1_D2=RUS 
+make data-f1-delta F1_YEAR=2026 F1_ROUND=3 F1_D1=RUS  F1_D2=ALO && make render-f1-delta-short F1_YEAR=2026 F1_ROUND=3 F1_D1=RUS  F1_D2=ALO 
 ```
 
 {{< youtube "G7u_KuvKK24" >}}
+
+```sh
+make data-f1-delta F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM
+  make render-f1-delta-short F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM                                            
+  # → renders/f1-delta-2021-r22-VER-HAM-Q.mp4                                                                      
+                                                                                                                     
+  FastF1 has full telemetry back to 2018. First run will fetch 2021 Abu Dhabi Q from the API (may take a minute),    
+  subsequent runs use cache.                                                                                         
+                                                                                                                     
+  You could also do the race lap instead of qualifying — that weekend's race is the iconic one where HAM led most of 
+  the race before the safety car controversy in the final laps:
+                                                                                                                     
+  make data-f1-delta F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM F1_SESSION=R                                     
+  make render-f1-delta-short F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM F1_SESSION=R                               
+  # → renders/f1-delta-2021-r22-VER-HAM-R.mp4                                                                        
+                                                                                               
+```
 
 
 
@@ -479,16 +504,31 @@ But maybe...
 is there a better way to just create videos about mechanisms?
 
 ```sh
-git clone https://github.com/JAlcocerT/mbsd
-cd mbsd/
+make render-mech-a
+# → renders/mech-a-slider_crank-10rpm.mp4 
+mpv renders/mech-a-slider_crank-10rpm.mp4
+
+#Or at a faster crank speed:                               
+make data-mech-a MECH_RPM=30                            
+make render-mech-a MECH_RPM=30                            
+# → renders/mech-a-slider_crank-30rpm.mp4 
+
+#git clone https://github.com/JAlcocerT/mbsd
+#cd mbsd/
+```
+
+```sh       
+make render-mech-b  
+# → renders/mech-b-slider_crank-10rpm.mp4                                                                                                                                                                                                   
+# Or regenerate data + render both in one go:                              
+#make data-mech-a && make render-mech-a && make render-mech-b   
 ```
 
 Remotion has integration with https://www.remotion.dev/docs/videos/as-threejs-texture
 
-Which I have been convering recently
+Which I have been convering recently for the 2D simulator.
 
-And...
-
+And also...
 
 React Three Fiber ~ Three JS?
 
@@ -533,26 +573,19 @@ make render-btc-powerlaw
 Does that mean that if your website already uses React then Claude Code has a much easier job to undertand your branding?
 
 ```sh
-git clone /slider-crank #this is exactly what im talking about
-
+#git clone /slider-crank #this is exactly what im talking about
 ```
 
 This is resonating a lot for me to promote all those `realestate.`, `webaudit.` etc etc etc services :)
 
 
-You can make quick promo videos or showcase of the web/apps you ~~create~~ vibe code:
-
-```sh
-#
-```
+You can make quick promo videos or showcase of the web/apps you ~~create~~ vibe code.
 
 does this mean...that in one year we have gone from repository to docs...
 
 to a repository to explanatory video with the look and feel plugged in?
 
 ok...we are done then :)
-
-
 
 ---
 
