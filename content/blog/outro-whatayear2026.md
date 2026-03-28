@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-03-27
+date: 2026-04-27
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -708,6 +708,10 @@ Others, from the vibe coding sessions: helped to bring quick demos to their rela
 I mean...several animations.
 
 {{< youtube "OL5UQaZc97E" >}}
+
+Including [data races](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/#yfinance-x-remotionjs):
+
+
 
 
 

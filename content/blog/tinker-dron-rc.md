@@ -7,6 +7,17 @@ description: 'Radio Control.'
 url: 'rc-tinkering'
 ---
 
+
+https://www.youtube.com/watch?v=hObWTCserzA
+
+
+https://www.youtube.com/watch?v=gx5DA8qEfHY
+
+https://www.youtube.com/watch?v=ZLpZ9bTT_P4
+
+
+https://www.youtube.com/watch?v=yqwb4HIrORM
+
 **Ekranoplan R/C?**
 
 People wont stop impressing me (in possitive way ofc).

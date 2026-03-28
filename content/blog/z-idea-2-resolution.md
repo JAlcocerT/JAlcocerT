@@ -3,7 +3,7 @@ title: "From Idea to Resolution"
 date: 2026-03-27T07:00:21+01:00
 draft: false
 tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3"]
-description: 'Faster, better either obsolete. DevOps x DORA x Apache DevLake'
+description: 'Faster and better or obsolete. DevOps x DORA x Apache DevLake'
 url: 'take-ideas-to-their-digital-resolution'
 math: true
 ---

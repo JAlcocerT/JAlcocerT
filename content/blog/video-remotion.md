@@ -12,7 +12,7 @@ url: 'video-creation-with-remotion'
 
 From code to video with Remotion.
 
-*(Not just animations)*
+*Not just animations, racing charts are coming*
 
 **Intro**
 
@@ -285,13 +285,37 @@ O and TROW were cheap in 2000 and bought many more shares, which amplified every
 
 #### F1 Data x RemotionJS
 
-By any chance can this videos/shorts get more traction?
+By any chance can this formula 1 videos/shorts get more traction?
+
+Oh, the racing data charts are already in the yfinance section above
+
+```sh
+#make render-divrace-growth-race
+#make render-total-return-race-short
+#make render-gdp-race
+#make render-population-race
+#make render-gdppc-race
+#ake render-purchasing-power-short
+  #make data-ticker-invest          Fetch MCD from 2000 (default) via yfinance
+#make render-ticker-invest-short  Render single-ticker invest reveal Short (~28 s)
+  #Custom: python3 scripts/compute_ticker_invest.py --ticker AAPL --start 2005-01-01
+#To use a different stock:
+  #python3 scripts/compute_ticker_invest.py --ticker AAPL --start 2005-01-01 --label "Apple" --color "#3b82f6"
+  #npx remotion render TickerInvest renders/ticker-invest-short.mp4
+
+```
+
+{{< youtube "G7u_KuvKK24" >}}
+
+
+But this is...**racing** as in...going fast through circuits around the world:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/eda-f1" title="Py EDA F1 ↗" icon="github" >}}
 {{< /cards >}}
 
-Like...2026 cars are [clipping so hard](https://jalcocert.github.io/JAlcocerT/f1-data-animated/#conclusions).
+
+Or so it was...until 2026 cars are [clipping so hard](https://jalcocert.github.io/JAlcocerT/f1-data-animated/#conclusions).
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post with animated F1, Real Estate, yfinance..." >}}

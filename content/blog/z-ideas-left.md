@@ -2,7 +2,7 @@
 title: "Which ideas are left?"
 date: 2026-04-26T07:00:21+01:00
 draft: false
-tags: ["Unit Economics 202","JAlcocerTech Services","Data Animations"]
+tags: ["Unit Economics 202","JAlcocerTech Services x Remotion","Data Animations"]
 description: 'what?'
 url: 'the-ideas-bucket-can-be-empty'
 math: true
@@ -11,7 +11,7 @@ math: true
 
 **TL;DR**
 
-Pretending to be a polymath and charging you for caring about solving your problems.
+Pretending to be a *polymath* and charging you for caring about solving your problems.
 
 **Intro**
 
@@ -64,7 +64,8 @@ You dont need to wait anymore:
 Active income >>> ~~passive income~~ delayed active income.
 
 ```sh
-git clone /jalcocertech-services
+#git init && git add . && git commit -m "Initial commit: Starting services" && gh repo create jalcocertech-services --private --source=. --remote=origin --push
+git clone https://github.com/JAlcocerT/jalcocertech-services
 ```
 
 How does my **value ladder** looks like as of today?
@@ -94,6 +95,21 @@ flowchart LR
     L2 --> L3
     L3 --> L4
 ```
+
+#### Quick Content Creation?
+
+If you have watched a vidoe like [this one](https://www.youtube.com/watch?v=M4cmrdoUKxI) and tinker with [remotion like I did](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/).
+
+You are aware that you are one step away to blow social media with spam videos of what you ship.
+
+```sh
+cd ./remotion-content
+```
+
+What if promoting your new web app features is already one prompt away?
+
+{{< youtube "OL5UQaZc97E" >}}
+
 
 ### Whats next?
 
