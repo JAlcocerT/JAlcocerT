@@ -1,9 +1,9 @@
 ---
 title: "Which ideas are left?"
-date: 2026-04-26T07:00:21+01:00
+date: 2026-04-25
 draft: false
 tags: ["Unit Economics 202","JAlcocerTech Services x Remotion","Video x Data Animations"]
-description: 'what?'
+description: 'What?'
 url: 'the-ideas-bucket-can-be-empty'
 math: true
 ---
@@ -35,6 +35,10 @@ Mechanisms...
 {{< youtube "G7u_KuvKK24" >}}
 
 Is it time to go back to the real world?
+
+Because software PER is going down to 20, being lower than NASDAQ avg for the first time in history.
+
+Does that tell you anything about the market future expectations *also knowing that currently their FCF is also growing?*
 
 ---
 

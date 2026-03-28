@@ -472,22 +472,32 @@ make data-f1-delta F1_YEAR=2026 F1_ROUND=3 F1_D1=RUS  F1_D2=ALO && make render-f
 
 ```sh
 make data-f1-delta F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM
-  make render-f1-delta-short F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM                                            
-  # → renders/f1-delta-2021-r22-VER-HAM-Q.mp4                                                                      
+make render-f1-delta-short F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM                                            
+# → renders/f1-delta-2021-r22-VER-HAM-Q.mp4                                                                      
                                                                                                                      
-  FastF1 has full telemetry back to 2018. First run will fetch 2021 Abu Dhabi Q from the API (may take a minute),    
-  subsequent runs use cache.                                                                                         
+# FastF1 has full telemetry back to 2018. First run will fetch 2021 Abu Dhabi Q from the API (may take a minute),    
+# subsequent runs use cache.                                                                                         
                                                                                                                      
-  You could also do the race lap instead of qualifying — that weekend's race is the iconic one where HAM led most of 
-  the race before the safety car controversy in the final laps:
+#You could also do the race lap instead of qualifying — that weekend's race is the iconic one where HAM led most of 
+#  the race before the safety car controversy in the final laps:
                                                                                                                      
-  make data-f1-delta F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM F1_SESSION=R                                     
-  make render-f1-delta-short F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM F1_SESSION=R                               
-  # → renders/f1-delta-2021-r22-VER-HAM-R.mp4                                                                        
-                                                                                               
+make data-f1-delta F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM F1_SESSION=R                                     
+make render-f1-delta-short F1_YEAR=2021 F1_ROUND=22 F1_D1=VER F1_D2=HAM F1_SESSION=R                               
+# → renders/f1-delta-2021-r22-VER-HAM-R.mp4                                                                                           
 ```
 
+##### Kart Overlays?
 
+
+As long as you have your video at `./public`, remotion can do the trick
+
+```sh
+make data-gopro        # re-extract (already done) 
+make render-gopro      # → renders/gopro-hud-GH030417.mp4                                                                                                                                                                                   
+# Different video:                                                                                                                                                                                                                          
+make data-gopro GOPRO_VIDEO=public/GX010001.MP4 GOPRO_LAP_START=8.0
+make render-gopro GOPRO_VIDEO=public/GX010001.MP4  
+```
 
 
 #### Mechanisms x RemotionJS
@@ -521,8 +531,21 @@ make render-mech-a MECH_RPM=30
 make render-mech-b  
 # → renders/mech-b-slider_crank-10rpm.mp4                                                                                                                                                                                                   
 # Or regenerate data + render both in one go:                              
-#make data-mech-a && make render-mech-a && make render-mech-b   
+#make data-mech-a && make render-mech-a && make render-mech-b
+make render-mech-c
+make render-mech-d
 ```
+
+Phase 1 — full run through the simulation with velocity arrows only (Mech-B style: cyan→orange→red), link gradients keyed to speed                                                                                                          
+                                                                                                                                                                                                                                              
+Transition card (1.5 s) — dark overlay with "PHASE 1: VELOCITY → PHASE 2: ACCELERATION" label showing both color palettes                                                                                                                   
+                                                            
+Phase 2 — runs through the simulation again with both layers simultaneously:                                                                                                                                                                
+- Velocity arrows fade to 40% opacity (still visible, dimmed)
+- Acceleration arrows fade in at full brightness with stronger glow indigo→violet→amber)                                                                                                                                                   
+- Link gradients switch to the acceleration palette                                      
+- Trail colour flips to acceleration                                                                                                                                                                                                        
+- HUD shows both m/s and m/s² readouts per tracked point       
 
 Remotion has integration with https://www.remotion.dev/docs/videos/as-threejs-texture
 
