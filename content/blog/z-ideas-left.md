@@ -143,10 +143,32 @@ git clone /my-logseq-notes
 
 3. Generating random data animated videos & rendres: *is probably time to unify these...*
 
+{{< cards >}}
+  {{< card link="https://gitlab.com/fossengineer1/unfolding-data" title="Unfolding Data | NEW Gitlab Repo" icon="github" >}}
+{{< /cards >}}
+
 ```sh
 git clone /VideoEditingRemotion
 cd remotion-cc #ideas.md is a gold mine
+
+make render-multi-invest-short
+#To make a different comparison:                                                                                    
+ # Nvidia vs Apple vs S&P ETF from 2015
+ #python3 scripts/compute_multi_invest.py --tickers NVDA AAPL SPY --start 2015-01-01                                 
+                                                                                                                  
+# Dividend kings from 2000                                                                                         
+  #python3 scripts/compute_multi_invest.py --tickers KO MCD PEP --start 2000-01-01 \                                  
+  #  --labels "Coca-Cola" "McDonald's" "PepsiCo"   
+make render-dividend-race-short
+mpv renders/dividend-race-short.mp4
+
+#make data-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=ANT
+#make render-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=ANT
+make data-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=RUS
+make render-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=RUS
+#mpv renders/f1-telemetry-2026-r3-RUS-Q.mp4
 ```
+
 
 ```sh
 git clone /mbsd
@@ -157,36 +179,20 @@ git clone /mbsd
 git clone /3Design
 ```
 
-Yea, its time:
+Yea... its about time:
 
 ```sh
-eda-f1
-eda-geospatial
+/eda-f1
+/eda-geospatial
 ```
 
 #### Stop Doing
 
-1. Collaborations with people/ideas/projects who dont have a clear*er* (>=) than what I expect before executing my ideas.
-
-
-{{% details title="Ideas Checklist 🚀" closed="true" %}}
-
-For this I dedicated a full post few weeks ago.
-
-The general idea checklist is as follows:
-
-
-
-{{% /details %}}
-
-{{% details title="Prospects/Clients Checklist 🚀" closed="true" %}}
-
-
-
-
-{{% /details %}}
+1. Collaborations with people around vague ideas/projects, those who dont have a clear*er* (>=) than what I expect before executing my own worthless ideas are to be skipped.
 
 When you have certain volume, this is the kind of thing that you put into a *dis*qualification form.
+
+Have your own [ideas checklist](#ideas-checklist) in place!
 
 
 
@@ -195,6 +201,21 @@ When you have certain volume, this is the kind of thing that you put into a *dis
 1. As code is cheap and so are videos...
 
 I need to think about the FOSS/JAlcocerTech yt videos rebump - TBC though
+
+2. Data is no longer a full thing, data product is the end to end
+
+Because nobody will pay you to make a group by and filters any more
+
+As you know, agents are coming to the workspace, that includes pbi, looker and whatever
+
+Why should you restrict yourself to existing dashboarding tools?
+
+not talking about streamlit pocs, but full stack data pocs
+
+```sh
+git clone /poc
+```
+
 
 
 ---
@@ -215,3 +236,27 @@ Meaning: that those actions were not meant to make yo be closer to where you wan
 
 This idea might suggest you [open questions](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#outro--random)
 
+### Ideas Checklist
+
+https://jalcocert.github.io/JAlcocerT/ideas-to-execution-via-sdlc/#evaluating-business-ideas
+
+https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#business-idea-checklist
+
+This will help you to understand how to disqualify business ideas: https://jalcocert.github.io/JAlcocerT/ideas-to-execution/
+
+{{% details title="Ideas Checklist 🚀" closed="true" %}}
+
+For this I dedicated a full post few weeks ago.
+
+The general idea checklist is as follows:
+
+
+
+{{% /details %}}
+
+{{% details title="Prospects/Clients Checklist 🚀" closed="true" %}}
+
+
+
+
+{{% /details %}}

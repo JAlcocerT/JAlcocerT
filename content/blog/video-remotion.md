@@ -315,8 +315,21 @@ But this is...**racing** as in...going fast through circuits around the world:
   {{< card link="https://github.com/JAlcocerT/eda-f1" title="Py EDA F1 ↗" icon="github" >}}
 {{< /cards >}}
 
+```sh
+#git clone https://github.com/JAlcocerT/eda-f1
+#cd eda-f1
+make help
+```
 
 Or so it was...until 2026 cars are [clipping so hard](https://jalcocert.github.io/JAlcocerT/f1-data-animated/#conclusions).
+
+In China between 6-9% of the lap:
+
+```sh
+#make clipping_detector
+make clipping_detector ARGS="2026 2 ANT"
+make clipping_detector ARGS="2026 2 ALO"
+```
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post with animated F1, Real Estate, yfinance..." >}}
@@ -325,17 +338,11 @@ Or so it was...until 2026 cars are [clipping so hard](https://jalcocert.github.i
 
 Why are my [amazing F1 shorts](https://jalcocert.github.io/JAlcocerT/f1-data-animated/) not getting *the hate* they deserve?
 
-Lets have a look whats going on at **Suzuka**: *and compare it with last year, just to trol a litte bit*
-
 ```sh
-#git clone https://github.com/JAlcocerT/eda-f1
-#cd eda-f1
-make help
-#uv run f1_q3_short.py #Interactive Q3 animation video (15s Short)
-```
+uv run f1_deep_analysis.py #
 
-```sh
-printf "2026\n1\nRUS\n2\ny\n" | uv run f1_deep_analysis.py
+mpv deep_analysis_2026_2_ANT_hud.mp4
+mpv deep_analysis_2025_2_PIA_hud.mp4 
 
 #printf "file 'deep_analysis_2026_1_RUS_hud.mp4'\nfile 'deep_analysis_2025_1_1_hud.mp4'" > concat_list.txt && ffmpeg -f concat -safe 0 -i concat_list.txt -c copy deep_analysis_joined.mp4
 uv run f1_session_summary.py
@@ -343,12 +350,118 @@ printf "file 'deep_analysis_2026_1_RUS_hud.mp4'\nfile 'outro_2026.mp4'\nfile 'de
 ffmpeg -f concat -safe 0 -i cinematic_review_list.txt -c copy f1_cinematic_review.mp4
 ```
 
-I could not resist to add a remotion folder to this project:
+The Chinese GP was not so bad for this new gen cars: *,just' 1:30:641 vs 1:32:064*: more time full throtle, but not there is clipping and more time to load batteries.
+
+```md
+========================================
+📊 PERFORMANCE SUMMARY: ANT @ Chinese Grand Prix 2026
+========================================
+🟢 Full Throttle:  52.9%
+🔴 Braking:       22.5%
+🟡 Coasting:      3.0%
+🔵 DRS Active:    0.0%
+⚡ Max G-Force:   5.00 G
+🛑 Max De-accel: -5.00 G
+========================================
+
+========================================
+📊 PERFORMANCE SUMMARY: PIA @ Chinese Grand Prix 2025
+========================================
+🟢 Full Throttle:  39.7%
+🔴 Braking:       16.3%
+🟡 Coasting:      7.6%
+🔵 DRS Active:    18.5%
+⚡ Max G-Force:   2.41 G
+🛑 Max De-accel: -5.00 G
+========================================
+```
+
+Lets have a look whats going on at **Suzuka**: *and compare it with last year, just to trol a litte bit*
 
 ```sh
-cd remotion-f1
+#uv run f1_deep_analysis.py #china
+#make deep_analysis ARGS="2026 2 ANT 2 y"
+#uv run f1_deep_analysis.py 2026 2 ANT 2 y
+make deep_analysis ARGS="2026 3 RUS 2 n" #ANT telemetry has some anomaly that tells is breaking where its not :)
+make deep_analysis ARGS="2026 3 ALO 2 n"
+make clipping_detector ARGS="2026 3 RUS" #this is for qualifying
+```
+
+![suzuka 2026 f1 clipping qualifying ALO](/blog_img/karting/clipping_analysis_2026_3_ALO.png)
+
+Now clipping...goes from 11.4% to 14.4%, all 130R :(
+
+```md
+========================================
+📊 CLIPPING SUMMARY: RUS
+========================================
+🟣 Clipping Detected:    11.4% of lap
+⚡ Max Speed Reached:   329.0 km/h
+📉 Longest Clipping:    22 samples
+========================================
+
+========================================
+📊 PERFORMANCE SUMMARY: ALO @ Japanese Grand Prix
+========================================
+🟢 Full Throttle:  56.4%
+🔴 Braking:       13.8%
+🟡 Coasting:      7.1%
+🔵 DRS Active:    0.0%
+⚡ Max G-Force:   5.00 G
+🛑 Max De-accel: -4.84 G
+========================================
+```
+
+I could not resist to add a remotion folder to this `eda-f1` project:
+
+```sh
+#cd remotion-f1 #but the magic happens at VideoEditingRemotion/remotion-cc anyways
+pip install fastf1 pandas
+#make render-f1-telemetry
+# Fetch Alonso's Suzuka 2026 qualifying lap                                                                        
+make data-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=ALO                                                       
+# Render it → renders/f1-telemetry-2026-r3-ALO-Q.mp4                                                               
+make render-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=ALO #generated in ~1min 20s
+```
+
+{{< youtube "G7u_KuvKK24" >}}
+
+Or a race lap instead of qualifying:
+
+```sh
+make data-f1-telemetry F1_YEAR=2024 F1_ROUND=8 F1_DRIVER=LEC F1_SESSION=R                                          
+make render-f1-telemetry F1_YEAR=2024 F1_ROUND=8 F1_DRIVER=LEC F1_SESSION=R
+# → renders/f1-telemetry-2024-r8-LEC-R.mp4 
+```
+
+Its surprising that the rendering goes faster than the original matplotlib one!
+
+{{< youtube "G7u_KuvKK24" >}}
+
+
+```sh
+# Monaco tends to be interesting — tight circuit, lots of ERS deployment zones                                     
+make data-f1-clipping F1_YEAR=2024 F1_ROUND=8                                 
+make render-f1-clipping-short F1_YEAR=2024 F1_ROUND=8                                                              
+# → renders/f1-clipping-2024-r8-Q.mp4  
+```
+
+{{< youtube "G7u_KuvKK24" >}}
+
+```sh
+make data-f1-championship && make render-f1-championship 
+```
+
+{{< youtube "G7u_KuvKK24" >}}
+
+
+
+```sh
 
 ```
+
+{{< youtube "G7u_KuvKK24" >}}
+
 
 
 
@@ -453,6 +566,15 @@ Now you have three options: [everything as a code](https://jalcocert.github.io/J
 3. NEW: Use...remotion to create videos as a code based on your existing code base!
 
 Now clear yet on the how to?
+
+Its all about having the right SKILLS
+
+<!-- 
+https://www.youtube.com/watch?v=BC4xJzNqutc 
+-->
+
+{{< youtube "BC4xJzNqutc" >}}
+
 
 You dont have to run anywhere to make your dream project.
 

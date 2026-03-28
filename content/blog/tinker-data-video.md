@@ -18,7 +18,7 @@ Does this count as one of those things that you do *even if nobody pays you*?
 
 **Intro**
 
-This is going to be a Python master class.
+This is going to be a [Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) master class.
 
 Or a sneek into the future on how cheap*er* information will be.
 

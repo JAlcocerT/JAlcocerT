@@ -344,6 +344,8 @@ Only that this time, than with python, not with Matlab:
 
 {{< youtube "0CLNWADDrtY" >}}
 
+When you are done, it generates this historical data of the path you followed:
+
 ![alt text](/blog_img/mechanics/simulation_results_bicycle.png)
 
 

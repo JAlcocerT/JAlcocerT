@@ -9,13 +9,13 @@ url: 'about-powerbi-and-fabric'
 
 **TL;DR**
 
-Havent done PowerBi dashboards yet?
+Havent done any PowerBi dashboards yet?
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PBi" title="PowerBI DAX/M Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Some useful DAX and M formulas - Source Code on Github" >}}
 {{< /cards >}}
 
-Well...agents are coming.
+Well...agents are coming to do it for you.
 
 **Intro**
 
@@ -320,7 +320,7 @@ WHERE table_name = '_dora_csr_metric_details';
 
 * **Gateways** act as a secure bridge that allows the Power BI cloud service to "reach back" into your private network to refresh data from on-premises databases like MySQL.
 
-## PBIX vs PBIP vs PBIT
+### PBIX vs PBIP vs PBIT
 
 You like things as code, right?
 

@@ -1,6 +1,6 @@
 ---
 title: "Spring is here, so are weddings"
-date: 2026-03-28
+date: 2026-03-29
 draft: false
 tags: ["RoadMap26","SlubneChwile","DRIP","Google Stitch"]
 description: 'The . With inspiring apps.'
