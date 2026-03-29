@@ -241,7 +241,7 @@ Ideas for Readme's - https://github.com/STJRush/handycode/tree/master/Raspi%20Pi
 <https://picockpit.com/raspberry-pi/everything-about-the-raspberry-pi-pico/>
 
 
-The chip: RP2040
+The chip: `RP2040`
 
 ```sh
 lsusb #Bus 003 Device 010: ID XYZ MicroPython Board in FS (File System) mode
@@ -277,7 +277,7 @@ import mip
 mip.install(PACKAGE_NAME, index="https://USERNAME.github.io/micropython-lib/mip/BRANCH_NAME")
 ```
 
-<https://micropython.org/download/rp2-pico-w/rp2-pico-w-latest.uf2>
+* <https://micropython.org/download/rp2-pico-w/rp2-pico-w-latest.uf2>
 
 unplug usb and plug
 
@@ -295,12 +295,15 @@ To install libraries, i have observed that recently **upip has been depricated i
 
 #### Testing the Raspberry Pi Pico W
 
+<!-- <https://www.youtube.com/watch?v=_ouzuI_ZPLs> -->
+
+{{< youtube "_ouzuI_ZPLs" >}}
+
 {{% details title="PicoW - Blinking Led Example with MicroPython 🚀" closed="true" %}}
 
 
 The led is the pin 25 as per the schema
 
-<https://www.youtube.com/watch?v=_ouzuI_ZPLs>
 
 Run -> Configure Interpreter -> Interpreter -> MicroPython (Raspberry Pi Pico)
 
@@ -332,12 +335,16 @@ while True:
 {{% /details %}}
 
 
+<!-- <https://www.youtube.com/watch?v=PYOaO1yW0rY> -->
+
+* <https://pypi.org/project/machine/>
+
+
+{{< youtube "PYOaO1yW0rY" >}}
+
 
 {{% details title="PicoW - Reading internal temp sensor with MicroPython 🚀" closed="true" %}}
 
-<https://www.youtube.com/watch?v=PYOaO1yW0rY>
-
-<https://pypi.org/project/machine/>
 
 ```py
 import machine
@@ -353,11 +360,14 @@ while True:
 
 {{% /details %}}
 
+{{< youtube "GiT3MzRzG48" >}}
+
+<!-- <https://www.youtube.com/watch?v=GiT3MzRzG48> -->
+
 
 {{% details title="Connecting the Pico to Wifi 🚀" closed="true" %}}
 
 
-<https://www.youtube.com/watch?v=GiT3MzRzG48>
 
 
 ```py
@@ -400,9 +410,12 @@ Name the file different than `main.py` to avoid the automatic execution.
 
 ### Temperature Sensors with Pi Pico
 
-https://www.youtube.com/watch?v=eNF3X3D0cH4
+<!-- https://www.youtube.com/watch?v=eNF3X3D0cH4 -->
 
-https://github.com/neeraj95575/Temperature-sensor-connect-to-raspberry-pi-pico
+{{< youtube "eNF3X3D0cH4" >}}
+
+
+* https://github.com/neeraj95575/Temperature-sensor-connect-to-raspberry-pi-pico
 
 
 ---
@@ -721,10 +734,10 @@ void loop() {
 }
 ```
 
+{{% /details %}}
+
 <https://www.youtube.com/watch?v=Q2HL8rwZ20A>
 
-
-{{% /details %}}
 
 
 {{< callout type="info" >}}
@@ -854,7 +867,9 @@ Thats really on the edge to power a Pi4.
 
 But...microcontrollers do.
 
-Even two of them at the same time.
+Even two of them (ESP32) at the same time.
+
+Just really, dont try with a Pi4.
 
 ### Interesting IoT Resources
 
@@ -866,7 +881,10 @@ Even two of them at the same time.
 
 ESP32 GPIO pins in real-time with **AWS API Gateway WebSockets**
 
-<https://www.youtube.com/watch?v=z53MkVFOnIo>
+<!-- <https://www.youtube.com/watch?v=z53MkVFOnIo> -->
+
+{{< youtube "z53MkVFOnIo" >}}
+
 
 - PlatformIO project with ESP32 WebSocket Client (C/C++)
 - Serverless Framework project utilizing AWS API Gateway WebSockets, AWS Lambda, and AWS DynamoDB to handle the communication between clients (TypeScript)
@@ -878,4 +896,6 @@ If you are into websites...
 
 Be aware that the ESP32 could potentially be your **small webserver**
 
-* <https://www.youtube.com/watch?v=Ra3iWgOfveQ>
+<!-- * <https://www.youtube.com/watch?v=Ra3iWgOfveQ> -->
+
+{{< youtube "Ra3iWgOfveQ" >}}

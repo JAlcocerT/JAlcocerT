@@ -428,6 +428,8 @@ make render-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=ALO #generated in ~1m
 
 {{< youtube "QiTwSpgumwQ" >}}
 
+Crazy [how far from mercedes](https://youtu.be/KVzzp4NHR50) they are.
+
 Or a race lap instead of qualifying:
 
 ```sh
@@ -495,10 +497,51 @@ As long as you have your video at `./public`, remotion can do the trick
 make data-gopro        # re-extract (already done) 
 make render-gopro      # → renders/gopro-hud-GH030417.mp4                                                                                                                                                                                   
 # Different video:                                                                                                                                                                                                                          
-make data-gopro GOPRO_VIDEO=public/GX010001.MP4 GOPRO_LAP_START=8.0
+make data-gopro GOPRO_VIDEO=public/GH020417.MP4 GOPRO_LAP_START=49.5
 make render-gopro GOPRO_VIDEO=public/GX010001.MP4  
 ```
 
+Not bad for being a copy of the matplotlib (not the Go desktop one):
+
+<!-- https://youtu.be/it1D1qqWMfA -->
+
+{{< youtube "it1D1qqWMfA" >}}
+
+
+> PS: Im in love with the **deceleration zones** idea
+
+ it's a resource configuration problem. Here's the full picture:                                                                                                                                              
+                                                                                                                                                                                                                                            
+  Why it failed by default:                                                                                                                                                                                                                   
+  - Remotion spawns 8 Chrome instances in parallel (concurrency=8)                                                                                                                                                                            
+  - Each Chrome instance decodes the 4K video frame-by-frame into a raw pixel buffer                                                                                                                                                          
+  - 4K frame = 3840×2160×3 bytes = ~25 MB per frame in RAM                                                                                                                                                                                  
+  - 8 instances × multiple buffered frames = Chrome exhausting available memory mid-render                                                                                                                                                    
+                                                                                                                                                                                                                                              
+  How to use 4K natively with Remotion:                                                                                                                                                                                                       
+                                                                                                                                                                                                                                              
+  1. Reduce concurrency — --concurrency=1 or --concurrency=2 keeps RAM usage manageable:                                                                                                                                                      
+  npx remotion render GoProHud out.mp4 --concurrency=1                                                                                                                                                                                        
+  1. Works fine, just slower (8–10× slower than the default).                                                                                                                                                                                 
+  2. More RAM — If your machine had 32+ GB RAM, concurrency=8 with 4K would work. At 14 GB with 8 GB already used, you were left with ~6 GB free, which isn't enough for 8 concurrent 4K decoders.                                            
+  3. Render at native 4K composition size — Set width={3840} height={2160} in Root.tsx, keep concurrency=1. Remotion handles it; Chrome just needs the RAM headroom.                                                                          
+                                                                                                                                                                                                                                              
+  The pre-transcode approach we used is actually the right choice for this specific case:                                                                                                                                                     
+  - The HUD canvas is 1920×1080 — rendering a 4K background into a 1080p output gives you zero visual benefit                                                                                                                                 
+  - The transcoded clip also encodes faster and produces a smaller output file                                                                                                                                                                
+                                                                                                                                                                                                                                            
+  TL;DR: 4K + Remotion works, but requires either --concurrency=1 or enough RAM (32 GB+) for parallel instances. For a 1920×1080 HUD composition, downscaling to 1080p before rendering is the right call regardless. 
+
+```sh
+npx remotion render GoProHudB renders/gopro-hud-GH020417.mp4 --concurrency=2                                                                                                                                                           
+#GOPRO_VIDEO=public/GX010001.MP4 GOPRO_LAP_START=8.0
+#npx remotion render GoProHud out.mp4 --concurrency=2
+```
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 #### Mechanisms x RemotionJS
 
@@ -546,6 +589,18 @@ Phase 2 — runs through the simulation again with both layers simultaneously:
 - Link gradients switch to the acceleration palette                                      
 - Trail colour flips to acceleration                                                                                                                                                                                                        
 - HUD shows both m/s and m/s² readouts per tracked point       
+
+```sh
+#sudo apt update && sudo apt install ffmpeg
+ls *.mp4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
+#ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
+```
+
+<!-- https://youtu.be/cFHyobRjcK0 -->
+
+{{< youtube "cFHyobRjcK0" >}}
+
 
 Remotion has integration with https://www.remotion.dev/docs/videos/as-threejs-texture
 
@@ -693,4 +748,6 @@ https://www.youtube.com/watch?v=MAhkbZHcbLA
 
 1. Matplotlib ~~plotly~~ - Because its more custom and quicker than you thought
 
-2. 
+2. The Python cadquery and then blender flow
+
+3. Now...apparently remotionJS!

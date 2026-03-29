@@ -15,6 +15,7 @@ The bar to create *slop* is lower than ever.
 **Intro**
 
 Can we generate mass produced & quality information content?
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}

@@ -59,7 +59,7 @@ Curious about CV, but dont have this kind of dron yet?
 A **Pi camera** its about ~5$, much more affordable way to enter the computer vision world!
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/" title="Pi Camera" image="/blog_img/hardware/iot/pi-cam.jpg" subtitle="Try OpenCV and yolov8 with the Pi!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/" title="Pi Camera" image="/blog_img/iot/pi-cam.jpg" subtitle="Try OpenCV and yolov8 with the Pi!" >}}
   {{< card link="https://jalcocert.github.io/RPi/posts/getting-started/" title="Raspberry 101" image="/blog_img/hardware/wifi_eth.jpg" subtitle="Get started with a RPi" >}}
 {{< /cards >}}
 
@@ -76,6 +76,8 @@ A **Pi camera** its about ~5$, much more affordable way to enter the computer vi
       *  A Free Demo alternative is [this one](https://play.google.com/store/apps/details?id=com.volatello.tellofpv.demo)
 
 ### How to Control DJI Tello with Python
+
+Testing to control the dji dron with my laptop:
 
 {{< youtube "JQQcfHeGaTM" >}}
 

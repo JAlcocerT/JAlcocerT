@@ -16,6 +16,11 @@ https://www.youtube.com/watch?v=tYg6T_DAP-k
 
 {{< youtube "tYg6T_DAP-k" >}}
 
+When was the last time you saw the fight club, matrix or Mr robot?
+
+a copy of a copy of a copy of a copy
+
+single serving things
 
 **Intro**
 

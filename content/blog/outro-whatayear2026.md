@@ -786,6 +786,8 @@ Just that the focus this year has been stability.
 
 Specially around nextcloud for the family
 
+The crucial P3 Plus nvme with up to 5000mb/s is doing good. I got a 1tb samsung 870 qvo as SO drive with up to 560mb/s
+
 I kept enjoying termix and since recently, also tmux:
 
 ```sh

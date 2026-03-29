@@ -1,8 +1,8 @@
 ---
 title: "Whats an FPV?"
-date: 2027-12-31T23:20:21+01:00
+date: 2026-12-31T23:20:21+01:00
 draft: true
-tags: ["Tinkering","Ardupilot vs ","DJi Tello"]
+tags: ["Tinkering","Ardupilot vs pymavlink vs dronekit","DJi Tello"]
 description: Drone.
 url: 'fpv-programming'
 ---
@@ -112,6 +112,8 @@ Its open-source nature and extensive configurability have made it the go-to choi
 There are other open-source flight controller firmware options besides Betaflight, although Betaflight is by far the most popular.  Here are a few notable alternatives:
 
 * **ArduPilot:** This is a very powerful and versatile open-source autopilot software suite. It's often used on larger drones, autonomous vehicles, and even planes and rovers. ArduPilot is known for its advanced features, including GPS navigation, waypoint following, and support for a wide range of hardware.  It's more complex to configure than Betaflight, making it less common for smaller racing or freestyle drones.
+
+https://github.com/Ardupilot/ardupilot
 
 * **INAV:**  INAV is a fork of Betaflight that focuses on navigation and autonomous flight.  It's particularly well-suited for long-range flights and missions where GPS functionality is important.  While it can be used for acro, its strength lies in its navigation capabilities.
 
