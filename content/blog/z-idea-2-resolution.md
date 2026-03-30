@@ -1,6 +1,6 @@
 ---
 title: "From Idea to Resolution"
-date: 2026-03-28T07:00:21+01:00
+date: 2026-03-30T07:00:21+01:00
 draft: false
 tags: ["Unit Economics 201","Prompts x Requirements x EAyP v3"]
 description: 'Faster and better or obsolete. DevOps x DORA x Apache DevLake.'
@@ -45,7 +45,11 @@ given the pbip exported files and the data-lineage.md, can you put together a da
 
 The productivity change [and learnings](#what-i-have-shipped) has been massive.
 
-Who could have guessed, the more repetitions you do, the more architecture you understand and the more predictable things become.
+Who could have guessed: the more repetitions you do
+
+the more architecture you understand
+
+and the more predictable things become
 
 ![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
 
@@ -83,7 +87,9 @@ flowchart LR
 
 Because with repetitions you go from a *so so* [vibed coded web/app](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps) to others that can really impress.
 
-2. Where are you bringing value? Net Profit and the value equation
+2. Where are you bringing value? 
+
+Net Profit and the value equation
 
 $$
 P \times V \times GM \times OM \times IF \times T
@@ -141,7 +147,7 @@ flowchart LR
     L3 --> L4
 ```
 
-Yea, avoid the 80% of clients that will give you the most headaches and pay the least.
+Yea, avoid the 80% of clients that will give you the most headaches while paying the least.
 
 4. Value is subjective: *for you, your time is not a commodity, your client money is*.
 
@@ -263,11 +269,18 @@ git clone /slubnechwile
 #entreagujaypunto eaypv3
 ```
 
-Some videos...
+Some videos...specially after the mech and remotion tinker sessions:
 
 ```sh
 
 ```
+
+Among all of them, I think that instead of doing mass produced via matplotlib or a remotion one script sizes all...
+
+its better to take the ~~effort~~ tokens and ask claude code for specific comments of what we are visualizing: *like this example with gold*
+
+{{< youtube "TZUTe7s11-I" >}}
+
 
 Let it be CC + nanobanana
 
