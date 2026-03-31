@@ -11,22 +11,26 @@ math: true
 
 <!-- engine starting
 https://www.youtube.com/shorts/mzWr2ZGf7OU
+
 https://www.youtube.com/watch?v=gmV4qwLfOMY
 derivatives
+
 The Trillion Dollar Equation
 https://www.youtube.com/watch?v=A5w-dEgIU1M
  -->
 
-<!-- 
-<https://www.youtube.com/watch?v=ABzKNvJCl28>
-<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html>
-<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html> -->
+
 <!-- 
 https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
 
 **TL;DR**
 
 Some [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/), [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/), physics put together to create.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
+{{< /cards >}}
 
 **Intro**
 

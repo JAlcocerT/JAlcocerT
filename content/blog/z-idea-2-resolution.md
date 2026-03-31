@@ -287,7 +287,7 @@ Among all of them, I think that instead of doing mass produced via matplotlib or
 
 its better to take the ~~effort~~ tokens and ask claude code for specific comments of what we are visualizing: *like this example with gold*
 
-{{< youtube "TZUTe7s11-I" >}}
+{{< youtube "hTz2J4EgNOs" >}}
 
 
 Let it be CC + nanobanana
@@ -547,7 +547,7 @@ However, MTTR is replaced by Failed Deployment Recovery Time from the 2023 DORA 
 
 This metric measures the finish time of a deployment to the resolution of the incident caused by the deployment.
 
-https://devlake.apache.org/assets/images/dora-intro-e3847646d8dbe47220e6c8347ab14f7b.png
+* https://devlake.apache.org/assets/images/dora-intro-e3847646d8dbe47220e6c8347ab14f7b.png
 
 DevLake: Incubating Apache project for SDLC metrics (e.g., DORA), data ingestion/visualization from dev tools; uses Go, Grafana; no relation to big data storage.
 
@@ -561,7 +561,7 @@ Delta Lake: Open-format (Databricks-led, Apache-compatible via Spark) for ACID t
 | **Change Failure Rate**  | % of deploys causing failures    | 0-15%                           |
 | **Time to Restore**     | MTTR from failure                | <1 hour                         |
 
-### Argo and Jenkins?
+#### Argo and Jenkins?
 
 If you care enough about DORA, speed stability, doing more for your clients...
 

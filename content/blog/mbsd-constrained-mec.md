@@ -340,16 +340,20 @@ $$T = \sum_i \left(\frac{1}{2}m_i v_{cm,i}^2 + \frac{1}{2}I_i \omega_i^2\right)$
 - **Potential Energy V**: Comes from the *center of mass* height in gravity field, plus any other potential fields
 $$V = \sum_i m_i g h_{cm,i} + V_{springs}$$
 
-So **yes, always center of gravity** (center of mass). This is not a choice—it's the only systematic way that works for rigid bodies.
+So **yes, always center of gravity** (center of mass).
+
+This is not a choice—it's the only systematic way that works for rigid bodies.
 
 #### What the Computer Does
 
 Once you've defined:
+
 1. Which generalized coordinates to use
 2. The mass and inertia of each body
 3. The constraints (if any)
 
 Then the computer can:
+
 1. Express T and V in terms of your coordinates
 2. Compute the Lagrangian L = T - V symbolically
 3. Apply Euler-Lagrange to get the differential equations automatically
@@ -368,7 +372,9 @@ At the cost of having to resolve more coordinates *and equations*.
 
 #### What Makes an Equation an "Equation of Motion"?
 
-An equation of motion is any differential equation that describes how a system evolves in time. More specifically:
+An equation of motion is any differential equation that describes **how a system evolves in time**.
+
+More specifically:
 
 **1st order**: $\frac{dx}{dt} = f(x, t)$ (velocity defined by position)
 

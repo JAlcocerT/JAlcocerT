@@ -2,9 +2,9 @@
 title: "Flat > Boxer"
 date: 2026-04-11T23:20:21+01:00
 draft: false
-tags: ["DA","Career","Volumetric Efficiency"]
+tags: ["MBSD","Career","Volumetric Efficiency","Holonomic vs Non Holonomic Constrains"]
 description: 'Comparing two popular engines'
-url: 'flat-boxer-simulation'
+url: 'flat-versus-boxer-simulation'
 ---
 
 **Tl;DR**
@@ -30,3 +30,7 @@ flat are v at 180 degrees that share crank pin, but boxer have different crank p
 
 
 VE map - https://www.tactrix.com/index.php?option=com_content&view=category&layout=blog&id=36
+
+### Holonomic vs Non Holonomic Constrains
+
+

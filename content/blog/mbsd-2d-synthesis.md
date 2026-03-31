@@ -16,6 +16,11 @@ Infinitely rigid solid is a huge constrain.
 
 How can you create a mechanism that passes at certain points?
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
+{{< /cards >}}
+
 And that it will be able to turn and *doesnt break*?
 
 ```sh
@@ -58,6 +63,10 @@ Ive been tinkering back :)
 
 ## Conclusions
 
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
 ### I want a mech that does A, B and C
 

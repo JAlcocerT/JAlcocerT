@@ -1,8 +1,8 @@
 ---
 title: "Inline 4 Engines: Balance and Vibrations"
-date: 2026-04-04T06:20:21+01:00
+date: 2026-04-01T06:20:21+01:00
 draft: false
-tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","MBSD"]
+tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","MBSD x Remotion"]
 description: 'Understanding the most popular engine once and for all.'
 url: 'inline-4-engine-balance'
 math: true
@@ -21,8 +21,10 @@ Getting right the slider-crank mechanism (2D) via MBSD to later form a 3D ICE I4
 
 **Intro**
 
-Some time ago I recorded this video in a restaurant:
 
+
+<https://www.youtube.com/watch?v=ABzKNvJCl28>
+<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html>
 
 
 $$
@@ -46,15 +48,54 @@ This channel has awsome [videos explaining engine balance](#about-engine-balance
 I just wanted to create my engine balance simulations as proof:
 
 ```sh
-git clone
+#git clone https://github.com/JAlcocerT/mbsd
 cd ./mbsd
-
 ```
+
+You might do this without a mbsd framework like the one ive built.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
+{{< /cards >}}
+
+Just...make the magic of the model and equation happen.
+
+You got x4 slider-cranks connected to a common axis
+
+{{< youtube "cFHyobRjcK0" >}}
+
+So you can model it as one axis that receives variable forces (the reaction ones that makes the crank stay in position) over time as it rotates
+
+```sh
+cd ./mbsd/2D-Dynamics
+make run-slider-crank-no-gravity
+```
+
+{{< youtube "iNl3s09BLoA" >}}
+
+
+### Inline 4
+
+
+After all of this modelling: how about visualizing?
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="Remotion Video | Repo" icon="github" >}}
+{{< /cards >}}
+
+
 
 ---
 
 ## Conclusions
 
+
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+{{< /cards >}}
 
 <!-- https://www.youtube.com/watch?v=qYTguJ_fWmA -->
 
@@ -70,16 +111,20 @@ https://www.youtube.com/watch?v=vzM_-Rr5mtw
 
 ### About Engine Balance
 
-<!-- 
-video insights
-can you summarize this video? https://www.youtube.com/watch?v=mTS48jX68YU&t=82s
+{{< youtube "mTS48jX68YU" >}}
+
+
+<!-- can you summarize this video? https://www.youtube.com/watch?v=mTS48jX68YU&t=82s -->
+
 Then provide a summary and pros and cons of the balance of each engine type discussed
 
 The video titled "ENGINE BALANCE: Inline 6 vs. V6 vs. VR6 vs. Flat / Boxer 6" discusses the engine balance, strengths, and weaknesses of four popular six-cylinder engine configurations: the inline six, the V6, the VR6, and the flat six.
 
 Here are the summaries and pros and cons of each engine type discussed:
 
-Inline 6: This engine configuration is simple and balanced. It only needs one cylinder head, one or two cams, and one exhaust manifold. However, its length is a downside as it's difficult to fit transversely in an engine bay. It's hard to fault the inline six other than its length.
+Inline 6: This engine configuration is simple and balanced. 
+
+It only needs one cylinder head, one or two cams, and one exhaust manifold. However, its length is a downside as it's difficult to fit transversely in an engine bay. It's hard to fault the inline six other than its length.
 
 Pros: Simple design, beautifully balanced, even firing interval.
 Cons: Its length makes it difficult to fit in some engine bays.
@@ -95,7 +140,9 @@ Flat / Boxer 6: The flat six, or more accurately a boxer six, is perfectly balan
 
 Pros: Perfectly balanced, light crankshaft, rev-happy engine.
 Cons: Most complex engine configuration, difficult to package due to its width, most expensive and complex engine to manufacture.
-In conclusion, each engine type has its own strengths and weaknesses. The inline six is simple and balanced but long, the V6 is compact but less balanced, the VR6 is a compact and simpler version of a V6 but not as simple as an inline six, and the flat/boxer six is perfectly balanced and light but complex and wide. -->
+In conclusion, each engine type has its own strengths and weaknesses. The inline six is simple and balanced but long, the V6 is compact but less balanced, the VR6 is a compact and simpler version of a V6 but not as simple as an inline six, and the flat/boxer six is perfectly balanced and light but complex and wide. 
+
+
 
 
 #### Primary Balance
@@ -103,6 +150,11 @@ In conclusion, each engine type has its own strengths and weaknesses. The inline
 #### Secondary Balance
 
 Blame it to ~~the boogie~~ Archimedes.
+
+Some time ago I recorded this video in a restaurant:
+
+{{< youtube "hTz2J4EgNOs" >}}
+
 
 
 ---
@@ -120,5 +172,3 @@ You have ~2007 units for ~10k$ as shown [here](https://www.youtube.com/watch?v=5
 {{< /cards >}}
 
 Im well aware that some people do cool stuff on the tracks with their bmw (BMW e86).
-
-### Holonomic vs Non Holonomic Constrains

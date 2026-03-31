@@ -39,6 +39,10 @@ Specially: [Claude...](https://www.anthropic.com/news/claude-opus-4-6)
 ### Other High Signal Videos
 
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="DataInMotion | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Remotion | Repo" icon="github" >}}
+{{< /cards >}}
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/karting/long_g_trace_L4.png" subtitle="Post with animated F1, Real Estate, yfinance..." >}}

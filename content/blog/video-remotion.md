@@ -278,7 +278,9 @@ https://youtu.be/OL5UQaZc97E -->
 
 The big insight: entry price matters as much as dividend growth
 
-O and TROW were cheap in 2000 and bought many more shares, which amplified every subsequent dividend raise :)
+O and TROW were cheap in 2000 and bought many more shares
+
+which amplified every subsequent dividend raise :)
 
 {{< youtube "G7u_KuvKK24" >}}
 <!-- https://youtube.com/shorts/G7u_KuvKK24 -->
@@ -604,7 +606,7 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original aud
 
 Remotion has integration with https://www.remotion.dev/docs/videos/as-threejs-texture
 
-Which I have been convering recently for the 2D simulator.
+Which I have been convering recently for the [2D simulator](https://jalcocert.github.io/JAlcocerT/2d-mbsd/).
 
 And also...
 
