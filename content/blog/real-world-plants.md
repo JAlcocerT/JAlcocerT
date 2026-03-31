@@ -2,7 +2,7 @@
 title: "Plants IRL"
 date: 2026-04-15
 draft: false
-tags: ["Outro","Real World","Solar"]
+tags: ["Outro","Real World","Solar","Tinkering IRL"]
 description: 'How to '
 url: 'plants-101'
 ---
@@ -83,7 +83,9 @@ Why not trying sth in the real world?
 
 ## FAQ
 
-You have a great selection there! You’ve essentially bought a "Relaxation and Refreshment" starter kit. Since you are in Poland, the timing for these is perfect as we head into spring.
+You have a great selection there! You’ve essentially bought a "Relaxation and Refreshment" starter kit.
+
+Since you are in Poland, the timing for these is perfect as we head into spring.
 
 Here is a breakdown of what you have and how to handle them:
 

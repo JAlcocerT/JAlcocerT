@@ -344,14 +344,23 @@ Fast and lightweight DNS proxy as ad-blocker for local network with many feature
 
 PiHole + Wireguard - https://www.youtube.com/watch?v=R29YBmYxXAk
 
-https://www.youtube.com/watch?v=-5Fwyl73C7g
+{{< youtube "R29YBmYxXAk" >}}
+
+
+<!-- https://www.youtube.com/watch?v=-5Fwyl73C7g -->
+
+{{< youtube "-5Fwyl73C7g" >}}
+
 
 
 ### Stubby DNS
 
 DNS over TLS
 
-* https://www.youtube.com/watch?v=VCTiR_Ny4Sc
+<!-- * https://www.youtube.com/watch?v=VCTiR_Ny4Sc -->
+
+{{< youtube "VCTiR_Ny4Sc" >}}
+
 
 
 ### DNSCrypt
@@ -364,19 +373,33 @@ DNS over TLS
 
 * https://hub.docker.com/r/ubuntu/bind9#!
 
-https://www.youtube.com/watch?v=4IuNKK2y49s
+<!-- https://www.youtube.com/watch?v=4IuNKK2y49s -->
+
+{{< youtube "4IuNKK2y49s" >}}
+
 
 > CÓMO configurar tu DNS - Configuración de BIND [Parte 1]
 
 
-https://www.youtube.com/watch?v=syzwLwE3Xq4
+<!-- https://www.youtube.com/watch?v=syzwLwE3Xq4 -->
 
-https://www.youtube.com/watch?v=syzwLwE3Xq4&t=745s
+{{< youtube "syzwLwE3Xq4" >}}
+
+
+<!-- {{< youtube "syzwLwE3Xq4" >}} -->
+
+<!-- https://www.youtube.com/watch?v=syzwLwE3Xq4&t=745s -->
+
 > You want a real DNS Server at home? (bind9 + docker)
 
 ### CoreDNS
 
-It is great for Docker: https://www.youtube.com/watch?v=tE9YjEV1T4E
+It is great for Docker: 
+
+<!-- https://www.youtube.com/watch?v=tE9YjEV1T4E -->
+
+{{< youtube "tE9YjEV1T4E" >}}
+
 
 ```sh
 ip route | grep default #see your CM/GW

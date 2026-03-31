@@ -2,7 +2,7 @@
 title: "IoT x Plants IRL"
 date: 2026-04-15
 draft: false
-tags: ["Outro","Real World","Solar","IoT"]
+tags: ["Outro","Real World","Solar","IoT","Tinkering IRL"]
 description: 'Plants, IoT  and future plans.'
 url: 'plants-102-and-iot'
 ---

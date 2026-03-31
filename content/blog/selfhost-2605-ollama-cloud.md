@@ -224,6 +224,8 @@ print(llm.complete("What is a vector database?"))
 
 ## Conclusions
 
+Ollama with [the mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) has been interesting
+
 ```sh
 sudo docker compose -f 2605_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
 ```

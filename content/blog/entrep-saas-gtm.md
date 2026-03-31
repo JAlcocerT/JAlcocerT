@@ -1248,7 +1248,9 @@ You can use this simple logic to show them the value:
 id like to understand more the TSL business, its tail winds and its pain points
 ```
 
-To master the TSL (Transport, Shipping, Logistics) sector in 2026, you have to understand that it is currently a "pressure cooker." It’s an industry squeezed by extreme costs but simultaneously being pulled into a new golden age of **Nearshoring**.
+To master the TSL (Transport, Shipping, Logistics) sector in 2026, you have to understand that it is currently a "pressure cooker."
+
+It’s an industry squeezed by extreme costs but simultaneously being pulled into a new golden age of **Nearshoring**.
 
 Here is the breakdown of the current Tailwinds and Pain Points for a mid-sized Polish TSL company.
 

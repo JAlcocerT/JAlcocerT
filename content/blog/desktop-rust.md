@@ -3,13 +3,14 @@ title: "Desktop Apps with RUST"
 date: 2026-05-16
 draft: false
 tags: ["Rust x Vue","RemotionJS"]
-description: 'Using Rust instead of CustomTkinter and GoLang Wails.'
+description: 'Using Rust Tauri instead of CustomTkinter and GoLang Wails.'
 url: 'desktop-apps-with-rust'
 ---
 
 
 **Tl;DR**
 
+From [Go](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/) and Python to Rust desktop apps
 
 **Intro**
 
@@ -21,12 +22,19 @@ A collection of stupid ideas that I just do to test AI models.
 
 ## Rust vs Go for Desktop
 
-For **Rust**, the equivalent to Wails is **Tauri**. In 2026, Tauri 2.0 is the industry standard for combining a Rust backend with a Vue frontend.
+For **Rust**, the equivalent to Wails is **Tauri**. 
 
-While Wails feels like "Go with a web UI," Tauri feels like "a secure Rust core that happens to have a web UI." The workflow is almost identical to what you’ve seen with Go, but the folders and commands change slightly.
+In 2026, Tauri 2.0 is the industry standard for combining a Rust backend with a Vue frontend.
+
+While Wails feels like "Go with a web UI," Tauri feels like "a secure Rust core that happens to have a web UI." 
+
+The workflow is almost identical to what you’ve seen with Go, but the folders and commands change slightly.
 
 1. The Quick Start (The "Tauri" Way)
-To scaffold a Rust + Vue project, you use the `create-tauri-app` utility. It handles all the boilerplate for you.
+
+To scaffold a Rust + Vue project, you use the `create-tauri-app` utility.
+
+It handles all the boilerplate for you.
 
 ```bash
 # 1. Start the interactive wizard

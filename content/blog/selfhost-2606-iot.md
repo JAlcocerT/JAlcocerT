@@ -1,8 +1,8 @@
 ---
 title: "[Learning] Selfhosted IoT x HA"
-date: 2026-04-15
+date: 2026-06-15
 draft: false
-tags: ["Home Assistant","Sonoff x Zigbee","Solar Panel"]
+tags: ["Home Assistant","Sonoff x Zigbee","Solar Panel","Tinkering IRL"]
 description: 'IoT.'
 url: 'iot-home-lab-tools'
 ---
@@ -49,7 +49,10 @@ emqx
 
 There has been few releases since the last time:
 
-https://www.youtube.com/watch?v=QwCR0h8_KyE
+<!-- https://www.youtube.com/watch?v=QwCR0h8_KyE -->
+
+{{< youtube "QwCR0h8_KyE" >}}
+
 
 https://github.com/homeassistant-ai/ha-mcp/
 

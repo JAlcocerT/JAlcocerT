@@ -283,7 +283,9 @@ Comparison Table: Motion Types
 
 You can demonstrate it step by step:
 
-https://youtu.be/EhOl9Uh_nyw?t=83
+{{< youtube "EhOl9Uh_nyw" >}}
+
+<!-- https://youtu.be/EhOl9Uh_nyw?t=83 -->
 
 Or...simulate it: *under the hood its just same hypothesis and equations*
 

@@ -235,7 +235,7 @@ I mean, we can provide images as prompts!
 
 Can we do such animations with blender?
 
-https://youtu.be/58C8dWL36GM
+<!-- https://youtu.be/58C8dWL36GM -->
 
 {{< youtube "58C8dWL36GM" >}}
 
@@ -280,7 +280,7 @@ It's one of the most comprehensive open-source animation suites available, offer
 
 ## Blender API - With Python
 
-* https://www.youtube.com/watch?v=cyt0O7saU4Q&list=PLFtLHTf5bnym_wk4DcYIMq1DkjqB7kDb-
+<!-- * https://www.youtube.com/watch?v=cyt0O7saU4Q&list=PLFtLHTf5bnym_wk4DcYIMq1DkjqB7kDb- -->
 
 {{< youtube "cyt0O7saU4Q" >}}
 
@@ -391,7 +391,11 @@ If you want your agent to produce **manufacturable, professional-grade parts**, 
 
 I saw recently this video:
 
-https://www.youtube.com/watch?v=8n7LfHpgn2M
+<!-- 
+https://www.youtube.com/watch?v=8n7LfHpgn2M 
+-->
+
+{{< youtube "8n7LfHpgn2M" >}}
 
 
 And could not resist to try that with the 2D mechanism that I have ready in Python.

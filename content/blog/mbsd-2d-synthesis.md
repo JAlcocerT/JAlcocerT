@@ -2,7 +2,7 @@
 title: "2D Mechanism Synthesis"
 date: 2026-03-25
 draft: false
-tags: ["MBSD x 2D Simulation","Grashof"]
+tags: ["MBSD x 2D Simulation","Grashof","Mechanical Synthesis"]
 description: 'Which mechanism can do what?'
 url: '2d-mechanism-synthesis'
 math: true
@@ -26,12 +26,18 @@ cd ./mbsd/2D-Synthesis
 
 Synthesis has always been a thing...
 
-https://youtube.com/shorts/9b19b7SmovU
+<!-- https://youtube.com/shorts/9b19b7SmovU -->
+
+{{< youtube "9b19b7SmovU" >}}
+
+<!-- https://youtube.com/shorts/ipi437M6g5A -->
+
+{{< youtube "ipi437M6g5A" >}}
+
+<!-- https://youtube.com/shorts/r8G3XRBn24s?is=sDOxquD4fxU6yKns -->
 
 
-https://youtube.com/shorts/ipi437M6g5A
-
-https://youtube.com/shorts/r8G3XRBn24s?is=sDOxquD4fxU6yKns
+{{< youtube "r8G3XRBn24s" >}}
 
 I just have not been focusing on mechanism for long time.
 

@@ -287,7 +287,9 @@ and its code https://github.com/kleberandrade/evolve-kart-unity
 
 ### Taylor vs Splines?
 
-Are theused splines polynomials? Like Taylor series?
+Are the used splines polynomials? 
+
+Like Taylor series?
 
 Yes, but different!
 

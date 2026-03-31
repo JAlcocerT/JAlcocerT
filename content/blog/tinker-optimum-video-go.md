@@ -216,16 +216,11 @@ Since both use web technologies for the UI, the choice usually comes down to the
 * **Wails (Go + Vue):** Use this if you want **maximum development speed**. Go is much easier to write than Rust, and the "glue" between the UI and the backend is more automated in Wails.
 * **Tauri (Rust + Vue):** Use this if you need **maximum security and performance**. Rust offers finer control over memory and slightly smaller binaries, but it will take you longer to write the code.
 
-### Summary
-If you already know a bit of Vue, **Wails is likely your best path**. It turns Go into a "super-powered" backend for your web skills, allowing you to ship a single, professional `.exe` or `.app` file that feels native to the user.
+Summary
 
-**Would you like me to provide a quick "Getting Started" command to scaffold a new Go + Vue project so you can see the folder structure?**
+If you already know a bit of Vue.js frontend, **Wails is likely your best path**. 
 
-[Building a Desktop App in Go using Wails and Vue](https://www.youtube.com/watch?v=Dg9rUXxNV-c)
-This video provides a practical walkthrough of setting up a Wails project specifically with a Vue.js frontend, demonstrating how the two languages interact.
-
-
-http://googleusercontent.com/youtube_content/4
+It turns Go into a "super-powered" backend for your web skills, allowing you to ship a single, professional `.exe` or `.app` file that feels native to the user.
 
 ---
 
@@ -234,12 +229,16 @@ http://googleusercontent.com/youtube_content/4
 You generally have two paths, and they couldn't be more different:
 
 **Path A: Wails (The "Modern/Beautiful" Way)**
+
 Wails is effectively "Go's version of Tauri."
+
 * **How it works:** Your backend logic is in Go, but you write the UI in whatever web framework you like (React, Vue, Svelte).
 * **Why use it:** This is the best way to make a Go app look like a modern 2026 app. It’s lightweight because it uses the system's built-in web browser (WebView2/Safari).
 
 **Path B: Fyne (The "Pure Go" Way)**
+
 Fyne is a toolkit where everything—even the buttons—is written in Go.
+
 * **How it works:** It uses the computer's graphics card (OpenGL) to draw its own UI.
 * **Why use it:** It is incredibly fast to develop. You can go from "zero" to a working window with buttons in 10 lines of code. It looks the same on every OS, though it has a distinct "utilitarian" look.
 

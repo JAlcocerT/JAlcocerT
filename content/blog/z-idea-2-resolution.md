@@ -18,6 +18,14 @@ Thoughts after one year of vibe coding.
 * Perplexity and commet (from W11 only on the desktop) 
 
 
+https://skills.sh/
+
+https://www.youtube.com/watch?v=qfWpPEgea2A&t=191s
+
+https://www.youtube.com/watch?v=rlLwSr-wIAg&t=431s
+
+https://github.com/martingaido/ai-prompt-engineering-docs/blob/main/gemini-for-google-workspace-prompting-guide-101.pdf
+
 **Intro**
 
 I stopped copy pasting from Gemini web UI and start using codex CLI, gemini cli and so on around one year ago.

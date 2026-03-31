@@ -2,7 +2,7 @@
 title: "Learning about 3D Printing"
 date: 2026-12-31
 draft: true
-tags: ["Tinkering","FreeCad vs OpenSCad","Blender"]
+tags: ["Tinkering IRL","FreeCad vs OpenSCad vs CadQuery","Blender"]
 description: abcd
 url: 'starting-with-3dprinting'
 ---
@@ -17,6 +17,10 @@ https://youtu.be/d6PyYCBft44?si=vsgHCiL2k2Fswwxd
 
 {{< youtube d6PyYCBft44 >}}
 
+
+**Tl;DR**
+
+One of those things in the bucket list of every tinkerer.
 
 **Intro**
 
@@ -180,13 +184,19 @@ Can't wait to make some mechanism design and see it work.
 
 ---
 
-## COnclusions
+## Conclusions
 
 Some people have businesses around 3dprinting:
 
-https://www.youtube.com/watch?v=RyKvEcgcswg&t=123s
+<!-- https://www.youtube.com/watch?v=RyKvEcgcswg&t=123s -->
 
-https://www.youtube.com/watch?v=o7qwIwoveA4
+{{< youtube "RyKvEcgcswg" >}}
+
+
+<!-- https://www.youtube.com/watch?v=o7qwIwoveA4 -->
+
+
+{{< youtube "o7qwIwoveA4" >}}
 
 ---
 
@@ -247,6 +257,13 @@ https://mariushosting.com/synology-best-docker-containers-for-3d-printers/
 ## Conclusions
 
 Blender
+
+What can you use 3D printing for IRL?
+
+
+From here...
+
+Whats stopping us to buy a 3-axis 
 
 ---
 

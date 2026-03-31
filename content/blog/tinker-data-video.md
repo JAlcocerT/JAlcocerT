@@ -547,20 +547,7 @@ $$\vec{r}_2 + \vec{r}_3 - \vec{d} = 0$$
 
 The Scalar equivalent Breakdown: *no complex [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) nor [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) here!*
 
-This \(\sigma(z) = \frac{1}{1 + e^{-z}}\) is an inline expression.
-
-$$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
-
-$$
-\begin{aligned}
-  \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
-  \nabla \cdot \mathbf{B} &= 0 \\
-  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
-  \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
-\end{aligned}
-$$
-
-Horizontal: $r_2 \cos(\theta_2) + r_3 \cos(\theta_3) - d = 0
+Horizontal: $r_2 \cos(\theta_2) + r_3 \cos(\theta_3) - d = 0$
 
 $Vertical: $r_2 \sin(\theta_2) + r_3 \sin(\theta_3) = 0$
 
