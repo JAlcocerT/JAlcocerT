@@ -35,14 +35,12 @@ Synthesis has always been a thing...
 
 {{< youtube "9b19b7SmovU" >}}
 
+Observe what a 3d printer and 2 mechanisms work together
+
+The black bars are forming one four bar mechanism
 <!-- https://youtube.com/shorts/ipi437M6g5A -->
 
 {{< youtube "ipi437M6g5A" >}}
-
-<!-- https://youtube.com/shorts/r8G3XRBn24s?is=sDOxquD4fxU6yKns -->
-
-
-{{< youtube "r8G3XRBn24s" >}}
 
 I just have not been focusing on mechanism for long time.
 
@@ -58,6 +56,16 @@ Ive been tinkering back :)
 
 
 ### Where does a mechanism block?
+
+I mean...before trying to resolve equations
+
+or having some error back from Python
+
+What if this could be done conceptually?
+
+All the *compatible movements* with The geometry og a given mechanisms are inside one Matrix.
+
+
 
 ---
 

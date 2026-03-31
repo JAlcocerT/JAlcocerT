@@ -34,6 +34,11 @@ There is a ''power silence'', but also power overlap due to the 90 and 270 degre
 ### Examples
 
 
+<!-- https://youtube.com/shorts/r8G3XRBn24s?is=sDOxquD4fxU6yKns -->
+
+
+{{< youtube "r8G3XRBn24s" >}}
+
 ---
 
 ## Conclusions

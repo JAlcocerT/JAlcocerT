@@ -238,6 +238,10 @@ Particularly by https://www.awesome-homelab.com/item/novel-editor
 
 Fast forward to today: lets put a web/app with UI to bundle all this.
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method" title="Web Deployment methods | Docs ↗" >}}
+{{< /cards >}}
+
 ### Creating a DIY x PaaS
 
 

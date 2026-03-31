@@ -652,3 +652,7 @@ Some people still have my free time to get this kind of things running:
 {{< /cards >}}
 
 How hard would be to make finally a one time editable, cool, **photo gallery** that superseeds eayp HUGO v1 and both v2 failed trials at the end of last year?
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method" title="Web Deployment methods | Docs ↗" >}}
+{{< /cards >}}

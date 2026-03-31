@@ -1,9 +1,9 @@
 ---
 title: "Science is so Cool!"
-date: 2026-12-01T23:20:21+01:00
+date: 2026-11-30T23:20:21+01:00
 draft: false
-tags: ["Heat Transfer vs Electrical Engineering","Atopile","3 Bodies vs SliDer Crank"]
-description: 'A Science recap with LLMs.'
+tags: ["Heat Transfer vs Electrical Engineering"]
+description: 'A Science recap.'
 url: 'cool-science'
 ---
 
@@ -34,15 +34,7 @@ And i could feel that while riding my bicycle during winter.
 
 ## Electrical Engineering
 
-Everything is...[code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/). 
 
-Same applies to circuit boards:
-
-* https://github.com/atopile/atopile
-
-> **MIT | Design circuit boards with code**! ✨ Get software-like design reuse 🚀, validation, version control and collaboration in hardware; starting with electronics ⚡️ 
-
-> > Write hardware like software. atopile is a language, compiler, and toolchain for electronics—declarative .ato files, deep validation, and layout that **works natively with KiCad**.
 
 <!--
 https://www.youtube.com/watch?v=1spW6vkpPMU 
@@ -101,12 +93,13 @@ https://github.com/JAlcocerT/ThreeBodies/blob/main/Z_DeployMe/3bodes-flask.png
 {{< /cards >}}
 
 <!-- https://www.youtube.com/watch?v=DT-1REn31eQ -->
+
 {{< youtube "DT-1REn31eQ" >}}
 
 
 {{< youtube "C-FEVzI8oe8" >}}
 
-https://www.youtube.com/watch?v=C-FEVzI8oe8
+<!-- https://www.youtube.com/watch?v=C-FEVzI8oe8 -->
 
 
 $$
@@ -243,7 +236,7 @@ Whatever you do...
 
 Forget about *Toy Models*, please.
 
-THis year i discovered that for simple calculations some JS vibe coded and shipped statically into your browser can do.
+Some time ago, I discovered that for simple calculations some JS vibe coded and shipped statically into your browser can do.
 
 You can get [your MRR](https://libreportfolio.pages.dev/recursos/calculadora-mrr/) *super complex* operation done.
 

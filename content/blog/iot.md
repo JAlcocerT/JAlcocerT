@@ -1,5 +1,5 @@
 ---
-title: "[IoT] Meets AI. AIoT with a Raspberry Pi."
+title: "[IoT] Meeting AI. AIoT with a Raspberry Pi."
 date: 2026-04-25
 draft: false
 tags: ["Tech Talk","IoT ebook","From obfuscaste towards 1toN eBooks","Roadmap26","Tinkering IRL"]
@@ -15,29 +15,101 @@ Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with
 
 BTW, this is the [last ebook](#conclusions) of [the DIY series](https://jalcocert.github.io/JAlcocerT/interesting-books) that I will be publishing!
 
-## From IoT Data to LangChAIn
+## Intro
 
-This part explores how to use **LangChain with Python** to chat with your database.
+Its been a while since ive been tinkering around [MQTT and messaging protocols](https://jalcocert.github.io/JAlcocerT/messaging-protocols/)
 
-{{< callout type="info" >}}
-The complete, working code is available in my [data-chat repository](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB).
-{{< /callout >}}
+I wont lie, mqtt allow us to achieve interesting things thanks to its pub-sub nature, similar to [the streamr network](https://jalcocert.github.io/JAlcocerT/streamr-network/#comparison-with-mqtt)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt" title="MQTT and Messaging Protocols" image="/blog_img/iot/mqttx-desktop.png" subtitle="Tools for MQTT - MQTTx Desktop" >}}
+{{< /cards >}}
+
+UpTime Kuma can also **monitor MQTT**:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/IoT" title="Kind of NEW IoT" image="/blog_img/apps/gh-jalcocert.svg" subtitle="IoT Repository for Pi, PicoW and ESP32" >}}
+{{< /cards >}}
+
 
 ## Hardware and Projects
 
+A Raspberry Pi [got me started](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/) all of this series!
 
-* Raspberry Pi
+Initially I wrote at Jekyll: https://jalcocert.github.io/RPi/
 
 1. Pushing sensor data to ES via Python
 2. Pushing sensor DB18B20 to TimeScale via Python
 
-* Raspberry Pico W
-  * https://picow.pinout.xyz/
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="Raspberry Pi and IoT 101" image="/blog_img/iot/pis-esp-mlx.jpg" subtitle="SBCs can do many other things!" >}}
+{{< /cards >}}
+
+https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/
+
+
+I wanted to try with an low cost (~20$) Solar Panel `CL-0915` which goes up to 15W (5V3A).
+
+![Solar Panel](/blog_img/outro/solar-panel.jpg)
+
+```sh
+#git clone /IoT
+```
+
+### ESP32 IoT Projects
 
 * ESP 32
   * https://esp32c3.pinout.xyz/
 
-### Raspberry Pi
+> You can do ton of stuff with a ESP32, like building a [drone](https://jalcocert.github.io/JAlcocerT/useful-dron-stuff/):
+
+* https://github.com/Circuit-Digest/ESP-Drone
+
+<!-- 
+https://www.youtube.com/watch?v=V_mZsiZcy7s -->
+
+{{< youtube "V_mZsiZcy7s" >}}
+
+### PicoW IoT Projects
+
+* Raspberry Pico W
+  * https://picow.pinout.xyz/
+
+https://jalcocert.github.io/JAlcocerT/pico-w/
+
+![PicoW working with a DHT22](/blog_img/iot/picoW/picow-dht22.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/RPi/categories/iot-data-analytics/" title="RPi Related Blog" image="https://jalcocert.github.io/RPi/img/RPi4-DHT22.png" subtitle="Jekyll Blog with posts about IoT" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW" title="RPi (PicoW Scripts) Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="PicoW MicroController Scripts Python Scripts to tinker!" >}}
+{{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW" title="PicoW Micropython Scripts 🐍 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MLX90614" title="PicoW + MLX906014 🐍 ↗" >}}
+{{< /cards >}}
+
+
+{{< callout type="info" >}}
+The [DHT11 is blue](https://jalcocert.github.io/RPi/posts/rpi-iot-dht11-influxdb/), and the [DHT22 is white](https://jalcocert.github.io/RPi/posts/rpi-iot-dht22-ES/)
+{{< /callout >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/DHT22" title="PicoW + DHT22 + Print 🐍 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MQTT-DHT22" title="PicoW + DHT22 + MQTT 🐍 ↗" >}}
+{{< /cards >}}
+
+![alt text](/blog_img/iot/picoW/picow-dht22-thonny.png)
+
+
+### Raspberry Pi IoT Projects
 
 #### Python x Elastic Search
 
@@ -52,7 +124,9 @@ To push data to Elasticsearch from Python, you can use the official Elasticsearc
 
 {{< details title="DHT - Temp & Humidity with Kibana 📌" closed="true" >}}
 
-[ES Container supports RPi 64](https://hub.docker.com/_/elasticsearch) by default, but thanks to [alinjie](https://github.com/alinjie/elasticsearch-docker-armv7/blob/main/Dockerfile), also ARM32 
+[ES Container supports RPi 64](https://hub.docker.com/_/elasticsearch) by default
+
+but thanks to [alinjie](https://github.com/alinjie/elasticsearch-docker-armv7/blob/main/Dockerfile), also ARM32 
 
 > For [Kibana container](https://hub.docker.com/_/kibana/tags?page=7) - See <https://github.com/jamesgarside/kibana-arm>
 
@@ -279,7 +353,9 @@ blackc able - gnd
 red - 3.3 to 5v
 yellow - data --> to pin 7
 
-It needs a resistor. A 4.7K Ohm Resistor (Colour Code: Yellow Purple Red Gold)
+It needs a resistor.
+
+A 4.7K Ohm Resistor (Colour Code: Yellow Purple Red Gold)
 
 
 
@@ -314,14 +390,12 @@ If you got that:
 {{< /cards >}}
 
 
-* This got me nothing so far: https://ko-fi.com/s/86175d7928
+This got me nothing so far: https://ko-fi.com/s/86175d7928
 
 
 With this post, I pretend to 
 
 
-1. https://a1karting.pl/cennik/
-2. https://sklep.drive-position.pl/kategoria-produktu/quady-i-adv/
 
 <!-- 
 Expertise:
@@ -337,6 +411,17 @@ https://siytek.com/what-is-tasmota-an-introduction-to-the-cloud-free-smart-home/
 
 https://acurast.com/
 
+### From IoT Data to LangChAIn
+
+In this part of the post, we will explores how to use **LangChain with Python** to chat with your database.
+
+{{< callout type="info" >}}
+The complete, working code is available in my [data-chat repository](https://github.com/JAlcocerT/Data-Chat/tree/main/LangChain/ChatWithDB).
+{{< /callout >}}
+
+Its just about putting everything together.
+
+
 
 ---
 
@@ -344,10 +429,10 @@ https://acurast.com/
 
 ### Languages
 
-C/C++
-MicroPython
-TinyGo (?)
-CircuitPython (?)
+1. C/C++
+2. MicroPython
+3. TinyGo (?)
+4. CircuitPython (?)
 
 O.S FreeRTS ??? <https://www.youtube.com/watch?v=5pUY7xVE2gU>
 
@@ -408,6 +493,7 @@ Laser Transmitter Module Overview
 - **Security Systems**: Set up alarms that trigger if the laser path is interrupted.
 
 Usage Considerations:
+
 - **Safety**: The laser can harm eyes; avoid direct exposure.
 - **Environment**: Operate in dim environments to minimize interference from sunlight or other bright lights.
 - **Alignment**: Ensure the path of the laser beam is clear of obstructions.
@@ -419,8 +505,6 @@ Connecting KY-008 to Raspberry Pi Pico
 - **Connection**:
   - `VCC` on KY-008 to `5V` on Pico
   - `GND` on KY-008 to `GND` on Pico
-
-
 
 
 <https://www.youtube.com/watch?v=KX_-MPOJNXY>
@@ -483,7 +567,9 @@ It is a **triple-axis magnetometer** that can measure the Earth's magnetic field
 
 It is powered by a 3 to 5V supply and communicates using the I2C protocol.
 
-The GY-273 is commonly used in robotics, drones, and other applications that require accurate orientation sensing. It can also be used in navigation systems, such as GPS receivers.
+The GY-273 is commonly used in robotics, drones, and other applications that require accurate orientation sensing.
+
+It can also be used in navigation systems, such as GPS receivers.
 
 **Features**
 
@@ -531,47 +617,9 @@ Arbitration and Collision: As I2C supports multi-master systems, there may be ca
 
 Acknowledge Mechanism: After sending out 8 bits, the transmitting device releases the SDA line and waits for the receiver to pull the line low (ACK). If the receiving device leaves the line high (NAK), the transmitting device knows something went wrong.
 
-Applications of I2C include temperature, humidity and light sensors, digital potentiometers, digital compasses, expansion IOs, EEPROMs, ADC/DACs, clock/timers, as well as controlling other circuits or devices, such as OLED displays, among others. The I2C protocol's simplicity and flexibility have made it a popular choice among designers and engineers for short distance, intra-board communication.
+Applications of I2C include temperature, humidity and light sensors, digital potentiometers, digital compasses, expansion IOs, EEPROMs, ADC/DACs, clock/timers, as well as controlling other circuits or devices, such as OLED displays, among others.
 
-
-### RPi x LCDs
-
-https://www.youtube.com/watch?v=3XLjVChVgec
-
-HOWTO Raspberry Pi + LCD 16x2 i2c
-
-
-
-https://github.com/the-raspberry-pi-guy/lcd
-
-https://www.youtube.com/watch?v=3XLjVChVgec
-
-HOWTO Raspberry Pi + LCD 16x2 i2c
-
-
-
-https://github.com/the-raspberry-pi-guy/lcd
-
-
-
-https://www.youtube.com/watch?v=3XLjVChVgec
-
-HOWTO Raspberry Pi + LCD 16x2 i2c
-
-
-
-https://github.com/the-raspberry-pi-guy/lcd
-
-https://www.youtube.com/watch?v=3XLjVChVgec
-
-HOWTO Raspberry Pi + LCD 16x2 i2c
-
-
-
-https://github.com/the-raspberry-pi-guy/lcd
-
-
----
+The I2C protocol's simplicity and flexibility have made it a popular choice among designers and engineers for short distance, intra-board communication.
 
 ## GPS RPi IoT Project - GPS Data (VK-162) with Apache Superset
 

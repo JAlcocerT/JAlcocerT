@@ -808,6 +808,8 @@ As we are reading the PicoW Internal sensor, for me it was showing ~+8C than a r
 
 ![Home Assistant dashboard with temperature from MQTT](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png)
 
+See how it looks:
+
 <!-- https://studio.youtube.com/video/x4tzWt6-I7c/edit -->
 
 {{< youtube "x4tzWt6-I7c" >}}
@@ -822,7 +824,10 @@ As we are reading the PicoW Internal sensor, for me it was showing ~+8C than a r
 
 1. Pico to Pico Wifi communication
 
-<https://www.youtube.com/watch?v=ACAmVg6MakI>
+<!-- <https://www.youtube.com/watch?v=ACAmVg6MakI> -->
+
+{{< youtube "ACAmVg6MakI" >}}
+
 
 2. Pico W web server:
 
@@ -843,8 +848,6 @@ Pico w web server via C, instead of Micropython - https://www.youtube.com/watch?
 **Supported Languages** 
 
 Yes, the Raspberry Pi Pico W supports all of the languages and the OS you listed.
-
-***
 
 ### Languages
 
@@ -915,8 +918,9 @@ This only helps if the uploaded sketch sends serial output (like using `Serial.p
 
 🔄 If you want to start fresh:
 
-You can always re-upload your own code. The old code will be overwritten.
+You can always re-upload your own code.
 
+The old code will be overwritten.
 
 Bonus: Using File System (for MicroPython users)
 

@@ -24,7 +24,7 @@ Last year I bough a couple of **companions for my Raspberry Pi 4 2GB**:
 
 And Recently, this new release got my attention:
 
-![Pi and ESP32](/blog_img/iot/pis-esp32.jpg)
+<!-- ![Pi and ESP32](/blog_img/iot/pis-esp32.jpg) -->
 
 3. Raspberry Pi Pico 2 -  A brand new model, with both **ARM and RISC-V cores**
 
@@ -90,16 +90,6 @@ An alternative micro-controller to the [PicoW](#pico-w-and-micropython)!
 
 * Connecting ESP32 to Linux - https://github.com/tio/tio
 * IDE - Thonny / Ardu IDE / VSCode ...
-
-> You can do ton of stuff with a ESP32, like building a [drone](https://jalcocert.github.io/JAlcocerT/useful-dron-stuff/):
-
-* https://github.com/Circuit-Digest/ESP-Drone
-
-<!-- 
-https://www.youtube.com/watch?v=V_mZsiZcy7s -->
-
-{{< youtube "V_mZsiZcy7s" >}}
-
 
 I prefered to go With Arduino IDE and create test projects like this one.
 

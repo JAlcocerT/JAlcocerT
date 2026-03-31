@@ -182,6 +182,18 @@ Can't wait to make some mechanism design and see it work.
 <!-- {{< youtube id="v=qQmQ9ZpvHUo" autoplay="false" >}} -->
 {{< youtube "qQmQ9ZpvHUo" >}}
 
+## 3D Printing x MBSD x Synthesis
+
+https://jalcocert.github.io/JAlcocerT/2d-mechanism-synthesis/
+
+## 3D Printing x HomeLab
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/botpress" title="BotPress | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/botpress" title="BotPress | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ---
 
 ## Conclusions
@@ -269,3 +281,43 @@ Whats stopping us to buy a 3-axis
 
 ## FAQ
 
+
+
+### RPi x LCDs
+
+https://www.youtube.com/watch?v=3XLjVChVgec
+
+HOWTO Raspberry Pi + LCD 16x2 i2c
+
+
+
+https://github.com/the-raspberry-pi-guy/lcd
+
+https://www.youtube.com/watch?v=3XLjVChVgec
+
+HOWTO Raspberry Pi + LCD 16x2 i2c
+
+
+
+https://github.com/the-raspberry-pi-guy/lcd
+
+
+
+https://www.youtube.com/watch?v=3XLjVChVgec
+
+HOWTO Raspberry Pi + LCD 16x2 i2c
+
+
+
+https://github.com/the-raspberry-pi-guy/lcd
+
+https://www.youtube.com/watch?v=3XLjVChVgec
+
+HOWTO Raspberry Pi + LCD 16x2 i2c
+
+
+
+https://github.com/the-raspberry-pi-guy/lcd
+
+
+---

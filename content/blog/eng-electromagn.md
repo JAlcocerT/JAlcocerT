@@ -2,8 +2,8 @@
 title: "Electro Magnetism for tinkerers"
 date: 2026-12-31
 draft: true
-tags: ["MBSD x 3D Simulation","Fluid Dynamics"]
-description: 'The physics of a real engine.'
+tags: ["MBSD x 3D Simulation","Electric Motors"]
+description: 'The physics of a electric engines.'
 url: 'electromagnetism-101'
 math: true
 ---
@@ -27,3 +27,6 @@ $$
   \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
 \end{aligned}
 $$
+
+
+## Electrical Engines

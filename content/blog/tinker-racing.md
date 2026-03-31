@@ -41,6 +41,9 @@ If you are into [f1](https://jalcocert.github.io/JAlcocerT/interesting-apis/#for
 ![Karting Adventure](/blog_img/memes/Accidente_karting-min.gif)
 <!-- https://www.youtube.com/watch?v=LToBbKTHAkw -->
 
+1. `https://a1karting.pl/cennik/`
+2. `https://sklep.drive-position.pl/kategoria-produktu/quady-i-adv/`
+
 Lets get started!
 
 ## OnBoard Telemetry

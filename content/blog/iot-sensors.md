@@ -2,10 +2,11 @@
 title: "[IoT] Sensors x Home Assistant"
 date: 2026-04-25
 draft: false
-tags: ["Tinkering","Polanduino x Arduino","Solar x DHT","MLX","Robotics"]
+tags: ["Tinkering","Polanduino x Arduino","Solar x DHT","MLX"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
+
 https://github.com/855princekumar/sense-hive
 
 **Tl;DR**
@@ -104,16 +105,6 @@ Also these: https://www.youtube.com/@homeassistant_facil/videos - https://www.yo
 
 ### **RISC-V open source arquitecture**
 
-
-### Linux and Robotics?
-
-https://www.youtube.com/shorts/28THuX3PS_8
-
-* https://github.com/ahundt/awesome-robotics
-
-<!-- https://www.youtube.com/watch?v=-JVHvU3Oor8 -->
-
-{{< youtube "-JVHvU3Oor8" >}}
 
 ---
 

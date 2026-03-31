@@ -209,12 +209,13 @@ This makes running a Streamr node accessible on standard hardware without manual
 
 **Streamr node rewards (for operators relaying data) are paid in DATA tokens, the network's native ERC-20 utility token on Polygon blockchain.**
 
-Operators stake DATA to join Sponsorships and earn proportional rewards based on uptime, bandwidth, and stream demand; delegators also stake DATA to operators for shared revenue.[1][2][3]
+Operators stake DATA to join Sponsorships and earn proportional rewards based on uptime, bandwidth, and stream demand; delegators also stake DATA to operators for shared revenue.
 
 **Yes, view live nodes via the Streamr Network Explorer at streamr.network/network-explorer.**
 
- It shows active streams, nodes, connections, metrics, and a geo map; search by node address or filter historical data. Your node provides a direct Explorer link post-setup for monitoring.[4][5][6]
-
+ It shows active streams, nodes, connections, metrics, and a geo map; search by node address or filter historical data. 
+ 
+Your node provides a direct Explorer link post-setup for monitoring.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/streamr" title="Streamr | Docker Config 🐋 ↗" >}}
@@ -232,11 +233,7 @@ Specifically, operators:
 - Participate in network consensus and governance by staking DATA tokens, which also enables earning rewards proportional to your contribution.
 - Support network resilience by decentralization and censorship resistance through distributing data traffic across many nodes.
 
-In return for providing these essential network services, operators earn rewards paid in DATA tokens based on their performance and staked amount.[1][2][3]
-
-[1](https://docs.streamr.network/streamr-network/network-roles/operators)
-[2](https://streamr.network/stake-and-earn)
-[3](https://beincrypto.com/streamr-decentralised-network-data-sharing/)
+In return for providing these essential network services, operators earn rewards paid in DATA tokens based on their performance and staked amount.
 
 ---
 

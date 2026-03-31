@@ -3,7 +3,7 @@ title: "Mechanical Engineering - I still love you"
 date: 2025-04-30
 draft: false
 tags: ["Outro","Engineering","Mechanics","Lorentz Attractor"]
-description: 'Captivating Mechanical eng.'
+description: 'Just captivating Mechanical eng.'
 url: 'mechanical-engineering-cool-stuff'
 math: true
 ---
