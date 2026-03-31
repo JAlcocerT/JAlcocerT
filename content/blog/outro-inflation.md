@@ -53,7 +53,7 @@ But before going to the details about when, how to apply and so on...
 
 > Looks like inflation was there before *the experts* informing :)
 
-There is an API: https://inflationchart.com/api
+There is an API: `https://inflationchart.com/api`
 
 In real life, as per [this post](https://forocoches.com/foro/showthread.php?t=10479839), a menu has gone up from ~8 to ~14 within 7 years.
 

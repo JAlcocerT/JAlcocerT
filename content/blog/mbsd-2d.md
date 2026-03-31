@@ -35,7 +35,7 @@ git clone git clone https://github.com/JAlcocerT/mbsd
 ```
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/mbsd" title="NEW MBSD" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Go desktop app for HUD overlays for GoPros" >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="NEW MBSD" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a MBSD framework in Python" >}}
 {{< /cards >}}
 
 * https://github.com/JAlcocerT/Slider-Crank

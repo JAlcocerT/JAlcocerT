@@ -225,7 +225,7 @@ Questions like the ones you can have solved:
 Ive shipped and learn many what to do and several NOT to do.
 
 
-{{< details title="RoadMap26 | As of 0323 📌" closed="true" >}}
+{{< details title="RoadMap26 | As of 0326 📌" closed="true" >}}
 
 Coming from [last year end review](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#for-next-year)
 
@@ -239,7 +239,7 @@ Coming from [last year end review](https://jalcocert.github.io/JAlcocerT/tech-re
 
 3. AIoT *end to end flow from solar panels to dashboarding & langchain*
 
-4. Custom Marketing analytics *from custom high signal content creation to funnels* Matplotlib, remotion stuff...
+4. Custom Marketing analytics *from custom high signal content creation to funnels* Matplotlib, [remotion](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/) stuff...
 
 6. ~~Scaling PRO Webs creation via PaaS~~ - A better DIY website with free (programmatic) audit - Free web audits [show problems here](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/) ✅
 

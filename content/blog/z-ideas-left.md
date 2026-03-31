@@ -126,9 +126,38 @@ Isnt it the math telling you that videos are also cheap now?
 
 ~1/3 of the year is gone...
 
-where do i wanted to be?
+*where did i wanted to be?*
 
-where am I?
+TBD 0426
+
+{{< details title="RoadMap26 | As of 0326 📌" closed="true" >}}
+
+Coming from [last year end review](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#for-next-year)
+
+1. Weddings serverless + ads - [WIP](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) ⚙️
+
+8. Get back to mech simulations - *for fun :)* - [MBSD 2D](https://jalcocert.github.io/JAlcocerT/2d-mbsd) ✅
+
+7. Prepare the DIY/DWY/DFY based on the ebooks and blog content ~ *Wiki efforts* - WIP ⚙️
+
+5. Books *from D&A to web and concepts from kindle notes* - WIP ⚙️
+
+3. AIoT *end to end flow from solar panels to dashboarding & langchain*
+
+4. Custom Marketing analytics *from custom high signal content creation to funnels* Matplotlib, [remotion](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/) stuff...
+
+6. ~~Scaling PRO Webs creation via PaaS~~ - A better DIY website with free (programmatic) audit - Free web audits [show problems here](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/) ✅
+
+* https://webaudit.jalcocertech.com/
+
+2. ~~Real Estate Custom RAG and WebApp via DecapCMS~~ | Cancelled and [whitelabelled](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/) 
+
+* https://realestate.jalcocertech.com/
+
+{{< /details >}}
+
+
+*Where am I?*
 
 #### Keep Doing
 

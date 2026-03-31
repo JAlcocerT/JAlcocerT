@@ -1,10 +1,10 @@
 ---
-title: "Ryze Robotics "
+title: "Ryze Robotics Dron and Python SDK"
 date: 2026-04-29
 draft: false
-tags: ["Tinkering","Ardupilot","DJi Tello","RC","Computer Vision"]
+tags: ["Ardupilot","DJi Tello","RC","Computer Vision"]
 description: A toy Drone, claude code and computer vision.
-url: 'fpv-programming'
+url: 'dji-tello-python-programming'
 ---
 
 
@@ -41,6 +41,8 @@ I also extracted the documentation for claude:
 uv init
 uv add kreuzberg
 ```
+
+You can skip Kreuzberg container, just:
 
 ```sh
 for f in Chapter*.pdf; do

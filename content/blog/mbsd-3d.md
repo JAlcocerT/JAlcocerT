@@ -237,6 +237,10 @@ The Python code is [a direct port](#bike-multibody-model) of the original MATLAB
 ## Conclusions
 
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a MBSD framework in Python" >}}
+{{< /cards >}}
+
 ```sh
 #git clone https://github.com/JAlcocerT/VideoEditingRemotion
 #cd remotion-cc
