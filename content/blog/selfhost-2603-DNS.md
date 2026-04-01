@@ -493,6 +493,64 @@ docker logs filebrowser #go to http://192.168.1.2:8037/files/
 In your local network, together with `claude` :)
 
 
+### Speed Tests
+
+If you have ever worked in [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), these is not trivial.
+
+Do it via curl:
+
+```sh
+
+#speedtest-cli #speedtest-cli --simple
+```
+
+Or to get a better overview of the throughput, via iperf3: *I was [testing this](https://jalcocert.github.io/JAlcocerT/sync-file-tools/) to measure my local wifi transfer speeds*
+
+```sh
+# iperf3 --help
+iperf3 -s #server
+#New-NetFirewallRule -DisplayName "iperf3" -Direction Inbound -Program "C:\iperf3\iperf3.exe" -Action Allow
+
+#ipconfig
+iperf3 -c 192.168.1.X -t 10 -P 1
+```
+
+![iPerf3 Ethernet local speeds](/blog_img/selfh/Sync/iperf3-eth.png)
+
+What a great excuse to make a **quick poc** around this:
+
+```sh
+git clone /poc
+cd ./poc/iperf
+#irm https://astral.sh/uv/install.ps1 | iex
+#uv init
+#uv add -r requirements.txt
+python main.py run --set standard --server 192.168.1.2
+python main.py stats --days 30
+```
+
+
+Which ive addapted from this [ui landing prompt](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders) to this one
+
+
+```sh
+# Terminal 1: Start API server (reads from your SQLite)
+python api_server.py
+
+# Terminal 2: Start React dashboard
+npm create vite@latest dashboard -- --template react
+cd dashboard && npm install
+npm install react-router-dom zustand @tanstack/react-query axios recharts
+npm run dev
+
+# Visit http://localhost:5173
+# See YOUR data displayed beautifully! 🎉
+```
+
+![poc vite fastapi iperf3](/blog_img/AIBI/iperf3-dashboard.png)
+
+Which it has been much faster and cooler than the [one year ago flask for real time temperature measuring via websockets](https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/) :)
+
 ### From Portainer to homepage-lite
 
 I got issues with Portainer couple of times.

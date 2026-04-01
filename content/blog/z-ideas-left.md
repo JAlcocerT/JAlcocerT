@@ -122,6 +122,13 @@ If code is cheap and you can do videos as a code
 
 Isnt it the math telling you that videos are also cheap now?
 
+The time for courses/watching yt tutorials was 3y ago, now is about building
+
+or...
+
+![meme](/blog_img/memes/bike.png)
+
+
 ### Whats next?
 
 ~1/3 of the year is gone...
@@ -173,6 +180,11 @@ Oh, also not the monthly selfhosted/homelab recaps.
 git clone /my-logseq-notes
 ```
 
+3. Quiiick PoCs: like the recent iperf3
+
+```sh
+git clone 
+```
 
 3. Generating random data animated videos & rendres: *is probably time to unify these...*
 

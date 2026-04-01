@@ -2,8 +2,8 @@
 title: "SelfHosted Cloud vs Syncs vs WebDav"
 date: 2025-03-15
 draft: false
-tags: ["OSS","Homelab","SFTPGo"]
-description: 'Alternatives to sync your files. From Nextcloud Web Dav to SFTP-Go'
+tags: ["OSS","Homelab","SFTPGo","iperf3"]
+description: 'Alternatives to sync your files. From Nextcloud Web Dav to SFTP-Go.'
 url: 'sync-file-tools'
 ---
 
@@ -97,7 +97,9 @@ If you are on windows, install **WINSCP** or Filezilla
 choco install winscp
 ```
 
-SFTP is a secure way to transfer files over a network. It uses SSH (Secure Shell) to encrypt the data, protecting it from unauthorized access.
+SFTP is a secure way to transfer files over a network.
+
+It uses SSH (Secure Shell) to encrypt the data, protecting it from unauthorized access.
 
 ```sh
 apt-get install iperf3
@@ -138,11 +140,15 @@ sudo apt install iotop
 sudo iotop
 ```
 
-Yes, when you connect to an SFTP server, you typically need to provide the username and password (or SSH key) of a valid user account on the remote system where the SFTP server is running.
+When you connect to an SFTP server, you typically need to provide the username and password (or SSH key) of a valid user account on the remote system where the SFTP server is running.
 
 It's not necessarily your Windows user/password unless those credentials happen to be the same on the remote system.
 
-That's a very important distinction! The speed you get with SFTP over your home Wi-Fi will be limited by your **local Wi-Fi speeds**, not your internet upload speed from your ISP. Here's why:
+That's a very important distinction! 
+
+The speed you get with SFTP over your home Wi-Fi will be limited by your **local Wi-Fi speeds**, not your internet upload speed from your ISP.
+
+Here's why:
 
 **Local Network vs. Internet Connection**
 
