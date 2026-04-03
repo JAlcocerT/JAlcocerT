@@ -1,8 +1,8 @@
 ---
 title: "Electro Magnetism for tinkerers"
-date: 2026-12-31
-draft: true
-tags: ["MBSD x 3D Simulation","Electric Motors"]
+date: 2026-04-01
+draft: false
+tags: ["MBSD x 3D Simulation","Electric Motors","Solenoids","EMR"]
 description: 'The physics of a electric engines.'
 url: 'electromagnetism-101'
 math: true

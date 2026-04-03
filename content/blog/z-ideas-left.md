@@ -2,7 +2,7 @@
 title: "Which ideas are left?"
 date: 2026-04-25
 draft: false
-tags: ["Unit Economics 202","JAlcocerTech Services x Remotion","Video x Data Animations"]
+tags: ["Unit Economics 202","JAlcocerTech Services x Remotion","Video x Data Animations","Python PPTx"]
 description: 'What?'
 url: 'the-ideas-bucket-can-be-empty'
 math: true
@@ -309,6 +309,8 @@ not talking about streamlit pocs, but full stack data pocs
 
 ```sh
 git clone /poc
+#claude
+#/usage #as long as you have still tokens
 ```
 
 
@@ -355,3 +357,20 @@ The general idea checklist is as follows:
 
 
 {{% /details %}}
+
+### Still doing PPTs?
+
+You know that im in love with slidevJS for my tech talks.
+
+But i got to know python-pptx.
+
+
+So for the pocs if you were doing slidev or giving a prompt to notebookllm or copilot:
+
+```sh
+
+```
+
+You are outdated.
+
+Take one branded pptx, tell to write the store with the branded slides and move on :)
