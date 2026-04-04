@@ -1,5 +1,5 @@
 ---
-title: "Electro Magnetism for tinkerers"
+title: "Electro-Magnetism for tinkerers"
 date: 2026-04-20
 draft: false
 tags: ["Simulations","Electric Motors","Solenoids","EMR"]
@@ -49,17 +49,15 @@ After [such investigation](https://github.com/JAlcocerT/electronics-101/blob/mas
   {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
 
-
 After sich simple project you can continue that [come back with more ad-ons](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/next-steps.md).
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
 {{< /cards >}}
 
-
+Like pluggint it to [a solar panel](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/#solar-power--microcontrollers).
 
 ### Electrical Engines
-
 
 Is the classical R-L model enough?
 
@@ -94,18 +92,33 @@ uv run main.py
 
 Yep, private :)
 
-
 ---
-
 
 ## Conclusions
 
 
+Beyond food and warm, do you have passions?
 
+Some project that wanted to complete for long
 
+but not sure on the how?
+
+<!-- {{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+{{< /cards >}} -->
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Get some of my time ↗" icon="book-open" >}}
+  {{< card link="https://cal.com/jalcocertech/consulting" title="Collaborations ↗" icon="user" >}}
+{{< /cards >}}
 
 
 ---
 
 ## FAQ
+
+
+
+
+
 

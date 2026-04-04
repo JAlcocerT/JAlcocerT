@@ -853,7 +853,7 @@ I wanted to try with an low cost (~20$) Solar Panel `CL-0915` which goes up to 1
 
 Thats really on the edge to power a Pi4.
 
-> And ofc, the 5V3A are in ideal conditions, so dont bother a Pi wont boot up with it.
+> And ofc, the 5V3A are in ideal conditions, so dont bother: a Pi wont boot up with it.
 
 But...microcontrollers do.
 

@@ -1,8 +1,8 @@
 ---
-title: "The physics of Mechanisms in the space"
-date: 2026-04-10
+title: "The physics of Mechanisms in the SPACE"
+date: 2026-04-12
 draft: false
-tags: ["MBSD x 3D Simulation","","CADQuery x Blender Rendering"]
+tags: ["MBSD x 3D Simulation","CADQuery x Blender Rendering"]
 description: 'The Dynamics x Kinematics of youve been waiting for.'
 url: '3d-mbsd'
 math: true
@@ -22,6 +22,8 @@ https://www.youtube.com/watch?v=A5w-dEgIU1M
 
 <!-- 
 https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
+
+
 
 **TL;DR**
 
@@ -295,7 +297,10 @@ Upcoming topics with 3D mechanics:
 1. Engine configuration analysis
 2. Suspensions: Double Wishbone, macpherson...
 
-https://youtu.be/y-ANdaUthxg
+<!-- https://youtu.be/y-ANdaUthxg -->
+
+{{< youtube "y-ANdaUthxg" >}}
+
 
 ### MBSD x Web Dev
 
@@ -346,7 +351,7 @@ The **Tech Stack**:
 
 >  Matter.js is a 2D physics engine for the web 
 
-* ThreeJS and D3JS
+* ThreeJS has been interesting and D3JS promising for D&A
 
 ### Bike MultiBody Model
 
@@ -482,11 +487,13 @@ Qvᵢ = -Σⱼₖ Γᵢⱼₖ · q̇ⱼ · q̇ₖ
 Each wheel uses an **elastic contact model**:
 
 **Normal force** — spring-damper with indentation `δ`:
+
 ```
 Fn = Kn · |δ|  +  c_damp · δ̇ · δ       (active when δ < 0)
 ```
 
 **Tangential force** — piecewise linear (bristle model) saturated by a friction ellipse:
+
 ```
 Longitudinal:  Fx = μx · Fn · (κ / κc)      if |κ| ≤ κc
                Fx = μx · Fn · sign(κ)         otherwise

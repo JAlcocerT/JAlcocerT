@@ -174,11 +174,17 @@ Teams can also regularly review their development practices and seek feedback fr
 
 Jidoka is a term used in Lean to describe a process that stops automatically when a problem occurs.
 
-The goal of jidoka is to build quality into the process and prevent defects from occurring. 
+The goal of jidoka is to build quality into the process and **prevent defects from occurring**. 
 
-When a problem is detected, the process stops, and the problem is addressed before the process resumes. Jidoka helps to create a culture of quality and encourages employees to take ownership of the process and the product.
+When a problem is detected, the process stops, and the problem is addressed before the process resumes.
 
-In software development, Jidoka can be applied to prevent defects and improve the quality of the product. This can involve implementing automated testing and continuous integration processes to catch errors early in the development cycle. By building quality into the development process, teams can improve the reliability and stability of the final product.
+Jidoka helps to create a culture of quality and **encourages employees to take ownership of the process and the product**.
+
+In software development, Jidoka can be applied to prevent defects and improve the quality of the product. 
+
+This can involve implementing automated testing and continuous integration processes to catch errors early in the development cycle. 
+
+By building quality into the development process, teams can improve the reliability and stability of the final product.
 
 > "Do it right, even when nobody is looking".
 
@@ -284,7 +290,9 @@ The Sustain principle involves **maintaining the improvements** made through the
 
 JIT or simple, **Just-In-Time** is a manufacturing philosophy that aims to **produce goods only when they are needed**, and in the quantities required, to reduce waste and increase efficiency. JIT is a key component of Lean manufacturing, which emphasizes the elimination of waste in all aspects of production.
 
-In software development, JIT can be applied in a similar way to reduce waste and increase efficiency. By using a pull-based system, where work is pulled through the development process in response to demand, rather than pushed through based on arbitrary timelines or quotas, developers can reduce the risk of overproduction and ensure that the software being developed meets the needs of the customer. 
+In software development, JIT can be applied in a similar way to reduce waste and increase efficiency. 
+
+By using a pull-based system, where work is pulled through the development process in response to demand, rather than pushed through based on arbitrary timelines or quotas, developers can reduce the risk of overproduction and ensure that the software being developed meets the needs of the customer. 
 
 This can be achieved through the use of agile development methodologies, such as Scrum or Kanban, which prioritize work based on customer needs and pull work through the development process as it is needed.
 
@@ -292,9 +300,15 @@ This can be achieved through the use of agile development methodologies, such as
 
 **Total quality management (TQM)** is a management philosophy that aims to improve quality and efficiency by involving all employees in the organization in a continuous improvement process. TQM emphasizes the importance of customer satisfaction, employee involvement, and the continuous improvement of processes and products.
 
-TQM and lean methodology share a common goal of improving efficiency and productivity through continuous improvement. Both approaches emphasize the importance of eliminating waste and optimizing processes to achieve greater results with fewer resources. However, while lean methodology focuses primarily on manufacturing processes, TQM is applicable to a wide range of industries and contexts.
+TQM and lean methodology share a common goal of improving efficiency and productivity through continuous improvement.
 
-Another important aspect of TQM is the emphasis on involving all employees in the improvement process. This aligns with the concept of "respect for people" in lean methodology, which emphasizes the importance of valuing and empowering employees to improve processes and drive continuous improvement.
+Both approaches emphasize the importance of eliminating waste and optimizing processes to achieve greater results with fewer resources. 
+
+However, while lean methodology focuses primarily on manufacturing processes, TQM is applicable to a wide range of industries and contexts.
+
+Another important aspect of TQM is the emphasis on involving all employees in the improvement process. 
+
+This aligns with the concept of "respect for people" in lean methodology, which emphasizes the importance of valuing and empowering employees to improve processes and drive continuous improvement.
 
 ### Push vs Pull
 

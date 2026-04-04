@@ -627,12 +627,12 @@ The [initial 3 bodies web app](https://jalcocert.github.io/JAlcocerT/testing-tin
 
 * https://burtleburtle.net/bob/physics/eight.html
 
+But it was more a quick example to try tiny auth and logto.
+
 ```sh
 git clone https://github.com/JAlcocerT/ThreeBodies/
 #cd ThePoincareLab
 ```
-
-But it was more a quick example to try tiny auth and logto.
 
 Now, how about creating another quick PoC around tat physics, but with [a better looking UI](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders) and OOP?
 
@@ -658,7 +658,10 @@ git init && git add . && git commit -m "Initial commit: oop 3 bodies" && gh repo
 
 This can be better, right?
 
-https://youtube.com/shorts/2xMOxiRz6F4
+<!-- https://youtube.com/shorts/2xMOxiRz6F4 -->
+
+{{< youtube "2xMOxiRz6F4" >}}
+
 
 ```sh
 git clone https://github.com/JAlcocerT/Slider-Crank
@@ -682,9 +685,13 @@ git clone https://github.com/JAlcocerT/mechanism
 Down the line, there is nothing stopping me merging the physically accurate movements with nice looking animations:
 
 * https://github.com/JAlcocerT/3Design
-* FreeCad and OpenScad are waiting
 
-https://youtube.com/shorts/TLROAYXxkvA?is=ywPjLN7C87Vk3yON
+> FreeCad and OpenScad are waiting there together with CadQuery!
+
+
+{{< youtube "TLROAYXxkvA" >}}
+
+<!-- https://youtube.com/shorts/TLROAYXxkvA?is=ywPjLN7C87Vk3yON -->
 
 For that video, the autor provides the files in the description!
 
@@ -725,3 +732,11 @@ You have to get enough speed to make your *great escape*:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
 {{< /cards >}}
+
+---
+
+## FAQ
+
+### Languages for OOP
+
+

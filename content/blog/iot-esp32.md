@@ -2,9 +2,9 @@
 title: "The ESP32 comeback"
 date: 2026-04-25T23:20:21+01:00
 draft: false
-description: "A solar panel, winter and the ESP32 microcontroller"
+description: "A solar panel, spring and the ESP32 microcontroller"
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
-url: 'esp32-x-nodered'
+url: 'esp32-x-solar-x-plants'
 ---
 
 

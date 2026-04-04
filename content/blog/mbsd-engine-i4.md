@@ -2,7 +2,7 @@
 title: "Inline 4 Engines: Balance and Vibrations"
 date: 2026-04-01T06:20:21+01:00
 draft: false
-tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","Remotion"]
+tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","Remotion","FFT"]
 description: 'Understanding the most popular engine once and for all.'
 url: 'inline-4-engine-balance'
 math: true
@@ -20,6 +20,10 @@ Getting right the slider-crank mechanism (2D) via MBSD to later form a 3D ICE I4
 
 
 **Intro**
+
+This channel has awsome [videos explaining engine balance](#about-engine-balance)
+
+But i wanted to make my own.
 
 {{< youtube "ABzKNvJCl28" >}}
 
@@ -42,7 +46,7 @@ $$
 \end{aligned}
 $$
 
-Wait...arent you gonna extend the MBSD 2D simulator already to 3D for this?
+Wait...arent you gonna extend [the MBSD 2D simulator](https://jalcocert.github.io/JAlcocerT/2d-mbsd/) already to 3D for this?
 
 Nop, im not.
 
@@ -56,9 +60,11 @@ No point reference coordinates this time :)
 
 Balance...what is it?
 
-Vibrations? Forces?
+Vibrations? 
 
-This channel has awsome [videos explaining engine balance](#about-engine-balance)
+[FFT](#fast-fourier-transform)?
+
+Forces?
 
 I just wanted to create my engine balance simulations as proof:
 
@@ -89,21 +95,57 @@ make run-slider-crank-no-gravity
 
 {{< youtube "iNl3s09BLoA" >}}
 
+Or you can start from the beginning.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
+{{< /cards >}}
+
+
+
 
 ### Inline 4
 
 After all of this modelling: *how about visualizing?*
 
 {{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/engine-balance" title="Engine Balance | Repo" icon="github" >}}
 {{< /cards >}}
 
 ```sh
+#git init && git add . && git commit -m "Initial commit: Starting engine balance repo" && gh repo create engine-balance --private --source=. --remote=origin --push
 git clone
 
 ```
 
+```md
+i want to create a way to simulate in python a slider-crank, being able to animate it and to have in any given point the position, speed, aceleration and forces (including the reaction forces between the bars). 
 
+The later goal will be to take few of this slider cranks and make simulation of engine balance at the axis for few configurations, like I4, I6, V8 etc
+
+can we create a brd.md to define all of this?
+```
+
+```md
+thats sounds good, with the export data we would be able to animate it later on with other frameworks like remotionJS, blender etc?
+```
+
+* BRD.md: "What & Why" (requirements, architecture, scope)
+* equations.md: "The Physics" (math model, coordinate system, all equations)
+* dev-phases.md: "The Code" (concrete tasks, references, examples, testing)
+
+```md
+before starting, can you define a Out of Scope section? Also, for starters we can make the tests with matplotlib, I will let you know later own which ultimamte presentation layer I want, as the output will go mostlikely to  youtube
+```
+
+Here is where you noticed those P1 estimations of 2-3 weeks still.
+
+When its...20-30 minutes already:
+
+```md
+then create a dev-phases.md where you can reference from brd and equations.md what we are doing, the uv python environment is ready for you
+```
 
 {{< youtube "iNl3s09BLoA" >}}
 
@@ -113,23 +155,17 @@ git clone
 
 ## Conclusions
 
+Someone told me that she sees the difference when I talk with passion
 
+Versus when I talk for the money
+
+If you want to convince her that there is no such gap:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
-<!-- https://www.youtube.com/watch?v=qYTguJ_fWmA -->
 
-{{< youtube "qYTguJ_fWmA" >}}
-
-<!-- 
-https://www.youtube.com/watch?v=vzM_-Rr5mtw 
--->
-
-
-{{< youtube "vzM_-Rr5mtw" >}}
 
 
 ### About Engine Balance
@@ -200,3 +236,5 @@ You have ~2007 units for ~10k$ as shown [here](https://www.youtube.com/watch?v=5
 {{< /cards >}}
 
 Im well aware that some people do cool stuff on the tracks with their bmw (BMW e86).
+
+### Fast Fourier Transform?

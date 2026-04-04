@@ -9,13 +9,20 @@ url: 'flat-versus-boxer-simulation'
 
 **Tl;DR**
 
-
+After the I4 it goes...
 
 **Intro**
 
 All Boxer are flat 180, but not viceversa.
 
 flat are v at 180 degrees that share crank pin, but boxer have different crank pins
+
+---
+
+## Conclusions
+
+
+Beyond food and warm, what do you like?
 
 
 

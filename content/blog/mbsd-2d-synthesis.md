@@ -51,6 +51,22 @@ Ive been tinkering back :)
 ## Mechanism Synthesis
 
 
+<!-- https://www.youtube.com/watch?v=qYTguJ_fWmA -->
+
+{{< youtube "qYTguJ_fWmA" >}}
+
+
+Geometry + algebra = movement
+
+
+<!-- 
+https://www.youtube.com/watch?v=vzM_-Rr5mtw 
+-->
+
+
+{{< youtube "vzM_-Rr5mtw" >}}
+
+
 ### Optimizing equations
 
 

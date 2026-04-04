@@ -26,7 +26,6 @@ maybe drones/electronic/robotics are?
 
 
 
-
 ### Claude x Python
 
 
@@ -116,3 +115,16 @@ uv run main.py
 
 #make run #requires .env.local
 ```
+
+### What I learnt
+
+Want this DFY?
+
+~~f off~~
+
+I mean, here you go:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Get some of my time ↗" icon="book-open" >}}
+  {{< card link="https://cal.com/jalcocertech/consulting" title="Collaborations ↗" icon="user" >}}
+{{< /cards >}}
