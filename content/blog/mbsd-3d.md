@@ -1,6 +1,6 @@
 ---
 title: "The physics of Mechanisms in the space"
-date: 2026-04-03
+date: 2026-04-10
 draft: false
 tags: ["MBSD x 3D Simulation","","CADQuery x Blender Rendering"]
 description: 'The Dynamics x Kinematics of youve been waiting for.'

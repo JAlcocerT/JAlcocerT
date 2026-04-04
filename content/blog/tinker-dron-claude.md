@@ -1,6 +1,6 @@
 ---
 title: "Ryze Robotics Dron and Python SDK"
-date: 2026-04-29
+date: 2026-04-04
 draft: false
 tags: ["Ardupilot","DJi Tello","RC","Computer Vision"]
 description: A toy Drone, claude code and computer vision.
@@ -10,13 +10,13 @@ url: 'dji-tello-python-programming'
 
 **Tl;DR**
 
-More tinkeringin the real world.
+More tinkering the real world.
 
 **Intro**
 
 As software is cheap, if plants are not for you
 
-maybe drones/robotics are?
+maybe drones/electronic/robotics are?
 
 
 

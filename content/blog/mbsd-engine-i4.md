@@ -2,7 +2,7 @@
 title: "Inline 4 Engines: Balance and Vibrations"
 date: 2026-04-01T06:20:21+01:00
 draft: false
-tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","MBSD x Remotion"]
+tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","Remotion"]
 description: 'Understanding the most popular engine once and for all.'
 url: 'inline-4-engine-balance'
 math: true
@@ -21,9 +21,11 @@ Getting right the slider-crank mechanism (2D) via MBSD to later form a 3D ICE I4
 
 **Intro**
 
+{{< youtube "ABzKNvJCl28" >}}
 
 
-<https://www.youtube.com/watch?v=ABzKNvJCl28>
+<!-- <https://www.youtube.com/watch?v=ABzKNvJCl28> -->
+
 <http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html>
 
 
@@ -77,12 +79,15 @@ make run-slider-crank-no-gravity
 
 ### Inline 4
 
-
-After all of this modelling: how about visualizing?
+After all of this modelling: *how about visualizing?*
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/mbsd" title="Remotion Video | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/engine-balance" title="Engine Balance | Repo" icon="github" >}}
 {{< /cards >}}
+
+
+
+{{< youtube "iNl3s09BLoA" >}}
 
 
 
@@ -124,7 +129,11 @@ Here are the summaries and pros and cons of each engine type discussed:
 
 Inline 6: This engine configuration is simple and balanced. 
 
-It only needs one cylinder head, one or two cams, and one exhaust manifold. However, its length is a downside as it's difficult to fit transversely in an engine bay. It's hard to fault the inline six other than its length.
+It only needs one cylinder head, one or two cams, and one exhaust manifold. 
+
+However, its length is a downside as it's difficult to fit transversely in an engine bay.
+
+It's hard to fault the inline six other than its length.
 
 Pros: Simple design, beautifully balanced, even firing interval.
 Cons: Its length makes it difficult to fit in some engine bays.

@@ -1,14 +1,16 @@
 ---
 title: "Electronics 101"
-date: 2026-08-01
+date: 2026-04-04
 draft: false
-tags: ["IoT","KiCad vs Atopile","PySpice x RemotionJS"]
+tags: ["Simulations","KiCad vs Atopile","PySpice x RemotionJS"]
 description: 'Simulating electronics components.'
 url: 'electronics-101'
 math: true
 ---
 
 **Tl;DR**
+
+Prep-work for watering plants :)
 
 **Intro**
 
@@ -51,6 +53,7 @@ Electronics board design...yep, also code from now on.
 #uv init
 #uv add -r requirements.txt
 #uv sync
+#cd sample-pyscipe
 uv run main.py
 
 #make run #requires .env.local
@@ -72,10 +75,27 @@ In this folder i have added a pyscipe that simulates a particular circuit
   to clarify sth?  
 ```
 
+Ive dare to generate such explanatory video:
+
 ```sh
 #git clone VideoEditingRemotion
 cd ./remotion-electronics/my-video
+# npx remotion render MosfetProtected mosfet_protected.mp4
+#npx remotion render MosfetUnprotected mosfet_unprotected.mp4
+
 npx remotion render SchematicKickback schematic_kickback.mp4
+```
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
+{{< /cards >}}
+
+
+```sh
+#sudo apt update && sudo apt install ffmpeg
+ls *.mp4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
+ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
 ```
 
 Toy models can NOT predict
@@ -95,5 +115,41 @@ No more: will I get an unexpected quickback due to transitory behaviour?
 Just...simulate: *see thats going to happen, before it happens*
 
 ```sh
+#cd sample-pyscipe
 uv run main.py --only mosfet --scenario compare   # overlay: with vs without diode 
 ```
+
+### The Meta-Lesson
+
+All of these curiosities point to one theme:
+
+**Linear analysis predicts steady state. Nonlinearities dominate transients.**
+
+- The motor inrush looks linear for 100µs, then saturation takes over.
+- The capacitor impedance is Ohmic for DC, but ESR-dominated for 150kHz ripple.
+- The MOSFET is a resistor at steady state, but an avalanche diode in stress.
+- The flyback diode's nonlinearity is the only thing preventing the circuit from killing itself.
+
+Real circuit design is about:
+
+1. **Identifying which nonlinearities matter** (flyback diode → essential; parasitic R → helpful)
+2. **Ensuring they trigger safely** (clamp at 12.7V, not 101.7V)
+3. **Controlling their speed** (ESR damping, gate slew rate)
+4. **Testing edge cases** (cold start, aged battery, old capacitors)
+
+That's why the simulations included these three scenarios: **protected**, **unprotected**, and **compare**.
+
+
+
+The math alone doesn't tell you the story. 
+
+You have to see it.
+
+---
+
+## FAQ
+
+### About Electronical Simulations
+
+1. KiCad
+2. Atopile

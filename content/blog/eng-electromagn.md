@@ -1,14 +1,16 @@
 ---
 title: "Electro Magnetism for tinkerers"
-date: 2026-04-01
+date: 2026-04-20
 draft: false
-tags: ["MBSD x 3D Simulation","Electric Motors","Solenoids","EMR"]
-description: 'The physics of a electric engines.'
+tags: ["Simulations","Electric Motors","Solenoids","EMR"]
+description: 'The physics you need for electronic projects.'
 url: 'electromagnetism-101'
 math: true
 ---
 
 **Tl;DR**
+
+Before tinkering with electronics, how about understanding what we are doing?
 
 **Intro**
 
@@ -29,4 +31,50 @@ $$
 $$
 
 
-## Electrical Engines
+## Applications
+
+### How to avoid frying an ESP32 due to kickback
+
+Even the simplest project has some meta-lessons and curiosities behind it.
+<!-- 
+https://youtu.be/1veGKSFzqcQ 
+-->
+
+{{< youtube "1veGKSFzqcQ" >}}
+
+After such investigation you also get interesting next steps.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
+{{< /cards >}}
+
+
+
+
+### Electrical Engines
+
+
+Is the classical R-L model enough?
+
+enough for what, right?
+
+#### AC Engines
+
+#### DC Engines
+
+
+---
+
+
+## Conclusions
+
+
+
+
+
+
+---
+
+## FAQ
+
