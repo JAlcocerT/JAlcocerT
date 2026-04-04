@@ -42,13 +42,19 @@ https://youtu.be/1veGKSFzqcQ
 
 {{< youtube "1veGKSFzqcQ" >}}
 
-After such investigation you also get interesting next steps.
+After [such investigation](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/consequences.md) you also get [interesting](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/curiosities.md) next steps.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
 
+
+After sich simple project you can continue that [come back with more ad-ons](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/next-steps.md).
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
+{{< /cards >}}
 
 
 
@@ -59,9 +65,34 @@ Is the classical R-L model enough?
 
 enough for what, right?
 
+These are not powered by slider cranks and powerful combustions
+
+But arent they simple, beautiful, elegant and massively efficient?
+
 #### AC Engines
 
+
+
+
 #### DC Engines
+
+These are the kind of motors propelling your DJi Tello Dron.
+
+Yea, the same for which I was recently making a nicer desktop app with computer vision plugged in.
+
+```sh
+git clone /dron
+cd ./sync
+uv sync
+uv run main.py
+```
+
+
+{{< youtube "nNMUY_GUw9s" >}}
+
+<!-- https://youtu.be/nNMUY_GUw9s -->
+
+Yep, private :)
 
 
 ---

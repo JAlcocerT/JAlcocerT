@@ -29,7 +29,6 @@ GoPro overlays? Nah, past
 
 {{< youtube "G7u_KuvKK24" >}}
 
-
 Mechanisms...
 
 {{< youtube "G7u_KuvKK24" >}}

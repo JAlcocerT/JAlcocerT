@@ -26,7 +26,11 @@ Getting right the slider-crank mechanism (2D) via MBSD to later form a 3D ICE I4
 
 <!-- <https://www.youtube.com/watch?v=ABzKNvJCl28> -->
 
-<http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html>
+* http://firsttimeprogrammer.blogspot.com/2015/02/crankshaft-connecting-rod-and-piston.html
+
+
+### Enough Theory for Balance
+
 
 
 $$
@@ -37,6 +41,15 @@ $$
   \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
 \end{aligned}
 $$
+
+Wait...arent you gonna extend the MBSD 2D simulator already to 3D for this?
+
+Nop, im not.
+
+This is going to be equation based.
+
+No point reference coordinates this time :)
+
 
 
 ## Engine Balance
@@ -85,6 +98,11 @@ After all of this modelling: *how about visualizing?*
   {{< card link="https://github.com/JAlcocerT/engine-balance" title="Engine Balance | Repo" icon="github" >}}
 {{< /cards >}}
 
+```sh
+git clone
+
+```
+
 
 
 {{< youtube "iNl3s09BLoA" >}}
@@ -116,8 +134,9 @@ https://www.youtube.com/watch?v=vzM_-Rr5mtw
 
 ### About Engine Balance
 
-{{< youtube "mTS48jX68YU" >}}
+The best video I found about engine balance:
 
+{{< youtube "mTS48jX68YU" >}}
 
 <!-- can you summarize this video? https://www.youtube.com/watch?v=mTS48jX68YU&t=82s -->
 

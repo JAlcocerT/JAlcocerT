@@ -1,6 +1,6 @@
 ---
 title: "Electronics 101"
-date: 2026-04-04
+date: 2026-04-03
 draft: false
 tags: ["Simulations","KiCad vs Atopile","PySpice x RemotionJS"]
 description: 'Simulating electronics components.'
@@ -38,7 +38,7 @@ Same applies to circuit boards:
 
 ## Conclusions
 
-So...mbsd is code, CAD and blender renders are code
+So...mbsd is code, CAD and blender renders are code:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG Search x LangGraph" >}}
