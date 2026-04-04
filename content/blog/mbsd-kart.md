@@ -1,5 +1,5 @@
 ---
-title: "The physics of Mechanism in the space"
+title: "A Kart != a point mass"
 date: 2026-05-26
 draft: false
 tags: ["MBSD x Simulation","Racing"]
@@ -16,6 +16,12 @@ A kart is not a point in the space.
 **Intro**
 
 Do you like racing / karting / sim racing?
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/" title="Video | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/" title="Racing | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 
 https://www.youtube.com/shorts/pi18gTkrP7c
 

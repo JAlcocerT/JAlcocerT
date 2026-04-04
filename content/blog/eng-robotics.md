@@ -15,6 +15,12 @@ Guess what goes after mechanics and electronics
 **Intro**
 
 
+<!-- https://www.youtube.com/watch?v=3bSO_Xedhx8 -->
+
+{{< youtube "3bSO_Xedhx8" >}}
+
+---
+
 ## Conclusions
 
 

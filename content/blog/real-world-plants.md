@@ -1,6 +1,6 @@
 ---
 title: "Plants IRL"
-date: 2026-04-15
+date: 2026-04-06
 draft: false
 tags: ["Outro","Real World","Solar","Tinkering IRL"]
 description: 'How to '
@@ -23,7 +23,9 @@ Because spring has come: you can notice that in the amount of weddings happening
 
 If you ever buy a flat with south orientation (northern hemisphere)
 
-in theory, you can grow tomatoes easily
+In theory: you can grow tomatoes easily.
+
+Lets see that in practice.
 
 
 ## Water Timing Sun

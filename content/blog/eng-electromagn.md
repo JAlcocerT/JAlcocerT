@@ -19,7 +19,11 @@ Before tinkering with electronics, how about understanding what we are doing?
 
 This \(\sigma(z) = \frac{1}{1 + e^{-z}}\) is an inline expression.
 
+then
+
 $$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
+
+more
 
 $$
 \begin{aligned}

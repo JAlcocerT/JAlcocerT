@@ -11,6 +11,7 @@ math: true
 
 **TL;DR**
 
+How aobut bringing fluid mechanics to the ICEs?
 
 **Intro**
 
@@ -45,4 +46,11 @@ I would have never guessed how, where and when I would be coming back to them.
 Will I write about heat transfer and electrical engineering next?
 
 who knows :)
+
+---
+
+## FAQ
+
+### References
+
 

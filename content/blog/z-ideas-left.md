@@ -1,6 +1,6 @@
 ---
 title: "Which ideas are left?"
-date: 2026-04-04
+date: 2026-04-05
 draft: false
 tags: ["Unit Economics 202","JAlcocerTech Services x Remotion","Video x Data Animations","Python PPTx"]
 description: 'To define whats wrong, we need to define whats the desired state.'
@@ -138,7 +138,7 @@ or...
 
 TBD 0426
 
-{{< details title="RoadMap26 | As of 0326 📌" closed="true" >}}
+{{< details title="RoadMap26 | As of 0426 📌" closed="true" >}}
 
 Coming from [last year end review](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#for-next-year)
 
@@ -187,7 +187,7 @@ git clone /my-logseq-notes
 git clone 
 ```
 
-3. Generating random data animated videos & rendres: *is probably time to unify these...*
+3. Generating random data animated videos & renders: *is probably time to unify these...*
 
 {{< cards >}}
   {{< card link="https://gitlab.com/fossengineer1/unfolding-data" title="Unfolding Data | NEW Gitlab Repo" icon="github" >}}
@@ -215,33 +215,38 @@ make render-f1-telemetry F1_YEAR=2026 F1_ROUND=3 F1_DRIVER=RUS
 #mpv renders/f1-telemetry-2026-r3-RUS-Q.mp4
 ```
 
-  Full F1 pipeline summary:                                                                                          
-   
-  # F1-A: Telemetry HUD                                                                                              
-  make data-f1-telemetry F1_YEAR=2024 F1_ROUND=1 F1_DRIVER=VER                                                     
-  make render-f1-telemetry F1_YEAR=2024 F1_ROUND=1 F1_DRIVER=VER                                                     
-                                                                                                                     
-  # F1-B: ERS Clipping grid                                                                                          
-  make data-f1-clipping F1_YEAR=2024 F1_ROUND=1                                                                      
-  make render-f1-clipping-short F1_YEAR=2024 F1_ROUND=1                                                              
-   
-  # F1-C: Championship race                                                                                          
-  make data-f1-championship F1_CHAMP_YEAR=2025                                                                   
-  make render-f1-championship F1_CHAMP_YEAR=2025                                                                       
-  # F1-D: Sector delta duel                                                                                          
-  make data-f1-delta F1_YEAR=2024 F1_ROUND=1 F1_D1=VER F1_D2=NOR                                                   
-  make render-f1-delta-short F1_YEAR=2024 F1_ROUND=1 F1_D1=VER F1_D2=NOR                                             
-                                                                                                                     
-  All four share F1_YEAR, F1_ROUND, F1_SESSION — so you can point all four at the same race weekend with consistent  
-  variables. The entire project now has 26 renderable compositions. Want to continue into the macro ideas (16–22), or
-   is there something else you'd like to explore?   
+Full F1 pipeline summary:                                                                                          
 
-      19      --d1       First driver code        (default: VER)                                                     
-      20      --d2       Second driver code       (default: NOR)
-      21      --session  Session type             (default: Q)                                                       
-      22 +    --lap      Specific lap number      (default: unset → fastest lap)                              
-      23      --npts     Interpolation points     (default: 500)
-      24      --out      TS variable name prefix  (default: f1Delta)
+```sh   
+# F1-A: Telemetry HUD                                                                                              
+make data-f1-telemetry F1_YEAR=2024 F1_ROUND=1 F1_DRIVER=VER                                                     
+make render-f1-telemetry F1_YEAR=2024 F1_ROUND=1 F1_DRIVER=VER                                                     
+                                                                                                                    
+# F1-B: ERS Clipping grid                                                                                          
+make data-f1-clipping F1_YEAR=2024 F1_ROUND=1                                                                      
+make render-f1-clipping-short F1_YEAR=2024 F1_ROUND=1                                                              
+  
+# F1-C: Championship race                                                                                          
+make data-f1-championship F1_CHAMP_YEAR=2025                                                                   
+make render-f1-championship F1_CHAMP_YEAR=2025                                                                       
+# F1-D: Sector delta duel                                                                                          
+make data-f1-delta F1_YEAR=2024 F1_ROUND=1 F1_D1=VER F1_D2=NOR                                                   
+make render-f1-delta-short F1_YEAR=2024 F1_ROUND=1 F1_D1=VER F1_D2=NOR                                             
+```
+                                                                                                                    
+All four share F1_YEAR, F1_ROUND, F1_SESSION — so you can point all four at the same race weekend with consistent  
+variables. 
+
+The entire project now has 26 renderable compositions. 
+
+Want to continue into the macro ideas (16–22), or is there something else you'd like to explore?   
+
+19      --d1       First driver code        (default: VER)                                                     
+20      --d2       Second driver code       (default: NOR)
+21      --session  Session type             (default: Q)                                                       
+22 +    --lap      Specific lap number      (default: unset → fastest lap)                              
+23      --npts     Interpolation points     (default: 500)
+24      --out      TS variable name prefix  (default: f1Delta)
 
 ```sh
 #Usage example for Abu Dhabi 2021 last lap:                                                                         
@@ -253,7 +258,6 @@ make render-f1-delta-short F1_YEAR=2021 F1_ROUND=22 F1_D1=HAM F1_D2=VER F1_SESSI
 make data-f1-delta F1_YEAR=2026 F1_ROUND=3 F1_SESSION=Q F1_D1=LEC F1_D2=HAM && make render-f1-delta-short F1_YEAR=2026 F1_ROUND=3 F1_SESSION=Q F1_D1=LEC F1_D2=HAM
 
 make data-f1-delta F1_YEAR=2026 F1_ROUND=2 F1_SESSION=Q F1_D1=LEC F1_D2=HAM F1_MAP=1 && make render-f1-delta-short F1_YEAR=2026 F1_ROUND=2 F1_SESSION=Q F1_D1=LEC F1_D2=HAM F1_MAP=1
-
 ```
 
 One of the [coolest poles](https://www.youtube.com/watch?v=puWsv5-4ELg) in the recent years:

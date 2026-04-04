@@ -151,24 +151,7 @@ then create a dev-phases.md where you can reference from brd and equations.md wh
 
 
 
----
-
-## Conclusions
-
-Someone told me that she sees the difference when I talk with passion
-
-Versus when I talk for the money
-
-If you want to convince her that there is no such gap:
-
-{{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-{{< /cards >}}
-
-
-
-
-### About Engine Balance
+## About Engine Balance
 
 The best video I found about engine balance:
 
@@ -220,6 +203,27 @@ Some time ago I recorded this video in a restaurant:
 {{< youtube "hTz2J4EgNOs" >}}
 
 
+### Who said Remotion?
+
+
+
+
+---
+
+## Conclusions
+
+Someone told me that she sees the difference when I talk with passion
+
+Versus when I talk for the money
+
+If you want to convince her that there is no such gap:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+{{< /cards >}}
+
+
+
 
 ---
 
@@ -238,3 +242,19 @@ You have ~2007 units for ~10k$ as shown [here](https://www.youtube.com/watch?v=5
 Im well aware that some people do cool stuff on the tracks with their bmw (BMW e86).
 
 ### Fast Fourier Transform?
+
+### References
+
+**Engine Balance Theory**:
+- Norton, R.L. "Design of Machinery" 5th ed., Chapter 14 (Engine Balance)
+- Heywood, J.B. "Internal Combustion Engine Fundamentals", Chapter 3 (Kinematics & Dynamics)
+- SAE J670e "Engine Sound Quality"
+
+**FFT & Harmonic Analysis**:
+- Welch, P.D. "The use of fast Fourier transform for estimation of power spectra" (IEEE Trans. Audio Electroacoustics, 1967)
+- NumPy FFT documentation: https://numpy.org/doc/stable/reference/fft.html
+
+**This Project**:
+- BRD.md § 4.3 — Balance Analysis Requirements
+- equations.md § 3-4 — Kinematics & Dynamics Equations
+- dev-phases.md § 2.2 — Phase 2.2 Specification
