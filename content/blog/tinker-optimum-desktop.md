@@ -17,7 +17,7 @@ Putting some racing stuff together and testing desktop apps via Python.
 
 ~~The launch strategy: aka, focus strategy~~
 
-This is not full Ikigai as I dont [get paid](#conclusions), but its the part of it that I just do because I want to.
+This is not a full [Ikigai](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#about-ikigai) as I dont [get paid](#conclusions), but its the part of it that I just do because I want to.
 
 
 **Intro**

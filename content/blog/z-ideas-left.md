@@ -1,9 +1,9 @@
 ---
 title: "Which ideas are left?"
-date: 2026-04-25
+date: 2026-04-04
 draft: false
 tags: ["Unit Economics 202","JAlcocerTech Services x Remotion","Video x Data Animations","Python PPTx"]
-description: 'What?'
+description: 'To define whats wrong, we need to define whats the desired state.'
 url: 'the-ideas-bucket-can-be-empty'
 math: true
 ---
@@ -44,7 +44,7 @@ Does that tell you anything about the market future expectations *also knowing t
 
 ## Conclusions
 
-If you have ever thoughts about Ikigai
+If you have ever thoughts [about Ikigai](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#about-ikigai)
 
 or tried to understand the psyc under your decision making
 
@@ -446,3 +446,13 @@ When an executive says "the data is wrong" after this meeting, your response bec
 **90% of the time, the answer is 1, 2, or 3.**
 
 By starting at the top, you've made them the "Product Owners" of the logic, leaving you to simply be the master of the execution.
+
+When the logic is "wrong," it’s often because a new business reality exists that hasn't been coded yet.
+
+The "New Variable" Question: "We agreed on this formula last month. Has a new business factor been introduced—like a new tax code, a seasonal discount, or a 'friends and family' rate—that our current math isn't subtracting yet?"
+
+The "Inclusion" Question: "Is there a specific transaction you’re looking at that should be in this total but isn't? If so, what 'tag' or 'category' does it have in the spreadsheet that our formula might be filtering out?"
+
+## SoloPreneur + AI versus Oldschool
+
+You [ikigai](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#about-ikigai) points somewhere different?

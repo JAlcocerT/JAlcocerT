@@ -711,7 +711,7 @@ But what for now, having Python available and many OSS goodies.
 
 Anyways, if you provide digital services and think [that claude code](https://www.reddit.com/r/ClaudeAI/comments/1q403xw/claude_code_for_noncoding_projectswork_a_complete/) wont be cause deflation there soon because 'Im not a programmer'...
 
-Better be finding your Ikigai (?)
+Better be finding [your Ikigai](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#about-ikigai) (?)
 
 I mean...
 

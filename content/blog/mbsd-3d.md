@@ -40,7 +40,7 @@ You thought that your 9-5 is killing you?
 
 Is your 5pm-9pm giving you some life?
 
-Have you ever thought about whats Ikigai for you?
+Have you ever thought about [whats Ikigai for you](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#about-ikigai)?
 
 Ops, wrong post to talk about this.
 
