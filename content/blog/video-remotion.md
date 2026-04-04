@@ -512,16 +512,14 @@ Not bad for being a copy of the matplotlib (not the Go desktop one):
 
 > PS: Im in love with the **deceleration zones** idea
 
- it's a resource configuration problem. Here's the full picture:                                                                                                                                              
-                                                                                                                                                                                                                                            
-  Why it failed by default:                                                                                                                                                                                                                   
-  - Remotion spawns 8 Chrome instances in parallel (concurrency=8)                                                                                                                                                                            
-  - Each Chrome instance decodes the 4K video frame-by-frame into a raw pixel buffer                                                                                                                                                          
-  - 4K frame = 3840×2160×3 bytes = ~25 MB per frame in RAM                                                                                                                                                                                  
-  - 8 instances × multiple buffered frames = Chrome exhausting available memory mid-render                                                                                                                                                    
-                                                                                                                                                                                                                                              
-  How to use 4K natively with Remotion:                                                                                                                                                                                                       
-                                                                                                                                                                                                                                              
+it's a resource configuration problem. Here's the full picture:                                                                                                                                                                                                                  
+Why it failed by default: 
+- Remotion spawns 8 Chrome instances in parallel (concurrency=8)  
+- Each Chrome instance decodes the 4K video frame-by-frame into a raw pixel buffer                                                                                                       
+- 4K frame = 3840×2160×3 bytes = ~25 MB per frame in RAM 
+- 8 instances × multiple buffered frames = Chrome exhausting available memory mid-render                                                                   
+How to use 4K natively with Remotion:
+
   1. Reduce concurrency — --concurrency=1 or --concurrency=2 keeps RAM usage manageable:                                                                                                                                                      
   npx remotion render GoProHud out.mp4 --concurrency=1                                                                                                                                                                                        
   1. Works fine, just slower (8–10× slower than the default).                                                                                                                                                                                 
@@ -680,7 +678,11 @@ Now you have three options: [everything as a code](https://jalcocert.github.io/J
 
 Now clear yet on the how to?
 
-Its all about having the right SKILLS
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion" title="Remotion x Video Edition" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG Search x LangGraph" >}}
+{{< /cards >}}
+
+Its all about having the right SKILLS~~.md~~
 
 <!-- 
 https://www.youtube.com/watch?v=BC4xJzNqutc 

@@ -362,7 +362,7 @@ The general idea checklist is as follows:
 
 You know that im in love with slidevJS for my tech talks.
 
-But i got to know python-pptx.
+But ~~I got to know~~ [reminded about](https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/#other-ppt-as-a-code) **python-pptx**.
 
 
 So for the pocs if you were doing slidev or giving a prompt to notebookllm or copilot:
@@ -374,3 +374,75 @@ So for the pocs if you were doing slidev or giving a prompt to notebookllm or co
 You are outdated.
 
 Take one branded pptx, tell to write the store with the branded slides and move on :)
+
+Or...behave logically like an agent does: swirly requirements = swirly output
+
+for those moments where things are wrong, but people dont agree of the concepts/meaning of whats correct / definitions
+
+![alt text](/blog_img/memes/data-deadlock.png)
+
+"When we say 'The data is wrong,' it usually means one of two things: either my code is failing, or we haven't agreed on what 'right' means conceptually.
+
+To build a dashboard we all trust, we must climb this 'Hierarchy of Right' for our main metrics. 
+
+~~We will start at the bottom and work up: What is the source, how is it calculated, and most importantly, what business concept does it represent? Let's begin with the concept.~~
+
+The Top-Down Hierarchy of "Right"
+
+That is a much more strategic way to handle a room full of executives. 
+
+By starting at the **Concept**, you are speaking their language first (Business Strategy) and only moving toward your language (Code/Data) once the foundation is poured.
+
+If you start with the code, they tune out. If you start with the concept, they take ownership of the result.
+
+Here is the **Top-Down Alignment Protocol** redesigned for that flow.
+
+## The Top-Down Hierarchy of "Right"
+
+### **Phase 1: The Semantic Concept (The "Why")**
+*Focus: Business Intent*
+At this level, don't mention databases or SQL. Talk about the real world.
+
+* **The Question:** "Let's ignore the numbers for a second. What is the **business event** we are trying to capture? For example, when we say 'Customer Acquisition,' do we mean the moment they sign a contract, or the moment they pay their first invoice?"
+* **The Conflict Resolver:** "If we have two different views on what an 'Active User' is, we don't have a data problem; we have a strategy gap. Which definition drives our decision-making today?"
+* **The Goal:** A written, plain-English sentence: *"A 'Sale' is defined as a signed contract regardless of payment status."*
+
+---
+
+### **Phase 2: The Logical Formula (The "How")**
+*Focus: The Mathematical Blueprint*
+Now that you have the concept, translate it into logic.
+
+* **The Question:** "Now that we’ve defined the event, how do we turn it into a KPI? To get the 'Net Margin' we just described, are we subtracting **Gross COGS** or **Net COGS** including shipping? Are we excluding internal test accounts?"
+* **The "Corner Case" Test:** "If a customer signs today but cancels tomorrow, does our formula for 'Growth' include them or filter them out?"
+* **The Goal:** An agreed-upon formula: $$(Total Revenue - Returns) \times Tax Rate = Net$$.
+
+---
+
+### **Phase 3: The Data Source (The "Where")**
+*Focus: The Source of Truth*
+Identify which system is "The Law."
+
+* **The Question:** "Every system tells a slightly different story. For this specific formula, which system is the **Golden Record**? Is it the CRM (Sales view) or the ERP (Accounting view)?"
+* **The Accountability Check:** "If the CRM says $1M and the ERP says $900k, which one do you want this dashboard to show? We must pick one, or we will always be chasing ghosts."
+* **The Goal:** Naming the primary database (e.g., "NetSuite is the source for all Revenue metrics").
+
+---
+
+### **Phase 4: The Technical Execution (The Code)**
+*Focus: Verification*
+This is your domain. You only show this if they challenge the first three steps.
+
+* **The Statement:** "Now that we’ve agreed on the **Concept**, the **Formula**, and the **Source**, my job is purely to ensure the code reflects those three things perfectly. If you ever feel the data is 'wrong' from here on out, we can check the code together to ensure it hasn't drifted from our agreed-upon definitions."
+* **The Goal:** Technical confidence. You are now just the "translator" of their own rules.
+
+When an executive says "the data is wrong" after this meeting, your response becomes a diagnostic check rather than a defense:
+
+1.  "Did the **Concept** change since our last meeting?"
+2.  "Is the **Formula** missing a new variable (like a new tax or discount)?"
+3.  "Is there an issue with the **Source** system (human entry error)?" - *Maybe sanity checks required by PMOs :)*
+4.  "Is my **Code** failing to execute the logic?"
+
+**90% of the time, the answer is 1, 2, or 3.**
+
+By starting at the top, you've made them the "Product Owners" of the logic, leaving you to simply be the master of the execution.

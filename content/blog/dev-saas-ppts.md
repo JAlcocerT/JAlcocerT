@@ -131,7 +131,7 @@ Instead of a common one for all.
 
 ### Other PPT as a Code
 
-See https://gitbrent.github.io/PptxGenJS/demos/ 
+See: https://gitbrent.github.io/PptxGenJS/demos/ 
 
 The most common and effective ways to create presentations "as code" (programmatically or using text-based formats) involve libraries and tools categorized by the language/format they use.
 
@@ -148,7 +148,6 @@ These tools use native language syntax to build the presentation object by objec
 | **Go (Golang)** 🐹 | **`unioffice`** | A pure Go library for working with all Office Open XML documents, including `.pptx`. |
 | **Ruby** ♦️ | **`ruby-powerpoint`** | Allows manipulation and generation of PowerPoint presentations in Ruby. |
 | **Java** ☕ | **Apache POI** | A popular API used to create and maintain other file formats based on Office Open XML (OOXML) or Microsoft's OLE2, including a component for PowerPoint (`.pptx`). |
-
 
 2. Markdown/YAML Tools (Text-First)
 
