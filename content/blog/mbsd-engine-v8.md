@@ -11,7 +11,17 @@ url: 'flat-plane-vs-cross-plane'
 **TL;DR**
 
 
+The I4 balance post was so-so
+
+How about...using the MBSD 3D simulator?
+
 **Intro**
+
+F1 might do a comeback to V8
+
+So how about understanding them?
+
+Why are so many people addicted to their sound?
 
 
 
@@ -39,16 +49,25 @@ There is a ''power silence'', but also power overlap due to the 90 and 270 degre
 
 {{< youtube "r8G3XRBn24s" >}}
 
+
+
 ---
 
 ## Conclusions
 
 No worries I6 V10 and V12 will also come.
 
-https://www.youtube.com/watch?v=hjsrqMe0B3s
+<!-- https://www.youtube.com/watch?v=hjsrqMe0B3s -->
+
+
+{{< youtube "hjsrqMe0B3s" >}}
+
 
 ---
 
 ### FAQ
 
-#### Big Bang Engines
+### Big Bang Engines
+
+
+###

@@ -162,3 +162,9 @@ flutter run -d linux
 
 ### Whats ArduPilot?
 
+
+### Software for Drones
+
+* https://github.com/arpanghosh8453/open-dronelog
+
+> Drone Log analyzer: A high-performance universal dashboard application for organizing and analyzing DJI/Litchi flight logs privately in one place. Built with Tauri v2, DuckDB, and React.

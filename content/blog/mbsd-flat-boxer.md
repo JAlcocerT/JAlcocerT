@@ -1,8 +1,8 @@
 ---
-title: "Flat > Boxer"
+title: "MBSD and Flat > Boxer"
 date: 2026-04-14
 draft: false
-tags: ["MBSD","Career","Volumetric Efficiency","Holonomic vs Non Holonomic Constrains"]
+tags: ["Volumetric Efficiency","Holonomic vs Non Holonomic Constrains"]
 description: 'Comparing two popular engines'
 url: 'flat-versus-boxer-simulation'
 ---
@@ -33,10 +33,14 @@ Beyond food and warm, what do you like?
 
 ### Volumetric efficiency
 
-<https://www.youtube.com/watch?v=1eRsaOxxiUc>
+<!-- <https://www.youtube.com/watch?v=1eRsaOxxiUc> -->
+
+{{< youtube "1eRsaOxxiUc" >}}
+
 
 
 VE map - https://www.tactrix.com/index.php?option=com_content&view=category&layout=blog&id=36
+
 
 ### Holonomic vs Non Holonomic Constrains
 

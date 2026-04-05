@@ -11,9 +11,8 @@ url: 'oss-automatic-docs-and-tech-video'
 
 **Tl;DR**
 
-Last year...https://jalcocert.github.io/JAlcocerT/tech-for-podcast/ I was working
+Last year [here](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/)... I was working for some kind of project [to do automatic docs](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#vibe-coded-project-docs)
 
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#vibe-coded-project-docs
 
 **Intro**
 
@@ -28,7 +27,31 @@ Specially: [Claude...](https://www.anthropic.com/news/claude-opus-4-6)
 ### From Repo to Post
 
 
+```sh
+git clone https://github.com/elduty/velomate
+
+```
+
+
 ### From Repo to Video
+
+
+## About FOSS
+
+What if for every cool repo not only a nice post could be generated
+
+```sh
+git clone
+
+```
+
+But also a nice RemotionJS video about it?
+
+```sh
+cd
+
+```
+
 
 ---
 
@@ -44,10 +67,14 @@ Interestingly, there is a fork of zed called GRAM that has been quite interestin
 ### Other High Signal Videos
 
 
+
+
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/DataInMotion" title="DataInMotion | Repo" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Remotion | Repo" icon="github" >}}
 {{< /cards >}}
+
+Has this signal make F1 re-think their strategy and make v8's come back?
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/karting/long_g_trace_L4.png" subtitle="Post with animated F1, Real Estate, yfinance..." >}}
@@ -110,12 +137,12 @@ On battery power?!
 
 My 5600G was taking like...10 min?!
 
-that was for 1080p, so i went ahead and made it harder:
+that was for 1080p, so i went ahead and made it **harder**:
 
 ```sh
 cd four-bar-mac
 make clean-all
-mae install UV_PYTHON=3.12
+make install UV_PYTHON=3.12
 .venv/bin.python --version
 
 #make scene-ui

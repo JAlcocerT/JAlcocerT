@@ -541,4 +541,10 @@ mise use --global node@lts
 mise use --global python@latest
 ```
 
-**What’s next?** Since you’re coming from Linux, would you like the commands to set up **Docker** (which is a bit different on Mac) or a specific window manager like **Yabai** to mimic tiling?
+To run **docker in mac** we will need something like QEMU or wsl
+
+yea...a VM, as it cant run natively
+
+```sh
+
+```

@@ -1,6 +1,6 @@
 ---
 title: "[AIoT] How to use LangChain to QnA Sensor Data"
-date: 2026-04-20T21:20:21+01:00
+date: 2026-05-15T21:20:21+01:00
 draft: false
 tags: ["DB2Rest","ekuiper","Embeded Analytics","Roadmap26 x Tech Talk"]
 description: 'Using LangChain to get Temperature & Humidity data from a DHT22 sensor.'
@@ -13,6 +13,7 @@ url: 'langchain-chat-with-sensor-data'
 Coming from the pgsql x langchain post...
 
 https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
+
 together with langchain RAG + db queries
 
 How about some IoT as a companion?

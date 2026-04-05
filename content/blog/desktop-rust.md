@@ -1,6 +1,6 @@
 ---
 title: "Desktop Apps with RUST"
-date: 2026-05-16
+date: 2026-06-16
 draft: false
 tags: ["Rust x Vue","RemotionJS"]
 description: 'Using Rust Tauri instead of CustomTkinter and GoLang Wails.'
@@ -13,6 +13,15 @@ url: 'desktop-apps-with-rust'
 From [Go](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/) and Python to Rust desktop apps
 
 **Intro**
+
+This year I have used Go to make one of my first desktop apps.
+
+Also...flutter to some extent: for the tello here, and a comparison with flet
+
+So im just curious, if there are so nice apps like: Zed, [open drone log](https://github.com/arpanghosh8453/open-dronelog)
+
+
+That are powered by RUST, 
 
 A collection of stupid ideas that I just do to test AI models.
 

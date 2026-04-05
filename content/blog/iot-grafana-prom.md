@@ -10,6 +10,14 @@ url: 'selfhosting-grafana'
 
 **Tl;DR**
 
+You can do very cool things with grafana
+
+Like bringing a world map to map your bike rides, like https://github.com/elduty/velomate
+
+> Self-hosted cycling analytics platform — Strava ingestion, Grafana dashboards, intelligent route planning. No Strava Premium required.
+
+https://github.com/iamceeso/zinalog?tab=readme-ov-file
+
 * https://telemetryharbor.com/
 * https://docs.telemetryharbor.com/docs/Integrations/home-assistant/
 
