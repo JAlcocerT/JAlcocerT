@@ -1,6 +1,6 @@
 ---
 title: "Flat > Boxer"
-date: 2026-04-11T23:20:21+01:00
+date: 2026-04-14
 draft: false
 tags: ["MBSD","Career","Volumetric Efficiency","Holonomic vs Non Holonomic Constrains"]
 description: 'Comparing two popular engines'

@@ -80,6 +80,13 @@ I mean, if you are one of those who actually do sth with information like the so
 
 Why not trying sth in the real world?
 
+1. After 7 days from planting the seeds, the first small green forms started to appear
+
+I made A/B testing, ofc and place x6 buckets without plastic coverage and one with - the first seeds going out were the latter
+
+The temperature at night dropped at ~15C and during peak I saw 35C (they are growing next to a Window glass)
+
+2. 
 
 ---
 

@@ -158,4 +158,7 @@ flutter run -d linux
 
 > This is the one, btw :)
 
-3. https://pub.dev/packages/ryze_tello with 5yo and also no incompatibilities
+3. https://pub.dev/packages/ryze_tello with 5yo and *also in theory*, no incompatibilities
+
+### Whats ArduPilot?
+

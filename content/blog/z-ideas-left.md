@@ -374,8 +374,9 @@ So for the pocs if you were doing slidev or giving a prompt to notebookllm or co
 
 ```sh
 git clone /pbi
-cd ./pbi/
-# #yea tech talks are here for now :)
+cd ./pbi/executive-dashboard-pptx #a sample with dummy data on how to use python-pptx :)
+
+#git clone / #yea tech talks are here for now :)
 ```
 
 

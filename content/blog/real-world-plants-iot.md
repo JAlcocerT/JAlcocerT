@@ -2,7 +2,7 @@
 title: "IoT x Plants x BoM"
 date: 2026-04-06
 draft: false
-tags: ["Real World","Solar","IoT","Tinkering IRL"]
+tags: ["Real World","Solar","IoT","Tinkering IRL","Velxio x ESP32"]
 description: 'Plants, IoT and future plans.'
 url: 'plants-102-and-iot'
 ---

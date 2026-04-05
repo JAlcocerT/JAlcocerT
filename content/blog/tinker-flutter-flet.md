@@ -1,8 +1,8 @@
 ---
-title: "Flutter Apps and Flet"
-date: 2026-11-29
+title: "Flutter Apps and Flet for Desktop Apps"
+date: 2026-06-10
 draft: false
-tags: ["Android","Ente Photos","wger","Desktop Apps","Flutter x Python Flet","FlutterFlow"]
+tags: ["Android","Ente Photos","wger","Desktop Apps","FlutterFlow","DART"]
 description: 'Flutter Apps. Created with Python via Flet.'
 url: 'from-python-to-flutter'
 ---
@@ -11,7 +11,9 @@ Affine and Appflowy are having web and desktop apps.
 
 not sure if those are done with flutter, but they are cool
 
-https://youtu.be/bhPHwVsrTo0
+{{< youtube "bhPHwVsrTo0" >}}
+
+<!-- https://youtu.be/bhPHwVsrTo0 -->
 
 **Tl;DR**
 
@@ -61,8 +63,14 @@ HGLRC M100 Mini	How to Install and Setup a GPS on your FPV Drone (4K) - YouTube	
 F9P?		
 Lora GPS?		
 
-https://www.youtube.com/watch?v=dQeNONerxEU
-https://www.youtube.com/watch?v=ibNzG1tMblE
+<!-- https://www.youtube.com/watch?v=dQeNONerxEU
+https://www.youtube.com/watch?v=ibNzG1tMblE -->
+
+{{< youtube "dQeNONerxEU" >}}
+
+
+{{< youtube "ibNzG1tMblE" >}}
+
 
 **Intro**
 
@@ -90,7 +98,7 @@ https://flathub.org/en/apps/de.wger.flutter Which I discovered thanks to https:/
 
 ![alt text](/blog_img/selfh/PaaS/wger.png)
 
-See https://play.google.com/store/apps/details?id=de.wger.flutter
+See `https://play.google.com/store/apps/details?id=de.wger.flutter`
 
 You can connect to your wger server
 
@@ -126,7 +134,9 @@ pip install flet #https://pypi.org/project/flet/
 app = flet.App()
 ```
 
-Once you have created the flet.App object, you can start adding widgets to it. To do this, you use the flet.App.add() method. For example, to add a button to your app, you would use the following code:
+Once you have created the flet.App object, you can start adding widgets to it. 
+
+To do this, you use the flet.App.add() method. For example, to add a button to your app, you would use the following code:
 
 
 Yes, **Flet can generate static pages**.
@@ -171,9 +181,7 @@ https://flet.dev/docs/guides/python/packaging-app-for-distribution/
 https://flet.dev/docs/guides/python/packaging-desktop-app/
 
 
-#### Flet as a PWA
-
-https://flet.dev/docs/guides/python/deploying-web-app/progressive-web-apps
+Flet as a PWA: https://flet.dev/docs/guides/python/deploying-web-app/progressive-web-apps
 
 ## Tinkering with Flutter
 
@@ -185,21 +193,54 @@ https://flet.dev/docs/guides/python/deploying-web-app/progressive-web-apps
 
 ### Flutter x DJI Tello
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/dron" title="DJI Tello x Py" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Python SDK and uv for the tello" >}}
+  {{< card link="https://github.com/JAlcocerT/dron-tello-flutter" title="Flutter Tello Flutter" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Blender, CadQuery..." >}}
+{{< /cards >}}
+
+I got a tello some time ago
+
+This year decided to use uv as pkg manager to control it better...
+
+And shortly after I caught myself around flutter:
+
 ```sh
 #git clone https://github.com/JAlcocerT/dron && cd ./dron && uv run main.py
 
-git clone
-ping 192.168.10.1
-
+git clone https://github.com/JAlcocerT/dron-tello-flutter
+cd dron-tello-flutter
+#ping 192.168.10.1
+flutter run -d linux
 ```
 
 ### Flutter x GoPro HUD
 
-```sh
-#git clone
+I was trying GoPros overlay for long
 
+```sh
+#git clone https://github.com/JAlcocerT/Py_RouteTracker
 ```
 
+Later, I tried this approach:
+
+```sh
+#git clone https://github.com/JAlcocerT/optimum-path
+#cd optimum-path/overlay
+```
+
+Even with go:
+
+```sh
+#git clone https://github.com/JAlcocerT/go-karting
+```
+
+Just that the Go desktop app worked nicely for me at Ubuntu
+
+But somehow my friend could not run it on W11
+
+I did not debug much tbh
+
+But just wondering if flutter would make this easier
 
 ---
 

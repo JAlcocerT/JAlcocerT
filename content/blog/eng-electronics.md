@@ -153,3 +153,9 @@ You have to see it.
 
 1. KiCad
 2. Atopile
+
+To simulate the behaviour of ESP32, picoW, even arduinos: https://github.com/davidmonterocrespo24/velxio
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
+{{< /cards >}}

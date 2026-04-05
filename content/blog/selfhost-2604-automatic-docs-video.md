@@ -34,6 +34,11 @@ Specially: [Claude...](https://www.anthropic.com/news/claude-opus-4-6)
 
 ## Conclusions
 
+This is the kind of post that makes me realize this year ill be doing 99 posts...instead of the much less planned.
+
+Talking about f/oss I tested mac OS with Zed and CodeEdit
+
+Interestingly, there is a fork of zed called GRAM that has been quite interesting.
 
 
 ### Other High Signal Videos
@@ -83,17 +88,46 @@ Which reminds me somehow to tmux *the one I used [here with blender](https://jal
 
 
 ```sh
+#brew install ffmpeg #you didnt know you need FFMPEG, but you DO NEED IT
 brew install gh
 #gh auth login
 #gh auth status
 git clone https://github.com/JAlcocerT/3Design
-cd ./3Design/z-cadquery
+cd ./3Design/mbsd-to-render/four-bar
 
 make check #make help
 #make scene-ui #this starts blender UI
-time make all #make the render programatically!
+time make all #makes all the steps, including the render programatically!
+#make render #or do this one for just the render of the scene-ui was OK
 
 #tmux new-session -d -s cad "make all" #if you will be leaving this for the night
 #tmux attach-session -t cad #to see hows going
 ```
 
+Wait....56 seconds to render?
+
+On battery power?!
+
+My 5600G was taking like...10 min?!
+
+that was for 1080p, so i went ahead and made it harder:
+
+```sh
+cd four-bar-mac
+make clean-all
+mae install UV_PYTHON=3.12
+.venv/bin.python --version
+
+#make scene-ui
+time make render all
+```
+
+Say thx to pairdrop, see the difference
+
+<!-- https://youtu.be/r0eg5onWbn0 -->
+
+{{< youtube "r0eg5onWbn0" >}}
+
+Oh the time for **4K with final presets**?
+
+This was 26min at the M2 and I did not dare to try it with my x13 nor the x300.
