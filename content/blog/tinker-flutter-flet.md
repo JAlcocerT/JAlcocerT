@@ -4,7 +4,7 @@ date: 2026-11-29
 draft: false
 tags: ["Android","Ente Photos","wger","Desktop Apps","Flutter x Python Flet","FlutterFlow"]
 description: 'Flutter Apps. Created with Python via Flet.'
-url: 'flutter-flet-python'
+url: 'from-python-to-flutter'
 ---
 
 Affine and Appflowy are having web and desktop apps.
@@ -15,7 +15,15 @@ https://youtu.be/bhPHwVsrTo0
 
 **Tl;DR**
 
+Flutter is used in many places.
+
+Actually even some smartTV apps from your favourite telecom provider might have been built with it.
+
+
 At an ecommerce they were using Swift for the code base of iOS
+
+
+## Flet
 
 Couple years ago I tried to do some Flet Apps with chatGPT, but the LLM knowledge was not there.
 
@@ -24,6 +32,28 @@ At least not to compensate for my lack of mobile app development (0).
 How about now?
 
 Is it there enought to create a desktop app to control the **DJI Tello dron**?
+
+Well, the thing is that...
+
+thing have changed
+
+And models are so good that I was able not only to build a nice python cli wrapper to control the tello here:
+
+```sh
+git clone
+uv run main.py
+```
+
+Oh...and in fact more than Python:
+
+```sh
+git clone dron-tello-flutter
+cd dron-tello-flutter
+
+flutter run -d linux
+```
+
+But also, 
 
 GPS BASED		
 ublox m8n		
@@ -36,9 +66,6 @@ https://www.youtube.com/watch?v=ibNzG1tMblE
 
 **Intro**
 
-Flutter is used in many places.
-
-Actually even some smartTV apps from your favourite telecom provider might have been built with it.
 
 <!-- * Flutter
         * Counter knitting
@@ -148,6 +175,39 @@ https://flet.dev/docs/guides/python/packaging-desktop-app/
 
 https://flet.dev/docs/guides/python/deploying-web-app/progressive-web-apps
 
+## Tinkering with Flutter
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/dron" title="DJI Tello x Py" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Python SDK and uv for the tello" >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="NEW - GoPro HUD" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Blender, CadQuery..." >}}
+{{< /cards >}}
+
+### Flutter x DJI Tello
+
+```sh
+#git clone https://github.com/JAlcocerT/dron && cd ./dron && uv run main.py
+
+git clone
+ping 192.168.10.1
+
+```
+
+### Flutter x GoPro HUD
+
+```sh
+#git clone
+
+```
+
+
+---
+
+
+## Conclusions
+
+
+
 ---
 
 ## FAQ
@@ -169,8 +229,6 @@ Targeting desktop apps instead of web:
 | Kivy | Touch apps across devices | Mobile + desktop |
 | wxPython | Native-look GUIs | OS-integrated apps |
 | Flet | Flutter-like experience for desktop & web | Unified apps |
-
-
 
 
 ### Desktop Apps Analytics

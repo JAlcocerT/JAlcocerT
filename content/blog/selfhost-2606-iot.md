@@ -7,7 +7,6 @@ description: 'IoT.'
 url: 'iot-home-lab-tools'
 ---
 
-https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-humidity-sensor
 
 
 
@@ -17,13 +16,17 @@ Isnt it time to do some upgrades to IoT, HA and the solar panel?
 
 **Intro**
 
-Spring has come!
+Summer is coming!
 
 Last year I was able to put together HA with a DHT connected to the Pico W powered by a solar panel.
 
 But I left some few loose ends while documenting how great that setup was.
 
-Its time to make that better.
+In the meantime... Ive made a ~~small~~ comeback to ~~mechanisms~~ electronics.
+
+And planted couple of things for the first time.
+
+Its time to make that IoT/Selfhosted setup better than I ever had.
 
 
 ## Protocols
@@ -95,3 +98,17 @@ They are now...static!
 ## FAQ
 
 
+### Tools I cant live w/o
+
+For the CLI:
+
+```sh
+lazydocker
+#sudo snap install ghostty --classic
+#tmux
+```
+
+
+### Interesting Sensors
+
+* https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-humidity-sensor

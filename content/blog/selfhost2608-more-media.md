@@ -13,7 +13,7 @@ Is there a reliable way not to loose photos for good?
 
 **Intro**
 
-I know you might be already familiar with **PairDrop**
+I know, you might be already familiar with **PairDrop**
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pairdrop" title="PairDrop | Docker Config 🐋 ↗" >}}
@@ -94,5 +94,10 @@ It goes beyond basic MP3 players like Navidrome by offering audiobook-specific f
 ---
 
 ## Conclusions
+
+
+---
+
+
 
 ## FAQ

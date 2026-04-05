@@ -11,6 +11,8 @@ url: 'selfhosting-frigate'
 
 If you like computer vision and homelabs, you will enjoy this one :)
 
++++ wanna see how your plants get water from the distance?
+
 **Intro**
 
 The **computer vision** is an interesting topic that I have just tinkered with superficially...*two years ago with [the Pi](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/)*.

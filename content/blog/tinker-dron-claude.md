@@ -101,7 +101,7 @@ ping 192.168.10.1
 echo -n "command" | nc -u -w1 192.168.10.1 8889
 ```
 
-This is happening already
+[This](#tello-x-flutter) is happening already...
 
 ```sh
 sudo snap install flutter --clasic
@@ -149,5 +149,13 @@ next
 
 2.  https://pub.dev/packages/udp/versions that does not shows incompatibilities
 
+```sh
+#ping 192.168.10.1
+flutter run -d linux
+```
+
+![alt text](/blog_img/apps/flutter-dron.png)
+
+> This is the one, btw :)
 
 3. https://pub.dev/packages/ryze_tello with 5yo and also no incompatibilities

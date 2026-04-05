@@ -1,8 +1,8 @@
 ---
-title: "[Learning] Selfhosted IoT x HA"
-date: 2026-04-06
+title: "From Repo Docs to Promo Video"
+date: 2026-04-05
 draft: false
-tags: ["AI Docs","RemotionJS Video","FOSS"]
+tags: ["AI Docs","RemotionJS Video","F/OSS"]
 description: 'Automatic repository 2 Docs x Videos .'
 url: 'oss-automatic-docs-and-tech-video'
 ---
@@ -65,12 +65,35 @@ Why not.........
 ## FAQ
 
 
-### What if tried recently
+### What ive tried recently
 
-More mac M2 and...
+More [mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) and...
 
 ```sh
-sudo snap install ghostty --classic
+#sudo snap install ghostty --classic
+ghostty
 ```
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Termix" title="Termix with Docker 🐋 ↗" >}}
+{{< /cards >}}
+
+
 Which reminds me somehow to tmux *the one I used [here with blender](https://jalcocert.github.io/JAlcocerT/about-constrained-mechanism/) and my x300*
+
+
+```sh
+brew install gh
+#gh auth login
+#gh auth status
+git clone https://github.com/JAlcocerT/3Design
+cd ./3Design/z-cadquery
+
+make check #make help
+#make scene-ui #this starts blender UI
+time make all #make the render programatically!
+
+#tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+#tmux attach-session -t cad #to see hows going
+```
+

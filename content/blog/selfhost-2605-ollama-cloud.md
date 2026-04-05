@@ -224,13 +224,20 @@ print(llm.complete("What is a vector database?"))
 
 ## Conclusions
 
-Ollama with [the mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) has been interesting
+Ollama with [the mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) has been interesting!
 
 ```sh
-sudo docker compose -f 2605_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
+#git clone https://github.com/JAlcocerT/Home-Lab/
+#cd ./Home-Lab/z-homelab-setup/evolution 
+sudo docker compose -f 2605_docker-compose.yml up -d ollama uptime....pihole nextcloud ncdb.......
+#ollama run
 ```
 
-For a daily driver OS, ZORIN 18 is working nicely for me.
+After the initial setup and checking how fast the M2 is with blender 
+
+Im not surprised the performance with Ollama
+
+> For a daily driver OS, ZORIN 18 is working nicely for me.
 
 But it was about time to do a format C to [my x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/).
 

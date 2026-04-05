@@ -41,8 +41,8 @@ Same applies to circuit boards:
 So...mbsd is code, CAD and blender renders are code:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG Search x LangGraph" >}}
-  {{< card link="https://github.com/JAlcocerT/local-deep-researcher" title="Local Deep Researcher Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Local Deep Researcher with langGraph - Source Code on Github" >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics" image="/blog_img/apps/gh-jalcocert.svg" subtitle="IoT and electronics projects" >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3D Design Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Blender, CadQuery..." >}}
 {{< /cards >}}
 
 Electronics board design...yep, also code from now on.
