@@ -370,13 +370,15 @@ You know that im in love with slidevJS for my tech talks.
 But ~~I got to know~~ [reminded about](https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/#other-ppt-as-a-code) **python-pptx**.
 
 
-So for the pocs if you were doing slidev or giving a prompt to notebookllm or copilot:
+So for the pocs if you were doing slidev or giving a prompt to notebookllm or copilot: You are outdated.
 
 ```sh
-
+git clone /pbi
+cd ./pbi/
+# #yea tech talks are here for now :)
 ```
 
-You are outdated.
+
 
 Take one branded pptx, tell to write the store with the branded slides and move on :)
 

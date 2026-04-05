@@ -3,7 +3,7 @@ title: "Inline 4 Engines: Balance and Vibrations"
 date: 2026-04-01T06:20:21+01:00
 draft: false
 tags: ["Multi-Body","Inline 4","Primary vs Secondary Balance","Remotion","FFT"]
-description: 'Understanding the most popular engine once and for all.'
+description: 'Understanding the most popular engine (once and for all) with a Force Locus.'
 url: 'inline-4-engine-balance'
 math: true
 ---
@@ -86,6 +86,8 @@ You got x4 slider-cranks connected to a common axis
 
 {{< youtube "cFHyobRjcK0" >}}
 
+> Yes, this one is [based on remotion](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/) :)
+
 So you can model it as one axis that receives variable forces (the reaction ones that makes the crank stay in position) over time as it rotates
 
 ```sh
@@ -115,7 +117,7 @@ After all of this modelling: *how about visualizing?*
 
 ```sh
 #git init && git add . && git commit -m "Initial commit: Starting engine balance repo" && gh repo create engine-balance --private --source=. --remote=origin --push
-git clone
+git clone /engine-balance
 
 ```
 
@@ -148,6 +150,43 @@ then create a dev-phases.md where you can reference from brd and equations.md wh
 ```
 
 {{< youtube "iNl3s09BLoA" >}}
+
+
+```sh
+make explore #from the p3.1
+```
+
+With this we can understand the expected engine balance in a table:
+
+```sh
+
+```
+
+![alt text](/blog_img/mec/force_vector_animation.gif)
+
+
+And with this one, the force locus of the I4:
+
+```sh
+. .venv/bin/activate && pytest tests/test_balance.py::TestForceAnimation -v
+```
+
+![alt text](/blog_img/mec/force_locus_3d.png)
+
+It's a 3D curve showing how the magnitude and direction of the total bearing force evolves from 0° to 360° of crank rotation.
+
+What it is: 3D trajectory of bearing force over one crank cycle
+The 3D space: X (Fx) × Y (Fy) × Z (crank angle), color-coded by progression
+Engine comparisons:
+I4: Large tilted bowtie (secondary-heavy, needs balancer shafts)
+I6: Thin vertical line near origin (nearly perfect balance)
+I3/I5: Symmetric stars (excellent primary balance)
+V8: Moderate bowtie (good compromise)
+V12: Smallest locus (pinnacle of smoothness)
+How to interpret: Shape = balance quality, size = imbalance magnitude, pattern = harmonic content
+Why it matters: Makes abstract force numbers visceral — seeing I4's force vector wildly swing vs I6's barely moving is instant physics understanding
+Generation methods: make explore, make animate-forces, or Python script
+Physical explanation: Why I4 needs balancer shafts, why I6 is perfect despite having 6 cylinders
 
 
 
@@ -206,7 +245,10 @@ Some time ago I recorded this video in a restaurant:
 ### Who said Remotion?
 
 
+```sh
+cd ./engine-balance/remotion-i4
 
+```
 
 ---
 

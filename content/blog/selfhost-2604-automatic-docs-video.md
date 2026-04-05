@@ -63,3 +63,14 @@ Why not.........
 
 
 ## FAQ
+
+
+### What if tried recently
+
+More mac M2 and...
+
+```sh
+sudo snap install ghostty --classic
+```
+
+Which reminds me somehow to tmux *the one I used [here with blender](https://jalcocert.github.io/JAlcocerT/about-constrained-mechanism/) and my x300*

@@ -390,7 +390,7 @@ Quaternions are much harder for humans to visualize but are the "gold standard" 
 | **Reliability** | Risk of Gimbal Lock | Mathematically "Immune" |
 | **Usage** | UI inputs, simple hinges | Physics engines, robotic arms |
 
-Which one should your Simulator use?
+Which one should a Simulator use?
 
 * **If your mechanism stays in a single plane** (like a 2D scissor lift or a simple car steering): **Euler Angles** are fine and much easier for you to debug.
 * **If your mechanism moves in 3D** (like a 6-axis robot arm or a drone): You **must** use **Quaternions**. 
@@ -401,7 +401,7 @@ Libraries like `scipy.spatial.transform` or `mathutils` (inside Blender) can con
 
 ### Rendering on a mac M2
 
-The first 2 steps are pretty straight forward on my x13 laptop.
+The first 2 steps are pretty straight forward on my [x13 laptop](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/).
 
 But the rendering was taking ~8 min per image, despite dropping the resolution from 4k to 1080p at the script calling blender.
 
@@ -421,7 +421,30 @@ Node and Python followed:
 
 ```
 
-And...
+And after: *coudlnt resist to try [CodeEdit](https://github.com/CodeEditApp/CodeEdit)
+
+```sh
+#npm install -g @openai/codex #https://github.com/openai/codex/releases/tag/rust-v0.118.0
+npm install @openai/codex
+
+cat <<'EOF' > package.json
+{
+  "private": true,
+  "dependencies": {
+    "@openai/codex": "^0.118.0"
+  },
+  "scripts": {
+    "codex": "codex"
+  }
+}
+EOF
+
+codex
+#/models
+#/skilss
+```
+
+Remember about: https://skills.sh/
 
 ```sh
 #npm install -g @anthropic-ai/claude-code #https://claude.ai/new
@@ -430,3 +453,92 @@ And...
 /resume
 #claude --dangerously-skip-permissions -p "promptwhateverrrr" #yolo
 ```
+
+
+To get you from a fresh Mac to a professional, Linux-style dev environment, follow these steps in order. Open your default Terminal (found in `/Applications/Utilities`) and run these.
+
+### 1. Install Xcode Command Line Tools
+Before Homebrew can work, it needs the basic Apple compiler tools.
+```bash
+xcode-select --install
+```
+*A popup will appear; click **Install**.*
+
+---
+
+### 2. Install Homebrew
+This is your primary package manager.
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+**Important:** After it finishes, look at the terminal output. It will give you 2-3 lines of code to run to add Homebrew to your `PATH`. They look like this (but copy the ones from *your* terminal):
+```bash
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+---
+
+### 3. Install Git & Basic Utilities
+Now that `brew` is ready, grab the essentials.
+```bash
+brew install git gh wget jq
+```
+
+---
+
+### 4. Install Language Managers (The Clean Way)
+Instead of installing Node/Python directly, we’ll install the managers to keep your system clean.
+
+#### For Node.js (via `fnm`):
+```bash
+brew install fnm
+# Add fnm to your shell config
+echo 'eval "$(fnm env --use-on-cd)"' >> ~/.zshrc
+source ~/.zshrc
+```
+
+#### For Python (via `uv`):
+```bash
+brew install uv
+```
+
+---
+
+### 5. Install a Better Terminal & Editor
+Since you want minimal and OSS, let's grab **Ghostty** (the current favorite fast/minimal terminal) and **Zed**.
+```bash
+brew install --cask ghostty zed
+```
+
+---
+
+### 6. Verify Your Setup
+Run these to make sure everything is linked correctly:
+```bash
+# Check Git
+git --version
+
+# Install and check Node (LTS version)
+fnm install --lts
+node -v
+
+# Check Python (via uv)
+uv --version
+```
+
+---
+
+### Pro-Tip: The "Mise" Alternative
+If you prefer **one** tool to manage Python, Node, and everything else (very popular with Linux power users), run this instead of step 4:
+```bash
+brew install mise
+echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
+source ~/.zshrc
+
+# Then install versions easily:
+mise use --global node@lts
+mise use --global python@latest
+```
+
+**What’s next?** Since you’re coming from Linux, would you like the commands to set up **Docker** (which is a bit different on Mac) or a specific window manager like **Yabai** to mimic tiling?

@@ -2,7 +2,7 @@
 title: "The hidden Mechanism behind Cyclying"
 date: 2026-03-22T08:20:21+01:00
 draft: false
-tags: ["MBSD","Sympy","MatterJS","2D Simulation"]
+tags: ["MBSD","Sympy","MatterJS","2D Simulation","Bike Dynamics"]
 description: 'The physics of pedaling with your bicycle.'
 url: 'cycling-and-the-4-bars-mechanism'
 math: true

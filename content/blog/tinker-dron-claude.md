@@ -2,7 +2,7 @@
 title: "Ryze Robotics Dron and Python SDK"
 date: 2026-04-04
 draft: false
-tags: ["Ardupilot","DJi Tello","RC","Computer Vision"]
+tags: ["Ardupilot","DJi Tello","RC","Computer Vision","DART"]
 description: A toy Drone, claude code and computer vision.
 url: 'dji-tello-python-sdk'
 ---
@@ -128,3 +128,26 @@ I mean, here you go:
   {{< card link="https://consulting.jalcocertech.com" title="Get some of my time ↗" icon="book-open" >}}
   {{< card link="https://cal.com/jalcocertech/consulting" title="Collaborations ↗" icon="user" >}}
 {{< /cards >}}
+
+---
+
+## FAQ
+
+### Tello x Flutter
+
+I got some problems with the connection to the tello.
+
+CC went to the route of we're using dart:io's built-in RawDatagramSocket, but some how was not getting there.
+
+So went out and look for existing projects:
+
+1. https://github.com/mateustoin/Flutter-app-DJI-Tello-Drone/tree/main
+
+Cool! but it has 6yo and depends on https://pub.dev/packages/tello/versions which is Dart3 incompatible.
+
+next
+
+2.  https://pub.dev/packages/udp/versions that does not shows incompatibilities
+
+
+3. https://pub.dev/packages/ryze_tello with 5yo and also no incompatibilities

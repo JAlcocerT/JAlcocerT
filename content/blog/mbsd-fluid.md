@@ -34,6 +34,23 @@ https://www.youtube.com/watch?v=7xwODOr-xTo
 
 {{< youtube "7xwODOr-xTo" >}}
 
+
+## About Fluid Mechanics
+
+
+## Application of Gas mechanics
+
+### The ICE!
+
+It was a very interesting time back then.
+
+I mean...when I was doing this kind of things in [matlab](https://jalcocert.github.io/JAlcocerT/matlab-vs-octave/).
+
+
+But similarly as I did with [the bike simulator](https://jalcocert.github.io/JAlcocerT/cycling-and-the-4-bars-mechanism/#from-concepts-to-equations), it is time to bring them to python.
+
+
+
 ---
 
 ## Conclusions
@@ -54,3 +71,10 @@ who knows :)
 ### References
 
 
+
+The combustion physics is a thing on its own...
+
+
+https://www.youtube.com/watch?v=Z3ZvxIz20-c
+
+'Bro started the video like an engineer and ended  like a philosopher. Great video!'
