@@ -8,7 +8,7 @@ url: 'iot-home-lab-tools'
 ---
 
 
-
+https://selfh.st/apps/?search=mqtt
 
 **TL;DR**
 
@@ -104,6 +104,7 @@ For the CLI:
 
 ```sh
 lazydocker
+glances #htop btop
 #sudo snap install ghostty --classic
 #tmux
 ```

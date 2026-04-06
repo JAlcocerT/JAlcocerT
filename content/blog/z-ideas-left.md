@@ -390,7 +390,7 @@ So for the pocs if you were doing slidev or giving a prompt to notebookllm or co
 git clone /pbi
 cd ./pbi/executive-dashboard-pptx #a sample with dummy data on how to use python-pptx :)
 
-#git clone / #yea tech talks are here for now :)
+#git clone /selfhosted-landing/y2026-tech-talks #yea tech talks are here for now :)
 ```
 
 

@@ -101,6 +101,4 @@ Critical Assembly Reminders:
 * **The Common Ground:** Ensure the Battery (-), Buck Converter IN(-), MOSFET Source, and ESP32 GND all share one single, solid connection point.
 * **Siphoning Check:** Place your 5L bottle **lower** than your plant pot. This way, if the pump stops, gravity pulls the water back into the bottle rather than letting it continue to drip onto the floor.
     
-
 This list covers everything you need to build a system that is safe for your house, reliable for your plants, and ready for vacations.
-

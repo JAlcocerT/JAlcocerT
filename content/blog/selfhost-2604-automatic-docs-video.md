@@ -178,10 +178,12 @@ If all previous is true...
 Why not......
 
 ```sh
-/jalcocertech-services
+#https://github.com/vercel-labs/just-bash
+#npm i -g @openai/codex 
+/jalcocertech-services #sales pitch
 ```
 
-Coming soon :)
+Coming soon, together with `https://stitch.withgoogle.com/`
 
 ---
 
@@ -196,6 +198,9 @@ More [mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-o
 ```sh
 #sudo snap install ghostty --classic
 ghostty
+#codeedit
+#zed #gram #https://codeberg.org/GramEditor/gram
+#glances
 ```
 
 {{< cards cols="2" >}}

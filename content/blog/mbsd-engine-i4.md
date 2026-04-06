@@ -530,7 +530,9 @@ Each six-cylinder layout reflects a different engineering priority. The **inline
 compromise designed to save space, and the **flat-six/boxer-six** delivers excellent balance and a low center of gravity at the cost of width and complexity. Rather than there being one universally
 best design, each configuration makes sense in different applications depending on what engineers value most.
 
-<!-- The video titled "ENGINE BALANCE: Inline 6 vs. V6 vs. VR6 vs. Flat / Boxer 6" discusses the engine balance, strengths, and weaknesses of four popular six-cylinder engine configurations: the inline six, the V6, the VR6, and the flat six.
+<!-- 
+
+The video titled "ENGINE BALANCE: Inline 6 vs. V6 vs. VR6 vs. Flat / Boxer 6" discusses the engine balance, strengths, and weaknesses of four popular six-cylinder engine configurations: the inline six, the V6, the VR6, and the flat six.
 
 Here are the summaries and pros and cons of each engine type discussed:
 
@@ -556,7 +558,9 @@ Flat / Boxer 6: The flat six, or more accurately a boxer six, is perfectly balan
 
 Pros: Perfectly balanced, light crankshaft, rev-happy engine.
 Cons: Most complex engine configuration, difficult to package due to its width, most expensive and complex engine to manufacture.
-In conclusion, each engine type has its own strengths and weaknesses. The inline six is simple and balanced but long, the V6 is compact but less balanced, the VR6 is a compact and simpler version of a V6 but not as simple as an inline six, and the flat/boxer six is perfectly balanced and light but complex and wide.  -->
+In conclusion, each engine type has its own strengths and weaknesses. The inline six is simple and balanced but long, the V6 is compact but less balanced, the VR6 is a compact and simpler version of a V6 but not as simple as an inline six, and the flat/boxer six is perfectly balanced and light but complex and wide.  
+
+-->
 
 
 
