@@ -225,4 +225,3 @@ Here is the timeline of when you should see the first green sprouts (the "germin
 These seeds are **very small**, so if you buried them deep under a thick layer of soil, they might struggle to find the light. They only need a very thin "dusting" of soil over them—barely enough to cover them.
 
 **If you don't see anything after 21 days**, it usually means the soil was either too cold or the seeds were planted too deep.
-

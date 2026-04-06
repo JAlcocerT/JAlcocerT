@@ -546,3 +546,11 @@ Same ordering as coordinates. Initial conditions:
 q0 = [0, 0, 0.97, 0, 0, 0, 0, 0, 0]   # starts at 0.97 m height
 v0 = [10, 0, 0, 0, 0, 0, 0, 10/0.34, 10/0.34]  # 10 m/s forward, wheels spinning
 ```
+
+### Whats next?
+
+Understanding suspensions?
+
+<!-- https://www.youtube.com/watch?v=VbReLNi2JP4 -->
+
+{{< youtube "VbReLNi2JP4" >}}

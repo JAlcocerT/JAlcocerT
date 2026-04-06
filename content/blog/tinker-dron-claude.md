@@ -114,7 +114,14 @@ sudo snap install flutter --clasic
 uv run main.py
 
 #make run #requires .env.local
+#git remote set-url origin git@gitlab.com:fossengineer1/dron.git
+#git push
 ```
+
+<!-- https://youtube.com/shorts/XNG57Co1lXA -->
+
+{{< youtube "XNG57Co1lXA" >}}
+
 
 ### What I learnt
 

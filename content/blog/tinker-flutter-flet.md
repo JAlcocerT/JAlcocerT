@@ -202,11 +202,18 @@ I got a tello some time ago
 
 This year decided to use uv as pkg manager to control it better...
 
-And shortly after I caught myself around flutter:
-
 ```sh
 #git clone https://github.com/JAlcocerT/dron && cd ./dron && uv run main.py
+#ssh -T git@gitlab.com
+git clone git@gitlab.com:fossengineer1/dron.git
+```
+<!-- https://youtube.com/shorts/XNG57Co1lXA -->
 
+{{< youtube "XNG57Co1lXA" >}}
+
+And shortly after I caught myself around flutter: *This was not quite there yet thought*
+
+```sh
 git clone https://github.com/JAlcocerT/dron-tello-flutter
 cd dron-tello-flutter
 #ping 192.168.10.1
