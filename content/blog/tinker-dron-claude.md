@@ -162,9 +162,42 @@ flutter run -d linux
 
 ### Whats ArduPilot?
 
+ArduPilot is an open-source autopilot system for vehicles like:
+
+  - drones
+  - planes
+  - helicopters
+  - rovers
+  - boats
+  - submarines
+
+  It is both:
+
+  - software: the flight/control stack that runs on the vehicle
+  - ecosystem: firmware, ground control tools, hardware support, simulation, and documentation
+
+  What it does:
+
+  - stabilizes and flies the vehicle
+  - handles GPS navigation and waypoint missions
+  - supports telemetry, failsafes, return-to-home, geofencing
+  - integrates sensors like GPS, IMU, compass, barometer, lidar, cameras, etc.
+
+  Typical setup:
+
+  - flight controller hardware running ArduPilot firmware
+  - a ground station such as Mission Planner or QGroundControl
+  - optional radio/telemetry link, RC transmitter, GPS, companion computer
+
+  In practice, people use it for:
+
+  - hobby drones
+  - research robots
+  - industrial UAVs
+  - autonomous boats and ground vehicles
 
 ### Software for Drones
 
 * https://github.com/arpanghosh8453/open-dronelog
 
-> Drone Log analyzer: A high-performance universal dashboard application for organizing and analyzing DJI/Litchi flight logs privately in one place. Built with Tauri v2, DuckDB, and React.
+> Drone Log analyzer: A high-performance universal dashboard application for organizing and analyzing DJI/Litchi flight logs privately in one place. Built with **Tauri v2, DuckDB, and React**.

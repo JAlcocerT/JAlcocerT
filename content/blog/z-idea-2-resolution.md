@@ -14,17 +14,6 @@ Thoughts after one year of vibe coding.
 
 +++ [EayP v3](#eayp-v3)
 
-* https://app.fireflies.ai/perks
-* Perplexity and commet (from W11 only on the desktop) 
-
-
-https://skills.sh/
-
-https://www.youtube.com/watch?v=qfWpPEgea2A&t=191s
-
-https://www.youtube.com/watch?v=rlLwSr-wIAg&t=431s
-
-https://github.com/martingaido/ai-prompt-engineering-docs/blob/main/gemini-for-google-workspace-prompting-guide-101.pdf
 
 **Intro**
 
@@ -103,6 +92,8 @@ $$
 P \times V \times GM \times OM \times IF \times T
 $$
 
+Make P*V go up!
+
 
 ```mermaid
 graph LR
@@ -175,7 +166,7 @@ what are our real needs?
 
 how would we behave if they'd be satisfied?
 
-https://github.com/JAlcocerT/Slider-Crank/blob/main/prompt-blueprint.md applied also to [threebodies here](https://github.com/JAlcocerT/ThreeBodies/blob/main/ThePoincareLab/z-tech-stack.md) and...around [the power law](https://github.com/JAlcocerT/btc-powerlaw/blob/master/GEMINI.md) :)
+See how [this great **prompt for UI blueprint**](https://github.com/JAlcocerT/Slider-Crank/blob/main/prompt-blueprint.md) applied also to [threebodies here](https://github.com/JAlcocerT/ThreeBodies/blob/main/ThePoincareLab/z-tech-stack.md) and...around [the power law](https://github.com/JAlcocerT/btc-powerlaw/blob/master/GEMINI.md) :)
 
 
 Because there are several ways to vibe code, but [some prompts + BRDs are gold](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)
@@ -186,13 +177,17 @@ git clone https://github.com/JAlcocerT/poc
 #this is not the rstocks / retirement facts, but somehow similar :)
 ```
 
+> Thats how simple it is `https://aegis-freedom.pages.dev/`
+
 are we numb?
 
 are we so asleep to be avoiding so hard to put few k$ into ads?
 
 ops, these questions are out of the scope for this post :)
 
-6. 
+6. Risk sensitivity and persistance seem to be good indicators of success
+
+> persistance: going into the same direction consistently, no matter what
 
 ---
 

@@ -75,7 +75,7 @@ In this folder i have added a pyscipe that simulates a particular circuit
   to clarify sth?  
 ```
 
-Ive dare to generate such explanatory video:
+Ive dare to generate such **explanatory video**: *do you beliave you need that Diode now? :)*
 
 ```sh
 #git clone VideoEditingRemotion
@@ -98,7 +98,11 @@ ls *.mp4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
 ```
 
-Toy models can NOT predict
+Toy models can NOT predict.
+
+No model is perfect, reality is far to complex.
+
+Its just that some are based on garbage and produce (surprise) more non sense garbage.
 
 {{< youtube "JbixCdhRzDo" >}}
 

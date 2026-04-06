@@ -11,12 +11,9 @@ url: 'object-oriented-programming-101'
 
 Long overdue topic: *WT& is OOP?*
 
-What I needed to get this going for good: https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
+What I needed to get this going for good [this concept](https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-)
 
 +++ With [examples](#applying-oop): [pendulum](#pendulum) + [3 bodies](#three-bodies)
-
-
-{{< youtube "b35XuJI98kI" >}}
 
 
 **Intro**
@@ -24,6 +21,10 @@ What I needed to get this going for good: https://github.com/JAlcocerT/MultiBody
 Object oriented programming!
 
 Its been a while since i used DevCpp for C programming.
+
+*yes, there are videos later on*
+
+{{< youtube "b35XuJI98kI" >}}
 
 I was trying for long to avoid such concept.
 
@@ -583,7 +584,6 @@ How about creating couple of examples Python app that apply OOP?
   {{< card link="https://github.com/JAlcocerT/ThreeBodies/" title="Three Bodies Web App Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
 {{< /cards >}}
 
-![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
 
 
 ### Pendulum
@@ -698,10 +698,14 @@ For that video, the autor provides the files in the description!
 But I will articulate it around:
 
 ```sh
+#git clone https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
 git clone https://github.com/JAlcocerT/mbsd
 
 
 ```
+
+
+
 
 ---
 

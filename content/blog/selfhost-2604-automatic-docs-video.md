@@ -1,6 +1,6 @@
 ---
 title: "From Repo Docs to Promo Video"
-date: 2026-04-05
+date: 2026-04-06
 draft: false
 tags: ["AI Docs","RemotionJS Video","F/OSS"]
 description: 'Automatic repository 2 Docs x Videos .'
@@ -20,20 +20,69 @@ But models have improved a lot
 
 Specially: [Claude...](https://www.anthropic.com/news/claude-opus-4-6)
 
+```sh
+#Copy your public key:
+cat ~/.ssh/id_ed25519.pub
+#Copy the full output.
+#Add the key in GitLab:
+#Go to GitLab -> Preferences / Edit profile -> SSH Keys -> paste the key -> Add key.
+#ssh -T git@gitlab.com
+git clone git@gitlab.com:fossengineer1/fossengineerpapermod.git
+```
 
+This started [long ago](https://github.com/JAlcocerT/FOSSEngineer_old)
 
 ## Extracting Repo Info
 
+Previously I was using interesting workflows with scripts.
+
+Like I have at folders like `Z_codex_posts` or `Z_OpenAI_POSTS`.
+
+But...
+
+agents are beyond that at this point
+
 ### From Repo to Post
 
+Lets go with an example?
 
 ```sh
 git clone https://github.com/elduty/velomate
-
+claude
+#git clone https://github.com/davidmonterocrespo24/velxio ./Desktop/TBT
 ```
+
+Ive already built an skill for this: `foss-post`
+
+Because thats really all there is: https://skills.sh/
+
+> Skills are reusable capabilities for AI agents. Install them with a single command to enhance your agents with **access to procedural knowledge**.
+
+
+```sh
+#npx skills add https://github.com/github/awesome-copilot --skill documentation-writer
+/foss-post /home/jalcocert/Desktop/TBT/velomate --depth medium
+```
+
+![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
+
+
+> You can also see other that [people created](https://skills.sh/github/awesome-copilot/documentation-writer)
+
+
 
 
 ### From Repo to Video
+
+
+How about...creating/combining another skills, so that we do video?
+
+
+Yea, remotion again:
+
+```sh
+
+```
 
 
 ## About FOSS
