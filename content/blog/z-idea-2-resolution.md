@@ -115,6 +115,7 @@ graph LR
     style F fill:#e1f5fe
 ```
 
+Remember about defining OoS, avoid scope creep!
 
 > B2C is extremely sensitive to the ,security/guarantees' part
 

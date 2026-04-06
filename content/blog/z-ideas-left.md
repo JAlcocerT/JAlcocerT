@@ -393,6 +393,11 @@ cd ./pbi/executive-dashboard-pptx #a sample with dummy data on how to use python
 #git clone /selfhosted-landing/y2026-tech-talks #yea tech talks are here for now :)
 ```
 
+So...go the slidev, the html or whatever route
+
+but just do impactful presentations, with nice UI/X
+
+Specially for your solo-preneur sales pitches
 
 
 Take one branded pptx, tell to write the store with the branded slides and move on :)
