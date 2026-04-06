@@ -95,12 +95,53 @@ cp /home/jalcocert/Desktop/TBT/velxio-post.md
       /home/jalcocert/Desktop/fossengineerpapermod/content/posts
 ```
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 But also a nice RemotionJS video about it?
 
-```sh
-cd
+* https://www.remotion.dev/docs/ai/claude-code
+* Source: https://github.com/remotion-dev/skills.git
 
+If you do the: *make sure to do it on a folder w/o git, or it wont prompt you for the add skills part and avoid creating a totally blank folder!*
+
+```sh
+npx create-video@latest #y / blank
+cd ./my-remotion-video
+npm install
+npm run dev #now it works!
+
+mv /home/jalcocert/Desktop/video-test-remotion /home/jalcocert/Desktop/fossengineerpapermod/z-remotion-oss/video-test-remotion
+  
+#/home/jalcocert/Desktop/VideoEditingRemotion/remotion-cc/.claude/skills/remotion-best-practices
 ```
+
+```sh
+cd ./z-remotion-oss/video-test-remotion
+npm run dev
+```
+
+```md
+ ok so inside that video-test-remotion, can we make a video that describes
+  what velxio does, using the UI/X of its components or any png that they
+  have at the repository? the video should be appealing for selfhosting
+  enthusiast
+```
+
+```sh
+npx remotion render VelxioShowcase selfhosting-velxio.mp4
+```
+
+<!-- 
+https://youtu.be/H5Q6fQyPptE 
+-->
+
+{{< youtube "H5Q6fQyPptE" >}}
+
+
+> All powered by *just* Haiku 4.5
+
 
 
 ---
@@ -116,12 +157,11 @@ Interestingly, there is a fork of zed called GRAM that has been quite interestin
 
 ### Other High Signal Videos
 
-
-
+Ive been tinkering around these too:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/DataInMotion" title="DataInMotion | Repo" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Remotion | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion" title="Remotion tests | Repo" icon="github" >}}
 {{< /cards >}}
 
 Has this signal make F1 re-think their strategy and make v8's come back?

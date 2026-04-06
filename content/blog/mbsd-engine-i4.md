@@ -383,7 +383,7 @@ For this post, i want to test how good the current LLMs are without much context
 
 ```sh
 #git init && git add . && git commit -m "Initial commit: Starting engine balance repo" && gh repo create engine-balance --private --source=. --remote=origin --push
-git clone /engine-balance
+git clone https://github.com/JAlcocerT/engine-balance
 #claude
 ```
 
@@ -425,8 +425,7 @@ When its...20-30 minutes already:
 then create a dev-phases.md where you can reference from brd and equations.md what we are doing, the uv python environment is ready for you
 ```
 
-{{< youtube "iNl3s09BLoA" >}}
-
+<!-- {{< youtube "iNl3s09BLoA" >}} -->
 
 ```sh
 make explore #from the p3.1
@@ -563,6 +562,10 @@ In conclusion, each engine type has its own strengths and weaknesses. The inline
 
 
 #### Primary Balance
+
+This is the obvious one.
+
+The pistons are moving in between and stop at the top/bottom.
 
 #### Secondary Balance
 

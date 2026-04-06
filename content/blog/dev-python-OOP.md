@@ -737,25 +737,24 @@ You have to get enough speed to make your *great escape*:
 
 ### Languages for OOP
 
-
 The most typical or “classic” OOP languages are usually:
 
-  - Java
-  - C++
-  - C#
-  - Python
-  - Ruby
-  - Smalltalk
-  - Objective-C
+- Java
+- C++
+- C#
+- Python
+- Ruby
+- Smalltalk
+- Objective-C
 
-  About the ones you mentioned:
+About the ones you mentioned:
 
-  - Python: yes, commonly considered OOP, though it’s multi-paradigm.
-  - JavaScript: kind of. It supports OOP, but through prototype-based objects rather than classic class-based OOP originally. Today it’s often treated as OOP-capable, not a “pure classic OOP”
-    language.
-  - Rust: not usually considered a typical OOP language. It has objects-like patterns, encapsulation, and polymorphism via traits, but no classical inheritance.
+- Python: yes, commonly considered OOP, though it’s multi-paradigm.
+- JavaScript: kind of. It supports OOP, but through prototype-based objects rather than classic class-based OOP originally. Today it’s often treated as OOP-capable, not a “pure classic OOP”
+language.
+- Rust: not usually considered a typical OOP language. It has objects-like patterns, encapsulation, and polymorphism via traits, but no classical inheritance.
 
-  So if you mean “most typical OOP languages,” the strongest examples are usually Java, C++, C#, Python, and Ruby.
+So if you mean “most typical OOP languages,” the strongest examples are usually Java, C++, C#, Python, and Ruby.
 
 #### Multi-Paradigm?
 
