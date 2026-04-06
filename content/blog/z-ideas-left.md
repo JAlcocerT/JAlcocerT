@@ -1,8 +1,8 @@
 ---
 title: "Which ideas are left?"
-date: 2026-04-06
+date: 2026-04-07
 draft: false
-tags: ["Unit Economics 202","JAlcocerTech Services x Remotion","Video x Data Animations","Python PPTx"]
+tags: ["Unit Economics 202","Remotion Video x Data Animations","Python PPTx"]
 description: 'To define whats wrong, we need to define whats the desired state.'
 url: 'the-ideas-bucket-can-be-empty'
 math: true
