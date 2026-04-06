@@ -579,12 +579,10 @@ Let's delve deeper into each of these aspects of inheritance:
 
 How about creating couple of examples Python app that apply OOP?
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a chaos theory in motion webapp" >}}
-  {{< card link="https://github.com/JAlcocerT/ThreeBodies/" title="Three Bodies Web App Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_Double_Pendulum" title="Double Pendulum Repo | Repo ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/ThreeBodies/" title="Bots | Repo ↗" >}}
 {{< /cards >}}
-
-
 
 ### Pendulum
 
@@ -665,11 +663,10 @@ This can be better, right?
 
 ```sh
 git clone https://github.com/JAlcocerT/Slider-Crank
-
-
+#git clome https://github.com/JAlcocerT/mechanism
 ```
 
-I could now avoid reviewing these and use uv:
+I could now avoid reviewing these and use uv as a reliable pkg manager:
 
 ```sh
 uv run
@@ -682,12 +679,11 @@ uv run
 git clone https://github.com/JAlcocerT/mechanism
 ```
 
-Down the line, there is nothing stopping me merging the physically accurate movements with nice looking animations:
+Down the line, there is nothing stopping you to merge the physically accurate movements with nice looking animations:
 
 * https://github.com/JAlcocerT/3Design
 
 > FreeCad and OpenScad are waiting there together with CadQuery!
-
 
 {{< youtube "TLROAYXxkvA" >}}
 
@@ -700,8 +696,6 @@ But I will articulate it around:
 ```sh
 #git clone https://github.com/JAlcocerT/MultiBodySystemDynamics-MBSD-
 git clone https://github.com/JAlcocerT/mbsd
-
-
 ```
 
 
@@ -744,3 +738,45 @@ You have to get enough speed to make your *great escape*:
 ### Languages for OOP
 
 
+The most typical or “classic” OOP languages are usually:
+
+  - Java
+  - C++
+  - C#
+  - Python
+  - Ruby
+  - Smalltalk
+  - Objective-C
+
+  About the ones you mentioned:
+
+  - Python: yes, commonly considered OOP, though it’s multi-paradigm.
+  - JavaScript: kind of. It supports OOP, but through prototype-based objects rather than classic class-based OOP originally. Today it’s often treated as OOP-capable, not a “pure classic OOP”
+    language.
+  - Rust: not usually considered a typical OOP language. It has objects-like patterns, encapsulation, and polymorphism via traits, but no classical inheritance.
+
+  So if you mean “most typical OOP languages,” the strongest examples are usually Java, C++, C#, Python, and Ruby.
+
+#### Multi-Paradigm?
+
+A multi-paradigm language supports more than one programming style well.
+
+For example, in Python you can write:
+
+- OOP: classes and objects
+- procedural: plain functions and step-by-step logic
+- functional-style: map, filter, lambdas, immutability patterns
+
+So “multi-paradigm” means the language does not force you into just one model.
+
+Examples:
+
+- Java is mostly associated with OOP, though it also supports other styles.
+- Python is strongly multi-paradigm.
+- JavaScript is also multi-paradigm.
+- Rust is multi-paradigm too, but not OOP-first.
+
+In short:
+
+* OOP language = centered mainly on objects/classes
+* multi-paradigm language = can do OOP, but also other styles naturally

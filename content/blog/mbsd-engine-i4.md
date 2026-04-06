@@ -39,14 +39,276 @@ In other words: whats the minimum physics context for an LLM to do this right?
 
 +++ some [references](#references) below
 
-$$
+<!-- $$
 \begin{aligned}
   \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
   \nabla \cdot \mathbf{B} &= 0 \\
   \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
   \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
 \end{aligned}
-$$
+$$ -->
+
+Complete mathematical equations for the slider-crank mechanism used in engine balance simulation.
+
+1. Coordinate System & Geometry
+
+1.1 Coordinate System Definition
+
+**2D Cartesian system:**
+- **Origin**: At crank pivot (crankshaft axis)
+- **X-axis**: Horizontal, pointing toward the slider (piston) at $\theta = 0°$
+- **Y-axis**: Vertical, perpendicular to X (right-hand rule)
+- **Rotation**: Crank rotates counterclockwise (positive $\theta$ direction)
+
+**Units (all equations use SI base + mm for length):**
+- Length: mm
+- Mass: kg
+- Force: N (= kg⋅mm/s²)
+- Torque: N⋅mm
+- Angular velocity: rad/s
+- Time: s
+
+1.2 Mechanism Definition
+
+**Parameters:**
+- $r$ = crank radius (L_crank) [mm]
+- $L$ = connecting rod length (L_rod) [mm]
+- $\theta$ = crank angle from X-axis [rad]
+- $\varphi$ = connecting rod angle from X-axis [rad]
+- $x$ = slider position along X-axis [mm]
+
+**Constraint equations:**
+
+$$r \cos(\theta) + L \cos(\varphi) = x \quad \text{...(1.1)}$$
+
+$$r \sin(\theta) + L \sin(\varphi) = 0 \quad \text{...(1.2)}$$
+
+
+2. Kinematics
+
+2.1 Slider Position
+
+From constraint (1.2): $\sin(\varphi) = -\frac{r \sin(\theta)}{L}$
+
+Therefore: $\cos(\varphi) = \sqrt{1 - \sin^2(\varphi)} = \frac{\sqrt{L^2 - r^2 \sin^2(\theta)}}{L}$
+
+**Slider position:**
+
+$$x(\theta) = r \cos(\theta) + \sqrt{L^2 - r^2 \sin^2(\theta)}$$
+
+**Standard form with $\lambda = r/L$:**
+
+$$x(\theta) = r\left[\cos(\theta) + \sqrt{1 - \lambda^2 \sin^2(\theta)}\right]$$
+
+**Physical range:**
+- Minimum: $x_{\min} = L - r$ (when $\theta = \pi$)
+- Maximum: $x_{\max} = L + r$ (when $\theta = 0$)
+- Stroke: $S = x_{\max} - x_{\min} = 2r$
+
+2.2 Slider Velocity
+
+Using the chain rule: $v_x = \frac{dx}{dt} = \frac{dx}{d\theta} \cdot \omega$
+
+**Slider velocity:**
+
+$$v_x(\theta) = \omega r \sin(\theta) \frac{\sqrt{L^2 - r^2 \sin^2(\theta)} + r \cos(\theta)}{\sqrt{L^2 - r^2 \sin^2(\theta)}}$$
+
+**Compact form:**
+
+$$v_x = \frac{r \omega \sin(\theta)}{[1 - (r/L)^2 \sin^2(\theta)]^{1/2}} \times \left[1 + \frac{(r/L) \cos(\theta)}{\sqrt{1 - (r/L)^2 \sin^2(\theta)}}\right]$$
+
+2.3 Slider Acceleration
+
+**Acceleration formula:**
+
+$$a_x(\theta) = r \omega^2 \left[\cos(\theta) + \frac{(r/L) \cos(2\theta)}{\sqrt{1 - (r/L)^2 \sin^2(\theta)}}\right]$$
+
+**Alternative expanded form:**
+
+$$a_x = r \omega^2 \cos(\theta) + \frac{r^2 \omega^2 \cos(2\theta)}{\sqrt{L^2 - r^2 \sin^2(\theta)}}$$
+
+**Physical interpretation:**
+- First term: primary acceleration (2× fundamental frequency)
+- Second term: secondary acceleration component (4× fundamental frequency)
+
+2.4 Connecting Rod Angle
+
+From constraint (1.2):
+
+$$\varphi(\theta) = -\arcsin\left(\lambda \sin(\theta)\right) \quad \text{where} \quad \lambda = \frac{r}{L}$$
+
+2.5 Rod Angular Velocity
+
+$$\omega_{\text{rod}}(\theta) = -\frac{\omega r \cos(\theta)}{\sqrt{L^2 - r^2 \sin^2(\theta)}} = -\frac{\omega r \cos(\theta)}{L \cos(\varphi)}$$
+
+2.6 Rod Angular Acceleration
+
+$$\alpha_{\text{rod}} = \frac{d\omega_{\text{rod}}}{dt} = \frac{d^2\varphi}{dt^2}$$
+
+3. Dynamics & Forces
+
+3.1 Assumptions
+
+1. **Rigid bodies**: No deformation; all masses are point masses or have defined inertias
+2. **No friction**: Ideal pins/bearings
+3. **Constant angular velocity**: Crankshaft rotates at constant $\omega$
+4. **Massless constraints**: Slider pin and crank pin have negligible mass
+5. **2D planar motion**: All motion in X–Y plane; no Z-axis components
+6. **No combustion forces**: Initial phase uses external motor to drive crank
+
+3.2 Component Masses & Inertias
+
+**Crank:**
+- Mass: $m_{\text{crank}}$ [kg]
+- Moment of inertia about pivot: $I_{\text{crank}}$ [kg⋅mm²]
+- Center of mass location: $R_{\text{cg,crank}}$ [mm]
+
+**Connecting Rod:**
+- Mass: $m_{\text{rod}}$ [kg]
+- Length: $L$ [mm]
+- Moment of inertia about center of mass: $I_{\text{rod,cm}}$ [kg⋅mm²]
+
+**Slider (piston):**
+- Mass: $m_{\text{slider}}$ [kg]
+
+3.3 Inertial Forces on Slider
+
+$$F_{\text{inertia}} = m_{\text{slider}} \cdot a_x(\theta) = m_{\text{slider}} \cdot r \omega^2 \left[\cos(\theta) + \frac{(r/L) \cos(2\theta)}{\sqrt{1 - (r/L)^2 \sin^2(\theta)}}\right]$$
+
+3.4 Force in Connecting Rod
+
+**Rod internal force (for massless rod):**
+
+$$F_{\text{rod,axial}} = \frac{m_{\text{slider}} \cdot a_x}{\cos(\varphi)}$$
+
+3.5 Crank Pin Force
+
+**Components:**
+
+$$F_{\text{rod,x}} = F_{\text{rod}} \cos(\varphi)$$
+
+$$F_{\text{rod,y}} = F_{\text{rod}} \sin(\varphi)$$
+
+**Magnitude:**
+
+$$|F_{\text{rod}}| = \sqrt{F_{\text{rod,x}}^2 + F_{\text{rod,y}}^2}$$
+
+3.6 Torque on Crankshaft
+
+**Torque from slider inertial force:**
+
+$$\tau_{\text{slider}} = F_{\text{rod}} \cdot r \sin(\theta - \varphi) = \frac{m_{\text{slider}} a_x \cdot r \sin(\theta - \varphi)}{\cos(\varphi)}$$
+
+**Simplified (massless rod, constant $\omega$):**
+
+$$\tau(\theta) = m_{\text{slider}} r \omega^2 \left[\cos(\theta) + \frac{(r/L) \cos(2\theta)}{\sqrt{1 - (r/L)^2 \sin^2(\theta)}}\right] \sin(\theta - \varphi(\theta))$$
+
+3.7 Ground Reaction Force on Slider
+
+**Force balance on slider:**
+
+$$m_{\text{slider}} a_x = F_{\text{rod}} \cos(\varphi) - F_{\text{ground,x}}$$
+
+**Components:**
+
+$$F_{\text{ground,x}} = F_{\text{rod}} \cos(\varphi) - m_{\text{slider}} a_x$$
+
+$$F_{\text{ground,y}} = -F_{\text{rod}} \sin(\varphi)$$
+
+**Magnitude:**
+
+$$|F_{\text{ground}}| = \sqrt{F_{\text{ground,x}}^2 + F_{\text{ground,y}}^2}$$
+
+4. Reaction Forces at Bearings
+
+4.1 Crank Bearing Force
+
+The crank bearing must support:
+1. The reaction force from the rod
+2. The centrifugal force of the crank mass
+3. Weight of crank (if vertical support needed)
+
+**Acceleration of crank center-of-mass:**
+
+Position of crank CG: $x_{\text{cg}} = R_{\text{cg}} \cos(\theta)$, $y_{\text{cg}} = R_{\text{cg}} \sin(\theta)$
+
+Acceleration: 
+$$a_{\text{cg,x}} = -R_{\text{cg}} \omega^2 \cos(\theta)$$
+$$a_{\text{cg,y}} = -R_{\text{cg}} \omega^2 \sin(\theta)$$
+
+**Bearing reaction force:**
+
+$$\vec{F}_{\text{bearing}} = \vec{F}_{\text{rod}} + m_{\text{crank}} \vec{a}_{\text{cg}}$$
+
+$$F_{\text{bearing,x}} = F_{\text{rod,x}} - m_{\text{crank}} R_{\text{cg}} \omega^2 \cos(\theta)$$
+
+$$F_{\text{bearing,y}} = F_{\text{rod,y}} - m_{\text{crank}} R_{\text{cg}} \omega^2 \sin(\theta)$$
+
+4.2 Multi-Cylinder: Total Bearing Force
+
+For an engine with multiple cylinders at angles $\theta_1, \theta_2, \ldots, \theta_N$:
+
+$$F_{\text{total,x}}(\theta) = \sum_i \left[F_{\text{rod,i}} \cos(\varphi_i) - m_{\text{crank}} R_{\text{cg}} \omega^2 \cos(\theta_i)\right]$$
+
+$$F_{\text{total,y}}(\theta) = \sum_i \left[F_{\text{rod,i}} \sin(\varphi_i) - m_{\text{crank}} R_{\text{cg}} \omega^2 \sin(\theta_i)\right]$$
+
+**Magnitude:**
+
+$$|F_{\text{bearing,total}}| = \sqrt{F_{\text{total,x}}^2 + F_{\text{total,y}}^2}$$
+
+5. Vibration Analysis
+
+5.1 Harmonic Decomposition (FFT)
+
+The bearing reaction force can be decomposed into harmonics:
+
+$$F_{\text{bearing}}(t) = F_0 + \sum_{n=1}^{\infty} \left[F_n \cos(n \omega t + \phi_n)\right]$$
+
+**Harmonic amplitude extraction:**
+
+$$F_n = \frac{1}{\pi} \int_0^{2\pi} F_{\text{bearing}}(\theta) \cos(n \theta) \, d\theta$$
+
+- **Primary imbalance** (1st order): $n = 1$, frequency = $1 \times \text{RPM}$
+- **Secondary imbalance** (2nd order): $n = 2$, frequency = $2 \times \text{RPM}$
+- **Tertiary imbalance** (3rd order): $n = 3$, frequency = $3 \times \text{RPM}$
+
+5.2 Frequency Response
+
+For each harmonic, the vibration amplitude depends on resonance:
+
+$$\text{Vibration amplitude} \propto \frac{F_n}{|k - n^2 \omega^2 m + j n \omega c|}$$
+
+where:
+- $k$ = stiffness [N/mm]
+- $m$ = mass [kg]
+- $c$ = damping [N·s/mm]
+- $j$ = imaginary unit
+
+
+6. Special Cases & Simplifications
+
+6.1 Infinite Rod Approximation ($L \to \infty$)
+
+When rod length is much larger than crank ($L >> r$), the rod angle $\varphi \approx 0$:
+
+$$x(\theta) \approx r \cos(\theta) + L$$
+
+$$v_x(\theta) \approx -r \omega \sin(\theta)$$
+
+$$a_x(\theta) \approx -r \omega^2 \cos(\theta) \quad \text{(simple harmonic)}$$
+
+6.2 Four-Stroke Cycle with Gas Pressure
+
+If we include combustion/pressure forces:
+
+$$F_{\text{gas}}(\theta) = p(\theta) \cdot A_{\text{piston}} \quad [\text{N}]$$
+
+where $p(\theta)$ is the gas pressure curve and $A_{\text{piston}}$ is the piston area.
+
+**Total force on slider:**
+
+$$F_{\text{total}} = F_{\text{inertia}} + F_{\text{gas}} - F_{\text{ground}}$$
+
 
 Wait...arent you gonna extend [the MBSD 2D simulator](https://jalcocert.github.io/JAlcocerT/2d-mbsd/) already to 3D for this?
 

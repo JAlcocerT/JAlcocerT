@@ -3,7 +3,7 @@ title: "From Repo Docs to Promo Video"
 date: 2026-04-06
 draft: false
 tags: ["AI Docs","RemotionJS Video","F/OSS"]
-description: 'Automatic repository 2 Docs x Videos .'
+description: 'Automatic repository 2 Docsand...Videos.'
 url: 'oss-automatic-docs-and-tech-video'
 ---
 
@@ -49,7 +49,6 @@ Lets go with an example?
 ```sh
 git clone https://github.com/elduty/velomate
 claude
-#git clone https://github.com/davidmonterocrespo24/velxio ./Desktop/TBT
 ```
 
 Ive already built an skill for this: `foss-post`
@@ -85,13 +84,15 @@ Yea, remotion again:
 ```
 
 
-## About FOSS
+## About FOSS - Repo to Video
 
-What if for every cool repo not only a nice post could be generated
+What if for every cool repo not only a nice post could be generated:
 
 ```sh
-git clone
-
+#git clone https://github.com/davidmonterocrespo24/velxio ./Desktop/TBT
+claude #/skills #use the foss-post against the cloned repo
+cp /home/jalcocert/Desktop/TBT/velxio-post.md
+      /home/jalcocert/Desktop/fossengineerpapermod/content/posts
 ```
 
 But also a nice RemotionJS video about it?
@@ -134,11 +135,13 @@ Has this signal make F1 re-think their strategy and make v8's come back?
 
 If all previous is true...
 
-Why not.........
+Why not......
 
 ```sh
 /jalcocertech-services
 ```
+
+Coming soon :)
 
 ---
 
