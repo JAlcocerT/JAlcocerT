@@ -122,7 +122,7 @@ Claude skills...its just about `SKILL.md` and the remotion team has put one toge
 ```sh
 npx create-video@latest
 npx skills add remotion-dev/skills
-#npx skills list
+#npx skills list 
 ```
 
 The magic happens at `.claude/skills/remotion-best-practices`

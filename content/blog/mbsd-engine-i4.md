@@ -610,9 +610,29 @@ create a hand over for the next agent to take advantage of all our work at a sum
 ```
 
 ```sh
-cd ./engine-balance/remotion-balance-video
+#npx create-video@latest
+#npx skills add remotion-dev/skills
+#npx skills list
 
+cd ./engine-balance/remotion-v8-video
+npm install
+npm run dev
 ```
+
+When you are happy enough, render that composition:
+
+```sh
+npx remotion render V8CrankMechanism v8-test.mp4
+```
+
+<!-- 
+https://youtu.be/Vrdphl04gas 
+-->
+
+{{< youtube "Vrdphl04gas" >}}
+
+
+> waste of tokens .mp4 :)
 
 ---
 
