@@ -14,7 +14,7 @@ I have launched recently a quick [e-book web version and downloadable as PDF](ht
 
 Also a simple waiting list.
 
-But most importantly, is to have a happy real estate client:
+But most importantly, is to have a **happy real estate client**:
 
 {{< cards >}}
     {{< card link="https://dm-real-estate.com/" title="DM - Real Estate Official Site" image="/blog_img/web/WebsSnapshots/Web_realestate.png" subtitle="A Real Estate Business Site for Spain" >}}

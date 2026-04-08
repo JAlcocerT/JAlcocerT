@@ -82,7 +82,7 @@ Yea...product and no clients does not pay bills.
 3) can the footer content be also controlled by the site.md copy?
 4) and can we do so that when we do npm run dev, I will be able to access it not only via localhost?
 
-5) based on a docker-compose.prod.yml with such network and also env variables context?
+5) based on a `docker-compose.prod.yml` with such network and also env variables context?
 
 networks:
   cloudflared_tunnel:
@@ -116,7 +116,7 @@ Guess what happened in ~45 minutes?
 That I went to termix `http://192.168.1.2:8090/` and made `shopify-landing-prod:4321` go live via cloudflare tunnels.
 
 ```sh
-git clone https://github.com/JAlcocerT/poc_shopify
+git clone https://github.com/JAlcocerT/poc_shopify #genbi.jalcocertech.com
 cd poc_shopify/landing
 #make help
 #docker compose -f docker-compose.prod.yml up -d --build
