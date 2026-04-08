@@ -195,7 +195,7 @@ As long as u understand consumer...u see how much **risk/uncertainty averse** we
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
-Tu dinero es una commodity, mi tiempo no.
+Quote of the week: Tu dinero es una commodity, mi tiempo no.
 
 Plus: Si atiendes a cualquiera = no escasez = eres malo.
 

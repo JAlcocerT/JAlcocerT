@@ -16,7 +16,7 @@ From excel to grist.
 
 Because even if you are on D&A, you wont be able to scape excels and those `.csv`, `.xlsx` at some point.
 
-There are tools like [OpenLTablets](https://jalcocert.github.io/JAlcocerT/understanding-openl-tablets/)
+There are tools like [OpenLTablets](https://jalcocert.github.io/JAlcocerT/understanding-openl-tablets/), that certain businesses are afraid to go out of for their business rules.
 
 * https://github.com/gristlabs/grist-core
     * https://github.com/gristlabs/grist-electron

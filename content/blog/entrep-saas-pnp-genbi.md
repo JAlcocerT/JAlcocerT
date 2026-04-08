@@ -401,7 +401,9 @@ https://youtu.be/qf-oNNNDXS0
 
 Go to `http://localhost:5173/` and enjoy.
 
-Looks cool, doesnt it? This has been the tech stack.
+Looks cool, doesnt it? 
+
+This has been the tech stack.
 
 | Requirement | Specification | Clarification / Decision |
 | :--- | :--- | :--- |

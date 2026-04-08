@@ -53,6 +53,8 @@ Which sounds like some how to reitti that we covered [here](https://jalcocert.gi
 
 ![Reitti UI](/blog_img/Monitoring/reitti-location-monitoring.png)
 
+Remember also about Wanderer for your trips:
+
 ![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
 
 

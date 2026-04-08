@@ -3,7 +3,7 @@ title: "How to (Dis)qualify Business Opportunities | v2"
 date: 2026-02-08T14:00:21+01:00
 draft: false
 tags: ["ADR x HLD to Prototype","The Business HOW - CPC vs CPA vs CaC","JSON to TOON"]
-description: 'AI powered SDLC x Unit Economics 105'
+description: 'Creating with an AI powered SDLC x Unit Economics 105'
 url: 'ideas-to-execution'
 math: true
 ---

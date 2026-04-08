@@ -3,10 +3,16 @@ title: "Real Estate Calculator with Python"
 date: 2025-01-25
 draft: false
 tags: ["Python","Streamlit","CAGR","WebApp"]
-description: "Making my own mortage calculator in Python. Understanding LTV, I2P, French Amortization..."
+description: "Making a mortage calculator. Understanding LTV, I2P, French Amortization..."
 url: 'python-real-estate-mortage-calculator'
 math: true
 ---
+
+**TL;DR**
+
+Understanding real estate logic with python.
+
+**Intro**
 
 A friend asked me about some **add-on for his real estate project**.
 

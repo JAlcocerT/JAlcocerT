@@ -500,7 +500,7 @@ reflex run --backend-port 8001 --frontend-port 3001
 #### Vibe Coded Reflex Real Estate App
 
 
-{{< details title="More | Real Estate Reflex, RBD and RFD 📌" closed="true" >}}
+{{< details title="More | Real Estate Reflex, BRD and RFD 📌" closed="true" >}}
 
 When creating vibe coded apps, [the BRD and FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/) concepts for theweb app, keeping in mind the input, desired output, and additional "cool ideas" for the FRD.
 

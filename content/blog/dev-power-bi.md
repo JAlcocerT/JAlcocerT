@@ -96,49 +96,6 @@ graph TD
     style Fabric_Platform fill:#f8f9fa,stroke:#333,stroke-dasharray: 5 5
 ```
 
-You are absolutely right to call that out—I used a specific "Mindmap" syntax that some viewers don't render with the text labels clearly if the icons aren't supported.
-
-Let me give you a **cleaner, more structured version** of that diagram using a standard Flowchart.
-
-This version explicitly shows **Power BI**, **OneLake**, and how they connect to your **MySQL/SQL** sources.
-
-```mermaid
-graph TD
-    %% Data Sources
-    Source[(MySQL / SQL Database)] -- "1. Fabric Mirroring / Pipelines" --> OneLake
-
-    %% The Core Storage
-    subgraph Fabric_Platform [Microsoft Fabric Capacity / F-SKU]
-        OneLake{{"OneLake (The 'OneDrive' for Data)"}}
-        
-        %% Engines
-        subgraph Engines [Engine Room]
-            CobraAI[CobraAI Agentic AI]
-            DataFactory[Data Factory / Pipelines]
-            Notebooks[Spark Notebooks / Python]
-        end
-
-        %% Power BI Layer
-        subgraph PowerBI_Layer [Power BI 2026]
-            SemanticModel[Semantic Model / Direct Lake]
-            Report[Power BI Reports & Dashboards]
-        end
-    end
-
-    %% Connections
-    OneLake <--> Engines
-    OneLake -- "Direct Lake (No Refresh)" --> SemanticModel
-    SemanticModel --> Report
-    CobraAI -- "Automates & Fixes" --> OneLake
-    DataFactory -- "Cleans Data" --> OneLake
-
-    %% Styling
-    style OneLake fill:#0078d4,color:#fff,stroke:#005a9e
-    style PowerBI_Layer fill:#f2c811,color:#000,stroke:#d1a600
-    style Fabric_Platform fill:#f8f9fa,stroke:#333,stroke-dasharray: 5 5
-
-```
-
 Why this structure matters for you:
 
 1. **OneLake is the "Center":** Everything (Agents, Data Factory, and Power BI) talks to OneLake. This is why you don't need to "import" data manually like the old days.
@@ -202,8 +159,6 @@ This is where the real "skipping" happens.
 * **New Way (Mirroring):** You point Fabric at your MySQL database. Fabric **continuously "mirrors"** the data into OneLake in the background.
 
 * *The result:* You skip the configuration of refresh schedules. The data is just "there" whenever you open your report.
-
-
 
 ---
 
@@ -275,7 +230,6 @@ If you only know how to drag and drop charts, you hit a ceiling quickly.
 
 Understanding this ecosystem allows you to build reports that are secure, fast, and professional.
 
-
 | Concept | Importance | Why it matters to YOU |
 | --- | --- | --- |
 | **Microsoft Fabric** | **Critical** | This is the future of Power BI. It’s where your data lives, and "Direct Lake" mode in Fabric makes reports faster than ever. |
@@ -284,10 +238,11 @@ Understanding this ecosystem allows you to build reports that are secure, fast, 
 | **Managed Identity** | **Medium** | You need this to set up "Automatic Data Refresh." Without it, your reports won't update unless you're manually logged in. |
 | **AKS / Vertex** | **Low** | You don't need to manage these, but you need to know they are "Data Producers" that feed information into your reports. |
 
-
 1. Security (The PAT vs. Managed Identity piece)
 
-Clients and IT departments hate PATs because they expire and leak. If you can set up a Power BI dataset using a **Managed Identity**, you look like a security pro. It means the report "just works" forever without someone having to update a password every 90 days.
+Clients and IT departments hate PATs because they expire and leak. If you can set up a Power BI dataset using a **Managed Identity**, you look like a security pro. 
+
+It means the report "just works" forever without someone having to update a password every 90 days.
 
 2. Performance (Fabric & SQL)
 
@@ -322,7 +277,7 @@ WHERE table_name = '_dora_csr_metric_details';
 
 ### PBIX vs PBIP vs PBIT
 
-You like things as code, right?
+You like **things as code**, right?
 
 Then, you will like to save as the `pbix` as `pbip` to get:
 
@@ -429,10 +384,13 @@ Yes, **DBeaver is the "Swiss Army Knife"** that can replace both MySQL Workbench
 
 For a Power BI developer, having one tool to manage both cloud and on-prem databases is a huge productivity win.
 
+Dbeaver for the win!
+
 ```sh
 choco install dbeaver
-
 ```
+
+You can always give it some [good D&A company](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#tools-to-interact-with-dbs) to interact with your dbs.
 
 How DBeaver Replaces Both Tools
 
