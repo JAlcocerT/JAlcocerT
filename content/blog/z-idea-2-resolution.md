@@ -484,14 +484,14 @@ The World *Still* Belongs To The Builders.
 
 As im proving with the [eayp v3 at this section](#eayp-v3).
 
-Wanted to collect the [best UI prompts](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders) I got to see: *bc there are some [things that all landing pages should have](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#what-should-a-landing-have)*
+Wanted to collect the [best UI prompts](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders) I got to see: *bc there are some [things that all landing pages should have](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#what-should-a-landing-have), like proper ATF.*
 
 Bc [creating with AI in your SDLC workflow](https://jalcocert.github.io/JAlcocerT/ideas-to-execution/#creating-with-ai) is about the right procedural knowledge from now:
 
 
 {{< details title="Vibe Coding | Setup  📌" closed="true" >}}
 
-Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
+`Do you think that these requirements are clear enough?`
 
 ```md
 I need Landing Page based with a cool and modern UI.

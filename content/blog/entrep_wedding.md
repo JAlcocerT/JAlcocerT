@@ -302,9 +302,9 @@ Should be pointing to the DNS you queried via Flask UI.
 
 To avoid loosing potential clients as soon as they get to know you: this has to be done right.
 
-{{< details title="First Impressions matter | Above the Fold 📌" closed="true" >}}
+{{< details title="First Impressions matter | Above the Fold - ATF 📌" closed="true" >}}
 
-The content of a web page that is visible before scrolling is commonly called: Above the fold
+The content of a web page that is visible before scrolling is commonly called: **Above the fold**
 
 This term originates from newspapers, where the most important content was placed above the physical fold of the paper.
 
