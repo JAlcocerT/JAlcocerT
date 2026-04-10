@@ -47,7 +47,7 @@ GoPro overlays? Nah, thats [sth of the past](https://jalcocert.github.io/JAlcoce
 
 Mechanisms [*in 2D*](https://jalcocert.github.io/JAlcocerT/2d-mbsd/)...
 
-{{< youtube "G7u_KuvKK24" >}}
+{{< youtube "r0eg5onWbn0" >}}
 
 Is it time to go back to the real world?
 
@@ -157,7 +157,7 @@ or...
 
 Some people think that two of the most important factors to predict success are:
 
-1. The RISK that you allow yourselv to take
+1. The RISK that you allow yourself to take
 2. The amount of TIME that you can wait without possitive rewards to keep going in a certain direction (~persistency)
 3. The number of times that you *ROLL the dice*
 
@@ -221,7 +221,9 @@ Take one branded pptx, tell to write the store with the branded slides and move 
 
 Or...behave logically like an agent does: swirly requirements = swirly output
 
-for those moments where things are wrong, but people dont agree of the concepts/meaning of whats correct / definitions
+for those moments were things are wrong
+
+but people dont agree of the concepts/meaning of whats correct / definitions
 
 ![alt text](/blog_img/memes/data-deadlock.png)
 
@@ -305,11 +307,15 @@ It is a classic case of **"Vibe-Based Management"** meeting **"Deterministic Exe
 
 The reason it feels ridiculous to you as a developer/solopreneur is that you are used to the **High-Fidelity Feedback Loop** of AI. If you give an AI a "vibe," it gives you "garbage." You are forced to be precise to get results. 
 
-In a traditional corporate structure, Middle Management has historically acted as a **Human Buffer** that absorbs the "vague vibes" from the C-Suite and translates them into something actionable. But now, with the "Agentic AI" hype, that buffer is evaporating, and the lack of conceptual clarity is being exposed as a massive liability.
+In a traditional corporate structure, Middle Management has historically acted as a **Human Buffer** that absorbs the "vague vibes" from the C-Suite and translates them into something actionable. 
+
+But now, with the "Agentic AI" hype, that buffer is evaporating, and the lack of conceptual clarity is being exposed as a massive liability.
 
 ### 1. The "Agentic Stuff" Fallacy
 
-When an executive says, "We want some agentic stuff," they are usually committing the **Tool-First Sin**. They are picking a shiny shovel before they even know where they want to dig a hole.
+When an executive says, "We want some agentic stuff," they are usually committing the **Tool-First Sin**.
+
+They are picking a shiny shovel before they even know where they want to dig a hole.
 
 * **The Problem:** "Agentic" implies autonomy. But autonomy requires a **Logic Guardrail**. 
 * **The "C" Failure:** If they can't define the "Hierarchy of Right" for a simple dashboard, they certainly cannot define the "Rules of Engagement" for an AI Agent that is supposed to make decisions, spend money, or talk to customers.

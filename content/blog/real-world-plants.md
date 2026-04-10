@@ -150,7 +150,9 @@ Since you have two types of mint and melisa (which all look similar when they ar
 It is very easy to mix them up until they grow their "true leaves."
 
 
-Since you’ve just planted your seeds, the watering strategy changes as they grow. Right now, your main goal is to keep the soil moist without "drowning" the seeds or washing them away.
+Since you’ve just planted your seeds, the watering strategy changes as they grow.
+
+Right now, your main goal is to keep the soil moist without "drowning" the seeds or washing them away.
 
 Here is the plan for your **Tomatoes, Melisa, and Mints**:
 
@@ -240,6 +242,7 @@ Here is the timeline of when you should see the first green sprouts (the "germin
 ### Why the difference?
 
 * **Temperature is Key:** Tomatoes are "tropical" at heart. If your room is warm ($21\text{--}25\text{°C}$), they might pop up in just 5 days. If the room is cool, they might take 12.
+
 * **Seed Size:** Mint and Melisa seeds are like dust. Because they are so small, they don't have much "fuel" inside, so they take a bit longer to build enough energy to push through the soil.
 
 ---

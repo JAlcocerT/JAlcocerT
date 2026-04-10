@@ -1,9 +1,9 @@
 ---
 title: "Selfhosted IoT x HA"
-date: 2026-04-11
+date: 2026-04-12
 #date: 2026-06-10
 draft: false
-tags: ["Home Assistant","Sonoff x Zigbee","Solar Panel","Tinkering IRL"]
+tags: ["Home Assistant","Sonoff x Zigbee","Tinkering IRL"]
 description: 'A homelab around IoT, sensors and HA.'
 url: 'home-lab-tools-for-iot'
 ---
@@ -79,9 +79,12 @@ https://www.home-assistant.io/integrations/mcp_server/
 #sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d home-assistant
 
 docker ps -a | grep -i home-assistant
-#udo docker stats home-assistant
+#docker stats home-assistant
 ```
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Termix" title="Termix with Docker 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ---

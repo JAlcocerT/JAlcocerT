@@ -817,11 +817,12 @@ To estimate how long a 10,000mAh power bank (5V, 1A output) will last when power
 - **Power Conversion**: The ESP32 operates at 3.3V, so a voltage regulator will step down from 5V, introducing some inefficiency (~85-90% efficient). We'll use 85% for calculation.
 
 2. **Adjust for Voltage and Efficiency**
+
 Convert the power bank's capacity from 5V to 3.3V to match the ESP32:
+
 \[
 \text{Effective Capacity at 3.3V} = 10,000 \, \text{mAh} \times \frac{5}{3.3} \times 0.85 = 12,879 \, \text{mAh at 3.3V}
 \]
-
 
 3. **Estimate Runtime**
 Using the ESP32's average current draw (150mA at 3.3V):
@@ -829,8 +830,8 @@ Using the ESP32's average current draw (150mA at 3.3V):
 \text{Runtime (hours)} = \frac{\text{Effective Capacity}}{\text{ESP32 Current Draw}} = \frac{12,879}{150} \approx 85.9 \, \text{hours}
 \]
 
-
 4. **Realistic Adjustments**
+
 - If the ESP32 is in deep sleep most of the time (e.g., IoT sensor application):
   - Assume ~1mA average current draw.
   - Runtime:
@@ -848,19 +849,21 @@ Using the ESP32's average current draw (150mA at 3.3V):
 
 {{% /details %}}
 
-
 **Summary**
+
 - **Active Wi-Fi Use**: ~64-86 hours (2.5-3.5 days).
 - **Deep Sleep Mode**: Several months to a year, depending on wake-up intervals.
 
 The actual runtime **depends ofc**, on your ESP32's workload and power mode.
 
-
 {{% details title="Understanding mAh versus Wh 🚀" closed="true" %}}
 
-No, a 10,000mAh power bank is not exactly the same as 37Wh unless we know the nominal voltage of the battery inside the power bank.
+A 10,000mAh power bank is not exactly the same as 37Wh
+
+unless we know the nominal voltage of the battery inside the power bank.
 
 **Understanding mAh and Wh**
+
 1. **mAh (milliamp-hours)** measures the charge capacity of a battery at a specific voltage.
 2. **Wh (watt-hours)** measures the total energy capacity, which depends on both the charge capacity and the voltage.
 
@@ -881,7 +884,9 @@ For a 10,000mAh power bank:
 This is likely where the "37Wh" value comes from.
 
 **Output Voltage (5V)**
+
 When the power bank steps up the voltage to **5V** for USB output, the effective energy capacity changes due to voltage conversion losses (efficiency):
+
 - Assume 85-90% efficiency for the boost converter.
 - Effective Wh at 5V:
   \[
@@ -889,6 +894,7 @@ When the power bank steps up the voltage to **5V** for USB output, the effective
   \]
 
 **Conclusion**
+
 - **At 3.7V (internal battery)**: 10,000mAh ≈ 37Wh.
 - **At 5V (output)**: The usable energy will be slightly less due to conversion losses, approximately **31.45Wh** if efficiency is ~85%.
 

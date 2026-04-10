@@ -207,3 +207,13 @@ With [the ESP32](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-10
   {{< card link="https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt" title="MQTT and Messaging Protocols" image="/blog_img/iot/mqttx-desktop.png" subtitle="Tools for MQTT - MQTTx Desktop" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/" title="Micro-Controller Scripts" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github inside the RPi repository." >}}
 {{< /cards >}}
+
+### ESP32 vs PicoW Consumption
+
+I could not avoid to make a quick experiment [around power consumption](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/#microcontroller-power-consumption).
+
+How long would each of these micocontrollers be sending data via MQTT before consuming the same battery?
+
+In theory, the ESP32 should be the winner.
+
+Lets check this out.
