@@ -11,6 +11,11 @@ url: 'selfhosting-frigate'
 
 If you like computer vision and homelabs, you will enjoy this one :)
 
+```sh
+git clone https://github.com/JAlcocerT/RPi
+cd ./RPi/Z_RPi_Cam
+```
+
 +++ wanna see how your plants get water from the distance?
 
 {{< cards >}}

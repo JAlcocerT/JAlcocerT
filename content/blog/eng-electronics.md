@@ -167,8 +167,13 @@ To simulate the behaviour of ESP32, picoW, even arduinos: https://github.com/dav
 ### Quick IoT Samples
 
 {{< callout type="info" >}}
-See **Cpp sample Codes for ESP32** MicroController [here](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c) and for the PicoW here
+See **Cpp sample Codes** for the ESP32 MicroController [here](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c) and for the [PicoW here](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW)
 {{< /callout >}}
+
+```sh
+git clone https://github.com/JAlcocerT/RPi
+cd ./RPi/Z_MicroControllers
+```
 
 With [the PicoW](https://jalcocert.github.io/JAlcocerT/pico-w/#raspberry-pi-pico-w)
 

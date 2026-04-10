@@ -1,14 +1,16 @@
 ---
-title: "[Learning] Selfhosted IoT x HA"
-date: 2026-04-10
+title: "Selfhosted IoT x HA"
+date: 2026-04-11
 #date: 2026-06-10
 draft: false
 tags: ["Home Assistant","Sonoff x Zigbee","Solar Panel","Tinkering IRL"]
-description: 'IoT.'
-url: 'iot-home-lab-tools'
+description: 'A homelab around IoT, sensors and HA.'
+url: 'home-lab-tools-for-iot'
 ---
 
 https://jalcocert.github.io/JAlcocerT/messaging-protocols/
+https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples
+
 https://selfh.st/apps/?search=mqtt
 
 **TL;DR**
@@ -24,15 +26,13 @@ Summer is coming!
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
 
-
-
-Last year I was able to put together HA with a DHT connected to the Pico W powered by a solar panel.
+Last year, I was able to put together HA with a DHT connected to the Pico W powered by a solar panel.
 
 But I left some few loose ends while documenting how great that setup was.
 
-In the meantime... Ive made a ~~small~~ comeback to ~~mechanisms~~ electronics.
+In the meantime... Ive made a ~~small~~ comeback to ~~mechanisms~~ [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/).
 
-And planted couple of things for the first time.
+And planted couple of seeds for the first time.
 
 Its time to make that IoT/Selfhosted setup better than I ever had.
 
@@ -88,6 +88,9 @@ docker ps -a | grep -i home-assistant
 
 ## Conclusions
 
+
+After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the electro-magnetic foundations this post was the next step.
+
 What else am I running?
 
 ```sh
@@ -105,8 +108,7 @@ They are now...static!
 
 ## FAQ
 
-
-### Tools I cant live w/o
+### HomeLab Tools I cant live w/o
 
 For the CLI:
 

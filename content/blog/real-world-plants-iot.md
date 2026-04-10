@@ -13,7 +13,7 @@ url: 'plants-102-and-iot'
 
 **Intro**
 
-
+[Velxio has been](https://fossengineer.com/selfhosting-velxio-arduino/) a recent surprise to me, when doing a [small come back to IoT and electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}

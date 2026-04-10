@@ -774,8 +774,9 @@ void loop() {
 
 {{% /details %}}
 
-<https://www.youtube.com/watch?v=Q2HL8rwZ20A>
+<!-- <https://www.youtube.com/watch?v=Q2HL8rwZ20A> -->
 
+{{< youtube "Q2HL8rwZ20A" >}}
 
 
 {{< callout type="info" >}}
@@ -788,9 +789,9 @@ Another try **MQTT ESP32**: <https://www.youtube.com/watch?v=x5A5S0hoyJ0&t=211s>
 
 ESP32's are so cool.
 
-You can also use them with [PhyPhox via micropython](https://github.com/phyphox/phyphox-micropython) : https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#phyphox
+You can also use them with [PhyPhox via micropython](https://github.com/phyphox/phyphox-micropython) : 
 
-Who knows, maybe as part of your trackdays
+Who knows, maybe as part of [your trackdays](https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/#phyphox)
 
 ---
 
@@ -932,7 +933,7 @@ ESP32 GPIO pins in real-time with **AWS API Gateway WebSockets**
 
 If you are into websites...
 
-Be aware that the ESP32 could potentially be your **small webserver**
+Be aware that the ESP32 could *potentially be* your **small webserver**
 
 <!-- * <https://www.youtube.com/watch?v=Ra3iWgOfveQ> -->
 
