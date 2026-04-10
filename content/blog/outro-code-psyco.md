@@ -486,6 +486,6 @@ This helps: *the best product tool*
 
 ![alt text](/blog_img/biz/posthog-eu.png)
 
-Find the revealed preferences.
+Find **revealed preferences**.
 
 Not the announced ones.

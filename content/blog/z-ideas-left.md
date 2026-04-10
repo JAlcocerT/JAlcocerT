@@ -1,6 +1,6 @@
 ---
 title: "Which ideas are left?"
-date: 2026-04-07
+date: 2026-04-09
 draft: false
 tags: ["Unit Economics 202","Remotion Video x Data Animations","Python PPTx"]
 description: 'To define whats wrong, we need to define whats the desired state.'
@@ -354,11 +354,13 @@ This idea might suggest you [open questions](https://jalcocert.github.io/JAlcoce
 
 ### Ideas Checklist
 
-https://jalcocert.github.io/JAlcocerT/ideas-to-execution-via-sdlc/#evaluating-business-ideas
+1. https://jalcocert.github.io/JAlcocerT/ideas-to-execution-via-sdlc/#evaluating-business-ideas
 
-https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#business-idea-checklist
+2. https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#business-idea-checklist
 
 This will help you to understand how to disqualify business ideas: https://jalcocert.github.io/JAlcocerT/ideas-to-execution/
+
+And with [some psyc](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#psyco), you'll better understand your clients.
 
 {{% details title="Ideas Checklist 🚀" closed="true" %}}
 

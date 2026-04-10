@@ -880,6 +880,14 @@ Some people still have my free time to get this kind of things running:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/filebrowser" title="Filebrowser | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+```sh
+git clone https://github.com/JAlcocerT/Home-Lab
+lazydocker
+docker system df
+#docker stop $(docker ps -a -q) #stop all
+#docker system prune -a
+```
+
 It plays very well together with filebrowser:
 
 ```sh

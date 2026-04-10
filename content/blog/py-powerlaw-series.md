@@ -3,7 +3,7 @@ title: "Power Laws...What?"
 date: 2025-12-18T23:20:21+01:00
 draft: false
 tags: ["Python x STEM","Math","Outro","Statistical Distributions","Pareto","YCombinator"]
-description: "Explaining series and the relation with the power law"
+description: "Explaining series and the relation with Power Laws."
 url: 'powerlaw-and-series-with-python'
 math: true
 ---

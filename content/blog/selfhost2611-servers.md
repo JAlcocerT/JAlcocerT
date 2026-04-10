@@ -1,10 +1,10 @@
 ---
 title: "Just SelfHosted"
-date: 2026-10-01T23:20:21+01:00
+date: 2026-11-01T23:20:21+01:00
 draft: false
 tags: ["DNS x SSL","Glances","BackUps x P2P","Nala"]
 description: 'Selfhosting.'
-url: 'selfhosting-and-servers'
+url: 'selfhosting-and-servers-review'
 ---
 
 **Tl;DR**
@@ -72,7 +72,7 @@ Glances has been a great discovery.
 
 ### DNS
 
-#### SSL x https
+#### SSL x HTTPs
 
 
 #### Webs and Apps
@@ -136,9 +136,28 @@ Pragmatism some may call it.
 
 ## Conclusions
 
-Selfhosting and self-learning about servers have opened my mind by brute force these years.
+Selfhosting and self-learning about servers have opened my mind by brute force these last years.
+
+
+
+{{< callout type="info" >}}
+Will I keep writing monthly posts?
+{{< /callout >}}
+
+
+```sh
+git clone https://github.com/JAlcocerT/Home-Lab
+lazydocker
+#htop #btop #glances
+docker system df
+#docker stop $(docker ps -a -q) #stop all
+#docker system prune -a
+```
+
 
 
 ---
 
 ## FAQ
+
+
