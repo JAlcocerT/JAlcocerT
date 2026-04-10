@@ -1,8 +1,8 @@
 ---
 title: "Electro-Magnetism for tinkerers"
-date: 2026-04-20
+date: 2026-04-12
 draft: false
-tags: ["Simulations","Electric Motors","Solenoids","EMR"]
+tags: ["Simulations","Electric Motors","Solenoids","EMR","Maxwell"]
 description: 'The physics you need for electronic projects.'
 url: 'electromagnetism-101'
 math: true

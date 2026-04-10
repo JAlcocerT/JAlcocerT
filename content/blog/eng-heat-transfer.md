@@ -1,9 +1,9 @@
 ---
 title: "Heat Transfer"
-date: 2026-12-31
-draft: true
-tags: ["MBSD x 3D Simulation","Fluid Dynamics"]
-description: 'The physics of a real engine.'
+date: 2026-05-01
+draft: false
+tags: ["Black-Scholes","Fluid Dynamics","Ptolomeo"]
+description: 'The physics of.'
 url: 'heat-transfer-ice'
 math: true
 ---
@@ -11,3 +11,16 @@ math: true
 **Tl;DR**
 
 Lisa, in this house...
+
+**Intro**
+
+
+---
+
+## Conclusions
+
+
+---
+
+## FAQ
+

@@ -2,11 +2,12 @@
 title: "People do crazy RC stuff!"
 date: 2026-12-30T23:20:21+01:00
 draft: true
-tags: ["Tinkering","PulseJet","Flutter","Desktop vs Mobile","RC"]
+tags: ["Tinkering","PulseJet","Flutter","Desktop vs Mobile","RC x L298N"]
 description: 'Radio Control.'
 url: 'rc-tinkering'
 ---
 
+https://www.youtube.com/watch?v=9-bRFNfh6Dc
 
 https://www.youtube.com/watch?v=hObWTCserzA
 

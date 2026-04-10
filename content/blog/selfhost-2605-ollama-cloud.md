@@ -2,7 +2,7 @@
 title: "Selfhosting local LLMs x GenBI"
 date: 2026-05-01
 draft: false
-description: "How to use Ollama - With WrenAI, Rill and Vanna in Ubuntu 26 LTS"
+description: "How to use Ollama x Gemma 4 - With WrenAI, Rill and Vanna in Ubuntu 26 LTS"
 tags: ["Home-Lab x x300 x ext4","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","TTS","Docker Model Run"]
 ---
 

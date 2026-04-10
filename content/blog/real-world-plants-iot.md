@@ -1,9 +1,9 @@
 ---
 title: "IoT x Plants x BoM"
-date: 2026-04-06
+date: 2026-04-10
 draft: false
-tags: ["Real World","Solar","IoT","Tinkering IRL","Velxio x ESP32"]
-description: 'Plants, IoT and future plans.'
+tags: ["Real World","Solar","Tinkering IRL","Velxio x ESPHome"]
+description: 'Plants, ESP32 and future plans.'
 url: 'plants-102-and-iot'
 ---
 
@@ -15,8 +15,10 @@ url: 'plants-102-and-iot'
 
 
 
-
-
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="ESPHome | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ---

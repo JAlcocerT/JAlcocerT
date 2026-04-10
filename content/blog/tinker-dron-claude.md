@@ -2,8 +2,8 @@
 title: "Ryze Robotics Dron and Python SDK"
 date: 2026-04-04
 draft: false
-tags: ["Ardupilot","DJi Tello","RC","Computer Vision","DART"]
-description: A toy Drone, claude code and computer vision.
+tags: ["Ardupilot","DJi Tello","RC","Computer Vision x PySymverse","DART"]
+description: A toy Drone, claude code and CV2.
 url: 'dji-tello-python-sdk'
 ---
 
@@ -73,6 +73,39 @@ uv run face_detection_poc.py
 ```
 
 Same thing we learnt with the pi, using the CV2 library (executed at your laptop, not the dron)
+
+Its just the same ppl take this to the next level 
+
+see this video 'pre-ai'
+
+<!-- https://www.youtube.com/watch?v=LmEcyQnfpDA -->
+{{< youtube "LmEcyQnfpDA" >}}
+
+* https://github.com/murtazahassan/OpenCV-Python-Tutorials-and-Projects
+  * https://github.com/murtazahassan/Drone-Face-Tracking/tree/master
+  * https://github.com/murtazahassan/Tello-Object-Tracking
+
+
+#### About PySymverse
+
+From the same channel, i got to know about: https://pypi.org/project/pysimverse/
+
+> From scripts to the Sky (if you have an account)
+
+<!-- https://www.youtube.com/watch?v=VBamzxfYHgA -->
+
+{{< youtube "VBamzxfYHgA" >}}
+
+{{< youtube "hedBZ_ViAGo" >}}
+
+{{< youtube "dFudZiQ5ocY" >}}
+
+<!-- https://www.youtube.com/watch?v=hedBZ_ViAGo
+https://www.youtube.com/watch?v=dFudZiQ5ocY -->
+
+{{< youtube "v5a7pKSOJd8" >}}
+
+<!-- https://www.youtube.com/watch?v=v5a7pKSOJd8 -->
 
 ---
 
@@ -208,3 +241,46 @@ ArduPilot is an open-source autopilot system for vehicles like:
 * https://github.com/arpanghosh8453/open-dronelog
 
 > Drone Log analyzer: A high-performance universal dashboard application for organizing and analyzing DJI/Litchi flight logs privately in one place. Built with **Tauri v2, DuckDB, and React**.
+
+### About computer vision
+
+If OpenCV is the heavy-duty engine, CVZone is the ergonomic dashboard and steering wheel that makes it much easier to drive.
+
+1. What is CVZone?
+
+CVZone is a high-level Python package designed to make computer vision tasks—like hand tracking, face detection, and object tracking—accessible with just a few lines of code. 
+
+It was created largely by Murtaza Hassan (Computer Vision Zone) to simplify the often complex boilerplate code required by standard libraries.
+
+* **Core Logic:** It is built on top of **OpenCV** (for image processing) and **Mediapipe** (for high-performance AI tracking).
+* **Key Features:** It includes "ready-to-use" modules for:
+    * **Hand Tracking:** Finding 21 landmarks on a hand and detecting gestures.
+    * **Face Detection & Mesh:** Real-time facial landmark mapping.
+    * **Pose Estimation:** Tracking body joints for fitness or motion apps.
+    * **Utilities:** Easy functions for drawing styled rectangles, putting text on screen, or stacking multiple images together.
+
+2. Does it relate with `cv2` (OpenCV)?
+
+**Yes, they are best friends.** CVZone does not replace `cv2`; it **complements** it. In a typical script, you will import both. CVZone takes the "raw" outputs from OpenCV or Mediapipe and handles the math and drawing for you.
+
+* **Example Comparison:** * To draw a "fancy" cornered rectangle in standard `cv2`, you might need 10+ lines of `cv2.line()` calls. 
+    * In `cvzone`, you simply call `cvzone.cornerRect(img, bbox)`.
+
+> **The Flow:** You use `cv2` to capture your webcam feed and display the window, but you use `cvzone` to process the AI logic and draw the overlays.
+
+3. Open-Source Models (The "Heavy Hitters" of 2026)
+
+If you want to move beyond the basic tracking in CVZone, here are the top open-source models currently dominating the field:
+
+| Model Category | Top Open-Source Recommendation | Best For... |
+| :--- | :--- | :--- |
+| **Object Detection** | **YOLOv11** (Ultralytics) | Lightning-fast detection of 80+ types of objects. |
+| **Segmentation** | **SAM 2** (Segment Anything) | "Click-to-cutout" any object in a video or image. |
+| **Face Recognition** | **DeepFace** / **InsightFace** | Identifying specific individuals, not just finding "a face." |
+| **Multimodal** | **Qwen2.5-VL** | Models that can "see" and then "talk" about what they see in detail. |
+| **Hand/Face/Body** | **Mediapipe** (The engine of CVZone) | Low-latency tracking that runs perfectly on CPUs/Mobile. |
+
+Which should you choose?
+
+* **For Beginners:** Stick with **CVZone**. It abstracts the scary math and lets you build projects like "Virtual Paint" or "Gesture Volume Control" in an afternoon.
+* **For Professional Apps:** Use **YOLOv11** or **SAM 2** directly. They offer more precision and are the industry standards for tasks like self-driving car logic or medical imaging.

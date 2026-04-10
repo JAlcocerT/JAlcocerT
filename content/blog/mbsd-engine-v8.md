@@ -1,6 +1,6 @@
 ---
 title: "4-4stroke rivals: flat plane vs cross plane"
-date: 2026-04-13
+date: 2026-04-14
 draft: false
 tags: ["Mechanical Engineering","MBSD x V8 Engines"]
 description: 'Comparing flat plane and cross plane 4stroke engines before simulating V8s.'
@@ -11,7 +11,7 @@ url: 'flat-plane-vs-cross-plane'
 **TL;DR**
 
 
-The I4 balance post was so-so
+The [I4 balance post](https://jalcocert.github.io/JAlcocerT/inline-4-engine-balance/) was so-so
 
 How about...using the MBSD 3D simulator?
 

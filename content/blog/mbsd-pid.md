@@ -2,12 +2,14 @@
 title: "Controlling a bike"
 date: 2026-12-31
 draft: false
-tags: ["MBSD x 3D Simulation","PID Controller"]
+tags: ["MBSD x 3D Simulation","PID Controller","PySymverse"]
 description: 'The physics of pedaling with your bicycle.'
 url: 'pid-for-bicycle-mbsd-model'
 math: true
 ---
 
+
+https://www.youtube.com/watch?v=dFudZiQ5ocY
 
 
 **Intro**

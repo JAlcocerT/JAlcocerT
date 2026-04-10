@@ -190,6 +190,9 @@ ops, these questions are out of the scope for this post :)
 
 > persistance: going into the same direction consistently, no matter what
 
+7. The product tattoo: diminishing returns and pareto.
+
+
 ---
 
 ## Conclusions
@@ -874,10 +877,20 @@ Some people still have my free time to get this kind of things running:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/foldergram" title="Foldergram | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/filebrowser" title="Filebrowser | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+It plays very well together with filebrowser:
+
+```sh
+#move the local photos to your server
+#spin the stack
+```
 
 How hard would be to make finally a one time editable, cool, **photo gallery** that superseeds eayp HUGO v1 and both v2 failed trials at the end of last year?
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website/#select-the-deployment-method" title="Web Deployment methods | Docs ↗" >}}
 {{< /cards >}}
+
+Well...its just a few CLI's away :)
