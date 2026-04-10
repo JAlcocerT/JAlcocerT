@@ -70,6 +70,8 @@ On top of htop, btop...
 
 Glances has been a great discovery.
 
+And its written in python!
+
 ### DNS
 
 #### SSL x HTTPs

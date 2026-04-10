@@ -1,13 +1,14 @@
 ---
 title: "[Learning] Selfhosted IoT x HA"
-date: 2026-06-15
+date: 2026-04-10
+#date: 2026-06-10
 draft: false
 tags: ["Home Assistant","Sonoff x Zigbee","Solar Panel","Tinkering IRL"]
 description: 'IoT.'
 url: 'iot-home-lab-tools'
 ---
 
-
+https://jalcocert.github.io/JAlcocerT/messaging-protocols/
 https://selfh.st/apps/?search=mqtt
 
 **TL;DR**
@@ -17,6 +18,13 @@ Isnt it time to do some upgrades to IoT, HA and the solar panel?
 **Intro**
 
 Summer is coming!
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers" title="Remotion x Video | Repo" icon="github" >}}
+{{< /cards >}}
+
+
 
 Last year I was able to put together HA with a DHT connected to the Pico W powered by a solar panel.
 

@@ -91,13 +91,8 @@ Yes, several published applications and projects actively use Streamr Network fo
 - **DeFi & Web3 Apps**: Real-time oracle data for trading bots, NFT drops, or gaming (e.g., live leaderboards).[3]
 - **Data Marketplaces**: Producers sell streams directly to consumers (e.g., air quality data, stock feeds) with automated micropayments.[5]
 
-Ideal for high-throughput, trustless scenarios avoiding AWS Kinesis/MQTT centralization; scales to millions of events/second via operator nodes.[1][4]
+Ideal for high-throughput, trustless scenarios avoiding AWS Kinesis/MQTT centralization; scales to millions of events/second via operator nodes.
 
-[1](https://streamr.network)
-[2](https://coinmarketcap.com/academy/article/a-deep-dive-into-streamr)
-[3](https://beincrypto.com/streamr-decentralised-network-data-sharing/)
-[4](https://streamr.network/network)
-[5](https://www.gate.com/learn/articles/what-is-streamr-all-you-need-to-know-about-data/2997)
 
 ### Notable Examples
 

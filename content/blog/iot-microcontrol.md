@@ -186,7 +186,23 @@ Connecting ESP32 to Wifi
 
 {{% details title="ESP32 - Blinking Lights in Cpp 🚀" closed="true" %}}
 
+```cpp
+#include <Arduino.h>
 
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+  Serial.begin(921600);
+  Serial.println("Hello from the setup");
+}
+
+void loop() {
+  delay(1000);
+  digitalWrite(LED_BUILTIN, HIGH);
+  Serial.println("Hello from the loop");
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+}
+```
 
 {{% /details %}}
 
@@ -199,6 +215,38 @@ Connecting ESP32 to Wifi
 * <https://www.youtube.com/watch?v=aAG0bp0Q-y4>
 * <https://github.com/ttarnowski/esp32-wifi-connect>
 * <https://github.com/ttarnowski/esp32-wifi-connect/blob/nonblocking/src/main.cpp>
+
+```cpp
+
+#define WIFI_SSID "wifi_network_name"
+#define WIFI_PASSWORD "wifi_password"
+
+void setup() {
+  Serial.begin(921600);
+  pinMode(LED_BUILTIN, OUTPUT);
+
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+
+  Serial.println("starting");
+}
+
+bool isConnected = false;
+
+void loop() {
+  if (WiFi.status() == WL_CONNECTED && !isConnected) {
+    Serial.println("Connected");
+    digitalWrite(LED_BUILTIN, HIGH);
+    isConnected = true;
+  }
+
+  if (WiFi.status() != WL_CONNECTED) {
+    Serial.println(".");
+    digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
+    delay(1000);
+    isConnected = false;
+  }
+}
+```
 
 {{% /details %}}
 

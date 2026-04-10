@@ -10,12 +10,12 @@ math: true
 
 **Tl;DR**
 
-Before tinkering with electronics, how about understanding what we are doing?
+Before [tinkering with electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/), how about understanding what we are doing?
 
 **Intro**
 
 
-
+Lately, I was getting surprised on [how neccesary a Diode is](https://jalcocert.github.io/JAlcocerT/electronics-101/#conclusions) to avoid EMR blowing up such systems.
 
 This \(\sigma(z) = \frac{1}{1 + e^{-z}}\) is an inline expression.
 

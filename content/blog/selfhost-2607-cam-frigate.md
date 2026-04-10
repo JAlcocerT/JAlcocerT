@@ -3,7 +3,7 @@ title: "Frigate - Cam with object detection"
 date: 2026-07-01T23:20:21+01:00
 draft: false
 tags: ["Dashboards","NVR","Self-Hosting","Pi-Camera","Side-Quest26"]
-description: 'Computer vision'
+description: 'Computer vision for HomeLabs.'
 url: 'selfhosting-frigate'
 ---
 
@@ -12,6 +12,10 @@ url: 'selfhosting-frigate'
 If you like computer vision and homelabs, you will enjoy this one :)
 
 +++ wanna see how your plants get water from the distance?
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="Raspberry Pi and IoT 101" image="/blog_img/iot/pis-esp-mlx.jpg" subtitle="SBCs can do many other things!" >}}
+{{< /cards >}}
 
 **Intro**
 

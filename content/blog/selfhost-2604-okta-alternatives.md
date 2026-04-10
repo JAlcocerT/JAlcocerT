@@ -11,13 +11,15 @@ url: 'open-source-sso-tools'
 
 **TL;DR**
 
+Claude [Mythos](https://red.anthropic.com/2026/mythos-preview/) is out-there, you better take security measures.
+
+**Intro**
+
+
 * https://www.awesome-homelab.com/item/pocket-id
   * https://pocket-id.org/
 
   > See https://github.com/petervdpas/goop2 Goop² is an ephemeral, peer-to-peer system for personal web spaces.
-
-
-**Intro**
 
 Some time back, when working at a popular *,ecommerce'*, they were using Okta everywhere.
 

@@ -322,10 +322,12 @@ Connect the sensor properly as per:
 GND is pin38
 3v3 out is pin 36
 
-11 (GP8) is I2C0 SDA
-12 (GP9) is I2C0 SCL
+* 11 (GP8) is I2C0 SDA
+* 12 (GP9) is I2C0 SCL
 
-<https://www.youtube.com/watch?v=FsdSkhdfOqY&t=24s> 
+{{< youtube "FsdSkhdfOqY" >}}
+
+<!-- <https://www.youtube.com/watch?v=FsdSkhdfOqY&t=24s>  -->
 
 And they are giving their own library: <https://github.com/embeddedclub/micropython>
 
@@ -706,11 +708,15 @@ Dont trust me, see what people do:
 
 ![alt text](/blog_img/iot/picoW/ha/ha-inspiration.png)
 
+More home assistant inspiration:
+
 ![alt text](/blog_img/iot/picoW/ha/ha-inspiration2.png)
 
 Setup Home assistant with:
 
 ```sh
+#git clone https://github.com/JAlcocerT/Home-Lab
+cd ./Home-Lab/home-assistant
 sudo docker compose up -d
 ```
 
@@ -808,7 +814,7 @@ As we are reading the PicoW Internal sensor, for me it was showing ~+8C than a r
 
 ![Home Assistant dashboard with temperature from MQTT](/blog_img/iot/picoW/ha/ha-dash-mqtt-temp.png)
 
-See how it looks:
+See how the PicoW sends its internal temperature to HomeAssistant looks like:
 
 <!-- https://studio.youtube.com/video/x4tzWt6-I7c/edit -->
 
@@ -847,9 +853,6 @@ Pico w web server via C, instead of Micropython - https://www.youtube.com/watch?
 
 **Supported Languages** 
 
-Yes, the Raspberry Pi Pico W supports all of the languages and the OS you listed.
-
-### Languages
 
 * **C/C++:** This is the primary language supported by the Raspberry Pi Pico, with an official SDK (Software Development Kit) provided by the Raspberry Pi Foundation. It offers the fastest performance and the most direct control over the hardware.
 * **MicroPython:** A lean and efficient implementation of the Python 3 programming language optimized for microcontrollers. It's an excellent choice for beginners and for rapid prototyping because of its simpler syntax and a large number of available libraries.
@@ -1014,4 +1017,4 @@ Your current script hardcodes the Wi-Fi credentials — that’s fine for testin
 
 {{% /details %}}
 
-> For me, the easiest was with Thonny + Windows11.
+> For me, the easiest was with **Thonny + Windows11**.

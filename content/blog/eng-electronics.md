@@ -18,7 +18,7 @@ You might have tinkered with IoT
 
 But without really understanding the under lying layer.
 
-This sits on top of Electromagnetism, yet below IoT
+This sits on top of Electromagnetism, yet below IoT and [messaging protocols](https://jalcocert.github.io/JAlcocerT/messaging-protocols/).
 
 
 ## Circuit Boards Design
@@ -162,4 +162,43 @@ To simulate the behaviour of ESP32, picoW, even arduinos: https://github.com/dav
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+### Quick IoT Samples
+
+{{< callout type="info" >}}
+See **Cpp sample Codes for ESP32** MicroController [here](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c) and for the PicoW here
+{{< /callout >}}
+
+With [the PicoW](https://jalcocert.github.io/JAlcocerT/pico-w/#raspberry-pi-pico-w)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/MQTT-InternalTemp/main.py" title="PicoW + InternalTemp + Push to MQTT Topic 🐍 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MLX90614" title="PicoW + MLX906014 🐍 ↗" >}}
+{{< /cards >}}
+
+```sh
+
+```
+
+For something more advance, see how the [PicoW can read and send DHT22 data](https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt-x-picow-x-dht22)
+
+```sh
+
+```
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MQTT-DHT22" title="PicoW + DHT22 + MQTT 🐍 ↗" >}}
+{{< /cards >}}
+
+With [the ESP32](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/#the-esp32):
+
+```sh
+
+```
+
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt" title="MQTT and Messaging Protocols" image="/blog_img/iot/mqttx-desktop.png" subtitle="Tools for MQTT - MQTTx Desktop" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/" title="Micro-Controller Scripts" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github inside the RPi repository." >}}
 {{< /cards >}}

@@ -76,6 +76,18 @@ Combine storage + table format + catalog + query engine for Fabric-like function
 
 **Why OSS?** Cost savings (no per-compute fees), customization (e.g., Iceberg governance across Spark/Trino), no lock-in (use AWS S3/GCP/etc.), community velocity—ideal for advanced users like devs building micro-SaaS. Fabric suits quick Azure starts; OSS for long-term control. [promethium](https://promethium.ai/guides/microsoft-fabric-alternatives-2025/)
 
+What can happen with OSS?
+
+That some project like minion say bye, but you can fork it and maintain it
+
+or switching to an equivalent one: https://github.com/rustfs/rustfs
+
+> Apache v2 | 🚀2.3x faster than MinIO for 4KB object payloads. RustFS is an open-source, S3-compatible high-performance object storage system supporting migration and coexistence with other S3-compatible platforms such as MinIO and Ceph.
+
+> > RustFS is a high-performance, distributed object storage system built in Rust.
+
+
+
 ---
 
 ## Conclusions

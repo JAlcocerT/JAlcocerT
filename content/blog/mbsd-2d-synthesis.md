@@ -1,6 +1,6 @@
 ---
 title: "2D Mechanism Synthesis"
-date: 2026-03-25
+date: 2026-04-14
 draft: false
 tags: ["MBSD x 2D Simulation","Grashof","Mechanical Synthesis"]
 description: 'Which mechanism can do what?'
@@ -13,6 +13,8 @@ math: true
 Infinitely rigid solid is a huge constrain.
 
 **Intro**
+
+Before moving to 3D mechanisms, there is one important thing missing.
 
 How can you create a mechanism that passes at certain points?
 

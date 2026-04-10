@@ -7,6 +7,8 @@ description: 'Computer'
 url: 'selfhosting-more-media'
 ---
 
+https://github.com/stirling-image/stirling-image
+
 **TL;DR**
 
 Is there a reliable way not to loose photos for good?
@@ -19,6 +21,13 @@ I know, you might be already familiar with **PairDrop**
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pairdrop" title="PairDrop | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+## Music Media
+
+https://github.com/BernardoGiordano/rewind
+
+https://github.com/Fingel/gelly
+
+>  A native, lightweight music client for Jellyfin and Subsonic. Built with Rust and GTK. 🦀🐧 
 
 ## Video Media
 
