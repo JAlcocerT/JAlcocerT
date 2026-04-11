@@ -1,6 +1,6 @@
 ---
 title: "Plants IRL"
-date: 2026-04-10
+date: 2026-04-11
 draft: false
 tags: ["Real World","Solar","Tinkering IRL","A/B Experiment"]
 description: 'How to grow tomato seeds.'

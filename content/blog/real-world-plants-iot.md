@@ -1,6 +1,6 @@
 ---
 title: "IoT x Plants x BoM"
-date: 2026-04-10
+date: 2026-04-11
 draft: false
 tags: ["Real World","Solar","Tinkering IRL","Velxio x ESPHome"]
 description: 'Plants, ESP32 and future plans.'
@@ -21,6 +21,44 @@ url: 'plants-102-and-iot'
 {{< /cards >}}
 
 
+## Current Setup: MQTT DHT22 PGSQL
+
+From this section and [these scripts](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW):
+
+```sh
+#mosquitto_sub -h 192.168.1.2 -t "pico/#" -v #if this is receiving data already
+git clone https://github.com/JAlcocerT/RPi
+cd ./RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp
+
+#docker ps | grep emqx
+#cd ./RPi/Z_SelfHosting/pgsql
+docker run -d --name timescaledb \
+    -e POSTGRES_USER=pico \
+    -e POSTGRES_PASSWORD=pico \
+    -e POSTGRES_DB=sensors \
+    -p 5432:5432 \
+    timescale/timescaledb:latest-pg16
+
+#docker ps | grep timescaledb
+docker exec -it timescaledb psql -U pico -d sensors
+```
+
+```sql
+CREATE TABLE readings (
+    ts          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    topic       TEXT        NOT NULL,
+    value       DOUBLE PRECISION NOT NULL
+);
+
+SELECT create_hypertable('readings', 'ts');
+```
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Termix | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ---
 
 ## Conclusions
@@ -38,7 +76,7 @@ Yea...that can be an interesting upgrade
 
 ## FAQ
 
-## The BoM for the project
+### The BoM for the project
 
 I thought initially about doing it with gravity + a NC solenoid valve.
 
@@ -104,3 +142,5 @@ Critical Assembly Reminders:
 * **Siphoning Check:** Place your 5L bottle **lower** than your plant pot. This way, if the pump stops, gravity pulls the water back into the bottle rather than letting it continue to drip onto the floor.
     
 This list covers everything you need to build a system that is safe for your house, reliable for your plants, and ready for vacations.
+
+

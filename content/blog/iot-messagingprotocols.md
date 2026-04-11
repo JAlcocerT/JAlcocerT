@@ -300,7 +300,7 @@ Tools that aim to be **multi-protocol API platforms** (like Hoppscotch) have exp
 
 ### MQTT x PicoW x DHT22
 
-For the Pi4 it was very simple to get the pin schematics:
+For the Pi4 it was very simple to get the **pin schematics**:
  
 ```sh
 pinout 
@@ -345,17 +345,17 @@ We can finally ready DHT22 temp and humidity data!
 
 So now, lets just combine this knowledge with the [PicoW MQTT setup](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MQTT-InternalTemp):
 
-Making some adjustments, we will be pushing now DHT22 info and the Internal temp to MQTT:
+Making some adjustments, we will be **pushing** now DHT22 sensor info and the Internal temp **to MQTT**:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MQTT-DHT22" title="PicoW + DHT22 + MQTT 🐍 ↗" >}}
 {{< /cards >}}
 
-Lets connect back to EMQX to verify: `http://192.168.1.11:18083` via admin/public or your configured pwd.
+Lets connect back to EMQX to verify: `http://192.168.1.11:18083` via `admin/public` or your configured pwd.
 
 You will see couple of clients: the PicoW and your HA, if you have just [followed this post](https://jalcocert.github.io/JAlcocerT/pico-w/#ha-x-mqtt).
 
-* http://192.168.1.11:18083/#/clients
+* `http://192.168.1.11:18083/#/clients`
 
 ![alt text](/blog_img/iot/picoW/emqx-clients.png)
 

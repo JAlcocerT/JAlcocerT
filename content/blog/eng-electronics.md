@@ -183,23 +183,45 @@ With [the PicoW](https://jalcocert.github.io/JAlcocerT/pico-w/#raspberry-pi-pico
 {{< /cards >}}
 
 ```sh
-
+cd ./RPiPicoW/DHT22
 ```
 
-For something more advance, see how the [PicoW can read and send DHT22 data](https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt-x-picow-x-dht22)
+For something more advance, see how the [PicoW can read and send DHT22 data via MQTT](https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt-x-picow-x-dht22)
 
 ```sh
+cd ..
+cd ./MQTT-DHT22
+```
 
+Remember about going to `http://192.168.1.2:18083/#/clients` and later to `http://192.168.1.2:18083/#/websocket` so you can subscribe, for example to `pico/temperature/dht22` as explained with [details here](https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt-x-picow-x-dht22)
+
+```sh
+#git clone
+#cd ./Home-Lab/emqx
+#docker compose up -d
+# Check if the container is running
+docker ps | grep emqx
+
+# Watch EMQX logs live
+docker logs emqx -f
+```
+
+Or if you prefer a quick CLI way to check the pushed data:
+
+```sh
+mosquitto_sub -h 192.168.1.2 -t "pico/#" -v
 ```
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/MQTT-DHT22" title="PicoW + DHT22 + MQTT 🐍 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 With [the ESP32](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/#the-esp32):
 
 ```sh
-
+#git clone https://github.com/JAlcocerT/RPi
+# cd ./RPi/Z_MicroControllers/ESP32
 ```
 
 
@@ -217,3 +239,21 @@ How long would each of these micocontrollers be sending data via MQTT before con
 In theory, the ESP32 should be the winner.
 
 Lets check this out.
+
+### Interesting Tools
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+1. https://schemdraw.readthedocs.io/en/stable/usage/start.html
+
+```sh
+uv add schemdraw #https://github.com/cdelker/schemdraw/
+```
+
+2. 
+
+
