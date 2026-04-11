@@ -9,7 +9,7 @@ url: 'plants-101'
 
 **Tl;DR**
 
-Coming back to the real world.
+Coming back to the real world :)
 
 **Intro**
 

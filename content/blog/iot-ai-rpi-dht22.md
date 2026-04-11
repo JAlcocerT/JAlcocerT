@@ -298,7 +298,7 @@ If you have been playing with IoT and some home devices, you will come to know Z
 
 * https://www.zigbee2mqtt.io/supported-devices/#
 
-Probably also https://esphome.io if you like ESP32 boards!
+Probably also `https://esphome.io` if you like ESP32 boards!
 
 ---
 

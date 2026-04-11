@@ -2,7 +2,7 @@
 title: "IoT x Plants x BoM"
 date: 2026-04-11
 draft: false
-tags: ["Real World","Solar","Tinkering IRL","Velxio x ESPHome"]
+tags: ["Real World","DHT22 vs MLX90614","Tinkering IRL","Velxio x ESPHome"]
 description: 'Plants, ESP32 and future plans.'
 url: 'plants-102-and-iot'
 ---
@@ -20,10 +20,19 @@ url: 'plants-102-and-iot'
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="ESPHome | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+ The big win with ESPHome for these sensor projects: the entire DHT22+MQTT setup that
+  took a main.py, boot.py, DHT22.py and manual error handling is replaced by ~15 lines 
+  of YAML.
+
 
 ## Current Setup: MQTT DHT22 PGSQL
 
-From this section and [these scripts](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW):
+From [this section](https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples) and [these scripts](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW):
+
+{{< callout type="info" >}}
+Thonny IDE + W11 + proper cable to push the MicroPython code made the trick 
+{{< /callout >}}
+
 
 ```sh
 #mosquitto_sub -h 192.168.1.2 -t "pico/#" -v #if this is receiving data already
@@ -43,6 +52,8 @@ docker run -d --name timescaledb \
 docker exec -it timescaledb psql -U pico -d sensors
 ```
 
+See this file for the full commands (we need to make a one time setup at TimescaleDB):
+
 ```sql
 CREATE TABLE readings (
     ts          TIMESTAMPTZ NOT NULL DEFAULT NOW(),
@@ -51,7 +62,24 @@ CREATE TABLE readings (
 );
 
 SELECT create_hypertable('readings', 'ts');
+-- .............
 ```
+
+As we need one script to push the data, and another (FastPI) to push it via websockets...
+
+we better use tmux: *similarly for those lenghty blender runs*
+
+```sh
+#tmux ls
+cd ./home/jalcocert/RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp
+tmux new-session -d -s mqtt "uv run mqtt_to_db.py"
+tmux new-session -d -s webapp "uv run uvicorn main:app --host 0.0.0.0 --port 8077"
+#tmux attach -t mqtt #see the logs flowing CTRL B + D to go out w/stopping it
+#docker exec -it timescaledb psql -U pico -d sensors -c "SELECT * FROM readings ORDER 
+#BY ts DESC LIMIT 5;" 
+```
+
+
 
 
 {{< cards cols="2" >}}
@@ -144,3 +172,14 @@ Critical Assembly Reminders:
 This list covers everything you need to build a system that is safe for your house, reliable for your plants, and ready for vacations.
 
 
+### How much solar is enough for the ESP32?
+
+I checked recently how much the consumption of both micro-c was as per how much time they send data to TimeScaleDB before killing a small battery.
+
+Now the questions is different: *is deep sleep + internal clock + a solar panel enough to power an ESP32 directly during sun hours?*
+
+Yep, this is in preparation for the upcoming watering setup :)
+
+### Is the sun hitting hard? x MLX90614
+
+* https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/

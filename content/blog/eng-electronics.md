@@ -189,7 +189,7 @@ cd ./RPiPicoW/DHT22
 For something more advance, see how the [PicoW can read and send DHT22 data via MQTT](https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt-x-picow-x-dht22)
 
 ```sh
-cd ..
+#cd ..
 cd ./MQTT-DHT22
 ```
 
@@ -217,11 +217,23 @@ mosquitto_sub -h 192.168.1.2 -t "pico/#" -v
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-With [the ESP32](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/#the-esp32):
+With [the ESP32](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/#the-esp32): *its very important to see which language was installed, as Thonny will just work with MicroPython!*
+
+*So go ahead and install arduinoIDE like so ~~`ESP32-WROOM-DA`~~*
 
 ```sh
+#choco install arduinoide
+#pnputil /enum-devices /class Ports
 #git clone https://github.com/JAlcocerT/RPi
-# cd ./RPi/Z_MicroControllers/ESP32
+# cd ./RPi/Z_MicroControllers/ESP32/esp32-c
+```
+
+Select `ESP32 Dev Module` + `CTRL + U` to compile the sketch `esp32-internal-temp-mqtt.cpp` into the board.
+
+See your data flowing to the server:
+
+```sh
+mosquitto_sub -h 192.168.1.2 -t "esp32/#" -v          
 ```
 
 
@@ -236,9 +248,15 @@ I could not avoid to make a quick experiment [around power consumption](https://
 
 How long would each of these micocontrollers be sending data via MQTT before consuming the same battery?
 
-In theory, the ESP32 should be the winner.
+In theory, the a PicoW should be the winner.
+
+The Pico W is roughly 2× more efficient than the ESP32 on the same battery — mainly because its WiFi chip (CYW43439) draws less than the ESP32's radio at idle. The DHT22 itself contributes almost nothing to consumption.
 
 Lets check this out.
+
+
+![PicoW working with a DHT22](/blog_img/iot/picoW/picow-dht22.png)
+
 
 ### Interesting Tools
 
