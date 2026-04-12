@@ -65,7 +65,7 @@ Previously, Ive tinkered with:
 
 3. emqx - which i recommend via container, as is a good companion for such [DHT11](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt.cpp) or [DHT22](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/MQTT-DHT22/DHT22.py) scripts
 
-> Like done at: https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp
+> Like done at: https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp combining [fastapi be](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps/#full-stack-web-apps), [websockets](https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/) and [pgsql x timescaledb](https://github.com/JAlcocerT/RPi/tree/main/Z_SelfHosting/pgsql)
 
 ![DHT Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/dht-webapp/dht-webapp.png)
 
@@ -132,6 +132,7 @@ You can do it with [this .cpp script](https://github.com/JAlcocerT/RPi/blob/main
 mosquitto_sub -h 192.168.1.2 -t "esp32/ir/#" -v
 ```
 
+
 ## ESP32 x LCD
 
 
@@ -139,6 +140,8 @@ mosquitto_sub -h 192.168.1.2 -t "esp32/ir/#" -v
 ## ESP32 x MQTT x HMC5883L
 
 Adding the **HMC5883L** (a 3-axis digital compass/magnetometer) is actually very easy because it uses the exact same "language" as the MLX90614: **I2C**.
+
+> Aka ESP32 x MQTT x Magnetometer
 
 Since you already have the MLX90614 connected to **D21** and **D22**, you don't need to find new data pins.
 

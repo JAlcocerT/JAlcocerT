@@ -77,13 +77,20 @@ tmux new-session -d -s webapp "uv run uvicorn main:app --host 0.0.0.0 --port 807
 #BY ts DESC LIMIT 5;" 
 ```
 
-
-
-
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Termix | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+
+By the time you are reading this, there is already [one version that combines DHT22 from a PicoW and a DHT11 from a ESP32](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp):
+
+```sh
+cd ./home/jalcocert/RPi/Z_MicroControllers/dht-webapp
+```
+
+![DHT Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/dht-webapp/dht-webapp.png)
+
 
 ---
 
