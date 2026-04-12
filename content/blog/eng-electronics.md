@@ -261,7 +261,7 @@ After compiling and uploading this one, the data is flowing `CTRL+shift+m`as exp
 | **Bad** | 34, 35, 36, 39 | **Input only.** Cannot trigger the DHT11. |
 | **Avoid** | 0, 1, 2, 3 | Critical for booting and USB communication. |
 
-Made one upgrade to the simple dht webapp, so that now it can plot both sensors:
+Made one upgrade to the [simple dht webapp](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp), so that now it can plot both sensors:
 
 ```sh
 # stop old sessions 
@@ -271,7 +271,31 @@ Made one upgrade to the simple dht webapp, so that now it can plot both sensors:
 #tmux ls
 #git clone https://github.com/JAlcocerT/RPi
 #git pull
-cd ./RPi/Z_MicroControllers
+cd ./RPi/Z_MicroControllers/dht-webapp
+#  tmux new-session -d -s mqtt 'cd ~/dht-webapp && uv run mqtt_to_db.py'
+#   tmux new-session -d -s webapp 'cd ~/dht-webapp && uv run uvicorn main:app --host     
+#   0.0.0.0 --port 8077'
+tmux new-session -d -s mqtt 'uv run mqtt_to_db.py'
+#uv run uvicorn main:app --host 0.0.0.0 --port 8077
+tmux new-session -d -s webapp 'uv run uvicorn main:app --host 0.0.0.0 --port 8077'
+```
+
+This will give you the trend and the last value read in real time:
+
+```sh
+docker exec -it timescaledb psql -U pico -d sensors -c \
+  "SELECT DISTINCT ON (topic)
+          topic,
+          ROUND(value::numeric, 2) AS value,
+          ts
+   FROM readings
+   WHERE topic IN (
+     'pico/temperature/dht22',
+     'pico/humidity/dht22',
+     'esp32/temperature/dht11',
+     'esp32/humidity/dht11'
+   )
+   ORDER BY topic, ts DESC;"
 ```
 
 ### ESP32 vs PicoW Consumption
@@ -291,6 +315,21 @@ The DHT11/22 itself contributes almost nothing to consumption.
 docker exec -it timescaledb psql -U pico -d sensors -c \
     "SELECT time_bucket('1 hour', ts) AS hour, AVG(value) FROM readings WHERE topic = 
   'pico/temperature/dht22' GROUP BY hour ORDER BY hour DESC LIMIT 24;"
+
+docker exec -it timescaledb psql -U pico -d sensors -c \
+  "SELECT time_bucket('1 hour', ts) AS hour,
+          topic,
+          ROUND(AVG(value)::numeric, 2) AS avg_value
+   FROM readings
+   WHERE topic IN (
+     'pico/temperature/dht22',
+     'pico/humidity/dht22',
+     'esp32/temperature/dht11',
+     'esp32/humidity/dht11'
+   )
+   AND ts > NOW() - INTERVAL '24 hours'
+   GROUP BY hour, topic
+   ORDER BY topic, hour DESC;"
 ```
 
 Lets check this out.
