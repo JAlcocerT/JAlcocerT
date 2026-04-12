@@ -251,6 +251,10 @@ docker system df
 #docker system prune -a
 ```
 
+```sh
+#sudo snap install ghostty --classic
+```
+
 These are the **services** im using as of now:
 
 ```sh

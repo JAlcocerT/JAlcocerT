@@ -1,6 +1,6 @@
 ---
 title: "IoT x Plants x BoM"
-date: 2026-04-11
+date: 2026-04-12
 draft: false
 tags: ["Real World","DHT22 vs MLX90614","Tinkering IRL","Velxio x ESPHome"]
 description: 'Plants, ESP32 and future plans.'
@@ -176,7 +176,7 @@ This list covers everything you need to build a system that is safe for your hou
 
 I checked recently how much the consumption of both micro-c was as per how much time they send data to TimeScaleDB before killing a small battery.
 
-Now the questions is different: *is deep sleep + internal clock + a solar panel enough to power an ESP32 directly during sun hours?*
+Now the questions is different: *is [deep sleep](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/deep-sleep.md) + internal clock + a solar panel enough to power an ESP32 directly during sun hours?*
 
 Yep, this is in preparation for the upcoming watering setup :)
 

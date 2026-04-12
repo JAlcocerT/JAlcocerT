@@ -155,10 +155,12 @@ You have to see it.
 
 ### About Electronical Simulations
 
+Interesting [engineering tools](https://jalcocert.github.io/Linux/docs/debian/foss_engineering/):
+
 1. KiCad
 2. Atopile
 
-To simulate the behaviour of ESP32, picoW, even arduinos: https://github.com/davidmonterocrespo24/velxio
+To **simulate** the behaviour of ESP32, picoW, even arduinos: https://github.com/davidmonterocrespo24/velxio
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
@@ -219,7 +221,7 @@ mosquitto_sub -h 192.168.1.2 -t "pico/#" -v
 
 With [the ESP32](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/#the-esp32): *its very important to see which language was installed, as Thonny will just work with MicroPython!*
 
-*So go ahead and install arduinoIDE like so ~~`ESP32-WROOM-DA`~~*
+*So go ahead and install [arduinoIDE like so](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-languages-ide.md)
 
 ```sh
 #choco install arduinoide
@@ -228,19 +230,49 @@ With [the ESP32](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-10
 # cd ./RPi/Z_MicroControllers/ESP32/esp32-c
 ```
 
-Select `ESP32 Dev Module` + `CTRL + U` to compile the sketch `esp32-internal-temp-mqtt.cpp` into the board.
+Select  ~~`ESP32-WROOM-DA`~~* `ESP32 Dev Module` + `CTRL + U` to compile the sketch `esp32-internal-temp-mqtt.cpp` into the board.
 
-See your data flowing to the server:
+> I got a ESP32 DevKitV1 printed on the back of it, despite on the chip it says ESP32 wroom 32
+
+See your **MQTT data flowing** to the server:
 
 ```sh
 mosquitto_sub -h 192.168.1.2 -t "esp32/#" -v          
 ```
 
-
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt" title="MQTT and Messaging Protocols" image="/blog_img/iot/mqttx-desktop.png" subtitle="Tools for MQTT - MQTTx Desktop" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/" title="Micro-Controller Scripts" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github inside the RPi repository." >}}
 {{< /cards >}}
+
+To send DHT11 information via mqtt with the esp32, just: *install `Adafruit Unified Sensor` & `DHT sensor library for ESPx` at arduino ide -> Tools -> Manage Libraries*
+
+```sh
+mosquitto_sub -h 192.168.1.2 -t "esp32/#" -v
+#mosquitto_sub -h 192.168.1.2 -t "esp32/temperature/dht11"
+```
+
+After compiling and uploading this one, the data is flowing `CTRL+shift+m`as expected :)
+
+| Choice | GPIO Numbers | Why? |
+| :--- | :--- | :--- |
+| **Best** | 4, 14, 25, 26, 27, 32, 33 | No special boot functions; very stable. |
+| **Okay** | 12, 13, 15 | Strapping pins; might cause boot/flash issues. |
+| **Bad** | 34, 35, 36, 39 | **Input only.** Cannot trigger the DHT11. |
+| **Avoid** | 0, 1, 2, 3 | Critical for booting and USB communication. |
+
+Made one upgrade to the simple dht webapp, so that now it can plot both sensors:
+
+```sh
+# stop old sessions 
+#tmux kill-session -t mqtt                                                            
+#tmux kill-session -t webapp                                                             
+# verify they're gone                                                                
+#tmux ls
+#git clone https://github.com/JAlcocerT/RPi
+#git pull
+cd ./RPi/Z_MicroControllers
+```
 
 ### ESP32 vs PicoW Consumption
 
@@ -248,15 +280,25 @@ I could not avoid to make a quick experiment [around power consumption](https://
 
 How long would each of these micocontrollers be sending data via MQTT before consuming the same battery?
 
-In theory, the a PicoW should be the winner.
+In theory, the a [PicoW should be the winner](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/MQTT-DHT22/picow-consumption.md).
 
-The Pico W is roughly 2× more efficient than the ESP32 on the same battery — mainly because its WiFi chip (CYW43439) draws less than the ESP32's radio at idle. The DHT22 itself contributes almost nothing to consumption.
+The Pico W is roughly 2× more [efficient than the ESP32](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-consumption.md) on the same battery — mainly because its WiFi chip (CYW43439) draws less than the ESP32's radio at idle.
+
+The DHT11/22 itself contributes almost nothing to consumption.
+
+```sh
+#docker exec -it timescaledb psql -U pico -d sensors -c "SELECT DISTINCT topic FROM readings LIMIT 10;"
+docker exec -it timescaledb psql -U pico -d sensors -c \
+    "SELECT time_bucket('1 hour', ts) AS hour, AVG(value) FROM readings WHERE topic = 
+  'pico/temperature/dht22' GROUP BY hour ORDER BY hour DESC LIMIT 24;"
+```
 
 Lets check this out.
 
-
 ![PicoW working with a DHT22](/blog_img/iot/picoW/picow-dht22.png)
 
+1. Connected the PicoW a Saturday 11pm to a 4000mAh battery
+2. When did the data stop flowing to TimescaleDB? Expected ~3/4 days, real: 
 
 ### Interesting Tools
 
@@ -273,5 +315,3 @@ uv add schemdraw #https://github.com/cdelker/schemdraw/
 ```
 
 2. 
-
-
