@@ -1,6 +1,6 @@
 ---
 title: "IoT x Plants x BoM"
-date: 2026-04-12
+date: 2026-04-10
 draft: false
 tags: ["Real World","DHT22 vs MLX90614","Tinkering IRL","Velxio x ESPHome"]
 description: 'Plants, ESP32 and future plans.'

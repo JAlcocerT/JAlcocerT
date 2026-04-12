@@ -92,7 +92,7 @@ or switching to an equivalent one: https://github.com/rustfs/rustfs
 
 ## Conclusions
 
-It doesnt matter if you stack is: powerbi+dbeaver+mssql/dbcode extensions at vscode...
+It doesnt matter if you stack is: `powerbi+dbeaver+mssql/dbcode` extensions at vscode...
 
 ```sql
 SELECT TOP 10 * FROM INFORMATION_SCHEMA.TABLES;
@@ -108,13 +108,20 @@ WHERE [EaId] LIKE 'sth123%';
 
 * https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction
 
-Or the Grafana+Pypsark+graphite/ES one...
+Or the `Grafana+Pypsark+graphite/ES` one...
+
+I got you covered on the D&A book
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
+
+Or if you are ready for that big next step, at the consulting ;)
 
 .....
 
-Not all of them are 100% Open Source Software (OSS). While many have an open-source "heart," several follow a **"Freemium"** or **"Open Core"** model where the most advanced features are locked behind a paid license.
-
-Here is the breakdown of the licensing for the tools we discussed:
+Not all of them are 100% Open Source Software (OSS). 
 
 🟢 Fully Open Source (100% Free & OSS)
 
@@ -148,7 +155,6 @@ Which should you choose?
 * If you want something **simple and truly OSS**: **HeidiSQL** (Windows) or **Beekeeper Studio Community**.
 * If you are on a **Mac**: **Sequel Ace** is a fantastic open-source native choice.
 
-**Would you like me to help you find the download link for the community version of one of these?**
 
 ### Agentic Orchestration Layer
 

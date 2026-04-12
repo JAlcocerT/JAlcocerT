@@ -40,6 +40,8 @@ $$
 ### How to avoid frying an ESP32 due to kickback
 
 Even the simplest project has some meta-lessons and curiosities behind it.
+
+Like this [simple diode simulation](https://jalcocert.github.io/JAlcocerT/electronics-101/):
 <!-- 
 https://youtu.be/1veGKSFzqcQ 
 -->

@@ -140,7 +140,10 @@ Pragmatism some may call it.
 
 Selfhosting and self-learning about servers have opened my mind by brute force these last years.
 
-
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 {{< callout type="info" >}}
 Will I keep writing monthly posts?

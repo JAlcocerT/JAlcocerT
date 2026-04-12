@@ -8,11 +8,6 @@ description: 'A homelab around IoT, sensors and HA.'
 url: 'home-lab-tools-for-iot'
 ---
 
-https://jalcocert.github.io/JAlcocerT/messaging-protocols/
-https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples
-
-https://selfh.st/apps/?search=mqtt
-
 **TL;DR**
 
 Isnt it time to do some upgrades to IoT, HA and the solar panel?
@@ -23,7 +18,7 @@ Summer is coming!
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers" title="Remotion x Video | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers" title="MicroControllers scripts | Repo" icon="github" >}}
 {{< /cards >}}
 
 Last year, I was able to put together HA with a DHT connected to the Pico W powered by a solar panel.
@@ -32,6 +27,8 @@ But I left some few loose ends while documenting how great that setup was.
 
 In the meantime... Ive made a ~~small~~ comeback to ~~mechanisms~~ [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/).
 
+> With the opportunity to make both, [the esp32 and picow setups better](https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples)
+
 And planted couple of seeds for the first time.
 
 Its time to make that IoT/Selfhosted setup better than I ever had.
@@ -39,21 +36,38 @@ Its time to make that IoT/Selfhosted setup better than I ever had.
 
 ## Protocols
 
+Among all [messaging protocols](https://jalcocert.github.io/JAlcocerT/messaging-protocols/), mqtt has something to say.
+
+
 ### Connecting to MQTT
 
 1. MqttX
 2. Mqtt Explorer
 3. MQTTy
 
-## Tools for MQTT
+Or simply with:
 
-httpie
+```sh
+mosquitto_sub -h 192.168.1.2 -t "esp32/#" -v
+#mosquitto_sub -h 192.168.1.2 -t "esp32/temperature/dht11"
+```
 
-reqable
+### Tools for MQTT
 
-emqx 
+You can get inspired at: https://selfh.st/apps/?search=mqtt
 
+Previously, Ive tinkered with:
 
+1. httpie
+
+2. reqable
+
+3. emqx - which i recommend via container
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ### HA
@@ -65,9 +79,10 @@ There has been few releases since the last time:
 {{< youtube "QwCR0h8_KyE" >}}
 
 
-https://github.com/homeassistant-ai/ha-mcp/
+Including the releases of the MCP integrations:
 
-https://www.home-assistant.io/integrations/mcp_server/
+* https://github.com/homeassistant-ai/ha-mcp/
+* https://www.home-assistant.io/integrations/mcp_server/
 
 ```sh
 #git clone https://github.com/JAlcocerT/Home-Lab
@@ -83,7 +98,8 @@ docker ps -a | grep -i home-assistant
 ```
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Termix" title="Termix with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/termix" title="Termix with Docker 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant" title="HA with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
 
@@ -91,8 +107,7 @@ docker ps -a | grep -i home-assistant
 
 ## Conclusions
 
-
-After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the electro-magnetic foundations this post was the next step.
+After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the [electro-magnetic foundations](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/), this post was the next step.
 
 What else am I running?
 
@@ -107,6 +122,13 @@ I removed the services for my ebooks and consulting subdomains.
 
 They are now...static!
 
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
+
+And you have one IoT basics ebook waiting for you in there.
 ---
 
 ## FAQ
