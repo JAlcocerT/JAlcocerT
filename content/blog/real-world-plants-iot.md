@@ -7,22 +7,20 @@ description: 'Plants, ESP32 and future plans.'
 url: 'plants-102-and-iot'
 ---
 
-
 **Tl;DR**
 
 
 **Intro**
 
-[Velxio has been](https://fossengineer.com/selfhosting-velxio-arduino/) a recent surprise to me, when doing a [small come back to IoT and electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples)
+[Velxio has been](https://fossengineer.com/selfhosting-velxio-arduino/) a recent surprise to me, when doing a [small come back to IoT and electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples).
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="ESPHome | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/esp-home/" title="ESPHome | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
- The big win with ESPHome for these sensor projects: the entire DHT22+MQTT setup that
-  took a main.py, boot.py, DHT22.py and manual error handling is replaced by ~15 lines 
-  of YAML.
+The big win with ESPHome for these sensor projects: the entire DHT22+MQTT setup that
+took a `main.py`, `boot.py`, `DHT22.py` and manual error handling is replaced by ~15 lines of YAML.
 
 
 ## Current Setup: MQTT DHT22 PGSQL

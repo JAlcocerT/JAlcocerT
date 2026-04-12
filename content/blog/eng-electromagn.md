@@ -80,17 +80,16 @@ But arent they simple, beautiful, elegant and massively efficient?
 
 #### DC Engines
 
-These are the kind of motors propelling your DJi Tello Dron.
+These are the kind of motors propelling your [DJi Tello Dron](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/).
 
-Yea, the same for which I was recently making a nicer desktop app with computer vision plugged in.
+Yea, the same for which I was recently making a [nicer desktop app](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter) with computer vision plugged in.
 
 ```sh
-git clone /dron
-cd ./sync
+#git clone /dron
+cd ./dron
 uv sync
 uv run main.py
 ```
-
 
 {{< youtube "nNMUY_GUw9s" >}}
 
@@ -101,7 +100,6 @@ Yep, private :)
 ---
 
 ## Conclusions
-
 
 Beyond food and warm, do you have passions?
 
@@ -122,9 +120,5 @@ but not sure on the how?
 ---
 
 ## FAQ
-
-
-
-
 
 

@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Sensors x Home Assistant"
-date: 2026-04-25
+date: 2026-10-25
 draft: false
 tags: ["Tinkering","Polanduino x Arduino","Solar x DHT","MLX"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
@@ -115,6 +115,8 @@ Also these: https://www.youtube.com/@homeassistant_facil/videos - https://www.yo
 
 
 #### MLX90614 GY-906 - IR
+
+* https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/
 
 The MLX90614 GY-906 is an **infrared (IR) temperature sensor** module commonly used for non-contact temperature measurements.
 
