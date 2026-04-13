@@ -608,5 +608,4 @@ https://f-droid.org/en/packages/eu.darken.capod/
 
 * Bitwarden
 * vaultwarden
-* Aegis
-    * <https://www.opensourcealternative.to/project/Aegis> -->
+* Aegis    * <https://www.opensourcealternative.to/project/Aegis> -->

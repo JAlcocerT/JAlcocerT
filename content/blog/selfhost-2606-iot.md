@@ -198,6 +198,11 @@ While the DHT11 tells you the "environment" and the MLX tells you the "target," 
 * **D21:** SDA for **both** MLX90614 and HMC5883L
 * **D22:** SCL for **both** MLX90614 and HMC5883L
 
+## SelfHosted IoT Tools
+
+OpenHUB
+
+ESPHome
 
 ### HA
 

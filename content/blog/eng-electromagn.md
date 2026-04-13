@@ -160,7 +160,7 @@ Does that help clarify why those sparks happen when you unplug high-power induct
 
 ### How to avoid frying an ESP32 due to kickback
 
-Even the simplest project has some meta-lessons and curiosities behind it.
+Even the simplest project has **some meta-lessons** and curiosities behind it.
 
 Like this [simple diode simulation](https://jalcocert.github.io/JAlcocerT/electronics-101/):
 <!-- 
@@ -172,8 +172,8 @@ https://youtu.be/1veGKSFzqcQ
 After [such investigation](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/consequences.md) you also get [interesting](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/curiosities.md) next steps.
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101/tree/master/sample-pyscipe" title="Electronics 101 | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion/tree/main/remotion-electronics" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
 
 After sich simple project you can continue that [come back with more ad-ons](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/next-steps.md).

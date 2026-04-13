@@ -337,7 +337,20 @@ Lets check this out.
 ![PicoW working with a DHT22](/blog_img/iot/picoW/picow-dht22.png)
 
 1. Connected the PicoW a Saturday 11pm to a 4000mAh battery
-2. When did the data stop flowing to TimescaleDB? Expected ~3/4 days, real: 
+2. When did the data stop flowing to TimescaleDB? Expected ~3/4 days, real: 21 hours
+
+Maybe the battery was no 4000mAh at all?
+
+for a relative comparison with the esp32, it doesnt matter
+
+So i recharged the battery and tried with the ESP+dht11 setup
+
+Surprisingly, the ESP32 just lasted ~11h instead of ~21h
+
+For another time, ill be testing the deep sleep option to see how it improves
+
+Also, I have to test using Zigbee instead of Wifi as it should also lower the power consumption 
+
 
 ### Interesting Tools
 
