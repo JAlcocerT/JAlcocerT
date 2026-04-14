@@ -11,6 +11,9 @@ url: 'selfhosting-frigate'
 
 If you like computer vision and homelabs, you will enjoy this one :)
 
+**Intro**
+
+
 ```sh
 git clone https://github.com/JAlcocerT/RPi
 cd ./RPi/Z_RPi_Cam
@@ -42,7 +45,6 @@ nano capture_images.sh
   {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="Raspberry Pi and IoT 101" image="/blog_img/iot/pis-esp-mlx.jpg" subtitle="SBCs can do many other things!" >}}
 {{< /cards >}}
 
-**Intro**
 
 The **computer vision** is an interesting topic that I have just tinkered with superficially...*two years ago with [the Pi](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/)*.
 

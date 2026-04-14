@@ -281,5 +281,5 @@ We are so lucky that we have IR sensors that can measure exactly that:
 * https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard (wg-easy) Server" image="/blog_img/hardware/wifi_eth.jpg" subtitle="VPS and Wiregaurd VPN" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard (wg-easy) Server" image="/blog_img/hardware/wifi_eth.jpg" subtitle="A Pi can also get you started with IoT and sensors" >}}
 {{< /cards >}}

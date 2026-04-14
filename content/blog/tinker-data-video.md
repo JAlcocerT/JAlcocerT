@@ -230,9 +230,11 @@ When we see something, we form a mental model of why things are the way they are
 
 Asking questions is important.
 
-Because inside the questions we have implicit hypothesis, not only in the answers.
+Because **inside the questions** we have implicit hypothesis, not only in the answers.
 
-So: which explanation do we give to the rising housing prices ($/m2)?
+notice how some questions are forcing you to converge toward a certain logic
+
+Anyways: which explanation do we give to the rising housing prices (in $/m2)?
 
 {{< youtube "lRIWm1oQI54" >}}
 
@@ -292,7 +294,7 @@ Just asking: *bring your own theory of how the world works here*
 
 nuts2 arcgis
 
-https://www.arcgis.com/home/item.html?id=48f0d1a2006c4e89a85712a618fcff89
+* https://www.arcgis.com/home/item.html?id=48f0d1a2006c4e89a85712a618fcff89
 
 
 
@@ -382,7 +384,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv run tests/plot_historical_gweiss.py ADM --start 2000-01-01 --brand "@LibrePortfolio" --warmup-days 400
 ```
 
-Dividends? no problem
+Dividends? 
+
+No problem
 
 ```sh
 #uv run tests/plot_historical_yield.py CAT --start 2000-01-01 --brand "@LibrePortfolio" --monthly

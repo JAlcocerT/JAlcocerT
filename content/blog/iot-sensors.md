@@ -1,8 +1,8 @@
 ---
-title: "[IoT] Sensors x Home Assistant"
+title: "[IoT] Sensors"
 date: 2026-10-25
 draft: false
-tags: ["Tinkering","Polanduino x Arduino","Solar x DHT","MLX"]
+tags: ["Polanduino x Arduino","Solar x DHT x MLX"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
@@ -69,7 +69,7 @@ Combining Blender + Arduino + Real Time Accelerometer Data: https://pabramsor.co
 
 I have pending a post about Blender.
 
-But what this guy created on that article is simply fantastic.
+But what this guy created on that **article is simply fantastic**.
 
 > See in real time where the arduino is moving rendered into blender https://github.com/Bardo91
 

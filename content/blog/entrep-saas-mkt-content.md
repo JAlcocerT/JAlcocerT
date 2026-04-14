@@ -1,8 +1,8 @@
 ---
 title: "Mass produced information content"
-date: 2026-06-01T23:20:21+01:00
+date: 2026-07-01T23:20:21+01:00
 draft: false
-tags: ["Social Media Marketing","Side-Quest26","Youtube","Stonks"]
+tags: ["Social Media Marketing","Side-Quest26","Youtube","Stocks x Stonks"]
 description: 'Is value based content dead? Prove it wrong with data animations.'
 url: 'social-media-content'
 ---
@@ -27,9 +27,15 @@ You need to
 
 ## From PyStonks
 
-Need ideas from here and here?
+Need BRD ideas from here and here?
 
 1. Gap between dividend yield and 10Y bond price.
+
+And...take ideas?
+
+Do we really need Matplotlib despite been so configurable?
+
+Or can we go with Shadcn charts / or [Recharts](https://recharts.github.io) as done lately for the trip planner?
 
 ---
 

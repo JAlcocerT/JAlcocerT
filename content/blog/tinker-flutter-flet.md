@@ -153,22 +153,9 @@ flet publish
 
 This will create a directory called build that contains all of the static files for your app. You can then deploy these files to any static web hosting service.
 
-Here are some of the benefits of generating static pages with Flet:
+Flet as Static Site: https://flet.dev/docs/guides/python/publishing-static-website/
 
-* Performance: Static pages are much faster than dynamic pages because they do not need to be rendered on the server. This makes Flet apps a good choice for websites that need to be able to handle a lot of traffic.
-* Security: Static pages are also more secure than dynamic pages because they are not vulnerable to server-side attacks.
-* Portability: Static pages can be deployed to any web server, including cheap and shared hosting plans. This makes Flet apps a good choice for websites that need to be able to scale to handle a lot of traffic.
-
-
-Overall, Flet is a great choice for developers who are looking for a fast, efficient, and secure way to generate static pages.
-
-## Flet as Static Site
-
-https://flet.dev/docs/guides/python/publishing-static-website/
-
-## Flet Samples
-
-* https://github.com/ndonkoHenri/Flet-Samples
+Flet Samples: https://github.com/ndonkoHenri/Flet-Samples
 
 ### Flet Features
 
@@ -368,6 +355,7 @@ https://busterbenson.com/
 
 
 We have built on top of FastAPI, which itself is based on the ASGI framework Starlette and the ASGI webserver Uvicorn because of their great performance and ease of use.
+
 * JustPY
     * JustPy is an object-oriented, component based, high-level Python Web Framework that requires no front-end programming. With a few lines of only Python code, you can create interactive websites without any JavaScript programming. JustPy can also be used to create graphic user interfaces for Python programs.
 
@@ -443,7 +431,10 @@ Like this TKInter test that I made [here for karting](https://jalcocert.github.i
 
 Or for some one who hasnt done one: could RUST be the way?
 
-https://youtu.be/WhjEL817Onw?si=uBhfxuuQhwRA0Ufe
+<!-- https://youtu.be/WhjEL817Onw?si=uBhfxuuQhwRA0Ufe -->
+
+{{< youtube "WhjEL817Onw" >}}
+
 
 Or just go all in for flutter?
 
@@ -493,6 +484,7 @@ Flutter - https://app.flutterflow.io/share/travel-app-bhdo3n
 <https://www.youtube.com/watch?v=Ej_Pcr4uC2Q>
 
 ## Flutter
+
 <https://www.youtube.com/watch?v=pTJJsmejUOQ&t=5276s&pp=ygUUZmx1dHRlciBmcmVlY29kZWNhbXA%3D>
 
 

@@ -17,7 +17,7 @@ At this point, whats stopping you to create a cool app for [the tello DJI](https
 
 First of all, an fpv is probably sth for what you need [such license](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#about-dron-regulations).
 
-This guy knows what he's talking about: https://github.com/Bardo91, aka Pablo ramom soria.
+This guy knows what he's talking about: https://github.com/Bardo91, aka Pablo ramon soria.
 
 The tello weights around ~ g:
 
