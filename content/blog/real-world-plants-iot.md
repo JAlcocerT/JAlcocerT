@@ -2,8 +2,8 @@
 title: "IoT x Plants x BoM"
 date: 2026-04-10
 draft: false
-tags: ["Real World","DHT22 vs MLX90614","Tinkering IRL","Velxio x ESPHome"]
-description: 'Plants, ESP32 and future plans.'
+tags: ["Real World","DHT22 vs MLX90614 x VPD","Tinkering IRL","Velxio x ESPHome"]
+description: 'Plants, VPD and future plans that made it for a tech talk.'
 url: 'plants-102-and-iot'
 ---
 
@@ -90,6 +90,91 @@ cd ./home/jalcocert/RPi/Z_MicroControllers/dht-webapp
 ```
 
 ![DHT Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/dht-webapp/dht-webapp.png)
+
+
+### From T and H to VPD
+
+VPD (vapor preassure deficit) is slightly more complex than just a "subtraction" of humidity from temperature.
+
+It represents the difference (the deficit) between how much moisture the air **can** hold when saturated and how much it **is** currently holding.
+
+While it is based on temperature and humidity, the math involves the **Saturated Vapor Pressure ($SVP$)**, which is a non-linear relationship—air's ability to hold water increases exponentially as it gets hotter.
+
+1. The Core Components
+
+To calculate $VPD$, you need to find two values:
+1.  **$SVP$ (Saturated Vapor Pressure):** The maximum amount of water vapor the air can hold at a specific temperature.
+2.  **$AVP$ (Actual Vapor Pressure):** The amount of water vapor currently in the air.
+
+The formula is:
+$$VPD = SVP - AVP$$
+
+2. The Detailed Formulas
+
+To calculate this in your microcontroller code, you usually use the **Tetens Equation** to find the pressure in kilopascals (kPa).
+
+Step A: Find $SVP$
+
+Using the air temperature ($T$ in °Celsius):
+
+$$SVP = 0.61078 \times \exp\left(\frac{17.27 \times T}{T + 237.3}\right)$$
+
+Step B: Find $AVP$
+
+Once you have $SVP$, you use your Relative Humidity ($RH$ as a percentage) to find the actual pressure:
+
+$$AVP = SVP \times \left(\frac{RH}{100}\right)$$
+
+Step C: Calculate $VPD$
+
+$$VPD = SVP \times \left(1 - \frac{RH}{100}\right)$$
+
+3. Why This "Beats" Standard Humidity
+
+Standard Relative Humidity ($RH$) is misleading for a greenhouse. For example:
+* At **15°C** and **70% RH**, the $VPD$ is approximately **0.51 kPa**.
+* At **30°C** and **70% RH**, the $VPD$ is approximately **1.27 kPa**.
+
+Even though the "Humidity" is 70% in both cases, the plants in the second scenario are losing water **more than twice as fast**. If you only controlled for 70% RH, your plants might dry out or stop growing when it gets hot because the "thirst" of the air changed.
+
+4. Implementing in your PID
+If you use $VPD$ as your "Process Variable" (your input) for your PID loop:
+1.  **Input:** Your code calculates $VPD$ every second using the formulas above.
+2.  **Setpoint:** You set a target $VPD$ (usually between **0.8 and 1.2 kPa** for most plants).
+3.  **Output:** The PID opens the window if the $VPD$ gets too high (air too dry) or closes it/turns on a mister if it gets too low (air too stagnant).
+
+5. The "Leaf Temp" Nuance
+
+In professional systems, engineers don't use air temperature for $SVP$; they use **Leaf Temperature** (measured with an infrared sensor).
+
+Because plants transpire, they are usually $1$–$2$°C cooler than the air.
+
+If you want the "Ultimate Greenhouse," measuring the leaf temp gives you the most accurate $VPD$ possible.
+
+Since you're looking at outside vs. inside temp anyway, calculating $VPD$ is just a few extra lines of math in your Python or C++ code.
+
+Particularly, now you have the VPD version: *with just cosmetic changes at the dashboarding side*
+
+```sh
+#tmux ls
+#cd ./home/jalcocert/RPi/Z_MicroControllers/dht-webapp
+cd ./home/jalcocert/RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd
+tmux new-session -d -s mqtt "uv run mqtt_to_db.py"
+tmux new-session -d -s webapp "uv run uvicorn main:app --host 0.0.0.0 --port 8077"
+```
+
+
+### Big Data Tech Talk 
+
+A tech talk that goes from embeded systems, to data engineering and to visualizations?
+
+If someone would have let me know that id be doing these sessions so easily:
+
+```sh
+#selfhosted-landing\y2026-tech-talks
+```
+
+I mean...so hard, bc Im not using Slidev, not python-pptx nor just html for presentations.
 
 
 ---
@@ -181,11 +266,17 @@ This list covers everything you need to build a system that is safe for your hou
 
 I checked recently how much the consumption of both micro-c was as per how much time they send data to TimeScaleDB before killing a small battery.
 
+And...it was not that much: ~12/24h
+
 Now the questions is different: *is [deep sleep](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/deep-sleep.md) + internal clock + a solar panel enough to power an ESP32 directly during sun hours?*
 
 Yep, this is in preparation for the upcoming watering setup :)
 
 ### Is the sun hitting hard? x MLX90614
+
+As seen at the SVP section, the leaf temperature matters.
+
+We are so lucky that we have IR sensors that can measure exactly that:
 
 * https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/
 

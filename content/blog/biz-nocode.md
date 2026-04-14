@@ -203,7 +203,7 @@ Just clean up:
 
 ```sh
 lazydocker
-docker system df
+docker system df #docker image prune #docker image prune -a
 #docker stop $(docker ps -a -q) #stop all
 #docker system prune -a
 ```

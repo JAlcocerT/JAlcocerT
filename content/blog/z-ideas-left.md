@@ -199,8 +199,8 @@ But ~~I got to know~~ [reminded about](https://jalcocert.github.io/JAlcocerT/ai-
 So for the pocs if you were doing slidev or giving a prompt to notebookllm or copilot: You are outdated.
 
 ```sh
-git clone /pbi
-cd ./pbi/executive-dashboard-pptx #a sample with dummy data on how to use python-pptx :)
+git clone /PBi
+cd ./PBi/executive-dashboard-pptx #a sample with dummy data on how to use python-pptx :)
 
 #git clone /selfhosted-landing/y2026-tech-talks #yea tech talks are here for now :)
 ```

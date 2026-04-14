@@ -5,7 +5,7 @@ draft: false
 description: 'Calculus 101'
 url: 'calculus-101'
 math: true
-tags: ["DSc","Bike_dynamic_simulator","Math"]
+tags: ["DSc","Bike_dynamic_simulator","Math","ODE"]
 ---
 
 
@@ -13,7 +13,9 @@ tags: ["DSc","Bike_dynamic_simulator","Math"]
 
 Today Ive had a yearly meeting with a friend and it been f*** amazing.
 
-Also, 10y back I was... better at calculus and worst at...
+Also, 10y back I was... 
+
+better at calculus and worst at...
 
 <!-- matrix bullet -->
 
@@ -94,6 +96,37 @@ Ordinary Differential Equations!
 
 
 {{< youtube "ly4S0oi3Yz8" >}}
+
+### The ODE Diagram
+
+In mathematics and physics, an **ODE diagram** (Ordinary Differential Equation diagram) typically refers to a visual representation used to analyze the behavior of a system without necessarily solving the equation analytically. 
+
+Depending on the context, this usually takes one of two forms: a **Phase Portrait** or a **Block Diagram**.
+
+1. The Phase Portrait (Direction Field)
+
+This is the most common "diagram" for an ODE. It maps out how the variables change over time.
+
+* **Direction Fields (Slope Fields):** For a first-order ODE like $\frac{dy}{dt} = f(t, y)$, we draw small line segments (vectors) at various points $(t, y)$ representing the slope at that point.
+* **Phase Plane:** For a system of two ODEs, the diagram plots one variable against the other (e.g., velocity vs. position).
+* **Equilibrium Points:** These diagrams help identify "steady states" where the system doesn't change, and whether those points are stable (sink) or unstable (source).
+
+2. The Control System Block Diagram
+In engineering, an ODE is often represented as a series of functional blocks. This is used to visualize how signals flow through a physical system.
+
+* **Integrator Blocks:** Since an ODE involves derivatives, the diagram uses "integrators" ($\frac{1}{s}$ in Laplace notation) to move from a derivative back to the state variable.
+* **Summing Junctions:** Points where different forces or signals are added together.
+* **Feedback Loops:** Used to show how the output of a system affects its future state, a core concept in stability analysis.
+
+
+3. Why use them?
+
+Numerical solutions give you a specific path, but a diagram gives you the **"global" picture**. They allow you to:
+1.  **Predict Long-term Behavior:** Will the system explode, oscillate, or settle down?
+2.  **Identify Bifurcations:** See how a small change in a constant (like friction or gravity) completely changes the system's nature.
+3.  **Simplify Complexity:** Visualizing a "swinging pendulum" via a phase portrait is often more intuitive than staring at a second-order nonlinear equation.
+
+You can use these to model a physical system like a circuit or population
 
 ### The Double Pendulum
 

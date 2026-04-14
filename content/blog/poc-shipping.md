@@ -1,6 +1,6 @@
 ---
 title: "Spring is here, so are weddings"
-date: 2026-04-14
+date: 2026-04-15
 draft: false
 tags: ["RoadMap26","SlubneChwile","DRIP","Google Stitch"]
 description: 'The . With inspiring apps.'
@@ -126,6 +126,8 @@ Dont waste add money, get emails and people to try, then...DRIP.
 > The magic happens at [this gha workflow](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/drip.yml)
 
 ### My Current Value Ladder
+
+The take it or leave it form is looking nice:
 
 ```mermaid
 flowchart LR
