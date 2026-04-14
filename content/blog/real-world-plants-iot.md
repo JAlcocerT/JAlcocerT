@@ -188,3 +188,7 @@ Yep, this is in preparation for the upcoming watering setup :)
 ### Is the sun hitting hard? x MLX90614
 
 * https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard (wg-easy) Server" image="/blog_img/hardware/wifi_eth.jpg" subtitle="VPS and Wiregaurd VPN" >}}
+{{< /cards >}}

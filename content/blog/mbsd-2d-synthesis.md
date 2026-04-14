@@ -1,6 +1,6 @@
 ---
 title: "2D Mechanism Synthesis"
-date: 2026-04-14
+date: 2026-04-21
 draft: false
 tags: ["MBSD x 2D Simulation","Grashof","Mechanical Synthesis"]
 description: 'Which mechanism can do what?'
