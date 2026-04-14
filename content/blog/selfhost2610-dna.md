@@ -113,7 +113,7 @@ Or the `Grafana+Pypsark+graphite/ES` one...
 I got you covered on the D&A book
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 

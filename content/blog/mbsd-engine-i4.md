@@ -462,11 +462,11 @@ The 3D space: X (Fx) × Y (Fy) × Z (crank angle), color-coded by progression
 
 Engine comparisons:
 
-I4: Large tilted bowtie (secondary-heavy, needs balancer shafts)
-I6: Thin vertical line near origin (nearly perfect balance)
-I3/I5: Symmetric stars (excellent primary balance)
-V8: Moderate bowtie (good compromise)
-V12: Smallest locus (pinnacle of smoothness)
+* I4: Large tilted bowtie (secondary-heavy, needs balancer shafts)
+* I6: Thin vertical line near origin (nearly perfect balance)
+* I3/I5: Symmetric stars (excellent primary balance)
+* V8: Moderate bowtie (good compromise)
+* V12: Smallest locus (pinnacle of smoothness)
 
 How to interpret: Shape = balance quality, size = imbalance magnitude, pattern = harmonic content
 
@@ -638,6 +638,8 @@ https://youtu.be/Vrdphl04gas
 
 > waste of tokens .mp4 :)
 
+> > Or in other words: nah, AI is a joke
+
 ---
 
 ## Conclusions
@@ -651,9 +653,6 @@ If you want to convince her that there is no such gap:
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
 {{< /cards >}}
-
-
-
 
 ---
 
@@ -672,6 +671,8 @@ You have ~2007 units for ~10k$ as shown [here](https://www.youtube.com/watch?v=5
 Im well aware that some people do cool stuff on the tracks with their bmw (BMW e86).
 
 ### Fast Fourier Transform?
+
+The good old FFT...
 
 ### References
 

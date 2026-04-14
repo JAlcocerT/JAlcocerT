@@ -28,7 +28,13 @@ what?
 
 ## System Theory
 
-Exactly! You’ve hit the nail on the head. What you’re describing—the relationship between your sensors, the window motor, and the air inside—is a classic example of **Control Theory**, which is a major branch of **Systems Theory**.
+What you’re describing—the relationship between your sensors, the window motor, and the air inside—is a classic example of **Control Theory**, which is a major branch of **Systems Theory**.
+
+
+{{< callout type="warning" >}}
+You might travel to the world of frequencies and [FFT](https://jalcocert.github.io/JAlcocerT/inline-4-engine-balance/#fast-fourier-transform)
+{{< /callout >}}
+
 
 Here is how the two relate to your greenhouse project:
 
@@ -337,12 +343,15 @@ This makes the simulator useful for studying bicycle dynamics without requiring 
 
 ## Conclusions
 
-Who could have guessed that in the end of the day reality matters more than models and the fine tunings beats equations.
+Who could have guessed that in the end of the day reality matters more than models and fine tunings beats equations.
 
 Boooom.
 
 
-
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 ---
 

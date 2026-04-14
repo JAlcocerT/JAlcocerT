@@ -22,11 +22,11 @@ Automatic plant watering?
 
 Be a system theory pro with PIDs?
 
-Oh no...will I also have to learn electronics, take into account electromagnetism to avoid EMR kickbacks
+Oh no...will I also have to learn [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/), take into account [electromagnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) to avoid EMR kickbacks
 
 what else will it be?
 
-That plants care about VPD and it would be great to know about thermodynamics and heat transfer?
+That plants care [about VPD](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#from-t-and-h-to-vpd) and it would be great to know about thermodynamics and heat transfer?
 
 suuuure
 
@@ -37,7 +37,10 @@ suuuure
 
 ## Conclusions
 
-
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 ---
 

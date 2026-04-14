@@ -38,6 +38,9 @@ Its time to make that IoT/Selfhosted setup better than I ever had.
 
 Among all [messaging protocols](https://jalcocert.github.io/JAlcocerT/messaging-protocols/), mqtt has something to say.
 
+Oh...no this is not regarding internet protocols like UDP and TCP.
+
+But about ways to send information
 
 ### Connecting to MQTT
 
@@ -75,7 +78,9 @@ Previously, Ive tinkered with:
 {{< /cards >}}
 
 
-## ESP32 x MQTT x MLX90614
+## ESP x MQTT 
+
+### ESP32 x MQTT x MLX90614
 
 Few years ago, I [wrote this post](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/) explaining how to use the MLX sensor with a Pi4 2GB.
 
@@ -133,11 +138,12 @@ mosquitto_sub -h 192.168.1.2 -t "esp32/ir/#" -v
 ```
 
 
-## ESP32 x LCD
+### ESP32 x LCD
+
+Why not displaying the info that is been sent?
 
 
-
-## ESP32 x MQTT x HMC5883L
+### ESP32 x MQTT x HMC5883L
 
 Adding the **HMC5883L** (a 3-axis digital compass/magnetometer) is actually very easy because it uses the exact same "language" as the MLX90614: **I2C**.
 
@@ -150,7 +156,7 @@ You can simply "chain" them together.
 * https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-hmc5883l-mqtt.cpp
 
 
-### 1. The Wiring (The I2C "Bus")
+1. The Wiring (The I2C "Bus")
 
 In I2C, multiple sensors share the same two data lines.
 
@@ -165,7 +171,7 @@ The ESP32 tells them apart by their unique internal "address."
 | **DRDY** | *Leave Empty* | "Data Ready" - usually not needed for basic projects |
 
 
-### 2. Is there anything "special" for this one?
+2. Is there anything "special" for this one?
 
 Yes, the HMC5883L has one specific quirk you should be aware of:
 
@@ -175,7 +181,7 @@ There are two chips that look identical: the original **HMC5883L** and the newer
 * They look the same, but the code for one won't work for the other because they have different I2C addresses. 
 * **Tip:** If your code says "Sensor not found," try a library specifically for the *QMC* version.
 
-### 3. Does it need a resistor?
+3. Does it need a resistor?
 
 Like your other modules, if the HMC5883L is on a small PCB (usually blue), it has the pull-up resistors built-in. 
 
@@ -183,26 +189,38 @@ However, because you are now putting **three** devices on the same power line (D
 
 If the power dips, the compass is usually the first thing to give weird readings.
 
----
-
-### 4. Why add a Compass?
+4. Why add a Compass?
 
 While the DHT11 tells you the "environment" and the MLX tells you the "target," the HMC5883L tells you **orientation**. 
 
 * **Orientation:** It measures the Earth's magnetic field.
 * **Interference:** Because it's a magnetometer, try to keep it away from magnets, motors, or even the ESP32’s own metal shield, as they can interfere with the "North" reading.
 
-### Summary of your "Super-Sensor" ESP32:
+Summary of your "Super-Sensor" ESP32:
 
 * **D4:** DHT11 (Temperature/Humidity)
 * **D21:** SDA for **both** MLX90614 and HMC5883L
 * **D22:** SCL for **both** MLX90614 and HMC5883L
 
+
+
 ## SelfHosted IoT Tools
 
 OpenHUB
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="OpenHUB | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Home Assistant | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ESPHome
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+Node-Red
 
 ### HA
 
@@ -258,11 +276,12 @@ They are now...static!
 
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-And you have one IoT basics ebook waiting for you in there.
+And you have one IoT basics ebook waiting for you in there :)
+
 ---
 
 ## FAQ
