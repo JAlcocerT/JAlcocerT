@@ -292,6 +292,10 @@ For the CLI:
 
 ```sh
 lazydocker
+#docker ps --filter "status=running"
+#docker ps -a --filter "name=home-assistant"
+#docker stats home-assistant
+
 glances #htop btop
 #sudo snap install ghostty --classic
 #tmux

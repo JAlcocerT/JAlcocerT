@@ -275,7 +275,7 @@ This is it **for now** all I got to tinker with ebooks.
 
 {{< youtube "XEFpzEIEDFc" >}}
 
-We've got a Astro statically deployable landing page to share ebooks!
+We've got a Astro **statically deployable landing page** to share ebooks!
 
 > Think of this as the first step to selfpublishing
 

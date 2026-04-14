@@ -16,6 +16,26 @@ git clone https://github.com/JAlcocerT/RPi
 cd ./RPi/Z_RPi_Cam
 ```
 
+```sh
+raspistill -o pico.jpg
+#scp yourraspbiuser@192.168.0.232:/home/reisipi/pico.jpg . #copy it to windows CMD
+```
+
+Save Pictures Every 60s
+
+Get the sample script at my [RPi Repo](https://github.com/JAlcocerT/RPi/tree/main/Z_RPi_Cam)!
+
+```sh
+mkdir -p ~/growth
+nano capture_images.sh
+./capture_images.sh
+```
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/" title="Pi Camera" image="/blog_img/iot/pi-cam.jpg" subtitle="Try OpenCV and yolov8 with the Pi!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#how-to-control-dji-tello-with-python" title="DJi Tello 101" image="/blog_img/hardware/wifi_eth.jpg" subtitle="Get started with a cheap toy dron." >}}
+{{< /cards >}}
+
 +++ wanna see how your plants get water from the distance?
 
 {{< cards >}}

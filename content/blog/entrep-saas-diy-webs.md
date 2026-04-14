@@ -2,7 +2,7 @@
 title: "Attraction Web Offer x Show a Problem"
 date: 2026-05-10T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey x EAyP v3"]
+tags: ["NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey"]
 description: 'A scalable way to provide DIY websites. With Free Web Audits!'
 url: 'diy-webs-via-paas'
 ---
@@ -244,6 +244,9 @@ Fast forward to today: lets put a web/app with UI to bundle all this.
 
 ### Creating a DIY x PaaS
 
+I thought about building some kind of a PaaS instead of a SaaS
+
+But...with no clients? really?
 
 {{% details title="Creating a DIY PaaS for Launching Websites... 🚀" closed="true" %}}
 
@@ -252,6 +255,46 @@ git init && git add . && git commit -m "Initial commit: Starting N ebooks DIY" &
 ```
 
 {{% /details %}}
+
+This can be easy, but not ~~effort~~ token free.
+
+So skip.
+
+### Testing the Web Audits with EAyP v3
+
+See the [deployment guide](https://github.com/JAlcocerT/foldergram/blob/main/z-deploy.md):
+
+```sh
+#git clone https://github.com/JAlcocerT/foldergram
+docker compose -f docker-compose.yml -f docker-compose.local.yml up -d --build --force-recreate
+#docker ps -a --filter "name=foldergram"
+
+# One-time copy
+scp -r ./data/gallery/ jalcocert@192.168.1.2:/home/jalcocert/foldergram/data/gallery/
+
+#But for photos, rsync is much better — it's incremental (only copies new/changed files) and shows progress:
+
+# First time or any subsequent sync
+#rsync -avz --progress ./data/gallery/ jalcocert@192.168.1.2:~/foldergram/data/gallery/
+```
+
+Go to `192.168.1.2:4141` and sync the pushed photos :)
+
+You can try to update files via: thay will be accessed by filebrowser
+
+```sh
+#docker compose -f docker-compose.yml -f docker-compose.filebrowser.yml up -d
+docker compose -f docker-compose.yml -f docker-compose.filebrowser.yml logs filebrowser
+
+```
+
+Just remember to add `_index.md` and `index.md` so that the captions match what you want to write
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/foldergram" title="Foldergram | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/filebrowser" title="Filebrowser | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ---
 

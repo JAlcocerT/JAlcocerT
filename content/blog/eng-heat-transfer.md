@@ -30,8 +30,11 @@ tmux new-session -d -s mqtt "uv run mqtt_to_db.py"
 tmux new-session -d -s webapp "uv run uvicorn main:app --host 0.0.0.0 --port 8077"
 ```
 
-## Heat transfor x MBSD x ICE
+## Heat transfer x MBSD x ICE
 
+Some time ago I had to make one fluid mechanics project in Matlab.
+
+its also time to have it in python
 
 
 ---

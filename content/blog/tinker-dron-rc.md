@@ -2,10 +2,17 @@
 title: "People do crazy RC stuff!"
 date: 2026-12-30T23:20:21+01:00
 draft: true
-tags: ["Tinkering","PulseJet","Flutter","Desktop vs Mobile","RC x L298N"]
-description: 'Radio Control.'
+tags: ["Flight Control","PulseJet","Flutter","Desktop vs Mobile","RC x L298N"]
+description: 'Radio Control with the T8L and beta-flight'
 url: 'rc-tinkering'
 ---
+
+**Tl;DR**
+
+From the [DJI Tello](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/) to a custom FPV
+
+**Intro**
+
 
 https://www.youtube.com/watch?v=9-bRFNfh6Dc
 
