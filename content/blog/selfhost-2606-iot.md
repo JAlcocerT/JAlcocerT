@@ -136,7 +136,7 @@ ESP32: Unlike the Pi, the ESP32 does not have physical pull-up resistors on its 
 
 It only has "weak" internal software pull-ups.
 
-## ESP32 x MQTT x HM
+### ESP32 x MQTT x HM
 
 How about sensing if some obstacle is present?
 
@@ -147,6 +147,9 @@ You can do it with [this .cpp script](https://github.com/JAlcocerT/RPi/blob/main
 mosquitto_sub -h 192.168.1.2 -t "esp32/ir/#" -v
 ```
 
+{{< youtube sapuSWokhtU >}}
+
+<!-- https://youtube.com/shorts/sapuSWokhtU -->
 
 ### ESP32 x LCD
 
@@ -272,7 +275,7 @@ docker ps -a | grep -i home-assistant
 
 After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the [electro-magnetic foundations](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/), this post was the next step.
 
-What else am I running?
+What else am I running since last month?
 
 ```sh
 sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx jellyfin

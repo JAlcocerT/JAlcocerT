@@ -2,8 +2,8 @@
 title: "SelfHosting Updates - Spring 2025"
 date: 2025-03-21T01:20:21+01:00
 draft: false
-tags: ["Homelab","Ventoy,","Homarr","Forward Auth","Jellyfin & FMHY"]
-description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich, Caddy, pihole v6...'
+tags: ["Homelab","Ventoy","Homarr","Forward Auth","Jellyfin & FMHY"]
+description: 'Selfhosted Apps that simplify my workflow as of Spring 2025: Homarr, Immich, Caddy'
 url: 'selfhosted-apps-spring-2025'
 ---
 

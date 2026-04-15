@@ -755,7 +755,7 @@ DORA is a **metrics framework** (not a rigid toolset)—a set of four standard K
 
 > DORA = *how good are companies at shipping software?*
 
-There are two key clusters of data inside DORA: Velocity and Stability.
+There are two key clusters of data inside **DORA: Velocity and Stability**.
 
 The DORA framework is focused on keeping them in context with each other, as a whole, rather than as independent variables, making the data more challenging to misinterpret or abuse.
 
@@ -838,7 +838,11 @@ In a typical workflow, Jenkins handles the **Continuous Integration (CI)** and A
 
 A great article: You rolled out coding agents. Engineers are faster. PRs flood in.
 
-Yet, cycle time doesn't budge. DORA metrics are flat. The backlog grows.
+Yet, cycle time doesn't budge. 
+
+DORA metrics [stored at DevLake](https://github.com/apache/incubator-devlake/pull/8746) are flat. 
+
+The backlog grows.
 
 * https://background-agents.com/
 * https://www.latent.space/p/reviews-dead

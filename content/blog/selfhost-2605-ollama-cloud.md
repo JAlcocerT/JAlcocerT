@@ -1,12 +1,14 @@
 ---
 title: "Selfhosting local LLMs x GenBI"
-date: 2026-05-01
+date: 2026-05-10
 draft: false
 description: "How to use Ollama x Gemma 4 - With WrenAI, Rill and Vanna in Ubuntu 26 LTS"
-tags: ["Home-Lab x x300 x ext4","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","TTS","Docker Model Run"]
+tags: ["Home-Lab x (x300 vs M2)","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","TTS"]
 ---
 
 **Tl;DR**
+
+Docker Model Run
 
 LocalModels: with Docker and [Ubuntu 26.04](#about-ubuntu-2604-lts)
 
@@ -226,9 +228,14 @@ print(llm.complete("What is a vector database?"))
 
 Ollama with [the mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) has been interesting!
 
+
+What else am I running since last month?
+
 ```sh
 #git clone https://github.com/JAlcocerT/Home-Lab/
 #cd ./Home-Lab/z-homelab-setup/evolution 
+
+#docker ps --filter "status=running"
 sudo docker compose -f 2605_docker-compose.yml up -d ollama uptime....pihole nextcloud ncdb.......
 #ollama run
 ```
@@ -506,7 +513,13 @@ This is a good chance to make a system format from scratch and reset the system 
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/sftp-go" title="SFTPGo | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
-Hopefully, you have your important containers volumes pointing to one external disk:
+Hopefully, you have your important containers volumes pointing to external/non OS disks:
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich
+![Immich UI](/blog_img/selfh/Photo/immich.png)
+
+https://jalcocert.github.io/JAlcocerT/image-backup-tools/#nc-vs-immich
+![alt text](/blog_img/selfh/media/NC-traefik/nc-32.png)
 
 ```sh
 #docker ps -a --filter "name=nextcloud"
@@ -518,6 +531,14 @@ docker ps -a --filter "status=running" --format "table {{.Names}}\t{{.Mounts}}"
 #SELECT * FROM comments;
 docker stats netdata
 ```
+
+You can also backup your logs:
+
+https://jalcocert.github.io/JAlcocerT/image-backup-tools/#server-maintainance
+
+![Uptime Kuma Monitoring Page](/blog_img/selfh/HomeLab/statuspages/uptimekuma.png)
+
+
 
 1. Like...installing python? nah, manage everything via uv with whatever python version:
 

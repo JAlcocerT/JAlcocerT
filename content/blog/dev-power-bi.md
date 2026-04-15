@@ -282,7 +282,7 @@ You like **things as code**, right?
 Then, you will like to save as the `pbix` as `pbip` to get:
 
 File	Role	What's inside
-modelbim.txt	🧠 Semantic Model	All 37 tables, columns, DAX measures, M queries, MySQL connection strings, and DORA classification thresholds. This is the brains of the report.
+model.bim	🧠 Semantic Model	All 37 tables, columns, DAX measures, M queries, MySQL connection strings, and DORA classification thresholds. This is the brains of the report.
 
 report.json	🎨 Report Layout	The 2 report pages (Summary + Details), ~20 KPI cards, ~8 slicers, ~6 detail tables, bookmark groups (DORA/WK CTO toggle), dark theme config, and all visual positioning. This is the face of the report.
 

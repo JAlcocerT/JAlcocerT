@@ -83,7 +83,7 @@ If its too much space, you can always:
 
 ### NC vs Immich
 
-We have some fresh releases since the last time: *and im adding to the x300 a drive :)*
+We have some fresh releases since I used them [the last time](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich): *and im adding a drive to [the x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/) :)*
 
 ```sh
 lsblk
@@ -139,7 +139,7 @@ Go to `http://localhost:8099/settings/user`
 
 With that, you should have Nextcloud 32 image working, which bring all in [Nextcloud Hub 25 Autumn](https://nextcloud.com/hub25-autumn/) 🚀
 
-Verify that is all OK with your trusted domains:
+Verify that is all OK with your **trusted domains**:
 
 ```sh
 #docker exec nextcloud php occ config:system:get trusted_domains
@@ -194,8 +194,12 @@ Remember about backups!
 ```sh
 #sudo rsync -rlptvP --no-owner --no-group /home/jalcocert/Docker/nextcloud/html/data /mnt/data2tb/nc/
 root@jalcocert-x300:/home/jalcocert/Docker/nextcloud/html/data/....
+```
 
-#same for immich
+Similarly, to backup immich photos:
+
+```sh
+
 ```
 
 And about security if you open those to the internet!
@@ -372,7 +376,7 @@ sudo radeontop
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-When using jellyfin with the x300 with the VA-API enabled, the cpu does almost nothing.
+When using jellyfin with the x300 (5600g) with the **VA-API enabled**, the cpu does almost nothing.
 
 ```sh
 docker stats
@@ -414,6 +418,11 @@ du -sh .
 sudo ncdu .
 sudo ncdu /mnt/data2tb/testftp
 ```
+
+![NCDU tool to check disk space](/blog_img/selfh/HomeLab/ncdu-nextcloud.png)
+
+
+Analyze everything except a path:
 
 ```sh
 # Using ncdu
@@ -518,7 +527,7 @@ docker ps -a | grep -i uptimekuma
 uv run scripts/bulk_add_monitors.py
 ```
 
-![alt text](/blog_img/selfh/HomeLab/statuspages/uptimekuma.png)
+![Uptime Kuma Monitoring Page](/blog_img/selfh/HomeLab/statuspages/uptimekuma.png)
 
 Any...**unconnected disk**?
 
@@ -529,12 +538,12 @@ sudo mount -t exfat /dev/nvme0n1p1 /mnt/data2tb
 #echo 'UUID=a123-567b /mnt/data2tb exfat defaults,uid=1000,gid=1000,umask=000 0 0' | sudo tee -a /etc/fstab
 ```
 
+To check the folder space consumption:
+
 ```sh
 sudo apt update && sudo apt install ncdu -y
 sudo ncdu /mnt/data2tb
 ```
-
-
 
 
 ---
@@ -561,5 +570,3 @@ Or just get ready for SelfHosting:
 ### How to Back Up my Server?
 
 Duplicati to other location (HD / Mega, One drive, s3...)
-
-You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/):

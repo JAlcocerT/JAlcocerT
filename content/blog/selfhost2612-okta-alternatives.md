@@ -1,6 +1,6 @@
 ---
 title: "Okta Alternatives? Selfhosted SSO Tools"
-date: 2026-05-17T23:20:21+01:00
+date: 2026-12-05
 draft: false
 tags: ["TinyAuth v6","Supabase Auth vs PB","Authelia vs Authentik","PocketID"]
 description: 'A look to F/OSS Selfhosted Single Sign On and authentication Tools'

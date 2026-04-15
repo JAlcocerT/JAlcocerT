@@ -594,6 +594,12 @@ Dont confuse Rclone *which can help you sync local to ProtonDrive*, with rsync: 
 ```sh
 #sudo ncdu /mnt/data2tb/testftp
 #du -sh * | sort -rn #du -sh * | sort -h
+```
+
+![NCDU tool to check disk space](/blog_img/selfh/HomeLab/ncdu-nextcloud.png)
+
+
+```sh
 rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/testftp/DJI_20250117084726_0009_D.MP4 ~/Downloads/ #~15MB/s
 rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/IoT ~/Downloads/ #~15MB/s
 rsync -avzP jalcocert@192.168.1.2:/mnt/data2tb/2tbe ~/Downloads/ #~15MB/s
@@ -866,8 +872,10 @@ What else am I running?
 
 Via Termix: `http://jalcocert-x300-1:8090`
 
+What else am I running [since last month](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#more-media)?
 
 ```sh
+#docker ps --filter "status=running"
 docker compose -f 2603_docker-compose.yml up -d nextcloud-app nextclouddb jellyfin qbittorrent prowlarr umami umamidb pocketbase cloudflared commento....
 
 #docker ps -a --filter "name=prowlarr"

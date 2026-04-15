@@ -152,7 +152,7 @@ This is the kind of post that makes me realize this year ill be doing 99 posts..
 
 Talking about f/oss I tested mac OS with Zed and CodeEdit
 
-Interestingly, there is a fork of zed called GRAM that has been quite interesting.
+Interestingly, there is a fork of zed called GRAM that [has been quite interesting](#what-ive-tried-recently).
 
 
 ### Other High Signal Videos
@@ -232,7 +232,17 @@ dig ebooks.jalcocertech.com
 
 ### What ive tried recently
 
-More [mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) and...
+What else am I running [since last month](https://jalcocert.github.io/JAlcocerT/private-dns-with-docker/#faq)?
+
+```sh
+#git clone https://github.com/JAlcocerT/Home-Lab/
+#cd ./Home-Lab/z-homelab-setup/evolution 
+
+#docker ps --filter "status=running"
+sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......
+```
+
+More with the [mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) and...
 
 ```sh
 #sudo snap install ghostty --classic

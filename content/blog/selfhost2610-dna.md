@@ -92,6 +92,8 @@ or switching to an equivalent one: https://github.com/rustfs/rustfs
 
 ## Conclusions
 
+You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/)
+
 It doesnt matter if you stack is: `powerbi+dbeaver+mssql/dbcode` extensions at vscode...
 
 ```sql

@@ -9,6 +9,34 @@ url: 'selfhosting-more-media'
 
 https://github.com/stirling-image/stirling-image
 
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich
+![Immich UI](/blog_img/selfh/Photo/immich.png)
+
+https://jalcocert.github.io/JAlcocerT/image-backup-tools/#nc-vs-immich
+![alt text](/blog_img/selfh/media/NC-traefik/nc-32.png)
+
+
+https://jalcocert.github.io/JAlcocerT/image-backup-tools/#cf-waf-vs-zero-trust-access
+
+
+
+![alt text](/blog_img/selfh/Jellyfin/prowlarr-qbittorrent.png)
+
+![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
+
+
+https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicates-files-in-the-system
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/vert" title="Vert | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mazanoke" title="Mazanoke Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="NextCloud | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 **TL;DR**
 
 Is there a reliable way not to loose photos for good?
@@ -33,7 +61,7 @@ https://github.com/Fingel/gelly
 
 Im sure that you are already using qb and prowlarr at `6011` and `9696`.
 
-And that you know how to create your videos via FFMPEG:
+And that you know how to quickly join your videos via FFMPEG:
 
 ```sh
 sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d prowlarr
