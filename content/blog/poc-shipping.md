@@ -2,8 +2,8 @@
 title: "Spring is here, so are weddings"
 date: 2026-04-15
 draft: false
-tags: ["RoadMap26","SlubneChwile","DRIP","Google Stitch"]
-description: 'The . With inspiring apps.'
+tags: ["RoadMap26","SlubneChwile","DRIP","Google Stitch","Agent OS"]
+description: 'The . With inspiring apps. With B2C vs B2B marketing.'
 url: 'quick-weddings-poc'
 ---
 
@@ -28,19 +28,31 @@ Surprising
   {{< card link="https://github.com/JAlcocerT/slubne-chwile-y26" title="Slubne 2026 v1 B2C ↗" icon="github" >}}
 {{< /cards >}}
 
+
+```sh
+git clone https://github.com/JAlcocerT/slubne-chwile-y26
+```
+
+You can build around what you have already create with: https://buildermethods.com/agent-os
+
+* https://github.com/buildermethods/agent-os
+
+> MIT | Agent OS is a system for injecting your codebase standards and writing better specs for spec-driven development.
+
 ```sh
 #git clone https://github.com/JAlcocerT/slubnechwile-chwile-y26
 #https://github.com/JAlcocerT/slubnechwile
 #https://github.com/JAlcocerT/Flask_SlubnyChwile
+git init && git add . && git commit -m "Initial commit: Starting slubnechwile with claude" && gh repo create slubnechwile-chwile-y26-claude --private --source=. --remote=origin --push
 ```
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/astro-editor" title="NEW - Astro Editor" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Editing astro posts md via NextJS + ToastUI " >}}
+  {{< card link="https://github.com/JAlcocerT/slubnechwile-chwile-y26-claude" title="NEW - SlubneChwile" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Green field Claude x SlubneChwile " >}}
 {{< /cards >}}
 
 
-### Rewritting SlubneChwile
+## Rewritting SlubneChwile
 
 Because for the initial version I used an astro theme and made it a web app.
 
@@ -86,6 +98,33 @@ Things are moving into a direction where human are the blockers:
 > Symphony turns project work into isolated, autonomous implementation runs, allowing teams to manage work instead of supervising coding agents.
 
 
+### The prompts side
+
+
+
+
+### The business side
+
+As seen with the COO self-diagnostic, the execution/delivery was fully already, so I can spend all the time on the **[GROWTH BET]**.
+
+https://jalcocert.github.io/JAlcocerT/custom-marketing-analytics/#2-three-strategic-paths-forward
+
+So was the [units economics of the QR web/app storage](https://jalcocert.github.io/JAlcocerT/custom-marketing-analytics/#1-the-unit-economics-of-qr-guest-photos)
+
+
+### The Agentic Operations
+
+This is a growth experiment.
+
+The delivery is clear, lets just focus on ATTRACTION & CONVERSION.
+
+{{< callout type="info" >}}
+For that, I chose google
+{{< /callout >}}
+
+For that, uptime, logs analysis, even individual sessions...can improve the app
+
+But I dont want to do it, I want the agents to do this.
 
 ---
 

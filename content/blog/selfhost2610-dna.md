@@ -86,11 +86,16 @@ or switching to an equivalent one: https://github.com/rustfs/rustfs
 
 > > RustFS is a high-performance, distributed object storage system built in Rust.
 
+Which of these would you use to analyze on chain data?
+
+{{< youtube "zBd13Owe5-o" >}}
 
 
 ---
 
 ## Conclusions
+
+
 
 You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/)
 

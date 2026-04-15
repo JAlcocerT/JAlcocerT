@@ -1,7 +1,6 @@
 ---
 title: "Selfhosted IoT x HA"
-date: 2026-04-15
-#date: 2026-06-10
+date: 2026-06-10
 draft: false
 tags: ["Home Assistant","Sonoff x Zigbee","Tinkering IRL"]
 description: 'A homelab around IoT and sensors.'
@@ -48,7 +47,7 @@ But about ways to send information
 2. Mqtt Explorer
 3. MQTTy
 
-Or simply with:
+Or simply with this CLI tool:
 
 ```sh
 mosquitto_sub -h 192.168.1.2 -t "esp32/#" -v
@@ -68,6 +67,10 @@ Previously, Ive tinkered with:
 
 3. emqx - which i recommend via container, as is a good companion for such [DHT11](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt.cpp) or [DHT22](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/MQTT-DHT22/DHT22.py) scripts
 
+```sh
+docker ps | grep emqx
+```
+
 > Like done at: https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp combining [fastapi be](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps/#full-stack-web-apps), [websockets](https://jalcocert.github.io/JAlcocerT/web-apps-with-flask/) and [pgsql x timescaledb](https://github.com/JAlcocerT/RPi/tree/main/Z_SelfHosting/pgsql)
 
 ![DHT Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/dht-webapp/dht-webapp.png)
@@ -80,11 +83,22 @@ Previously, Ive tinkered with:
 
 ## ESP x MQTT 
 
+For this post, ill be focusing on the ESP32
+
+But the setup is also working for the PicoW.
+
+Make sure that you see data flowing:
+
 
 ```sh
+#mosquitto_sub -h 192.168.1.2 -t "pico/#" -v
 #docker ps -a --filter "name=timescale"
 docker exec -it timescaledb psql -U pico -d sensors -c "SELECT * FROM readings ORDER BY ts DESC LIMIT 5;" 
+```
 
+And that there are two terminals active:
+
+```sh
 tmux ls
 ```
 

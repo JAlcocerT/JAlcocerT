@@ -91,6 +91,9 @@ docker exec bitcoin_app_1 bitcoin-cli getblockchaininfo
 }
 ```
 
+{{< youtube "zBd13Owe5-o" >}}
+
+
 More on this, [later](#big-data-analytics-with-on-chain-data).
 
 > Yes, this is an D&A Adventure that I could not avoid mentioning :)

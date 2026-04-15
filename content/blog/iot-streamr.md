@@ -178,6 +178,13 @@ I didnt see any OSS project for it, so...im quite skeptical.
 
 Recently I tested a **BTC node [via UmbrelOS](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#selfhosted-adventures)**, which was a cool data experiment.
 
+Could you believe its already almost 1TB of data?!
+
+<!-- https://youtu.be/zBd13Owe5-o -->
+
+{{< youtube "zBd13Owe5-o" >}}
+
+
 Using their container image at dockerhub: https://hub.docker.com/r/streamr/node
 
 ```sh
