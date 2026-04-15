@@ -99,9 +99,15 @@ This is the one that people call it *,passive income'*
 
 Not sure *how passive* it is to get it started. 
 
-So personally, hearing from someone they are on passive income started to sound to me like a huge coasting the 9-5 and living on the weekends and or been financed by others.
+Personally, hearing from someone they are on passive income
 
-Aaaanyways.
+started to sound to me like a huge coasting the 9-5 and living just during weekends 
+
+and or been financed by others
+
+is living passively sth to strive for?
+
+Aaaanyways :)
 
 ### Entrepre-AI
 

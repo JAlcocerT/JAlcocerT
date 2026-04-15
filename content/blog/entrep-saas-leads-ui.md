@@ -392,7 +392,7 @@ You can try: MillionVerifier or NeverBounce
 
 ### SelfHosted OutReach Tools
 
-If it does not already, Growchief should sounds to you to a lead enrichment and/or sales pipeline companion.
+If it does not already, Growchief should sounds to you to a lead enrichment and/or [sales pipeline](https://jalcocert.github.io/JAlcocerT/apify) companion.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postiz" title="Postiz | Docker Config 🐋 ↗" >}}

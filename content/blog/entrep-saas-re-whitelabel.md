@@ -41,11 +41,12 @@ So, taking the learnings we have these stages for a business: *this would be one
 
 ### The Attraction - Leads
 
-Partner with someone who actually knows sales and give them a commision.
+Partner with someone who actually knows sales and give them a commision ( DFY :) )
 
 Go put ads somewhere.
 
-Or just use such sale pipeline to find prospects yourself.
+Or just use [such sale pipeline](https://jalcocert.github.io/JAlcocerT/apify) to find prospects yourself.
+
 
 ### The Conversion -  via Fantastic Landing
 
