@@ -285,7 +285,6 @@ You can try to update files via: thay will be accessed by filebrowser
 ```sh
 #docker compose -f docker-compose.yml -f docker-compose.filebrowser.yml up -d
 docker compose -f docker-compose.yml -f docker-compose.filebrowser.yml logs filebrowser
-
 ```
 
 Just remember to add `_index.md` and `index.md` so that the captions match what you want to write

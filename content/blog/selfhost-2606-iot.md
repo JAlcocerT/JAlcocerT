@@ -1,10 +1,10 @@
 ---
 title: "Selfhosted IoT x HA"
-date: 2026-04-12
+date: 2026-04-15
 #date: 2026-06-10
 draft: false
 tags: ["Home Assistant","Sonoff x Zigbee","Tinkering IRL"]
-description: 'A homelab around IoT, sensors and HA.'
+description: 'A homelab around IoT and sensors.'
 url: 'home-lab-tools-for-iot'
 ---
 
@@ -79,6 +79,16 @@ Previously, Ive tinkered with:
 
 
 ## ESP x MQTT 
+
+
+```sh
+#docker ps -a --filter "name=timescale"
+docker exec -it timescaledb psql -U pico -d sensors -c "SELECT * FROM readings ORDER BY ts DESC LIMIT 5;" 
+
+tmux ls
+```
+
+> See `http://192.168.1.2:8077`
 
 ### ESP32 x MQTT x MLX90614
 
@@ -194,6 +204,7 @@ If the power dips, the compass is usually the first thing to give weird readings
 While the DHT11 tells you the "environment" and the MLX tells you the "target," the HMC5883L tells you **orientation**. 
 
 * **Orientation:** It measures the Earth's magnetic field.
+
 * **Interference:** Because it's a magnetometer, try to keep it away from magnets, motors, or even the ESP32’s own metal shield, as they can interfere with the "North" reading.
 
 Summary of your "Super-Sensor" ESP32:
@@ -298,7 +309,7 @@ lazydocker
 
 glances #htop btop
 #sudo snap install ghostty --classic
-#tmux
+#tmux #ghostty
 ```
 
 
@@ -306,12 +317,15 @@ glances #htop btop
 
 * https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-humidity-sensor
 
+Zigbee?
 
-### One ESP - Few Sensors
+#### One ESP - Few Sensors
 
-For the **MLX90614**, it makes the most sense to use the **default I2C pins** on the ESP32. While the ESP32 is flexible and allows you to map I2C to almost any pin, using the defaults ensures that almost every library (like the Adafruit one) will work instantly without you having to write extra lines of code to "remap" the pins.
+For the **MLX90614**, it makes the most sense to use the **default I2C pins** on the ESP32. 
 
-### The Best Choice: GPIO 21 and 22
+While the ESP32 is flexible and allows you to map I2C to almost any pin, using the defaults ensures that almost every library (like the Adafruit one) will work instantly without you having to write extra lines of code to "remap" the pins.
+
+The Best Choice: GPIO 21 and 22
 
 On your 30-pin ESP-WROOM-32, these are labeled as **D21** and **D22**.
 
@@ -331,7 +345,9 @@ On your 30-pin ESP-WROOM-32, these are labeled as **D21** and **D22**.
 
 Can you use the DHT11 and MLX90614 at the same time?
 
-Absolutely! This is a very common setup.
+Absolutely!
+
+This is a very common setup.
 
 Since they use different communication methods, they won't interfere with each other. 
 
@@ -345,15 +361,11 @@ Here is your "Master Plan" for wiring both:
 > **Pro Tip:** Since the ESP32 only has one `3V3` pin and a couple of `GND` pins, you might need a small **breadboard** to share the power and ground lines between the two sensors. 
 
 
----
-
-Yes, that is exactly right! In fact, most **MLX90614 modules** (the GY-906 version) come with those 4 pins. 
+Most **MLX90614 modules** (the GY-906 version) come with those 4 pins. 
 
 The "extra" pins you might see on the bare sensor (which has 4 pins in a circle) are usually combined or simplified on the PCB module to make it easy to use with microcontrollers like your ESP32.
 
----
-
-### Understanding the 4 Pins
+Understanding the 4 Pins
 
 Here is what each pin does and where it goes on your **ESP-WROOM-32**:
 
@@ -364,26 +376,21 @@ Here is what each pin does and where it goes on your **ESP-WROOM-32**:
 | **SCL** | Serial Clock | **D22 (GPIO 22)** | This is the "metronome" that keeps the data timing in sync. |
 | **SDA** | Serial Data | **D21 (GPIO 21)** | This is the actual pipe where the temperature data travels. |
 
-
-
----
-
-### Why 4 pins instead of 3 (like the DHT11)?
+Why 4 pins instead of 3 (like the DHT11)?
 
 The DHT11 uses a custom **1-wire protocol** where the "clock" and "data" are mashed into a single wire. It’s simple, but a bit slow and error-prone.
 
 The MLX90614 uses **I2C (Inter-Integrated Circuit)**. This requires two wires for data communication:
+
 1.  **SDA:** Sends the actual bits of temperature data.
 2.  **SCL:** Sends a steady pulse (the clock) so the ESP32 knows exactly when to "read" each bit on the SDA line.
 
-This makes I2C much faster and more reliable than the DHT11's method. Plus, you can actually hook up **multiple different I2C sensors** to the same two pins (D21 and D22), and the ESP32 can talk to them individually using their "addresses."
+This makes I2C much faster and more reliable than the DHT11's method. 
 
----
+Plus, you can actually hook up **multiple different I2C sensors** to the same two pins (D21 and D22), and the ESP32 can talk to them individually using their "addresses."
 
-### A Quick Tip for your ESP-WROOM-32
+A Quick Tip for your ESP-WROOM-32
 
 Since you are likely using a breadboard now to connect both sensors:
 * **The "Power Rail":** Connect the ESP32's **3V3** pin to the red (+) rail on your breadboard and **GND** to the blue (-) rail. 
 * **Shared Power:** Now you can just plug the VIN and GND from both the DHT11 and the MLX90614 into those rails.
-
-Are you planning to port your Raspberry Pi Python code over to the ESP32, or are you looking to start fresh with a C++ (Arduino) sketch?

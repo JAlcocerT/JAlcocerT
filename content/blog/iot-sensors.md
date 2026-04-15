@@ -90,6 +90,25 @@ https://www.youtube.com/watch?v=DPqiIzK97K0 -->
 
 ### PolanDuino
 
+## Sensors Ive tried
+
+### DHT11 and DHT22
+
+These were really easy to setup and if you are getting started they are perfect.
+
+### MLX
+
+The MLX will get you ambient temp and IR temp of an object
+
+### a
+
+The movement sensor
+
+
+### b
+
+Soil humidity!
+
 
 ---
 

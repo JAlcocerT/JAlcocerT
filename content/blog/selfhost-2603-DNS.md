@@ -2,7 +2,7 @@
 title: "Improving a HomeLab Privacy with OSS DNS"
 date: 2026-03-01T07:20:21+01:00
 draft: false
-tags: ["Self-Hosting x ProtonDrive","Pihole v6 x UnboundDNS","DNS as Distributed DB","Privacy x Euria"]
+tags: ["Self-Hosting x ProtonDrive","Pihole v6 x UnboundDNS","DNS as Distributed DB","Privacy x Euria","iPerf3"]
 description: 'How to change DNS Servers and why it matters. From Portainer to Homepage-Lite.'
 url: 'private-dns-with-docker'
 ---
@@ -578,6 +578,8 @@ If you are not 100% confortable with the terminal yet or need some place to book
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dockge" title="Dockge | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
+If you want to tinker with CLIs: have a look to tmux and ghostty.
+
 ### Proton for all?
 
 Well, not for all as they dont have a proton drive linux desktop app....yet.
@@ -864,6 +866,7 @@ What else am I running?
 
 Via Termix: `http://jalcocert-x300-1:8090`
 
+
 ```sh
 docker compose -f 2603_docker-compose.yml up -d nextcloud-app nextclouddb jellyfin qbittorrent prowlarr umami umamidb pocketbase cloudflared commento....
 
@@ -874,6 +877,11 @@ docker ps -a --filter "name=umami"
 #docker ps --filter "name=umami"
 docker stop umamiweban-umami-1 umamiweban-db-1 #https://weban...#https://jsx-7jp.pages.dev/index1
 ```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="PiHole | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tiny-auth" title="Wireshark Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ```mermaid
 graph TD

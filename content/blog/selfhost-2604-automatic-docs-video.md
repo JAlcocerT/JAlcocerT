@@ -190,6 +190,45 @@ Coming soon, together with `https://stitch.withgoogle.com/`
 
 ## FAQ
 
+CLIs ive used recently?
+
+```sh
+#docker images --format "table {{.Repository}}\t{{.Tag}}\t{{.Size}}" | (read -r; printf "%s\n" "$REPLY"; sort -hk 3 -r)
+lazydocker
+#docker ps --filter "status=running"
+#docker ps -a --filter "name=entre"
+#docker stats home-assistant
+docker system df
+
+glances #htop btop
+#sudo snap install ghostty --classic
+#tmux #ghostty
+```
+
+```sh
+sudo apt-get clean
+sudo apt-get autoremove
+journalctl --disk-usage #sudo du -sh /var/log
+#sudo journalctl --vacuum-time=2d
+```
+
+Lack of disk space?
+
+```sh
+sudo apt update && sudo apt install ncdu
+#sudo ncdu -x /
+#sudo ncdu -x .
+```
+
+![NCDU tool to check disk space](/blog_img/selfh/HomeLab/ncdu-nextcloud.png)
+
+```sh
+#whois ebooks.jalcocertech.com| grep -i -E "(creation|created|registered)"
+nslookup ebooks.jalcocertech.com
+dig ebooks.jalcocertech.com
+#sudo docker stop 1tonebooksprod grafana-server
+#docker rm -f $(docker ps -aq --filter "name=entre")
+```
 
 ### What ive tried recently
 

@@ -747,7 +747,7 @@ git clone /foldergram
 
 ### Whats Open DevOps?
 
-Ive heard this year about DORA.
+Ive heard this year about [DORA](https://dora.dev/guides/dora-metrics/).
 
 Which maps with [Lean](https://jalcocert.github.io/JAlcocerT/lean/) (via VSM) and DevOps: https://www.atlassian.com/devops/frameworks/dora-metrics
 
@@ -865,6 +865,13 @@ Isnt it this already CONTEXT ENGINEERING?
 
 
 ### EayP v3
+
+This setup was not enough:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/entreagujaypunto-next-gallery" title="Next Gallery AgujayPunto ↗" icon="github" >}}
+    {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/imgproxy" title="N8N | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 Lately I got to know:
 

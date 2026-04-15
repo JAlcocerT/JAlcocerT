@@ -201,9 +201,6 @@ sudo apt install nextcloud-desktop
 flatpak install flathub com.hunterwittenborn.Celeste
 ```
 
-
-
-
 {{< details title="SFTPgo as WebDav 📌" closed="true" >}}
 
 > SFTPgo with docker compose [JMLabarta video](https://www.youtube.com/watch?v=ME5t2UREY_Q&t=570s)

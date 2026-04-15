@@ -497,3 +497,40 @@ https://www.youtube.com/watch?v=qEI95GIRKaU
 * https://apps.gnome.org/Maps/
 
 There are interesting things going on: https://agelesslinux.org/map.html
+
+This is a good chance to make a system format from scratch and reset the system with all the goodies and latest learnings:
+
+0. First, some backups and tests:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/sftp-go" title="SFTPGo | Docker Config Setup 🐋 ↗"  >}}
+{{< /cards >}}
+
+Hopefully, you have your important containers volumes pointing to one external disk:
+
+```sh
+#docker ps -a --filter "name=nextcloud"
+docker ps -a --filter "name=nextcloud" --format "table {{.Names}}\t{{.Mounts}}"
+docker ps -a --filter "status=running" --format "table {{.Names}}\t{{.Mounts}}"
+
+#docker exec -it commento_db-foss bash
+#psql -U commento -d commento
+#SELECT * FROM comments;
+docker stats netdata
+```
+
+1. Like...installing python? nah, manage everything via uv with whatever python version:
+
+```sh
+
+```
+
+> Similarly as I did with this mac M2 :)
+
+2. 
+
+
+```mermaid
+graph TD
+    A[ThinkPad] --> B[Orange Pi 5]
+```

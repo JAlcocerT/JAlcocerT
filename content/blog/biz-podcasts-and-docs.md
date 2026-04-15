@@ -83,7 +83,7 @@ npm run dev -- --host 0.0.0.0 --port 4321 #http://192.168.1.11:4321/
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Web/SSGs" title="SSG Containers | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
-You can explore commento's PostgresSQL DB:
+You can explore **commento's PostgresSQL DB**:
 
 ```sh
 docker exec -it commento_db-foss bash
