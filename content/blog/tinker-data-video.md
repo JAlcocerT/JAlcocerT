@@ -553,7 +553,7 @@ The Scalar equivalent Breakdown: *no complex [calculus](https://jalcocert.github
 
 Horizontal: $r_2 \cos(\theta_2) + r_3 \cos(\theta_3) - d = 0$
 
-$Vertical: $r_2 \sin(\theta_2) + r_3 \sin(\theta_3) = 0$
+Vertical: $r_2 \sin(\theta_2) + r_3 \sin(\theta_3) = 0$
 
 > Yea, [katex](https://katex.org/docs/supported.html) x [Hugo Hextra](https://imfing.github.io/hextra/docs/guide/latex/) is great
 
@@ -587,7 +587,6 @@ For two masses ($m_1, m_2$) and two lengths ($l_1, l_2$) at angles ($\theta_1, \
 1. Equation for $\theta_1$
 
 This describes the acceleration of the top arm:
-
 
 $$(m_1 + m_2) l_1 \ddot{\theta}_1 + m_2 l_2 \ddot{\theta}_2 \cos(\theta_1 - \theta_2) + m_2 l_2 \dot{\theta}_2^2 \sin(\theta_1 - \theta_2) + (m_1 + m_2) g \sin \theta_1 = 0$$
 
@@ -679,8 +678,9 @@ Any ideas to animate?
 
 Maybe a bicycle?
 
-As I did [here](https://ereding.etsi.us.es/bibing/proyectos/abreproy/90128/) https://github.com/JAlcocerT/Bike_dynamic_simulator
+As I did [here](https://ereding.etsi.us.es/bibing/proyectos/abreproy/90128/)
 
+With: https://github.com/JAlcocerT/Bike_dynamic_simulator
 
 That was a **real time** challenge: https://link.springer.com/book/10.1007/978-1-4612-2600-0
 

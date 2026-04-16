@@ -1,6 +1,6 @@
 ---
 title: "Which ideas are left?"
-date: 2026-04-12
+date: 2026-04-13
 draft: false
 tags: ["Unit Economics 202","Remotion Video x Data Animations","Python PPTx"]
 description: 'To define whats wrong, we need to define whats the desired state.'

@@ -90,12 +90,19 @@ Which of these would you use to analyze on chain data?
 
 {{< youtube "zBd13Owe5-o" >}}
 
+### New Data Stock
+
+DuckDB and MotherDuck
+
+> which btw can be integrated with perplexity connectors!
+
 
 ---
 
 ## Conclusions
 
-
+- **Apache DevLake** = DevOps/SDLC Analytics & Metrics
+- **Delta Lake** = Data Storage Layer for Data Lakes
 
 You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/)
 

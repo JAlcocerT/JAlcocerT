@@ -479,6 +479,8 @@ That I could not resist to tinker with some time back
 
 ![Sample animation Gif](/blog_img/dev/503.gif)
 
+And here are the references:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/" title="A Summary of Animations" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Post with animated F1, Real Estate, yfinance..." >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/f1-data-animated/" title="F1 Animated Data" image="/blog_img/karting/long_g_trace_L4.png" subtitle="Creating animations around F1 Data | Post" >}}

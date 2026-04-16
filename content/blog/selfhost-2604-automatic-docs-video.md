@@ -140,7 +140,7 @@ https://youtu.be/H5Q6fQyPptE
 {{< youtube "H5Q6fQyPptE" >}}
 
 
-> All powered by *just* Haiku 4.5
+> All powered by ,just' Haiku 4.5
 
 
 

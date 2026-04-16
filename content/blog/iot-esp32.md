@@ -1,6 +1,6 @@
 ---
 title: "The ESP32 comeback"
-date: 2026-04-24
+date: 2026-04-20
 draft: false
 description: "A solar panel, spring and the ESP32 microcontroller"
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
@@ -13,6 +13,10 @@ url: 'esp32-x-solar-x-plants'
 https://github.com/gsampallo/mqtt_valvula
 
 **TL;DR**
+
+How much solar is enough for the mqtt x dht setup with a ESP32?
+
+Despite the PicoW lasting x2 in the same battery, for some reason the esp is less picky to connect and send the data over the same solar pannel
 
 **Intro**
 

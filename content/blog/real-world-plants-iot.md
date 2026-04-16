@@ -5,6 +5,7 @@ draft: false
 tags: ["Real World","DHT22 vs MLX90614 x VPD","Tinkering IRL","Velxio x ESPHome"]
 description: 'Plants, VPD and future plans that made it for a tech talk.'
 url: 'plants-102-and-iot'
+math: true
 ---
 
 **Tl;DR**
@@ -22,8 +23,9 @@ url: 'plants-102-and-iot'
 The big win with ESPHome for these sensor projects: the entire DHT22+MQTT setup that
 took a `main.py`, `boot.py`, `DHT22.py` and manual error handling is replaced by ~15 lines of YAML.
 
+## MQTT x IoT
 
-## Current Setup: MQTT DHT22 PGSQL
+### Current Setup: MQTT DHT22 PGSQL
 
 From [this section](https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples) and [these scripts](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW):
 
@@ -163,8 +165,28 @@ tmux new-session -d -s mqtt "uv run mqtt_to_db.py"
 tmux new-session -d -s webapp "uv run uvicorn main:app --host 0.0.0.0 --port 8077"
 ```
 
+### MQTT to Sources
 
-### Big Data Tech Talk 
+We have seen towards timescaleDB
+
+A good mental model is: Prometheus wants metrics, Elastic wants documents, TimescaleDB wants rows, and MQTT is just the transport.
+
+For MQTT to Prometheus, it’s usually not hard if your data is already a numeric measurement and the topic structure is stable. The common pattern is an MQTT-to-Prometheus exporter or a small bridge service that subscribes to MQTT and exposes metrics on an HTTP endpoint for Prometheus to scrape.
+
+For TimescaleDB to Prometheus, it’s less natural. Prometheus is pull-based and expects current metric values, not arbitrary historical SQL rows, so you normally export a current aggregate or a derived gauge rather than “syncing” the whole database. If the data starts in TimescaleDB, a custom exporter or scheduled job is usually the cleanest bridge.
+
+For MQTT to Elasticsearch, it’s also manageable, but the approach is different: you usually use Logstash, Elastic Agent, a custom consumer, or an ingest pipeline to transform messages into documents before indexing them. Elasticsearch is much better at storing event records and searchable history than at serving as a live metrics endpoint.
+
+#### MQTT x DHT x Prometheus
+
+#### MQTT x DHT x Elastic
+
+
+#### MQTT x Alerts
+
+1. Initially I thought about webhooks
+
+## Big Data Tech Talk 
 
 A tech talk that goes from embeded systems, to data engineering and to visualizations?
 

@@ -106,6 +106,10 @@ Things are moving into a direction where human are the blockers:
 
 This all have to make sense for the unit economics to [have a chance](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#any-business-who-what-how): *The Market (Who), the Offer (What), and the Leads (How)*
 
+{{< callout type="info" >}}
+Believe it or not, making all these resonate is key for $
+{{< /callout >}}
+
 *   **BRD (Business Requirements):** Answers **"WHY build this?"** (The Vision & Goals).
 *   **PRD (Product Requirements):** Answers **"WHAT are we building?"** (The Features & Roadmap).
 *   **FRD (Functional Requirements):** Answers **"HOW does it work?"** (The Technical Logic & CRUDs).
@@ -158,6 +162,25 @@ https://jalcocert.github.io/JAlcocerT/custom-marketing-analytics/#2-three-strate
 So was the [units economics of the QR web/app storage](https://jalcocert.github.io/JAlcocerT/custom-marketing-analytics/#1-the-unit-economics-of-qr-guest-photos)
 
 
+| Dimension | B2C (couples) | B2B (photographers) |
+|-----------|---------------|---------------------|
+| Buyer | Couple planning their wedding | Wedding photographer |
+| Discovery | Google Ads | Cold call from partner |
+| Sales motion | Self-serve, automated | Human-led, relationship |
+| Conversion time | Minutes (free signup) to days (drip) | Days to weeks |
+| LTV per deal | 299 PLN one-time | 299 PLN × N weddings/year |
+| CAC structure | Ad spend ÷ paid conversions | Partner's time cost |
+| Scale ceiling | Bounded by ad budget & Polish market size | Bounded by partner's calling capacity |
+| Product changes needed | None | Minor (referral code, bulk pricing) |
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | One of the ,Core-4': Warm OutReach / Free Content / Cold OutReach / Paid Ads |
+| The Lead Magnet | Strategy Type: , Delivery Method: |
+
+
 ### The Agentic Operations
 
 This is a growth experiment.
@@ -194,7 +217,7 @@ whois leadarchitect.org| grep -i -E "(creation|created|registered)"
 
 ## Conclusions
 
-Should you go B2C or B2B?
+Should you go [B2C or B2B](https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/b2b-vs-b2c.md)?
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
@@ -221,6 +244,10 @@ Its a different story and you have to configure the offer accordingly.
 Account for the price and risk sensitivity.
 
 #### Ads x Remotion Promo Video
+
+The repo to video concept [worked here](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#about-foss---repo-to-video) for OSS.
+
+Why not for your indie-hacker projects?
 
 Based on the UI/X ofc :)
 
