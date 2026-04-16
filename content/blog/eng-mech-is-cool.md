@@ -28,15 +28,13 @@ This is very motivational.
 {{< /cards >}}
 
 
-## Kynematics
+## Kinematics
 
 As someone told me: *its just geometry and the time*
 
 <!-- https://youtu.be/PWvIYU_Z8z8?si=LVaco4q82nDxspEj -->
 
 {{< youtube "PWvIYU_Z8z8" >}}
-
-> You can do more cool thing with geometry, like [knitting patterns](https://jalcocert.github.io/JAlcocerT/knitting-pattern-calculator/).
 
 
 ## Stress Concentrators
@@ -50,7 +48,9 @@ https://www.youtube.com/watch?v=Gbpf1rctHKc
 
 ## Materials
 
-Lately I tried a titanium bycicle and I could not resist to recap on Material Science with google:
+Lately, I tried a titanium bycicle
+
+and I could not resist to recap on Material Science with Gemini.
 
 ### Al vs Ti vs Steel
 
@@ -61,8 +61,12 @@ Let's break down the comparison between aluminum and steel in terms of stiffness
 **Stiffness (Young's Modulus):**
 
 * **Steel is significantly stiffer than aluminum.** Steel has a Young's Modulus of around 200 GPa, while aluminum is around 70 GPa.
+
 * **This means that for the same shape and thickness, a steel part will deflect about three times less than an aluminum part under the same load.**
-* To achieve the same stiffness as a steel component, an aluminum component would need to be significantly thicker (approximately 44% thicker). However, even with this increased thickness, the aluminum part could still be lighter due to aluminum's lower density.
+
+* To achieve the same stiffness as a steel component, an aluminum component would need to be significantly thicker (approximately 44% thicker). 
+
+However, even with this increased thickness, the aluminum part could still be lighter due to aluminum's lower density.
 
 **Tensile Resistance:**
 
@@ -94,12 +98,15 @@ Here's a breakdown:
 **Tensile Strength:**
 
 * **Some high-strength steel alloys can have higher ultimate tensile strength than commercially pure titanium.** Tensile strength is the maximum stress a material can withstand while being stretched or pulled before breaking. Certain high-carbon steels can reach tensile strengths of around 1100 MPa, while commercially pure titanium is typically in the range of 275-410 MPa.
+
 * **However, some titanium alloys can have tensile strengths comparable to or even exceeding certain steel alloys.** For instance, Ti-6Al-4V, a common titanium alloy, can reach tensile strengths of around 1100 MPa.
+
 * **Titanium has a significantly higher strength-to-weight ratio than steel.** This means that for the same weight, a titanium component can withstand greater tensile forces than a steel component. This is a key reason why titanium is preferred in aerospace and other weight-sensitive applications.
 
 **Yield Strength:**
 
 * **Many steel alloys possess higher yield strength than commercially pure titanium.** Yield strength is the point at which a material begins to deform permanently. Some steel grades can have yield strengths up to 550 MPa, while pure titanium is around 140 MPa.
+
 * **Certain titanium alloys can achieve higher yield strengths than some lower-strength steels.** However, generally, high-strength steels will have a higher yield strength.
 
 **Tensile Elongation (Ductility):**
@@ -179,9 +186,13 @@ Here's a breakdown of what it is and its key characteristics:
 
 **Key Characteristics:**
 
-1.  **Sensitive Dependence on Initial Conditions (The Butterfly Effect):** This is the most famous characteristic of the Lorenz attractor. Even an infinitesimally small change in the initial starting values of the system's variables can lead to vastly different long-term trajectories. This is where the popular "butterfly effect" metaphor comes from: the idea that a butterfly flapping its wings in Brazil could theoretically contribute to a hurricane in Texas (though this is a poetic exaggeration, it illustrates the principle of amplified small differences).
+1.  **Sensitive Dependence on Initial Conditions (The Butterfly Effect):** This is the most famous characteristic of the Lorenz attractor. Even an infinitesimally small change in the initial starting values of the system's variables can lead to vastly different long-term trajectories.
 
-2.  **Deterministic Chaos:** Despite its unpredictable behavior, the Lorenz system is entirely deterministic. This means that if you know the exact initial conditions, the future state of the system is theoretically determined. The "chaos" arises because even tiny imprecisions in measuring or defining those initial conditions make long-term prediction practically impossible.
+This is where the popular "butterfly effect" metaphor comes from: the idea that a butterfly flapping its wings in Brazil could theoretically contribute to a hurricane in Texas (though this is a poetic exaggeration, it illustrates the principle of amplified small differences).
+
+2.  **Deterministic Chaos:** Despite its unpredictable behavior, the Lorenz system is entirely deterministic. This means that if you know the exact initial conditions, the future state of the system is theoretically determined.
+
+The "chaos" arises because even tiny imprecisions in measuring or defining those initial conditions make long-term prediction practically impossible.
 
 3.  **Fractal Structure:** The Lorenz attractor has a fractal dimension, meaning it exhibits self-similarity at different scales. If you zoom in on parts of the attractor, you'll see similar intricate patterns. Its infinite complexity is a hallmark of fractal geometry.
 

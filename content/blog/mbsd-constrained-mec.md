@@ -255,7 +255,7 @@ Upcoming questions to be resolved:
 
 1. Whats the best angle for each V shape engine based on the vibrations?
 
-V8 tend to be at 90 degrees, why?
+> V8 tend to be at 90 degrees, why?
 
 2. The dynamics of the hip thrust exercise....
 
@@ -429,7 +429,9 @@ Methods to Solve Equations of Motion
 
 Why MBSD Uses Numerical Integration
 
-For multibody systems with **constraints, multiple degrees of freedom, and complex geometries**, analytical solutions are impossible. Numerical integration is the only practical approach:
+For multibody systems with **constraints, multiple degrees of freedom, and complex geometries**, analytical solutions are impossible.
+
+Numerical integration is the only practical approach:
 
 1. Lagrangian formulation gives you the differential equations
 2. Numerical integrator steps through time: $q(t+\Delta t) = q(t) + \Delta t \cdot \dot{q}(t) + \ldots$

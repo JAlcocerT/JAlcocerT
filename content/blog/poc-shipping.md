@@ -180,6 +180,37 @@ So was the [units economics of the QR web/app storage](https://jalcocert.github.
 | **One Channel** | One of the ,Core-4': Warm OutReach / Free Content / Cold OutReach / Paid Ads |
 | The Lead Magnet | Strategy Type: , Delivery Method: |
 
+The Matrix: *Strategy vs. Medium for leads*
+
+| Strategy (The 3 Types) | Software Delivery | Information Delivery | Service Delivery | Physical Delivery |
+| --- | --- | --- | --- | --- |
+| **1. Reveal the Problem** | A "Profit Leak" Calculator. | A "Red Flag" PDF Checklist. | A Free 5-Min Security Audit. | A "Water Hardness" Testing Kit. |
+| **2. Give a Sample** | 7-Day Trial of a CRM. | A Free Masterclass Lesson. | A 15-Min Mini-Consult. | A Trial-Sized Supplement. |
+| **3. Step 1 of N** | A template pre-loaded in an app. | A "How to Set Up Your LLC" Guide. | A "Done-for-you" Website Header. | A "Starter Tool" (e.g., a free brush for a paint kit). |
+
+The **Tier of Service**: DFY *because The value ladder is a thing*
+
+The **fundamental nature of the business model** and its primary bottleneck
+
+| Feature | **Guest Photo WebApp** | **Educational Model** | **The Lead Architect Agency** |
+| --- | --- | --- | --- |
+| **Business Archetype** | B2C Indie Hacker (SaaS-Lite) | Info-Product / Course |  |
+| **Primary Lever** | **Volume** | **Volume** | **Price** |
+| **Strategic Tag** | **[GROWTH BET]** | **[GROWTH BET]** | |
+| **Customer Intent** | Emotional (Memories) | Aspirational (Success) |  |
+| **Execution Risk** | Technical/Server Downtime | Content Obsolescence |  |
+| **Main Constraint** | **Demand (Marketing, ads)** | **Demand (Attention)** | **Supply (Expert Hours)** |
+| **Macro Winner** | Low-cost luxury (Recession) | Upskilling (Recession) |  |
+
+The **GTM strategy** is a cross-functional roadmap that answers the question: *How will we bring this new product to market successfully?* 
+
+It aligns all key business functions, including:
+
+* **Product:** What are we selling? What problem does it solve?
+* **Pricing:** How much will we charge?
+* **Distribution/Sales:** How will we get the product into the hands of customers? (e.g., direct sales team, e-commerce, third-party distributors).
+* **Marketing:** How will we generate awareness and demand?
+* **Customer Success/Support:** How will we onboard and support customers after they buy?
 
 ### The Agentic Operations
 

@@ -2,7 +2,7 @@
 title: "SelfHosted Data Analytics"
 date: 2026-10-01T23:20:21+01:00
 draft: false
-tags: ["D&A","Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql"]
+tags: ["Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql"]
 description: 'Selfhosting D&A Tools. .'
 url: 'selfhosting-data-analytics'
 ---
@@ -45,6 +45,8 @@ sudo docker compose -f ./z-homelab-setup/evolution/2610_docker-compose.yml logs 
 Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check their [notebooks for DBs](https://dbcode.io/docs/notebooks/getting-started)
 
 ## Fabric One Catalogue or...
+
+> A `procedural.md` is all you might need to know everything you ever wanted from ~~pbix~~ .pbip powerbi dashboards
 
 **OneLake Catalog** is a Microsoft Fabric feature—a centralized data discovery and governance tool within OneLake, Microsoft's unified data lake (like "OneDrive for data"). It helps users search, explore, and manage Fabric items like lakehouses, warehouses, reports, and pipelines across workspaces. [learn.microsoft](https://learn.microsoft.com/en-us/fabric/governance/onelake-catalog-overview)
 

@@ -66,6 +66,8 @@ mpv bicycle_leg.mp4
 
 <!-- https://youtu.be/PBFRIEC9aB8 -->
 
+#### Implemented 2D Constrains
+
 ### Dynamics
 
 Understand **constrained dynamics** and how to simulate real mechanisms with 2D motions.
@@ -123,6 +125,16 @@ C(q, t) = 0              ← Joint constraint (position)
 C_q @ v = ∂C/∂t          ← Velocity constraint (automatic)
 C_q @ a = -dC_q @ v - d²C/dt²   ← Acceleration constraint
 ```
+
+
+#### 2D Direct Mechanics
+
+Given certain forces - where does the mbsd position evolve over time?
+
+
+#### 2D Indirect Mechanics
+
+Given a defined trajectory - what are the forces that make it possible?
 
 
 ## A 2D MBSD Simulator
@@ -208,6 +220,10 @@ What we could visualize (Phase 2):
 
 ## Conclusions
 
+> You can do more cool thing with geometry, like [knitting patterns](https://jalcocert.github.io/JAlcocerT/knitting-pattern-calculator/).
+
+
+
 Some people say that we could be doing our passions only if there would be some kind of magic that pay for it.
 
 Not sure about you, but I dont believe in magic.
@@ -278,12 +294,16 @@ When you look at a phase portrait, you aren't just looking at one simulation run
 Phase portraits are the ultimate "litmus test" for your physics engine. 
 
 1.  **Stability Detection:** You mentioned the bike is stable at 10 m/s. In a phase portrait of $\phi$ vs. $\dot{\phi}$, you would see a "basin of attraction"—a region where, even if you push the bike, the lines eventually curve back to $(0,0)$ (upright and still).
+
 2.  **Bifurcations:** As you lower the speed in your simulator from 10 m/s to 2 m/s, the phase portrait will physically change. The stable "sink" at the center might split or vanish, visually showing you exactly at what speed the gyroscopic and caster effects are no longer enough to keep the bike upright.
+
 3.  **Sensitivity to Initial Conditions:** It helps you see how much "lean" is too much. The portrait will show a clear boundary (a **separatrix**) where one trajectory leads back to upright and the one right next to it leads to a crash.
 
 4. Mathematical Connection
 
-In your documentation, you solve for $\ddot{q} = M(q)^{-1} \cdot Q(q, \dot{q})$. To create the phase portrait, you take that $\ddot{q}$ and use it to draw the **vector field** (the little arrows) that tell the state which way to move at every point in the graph.
+In your documentation, you solve for $\ddot{q} = M(q)^{-1} \cdot Q(q, \dot{q})$. 
+
+To create the phase portrait, you take that $\ddot{q}$ and use it to draw the **vector field** (the little arrows) that tell the state which way to move at every point in the graph.
 
 In common conversation, people often use the terms interchangeably, but in technical physics and engineering, they actually refer to two different things.
 
