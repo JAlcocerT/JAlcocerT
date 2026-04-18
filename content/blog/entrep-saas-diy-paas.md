@@ -2,10 +2,16 @@
 title: "Making an enhanced DIY offering via PaaS"
 date: 2026-07-01T09:20:21+01:00
 draft: false
-tags: ["DIY Platform Service","RoadMap26","PostgreSQL"]
+tags: ["DIY Platform Service","RoadMap26","PostgreSQL","Web Audit"]
 description: 'A platform service offering for B2C to get up to speed with services that dont require any customization.'
 url: 'creating-a-diy-paas-service'
 ---
+
+https://github.com/umami-software/umami
+https://docs.litlyx.com/intro
+https://docs.litlyx.com/self-hosting/yml
+
+
 
 **Tl;DR**
 

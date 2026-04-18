@@ -1,14 +1,37 @@
 ---
-title: "Vacations with Python and LibreChat."
-date: 2026-09-15T19:20:21+01:00
+title: "Vacations with Python"
+date: 2026-07-05T19:20:21+01:00
 draft: false
-tags: ["Django","PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs of Living","Scrap"]
-summary: 'Where am I going next? With Vibe Planning and wisdom of crowds.'
+tags: ["PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs of Living"]
+summary: 'Where am I going next? With Vibe Planning and scrapped wisdom of crowds.'
 url: 'py-vacations'
 ---
 
+https://selfh.st/apps/?search=trip
 
-https://www.albertina.at/en/
+trip software
+https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#trip-planner
+![Travel pack](/blog_img/hardware/travel-pakc.jpg)
+
+
+https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/
+
+![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+https://github.com/dedicatedcode/reitti
+immich with reitti
+
+https://github.com/MrModest/reisenotiz
+
+vpns: tailscale, wireguard
+
+`https://www.albertina.at/en/`
 
 
 **Tl;DR**
@@ -71,7 +94,7 @@ And no API key!
 
 ## Conclusions
 
-I got to know that something similar exists: https://nomads.com/ from cool solopreneurs.
+I got to know that something similar exists: `https://nomads.com/` from cool solopreneurs.
 
 
 

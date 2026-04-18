@@ -7,14 +7,17 @@ tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]
 url: 'esp32-x-solar-x-plants'
 ---
 
-
-
-
 https://github.com/gsampallo/mqtt_valvula
 
 **TL;DR**
 
 How much solar is enough for the mqtt x dht setup with a ESP32?
+
+https://fossengineer.com/selfhosting-velxio-arduino/
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 Despite the PicoW lasting x2 in the same battery, for some reason the esp is less picky to connect and send the data over the same solar pannel
 

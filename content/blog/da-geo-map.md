@@ -264,6 +264,8 @@ As you might know, [gpx is great](https://jalcocert.github.io/JAlcocerT/selfhost
 
 * https://github.com/tess1o/geopulse
 
-tess1o/geopulse: A self-hosted, privacy-first location tracking platform. The perfect open-source alternative to Google Timeline with automatic trip detection, Immich integration, and detailed analytics.
+`tess1o/geopulse`: A self-hosted, privacy-first location tracking platform. 
+
+The perfect open-source alternative to Google Timeline with automatic trip detection, Immich integration, and detailed analytics.
 
 * https://github.com/itskovacs/trip

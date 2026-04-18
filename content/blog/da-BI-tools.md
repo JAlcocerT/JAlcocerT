@@ -613,9 +613,9 @@ IoT Project with [Metabase+MongoDB+DHT Sensor](https://jalcocert.github.io/RPi/p
 <script src="https://gist.github.com/JAlcocerT/953cab1052af58f4241f28dbc0a314a0.js"></script>
 
 
-Compare with Apache Superset - https://superset.apache.org/
+Compare with Apache Superset - `https://superset.apache.org/`
 
-You can use serverless version of it at - https://preset.io/
+You can use serverless version of it at - `https://preset.io/`
 
 ## Metabase Embedded Analytics
 

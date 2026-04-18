@@ -44,25 +44,72 @@ sudo docker compose -f ./z-homelab-setup/evolution/2610_docker-compose.yml logs 
 
 Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check their [notebooks for DBs](https://dbcode.io/docs/notebooks/getting-started)
 
+## AI/BI Tools
+
+Since the last time, chartbrew reached version 5:
+
+[![shields.io Stars](https://img.shields.io/github/stars/chartdb/chartdb)](https://github.com/chartdb/chartdb/stargazers)
+
+
+
+[![shields.io Stars](https://img.shields.io/github/stars/chartdb/chartdb)](https://github.com/chartbrew/chartbrew/stargazers)
+
+
+https://github.com/chartbrew/chartbrew
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartbrew/" title="ChartBrew | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+chartDB or DB2rest
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen" title="AIGen | Docker Configs 🐋✅ ↗" >}}
+{{< /cards >}}
+
+### New
+
+Rill vs WrenAI vs Vanna
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartbrew/" title="WrenAI | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartbrew/" title="Vanna | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ## Fabric One Catalogue or...
 
 > A `procedural.md` is all you might need to know everything you ever wanted from ~~pbix~~ .pbip powerbi dashboards
 
-**OneLake Catalog** is a Microsoft Fabric feature—a centralized data discovery and governance tool within OneLake, Microsoft's unified data lake (like "OneDrive for data"). It helps users search, explore, and manage Fabric items like lakehouses, warehouses, reports, and pipelines across workspaces. [learn.microsoft](https://learn.microsoft.com/en-us/fabric/governance/onelake-catalog-overview)
+**OneLake Catalog** is a Microsoft Fabric feature—a centralized data discovery and governance tool within OneLake, Microsoft's unified data lake (like "OneDrive for data"). 
+
+It helps users search, explore, and manage Fabric items like lakehouses, warehouses, reports, and pipelines across workspaces.
+
+[learn.microsoft](https://learn.microsoft.com/en-us/fabric/governance/onelake-catalog-overview)
 
 Key Features
 
-It offers an **Explore tab** for browsing with filters (domains, tags, endorsements, item types), rich metadata (descriptions, schemas, lineage, permissions), and direct actions like querying or analyzing items. The **Govern tab** (preview in some updates) provides data owners insights on quality, compliance, and recommended actions. [blog.fabric.microsoft](https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-the-trusted-catalog-for-organizations-worldwide/)
+It offers an **Explore tab** for browsing with filters (domains, tags, endorsements, item types), rich metadata (descriptions, schemas, lineage, permissions), and direct actions like querying or analyzing items.
+
+The **Govern tab** (preview in some updates) provides data owners insights on quality, compliance, and recommended actions. [blog.fabric.microsoft](https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-the-trusted-catalog-for-organizations-worldwide/)
 
 Microsoft Fabric Context
-Built into every Fabric tenant, it unifies multi-cloud data estates, integrates with Teams/Excel/Copilot, and supports APIs/CLI for devs—promoting trust, reuse, and security via endorsements and sensitivity labels. It's complementary to Purview for broader governance. [learn.microsoft](https://learn.microsoft.com/en-us/fabric/onelake/)
+
+Built into every Fabric tenant, it unifies multi-cloud data estates, integrates with Teams/Excel/Copilot, and supports APIs/CLI for devs—promoting trust, reuse, and security via endorsements and sensitivity labels.
+
+It's complementary to Purview for broader governance. [learn.microsoft](https://learn.microsoft.com/en-us/fabric/onelake/)
 
 Yes, that description is accurate. OneLake Catalog centralizes all Microsoft Fabric content for browsing, curation, and governance in one unified view. [learn.microsoft](https://learn.microsoft.com/en-us/fabric/governance/onelake-catalog-overview)
 
 Coverage Details
-It spans **insight items** (reports, dashboards), **data items** (lakehouses, semantic models, warehouses), **process items** (pipelines, notebooks), plus apps and more—accessible via Explore and Govern tabs with filters, metadata, lineage, and actions. This matches official docs and demos exactly. [blog.fabric.microsoft](https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-the-trusted-catalog-for-organizations-worldwide/)
 
-**Open-source alternatives** to Microsoft Fabric (unified analytics) and OneLake Catalog (data governance/discovery) exist for building custom lakehouses with catalogs. They prioritize vendor independence, lower costs, flexibility, and multi-cloud support over Fabric's seamless Azure integration. [peliqan](https://peliqan.io/blog/microsoft-fabric-alternatives-competitors/)
+It spans **insight items** (reports, dashboards), **data items** (lakehouses, semantic models, warehouses), **process items** (pipelines, notebooks), plus apps and more—accessible via Explore and Govern tabs with filters, metadata, lineage, and actions.
+
+This matches official docs and demos exactly. [blog.fabric.microsoft](https://blog.fabric.microsoft.com/en-US/blog/onelake-catalog-the-trusted-catalog-for-organizations-worldwide/)
+
+**Open-source alternatives** to Microsoft Fabric (unified analytics) and OneLake Catalog (data governance/discovery) exist for building custom lakehouses with catalogs.
+
+They prioritize vendor independence, lower costs, flexibility, and multi-cloud support over Fabric's seamless Azure integration. [peliqan](https://peliqan.io/blog/microsoft-fabric-alternatives-competitors/)
 
 ## OSS Stack Alternatives
 Combine storage + table format + catalog + query engine for Fabric-like functionality (data ingestion, lakehouse, governance). [reddit](https://www.reddit.com/r/dataengineering/comments/1jqrxyq/open_source_alternatives_to_fabric_data_factory/)

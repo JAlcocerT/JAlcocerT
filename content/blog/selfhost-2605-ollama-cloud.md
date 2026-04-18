@@ -494,6 +494,8 @@ They are also available as standalone chips from some manufacturers.
 
 ### About Ubuntu 2604 LTS
 
+helium, zen...
+
 * https://winboat.app/
 
 With VM you dont have GPU passthrough and hardware acceleration.

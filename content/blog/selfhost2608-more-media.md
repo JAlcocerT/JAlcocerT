@@ -7,6 +7,18 @@ description: 'Computer'
 url: 'selfhosting-more-media'
 ---
 
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/#video-as-a-code" title="Video Docs Section with consolidated info ↗" >}}
+{{< /cards >}}
+
+https://github.com/frederikemmer/MediaLyze
+
+Self-hosted media library analysis for large video collections 
+
+https://github.com/ashim-hq/ashim
+
+A Self Hosted Image Manipulator - 45+ tools, local AI, and pipelines in a single Docker container. No cloud, no telemetry. Your images never leave your machine. 
+
 https://github.com/stirling-image/stirling-image
 
 https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich
