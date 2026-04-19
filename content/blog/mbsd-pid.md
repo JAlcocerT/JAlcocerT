@@ -8,6 +8,9 @@ url: 'pid-for-bicycle-mbsd-model'
 math: true
 ---
 
+PID
+
+margen de fase
 
 <!-- https://www.youtube.com/watch?v=dFudZiQ5ocY -->
 

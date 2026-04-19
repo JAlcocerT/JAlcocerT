@@ -2,8 +2,8 @@
 title: "3d Printing"
 date: 2026-12-31
 draft: false
-tags: ["Blender","OpenSCad vs CadQuery","ThreeJS vs BabbylonJS","ArchViz"]
-description: 'IoT.'
+tags: ["Blender","OpenSCad vs CadQuery","ThreeJS & BabbylonJS","ArchViz"]
+description: 'From Digital Modelling to 3D Printing 101'
 url: '3d-modelling-101'
 ---
 
