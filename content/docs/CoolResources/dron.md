@@ -1,5 +1,5 @@
 ---
-title: "Dron"
+title: "Drones"
 date: 2024-09-04T10:20:21+01:00
 draft: false
 tags: ["dev"]
@@ -15,16 +15,17 @@ With drons we kind of combine it all: electronics, programming, physics and...fu
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/" title="Budget Drone" image="/blog_img/hardware/dji-dron.png" subtitle="Tinkering with a DJI Ryze Tello | Post" >}}
 {{< /cards >}}
 
-* https://www.diyfpv.com/
+If you got a Tello, you will get the chance to learn Python to make computer vision and face detection with the feed that goes to your laptop as shown [here](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/).
 
 
-* https://github.com/jyjblrd/Low-Cost-Mocap
-  * https://github.com/jyjblrd/Low-Cost-Mocap?tab=MIT-1-ov-file#readme
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/dron" title="Dron UV Repo Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/dron-tello-flutter" title="Dron Flutter Repo Github ↗" icon="github" >}}
+{{< /cards >}}
 
-> Low cost motion capture system for room scale tracking
 
-To tinker with Computer Vision, you could also use a Pi: *as I did [here](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/)*
+You will be also able to make/tinker with flutter apps: *because the official one is not available for android anymore*
 
-![Pi4 and its camera](/blog_img/hardware/RPi4_2gb_cam.jpg)
 
-> And there is a [repo where i tinkered with it](https://gitlab.com/fossengineer1/cv)
+Best of all, it can motivate you to get into DIY.
+

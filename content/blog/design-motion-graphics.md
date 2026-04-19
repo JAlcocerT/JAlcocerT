@@ -19,8 +19,12 @@ Now that everything possible to be codable as web can be a video...
 
 ## Ways to Motion Graphic
 
+You got it, there are few ways around
+
+Ive tried a few:
+
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/3DDesign" title="HomeLab | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/3DDesign" title="3d design x blender | Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion" title="Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
 {{< /cards >}}
 
@@ -34,7 +38,7 @@ Now that everything possible to be codable as web can be a video...
 
 Ive also been using blender together with mechanisms [here](https://jalcocert.github.io/JAlcocerT/about-constrained-mechanism/#2d-kinematics-x-blender)
 
-if you are curious, running this in a mac M2 is way faster
+if you are curious, running this [in a mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) was way faster
 
 
 ### Web Technologies
@@ -50,7 +54,7 @@ Because the web technologies can do it
 
 ### ThreeJS and BabbylonJS
 
-if you wondered how lando website was possible
+if you wondered how [lando website was possible](https://jalcocert.github.io/JAlcocerT/micro-saas/#quantux)
 
 Or how Ive been tinkering with a custom mbsd animator for the augmented reality part (AR)
 
@@ -64,9 +68,26 @@ We have a new library in town: https://github.com/heygen-com/hyperframes
 
 > Apache v2 | Write HTML. Render video. Built for agents.
 
+You bet there are skills too: https://skills.sh/heygen-com/hyperframes/hyperframes
+
 ```sh
 npx skills add heygen-com/hyperframes
 ```
+
+```md
+what do i need to provide for you to use the website to hyperframe skill?
+```
+
+After consuming 85% of the 5h slot tokens and having these learnings, the video appeared by just having my website as context:
+
+<!-- https://youtu.be/KLpPt9P9s2E -->
+
+{{< youtube "KLpPt9P9s2E" >}}
+
+
+
+You can see the video compositions like this one at: `http://localhost:3002/#project/z-hyperframes`
+
 
 ---
 

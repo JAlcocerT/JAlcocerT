@@ -457,7 +457,8 @@ Remember about: https://skills.sh/
 
 To get you from a fresh Mac to a professional, Linux-style dev environment, follow these steps in order. Open your default Terminal (found in `/Applications/Utilities`) and run these.
 
-### 1. Install Xcode Command Line Tools
+1. Install Xcode Command Line Tools
+
 Before Homebrew can work, it needs the basic Apple compiler tools.
 ```bash
 xcode-select --install
@@ -466,31 +467,35 @@ xcode-select --install
 
 ---
 
-### 2. Install Homebrew
+2. Install Homebrew
+
 This is your primary package manager.
+
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
 **Important:** After it finishes, look at the terminal output. It will give you 2-3 lines of code to run to add Homebrew to your `PATH`. They look like this (but copy the ones from *your* terminal):
 ```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 
----
 
-### 3. Install Git & Basic Utilities
+3. Install Git & Basic Utilities
+
 Now that `brew` is ready, grab the essentials.
+
 ```bash
 brew install git gh wget jq
 ```
 
----
+4. Install Language Managers (The Clean Way)
 
-### 4. Install Language Managers (The Clean Way)
 Instead of installing Node/Python directly, we’ll install the managers to keep your system clean.
 
-#### For Node.js (via `fnm`):
+For Node.js (via `fnm`):
+
 ```bash
 brew install fnm
 # Add fnm to your shell config
@@ -498,23 +503,24 @@ echo 'eval "$(fnm env --use-on-cd)"' >> ~/.zshrc
 source ~/.zshrc
 ```
 
-#### For Python (via `uv`):
+For Python (via `uv`):
+
 ```bash
 brew install uv
 ```
 
----
+5. Install a Better Terminal & Editor
 
-### 5. Install a Better Terminal & Editor
 Since you want minimal and OSS, let's grab **Ghostty** (the current favorite fast/minimal terminal) and **Zed**.
+
 ```bash
 brew install --cask ghostty zed
 ```
 
----
+6. Verify Your Setup
 
-### 6. Verify Your Setup
 Run these to make sure everything is linked correctly:
+
 ```bash
 # Check Git
 git --version
@@ -527,10 +533,11 @@ node -v
 uv --version
 ```
 
----
 
-### Pro-Tip: The "Mise" Alternative
+Pro-Tip: The "Mise" Alternative
+
 If you prefer **one** tool to manage Python, Node, and everything else (very popular with Linux power users), run this instead of step 4:
+
 ```bash
 brew install mise
 echo 'eval "$(mise activate zsh)"' >> ~/.zshrc
@@ -541,7 +548,7 @@ mise use --global node@lts
 mise use --global python@latest
 ```
 
-To run **docker in mac** we will need something like QEMU or wsl
+To run **docker in mac** we will need something like [QEMU](https://jalcocert.github.io/JAlcocerT/testing-nix-os/) or [wsl for Windows](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/#conclusions)
 
 yea...a VM, as it cant run natively
 

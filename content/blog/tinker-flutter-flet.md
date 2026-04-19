@@ -58,9 +58,13 @@ flutter run -d linux
 But also, 
 
 GPS BASED		
+
 ublox m8n		
+
 HGLRC M100 Mini	How to Install and Setup a GPS on your FPV Drone (4K) - YouTube	HGLRC M100 Mini GPS module - a small, cheap and accurate GPS module for all your FPV builds - YouTube
+
 F9P?		
+
 Lora GPS?		
 
 <!-- https://www.youtube.com/watch?v=dQeNONerxEU

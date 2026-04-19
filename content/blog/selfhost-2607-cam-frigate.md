@@ -13,6 +13,11 @@ If you like computer vision and homelabs, you will enjoy this one :)
 
 **Intro**
 
+To tinker with Computer Vision, you could also use a Pi: *as I did [here](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/)*
+
+![Pi4 and the ov5647 camera](/blog_img/hardware/RPi4_2gb_cam.jpg)
+
+> And there is a [repo where i tinkered with it](https://gitlab.com/fossengineer1/cv)
 
 ```sh
 git clone https://github.com/JAlcocerT/RPi

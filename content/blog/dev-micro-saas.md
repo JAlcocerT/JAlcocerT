@@ -2,7 +2,7 @@
 title: "From idea to Launch. Building a Landing+MicroSaaS"
 date: 2025-09-23T08:20:21+01:00
 draft: false
-tags: ["Firebase","QuantUX","Firecrawl","Status Pages","Go Clone","Make-Landing"]
+tags: ["Firebase","QuantUX vs GoClone","Firecrawl","Status Pages","Make-Landing"]
 url: 'micro-saas'
 description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Features) to launch fast'
 ---
@@ -156,9 +156,9 @@ What it does related to user attention:
   
 If the requirement is specifically to know where users are *looking* (eye-tracking), Quant-UX may not provide that natively. Instead, it measures active interactions to infer attention and usability issues.
 
-So, while Quant-UX helps inform what parts of the page users interact with the most and how effectively they use the design, it does NOT capture actual eye movement or gaze tracking data.[1]
+So, while Quant-UX helps inform what parts of the page users interact with the most and how effectively they use the design, it does NOT capture actual eye movement or gaze tracking data.
 
-Yes, to summarize, Quant-UX is primarily a platform for:
+Quant-UX is primarily a platform for:
 
 - **Prototyping:** Quickly creating interactive, clickable wireframes and UI mockups with a visual editor and pre-built components.
 - **Wireframing:** Designing layout and user interface elements to represent app screens or web pages easily.
@@ -167,10 +167,11 @@ Yes, to summarize, Quant-UX is primarily a platform for:
 - **Iterative Design:** Using test results and analytics to refine and improve designs efficiently.
 - **Collaboration:** Sharing prototypes with stakeholders and involving users early in the design process.
 
-Quant-UX combines these functions in one integrated tool for UX designers and researchers to prototype, test, learn, and evolve their digital experiences effectively.[1][7][8]
+Quant-UX combines these functions in one integrated tool for UX designers and researchers to prototype, test, learn, and evolve their digital experiences effectively.
 
+Quant-UX is not typically plugged directly into your existing live website to capture data.
 
-Quant-UX is not typically plugged directly into your existing live website to capture data. It is primarily a **standalone usability testing tool for prototypes or new designs** before full deployment.
+It is primarily a **standalone usability testing tool for prototypes or new designs** before full deployment.
 
 If you want to test interactions on your existing live site continuously, you would need specialized user analytics or A/B testing tools instead, like POSTHOG.
 
@@ -196,6 +197,8 @@ With Quant-UX, the typical workflow is:
 
 **To test quantUX** we can give a try to LandoNorris website: `https://landonorris.com/`
 
+
+#### GoClone
 
 You can also try with GoClone: *but the tools is not there yet imo*
 

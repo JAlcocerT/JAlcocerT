@@ -7,6 +7,18 @@ description: 'From a DJi Tello Drone to one around BetaFPV.'
 url: 'fpv-programming'
 ---
 
+
+
+* https://www.diyfpv.com/
+
+
+* https://github.com/jyjblrd/Low-Cost-Mocap
+  * https://github.com/jyjblrd/Low-Cost-Mocap?tab=MIT-1-ov-file#readme
+
+> Low cost motion capture system for room scale tracking
+
+
+
 https://www.youtube.com/watch?v=uC9hVyqGvDE
 
 **TL;DR**
@@ -173,6 +185,10 @@ https://youtube.com/shorts/btdBPai3ppU?si=yN8nHFoL9bB1BybA
 ---
 
 ## Conclusions
+
+Will we see soon flying ~~cars~~ vehicles?
+
+can be if projects like cavorite x7 (eVTOL) come true
 
 If you like mechanics, 3d printing and RC: this could be a hobby for you.
 
