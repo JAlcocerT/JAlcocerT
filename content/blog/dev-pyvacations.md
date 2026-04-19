@@ -7,6 +7,8 @@ summary: 'Where am I going next? With Vibe Planning and scrapped wisdom of crowd
 url: 'py-vacations'
 ---
 
+https://wanderlog.com/
+
 https://selfh.st/apps/?search=trip
 
 trip software

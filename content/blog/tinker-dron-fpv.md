@@ -2,8 +2,8 @@
 title: "Whats an FPV?"
 date: 2026-12-31T23:20:21+01:00
 draft: true
-tags: ["Tinkering","Ardupilot vs pymavlink vs dronekit","DJi Tello"]
-description: Drone.
+tags: ["Tinkering","Ardupilot vs pymavlink vs dronekit"]
+description: 'From a DJi Tello Drone to one around BetaFPV.'
 url: 'fpv-programming'
 ---
 
@@ -17,7 +17,7 @@ At this point, whats stopping you to create a cool app for [the tello DJI](https
 
 First of all, an fpv is probably sth for what you need [such license](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#about-dron-regulations).
 
-This guy knows what he's talking about: https://github.com/Bardo91, aka Pablo ramon soria.
+This guy knows what he's talking about: `https://github.com/Bardo91`, aka Pablo ramon soria.
 
 The tello weights around ~ g:
 
@@ -182,3 +182,70 @@ Have a look to:
 <!-- https://www.youtube.com/watch?v=pdKnIPH3JQs -->
 
 {{< youtube "pdKnIPH3JQs" >}}
+
+---
+
+## FAQ
+
+### BOM for FPV around OSS
+
+For a full setup that embraces the **Open Source (OSS)** and **DIY** philosophy, you want components that run community-driven firmware and offer modularity. 
+
+In 2026, this usually means staying away from "locked" ecosystems like DJI and sticking to **ELRS**, **EdgeTX**, and **Analog/OpenIPC** video.
+
+Here is the recommended Bill of Materials (BOM) for a versatile, sub-100g focused setup.
+
+### 1. The Radio (The Brain)
+
+* **Recommendation:** **RadioMaster Pocket (ELRS Version)**
+* **Why:** It runs **EdgeTX** (OSS Operating System) and uses **ExpressLRS** (OSS Protocol). It’s the most "OSS-compatible" radio for the price.
+* **Estimated Cost:** $65 – $75.
+* **Essential Mods:** Buy two high-quality **18650 Li-ion batteries** (e.g., Molicel P28A) separately, as they aren't usually included.
+
+### 2. The Aircraft (The DIY Tiny Whoop)
+
+Instead of a pre-built BetaFPV, building your own allows for easier repairs and specific OSS tuning.
+
+* **Frame:** **BetaFPV Air65** or **Meteor65 Air Frame** ($5).
+* **Flight Controller (AIO):** **BetaFPV Air 5-in-1 G473 FC** ($55).
+    * *Why:* It runs **Betaflight** (OSS) and has a built-in ELRS receiver and Analog VTX. The G473 processor is the 2026 standard for micro-builds.
+* **Motors:** **0702SE 27,000KV** Brushless Motors ($40 for a set).
+* **Props:** **Gemfan 1219-3** or **HQ 31mm Ultralight** ($3).
+* **Total Drone Weight:** ~18g (without battery).
+
+3. The Video System (The Eyes)
+
+To stay true to OSS and budget, **Analog** is the "most open" because it has no encryption, but **OpenIPC** is the rising star of 2026.
+
+* **Budget Entry:** **Eachine EV800D** ($80 - $100).
+    * *Why:* They can be used as goggles or a standalone monitor, and they are easily "hackable."
+* **Mid-Range (Pro-OSS):** **Skyzone SKY04O Pro** ($350+).
+    * *Why:* Skyzone uses open-source friendly firmware and allows for modular receivers.
+* **The "Open" Digital Choice:** Look into **OpenIPC / ArtLynk** modules if you want digital quality with an open-source spirit.
+
+4. Charging & Power
+
+* **Charger:** **VIFLY Whoop VIPER** or **SkyRC B6neo** ($25 - $35).
+    * *Why:* The B6neo is tiny, powerful, and runs open-source-friendly firmware.
+* **Batteries:** **LAVA 1S 300mAh (BT2.0)** ($25 for a 4-pack).
+    * *Note:* Stick to the **BT2.0 connector**; it’s the community standard for performance in 2026.
+
+5. The Software Stack (All 100% Free/OSS)
+
+* **Configurator:** [Betaflight Configurator](https://github.com/betaflight/betaflight-configurator) (For the drone).
+* **Radio Firmware:** [EdgeTX Buddy](https://buddy.edgetx.org/) (For the Pocket).
+* **Link Firmware:** [ExpressLRS Configurator](https://www.expresslrs.org/quick-start/installing-configurator/) (For the radio link).
+* **Simulator:** **Tiny Whoop GO** or **FPV SkyDive** (Free versions to start).
+
+Total Estimated Budget: $250 – $320
+
+| Category | Item | Price (Approx) |
+| :--- | :--- | :--- |
+| **Radio** | RadioMaster Pocket ELRS | $70 |
+| **Drone** | DIY Air65 Build | $110 |
+| **Goggles** | EV800D (Analog) | $90 |
+| **Power** | Charger + 4x Batteries | $50 |
+
+**Expert Peer Note:** This setup is completely "interchangeable."
+
+If you decide to build a 2-meter long RC plane next month, your **RadioMaster Pocket** and **Charger** will work perfectly with it—you’ll just need a $15 ELRS receiver for the plane.

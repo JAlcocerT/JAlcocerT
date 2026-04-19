@@ -7,6 +7,10 @@ description: 'Computer'
 url: 'selfhosting-more-media'
 ---
 
+https://github.com/transmute-app/transmute
+
+> MIT, Self hosted file converter for images, video, audio, json, excel and more. Supports over 2,000 conversions! 
+
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/#video-as-a-code" title="Video Docs Section with consolidated info ↗" >}}
 {{< /cards >}}

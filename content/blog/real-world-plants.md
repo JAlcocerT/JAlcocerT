@@ -95,7 +95,13 @@ I made A/B testing, ofc and place x6 buckets without plastic coverage and one wi
 
 The temperature at night dropped at ~15C and during peak I saw 35C (they are growing next to a Window glass)
 
-2. The mint seeds took ~14 days
+2. The mint seeds took ~14 days to appear
+
+3. Mieta piep. took ~21 days to appear
+
+In the meantime, some tomatoes had several flowers already
+
+
 
 ---
 
@@ -169,7 +175,12 @@ Until you see green peeking out of the soil, the seeds need **consistent humidit
 Once they are growing, they need "deeper" water to encourage roots to grow down.
 
 * **The Finger Test:** Stick your fingertip into the soil (about 1 cm deep). If it feels dry, water. If it feels cold and damp, wait.
-* **Bottom Watering:** This is the best "pro" secret. Instead of watering from the top, put your pots in a tray with 2 cm of water. Let them "drink" from the bottom for 15–30 minutes, then pour out the leftover water. This keeps the stems dry and prevents mold (especially for **Tomatoes**).
+
+* **Bottom Watering:** This is the best "pro" secret. Instead of watering from the top, put your pots in a tray with 2 cm of water.
+
+Let them "drink" from the bottom for 15–30 minutes, then pour out the leftover water. 
+
+This keeps the stems dry and prevents mold (especially for **Tomatoes**).
 
 ### 3. Plant-Specific Tips
 

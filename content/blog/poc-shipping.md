@@ -1,8 +1,8 @@
 ---
 title: "Spring is here, so are weddings"
-date: 2026-04-15T13:20:21+01:00
+date: 2026-04-18T13:20:21+01:00
 draft: false
-tags: ["RoadMap26","SlubneChwile","DRIP","Google Stitch","Agent OS"]
+tags: ["RoadMap26","SlubneChwile","DRIP","Google Stitch & Claude Design","Agent OS"]
 description: 'The . With inspiring apps. With B2C vs B2B marketing.'
 url: 'quick-weddings-poc'
 ---
@@ -369,3 +369,9 @@ Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts
 
 
 How about building like they've done?
+
+### Using Google Stitch vs Claude Design
+
+1. `https://claude.ai/design`
+
+2. `https://stitch.withgoogle.com/`
