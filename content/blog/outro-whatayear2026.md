@@ -711,7 +711,9 @@ I mean...several animations.
 Including [data races](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/#yfinance-x-remotionjs):
 
 
+18. That was true until in March/April I tinkered more and more with RemotionJS and HyperFrames
 
+From that point I started making quick videos: from [intro to tech talks](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk), ...
 
 
 ### Serverless

@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Meeting AI. AIoT with a Raspberry Pi."
-date: 2026-04-23
+date: 2026-05-23
 draft: false
 tags: ["Tech Talk","IoT ebook","From obfuscaste towards 1toN eBooks","Roadmap26","Tinkering IRL"]
 description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'

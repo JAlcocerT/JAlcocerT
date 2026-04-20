@@ -207,6 +207,10 @@ npx hyperframes render --quality high
 
 {{< youtube "51kgUUPyIWY" >}}
 
+{{< callout type="info" >}}
+The learnings are stored [here](https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks/4-iot-to-bigdata/tech-talk)
+{{< /callout >}}
+
 
 ---
 

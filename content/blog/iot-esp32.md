@@ -1,6 +1,6 @@
 ---
 title: "The ESP32 comeback"
-date: 2026-04-20
+date: 2026-05-20
 draft: false
 description: "A solar panel, spring and the ESP32 microcontroller"
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed"]

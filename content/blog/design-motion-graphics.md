@@ -82,6 +82,10 @@ You bet there are skills too: https://skills.sh/heygen-com/hyperframes/hyperfram
 ```sh
 npx skills add heygen-com/hyperframes
 ```
+Full docs: https://hyperframes.heygen.com/introduction
+
+Machine-readable index for AI tools: https://hyperframes.heygen.com/llms.txt
+
 
 ```md
 what do i need to provide for you to use the website to hyperframe skill?
@@ -128,6 +132,11 @@ See `http://localhost:3003/#project/sensor-to-dashboard`
 
 <!-- https://youtu.be/51kgUUPyIWY -->
 
+You can add it to readme.md like:
+
+```md
+[![Watch the demo](https://img.youtube.com/vi/51kgUUPyIWY/0.jpg)](https://www.youtube.com/watch?v=51kgUUPyIWY) 
+```
 
 ### F1 Data Stories
 
