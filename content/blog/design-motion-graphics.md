@@ -46,6 +46,15 @@ if you are curious, running this [in a mac M2](https://jalcocert.github.io/JAlco
 
 Because the web technologies can do it
 
+<!-- 
+https://www.youtube.com/watch?v=j1oJi1Pfobs 
+-->
+
+{{< youtube "j1oJi1Pfobs" >}}
+
+I got inspored by DotCSV again :)
+
+
 ### RemotionJS
 
 ```sh
@@ -84,14 +93,65 @@ After consuming 85% of the 5h slot tokens and having these learnings, the video 
 
 {{< youtube "KLpPt9P9s2E" >}}
 
+The speech?
+
+Generated automatically [with the OSS kokoro TTS](https://github.com/thewh1teagle/kokoro-onnx)
 
 
-You can see the video compositions like this one at: `http://localhost:3002/#project/z-hyperframes`
+You can see the video compositions [like this test](https://github.com/JAlcocerT/jalcocertech/tree/main/z-hyperframes) at: `http://localhost:3002/#project/z-hyperframes`
+
+## Applications
+
+### Tech Talk Intro Videos
+
+Ive used hyperframe as a second test here
+
+The goal?
+
+To make a catchy short video as an intro for this [big data x dht's related tech talk](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk)
+
+```md
+thats amazing, now with your hyperframe skills, and looking at the dht-webapp look and feel, can we make    a intro-video.md with a draft of what would be a catchy video that i can upload to youtube for the team    to have and see whats coming? lets say 30 seconds duration. lets also consider all the psyco stuf
+```
+
+```sh
+# git clone selfhosted-landing
+cd ./y2026-tech-talks\4-iot-to-bigdata\tech-talk\sensor-to-dashboard
+npx hyperframes preview      # preview in browser (studio editor)
+npx hyperframes render       # render to MP4
+cd tech-talk/sensor-to-dashboard && npx hyperframes render --quality high
+```
+
+See `http://localhost:3003/#project/sensor-to-dashboard`
+
+{{< youtube "51kgUUPyIWY" >}}
+
+<!-- https://youtu.be/51kgUUPyIWY -->
+
+
+### F1 Data Stories
+
+
+### A Proper brand
+
+Are you selecting? or being selected?
+
+
+
 
 
 ---
 
 ## Conclusions
+
+The reason people are "lost without enough details" is that they lack Pattern Recognition (the horizontal bar of T-shape).
+
+Get to know the connections your team is missing:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 ### About Design Thinking 
 

@@ -21,6 +21,8 @@ Agents from: stories, dev and deployment...and DAO?
 
 AdguardHome is a good starter for any homelab.
 
+You can setup that one very quick [with via MLT UI](#a-vpn-recap)
+
 But DNS is a rabbithole of its own.
 
 With this post, I want to explore the [latests on PiHole v6](#pihole) and use it as the default DNS for a smart TV.
@@ -1196,3 +1198,25 @@ These have been apps that I have used **at some point at my homelab** and might 
 10. [SSGs](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-astro) combined with a headlessCMS and [selfhosted static server](https://github.com/JAlcocerT/Home-Lab/tree/main/ssg-static-hosting) 🐳 
 
 If you are starting, just use [static web hosting](https://jalcocert.github.io/JAlcocerT/create-your-website/) for those and forget about servers.
+
+### A VPN recap
+
+If you are interested in DNS, you might also be in VPNs.
+
+Using the travel [the gl-inet modem](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/) together [with wireguard](https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/#wgeasy-docker-compose-file) and ProtonVPN is very simple
+
+1. https://account.proton.me/u/0/vpn/WireGuard
+2. Connect to the router WIFI and go to `http://192.168.8.1/#/login`
+3. Go to `http://192.168.8.1/#/wgclient` and add the [proton config manually](https://docs.gl-inet.com/router/en/4/interface_guide/wireguard_client/#set-up-wireguard-client-manually-for-other-providers)
+
+You could also do [via Hetzner or DO VPS](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/#vps-to-deploy-a-wireguard-server)
+
+If you had some mullvad VPN connection that you are no longer paying, you better remove it from the wireguard settings as you wont have internet access as long as thats setup.
+
+Same for abandoned tailscale setups :)
+
+```sh
+curl -sS https://ipinfo.io/json #the command to use to see your IP
+curl -sS http://ip-api.com/json/ #provides info about country, ISP, ...
+#curl -6 ifconfig.me #ipv6 info 
+```

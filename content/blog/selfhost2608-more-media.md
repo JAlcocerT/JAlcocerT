@@ -57,6 +57,8 @@ https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicat
 
 Is there a reliable way not to loose photos for good?
 
++ Can I use CLI agents to order my media?
+
 **Intro**
 
 I know, you might be already familiar with **PairDrop**

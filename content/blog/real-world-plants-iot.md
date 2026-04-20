@@ -193,10 +193,19 @@ A tech talk that goes from embeded systems, to data engineering and to visualiza
 If someone would have let me know that id be doing these sessions so easily:
 
 ```sh
-#selfhosted-landing\y2026-tech-talks
+#cd selfhosted-landing\y2026-tech-talks\4-iot-to-bigdata
+#html :)
 ```
 
 I mean...so hard, bc Im not using Slidev, not python-pptx nor just html for presentations.
+
+```sh
+cd .\tech-talk\sensor-to-dashboard
+#npx skills add heygen-com/hyperframe
+npx hyperframes render --quality high
+```
+
+{{< youtube "51kgUUPyIWY" >}}
 
 
 ---
