@@ -3,7 +3,7 @@ title: "Spring is here and so are weddings"
 date: 2026-04-18T13:20:21+01:00
 draft: false
 tags: ["RoadMap26","SlubneChwile","DRIP","Google Stitch & Claude Design","Agent OS"]
-description: 'The . With inspiring apps. With B2C vs B2B marketing.'
+description: 'Improving weddings. With inspiring apps. With B2C vs B2B marketing.'
 url: 'quick-weddings-poc'
 ---
 

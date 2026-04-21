@@ -3,7 +3,7 @@ title: "Design (thinking) around AI"
 date: 2026-04-19T06:20:21+01:00
 draft: false
 tags: ["Remotion vs Hyperframe","JAlcocerTech Branding","nanobanana"]
-description: 'Claude Design is here for your animations and brand'
+description: 'Claude Design is here for your animations/motion graphics and brand.'
 url: 'about-motion-graphics'
 math: true
 ---
@@ -84,6 +84,7 @@ You bet there are skills too: https://skills.sh/heygen-com/hyperframes/hyperfram
 ```sh
 npx skills add heygen-com/hyperframes
 ```
+
 Full docs: https://hyperframes.heygen.com/introduction
 
 Machine-readable index for AI tools: https://hyperframes.heygen.com/llms.txt
@@ -147,9 +148,48 @@ You can add it to readme.md like:
 
 Are you selecting? or being selected?
 
+wt* am I talking about?
 
+Im saying if you were the one who selected your partner, your job, the place that you live in
 
+Or if that was chosen for you.
 
+If you have not, you need backend engine, the hard skills.
+
+And like it or not, also the soft/frontend/marketing/attraction ones.
+
+Remember that [white labeled RE solution](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/) that went nowere due to missing [basic disqualification](https://jalcocert.github.io/JAlcocerT/ideas-to-execution/) non performed?
+
+```sh
+npx skills add heygen-com/hyperframes
+#npx skills add remotion-dev/skills
+```
+
+Some claude, 10min and 50% tokens consumed later:
+
+```sh
+git clone 
+cd ./jalcocertech-services\channel-youtube\brand-template
+npx hyperframes preview
+#npx hyperframes render
+```
+
+{{< youtube "zDMjKYQgNUE" >}}
+
+<!-- https://youtu.be/zDMjKYQgNUE -->
+
+| Dimension | HyperFrames | RemotionJS |
+| :--- | :--- | :--- |
+| **File complexity** | One HTML file | Full React project (package.json, TSX, config) |
+| **Learning curve** | CSS + GSAP — familiar if you do web | React + TypeScript + Remotion API |
+| **AI generation** | Very high — Claude writes HTML in one shot | Medium — needs project scaffold + component structure |
+| **Animation power** | GSAP — industry standard, extremely capable | `interpolate()` + `spring()` — powerful but more verbose |
+| **Setup time** | `npx hyperframes init` → write HTML → render | `npx create-video` → write TSX → wire composition → render |
+| **Reusability** | Copy HTML scenes between files | React components are properly modular and importable |
+| **Data-driven content** | Manual or templated strings in HTML | Clean — pass props, map arrays, compute from data |
+| **TTS / captions** | Built-in: `npx hyperframes tts` | Manual integration |
+| **Community / docs** | Small, new | Large, established — lots of examples |
+| **Best for** | Quick branded videos, architecture diagrams, idents, one-off compositions | Long-form series, data-driven videos, reusable component libraries |
 
 ---
 
@@ -163,6 +203,23 @@ Get to know the connections your team is missing:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
+
+HyperFrames in one sentence: it's literally one HTML file. You write scenes as
+divs, animate with GSAP in a script tag, and the CLI captures the browser to MP4.
+An AI agent can write the whole thing in one pass — which is why brand-template/index.html just appeared from a brief.
+                                                                                  
+RemotionJS: a proper React project with TSX components, useCurrentFrame(), a full
+Node build pipeline. More setup, more structure, genuinely better for data-driven
+or reusable component scenarios.
+
+The practical split: HyperFrames for anything visual/animated (idents, diagrams,  
+title cards, stat animations), RemotionJS for the automated repo→video pipeline   
+where you're feeding structured data into a template. Both tools, different jobs.
+
+
+Adding to the previous some: https://stitch.withgoogle.com/projects/6262766544279341423?pli=1
+
+
 
 ### About Design Thinking 
 
