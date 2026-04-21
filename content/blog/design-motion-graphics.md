@@ -204,8 +204,10 @@ Get to know the connections your team is missing:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-HyperFrames in one sentence: it's literally one HTML file. You write scenes as
-divs, animate with GSAP in a script tag, and the CLI captures the browser to MP4.
+HyperFrames in one sentence: it's literally one HTML file. 
+
+You write scenes as divs, animate with GSAP in a script tag, and the CLI captures the browser to MP4.
+
 An AI agent can write the whole thing in one pass — which is why brand-template/index.html just appeared from a brief.
                                                                                   
 RemotionJS: a proper React project with TSX components, useCurrentFrame(), a full
@@ -217,9 +219,39 @@ title cards, stat animations), RemotionJS for the automated repo→video pipelin
 where you're feeding structured data into a template. Both tools, different jobs.
 
 
-Adding to the previous some: https://stitch.withgoogle.com/projects/6262766544279341423?pli=1
+Adding to the previous some [stitch](https://stitch.withgoogle.com/projects/6262766544279341423?pli=1) and [claude design](https://claude.ai/design/p/5c659bb6-4d70-4954-8500-8275f3ba3950).
 
+```sh
+cd ./jalcocertech-services\channel-youtube
+uv run python genbi-1/transcribe.py 
+#genbi-1/generate_tts.py
+cd genbi-1
+#npx hyperframes transcribe narration.wav
+npx hyperframes preview .
+#npx hyperframes render
+```
 
+{{< youtube "GbR8fuwF5AA" >}}
+
+<!-- 
+https://youtu.be/GbR8fuwF5AA -->
+
+1. Write the script — spoken-word rules, say URLs as words, read it aloud first
+2. Generate audio — npx hyperframes tts or the Python script, with voice/speed guide               3. Get word timestamps — uv run python transcribe.py (avoids the whisper.exe path conflict)
+4. Map words to triggers — the 0.2–0.4s early rule, with the genbi-1 mapping as a concrete       
+example
+5. Wire the GSAP timeline — use real timestamps as position parameters, not guesses
+6. Preview and fine-tune — npx hyperframes preview . for scrubbing
+7. Render — npx hyperframes render .
+
+The key insight documented: Whisper may mishear words ("Jira" → "Gira") but the timestamp is     
+still correct — the engine timestamps the sound, not the spelling. 
+
+And the note on why we didn't use HyperFrames auto-captions here: the text IS the animation, not a subtitle overlay.
+
+{{< callout type="info" >}}
+Audio powered locally with [kokoro (TTS) and whisper (S2T)](https://github.com/JAlcocerT/jalcocertech-services/blob/master/channel-youtube/tts-hyperframe.md)
+{{< /callout >}}
 
 ### About Design Thinking 
 
@@ -289,8 +321,6 @@ Lean Startup thrives in environments with high uncertainty. It shifts the docume
 * **In the PRD (The MVP):** Lean Startup aggressively prunes the PRD. It forces the team to identify the **Minimum Viable Product**. Any feature that doesn't directly test the core hypothesis is moved to a "Backlog" or discarded to save speed.
 * **In the FRD (Instrumentation):** The FRD must include "Analytics Requirements." You aren't just documenting how a button works; you are documenting how that button's usage is **tracked and measured** to feed the "Learn" part of the loop.
 
-
-
 2. Systems Thinking (The "Big Picture" View)
 
 Systems thinking is used when a product is part of a massive, interconnected ecosystem (like a city's power grid, a global supply chain, or a complex ERP).
@@ -298,7 +328,6 @@ Systems thinking is used when a product is part of a massive, interconnected eco
 * **In the BRD (Interdependencies):** Systems thinking identifies **Feedback Loops**. A business goal to "Increase Sales" might have a reinforcing loop that accidentally "Overwhelms Customer Support." The BRD uses systems mapping to ensure the business goal doesn't break another part of the company.
 * **In the PRD (Contextual Impact):** The PRD looks beyond the user's screen. It defines requirements for how this product interacts with third-party APIs, legacy databases, and environmental factors. It ensures the "What" doesn't cause a "Butterfly Effect" of errors elsewhere.
 * **In the FRD (Structural Logic):** This is where **Causal Loop Diagrams** or **Stock and Flow Diagrams** live. The FRD defines the system's "State"—how data flows through the pipes, where it pools (stocks), and what triggers the release of information.
-
 
 | Framework | Best fit in... | Key Question it answers |
 | :--- | :--- | :--- |
@@ -308,7 +337,9 @@ Systems thinking is used when a product is part of a massive, interconnected eco
 
 **How to combine them**
 
-In a modern product team, you rarely use just one. You might use **Systems Thinking** to map out the complexity of a new healthcare platform (BRD), **Design Thinking** to figure out how a doctor will actually use the tablet (PRD), and **Lean Startup** to decide which single feature to build first to see if patients even want to log in (MVP).
+In a modern product team, you rarely use just one.
+
+You might use **Systems Thinking** to map out the complexity of a new healthcare platform (BRD), **Design Thinking** to figure out how a doctor will actually use the tablet (PRD), and **Lean Startup** to decide which single feature to build first to see if patients even want to log in (MVP).
 
 Does your current project feel more like a "human" problem (Design), a "market" mystery (Lean), or a "complex machine" (Systems)?
 
@@ -319,6 +350,15 @@ Does your current project feel more like a "human" problem (Design), a "market" 
 
 ## FAQ
 
+GSAP (GreenSock Animation Platform) is a JavaScript library for animating things on a webpage —  
+moving elements, fading them in, scaling them, rotating them — with precise control over timing.
+                                                                                                    The core idea: instead of CSS transitions (which are limited and hard to sequence), GSAP gives
+you a programmable timeline where you say exactly what happens and when.                         
+
+Why HyperFrames uses it: when you render a video, the capture engine scrubs through time frame by
+  frame. GSAP's timeline is deterministic — at t=14.1s, element X is at exactly this position,    
+with exactly this opacity. The capture engine reads that state and renders it to a pixel-perfect 
+video frame. CSS animations are not scrub-friendly; GSAP is.
 
 
 
