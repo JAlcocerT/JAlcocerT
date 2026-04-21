@@ -203,6 +203,7 @@ I mean...so hard, bc Im not using Slidev, not python-pptx nor just html for pres
 cd .\tech-talk\sensor-to-dashboard
 #npx skills add heygen-com/hyperframe
 npx hyperframes render --quality high
+#npx hyperframes render --fps 30 --quality high --output renders/jalcocertech-dhtwebapp.mp4
 ```
 
 {{< youtube "51kgUUPyIWY" >}}

@@ -27,7 +27,7 @@ Time to put those together with a quick WebApp/SaaS to free my time and **enhanc
 
 How about **improving CX** for DIYs websites?
 
-You know that you can reach `webaudit.jalcocertech.com`
+You know that you can reach `webaudit.jalcocertech.com` as created [here](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/#programmatic-free-audits-for-websites) on [this repo](https://github.com/JAlcocerT/poc_webs_magnet)
 
 The thing is: Does it needs to be a trade of between a Wordpress/Ghost/Wix or a code driven cool SSG?
 

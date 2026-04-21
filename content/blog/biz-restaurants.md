@@ -229,6 +229,8 @@ Understand that **who** you sell to (Niche) dictates **what** you sell (Offer) a
 | **One Channel** | One of the ,Core-4': Warm OutReach / Free Content / Cold OutReach / Paid Ads |
 | The Lead Magnet | Strategy Type: , Delivery Method: |
 
+The “One Product / One Channel / Lead Magnet” assumes commercial intent and audience acquisition mechanics. Some repos are authority assets, not direct offers. 
+
 The Matrix: *Strategy vs. Medium for leads*
 
 | Strategy (The 3 Types) | Software Delivery | Information Delivery | Service Delivery | Physical Delivery |

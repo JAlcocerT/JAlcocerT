@@ -58,8 +58,10 @@ It incorporated a programmatic 101 web audit.
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="NEW - Web Magnet" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Vite x Astro x Web Audit" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="NEW-Web Magnet" image="/blog_img/apps/gh-jalcocert" subtitle="Vite x Astro x Web Audit" >}}
 {{< /cards >}}
+
+
 
 
 People who have some product/service still need a website.

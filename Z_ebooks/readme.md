@@ -2,6 +2,8 @@
 > [!IMPORTANT]
 > You can create your own pdf ebooks following [these docs](https://jalcocert.github.io/JAlcocerT/cool-ebooks/)
 
+For modular knowledge, visit: <https://ebooks.jalcocertech.com/>
+
 ---
 
 Created few **sample pdf ebooks** for expanding knowledge in few topics Ive found interesting while learning and creating [these docs](https://jalcocert.github.io/JAlcocerT/docs/).

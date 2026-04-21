@@ -54,6 +54,8 @@ https://www.youtube.com/watch?v=j1oJi1Pfobs
 
 I got inspored by DotCSV again :)
 
+And continue the [repo to doc/video seen here](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/)
+
 
 ### RemotionJS
 

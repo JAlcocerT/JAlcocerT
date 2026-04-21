@@ -133,6 +133,12 @@ Im now using https://github.com/Litlyx/litlyx for the **web analytics** of this 
 
 > Self hosted app for your knitting or crochet projects
 
+* https://github.com/FashionFreedom/Seamly2D
+
+> Open source patternmaking software to democratize fashion.
+
+
+
 
 ### Knitting vs Sewing
 
