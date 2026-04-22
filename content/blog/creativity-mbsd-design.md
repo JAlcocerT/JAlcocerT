@@ -161,7 +161,7 @@ If it needs to change the hole size later, it has to move hundreds of vertices m
 
 ## Conclusions
 
-So here you have the working pipeline.
+Here you have the working pipeline to bring mechanisms to live:
 
 ```sh
 choco install blender --version=4.2.2 -y                                      
@@ -173,11 +173,12 @@ Oh, not a data pipeline [this time](#outro).
 
 There is "Pro" way to handle this.
 
-We have the **Logic** (Simulator)
+We have the **Logic** (Py mbsd Simulator)
 
-Wow you need the **Geometry** (CAD), and finally the **Cinematics** (Blender).
+Now you need the **Geometry** (CAD), and finally the **Cinematics** (Blender).
 
 ```sh
+#https://github.com/JAlcocerT/3Design/tree/main/z-cadquery
 cd z-cadquery
 & "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe" --python blender_scene.py                
 & "C:\Program Files\Blender Foundation\Blender 4.2\blender.exe" --background slider_crank.blend
@@ -219,6 +220,7 @@ Instead of hard-coding dimensions, you map your simulator's variables to CadQuer
 This is where you make it "look cool."
 
 * **Data-Driven Animation:** You don't need to manually animate. You can feed your simulator's CSV or JSON output into a Blender Python script (`bpy`).
+
 * **The "Realism" Pass:** * **Beveling:** In CAD, edges are mathematically sharp. In Blender, you add a "Bevel Modifier" to catch highlights, which is the secret to making 3D objects look "real."
     * **Motion Blur:** Since you have the kinematic vectors, Blender can calculate perfect motion blur for the moving parts.
 
@@ -244,10 +246,11 @@ A Simple "Agentic" Workflow Strategy:
 
 ### Outro
 
-
 Why would you be doing D&A when agents are taking over?
 
-Not sure if you are aware, but any of the ones in the leaderboard understand perfectly pbip files, lookML or simply...create awsome full stack web apps with FastAPI and Vite if you care enough just to put clear requirements.
+Not sure if you are aware, but any of the models in the arena leaderboard understand perfectly `pbip` files, lookML or simply...
+
+create awsome full stack web apps with FastAPI and Vite if you care enough just to put clear BRD/requirements.
 
 * https://github.com/JAlcocerT/PBi
 
@@ -276,9 +279,9 @@ docker run -e OPENAI_API_KEY=<YOUR_OPEN_AI_KEY> -p 8080:80 ghcr.io/chartdb/chart
 
 And specially:
 
-* https://background-agents.com/ - Individual speed !+ organizational velocity :)
-* https://arena.ai/leaderboard
-* https://status.claude.com/ - Imagine the day that you'd be obsolete when this is down
+* `https://background-agents.com/` - Individual speed !+ organizational velocity :)
+* `https://arena.ai/leaderboard`
+* `https://status.claude.com/` - Imagine the day that you'd be obsolete when this is down
 
 ```sh
 claude
@@ -297,7 +300,6 @@ uv run tests/plot_historical_gweiss.py HESM --start 2015-01-01 --brand "@LibrePo
 Wasnt it just a Time travel machine to consume energy that left the sun ~250/300M years ago?
 
 Isnt it just crazy...?
-
 
 ---
 

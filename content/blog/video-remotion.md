@@ -257,7 +257,7 @@ npx remotion render SoftwareDrawdown software-drawdown.mp4
 
 how could you think that making this kind of ~~video as a ~~code so cheap had no deflationary consecuencies?
 
-PS: price is not current earnings, but current + estimated discounted cash flows
+**PS**: price is not current earnings, but current + estimated discounted cash flows
 
 Will the future hold so stable?
 

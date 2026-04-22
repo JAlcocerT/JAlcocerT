@@ -44,7 +44,7 @@ if you are curious, running this [in a mac M2](https://jalcocert.github.io/JAlco
 ### Web Technologies
 
 
-Because the web technologies can do it
+Because the web technologies can do a lot.
 
 <!-- 
 https://www.youtube.com/watch?v=j1oJi1Pfobs 
@@ -67,9 +67,9 @@ And continue the [repo to doc/video seen here](https://jalcocert.github.io/JAlco
 
 if you wondered how [lando website was possible](https://jalcocert.github.io/JAlcocerT/micro-saas/#quantux)
 
-Or how Ive been tinkering with a custom mbsd animator for the augmented reality part (AR)
+Or how Ive been tinkering with a [custom mbsd simulator/animator](https://jalcocert.github.io/JAlcocerT/2d-mbsd/#a-2d-mbsd-simulator) for the augmented reality part (AR)
 
-ThreeJS is the answer:
+ThreeJS is the answer if you dont want to [mess around with python->CadQuery->Blender](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#conclusions)
 
 
 
@@ -118,7 +118,7 @@ The goal?
 To make a catchy short video as an intro for this [big data x dht's related tech talk](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk)
 
 ```md
-thats amazing, now with your hyperframe skills, and looking at the dht-webapp look and feel, can we make    a intro-video.md with a draft of what would be a catchy video that i can upload to youtube for the team    to have and see whats coming? lets say 30 seconds duration. lets also consider all the psyco stuf
+thats amazing, now with your hyperframe skills, and looking at the dht-webapp look and feel, can we make a intro-video.md with a draft of what would be a catchy video that i can upload to youtube for the team    to have and see whats coming? lets say 30 seconds duration. lets also consider all the psyco stuf
 ```
 
 ```sh
@@ -141,7 +141,49 @@ You can add it to readme.md like:
 [![Watch the demo](https://img.youtube.com/vi/51kgUUPyIWY/0.jpg)](https://www.youtube.com/watch?v=51kgUUPyIWY) 
 ```
 
-### F1 Data Stories
+### Data Stories - F1, Finance...
+
+You could go with matplotlib:
+
+```sh
+#git clone https://github.com/JAlcocerT/eda-f1
+#cd eda-f1
+make help
+```
+
+Or with remotionJS:
+
+```sh
+#https://github.com/JAlcocerT/eda-f1/tree/master/remotion-f1
+git clone https://github.com/JAlcocerT/VideoEditingRemotion
+cd ./VideoEditingRemotion/remotion-cc
+#time npx remotion render GoldPrice gold-price.mp4 #just 20seconds
+#npx remotion render GoProHudB renders/gopro-hud-GH020417.mp4 --concurrency=2                                                     #https://github.com/JAlcocerT/VideoEditingRemotion/blob/main/remotion-cc/src/F1ChampionshipComposition.tsx
+make render-f1-championship                
+```
+
+<!-- https://youtu.be/aAfD2Yfnk0Q -->
+
+{{< youtube "aAfD2Yfnk0Q" >}}
+
+
+Who could guess that [gold is so beautiful to animate](https://youtu.be/hTz2J4EgNOs)?
+```sh
+#make render-gold
+make render-inflation-fedrate
+make render-yield-curve
+```
+
+{{< youtube "idhTXShKHvw" >}}
+
+<!-- https://youtu.be/idhTXShKHvw -->
+
+yea, financial data called via API and rendered into a video:
+
+<!-- https://youtu.be/USSx0kKZE8Y -->
+
+{{< youtube "USSx0kKZE8Y" >}}
+
 
 
 ### A Proper brand
@@ -210,14 +252,11 @@ You write scenes as divs, animate with GSAP in a script tag, and the CLI capture
 
 An AI agent can write the whole thing in one pass — which is why brand-template/index.html just appeared from a brief.
                                                                                   
-RemotionJS: a proper React project with TSX components, useCurrentFrame(), a full
-Node build pipeline. More setup, more structure, genuinely better for data-driven
-or reusable component scenarios.
+RemotionJS: a proper React project with TSX components, useCurrentFrame(), a full Node build pipeline. 
 
-The practical split: HyperFrames for anything visual/animated (idents, diagrams,  
-title cards, stat animations), RemotionJS for the automated repo→video pipeline   
-where you're feeding structured data into a template. Both tools, different jobs.
+More setup, more structure, genuinely better for data-driven or reusable component scenarios.
 
+The practical split: HyperFrames for anything visual/animated (idents, diagrams, title cards, stat animations), RemotionJS for the automated repo→video pipeline where you're feeding structured data into a template. Both tools, different jobs.
 
 Adding to the previous some [stitch](https://stitch.withgoogle.com/projects/6262766544279341423?pli=1) and [claude design](https://claude.ai/design/p/5c659bb6-4d70-4954-8500-8275f3ba3950).
 

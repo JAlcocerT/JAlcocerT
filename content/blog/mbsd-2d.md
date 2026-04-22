@@ -141,7 +141,7 @@ Given a defined trajectory - what are the forces that make it possible?
 
 As Im preparing for 3D, just thought that matplotlib could be insufficient.
 
-I got to know about: https://threejs.org/
+I got to know about **3JS**: `https://threejs.org/`
 
 Just tweaked the architecture and made it hybrid...
 
@@ -152,6 +152,8 @@ cd /home/jalcocert/Desktop/mbsd/2D-Dynamics && source venv/bin/activate && pytho
 ```
 
 That will generate a JSON export with what the mechanism do.
+
+Meaning snapshots of its position defined overtime
 
 To visualize whats coming: *and debug*
 
