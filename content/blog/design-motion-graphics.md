@@ -10,6 +10,7 @@ math: true
 
 **Tl;DR**
 
+The end of excuses for NOT having a brand.
 
 **Intro**
 
@@ -59,9 +60,26 @@ And continue the [repo to doc/video seen here](https://jalcocert.github.io/JAlco
 
 ### RemotionJS
 
+
+As we learnt here, just: https://www.remotion.dev/prompts
+
 ```sh
 #npx skills add remotion-dev/skills
+npx remotion render BrandIntro renders/intro-jalcocertech.mp4
+npx remotion render CEOIntro out/ceo-intro.mp4
+npx remotion render CEOIntro out/intro-jalcocertech.mp4
 ```
+
+Or just:
+
+```sh
+npx remotion render FullVideo out/full-video.mp4 
+```
+
+<!-- https://youtu.be/UDbUPYFfBxA -->
+
+{{< youtube "UDbUPYFfBxA" >}}
+
 
 ### ThreeJS and BabbylonJS
 
@@ -162,21 +180,21 @@ cd ./VideoEditingRemotion/remotion-cc
 make render-f1-championship                
 ```
 
-<!-- https://youtu.be/aAfD2Yfnk0Q -->
+See [this](https://youtu.be/aAfD2Yfnk0Q)
 
-{{< youtube "aAfD2Yfnk0Q" >}}
+<!-- {{< youtube "aAfD2Yfnk0Q" >}} -->
 
 
 Who could guess that [gold is so beautiful to animate](https://youtu.be/hTz2J4EgNOs)?
 ```sh
 #make render-gold
-make render-inflation-fedrate
+#make render-inflation-fedrate
 make render-yield-curve
 ```
 
-{{< youtube "idhTXShKHvw" >}}
+<!-- {{< youtube "idhTXShKHvw" >}} -->
 
-<!-- https://youtu.be/idhTXShKHvw -->
+Or [this](https://youtu.be/idhTXShKHvw)
 
 yea, financial data called via API and rendered into a video:
 
@@ -464,7 +482,3 @@ Code editor: You'll need a code editor of your choice to write and edit your Mot
 (Optional) ffmpeg: While not strictly necessary for basic functionality, ffmpeg is a powerful tool for video encoding and manipulation. Motion Canvas can leverage ffmpeg for exporting your animations as videos. You can find installation instructions for ffmpeg based on your operating system through a web search. 
 
 {{< /details >}}
-
-### Python x OpenSCAD
-
-* https://github.com/SolidCode/SolidPython

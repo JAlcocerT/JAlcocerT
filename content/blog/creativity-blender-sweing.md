@@ -22,3 +22,8 @@ Why not combining [blender](https://jalcocert.github.io/JAlcocerT/using-blender-
 
 
 ## FAQ
+
+
+### Python x OpenSCAD
+
+* https://github.com/SolidCode/SolidPython

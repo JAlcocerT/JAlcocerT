@@ -127,6 +127,7 @@ This self-sustaining loop allows **electromagnetic waves** (light, Wi-Fi, X-rays
 Which of these four feels the most intuitive to you, or is there a specific one that's still a bit fuzzy?
 
 The phenomenon you're describing—often called **inductive kickback** or **flyback**—is primarily driven by **Faraday’s Law of Induction**, though it's the result of a "disagreement" between Faraday’s Law and **Ampère’s Law**.
+
 Here is how the physics plays out the moment you cut the power:
 
 ### The Primary Culprit: Faraday’s Law
@@ -212,11 +213,9 @@ uv sync
 uv run main.py
 ```
 
-{{< youtube "nNMUY_GUw9s" >}}
+<!-- {{< youtube "nNMUY_GUw9s" >}} -->
 
-<!-- https://youtu.be/nNMUY_GUw9s -->
-
-Yep, private :)
+Yep, [private video](https://youtu.be/nNMUY_GUw9s) :)
 
 ---
 
@@ -233,13 +232,5 @@ but not sure on the how?
 {{< /cards >}} -->
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Get some of my time ↗" icon="book-open" >}}
-  {{< card link="https://cal.com/jalcocertech/consulting" title="Collaborations ↗" icon="user" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Get some of my time ↗" icon="user" >}}
 {{< /cards >}}
-
-
----
-
-## FAQ
-
-
