@@ -25,7 +25,7 @@ You got it, there are few ways around
 Ive tried a few:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/3DDesign" title="3d design x blender | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3d design x blender | Github ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion" title="Shopofy AI COO | Landing x App | Github ↗" icon="github" >}}
 {{< /cards >}}
 
@@ -34,12 +34,14 @@ Ive tried a few:
 [Experimenting with blender](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/) has been great.
 
 ```sh
+git clone https://github.com/JAlcocerT/3Design
+
 
 ```
 
 Ive also been using blender together with mechanisms [here](https://jalcocert.github.io/JAlcocerT/about-constrained-mechanism/#2d-kinematics-x-blender)
 
-if you are curious, running this [in a mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) was way faster
+> Running this [in a mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) was waaay faster
 
 
 ### Web Technologies
@@ -70,7 +72,7 @@ npx remotion render CEOIntro out/ceo-intro.mp4
 npx remotion render CEOIntro out/intro-jalcocertech.mp4
 ```
 
-Or just:
+Or just [render them all](https://github.com/JAlcocerT/jalcocertech-services/tree/master/channel-youtube/jalcocertech-intros/src):
 
 ```sh
 npx remotion render FullVideo out/full-video.mp4 
@@ -129,7 +131,7 @@ You can see the video compositions [like this test](https://github.com/JAlcocerT
 
 ### Tech Talk Intro Videos
 
-Ive used hyperframe as a second test here
+Ive used hyperframe as a [second test here](https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks/4-iot-to-bigdata/tech-talk/sensor-to-dashboard)
 
 The goal?
 
