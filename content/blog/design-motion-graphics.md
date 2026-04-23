@@ -384,7 +384,6 @@ While Design Thinking focuses on **human needs**, Lean Startup focuses on **mark
 
 Here is where they plug into the BRD, PRD, and FRD framework:
 
-
 1. Lean Startup (The "Build-Measure-Learn" Loop)
 
 Lean Startup thrives in environments with high uncertainty.

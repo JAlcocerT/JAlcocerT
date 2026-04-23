@@ -14,7 +14,9 @@ math: true
 An excuse to upgrade to Claude Max plan and [burn tokens](https://claude.ai/settings/usage).
 
 Drop if the wordd free still has meaning for you.
+* https://github.com/carboneio/carbone
 
+>  Fast and simple report generator, from JSON to pdf, xslx, docx, odt... 
 **Intro**
 
 You can tell that i like animations and videos.
@@ -24,11 +26,18 @@ You can tell that i like animations and videos.
 git init && git add . && git commit -m "Initial commit: YT Videos as a Code HUB" && gh repo create yt-videos-as-a-code --private --source=. --remote=origin --push
 
 #The trick
-git submodule add https://github.com/JAlcocerT/JAlcocerT.git external/JAlcocerT
-git commit -m "Add JAlcocerT repo as submodule"
+git submodule add https://github.com/JAlcocerT/VideoEditingRemotion.git external/VideoEditingRemotion
+git commit -m "Add VideoEditingRemotion repo as submodule"
 #git clone --recurse-submodules https://github.com/JAlcocerT/yt-videos-as-a-code.git
 
-#git submodule add https://github.com/JAlcocerT/DataInMotion.git external/RPi external/DataInMotion
+git submodule add https://github.com/JAlcocerT/DataInMotion.git external/DataInMotion
+git commit -m "Add DataInMotion repo as submodule" #remember that the goodies are not in the main branch
+
+git submodule add -b libreportfolio https://github.com/JAlcocerT/DataInMotion.git external/DataInMotion-libreportfolio
+git submodule update --remote external/DataInMotion-libreportfolio
+
+git submodule add https://github.com/JAlcocerT/eda-f1.git external/eda-f1
+git commit -m "Add eda-f1 repo as submodule"
 ```
 
 yea...
@@ -45,10 +54,32 @@ It was time to put together all those nice animations related repositories to sh
 
 ### Formula 1 Animations
 
+This engine is a yoke
 
 ---
 
 ## Conclusions
+
+There are 2 HUBs so far:
+
+1. the jalcocertech one
+
+2. the general video as a code:
+
+```sh
+
+```
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/yt-videos-as-a-code" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NEW - Source Code HUB for multi-purpose video as a code" >}}
+  {{< card link="https://github.com/JAlcocerT/jalcocertech-services" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code brand HUB for jalcocertech" >}}
+{{< /cards >}}
+
+And a 3rd one coming...
+
+Does this mean that...is possible to... do 1, do on top and...3 HUBs?
+
+oh shat...
 
 
 ## FAQ

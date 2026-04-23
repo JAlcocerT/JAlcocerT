@@ -23,6 +23,7 @@ How can you create a mechanism that passes at certain points?
   {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
 {{< /cards >}}
 
+https://github.com/JAlcocerT/mbsd/tree/master/2D-Synthesis
 
 And that it will be able to turn and *doesnt break*?
 

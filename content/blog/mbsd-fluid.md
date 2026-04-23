@@ -8,6 +8,7 @@ url: 'fluid-dynamics-ice'
 math: true
 ---
 
+https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics
 
 **TL;DR**
 

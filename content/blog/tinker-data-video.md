@@ -214,14 +214,13 @@ This has been the most practical model among the ones I tried:
 
 ## Real Estate
 
-This is a snapshot in time of real estate situation in France:
+This is a snapshot in time of **real estate situation in France**:
 
 {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="eda-geospatial Github ↗" icon="github" >}}
 
 
 ```sh
 #git clone https://github.com/JAlcocerT/eda-geospatial
-
 ```
 
 {{< youtube "ctfGunPZwJ4" >}}

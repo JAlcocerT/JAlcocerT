@@ -130,18 +130,19 @@ i love this workflow and it works great for one example that we have for the sli
   equivalents scripts that will interact with cadquery and blender programatically?
 ```
 
-. How mbsd works — coordinate system, constraint types, solving pipeline, all 6 example mechanisms
-  2. The existing slider-crank pipeline — what data.json contract looks like today
-  3. What needs to be built per mechanism — 3 scripts each:
-    - export_<name>.py — runs the mbsd solver, converts 2D coords to 3D and writes data.json
-    - cad_parts_<name>.py — CadQuery parametric parts → STLs
-    - blender_scene_<name>.py — Blender scene builder (mostly copy of existing one)
-  4. Per-mechanism notes — four-bar, Geneva drive, Scotch yoke, pantograph specifics
-  5. Suggested folder layout and a shared/blender_utils.py idea to avoid duplication
-  6. The data contract — the data.json schema everything must agree on
-  7. Gap analysis table — what exists vs what needs building
+How mbsd works — coordinate system, constraint types, solving pipeline, all 6 example mechanisms
 
-  The key insight is that the mbsd solver is already generic — you just need the 3 glue scripts per mechanism, using slider-crank as the template.
+2. The existing slider-crank pipeline — what data.json contract looks like today
+3. What needs to be built per mechanism — 3 scripts each:
+  - export_<name>.py — runs the mbsd solver, converts 2D coords to 3D and writes data.json
+  - cad_parts_<name>.py — CadQuery parametric parts → STLs
+  - blender_scene_<name>.py — Blender scene builder (mostly copy of existing one)
+4. Per-mechanism notes — four-bar, Geneva drive, Scotch yoke, pantograph specifics
+5. Suggested folder layout and a shared/blender_utils.py idea to avoid duplication
+6. The data contract — the data.json schema everything must agree on
+7. Gap analysis table — what exists vs what needs building
+
+The key insight is that the mbsd solver is already generic — you just need the 3 glue scripts per mechanism, using slider-crank as the template.
 
 Will it work for any mechanism? Yes, with one caveat per mechanism type:
 
@@ -242,6 +243,10 @@ https://youtu.be/iNl3s09BLoA -->
 No 3D speeds and 3D forces for the mbsd model so far.
 
 But dont worry, they are coming.
+
+Only that you have to provide the right prompts to create these.
+
+Its easy...but not that easy.
 
 <!-- https://www.youtube.com/watch?v=fO_4eN-IyOo -->
 
