@@ -52,7 +52,13 @@ You can do local TTS as I was doing [here](https://jalcocert.github.io/JAlcocerT
 
 I was initially using transcription [here](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#obs--openai-whisper) to create the audio for my tech yt videos.
 
-That was based on OpenAI keys, see : https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openait2a.py
+That was based on OpenAI keys, [see how](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openait2a.py)
+
+You can also [use Kokoro](https://jalcocert.github.io/JAlcocerT/about-motion-graphics/#hyperframe):
+
+```sh
+pip install kokoro-onnx soundfile --user
+```
 
 * https://github.com/resemble-ai/chatterbox
 
@@ -60,7 +66,13 @@ That was based on OpenAI keys, see : https://github.com/JAlcocerT/Streamlit-Mult
 
 ## S2T / Transcription
 
-See also: https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py
+You can try locally with Whisper:
+
+```sh
+pip install openai-whisper --user
+```
+
+See also [the OpenAI way](https://github.com/JAlcocerT/Streamlit-MultiChat/blob/main/Z_Tests/OpenAI/openais2t.py)
 
 ## Other OSS Audio Apps
 

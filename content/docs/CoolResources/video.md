@@ -13,8 +13,9 @@ draft: false
 
 2. KDEnlive: *which imo, is fantastic*
 
-
 ![KDENlive Comments](/blog_img/karting/kdenlive-gopro-gps-comments.png)
+
+You can zoom in:
 
 ![alt text](/blog_img/outro/kdenlive-zoom.png)
 
@@ -29,11 +30,14 @@ Search for "Transform".
 Drag and drop the Transform effect directly onto your video clip in the timeline.
 
 2. Adjust the Zoom (Static Zoom)
+
 Once the effect is applied, look at the Effect Stack panel (usually on the right):
 
 Size: Change the percentage (e.g., set it to 150% to zoom in).
 
-Position: You will see a red rectangle in the Project Monitor. Grab the center of the rectangle to move the video until the specific part you want to highlight is centered.
+Position: You will see a red rectangle in the Project Monitor.
+
+Grab the center of the rectangle to move the video until the specific part you want to highlight is centered.
 
 Tip: You can also adjust the X and Y coordinates in the Effect Stack for more precision.
 
@@ -90,17 +94,16 @@ Manim is the tool for deep mathematical visualization with powerful programmatic
 | Learning Curve         | Moderate                         | Moderate                        | Steep (programming + math)        |
 | Community & Docs       | Growing, good docs                 | Strong community & documentation | Mature community, rich resources  |
 
-
-
-
 * https://github.com/mifi/lossless-cut
 
 * https://github.com/HandBrake/HandBrake - an OSS UI for Video compression (which does not use FFMPEG)
 
-
 ---
 
 ## Video as a Code
+
+
+### FFMPEG
 
 It's all about using **FFMPEG**: https://github.com/FFmpeg/FFmpeg
 
@@ -136,11 +139,14 @@ And I have a dedicated repository for ffmpeg video creation:
 
 
 
-### Converting Video
+
+## Converting Video
 
 If people around you have iphones...
 
-The main difference between iPhone `.mov` and `.mp4` files is the format, compatibility, and intended use: .mov is Apple's native format designed for high-quality video editing on Apple devices, while `.mp4` is a globally accepted standard optimized for compatibility and efficient sharing across platforms.
+The main difference between iPhone `.mov` and `.mp4` files is the format, compatibility, and intended use.
+
+The `.mov` is Apple's native format designed for high-quality video editing on Apple devices, while `.mp4` is a globally accepted standard optimized for compatibility and efficient sharing across platforms.
 
 
 | Feature           | .mov                | .mp4                  |
@@ -159,7 +165,7 @@ The main difference between iPhone `.mov` and `.mp4` files is the format, compat
 ffmpeg -i input.mov -c:v copy -c:a copy output.mp4
 ```
 
-### Extracting Video Data
+## Extracting Video Data
 
 For crazy people that like [trackdays](https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/), D&A [geospatial geeks](https://jalcocert.github.io/JAlcocerT/geospatial-data/) or somebody with a [gopro](https://jalcocert.github.io/JAlcocerT/geospatial-data/#gopro-metadata-extraction)
 

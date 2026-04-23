@@ -4,6 +4,8 @@ type: docs
 prev: /docs/android/
 next: docs/
 draft: false
+sidebar:
+  open: false
 ---
 
 
@@ -34,3 +36,7 @@ https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
   {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/" title="Three Body x Flas" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask web app 101 | Blog Post" >}}
   {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
 {{< /cards >}}
+
+
+## Electronics
+

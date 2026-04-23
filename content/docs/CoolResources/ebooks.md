@@ -77,7 +77,9 @@ You can also extract information from PDFs with Kreuzberg:
 
 Arent these just PDFs?
 
-Yes, but with a different structure.
+Yes! 
+
+But with a different structure.
 
 That said, you can still do [infographics as code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#infographics-as-a-code)
 
