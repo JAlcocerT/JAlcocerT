@@ -83,7 +83,7 @@ https://www.youtube.com/watch?v=TiQEElXyY2w
 
 ### Optimum Path
 
-If you know a **circuit's geometry**, why not estimating the best path for a given kart to go for those hot laps?
+Given a **circuit's geometry**, why not estimating the best path for a given kart to go for those hot laps?
 
 <!-- ![IoRacing IoTechCrafts IoTrack](/blog_img/web/WebsSnapshots/web_ioracing.png) -->
 <!-- 
@@ -103,11 +103,12 @@ This is also a chance to try more complex algorithms:
 
 ### Optimum Gears
 
-Probably you Kart have no gears.
+Probably you Kartr have no gears.
 
 But in case it does, you will need to take this into consideration: *Maaax Poweeeer...*
 
-* https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears
+
+The [Optimum Gears](https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears) can be applied similarly if yo go for track days with your daily driver.
 
 
 ## Other Racing Resources

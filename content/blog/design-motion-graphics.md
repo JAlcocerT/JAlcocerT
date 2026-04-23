@@ -127,6 +127,17 @@ Generated automatically [with the OSS kokoro TTS](https://github.com/thewh1teagl
 
 You can see the video compositions [like this test](https://github.com/JAlcocerT/jalcocertech/tree/main/z-hyperframes) at: `http://localhost:3002/#project/z-hyperframes`
 
+### A word for Matplotlib
+
+You can still do nice data animations with matplotlib!
+
+Its just that for a brand, just level up with any of the previous.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/keystaticcms-astrodb/#animations" title="Tinkering with Animations | Post" image="https://img.youtube.com/vi/YuvHXyFeRV4/hqdefault.jpg" subtitle="Posting to Twitter or Youtube those animations 101." >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Data In Motion Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="DatainMotion Source Code on Github. Generating mp4 animations with Matplotlib and Python..." >}}
+{{< /cards >}}
+
 ## Applications
 
 ### Tech Talk Intro Videos
@@ -367,14 +378,18 @@ The FRD is highly technical, detailing how the system must behave to satisfy the
 > > Design thinking ensures that the "Golden Thread" of user value remains intact from the first business meeting to the final technical spec.
 
 
-Both **Lean Startup** and **Systems Thinking** act as different "operating systems" for your documentation. While Design Thinking focuses on **human needs**, Lean Startup focuses on **market viability**, and Systems Thinking focuses on **structural logic**.
+Both **Lean Startup** and **Systems Thinking** act as different "operating systems" for your documentation. 
+
+While Design Thinking focuses on **human needs**, Lean Startup focuses on **market viability**, and Systems Thinking focuses on **structural logic**.
 
 Here is where they plug into the BRD, PRD, and FRD framework:
 
 
 1. Lean Startup (The "Build-Measure-Learn" Loop)
 
-Lean Startup thrives in environments with high uncertainty. It shifts the documentation from "predicting the future" to "testing a hypothesis."
+Lean Startup thrives in environments with high uncertainty.
+
+It shifts the documentation from "predicting the future" to "testing a hypothesis."
 
 * **In the BRD (Pivot or Persevere):** The BRD becomes a collection of **hypotheses** rather than fixed requirements. Instead of "The business needs X," it’s "We believe that by doing X, we will achieve Y (Metric), and we will know we are right when we see Z (Data)."
 * **In the PRD (The MVP):** Lean Startup aggressively prunes the PRD. It forces the team to identify the **Minimum Viable Product**. Any feature that doesn't directly test the core hypothesis is moved to a "Backlog" or discarded to save speed.
@@ -484,3 +499,30 @@ Code editor: You'll need a code editor of your choice to write and edit your Mot
 (Optional) ffmpeg: While not strictly necessary for basic functionality, ffmpeg is a powerful tool for video encoding and manipulation. Motion Canvas can leverage ffmpeg for exporting your animations as videos. You can find installation instructions for ffmpeg based on your operating system through a web search. 
 
 {{< /details >}}
+
+
+<!-- https://www.youtube.com/shorts/ls_66dIM9-4 -->
+
+{{< youtube "ls_66dIM9-4" >}}
+
+
+Motion Canvas is great for interactive, visually rich web animations. 
+
+Remotion is best for React developers needing video automation and scaling.
+
+Manim is the tool for deep mathematical visualization with powerful programmatic control.
+
+
+| Feature/Aspect          | Motion Canvas                       | Remotion                          | Manim                              |
+|------------------------|-----------------------------------|----------------------------------|-----------------------------------|
+| Programming Language   | TypeScript (Web, JS)               | React (JavaScript)                | Python                            |
+| Main Use Case          | Vector animations & presentations | Programmatic video creation      | Math & educational animations     |
+| Preview/Interactivity  | Real-time visual preview           | React-driven dynamic rendering   | No live preview, manual rendering |
+| Complexity & Control   | Moderate, web tech based           | High for UI/UX videos            | High for math/algorithm detail    |
+| Target Users           | Web developers, educators          | React developers, marketers      | Educators, researchers, math pros |
+| Learning Curve         | Moderate                         | Moderate                        | Steep (programming + math)        |
+| Community & Docs       | Growing, good docs                 | Strong community & documentation | Mature community, rich resources  |
+
+* https://github.com/mifi/lossless-cut
+
+* https://github.com/HandBrake/HandBrake - an OSS UI for Video compression (which does not use FFMPEG)

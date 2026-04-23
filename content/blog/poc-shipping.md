@@ -345,30 +345,6 @@ whois leadarchitect.org| grep -i -E "(creation|created|registered)"
 dig slubnechwile.com
 ```
 
-### Apps that Inspire
-
-1. ~~DocuSign~~ DocuSeal
-2. Tiinyhost
-
-Whats interesting?
-
-That you can get inspired by these webs UI/X with google stitch nowadays.
-
-Inspiring apps: all those `pwa` like that just...work
-
-* https://bentopdf.com/index.html
-* Docuseal
-* it-tools
-* Vert - https://jalcocert.github.io/JAlcocerT/wasm/
-* Pairdrop...
-
-
-* https://github.com/scio-labs/inkathon
- 
-Full-Stack DApp Boilerplate for Substrate and ink! Smart Contracts 
-
-
-How about building like they've done?
 
 ### Using Google Stitch vs Claude Design
 

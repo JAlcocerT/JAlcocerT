@@ -137,10 +137,14 @@ Standard Relative Humidity ($RH$) is misleading for a greenhouse. For example:
 * At **15°C** and **70% RH**, the $VPD$ is approximately **0.51 kPa**.
 * At **30°C** and **70% RH**, the $VPD$ is approximately **1.27 kPa**.
 
-Even though the "Humidity" is 70% in both cases, the plants in the second scenario are losing water **more than twice as fast**. If you only controlled for 70% RH, your plants might dry out or stop growing when it gets hot because the "thirst" of the air changed.
+Even though the "Humidity" is 70% in both cases, the plants in the second scenario are losing water **more than twice as fast**. 
+
+If you only controlled for 70% RH, your plants might dry out or stop growing when it gets hot because the "thirst" of the air changed.
 
 4. Implementing in your PID
+
 If you use $VPD$ as your "Process Variable" (your input) for your PID loop:
+
 1.  **Input:** Your code calculates $VPD$ every second using the formulas above.
 2.  **Setpoint:** You set a target $VPD$ (usually between **0.8 and 1.2 kPa** for most plants).
 3.  **Output:** The PID opens the window if the $VPD$ gets too high (air too dry) or closes it/turns on a mister if it gets too low (air too stagnant).

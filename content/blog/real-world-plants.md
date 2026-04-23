@@ -34,33 +34,33 @@ You’ve nailed the "Big Three" (Water, Timing, Sun), but there are a few more "
 
 Here are the other major factors:
 
-### 1. Temperature (The "Invisible" Wall)
+1. Temperature (The "Invisible" Wall)
 
 In PL, this is the most important factor for your **Tomatoes**.
 
 * **The Rule:** If the temperature drops below **$10\text{°C}$**, tomatoes stop growing completely. If it hits **$0\text{°C}$**, they turn to mush.
 * **The Soil Heat:** Even if the air is warm, the soil needs to be warm for the roots to work. This is why we wait until mid-May in Poland to put them in the ground.
 
-### 2. Air Flow (The "Breath" of the Plant)
+2. Air Flow (The "Breath" of the Plant)
 
 If you grow plants too close together, the air can't move. 
 
 * **Why it matters:** Wet, still air leads to **fungus** (like powdery mildew on your mint) or **blight** on your tomatoes. 
 * **The Fix:** Don't be afraid to thin out your seedlings. If 20 tomatoes sprout in one tiny pot, pick the strongest 2 and remove the rest so they have room to "breathe."
 
-### 3. Food (Nutrients/Soil Quality)
+3. Food (Nutrients/Soil Quality)
 
 Plants are like us—they can't live on water alone.
 
 * **Tomatoes:** These are "heavy feeders." They need a lot of Calcium and Potassium to grow big fruit. Once they start flowering, you’ll want to give them some tomato fertilizer (look for *Nawóz do pomidorów*).
 * **Mints & Melisa:** These aren't as hungry. Good potting soil is usually enough, but they like a little "snack" of general fertilizer once a month in the summer.
 
-### 4. Container Size (The "Feet" Room)
+4. Container Size (The "Feet" Room)
 
 * **Mints:** As we discussed, they spread horizontally. Give them a **wide, shallow pot** so they can send out their "runners" (the roots that make new plants).
 * **Tomatoes:** They have deep roots. They need a **deep pot** (at least 10–20 liters for one plant) or they will get "root-bound" and stay small.
 
-### 5. Pollination (The "Birds and Bees")
+5. Pollination (The "Birds and Bees")
 
 * **Inside:** If your tomatoes stay on a windowsill behind glass, there are no bees to shake the flowers. 
 * **The Trick:** When you see yellow flowers on your tomato plant, give the stem a **gentle wiggle** every morning. This mimics the wind and helps the pollen fall so the fruit can grow.
@@ -72,7 +72,6 @@ Plants are like us—they can't live on water alone.
 | **Food** | Does the soil have nutrients, or is it just old dirt? |
 | **Space** | Is the pot big enough for the roots to grow? |
 | **Drainage** | Does the pot have holes at the bottom? (Crucial!) |
-
 
 ---
 
@@ -261,10 +260,12 @@ Here is the timeline of when you should see the first green sprouts (the "germin
 ### 3 Signs to Watch For
 
 1.  **The "Loop":** Before the leaf appears, you'll see a little green "hook" or "arch" pushing through the dirt. That’s the stem breaking the surface.
+
 2.  **The "Seed Leaves":** The first two leaves that appear are usually smooth and oval. These are **not** the real leaves! They are called *cotyledons*. 
+
 3.  **The "True Leaves":** About a week after the first sprout, you will see the "real" leaves that actually look like Mint or Tomato leaves.
 
-### A "Pro" Tip for Your Melisa and Mint:
+A "Pro" Tip for Your Melisa and Mint:
 
 These seeds are **very small**, so if you buried them deep under a thick layer of soil, they might struggle to find the light.
 

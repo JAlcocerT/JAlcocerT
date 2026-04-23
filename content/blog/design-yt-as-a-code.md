@@ -28,7 +28,7 @@ git submodule add https://github.com/JAlcocerT/JAlcocerT.git external/JAlcocerT
 git commit -m "Add JAlcocerT repo as submodule"
 #git clone --recurse-submodules https://github.com/JAlcocerT/yt-videos-as-a-code.git
 
-#git submodule add https://github.com/JAlcocerT/RPi.git external/RPi external/RPi
+#git submodule add https://github.com/JAlcocerT/DataInMotion.git external/RPi external/DataInMotion
 ```
 
 yea...
@@ -38,10 +38,10 @@ Same as Ive distilled my brand assets [here](https://jalcocert.github.io/JAlcoce
 It was time to put together all those nice animations related repositories to ship consistently.
 
 
+### Science Animations
 
 ### Financial Animations
 
-### Physic Animations
 
 ### Formula 1 Animations
 

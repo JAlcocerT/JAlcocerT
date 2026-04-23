@@ -1243,3 +1243,28 @@ xychart
     bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
     line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
 ```
+
+{{< hextra/feature-grid >}}
+ 
+  {{< hextra/feature-card
+    title="Pi's are cool"
+    subtitle="Single Board Computers and IoT Stuff"
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+    link="https://jalcocert.github.io/RPi/"
+  >}}
+
+  {{< hextra/feature-card
+    title="How could I miss AI?"
+    subtitle="If this is what I do for free. Imagine..."
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+    link="https://www.jalcocertech.com"
+  >}}
+
+    {{< hextra/feature-card
+    title="Who said Web-3?"
+    subtitle="Code is Law."
+    style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+    link="https://jalcocert.github.io/web3/"
+  >}}
+
+{{< /hextra/feature-grid >}}

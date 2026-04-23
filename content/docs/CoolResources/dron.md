@@ -15,7 +15,7 @@ With drons we kind of combine it all: electronics, programming, physics and...fu
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/" title="Budget Drone" image="/blog_img/hardware/dji-dron.png" subtitle="Tinkering with a DJI Ryze Tello | Post" >}}
 {{< /cards >}}
 
-If you got a Tello, you will get the chance to learn Python to make computer vision and face detection with the feed that goes to your laptop as shown [here](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/).
+If you got a Tello, you will get the chance to learn Python to make [computer vision](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/) *like face detection* with the feed that goes to your laptop as shown [here](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/).
 
 
 {{< cards >}}
@@ -23,9 +23,6 @@ If you got a Tello, you will get the chance to learn Python to make computer vis
   {{< card link="https://github.com/JAlcocerT/dron-tello-flutter" title="Dron Flutter Repo Github ↗" icon="github" >}}
 {{< /cards >}}
 
-
 You will be also able to make/tinker with flutter apps: *because the official one is not available for android anymore*
 
-
 Best of all, it can motivate you to get into DIY.
-

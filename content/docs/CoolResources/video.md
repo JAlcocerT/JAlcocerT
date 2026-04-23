@@ -43,12 +43,17 @@ Tip: You can also adjust the X and Y coordinates in the Effect Stack for more pr
 
 ![Obfuscate an area with KDEnlive](/blog_img/outro/kdenlive-blur.png)
 
+I started to do more videos with:
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-osmo-action-5-pro/" title="OA5Pro" image="/blog_img/hardware/dji_oa5pro.jpg" subtitle="Action Cam Review" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#kdenlive" title="KDenLive with OA5Pro" image="/blog_img/outro/kdenlive.png" subtitle="Editing video with kdenlive" >}}
 {{< /cards >}}
 
+Learning about LUTs...
+
 ![Applying KDENLIVE LUT](/blog_img/outro/kdenlive-lut.png)
+
 
 
 3. Others like: Shotcut
@@ -72,31 +77,6 @@ sudo apt install vlc
 
 {{< /details >}}
 
-<!-- https://www.youtube.com/shorts/ls_66dIM9-4 -->
-
-{{< youtube "ls_66dIM9-4" >}}
-
-
-Motion Canvas is great for interactive, visually rich web animations. 
-
-Remotion is best for React developers needing video automation and scaling.
-
-Manim is the tool for deep mathematical visualization with powerful programmatic control.
-
-
-| Feature/Aspect          | Motion Canvas                       | Remotion                          | Manim                              |
-|------------------------|-----------------------------------|----------------------------------|-----------------------------------|
-| Programming Language   | TypeScript (Web, JS)               | React (JavaScript)                | Python                            |
-| Main Use Case          | Vector animations & presentations | Programmatic video creation      | Math & educational animations     |
-| Preview/Interactivity  | Real-time visual preview           | React-driven dynamic rendering   | No live preview, manual rendering |
-| Complexity & Control   | Moderate, web tech based           | High for UI/UX videos            | High for math/algorithm detail    |
-| Target Users           | Web developers, educators          | React developers, marketers      | Educators, researchers, math pros |
-| Learning Curve         | Moderate                         | Moderate                        | Steep (programming + math)        |
-| Community & Docs       | Growing, good docs                 | Strong community & documentation | Mature community, rich resources  |
-
-* https://github.com/mifi/lossless-cut
-
-* https://github.com/HandBrake/HandBrake - an OSS UI for Video compression (which does not use FFMPEG)
 
 ---
 
