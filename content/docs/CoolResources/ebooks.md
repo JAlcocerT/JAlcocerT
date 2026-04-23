@@ -1,13 +1,12 @@
 ---
-title: "Creating your ebooks"
+title: "Creating ebooks"
 date: 2025-10-28T10:20:21+01:00
 draft: false
-tags: ["dev"]
 summary: 'How to create your ebooks'
 url: 'cool-ebooks'
 ---
 
-For me, creating ebooks has been all about **knowledge consoldation** and to be able to help others without my active time investment.
+For me, creating ebooks has been all about **knowledge consolidation** and to be able to help others without my active time investment.
 
 An [offer](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers) you cant refuse: *use your time to gain curated knowledge*.
 
@@ -16,6 +15,10 @@ I was tinkering with **ebooks creation** [here](https://github.com/JAlcocerT/ebo
 It was all about to [extract knowledge from Kinddle clippings](https://jalcocert.github.io/JAlcocerT/kindle-clippings-knowledge-base/) and I ended up creating some instead.
 
 ## ebooks 101
+
+{{< callout type="info" >}}
+I ended up giving free consolidated branded value [via web/ebooks](#webooks)
+{{< /callout >}}
 
 ### PDFs
 
@@ -73,36 +76,19 @@ You can also extract information from PDFs with Kreuzberg:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Extract PDF info via Kreuzberg | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-### InfoGraphics
-
-Arent these just PDFs?
-
-Yes! 
-
-But with a different structure.
-
-That said, you can still do [infographics as code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#infographics-as-a-code)
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#with-dividend-reinvestment" title="Animating yfinance" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="YFinance for Python, cool plots and animations | Post" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/genetic-algorithm-for-racing/#discrete-to-continuum" title="Track Infographic" image="/blog_img/karting/track_top_curvature_peaks.png" subtitle="Matplotlib x Race track x Curvature | GA Post" >}}
-{{< /cards >}}
-
-<!-- 
-![alt text](/blog_img/karting/track_top_curvature_peaks.png) -->
-
 
 ### Epubs
 
 Now, the epub files are closer to htmls than we might expect.
 
-And IMO they are trickier to create compared to PDFs.
+IMO, they are trickier to create compared to PDFs.
 
 ### Web/ooks
 
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="From blogs/docs to web ebooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web/book and also downlodable as PDFs" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
 

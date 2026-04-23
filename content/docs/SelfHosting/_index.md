@@ -13,13 +13,11 @@ Whatever you plan to **Selfhost**, there will be a moment that you will be looki
 2. [Monitoring](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/monitoring/) Servers
 3. [Benchmarking](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/benchmarks/) Hardware
 
-
-
 {{< callout type="info" >}}
-Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhosted
+You can access a distilled [Home-Lab 101 web/ook](https://ebooks.jalcocertech.com/books/servers/) to save hours [HERE](https://ebooks.jalcocertech.com/books/servers/)
 {{< /callout >}}
 
-* https://github.com/hotheadhacker/awesome-selfhost-docker
+
 
 **General SelfHosted Resources**
 
@@ -27,6 +25,8 @@ Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhos
 - [Privacy Tools](https://www.privacytools.io/)
 - [Selfh.st](https://selfh.st/)
 - https://awweso.me/
+- Great Reference for ideas: https://github.com/awesome-selfhosted/awesome-selfhosted
+- https://github.com/hotheadhacker/awesome-selfhost-docker
 
 ---
 

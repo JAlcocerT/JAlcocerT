@@ -10,10 +10,14 @@ For Devs or for Data Analytics.
 Just use [diagrams](https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/): *for whatever your have to explain*
 
 
-{{< cards >}}
+{{< callout type="info" >}}
+Distilled [D&A FREE knowledge](https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/dna-ebook.pdf) as web/ook? Consume it [here](https://ebooks.jalcocertech.com/books/dna/) and create [data products effectively](https://ebooks.jalcocertech.com/books/managing-data-projects/)
+{{< /callout >}}
+
+<!-- {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/JAlcocerT/blob/main/Z_ebooks/dna-ebook.pdf" title="Concepts and tools to land a job in D&A ↗" icon="github" >}}
   {{< card link="https://books.jalcocertech.com" title="Create a DIY website with Astro" icon="tag" >}}
-{{< /cards >}}
+{{< /cards >}} -->
 
 <!-- {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/listmonk/listmonk-api-py/Ebook-cover-SSGs.pdf" title="Get an ebook with all Data Analytics concepts you need" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to land a job in D&A" >}}

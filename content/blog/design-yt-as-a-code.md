@@ -11,7 +11,7 @@ math: true
 
 **TL;DR**
 
-An excuse to upgrade to Claude Max plan and burn tokens.
+An excuse to upgrade to Claude Max plan and [burn tokens](https://claude.ai/settings/usage).
 
 Drop if the wordd free still has meaning for you.
 
@@ -38,6 +38,12 @@ Same as Ive distilled my brand assets [here](https://jalcocert.github.io/JAlcoce
 It was time to put together all those nice animations related repositories to ship consistently.
 
 
+
+### Financial Animations
+
+### Physic Animations
+
+### Formula 1 Animations
 
 
 ---

@@ -9,6 +9,45 @@ url: 'iot-sensors-101'
 
 https://github.com/855princekumar/sense-hive
 
+### Lora
+
+<!-- 
+
+RYLR 998, a blue chip equipped with a LoRa ultra-long-range modem, perfect for various hardware integrations including Raspberry Pi, Arduino, and ESP-32.
+
+https://www.youtube.com/watch?v=9azEfCQNhSA
+
+Takeaways
+
+The Ryder 998 is a low-power, low-cost chip that can send messages over 12 miles without any infrastructure.
+LoRa technology has the potential to disrupt the status quo of communication technology.
+The Ryder 998 can be used in a variety of applications, including IoT, emergency response, and extreme outdoor activities.
+The chip's low power consumption and versatility make it an attractive option for many industries. -->
+
+
+## Home Assistant
+
+https://works-with.home-assistant.io/certified-products/
+
+
+## Pi
+
+A raspberry Pi inside a container - https://github.com/ptrsr/pi-ci
+
+> A Raspberry **Pi emulator in a Docker image** that lets developers easily prepare and flash RPi configurations.
+
+
+### IoT with a RPi4
+
+### IoT with a PicoW
+
+## IoT with Esp32
+
+## IoT with Arduino
+
+## IoT with RISC-V
+
+
 **Tl;DR**
 
 Isnt it time to build something real?

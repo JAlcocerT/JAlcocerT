@@ -7,7 +7,11 @@ The *day by day journey* from the [blog section](https://jalcocert.github.io/JAl
 
 So created these docs as a curated higher level version of the technologies Ive used.
 
-For some posts, i'll assume that you are not scared about Linux:
+{{< callout type="info" >}}
+For further distilled knowledge, ive put together [FREE ebooks here](https://ebooks.jalcocertech.com)
+{{< /callout >}}
+
+For some posts, I assume that you are not scared about Linux:
 
 ```sh
 sudo apt update && sudo apt install flatpak gnome-software-plugin-flatpak -y

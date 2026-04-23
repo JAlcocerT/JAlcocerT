@@ -48,6 +48,8 @@ Then, you just need to say whats your home wifi and provide the pwd for it.
 2. Allowed power: up to 3680W (16A max)
 3. Android App: [TP-Link Tapo](https://play.google.com/store/apps/details?id=com.tplink.iot&pcampaignid=web_share)
 
+> Controllable via Python with: https://pypi.org/project/PyP100/
+
 ### Tapo P110 and Home Assistant
 
 * https://community.home-assistant.io/t/is-a-tapo-p110m-from-tp-link-compatible-with-home-assistant/738579/5

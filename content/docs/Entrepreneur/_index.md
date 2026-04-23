@@ -7,7 +7,7 @@ sidebar:
 
 [Boostrapping](https://jalcocert.github.io/JAlcocerT/whats-boostrap/) is not straight forward.
 
-It's a journey of *doing more, better, newer* - all of the time surounded with unknowns.
+It's a journey of *doing more, better, newer* - all of the time, while surounded with *(unknown)* unknowns.
 
 ```mermaid
 flowchart LR
@@ -41,7 +41,11 @@ But these are some tools that make getting returns from [what you build](https:/
 1. [Automation](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/):
 2. [Bots](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/):
 3. [Marketing](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/):
-4. [Product](#product) and [Offers](#offers)!  
+4. [Product](#product) and [Offers](#offers)!
+
+{{< callout type="info" >}}
+Distilled Entrepreneurial FREE knowledge as web/ook? Sure, [here](https://ebooks.jalcocertech.com/books/ai-business/) and HERE
+{{< /callout >}}
 
 ## Product
 

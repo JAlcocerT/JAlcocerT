@@ -134,7 +134,9 @@ Titanium often wins when weight is a critical factor, while certain steels excel
 
 ### Analogies with Electrical Eng
 
-If you like to do transfer learning and make some analogy to other knowledge...
+If you like to do **transfer learning** and make some analogies
+
+You can definitely map mech engineering to other knowledge...
 <!-- 
 https://youtu.be/Ckownv7VoxM?si=oENq0sLMSJ8F2Vls -->
 

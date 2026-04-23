@@ -1,8 +1,6 @@
 ---
 title: Telco
 type: docs
-prev: /docs/
-next: docs/engineering/
 draft: false
 ---
 

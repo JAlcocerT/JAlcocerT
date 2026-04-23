@@ -54,18 +54,6 @@ Probably you will not find them on the firsts google results, yet they were help
 * https://www.opensourcealternative.to/
 * https://osssoftware.org/
 
-### Interesting Videos
-
-<!-- * https://www.youtube.com/watch?v=pIZ_MXutC0o -->
-
-<!-- {{< youtube id="v=pIZ_MXutC0o" autoplay="false" >}} -->
-{{< youtube "pIZ_MXutC0o" >}}
-
-
-<!-- * https://www.youtube.com/watch?v=_VLZ4b9LHLs -->
-
-<!-- {{< youtube id="v=_VLZ4b9LHLs" autoplay="false" >}} -->
-{{< youtube "_VLZ4b9LHLs" >}}
 
 ### Interesting WebApps
 

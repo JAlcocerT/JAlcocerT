@@ -6,7 +6,7 @@ next: docs/arch/
 draft: false
 ---
 
-
+Interesting Android stuff from a [Pixel user](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/) perspective.
 
 ## For Android Users
 
