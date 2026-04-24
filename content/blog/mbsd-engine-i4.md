@@ -480,7 +480,7 @@ Physical explanation: Why I4 needs balancer shafts, why I6 is perfect despite ha
 
 ## About Engine Balance
 
-The best video I found about engine balance:
+The best video I found about **engine balance**:
 
 {{< youtube "mTS48jX68YU" >}}
 
@@ -490,50 +490,58 @@ Then provide a summary and pros and cons of the balance of each engine type disc
 
 The video titled **"ENGINE BALANCE: Inline 6 vs. V6 vs. VR6 vs. Flat / Boxer 6"** compares the balance, packaging, strengths, and weaknesses of four common six-cylinder engine layouts: the **inline-six**, **V6**, **VR6**, and **flat-six/boxer-six**.
 
-**Inline 6**
+Each configuration represents a specific engineering trade-off between **smoothness**, **size**, and **mechanical complexity**.
 
-The **inline-six** is widely regarded as the smoothest and simplest of the group. 
+1. Inline-6 (I6)
 
-ts layout gives it excellent inherent balance and an even firing interval, which helps it run very smoothly without needing major balancing aids.
+The **inline-six** is widely regarded as the smoothest and simplest of the group.
 
-It is also mechanically straightforward, typically using only one cylinder head and a simpler overall design than split-bank engines.
+* **Characteristics:** Excellent inherent balance and an even firing interval. Runs smoothly without needing heavy balancing aids.
+* **Design:** Mechanically straightforward, typically using only one cylinder head.
+* **Drawbacks:** Difficult to fit in tight engine bays (especially transverse layouts) due to its significant length.
+* **Pros:** Simple design, excellent balance, smooth operation.
+* **Cons:** Long overall length makes packaging difficult.
 
-Its main drawback is packaging:
-because all six cylinders are arranged in a straight line, the engine is long and can be difficult to fit in tighter engine bays, especially in transverse layouts.
+2. V6
 
-**Pros:** Simple design, excellent inherent balance, smooth operation, even firing interval.
-**Cons:** Long overall length makes packaging more difficult.
+Developed largely to solve the packaging limitations of the inline-six.
 
-V6
+* **Characteristics:** Splitting cylinders into two banks makes it much shorter and versatile for various engine bays.
+* **Design:** More complex; typically requires two cylinder heads and duplicated components (cams, manifolds).
+* **Drawbacks:** Lacks the natural balance of an I6; smoothness depends on bank angle (e.g., 60° vs 90°) and balancing shafts.
+* **Pros:** Compact, easy to package, fits transverse layouts.
+* **Cons:** Less inherently balanced, higher mechanical complexity.
 
-The **V6** was largely developed to solve the packaging problems of the inline-six. By splitting the cylinders into two banks, it becomes much shorter and easier to fit into a wider range of
-vehicles, including transverse-engine layouts. The tradeoff is that it does not usually have the same natural balance as an inline-six, so smoothness often depends more heavily on bank angle,
-crankshaft design, and sometimes balancing aids. It is also mechanically more complex, since it typically uses two cylinder heads and more duplicated components.
+3. VR6
 
-**Pros:** More compact, easier to package, well suited to many engine bays.
-**Cons:** Generally less inherently balanced than an inline-six, more mechanically complex.
+A narrow-angle hybrid design that blends I6 and V6 characteristics.
 
-VR6
+* **Characteristics:** A "staggered" six-cylinder that is narrower than a V6 and shorter than an I6.
+* **Design:** Uses a single cylinder head despite the two banks, which simplifies the package compared to a traditional V.
+* **Drawbacks:** A packaging compromise; involves uneven port geometry and more engineering complexity than a straight-six.
+* **Pros:** Extremely compact, efficient packaging.
+* **Cons:** Not as naturally balanced as an I6, complex internal geometry.
 
-The **VR6** is a narrow-angle six-cylinder design that blends characteristics of the inline-six and V6. Its main advantage is compactness: it is narrower than a conventional V6 and can be packaged
-very efficiently, while also avoiding some of the bulk of a traditional split-bank design. However, it should not be thought of as having the same inherent balance or simplicity as an inline-six. It
-is best understood as a clever packaging compromise that offers a unique middle ground between size, smoothness, and complexity.
+4. Flat-6 / Boxer-6
 
-**Pros:** Very compact, efficient packaging, simpler overall package than some conventional V6 designs.
-**Cons:** Still more of a compromise than an inline-six, not as naturally balanced, can involve uneven port geometry and added engineering complexity.
+A horizontally opposed layout known for high-performance applications.
 
-Flat / Boxer 6
+* **Characteristics:** Exceptionally smooth with a very low center of gravity and a short, stiff crankshaft.
+* **Design:** Pairs of pistons move in opposite directions, canceling out vibrations (in a true Boxer).
+* **Drawbacks:** The engine is very wide, which can interfere with suspension components or frame rails.
+* **Pros:** Excellent balance, low center of gravity, responsive performance.
+* **Cons:** High manufacturing cost, wide layout, complex packaging.
 
-The **flat-six**, especially in true boxer form, is also an extremely smooth and well-balanced engine design. It benefits from a low center of gravity and a short crankshaft, which can help both
-handling and responsiveness. However, its width makes packaging more difficult, and this layout can be more complex and expensive to manufacture depending on the application. While it offers major
-dynamic advantages, it is not always easy to fit into a vehicle platform.
+| Layout | Primary Strength | Primary Weakness | Best For |
+| :--- | :--- | :--- | :--- |
+| **Inline-6** | Perfect Balance | Total Length | RWD Luxury & Sport |
+| **V6** | Packaging | Complexity | FWD & Universal Use |
+| **VR6** | Compactness | Port Complexity | Small Engine Bays |
+| **Flat-6** | Low Center of Gravity | Total Width | High-Performance Sport |
 
-**Pros:** Excellent balance, low center of gravity, short crankshaft, strong performance character.
-**Cons:** Wide layout makes packaging difficult, often more expensive and complex to manufacture.
+> **Conclusion:** Rather than there being one universally "best" design, each configuration is chosen based on what engineers value most for a specific vehicle platform.
 
-Each six-cylinder layout reflects a different engineering priority. The **inline-six** emphasizes smoothness and simplicity, the **V6** prioritizes compact packaging, the **VR6** is a specialized
-compromise designed to save space, and the **flat-six/boxer-six** delivers excellent balance and a low center of gravity at the cost of width and complexity. Rather than there being one universally
-best design, each configuration makes sense in different applications depending on what engineers value most.
+
 
 <!-- 
 

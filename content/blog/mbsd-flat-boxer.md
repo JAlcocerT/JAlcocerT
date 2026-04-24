@@ -56,7 +56,13 @@ Im getting away with the 2D implementation so far :)
 
 ### Flat 4
 
-### Boxer
+
+
+![alt text](/blog_img/mec/flat4_spectrum.png)
+
+### Boxer 4
+
+Every boxer is a flat 4, but not every flat 4 is a boxer.
 
 <!-- 
 https://www.youtube.com/watch?v=5SFxPu-K2xw 
@@ -67,10 +73,95 @@ https://www.youtube.com/watch?v=5SFxPu-K2xw
 
 ### Flat vs Boxer
 
+The distinction lies entirely in the **crankshaft throws**, and you can break it down using the logic you’ve built in your series:
 
-### A proper I4 Analysis
+1. The Shared Geometry (The "Flat" part)
+
+Both engines are horizontally opposed.
+
+They both use the bank-mirror sign pattern **$[+1, -1, +1, -1]$** because the pistons physically move in opposite directions in world coordinates. 
+
+This is why **both** cancel their net forces ($F = 0$) at every harmonic.
+
+2. The Crankshaft (The "Boxer" part)
+
+The defining characteristic of a **Boxer** is that each cylinder has its own dedicated crankpin, and opposed pairs are phased $180^\circ$ apart relative to each other.
+* **Result:** Opposed pistons reach Top Dead Centre (TDC) at the **same time**. They "box" toward and away from each other.
+* **Phasor Sum:** The kinematic phases for an opposed pair are the same (e.g., $0^\circ$ and $0^\circ$). Because the sign flip is applied, they cancel immediately: $1 - 1 = 0$.
+
+3. The Non-Boxer (The "180° V" or "Flat" engine)
+
+In a non-boxer flat engine (like the one used in some Ferraris or the Lancia Fulvia), opposed pistons often share a crankpin or use an Inline-4 style crank.
+* **Result:** When one piston is at TDC, its opposite partner is at Bottom Dead Centre (BDC). They move in the same world direction at the same time (e.g., both moving "Left" together).
+* **Phasor Sum:** The kinematic phases for an opposed pair are $180^\circ$ apart (e.g., $0^\circ$ and $180^\circ$).
+    * Cylinder 1: $+1 \cdot \exp(j \cdot 0^\circ) = +1$
+    * Cylinder 2: $-1 \cdot \exp(j \cdot 180^\circ) = -1 \cdot (-1) = +1$
+    * **Net effect:** They reinforce each other's momentum in the short term, leading to the **1× rocking couple** you just analyzed.
+
+
+The Final Classification
+
+* **Boxer-4:** A subset of flat-4s where the crankpins are arranged so that opposed pistons are in phase ($s_1\phi_1 + s_2\phi_2 = 0$). **Balanced in force AND moment.**
+* **Non-Boxer Flat-4:** A flat-4 where the crankpins are arranged like an I4 ($180^\circ$ apart). **Balanced in force, but unbalanced in moment.**
+
+
+| Layout | Force 1× | Force 2× | Moment 1× | Moment 2× |
+|---|---:|---:|---:|---:|
+| I4 (inline) | 0 | **16.44 N** | 0 | 0 |
+| Boxer-4 | 0 | 0 | 0 | 0 |
+| **Non-boxer flat-4** | 0 | 0 | **3.95 N·m** | 0 |
+
+
+### Proper I4 Analysis
 
 I wont let you with the ai slop previous analysis.
+
+
+```sh
+# Default: 10 RPM, R=1, L=2
+python 2D-Dynamics/examples/multi-cylinder-nograv/engine_comparison.py
+
+# Custom R/L
+python -c "import engine_comparison as e; e.main(rpm=10, R=0.8, L=3.0)"
+
+# R/L sweep
+python -c "import engine_comparison as e; e.sweep_RL(R=1.0, L_values=[1.5, 2.0, 3.0, 4.0])"
+```
+
+This data is the "smoking gun" for engine balance theory. 
+
+By isolating the forces and moments at these specific toy parameters, you've created a perfect fingerprint for each layout.
+
+* **The Zero-Force Rule:** Notice that every engine on your list *except* the I4 has `(none)` for force.
+
+This confirms that 3, 4, and 6-cylinder layouts are generally excellent at cancelling **Primary (1×)** and **Secondary (2×)** linear shake—the I4 is the famous outlier because its $2\times$ secondary phasors all point in the same direction.
+
+* **The Rocking Rivalry:** Comparing the **Straight-3** ($1.71\text{ N}\cdot\text{m}$) to the **Non-boxer flat-4** ($3.95\text{ N}\cdot\text{m}$) is eye-opening. 
+
+Even though the flat-4 has more cylinders and cancels its force, its rocking couple is **2.3 times more violent** than the notoriously "thrummy" three-cylinder. 
+
+> This is the mathematical reason why the non-boxer flat-4 is a historical rarity.
+
+* **The Gold Standards:** The **Boxer-4** and **Straight-6** both hitting `(0, 0)` is the verification of the "Inherently Balanced" title. 
+
+One achieves it through mirror-image pairs (**sign-flip**), the other through $120^\circ$ symmetry (**phasor-sum**).
+
+
+| Configuration | The "Vibe" | The Physics |
+| :--- | :--- | :--- |
+| **Straight-3** | Thrummy / Rocking | $1\times$ force cancels, but the lever arms create a seesaw moment. |
+| **Inline-4** | High-frequency Buzz | Perfect primary balance, but $2\times$ secondary forces stack linearly. |
+| **Boxer-4** | Stillness | Opposed cylinders share the same phase; sign-flip kills every harmonic. |
+| **Non-boxer flat-4** | Heavy Pitching | I4 phasing in a flat layout turns the $2\times$ shake into a $1\times$ rock. |
+| **Straight-6** | Turbine-like | Forces and moments cancel at $1\times$ and $2\times$ by pure geometry. |
+
+![alt text](/blog_img/mec/engine_comparison_sweep.png)
+
+### A Quick Sanity Check
+
+Looking at your **I4 Force (16.44 N)**: Since $F_{2\times} \approx 4 \cdot F_{single} \cdot (R/L)$, and your $R/L$ is $0.5$, this implies your single-cylinder secondary force is roughly $8.22\text{ N}$ at these parameters. 
+
+This perfectly aligns with the theoretical derivation where the secondary force is a function of the rod-ratio.
 
 
 ---
@@ -131,7 +222,11 @@ $$\begin{bmatrix} M & C_q^T \\ C_q & 0 \end{bmatrix} \begin{bmatrix} a \\ \lambd
 
 **Why It Is Called a "Saddle Point"**
 
-The name comes from optimization theory. If you view the engine as a system trying to minimize its energy while staying on the track of its constraints, the solution $(a, \lambda)$ is a **minimum** with respect to the accelerations but a **maximum** with respect to the constraint forces. This creates a "saddle" shape in the mathematical landscape.
+The name comes from optimization theory. 
+
+If you view the engine as a system trying to minimize its energy while staying on the track of its constraints, the solution $(a, \lambda)$ is a **minimum** with respect to the accelerations but a **maximum** with respect to the constraint forces. 
+
+This creates a "saddle" shape in the mathematical landscape.
 
 **Application in the Series**
 
@@ -139,26 +234,17 @@ The name comes from optimization theory. If you view the engine as a system tryi
 * **Inverse Dynamics:** We provide the motion ($a$ is known via constraints) and solve for the $\lambda$ values required to make that motion happen.
 * **Vibration Source:** By solving this system at every time step, we generate a high-fidelity time-series of $\lambda(t)$. When we feed those multipliers into an FFT, we get the vibration spectrum that identifies the "I4 buzz" or the "Subaru hum."
 
-### Volumetric efficiency
-
-<!-- <https://www.youtube.com/watch?v=1eRsaOxxiUc> -->
-
-{{< youtube "1eRsaOxxiUc" >}}
-
-
-VE map - https://www.tactrix.com/index.php?option=com_content&view=category&layout=blog&id=36
-
-
 ### Holonomic vs Non Holonomic Constrains
 
-A **holonomic** constraint is an equation of the form `C(q, t) = 0` that
-must hold at every time. 
+A **holonomic** constraint is an equation of the form 
+
+$$C(q, t) = 0$$
 
 "Holonomic" means it depends only on positions (and possibly explicit time), not on velocities. 
 
 Expanding into **non-holonomic** constraints moves the physics from "geometry of position" to "geometry of motion."
 
-{{< callout type="warning" >}}
+{{< callout type="info" >}}
 As somebody told me once: with non-holonomic, *you can go anywhere, but not however you want*
 {{< /callout >}}
 
@@ -227,3 +313,8 @@ This makes "Inverse Kinematics" for non-holonomic systems (like autonomous drivi
 | **Solver Impact** | Reduces coordinate space | Restricts velocity space only |
 
 **Does your current simulator need to handle "pure rolling" for the vehicle examples, or are you sticking to the "penalty-friction" approach which mimics non-holonomic behavior without the hard algebraic constraint?**
+
+
+{{< callout type="info" >}}
+
+{{< /callout >}}

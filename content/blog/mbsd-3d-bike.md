@@ -1,45 +1,82 @@
 ---
-title: "The physics of Mechanisms in the SPACE"
-date: 2026-04-25
+title: "The physics of motor/bi cycles"
+date: 2026-03-28
 draft: false
-tags: ["MBSD x 3D Simulation","CADQuery x Blender"]
-description: 'The Dynamics x Kinematics of you ve been waiting for.'
-url: '3d-mbsd'
+tags: ["MBSD x 3D Simulation","CADQuery x Blender Rendering"]
+description: 'The Dynamics x Kinematics of bicycles (with Python).'
+url: '3d-mbsd-bicycle'
 math: true
 ---
-
-<!-- engine starting
-https://www.youtube.com/shorts/mzWr2ZGf7OU
-
-https://www.youtube.com/watch?v=gmV4qwLfOMY
-derivatives
-
-The Trillion Dollar Equation
-https://www.youtube.com/watch?v=A5w-dEgIU1M
- -->
-
-
-<!-- 
-https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
-
-
 
 
 **TL;DR**
 
-
-**Intro**
-
+Some [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/), [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/), physics put together to create.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}
 {{< /cards >}}
+
+**Intro**
+
+The kind of thing that you put together in *few afternoons* nowadays.
+
+You thought that your 9-5 is killing you?
+
+Is your 5pm-9pm giving you some life?
+
+Have you ever thought about [whats Ikigai for you](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#about-ikigai)?
+
+Ops, wrong post to talk about this.
+
+Let me go back: 3D mechanisms! 
+
+YES!
+
+Here it goes all that *unseen talent* that the world was [eager to consume](#mbsd-x-web-dev).
+
 
 ## About MBSD
 
-I wouldnt let you with just the [3d bicycle model](https://github.com/JAlcocerT/mbsd/tree/master/bike-real-time-simulator) explained here.
+Code is law, specially for multibody system dynamics.
 
-### 2D MBSD Recap
+```sh
+#git clone https://github.com/JAlcocerT/mbsd
+```
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="NEW MBSD" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a Python fwk to simulate mechanisms" >}}
+{{< /cards >}}
+
+The next sections will be theoretical, but they will be a [base to simulate cool thingies](#conclusions).
+
+### 2D MBSD is cool but
+
+With *just* 2D kinematics in place you can create very nice 3D renders.
+
+For example, this geneva drive:
+
+```sh
+cd ./3Design/mbsd-to-render/geneva-drive
+#make help
+make all
+rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/mbsd-to-render/geneva-drive/render/geneva_drive.mp4 .
+mpv geneva_drive.mp4
+```
+
+Or this Scotch...the pantograph...you name it:
+
+```sh
+cd ./3Design/mbsd-to-render/scotch-yoke
+make all
+rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/mbsd-to-render/scotch-yoke/render/scotch_yoke.mp4 .
+mpv scotch_yoke.mp4
+cd ./3Design/mbsd-to-render/pantograph
+make all
+rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/mbsd-to-render/pantograph/render/pantograph.mp4 .
+mpv scotch_yoke.mp4
+```
 
 ```sh
 cd /home/jalcocert/Desktop/3Design/mbsd-to-render
@@ -52,33 +89,171 @@ mpv all_mechanisms.mp4
 
 {{< youtube "KA7HloE6IQY" >}}
 
-### 3D MBSD
 
+### CAD x Blender
 
-#### 3D Kinematics
+I was using a simple slider-crank to test that its possible to go from a ~mbsd to STL's and blender renders.
 
-But if you want to do 3D mechanics, you need to get 3D kinematics right first.
+Call it [blender as a code](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/#blender-as-a-code) or [how to bring mechanisms to life](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/).
 
+```sh
+git clone https://github.com/JAlcocerT/3Design
+cd ./3Design/z-cadquery
+make check #make help
+#make scene-ui #this starts blender UI
+#make all
+tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+#tmux attach-session -t cad #to see hows going
+#rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/z-cadquery/render/slider_crank.mp4 .
+#mpv slider_crank.mp4
+```
 
-There are many interesting effects in 3D that simply dont exist in 2D.
+Even though...
 
+bringing them to life would be to manufacture them, right?
 
-#### 3D Dynamics
+```sh
+#git clone git clone https://github.com/JAlcocerT/mbsd
+cd ./mbsd/z-cad-render
+```
 
+Well...give me some time for that :)
 
+### Real Time Bike Simulator in Python
 
+A 9-DOF multibody dynamics simulator for a bicycle, ported from MATLAB to Python.
+
+```sh
+cd ./mbsd/bike-real-time-simulator/Python_version
+# Install tkinter (system dependency for matplotlib GUI)
+sudo apt install python3-tk
+# Install Python dependencies
+#pip install -r requirements.txt
+```
+
+Yea...this is also 3D :) 
+
+Just that it does not uses the reference coordinate system
+
+Why?
+
+Because this has to be solved in real time
+
+For that, i needed to think and optimize the model:
+
+```sh
+#uv init --no-readme .
+
+# Add packages from requirements.txt one-shot
+#uv add numpy matplotlib pynput
+uv pip install -r requirements.txt
+#uv sync
+
+# Basic run — bicycle rolls forward at ~10 m/s with 3D animation
+#python3 main.py
+
+# With keyboard steering
+#python3 main.py --keyboard
+uv run main.py --keyboard
+
+# Without animation (faster, plots results at the end)
+#python3 main.py --no-animate
+```
+
+Keyboard Controls (with `--keyboard`)
+
+| Key | Action |
+|-----|--------|
+| Left / Right arrows | Steer |
+| Up / Down arrows | Pedal / Brake |
+| Ctrl+C | Stop simulation early |
+
+Project Structure
+
+| File | Description |
+|------|-------------|
+| `main.py` | Entry point, RK2 integrator, equations of motion |
+| `parameters.py` | All physical parameters and system data structure |
+| `kinematics.py` | Rotation matrices, positions, and Jacobians (12 functions) |
+| `forces.py` | Mass matrix, gravity, Coriolis, aerodynamic drag, tire-ground contact |
+| `visualization.py` | Real-time 3D matplotlib animation |
+
+**Execution flow:**
+
+```
+main.py  →  run_simulation()
+              │
+              ├── MBodySystem()          [parameters.py]
+              ├── runge_kutta_2()        [main.py]
+              │     └── equations_of_motion()  at each step
+              │           ├── mass_matrix()    [forces.py]
+              │           ├── gravity_forces() [forces.py]
+              │           ├── coriolis_forces()[forces.py]
+              │           ├── aero_forces()    [forces.py]
+              │           ├── contact_forces() [forces.py]
+              │           │     └── A2, A5, H2, H5, H2p, H5p  [kinematics.py]
+              │           └── G2g, G4g         [kinematics.py]
+              └── BicycleAnimator.update()  [visualization.py] (every 2 steps)
+```
+
+The theoretical basis for this is at: https://github.com/JAlcocerT/Bike_dynamic_simulator
+
+> Dont forget about the *steer to the fall* concept!
+
+It computes how the vehicle moves over time under the influence of gravity, aerodynamic drag, **tire-ground contact forces**, and externally applied steering/pedaling torques.
+
+The Python code is [a direct port](#bike-multibody-model) of the original MATLAB simulator (`Matlab_version/`).
 
 ---
 
 ## Conclusions
 
-
+This has been quite a lot of tinkering.
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a MBSD framework in Python" >}}
 {{< /cards >}}
 
-If you want to ship:
+```sh
+#git clone https://github.com/JAlcocerT/VideoEditingRemotion
+#cd remotion-cc
+```
+
+Also at:
+
+```sh
+#git clone https://github.com/JAlcocerT/3Design
+cd ./3Design/mbsd-to-render
+```
+
+You see how I write about many different stuff?
+
+```sh
+find ./content/blog -maxdepth 1 -type f -name "*.md" | wc -l #this post is 350+ and 80+ expected for this year!
+
+find content/blog -name '*.md' -print0 |
+xargs -0 awk '
+  FNR==1 { 
+    post_date=""; 
+    printed=0 
+  }
+
+  /^date:/ && !printed {
+    gsub(/^date:[[:space:]]*/, "", $0)
+    post_date = substr($0, 1, 10)
+    if (post_date >= "2019-01-01" && post_date <= "2026-03-31") {
+      print FILENAME ": " post_date
+      printed=1
+      count++
+    }
+  }
+
+  END {
+    print "TOTAL:", count+0
+  }'
+```
+
+If any of the things I wrote about catches your attention and you want to get stuff done:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
@@ -93,6 +268,19 @@ Upcoming topics with 3D mechanics:
 <!-- https://youtu.be/y-ANdaUthxg -->
 
 {{< youtube "y-ANdaUthxg" >}}
+
+
+### MBSD x Web Dev
+
+Because if mechanism 3D dynamics its kind of trivial now.
+
+So is web development.
+
+```sh
+#git clone https://github.com/JAlcocerT/Slider-Crank
+cd ./Slider-Crank/landing #https://multibodysystemdynamics.pages.dev/
+```
+
 
 
 ---
@@ -134,7 +322,7 @@ The simulator uses **multibody dynamics in generalized coordinates** — a class
 | The bicycle is **symmetric** about its plane of travel | All `y`-offsets of CoGs are zero |
 | Joints are **ideal** (no friction, no compliance) | Pin joints at axles transmit forces perfectly |
 
-What the model does NOT capture
+What the model does **NOT capture**:
 
 - Road camber, bumps, or surface roughness
 - Tire sidewall dynamics or pneumatic pressure effects
@@ -144,7 +332,9 @@ What the model does NOT capture
 - Wind, rain, or temperature effects
 - Motor/drivetrain dynamics (pedaling torque is applied directly as a generalized force)
 
-Each rigid body has its own local frame, whose orientation relative to the global frame is given by a rotation matrix `Aᵢ(q)`. Body frames are **right-handed** and aligned with the principal axes of inertia when at zero lean/pitch/steer.
+Each rigid body has its own local frame, whose orientation relative to the global frame is given by a rotation matrix `Aᵢ(q)`.
+
+Body frames are **right-handed** and aligned with the principal axes of inertia when at zero lean/pitch/steer.
 
 **Angular rotation convention**: Euler angles are applied in this sequence for the frame body (body 3).
 
@@ -222,7 +412,9 @@ M = Σᵢ [ mᵢ · Jvᵢᵀ Jvᵢ  +  Jwᵢᵀ · Iᵢ_global · Jwᵢ ]
 
 Where `Jvᵢ` and `Jwᵢ` are the translational and angular Jacobians of body `i`, and `Iᵢ_global = Aᵢ · Iᵢ_body · Aᵢᵀ` transforms the body-frame inertia tensor to global frame.
 
-Jacobians are computed **numerically via central finite differences** on the rotation matrices and CoG position functions (step size `ε = 1e-7`). This avoids translating 590 lines of symbolic MATLAB code at the cost of ~18 extra `mass_matrix()` calls per Coriolis evaluation.
+Jacobians are computed **numerically via central finite differences** on the rotation matrices and CoG position functions (step size `ε = 1e-7`). 
+
+This avoids translating 590 lines of symbolic MATLAB code at the cost of ~18 extra `mass_matrix()` calls per Coriolis evaluation.
 
 **Coriolis & Centrifugal Forces**
 
@@ -302,3 +494,4 @@ v0 = [10, 0, 0, 0, 0, 0, 0, 10/0.34, 10/0.34]  # 10 m/s forward, wheels spinning
 ```
 
 ### References
+

@@ -33,10 +33,74 @@ git init https://github.com/JAlcocerT/multi-body
 ```
 
 
+## MBSD Framework Applications
+
+### Engine Balance
+
+#### NVH
+
+
+---
+
+
+## Conclusions
+
+Believe it or not, this is another industry getting shaped by AI capabilities.
+
+Because if mechanism 3D dynamics its kind of trivial now.
+
+So is web development.
+
+```sh
+#git clone https://github.com/JAlcocerT/Slider-Crank
+cd ./Slider-Crank/landing #https://multibodysystemdynamics.pages.dev/
+```
+
+And here is JAlcocerTech whitepaper about it:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
+
+
+### Whats next?
+
+Understanding suspensions?
+
+<!-- https://www.youtube.com/watch?v=VbReLNi2JP4 -->
+
+{{< youtube "VbReLNi2JP4" >}}
 
 ---
 
 ## FAQ
+
+The **launch strategy**: *aka, focus strategy*
+
+Non for comercial purposes :)
+
+The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
+
+The **Tech Stack**:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | Astro | |
+| **Styling/UI Library** | Sassify MIT like theme | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)** | | |
+| **Database** | FireStore | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | Firebase Auth | |
+| **E-mail/ESP** | MailTrap | |
+| **Analytics** | Posthog | |
+| **Hosting** | Container | |
 
 ### How did you started doing mechanical simulations?
 

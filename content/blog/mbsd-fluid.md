@@ -69,6 +69,18 @@ who knows :)
 
 ## FAQ
 
+
+
+
+### Volumetric efficiency
+
+<!-- <https://www.youtube.com/watch?v=1eRsaOxxiUc> -->
+
+{{< youtube "1eRsaOxxiUc" >}}
+
+
+VE map - https://www.tactrix.com/index.php?option=com_content&view=category&layout=blog&id=36
+
 ### References
 
 

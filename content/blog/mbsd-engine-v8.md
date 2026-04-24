@@ -1,10 +1,10 @@
 ---
-title: "4-4stroke rivals: flat plane vs cross plane"
-date: 2026-04-28
+title: "4 stroke rivals: flat plane vs cross plane"
+date: 2026-04-26
 draft: false
-tags: ["Mechanical Engineering","MBSD x V8 Engines"]
-description: 'Comparing flat plane and cross plane 4stroke engines before simulating V8s.'
-url: 'flat-plane-vs-cross-plane'
+tags: ["Mechanical Engineering","MBSD x V8 Engines power distribution"]
+description: 'Comparing flat plane and cross plane 4stroke. Simulating V8s.'
+url: 'flat-plane-vs-cross-plane-v8s'
 ---
 
 
@@ -14,6 +14,10 @@ url: 'flat-plane-vs-cross-plane'
 The [I4 balance post](https://jalcocert.github.io/JAlcocerT/inline-4-engine-balance/) was so-so
 
 How about...using the MBSD 3D simulator?
+
+
+**Since the Straight-6 is the final "balanced" entry here, are you planning to simulate the V8 next to show why the "Cross-plane" crank was invented to solve the V8's rocking issues?**
+
 
 **Intro**
 
