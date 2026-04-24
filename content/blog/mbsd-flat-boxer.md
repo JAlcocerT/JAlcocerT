@@ -155,13 +155,22 @@ One achieves it through mirror-image pairs (**sign-flip**), the other through $1
 | **Non-boxer flat-4** | Heavy Pitching | I4 phasing in a flat layout turns the $2\times$ shake into a $1\times$ rock. |
 | **Straight-6** | Turbine-like | Forces and moments cancel at $1\times$ and $2\times$ by pure geometry. |
 
-![alt text](/blog_img/mec/engine_comparison_sweep.png)
-
-### A Quick Sanity Check
+A Quick Sanity Check
 
 Looking at your **I4 Force (16.44 N)**: Since $F_{2\times} \approx 4 \cdot F_{single} \cdot (R/L)$, and your $R/L$ is $0.5$, this implies your single-cylinder secondary force is roughly $8.22\text{ N}$ at these parameters. 
 
-This perfectly aligns with the theoretical derivation where the secondary force is a function of the rod-ratio.
+
+![alt text](/blog_img/mec/engine_comparison_sweep.png)
+
+{{< callout type="info" >}}
+This perfectly aligns with the theoretical derivation where the **secondary force is a function of the rod-ratio** R/L!
+{{< /callout >}}
+
+Why does 2× scale with R/L but 1× doesn't?
+
+Taylor-expands L·√(1 − (R/L)²·sin²θ) using sin²θ = (1 − cos 2θ)/2 to show that piston acceleration has a 1× term (ω²·R — no L dependence) and a 2× term (ω²·R²/L = ω²·R·(R/L)).
+
+Ends with the engineering consequence: longer rods reduce secondary imbalance linearly, production I4s hit the R/L ≈ 0.25–0.33 wall and then need balance shafts.
 
 
 ---

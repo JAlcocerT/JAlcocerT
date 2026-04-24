@@ -15,7 +15,7 @@ https://youtu.be/d6PyYCBft44?si=vsgHCiL2k2Fswwxd
 
 > gpl 3.0 | Fluidd, the klipper UI.
 
-{{< youtube d6PyYCBft44 >}}
+{{< youtube "d6PyYCBft44" >}}
 
 
 **Tl;DR**
