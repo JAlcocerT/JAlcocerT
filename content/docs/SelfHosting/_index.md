@@ -51,6 +51,8 @@ lsblk -f /dev/sda1 /dev/sdb2 #see the format and the UUID of a couple of blocks
 df -h /dev/sda1 #you will see if its mounted
 ```
 
+Then:
+
 ```sh
 sudo apt install ntfs-3g
 

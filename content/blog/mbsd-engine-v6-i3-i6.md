@@ -10,7 +10,9 @@ url: 'v6'
 
 **TL;DR**
 
-What's next — V-engines, combustion modelling, mounted-engine 3D response, active mass damping. Each is "one chapter + one or two scripts" of clean extension.
+Which appeals: engine mount transmissibility 2d (largest payoff, biggest chapter), balance shafts (quick loop-closer), or active mass damping (modern-powertrain flavour)?
+
+What's next —  mounted-engine 3D response, active mass damping. Each is "one chapter + one or two scripts" of clean extension.
 
 **Intro**
 
@@ -141,10 +143,22 @@ If an I4 vibrates too much, your only mechanical options are to lengthen the rod
 
 ### One Follow-up Question for your Analysis
 
-In your **Rocking Couples** script, have you tried simulating a **V6 with a $90^\circ$ bank angle** versus a **$60^\circ$ bank angle**? The difference in the residual $1\times$ and $2\times$ moments is a great way to show why "Bank Angle" is the most expensive decision a V6 designer makes.
+In your **Rocking Couples** script, have you tried simulating a **V6 with a $90^\circ$ bank angle** versus a **$60^\circ$ bank angle**? 
+
+The difference in the residual $1\times$ and $2\times$ moments is a great way to show why "Bank Angle" is the most expensive decision a V6 designer makes.
+
+{{< callout type="info" >}}
+Ever wondered why the V angle seems to be 720/n_pistons?
+{{< /callout >}}
+
+Isnt it a coincidence that for V8 we typically have them at 720/8=90 degrees?
+
 
 ### Combustion Pulse preassure modelling
 
 The tradeoff to decide upfront is how realistic the pressure pulse should be: a parameterised half-sine-over-a-power-stroke-window is enough to reproduce the textbook firing-frequency peak and its harmonics, but if you want real "V8 rumble vs flat-six smoothness" at the right amplitudes, you'd want a tabulated P-θ curve (or a Wiebe heat-release model) per cylinder.
 
 I'd start with the parameterised pulse — it's ~20 lines and gives you the firing-order phasor math cleanly — and leave the tabulated P-θ as a later extension if you want to match a specific engine.
+
+
+![alt text](/blog_img/mec/combustion_comparison.png)

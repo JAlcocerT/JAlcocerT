@@ -52,8 +52,39 @@ mpv all_mechanisms.mp4
 
 {{< youtube "KA7HloE6IQY" >}}
 
+#### Engine Balance
+
+This project has successfully built a "Full-Stack" engine simulator. You have gone from:
+
+Inverse Kinematics (Position/Velocity)
+
+Inverse Dynamics (Inertial Forces)
+
+Phasor Superposition (Multi-cylinder linear sums)
+
+Spatial Geometry (V-engine vectoring)
+
+Thermodynamic Forcing (Combustion harmonics)
+
+{{< callout type="info" >}}
+Possible at 2D thx to some Dimensional Generalization!
+{{< /callout >}}
+
 ### 3D MBSD
 
+
+#### 3D Coordinates
+
+### MBSD x Coordinates
+
+
+### MBSD x Reference Coordinates
+
+The bicycle model was not using reference/absolute coordinates as I wanted to reduce the computational load to make the simulation real time back in te days.
+
+With reference coordinates, you have a very systematic approach, at the cost of solving more equations.
+
+If you dont care about performance and what to optimize for reach of mechanism analysis, this is for you.
 
 #### 3D Kinematics
 

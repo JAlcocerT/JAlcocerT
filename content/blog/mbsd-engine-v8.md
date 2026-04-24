@@ -29,7 +29,7 @@ Why are so many people addicted to their sound?
 
 
 
-## Flatvs Cross
+## Flat vs Cross
 
 The V8 Distinction: Your "V-engine results in one line" is the perfect summary of the Ferrari vs. Ford engineering trade-off.
 
@@ -58,7 +58,7 @@ https://www.youtube.com/watch?v=_TssXF8yQek -->
 
 This one are two I4 at 90 degrees!
 
-Expect high secondary engine imbalance :)
+Expect high secondary engine imbalance, but primary balanced :)
 
 ### Power Distribution
 
@@ -67,14 +67,16 @@ Always one cylinder is in power stroke
 ### Examples
 
 
-https://www.youtube.com/watch?v=RcyMoZoqkPA
+<!-- https://www.youtube.com/watch?v=RcyMoZoqkPA -->
 
 {{< youtube "RcyMoZoqkPA" >}}
 
 
 ## Cross Plane
 
+The V8 "Rumble" Math: Showing that the cross-plane V8's uneven firing pattern ($L-R-L-L-R-L-R-R$) populates the half-order harmonics ($0.5\times, 1.5\times$) while the flat-plane cancels them is the most technically accurate explanation for the difference in their acoustic and vibration signatures.
 
+This one secondary balanced!
 
 ### Power Distribution
 

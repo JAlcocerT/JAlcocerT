@@ -6,6 +6,14 @@ draft: false
 
 
 
+* https://github.com/JAlcocerT/mechanism
+
+
+
+
+{{< callout type="info" >}}
+Wifi is also used for dron control!
+{{< /callout >}}
 
 
 
@@ -25,15 +33,3 @@ Well...yes, they can.
 
 Providing that you communicate the physics accordingly.
 
-### MBSD x Coordinates
-
-
-
-
-### MBSD x Reference Coordinates
-
-The bicycle model was not using reference/absolute coordinates as I wanted to reduce the computational load to make the simulation real time back in te days.
-
-With reference coordinates, you have a very systematic approach, at the cost of solving more equations.
-
-If you dont care about performance and what to optimize for reach of mechanism analysis, this is for you.

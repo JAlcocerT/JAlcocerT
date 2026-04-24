@@ -8,15 +8,12 @@ sidebar:
 
 Enough *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/)?*
 
+Well, math is an awsome tool.
 
 
-* https://github.com/JAlcocerT/mechanism
-
-## Mechanical Engineering
-
-### Mechanism Simulations
+1. Mechanical Engineering
+2. Electronics
 
 
 
-## Electronics
-
+Wanna talk some science now?
