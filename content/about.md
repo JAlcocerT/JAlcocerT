@@ -15,5 +15,5 @@ Hope that these guides in form of a website will make the **your Tech Journey** 
 You can follow me at https://www.youtube.com/@JAlcocerTech
 
 {{< cards >}}
-  {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="And you can also rent my time" >}}
+  {{< card link="https://cal.com/jalcocertech/consulting" title="Tech Consulting" image="/blog_img/email/cal-email-stripe.png" subtitle="Questions? Get them solved" >}}
 {{< /cards >}}

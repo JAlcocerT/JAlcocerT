@@ -494,6 +494,8 @@ They are also available as standalone chips from some manufacturers.
 
 ### About Ubuntu 2604 LTS
 
+https://releases.ubuntu.com/ coming with the kernel 7.
+
 helium, zen...
 
 * https://winboat.app/

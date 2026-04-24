@@ -1,9 +1,6 @@
 ---
 title: Engineering
 type: docs
-prev: /docs/android/
-next: docs/
-draft: false
 sidebar:
   open: false
 ---

@@ -38,12 +38,13 @@ git clone git clone https://github.com/JAlcocerT/mbsd
   {{< card link="https://github.com/JAlcocerT/mbsd" title="NEW MBSD" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of a MBSD framework in Python" >}}
 {{< /cards >}}
 
+This is obviously superseeding:
+
 * https://github.com/JAlcocerT/Slider-Crank
 * https://github.com/JAlcocerT/mechanism
 
 
 ### Kinematics
-
 
 With *just kinematics* and the learnings inside the 3D-Design repository...
 
@@ -54,7 +55,7 @@ cd ./3D-Design/mbsd-to-render/bicycle_leg
 #make help
 ```
 
-Once rendered at my x300, I bring it to my x13 via:
+Once rendered at my x300, I bring it to my x13 via **rsync**:
 
 ```sh
 make all
@@ -65,6 +66,18 @@ mpv bicycle_leg.mp4
 {{< youtube "PBFRIEC9aB8" >}}
 
 <!-- https://youtu.be/PBFRIEC9aB8 -->
+
+```mermaid
+flowchart LR
+    A[q₀ initial guess] --> B[Position solve:<br/>C q,t = 0<br/>Newton-Raphson]
+    B --> C[Velocity solve:<br/>Cq·v = -Ct]
+    C --> D[Acceleration solve:<br/>Cq·a = -DCq·v + Ctt]
+    D --> E[Store q, v, a at tᵢ]
+    E --> F{Next t?}
+    F -->|yes, q₀ := q| B
+    F -->|no| G[Done]
+```
+
 
 #### Implemented 2D Constrains
 
@@ -86,19 +99,10 @@ Accelerations (F = ma)
 Velocities (∫a dt)
 Energy Flow (validation)
 
-What This Proves
 
-The constraint forces visualization will make it crystal clear:
+See a diagram of [the dynamics flow](https://mermaid.live/edit#pako:eNptU91u0zAUfpUjXzEt7fqbrRUdmloQAk1oP1ekpfJit7WU2IntZCtVpYkLJG4Rr8ALjAsuuNsD8BB7Eo6dtgg2S0n8ne87x8df7BWJFeOkT2aJuo4XVFu4HI0l4LiwiJ5F-cOn2wBKfMPD7TdIC2PBUCvMbAlDcCwMoDHZg1rtGC64LbLIxCJb1o1KSj4VZfb8Sh8ca6uSQZPXegHQzbTZnGxWcllVvuVZdP6204VMq0wZbsCKlBsMb7U49dLz1xcRW0qaithM9QKFAeRBibJKiLzXvVI65iY6m1plaQID383ZdK5pKewS9jfYZFrIudnhWElLY7vDheH6Ue1Takx0CrnXpAggpVaLG4-FjJO661fIJ1KHeTSc5pB7U9_QWF0JKn0ew_gBs55wmwfGtSgr6v5uiNT9nSdbklXcrni118pJyljCq7Br81FwmP8T2rjrUTQmEZyCH9jMh0uYQAQU34DfrZMT31LkFE7Y8HIn_P0LPwM3-VHV2EgRDqA2Gub3P0uoYZ61YzKpunBnJZJZPRGSJvPq7Oy25dnqp-NJ0TJi3qABbFwpK0T_muxlPuOE0cyuXmqtNIjKYDx-XFMZ8xfrSu41qAapdqfwP2a5sfWElS4zwt_z-SvYfWYnW6UnvGikJF-h4st3sFMu2XYdF39ymS2xXeVdYbPC3T2wgHcPrO9bSVeuROvnWrDJHgmIm5C-1QUPSMp1Sh0kK1d1TOyCp3xM-jhlfEaLBO0eyzWmZVS-VyrdZmpVzBekP6OJQVRkjFo-EhSvSLqLatwH10NVSEv67cOWL0L6K3KDsFvvHXUO8Wk3272wc9QJyJL0O2G92w0b4VGn1eg0G81uuA7IR79uq95uhO2wddgLcWDe-g8VPHGZ)
 
-Gravity is indeed constant (red arrows barely move)
-Constraint forces vary with mechanism configuration (blue arrows dance around)
-When you add them together (green arrows), you get exactly the acceleration pattern
-This is why your intuition was right: constant gravity alone can't explain variable accelerations
-
-
-
-
-
+#### Physics x Lagrangian 
 
 The Physics: Constrained Lagrangian Mechanics
 
@@ -132,9 +136,23 @@ C_q @ a = -dC_q @ v - d²C/dt²   ← Acceleration constraint
 Given certain forces - where does the mbsd position evolve over time?
 
 
-#### 2D Indirect Mechanics
+#### 2D Inverse Mechanics
 
 Given a defined trajectory - what are the forces that make it possible?
+
+Thats not a problem, see this script for a slider crank rotating at constant speed.
+
+![alt text](/blog_img/mec/inverse_slider_crank.png)
+
+Given a kinematically-driven trajectory (mechanism with `DOF = 0` thanks to
+user constraints), compute the **Lagrange multipliers = constraint reaction
+forces** at every time step.
+
+No integration — just a kinematic sweep plus the saddle-point solve.
+
+The classic ME use case: "I need my crankshaft to rotate at 10 RPM — what
+driving torque do I supply, and what loads do the bearings see through the
+cycle?"
 
 
 ## A 2D MBSD Simulator
@@ -173,8 +191,7 @@ python3 visualize_json.py viewer/data/slider-crank-no-gravity.json --frame 50 --
 python3 visualize_json.py viewer/data/slider-crank.json --frame 100 --output gravity_frame.png
 ```
 
-
-Now to visualize it: *thanks to threeJS we have some kind of augmented reality :)*
+Now to visualize it: *thanks to threeJS, we have some kind of augmented reality :)*
 
 ```sh
 cd ./mbsd/2D-Simulator
@@ -190,8 +207,7 @@ This installs:
 npm run dev
 ```
 
-
-Yes, we already capture all that data in the JSON! Looking at lines 247-262 of the export function:
+We already capture all this data in the JSON:
 
 ```json
 trajectory_data = {
@@ -222,6 +238,55 @@ What we could visualize (Phase 2):
 
 ## Conclusions
 
+A mechanism is an `MBody` object with:
+
+| Attribute | Contents |
+|---|---|
+| `bodies` | list of `Body(name, mass, inertia, rG)`; body 0 is always ground |
+| `rev_joints` | list of `RevJoint(i, j, ri, rj)` — revolute pair between body i and j at local points ri, rj |
+| `prism_joints` | `PrismJoint(i, j, ri, rj, hi)` — prismatic, `hi` defines sliding direction normal |
+| `punto_linea_joints` | `PuntoLineaJoint(i, j, ri, rj, hi)` — point on line |
+| `leva_joints` | `LevaJoint(i, j, geom_i, geom_j, ri, rj)` — surface-surface CAM contact (3 eqs, adds 2 extra coords per joint) |
+| `gear_joints` | `GearJoint(i, j, tau)` — fixed transmission ratio |
+| `user_constraints` | list of `UserConstraint` — arbitrary user-written scalar equations (driving, locking, etc.) |
+
+{{< callout type="info" >}}
+For 2D, this is a consolidation [wiki doc](https://github.com/JAlcocerT/mbsd/blob/master/2D-mbsd/z-py-mindmap.md)
+{{< /callout >}}
+
+```mermaid
+mindmap
+  root((2D MBSD<br/>Python<br/>Examples))
+    Direct MATLAB Ports
+      Slider-Crank
+        slider_crank.py
+        dynamic_slider_crank.py
+      Cam-Follower
+        cam_follower_angular.py
+      Terrain-Wheel-SuspMass
+        dynamic_terrain_wheel.py
+        dynamic_terrain_wheel_rolling.py
+        dynamic_terrain_wheel_polygonal.py
+    Variants built on ports
+      dynamic_slider_crank_gravity.py
+      dynamic_slider_crank_no_gravity.py
+      dynamic_cam_follower.py
+    New Classical Kinematics
+      four_bar.py
+      four_bar_linkage.py
+      four_bar_bicycle.py
+      geneva_drive.py
+      pantograph.py
+      scotch_yoke.py
+    New Classical Dynamics
+      dynamic_pendulum.py
+      dynamic_double_pendulum.py
+      dynamic_mass_spring_damper.py
+      dynamic_four_bar.py
+      dynamic_scotch_yoke.py
+      dynamic_bicycle_leg.py
+```
+
 > You can do more cool thing with geometry, like [knitting patterns](https://jalcocert.github.io/JAlcocerT/knitting-pattern-calculator/).
 
 
@@ -245,13 +310,11 @@ If you are here for the free goodies, you can have them at the time of writing a
 
 Enjoy!
 
-
 ### MBSD 2D x CC Skills
 
-How about...documenting the framework in a way that claude code or any other agent could understand it from now on?
+How about...
 
-
-According 
+documenting the framework in a way that claude code or any other agent could understand it from now on?
 
 ### MBSD 2D x Excalidraw and MermaidJS
 
@@ -260,6 +323,8 @@ Both can be generating diagrams as a code.
 I thought that excalidraw accepted mermaid code and that was it.
 
 But actually...it has its own json that can be understood.
+
+
 
 
 ---
