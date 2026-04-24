@@ -1,9 +1,9 @@
 ---
-title: "MBSD centered design"
+title: "Launching a MBSD framework"
 date: 2026-04-29
 draft: false
-tags: ["MBSD x Simulations","CADQuery x Blender","JAlcocerTech ebook"]
-description: 'A Dynamics x Kinematics HUB so you can design from Mechanism Analytics.'
+tags: ["Mechanism Analytics x Simulations","CADQuery x Blender","JAlcocerTech ebook x WhitePaper"]
+description: 'A Dynamics x Kinematics HUB to perform agentic centered mechanism design.'
 url: 'design-centric-mbsd'
 math: true
 ---
@@ -13,9 +13,19 @@ https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics
 
 **TL;DR**
 
-The start of a system to ship mechanisms.
+The start of a system to ship mechanisms as a code.
 
 **Intro**
+
+You know whats coming right?
+
+The era of drag and drop its slowly going to an end.
+
+And the time for concepts, semantics and orchestrating outcomes.
+
+## Computational Mechanics
+
+
 
 
 ```sh

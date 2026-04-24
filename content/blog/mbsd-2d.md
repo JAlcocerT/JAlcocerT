@@ -81,6 +81,39 @@ flowchart LR
 
 #### Implemented 2D Constrains
 
+A **holonomic** constraint is an equation of the form `C(q, t) = 0` that
+must hold at every time. 
+
+"Holonomic" means it depends only on positions (and possibly explicit time), not on velocities. 
+
+All the joints in this series are holonomic.
+
+Common **2D joint types** and the number of equations each contributes:
+
+| Joint | Geometric meaning | Equations |
+|---|---|---|
+| Revolute (pin) | Two body-fixed points coincide in world | 2 |
+| Prismatic (slider) | Same angle + one point stays on a fixed line | 2 |
+| Point-on-line | One body-fixed point stays on a line defined by another body | 1 |
+| Cam/Leva | Two parameterised surfaces stay in tangent contact | 3 (+ 2 extra coords per joint) |
+| Gear | `θ_i − τ·θ_j = 0` (fixed transmission ratio) | 1 |
+| User | Any scalar equation `C_user(q, t) = 0` (driving motion, locks, …) | 1 or more |
+
+Plus three equations pinning the ground body at `x_0 = y_0 = θ_0 = 0`.
+
+Stacking all constraint equations gives the **constraint vector** `C(q,
+t) ∈ ℝ^{n_restr}`. The system's physical **degrees of freedom** are
+
+```
+n_DOF = n_coord − n_restr
+```
+
+For a slider-crank driven by a user constraint that prescribes the crank
+angle, `n_DOF = 0` — the mechanism's motion is completely determined.
+
+> Without that user constraint, `n_DOF = 1` — the crank can spin freely.
+
+
 ### Dynamics
 
 Understand **constrained dynamics** and how to simulate real mechanisms with 2D motions.
@@ -93,11 +126,11 @@ cd ./mbsd/2D-Dynamics
 
 The combined video now shows the complete causality chain:
 
-Forces (gravity + applied torque)
-Constraints (gravity vs constraint forces) ← NEW!
-Accelerations (F = ma)
-Velocities (∫a dt)
-Energy Flow (validation)
+* Forces (gravity + applied torque)
+* Constraints (gravity vs constraint forces) ← NEW!
+* Accelerations (F = ma)
+* Velocities (∫a dt)
+* Energy Flow (validation)
 
 
 See a diagram of [the dynamics flow](https://mermaid.live/edit#pako:eNptU91u0zAUfpUjXzEt7fqbrRUdmloQAk1oP1ekpfJit7WU2IntZCtVpYkLJG4Rr8ALjAsuuNsD8BB7Eo6dtgg2S0n8ne87x8df7BWJFeOkT2aJuo4XVFu4HI0l4LiwiJ5F-cOn2wBKfMPD7TdIC2PBUCvMbAlDcCwMoDHZg1rtGC64LbLIxCJb1o1KSj4VZfb8Sh8ca6uSQZPXegHQzbTZnGxWcllVvuVZdP6204VMq0wZbsCKlBsMb7U49dLz1xcRW0qaithM9QKFAeRBibJKiLzXvVI65iY6m1plaQID383ZdK5pKewS9jfYZFrIudnhWElLY7vDheH6Ue1Takx0CrnXpAggpVaLG4-FjJO661fIJ1KHeTSc5pB7U9_QWF0JKn0ew_gBs55wmwfGtSgr6v5uiNT9nSdbklXcrni118pJyljCq7Br81FwmP8T2rjrUTQmEZyCH9jMh0uYQAQU34DfrZMT31LkFE7Y8HIn_P0LPwM3-VHV2EgRDqA2Gub3P0uoYZ61YzKpunBnJZJZPRGSJvPq7Oy25dnqp-NJ0TJi3qABbFwpK0T_muxlPuOE0cyuXmqtNIjKYDx-XFMZ8xfrSu41qAapdqfwP2a5sfWElS4zwt_z-SvYfWYnW6UnvGikJF-h4st3sFMu2XYdF39ymS2xXeVdYbPC3T2wgHcPrO9bSVeuROvnWrDJHgmIm5C-1QUPSMp1Sh0kK1d1TOyCp3xM-jhlfEaLBO0eyzWmZVS-VyrdZmpVzBekP6OJQVRkjFo-EhSvSLqLatwH10NVSEv67cOWL0L6K3KDsFvvHXUO8Wk3272wc9QJyJL0O2G92w0b4VGn1eg0G81uuA7IR79uq95uhO2wddgLcWDe-g8VPHGZ)
@@ -130,6 +163,57 @@ C_q @ v = ∂C/∂t          ← Velocity constraint (automatic)
 C_q @ a = -dC_q @ v - d²C/dt²   ← Acceleration constraint
 ```
 
+#### The Mathematical Recipe for 2D Dynamics
+
+This is a high-level summary of the mathematical "recipe" used to solve the dynamics
+
+To move from a static description of a mechanism to a living simulation, we follow a four-step mathematical process rooted in **Lagrangian Mechanics**.
+
+1. Define the System State
+
+We represent every rigid body $i$ using three coordinates: $q_i = [x, y, \theta]^T$. 
+
+For a system of $n$ bodies, the global state vector is:
+
+$$q = [q_1, q_2, \dots, q_n]^T$$
+
+2. Apply Geometric Constraints
+
+Physical joints (pins, sliders, gears) are represented as algebraic equations that must equal zero:
+
+$$C(q, t) = 0$$
+
+To solve for motion, we must know how these constraints change as the bodies move. 
+
+We find the **Jacobian** ($C_q$) by taking the partial derivative of the constraints with respect to the coordinates:
+
+$$C_q = \frac{\partial C}{\partial q}$$
+
+3. Assemble the Equations of Motion
+
+Using the Principle of Virtual Work and the Lagrange Multiplier method, we combine Newton's second law ($F = ma$) with our constraints. 
+
+This results in the **Saddle-Point System**:
+
+$$\begin{bmatrix} M(q) & C_q^T \\ C_q & 0 \end{bmatrix} \begin{bmatrix} a \\ \lambda \end{bmatrix} = \begin{bmatrix} Q_{total} \\ \gamma \end{bmatrix}$$
+
+
+
+* **$M(q)$**: The mass and inertia of all bodies.
+* **$a$**: The unknown accelerations we want to find.
+* **$\lambda$**: The unknown **Lagrange Multipliers** (the reaction forces at the joints).
+* **$Q_{total}$**: External forces like gravity, springs, and motor torques.
+* **$\gamma$**: The "acceleration RHS," which handles the inertial effects of the constraints ($C_q \cdot a = \gamma$).
+
+4. Integrate or Extract
+
+Depending on the goal, we use the results of that matrix solve in two ways:
+
+* **Forward Dynamics:** We take the accelerations ($a$), add them to the current velocities, and update the positions using a time-integrator (like Runge-Kutta). This "plays" the simulation forward.
+* **Inverse Dynamics:** If the motion is already prescribed (e.g., we know the crank must spin at 10 RPM), we solve for $\lambda$ to find out exactly how much torque the motor needs to provide and how much stress the bearings are under.
+
+
+By repeating this solve hundreds of times per second, we capture the high-frequency vibrations and inertial "shakes" characteristic of complex mechanical systems.
 
 #### 2D Direct Mechanics
 
@@ -153,7 +237,6 @@ No integration — just a kinematic sweep plus the saddle-point solve.
 The classic ME use case: "I need my crankshaft to rotate at 10 RPM — what
 driving torque do I supply, and what loads do the bearings see through the
 cycle?"
-
 
 ## A 2D MBSD Simulator
 

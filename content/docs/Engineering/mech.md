@@ -25,14 +25,14 @@ Well...yes, they can.
 
 Providing that you communicate the physics accordingly.
 
-### MBSD x 
+### MBSD x Coordinates
 
 
 
 
 ### MBSD x Reference Coordinates
 
-The bicycle model was not using this one as I wanted to reduce the computational load to make the simulation real time back in te days.
+The bicycle model was not using reference/absolute coordinates as I wanted to reduce the computational load to make the simulation real time back in te days.
 
 With reference coordinates, you have a very systematic approach, at the cost of solving more equations.
 

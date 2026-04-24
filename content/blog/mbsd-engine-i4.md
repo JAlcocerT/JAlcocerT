@@ -490,10 +490,15 @@ Then provide a summary and pros and cons of the balance of each engine type disc
 
 The video titled **"ENGINE BALANCE: Inline 6 vs. V6 vs. VR6 vs. Flat / Boxer 6"** compares the balance, packaging, strengths, and weaknesses of four common six-cylinder engine layouts: the **inline-six**, **V6**, **VR6**, and **flat-six/boxer-six**.
 
-Inline 6
+**Inline 6**
 
-The **inline-six** is widely regarded as the smoothest and simplest of the group. Its layout gives it excellent inherent balance and an even firing interval, which helps it run very smoothly without
-needing major balancing aids. It is also mechanically straightforward, typically using only one cylinder head and a simpler overall design than split-bank engines. Its main drawback is packaging:
+The **inline-six** is widely regarded as the smoothest and simplest of the group. 
+
+ts layout gives it excellent inherent balance and an even firing interval, which helps it run very smoothly without needing major balancing aids.
+
+It is also mechanically straightforward, typically using only one cylinder head and a simpler overall design than split-bank engines.
+
+Its main drawback is packaging:
 because all six cylinders are arranged in a straight line, the engine is long and can be difficult to fit in tighter engine bays, especially in transverse layouts.
 
 **Pros:** Simple design, excellent inherent balance, smooth operation, even firing interval.
@@ -593,7 +598,7 @@ create a hand over for the next agent to take advantage of all our work at a sum
 ```
 
 ```sh
-#git clone /engine-balance
+#git clone https://github.com/JAlcocerT/engine-balance
 #claude #/skills 
 ```
 
@@ -623,6 +628,15 @@ npm install
 npm run dev
 ```
 
+
+{{< callout type="warning" >}}
+This has all been a test for LLMs understanding of mechanics. Treat the post accordingly.
+{{< /callout >}}
+
+---
+
+## Conclusions
+
 When you are happy enough, render that composition:
 
 ```sh
@@ -636,13 +650,9 @@ https://youtu.be/Vrdphl04gas
 {{< youtube "Vrdphl04gas" >}}
 
 
-> waste of tokens .mp4 :)
+> waste of tokens `.mp4` :)
 
 > > Or in other words: nah, AI is a joke
-
----
-
-## Conclusions
 
 Someone told me that she sees the difference when I talk with passion
 
