@@ -4,13 +4,17 @@ date: 2026-04-25
 draft: false
 tags: ["MBSD x Active Damping","LMS Filter","V10 vs V12"]
 description: 'Connecting Mechanical Engineering with signal processing and control theory.'
-url: 'simulating-v-shape-engine-balance'
+url: 'simulating-the-shape-of-engine-balance'
 ---
 
 
 **Tl;DR**
 
 **Intro**
+
+With just a slider-crank and the [AR threeJS based simulator](https://jalcocert.github.io/JAlcocerT/2d-mbsd/#a-2d-mbsd-simulator) we got:
+
+
 
 
 ## V10 vs V10
@@ -20,6 +24,12 @@ url: 'simulating-v-shape-engine-balance'
 ### I3
 
 ## V8 Comparison
+
+See how this cross plane V8 placed longitudinally rolls the full car at startup:
+
+{{< youtube "Xpw6RovYXW4" >}}
+<!-- 
+https://www.youtube.com/watch?v=Xpw6RovYXW4 -->
 
 **Since the Straight-6 is the final "balanced" entry here, are you planning to simulate the V8 next to show why the "Cross-plane" crank was invented to solve the V8's rocking issues?**
 
@@ -102,6 +112,11 @@ The Environment: Mounts and Transmissibility.
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
+
+
+{{< callout type="info" >}}
+For my reference, its all distilled [here](https://github.com/JAlcocerT/mbsd/tree/master/z-destilled-ebook)
+{{< /callout >}}
 
 
 ---

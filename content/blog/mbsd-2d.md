@@ -67,6 +67,8 @@ mpv bicycle_leg.mp4
 
 <!-- https://youtu.be/PBFRIEC9aB8 -->
 
+This is the flow:
+
 ```mermaid
 flowchart LR
     A[q₀ initial guess] --> B[Position solve:<br/>C q,t = 0<br/>Newton-Raphson]
@@ -315,7 +317,6 @@ What we could visualize (Phase 2):
 * Color-coded bars — bars colored by velocity/acceleration magnitude
 * Energy flow — animate kinetic↔potential energy transfers
 * Vector trails — show historical path of joint motion
-
 
 ---
 

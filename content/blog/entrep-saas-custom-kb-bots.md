@@ -18,6 +18,10 @@ Data first, then AI centric.
 
 How about some Document Intelligence?
 
+
+karpathy
+https://www.youtube.com/watch?v=iXd0t60YmMw
+
 How about breaking the most likely inevitable silos between department collaboration?
 
 How about knowing where do you sit in [the business *game*](#the-business-game)?

@@ -24,8 +24,10 @@ How about making a come back?
 
 ```sh
 git clone https://github.com/JAlcocerT/3Design
-git clone https://github.com/JAlcocerT/mbsd
+#git clone https://github.com/JAlcocerT/mbsd
 ```
+
+This is the flow:
 
 ```mermaid
 graph TD
@@ -62,8 +64,11 @@ graph TD
     style PRINT fill:#bfb,stroke:#333,stroke-width:4px
 ```
 
+You can do it via:
+
 ```sh
 ###make creative #read the post to understand this :)
+
 # Step 1 — build the scene
 ~/Applications/Blender4.2/blender --background --python blender_scene_creative.py
 #Runs the Python script to build the scene — imports STLs, sets up materials, lighting, camera, bakes keyframes, and saves slider_crank_creative.blend. This is equivalent to make scene.
@@ -76,10 +81,11 @@ graph TD
 mpv slider_crank_creative.mp4
 ```
 
+This is what it got rendered after a while:
+
 <!-- https://youtu.be/0fmFl3hVgaA
  -->
 {{< youtube "0fmFl3hVgaA" >}}
-
 
 This workflow replies to:
 
@@ -131,7 +137,10 @@ If you want the best of both worlds, set your agent up with this two-step proces
 
 **Step A: The Engineering (CadQuery)**
 
-The agent writes a CadQuery script. This ensures the part is perfectly dimensioned and the holes align for 3D printing.
+The agent writes a CadQuery script.
+
+This ensures the part is perfectly dimensioned and the holes align for 3D printing.
+
 ```python
 # Agent-generated CadQuery snippet
 import cadquery as cq
@@ -155,7 +164,9 @@ The agent then runs a Python script inside Blender to import that STL and make i
 
 If an agent tries to design a precision bolt-hole pattern in Blender using only mesh commands, it will eventually "break" the geometry. 
 
-If it needs to change the hole size later, it has to move hundreds of vertices manually. In **CadQuery**, it just changes a single variable: `hole_dia = 5`.
+If it needs to change the hole size later, it has to move hundreds of vertices manually. 
+
+In **CadQuery**, it just changes a single variable: `hole_dia = 5`.
 
 ---
 
@@ -275,7 +286,6 @@ docker run -e OPENAI_API_KEY=<YOUR_OPEN_AI_KEY> -p 8080:80 ghcr.io/chartdb/chart
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartdb" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
 {{< /cards >}}
-
 
 And specially:
 

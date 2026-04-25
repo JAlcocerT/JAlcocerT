@@ -1,6 +1,6 @@
 ---
 title: "2D Mechanism Synthesis"
-date: 2026-04-27
+date: 2026-04-26
 draft: false
 tags: ["MBSD x 2D Simulation","Grashof","Mechanical Synthesis"]
 description: 'Which mechanism can do what? Explained with via Hyperframe video'
@@ -80,6 +80,11 @@ All the *compatible movements* with The geometry og a given mechanisms are insid
 
 
 Synthesis has always been a thing...
+
+
+{{< callout type="info" >}}
+Luckily, now I have it all clear here
+{{< /callout >}}
 
 <!-- https://youtube.com/shorts/9b19b7SmovU -->
 
