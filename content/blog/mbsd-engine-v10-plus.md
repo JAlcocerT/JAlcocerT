@@ -2,7 +2,7 @@
 title: "The balance of Vs"
 date: 2026-04-25
 draft: false
-tags: ["MBSD x Active Damping","LMS Filter"]
+tags: ["MBSD x Active Damping","LMS Filter","V10 vs V12"]
 description: 'Connecting Mechanical Engineering with signal processing and control theory.'
 url: 'simulating-v-shape-engine-balance'
 ---
@@ -13,9 +13,17 @@ url: 'simulating-v-shape-engine-balance'
 **Intro**
 
 
+## V10 vs V10
+
+### I5 vs I6
+
+### I3
+
 ## V8 Comparison
 
 **Since the Straight-6 is the final "balanced" entry here, are you planning to simulate the V8 next to show why the "Cross-plane" crank was invented to solve the V8's rocking issues?**
+
+### I4
 
 ## Active Damping
 

@@ -67,9 +67,13 @@ mpv all_mechanisms.mp4
 
 Close the last mile of the NVH chain — chassis modal response. 
 
-Take F_chassis(ω) from the engine-mounts chapter and propagate it through a simple modal model of a body shell to predict cabin acceleration. This is the layer the driver actually feels, and it reuses the same transmissibility / phasor language one more time. Smallest scope, finishes a story we explicitly left open.
+Take F_chassis(ω) from the engine-mounts chapter and propagate it through a simple modal model of a body shell to predict cabin acceleration.
 
-Branch the framework into a second mechanism — valvetrain (cam-follower) NVH or terrain/wheel (suspension NVH). Same framework spine — source spectrum, transmissibility, optional active control — but on a totally different mechanism.
+This is the layer the driver actually feels, and it reuses the same transmissibility / phasor language one more time. Smallest scope, finishes a story we explicitly left open.
+
+Branch the framework into a second mechanism — valvetrain (cam-follower) NVH or terrain/wheel (suspension NVH). 
+
+Same framework spine — source spectrum, transmissibility, optional active control — but on a totally different mechanism.
 
 Opens a parallel narrative arc, repo's adjacent examples become first-class citizens. Largest payoff for repo coherence, biggest scope.
 
@@ -97,15 +101,15 @@ Thermodynamic Forcing (Combustion harmonics)
 Possible at 2D thx to some Dimensional Generalization!
 {{< /callout >}}
 
-### 3D MBSD
-
-
-#### 3D Coordinates
+## 3D MBSD
 
 ### MBSD x Coordinates
 
 
-### MBSD x Reference Coordinates
+#### 3D Coordinates
+
+
+#### 3D MBSD x Reference Coordinates
 
 The bicycle model was not using reference/absolute coordinates as I wanted to reduce the computational load to make the simulation real time back in te days.
 
@@ -113,7 +117,7 @@ With reference coordinates, you have a very systematic approach, at the cost of 
 
 If you dont care about performance and what to optimize for reach of mechanism analysis, this is for you.
 
-#### 3D Kinematics
+### 3D Kinematics
 
 But if you want to do 3D mechanics, you need to get 3D kinematics right first.
 
@@ -121,9 +125,10 @@ But if you want to do 3D mechanics, you need to get 3D kinematics right first.
 There are many interesting effects in 3D that simply dont exist in 2D.
 
 
-#### 3D Dynamics
+### 3D Dynamics
 
 
+### 3D Strange Effects
 
 
 ---
@@ -142,15 +147,6 @@ If you want to ship:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
-
-Upcoming topics with 3D mechanics:
-
-1. Engine configuration analysis
-2. Suspensions: Double Wishbone, macpherson...
-
-<!-- https://youtu.be/y-ANdaUthxg -->
-
-{{< youtube "y-ANdaUthxg" >}}
 
 
 ---

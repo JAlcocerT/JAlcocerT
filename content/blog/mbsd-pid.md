@@ -1,6 +1,6 @@
 ---
 title: "Controlling: from bikes to humidity"
-date: 2026-05-01
+date: 2026-75-01
 draft: false
 tags: ["MBSD x 3D Simulation","PID","Control Theory","PySymverse"]
 description: 'System Theory, SISO, MIMO...'
@@ -366,6 +366,84 @@ Boooom.
 ---
 
 ## FAQ
+
+### Transfer Function vs FRF
+
+The short answer is **yes, but with a nuance in perspective.**
+
+While an **FRF (Frequency Response Function)** and a **Transfer Function** are mathematically cousins, they are typically used in different engineering cultures (Mechanical/Vibration vs. Electrical/Control).
+
+1. The Mathematical Relationship
+
+In the world of the **Laplace Transform**, we define the Transfer Function $H(s)$ as the ratio of output to input in the complex $s$-domain:
+
+$$H(s) = \frac{Y(s)}{X(s)}$$
+
+where $s = \sigma + j\omega$.
+
+An **FRF** is simply the Transfer Function evaluated only along the imaginary axis ($s = j\omega$).
+
+In other words, we assume the transient parts of the signal ($\sigma$) have died out, and we are only looking at the steady-state sinusoidal response.
+
+$$FRF(\omega) = H(j\omega)$$
+
+
+2. Structural Dynamics vs. Control Theory
+
+The terminology usually changes based on what you are trying to measure:
+
+| Feature | **FRF** (Mechanical/NVH) | **Transfer Function** (Control Theory) |
+| :--- | :--- | :--- |
+| **Domain** | Frequency ($j\omega$) | Complex $s$-plane ($s = \sigma + j\omega$) |
+| **Data Source** | Usually **Experimental**. Measured via an impact hammer or shaker. | Usually **Analytical**. Derived from differential equations ($F=ma$). |
+| **Focus** | Physical resonances, modal mass, and damping ratios. | Stability, gain margin, and transient response (overshoot). |
+| **Common Plot** | **Bode Plot** (Magnitude & Phase vs. Freq). | **Root Locus**, Nyquist, or Bode. |
+
+3. Is it the same "Nyquist"?
+**Yes, absolutely.** The Nyquist stability criterion used in control theory is directly applicable to the FRFs we’ve been discussing.
+
+In Control Theory, you use a **Nyquist Plot** (a polar plot of the Transfer Function) to see if the system will become unstable (go "infinite") when you close a feedback loop.
+
+In our **Active Mass Damping** chapter, the "Actuator Delay" we discussed is a classic Nyquist problem. 
+
+If the phase shift caused by the delay reaches $180^\circ$ while the gain is still high, the Nyquist plot "encircles" the critical point $(-1, 0)$, and your vibration canceller becomes a vibration **amplifier**.
+
+
+In the mbsd series, we have been using **FRFs** to describe:
+
+* **Transmissibility:** How force moves from the engine to the mounts ($T(j\omega)$).
+* **Chassis Response:** How force at the mount becomes acceleration in the cabin ($H(j\omega)$).
+
+We call them FRFs because we are simulating the **steady-state** harmonics of the engine.
+
+However, the moment we added the **LMS Controller**, we transitioned into **Control Theory**. 
+
+To ensure that the LMS algorithm doesn't blow up (as seen in the "instability" demo), we are effectively ensuring that the system's Transfer Function obeys Nyquist's stability laws.
+
+* **Transfer Function:** The "Master" equation for the system’s behavior everywhere.
+* **FRF:** The "Slice" of the transfer function that tells you how the system vibrates at specific frequencies.
+* **Nyquist:** The tool used to make sure your **Active Damping** (Mechatronics) doesn't turn your engine into a giant, oscillating mechanical disaster.
+
+
+| | **FRF (mechanical / NVH)** | **Transfer function (control)** |
+|---|---|---|
+| Domain | `jω` only (steady state) | full `s`-plane (transient + steady) |
+| Typical origin | experimental — hammer test, shaker, dyno | analytical — derived from differential equations |
+| What you study | resonances, modal damping, frequency content | stability, gain margin, transient response |
+| Common plot | Bode (magnitude / phase vs frequency) | Bode, Nyquist, root locus |
+
+*Slight nuance worth being honest about:* "FRF = experimental" is the
+industry default (NVH engineers measure them in the lab) but not a
+rule. Our `T(ω)` and `H_cabin(ω)` are FRFs derived analytically from
+linear models — same mathematical object as a measured FRF, just a
+different origin. Conversely, control engineers do measure transfer
+functions experimentally too (system identification).
+
+
+
+**Would you like to see how the Nyquist plot for our I4 engine looks when we add that 4ms actuator delay? It’s a very visual way to see the system "crossing the line" into instability.**
+
+### Bode vs Nyquist
 
 ### How does a PID look like?
 

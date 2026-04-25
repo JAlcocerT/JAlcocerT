@@ -1,6 +1,6 @@
 ---
 title: "Heat Transfer"
-date: 2026-05-01
+date: 2026-06-01
 draft: false
 tags: ["Black-Scholes","Fluid Dynamics","Ptolomeo"]
 description: 'The physics of heat and thermodynamics.'

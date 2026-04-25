@@ -7,6 +7,7 @@ url: 'create-infographics'
 
 https://openai.com/index/introducing-chatgpt-images-2-0/
 
+https://github.com/JAlcocerT/jalcocertech-services/tree/master/channel-infographics
 
 ### InfoGraphics
 
