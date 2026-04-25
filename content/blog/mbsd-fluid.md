@@ -10,6 +10,8 @@ math: true
 
 https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics
 
+https://github.com/JAlcocerT/mbsd/blob/master/z-destilled-ebook/2d-slidercrank-multicylinder-combustion.md
+
 **TL;DR**
 
 How aobut bringing fluid mechanics to the ICEs?

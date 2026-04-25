@@ -1,6 +1,6 @@
 ---
 title: "The physics of Mechanisms in the SPACE"
-date: 2026-04-25
+date: 2026-04-25T09:20:21+01:00
 draft: false
 tags: ["MBSD x 3D Simulation","CADQuery x Blender"]
 description: 'The Dynamics x Kinematics of you ve been waiting for.'
@@ -41,6 +41,16 @@ I wouldnt let you with just the [3d bicycle model](https://github.com/JAlcocerT/
 
 ### 2D MBSD Recap
 
+For some reason, I ended up accelerating with this.
+
+Nothing to do with using SOA cc models. Sure.
+
+Anyways, this is done:
+
+1. The matlab bycicle thesis is translated to python [here](https://jalcocert.github.io/JAlcocerT/3d-mbsd-bicycle/).
+
+2. 2D mechanisms with AR vectors and with blender, done.
+
 ```sh
 cd /home/jalcocert/Desktop/3Design/mbsd-to-render
 printf "file '%s'\n" *.mp4 > concat.txt
@@ -52,9 +62,26 @@ mpv all_mechanisms.mp4
 
 {{< youtube "KA7HloE6IQY" >}}
 
+3. Around slidercranks and a NVH stack: engine balance, balance shafts, active damping...
+4. 
+
+Close the last mile of the NVH chain — chassis modal response. 
+
+Take F_chassis(ω) from the engine-mounts chapter and propagate it through a simple modal model of a body shell to predict cabin acceleration. This is the layer the driver actually feels, and it reuses the same transmissibility / phasor language one more time. Smallest scope, finishes a story we explicitly left open.
+
+Branch the framework into a second mechanism — valvetrain (cam-follower) NVH or terrain/wheel (suspension NVH). Same framework spine — source spectrum, transmissibility, optional active control — but on a totally different mechanism.
+
+Opens a parallel narrative arc, repo's adjacent examples become first-class citizens. Largest payoff for repo coherence, biggest scope.
+
+Lift the e-book out of raw markdown — top-level TOC chapter, master "field guide" mindmap of all 11 series chapters + 4 reference chapters, possibly a printable PDF build. Pure consolidation, no new physics.
+
+
+
 #### Engine Balance
 
-This project has successfully built a "Full-Stack" engine simulator. You have gone from:
+This project has successfully built a "Full-Stack" engine simulator. 
+
+You have gone from:
 
 Inverse Kinematics (Position/Velocity)
 

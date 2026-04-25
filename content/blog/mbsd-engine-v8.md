@@ -15,10 +15,6 @@ The [I4 balance post](https://jalcocert.github.io/JAlcocerT/inline-4-engine-bala
 
 How about...using the MBSD 3D simulator?
 
-
-**Since the Straight-6 is the final "balanced" entry here, are you planning to simulate the V8 next to show why the "Cross-plane" crank was invented to solve the V8's rocking issues?**
-
-
 **Intro**
 
 F1 might do a comeback to V8

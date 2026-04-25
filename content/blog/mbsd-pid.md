@@ -1,8 +1,8 @@
 ---
-title: "Controlling: bikes and humidity"
+title: "Controlling: from bikes to humidity"
 date: 2026-05-01
 draft: false
-tags: ["MBSD x 3D Simulation","PID Controller","PySymverse"]
+tags: ["MBSD x 3D Simulation","PID","Control Theory","PySymverse"]
 description: 'System Theory, SISO, MIMO...'
 url: 'pid-for-bicycle-mbsd-model'
 math: true
@@ -44,16 +44,22 @@ Here is how the two relate to your greenhouse project:
 ---
 
 ## 1. Systems Theory: The "Big Picture"
+
 Systems theory is the study of how different parts interact to create a whole. In your case, the "System" isn't just the greenhouse; it's an interconnected web:
+
 * **The Environment:** Sun, outside wind, and ambient temperature.
 * **The Plant:** The physical structure and the actual biological plants (which breathe and release moisture).
 * **The Hardware:** Sensors, motors, and windows.
 
-Systems theory looks at **emergent behavior**. For example, if you open the window to lower heat (Temperature System), you accidentally drop the moisture levels (Humidity System). Systems theory helps you understand that you can't change one knob without affecting the other.
+Systems theory looks at **emergent behavior**. 
 
----
+For example, if you open the window to lower heat (Temperature System), you accidentally drop the moisture levels (Humidity System).
+
+Systems theory helps you understand that you can't change one knob without affecting the other.
+
 
 ## 2. Control Theory: The "Action"
+
 Control theory is the math and logic used to make that system behave the way you want. It focuses on the **Feedback Loop**.
 
 In your greenhouse, you are building a **Closed-Loop System**:
@@ -66,6 +72,7 @@ In your greenhouse, you are building a **Closed-Loop System**:
 Spot on. If you are only looking at one input (like your temperature sensor) to control one output (the window motor), that is a **SISO** system.
 
 ## The Acronyms of Control Theory
+
 Engineers love these four-letter categories to describe how "busy" a system is:
 
 * **SISO (Single-Input Single-Output):** * *Example:* One temp sensor controlling one window. 

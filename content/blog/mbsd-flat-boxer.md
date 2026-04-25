@@ -183,6 +183,9 @@ This has been a good excuse to test `opus 4.7` via the CC Max plan:
 
 ![alt text](/blog_img/mec/mec-cc.png)
 
+Have you noticed the gap of value from such subscription from the similarly priced today accounting ones?
+
+What am i talking about...
 
 Beyond food and warm, what do you like?
 
@@ -198,17 +201,10 @@ Beyond food and warm, what do you like?
 
 ### What are those concepts?
 
-1. FFT
 
-2. Phasors/harmonics
-
-Vibration spectrum
-
-3. DC
-
-4. Saddle-point system
-
-5. Signal Processing
+{{< callout type="info" >}}
+Ive put them all together [here](https://github.com/JAlcocerT/mbsd/blob/master/z-destilled-ebook/2d-concepts.md)
+{{< /callout >}}
 
 The **Saddle-Point System** is the mathematical engine under the hood of most professional multibody dynamics solvers.
 

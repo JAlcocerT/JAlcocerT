@@ -5,6 +5,9 @@ type: docs
 url: 'create-infographics'
 ---
 
+https://openai.com/index/introducing-chatgpt-images-2-0/
+
+
 ### InfoGraphics
 
 Arent these just PDFs?

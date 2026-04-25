@@ -45,7 +45,7 @@ git init https://github.com/JAlcocerT/multi-body
 
 ## Conclusions
 
-Believe it or not, this is another industry getting shaped by AI capabilities.
+Believe it or not: this is another industry getting shaped by AI capabilities.
 
 Because if mechanism 3D dynamics its kind of trivial now.
 
