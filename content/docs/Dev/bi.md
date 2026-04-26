@@ -20,11 +20,6 @@ Sometimes, the [OSS BI Tools](https://jalcocert.github.io/JAlcocerT/setup-bi-too
 4. Grafana
 5. [Others like](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#business-intelligence-and-iot): Metabase, Redash, Superset... 
 
-<!-- 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker" title="Superset Example" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PyGWalker Rendered Map with locations..." >}}
-{{< /cards >}} -->
-
 Normally, these tools go plugged in the **final stage of the data pipelines**: *aka gold*
 
 ```mermaid
@@ -98,7 +93,7 @@ For a PoC on BI Tools, just go for Streamlit: *data centered plus its speed of i
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="Streamlit PoC Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PyGWalker Rendered Map with locations..." >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts" title="Financial PoC image="/blog_img/dev/pystocks/pystocks-vibed1.png" subtitle="Stocks analytics with Streamlit" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts" title="Financial PoC" image="/blog_img/dev/pystocks/pystocks-vibed1.png" subtitle="Stocks analytics with Streamlit" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}

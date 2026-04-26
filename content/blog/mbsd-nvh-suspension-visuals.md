@@ -1,6 +1,6 @@
 ---
 title: "Suspension videos"
-date: 2026-04-25
+date: 2026-12-25
 draft: false
 tags: ["MBSD x Active Damping","LMS Filter"]
 description: '.'

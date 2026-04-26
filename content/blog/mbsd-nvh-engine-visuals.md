@@ -5,6 +5,7 @@ draft: false
 tags: ["MBSD","Chassis Transfer Function x ISO 2631","Blender"]
 description: '.'
 url: 'visualizing-engine-nvh'
+math: true
 ---
 
 
@@ -253,6 +254,18 @@ ffmpeg -stream_loop 14 -i v6_90.mp4 -c copy v6_90_output.mp4
 
 <!-- https://youtu.be/q24QdtCGXC4 -->
 
+
+```sh
+cd cadquery-blender-v6-90-analysis && make scene && make still FRAME=15
+#scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-v6-90-analysis/render/v6_90_analysis_still_0015.png .
+scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-v6-90-analysis/render/v6_90_analysis.mp4 .
+ffmpeg -stream_loop 14 -i v6_90_analysis.mp4 -c copy v6_90_analysis_output.mp4
+```
+
+<!-- https://youtu.be/ePA8wPBI0HM -->
+{{< youtube "ePA8wPBI0HM" >}}
+
+
 ## InLines
 
 Integrating the Inline (straight) engines into one comparison table is fascinating because it shows the "battle of the cylinders."
@@ -286,9 +299,38 @@ The most common engine in the world, and the one we've analyzed the most in the 
 * **The Sound:** Generally "generic." In larger displacements (2.2L+), manufacturers add twin counter-rotating balance shafts (Lanchester balancers) to kill that $2\times$ buzz.
 
 
+![alt text](/blog_img/mec/i4_nvh_timeseries.gif)
+
+
+
+```sh
+cd cadquery-blender-i4-analysis && make scene && make still FRAME=15
+#scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-i4-analysis/render/i4_analysis_still_0015.png .
+tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-i4-analysis/render/i4_analysis.mp4 .
+
+ffmpeg -stream_loop 14 -i i4_analysis.mp4 -c copy i4_analysis_output.mp4
+```
+
+Smoke-tested output:
+
+
+|F_primary|   peak = 0.0000 N
+|F_secondary| peak = 78.9568 N
+|M_rocking|   peak = 0.0000 N·m
+135 GIF frames (40 per subplot + 15 hold) → 800 KB GIF
+
+Open render/i4_nvh_timeseries.gif and you should see: top panel stays flat at 0 (BALANCED, green), middle panel's red Fz line draws four full sine cycles with peak ±79 N (UNBALANCED, orange), bottom panel stays flat at 0 (BALANCED, green). That's the I4 NVH story written in pure 2D, totally independent of the 3D Blender visualization — two independent checks of the same math.
+
+{{< youtube "ePA8wPBI0HM" >}}
+
+
+
+
 3. The I5 (The Exotic Warble)
 
 Famously used by Audi, Volvo, and early 5-cylinder VWs.
+
 * **The Math:** With pins every 72°, the I5 is much better balanced than an I4. It has **zero** net primary and secondary force shake. 
 * **The Issue:** Like the I3, it has a **Rocking Couple**, but because the engine is longer and the pins are "spread out" around the circle, the rock is much smaller and "snakes" in a circular pattern rather than a simple vertical nod.
 * **The Sound:** Iconic $144^\circ$ firing interval. It sounds like a "Baby V10" because the harmonics are similar.
@@ -327,3 +369,46 @@ This gave you some idea?
 ---
 
 ## FAQ
+
+When analyzing an **Inline-4 (I4)**, the term "secondary momentum" (or more accurately, the **secondary rocking couple/moment**) is one of the most elegant parts of the math because, in a standard symmetrical I4, it is **zero**.
+
+Here is why that $0.0000$ N·m result for the rocking moment makes perfect sense from a physics perspective, especially when contrasted against the secondary force.
+
+1. The Symmetry of the I4
+
+In a standard I4, the crankpins are arranged at $[0^\circ, 180^\circ, 180^\circ, 0^\circ]$. 
+
+* **Pistons 1 & 4** (the outside pair) move together.
+* **Pistons 2 & 3** (the inside pair) move together, exactly opposite to the outside pair.
+
+Because the engine is perfectly symmetrical about its center point (between cylinders 2 and 3), the "leverage" from the front half is exactly cancelled by the "leverage" from the rear half.
+
+2. Force vs. Moment: The Crucial Distinction
+
+It is a common point of confusion: **How can there be a secondary force but no secondary moment?**
+
+* **Secondary Force ($F_{secondary}$):** All four pistons reach their maximum upward acceleration at the same time and their maximum downward acceleration at the same time (twice per revolution). Because they all push in the same direction, the forces **add up**. This creates the vertical "buzz."
+* **Secondary Moment ($M_{secondary}$):** To have a moment (a rocking couple), the forces on one side of the engine center would have to be different from the other. Since Cylinder 1 is identical to Cylinder 4, and Cylinder 2 is identical to Cylinder 3, there is no "see-saw" effect. The net tendency to tilt end-to-end is **zero**.
+
+3. Comparison Table: I3 vs. I4 vs. I6
+
+| Engine | Secondary Force ($F$) | Secondary Moment ($M$) | Visual Behavior |
+| :--- | :--- | :--- | :--- |
+| **I3** | Balanced (0) | **Unbalanced** | The engine "nods" end-to-end. |
+| **I4** | **Unbalanced** | Balanced (0) | The engine "hops" vertically. |
+| **I6** | Balanced (0) | Balanced (0) | Perfectly still. |
+
+
+4. When does the I4 have a Secondary Moment?
+
+In the real world, an I4 only develops a secondary rocking moment if you break the symmetry. This happens in:
+* **Asymmetric Firing/Crank Geometry:** Rare in production cars, but used in some racing applications.
+* **Manufacturing Tolerances:** If piston 1 is significantly heavier than piston 4, a small residual moment appears (this is why high-end "blueprinted" engines feel smoother).
+* **V-Engines:** A **V8 Flat-Plane** (which is two I4s) can actually have secondary moments if the bank angle or the axial offset of the cylinders isn't perfectly managed.
+
+**Summary for your "X-Ray" Mode**
+
+In your 135-frame GIF for the I4:
+
+1.  **Force Plot:** You will see a strong, high-frequency Red vector (Secondary Force) oscillating vertically.
+2.  **Moment Plot:** You will see a flat line at zero.
