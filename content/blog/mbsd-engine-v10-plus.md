@@ -44,9 +44,9 @@ See how this cross plane V8 placed longitudinally rolls the full car at startup:
 https://www.youtube.com/watch?v=Xpw6RovYXW4 -->
 
 
-![alt text](../../static/blog_img/mec/v8_cross_nvh_timeseries.gif) 
+![alt text](/blog_img/mec/v8_cross_nvh_timeseries.gif) 
 
-![alt text](../../static/blog_img/mec/v8_flat_nvh_timeseries.gif)
+![alt text](/blog_img/mec/v8_flat_nvh_timeseries.gif)
 
 **Since the Straight-6 is the final "balanced" entry here, are you planning to simulate the V8 next to show why the "Cross-plane" crank was invented to solve the V8's rocking issues?**
 

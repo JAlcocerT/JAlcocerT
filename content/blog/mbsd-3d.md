@@ -180,6 +180,23 @@ Phasor Superposition (Multi-cylinder linear sums)
 Spatial Geometry (V-engine vectoring)
 Thermodynamic Forcing (Combustion harmonics)
 
+![alt text](/blog_img/mec/i4_nvh_timeseries.gif)
+
+| Engine | Primary Shake ($1\times$) | Secondary Shake ($2\times$) | Rocking Moment ($M$) | The "X-Ray" Visual |
+| :--- | :--- | :--- | :--- | :--- |
+| **I3** | Balanced | Balanced | **High Unbalance** | Aggressive "See-saw" nodding. |
+| **I4** | Balanced | **High Unbalance** | Balanced | Rapid vertical "piston" pulse. |
+| **I5** | Balanced | Balanced | **Moderate Unbalance** | Complex "Snaking" thrum. |
+| **I6** | **Balanced** | **Balanced** | **Balanced** | **Perfectly still.** |
+| **V6 (60°)** | Balanced | Balanced | **Moderate Unbalance** | Steady "Nodding" rock. |
+| **V8 (Flat)** | Balanced | **High Unbalance** | Balanced | Horizontal 2× "Buzz." |
+| **V8 (Cross)**| Balanced | Balanced | **Rotating Couple** | Constant-magnitude spinning "wobble." |
+| **V10 (72°)** | Balanced | Balanced | **Highest Unbalance** | Large, high-leverage rocking. |
+| **V12 (60°)** | **Balanced** | **Balanced** | **Balanced** | **Perfectly still.** |
+
+![alt text](/blog_img/mec/v10_nvh_timeseries.gif)
+
+
 {{< callout type="info" >}}
 Possible at 2D thx to some Dimensional Generalization!
 {{< /callout >}}
@@ -187,7 +204,7 @@ Possible at 2D thx to some Dimensional Generalization!
 ## 3D MBSD
 
 {{< callout type="info" >}}
-For my reference, its all distilled [here](https://github.com/JAlcocerT/mbsd/tree/master/z-destilled-ebook)
+For my **reference**, its all distilled [here](https://github.com/JAlcocerT/mbsd/tree/master/z-destilled-ebook)
 {{< /callout >}}
 
 
@@ -286,7 +303,9 @@ What the model does NOT capture
 - Wind, rain, or temperature effects
 - Motor/drivetrain dynamics (pedaling torque is applied directly as a generalized force)
 
-Each rigid body has its own local frame, whose orientation relative to the global frame is given by a rotation matrix `Aᵢ(q)`. Body frames are **right-handed** and aligned with the principal axes of inertia when at zero lean/pitch/steer.
+Each rigid body has its own local frame, whose orientation relative to the global frame is given by a rotation matrix `Aᵢ(q)`.
+
+Body frames are **right-handed** and aligned with the principal axes of inertia when at zero lean/pitch/steer.
 
 **Angular rotation convention**: Euler angles are applied in this sequence for the frame body (body 3).
 
@@ -364,7 +383,9 @@ M = Σᵢ [ mᵢ · Jvᵢᵀ Jvᵢ  +  Jwᵢᵀ · Iᵢ_global · Jwᵢ ]
 
 Where `Jvᵢ` and `Jwᵢ` are the translational and angular Jacobians of body `i`, and `Iᵢ_global = Aᵢ · Iᵢ_body · Aᵢᵀ` transforms the body-frame inertia tensor to global frame.
 
-Jacobians are computed **numerically via central finite differences** on the rotation matrices and CoG position functions (step size `ε = 1e-7`). This avoids translating 590 lines of symbolic MATLAB code at the cost of ~18 extra `mass_matrix()` calls per Coriolis evaluation.
+Jacobians are computed **numerically via central finite differences** on the rotation matrices and CoG position functions (step size `ε = 1e-7`).
+
+This avoids translating 590 lines of symbolic MATLAB code at the cost of ~18 extra `mass_matrix()` calls per Coriolis evaluation.
 
 **Coriolis & Centrifugal Forces**
 
@@ -443,4 +464,43 @@ q0 = [0, 0, 0.97, 0, 0, 0, 0, 0, 0]   # starts at 0.97 m height
 v0 = [10, 0, 0, 0, 0, 0, 0, 10/0.34, 10/0.34]  # 10 m/s forward, wheels spinning
 ```
 
+### Primary vs SecoNdary Balance
+
+It actually **does** make sense to talk about secondary moments!
+
+In many high-performance and luxury engine designs, the secondary moment is the "final boss" of engine refinement.
+
+However, in introductory engineering or basic automotive discussions, it is often ignored for three specific reasons:
+
+1. The Magnitude Gap
+
+In most common engines (like the Inline-4), the **secondary force** is so massive and intrusive that it completely overshadows any small residual moments.
+
+* In an I4, the secondary force is a vertical "hammer" hitting the mounts at twice engine speed.
+* Because the I4 is axially symmetric, the secondary **moment** is mathematically zero. 
+* People get used to saying "Secondary = Force" because the most common engine on earth only has the force component.
+
+2. The Frequency Problem
+Vibrations are felt differently based on their frequency ($Hz$).
+
+* **Primary (1x):** Felt as a low-frequency "shake" or "rock." It moves the whole car.
+* **Secondary (2x):** At 3000 RPM, a secondary vibration is at $100\text{ Hz}$. This is felt more as a "buzz" or "hum" in the floorboards and steering wheel rather than a physical rocking of the chassis.
+* Because the secondary moment is a high-frequency "twisting" motion, it is often absorbed by the rubber engine mounts before the driver can feel it as a distinct "rocking."
+
+Where it DOES matter (The Exceptions)
+
+There are specific engines where you **cannot** ignore the secondary moment:
+
+* **Inline-5:** As your analysis showed, the I5 has zero secondary force but a non-zero secondary moment. Here, the secondary moment is the *primary* source of the engine's high-frequency "warble."
+* **V6 90°:** The secondary moments are large enough here that they can cause "steering wheel nibble" if not addressed with balance shafts.
+* **Large Displacement Engines:** Because the secondary moment scales with the square of the stroke and the mass of the pistons, a "big block" engine will have secondary moments that are physically powerful enough to shear bolts if left unchecked.
+
+
+
 ### References
+
+
+#### 3D concepts
+
+
+#### 3D physics

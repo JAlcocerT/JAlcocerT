@@ -8,6 +8,8 @@ url: 'aircraft-engine-analysis'
 ---
 
 
+https://www.youtube.com/watch?v=TiTb08qBEKY
+
 **Tl;DR**
 
 The moment 2D mechanics is not enough.

@@ -15,11 +15,11 @@ math: true
 
 
 
-![alt text](../../static/blog_img/mec/chassis_full_chain.png) 
+![alt text](/blog_img/mec/chassis_full_chain.png) 
 
-![alt text](../../static/blog_img/mec/chassis_iso_weighting.png) 
+![alt text](/blog_img/mec/chassis_iso_weighting.png) 
 
-![alt text](../../static/blog_img/mec/chassis_transfer_function.png)
+![alt text](/blog_img/mec/chassis_transfer_function.png)
 
 
 ## 2D mbsd x 3D art
@@ -43,6 +43,7 @@ This is the most critical takeaway. You aren't "faking" the 3D engine; you are *
 2. The 3D "Kill" Criteria (When to Port)
 
 Your list of "When 3D becomes necessary" is technically rigorous.
+
 * **Gyroscopics:** This is the hard boundary. Once you have a spinning mass (Crank/Propeller) that is being rotated by a second body (Fuselage), the angular momentum vector $\mathbf{L} = \mathbf{I}\boldsymbol{\omega}$ must be modeled in 3D to capture the precession moments.
 * **Single-Track Stability:** A bicycle's stability is a 3D phenomenon. You cannot model the "weave" or "wobble" modes of a motorcycle in a plane because they rely on the interaction between leaning and steering.
 
@@ -103,7 +104,9 @@ Both V8s are "Even-Fire" (firing every $90^\circ$), but the **order** in which t
 
 3. Primary and Secondary Balance ($F$ and $M$)
 
-The V8 is a masterclass in trade-offs. You can have perfect secondary balance or perfect primary balance, but usually not both.
+The V8 is a masterclass in trade-offs. 
+
+You can have perfect secondary balance or perfect primary balance, but usually not both.
 
 **The Flat-Plane V8 (The Racer)**
 
@@ -118,17 +121,18 @@ The V8 is a masterclass in trade-offs. You can have perfect secondary balance or
 * **Primary Balance:** **Poor (initially).** The heavy $90^\circ$ offsets create a massive rocking couple (the engine wants to wobble).
 * **The Fix:** Massive **counterweights** are added to the crankshaft. This makes the crank much heavier and slower to rev, but it results in a "dead smooth" engine.
 
----
 
 4. Summary: The Best Choice?
+
 * **Choose Flat-Plane** if you are building a race car or a high-performance supercar. You accept the "buzz" and vibration in exchange for a lightweight rotating assembly that can scream to 9,000 RPM.
 * **Choose Cross-Plane** if you are building a luxury sedan, a muscle car, or a truck. You want the engine to be silky smooth at idle and during cruise, and you enjoy the low-end torque and iconic "American" sound.
 
 Final Engineering Note
 
-In our **Phasor Framework**, the Flat-Plane V8 is treated as two I4 phasors added together. The Cross-Plane V8 uses four unique pin phases, which allows the secondary phasors to sum to exactly zero—the holy grail of secondary balance.
+In our **Phasor Framework**, the Flat-Plane V8 is treated as two I4 phasors added together. 
 
-**Since you have the V8 render ready, did you notice the "Secondary Shake" in the Flat-Plane version? It usually manifests as a visible vertical "blur" at high RPMs in the simulation.**
+The Cross-Plane V8 uses four unique pin phases, which allows the secondary phasors to sum to exactly zero—the holy grail of secondary balance.
+
 
 ### V8 Visualized
 
@@ -203,7 +207,11 @@ This is where the V6 struggles. Because the cylinders are offset along the lengt
 
 Final Engineering Note
 
-In our **Phasor Framework**, the V6 is represented by three unique phasors. While the **Force Sum** always returns to the origin ($0$), the **Moment Sum** (weighted by axial position $z$) results in a non-zero vector. That vector is the "Rocking Couple" that defines the V6's character.
+In our **Phasor Framework**, the V6 is represented by three unique phasors.
+
+While the **Force Sum** always returns to the origin ($0$), the **Moment Sum** (weighted by axial position $z$) results in a non-zero vector. 
+
+That vector is the "Rocking Couple" that defines the V6's character.
 
 ### V6 60
 
@@ -229,7 +237,11 @@ Adding a cadquery-blender-v6-90/ folder with a --preset v6_90 flag is the right 
 
 1. The Firing Interval LogicIn an even-fire engine, we want a "bang" every $720^\circ / N_{cyl}$. For a V6, that is exactly 120°.60° Bank: The bank angle ($60^\circ$) plus the pin spacing ($60^\circ$) equals $120^\circ$. It works naturally.90° Bank: The bank angle ($90^\circ$) leaves a gap. Without split pins, you fire at 90°, then wait 150° for the next one ($90 + 150 = 240$, the natural pin spacing). 
 
-That "loping" idle is what gave early Buick V6s their rough reputation.The 30° Split: By offsetting the pins on the same journal by 30°, you "borrow" 30° from the long gap and add it to the short gap, resulting in $90+30=120$ and $150-30=120$. Perfect symmetry.
+That "loping" idle is what gave early Buick V6s their rough reputation.
+
+The 30° Split: By offsetting the pins on the same journal by 30°, you "borrow" 30° from the long gap and add it to the short gap, resulting in $90+30=120$ and $150-30=120$. 
+
+Perfect symmetry.
 
 
 
