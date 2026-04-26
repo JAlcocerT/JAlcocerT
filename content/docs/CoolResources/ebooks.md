@@ -55,7 +55,7 @@ Rscript Z_ebooks/render.R \
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#using-sell-your-ebook" title="Astro x eBook PDF Landing" image="/blog_img/shipping/astro-sell-your-ebook.png" subtitle="Share your ebook with its own landing" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Create a web/ook WebApp" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="Show or Obfuscate your ebook content" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/ai-driven-ebooks/#show-and-obfuscate/" title="Create a web/ook WebApp" image="/blog_img/dev/fastapi/ebook-obfuscate-ui.png" subtitle="Show or Obfuscate your ebook content" >}}
 {{< /cards >}}
 
 You could think about using your books as lead magnets:
@@ -85,6 +85,7 @@ IMO, they are trickier to create compared to PDFs.
 
 ### Web/ooks
 
+Whats the problem on having these?
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="From blogs/docs to web ebooks" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code a Web App to serve md content via web/book and also downlodable as PDFs" >}}

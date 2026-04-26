@@ -98,7 +98,7 @@ For a PoC on BI Tools, just go for Streamlit: *data centered plus its speed of i
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/ai-bi-tools/#pygwalker" title="Streamlit PoC Post" image="/blog_img/apps/streamlit/st_pygwalker_map.png" subtitle="Streamlit PyGWalker Rendered Map with locations..." >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts" title="Marketing Docs" image="/blog_img/dev/pystocks/pystocks-vibed1.png" subtitle="Funnels with Streamlit" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/#the-charts" title="Financial PoC image="/blog_img/dev/pystocks/pystocks-vibed1.png" subtitle="Stocks analytics with Streamlit" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
@@ -118,7 +118,7 @@ To build a BI Tools even more custom: *with certain UI look and feel, you can **
   {{< card link="https://jalcocert.github.io/JAlcocerT/python-financial-data-with-yfinance/#compared-with-real-estate" title="Custom Plots for Reporting" image="/blog_img/data-experiments/MCD_dividends_pct_12m.png" subtitle="Sample YFinance based reporting" >}}
 {{< /cards >}}
 
-Or [for stonks](https://jalcocert.github.io/JAlcocerT/py-stonks/#from-data-in-motion-to-pystonks):
+Or [for stonks](https://jalcocert.github.io/JAlcocerT/py-stonks/#from-data-in-motion-to-pystonks): *you can level up streamlit functionality towards fastapi later on*
 
 ![Flask web app DataInMotion Twitter](/blog_img/dev/pystocks/libreportfolio-plots-datainmotion.png)
 
@@ -130,7 +130,7 @@ To create interactivity, we have the well known plotly, but also **ApexCharts an
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/node-js/chart-generator" title="Sample NodeJS x ApexChartJS Generator" image="/blog_img/DA/apexchartjs-nodejs.png" subtitle="Using NodeJS to generate ApexCharts" >}}
 {{< /cards >}}
 
-You can also vibe code such CSR'ed dashboards:
+You can also vibe code [such CSR'ed dashboards](https://jalcocert.github.io/JAlcocerT/custom-re-rag/#dream-calculator-x-chartjs):
 
 ![Astro real estate CSR ChartJS](/blog_img/biz/RE/vibecoded-calc-chartjs.png)
 
@@ -145,7 +145,7 @@ You can potentially make embedable BI components that work on websites or just g
 
 You could also use these skills when **building funnels** during your [entrepreneurial journey](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/):
 
-> PS Reflex has very cool funnels: https://reflex.dev/docs/library/graphing/charts/funnelchart/
+> PS: [Reflex](https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/) has very [cool funnels](https://reflex.dev/docs/library/graphing/charts/funnelchart/)
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
@@ -161,7 +161,7 @@ You could also use these skills when **building funnels** during your [entrepren
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/#funnels" title="Marketing Docs" image="/blog_img/apps/streamlit/streamlit-plotly-funnel.png" subtitle="Funnels with Streamlit" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#reflex-sample-apps" title="Marketing Docs" image="/blog_img/apps/reflex/reflex-stocks-sample.png" subtitle="Funnels with Streamlit" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-with-reflex/#reflex-sample-apps" title="Marketing Docs" image="/blog_img/apps/reflex/reflex-stocks-sample.png" subtitle="Marketing analytics with Reflex" >}}
 {{< /cards >}}
 
 You can also create a quick [mermaidJS sankey of on boarding flows](https://mermaid.live/edit#pako:eNptksFuwjAMhl-l8mlIEUrSNqW5DbggbRIS2mXqJSOmVKMJCum2DvHuS4so07pTYvv__VmJz7C1GkFCYU7KvGNbmCdldGXKaK1KJJuqNNHLkWQp_VN5fAuRNaijh40PiYhNCO9UhbmZ-nNliKD0nhz5-ISwX76gX9U16kp5jNaN2-7VCUmc0nt97uznKQxy4w3xEg-qDZ0HG-vIQ3mEjgf0P8iFNR_ofKeeNy26yXWIEWOsC1QgULpKg_SuQQI1ulp1IZwLE0UF-D3WWIAMV4071Rx8Eb7gEmxHZV6trW9OZ5tyD3KnDgEFzVGHGZeVKp26S9BodAvbGA8y7TuAPMMXSDYT0zxhPE5FEieU8xmBFiSnfEpzNuOcJ3mWCn4h8N0z6VRkucjSlOWJEAmljEB4F2_d83VN-m25_ABw1bbl).
@@ -175,6 +175,11 @@ You can also create a quick [mermaidJS sankey of on boarding flows](https://merm
 * Shiny in Python
   * <https://shiny.rstudio.com/py/gallery/>
   * <https://shiny.rstudio.com/py/gallery/>
+
+
+{{< callout type="info" >}}
+Keep exploring for [more charting options](https://jalcocert.github.io/JAlcocerT/poc-101/#charts-for-data-products) for your data products!
+{{< /callout >}}
 
 <!-- 
 ```mermaid

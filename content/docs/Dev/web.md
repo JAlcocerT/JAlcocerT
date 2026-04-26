@@ -439,6 +439,8 @@ How about checking your new website against few tools:
 
 ![AI Trend in Google Search late 2025](/blog_img/GenAI/ai-trend.png)
 
+You will get such mails:
+
 ![alt text](/blog_img/dev/google-search.png)
 
 {{< cards cols="2" >}}

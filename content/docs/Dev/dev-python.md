@@ -37,7 +37,7 @@ curl -LsSf https://astral.sh/uv/0.7.7/install.sh | sh
 uv --version #uv 0.7.7
 ```
 
-Example with BAML:
+Example with [BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database/#using-baml):
 
 ```sh
 uv init

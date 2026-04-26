@@ -1,8 +1,8 @@
 ---
 title: "Engine videos"
-date: 2026-04-25
+date: 2026-04-26
 draft: false
-tags: ["MBSD","Chassis Transfer Function x ISO 2631"]
+tags: ["MBSD","Chassis Transfer Function x ISO 2631","Blender"]
 description: '.'
 url: 'visualizing-engine-nvh'
 ---
@@ -58,14 +58,265 @@ So, [similarly](https://github.com/JAlcocerT/3Design/tree/main/mbsd-to-render/fo
 ```sh
 #git clone https://github.com/JAlcocerT/3Design
 #cd ./3Design/mbsd-to-render/four-bar
-choco install blender --version=4.2.2 -y
+#choco install blender --version=4.2.2 -y
+#Blender 4.2.2 LTS (hash c03d7d98a413 built 2024-09-24 00:09:56)
+#git clone https://github.com/JAlcocerT/mbsd
+cd ./mbsd/cad-render/cadquery-blender-v8
+tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-v8/render/v8.mp4 .
 ```
+
+Again, for these things [the M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) does the trick
+
+This time, we have a pretty [solid 2D documentation](https://github.com/JAlcocerT/mbsd/tree/master/z-destilled-ebook).
+
+## V8
+
+The V8 is the "Big Brother" of engine architecture. 
+
+While it is essentially two Inline-4 engines joined at the hip, the way you connect them to the crankshaft changes everything. 
+
+In the V8 world, there are two competing philosophies: **Flat-Plane** (European/Racing) and **Cross-Plane** (American/Luxury).
+
+Here is the recap for the V8, focusing on the two dominant species.
+
+V8 Architecture & Balance Recap
+
+| Crankshaft Type | Bank Angle | Firing Interval | Primary Balance (F / M) | Secondary Balance (F / M) | Character / Sound |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Flat-Plane** | **90°** | **Even** (90°) | Force: 0 <br> Moment: 0 | **Force: High (Vertical)** <br> Moment: 0 | High-pitched "Scream" (Ferrari, GT350) |
+| **Cross-Plane** | **90°** | **Even** (90°) | Force: 0 <br> **Moment: High** | Force: 0 <br> Moment: 0 | Low-pitched "Rumble" (Mustang, AMG, F-150) |
+
+1. The Geometry: 180° vs. 90° Pins
+
+The fundamental difference lies in the shape of the crankshaft.
+
+* **Flat-Plane ($180^\circ$):** The pins are in a single plane (like an I4). Pins 1 & 4 are at $0^\circ$, and 2 & 3 are at $180^\circ$. It looks like a flat plate.
+* **Cross-Plane ($90^\circ$):** The pins are arranged in a "cross" when viewed from the end. Pins are at $0^\circ, 90^\circ, 180^\circ,$ and $270^\circ$.
+
+2. The Firing Consequence: The "Rumble"
+
+Both V8s are "Even-Fire" (firing every $90^\circ$), but the **order** in which the cylinders fire creates the acoustic signature.
+
+* **Flat-Plane:** Fires Left-Right-Left-Right consistently. This creates a high-frequency exhaust pulse that sounds like two sportbikes racing.
+* **Cross-Plane:** Because of the $90^\circ$ pins, the firing order "stutters" across the banks (e.g., L-R-L-L-R-L-R-R). Those two "L-L" and "R-R" double-taps create the low-frequency pressure wave we call the **V8 Rumble**.
+
+3. Primary and Secondary Balance ($F$ and $M$)
+
+The V8 is a masterclass in trade-offs. You can have perfect secondary balance or perfect primary balance, but usually not both.
+
+**The Flat-Plane V8 (The Racer)**
+
+* **Primary Balance:** Perfect. Both forces and moments cancel out.
+* **Secondary Balance:** **Poor.** It inherits the Inline-4's secondary shake. Because there are two banks, this results in a massive vertical vibration at $2\times$ engine speed. 
+* **Why use it?** The crank is lighter (no heavy counterweights needed), allowing the engine to rev much faster.
+
+
+**The Cross-Plane V8 (The Cruiser)**
+
+* **Secondary Balance:** Perfect. The $90^\circ$ pin offsets naturally cancel out the secondary vibrations that plague the I4 and Flat-Plane V8.
+* **Primary Balance:** **Poor (initially).** The heavy $90^\circ$ offsets create a massive rocking couple (the engine wants to wobble).
+* **The Fix:** Massive **counterweights** are added to the crankshaft. This makes the crank much heavier and slower to rev, but it results in a "dead smooth" engine.
+
+---
+
+4. Summary: The Best Choice?
+* **Choose Flat-Plane** if you are building a race car or a high-performance supercar. You accept the "buzz" and vibration in exchange for a lightweight rotating assembly that can scream to 9,000 RPM.
+* **Choose Cross-Plane** if you are building a luxury sedan, a muscle car, or a truck. You want the engine to be silky smooth at idle and during cruise, and you enjoy the low-end torque and iconic "American" sound.
+
+Final Engineering Note
+
+In our **Phasor Framework**, the Flat-Plane V8 is treated as two I4 phasors added together. The Cross-Plane V8 uses four unique pin phases, which allows the secondary phasors to sum to exactly zero—the holy grail of secondary balance.
+
+**Since you have the V8 render ready, did you notice the "Secondary Shake" in the Flat-Plane version? It usually manifests as a visible vertical "blur" at high RPMs in the simulation.**
+
+### V8 Visualized
+
+Because blender made a 2s animationed with couple rotations:
+
+```sh
+ffmpeg -stream_loop 14 -i v8.mp4 -c copy v8_output.mp4
+```
+
+{{< youtube "NY1tjmpLRk0" >}}
+
+<!-- https://youtu.be/NY1tjmpLRk0 -->
+
+Flat-Plane: $[0, 180, 180, 0]$ is exactly why Ferrari V8s sound like two screaming 4-cylinders.
+
+It has massive secondary imbalance (the 2× shake), but it is light and revs fast.
+
+Cross-Plane: The $[0, 90, 180, 270]$ pattern creates that "lopey" exhaust note because the firing intervals are uneven across the banks ($L-R-L-L-R-L-R-R$)
+
+### v6
+
+The V6 is often called the "Engineer’s Headache" because its balance is far more complex than the naturally smooth Straight-6 or the symmetric V8. 
+
+Because a V6 is essentially two 3-cylinder engines sharing a crankshaft, it inherits a **primary rocking couple** (a "nodding" motion) that must be managed by the bank angle and firing intervals.
+
+Here is the definitive recap of the typical V6 configurations and their NVH (Noise, Vibration, and Harshness) consequences.
+
+V6 Architecture & Balance Recap
+
+| Bank Angle | Crankshaft Type | Firing Interval | Primary Balance (F / M) | Secondary Balance (F / M) | Typical Use |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **60°** | **Simple 3-pin** (Shared pins) | **Even** (120°) | Force: 0 <br> **Moment: High** | Force: 0 <br> **Moment: High** | Most modern V6s (Honda, Toyota, Ford) |
+| **90°** | **Simple 3-pin** (Shared pins) | **Odd** (90°-150°) | Force: 0 <br> **Moment: Moderate** | Force: 0 <br> **Moment: Moderate** | Early GM/Buick "Odd-Fire" |
+| **90°** | **Split-pin** (30° offset) | **Even** (120°) | Force: 0 <br> **Moment: Moderate** | Force: 0 <br> **Moment: High** | Modern 90° V6s (Audi, Mercedes, GM) |
+| **120°** | **Simple 3-pin** (Shared pins) | **Even** (120°) | Force: 0 <br> **Moment: Low** | Force: 0 <br> **Moment: Very High** | Racing (Ferrari F1, Lancia) |
+
+---
+
+1. The Firing Consequence: "Odd-Fire" vs. "Even-Fire"
+
+The firing interval is determined by the relationship between the **Bank Angle** and the **Crankpin Spacing**. For a 4-stroke V6 to be "Even-Fire," a cylinder must fire every $120^\circ$ of crank rotation ($720^\circ / 6$).
+
+* **The 60° Sweet Spot:** Because $60^\circ \text{ (Bank)} + 60^\circ \text{ (Pin Spacing)} = 120^\circ$, it is naturally even-fire. It is the most compact and refined "standard" V6.
+* **The 90° Compromise:** Without a split-pin, you get a "stutter." The engine fires, waits $90^\circ$, fires the opposite bank, then has to wait $150^\circ$ to get back to the start of the next cycle. This creates a distinctive "drone" or "throb" at idle.
+* **The Split-Pin Fix:** By "splitting" each crankpin and offsetting the journals by $30^\circ$, engineers force the $90^\circ$ block to behave like a $60^\circ$ or $120^\circ$ engine, restoring the $120^\circ$ firing rhythm.
+
+
+2. Primary and Secondary Forces ($F$)
+
+In almost all V6 configurations (assuming $120^\circ$ or $240^\circ$ crankpin spacing), **Inertial Forces are perfectly balanced.**
+
+* The three pistons on each bank cancel each other out ($1 + e^{j120} + e^{j240} = 0$).
+* Unlike an Inline-4, a V6 has **zero** net secondary shake ($F_y = 0$). This is why a V6 often feels "smoother" than an I4 at high RPM.
+
+3. Primary and Secondary Moments ($M$)
+
+This is where the V6 struggles. Because the cylinders are offset along the length of the crankshaft, the forces don't line up perfectly. They create **Rocking Couples** (the engine tries to "see-saw" or "yaw").
+
+* **Primary Rocking ($1\times$):** This is a heavy, low-frequency thrum. Most V6s require a **counter-rotating balance shaft** or massive crankshaft counterweights to cancel this out.
+* **Secondary Rocking ($2\times$):** This is a high-frequency "buzz."
+    * **60° V6:** The secondary moments are present but manageable.
+    * **90° V6:** The secondary moments are actually larger, especially in the horizontal ($x$) plane.
+    * **120° V6:** This is the most balanced for *primary* moments but has a massive *secondary* rocking couple that makes it feel very "buzzy" at high revs.
+
+
+4. Summary: The Best Choice?
+
+* If you want **Refinement (NVH):** Use a **60° V6**. It has the best balance of firing intervals and manageable rocking couples.
+* If you want **Packaging:** Use a **90° V6** (it’s lower and wider, fits under flat hoods) but you **must** use a split-pin crank and a balance shaft to keep it from feeling like a tractor.
+* If you want **Performance:** The **120° V6** allows for a very low Center of Gravity (CG) and simple crankshaft, provided you can isolate the high-frequency secondary vibrations from the chassis.
+
+
+Final Engineering Note
+
+In our **Phasor Framework**, the V6 is represented by three unique phasors. While the **Force Sum** always returns to the origin ($0$), the **Moment Sum** (weighted by axial position $z$) results in a non-zero vector. That vector is the "Rocking Couple" that defines the V6's character.
+
+### V6 60
+
+V6 60° Character: A V6 60° is "even-fire," meaning every 120° of crank rotation, a cylinder fires.
+
+Visualizing this $[0 \to 120 \to 240 \to 360 \to 480 \to 600]$ sequence makes the 720° four-stroke cycle intuitive to the viewer.
+
+```sh
+cd ./mbsd/cad-render/cadquery-blender-v6
+make parts && make scene #regenerates engine_block.stl 
+make still              # renders frame 25 → render/v6_still_0025.png
+make still FRAME=10     # any frame
+make still FRAME=0      # opening shot
+
+tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-v6/render/v6_still_0025.png .
+#scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-v6/render/v6.mp4 .
+```
+
+
+
+Adding a cadquery-blender-v6-90/ folder with a --preset v6_90 flag is the right way to handle this. The "Bore-Flash" will be the smoking gun that proves the even-fire conversion:Odd-fire V6: The flashes will appear in "stuttering" pairs ($Bang \dots Bang \dots \dots \dots Bang \dots Bang$).Even-fire V6 (Split-pin): The flashes will appear like a steady metronome ($Bang \dots Bang \dots Bang \dots Bang$).
+
+1. The Firing Interval LogicIn an even-fire engine, we want a "bang" every $720^\circ / N_{cyl}$. For a V6, that is exactly 120°.60° Bank: The bank angle ($60^\circ$) plus the pin spacing ($60^\circ$) equals $120^\circ$. It works naturally.90° Bank: The bank angle ($90^\circ$) leaves a gap. Without split pins, you fire at 90°, then wait 150° for the next one ($90 + 150 = 240$, the natural pin spacing). 
+
+That "loping" idle is what gave early Buick V6s their rough reputation.The 30° Split: By offsetting the pins on the same journal by 30°, you "borrow" 30° from the long gap and add it to the short gap, resulting in $90+30=120$ and $150-30=120$. Perfect symmetry.
+
+
+
+### V6 90
+
+```sh
+cd ./mbsd/cad-render/cadquery-blender-v6-90
+
+tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-v6-90/render/v6_90.mp4 .
+#scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-v6/render/v6.mp4 .
+```
+
+Then:
+
+```sh
+ffmpeg -stream_loop 14 -i v6_90.mp4 -c copy v6_90_output.mp4
+```
+
+{{< youtube "q24QdtCGXC4" >}}
+
+<!-- https://youtu.be/q24QdtCGXC4 -->
+
+## InLines
+
+Integrating the Inline (straight) engines into one comparison table is fascinating because it shows the "battle of the cylinders."
+
+Every time you add a piston, you change the mathematical symmetry of the engine.
+
+In the **Inline** world, the **Straight-6** is the undisputed king of balance, while the **Inline-3** and **Inline-5** are the "oddballs" that require clever engineering to feel refined.
+
+Inline Engine Balance Recap (1D/Planar)
+
+| Layout | Crankpin Spacing | Firing Interval | Primary Balance (F / M) | Secondary Balance (F / M) | Character / "The Problem" |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **I3** | 120° | 240° | Force: 0 <br> **Moment: High** | Force: 0 <br> **Moment: Low** | The "Thrum." Needs a balance shaft for rocking. |
+| **I4** | 180° | 180° | Force: 0 <br> Moment: 0 | **Force: High** <br> Moment: 0 | The "Buzz." Dominant vertical 2× shake. |
+| **I5** | 72° | 144° | Force: 0 <br> **Moment: Low** | Force: 0 <br> **Moment: Low** | The "Warble." Unique sound; subtle "snaking" rock. |
+| **I6** | 120° | 120° | Force: 0 <br> Moment: 0 | Force: 0 <br> Moment: 0 | **Perfect Balance.** Naturally smooth in all axes. |
+
+1. The I3 (The Tiny Thrummer)
+
+The I3 is effectively half of a V6. 
+
+* **The Math:** Because the pins are at 120°, the forces cancel ($1 + e^{j120} + e^{j240} = 0$). 
+* **The Issue:** Since the pistons are in different positions along the shaft, the engine wants to "nod" end-to-end. This **Primary Rocking Couple** is significant. 
+* **The Sound:** A very distinct, half-V6 growl. Almost all modern I3s (Ford 1.0 EcoBoost, BMW/Mini 1.5) use a **balance shaft** to cancel that 1× rock.
+
+2. The I4 (The Standard Workhorse)
+
+The most common engine in the world, and the one we've analyzed the most in the e-book.
+
+* **The Math:** Primary forces cancel, but **Secondary forces reinforced.** * **The Issue:** At $2\times$ engine speed, all four pistons are accelerating at the same time in a way that doesn't cancel out. This creates a vertical "blur." 
+* **The Sound:** Generally "generic." In larger displacements (2.2L+), manufacturers add twin counter-rotating balance shafts (Lanchester balancers) to kill that $2\times$ buzz.
+
+
+3. The I5 (The Exotic Warble)
+
+Famously used by Audi, Volvo, and early 5-cylinder VWs.
+* **The Math:** With pins every 72°, the I5 is much better balanced than an I4. It has **zero** net primary and secondary force shake. 
+* **The Issue:** Like the I3, it has a **Rocking Couple**, but because the engine is longer and the pins are "spread out" around the circle, the rock is much smaller and "snakes" in a circular pattern rather than a simple vertical nod.
+* **The Sound:** Iconic $144^\circ$ firing interval. It sounds like a "Baby V10" because the harmonics are similar.
+
+4. The I6 (The Mechanical Holy Grail)
+
+The Straight-6 is the "Gold Standard" of engine design.
+* **The Math:** It is essentially two I3s mirrored. The rocking moment of the front 3 cylinders is perfectly cancelled by the rocking moment of the rear 3 cylinders. 
+* **The Result:** Zero Primary Force, Zero Primary Moment, Zero Secondary Force, Zero Secondary Moment. 
+* **Why not use it always?** It is very **long**. It is hard to fit transversely (front-wheel drive) and takes up massive space under the hood.
+
+### Why the I6 wins the NVH war
+
+In our **Phasor Framework**, the I6 is the only one where the vectors sum to zero for both the **Force sum** and the **Moment sum** across both 1× and 2× harmonics. 
+
+| Engine | Force Sum ($1\times$) | Moment Sum ($1\times$) | Force Sum ($2\times$) | Moment Sum ($2\times$) |
+| :--- | :--- | :--- | :--- | :--- |
+| **I3** | 0 | ❌ | 0 | ❌ |
+| **I4** | 0 | 0 | ❌ | 0 |
+| **I5** | 0 | ❌ (small) | 0 | ❌ (small) |
+| **I6** | 0 | 0 | 0 | 0 |
 
 
 ---
 
 ## Conclusions
 
+This gave you some idea?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}

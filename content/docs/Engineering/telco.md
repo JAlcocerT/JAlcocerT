@@ -37,7 +37,7 @@ It just pours packets onto the wire as fast as possible.
 * **Best for:** Live streaming, Online gaming, VoIP (Discord/Zoom), and—as you mentioned—**TR-471 speed tests**. 
 * **The Downside:** It is "unreliable." If your connection is bad, you get "glitches" or "artifacts" in a video call because UDP won't stop to fix the missing data.
 
-## 3. Are they competitors?
+**3. Are they competitors?**
 
 In a way, yes, but it’s more like **tools in a toolbox**. 
 
@@ -45,14 +45,13 @@ You don't use a hammer to do a screwdriver's job.
 
 However, there is a "new" competitor that is actually trying to replace both by combining their best features: **QUIC**.
 
-### The Rise of QUIC (The Real Competitor)
+The Rise of QUIC (The Real Competitor)
 
 Developed by Google and now an internet standard (HTTP/3), **QUIC** technically runs *on top* of UDP, but it adds the reliability of TCP. 
 
 * **TCP's Flaw:** If one packet is lost, the whole line stops (Head-of-Line Blocking).
 * **QUIC's Solution:** It uses UDP to move fast, but it handles its own error correction. If one "stream" of data drops a packet, the others keep moving.
 
-### Comparison Table
 
 | Feature | TCP | UDP | QUIC (The New Challenger) |
 | :--- | :--- | :--- | :--- |
@@ -101,11 +100,14 @@ It is helpful to remember that **MQTT** and **Web Browsers** (HTTP) are "Applica
 
 They are the *passengers* in the car.
 
+
+
+{{< callout type="info" >}}
 **TCP** and **UDP** are the "Transport Layer" protocols—they are the *car* itself.
+{{< /callout >}}
 
----
 
-### Why this matters for your TR-471 question:
+**Why this matters for your TR-471 question:**
 
 Old speed tests used **TCP**, but because TCP slows itself down when it sees *any* congestion, it often reported speeds lower than what the fiber line was actually capable of.
 
@@ -113,9 +115,6 @@ Old speed tests used **TCP**, but because TCP slows itself down when it sees *an
 
 Each of these technologies chooses a protocol based on whether they prioritize **reliability** (not losing data) or **efficiency** (speed and low overhead).
 
-Here is the breakdown of what they use and why:
-
----
 
 ## 1. Web Browsers (Chrome, Safari, Firefox)
 
@@ -145,9 +144,6 @@ It is designed for tiny sensors with very little battery power.
 
 * **MQTT-SN (Sensor Networks):** This version uses **UDP**. It is used for devices that are so small or have such bad connections (like Zigbee or long-range radio) that the "overhead" of a TCP handshake would drain the battery too fast.
 
----
-
-### Summary Comparison Table
 
 | Technology | Primary Protocol | Why? |
 | :--- | :--- | :--- |

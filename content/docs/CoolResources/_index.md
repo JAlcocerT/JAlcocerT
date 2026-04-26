@@ -9,13 +9,15 @@ sidebar:
 
 You probably have landed here because **you are curious**
 
-Good news! you can feed your curiosity, learn and DO at the same time.
+Good news! 
 
-From Engineering and Racing:
+You can feed your curiosity, learn and DO at the same time.
 
-Going on through how to create your own ebooks, diagrams and ppts efficiently: *to show your work*
+From [Engineering](https://jalcocert.github.io/JAlcocerT/docs/engineering/) and [Racing](https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/):
 
-To Photo, video and animations:
+Going on through how to [create your own ebooks](https://jalcocert.github.io/JAlcocerT/cool-ebooks/), [diagrams and ppts](https://jalcocert.github.io/JAlcocerT/docs/coolresources/diagrams_ppts/) efficiently: *to show your work*
+
+To [Photo](https://jalcocert.github.io/JAlcocerT/docs/coolresources/photo/), [video](https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/) and [animations](https://jalcocert.github.io/JAlcocerT/docs/coolresources/video-animations/):
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/" title="Selfhosting | Docs ↗" icon="book-open" >}}

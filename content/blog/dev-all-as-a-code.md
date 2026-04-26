@@ -269,9 +269,11 @@ make up-external
 
 It was also interesting to play with the fastapi routes.
 
-Because the making it look cool is just one prompt of Claude Haiku 4.5
+Because the making it look cool is just one prompt of `Claude Haiku 4.5`
 
 ![Book publisher default UI](/blog_img/dev/fastapi/ebook-obfuscate.png)
+
+The result:
 
 ![Book publisher with FastAPI and Obfuscator looking cool](/blog_img/dev/fastapi/ebook-obfuscate-ui.png)
 

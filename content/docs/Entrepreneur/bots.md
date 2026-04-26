@@ -104,7 +104,7 @@ To this: *as seen [here](https://github.com/JAlcocerT/diy-landing-boilerplate/tr
 ![Typescript x Astro x md knowledge x OpenAI ChatBot](/blog_img/dev/diy-landing-bot.png)
 
 
-* https://jalcocert.github.io/JAlcocerT/custom-re-rag/#about-rag-and-bots
+You can also create such [embeded bot with business knowledge](https://jalcocert.github.io/JAlcocerT/custom-re-rag/#about-rag-and-bots):
 
 ![Vibe Coded QnA Real Estate ChatBot](/blog_img/biz/RE/vibe-coded-re-chatbot.png)
 
@@ -121,10 +121,7 @@ https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/#vibe-codin
 
 You need to plug something to that cool UI/UX and backend with the bot logic.
 
-
-
 {{< details title="Interesting AI via APIs  📌" closed="true" >}}
-
 
 * Groq - https://console.groq.com/keys
 * OpenAI - https://platform.openai.com/account/api-keys
@@ -197,9 +194,7 @@ What you get?
 
 Some people look for ,bot' **scrappers**.
 
-
 And Ive been commenting about those in few occasions.
-
 
 To understand these tools, it helps to think of them as building blocks for a house. 
 

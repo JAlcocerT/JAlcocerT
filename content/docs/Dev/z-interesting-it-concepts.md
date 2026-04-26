@@ -76,6 +76,8 @@ gitGraph:
 
 **Github Authentication**
 
+For whenever you format your [Linux](https://jalcocert.github.io/Linux/docs/):
+
 ```sh
 sudo apt update
 sudo apt install gh #https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls

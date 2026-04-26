@@ -33,3 +33,6 @@ Well...yes, they can.
 
 Providing that you communicate the physics accordingly.
 
+
+
+![Engine Sample Animation](/blog_img/mec/engine.gif)

@@ -23,6 +23,6 @@ If you got a Tello, you will get the chance to learn Python to make [computer vi
   {{< card link="https://github.com/JAlcocerT/dron-tello-flutter" title="Dron Flutter Repo Github ↗" icon="github" >}}
 {{< /cards >}}
 
-You will be also able to make/tinker with flutter apps: *because the official one is not available for android anymore*
+You will be also able to make/tinker with flutter apps: *because the official one is not available for [android](https://jalcocert.github.io/JAlcocerT/docs/coolresources/android/) anymore*
 
 Best of all, it can motivate you to get into DIY.

@@ -8,6 +8,7 @@ draft: false
 
 **[Diagrams](#diagrams-tools) and [PPTs](#ppts) for All**
 
+The 101 goodies for any serious job in the AI era.
 
 ## Diagrams Tools
 
@@ -73,6 +74,10 @@ Look how cool **Excalidraw is for Wireframes**:
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selling-with-a-landing-website/" title="Astro Landing CSR" image="/blog_img/entrepre/selfh-landing/wireframe.png" subtitle="Vibe Coding an Astro Landing Page for DWY Consulting" >}}
 {{< /cards >}}
+
+{{< callout type="info" >}}
+You can also use excalidraw as a code!
+{{< /callout >}}
 
 
 ### DrawIO

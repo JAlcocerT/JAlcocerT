@@ -149,9 +149,6 @@ https://www.youtube.com/watch?v=g8mQdICewis -->
 
 {{% /details %}}
 
-### How to Run Docker on Android
-
-We will be using Termux to run Docker on Android (without Root).
 
 
 ### How to use Andronix to Run Linux

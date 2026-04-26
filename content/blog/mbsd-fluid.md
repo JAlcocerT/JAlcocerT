@@ -14,11 +14,11 @@ https://github.com/JAlcocerT/mbsd/blob/master/z-destilled-ebook/2d-slidercrank-m
 
 **TL;DR**
 
-How aobut bringing fluid mechanics to the ICEs?
+How about bringing fluid mechanics to the ICEs?
 
 **Intro**
 
-A constant torque at the crank?
+A constant speed at the crank?
 
 What kind of model was that?
 
@@ -58,14 +58,18 @@ But similarly as I did with [the bike simulator](https://jalcocert.github.io/JAl
 
 ## Conclusions
 
-This has been the year of bridging concepts.
+This is being the year of bridging concepts.
 
 I would have never guessed how, where and when I would be coming back to them.
 
-
-Will I write about heat transfer and electrical engineering next?
+Will I write about heat transfer and electrical engineering?
 
 who knows :)
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 ---
 
@@ -85,9 +89,7 @@ VE map - https://www.tactrix.com/index.php?option=com_content&view=category&layo
 
 ### References
 
-
-
-The combustion physics is a thing on its own...
+The **physics of combustion** is a thing on its own...
 
 
 {{< youtube "Z3ZvxIz20-c" >}}

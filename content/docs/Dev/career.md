@@ -70,6 +70,8 @@ graph LR
 
 **Data Modelling**
 
+This flow is very common in pipelines:
+
 
 ```mermaid
 flowchart LR

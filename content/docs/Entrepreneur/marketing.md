@@ -31,8 +31,7 @@ The power of emails.
 
 #### MailerLite
 
-https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#mailerlite-api
-
+You can [control Mailerlite via API](https://jalcocert.github.io/JAlcocerT/mailerlite-for-saas/#mailerlite-api).
 
 {{< details title="Setup MailerLite with your Custom Domain 📌" closed="true" >}}
 
@@ -159,12 +158,15 @@ You can enable so that before someone booking your time, they have to pay first:
 
 This increase friction - so you need to find the sweet spot.
 
-> No friction will never be the perfect one for converting leads.
+> `No friction` will never be the perfect one for converting leads - You need [qualification](https://jalcocert.github.io/JAlcocerT/ideas-to-execution/)!
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/using-stripe-with-flask/#stripe" title="Using Stripe withing a Flask" image="/blog_img/entrepre/stripe/stripe-apps.png" subtitle="Stripe 101 withing a SaaS PoC" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/" title="Cyrpto Too?" image="/blog_img/entrepre/stripe/stripe-apps.png" subtitle="Cal potentially accepts crypto payments too :O - Check your local regulations first!" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai/" title="Cyrpto Too?" image="/blog_img/crypto/usdt-marketcap.png" subtitle="Cal potentially accepts crypto payments too :O - Check your local regulations first!" >}}
 {{< /cards >}}
+
+<!-- ![USDT MarketCap](/blog_img/crypto/usdt-marketcap.png) -->
+
 
 <!-- 
 ![Stripe Apps Connection](/blog_img/entrepre/stripe/stripe-apps.png) 
@@ -173,8 +175,6 @@ This increase friction - so you need to find the sweet spot.
 To integrate stripe properly, but not only technically, you need to have a look to [offers](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers) and their [pricing](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#pricing):
 
 * https://docs.stripe.com/products-prices/pricing-models
-
-
 
 ## In Touch with Clients
 

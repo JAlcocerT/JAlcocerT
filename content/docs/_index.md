@@ -11,7 +11,7 @@ So created these docs as a curated higher level version of the technologies Ive 
 For further distilled knowledge, ive put together [FREE ebooks here](https://ebooks.jalcocertech.com)
 {{< /callout >}}
 
-For some posts, I assume that you are not scared about Linux:
+For some posts, I assume that you are not scared [about Linux](https://jalcocert.github.io/Linux/docs/):
 
 ```sh
 sudo apt update && sudo apt install flatpak gnome-software-plugin-flatpak -y
@@ -30,6 +30,6 @@ In [Windows](https://jalcocert.github.io/JAlcocerT/how-to-use-chocolatey-windows
 choco install zen
 ```
 
-But in general this section is beginner friendly and aimed to give you a range of options/tools to consider for your own jouney.
+But in general this `/doc` section is beginner friendly and aimed to give you a range of options/tools to consider for your own jouney.
 
 From your [tech career](https://jalcocert.github.io/JAlcocerT/docs/dev/) to your [entrepreneurial journey](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/), going in between for the geek ones with [HomeLabs and IoT](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/).

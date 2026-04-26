@@ -59,13 +59,11 @@ It offers a Python package and an API and is available under the MIT license.
 
 Other notable open-source tools or models often mentioned include Python libraries such as **rembg** and AI models hosted on platforms like Hugging Face, but withoutbg stands out for local operation and ease of use.
 
-If you want a powerful, privacy-respecting background remover that is free, open source, and runs locally, withoutbg is a leading choice as of 2025.
+If you want a powerful, privacy-respecting background remover that is free, open source, and runs locally, check **withoutbg**
 
 For simple needs or GUI apps, tools like **GIMP** with plugins can also do background removal but may be less automated.
 
 If you're open to using online tools with open-source backends, platforms like remove.bg offer APIs but are not open source themselves.
-
-In summary:
 
 | Tool        | Type          | Key Feature                       | License     | Runs Locally? |
 |-------------|---------------|---------------------------------|-------------|--------------|
@@ -77,6 +75,8 @@ In summary:
 Withoutbg is the best if you want open-source, local, privacy-focused background removal
 
 * https://github.com/withoutbg/withoutbg
+
+>  Image Background Removal Toolkit - Open Source and API Models 
 
 * https://github.com/danielgatis/rembg
 

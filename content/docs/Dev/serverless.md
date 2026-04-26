@@ -11,7 +11,7 @@ draft: false
 
 Just go serverless.
 
-But before that, understand: serverless it does not mean that there is not a server, it means that you dont care about it.
+But before that, understand: serverless it does not mean that there is not a server, it means that you dont care about it as you do [with your homelab](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/).
 
 +++ Using Logto JS SDK with CF Workers (?)
 

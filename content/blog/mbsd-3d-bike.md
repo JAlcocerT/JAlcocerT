@@ -78,6 +78,8 @@ rsync -avP jalcocert@192.168.1.2:/home/jalcocert/3Design/mbsd-to-render/pantogra
 mpv scotch_yoke.mp4
 ```
 
+With the ffmpeg trick:
+
 ```sh
 cd /home/jalcocert/Desktop/3Design/mbsd-to-render
 printf "file '%s'\n" *.mp4 > concat.txt
@@ -133,13 +135,17 @@ sudo apt install python3-tk
 
 Yea...this is also 3D :) 
 
+{{< callout type="warning" >}}
+No way you can capture the reality of a bike with 2D!
+{{< /callout >}}
+
 Just that it does not uses the reference coordinate system
 
 Why?
 
-Because this has to be solved in real time
+Because this had to be solved in real time back in the days.
 
-For that, i needed to think and optimize the model:
+For that, i needed to think (surprise) and optimize the model: *at the cost of not being using the plug and play coordinate system*
 
 ```sh
 #uv init --no-readme .

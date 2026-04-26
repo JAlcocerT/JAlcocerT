@@ -103,7 +103,7 @@ This is also a chance to try more complex algorithms:
 
 ### Optimum Gears
 
-Probably you Kartr have no gears.
+Probably you kart have no gears.
 
 But in case it does, you will need to take this into consideration: *Maaax Poweeeer...*
 
@@ -115,6 +115,5 @@ The [Optimum Gears](https://github.com/JAlcocerT/Private/tree/main/Py_optimum_ge
 
 If you like Mechanisms and animations [as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code)
 
-You will probably enjoy this section:
+You will probably enjoy [this engineering section](https://jalcocert.github.io/JAlcocerT/docs/engineering/mech/).
 
-![Engine Sample Animation](/blog_img/mec/engine.gif)

@@ -59,6 +59,8 @@ Need a full-fledge WebApp framework for R?
 
 Have a look to **Shiny**.
 
+This was enought to me to overdeliver value at [marketing](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/marketing/) analytics
+
 And if you are looking for a Flexdashboard example (deployed to Github Pages), see:
 
 {{< cards >}}
@@ -76,10 +78,10 @@ I covered **Containers for R Apps** [here](https://jalcocert.github.io/JAlcocerT
 
 ## eBooks with R
 
-We can say that creating ebooks with R language its also data driven.
+We can say that [creating ebooks](https://jalcocert.github.io/JAlcocerT/cool-ebooks/) with R language its also data driven.
 
 Get a `.md` file and render it to pdf with R.
 
 Together with a cool [cover that you can create on canva](https://www.canva.com/s/templates?query=ebook), you can have a pdf ebook.
 
-See this folder: https://github.com/JAlcocerT/JAlcocerT/tree/main/Z_ebooks
+See this [folder with an example](https://github.com/JAlcocerT/JAlcocerT/tree/main/Z_ebooks).
