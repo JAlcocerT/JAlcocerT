@@ -1,6 +1,6 @@
 ---
 title: "The physics of Mechanisms in the SPACE"
-date: 2026-04-26T09:20:21+01:00
+date: 2026-04-27T09:20:21+01:00
 draft: false
 tags: ["MBSD x 3D Simulation","CADQuery x Blender"]
 description: 'The Dynamics x Kinematics of you ve been waiting for.'
@@ -97,6 +97,12 @@ mpv all_mechanisms.mp4
 {{< youtube "KA7HloE6IQY" >}}
 
 3. Around slidercranks and a NVH stack: engine balance, balance shafts, active damping...
+
+![alt text](/blog_img/mec/i4_nvh_timeseries.gif)
+
+![alt text](/blog_img/mec/v10_nvh_timeseries.gif)
+
+
 4. 
 
 Close the last mile of the NVH chain — chassis modal response. 

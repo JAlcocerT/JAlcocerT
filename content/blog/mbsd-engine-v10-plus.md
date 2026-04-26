@@ -1,6 +1,6 @@
 ---
 title: "The balance of Vs"
-date: 2026-04-25
+date: 2026-04-26
 draft: false
 tags: ["MBSD x Active Damping","LMS Filter","V10 vs V12"]
 description: 'Connecting Mechanical Engineering with signal processing and control theory.'
@@ -17,11 +17,22 @@ With just a slider-crank and the [AR threeJS based simulator](https://jalcocert.
 
 
 
-## V10 vs V10
+## V10 vs V12
+
+![alt text](/blog_img/mec/v10_nvh_timeseries.gif)
+
+```sh
+#cd cadquery-blender-i5-analysis && make scene && make still FRAME=15
+#scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-i5-analysis/render/i5_analysis_still_0015.png .
+tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-v10-analysis/render/v10_analysis.mp4 .
+
+ffmpeg -stream_loop 14 -i v10_analysis.mp4 -c copy v10_analysis_output.mp4
+```
 
 ### I5 vs I6
 
-### I3
+![alt text](/blog_img/mec/i5_nvh_timeseries.gif)
 
 ## V8 Comparison
 
@@ -33,7 +44,19 @@ https://www.youtube.com/watch?v=Xpw6RovYXW4 -->
 
 **Since the Straight-6 is the final "balanced" entry here, are you planning to simulate the V8 next to show why the "Cross-plane" crank was invented to solve the V8's rocking issues?**
 
-### I4
+```sh
+#cd cadquery-blender-v8-cross-analysis && make scene && make plot && make still FRAME=15
+tmux new-session -d -s cad "make all"
+scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-v8-analysis/render/v8_analysis.mp4 .
+
+ffmpeg -stream_loop 14 -i v8_analysis.mp4 -c copy v8_analysis_output.mp4
+```
+
+The V8 flat is just 2 x I4
+
+![alt text](/blog_img/mec/i4_nvh_timeseries.gif)
+
+---
 
 ## Active Damping
 
@@ -43,7 +66,7 @@ When these three intersect to solve a physical problem using hardware and softwa
 
 Here are the four pillars that hold everything together:
 
-### 1. The Phasor: Your "Mathematical Lens"
+1. The Phasor: Your "Mathematical Lens"
 
 The most critical concept is the shift from the **Time Domain** (watching a piston move up and down) to the **Frequency Domain** (viewing that movement as a rotating vector).
 
@@ -51,14 +74,14 @@ The most critical concept is the shift from the **Time Domain** (watching a pist
 * **The "Mechatronics" connection:** Digital controllers don't "see" the piston; they see these frequency components. By characterizing the engine as a set of phasors, we give the computer a language it can use to fight the vibration.
 
 
-### 2. The DAE (Differential-Algebraic Equation)
+2. The DAE (Differential-Algebraic Equation)
 
 This project doesn't use simple $F=ma$ physics; it uses **Constrained Dynamics**.
 
 * **The Concept:** A "Differential" equation describes how things move. An "Algebraic" equation describes the rules they must follow (e.g., "the rod must stay attached to the pin").
 * **The Saddle-Point Solve:** This is the specific matrix math we use to find the **Lagrange Multipliers**. These multipliers are the "ghost forces" that keep the engine together. In our analysis, these "ghosts" are exactly what we measure as bearing reactions and vibration.
 
-### 3. Transmissibility: The "Filter"
+3. Transmissibility: The "Filter"
 
 Once the engine creates a force, you have to understand how that force moves through a structure.
 
@@ -70,7 +93,7 @@ This "Stiffness vs. Isolation" conflict is the central struggle of NVH engineeri
 {{< /callout >}}
 
 
-### 4. LMS (Least Mean Squares): The "Brain"
+4. LMS (Least Mean Squares): The "Brain"
 
 LMS is the algorithm that turns a passive piece of metal into an **Active Damper**.
 
@@ -137,7 +160,9 @@ Vibration spectrum
 
 ### NVH Stack
 
-This is a spectacular final chapter for the active damping sequence. You’ve successfully elevated the project from "Mechanical Simulation" to "Mechatronic Control."
+This is a spectacular final chapter for the active damping sequence. 
+
+You’ve successfully elevated the project from "Mechanical Simulation" to "Mechatronic Control."
 
 By introducing **Least Mean Squares (LMS)**, you’ve provided the reader with a functional bridge between the rigid-body world ($F=ma$) and the signal-processing world (adaptive filtering). 
 

@@ -3,7 +3,7 @@ title: "Engine videos"
 date: 2026-04-26
 draft: false
 tags: ["MBSD","Chassis Transfer Function x ISO 2631","Blender"]
-description: '.'
+description: 'Some matplotlib gifs around NVH'
 url: 'visualizing-engine-nvh'
 math: true
 ---
@@ -13,7 +13,7 @@ math: true
 
 **Intro**
 
-## 
+
 
 ![alt text](../../static/blog_img/mec/chassis_full_chain.png) 
 
@@ -38,7 +38,6 @@ This is the most critical takeaway. You aren't "faking" the 3D engine; you are *
 
 * **The Phasor Advantage:** You can generate a full 3D V8 animation from a *single* 2D piston simulation just by applying the correct `z_offset` and `phase_shift` in the export script.
 * **The Asset Pipeline:** Using **CADquery** to generate parametric parts (pistons, rods) and **Blender** to handle the light and materials creates a professional-grade output that a "homegrown" 3D viewer could never match.
-
 
 
 2. The 3D "Kill" Criteria (When to Port)
@@ -283,7 +282,7 @@ Inline Engine Balance Recap (1D/Planar)
 | **I5** | 72° | 144° | Force: 0 <br> **Moment: Low** | Force: 0 <br> **Moment: Low** | The "Warble." Unique sound; subtle "snaking" rock. |
 | **I6** | 120° | 120° | Force: 0 <br> Moment: 0 | Force: 0 <br> Moment: 0 | **Perfect Balance.** Naturally smooth in all axes. |
 
-1. The I3 (The Tiny Thrummer)
+1. The **I3** (The Tiny Thrummer)
 
 The I3 is effectively half of a V6. 
 
@@ -291,7 +290,7 @@ The I3 is effectively half of a V6.
 * **The Issue:** Since the pistons are in different positions along the shaft, the engine wants to "nod" end-to-end. This **Primary Rocking Couple** is significant. 
 * **The Sound:** A very distinct, half-V6 growl. Almost all modern I3s (Ford 1.0 EcoBoost, BMW/Mini 1.5) use a **balance shaft** to cancel that 1× rock.
 
-2. The I4 (The Standard Workhorse)
+2. The **I4** (The Standard Workhorse)
 
 The most common engine in the world, and the one we've analyzed the most in the e-book.
 
@@ -320,14 +319,16 @@ Smoke-tested output:
 |M_rocking|   peak = 0.0000 N·m
 135 GIF frames (40 per subplot + 15 hold) → 800 KB GIF
 
-Open render/i4_nvh_timeseries.gif and you should see: top panel stays flat at 0 (BALANCED, green), middle panel's red Fz line draws four full sine cycles with peak ±79 N (UNBALANCED, orange), bottom panel stays flat at 0 (BALANCED, green). That's the I4 NVH story written in pure 2D, totally independent of the 3D Blender visualization — two independent checks of the same math.
+Open render/i4_nvh_timeseries.gif and you should see: top panel stays flat at 0 (BALANCED, green), middle panel's red Fz line draws four full sine cycles with peak ±79 N (UNBALANCED, orange), bottom panel stays flat at 0 (BALANCED, green). 
+
+That's the I4 NVH story written in pure 2D, totally independent of the 3D Blender visualization — two independent checks of the same math.
 
 {{< youtube "ePA8wPBI0HM" >}}
 
 
 
 
-3. The I5 (The Exotic Warble)
+3. The **I5** (The Exotic Warble)
 
 Famously used by Audi, Volvo, and early 5-cylinder VWs.
 
@@ -335,14 +336,86 @@ Famously used by Audi, Volvo, and early 5-cylinder VWs.
 * **The Issue:** Like the I3, it has a **Rocking Couple**, but because the engine is longer and the pins are "spread out" around the circle, the rock is much smaller and "snakes" in a circular pattern rather than a simple vertical nod.
 * **The Sound:** Iconic $144^\circ$ firing interval. It sounds like a "Baby V10" because the harmonics are similar.
 
-4. The I6 (The Mechanical Holy Grail)
+```sh
+cd cadquery-blender-i5-analysis && make scene && make still FRAME=15
+#scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-i5-analysis/render/i5_analysis_still_0015.png .
+tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-i5-analysis/render/i5_analysis.mp4 .
+
+ffmpeg -stream_loop 14 -i i5_analysis.mp4 -c copy i5_analysis_output.mp4
+```
+
+Build it with `cd cadquery-blender-i5-analysis && make scene && make plot && make still FRAME=15`.
+
+The two-rocking-couple yellow arrows will show the mixed-frequency throbbing pattern (4 main 2× cycles modulated by a slower 1× envelope) — visually distinct from both the I4's clean vertical pulsing and the V6-90's similar-but-different rocking flavour.
+
+![alt text](/blog_img/mec/i5_nvh_timeseries.gif)
+
+Yes, those numbers are **perfectly consistent** with the unique physics of the Inline-5. You have mathematically captured exactly what gives the I5 its "exotic" reputation: it is an engine that is **smooth in its hands (Force) but restless in its feet (Moment).**
+
+Here is why those specific results make sense for an I5 with $72^\circ$ crankpin spacing:
+
+**1. $|F_{primary}| = 0$ and $|F_{secondary}| = 0$**
+
+In an I4, the secondary forces ($2\times$) add up because the pistons move in pairs that reinforce each other. In an I5, the $72^\circ$ spacing is the "Magic Number."
+
+When you look at the force phasors for 5 cylinders spaced evenly around a circle:
+* **Primary:** They form a perfect pentagon. The vector sum is zero.
+* **Secondary:** The angles become $2 \times 72^\circ = 144^\circ$. If you plot 5 vectors at $144^\circ$ intervals, they *also* form a perfect (though "star-shaped") pentagon. The sum remains zero.
+
+This is why an I5 doesn't have the vertical "buzz" of an I4. In terms of pure "shaking force," an I5 is as balanced as an I6.
+
+
+
+**2. $|M_{rocking}| = 66.5595$ N·m**
+
+This is the "Price of Admission" for the I5. Even though the forces cancel, they act at different points along the crankshaft. 
+
+Unlike the I4 or I6, the I5 is **axially asymmetric**. Cylinder 1 (at the front) doesn't have a "twin" at the back (Cylinder 5) doing the exact same thing at the exact same time. 
+
+* When Cylinder 1 pushes up, the other cylinders aren't perfectly positioned to stop the engine from tilting.
+* This creates a **Primary Rocking Couple** (the $66.5$ N·m you seeing).
+* It also creates a **Secondary Rocking Couple** (though usually smaller), contributing to that complex, 3D "snaking" vibration.
+
+**Comparison of the "Analysis Mode" (I4 vs I5)**
+
+If you rendered these two side-by-side in your 3D Analysis Mode, the contrast would be a powerful educational tool:
+
+| Feature | Inline-4 Analysis | Inline-5 Analysis |
+| :--- | :--- | :--- |
+| **Primary Vector (Blue)** | Zero (Static dot) | Zero (Static dot) |
+| **Secondary Vector (Red)** | **Strong Vertical Pulse** | Zero (Static dot) |
+| **Rocking Arrows** | Zero | **Visible "See-Saw" motion** |
+| **NVH Identity** | The "Vertical Hopper" | The "End-to-End Rocker" |
+
+**The I5 "Warble"**
+
+The $66.5$ N·m peak explains why the I5 needs specific motor mount tuning. The engine isn't trying to jump out of the car; it’s trying to twist. 
+
+This twisting, combined with the $144^\circ$ firing interval, is what creates the famous Audi/Volvo "warble"—the sound of the block physically reacting to those rocking moments.
+
+
+
+4. **The I6 (The Mechanical Holy Grail)**
 
 The Straight-6 is the "Gold Standard" of engine design.
+
 * **The Math:** It is essentially two I3s mirrored. The rocking moment of the front 3 cylinders is perfectly cancelled by the rocking moment of the rear 3 cylinders. 
 * **The Result:** Zero Primary Force, Zero Primary Moment, Zero Secondary Force, Zero Secondary Moment. 
 * **Why not use it always?** It is very **long**. It is hard to fit transversely (front-wheel drive) and takes up massive space under the hood.
 
-### Why the I6 wins the NVH war
+![alt text](/blog_img/mec/i6_nvh_timeseries.gif)
+
+```sh
+cd cadquery-blender-i6-analysis && make scene && make still FRAME=15
+#scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-i6-analysis/render/i6_analysis_still_0015.png .
+tmux new-session -d -s cad "make all" #if you will be leaving this for the night
+scp jalcocert@192.168.1.2:/home/jalcocert/mbsd/z-cad-render/cadquery-blender-i6-analysis/render/i6_analysis.mp4 .
+
+ffmpeg -stream_loop 14 -i i6_analysis.mp4 -c copy i6_analysis_output.mp4
+```
+
+**Why the I6 wins the NVH war**
 
 In our **Phasor Framework**, the I6 is the only one where the vectors sum to zero for both the **Force sum** and the **Moment sum** across both 1× and 2× harmonics. 
 
@@ -401,7 +474,10 @@ It is a common point of confusion: **How can there be a secondary force but no s
 
 4. When does the I4 have a Secondary Moment?
 
-In the real world, an I4 only develops a secondary rocking moment if you break the symmetry. This happens in:
+In the real world, an I4 only develops a secondary rocking moment if you break the symmetry. 
+
+This happens in:
+
 * **Asymmetric Firing/Crank Geometry:** Rare in production cars, but used in some racing applications.
 * **Manufacturing Tolerances:** If piston 1 is significantly heavier than piston 4, a small residual moment appears (this is why high-end "blueprinted" engines feel smoother).
 * **V-Engines:** A **V8 Flat-Plane** (which is two I4s) can actually have secondary moments if the bank angle or the axial offset of the cylinders isn't perfectly managed.
