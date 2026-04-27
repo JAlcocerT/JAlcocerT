@@ -145,7 +145,10 @@ DuckDB and MotherDuck
 
 > which btw can be integrated with perplexity connectors!
 
-
+![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+* https://www.ohansemmanuel.com/books/understanding-astro
+* https://github.com/understanding-astro/understanding-astro-book/tree/master?tab=readme-ov-file
+* https://understanding-astro-webook.vercel.app/
 
 ---
 

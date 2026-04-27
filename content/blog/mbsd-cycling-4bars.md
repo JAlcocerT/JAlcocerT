@@ -305,7 +305,6 @@ done
 ###with container even better!
 #docker run -p 8027:8000 goldziher/kreuzberg
 #curl -X POST -F "file=@jira-estimation.pdf" http://localhost:8027/extract
-
 ```
 
 Yep, using claude:

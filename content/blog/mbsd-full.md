@@ -23,14 +23,34 @@ The era of drag and drop its slowly going to an end.
 
 And the time for concepts, semantics and orchestrating outcomes.
 
+
+I consolidated the initial repo via: https://github.com/juliusbrussee/caveman just to save tokens
+
+```sh
+##git clone https://github.com/JAlcocerT/mechanism
+#git clone https://github.com/JAlcocerT/mbsd
+git init https://github.com/JAlcocerT/multi-body
+```
+
 ## Computational Mechanics
 
 
+Familiar now. Repo = 2D MBSD simulator (Python) + e-book chaining engine NVH source→driver and
+  suspension arc.                                                                                       
+
+  Simulator core (2D-Dynamics/)                                                                         
+  - Saddle-point system: M·a + Cqᵀ·λ = Q, Cq·a = γ. Bodies, joints, constraints, contact, cam, terrain.   - Outputs motions + Lagrange reactions.                                                               
+                                                                                                        
+  E-book (z-destilled-ebook/) = 12 engine-NVH chapters + 4 suspension + 4 reference. Pipeline: cylinder
+  → block → mounts → chassis → cabin → driver.                                                          
+
+  Examples under 2D-Dynamics/examples/:
+  - multi-cylinder-nograv/ — i4, boxer4, flat4, V, combustion, balance shafts, mounts, active damping,  
+  chassis modal
+  - suspension-terrain/ — quarter_car, road_profile_psd, design_space_sweep, active_suspension
+  - Adjacent: cam-follower, four-bar, pendulums, scotch-yoke, terrain-wheel
 
 
-```sh
-git init https://github.com/JAlcocerT/multi-body
-```
 
 
 ## MBSD Framework Applications
@@ -40,7 +60,21 @@ git init https://github.com/JAlcocerT/multi-body
 
 ### Engine Balance
 
+https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/
+
 #### NVH
+
+
+#### Synthesis
+
+https://jalcocert.github.io/JAlcocerT/2d-mechanism-synthesis/
+
+I just have not been focusing on mechanism for long time.
+
+But...that time allocation has changed recently.
+
+Ive been tinkering back :)
+
 
 
 ---

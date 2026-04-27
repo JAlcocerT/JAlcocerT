@@ -1,20 +1,22 @@
 ---
-title: "Attraction Web Offer x Show a Problem"
+title: "Improving a Blog"
 date: 2026-05-02T23:20:21+01:00
 draft: false
-tags: ["NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey"]
-description: 'A scalable way to provide DIY websites. With Free Web Audits!'
+tags: ["FOSS","RoadMap26","Codex x HUGO"]
+description: 'A !'
 url: 'diy-webs-via-paas'
 ---
 
 
 **Tl;DR**
-
+https://github.com/openai/skills
 An excuse to try the free web audit engine
-
+https://developers.openai.com/codex/pricing
 **Intro**
 
 https://developers.openai.com/showcase
+https://developers.openai.com/blog/designing-delightful-frontends-with-gpt-5-4
+
 
 could foss still be HUGO and look as sleek?
 

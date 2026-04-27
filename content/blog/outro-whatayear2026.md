@@ -91,11 +91,9 @@ and feedback to the lead engine.
 
 0. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
 
-![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png)
+<!-- ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png) -->
 
-* https://www.ohansemmanuel.com/books/understanding-astro
-* https://github.com/understanding-astro/understanding-astro-book/tree/master?tab=readme-ov-file
-* https://understanding-astro-webook.vercel.app/
+
 
 
 {{< cards cols="2" >}}
@@ -109,11 +107,6 @@ But I Just continued here.
 
 The same blog as last year, public and even clonable :)
 
-0. For the ones that dont want to read an ebook neither to pay consulting or the DFY...
-
-I offered a *1 to many* free session, aka Webinar.
-
-At my schedule convenience, ofc.
 
 People are using these platforms to do so: *and you have to place your email for later use*
 
@@ -714,7 +707,7 @@ Who would have thought that you can use GHA to send automatical emails for peopl
 
 With a cool template and API based.
 
-4. Creating invoices with `.json` via the serverless SPA: https://github.com/JAlcocerT/serverless-invoices
+4. Creating invoices with `.json` via [the serverless SPA](https://github.com/JAlcocerT/serverless-invoices).
 
 Which I deployed last year to `https://serverless-invoices.pages.dev/invoices?lang=en` 
 
@@ -739,17 +732,21 @@ https://blog.cloudflare.com/serverless-matrix-homeserver-workers/?ref=selfh.st/
 
 I have been still using my homelab
 
-Just that the focus this year has been stability.
+Just that the **focus** this year has been **stability**.
 
 Specially around nextcloud for the family
 
-The crucial P3 Plus nvme with up to 5000mb/s is doing good. I got a 1tb samsung 870 qvo as SO drive with up to 560mb/s
+The crucial P3 Plus nvme with up to 5000mb/s is doing good. 
+
+I got a 1tb samsung 870 qvo as SO drive with up to 560mb/s
 
 I kept enjoying termix and since recently, also tmux:
 
 ```sh
 sudo apt update && sudo apt install tmux -y
 ```
+
+Trying for the first time the mac ecosystem was also interesting.
 
 ### Tech Talks
 
@@ -1037,7 +1034,7 @@ Aka ~~,failed apps'~~: *projects where i just learnt*
 5. ~~EntrepreAI~~, with all those: CV CreAItor,Speech RAIter,AIssistant - PPT, ...
 6. ~~Webifyer / Web CreAItor~~ : DFY/DWY websites for those with the right signal.
 7. ~~Wordpress MigrAItions~~ same with ~~Portfolio CreAItor~~
-8. ~~Cursos udemy ~~
+8. ~~Cursos udemy~~
 9. ~~PyInsightChAIn~~ Understand crypto with AI> Just copy paste the code yourself
 10. ~~IoDoctor reloaded~~: A second opinion, No kyc, [no receta](https://github.com/cssninjaStudio/dokto)
 
@@ -1054,42 +1051,38 @@ See https://en.wikipedia.org/wiki/Dick_Fosbury for inspiration
 YT Tech Videos - JAlcocerTech
 
 YT Shorts/Videos 4K: Ufolding Data / IoTrack
-YT Videos with Streamlit // FinanceInMotion // visualAIzed
+* ~~YT Videos with Streamlit // FinanceInMotion // visualAIzed~~
 
 YT - GoPro/DJI Telemtry Overlay Python
-PyStocks - Publish it on X/Reddit (?) ? RStocks Re-Bump?
-LibrePortfolio.fyi (ES)
-PyVacAItions // TripAdvAIsor
-Real Estate Inv Calculator (Streamlit & Reflex)
-Real Estate Paint Estimaitor with AI
-app lista negra (orlandos)
+* ~~PyStocks - Publish it on X/Reddit (?) ? RStocks Re-Bump?~~
+* LibrePortfolio.fyi (ES)
+* PyVacAItions // TripAdvAIsor
+* ~~Real Estate Inv Calculator (Streamlit & Reflex)~~
+* ~~Real Estate Paint Estimaitor with AI~~
+* ~~app lista negra (orlandos)~~
+			
+~~AI Powered shorts ~ PyStocks~~
 
-			
-AI Powered shorts ~ PyStocks	
-			
 Calculators (CSR based)			
-AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance blog ~ PyStocks | LiberoCompass/LiberoPortfolio - Web	Twitter/X
+
+AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance blog ~ 
+
+PyStocks | LiberoCompass/LiberoPortfolio - Web	Twitter/X
 	E-Comerce CozyKnittingClub		travelmap
 	knitting app para medidas - vs excel based		polar steps
 			countries been app / find penguins
 	Daily Stoic - AI Powered Web Podcast (Text2Audio + YT?)		
 	openengineer.ing		
 
-
 Intentar venta en allegro de 3dprints 
-
 Cajas para PCs 
-
 Utiles para cocina 
-
 Utiles para bicicletas 
-
-
 Impresion 3d con python?? 
-				
+
 Bodas - SlubneChwile				
-Portfolio CreAItor	Wordpress MigrAItion			
-CV CreAItor,Speech RAIter,AIssistant - PPT, ...				
+~~Portfolio CreAItor	Wordpress MigrAItion~~
+~~CV CreAItor,Speech RAIter,AIssistant - PPT, ...~~				
 
 YT Tech Videos - JAlcocerTech. You dont need that much tech skills, but marketing skills `https://www.vrsen.ai/`		
 
@@ -1098,22 +1091,6 @@ YT Shorts/Videos 4K: BeyondaJourney / IoTrack
 YT Videos with Streamlit // FinanceInMotion // visualAIzed				
 
 Finance in Motion / Unfolding Data (YT + ChartJS / Matplotlib / Remotion)			AI Powered shorts ~ PyStocks	
-
-YT - GoPro/DJI Telemtry Overlay Python				
-
-PyStocks - Publish it on Reddit (?) ? RStocks Re-Bump?				
-
-LibrePortfolio.fyi (ES)	AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance blog ~ PyStocks | LiberoCompass/LiberoPortfolio - Web	
-
-PyVacAItions // TripAdvAIsor		E-Comerce CozyKnittingClub		travelmap
-
-PyInsightChAIn (Understand crypto with AI)		knitting app para medidas - vs excel based		polar steps
-
-Real Estate Inv Calculator (Streamlit & Reflex)				countries been app / find penguins
-
-Real Estate Paint Estimaitor with AI		Daily Stoic - AI Powered Web Podcast (Text2Audio + YT?)		
-
-app lista negra (orlandos)		openengineer.ing		
 
 Automations n8n chatbots etc				
 

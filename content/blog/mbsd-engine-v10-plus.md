@@ -11,6 +11,8 @@ math: true
 
 **Tl;DR**
 
+Confirming that I6 and multiples have perfect balance.
+
 **Intro**
 
 With just a slider-crank and the [AR threeJS based simulator](https://jalcocert.github.io/JAlcocerT/2d-mbsd/#a-2d-mbsd-simulator) we got:
