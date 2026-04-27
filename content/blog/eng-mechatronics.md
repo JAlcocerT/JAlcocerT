@@ -13,6 +13,11 @@ math: true
 
 Mechanics + electronics = mechatronics
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="MBSD | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics | Repo" icon="github" >}}
+{{< /cards >}}
+
 **Intro**
 
 This is where I put together an old lesson

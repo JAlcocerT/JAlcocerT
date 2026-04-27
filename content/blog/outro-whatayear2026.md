@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-04-27
+date: 2026-04-25
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -624,15 +624,9 @@ Others, from the vibe coding sessions: helped to bring quick demos to their rela
 
 17. I made **some animations** instead.
 
+I mean...[several animations](https://jalcocert.github.io/JAlcocerT/youtube-video-as-a-code/).
 
-{{< youtube "MZTt8ICeF0Y" >}}
-
-
-I mean...several animations.
-
-{{< youtube "OL5UQaZc97E" >}}
-
-Including [data races](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/#yfinance-x-remotionjs):
+Including [data races](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/#yfinance-x-remotionjs).
 
 
 18. That was true until in March/April I tinkered more and more with RemotionJS and HyperFrames
@@ -642,7 +636,7 @@ From that point I started making quick videos: from [intro to tech talks](https:
 
 ### Serverless
 
-Im not forgetting the CSR learnings from last year.
+Im not forgetting the [CSR learnings](https://jalcocert.github.io/JAlcocerT/csr-and-js/) from last year.
 
 And its great that ideas like `multibodysystemdynamics.pages.dev` or `aegis-freedom.pages.dev` can be shipped in ~1h.
 
@@ -715,7 +709,7 @@ The crucial P3 Plus nvme with up to 5000mb/s is doing good.
 
 I got a 1tb samsung 870 qvo as SO drive with up to 560mb/s
 
-I kept enjoying termix and since recently, also tmux:
+I kept enjoying termix and since recently, also tmux: *and ghostty*
 
 ```sh
 sudo apt update && sudo apt install tmux -y

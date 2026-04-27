@@ -18,6 +18,8 @@ Why not combining [blender](https://jalcocert.github.io/JAlcocerT/using-blender-
 
  The Open Source (OSS) EcosystemProfessional designers who want to maintain the "geometric rigor" of a pattern while using free software usually use a specific pipeline:Seamly2D / Valentina: These are the gold standards for OSS pattern making. They are parametric, meaning if you change a "waist" variable from $70cm$ to $75cm$, the entire pattern geometrically updates itself. You can export these as SVGs or DXFs.Blender (The Visualizer): You can import your Seamly2D patterns into Blender. Once inside, you use the "Sewing" feature in the Cloth physics tab to "pull" the 2D pieces together around a 3D mannequin (avatar).
 
+---
+
 ## Conclusions
 
 

@@ -9,16 +9,24 @@ url: 'diy-webs-via-paas'
 
 
 **Tl;DR**
+
 https://github.com/openai/skills
 An excuse to try the free web audit engine
 https://developers.openai.com/codex/pricing
+
+
 **Intro**
 
 https://developers.openai.com/showcase
 https://developers.openai.com/blog/designing-delightful-frontends-with-gpt-5-4
 
 
-could foss still be HUGO and look as sleek?
+Could foss/ still be HUGO and look as sleek?
+
+
+{{< callout type="warning" >}}
+Id keep JAMstack to avoid Mythos and similar coming inside my homelab :)
+{{< /callout >}}
 
 ```sh
 dig fossengineer.com any

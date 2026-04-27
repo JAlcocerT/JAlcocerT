@@ -2,9 +2,9 @@
 title: "Selfhosted Media"
 date: 2026-05-01T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr"]
-description: 'Computer'
-url: 'selfhosting-more-media'
+tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
+description: 'Organizing my Computer via agents.'
+url: 'selfhosting-media'
 ---
 
 https://github.com/transmute-app/transmute
@@ -55,9 +55,9 @@ https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicat
 
 **TL;DR**
 
-Is there a reliable way not to loose photos for good?
+Despite google giving 5TB now: Is there a reliable way not to loose photos for good?
 
-+ Can I use CLI agents to order my media?
++++ Can I use [CLI agents to order my media](#codex-x-ordering-my-media)?
 
 **Intro**
 
@@ -156,6 +156,26 @@ It goes beyond basic MP3 players like Navidrome by offering audiobook-specific f
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
+
+
+### BackUps First!
+
+#### My HomeLab Recently
+
+Last months it was all about [this](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#what-ive-tried-recently) and [this](https://jalcocert.github.io/JAlcocerT/private-dns-with-docker/#faq).
+
+
+
+### Codex x Ordering My Media
+
+1. [BAAAACK-ups](#backups-first)
+2. Continue at your own risk!
+3. 
+
+
+```sh
+codex
+```
 
 ---
 

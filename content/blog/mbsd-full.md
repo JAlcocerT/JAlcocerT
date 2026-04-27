@@ -21,10 +21,10 @@ You know whats coming right?
 
 The era of drag and drop its slowly going to an end.
 
-And the time for concepts, semantics and orchestrating outcomes.
+And the time for concepts, semantics and **orchestrating outcomes**.
 
 
-I consolidated the initial repo via: https://github.com/juliusbrussee/caveman just to save tokens
+I consolidated the initial mbsd repo via: https://github.com/juliusbrussee/caveman just to save tokens
 
 ```sh
 ##git clone https://github.com/JAlcocerT/mechanism

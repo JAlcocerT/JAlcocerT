@@ -2,12 +2,10 @@
 title: "From Repo Docs to Promo Video"
 date: 2026-04-06
 draft: false
-tags: ["AI Docs","RemotionJS Video","F/OSS"]
+tags: ["AI Docs","RemotionJS Video","F/OSS","Home-Lab x Selfhosting"]
 description: 'Automatic repository 2 Docsand...Videos.'
 url: 'oss-automatic-docs-and-tech-video'
 ---
-
-
 
 **Tl;DR**
 
@@ -204,6 +202,8 @@ glances #htop btop
 #sudo snap install ghostty --classic
 #tmux #ghostty
 ```
+
+To clean space:
 
 ```sh
 sudo apt-get clean

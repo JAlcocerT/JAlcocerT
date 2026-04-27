@@ -52,6 +52,11 @@ It was time to put together all those nice animations related repositories to sh
 ### Financial Animations
 
 
+{{< youtube "MZTt8ICeF0Y" >}}
+
+
+{{< youtube "OL5UQaZc97E" >}}
+
 ### Formula 1 Animations
 
 This engine is a yoke

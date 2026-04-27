@@ -42,21 +42,12 @@ for f in Chapter*.pdf; do
 done
 ```
 
-I consolidated the initial repo via: https://github.com/juliusbrussee/caveman just to save tokens
+I consolidated the initial repo via: https://github.com/juliusbrussee/caveman just to save tokens.
 
-```sh
-#The trick
-git submodule add https://github.com/JAlcocerT/mechanism.git external/mechanism
-git commit -m "Add mechanism repo as submodule"
-```
-
-But hey...do we really understand the hypothesis we are making?
-
-How difficult would be to make an animation / motion graphic that explains in a proffesional way how a solid rigid works?
+How difficult would be making an animation / motion graphic [that explains](#hyperframes-x-rigid-solid) in a proffesional way how synthesis withing solid rigid works?
 
 
 ## Mechanism Synthesis
-
 
 <!-- https://www.youtube.com/watch?v=qYTguJ_fWmA -->
 
