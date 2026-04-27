@@ -8,22 +8,6 @@ url: '3d-mbsd'
 math: true
 ---
 
-<!-- engine starting
-https://www.youtube.com/shorts/mzWr2ZGf7OU
-
-https://www.youtube.com/watch?v=gmV4qwLfOMY
-derivatives
-
-The Trillion Dollar Equation
-https://www.youtube.com/watch?v=A5w-dEgIU1M
- -->
-
-
-<!-- 
-https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
-
-
-
 
 **TL;DR**
 
@@ -53,7 +37,9 @@ Rewriting the solver in 3D isn't just "adding a Z-coordinate."
 
 It changes the fundamental algebra of the system.
 
-* **Non-Commutative Rotations:** In 2D, rotations are scalar additions. In 3D, the order of rotation matters ($\text{Roll} \times \text{Pitch} \neq \text{Pitch} \times \text{Roll}$). Dealing with Quaternions or Euler Angles to avoid "Gimbal Lock" adds layers of complexity to every Jacobian and every constraint equation.
+* **Non-Commutative Rotations:** In 2D, rotations are scalar additions. In 3D, the order of rotation matters ($\text{Roll} \times \text{Pitch} \neq \text{Pitch} \times \text{Roll}$).
+
+Dealing with Quaternions or Euler Angles to avoid "Gimbal Lock" adds layers of complexity to every Jacobian and every constraint equation.
 
 * **The " sitting" vs. "man-years" reality:** As you noted, the saddle-point solver for a 3D system requires 6-DOF mass matrices and complex 3D contact normals. You would be pivoting from an **NVH E-Book** to a **Numerical Methods Research Project.**
 
