@@ -139,11 +139,45 @@ Which of these would you use to analyze on chain data?
 
 {{< youtube "zBd13Owe5-o" >}}
 
-### New Data Stock
+### New Data Stack
 
 DuckDB and MotherDuck
 
 > which btw can be integrated with perplexity connectors!
+
+
+
+---
+
+DuckDB as been very interesting.
+
+Ive eben managed to plug it to langchain with a dummy db for a [tech talk here](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps/#conclusions).
+
+And gen bi tools like Rill rely on it.
+
+https://ducklake.select/manifesto/
+
+which relates to rill gen bi andduckdb
+
+https://www.youtube.com/watch?v=dJMqeKEtW6w
+
+https://www.youtube.com/watch?v=dJMqeKEtW6w
+
+https://www.youtube.com/watch?v=hrTjvvwhHEQ
+
+https://www.youtube.com/watch?v=-PYLFx3FRfQ
+
+
+
+https://motherduck.com/docs/getting-started/
+
+Infrastructure for Answers
+
+The data warehouse built for answers, in SQL or natural language.
+
+I focused on [articulating better](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/articulated-vs-authorit.md) my ideas, creating [engaging presentations](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/authoritative-content.md) and [authorated](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/authoritative-content.md) content.
+
+Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#psyco).
 
 
 ---

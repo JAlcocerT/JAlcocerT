@@ -61,7 +61,7 @@ mindmap
 
 Making a living from software as an indiehacker is something more than just coding.
 
-You need to wrap the product within a successful a good business model:
+You need to wrap the product within a successful a good **business model**:
  
 ![alt text](/blog_img/data-experiments/business-ltv-cac.png)
 

@@ -222,6 +222,11 @@ print(llm.complete("What is a vector database?"))
 ### 
 
 
+## Local Audio
+
+<!-- https://www.youtube.com/watch?v=dQ841Pd6YvQ -->
+
+{{< youtube "dQ841Pd6YvQ" >}}
 
 
 ## Conclusions

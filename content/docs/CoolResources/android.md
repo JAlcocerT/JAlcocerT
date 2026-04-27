@@ -159,6 +159,8 @@ https://www.youtube.com/watch?v=g8mQdICewis -->
 
 * https://www.youtube.com/watch?v=M4GYxkzCobA
 
+> PrimeOS was interesting back in the days
+
 
 ### Better Android OS
 

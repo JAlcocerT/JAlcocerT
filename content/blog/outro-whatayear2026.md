@@ -12,7 +12,7 @@ https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktow
 
 **TL;DR**
 
-Have the last 3 years been 9?
+Have the [last 3 years](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/) been 9?
 
 **Intro**
 
@@ -23,10 +23,6 @@ Have the last 3 years been 9?
 
 
 
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
 
 
 
@@ -37,10 +33,6 @@ AI...employees coming?
 Comercial ones like: `https://www.lindy.ai/pricing`
 
 Maybe, try to build a brand *before its too late*.
-
-0. Android
-
-PrimeOS was nice
 
 0. Interesting Recipes
 
@@ -55,7 +47,7 @@ With
 
 **Side Quests**
 
-0. About Type safe
+0. About Type safe: something that some languages like RUST have
 
 From [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/) we evolved to [TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/)
 
@@ -84,23 +76,11 @@ get proper data lineage trazability to see what worked (what are the *features* 
 
 and feedback to the lead engine.
 
-0. Web CMS stuff: *Strapi directus...*
 
-This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
 
-But I said no more to custom CMS integrations.
+0. Audio TTS/S2T
 
-Actually: Not doing more (DFY) websites for others.
 
-{{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com/" title="Consulting | DWY ↗" icon="book-open" >}}
-{{< /cards >}}
-
-0. Audio TTS
-
-<!-- https://www.youtube.com/watch?v=dQ841Pd6YvQ -->
-
-{{< youtube "dQ841Pd6YvQ" >}}
 
 
 0. Delivery Analytics
@@ -150,29 +130,8 @@ dig fossengineer.com any
 #ping fossengineer.com
 ```
 
-Not [with codex cli](https://github.com/JAlcocerT/docs-testing/tree/master) this time, but directly with IDE:
 
-```sh
-git init && git add . && git commit -m "Initial commit: better ai docs" && gh repo create fossengineer-hugo --private --source=. --remote=origin --push
-```
-
-{{< cards >}}
-  {{< card link="https://gitlab.com/fossengineer/fossengineer" title="foss | Github ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/fossengineer-hugo" title="foss reloaded x HomeLab integration | Github ↗" icon="github" >}}
-{{< /cards >}}
-
-HUGO Vibe Coded Re-build
-
-To offer this via fossengineer, I can try: *these are next steps*
-
-1. As is (later removing adsense)
-2. The local KB offer
-3. The webpage offer
-4. Finally remodel the webpage to avoid the shape of a blog, as is more a news/docs one - vibe coding ofc.
-
-With that remota data (yaml) fetching from the home-lab repo.
-
-0. Talking about Home-Lab and selfhosting: I keep admiring the work that selfh.st puts weekly
+0. Talking about Home-Lab and selfhosting: I keep admiring the work that `selfh.st` puts weekly
 
 I have done a ~monthly series on stuff Ive tried or actively used.
 
@@ -205,13 +164,7 @@ Because power BI and looker might not be enough
 
 
 
-0. IoDoctor reloaded
 
-* A second opinion
-* No kyc, no receta
-
-* with v3 -  Astro + Alpine + Tailwind Starter - as per https://github.com/cssninjaStudio/dokto
-can find out existing interface
 
 0. Blogspot vs Wordpress Migrations *with Free web Audits plugged in*
 
@@ -264,7 +217,7 @@ Another example of why you need to know the business game you are playing.
 
 Build what it makes sense to build.
 
-Consider if you are supply or demand constrain!
+Consider if you are supply or demand constrained!
 
 Then prospect your clients and create a proper offer:
 
@@ -279,7 +232,9 @@ No effort to get the right clients = dont complain and learn.
 
 The captured knowledge on these [blog posts](https://jalcocert.github.io/JAlcocerT/blog/) and [docs](https://jalcocert.github.io/JAlcocerT/docs/) into ebooks *markdown driven* anyone can use for quick DIY.
 
-One of the start doing goals from last year. And that I quickly put together [here](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#building-n-ebooks-for-a-webook).
+One of the start doing goals from last year. 
+
+And that I quickly put together [here](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#building-n-ebooks-for-a-webook).
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#building-n-ebooks-for-a-webook" title="Web/ook | Post ↗" >}}
@@ -373,7 +328,7 @@ It was a continuation of [this section for artists](https://jalcocert.github.io/
   {{< card link="https://github.com/JAlcocerT/diy-landing-boilerplate" title="DIY Landing BoilerPlate Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-A nice landing is a matter of: a cool responsive UI with a demo video, a form and a calendar.
+A nice landing is a matter of: *a cool responsive UI with a demo video, a form and a calendar*s.
 
 This is awsome to validate ideas: *a part of which dis-qualifying prospects is key.*
 
@@ -513,6 +468,8 @@ Which I used for the first **tech [talk](#tech-talks)** of this year.
 10. IoT: *From sensors, to databases and QnA*
 
 Should I call this Embeded analytics?
+
+I ended up [planting tomatoes around IoT](https://jalcocert.github.io/JAlcocerT/plants-101/)
 
 11. Mechanisms reloaded. *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) back in place*
 
@@ -655,11 +612,10 @@ Because the datainmotion `libreportfolio` branch with gweiss method and so on wa
 uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
 ```
 
-All powered via:
+All powered via: https://gitlab.com/fossengineer1/unfolding-data
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
-  {{< card link="https://gitlab.com/fossengineer1/unfolding-data" title="Unfolding Data | NEW Repo with all my animations to date" icon="github" >}}
 {{< /cards >}}
 
 
@@ -805,37 +761,6 @@ sudo apt update && sudo apt install tmux -y
 
 99. Duckdb x motherduck
 
-DuckDB as been very interesting.
-
-Ive eben managed to plug it to langchain with a dummy db for a [tech talk here](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps/#conclusions).
-
-And gen bi tools like Rill rely on it.
-
-https://ducklake.select/manifesto/
-
-which relates to rill gen bi andduckdb
-
-https://www.youtube.com/watch?v=dJMqeKEtW6w
-
-https://www.youtube.com/watch?v=dJMqeKEtW6w
-
-https://www.youtube.com/watch?v=hrTjvvwhHEQ
-
-https://www.youtube.com/watch?v=-PYLFx3FRfQ
-
-
-
-https://motherduck.com/docs/getting-started/
-
-Infrastructure for Answers
-
-The data warehouse built for answers, in SQL or natural language.
-
-I focused on [articulating better](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/articulated-vs-authorit.md) my ideas, creating [engaging presentations](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/authoritative-content.md) and [authorated](https://github.com/JAlcocerT/selfhosted-landing/blob/master/y2026-tech-talks/authoritative-content.md) content.
-
-Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#psyco).
-
-
 ~33...now 46...60 and 16post/22 days january
 
 And ending Q1 of 2026...89.
@@ -938,6 +863,7 @@ There are questions that dont have a single reply:
 
 
 * Whats freedom?: Possibility of acting or the absence of obstacles?
+  * https://aegis-freedom.pages.dev/
 * Will we ever get to value the spark more than the shadow it casts?
 * is blockchain the ultimate database?
 * Is some official/certified the prohibition of any other alternative?
@@ -1098,7 +1024,7 @@ Wait...how many years already?!?!
 
 [2025](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025) - BiP *and social sign in/up*
 
-2026 - 
+2026 - *the end of the fomo (?)*
 
 ##### Closed Projects
 
@@ -1113,6 +1039,8 @@ Aka ~~,failed apps'~~: *projects where i just learnt*
 7. ~~Wordpress MigrAItions~~ same with ~~Portfolio CreAItor~~
 8. ~~Cursos udemy ~~
 9. ~~PyInsightChAIn~~ Understand crypto with AI> Just copy paste the code yourself
+10. ~~IoDoctor reloaded~~: A second opinion, No kyc, [no receta](https://github.com/cssninjaStudio/dokto)
+
 
 Else, use a PaaS or watch a yt tutorial to setup wordpress.
 
