@@ -337,7 +337,7 @@ A better structured *,passive'* service offering.
 These are **deployed at**: *the boilerplate will have a one time fee btw*
 
 * https://ebooks.jalcocertech.com - If you have some idea and **dont know how to start** creating it, this is for you
-* https://boilerplate.jalcocertech.com - If you are creating and want to **do it faster**, this is for you
+* https://consulting.jalcocertech.com - If you are creating and want to **do it faster**, this is for you
 
 This has been possible thanks to perplexity and notebookllm, together with a huge txt file of kindle notes I have: *collected initially at*
 

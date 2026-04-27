@@ -1,6 +1,6 @@
 ---
 title: "Launching a MBSD framework"
-date: 2026-04-26
+date: 2026-04-29
 draft: false
 tags: ["Mechanism Analytics x Simulations","CADQuery x Blender","JAlcocerTech ebook x WhitePaper"]
 description: 'A Dynamics x Kinematics HUB to perform agentic centered mechanism design.'
@@ -68,6 +68,7 @@ https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/
 #### Synthesis
 
 https://jalcocert.github.io/JAlcocerT/2d-mechanism-synthesis/
+https://github.com/JAlcocerT/mbsd/tree/master/2D-Synthesis
 
 I just have not been focusing on mechanism for long time.
 

@@ -38,6 +38,14 @@ flatpak install flathub app.zen_browser.zen -y
 ```
 
 
+Cloudflare tunnels keep been great, but I was surprised by tailscale funnels for those very quick PoC that might require exposing some we/app or webhooks.
+
+<!-- 
+https://x.com/tom_doerr/status/1979894065400263086 
+-->
+
+{{< tweet user="tom_doerr" id="1979894065400263086" >}}
+
 
 ### PaaS
 

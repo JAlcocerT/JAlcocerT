@@ -13,3 +13,10 @@ For the ones that dont want to read an ebook neither to pay consulting or the DF
 I offered a *1 to many* free session, aka Webinar.
 
 At my schedule convenience, ofc.
+
+
+AI...employees coming?
+
+Comercial ones like: `https://www.lindy.ai/pricing`
+
+Maybe, try to build a brand *before its too late*.

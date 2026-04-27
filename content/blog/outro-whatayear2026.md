@@ -28,21 +28,7 @@ Have the [last 3 years](https://jalcocert.github.io/JAlcocerT/this-year-was-craz
 
 ### Curated Posts / Videos
 
-AI...employees coming?
 
-Comercial ones like: `https://www.lindy.ai/pricing`
-
-Maybe, try to build a brand *before its too late*.
-
-0. Interesting Recipes
-
-How could I not offer something very special to entreagujaypunto: *to capture all those recipes*
-
-```sh
-#eayp v3
-```
-
-With
 
 
 **Side Quests**
@@ -132,14 +118,6 @@ Also, have upgraded the x300 and x13 OS'es with a better backup strategy.
 
 Oh, and Im quite happy with proton mail and custom domains.
 
-Cloudflare tunnels keep been great, but I was surprised by tailscale funnels for those very quick PoC that might require exposing some we/app or webhooks.
-
-<!-- 
-https://x.com/tom_doerr/status/1979894065400263086 
--->
-
-{{< tweet user="tom_doerr" id="1979894065400263086" >}}
-
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="repo↗" >}}
@@ -156,10 +134,7 @@ Share on social media / ads and do `draft:true` when old, but history will be ke
 Because power BI and looker might not be enough
 
 
-
-
-
-0. Blogspot vs Wordpress Migrations *with Free web Audits plugged in*
+0. [Blogspot](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/#preparing-for-blogspot-migration) vs Wordpress Migrations *with Free web Audits plugged in*
 
 The free web audit is a thing: <https://webaudit.jalcocertech.com/>
 
@@ -372,7 +347,7 @@ And use APIFY x FireCrawl to find B2B clients at scale:
 
 7. Boiler plate / **blueprint for vibe coders**: WebApps with proper auth flows with NextJS, like this the Slidev+LogTo setup
 
-I also **launched my boilerplate**: https://boilerplate.jalcocertech.com
+I also **launched my boilerplate**: https://consulting.jalcocertech.com
 
 > It has the look and feel of my latest [diy landing boilerplate](https://github.com/JAlcocerT/diy-landing-boilerplate) for a reason :)
 
@@ -752,8 +727,9 @@ Trying for the first time the mac ecosystem was also interesting.
 
 1. About langchain connected to a database...v2. [Post](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/). [Video](https://youtu.be/XS0vLK9x9nc).
 
-2. Langchain Chat with a DB via web UI x BRD x DuckDB x OpenAI
+2. Langchain Chat with a DB via web UI x BRD x BAML x DuckDB x OpenAI: [1](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/, #related-tech-talk)
 
+3. [Big Data x IoT](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk)
 
 
 99. Duckdb x motherduck
