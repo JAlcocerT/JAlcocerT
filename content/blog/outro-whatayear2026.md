@@ -791,7 +791,7 @@ A certain Negative cash flow year one then...uncertainty
 
 10. First you focus and create. Then you diversify to maintain.
 
-11. How good are your idea? How good are you at describe them? `/JAlcocerT/a-diy-boilerplate-to-ship`
+11. [How good](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#why-creating-like-a-ba) are your ideas? How good are you describing them?
 
 12. Saas is built to optimize for retention, locking and expansion.
 

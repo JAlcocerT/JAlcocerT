@@ -17,6 +17,8 @@ Drop if the wordd free still has meaning for you.
 * https://github.com/carboneio/carbone
 
 >  Fast and simple report generator, from JSON to pdf, xslx, docx, odt... 
+
+
 **Intro**
 
 You can tell that i like animations and videos.
@@ -39,6 +41,10 @@ git submodule update --remote external/DataInMotion-libreportfolio
 git submodule add https://github.com/JAlcocerT/eda-f1.git external/eda-f1
 git commit -m "Add eda-f1 repo as submodule"
 ```
+
+{{< callout type="info" >}}
+With agents having skills for [remotion](https://jalcocert.github.io/JAlcocerT/about-motion-graphics/#remotionjs) or [hyperframe](https://jalcocert.github.io/JAlcocerT/about-motion-graphics/#hyperframe)...
+{{< /callout >}}
 
 yea...
 

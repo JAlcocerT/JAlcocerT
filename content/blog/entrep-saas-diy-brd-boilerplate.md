@@ -17,7 +17,9 @@ Get the benefits of it, without having to build it from scratch.
 
 **Intro**
 
-How good are your ideas? How good are you describing them?
+How good are your ideas? 
+
+How good are you describing them?
 
 I was thinking to put these notes in a separated repo to [the n ebooks](https://github.com/JAlcocerT/1ton-ebooks).
 
