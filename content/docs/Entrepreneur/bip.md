@@ -299,3 +299,13 @@ Here are the most important leading indicators in SaaS:
 To manage cash flow, you must obsess over keeping your **CAC Payback Period** short - *gurus tend to say < 1 month*
 
 And driving your **NRR** above 100%.
+
+---
+
+## References
+
+
+- **Show Your Work** — Austin Kleon (probably the closest thing to a bible for this)
+- **Company of One** — Paul Jarvis
+- **The 1,000 True Fans** essay by Kevin Kelly
+- **Anything You Want** — Derek Sivers

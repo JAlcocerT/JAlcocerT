@@ -254,5 +254,41 @@ Once you get leads, you want to make sure you convert them into customers.
 
 With a funnel, you can **visualize the process** of converting leads into customers.
 
-#### Marketing Analytics KPIs
+## Marketing Analytics KPIs
 
+
+| Rank | KPI | The One-Liner |
+| :--- | :--- | :--- |
+| **1** | **Customer Acquisition Cost (CAC)** | The total price tag of turning a prospect into a customer, factoring in all ad spend and overhead. |
+| **2** | **Customer Lifetime Value (CLV)** | The total projected revenue a single customer generates over the entire duration of their relationship with your brand. |
+| **3** | **LTV:CAC Ratio** | The "Golden Ratio" that measures the sustainability of your business by comparing a customer's value to the cost of getting them. |
+| **4** | **Return on Ad Spend (ROAS)** | A direct efficiency score that tells you exactly how many dollars of revenue you earned for every dollar spent on advertising. |
+| **5** | **Conversion Rate (CR)** | The percentage of visitors who take a specific desired action, revealing how well your messaging and user experience actually work. |
+| **6** | **Marketing Originated Pipeline** | The total value of sales opportunities that were directly sparked by marketing efforts before being handed to sales. |
+| **7** | **AI Search Visibility** | A modern metric measuring how often and how accurately your brand appears in AI-generated answers (like ChatGPT or Google Gemini). |
+| **8** | **Net Revenue Retention (NRR)** | The percentage of recurring revenue retained from existing customers, accounting for upgrades, downgrades, and churn. |
+| **9** | **Share of Voice (SoV)** | A competitive metric that tracks your brand's dominance and visibility in market conversations compared to your top rivals. |
+| **10** | **Lead-to-Customer Conversion Rate** | The ultimate bridge metric that tracks the efficiency of your full funnel—from the first "hello" to the final "buy." |
+
+Stop obsessing over **Vanity Metrics** like raw page views or follower counts. 
+
+In the current landscape, if a metric doesn't help you predict future revenue (RevOps) or understand customer intent, it’s likely just a distraction.
+
+## References
+
+Early on → Cardone wins. 
+
+You need clients now, and his direct approach gets you moving.
+
+As you scale → Ogilvy wins. You can't sell one-on-one forever; you need messaging that sells while you sleep.
+
+A solopreneur without Cardone stays invisible. 
+
+A solopreneur without Ogilvy stays exhausted.
+
+| | Ogilvy | Cardone | Cashvertising |
+|---|---|---|---|
+| Focus | Brand & copy craft | Direct sales | Consumer psychology |
+| Tone | Elegant, strategic | High-energy, aggressive | Clinical, practical |
+| Best for | Messaging & positioning | Closing & outreach | Writing ads & copy |
+| Depth | High | Medium | High |

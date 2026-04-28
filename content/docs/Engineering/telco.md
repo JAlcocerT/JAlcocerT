@@ -220,8 +220,7 @@ While **TR-471** is a high-level standard used by ISPs to certify line quality, 
 <!-- ![poc vite fastapi iperf3](/blog_img/AIBI/iperf3-dashboard.png) -->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/poc-101/#poc-as-a-service
-  " title="PoC around Iperf3" image="/blog_img/AIBI/iperf3-dashboard.png" subtitle="You can build solutions around iPerf3 as it is OSS" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/poc-101/#poc-as-a-service" title="PoC around Iperf3" image="/blog_img/AIBI/iperf3-dashboard.png" subtitle="You can build solutions around iPerf3 as it is OSS" >}}
 {{< /cards >}}
 
 It handles both TCP and UDP, but they give you very different data points.
