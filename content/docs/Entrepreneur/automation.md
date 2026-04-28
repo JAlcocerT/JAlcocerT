@@ -29,7 +29,7 @@ Just that B2B clients will be more eager to pay for them
 
 ### N8N
 
-Just FYI, you can **get n8n running** on your server under 1 min:
+Just FYI, you can **get n8n running** [on your server](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/) under 1 min:
 
 {{< youtube "v-gCNTI5kzE" >}}
 
@@ -41,6 +41,11 @@ Consider looking at: https://github.com/Lissy93/email-comparison
 > 📬 A quick comparison of private and / or secure email providers
 
 But...email automation is more about ESP, like mailtrap, Resend, Mailjet or Amazon SES.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/slubnechwile-chwile-y26" title="Slubne-Chwile - Email OutReach System x DRIP ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/slubnechwile-chwile-y26" title="Slubne-Chwile  Leads - Enriched Sales Pipeline ↗" icon="github" >}}
+{{< /cards >}}
 
 Ive enjoyed sending mails via Mailtrap as done with [this DIY Landing Boilerplate](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#sending-via-mailtrap)
 

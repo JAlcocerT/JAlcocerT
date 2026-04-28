@@ -13,11 +13,11 @@ These dashboards are consolidated into **"just" html information**, like static 
 
 And you bet, they are **cool and functional**. 
 
-Plus, they can be deployed as a static web.
+Plus, they can be [deployed as a static web](https://jalcocert.github.io/JAlcocerT/create-your-website/#deployments).
 
-{{< cards >}}
+<!-- {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/listmonk/listmonk-api-py/Ebook-cover-SSGs.pdf" title="Get an ebook to get started with Websites" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Stop being lazy and start building websites" >}}
-{{< /cards >}}
+{{< /cards >}} -->
 
 
 **Icons and fonts?**

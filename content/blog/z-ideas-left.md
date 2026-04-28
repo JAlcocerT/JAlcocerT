@@ -16,21 +16,6 @@ Pretending to be a *polymath* and charging you for caring about solving your pro
 
 +++ [High-Value Engineering](#lean-thinking-x-semantic-clarity)
 
-* https://app.fireflies.ai/perks
-* Perplexity and commet (from W11 only on the desktop) 
-
-
-https://skills.sh/
-
-https://www.youtube.com/watch?v=qfWpPEgea2A&t=191s
-
-https://www.youtube.com/watch?v=rlLwSr-wIAg&t=431s
-
-https://github.com/martingaido/ai-prompt-engineering-docs/blob/main/gemini-for-google-workspace-prompting-guide-101.pdf
-
-aristotel onassis
-
-
 **Intro**
 
 When the ideas bucket stops filling up, I got clarity.

@@ -252,5 +252,7 @@ Take into consideration that experts advice is to:
 
 Once you get leads, you want to make sure you convert them into customers.
 
-With a funnel, you can visualize the process of converting leads into customers.
+With a funnel, you can **visualize the process** of converting leads into customers.
+
+#### Marketing Analytics KPIs
 

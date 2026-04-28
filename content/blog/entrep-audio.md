@@ -118,7 +118,7 @@ Thanks to the implemented monaco editor, we can just quickly tweak the content o
 
 ### The FastAPI Speech Rater
 
-I wanted to combine finally FastAPI (BE) x SQLITE for simple user management x A cool Astro SSG Theme
+I wanted to combine finally FastAPI (BE) x SQLITE for **simple user management** x A cool Astro SSG Theme
 
 Because...
 
@@ -132,7 +132,7 @@ git clone https://github.com/LaB-CH3/Astro-idol
 ```
 
 
-After asking to Cursor to connect the astro theme with FastAPI and make login possible via sqlite...
+After asking to *Cursor* to connect the astro theme with FastAPI and make the login possible via sqlite...
 
 ![FastAPI x signup integrated with astro](/blog_img/GenAI/audio/fastapi-astro-signup.png)
 

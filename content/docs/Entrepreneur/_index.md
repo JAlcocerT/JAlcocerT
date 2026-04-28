@@ -52,7 +52,7 @@ Distilled Entrepreneurial FREE knowledge as web/ook? Sure, [here](https://ebooks
 You can also get help from [some product tools](https://jalcocert.github.io/JAlcocerT/product-tools/)
 
 
-A SaaS be like:
+A SaaS be like: *thanks to their inherent scalability and [automation](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/automation/)*
 
 ![Supply and Demand for a SaaS](/blog_img/entrepre/bip-supply-demand.png)
 
@@ -102,18 +102,17 @@ Designing **proper forms** is key to get the right data from your leads.
 
 The good thing about designing your landing pages so that the full content is available in just one markdown/json file, is that is very easy to create forms or get feedback on them via agents.
 
-```md
-
-```
+You will also need to [consider psyc](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#psyco).
 
 {{% /details %}}
 
+<!-- 
 See couple examples projects Ive built that are using formbricks
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/selfhosted-landing/tree/master" title="DWY Consulting ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY Webs ↗" icon="github" >}}
-{{< /cards >}}
+{{< /cards >}} -->
 
 ### PostHog
 

@@ -129,7 +129,9 @@ The Direct GitHub Backend relies on GitHub's native OAuth flow to authorize user
 
 ## 🛡️ Git Gateway Backend (Recommended)
 
-The Git Gateway acts as an intermediary (a proxy service) between the Decap CMS UI and your Git repository. It is the necessary component for achieving proper **decoupling** of user roles.
+The Git Gateway acts as an intermediary (a proxy service) between the Decap CMS UI and your Git repository. 
+
+It is the necessary component for achieving proper **decoupling** of user roles.
 
 | Feature | Details |
 | :--- | :--- |

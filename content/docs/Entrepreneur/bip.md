@@ -161,7 +161,7 @@ Configure that server, see the DIY ways to get Https, then need to *deploy* your
 For that, [containers](https://jalcocert.github.io/JAlcocerT/dev-ops-for-non-devops/#containers) are your friends.
 
 
-## BiP Examples
+#### BiP Examples
 
 With all that clear, how about some examples?
 
@@ -196,9 +196,14 @@ And the best way to know if someone values what you do, is if they are willing t
 {{< /cards >}}
 
 
+#### More PoCs
+
+
+
+
 ## SaaS KPIs
 
-CAC, LTV, and Churn are the fundamental pillars of SaaS financial health
+CAC, LTV, and Churn are the fundamental pillars of **SaaS financial health**
 
 But they are all **lagging indicators** (they tell you what already happened).
 

@@ -42,7 +42,7 @@ Even if you got your a nice solar panel setup:
 As per my [energy experiments](https://jalcocert.github.io/JAlcocerT/benchmarking-computers/#consumption): expect idles of ~15W for a x300 / ~10W for a BMAX or a laptop / ~5W for a Pi
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tapo-p110-review" title="Tapo Smart Plug Post" image="/blog_img/hardware/energy/x300-linux-w11-energy.jpg" subtitle="Measuring x300 Linux 15w vs W11 25w consumption via the P110" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tapo-p110-review" title="Tapo Smart Plug Post" image="/blog_img/mini_pc/bmax_asrockx300.jpg" subtitle="Measuring x300 Linux 15w vs W11 25w consumption via the P110" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/" title="Testing the Thinkpad X13" image="/blog_img/hardware/Lenovo_x13.jpg" subtitle="~1kg x13 laptop review - SSD Speed Section" >}}
 {{< /cards >}}
 
@@ -58,8 +58,11 @@ ping google.com
 
 We can use these tools to benchmark our internet speed:
 
+<!-- ![OpenSpeedTest](/blog_img/hardware/TPLink4G-OpenSpeedTest.png) -->
+
+
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="Testing 4G Connection" image="/blog_img/hardware/energy/x300-linux-w11-energy.jpg" subtitle="OpenSpeedTest and a TPLink" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/" title="Testing 4G Connection" image="/blog_img/hardware/TPLink4G-OpenSpeedTest.png" subtitle="OpenSpeedTest and a TPLink" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Testing a Travel Router" image="/blog_img/hardware/TPLink4G-SpeedTestTraker.png" subtitle="SpeedTest Tracker on a GL MT3000" >}}
 {{< /cards >}}
 

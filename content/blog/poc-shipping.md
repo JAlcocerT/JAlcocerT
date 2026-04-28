@@ -9,7 +9,7 @@ url: 'quick-weddings-poc'
 
 **Tl;DR**
 
-Hora de mercantilizar mi vida otra vez :(
+Hora de mercantilizar mi vida otra vez :'(
 
 +++ [Inspiring Apps](#apps-that-inspire)
 

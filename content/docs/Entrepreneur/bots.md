@@ -60,6 +60,8 @@ Having your AI APi Keys ready and your n8n setup first:
 
 #### Flowise AI
 
+You can get flowise running into [your homelab](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/)
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/flowise-ai" title="Flowise | Docker Config 🐋 ↗" >}}
 {{< /cards >}}

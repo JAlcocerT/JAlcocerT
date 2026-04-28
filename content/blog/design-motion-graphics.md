@@ -35,11 +35,13 @@ Ive tried a few:
 
 ```sh
 git clone https://github.com/JAlcocerT/3Design
-
-
+#git clone /mbsd
 ```
 
 Ive also been using blender together with mechanisms [here](https://jalcocert.github.io/JAlcocerT/about-constrained-mechanism/#2d-kinematics-x-blender)
+
+{{< youtube "QQq3d_QHmns" >}}
+<!-- https://youtu.be/QQq3d_QHmns -->
 
 > Running this [in a mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) was waaay faster
 
@@ -87,7 +89,7 @@ npx remotion render FullVideo out/full-video.mp4
 
 if you wondered how [lando website was possible](https://jalcocert.github.io/JAlcocerT/micro-saas/#quantux)
 
-Or how Ive been tinkering with a [custom mbsd simulator/animator](https://jalcocert.github.io/JAlcocerT/2d-mbsd/#a-2d-mbsd-simulator) for the augmented reality part (AR)
+Or how Ive been tinkering with a [custom mbsd simulator/animator](https://jalcocert.github.io/JAlcocerT/2d-mbsd/#a-2d-mbsd-simulator) for the [augmented reality part (AR)](https://github.com/JAlcocerT/mbsd/tree/master/2D-Simulator)
 
 ThreeJS is the answer if you dont want to [mess around with python->CadQuery->Blender](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#conclusions)
 
@@ -251,6 +253,8 @@ npx hyperframes preview
 
 <!-- https://youtu.be/zDMjKYQgNUE -->
 
+Not sure what to pick?
+
 | Dimension | HyperFrames | RemotionJS |
 | :--- | :--- | :--- |
 | **File complexity** | One HTML file | Full React project (package.json, TSX, config) |
@@ -277,17 +281,19 @@ Get to know the connections your team is missing:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-HyperFrames in one sentence: it's literally one HTML file. 
+**HyperFrames** in one sentence: it's literally one HTML file. 
 
 You write scenes as divs, animate with GSAP in a script tag, and the CLI captures the browser to MP4.
 
 An AI agent can write the whole thing in one pass — which is why brand-template/index.html just appeared from a brief.
-                                                                                  
-RemotionJS: a proper React project with TSX components, useCurrentFrame(), a full Node build pipeline. 
+                                                                              
+**RemotionJS**: a proper React project with TSX components, useCurrentFrame(), a full Node build pipeline. 
 
 More setup, more structure, genuinely better for data-driven or reusable component scenarios.
 
-The practical split: HyperFrames for anything visual/animated (idents, diagrams, title cards, stat animations), RemotionJS for the automated repo→video pipeline where you're feeding structured data into a template. Both tools, different jobs.
+The practical split: HyperFrames for anything visual/animated (idents, diagrams, title cards, stat animations), RemotionJS for the automated repo→video pipeline where you're feeding structured data into a template.
+
+Both tools, different jobs.
 
 Adding to the previous some [stitch](https://stitch.withgoogle.com/projects/6262766544279341423?pli=1) and [claude design](https://claude.ai/design/p/5c659bb6-4d70-4954-8500-8275f3ba3950).
 
@@ -307,15 +313,14 @@ npx hyperframes preview .
 https://youtu.be/GbR8fuwF5AA -->
 
 1. Write the script — spoken-word rules, say URLs as words, read it aloud first
-2. Generate audio — npx hyperframes tts or the Python script, with voice/speed guide               3. Get word timestamps — uv run python transcribe.py (avoids the whisper.exe path conflict)
-4. Map words to triggers — the 0.2–0.4s early rule, with the genbi-1 mapping as a concrete       
-example
+2. Generate audio — npx hyperframes tts or the Python script, with voice/speed guide
+3. Get word timestamps — uv run python transcribe.py (avoids the whisper.exe path conflict)
+4. Map words to triggers — the 0.2–0.4s early rule, with the genbi-1 mapping as a concrete example
 5. Wire the GSAP timeline — use real timestamps as position parameters, not guesses
 6. Preview and fine-tune — npx hyperframes preview . for scrubbing
 7. Render — npx hyperframes render .
 
-The key insight documented: Whisper may mishear words ("Jira" → "Gira") but the timestamp is     
-still correct — the engine timestamps the sound, not the spelling. 
+The key insight documented: Whisper may mishear words ("Jira" → "Gira") but the timestamp is still correct — the engine timestamps the sound, not the spelling. 
 
 And the note on why we didn't use HyperFrames auto-captions here: the text IS the animation, not a subtitle overlay.
 
@@ -423,23 +428,23 @@ Does your current project feel more like a "human" problem (Design), a "market" 
 
 ## FAQ
 
-GSAP (GreenSock Animation Platform) is a JavaScript library for animating things on a webpage —  
-moving elements, fading them in, scaling them, rotating them — with precise control over timing.
-                                                                                                    The core idea: instead of CSS transitions (which are limited and hard to sequence), GSAP gives
-you a programmable timeline where you say exactly what happens and when.                         
+* GSAP (GreenSock Animation Platform) is a JavaScript library for animating things on a webpage — moving elements, fading them in, scaling them, rotating them — with precise control over timing.
 
-Why HyperFrames uses it: when you render a video, the capture engine scrubs through time frame by
-  frame. GSAP's timeline is deterministic — at t=14.1s, element X is at exactly this position,    
-with exactly this opacity. The capture engine reads that state and renders it to a pixel-perfect 
-video frame. CSS animations are not scrub-friendly; GSAP is.
+The core idea: instead of CSS transitions (which are limited and hard to sequence), GSAP gives you a programmable timeline where you say exactly what happens and when.                         
+
+Why HyperFrames uses it: when you render a video, the capture engine scrubs through time frame by frame.
+
+GSAP's timeline is deterministic — at t=14.1s, element X is at exactly this position, with exactly this opacity.
+
+The capture engine reads that state and renders it to a pixel-perfect 
+video frame. 
 
 
+{{< callout type="info" >}}
+CSS animations are not scrub-friendly; GSAP is.
+{{< /callout >}}
 
-### How to Install Stable Difussion
 
-* https://aman.ai/primers/ai/diffusion-models/
-
-> Great explanation on how these model work
 
 ### F/OSS Animations Suites
 
@@ -507,9 +512,11 @@ Code editor: You'll need a code editor of your choice to write and edit your Mot
 
 Motion Canvas is great for interactive, visually rich web animations. 
 
-Remotion is best for React developers needing video automation and scaling.
+#### Others
 
-Manim is the tool for deep mathematical visualization with powerful programmatic control.
+**Remotion** is best for React developers needing video automation and scaling.
+
+**Manim** is the tool for deep mathematical visualization with powerful programmatic control.
 
 
 | Feature/Aspect          | Motion Canvas                       | Remotion                          | Manim                              |

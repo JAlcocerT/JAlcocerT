@@ -48,7 +48,8 @@ Or Streamlit x Pocketbase as seen [here](https://jalcocert.github.io/JAlcocerT/s
 #### FastAPI x Login x Astro
 
 
-https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater
+To get such [simple auth around sqlite](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fastapi-speech-rater) was a great surprise:
+
 ![FastAPI x signup integrated with astro](/blog_img/GenAI/audio/fastapi-astro-signup.png)
 
 ### Authentication with Logto
@@ -74,7 +75,17 @@ So you dont care about the server, it just works.
 
 ### Authentication via Pocketbase
 
-https://pocketbase.io/docs/authentication/#api-keys
+See: https://pocketbase.io/docs/authentication/#api-keys
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+See this is one with **http cookie**: https://github.com/JAlcocerT/payroll-workers-pb
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Astro x Cloudflare Workers x PB" image="/blog_img/apps/gh-jalcocert.svg" subtitle="SSG + CF Workers + Pocketbase users collections via http cookie to get authenticated" >}}
+{{< /cards >}}
 
 ### Authentication via TinyAuth
 
@@ -148,14 +159,7 @@ The choice between a JWT (token-based) and a traditional session (server-side) s
 
 {{< /details >}}
 
-This is a project with server sise session storage: https://github.com/JAlcocerT/make-podcast
-
-And this is one with http cookie: https://github.com/JAlcocerT/payroll-workers-pb
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/payroll-workers-pb/" title="Astro x Cloudflare Workers x PB" image="/blog_img/apps/gh-jalcocert.svg" subtitle="SSG + CF Workers + Pocketbase users collections via http cookie" >}}
-{{< /cards >}}
-
+This is a project with server side session storage: https://github.com/JAlcocerT/make-podcast
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik | Docker Config 🐋 ↗" >}}
@@ -164,13 +168,15 @@ And this is one with http cookie: https://github.com/JAlcocerT/payroll-workers-p
 
 Yes, there is a way to use **TinyAuth** to whitelist specific emails for access.
 
-This functionality is central to how TinyAuth works when you are using an external identity provider (like Google or GitHub OAuth). However, **you do not directly interact with the SQLite database to manage this list.**
+This functionality is central to how TinyAuth works when you are using an external identity provider (like Google or GitHub OAuth).
 
------
+However, **you do not directly interact with the SQLite database to manage this list.**
 
-## 📧 Whitelisting Emails in TinyAuth
+#### Whitelisting Emails in TinyAuth
 
-TinyAuth manages the email whitelist through its configuration, which can be defined using environment variables or a configuration file. The SQLite database is only used internally by TinyAuth for **session management** and storing the **local user database (if enabled)**, not for the whitelist itself.
+TinyAuth manages the email whitelist through its configuration, which can be defined using environment variables or a configuration file.
+
+The SQLite database is only used internally by TinyAuth for **session management** and storing the **local user database (if enabled)**, not for the whitelist itself.
 
 When a user attempts to log in via an external OAuth provider:
 
@@ -183,7 +189,7 @@ When a user attempts to log in via an external OAuth provider:
 
 The simplest way to whitelist emails is by setting the `WHITELISTED_EMAILS` environment variable when running the TinyAuth container or service.
 
-  * You provide a comma-separated list of the exact emails that are allowed to access the protected application.
+* You provide a comma-separated list of the exact emails that are allowed to access the protected application.
 
 > **Example:**
 >

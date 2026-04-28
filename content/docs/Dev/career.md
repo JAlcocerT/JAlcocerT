@@ -537,8 +537,11 @@ Focus on becoming a **T-Shaped Professional**:
 *   **The Horizontal Bar**: Broad knowledge of data stacks (GCP, Azure, Open Source), orchestration, and governance.
 *   **The Vertical Stem**: Deep expertise in one or two core skills (e.g., SQL and PySpark, or Data Modeling and dbt).
 
-Remember: **Diagrams** are your best friend. Always blueprint your pipelines before writing a single line of code.
+Remember: **Diagrams** are your best friend.
 
+Always blueprint your pipelines before writing a single line of code.
+
+#### Questions!
 
 Requirement Elicitation: *its all about **Key Questions to Ask:***
 

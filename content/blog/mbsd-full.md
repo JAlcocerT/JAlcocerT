@@ -1,6 +1,6 @@
 ---
 title: "Launching a MBSD framework"
-date: 2026-04-29
+date: 2026-04-30
 draft: false
 tags: ["Mechanism Analytics x Simulations","CADQuery x Blender","JAlcocerTech ebook x WhitePaper"]
 description: 'A Dynamics x Kinematics HUB to perform agentic centered mechanism design.'

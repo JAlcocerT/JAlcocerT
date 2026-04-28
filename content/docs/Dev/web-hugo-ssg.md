@@ -145,9 +145,11 @@ So you create them once, and reuse forever.
 Just use it like so in your markdown ,**example with the gist**:
 
 ```md
-{{< gist "username" "gistID" "filename.js" >}}
-{{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks - PayoutRatioEvolution.JPG">}}
+gist "username" "gistID" "filename.js"
 ```
+
+{{< gist jalcocert 879fecd6ae9bccaa0175d1c180a032cd "RStocks - PayoutRatioEvolution.JPG">}}
+
 
 * First parameter (jalcocert): This is the GitHub username or organization that owns the Gist.
 * Second parameter (879fecd6ae9bccaa0175d1c180a032cd): This is the unique Gist ID.
@@ -170,9 +172,9 @@ Just use it like so in your markdown ,**example with the gist**:
 
 Katex is similar to Latex.
 
-You can bring cool formulas to HUGo with Katex.
+You can bring cool formulas to HUGO with Katex.
 
-> See an example on this [HUGO Hextra post](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/#the-chemistry-of-lye)
+See an example with KATEX inside HUGO on this [HUGO Hextra post](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/#the-chemistry-of-lye) or [here](https://jalcocert.github.io/JAlcocerT/3d-mbsd/#3d-kinematics).
 
 ### Tweaking HUGO Themes
 
