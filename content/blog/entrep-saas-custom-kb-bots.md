@@ -8,6 +8,10 @@ url: 'custom-bots-kb'
 math: true
 ---
 
+
+https://www.mindstudio.ai/blog/andrej-karpathy-llm-wiki-knowledge-base-claude-code
+
+
 **Tl;DR**
 
 Delete before you Automate.

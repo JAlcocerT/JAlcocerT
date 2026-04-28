@@ -17,7 +17,7 @@ Think of **TCP** and **UDP** as the two primary "shipping methods" for data on t
 
 They both live at the **Transport Layer** of the networking stack, but they have completely different philosophies on how to get a package from Point A to Point B.
 
-## 1. TCP (Transmission Control Protocol)
+### TCP (Transmission Control Protocol)
 
 **The "Certified Mail" approach.** TCP is obsessed with accuracy and reliability. Before it sends any data, it performs a "three-way handshake" to make sure the receiver is ready. 
 
@@ -25,7 +25,7 @@ They both live at the **Transport Layer** of the networking stack, but they have
 * **Best for:** Web browsing (HTTP), Email, and File Transfers. You wouldn’t want a "mostly complete" bank statement.
 * **The Downside:** It’s slower. All that checking and "handshaking" creates **latency**.
 
-## 2. UDP (User Datagram Protocol)
+### UDP (User Datagram Protocol)
 
 **The "Fire and Forget" approach.**
 
@@ -116,7 +116,7 @@ Old speed tests used **TCP**, but because TCP slows itself down when it sees *an
 Each of these technologies chooses a protocol based on whether they prioritize **reliability** (not losing data) or **efficiency** (speed and low overhead).
 
 
-## 1. Web Browsers (Chrome, Safari, Firefox)
+1. Web Browsers (Chrome, Safari, Firefox)
 
 Browsers have traditionally been the kingdom of **TCP**, but they are currently in the middle of a massive transition.
 
@@ -124,7 +124,7 @@ Browsers have traditionally been the kingdom of **TCP**, but they are currently 
 * **Modern Web (HTTP/3):** Most modern browsers now use **QUIC** (which runs on top of **UDP**). This is what happens when you use Google services, YouTube, or Facebook. It provides the reliability of TCP but starts connections much faster.
 * **Real-Time Video (WebRTC):** If you use Google Meet or Zoom *inside* a browser, it uses **UDP** to keep the video from lagging.
 
-## 2. P2P (Peer-to-Peer / BitTorrent)
+2. P2P (Peer-to-Peer / BitTorrent)
 
 P2P is unique because it often uses **both** simultaneously to balance speed and management.
 
@@ -133,8 +133,7 @@ P2P is unique because it often uses **both** simultaneously to balance speed and
 * **Why UDP for P2P?** It helps with "NAT Traversal" (getting through home firewalls) and prevents the P2P upload from "choking" your entire home internet connection.
 
 
-
-## 3. MQTT (Message Queuing Telemetry Transport)
+3. MQTT (Message Queuing Telemetry Transport)
 
 MQTT is the "language of the Smart Home" (IoT). 
 
@@ -144,7 +143,6 @@ It is designed for tiny sensors with very little battery power.
 
 * **MQTT-SN (Sensor Networks):** This version uses **UDP**. It is used for devices that are so small or have such bad connections (like Zigbee or long-range radio) that the "overhead" of a TCP handshake would drain the battery too fast.
 
-
 | Technology | Primary Protocol | Why? |
 | :--- | :--- | :--- |
 | **Web Browser** | **TCP / QUIC (UDP)** | Needs 100% accuracy for text/images; uses QUIC for speed. |
@@ -153,10 +151,14 @@ It is designed for tiny sensors with very little battery power.
 
 
 
-### A Quick Note on "Layers"
-It is helpful to remember that **MQTT** and **Web Browsers** (HTTP) are "Application Layer" protocols. They are the *passengers* in the car. **TCP** and **UDP** are the "Transport Layer" protocols—they are the *car* itself.
+### A Quick Note on Layers
 
-Are you looking into this because you're setting up an IoT project or a home server?
+It is helpful to remember that **MQTT** and **Web Browsers** (HTTP) are "Application Layer" protocols.
+
+They are the *passengers* in the car.
+
+**TCP** and **UDP** are the "Transport Layer" protocols—they are the *car* itself.
+
 
 ## Wifi Standards
 
@@ -214,6 +216,13 @@ Now, through standards like **TR-471**, they are forcing ISPs to care about **Qu
 **iperf3** is the industry-standard tool for exactly these types of tests.
 
 While **TR-471** is a high-level standard used by ISPs to certify line quality, **iperf3** is the "hands-on" tool used by network engineers to actually run the tests and troubleshoot bottlenecks.
+
+<!-- ![poc vite fastapi iperf3](/blog_img/AIBI/iperf3-dashboard.png) -->
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/poc-101/#poc-as-a-service
+  " title="PoC around Iperf3" image="/blog_img/AIBI/iperf3-dashboard.png" subtitle="You can build solutions around iPerf3 as it is OSS" >}}
+{{< /cards >}}
 
 It handles both TCP and UDP, but they give you very different data points.
 
