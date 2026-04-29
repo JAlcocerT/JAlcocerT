@@ -29,28 +29,26 @@ I consolidated the initial mbsd repo via: https://github.com/juliusbrussee/cavem
 ```sh
 ##git clone https://github.com/JAlcocerT/mechanism
 #git clone https://github.com/JAlcocerT/mbsd
-git init https://github.com/JAlcocerT/multi-body
+
+git init && git add . && git commit -m "Initial commit: better ai docs" && gh repo create multi-body --private --source=. --remote=origin --push
 ```
 
 ## Computational Mechanics
 
 
-Familiar now. Repo = 2D MBSD simulator (Python) + e-book chaining engine NVH source→driver and
-  suspension arc.                                                                                       
+Familiar now. Repo = 2D MBSD simulator (Python) + e-book chaining engine NVH source→driver and suspension arc.
 
-  Simulator core (2D-Dynamics/)                                                                         
-  - Saddle-point system: M·a + Cqᵀ·λ = Q, Cq·a = γ. Bodies, joints, constraints, contact, cam, terrain.   - Outputs motions + Lagrange reactions.                                                               
-                                                                                                        
-  E-book (z-destilled-ebook/) = 12 engine-NVH chapters + 4 suspension + 4 reference. Pipeline: cylinder
-  → block → mounts → chassis → cabin → driver.                                                          
+Simulator core (2D-Dynamics/)                                                                         
+- Saddle-point system: M·a + Cqᵀ·λ = Q, Cq·a = γ. Bodies, joints, constraints, contact, cam, terrain.   - Outputs motions + Lagrange reactions.                                                               
+                                                                                                      
+E-book (z-destilled-ebook/) = 12 engine-NVH chapters + 4 suspension + 4 reference. Pipeline: cylinder
+→ block → mounts → chassis → cabin → driver.                                                          
 
-  Examples under 2D-Dynamics/examples/:
-  - multi-cylinder-nograv/ — i4, boxer4, flat4, V, combustion, balance shafts, mounts, active damping,  
-  chassis modal
-  - suspension-terrain/ — quarter_car, road_profile_psd, design_space_sweep, active_suspension
-  - Adjacent: cam-follower, four-bar, pendulums, scotch-yoke, terrain-wheel
-
-
+Examples under 2D-Dynamics/examples/:
+- multi-cylinder-nograv/ — i4, boxer4, flat4, V, combustion, balance shafts, mounts, active damping,  
+chassis modal
+- suspension-terrain/ — quarter_car, road_profile_psd, design_space_sweep, active_suspension
+- Adjacent: cam-follower, four-bar, pendulums, scotch-yoke, terrain-wheel
 
 
 ## MBSD Framework Applications
@@ -85,7 +83,7 @@ Ive been tinkering back :)
 
 Believe it or not: this is another industry getting shaped by AI capabilities.
 
-Because if mechanism 3D dynamics its kind of trivial now.
+Because if mechanism 3D dynamics its *kind of* trivial now.
 
 So is web development.
 
@@ -94,12 +92,70 @@ So is web development.
 cd ./Slider-Crank/landing #https://multibodysystemdynamics.pages.dev/
 ```
 
-And here is JAlcocerTech whitepaper about it:
+And here is the JAlcocerTech whitepaper about it:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
+
+### Launching MultiBodySystemsDynamics
+
+How could have I guessed that this domain was available to buy.
+
+
+I made a quick web wrap: `https://trends.google.com/`
+
+```sh
+#git clone https://github.com/JAlcocerT/Slider-Crank #kineo bridge :) #https://multibodysystemdynamics.pages.dev/
+#git clone https://github.com/JAlcocerT/multi-body
+
+```
+
+Superseeding [this](https://github.com/JAlcocerT/Slider-Crank/blob/main/prompt-blueprint.md).
+
+```sh
+npm run build
+#npx wrangler pages project create multibodysystemsdynamics
+#https://multibodysystemsdynamics.pages.dev/
+```
+
+With [programmatic contact form](https://jalcocert.github.io/JAlcocerT/poc-101/#programmatic-formbricks-via-api), ofc.
+
+About the **"Authority Funnel"** strategy. 
+
+In a high-stakes engineering field, this structure solves three problems at once: **Identity**, **Validation**, and **Lead Generation**.
+
+Here is how those three components work together as a machine:
+
+1. The Landing Page (The "Hook")
+
+Since `multibodysystemsdynamics.com` is a long, formal name, the landing page must be **visually light but technically heavy**.
+
+* **The Hero Section:** A high-quality 3D render or animation of a mechanism.
+* **The Value Prop:** "We solve the mechanisms that others guess."
+* **The Problem/Solution:** Clearly state that you eliminate mechanical lock-up, branch defects, and vibration through rigorous algebraic synthesis.
+
+2. The Blog Section (The "Magnet")
+
+This is where you handle the "0 search volume" issue.
+
+You don't write for the masses; you write for the **Search Intent**.
+
+* **Topic Clusters:** Write one post per chapter of your work.
+    * *Example:* "Why your 2D simulation is lying to you about gyroscopic stability."
+    * *Example:* "Solving the 3-position synthesis problem in Python: A Burmester approach."
+
+3. The Contact Form (The "Filter")
+
+Don't just ask for an email. Use the form to **qualify the lead**.
+
+Ask 2-3 technical questions:
+
+* "What is your primary design challenge? (e.g., Path Generation, Force Balancing, 3D Dynamics)"
+* "Are you looking for custom software, a one-time analysis, or a consultation?"
+* **Why?** High-end clients *prefer* a form that asks for specifics. It tells them you are a professional who values time and understands the complexity of their problem.
+
 
 
 ### Whats next?
@@ -118,7 +174,7 @@ The **launch strategy**: *aka, focus strategy*
 
 Non for comercial purposes :)
 
-The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
+The **Tier of Service**: DFY 
 
 The **Tech Stack**:
 

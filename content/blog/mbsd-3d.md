@@ -516,8 +516,3 @@ There are specific engines where you **cannot** ignore the secondary moment:
 
 ### References
 
-
-#### 3D concepts
-
-
-#### 3D physics
