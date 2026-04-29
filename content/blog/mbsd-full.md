@@ -1,9 +1,9 @@
 ---
 title: "Launching a MBSD framework"
-date: 2026-04-30
+date: 2026-05-01
 draft: false
-tags: ["Mechanism Analytics x Simulations","CADQuery x Blender","JAlcocerTech ebook x WhitePaper"]
-description: 'A Dynamics x Kinematics HUB to perform agentic centered mechanism design.'
+tags: ["Mechanism Analytics x Simulations","JAlcocerTech ebook x WhitePaper"]
+description: 'A Dynamics x Kinematics HUB. Perform agentic centered mechanism design via CADQuery x Blender.'
 url: 'design-centric-mbsd'
 math: true
 ---
@@ -118,6 +118,10 @@ Superseeding [this](https://github.com/JAlcocerT/Slider-Crank/blob/main/prompt-b
 npm run build
 #npx wrangler pages project create multibodysystemsdynamics
 #https://multibodysystemsdynamics.pages.dev/
+ping multibodysystemsdynamics.com
+#whois multibodysystemsdynamics.com| grep -i -E "(creation|created|registered)"
+#nslookup multibodysystemsdynamics.com
+#dig multibodysystemsdynamics.com
 ```
 
 With [programmatic contact form](https://jalcocert.github.io/JAlcocerT/poc-101/#programmatic-formbricks-via-api), ofc.
@@ -172,7 +176,11 @@ Understanding suspensions?
 
 The **launch strategy**: *aka, focus strategy*
 
-Non for comercial purposes :)
+In theory, for Non comercial purposes :)
+
+1. maximizar active income
+2. ahorrar
+3. **Value based or nothing**
 
 The **Tier of Service**: DFY 
 
@@ -216,3 +224,11 @@ https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
   {{< card link="https://jalcocert.github.io/JAlcocerT/testing-tinyauth/" title="Three Body x Flas" image="/blog_img/dev/flask-vibe-coded.png" subtitle="Flask web app 101 | Blog Post" >}}
   {{< card link="https://github.com/JAlcocerT/ThreeBodies" title="Three Bodies Web App" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Flask Web App to test Traefik x TinyAuth" >}}
 {{< /cards >}}
+
+### Agentic Blender?
+
+ https://www.youtube.com/watch?v=LZMWsZbZU5w
+
+Some references: https://github.com/agmmnn/awesome-blender
+
+https://blendercam.com/ -  An Open Source solution for CAM with Blender 3D

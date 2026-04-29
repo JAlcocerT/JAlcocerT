@@ -1,6 +1,6 @@
 ---
 title: "The balance of Vs"
-date: 2026-04-26
+date: 2026-04-29T08:20:21+01:00
 draft: false
 tags: ["MBSD x Active Damping","LMS Filter","V10 vs V12"]
 description: 'Connecting Mechanical Engineering with signal processing and control theory.'

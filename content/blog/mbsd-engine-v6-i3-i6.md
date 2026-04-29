@@ -1,6 +1,6 @@
 ---
 title: "V6 and engine mount"
-date: 2026-04-25
+date: 2026-04-27
 draft: false
 tags: ["Mechanical Engineering","MBSD","engine mount transmissibility"]
 description: 'Visualizing engine balance with the mbsd 2d framework.'

@@ -1,6 +1,6 @@
 ---
 title: "MBSD 2D. Flat > Boxer?"
-date: 2026-04-24T09:20:21+01:00
+date: 2026-04-26T09:20:21+01:00
 draft: false
 tags: ["Volumetric Efficiency","Holonomic vs Non Holonomic Constrains"]
 description: 'Comparing two popular engines NVH.'

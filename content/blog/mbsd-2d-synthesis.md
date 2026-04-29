@@ -1,6 +1,6 @@
 ---
 title: "2D Mechanism Synthesis"
-date: 2026-04-27
+date: 2026-04-28
 draft: false
 tags: ["MBSD x 2D Simulation","Grashof","Mechanical Synthesis","Caveman"]
 description: 'Which mechanism can do what? Explained with via Hyperframe video'
