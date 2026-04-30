@@ -3,7 +3,7 @@ title: "Launching a MBSD framework"
 date: 2026-05-01
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech ebook x WhitePaper"]
-description: 'A Dynamics x Kinematics HUB. Perform agentic centered mechanism design via CADQuery x Blender.'
+description: 'A Dynamics x Kinematics HUB. Agentic centered design via CADQuery x Blender.'
 url: 'design-centric-mbsd'
 math: true
 ---
@@ -174,6 +174,9 @@ Understanding suspensions?
 
 ## FAQ
 
+
+### Is this an epic launch?
+
 The **launch strategy**: *aka, focus strategy*
 
 In theory, for Non comercial purposes :)
@@ -206,8 +209,11 @@ The **Tech Stack**:
 
 ### How did you started doing mechanical simulations?
 
+It was actually long ago.
 
-https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
+I got re-inspired by [GabeMorris](https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/) few years back.
+
+Now with agents, there is no excuse not to do this just bc is not my job.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/chaos-theory-and-the-double-pendulum-with-python/" title="Double Pendulum Repo" image="https://raw.githubusercontent.com/JAlcocerT/Py_Double_Pendulum/main/Z_Outro/DoublePendulum.gif" subtitle="Python Double Pendulum" >}}
@@ -229,6 +235,6 @@ https://jalcocert.github.io/JAlcocerT/gabemorris12-mechanism-project-setup/
 
  https://www.youtube.com/watch?v=LZMWsZbZU5w
 
-Some references: https://github.com/agmmnn/awesome-blender
+Some references: `https://github.com/agmmnn/awesome-blender`
 
-https://blendercam.com/ -  An Open Source solution for CAM with Blender 3D
+`https://blendercam.com/` -  An Open Source solution for CAM with Blender 3D
