@@ -1,6 +1,6 @@
 ---
 title: "Launching a MBSD framework"
-date: 2026-05-01
+date: 2026-05-02
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech ebook x WhitePaper"]
 description: 'A Dynamics x Kinematics HUB. Agentic centered design via CADQuery x Blender.'
@@ -33,16 +33,26 @@ I consolidated the initial mbsd repo via: https://github.com/juliusbrussee/cavem
 git init && git add . && git commit -m "Initial commit: better ai docs" && gh repo create multi-body --private --source=. --remote=origin --push
 ```
 
+```sh
+#The trick
+git submodule add https://github.com/JAlcocerT/mechanism.git external/mechanism
+git commit -m "Add mechanism repo as submodule"
+git submodule add https://github.com/JAlcocerT/mbsd.git external/mbsd
+git commit -m "Add mbsd repo as submodule"
+#git clone --recurse-submodules https://github.com/JAlcocerT/multi-body.git
+```
+
 ## Computational Mechanics
 
 
 Familiar now. Repo = 2D MBSD simulator (Python) + e-book chaining engine NVH source→driver and suspension arc.
 
-Simulator core (2D-Dynamics/)                                                                         
-- Saddle-point system: M·a + Cqᵀ·λ = Q, Cq·a = γ. Bodies, joints, constraints, contact, cam, terrain.   - Outputs motions + Lagrange reactions.                                                               
+Simulator core (2D-Dynamics/)
+
+- Saddle-point system: M·a + Cqᵀ·λ = Q, Cq·a = γ. Bodies, joints, constraints, contact, cam, terrain.   - Outputs motions + Lagrange reactions.
                                                                                                       
 E-book (z-destilled-ebook/) = 12 engine-NVH chapters + 4 suspension + 4 reference. Pipeline: cylinder
-→ block → mounts → chassis → cabin → driver.                                                          
+→ block → mounts → chassis → cabin → driver.
 
 Examples under 2D-Dynamics/examples/:
 - multi-cylinder-nograv/ — i4, boxer4, flat4, V, combustion, balance shafts, mounts, active damping,  

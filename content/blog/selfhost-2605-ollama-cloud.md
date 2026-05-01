@@ -564,3 +564,127 @@ https://jalcocert.github.io/JAlcocerT/image-backup-tools/#server-maintainance
 graph TD
     A[ThinkPad] --> B[Orange Pi 5]
 ```
+
+
+### Prompting 101
+
+First timer doing prompts?
+
+```sh
+curl
+```
+
+The **D.E.F.I.N.E.** framework! 
+
+This is a structured engineering mindset that treats a prompt like a formal **Project Requirements Document (PRD)**. 
+
+While "Creating" is the act of generation, **D.E.F.I.N.E.** is the methodology pro users use to ensure that the creation doesn't hallucinate or miss the mark.
+
+---
+
+## **The D.E.F.I.N.E. Framework**
+
+### **D – Desired Outcome**
+Pros start with the "Why" and the "Final Form."
+* **The Goal:** Don't just ask for "an email." Ask for "a persuasive email that secures a follow-up meeting."
+* **The Format:** Specify if you want a table, a code block, a list, or a JSON object.
+
+### **E – End User / Audience**
+This sets the tone and complexity level. 
+* **The Context:** Is the AI writing for a skeptical CFO, a 5-year-old, or a Senior DevOps Engineer?
+* **The Persona:** You might also define the AI’s persona here (e.g., "Act as a legal expert").
+
+### **F – Facts / Inputs**
+AI is only as good as the data it’s chewing on. 
+* **The Data:** Provide the raw text, the statistics, or the URL.
+* **The Reference:** "Base your answer *only* on the following transcript..."
+
+### **I – In-Scope / Out-of-Scope (OOS)**
+This is the "Guardrail" phase. It prevents the AI from wandering into irrelevant topics.
+* **In-Scope:** "Focus specifically on the Q3 fiscal projections."
+* **Out-of-Scope:** "Do not mention the merger or the previous year’s losses."
+
+### **N – Needs, Constraints, & Dependencies**
+This is the fine print that makes the output usable.
+* **Constraints:** "Must be under 200 words," "Avoid passive voice," or "No technical jargon."
+* **Dependencies:** "Assume the reader has already seen the first pitch deck."
+
+### **E – Evaluation & Execution**
+The final check before the AI "runs" the task.
+* **Evaluation:** Ask the AI to critique its own work before presenting it. "Check your answer for logical fallacies."
+* **Execution:** Tell the AI how to finish. "Provide the summary first, then the detailed breakdown, then a list of follow-up questions."
+
+---
+
+### **Example: Applying D.E.F.I.N.E. to a Task**
+
+Instead of saying: *"Write a marketing post about our new AI tool,"* a pro uses the framework:
+
+> **D:** Create a LinkedIn post to drive sign-ups.  
+> **E:** Targeting Mid-level Product Managers who are "AI-fatigued."  
+> **F:** Tool features: 10x faster rendering, zero-latency, local-only processing.  
+> **I:** Focus on the technical speed; ignore the pricing (OOS).  
+> **N:** Use a professional yet punchy tone. Max 150 words. Use emojis sparingly.  
+> **E:** Evaluate the post for "cringe" corporate speak and remove it before outputting.
+
+---
+
+### **Why Pros Use This Over "Creating" Freehand**
+1. **Reduces Iteration:** You get what you want in one "hit" rather than five follow-up prompts.
+2. **Scalability:** You can turn a **D.E.F.I.N.E.** block into a template for any future task.
+3. **Control:** It moves the AI from "Creative Assistant" to "Precision Tool."
+
+Which part of this framework do you find hardest to implement when you're working with AI?
+
+While **DEFINE** is about the architecture and preparation, **CREATE** is the engine for the actual drafting and iterative execution. It is the framework used to turn those requirements into a high-quality final product.
+
+Here is how pro power users break down the **C.R.E.A.T.E.** framework:
+
+---
+
+### **C – Character & Context**
+Before the AI writes a single word, you must anchor its identity and the situation.
+*   **The Role:** Assign a specific "expert" persona (e.g., "You are a Senior Editor at a Tier-1 tech publication").
+*   **The Background:** Brief the AI on why this task is happening now.
+
+### **R – Reference & Resources**
+Provide the "raw materials" for the build.
+*   **Examples (Few-Shot):** Give the AI 2–3 examples of the style or format you want.
+*   **Knowledge:** Attach documents, paste data, or provide links that the AI must use as its "source of truth."
+
+### **E – Explicit Instructions**
+This is the "meat" of the prompt where you give the direct command.
+*   **The Action:** Use strong verbs (e.g., "Synthesize," "Contrast," "Draft," "Refactor").
+*   **The Structure:** Tell it exactly how to organize the response (e.g., "Introduction, then 3 body paragraphs, then a TL;DR").
+
+### **A – Adjustments & Constraints**
+Set the boundaries to prevent "AI-isms" and hallucinations.
+*   **Tone/Voice:** "Professional but provocative," "Scientific and dry," or "Empathetic."
+*   **Negative Constraints:** Explicitly state what to avoid (e.g., "Do not use the word 'delve'," "No preamble," or "Don't mention competitors").
+
+### **T – Type of Output**
+Define the technical delivery.
+*   **Format:** Do you need Markdown, a CSV table, a Python script, or a Mermaid diagram?
+*   **Length:** Set word counts or "one-page" limits.
+
+### **E – Evolutionary Iteration**
+Pro users rarely stop at the first output. This step turns a "chat" into a "workflow."
+*   **Feedback Loop:** Ask the AI to "Review your response against my constraints and highlight where you might have missed a detail."
+*   **Multi-step refinement:** "Now take that draft and rewrite it to be 20% more concise."
+
+---
+
+### **The Distinction: DEFINE vs. CREATE**
+
+*   **DEFINE** is **Strategic**: It’s used for project management, aligning stakeholders, and ensuring you know *what* you need. It is the "Contract."
+*   **CREATE** is **Tactical**: It’s the actual prompt engineering syntax used to talk to the LLM to get the work done. It is the "Execution."
+
+| Feature | **DEFINE** (The Planner) | **CREATE** (The Builder) |
+| :--- | :--- | :--- |
+| **Primary Goal** | Clarity and alignment | Quality and output |
+| **Best For** | Complex projects/Workflows | Prompt engineering/Drafting |
+| **Focus** | Dependencies and End Users | Persona and Iteration |
+
+**Pro Tip:** Use **DEFINE** to organize your thoughts in a scratchpad or document, then translate those requirements into a **CREATE** prompt for the AI.
+
+Which of these frameworks feels more natural to your current workflow?
