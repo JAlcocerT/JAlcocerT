@@ -402,7 +402,9 @@ You'll probably know how to deliver
 
 And most likely dont know how to attract and convert.
 
-Thats why some people have 10k ig followers - 2k in a telegram group - and 200 into a smaller tg group ready to buy them a vibe/life mentory which gross delivery is 1k+ $/h (only for 30 lucky selected ppl who can pay 500$ each for 10h, ofc)
+Thats why some people have 10k ig followers - 2k in a telegram group - and 200 into a smaller tg group ready to buy them a vibe/life mentory which gross delivery is 1k+ $/h 
+
+> only for the 30 lucky selected ppl who can pay 500$ each for 10h, ofc
 
 Pretty interesting value proposition, ah?
 
@@ -706,6 +708,9 @@ After receiving answers to the 4 questions:
 
 {{% /details %}}
 
+<!-- https://github.com/JAlcocerT/Slider-Crank/blob/main/landing/Screenshot%202026-05-01%20080420.png -->
+
+![Slider-Crank screenshot](https://raw.githubusercontent.com/JAlcocerT/Slider-Crank/main/landing/Screenshot%202026-05-01%20080420.png)  
 
 
 {{% details title="Vite x Tailwind x Framer Motion Glassmorphism 🚀" closed="true" %}}
@@ -724,25 +729,6 @@ After receiving answers to the 4 questions:
 
 ![alt text](/blog_img/AIBI/vite-baml-genbi.png)
 
-The [web audits](https://jalcocert.github.io/JAlcocerT/do-your-instagram/#web-audits) ...were fine
-
-but the edits and uploads...not there.
-
-So for the v3...
-
-I just played around the forked oss foldergram project:
-
-```sh
-git clone /foldergram
-```
-
-{{% details title="All my BRD / requirements for a website 🚀" closed="true" %}}
-
-1. Editor in one subdomain, delivery static if possible and in another
-
-2. For UI Astro and Vite allow really cool features
-
-{{% /details %}}
 
 
 ### Whats Open DevOps?

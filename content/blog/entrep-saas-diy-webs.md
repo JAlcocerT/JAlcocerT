@@ -1,6 +1,6 @@
 ---
 title: "Attraction Web Offer x Show a Problem"
-date: 2026-05-01T23:20:21+01:00
+date: 2026-05-08T23:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey"]
 description: 'A scalable way to provide DIY websites. With Free Web Audits!'
@@ -293,6 +293,18 @@ Just remember to add `_index.md` and `index.md` so that the captions match what 
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/foldergram" title="Foldergram | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/filebrowser" title="Filebrowser | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+The [web audits](https://jalcocert.github.io/JAlcocerT/do-your-instagram/#web-audits) ...were fine
+
+but the edits and uploads...not there.
+
+So for the v3...
+
+I just played around the forked oss foldergram project:
+
+```sh
+git clone /foldergram
+```
 
 
 ---

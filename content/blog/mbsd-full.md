@@ -102,12 +102,18 @@ So is web development.
 cd ./Slider-Crank/landing #https://multibodysystemdynamics.pages.dev/
 ```
 
-And here is the JAlcocerTech whitepaper about it:
+And here is the JAlcocerTech whitepaper about it.
+
+All models are wrong; some are useful.
+
+To decide which one is the best fit for you:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
+
+
 
 ### Launching MultiBodySystemsDynamics
 
