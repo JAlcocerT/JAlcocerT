@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Media"
-date: 2026-05-01T23:20:21+01:00
+date: 2026-05-08T23:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
 description: 'Organizing my Computer via agents.'

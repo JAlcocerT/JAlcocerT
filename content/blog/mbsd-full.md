@@ -10,6 +10,7 @@ math: true
 
 https://github.com/JAlcocerT/engine-balance
 https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics
+https://github.com/JAlcocerT/mechanism
 
 **TL;DR**
 
