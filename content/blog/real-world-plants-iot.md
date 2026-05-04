@@ -1,14 +1,16 @@
 ---
 title: "IoT x Plants x BoM"
-date: 2026-04-10
+date: 2026-04-11
 draft: false
 tags: ["Real World","DHT22 vs MLX90614 x VPD","Tinkering IRL","Velxio x ESPHome"]
-description: 'Plants, VPD and future plans that made it for a tech talk.'
+description: 'Watering Plants, VPD and future plans that made it for a tech talk.'
 url: 'plants-102-and-iot'
 math: true
 ---
 
 **Tl;DR**
+
+When you start [planting tomatoes](https://jalcocert.github.io/JAlcocerT/plants-101/#growth-experiment), make an elect[ronic catch up](https://jalcocert.github.io/JAlcocerT/electronics-101/) and prepare an IoT/Big Data [tech talk](#big-data-tech-talk).
 
 
 **Intro**

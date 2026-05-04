@@ -25,11 +25,39 @@ The era of drag and drop its slowly going to an end.
 And the time for concepts, semantics and **orchestrating outcomes**.
 
 
-I consolidated the initial mbsd repo via: https://github.com/juliusbrussee/caveman just to save tokens
+I consolidated the initial mbsd repo via: https://github.com/juliusbrussee/caveman just to save tokens.
+
+## Gabe Morris - Mechanism
+
 
 ```sh
-##git clone https://github.com/JAlcocerT/mechanism
-#git clone https://github.com/JAlcocerT/mbsd
+git clone https://github.com/JAlcocerT/mechanism
+#choco install blender --version=4.2.2 -y #5.1.1
+uv add mapbox-earcut
+uv run blender-export/cam_to_stl.py 
+uv run blender-export/gear_to_stl.py 
+```
+
+You can import the STLs to blender manually or with:
+
+```sh
+blender --background --python blender-export/blender_import.py
+```
+
+Kinematics only. No dynamics.                                   
+                  
+  Evidence:                                                                                                     
+  - Zero mass/inertia/torque/force-balance code in mechanism/. Sole "forces" mention = stray word in origin       docstring (mechanism.py:270).                                                                                 
+  - Solver = vector-loop position/velocity/acceleration via numerical iteration. No Newton-Euler, no kinetics.  
+  - Cam output = SVAJ (geometric). No follower spring/preload force calc.
+  - Gears = involute geometry only. No bending/contact stress, no power transmission.
+  - README confirms: "perform kinematic analysis by utilizing degrees of freedom".
+
+  What you get = θ, ω, α, position, velocity, acceleration of points/vectors. What you don't get = required     
+  input torque, joint reaction forces, link stresses, dynamic balancing.
+
+```sh
+#git clone https://github.com/JAlcocerT/multi-body
 
 git init && git add . && git commit -m "Initial commit: better ai docs" && gh repo create multi-body --private --source=. --remote=origin --push
 ```

@@ -1,8 +1,8 @@
 ---
 title: "Plants IRL"
-date: 2026-04-11T01:20:21+01:00
+date: 2026-04-10T01:20:21+01:00
 draft: false
-tags: ["Real World","Solar","Tinkering IRL","A/B Experiment"]
+tags: ["Real World","Tinkering IRL","A/B Experiment x Tomatoes"]
 description: 'How to grow tomato seeds.'
 url: 'plants-101'
 ---
@@ -98,7 +98,7 @@ The temperature at night dropped at ~15C and during peak I saw 35C (they are gro
 
 3. Mieta piep. took ~21 days to appear
 
-In the meantime, some tomatoes had several flowers already
+In the meantime, some tomatoes had several leaves already
 
 
 
@@ -106,7 +106,16 @@ In the meantime, some tomatoes had several flowers already
 
 ## FAQ
 
-You have a great selection there! You’ve essentially bought a "Relaxation and Refreshment" starter kit.
+You’ve essentially bought a "Relaxation and Refreshment" starter kit.
+
+
+| Plant | Best Use | Sunlight | Pot or Ground? |
+| :--- | :--- | :--- | :--- |
+| **Tomato** | Eating / Salads | Full Sun | Either (needs space) |
+| **Melisa** | Sleep / Relaxation | Sun or Part Shade | Either |
+| **Mięta pieprzowa** | Digestion / Ice Tea | Part Shade | **Pot Only** |
+| **Mięta polej** | Insect Repellent | Full Sun | Pot |
+
 
 Since you are in Poland, the timing for these is perfect as we head into spring.
 
@@ -137,17 +146,6 @@ Here is a breakdown of what you have and how to handle them:
     * **In English:** It is called *Pennyroyal*.
     * **Usage:** Historically, it was used to repel insects (fleas and mosquitoes). Most modern gardeners grow it for its scent or to keep bugs away, rather than for drinking. **I would stick to the Peppermint for your tea and use this one as a natural pest repellent in the garden.**
 
----
-
-### Quick Comparison Table
-
-| Plant | Best Use | Sunlight | Pot or Ground? |
-| :--- | :--- | :--- | :--- |
-| **Tomato** | Eating / Salads | Full Sun | Either (needs space) |
-| **Melisa** | Sleep / Relaxation | Sun or Part Shade | Either |
-| **Mięta pieprzowa** | Digestion / Ice Tea | Part Shade | **Pot Only** |
-| **Mięta polej** | Insect Repellent | Full Sun | Pot |
-
 ### A Quick Tip for Your Seeds
 
 Since you have two types of mint and melisa (which all look similar when they are tiny sprouts), make sure to **label your pots** immediately! 
@@ -159,9 +157,11 @@ Since you’ve just planted your seeds, the watering strategy changes as they gr
 
 Right now, your main goal is to keep the soil moist without "drowning" the seeds or washing them away.
 
+### The Plan
+
 Here is the plan for your **Tomatoes, Melisa, and Mints**:
 
-### 1. Phase One: The "Waiting for Sprouts" Stage
+#### 1. Phase One: The "Waiting for Sprouts" Stage
 
 Until you see green peeking out of the soil, the seeds need **consistent humidity**.
 
@@ -169,7 +169,7 @@ Until you see green peeking out of the soil, the seeds need **consistent humidit
 * **How much:** Spray the surface whenever it looks light brown or dry. The soil should feel like a wrung-out sponge—moist, but not dripping.
 * **The Trick:** Cover your pots with clear plastic wrap or a plastic bag. This creates a "mini-greenhouse" that keeps the moisture in so you don't have to water as often. Remove it the second you see a sprout!
 
-### 2. Phase Two: The Seedling Stage (Once they have leaves)
+#### 2. Phase Two: The Seedling Stage (Once they have leaves)
 
 Once they are growing, they need "deeper" water to encourage roots to grow down.
 
@@ -181,20 +181,22 @@ Let them "drink" from the bottom for 15–30 minutes, then pour out the leftover
 
 This keeps the stems dry and prevents mold (especially for **Tomatoes**).
 
-### 3. Plant-Specific Tips
+#### 3. Plant-Specific Tips
 
 * **Tomatoes:** They are thirsty! As they get bigger, they will need water almost every day, especially if they are in a sunny window.
 
 * **Melisa & Peppermint:** These love "damp feet." They are less forgiving than tomatoes if the soil dries out completely. If they start to wilt (droop), give them water immediately and they usually "pop" back up in an hour.
 * **Pennyroyal (Mięta polej):** Similar to peppermint, keep it moist but make sure the pot has holes in the bottom so the water can drain.
 
----
-
 ### What to avoid
 
-* **Standing Water:** Never let the pots sit in a tray of water all day. This causes "root rot," and the plant will turn yellow and die.
+* **Standing Water:** Never let the pots sit in a tray of water all day. 
 
-* **Cold Water:** In Poland, tap water in March is freezing. Let your watering can sit out for an hour to reach **room temperature** so you don't shock the "tropical" tomato seeds.
+This causes "root rot," and the plant will turn yellow and die.
+
+* **Cold Water:** In Poland, tap water in March is freezing. 
+
+Let your watering can sit out for an hour to reach **room temperature** so you don't shock the "tropical" tomato seeds.
 
 The best time to water your plants is actually **in the morning**.
 

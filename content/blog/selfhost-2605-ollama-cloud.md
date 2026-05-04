@@ -501,11 +501,32 @@ They are also available as standalone chips from some manufacturers.
 
 https://releases.ubuntu.com/ coming with the kernel 7.
 
+I ended up trying it first [on a VM](https://jalcocert.github.io/JAlcocerT/testing-nix-os/#interesting-stuff-regarding-emulation), with a check with codex on the must follow steps for a reliable setup:
+
+```sh
+sudo snap install gnome-boxes
+gnome-boxes
+#codex
+apt update && apt upgrade -y
+```
+
+
+{{< callout type="info" >}}
+You have them all updated into this script
+{{< /callout >}}
+
+
+You can test the speed with this script, which now includes [the trip-planner v3](https://jalcocert.github.io/JAlcocerT/poc-101/#where-are-you-going):
+
+```sh
+
+```
+
 helium, zen...
 
 * https://winboat.app/
 
-With VM you dont have GPU passthrough and hardware acceleration.
+With [a VM](https://jalcocert.github.io/JAlcocerT/testing-nix-os/#interesting-stuff-regarding-emulation) you dont have GPU passthrough and hardware acceleration.
 
 https://www.youtube.com/watch?v=qEI95GIRKaU
 
