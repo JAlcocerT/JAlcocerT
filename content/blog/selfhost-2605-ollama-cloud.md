@@ -368,6 +368,12 @@ Using Ollama with Gemma 4 is a reasonable option.
 
 You can also get some compute or pay API use for: Kimi vs Deepseek
 
+You also have: https://z.ai/blog/glm-5
+
+Which is at the top of the arena for now: https://arena.ai/leaderboard/code?license=open-source
+
+* https://chat.z.ai/auth
+
 ### About Protocols
 
 Is ADL the next big thing after MCP eating the context windows?

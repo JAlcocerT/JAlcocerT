@@ -16,6 +16,10 @@ Post [electro-magnetism 101](https://jalcocert.github.io/JAlcocerT/electromagnet
 
 Ive been doing [additional electronics recaps](https://github.com/JAlcocerT/electronics-101/tree/master/samples-confidence) before going all in with more [electronics ideas](https://github.com/JAlcocerT/electronics-101/blob/master/z-ideas.md)
 
+```sh
+git clone /electronics-101/samples-motors
+```
+
 ## Circuits Recap
 
 
