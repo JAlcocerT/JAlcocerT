@@ -1,6 +1,6 @@
 ---
 title: "Plants while travelling"
-date: 2026-05-10T01:20:21+01:00
+date: 2026-05-05T01:20:21+01:00
 draft: false
 tags: ["Tinkering IRL","Watering Plants x Pi Camera"]
 description: 'Inspiration for real world projects before a trip.'
@@ -28,7 +28,11 @@ You can use the setups I will explain accordingly to [the typical weather](#when
 
 ### The IoT and Controlled Watering
 
+
+
 ### The Capilarity approach
+
+Aka just physics approach.
 
 
 ## Monitoring Plants while Travelling
@@ -71,11 +75,16 @@ How are the plants doing after ~6 weeks of planting them?
 
 ### When is the best weather to plant what?
 
-You can use my latest trip-planner v4 as launched [here]()
+You can use my [latest trip-planner v4](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/poc-trip-planner-v4) as launched [here]()
 
 ```sh
-
+git clone https://github.com/JAlcocerT/Py_Trip_Planner
+cd ./Py_Trip_Planner/poc-trip-planner-v4
+#npm run dev
 ```
+
+![alt text](/blog_img/apps/TripPlanner/trip-planner-v4.png)
+
 
 Get the patters to know what to expect depending when you will be leaving your plants alone.
 

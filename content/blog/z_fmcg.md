@@ -18,6 +18,7 @@ Why is your logistic manager so obssesed with that Fill Rate to be as close to 1
 It's all about [lean](https://jalcocert.github.io/JAlcocerT/lean/) customer center pull approach and the very low margins and volume required for this kind of business to work.
 
 +++ [SAP](#what-about-sap)
+
 +++ [About Consumer Intelligence](#consumer-intelligence)
 
 ## FMCG
