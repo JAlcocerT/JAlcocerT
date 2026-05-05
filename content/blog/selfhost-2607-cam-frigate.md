@@ -65,6 +65,8 @@ But there are cool projects for computer vision that combine
 sudo docker compose -f ./z-homelab-setup/evolution/2607_docker-compose.yml logs -f frigate
 ```
 
+> Change the default at: http://192.168.1.18:5000/settings
+
 ## Tools
 
 Beyond the ,DIY' with the Pi camera.
@@ -79,6 +81,9 @@ Beyond the ,DIY' with the Pi camera.
 
 <https://www.youtube.com/watch?v=sCkswrK0G3I>
 
+```sh
+#ghcr.io/blakeblackshear/frigate:stable
+```
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/frigate" title="Frigate | Docker Config 🐋 ↗" >}}

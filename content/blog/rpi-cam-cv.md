@@ -159,7 +159,9 @@ Im experimenting with CV - [**C**omputer **V**ision stuff](https://gitlab.com/fo
 
 ### Pi NVR
 
-An NVR stands for Network Video Recorder. It's a specialized computer system designed to record and store video footage captured by IP (Internet Protocol) cameras.
+An NVR stands for Network Video Recorder.
+
+It's a specialized computer system designed to record and store video footage captured by IP (Internet Protocol) cameras.
 
 * https://github.com/geerlingguy/pi-nvr
 

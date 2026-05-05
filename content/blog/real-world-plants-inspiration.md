@@ -2,7 +2,7 @@
 title: "Plants while travelling"
 date: 2026-05-05T01:20:21+01:00
 draft: false
-tags: ["Tinkering IRL","Watering Plants x Pi Camera","VPD"]
+tags: ["Tinkering IRL","Watering Plants x Pi Camera","VPD","Frigate"]
 description: 'Inspiration for real world projects before a trip.'
 url: 'plants-103-inspiration'
 ---
@@ -36,6 +36,8 @@ Watchout for [that EMR kickback](https://jalcocert.github.io/JAlcocerT/electroma
   {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion/tree/main/remotion-electronics" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
 
+This was possible by combining PySpice with RemotionJS:
+
 {{< youtube "1veGKSFzqcQ" >}}
 
 
@@ -50,6 +52,12 @@ Aka just physics approach.
 
 <!-- ![Pi Camera](/blog_img/hardware/RPi4_2gb_cam.jpg) -->
 
+Some time ago I put together [this repo folder](https://github.com/JAlcocerT/RPi/tree/main/Z_RPi_Cam) to use your Pi as a streaming camera:
+
+```sh
+choco install rpi-imager
+#ip neigh
+```
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/" title="Pi Cam 101" image="/blog_img/hardware/RPi4_2gb_cam.jpg" subtitle="Using the raspberry camera for the first time" >}}
@@ -58,14 +66,65 @@ Aka just physics approach.
 Particularly [with mjpg-streamer](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/#pi-camera---video-streaming)
 
 ```sh
-#git clone https://github.com/meinside/rpi-mjpg-streamer 
-git clone https://github.com/JAlcocerT/rpi-mjpg-streamer
-cd rpi-mjpg-streamer
+ip neigh show 192.168.1.18
+git clone https://github.com/JAlcocerT/RPi
+#git clone https://github.com/JAlcocerT/Home-Lab 
+cd ./RPi/Z_SelfHosting
+sudo bash homelab-selfhosting.sh
+#docker --version #Docker version 26.1.5+dfsg1, build a72d7cd
 ```
 
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rpi-mjpg-streamer" title="RPi mjpg streamer | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
+{{< callout type="warning" >}}
+Remember to enable the camera!
+{{< /callout >}}
+
+```sh
+#vcgencmd get_camera
+sudo raspi-config #OV5647 sensor (the classic 5MP Camera Module v1.3)
+```
+
+Now, these are the ones working: *for Debian Trixie*
+
+```sh
+rpicam-hello #Linux jalcocert 6.12.75+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.12.75-1+rpt1 (2026-03-11) aarch64 GNU/Linux
+rpicam-still -t 1000 -o pico.jpg --nopreview
+scp jalcocert@192.168.1.18:~/pico.jpg .
+```
+
+As you can imagine, this worked back in time, but for the latest Trixie OS its...tricky
+
+```sh
+rpicam-vid -t 15000 --width 1920 --height 1080 --framerate 30 \
+--bitrate 10000000 --codec h264 -o clean_1080p.h264
+
+ffmpeg -framerate 30 -i clean_1080p.h264 -c:v copy clean_1080p.mp4
+
+scp jalcocert@192.168.1.18:/home/jalcocert/RPi/Z_SelfHosting/Frigate/clean_1080p.mp4 .
+```
+
+
+```sh
+sudo apt install gh
+gh auth login
+cd ~/RPi && git push
+```
+
+There where [some gotchas](https://github.com/JAlcocerT/RPi/tree/main/Z_SelfHosting/Frigate#gotchas-we-hit-in-order), but [this Frigate stack](https://github.com/JAlcocerT/RPi/blob/main/Z_SelfHosting/Frigate/docker-compose.yaml) also does the trick.
+
+As i just wanted to see, I disabled the recordings at the `config.yml` [like so](https://github.com/JAlcocerT/RPi/tree/main/Z_SelfHosting/Frigate#enabling-recording-later-if-you-want-it)
+
+
+```sh
+cd ./RPi/Z_SelfHosting/Frigate
+sudo docker compose stop      # stop both containers (keeps them, fast restart)
+sudo docker compose start     # start them again
+sudo docker compose down      # stop + remove containers (network too)
+sudo docker compose up -d     # recreate from compose files (use after editing them)
+```
+
+{{< callout type="info" >}}
+More about Frigate in a future post, for now enjoy it at `http://192.168.1.18:5000/`
+{{< /callout >}}
 
 #### The DHT Home Monitoring
 
@@ -76,7 +135,8 @@ Going from this:
 
 ![DHT Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/dht-webapp/dht-webapp.png)
 
-To:
+
+To [such stack](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc/docker-compose.yml):
 
 ```sh
 #docker ps | grep emqx
@@ -89,6 +149,13 @@ docker compose up -d --build webapp
 #docker compose up -d #and here it goes timescaleDB + all the webApp
 #docker exec -it timescaledb psql -U pico -d sensors
 ```
+
+We still rely on EMQX for MQTT!
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pi-dht22-vpd" title="RPi DHT22 NodeJS - Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ![DHT22 x VPD x pgsql Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc/dht22-vpd.png)
 
@@ -110,7 +177,9 @@ docker compose up -d --build webapp
 
 ## Conclusions
 
-{{< youtube "MZTt8ICeF0Y" >}}
+{{< youtube "yrQ3Tjy8rPU" >}}
+
+<!-- https://youtube.com/shorts/yrQ3Tjy8rPU -->
 
 ### Growth Experiment
 
@@ -165,3 +234,57 @@ Turbines are a thing:
 ### Concepts
 
 1. VPD - 
+
+
+### Pi x Cam is trickier
+
+
+```sh
+#git clone https://github.com/meinside/rpi-mjpg-streamer 
+git clone https://github.com/JAlcocerT/rpi-mjpg-streamer
+cd rpi-mjpg-streamer
+#curl -fsSL https://claude.ai/install.sh | bash
+# echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+#source ~/.bashrc  
+```
+
+{{< callout type="warning" >}}
+This worked with bullseye debian v11, but notanymore
+{{< /callout >}}
+
+So I got to know about: https://github.com/bhaney/rtsp-simple-server#docker 
+
+```sh
+podman run --rm -it \
+  --name camera-stream \
+  --network=host \
+  --privileged \
+  --tmpfs /dev/shm:exec \
+  -v /run/udev:/run/udev:ro \
+  -e MTX_PATHS_CAM_SOURCE=rpiCamera \
+  docker.io/bluenviron/mediamtx:1-rpi
+```
+
+> http://192.168.1.18:8889/cam/
+
+And finally: https://github.com/AlexxIT/go2rtc
+
+```sh
+podman run -d --name go2rtc \
+  --restart always \
+  --privileged \
+  --network host \
+  --tmpfs /dev/shm:exec \
+  -v /run/udev:/run/udev:ro \
+  --device /dev/video0:/dev/video0 \
+  --device /dev/media0:/dev/media0 \
+  --device /dev/dma_heap/linux,cma:/dev/dma_heap/linux,cma \
+  --device /dev/dma_heap/system:/dev/dma_heap/system \
+  -e GO2RTC_STREAMS_TOMATO_CAM='exec:rpicam-vid -t 0 --nopreview --codec h264 --inline --listen -o -' \
+  -e GO2RTC_ALLOW_ARBITRARY_EXEC=true \
+  docker.io/alexxit/go2rtc:latest
+```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rpi-mjpg-streamer" title="RPi mjpg streamer | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
