@@ -467,7 +467,7 @@ How to **test your ad-blocks?**
 * Tailscale or Headscale
 
 
-If you are concerned about privacy and the use of LLMs, consider:
+If you are concerned about **privacy and the use of LLMs**, consider:
 
 * [Proton](#proton-for-all) Apps, like [LumoAI](https://lumo.proton.me/u/0/)
 * `https://euria.infomaniak.com/`
@@ -497,12 +497,11 @@ In your local network, together with `claude` :)
 
 ### Speed Tests
 
-If you have ever worked in [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), these is not trivial.
+If you have ever worked in [telecom](https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/), these are not trivial.
 
 Do it via curl:
 
 ```sh
-
 #speedtest-cli #speedtest-cli --simple
 ```
 

@@ -10,7 +10,7 @@ math: true
 
 **Tl;DR**
 
-Post electro-magnetism 101 and electronics
+Post [electro-magnetism 101](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) and [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/)
 
 **Intro**
 

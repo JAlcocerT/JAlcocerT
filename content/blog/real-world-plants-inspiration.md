@@ -75,7 +75,7 @@ sudo bash homelab-selfhosting.sh
 ```
 
 {{< callout type="warning" >}}
-Remember to enable the camera!
+Remember to enable the pi camera!
 {{< /callout >}}
 
 ```sh
@@ -122,8 +122,11 @@ sudo docker compose down      # stop + remove containers (network too)
 sudo docker compose up -d     # recreate from compose files (use after editing them)
 ```
 
+![DHT22 x VPD x pgsql Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_SelfHosting/frigate.png)
+
+
 {{< callout type="info" >}}
-More about Frigate in a future post, for now enjoy it at `http://192.168.1.18:5000/`
+More about Frigate in a future post, for now [enjoy the setup](https://github.com/JAlcocerT/RPi/tree/main/Z_SelfHosting/Frigate) at `http://192.168.1.18:5000/`
 {{< /callout >}}
 
 #### The DHT Home Monitoring
@@ -174,8 +177,9 @@ We still rely on EMQX for MQTT!
 
 ---
 
-
 ## Conclusions
+
+So far, one of the best experiments of the year:
 
 {{< youtube "yrQ3Tjy8rPU" >}}
 

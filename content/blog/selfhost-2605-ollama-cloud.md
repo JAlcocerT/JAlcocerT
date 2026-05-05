@@ -1,9 +1,9 @@
 ---
-title: "Selfhosting local LLMs x GenBI"
+title: "Selfhosting local Gen-AI (LLMs x Agents)"
 date: 2026-05-22
 draft: false
-description: "How to use Ollama x Gemma 4 - With WrenAI, Rill and Vanna in Ubuntu 26 LTS"
-tags: ["Home-Lab x (x300 vs M2)","Gen-AI","Proton vs Euria vs Kimi vs Deepseek","TTS"]
+description: "How to use Ollama x Gemma 4. With OpenClaw and Hermes."
+tags: ["Home-Lab x (x300 vs M2)","Kimi vs Deepseek","TTS"]
 ---
 
 **Tl;DR**
@@ -355,6 +355,19 @@ Or reach out for doubts:
 Prepare [Ventoy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started) if you are ready to go with [the latest ubuntu](#about-ubuntu-2604-lts)
 {{< /callout >}}
 
+### Hardening a Pi for Agents
+
+#### OpenClaw
+
+#### Hermes
+
+
+#### OSS Models APIs x Agents
+
+Using Ollama with Gemma 4 is a reasonable option.
+
+You can also get some compute or pay API use for: Kimi vs Deepseek
+
 ### About Protocols
 
 Is ADL the next big thing after MCP eating the context windows?
@@ -364,7 +377,7 @@ Is ADL the next big thing after MCP eating the context windows?
 
 ADL (Agent Definition Language) is an open source, vendor‑neutral spec for describing what an AI agent is and is allowed to do, so the same agent definition can be inspected, versioned, audited, and reused across different platforms and runtimes. 
 
-## Core idea
+**Core idea**
 
 - ADL solves fragmentation where each team or vendor defines “agents” differently (YAML, ad‑hoc JSON, in‑code configs), which hurts governance, security, portability, and audits. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 - It provides a single declarative file that captures an agent’s purpose, tools, retrieval (RAG) sources, LLM config, permissions, dependencies, and governance metadata. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
@@ -470,6 +483,8 @@ But I dont have much time to act on it.
 I just got to know recently about:
 
 * https://huggingface.co/kyutai/pocket-tts
+
+Which can be a good companion for:
 
 ### How to Enhance a Raspberry Pi for AI
 
