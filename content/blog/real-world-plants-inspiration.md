@@ -72,16 +72,25 @@ cd rpi-mjpg-streamer
 
 I modified it recently to just be Node x PGsql (TimescaleDB)
 
+Going from this:
+
+![DHT Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/dht-webapp/dht-webapp.png)
+
+To:
+
 ```sh
 #docker ps | grep emqx
 #cd ./RPi/Z_SelfHosting/pgsql
 #docker ps | grep timescaledb
-cd ./RPi/RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
-docker compose up -d #and here it goes timescaleDB + all the webApp
+cd ./RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
+docker compose up -d --build
+#Web → http://<host>:8001 · DB → localhost:5433.
+docker compose up -d --build webapp
+#docker compose up -d #and here it goes timescaleDB + all the webApp
 #docker exec -it timescaledb psql -U pico -d sensors
 ```
 
-![DHT Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/dht-webapp/dht-webapp.png)
+![DHT22 x VPD x pgsql Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc/dht22-vpd.png)
 
 
 > The one you can visit anytime at `http://192.168.1.2:8077/`
@@ -151,3 +160,8 @@ For transmiting power at same V, DC is more efficient than AC
 {{< callout type="info" >}}
 Turbines are a thing:
 {{< /callout >}}
+
+
+### Concepts
+
+1. VPD - 
