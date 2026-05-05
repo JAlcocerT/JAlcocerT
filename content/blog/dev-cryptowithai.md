@@ -18,6 +18,8 @@ Nobody knows what will be [BTC dominance](https://www.tradingview.com/symbols/BT
 
 ![USDT MarketCap](/blog_img/crypto/usdt-marketcap.png)
 
+*See the [historical liquidity flow](https://coinmarketcap.com/currencies/tether/)*
+
 **Intro**
 
 Here we go again...

@@ -2,7 +2,7 @@
 title: "Heat Transfer"
 date: 2026-06-01
 draft: false
-tags: ["Black-Scholes","Fluid Dynamics","Ptolomeo"]
+tags: ["Black-Scholes","Fluid Dynamics","Ptolomeo","VPD"]
 description: 'The physics of heat and thermodynamics.'
 url: 'heat-transfer-ice'
 math: true

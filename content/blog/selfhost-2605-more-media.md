@@ -61,6 +61,8 @@ Despite google giving 5TB now: Is there a reliable way not to loose photos for g
 
 **Intro**
 
+Time to have a realiable selfhosted cold storage around nextcloud, tailscale and my old 2200G with 4TB HDD :)
+
 I know, you might be already familiar with **PairDrop**
 
 {{< cards cols="2" >}}
@@ -146,6 +148,17 @@ It goes beyond basic MP3 players like Navidrome by offering audiobook-specific f
 * https://github.com/TortugaPower/BookPlayer
 
 
+### Code is also Media
+
+With all that its going on around github lately: https://www.githubstatus.com/uptime
+
+Ive decided to get a code sync to my HomeLab:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="Gitea | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ---
 
 ## Conclusions
@@ -164,7 +177,7 @@ It goes beyond basic MP3 players like Navidrome by offering audiobook-specific f
 
 Last months it was all about [this](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#what-ive-tried-recently) and [this](https://jalcocert.github.io/JAlcocerT/private-dns-with-docker/#faq).
 
-https://haveibeenpwned.com/
+* `https://haveibeenpwned.com/`
 
 ### Codex x Ordering My Media
 

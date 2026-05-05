@@ -350,6 +350,11 @@ Or reach out for doubts:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
+
+{{< callout type="info" >}}
+Prepare [Ventoy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started) if you are ready to go with [the latest ubuntu](#about-ubuntu-2604-lts)
+{{< /callout >}}
+
 ### About Protocols
 
 Is ADL the next big thing after MCP eating the context windows?
@@ -511,6 +516,10 @@ apt update && apt upgrade -y
 ```
 
 
+https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks
+https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab
+
+
 {{< callout type="info" >}}
 You have them all updated into this script
 {{< /callout >}}
@@ -567,7 +576,6 @@ You can also backup your logs:
 https://jalcocert.github.io/JAlcocerT/image-backup-tools/#server-maintainance
 
 ![Uptime Kuma Monitoring Page](/blog_img/selfh/HomeLab/statuspages/uptimekuma.png)
-
 
 
 1. Like...installing python? nah, manage everything via uv with whatever python version:

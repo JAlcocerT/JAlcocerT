@@ -161,7 +161,7 @@ If you want the "Ultimate Greenhouse," measuring the leaf temp gives you the mos
 
 Since you're looking at outside vs. inside temp anyway, calculating $VPD$ is just a few extra lines of math in your Python or C++ code.
 
-Particularly, now you have the VPD version: *with just cosmetic changes at the dashboarding side*
+Particularly, now you have the **VPD** version: *with just cosmetic changes at the dashboarding side*
 
 ```sh
 #tmux ls
@@ -177,20 +177,24 @@ We have seen towards timescaleDB
 
 A good mental model is: Prometheus wants metrics, Elastic wants documents, TimescaleDB wants rows, and MQTT is just the transport.
 
-For MQTT to Prometheus, it’s usually not hard if your data is already a numeric measurement and the topic structure is stable. The common pattern is an MQTT-to-Prometheus exporter or a small bridge service that subscribes to MQTT and exposes metrics on an HTTP endpoint for Prometheus to scrape.
+For MQTT to Prometheus, it’s usually not hard if your data is already a numeric measurement and the topic structure is stable. 
 
-For TimescaleDB to Prometheus, it’s less natural. Prometheus is pull-based and expects current metric values, not arbitrary historical SQL rows, so you normally export a current aggregate or a derived gauge rather than “syncing” the whole database. If the data starts in TimescaleDB, a custom exporter or scheduled job is usually the cleanest bridge.
+The common pattern is an MQTT-to-Prometheus exporter or a small bridge service that subscribes to MQTT and exposes metrics on an HTTP endpoint for Prometheus to scrape.
 
-For MQTT to Elasticsearch, it’s also manageable, but the approach is different: you usually use Logstash, Elastic Agent, a custom consumer, or an ingest pipeline to transform messages into documents before indexing them. Elasticsearch is much better at storing event records and searchable history than at serving as a live metrics endpoint.
+For TimescaleDB to Prometheus, it’s less natural.
 
-#### MQTT x DHT x Prometheus
+Prometheus is pull-based and expects current metric values, not arbitrary historical SQL rows, so you normally export a current aggregate or a derived gauge rather than “syncing” the whole database. 
 
-#### MQTT x DHT x Elastic
+If the data starts in TimescaleDB, a custom exporter or scheduled job is usually the cleanest bridge.
 
+For MQTT to Elasticsearch, it’s also manageable, but the approach is different: you usually use Logstash, Elastic Agent, a custom consumer, or an ingest pipeline to transform messages into documents before indexing them.
 
-#### MQTT x Alerts
+Elasticsearch is much better at storing event records and searchable history than at serving as a live metrics endpoint.
 
-1. Initially I thought about webhooks
+<!-- #### MQTT x DHT x Prometheus
+
+#### MQTT x DHT x Elastic -->
+
 
 ## Big Data Tech Talk 
 

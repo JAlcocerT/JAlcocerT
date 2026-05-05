@@ -2,7 +2,7 @@
 title: "Electro-Magnetism for tinkerers"
 date: 2026-04-12
 draft: false
-tags: ["Simulations","Electric Motors","Solenoids","EMR","Maxwell"]
+tags: ["Simulations","Electric Motors","Solenoids","EMR","Maxwell","PyScipe"]
 description: 'The physics you need for electronic projects.'
 url: 'electromagnetism-101'
 math: true
@@ -114,7 +114,11 @@ If you move a magnet through a coil of wire, the magnetic field changes over tim
 $$\nabla \times \mathbf{B} = \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)$$
 **What it means:** Magnetic fields are created by moving charges (current) **OR** by changing electric fields.
 
-Ampère originally figured out that current ($J$) creates a magnetic field (like in an electromagnet). Maxwell added the second part: even if there is no physical wire, a changing electric field ($\frac{\partial \mathbf{E}}{\partial t}$) creates a magnetic field. This addition was the "missing link" that proved light is an electromagnetic wave.
+Ampère originally figured out that current ($J$) creates a magnetic field (like in an electromagnet).
+
+Maxwell added the second part: even if there is no physical wire, a changing electric field ($\frac{\partial \mathbf{E}}{\partial t}$) creates a magnetic field. 
+
+This addition was the "missing link" that proved light is an electromagnetic wave.
 
 ---
 

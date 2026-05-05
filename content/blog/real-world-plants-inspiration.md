@@ -2,7 +2,7 @@
 title: "Plants while travelling"
 date: 2026-05-05T01:20:21+01:00
 draft: false
-tags: ["Tinkering IRL","Watering Plants x Pi Camera"]
+tags: ["Tinkering IRL","Watering Plants x Pi Camera","VPD"]
 description: 'Inspiration for real world projects before a trip.'
 url: 'plants-103-inspiration'
 ---
@@ -29,6 +29,17 @@ You can use the setups I will explain accordingly to [the typical weather](#when
 ### The IoT and Controlled Watering
 
 
+Watchout for [that EMR kickback](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#how-to-avoid-frying-an-esp32-due-to-kickback) when the DC switches off
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101/tree/master/sample-pyscipe" title="Electronics 101 | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion/tree/main/remotion-electronics" title="Remotion x Video | Repo" icon="github" >}}
+{{< /cards >}}
+
+{{< youtube "1veGKSFzqcQ" >}}
+
+
+
 
 ### The Capilarity approach
 
@@ -37,7 +48,7 @@ Aka just physics approach.
 
 ## Monitoring Plants while Travelling
 
-![Pi Camera](/blog_img/hardware/RPi4_2gb_cam.jpg)
+<!-- ![Pi Camera](/blog_img/hardware/RPi4_2gb_cam.jpg) -->
 
 
 {{< cards >}}
@@ -54,6 +65,35 @@ cd rpi-mjpg-streamer
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rpi-mjpg-streamer" title="RPi mjpg streamer | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+#### The DHT Home Monitoring
+
+
+I modified it recently to just be Node x PGsql (TimescaleDB)
+
+```sh
+#docker ps | grep emqx
+#cd ./RPi/Z_SelfHosting/pgsql
+#docker ps | grep timescaledb
+cd ./RPi/RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
+docker compose up -d #and here it goes timescaleDB + all the webApp
+#docker exec -it timescaledb psql -U pico -d sensors
+```
+
+![DHT Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/dht-webapp/dht-webapp.png)
+
+
+> The one you can visit anytime at `http://192.168.1.2:8077/`
+
+#### MQTT x Alerts
+
+1. Initially I thought about webhooks
+2. Then, I reminded that I [tried gotify last year](https://jalcocert.github.io/JAlcocerT/wedding-photo-galleries/#gotify)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/gotify/" title="Gotify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ntfy/" title="Ntfy | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ---
