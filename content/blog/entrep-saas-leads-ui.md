@@ -3,7 +3,7 @@ title: "Any SaaS needs this: Leads and a UI"
 date: 2026-01-24T09:20:21+01:00
 draft: false
 tags: ["BiP x GTM","APIFY vs Apollo vs Clay","RoadMap26","GrowChief x Social Media OutReach"]
-description: 'Forget about B2C. Go find B2B clients.'
+description: 'Forget about B2C. Go find B2B clients with proper RevOps.'
 url: 'how-to-do-social-media-outreach'
 ---
 
@@ -64,7 +64,7 @@ Lets start building the foundation of proper P*V growth as DevOps would.
 Actually, the idea around this is called: **RevOps**.
 
 
-{{< details title="Vibe Coding | Setup  📌" closed="true" >}}
+{{< details title="Vibe Coding | Setup Jan26 📌" closed="true" >}}
 
 Go to whatever LLM you are using and ask: `do you think that these requirements are clear enough?`
 

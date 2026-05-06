@@ -11,7 +11,7 @@ math: true
 
 **TL;DR**
 
-From [2D](https://jalcocert.github.io/JAlcocerT/2d-mbsd/) to 3D mbsd
+From [2D](https://jalcocert.github.io/JAlcocerT/2d-mbsd/) to **3D mbsd**
 
 
 **Intro**
@@ -484,6 +484,14 @@ The full state vector is `y = [q; q̇] ∈ ℝ¹⁸`, where `q̇` are the genera
 ### Primary vs SecoNdary Balance
 
 It actually **does** make sense to talk about secondary moments!
+
+I have a series of posts to explain this:
+
+* https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/
+* https://jalcocert.github.io/JAlcocerT/v6-and-engine-mounts/
+* https://jalcocert.github.io/JAlcocerT/visualizing-engine-nvh/
+* https://jalcocert.github.io/JAlcocerT/flat-versus-boxer-simulation/
+* https://jalcocert.github.io/JAlcocerT/flat-plane-vs-cross-plane-v8s/
 
 In many high-performance and luxury engine designs, the secondary moment is the "final boss" of engine refinement.
 

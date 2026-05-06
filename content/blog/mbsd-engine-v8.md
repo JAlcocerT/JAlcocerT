@@ -5,6 +5,7 @@ draft: false
 tags: ["Mechanical Engineering","MBSD x V8 Engines power distribution"]
 description: 'Inertial source-characterization and dimensional generalization. Aka Simulating V8s.'
 url: 'flat-plane-vs-cross-plane-v8s'
+math: true
 ---
 
 
@@ -92,7 +93,7 @@ There is a ''power silence'', but also power overlap due to the 90 and 270 degre
 
 ## Conclusions
 
-No worries I6 V10 and V12 will also come.
+No worries I6, V10 and V12 will also come.
 
 <!-- https://www.youtube.com/watch?v=hjsrqMe0B3s -->
 

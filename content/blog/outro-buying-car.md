@@ -5,6 +5,7 @@ draft: false
 tags: ["Outro","Mechanics","Honda Civic 6","Data Experiment"]
 description: 'What to keep in mind, what NOT to do...When buying a second hand car.'
 url: 'buying-car-data-analytics'
+math: true
 ---
 
 It was a **Honda Civic 6**, *born* on 1997 (1995-2000).
@@ -109,7 +110,7 @@ The energy costs, you can say it depends on the car.
 
 Or throw a 10% number
 
-{{< details title="With electric cars...its kind of differnet 📌" closed="true" >}}
+{{< details title="With electric cars...its kind of different 📌" closed="true" >}}
 
 In norway, you can find charging station around 4.4 ~ 5.5 NOK / Kwh
 
@@ -119,8 +120,7 @@ Some chargers are slow and will give you 3.3 KW, others, can give you 22/50 or e
 
 ---
 
-
-ive rented an electric car and we have done:
+Ive rented an electric car and we have done:
 
 I got the car initially with 31999 and 92% battery
 
@@ -260,6 +260,44 @@ Remember that not everywhere you can rent without a credit card!
 > For me, it worked with sixt, budget and avis. Also in hertz.
 
 >> To charge you can try elton or eviny via bilkraft app.
+
+To understand the "Unit Economics," we have to break down the cost of each **unit of energy** ($1 \text{ kWh}$) as it enters the car.
+
+Based on current May 2026 data, here is what you paid (or would pay) for every single kilowatt-hour of energy "bought."
+
+**1. Public Charging (What you actually paid)**
+Since you spent **810 NOK** to put roughly **189 kWh** into the car (total energy excluding your starting/ending levels), your blended average cost was:
+*   **Cost in NOK:** ~4.29 NOK per kWh
+*   **Cost in USD:** **$0.46 per kWh**
+> **Takeaway:** This is your most expensive energy. You are paying for the fast-charging infrastructure and convenience.
+
+**2. Diesel (The Chemical Energy "Unit")**
+
+Diesel is sold by the liter, but 1 Liter of diesel contains approximately **10 kWh** of chemical energy. 
+*   **Diesel Price:** ~21.39 NOK per Liter (May 2026 average).
+*   **Unit Price:** $21.39 \text{ NOK} / 10 \text{ kWh} = \mathbf{2.14 \text{ NOK per kWh}}$.
+*   **Cost in USD:** **$0.23 per kWh**
+> **Takeaway:** Energy in a liquid form is **50% cheaper per unit** than public electricity. This is why the EV's 4x physics advantage only feels like a 2x money advantage—you are starting with "fuel" that costs twice as much per unit of potential energy.
+
+**3. Home Charging (The 3rd Option)**
+
+In 2026, the Norwegian government’s "Norgespris" scheme has stabilized household electricity.
+*   **Home Rate:** ~0.50 NOK per kWh (including VAT/subsidies).
+*   **Grid Fees:** Adding the typical grid tariff (nettleie), your total cost is roughly **1.35 NOK per kWh**.
+*   **Cost in USD:** **$0.15 per kWh**
+> **Takeaway:** This is the "God Mode" of EV ownership. Home electricity is **3x cheaper** than public charging and **35% cheaper** than the energy in diesel fuel.
+
+**Unit Cost Comparison ($ USD per 1 kWh)**
+
+| Energy Source | Cost per kWh (USD) | Relative Price |
+| :--- | :--- | :--- |
+| **Home Charging** | **$0.15** | 1.0x (Baseline) |
+| **Diesel Fuel** | **$0.23** | 1.5x more expensive |
+| **Public Charging (Your Trip)** | **$0.46** | 3.0x more expensive |
+
+
+*   **Why only 2x savings?** Because you bought "Public Energy" ($0.46) which is twice as expensive as "Diesel Energy" ($0.23). Even though the EV is 4x more efficient, the higher unit price of public electricity "eats" half of those gains.
+*   **The "Efficiency Win":** If you charged at **Home** ($0.15), you would be combining a 4x efficiency gain with a 1.5x lower unit price. That is how people achieve those **6x to 7x** total cost savings over diesel.
 
 ## The costs of a Car
 
@@ -455,9 +493,8 @@ Comprar un vehículo de segunda mano en España implica una serie de pasos y con
 
 * https://www.otomoto.pl/osobowe/oferta
 
-https://www.autocentrum.pl/fiat/ducato/ii/silnik-diesla-2.8-td-122km-1998-2003/
-
-https://en.wikipedia.org/wiki/Fiat_Ducato
+* https://www.autocentrum.pl/fiat/ducato/ii/silnik-diesla-2.8-td-122km-1998-2003/
+* https://en.wikipedia.org/wiki/Fiat_Ducato
 
 ### How about Campers?
 

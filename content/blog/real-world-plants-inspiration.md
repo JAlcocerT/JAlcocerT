@@ -182,7 +182,7 @@ So far, one of the best experiments of the year:
 
 How are the plants doing after ~6 weeks of planting them?
 
-
+The most developed tomatoe plants are having small flowers already at the top.
 
 ---
 
