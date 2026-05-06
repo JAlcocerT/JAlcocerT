@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Media"
-date: 2026-05-08T23:20:21+01:00
+date: 2026-05-09T23:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
 description: 'Organizing my Computer via agents.'
@@ -152,10 +152,11 @@ It goes beyond basic MP3 players like Navidrome by offering audiobook-specific f
 
 With all that its going on around github lately: https://www.githubstatus.com/uptime
 
-Ive decided to get a code sync to my HomeLab:
+Ive decided to get a code sync to my HomeLab: *with Forgejo (codeberg) OSS model being > than gitea*
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="Gitea | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/forgejo" title="Forgejo | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 

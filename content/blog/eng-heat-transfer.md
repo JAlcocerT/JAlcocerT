@@ -1,6 +1,6 @@
 ---
 title: "Heat Transfer"
-date: 2026-05-06
+date: 2026-05-07
 draft: false
 tags: ["Black-Scholes","Fluid Dynamics","Ptolomeo","VPD","HeatraPy vs PyScipe"]
 description: 'The physics of heat and thermodynamics. The solar plan B.'
@@ -187,12 +187,18 @@ No, i dont mean that you have to go off-grid
 uv run  uv run ./electronics-101/sample-pyscipe\home-scale-pv\compare_systems.py
 ```
 
-Just that you can estimate pretty acurately according to your latitude and few parameters how much can you get from the sun: *coming frm this [previous streamlit app](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/go-solar.md#solar-optimizer-interactive-tool) and shaped by this brd*
+Just that you can estimate pretty acurately according to your latitude and few parameters how much can you get from the sun: *coming frm this [previous streamlit app](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/go-solar.md#solar-optimizer-interactive-tool) and shaped by [this brd](https://github.com/JAlcocerT/poc/blob/main/go-solar/brd.md)*
 
 ```sh
 git clone /poc
 cd ./poc/go-solar/
 ```
+
+> See the UI at: `localhost:3000`
+
+![alt text](/blog_img/apps/gosolar.png)
+
+Its all about the latitude, the tilt, the day of the year... all [those features](https://github.com/JAlcocerT/poc/blob/main/go-solar/z-features.md) :)
 
 ## Tools
 

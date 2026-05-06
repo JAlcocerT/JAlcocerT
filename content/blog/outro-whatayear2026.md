@@ -466,7 +466,22 @@ All as a code, with [CadQuery as the bridge](https://jalcocert.github.io/JAlcoce
 
 {{< youtube "1WzRJM8HVKg" >}}
 
-And not only for mechanisms.
+So what?
+
+You can know simulate full engine vibrations:
+
+{{< youtube "1WzRJM8HVKg" >}}
+
+
+Oh, but ive done simulations not only for mechanisms.
+
+12. Because ive also done electronical simulations
+
+All started with the prep work around electromagnetism and electronics 101 for the tomatoes experiment.
+
+I later continued expanding on electric motors
+
+13. And heat transfer ones
 
 12. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and HUD video overlays.
 

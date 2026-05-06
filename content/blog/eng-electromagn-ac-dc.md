@@ -1,6 +1,6 @@
 ---
 title: "Electro-Magnetism for AC/DC engines"
-date: 2026-05-09
+date: 2026-05-06
 draft: false
 tags: ["PyScipe Simulations","Electric Motors vs L-R Model","Solenoids","EMF"]
 description: 'The physics you need for building. Drones and electric cars.'
