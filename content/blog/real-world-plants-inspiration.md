@@ -102,13 +102,6 @@ ffmpeg -framerate 30 -i clean_1080p.h264 -c:v copy clean_1080p.mp4
 scp jalcocert@192.168.1.18:/home/jalcocert/RPi/Z_SelfHosting/Frigate/clean_1080p.mp4 .
 ```
 
-
-```sh
-sudo apt install gh
-gh auth login
-cd ~/RPi && git push
-```
-
 There where [some gotchas](https://github.com/JAlcocerT/RPi/tree/main/Z_SelfHosting/Frigate#gotchas-we-hit-in-order), but [this Frigate stack](https://github.com/JAlcocerT/RPi/blob/main/Z_SelfHosting/Frigate/docker-compose.yaml) also does the trick.
 
 As i just wanted to see, I disabled the recordings at the `config.yml` [like so](https://github.com/JAlcocerT/RPi/tree/main/Z_SelfHosting/Frigate#enabling-recording-later-if-you-want-it)
@@ -153,7 +146,7 @@ docker compose up -d --build webapp
 #docker exec -it timescaledb psql -U pico -d sensors
 ```
 
-We still rely on EMQX for MQTT!
+We still rely on EMQX for MQTT like the [previous version](#prior-picoesp-dht)!
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
@@ -249,7 +242,10 @@ git clone https://github.com/JAlcocerT/rpi-mjpg-streamer
 cd rpi-mjpg-streamer
 #curl -fsSL https://claude.ai/install.sh | bash
 # echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-#source ~/.bashrc  
+#source ~/.bashrc
+sudo apt install gh
+gh auth login #with a PAT for 30d
+cd ~/RPi && git push
 ```
 
 {{< callout type="warning" >}}
@@ -292,3 +288,14 @@ podman run -d --name go2rtc \
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/rpi-mjpg-streamer" title="RPi mjpg streamer | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+### Prior Pico/ESP DHT
+
+```sh
+#git clone https://github.com/JAlcocerT/RPi
+#git pull
+cd ./RPi/Z_MicroControllers/dht-webapp
+tmux new-session -d -s mqtt 'uv run mqtt_to_db.py'
+tmux new-session -d -s webapp 'uv run uvicorn main:app --host 0.0.0.0 --port 8077'
+#tmux ls
+```

@@ -1,7 +1,7 @@
 ---
 title: "3D MBSD and Fluid Mechanics"
-date: 2026-05-01
-draft: true
+date: 2026-05-08
+draft: false
 tags: ["MBSD x 3D Simulation","Fluid Dynamics","Matlab to Python"]
 description: 'The physics of a real engine.'
 url: 'fluid-dynamics-ice'

@@ -13,6 +13,10 @@ From the [DJI Tello](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/
 
 **Intro**
 
+Having some thoughts around electro-magnetism, electronics 101, ac/dc motors...
+
+goes quite well before jumping here.
+
 
 https://www.youtube.com/watch?v=9-bRFNfh6Dc
 

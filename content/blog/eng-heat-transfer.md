@@ -1,6 +1,6 @@
 ---
 title: "Heat Transfer"
-date: 2026-06-01
+date: 2026-05-07
 draft: false
 tags: ["Black-Scholes","Fluid Dynamics","Ptolomeo","VPD"]
 description: 'The physics of heat and thermodynamics.'
@@ -23,11 +23,14 @@ who.could.have.guessed.
 ## Heat transfer x VPD x DHT
 
 ```sh
-#tmux ls
-#cd ./home/jalcocert/RPi/Z_MicroControllers/dht-webapp
-cd ./home/jalcocert/RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd
-tmux new-session -d -s mqtt "uv run mqtt_to_db.py"
-tmux new-session -d -s webapp "uv run uvicorn main:app --host 0.0.0.0 --port 8077"
+#docker ps | grep emqx
+cd ./RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
+docker compose up -d --build
+#Web → http://<host>:8001 · DB → localhost:5433.
+docker compose up -d --build webapp
+#docker compose up -d #and here it goes timescaleDB + all the webApp
+#docker exec -it timescaledb psql -U pico -d sensors
+#docker ps | grep timescaledb
 ```
 
 ## Heat transfer x MBSD x ICE
