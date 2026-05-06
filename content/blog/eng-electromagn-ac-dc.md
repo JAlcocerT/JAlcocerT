@@ -150,8 +150,11 @@ A **Rectifier** converts Alternating Current (**AC**) into Direct Current (**DC*
 2. Inverter (DC $\rightarrow$ AC)
 
 An **Inverter** converts Direct Current (**DC**) into Alternating Current (**AC**).
+
 *   **How it works:** It uses high-speed switches (transistors) to "chop up" the flat DC signal and flip its polarity back and forth to mimic the wave shape of AC.
 *   **Common Example:** Solar panels. They produce DC, but your home appliances need AC, so a "Solar Inverter" sits in the middle.
+
+> [Home pv](https://github.com/JAlcocerT/electronics-101/tree/master/sample-pyscipe/home-scale-pv) setups tend to have one of these! 
 
 3. Transformer (AC $\rightarrow$ AC)
 

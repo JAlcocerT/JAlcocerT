@@ -1,5 +1,5 @@
 ---
-title: "IoT x Plants x BoM"
+title: "IoT x Plants x PyScipe BoM"
 date: 2026-04-11
 draft: false
 tags: ["Real World","DHT22 vs MLX90614 x VPD","Tinkering IRL","Velxio x ESPHome"]
@@ -227,9 +227,30 @@ The learnings are stored [here](https://github.com/JAlcocerT/selfhosted-landing/
 
 ## Conclusions
 
+**Design Margins:** as per [this doc](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/interesting-simulations.md).
+- System properly sized for nominal 25°C, 5-year warranty
+- Cold start marginal at -20°C with 5-year-old battery (pre-warm or foldback current needed)
+- Capacitor aging requires replacement every 7-10 years (field maintenance)
+- [Watchdog](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/watchdog.md) timeout critical: must trigger <300ms during stall to prevent fuse melt-down
+
 ### Whats next from here?
 
 Maybe...the 3D print thing to make a custom build with the solar panel mounted properly on top of the plants?
+
+```sh
+#streamlit run electronics-101/sample-pyscipe/solar_optimizer.py
+uv run streamlit run .\solar_optimizer.py
+#uv run  uv run .\home-scale-pv\compare_systems.py
+```
+
+Key findings (30kWh/month @ $0.15/kWh example):
+- Grid-connected: $1.02/kWh (cheapest, net-zero generation)
+- Hybrid: $1.31/kWh (+battery cost, but resilience)
+- Off-grid: $2.33/kWh (most expensive, requires huge panel/battery for winter)
+
+{{< callout type="info" >}}
+Yes, this setup can [go solar](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/go-solar.md) pretty easily. Imagine a [home pv setup](https://github.com/JAlcocerT/electronics-101/tree/master/sample-pyscipe/home-scale-pv).
+{{< /callout >}}
 
 And...designed as a code with CadQuery, of course :)
 
@@ -246,11 +267,55 @@ I thought initially about doing it with gravity + a NC solenoid valve.
 
 Buuut...some of them need more preassure than gravity will do for me at my use case
 
-So water pump it is
+So water pump with an electric motor it is.
 
-This is the final, definitive **"Safety-First" Bill of Materials** for your indoor 5L reservoir project.
+Every component has a **specific failure mode it prevents**: *there is [a why behind](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/why.md) each*
 
-I’ve updated it to include the specific pump, the protection components, and the connectors needed to make this "plug-and-play" and house-safe.
+| Layer | Failure | Mitigation | Cost |
+|-------|---------|-----------|------|
+| Fuse (5A) | Wire short → fire/explosion | Weak link melts first | $0.10 |
+| Diode (1N4007) | Back-EMF spike (100V) → MOSFET destroyed | Clamps to 12.7V | $0.03 |
+| Cap C1 (1000µF) | Inrush droop (500mV) → ESP32 brownout reset | Supplies fast current | $0.50 |
+| Cap C2 (0.1µF) | HF noise on 5V rail → false logic transitions | Bypass cap at pin | $0.05 |
+| Gate resistor (47Ω) | Fast edge (dI/dt) → EMI, ringing, gate overstress | Slows switching, reduces EMI | $0.02 |
+| MOSFET gate drive | GPIO alone can't fully saturate standard MOSFET | Use logic-level MOSFET | $0.30 |
+| Ground plane | Ground bounce → floating reference → logic glitches | Star grounding, low impedance | (PCB layout) |
+
+The components are [dimensioned accordingly](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/output.txt):
+
+```sh
+python .\component_sizing.py > output.txt
+```
+
+1. temperature_effects.py → plots/1_temperature_effects.png
+- ESR vs temperature (-20°C to +60°C)
+- Shows 3× ESR increase in cold, marginal operation <-5°C
+2. capacitor_aging.py → plots/2_capacitor_aging.png
+- 10-year degradation model (exponential ESR growth)
+- System OK for 5 years, failure >8 years
+3. diode_reverse_recovery.py → plots/3_diode_reverse_recovery.png
+- Reverse recovery current pulse (8A over 35ns)
+- Drain spike 0.15V with good PCB layout, gate coupling 7mV
+4. pump_cycles.py → plots/4_pump_cycles.png
+- 100 pump cycles with ESR aging + thermal stress
+- Stall event at cycle 50: 288 A²*s fuse heating (critical)
+5. gate_coupling.py → plots/5_gate_coupling.png
+- Cgd coupling sweep (20-100pF) with RC filtering
+- Max 0.215V gate coupling after 47Ω resistor (SAFE)
+6. buck_startup.py → plots/6_buck_startup.png
+- Startup overshoot for 3 damping scenarios
+- Good design: 7.3% overshoot, marginal: 30%, poor: 51%
+7. cold_start.py → plots/7_cold_start.png
+- Voltage cascade at -10°C with aged battery
+- Logic supply 5.00V margin (0.50V above 4.5V minimum)
+
+{{< callout type="info" >}}
+I also made additional [interesting simulations](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/interesting-simulations.md) that validate the design sizing
+{{< /callout >}}
+
+This is the final, definitive **"Safety-First" Bill of Materials** for the indoor 5L reservoir project.
+
+With the specific pump, the protection components, and the connectors needed to make this "plug-and-play" and house-safe.
 
 1. The "Brain" (Logic & Time)
 

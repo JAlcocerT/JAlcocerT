@@ -1,6 +1,6 @@
 ---
 title: "Improving a Blog"
-date: 2026-05-07T23:20:21+01:00
+date: 2026-05-14T23:20:21+01:00
 draft: false
 tags: ["FOSS","RoadMap26","Codex x HUGO"]
 description: 'A !'
