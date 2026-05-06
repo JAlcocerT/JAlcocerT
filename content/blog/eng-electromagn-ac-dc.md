@@ -2,7 +2,7 @@
 title: "Electro-Magnetism for AC/DC engines"
 date: 2026-05-09
 draft: false
-tags: ["PyScipe Simulations","Electric Motors vs L-R Model","Solenoids","EMR"]
+tags: ["PyScipe Simulations","Electric Motors vs L-R Model","Solenoids","EMF"]
 description: 'The physics you need for building. Drones and electric cars.'
 url: 'electromagnetism-for-ac-dc-motors'
 math: true
@@ -63,7 +63,13 @@ Well, you can use this knowledge for fpv/drons:
 
 {{< youtube "MxG22nbBNvQ" >}}
 
-https://www.youtube.com/watch?v=SMymlTtM1w8
+See also [this one](https://www.youtube.com/watch?v=SMymlTtM1w8).
+
+The drone brushless DC motors will have present [Faraday law](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#3-faradays-law-of-induction) with their [Back EMF](https://github.com/JAlcocerT/electronics-101/blob/master/samples-theory/motors-ac-dc/backemf_vs_emf_kickback.md), same principle of [the EMF kickback of the watering project](https://jalcocert.github.io/JAlcocerT/electronics-101/#conclusions).
+
+$$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$$
+
+Remember: A changing magnetic field creates an electric field!
 
 {{< callout type="info" >}}
 "kV" on drone motors is **NOT kilovolts.** It's **motor constant:** volts of back-EMF per 1000 RPM. More [about dron motors](https://github.com/JAlcocerT/electronics-101/blob/master/samples-theory/motors-ac-dc/drone_motors.md).

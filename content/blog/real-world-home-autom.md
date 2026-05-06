@@ -22,7 +22,7 @@ Automatic plant watering?
 
 Be a system theory pro with PIDs?
 
-Oh no...will I also have to learn [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/), take into account [electromagnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) to avoid EMR kickbacks
+Oh no...will I also have to learn [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/), take into account [electromagnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) to avoid EMF  kickbacks
 
 what else will it be?
 

@@ -2,7 +2,7 @@
 title: "Electro-Magnetism for tinkerers"
 date: 2026-04-12
 draft: false
-tags: ["Simulations","Electric Motors","Solenoids","EMR","Maxwell","PyScipe"]
+tags: ["Simulations","Electric Motors","Solenoids","EMF","Maxwell","PyScipe"]
 description: 'The physics you need for electronic projects.'
 url: 'electromagnetism-101'
 math: true
@@ -14,7 +14,7 @@ Before [tinkering with electronics](https://jalcocert.github.io/JAlcocerT/electr
 
 **Intro**
 
-Lately, I was getting surprised on [how neccesary a Diode is](https://jalcocert.github.io/JAlcocerT/electronics-101/#conclusions) to avoid EMR blowing up such systems.
+Lately, I was getting surprised on [how neccesary a Diode is](https://jalcocert.github.io/JAlcocerT/electronics-101/#conclusions) to avoid EMF blowing up such systems.
 
 This \(\sigma(z) = \frac{1}{1 + e^{-z}}\) is an inline expression.
 
@@ -103,6 +103,7 @@ Because of this, magnetic field lines always form closed loops—whatever goes o
 ### 3. Faraday’s Law of Induction
 
 $$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$$
+
 **What it means:** A changing magnetic field creates an electric field.
 
 This is the principle behind power generators and wireless charging. 

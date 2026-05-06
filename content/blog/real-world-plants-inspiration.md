@@ -29,7 +29,7 @@ You can use the setups I will explain accordingly to [the typical weather](#when
 ### The IoT and Controlled Watering
 
 
-Watchout for [that EMR kickback](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#how-to-avoid-frying-an-esp32-due-to-kickback) when the DC switches off
+Watchout for [that EMF kickback](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#how-to-avoid-frying-an-esp32-due-to-kickback) when the DC switches off
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/electronics-101/tree/master/sample-pyscipe" title="Electronics 101 | Repo" icon="github" >}}

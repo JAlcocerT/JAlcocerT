@@ -3,7 +3,7 @@ title: "Electronics 101"
 date: 2026-04-03
 draft: false
 tags: ["Simulations","KiCad vs Atopile","PySpice x RemotionJS"]
-description: 'Simulating electronics components.'
+description: 'Simulating EMR within electronics components.'
 url: 'electronics-101'
 math: true
 ---
@@ -127,7 +127,8 @@ No more: will I get an unexpected quickback due to transitory behaviour?
 Just...simulate: *see thats going to happen, before it happens*
 
 ```sh
-#cd sample-pyscipe
+git clone https://github.com/JAlcocerT/electronics-101
+#cd ./electronics-101/sample-pyscipe
 uv run main.py --only mosfet --scenario compare   # overlay: with vs without diode 
 ```
 
@@ -151,8 +152,6 @@ Real circuit design is about:
 
 That's why the simulations included these three scenarios: **protected**, **unprotected**, and **compare**.
 
-
-
 The math alone doesn't tell you the story. 
 
 You have to see it.
@@ -167,6 +166,7 @@ Interesting [engineering tools](https://jalcocert.github.io/Linux/docs/debian/fo
 
 1. KiCad
 2. Atopile
+3. **PySpice**: the discovery of today :)
 
 To **simulate** the behaviour of ESP32, picoW, even arduinos: https://github.com/davidmonterocrespo24/velxio
 
@@ -534,6 +534,6 @@ Trade-offs:
 | Always damped | Can ring or oscillate without R for damping |
 | OK at any frequency | Below ~10 kHz, inductors get huge; above ~1 GHz, parasitics dominate |
 
-In the watering BRD, the buck converter's L+C output is an LC filter.
+In the watering BRD, the **buck converter's L+C output** is an LC filter.
 
 The Q is moderate (resistance from MOSFET Rds(on), inductor DCR, ESR of cap) and the cutoff is well below the 150 kHz switching frequency, giving clean Vout.
