@@ -248,7 +248,7 @@ Oterm seems to [support MCP](https://ggozad.github.io/oterm/mcp/?h=mcp#tools)
 ![LibreChat UI with OpenAI](/blog_img/GenAI/librechat-openai.png)
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LibreChat" title="LibreChat Docker Configs 🐋✅ ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen/LibreChat" title="LibreChat Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
 3. I got working a **local research assistant** the searches the web for you and summarizes the content via Ollama (I added OpenAI as well and groq support is on the way for faster inference).
@@ -263,8 +263,8 @@ It uses [LangGraph](https://jalcocert.github.io/JAlcocerT/understanding-langgrap
 
 ### I needed recently...
 
-* https://notebooklm.google.com/
-* https://speed.cloudflare.com/
+* `https://notebooklm.google.com/`
+* `https://speed.cloudflare.com/`
 
 To monitor my internet speed:
 

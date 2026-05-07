@@ -242,6 +242,8 @@ Summary of your "Super-Sensor" ESP32:
 
 OpenHUB
 
+https://fossengineer.com/selfhosting-velxio-arduino/
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="OpenHUB | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Home Assistant | Docker Config 🐋 ↗" >}}

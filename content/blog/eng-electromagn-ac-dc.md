@@ -26,6 +26,8 @@ git clone /electronics-101/samples-motors
 
 ## Electric Engines
 
+Wondering about [buying a car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/)?
+
 ### DC
 
 ### AC

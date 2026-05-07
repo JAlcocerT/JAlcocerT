@@ -299,6 +299,12 @@ Are you looking to create a visual "heat map" of an object, or just calculate th
 
 ## Conclusions
 
+Dont let AI take away your thinking.
+
+Let AI enhance your thinking.
+
+✅
+
 
 ---
 
