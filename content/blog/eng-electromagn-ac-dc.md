@@ -122,7 +122,7 @@ More about [electric cars motors](https://github.com/JAlcocerT/electronics-101/b
 
 ### AC vs DC Power Transmission
 
-As experimented and summarized here:
+As experimented and summarized [here](https://github.com/JAlcocerT/electronics-101/tree/master/samples-theory/0e-dc-vs-ac-power):
 
 | Scenario | Winner | Margin | Why |
 |----------|--------|--------|-----|

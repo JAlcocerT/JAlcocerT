@@ -212,7 +212,7 @@ You get a walk around AC/DC power transmission
 
 
 {{< callout type="info" >}}
-For transmiting power at same V, DC is more efficient than AC
+For transmiting power at same V, DC is more efficient than AC because of [effects like skin effect, corona...](https://github.com/JAlcocerT/electronics-101/blob/master/samples-theory/0e-dc-vs-ac-power/transmission_effects_faq.md#summary-table-effect-magnitudes-at-60-hz-1-gw-765-kv-transmission)
 {{< /callout >}}
 
 <!-- https://www.youtube.com/watch?v=45DNG8eUhwY -->
@@ -224,7 +224,7 @@ For transmiting power at same V, DC is more efficient than AC
 
 
 {{< callout type="info" >}}
-Turbines are a thing:
+Turbines are a thing: there is an upcoming fluid post
 {{< /callout >}}
 
 
@@ -235,6 +235,7 @@ Turbines are a thing:
 
 ### Pi x Cam is trickier
 
+Some time back, this worked:
 
 ```sh
 #git clone https://github.com/meinside/rpi-mjpg-streamer 

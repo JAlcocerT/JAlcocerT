@@ -2,14 +2,14 @@
 title: "Selfhosted IoT x HA"
 date: 2026-06-10
 draft: false
-tags: ["Home Assistant","Sonoff x Zigbee","Tinkering IRL"]
+tags: ["Home Assistant x EMQX","Sonoff x Zigbee","Tinkering IRL"]
 description: 'A homelab around IoT and sensors.'
 url: 'home-lab-tools-for-iot'
 ---
 
 **TL;DR**
 
-Isnt it time to do some upgrades to IoT, HA and the solar panel?
+Isnt it time to do some recap to IoT, HA and the solar panel?
 
 **Intro**
 
@@ -31,6 +31,12 @@ In the meantime... Ive made a ~~small~~ comeback to ~~mechanisms~~ [electronics]
 And planted couple of seeds for the first time.
 
 Its time to make that IoT/Selfhosted setup better than I ever had.
+
+Specially as I have also built some poc about how to go solar depending on your latitude, battery size, consumption...
+
+```sh
+cd ./poc/go-solar
+```
 
 
 ## Protocols
