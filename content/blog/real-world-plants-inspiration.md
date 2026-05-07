@@ -180,9 +180,17 @@ So far, one of the best experiments of the year:
 
 ### Growth Experiment
 
+Its been a while since [the last](https://jalcocert.github.io/JAlcocerT/plants-101/#growth-experiment) review.
+
 How are the plants doing after ~6 weeks of planting them?
 
 The most developed tomatoe plants are having small flowers already at the top.
+
+{{< youtube "YvhEcUt1-to" >}}
+
+<!-- 
+https://youtube.com/shorts/YvhEcUt1-to 
+-->
 
 ---
 
