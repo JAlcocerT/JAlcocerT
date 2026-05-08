@@ -1,9 +1,9 @@
 ---
 title: "Selfhosted Media"
-date: 2026-05-09T23:20:21+01:00
+date: 2026-05-10T00:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
-description: 'Organizing my Computer via agents.'
+description: 'Organizing my media server with agents.'
 url: 'selfhosting-media'
 ---
 
@@ -62,6 +62,11 @@ https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicat
 Despite google giving 5TB now: Is there a reliable way not to loose photos for good?
 
 +++ Can I use [CLI agents to order my media](#codex-x-ordering-my-media)?
+
+```sh
+#codex #5.5 made a great job
+df -hT
+```
 
 **Intro**
 
@@ -168,6 +173,9 @@ Ive decided to get a code sync to my HomeLab: *with Forgejo (codeberg) OSS model
 
 ## Conclusions
 
+```sh
+docker ps -a --filter status=exited --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'
+```
 
 
 {{< cards >}}
@@ -202,3 +210,257 @@ codex
 ## FAQ
 
 Youtube `https://piped.kavin.rocks/`
+
+### How to NextCloud
+
+### How to Immich
+
+I was using Immich wrong:
+
+/data/compose/14/library  -> mounted into immich_server as /usr/src/app/upload
+  /data/compose/14/postgres -> mounted into immich_postgres as /var/lib/postgresql/data
+
+  Breakdown:
+
+  50G   /data/compose/14/library/upload
+  6.8G  /data/compose/14/library/encoded-video
+  669M  /data/compose/14/library/thumbs
+  314M  /data/compose/14/library/backups
+
+Go to: http://192.168.1.2:2283/map#12.43/36.33211/-6.14777
+
+![alt text](/blog_img/selfh/media/immich.png)
+
+![alt text](/blog_img/selfh/media/immich2.png)
+
+```sh
+docker stop immich_server immich_machine_learning immich_postgres immich_redis
+docker ps -a --filter name=immich --format 'table {{.Names}}\t{{.Status}}'
+```
+
+I didnt like the immich makes strange paths inside: /mnt/data2tb/immich/library/upload
+
+Immich stores files in an app-managed layout, not a human folder layout.
+
+  Example:
+
+  /mnt/data2tb/immich/library/upload/<user-id>/<hash folders>/<asset-id>.jpg
+  /mnt/data2tb/immich/library/thumbs/<user-id>/...
+  /mnt/data2tb/immich/library/encoded-video/<user-id>/...
+
+  That is normal for Immich. It uses UUIDs, hash-like subfolders, thumbnails, encoded video copies, metadata, and a Postgres database to know what each file actually is. The folder
+  names are optimized for the app, not for browsing manually.
+
+  Nextcloud feels different because it exposes a user-facing filesystem:
+
+  nextcloud/data/<user>/files/Photos/...
+  nextcloud/data/<user>/files/Documents/...
+
+  So Nextcloud’s storage mirrors what users see in the web UI. Immich’s storage is closer to an internal media database: the UI, albums, dates, people, locations, and search come from
+  its database and generated assets, not from nice folder names.
+
+  Short version: Nextcloud is file-first. Immich is photo-library-first.
+
+So i said bye to immich:
+
+```sh
+sudo rm -rf /data/compose/14
+```
+
+### How to SFTP GO
+
+docker ps -a --filter name=sftp --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'
+
+
+---
+
+Baseline
+
+  1. Automatic security updates
+     On Ubuntu/Debian, use unattended-upgrades for OS security patches.
+
+     sudo apt install unattended-upgrades
+     sudo dpkg-reconfigure unattended-upgrades
+
+     Good for: kernel/security patches, OpenSSL, SSH, system packages.
+
+  2. Firewall with UFW
+     Default-deny inbound, allow only what you actually use.
+
+     Typical:
+
+     sudo ufw default deny incoming
+     sudo ufw default allow outgoing
+     sudo ufw allow ssh
+     sudo ufw enable
+     sudo ufw status verbose
+
+     Then only expose needed service ports, for example Nextcloud via reverse proxy ports 80/443, not every container port.
+
+  3. SSH hardening
+     Use keys, disable password login if possible.
+
+     In /etc/ssh/sshd_config:
+
+     PasswordAuthentication no
+     PermitRootLogin no
+     PubkeyAuthentication yes
+
+     Then:
+
+     sudo systemctl reload ssh
+
+  4. Fail2ban or CrowdSec
+     Useful if SSH or web services are internet-facing.
+
+     Simple option:
+
+     sudo apt install fail2ban
+     sudo systemctl enable --now fail2ban
+
+  5. Reverse proxy only
+     Expose only Traefik/Nginx Proxy Manager/Caddy to the internet. Keep app containers internal unless they must be public.
+  6. Backups
+     Security includes recovery. For your setup, I’d especially back up:
+
+     Nextcloud config
+     Nextcloud database
+     Nextcloud user data
+     Docker compose files
+     Reverse proxy config/certs
+
+  7. Docker hygiene
+     Avoid running random containers as privileged. Prefer:
+
+     no privileged: true unless required
+     pinned image tags where practical
+     bind mounts only where needed
+     no Docker socket exposed to web apps
+
+  8. Separate public vs private services
+     Public:
+
+     Nextcloud
+     maybe landing pages
+     reverse proxy
+
+     Portainer
+     databases
+     dashboards
+     Home Assistant admin
+     file managers
+     SSH
+
+  9. VPN for admin access
+     Tailscale, WireGuard, or NetBird is usually better than exposing admin panels publicly.
+  10. Monitoring
+     At minimum:
+
+  df -h
+  docker ps
+  systemctl --failed
+
+  Longer term, Uptime Kuma or Beszel are nice lightweight options.
+
+  For your case, I’d do this order:
+
+  1. Enable unattended security updates
+  2. Configure UFW
+  3. Confirm only 80/443/SSH are exposed
+  4. Harden SSH
+  5. Put admin tools behind VPN only
+  6. Build a real Nextcloud backup routine
+
+
+› do i need fail2ban if im exposing via cloudflare tunnels?
+
+
+• Usually: less need, but not zero.
+
+  If your public services are exposed only through Cloudflare Tunnel, then random internet clients are not directly hitting your home IP/ports. That greatly reduces the usefulness of
+  Fail2ban on the homelab host, because attackers are connecting to Cloudflare, not directly to your server.
+
+  You still may want Fail2ban if:
+
+  SSH is exposed directly to the internet
+  Nextcloud is also reachable by direct IP/port, not only tunnel
+  you have local/LAN attackers or compromised LAN devices
+  you expose anything outside the tunnel
+
+  If everything public goes through Cloudflare Tunnel, I would prioritize Cloudflare-side controls instead:
+
+  Cloudflare Access for admin apps
+  WAF/security rules
+  rate limiting for login paths
+  country/IP restrictions if useful
+  2FA on Cloudflare account
+  no direct router port forwards to the homelab
+
+  For your homelab, the better setup is:
+
+  Public internet -> Cloudflare Tunnel -> selected apps
+  Admin access -> Tailscale/WireGuard/VPN
+  Router port forwards -> none, or only absolutely required
+  SSH -> LAN/VPN only
+
+  Then Fail2ban becomes optional rather than essential. It’s still fine to install, but it won’t see most Cloudflare-side attack traffic unless requests reach your service with real
+  client IPs and your logs are configured accordingly.
+
+ ---
+
+ For a normal personal Google Drive account, you mainly need this:
+
+  1. rclone installed on the server
+  2. a Google account login in a browser
+  3. an rclone remote config stored on the server
+
+  The artifact rclone creates is usually:
+
+  ~/.config/rclone/rclone.conf
+
+  That file contains the Google Drive remote definition and OAuth token. Treat it like a secret.
+
+  Typical setup:
+
+  rclone config
+
+  Then choose roughly:
+
+  n) New remote
+  name: gdrive
+  storage: Google Drive
+  client_id: leave blank
+  client_secret: leave blank
+  scope: drive
+  root_folder_id: leave blank
+  service_account_file: leave blank
+  auto config: yes, if browser available
+
+  After browser login, rclone saves credentials here:
+
+  /home/jalcocert/.config/rclone/rclone.conf
+
+  Test it:
+
+  rclone lsd gdrive:
+  rclone mkdir gdrive:homelab-backups
+  rclone lsd gdrive:
+
+  If the server has no browser/GUI, run:
+
+  rclone config
+
+  and when asked:
+
+  Use auto config?
+  n
+
+  Then rclone gives you a URL. Open that URL on your laptop/desktop, sign in to Google, copy the token/code back into the server prompt.
+
+  For backups, the only artifact you need to preserve is:
+
+  ~/.config/rclone/rclone.conf
+
+  If using restic, also preserve your restic repository password. Without it, the encrypted backup is unrecoverable.
+
+ 
