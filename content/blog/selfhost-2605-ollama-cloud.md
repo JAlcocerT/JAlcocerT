@@ -361,6 +361,20 @@ Prepare [Ventoy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025
 
 #### Hermes
 
+As seen recently:
+
+```sh
+mkdir -p ~/.hermes
+docker run -it --rm \
+  -v ~/.hermes:/opt/data \
+  nousresearch/hermes-agent setup
+```
+
+I gave it a try with: https://aistudio.google.com/api-keys
+
+![alt text](/blog_img/GenAI/hermes-agent.png)
+
+
 
 #### OSS Models APIs x Agents
 
