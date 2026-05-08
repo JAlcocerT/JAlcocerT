@@ -9,6 +9,10 @@ url: 'selfhosting-media'
 
 https://github.com/transmute-app/transmute
 
+{{< callout type="warning" >}}
+Make sure to understand [file types](https://github.com/JAlcocerT/Home-Lab/blob/main/file-format.md)!
+{{< /callout >}}
+
 > MIT, Self hosted file converter for images, video, audio, json, excel and more. Supports over 2,000 conversions! 
 
 {{< cards cols="1" >}}

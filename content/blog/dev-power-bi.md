@@ -53,11 +53,13 @@ RooVeterinaryInc.roo-cline #https://marketplace.visualstudio.com/items?itemName=
 
 I can deliver a concise overview of Sample-DevSecOps-UAT3 now. How deep should the summary go?
 
-High-level: pages/sections, key tables and relationships, and notable measures only
+High-level: pages/sections, key tables and relationships, and notable measures only 
+
 Detailed model: include main tables, relationships, and key DAX measures/logic summaries
+
 Full deep dive: exhaustive model inventory and DAX measure notes
 
-Havent I mentioned also how cool...Goose or Codex CLI are combined with a **HITL**?
+Havent I mentioned also how cool...`Goose` or `Codex CLI` are combined with a **HITL**?
 
 
 ```mermaid
@@ -111,7 +113,9 @@ Summary of the "Landscape"
 
 We still have Service accounts and Gateways...**BUT**
 
-Not entirely, but it **massively simplifies** it. In the 2026 landscape, the "old way" (manual ETL and constant gateway babysitting) is being replaced by **SaaS-ified connectivity**.
+Not entirely, but it **massively simplifies** it. 
+
+In the 2026 landscape, the "old way" (manual ETL and constant gateway babysitting) is being replaced by **SaaS-ified connectivity**.
 
 Here is the reality of what stays and what goes:
 
@@ -266,6 +270,8 @@ choco install mysql.workbench -y #or...dbeaver
 #choco install dbeaver
 ```
 
+Then just:
+
 ```sh
 SELECT * FROM information_schema.columns 
 WHERE table_name = '_dora_csr_metric_details';
@@ -274,6 +280,20 @@ WHERE table_name = '_dora_csr_metric_details';
 ```
 
 * **Gateways** act as a secure bridge that allows the Power BI cloud service to "reach back" into your private network to refresh data from on-premises databases like MySQL.
+
+ 
+
+{{< callout type="warning" >}}
+Calc groups are NOT data tables. They're DAX templates keyed by their column value (Period Mode).
+{{< /callout >}}
+
+Calc group itself has zero rows of "data" feeding any fact. It's pure    
+  expression substitution. No relationships involved on the group's own    
+  connection — it leverages the relationships already in the model (Dates ↔
+   YearMonthNums ↔ fact tables) once it adds its filter to Dates.
+
+  That's why this approach scales — every measure inherits the date shift  
+  through the existing date dim. No model schema changes.
 
 ### PBIX vs PBIP vs PBIT
 
