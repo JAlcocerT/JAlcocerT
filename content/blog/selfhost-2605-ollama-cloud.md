@@ -350,12 +350,28 @@ Or reach out for doubts:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-
 {{< callout type="info" >}}
 Prepare [Ventoy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started) if you are ready to go with [the latest ubuntu](#about-ubuntu-2604-lts)
 {{< /callout >}}
 
 ### Hardening a Pi for Agents
+
+
+Then just choose whatever provider that allow for 24/7 queries:
+
+1. https://www.kimi.com/ and kimiclaw...
+
+2. 
+
+get ready for SDD: https://www.youtube.com/watch?v=b6cbxSaa4U4
+
+and openspec: https://www.youtube.com/watch?v=nFq4POtqom4
+
+because context is the new code: https://www.youtube.com/watch?v=bSG9wUYaHWU
+
+(It always was)
+
+Matt Potcock was a great inspiration with [the /grill-me](https://www.youtube.com/watch?v=EJyuu6zlQCg)
 
 #### OpenClaw
 

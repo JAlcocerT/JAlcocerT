@@ -211,7 +211,11 @@ Then at one with some order
 
 ### Tinkered with UptimeKuma
 
-### And with LightHouse CI
+### Also with Formbricks
+
+### PB...
+
+### oh and the  LightHouse CI
 
 ![lighthouse programmatic test](/blog_img/dev/web-test-lighthouse.png)
 
@@ -312,6 +316,25 @@ I just played around the forked oss foldergram project:
 git clone /foldergram
 ```
 
+## Few Changes since I drafted this early 2026
+
+1. Formbricks is a survey engine, not a lead database.
+
+```sh
+#git clone https://github.com/JAlcocerT/poc_webs_magnet
+cd ./poc_webs_magnet
+make pb-install pb-bootstrap
+#docker ps -a --filter "name=pocketbase"
+#docker exec pocketbase /pb/pocketbase --version
+#docker ps -a --filter "name=magnet" #auditmagnet-prod
+make docker-up #make dev
+#docker compose logs -f
+```
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 ---
 
@@ -370,9 +393,7 @@ If you are building websites, get inspired:
 
 1. Pop up at time or location of page
 
-
 2. Maps ✅
-
 
 * https://github.com/roblabs/maps-withastro ✅
 * Leaflet + OSM ✅
@@ -380,10 +401,8 @@ If you are building websites, get inspired:
     * An open source **visual editor** for the '**MapLibre Style** Specification'  - https://github.com/maplibre/maputnik
 * komoot embed OK
 
-
 * Adding interactive globe with the countries you have visited
     * From [astro bento portfolio](https://github.com/IoTechCrafts/astro-bento-portfolio-ssg/blob/master/src/components/Globe.tsx) (d3 & solid-js library) ✅
-
 
 
 #### How Ive improved my websites
@@ -414,6 +433,10 @@ A project that I phased out for now, but with interesting learnings around astro
 ### Other Static CMS
 
 What are Static Site Generators?
+
+* https://github.com/zensical/zensical
+
+> MIT |  A modern static site generator by the Material for MkDocs team 
 
 * https://github.com/plentico/plenti
 
@@ -514,41 +537,3 @@ You can enhance site interactivity and functionality using modern web developmen
   {{< card link="https://jalcocert.github.io/JAlcocerT/micro-saas/#creating-a-quick-landing" title="NEW - Make landing" image="/blog_img/shipping/make-landing2.png" subtitle="Landing Page x TailWind x VanillaJS x email to SQLITE" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-create-a-waiting-list/#ssg-astro-waiting-list" title="NEW - Make landing" image="https://raw.githubusercontent.com/JAlcocerT/waiting-to-landing/main/screens/demoLight.webp" subtitle="Creating the Waiting2Landing Concept x Formbricks" >}}
 {{< /cards >}}
-
----
-
-### TBC
-
-WIP
-
-to go with boilerplate at some poiint (?) or as ebook
-
-  {{< card link="https://github.com/JAlcocerT/entrepre-AI" title="EntrepreAI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code EntrepreAI" >}}
-
-Entrepre-AI Quick Sping
-
-```sh
-git clone
-make container-build
-make container-up
-```
-
-* CTA's
-    * Quieres el premium? No, correre el riesgo!
-    * You don’t have to miss out
-    * They all laugh when…
-    * What sounds better than privacy?
-    * Is your Business performing at 100%? Here is the best/easiest way to find out
-        * Measure, Check, Act
-    * Blinded pa lazyness?
-    * A friend told me that this will fail as people on ig has really nothing to say
-      * Lets proove him wrong
-
-* Interesting catchy sentences:
-  * Pollo hecho en serio y no en serie
-  * Hay una casa para cada persona, hay una app para todas las casas.
-  * Lets sea
-  * We ve bean waiting for you (coffee)
-  * Make IT happen
-  * Fotografiamos historias de amor. 
-    * La historia la escribís vosotros; nosotros la contaremos con imágenes.

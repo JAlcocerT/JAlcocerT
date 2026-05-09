@@ -3,59 +3,9 @@ title: "Selfhosted Media"
 date: 2026-05-10T00:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
-description: 'Organizing my media server with agents.'
+description: 'Organizing my media server with agents. Code too with forgejo.'
 url: 'selfhosting-media'
 ---
-
-https://github.com/transmute-app/transmute
-
-{{< callout type="warning" >}}
-Make sure to understand [file types](https://github.com/JAlcocerT/Home-Lab/blob/main/file-format.md)!
-{{< /callout >}}
-
-> MIT, Self hosted file converter for images, video, audio, json, excel and more. Supports over 2,000 conversions! 
-
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/#video-as-a-code" title="Video Docs Section with consolidated info ↗" >}}
-{{< /cards >}}
-
-https://github.com/frederikemmer/MediaLyze
-
-Self-hosted media library analysis for large video collections 
-
-https://github.com/ashim-hq/ashim
-
-A Self Hosted Image Manipulator - 45+ tools, local AI, and pipelines in a single Docker container. No cloud, no telemetry. Your images never leave your machine. 
-
-https://github.com/stirling-image/stirling-image
-
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich
-![Immich UI](/blog_img/selfh/Photo/immich.png)
-
-https://jalcocert.github.io/JAlcocerT/image-backup-tools/#nc-vs-immich
-![alt text](/blog_img/selfh/media/NC-traefik/nc-32.png)
-
-
-https://jalcocert.github.io/JAlcocerT/image-backup-tools/#cf-waf-vs-zero-trust-access
-
-
-
-![alt text](/blog_img/selfh/Jellyfin/prowlarr-qbittorrent.png)
-
-![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
-
-
-https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicates-files-in-the-system
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/vert" title="Vert | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mazanoke" title="Mazanoke Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="NextCloud | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich Docker Config 🐋 ↗" >}}
-{{< /cards >}}
 
 **TL;DR**
 
@@ -86,6 +36,14 @@ https://github.com/Fingel/gelly
 
 >  A native, lightweight music client for Jellyfin and Subsonic. Built with Rust and GTK. 🦀🐧 
 
+### Podcasts or Transcripts
+
+```sh
+cd /poc/yt-distil
+
+```
+
+
 ## Video Media
 
 Im sure that you are already using qb and prowlarr at `6011` and `9696`.
@@ -107,11 +65,16 @@ You can create your own torrent of your joined `.MP4` with:
 
 ```
 
+### Jellyfin and QBit
+
+Because you will want to move those action cam videos:
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+And share them with your friends :)
 
 <!-- 
 https://blog.bartzz.com/setting-up-secure-transmission-torrent-with-vpn-using-docker/
@@ -169,6 +132,54 @@ Ive decided to get a code sync to my HomeLab: *with Forgejo (codeberg) OSS model
 {{< /cards >}}
 
 
+## Others
+
+
+https://github.com/transmute-app/transmute
+
+{{< callout type="warning" >}}
+Make sure to understand [file types](https://github.com/JAlcocerT/Home-Lab/blob/main/file-format.md)!
+{{< /callout >}}
+
+> MIT, Self hosted file converter for images, video, audio, json, excel and more. Supports over 2,000 conversions! 
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/#video-as-a-code" title="Video Docs Section with consolidated info ↗" >}}
+{{< /cards >}}
+
+https://github.com/frederikemmer/MediaLyze
+
+Self-hosted media library analysis for large video collections 
+
+https://github.com/ashim-hq/ashim
+
+A Self Hosted Image Manipulator - 45+ tools, local AI, and pipelines in a single Docker container. No cloud, no telemetry. Your images never leave your machine. 
+
+https://github.com/stirling-image/stirling-image
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich
+![Immich UI](/blog_img/selfh/Photo/immich.png)
+
+https://jalcocert.github.io/JAlcocerT/image-backup-tools/#nc-vs-immich
+![alt text](/blog_img/selfh/media/NC-traefik/nc-32.png)
+
+
+https://jalcocert.github.io/JAlcocerT/image-backup-tools/#cf-waf-vs-zero-trust-access
+
+
+
+![alt text](/blog_img/selfh/Jellyfin/prowlarr-qbittorrent.png)
+
+![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
+
+
+https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicates-files-in-the-system
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/vert" title="Vert | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mazanoke" title="Mazanoke Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 ---
 
 ## Conclusions
@@ -195,23 +206,29 @@ Last months it was all about [this](https://jalcocert.github.io/JAlcocerT/oss-au
 ### Codex x Ordering My Media
 
 1. [BAAAACK-ups](#backups-first)
+
 2. Continue at your own risk!
 3. 
 
 
 ```sh
-codex
+#codex
 ```
 
 ---
 
-
-
 ## FAQ
 
-Youtube `https://piped.kavin.rocks/`
+
+
 
 ### How to NextCloud
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="NextCloud | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ### How to Immich
 
