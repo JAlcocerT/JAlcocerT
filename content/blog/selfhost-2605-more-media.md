@@ -22,6 +22,10 @@ df -hT
 
 Time to have a realiable selfhosted cold storage around nextcloud, tailscale and my old 2200G with 4TB HDD :)
 
+Or just...
+
+do some space to spin agents like crazy, have forgejo going and tmux to see how each project goes by
+
 I know, you might be already familiar with **PairDrop**
 
 {{< cards cols="2" >}}

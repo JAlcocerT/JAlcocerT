@@ -318,7 +318,7 @@ git clone /foldergram
 
 ## Few Changes since I drafted this early 2026
 
-1. Formbricks is a survey engine, not a lead database.
+1. [Formbricks](https://github.com/JAlcocerT/jalcocertech-services/tree/master/forms) is a survey engine, not [a lead database](https://github.com/JAlcocerT/poc_webs_magnet/blob/master/z-lead-capture.md).
 
 ```sh
 #git clone https://github.com/JAlcocerT/poc_webs_magnet
@@ -336,11 +336,22 @@ make docker-up #make dev
 {{< /cards >}}
 
 
+
 ---
 
 ## Conclusions
 
 Remember, you can always do your [wordpress stuff](#still-want-a-wp).
+
+```sh
+#/remote-control
+npx skills add https://github.com/alchaincyf/huashu-design --skill huashu-design
+```
+
+But considering that you can make [awsome one pagers](https://github.com/JAlcocerT/poc_webs_magnet/blob/master/z-why-a-onepager.md) that are converted to the landing...
+
+what for?
+
 
 ```mermaid
 mindmap
@@ -357,6 +368,7 @@ mindmap
     ChatBots
 ```
 
+Yea, what for?
 
 ```mermaid
 graph TD
