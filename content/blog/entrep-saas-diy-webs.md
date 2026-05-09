@@ -2,8 +2,8 @@
 title: "Attraction Web Offer x Show a Problem"
 date: 2026-05-09T08:20:21+01:00
 draft: false
-tags: ["NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey"]
-description: 'A scalable way to provide DIY websites. Free Web Audits!'
+tags: ["Vertigo","NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey","PocketBase Leads","EayP v3 checks"]
+description: 'A scalable way to provide DIY websites. Free Web Audits and custom forms.'
 url: 'diy-webs-via-paas'
 ---
 
@@ -15,6 +15,12 @@ If I ever talked with you about how to build a website: **its obsolete**.
 +++ [Gitlab Pages](#what-about-gitlab-pages)
 
 **Intro**
+
+This is Vertigo.
+
+Not the U2 song.
+
+But... see.
 
 Last year I completed all these pieces of the puzzle: [PaaS](https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/) + [DecapCMS x Astro](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms)
 
@@ -30,8 +36,14 @@ How about **improving CX** for DIYs websites?
 
 ```sh
 #git clone https://github.com/JAlcocerT/poc_webs_magnet
-
+make help
 ```
+
+Was able to put some UI/X changes with `cc` into the original product.
+
+As well as some backend changes like get leads flowing into pocketbase.
+
+See the details at [this section].
 
 You know that you can reach `webaudit.jalcocertech.com` as created [here](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/#programmatic-free-audits-for-websites) on [this repo](https://github.com/JAlcocerT/poc_webs_magnet)
 

@@ -279,7 +279,7 @@ time make all #makes all the steps, including the render programatically!
 
 Wait....56 seconds to render?
 
-On battery power?!
+On **battery power**?!
 
 My 5600G was taking like...10 min?!
 

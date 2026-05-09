@@ -269,12 +269,17 @@ Last months it was all about [this](https://jalcocert.github.io/JAlcocerT/oss-au
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/immich" title="Immich Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+Last month I was doing by hand some maintainance [via CLIs to nextcloud](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#faq)
+
+![NCDU tool to check disk space](/blog_img/selfh/HomeLab/ncdu-nextcloud.png)
+
+
 ### How to Immich
 
 I was using Immich wrong:
 
-/data/compose/14/library  -> mounted into immich_server as /usr/src/app/upload
-  /data/compose/14/postgres -> mounted into immich_postgres as /var/lib/postgresql/data
+* `/data/compose/14/library`  -> mounted into immich_server as /usr/src/app/upload
+* `/data/compose/14/postgres` -> mounted into immich_postgres as /var/lib/postgresql/data
 
   Breakdown:
 
@@ -518,5 +523,3 @@ Baseline
   ~/.config/rclone/rclone.conf
 
   If using restic, also preserve your restic repository password. Without it, the encrypted backup is unrecoverable.
-
- 
