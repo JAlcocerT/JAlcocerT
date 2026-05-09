@@ -191,3 +191,7 @@ Why not starting using AI to make projects you could only dream about?
 1. https://github.com/projectchrono/chrono
 
 > High-performance C++ library for multiphysics and multibody dynamics simulations
+
+2. https://github.com/OpenModelica/OpenModelica
+
+> OpenModelica is an open-source Modelica-based modeling and simulation environment intended for industrial and academic usage.

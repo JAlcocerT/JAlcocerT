@@ -26,6 +26,15 @@ Or just...
 
 do some space to spin agents like crazy, have forgejo going and tmux to see how each project goes by
 
+
+You can [try gram](https://codeberg.org/GramEditor/gram/releases/) to eat less ram: *which code is in forgejo/codeberg btw*
+
+```sh
+cd /tmp
+curl -fLO https://codeberg.org/GramEditor/gram/releases/download/1.2.1/gram_1.2.1-1_x86_64.deb
+#npm install -g opencode-ai
+```
+
 I know, you might be already familiar with **PairDrop**
 
 {{< cards cols="2" >}}
@@ -135,11 +144,37 @@ Ive decided to get a code sync to my HomeLab: *with Forgejo (codeberg) OSS model
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/forgejo" title="Forgejo | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+```sh
+git clone /home-lab
+cd home-lab/forgejo
+#make list-github-repos #make help
+make migrate-repo REPO_OWNER=JAlcocerT REPO_NAME=eda-f1                                    
+```
+
+![alt text](/blog_img/selfh/forgejo.png)
+
+> http://localhost:3034/user/sign_up
+
+
+Wanna get ready for agents 24/7 in the Pi?
+
+
+```sh
+# See all existing users                                        
+make list-users
+# Create a new non-admin user (will be forced to change password on first login)                                                                                                                                                            
+make create-user NEW_USER=hermesagent NEW_USER_EMAIL=alice@example.com NEW_USER_PASSWORD=changeme123
+# Grant write access to a specific repo (can push, cannot delete or change settings)                                                                                                                                                        
+make add-collaborator NEW_USER=alice REPO_OWNER=JAlcocerT REPO_NAME=eda-f1
+make list-user-repos NEW_USER=hermesagent
+```
+
+---
 
 ## Others
 
 
-https://github.com/transmute-app/transmute
+* https://github.com/transmute-app/transmute
 
 {{< callout type="warning" >}}
 Make sure to understand [file types](https://github.com/JAlcocerT/Home-Lab/blob/main/file-format.md)!

@@ -387,7 +387,7 @@ https://github.com/buildermethods/agent-os
 https://github.com/Fission-AI/OpenSpec
 
 
-> MIT |  Spec-driven development (SDD) for AI coding assistants. 
+> MIT | Spec-driven development (SDD) for AI coding assistants. 
 
 #### paperclip
 
