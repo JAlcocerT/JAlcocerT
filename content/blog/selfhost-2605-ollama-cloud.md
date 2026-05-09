@@ -359,6 +359,26 @@ Prepare [Ventoy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025
 
 #### OpenClaw
 
+
+#### AgentOS
+https://github.com/buildermethods/agent-os
+
+
+> MIT | Agent OS is a system for injecting your codebase standards and writing better specs for spec-driven development.
+
+#### OpenSpec
+
+https://github.com/Fission-AI/OpenSpec
+
+
+> MIT |  Spec-driven development (SDD) for AI coding assistants. 
+
+#### paperclip
+
+* https://github.com/paperclipai/paperclip
+
+> MIT | Open-source orchestration for zero-human companies
+
 #### Hermes
 
 As seen recently:

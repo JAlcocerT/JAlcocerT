@@ -182,3 +182,12 @@ Problems with cognitive dilution due to AI usage?
 
 Why not starting using AI to make projects you could only dream about?
 
+
+
+---
+
+## FAQ
+
+1. https://github.com/projectchrono/chrono
+
+> High-performance C++ library for multiphysics and multibody dynamics simulations

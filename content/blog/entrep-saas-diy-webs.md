@@ -1,16 +1,20 @@
 ---
 title: "Attraction Web Offer x Show a Problem"
-date: 2026-05-15T23:20:21+01:00
+date: 2026-05-09T08:20:21+01:00
 draft: false
 tags: ["NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey"]
-description: 'A scalable way to provide DIY websites. With Free Web Audits!'
+description: 'A scalable way to provide DIY websites. Free Web Audits!'
 url: 'diy-webs-via-paas'
 ---
 
 
 **Tl;DR**
 
-If I ever talked with you about how to build your website: its obsolete.
+If I ever talked with you about how to build a website: **its obsolete**.
+
++++ [Gitlab Pages](#what-about-gitlab-pages)
+
+**Intro**
 
 Last year I completed all these pieces of the puzzle: [PaaS](https://jalcocert.github.io/JAlcocerT/selfhosted-server-paas/) + [DecapCMS x Astro](https://jalcocert.github.io/JAlcocerT/open-source-minimalist-websites/#using-decap-cms)
 
@@ -21,11 +25,13 @@ Time to put those together with a quick WebApp/SaaS to free my time and **enhanc
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-+++ [Gitlab Pages](#what-about-gitlab-pages)
-
-**Intro**
 
 How about **improving CX** for DIYs websites?
+
+```sh
+#git clone https://github.com/JAlcocerT/poc_webs_magnet
+
+```
 
 You know that you can reach `webaudit.jalcocertech.com` as created [here](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/#programmatic-free-audits-for-websites) on [this repo](https://github.com/JAlcocerT/poc_webs_magnet)
 
