@@ -173,6 +173,13 @@ Does thinking of a "heatsink" as just a "resistor to ground" make it easier to v
 
 ### Heat transfer x VPD x DHT
 
+In case you have some go-solar PoC system or you are just planting tomatoes and doing IoT/Big Data tech talks around:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc/tree/master/go-solar" title="PicoW Esp32 x DHT22 - PoC | Repo" icon="github" >}}
+{{< /cards >}}
+
+
 ```sh
 #docker ps | grep emqx
 cd ./RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
@@ -184,9 +191,21 @@ docker compose up -d --build webapp
 #docker ps | grep timescaledb
 ```
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc/tree/master/go-solar" title="Go Solar PoC | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/poc/tree/master/go-solar" title="Go Solar PoC | Repo" icon="github" >}}
+{{< /cards >}}
+
 ### Heat transfer x MBSD x ICE
 
-In an ICE, only about 30% of the fuel's chemical energy reaches the crankshaft as useful work. The rest must go somewhere:
+In an ICE, only about 30% of the fuel's chemical energy reaches the crankshaft as useful work. 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics" title="Fluids inside MBSD | Repo" icon="github" >}}
+{{< /cards >}}
+
+
+The rest must go somewhere:
 
 | Energy path | Share |
 | :--- | :--- |

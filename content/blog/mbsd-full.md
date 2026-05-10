@@ -99,7 +99,55 @@ chassis modal
 
 ### Engine Balance
 
-https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/
+Every engine in the MBSD series was analysed using the same tool: **phasor analysis**. Each cylinder's reciprocating inertia force is represented as a rotating vector at a given harmonic order ($1\times$, $2\times$, ... engine speed). Sum the vectors for all cylinders — if they cancel, that order is balanced; if they don't, you have a free force or moment that will shake the engine.
+
+The two sources of imbalance are:
+
+- **Free forces** — net unbalanced force transmitted to the mounts and chassis
+- **Free moments (couples)** — net unbalanced torque that rocks the engine about its mounts
+
+#### The Phasor Method
+
+For a multi-cylinder engine with crank throws at angles $\phi_k$, the $n$-th order force phasor for cylinder $k$ is:
+
+$$\vec{F}_k^{(n)} = F_0 \cdot e^{j n \phi_k}$$
+
+where $F_0 = m_r \cdot r \cdot \omega^2$ (rotating equivalent mass × crank radius × angular velocity squared). Balance requires $\sum_k \vec{F}_k^{(n)} = 0$ for each order of interest.
+
+For in-line engines the moment check adds a $z_k$ arm (cylinder spacing along the crankshaft axis): $\sum_k z_k \cdot \vec{F}_k^{(n)} = 0$.
+
+#### Engine Family Balance Map
+
+| Engine | Config | Primary ($1\times$) | Secondary ($2\times$) | Free moment | Notes |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **I3** | Inline 3 | Balanced | Balanced | Yes — rocking couple | Characteristic 3-cyl rumble |
+| **I4** | Inline 4 | Balanced | **Not balanced** | No | $2\times$ shakers standard; balance shafts optional |
+| **I6** | Inline 6 | Balanced | Balanced | No | Perfectly balanced — smoothest inline config |
+| **Flat-4 / Boxer-4** | Horizontally opposed | Balanced | Balanced | **Yes — offset couple** | Cylinder offset creates hidden rocking moment |
+| **V6 (60°)** | V-angle 60° | Balanced | Balanced | Yes — rocking couple | Mount tuning critical; dominant in compact cars |
+| **V8 Cross-plane** | 90° V, 90° firing | Balanced | Balanced | No | Uneven bank firing → characteristic burble; US muscle |
+| **V8 Flat-plane** | 90° V, 180° firing | Balanced | **Not balanced** | No | Even firing → high-RPM power; needs counter-rotating shafts |
+| **V10** | 72° V | Balanced | Balanced | No | Near-ideal; F1 standard before displacement limits |
+| **V12** | 60° V | Balanced | Balanced | No | Two I6 joined → inherently perfect |
+
+Key takeaways from the series:
+
+- **I4** is the most common compromise: primary balance achieved cheaply, secondary $2\times$ shaking accepted or suppressed with Lanchester balance shafts spinning at $2\omega$ in opposite directions.
+- **Flat-plane V8** (Ferrari 458, Ford GT500R) trades the cross-plane's moment advantage for even $90°$ firing intervals — every bank fires evenly, which improves exhaust scavenging and high-RPM breathing, but the $2\times$ secondary forces require counter-rotating balance shafts or stiff mounts.
+- **Boxer-4** feels balanced on paper but the lateral offset between opposing cylinders ($\Delta z \neq 0$) produces a rocking couple that a true opposed-piston engine (with zero offset) would not have.
+- **V12** is the engineering endpoint: two I6 crankshafts joined at the middle — every order cancels, no free moments, no balance shafts needed. Cost and length are the only constraints.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/inline-4-engine-analysis/" title="I4 Engine | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/v8-engine-analysis/" title="V8 Engine | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/v6-engine-analysis/" title="V6 + Engine Mounts | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/v10-v12-engine-analysis/" title="V10 / V12 | Post" icon="book-open" >}}
+{{< /cards >}}
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/flat-boxer-engine/" title="Flat vs Boxer | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/" title="Engine Balance Visuals | Post" icon="book-open" >}}
+{{< /cards >}}
 
 #### NVH
 
