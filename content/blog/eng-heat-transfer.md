@@ -3,7 +3,7 @@ title: "Heat Transfer (+ Go Solar PoC)"
 date: 2026-05-07
 draft: false
 tags: ["Black-Scholes","ICE x Fluid Dynamics x NVH","Ptolomeo","VPD","HeatraPy vs PyScipe"]
-description: 'The physics of heat and thermodynamics. The solar plan B.'
+description: 'The physics of heat and thermodynamics. The solar plan B - FV and Aerotermia.'
 url: 'heat-transfer-ice'
 math: true
 ---
@@ -395,7 +395,7 @@ Are you looking to create a visual "heat map" of an object, or just calculate th
 Heat transfer closes the loop that MBSD, fluid mechanics, and FEM opened.
 
 {{< callout type="info" >}}
-Which can be a good excuse to [recap thermodynamics and cycles](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-mcia-thermodynamic-cycles.md)
+Which can be a good excuse to [recap thermodynamics and cycles](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-mcia-thermodynamic-cycles.md) also each cycle typical applications
 {{< /callout >}}
 
 The combustion event produces forces (fluid), the forces drive motion (MBSD), the motion subjects parts to stress (FEM), and the same combustion event heats those parts — changing the material properties that FEM relied on. 
@@ -409,17 +409,23 @@ Skip heat transfer and you are doing structural analysis with wrong material dat
 As per [these next steps](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-next-steps.md)
 
 1. The effect of variable valve timming - [vvt](https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics/improvements/01_vvt)
-2. Forced induction (Compressor/Supercharger)
-3. Diesel (CI vs SI)
-4. NVH map
-5. TurboCharger
-6. Knock / detonation limit
+2. Forced induction (Compressor/[Supercharger](https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics/improvements/02_forced_induction))
+3. [Diesel](https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics/improvements/03_diesel) (CI vs SI)
+4. [NVH map](https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics/improvements/04_nvh_map)
+5. [TurboCharger](https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics/improvements/05_turbo)
+6. [Knock](https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics/improvements/06_knock) / detonation limit
 7. Cylinder deactivation
 8. torsional crankshaft dynamics
 
 99. volumetric efficiency
 
 ![alt text](/blog_img/mechanics/fi_fig3_efficiency.png)
+
+{{< callout type="info" >}}
+If you ever thought to build a pulse jet, a stirling engine or [aerotermia](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/aerotermia_simulator.py) at home, [check this `.md`](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-thermodynamic-cycles-applications.md#25-pulse-jet--resonant-intermittent-combustion).
+{{< /callout >}}
+
+
 
 ---
 
@@ -512,15 +518,21 @@ Still 0D spatially, but captures the burned/unburned temperature split that a si
 
 #### Quasi-Dimensional (Flame Speed) Models
 
-Add a geometric model of the flame front — typically a sphere expanding from the spark plug clipped by the cylinder walls. The turbulent flame speed $S_T$ is modelled as a function of turbulence intensity $u'$ and laminar flame speed $S_L$:
+Add a geometric model of the flame front — typically a sphere expanding from the spark plug clipped by the cylinder walls. 
+
+The turbulent flame speed $S_T$ is modelled as a function of turbulence intensity $u'$ and laminar flame speed $S_L$:
 
 $$S_T \approx S_L + u'$$
 
-This links combustion to in-cylinder flow (tumble, swirl) without solving the Navier-Stokes equations. Useful for sensitivity studies of combustion chamber geometry.
+This links combustion to in-cylinder flow (tumble, swirl) without solving the Navier-Stokes equations. 
+
+Useful for sensitivity studies of combustion chamber geometry.
 
 #### 3D CFD Combustion Models (Full Spatial)
 
-Solve the Navier-Stokes equations plus species transport and a combustion sub-model on a 3D mesh that moves with the piston and valves. The main approaches:
+Solve the Navier-Stokes equations plus species transport and a combustion sub-model on a 3D mesh that moves with the piston and valves. 
+
+The main approaches:
 
 | Model | Approach | Cost |
 | :--- | :--- | :--- |

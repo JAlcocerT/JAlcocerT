@@ -227,6 +227,8 @@ The learnings are stored [here](https://github.com/JAlcocerT/selfhosted-landing/
 
 ## Conclusions
 
+No, I didnt try hydroponics in the end :)
+
 **Design Margins:** as per [this doc](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/interesting-simulations.md).
 - System properly sized for nominal 25°C, 5-year warranty
 - Cold start marginal at -20°C with 5-year-old battery (pre-warm or foldback current needed)

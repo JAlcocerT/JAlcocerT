@@ -1,6 +1,6 @@
 ---
 title: "Selfhosting local Gen-AI (LLMs x Agents)"
-date: 2026-05-22
+date: 2026-05-12
 draft: false
 description: "How to use Ollama x Gemma 4. With OpenClaw and Hermes."
 tags: ["Home-Lab x (x300 vs M2)","Kimi vs Deepseek","TTS"]
@@ -290,6 +290,10 @@ sudo virt-install \
   --os-variant generic \
   --network network=default \
   --graphics spice
+#virsh list --all
+#sudo virsh shutdown ubuntu-vm
+
+#
 ```
 
 Sitting at 1.2gb RAM at start up!
