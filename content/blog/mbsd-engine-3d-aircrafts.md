@@ -1,7 +1,7 @@
 ---
 title: "3D vibrations for aircrafts"
 date: 2026-12-25T08:20:21+01:00
-draft: false
+draft: true
 tags: ["Mechanical Engineering","MBSD x Airplanes Engine Mount"]
 description: 'Simulating .'
 url: 'aircraft-engine-analysis'

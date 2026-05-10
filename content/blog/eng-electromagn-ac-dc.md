@@ -1,6 +1,6 @@
 ---
 title: "Electro-Magnetism for AC/DC engines"
-date: 2026-05-06
+date: 2026-05-04
 draft: false
 tags: ["PyScipe Simulations","Electric Motors vs L-R Model","Solenoids","EMF"]
 description: 'The physics you need for building. Drones and electric cars.'
@@ -21,6 +21,10 @@ git clone /electronics-101/samples-motors
 ```
 
 ## Circuits Recap
+
+{{< cards >}}
+  {{< card link="https://github.com/clidey/electronics-101" title="Electronics-101 Github ↗" icon="github" >}}
+{{< /cards >}}
 
 
 

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git check-ignore *)",
+      "Bash(git -C /home/jalcocert/Desktop/JAlcocerT log --all --full-history -- .env)",
+      "Bash(git -C /home/jalcocert/Desktop/JAlcocerT log --all -S \"MAILTRAP_API_TOKEN\\\\|OpenAI_API_KEY\\\\|CLOUDFLARE_API_TOKEN\" --oneline)"
+    ]
+  }
+}

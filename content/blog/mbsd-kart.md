@@ -1,7 +1,7 @@
 ---
 title: "A Kart != a point mass"
 date: 2026-05-26
-draft: false
+draft: true
 tags: ["MBSD x Simulation","Racing"]
 description: 'The physics of a Kart that is no longer a single point in the space.'
 url: 'kart-mbsd-simulation'

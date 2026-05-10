@@ -14,7 +14,7 @@ https://github.com/JAlcocerT/mechanism
 
 **TL;DR**
 
-The start of a system to ship mechanisms as a code.
+The start of a system to **ship mechanisms as a code**.
 
 **Intro**
 

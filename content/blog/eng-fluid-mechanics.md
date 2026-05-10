@@ -1,12 +1,14 @@
 ---
 title: "Fluids"
-date: 2026-05-08
+date: 2026-05-06
 draft: false
-tags: ["Fluid Dynamics"]
+tags: ["Fluid Dynamics","Betz"]
 description: 'The physics of fluids.'
 url: 'fluids'
 math: true
 ---
+
+https://www.youtube.com/watch?v=gXHXrdzIt38
 
 
 https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics
@@ -41,6 +43,57 @@ https://www.youtube.com/watch?v=7xwODOr-xTo
 
 ## About Fluid Mechanics
 
+### The Missing Half of the MBSD Picture
+
+Every engine post in the MBSD series treated the combustion force as a known input — a prescribed pressure pushing the piston down at the right moment. That is a clean assumption for studying crankshaft balance and NVH, but it hides the question: *where does that force actually come from?*
+
+The answer is fluid mechanics. Specifically, the thermodynamics of a gas being compressed and then ignited. Fluid mechanics is the discipline that lets you compute $P(\theta)$ — the cylinder pressure as a function of crank angle — rather than just assuming it.
+
+The conceptual shift mirrors the one from MBSD to FEM:
+
+| Discipline | Question | Solves for |
+| :--- | :--- | :--- |
+| **MBSD** | How do bodies move under given forces? | $q(t)$, $\dot{q}(t)$ — positions and velocities |
+| **FEM** | How does material deform under given loads? | $\mathbf{u}(\mathbf{x})$ — displacement field |
+| **Fluid Mechanics** | Where do those forces come from? | $P$, $\rho$, $T$, $\mathbf{v}$ — pressure, density, temperature, velocity |
+
+### The Governing Equations
+
+Fluid mechanics is built on three conservation laws applied to a continuous medium:
+
+**1. Conservation of mass (continuity):**
+
+$$\frac{\partial \rho}{\partial t} + \nabla \cdot (\rho \mathbf{v}) = 0$$
+
+What goes in must come out — mass cannot appear or disappear inside a control volume.
+
+**2. Conservation of momentum (Navier-Stokes):**
+
+$$\rho \left(\frac{\partial \mathbf{v}}{\partial t} + \mathbf{v} \cdot \nabla \mathbf{v}\right) = -\nabla P + \mu \nabla^2 \mathbf{v} + \mathbf{f}$$
+
+Forces on a fluid element — pressure gradients, viscosity, and body forces — produce acceleration. This is Newton's second law for fluids.
+
+**3. Conservation of energy:**
+
+$$\rho c_v \frac{DT}{Dt} = -P\,(\nabla \cdot \mathbf{v}) + \nabla \cdot (k \nabla T) + \dot{q}_{combustion}$$
+
+Temperature changes come from compression work, heat conduction, and heat release from combustion.
+
+For an ideal gas these three equations are closed by the **equation of state**:
+
+$$P = \rho R T$$
+
+### For an ICE: From Crank Angle to Cylinder Pressure
+
+Inside a cylinder, the volume changes with crank angle $\theta$ following the slider-crank geometry (which you already know from the MBSD posts). Assuming an ideal Otto cycle, the pressure during the compression and expansion strokes follows a **polytropic** process:
+
+$$P V^\gamma = \text{const}$$
+
+where $\gamma = c_p / c_v \approx 1.35$ for hot combustion gases. This gives you the pressure trace $P(\theta)$ that acts on the piston crown — the force input that the MBSD engine models take as given.
+
+The combustion event itself adds a spike on top: the heat release from burning fuel raises temperature almost instantaneously at TDC, which via the ideal gas law drives a sharp pressure rise. Integrating $P(\theta)$ over the piston area and projecting along the connecting rod gives you exactly the slider force that feeds into the dynamics.
+
+This is the loop: fluid mechanics computes the gas forces → MBSD propagates them through the mechanism → FEM checks whether the parts survive the resulting stress.
 
 ## Application of Gas mechanics
 
@@ -195,3 +248,106 @@ Why not starting using AI to make projects you could only dream about?
 2. https://github.com/OpenModelica/OpenModelica
 
 > OpenModelica is an open-source Modelica-based modeling and simulation environment intended for industrial and academic usage.
+
+---
+
+### OSS Programs and Python Libraries for Fluid Mechanics
+
+**Can FreeCAD do this?**
+
+Yes. FreeCAD has two relevant workbenches:
+
+- **FEM Workbench** — structural and thermal FEM via CalculiX and Elmer solvers, with a GUI mesh generator. Good for static stress and simple heat transfer, not CFD.
+- **CfdOF Add-on** — a CFD workbench built on top of **OpenFOAM**. You define geometry in FreeCAD, mesh it (SnappyHexMesh or cfMesh), set boundary conditions, and run OpenFOAM in the background. Visualisation is done via ParaView. This is the closest you get to a free ANSYS Fluent workflow.
+
+**GUI / standalone solvers:**
+
+| Tool | What it does | Notes |
+| :--- | :--- | :--- |
+| **OpenFOAM** | General-purpose CFD (incompressible, compressible, reacting flow) | Industry standard OSS CFD; steep learning curve, powerful |
+| **SU2** | CFD + adjoint-based optimisation | From Stanford; good for aerodynamics and shape optimisation |
+| **Elmer FEM** | Multiphysics including fluid-structure interaction | Finnish government-backed; GUI available |
+| **Code_Saturne** | Turbulent industrial CFD | From EDF; handles complex geometries well |
+| **DWSIM** | Chemical process simulation with thermodynamics | Good for ICE thermodynamic cycle modelling |
+
+**Python libraries:**
+
+| Library | Use case |
+| :--- | :--- |
+| **Cantera** | Combustion chemistry and thermodynamics — the right tool for computing the pressure trace $P(\theta)$ in an ICE from first principles |
+| **CoolProp** | Thermophysical properties of real fluids (density, enthalpy, viscosity as functions of $P$ and $T$) |
+| **fluids** | Engineering pipe flow, friction factors, fittings — Darcy-Weisbach and beyond |
+| **thermo** | Equation-of-state thermodynamics for mixtures |
+| **PyFluids** | Wrapper around CoolProp with a cleaner API |
+| **fipy** | PDE solver that can handle the full Navier-Stokes if you want to write it yourself |
+| **pySPH** | Smoothed Particle Hydrodynamics — mesh-free, good for free-surface flows |
+
+**For the ICE use case specifically**, the practical Python stack is:
+
+```python
+# pip install cantera coolprop fluids
+import cantera as ct
+
+# Define the gas mixture (air + fuel)
+gas = ct.Solution('gri30.yaml')
+gas.TPX = 300, 101325, 'CH4:1, O2:2, N2:7.52'
+
+# Compress to TDC (polytropic)
+gas.SP = gas.s, gas.P * (compression_ratio ** gamma)
+
+# Ignite and get pressure
+r = ct.IdealGasReactor(gas)
+sim = ct.ReactorNet([r])
+sim.advance(1e-3)
+print(f"Peak pressure: {r.thermo.P/1e5:.1f} bar")
+```
+
+This gives you the combustion pressure that feeds directly into the MBSD slider-crank force model.
+
+---
+
+### Betz's Law and the Limits of Fluid Energy Extraction
+
+The **Betz Limit** (formulated in 1919 by Albert Betz) is a fundamental result in fluid dynamics that establishes the maximum possible efficiency for any turbine operating in an open flow. It is a clean example of how continuity and momentum conservation together impose a hard ceiling on what engineering can achieve.
+
+**What it states:** no turbine can capture more than **59.3%** of the kinetic energy in a flowing fluid. The maximum power coefficient is:
+
+$$C_p = \frac{16}{27} \approx 0.593$$
+
+The reasoning is elegant. If a turbine extracted 100% of the kinetic energy, the fluid downstream would be stationary — and stationary fluid cannot make room for incoming fluid, so the flow stalls. If the turbine extracts nothing, the fluid passes through unchanged. The optimum is somewhere in between: the fluid must leave with enough velocity to keep moving out of the way. Solving the momentum balance across a rotor disk gives exactly $16/27$.
+
+#### Why Hydro Turbines Are Not Bound by Betz
+
+Betz Law applies specifically to **open-flow** systems — where the fluid can expand and divert around the rotor. Most hydroelectric turbines operate in **closed conduits**, which changes the physics entirely:
+
+1. **Open vs. closed systems** — in a pipe or casing, water cannot "escape" around the blades. Every kilogram of water must pass through the runner. This confinement allows pressure to do work that velocity alone cannot.
+
+2. **Pressure energy vs. kinetic energy** — wind turbines extract kinetic energy from moving air. Hydro turbines mostly extract **potential energy** (head) converted to pressure. The Betz derivation does not apply to pressure-driven systems.
+
+3. **Incompressibility** — water is ~800× denser than air and effectively incompressible. In a wind turbine the stream tube must widen as air slows down. In a pipe the cross-section is fixed, so flow diversion is not an issue.
+
+The exception is **hydrokinetic turbines** (in open rivers or tidal streams without a dam). These sit in open flow just like wind turbines and are subject to the same 59.3% limit.
+
+#### The Three Classic Hydro Turbines
+
+Each is engineered for a specific combination of head (pressure) and flow rate:
+
+**Pelton (Impulse)**
+
+Designed for high head, low flow — mountain streams falling hundreds of metres through a narrow pipe. A nozzle converts pressure to a high-speed jet; the jet strikes spoon-shaped buckets at atmospheric pressure. Energy is extracted purely through momentum change. Because the water jet is concentrated and controlled, efficiencies above **90%** are routine. No open-flow diversion problem, hence no Betz limit.
+
+**Francis (Reaction)**
+
+The most common turbine in the world (Hoover Dam). Designed for medium head and medium-to-high flow. Water enters radially through a spiral casing, passes through the runner blades, and exits axially. It operates fully submerged and uses both velocity and pressure — the pressure drop across the blades "reacts" against them to produce torque. Efficiencies up to **95%**. Fully enclosed, so Betz does not apply.
+
+**Kaplan (Reaction / Propeller)**
+
+Essentially a large ducted propeller. Designed for low head and very high flow — large, slow-moving rivers. Adjustable blades allow it to remain efficient as river levels change through the year. Like the Francis it is a reaction turbine enclosed in a housing, forcing all flow through the runner. Efficiencies typically **90–93%**.
+
+| Turbine | Type | Head | Flow | Best use case |
+| :--- | :--- | :--- | :--- | :--- |
+| **Pelton** | Impulse | High | Low | Mountain / alpine |
+| **Francis** | Reaction | Medium | Medium–High | Large dams |
+| **Kaplan** | Reaction | Low | Very high | Flat rivers, tidal |
+
+The common thread: where a wind turbine must "let go" of some energy just to keep air moving away, these hydro designs control every drop through a closed path — which is why they all exceed the Betz limit comfortably.
