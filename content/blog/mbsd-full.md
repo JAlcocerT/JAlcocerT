@@ -94,12 +94,15 @@ chassis modal
 
 ## MBSD Framework Applications
 
-
-### Augmented Reality Simulations
+From Augmented Reality Simulations, to engine balance, NVH, synthesis...
 
 ### Engine Balance
 
-Every engine in the MBSD series was analysed using the same tool: **phasor analysis**. Each cylinder's reciprocating inertia force is represented as a rotating vector at a given harmonic order ($1\times$, $2\times$, ... engine speed). Sum the vectors for all cylinders — if they cancel, that order is balanced; if they don't, you have a free force or moment that will shake the engine.
+Every engine in the MBSD series was analysed using the same tool: **phasor analysis**. 
+
+Each cylinder's reciprocating inertia force is represented as a rotating vector at a given harmonic order ($1\times$, $2\times$, ... engine speed). 
+
+Sum the vectors for all cylinders — if they cancel, that order is balanced; if they don't, you have a free force or moment that will shake the engine.
 
 The two sources of imbalance are:
 
@@ -151,7 +154,9 @@ Key takeaways from the series:
 
 #### NVH
 
-NVH (Noise, Vibration, Harshness) is what happens *after* the engine balance analysis. Even a perfectly balanced engine produces vibration — combustion pulses, torque ripple, tyre inputs. NVH engineering is the discipline of preventing that energy from reaching the driver.
+NVH (Noise, Vibration, Harshness) is what happens *after* the engine balance analysis.
+
+Even a perfectly balanced engine produces vibration — combustion pulses, torque ripple, tyre inputs. NVH engineering is the discipline of preventing that energy from reaching the driver.
 
 The pipeline across the MBSD posts follows a single chain:
 
@@ -236,16 +241,95 @@ All RMS metrics in the suspension and engine posts are implicitly frequency-weig
 
 ### Synthesis
 
-https://jalcocert.github.io/JAlcocerT/2d-mechanism-synthesis/
-https://github.com/JAlcocerT/mbsd/tree/master/2D-Synthesis
+Mechanism **analysis** asks: given this linkage, what does it do? Mechanism **synthesis** asks the inverse: given what it must do, what linkage should I build? The synthesis posts introduce the three classical tools — one for each layer of the problem.
 
-I just have not been focusing on mechanism for long time.
+The three grandfathers of kinematic synthesis:
 
-But...that time allocation has changed recently.
+- **Grashof** → *Does it work?* — the feasibility check
+- **Freudenstein** → *What are the link lengths?* — the algebraic design tool
+- **Burmester** → *Where do the pivots go?* — the geometric construction for pose generation
 
-Ive been tinkering back :)
+#### Grashof — Feasibility
 
+The **Grashof inequality** determines whether any link in a four-bar can rotate continuously ($360°$) or only rock:
 
+$$s + l \leq p + q$$
+
+where $s$ is the shortest link, $l$ is the longest, and $p$, $q$ are the remaining two. Depending on which link is grounded, the same set of link lengths produces four different mechanisms:
+
+| Grounded link | Mechanism type | Motion |
+| :--- | :--- | :--- |
+| Adjacent to $s$ | Crank-Rocker | Short link rotates; output rocks |
+| Short link $s$ | Double-Crank | Both sides rotate $360°$ |
+| Opposite to $s$ | Double-Rocker | Both sides rock only |
+| Non-Grashof ($>$) | Triple-Rocker | Trapped in an arc — no full rotation |
+
+**Real example from the cycling post** — the human leg as a 4-bar at 60 RPM cadence:
+
+| Link | Physical part | Length |
+| :--- | :--- | :--- |
+| Crank ($s$) | Pedal arm | 170 mm |
+| Coupler | Lower leg (ankle→knee) | 440 mm |
+| Rocker | Upper leg (knee→hip) | 400 mm |
+| Ground | Frame (BB→hip) | 618 mm |
+
+Grashof check: $170 + 618 = 788 \leq 400 + 440 = 840$ ✓ — crank-rocker, full pedal rotation achievable.
+
+#### Freudenstein — Function Generation
+
+Given three precision points (three pairs of input/output angles $\theta_i, \phi_i$), **Freudenstein's equation** linearises the link-length ratios into a $3\times3$ system that can be solved directly by matrix inversion:
+
+$$R_1 \cos\theta - R_2 \cos\phi + R_3 = \cos(\theta - \phi)$$
+
+where $R_1 = L_0/L_3$, $R_2 = L_0/L_1$, $R_3 = (L_0^2 + L_1^2 - L_2^2 + L_3^2)/(2L_1 L_3)$.
+
+Substituting the three precision points gives a $3\times3$ linear system in $(R_1, R_2, R_3)$ — no iteration, no nonlinear solver. From those three ratios you recover the four link lengths directly. This is the fastest route from a functional specification ("output must follow input according to this table of three values") to a physical four-bar.
+
+#### Burmester — Motion Generation
+
+Where Freudenstein solves for function (angle-to-angle), **Burmester theory** solves for **motion generation**: the coupler must pass through a sequence of full poses (position + orientation). For four prescribed poses, the locus of valid fixed pivot locations traces the **center point curve** (a fifth-degree algebraic curve). Intersecting two such curves for the two pivots gives the complete set of four-bars that guide the coupler through all four poses.
+
+Burmester synthesis introduces two classic problems that pure algebra misses:
+
+- **Order problem** — the mechanism may visit the poses in A→C→B order rather than A→B→C
+- **Branch problem** — reaching all poses may require physically dismantling and reassembling the linkage
+
+Both are checked in simulation after synthesis via the Jacobian and position continuity tests.
+
+#### Transmission Angle — The Design Diagnostic
+
+Across both analysis and synthesis the single most useful scalar is the **transmission angle** $\mu$: the angle between the coupler and the output rocker. Force efficiency scales as $\sin(\mu)$:
+
+$$F_{useful} = F_{coupler} \cdot \sin(\mu)$$
+
+At $\mu = 0°$ (toggle point) the output force drops to zero regardless of input — this is a kinematic jam. 
+
+The engineering floor is $\mu > 40°$ throughout the full cycle. 
+
+The transmission angle is a better early-warning metric than $\det(C_q) = 0$ (the mathematical singularity condition) because it is dimensionless, normalised, and has a direct physical interpretation.
+
+The diagnostic checklist from the synthesis post:
+
+| Check | Calculation | Catches |
+| :--- | :--- | :--- |
+| Newton-Raphson convergence | Position solve residual | Kinematic failure, Grashof violation |
+| $\sigma_{min}$ of $C_q$ | SVD of Jacobian | Proximity to singularity |
+| $\mu_{min}$ over full cycle | $\arccos$ of link vectors | Physical jamming, toggle points |
+
+#### From Synthesis to Simulation
+
+Once link lengths pass the Grashof and transmission-angle checks, the mechanism is handed to the constrained dynamics solver. The constraint equations $C(q, t) = 0$ encode the joint topology; the saddle-point system solves positions, velocities, accelerations, and Lagrange multiplier reaction forces in one step:
+
+$$\begin{bmatrix} M & C_q^T \\ C_q & 0 \end{bmatrix} \begin{bmatrix} a \\ \lambda \end{bmatrix} = \begin{bmatrix} Q_{total} \\ \gamma \end{bmatrix}$$
+
+The Lagrange multipliers $\lambda$ are the joint reaction forces — the same forces that feed into FEM for stress analysis. Synthesis provides the geometry; the MBSD solver provides the loads; FEM checks whether the chosen geometry survives them.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/2d-mechanism-synthesis/" title="2D Synthesis | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cycling-and-the-4-bars-mechanism/" title="Cycling & 4-Bar | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/constrained-mechanisms/" title="Constrained Mechanics | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/2d-kinematics-and-dynamics/" title="2D Kinematics & Dynamics | Post" icon="book-open" >}}
+{{< /cards >}}
 
 ---
 

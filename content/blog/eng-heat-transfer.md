@@ -198,7 +198,18 @@ docker compose up -d --build webapp
 
 ### Heat transfer x MBSD x ICE
 
+The **physics of combustion** is a thing on its own...
+
+{{< youtube "Z3ZvxIz20-c" >}}
+
+<!-- https://www.youtube.com/watch?v=Z3ZvxIz20-c -->
+
+'Bro started the video like an engineer and ended  like a philosopher. Great video!'
+
 In an ICE, only about 30% of the fuel's chemical energy reaches the crankshaft as useful work. 
+
+* https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/dinamica-gases-py.md
+* https://github.com/JAlcocerT/mbsd/blob/master/z-destilled-ebook/2d-slidercrank-multicylinder-combustion.md
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics" title="Fluids inside MBSD | Repo" icon="github" >}}

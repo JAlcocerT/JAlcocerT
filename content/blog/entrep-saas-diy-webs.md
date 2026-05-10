@@ -36,6 +36,9 @@ How about **improving CX** for DIYs websites?
 
 ```sh
 #git clone https://github.com/JAlcocerT/poc_webs_magnet
+docker ps -a --filter "name=audit"
+#docker logs --tail 120 auditmagnet-prod
+docker compose -f docker-compose.prod.yml up -d --build #https://webaudit.jalcocertech.com/
 make help
 ```
 

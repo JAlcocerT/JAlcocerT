@@ -319,7 +319,11 @@ I have refined the phrasing for better flow, corrected minor punctuation, and en
 
 1. Rotational Parameterization: Quaternions vs. Euler Angles
 
-Euler angles (roll, pitch, and yaw) suffer from a geometric and mathematical coordinate singularity known as **Gimbal Lock**. This occurs when two of the three rotation axes align. For example, when the pitch angle reaches exactly $\pm90^\circ$, the system loses a degree of freedom and can no longer distinguish between roll and yaw movements. 
+Euler angles (roll, pitch, and yaw) suffer from a geometric and mathematical coordinate singularity known as **Gimbal Lock**. 
+
+This occurs when two of the three rotation axes align.
+
+For example, when the pitch angle reaches exactly $\pm90^\circ$, the system loses a degree of freedom and can no longer distinguish between roll and yaw movements. 
 
 Mathematically, the derivatives governing Euler dynamics require division by the cosine of the pitch; since $\cos(90^\circ) = 0$, the equations collapse. 
 
@@ -357,7 +361,9 @@ If an asymmetric body rotates around its intermediate axis of inertia in zero gr
 
 III. Cardan Joint (Universal Joint) Velocity Anomaly
 
-When connecting two non-aligned shafts with a universal joint, a constant input speed produces an output speed that fluctuates (accelerating and decelerating twice per revolution—a $2\times$ harmonic). This is a purely geometric source of torsional vibration that requires axes to tilt out of the base plane, making it impossible to define in 2D.
+When connecting two non-aligned shafts with a universal joint, a constant input speed produces an output speed that fluctuates (accelerating and decelerating twice per revolution—a $2\times$ harmonic).
+
+This is a purely geometric source of torsional vibration that requires axes to tilt out of the base plane, making it impossible to define in 2D.
 
 IV. Non-Coplanar Degree of Freedom (DOF) Coupling
 
@@ -519,8 +525,3 @@ There are specific engines where you **cannot** ignore the secondary moment:
 * **Inline-5:** As your analysis showed, the I5 has zero secondary force but a non-zero secondary moment. Here, the secondary moment is the *primary* source of the engine's high-frequency "warble."
 * **V6 90°:** The secondary moments are large enough here that they can cause "steering wheel nibble" if not addressed with balance shafts.
 * **Large Displacement Engines:** Because the secondary moment scales with the square of the stroke and the mass of the pistons, a "big block" engine will have secondary moments that are physically powerful enough to shear bolts if left unchecked.
-
-
-
-### References
-

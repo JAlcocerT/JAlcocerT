@@ -2,7 +2,7 @@
 title: "FEM and a SelfOptimizing design loop"
 date: 2026-05-08
 draft: false
-tags: ["MBSD x 3D Simulation","Von Misses"]
+tags: ["MBSD x 3D Simulation","Von Misses","FreeCad X FEM"]
 description: 'Usinng physics guardrails for AI driven design.'
 url: 'fem'
 math: true
@@ -95,6 +95,48 @@ The dimensional reduction idea from the MBSD series still applies here: a 2D pla
 ## Conclusions
 
 MBSD tells you how parts move. FEM tells you whether they survive the trip. 
+
+* https://github.com/JAlcocerT/3Design/blob/main/z-freecad/fem-guide.md
+
+```sh
+#git clone https://github.com/JAlcocerT/3Design
+#freecad
+exec(open("/home/jalcocert/Desktop/3Design/z-freecad/slider_crank_fem.py").read())
+```
+
+```md
+Writing time CalculiX input file: 0.006 seconds.
+
+CalculiX solver run...
+CalculiX finished without error.
+
+CalculiX read results...
+Read ccx results from frd file: /tmp/fcfem_joytblqk/FEMMeshGmsh.frd
+Read ccx results from dat file: /tmp/fcfem_joytblqk/FEMMeshGmsh.dat
+Solver: True
+
+── FEM Results ──────────────────────────────────
+  Motor torque:        10.0 Nm
+  Crank length:        100 mm
+  Applied pin force:   100.0 N
+  Material:            AlMgSi1F31
+  Max von Mises:       2.9595 MPa
+  Mean von Mises:      0.6178 MPa
+  Yield strength:      276 MPa  (Al 6061-T6)
+  Safety factor:       93.26
+  OK — passes static check.
+  Max displacement:    0.0067 mm
+─────────────────────────────────────────────────
+
+```
+
+![alt text](/blog_img/data-experiments/freecad-fem.png)
+
+
+{{< callout type="warning" >}}
+FreeCAD FEM is a first-pass sanity check, not a production analysis tool.
+{{< /callout >}}
+
 
 Running them in sequence — loads from dynamics, stress from FEM, geometry update, repeat — is what the self-optimising loop in the title actually means.
 

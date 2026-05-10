@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Media"
-date: 2026-05-10T00:20:21+01:00
+date: 2026-05-11T00:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
 description: 'Organizing my media server with agents. Code too with forgejo.'
@@ -43,16 +43,19 @@ I know, you might be already familiar with **PairDrop**
 
 ## Music Media
 
-https://github.com/BernardoGiordano/rewind
-
 https://github.com/Fingel/gelly
 
 >  A native, lightweight music client for Jellyfin and Subsonic. Built with Rust and GTK. 🦀🐧 
 
 ### Podcasts or Transcripts
 
+Not telling you to remember that you can have your own podcast
+
+Neither that with some S2T transcripts, ffmpeg and yt-dl you can do sth nice:
+
 ```sh
 cd /poc/yt-distil
+#tmux new-session -d -s yt 'cd /home/jalcocert/poc/yt-distil && uv run yt-distil run "https://www.youtube.com/watch?v=qsXxckCbci0" --no-qna -y'
 
 ```
 
@@ -64,7 +67,9 @@ Im sure that you are already using qb and prowlarr at `6011` and `9696`.
 And that you know how to quickly join your videos via FFMPEG:
 
 ```sh
-sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d prowlarr
+sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml up -d prowlarr
+#sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d prowlarr
+
 #ffmpeg for oa5!
 ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
@@ -86,6 +91,11 @@ Because you will want to move those action cam videos:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+<!-- https://www.youtube.com/watch?v=lRwGtPek1FQ -->
+
+{{< youtube id="lRwGtPek1FQ" autoplay="false" >}}
+
 
 And share them with your friends :)
 
@@ -223,10 +233,19 @@ https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicat
 
 ## Conclusions
 
+
+
+
+
 ```sh
 docker ps -a --filter status=exited --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'
 ```
 
+Problems with cognitive dilution due to AI usage?
+
+You might be seeking for a proper knowledge base for the agentic era.
+
+Why not starting using AI to make projects you could only dream about?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}

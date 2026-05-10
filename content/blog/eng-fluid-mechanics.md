@@ -9,17 +9,15 @@ math: true
 ---
 
 
-
-https://github.com/JAlcocerT/mbsd/blob/master/z-destilled-ebook/2d-slidercrank-multicylinder-combustion.md
-
 **TL;DR**
 
 How about bringing fluid mechanics to the ICEs?
 
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics" title="Fluids inside MBSD | Repo" icon="github" >}}
 {{< /cards >}}
+
++++ migrated to [py the good old MCIA model](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/dinamica-gases-py.md)
 
 
 **Intro**
@@ -92,13 +90,20 @@ $$P = \rho R T$$
 
 ### For an ICE: From Crank Angle to Cylinder Pressure
 
-Inside a cylinder, the volume changes with crank angle $\theta$ following the slider-crank geometry (which you already know from the MBSD posts). Assuming an ideal Otto cycle, the pressure during the compression and expansion strokes follows a **polytropic** process:
+Inside a cylinder, the volume changes with crank angle $\theta$ following the slider-crank geometry (which you already know from the MBSD posts). 
+
+* https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/dinamica-gases-py.md
+* https://github.com/JAlcocerT/mbsd/blob/master/z-destilled-ebook/2d-slidercrank-multicylinder-combustion.md
+
+Assuming an **ideal Otto cycle**, the pressure during the compression and expansion strokes follows a **polytropic** process:
 
 $$P V^\gamma = \text{const}$$
 
 where $\gamma = c_p / c_v \approx 1.35$ for hot combustion gases. This gives you the pressure trace $P(\theta)$ that acts on the piston crown — the force input that the MBSD engine models take as given.
 
-The combustion event itself adds a spike on top: the heat release from burning fuel raises temperature almost instantaneously at TDC, which via the ideal gas law drives a sharp pressure rise. Integrating $P(\theta)$ over the piston area and projecting along the connecting rod gives you exactly the slider force that feeds into the dynamics.
+The combustion event itself adds a spike on top: the heat release from burning fuel raises temperature almost instantaneously at TDC, which via the ideal gas law drives a sharp pressure rise.
+
+Integrating $P(\theta)$ over the piston area and projecting along the connecting rod gives you exactly the slider force that feeds into the dynamics.
 
 This is the loop: fluid mechanics computes the gas forces → MBSD propagates them through the mechanism → FEM checks whether the parts survive the resulting stress.
 
@@ -119,29 +124,32 @@ But similarly as I did with [the bike simulator](https://jalcocert.github.io/JAl
 
 ## Conclusions
 
-
+Im still amazed at people like `FarmCraft101` and their subs who provide OSS cad design for a new turbine which x2 the energy collection:
 
 <!-- https://www.youtube.com/watch?v=gXHXrdzIt38 -->
 
 {{< youtube "gXHXrdzIt38" >}}
 
+Crazy....
 
 This is being the year of bridging concepts.
 
 I would have never guessed how, where and when I would be coming back to them.
 
+The executing speed is less of a problem
 
+The blocker is being more about knowledge management.
+
+For that, you can always:
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
 ---
 
 ## FAQ
-
-
 
 
 ### Volumetric efficiency
@@ -190,28 +198,16 @@ A VE map measured on a dyno (or estimated from pressure-trace data) is exactly t
 
 VE map reference: [Tactrix open-source ECU data](https://www.tactrix.com/index.php?option=com_content&view=category&layout=blog&id=36)
 
-### References
 
-The **physics of combustion** is a thing on its own...
-
-{{< youtube "Z3ZvxIz20-c" >}}
-
-<!-- https://www.youtube.com/watch?v=Z3ZvxIz20-c -->
-
-'Bro started the video like an engineer and ended  like a philosopher. Great video!'
-
-**Tl;DR**
-
-**Intro**
-
-
-## The Analogy
+### The Analogy
 
 Heat can be related to electro-magnetism, remember?
 
 We can bring fluid variables to that same play:
 
-In fact, the "Triple Analogy" between **Electricity, Heat, and Fluid Mechanics** is one of the most elegant corners of physics. When you combine them, you get what engineers call **Lumped Element Modeling**.
+In fact, the "Triple Analogy" between **Electricity, Heat, and Fluid Mechanics** is one of the most elegant corners of physics. 
+
+When you combine them, you get what engineers call **Lumped Element Modeling**.
 
 Just as we mapped heat to electricity, we can map fluid flow to both. The "Master Variable" in fluid mechanics that corresponds to Voltage or Temperature is **Pressure**.
 
@@ -227,9 +223,6 @@ If you can visualize water flowing through a pipe, you can understand a circuit 
 | **Resistance ($R$)** | **Thermal Resistance ($R_{th}$)** | **Hydraulic Resistance ($R_h$)** |
 | **Capacitance ($C$)** | **Thermal Mass ($C_{th}$)** | **Compliance / Tank Volume** |
 | **Inductance ($L$)** | *(No direct simple analog)* | **Inertance (Fluid Mass/Inertia)** |
-
-
-
 
 
 2. How Fluid Components "Mimic" the Others
@@ -276,19 +269,8 @@ While the "math" matches up beautifully for **Laminar Flow** (smooth water), it 
 
 Does adding the "Pressure" and "Pipes" layer make the concept of Heat Resistance feel more like a physical "obstacle" to you?
 
----
 
-## Conclusions
-
-Problems with cognitive dilution due to AI usage?
-
-Why not starting using AI to make projects you could only dream about?
-
-
-
----
-
-## FAQ
+### Tools
 
 1. https://github.com/projectchrono/chrono
 
@@ -300,7 +282,7 @@ Why not starting using AI to make projects you could only dream about?
 
 ---
 
-### OSS Programs and Python Libraries for Fluid Mechanics
+#### OSS Programs and Python Libraries for Fluid Mechanics
 
 **Can FreeCAD do this?**
 
