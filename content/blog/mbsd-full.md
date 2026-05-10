@@ -151,8 +151,90 @@ Key takeaways from the series:
 
 #### NVH
 
+NVH (Noise, Vibration, Harshness) is what happens *after* the engine balance analysis. Even a perfectly balanced engine produces vibration — combustion pulses, torque ripple, tyre inputs. NVH engineering is the discipline of preventing that energy from reaching the driver.
 
-#### Synthesis
+The pipeline across the MBSD posts follows a single chain:
+
+```
+Engine (source) → Mounts → Block/Chassis → Suspension → Cabin → Driver
+```
+
+Each stage has a transfer function that either amplifies or attenuates the vibration passing through it.
+
+**Stage 1 — Engine as a vibration source**
+
+The phasor analysis from the engine balance section quantifies what the engine puts into the mounts. Key outputs per engine family:
+
+| Engine | Dominant free force | Dominant free moment | Peak amplitude (example) |
+| :--- | :--- | :--- | :--- |
+| I4 | $2\times$ vertical | None | 78.96 N secondary force |
+| I5 | None | $1\times$ rocking | 66.56 N·m primary moment |
+| V6 60° | None | $1\times$ rocking couple | Mount-position dependent |
+| Flat-plane V8 | $2\times$ lateral | None | Needs counter-rotating shafts |
+| Cross-plane V8 | None | None | Clean — rumble is firing-order acoustics only |
+| I6 / V12 | None | None | Inherently zero — no shafts needed |
+
+The rod ratio $R/L$ scales the $2\times$ component linearly — longer rods reduce secondary forces, which is why performance engines favour high rod ratios.
+
+**Stage 2 — Mount transmissibility**
+
+The engine sits on rubber or hydraulic mounts. Their job is to present high stiffness at low frequency (to locate the engine) and low transmissibility at the excitation frequencies. The 1-DOF transmissibility is:
+
+$$T(r, \zeta) = \sqrt{\frac{1 + (2\zeta r)^2}{(1 - r^2)^2 + (2\zeta r)^2}}$$
+
+where $r = \omega / \omega_n$ is the frequency ratio. Isolation only begins above $r = \sqrt{2}$, so the mount natural frequency $\omega_n$ must be placed well below the lowest engine harmonic:
+
+| Mount type | Typical $\omega_n$ | Damping $\zeta$ | Best for |
+| :--- | :--- | :--- | :--- |
+| Soft rubber | ~8 Hz | 0.05–0.10 | Passenger car comfort |
+| Stiff rubber | ~25 Hz | 0.10–0.15 | Sport / truck (load handling) |
+| Hydraulic | Frequency-dependent | High near resonance, low above | Best of both — used in premium cars |
+
+A 3-point mount layout for a transverse I4 (block mass ~150 kg, $I_z \approx 4\,\text{kg·m}^2$) must be tuned so all 6-DOF rigid-body modes (lateral $F_x$, vertical $F_y$, pitch $M_{pitch}$, yaw $M_{yaw}$, roll $M_{roll}$) fall below the $2\times$ idle excitation frequency (~33 Hz at 1000 rpm idle).
+
+**Stage 3 — Suspension: the Pareto front**
+
+The quarter-car model (sprung mass $m_s$ + unsprung mass $m_u$, spring $k_s$, damper $c_s$) gives three conflicting objectives that cannot all be minimised simultaneously:
+
+- **Comfort** — minimise sprung mass acceleration (cabin floor $g$-level)
+- **Road holding** — minimise tyre load variation (contact patch stays loaded)
+- **Suspension travel** — minimise rattle-space requirement
+
+Sweeping $k_s$ and $c_s$ across the design space and evaluating all three metrics traces a **Pareto front** — any point on it is optimal in the sense that improving one objective worsens another.
+
+Typical production pockets from the series:
+
+| Segment | $k_s$ | $c_s$ | $\zeta$ |
+| :--- | :--- | :--- | :--- |
+| Luxury | ~15 kN/m | ~1000 N·s/m | 0.24 |
+| Family | ~22 kN/m | ~1500 N·s/m | 0.35 |
+| Sport | ~35 kN/m | ~2500 N·s/m | 0.50 |
+| Truck | ~55 kN/m | ~4000 N·s/m | 0.62 |
+
+The body-bounce resonance sits at ~1.3 Hz for a typical family car. Passive damping that flattens this peak worsens high-frequency isolation — this is the fundamental Pareto trade-off.
+
+**Stage 4 — Active and semi-active control**
+
+Active control escapes the Pareto front by making $c_s$ frequency-dependent in real time.
+
+- **Skyhook** — conceptually anchors the damper to an inertial frame ("the sky") rather than relative velocity. Reduces body-bounce RMS by ~12% on smooth highway vs. passive baseline.
+- **Karnopp switching** (semi-active) — approximates ideal skyhook using a controllable valve; switching transients cost ~4% performance vs. ideal but requires no hydraulic actuator.
+- **LMS adaptive filter** (active) — feedforward controller using road preview; performance degrades when actuator delay pushes phase margin below 0° (Nyquist encirclement of $(-1,0)$).
+
+The stability check for any active suspension loop uses the transfer function $G(s) = Y(s)/U(s)$ in the Laplace domain — poles in the right half-plane indicate instability, visible directly on a pole-zero plot without solving the full ODE.
+
+**ISO 2631 — the human weighting filter**
+
+All RMS metrics in the suspension and engine posts are implicitly frequency-weighted by **ISO 2631**, which models human sensitivity to vibration. The weighting peaks around 4–8 Hz for vertical vibration (where humans are most sensitive) and rolls off at low and high frequencies. A $2\times$ engine harmonic at idle (~33 Hz) is weighted lower than the body-bounce resonance at 1.3 Hz even if its raw amplitude is larger — which is why mount tuning focuses on the $\sqrt{2}\,\omega_n$ criterion rather than raw force magnitudes.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/engine-nvh-visuals/" title="Engine NVH Visuals | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/suspension-nvh-visuals/" title="Suspension NVH Visuals | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/v6-engine-analysis/" title="V6 + Engine Mounts | Post" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/pid-control/" title="PID + Control Theory | Post" icon="book-open" >}}
+{{< /cards >}}
+
+### Synthesis
 
 https://jalcocert.github.io/JAlcocerT/2d-mechanism-synthesis/
 https://github.com/JAlcocerT/mbsd/tree/master/2D-Synthesis
