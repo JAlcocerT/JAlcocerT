@@ -281,16 +281,18 @@ I was using Immich wrong:
 * `/data/compose/14/library`  -> mounted into immich_server as /usr/src/app/upload
 * `/data/compose/14/postgres` -> mounted into immich_postgres as /var/lib/postgresql/data
 
-  Breakdown:
+Breakdown:
 
-  50G   /data/compose/14/library/upload
-  6.8G  /data/compose/14/library/encoded-video
-  669M  /data/compose/14/library/thumbs
-  314M  /data/compose/14/library/backups
+50G   /data/compose/14/library/upload
+6.8G  /data/compose/14/library/encoded-video
+669M  /data/compose/14/library/thumbs
+314M  /data/compose/14/library/backups
 
-Go to: http://192.168.1.2:2283/map#12.43/36.33211/-6.14777
+Go to: `http://192.168.1.2:2283/map#12.43/36.33211/-6.14777`
 
 ![alt text](/blog_img/selfh/media/immich.png)
+
+I still appreciate their map feature:
 
 ![alt text](/blog_img/selfh/media/immich2.png)
 
@@ -305,33 +307,35 @@ Immich stores files in an app-managed layout, not a human folder layout.
 
   Example:
 
-  /mnt/data2tb/immich/library/upload/<user-id>/<hash folders>/<asset-id>.jpg
-  /mnt/data2tb/immich/library/thumbs/<user-id>/...
-  /mnt/data2tb/immich/library/encoded-video/<user-id>/...
+/mnt/data2tb/immich/library/upload/<user-id>/<hash folders>/<asset-id>.jpg
+/mnt/data2tb/immich/library/thumbs/<user-id>/...
+/mnt/data2tb/immich/library/encoded-video/<user-id>/...
 
-  That is normal for Immich. It uses UUIDs, hash-like subfolders, thumbnails, encoded video copies, metadata, and a Postgres database to know what each file actually is. The folder
-  names are optimized for the app, not for browsing manually.
+That is normal for Immich. It uses UUIDs, hash-like subfolders, thumbnails, encoded video copies, metadata, and a Postgres database to know what each file actually is. The folder
+names are optimized for the app, not for browsing manually.
 
-  Nextcloud feels different because it exposes a user-facing filesystem:
+Nextcloud feels different because it exposes a user-facing filesystem:
 
-  nextcloud/data/<user>/files/Photos/...
-  nextcloud/data/<user>/files/Documents/...
+nextcloud/data/<user>/files/Photos/...
+nextcloud/data/<user>/files/Documents/...
 
-  So Nextcloud’s storage mirrors what users see in the web UI. Immich’s storage is closer to an internal media database: the UI, albums, dates, people, locations, and search come from
-  its database and generated assets, not from nice folder names.
+So Nextcloud’s storage mirrors what users see in the web UI. Immich’s storage is closer to an internal media database: the UI, albums, dates, people, locations, and search come from
+its database and generated assets, not from nice folder names.
 
-  Short version: Nextcloud is file-first. Immich is photo-library-first.
+Short version: Nextcloud is file-first. Immich is photo-library-first.
 
-So i said bye to immich:
+So, I said **bye to immich**:
 
 ```sh
 sudo rm -rf /data/compose/14
 ```
 
-### How to SFTP GO
+### How to SFTP Go
 
+
+```sh
 docker ps -a --filter name=sftp --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'
-
+```
 
 ---
 

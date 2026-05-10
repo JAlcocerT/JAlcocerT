@@ -2,22 +2,25 @@
 title: "Fluids"
 date: 2026-05-06
 draft: false
-tags: ["Fluid Dynamics","Betz"]
+tags: ["Fluid Dynamics","Betz","Volumetric Efficiency"]
 description: 'The physics of fluids.'
 url: 'fluids'
 math: true
 ---
 
-https://www.youtube.com/watch?v=gXHXrdzIt38
 
-
-https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics
 
 https://github.com/JAlcocerT/mbsd/blob/master/z-destilled-ebook/2d-slidercrank-multicylinder-combustion.md
 
 **TL;DR**
 
 How about bringing fluid mechanics to the ICEs?
+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics" title="Fluids inside MBSD | Repo" icon="github" >}}
+{{< /cards >}}
+
 
 **Intro**
 
@@ -45,9 +48,13 @@ https://www.youtube.com/watch?v=7xwODOr-xTo
 
 ### The Missing Half of the MBSD Picture
 
-Every engine post in the MBSD series treated the combustion force as a known input — a prescribed pressure pushing the piston down at the right moment. That is a clean assumption for studying crankshaft balance and NVH, but it hides the question: *where does that force actually come from?*
+Every engine post in the MBSD series treated the combustion force as a known input — a prescribed pressure pushing the piston down at the right moment. 
 
-The answer is fluid mechanics. Specifically, the thermodynamics of a gas being compressed and then ignited. Fluid mechanics is the discipline that lets you compute $P(\theta)$ — the cylinder pressure as a function of crank angle — rather than just assuming it.
+That is a clean assumption for studying crankshaft balance and NVH, but it hides the question: *where does that force actually come from?*
+
+The answer is fluid mechanics. 
+
+Specifically, the thermodynamics of a gas being compressed and then ignited. Fluid mechanics is the discipline that lets you compute $P(\theta)$ — the cylinder pressure as a function of crank angle — rather than just assuming it.
 
 The conceptual shift mirrors the one from MBSD to FEM:
 
@@ -112,13 +119,18 @@ But similarly as I did with [the bike simulator](https://jalcocert.github.io/JAl
 
 ## Conclusions
 
+
+
+<!-- https://www.youtube.com/watch?v=gXHXrdzIt38 -->
+
+{{< youtube "gXHXrdzIt38" >}}
+
+
 This is being the year of bridging concepts.
 
 I would have never guessed how, where and when I would be coming back to them.
 
-Will I write about heat transfer and electrical engineering?
 
-who knows :)
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
@@ -134,12 +146,49 @@ who knows :)
 
 ### Volumetric efficiency
 
-<!-- <https://www.youtube.com/watch?v=1eRsaOxxiUc> -->
-
 {{< youtube "1eRsaOxxiUc" >}}
 
+**Volumetric efficiency** ($\eta_v$) measures how well an engine breathes — how much fresh charge actually enters the cylinder compared to what could theoretically fit:
 
-VE map - https://www.tactrix.com/index.php?option=com_content&view=category&layout=blog&id=36
+$$\eta_v = \frac{m_{actual}}{m_{ideal}} = \frac{\text{mass of air-fuel charge inducted}}{\rho_{ambient} \cdot V_{displacement}}$$
+
+A naturally aspirated engine at peak torque typically reaches $\eta_v \approx 85\text{–}95\%$. 
+
+The gap from 100% comes from several fluid-mechanical losses:
+
+| Loss source | Mechanism | Effect on $\eta_v$ |
+| :--- | :--- | :--- |
+| **Intake restriction** | Throttle, filter, port — pressure drop reduces charge density | $-5$ to $-15\%$ |
+| **Residual gases** | Hot exhaust gases left in clearance volume displace fresh charge | $-5$ to $-10\%$ |
+| **Charge heating** | Intake port and valve heat the incoming air, reducing density | $-3$ to $-8\%$ |
+| **Late intake valve closing** | At high RPM, inertia can ram extra charge in (beneficial) or cause backflow (harmful) | $\pm$variable |
+| **Valve curtain area** | Flow is choked by the annular gap at the valve seat | RPM-dependent |
+
+#### The VE–RPM Curve
+
+VE is not a fixed number — it varies with engine speed, and its shape is what engine tuners care about:
+
+- At **low RPM**: slow piston velocity means low charge inertia; the intake valve closes before the cylinder is full → low VE
+- At **peak torque RPM**: intake runner length is tuned so pressure waves arrive just before valve closing, ram-charging the cylinder → peak VE
+- At **high RPM**: flow velocity through the valves approaches sonic limits; viscous and inertia losses dominate → VE drops
+
+This is why intake runner length is tuned for a target RPM band.
+
+Short runners favour high-RPM power; long runners favour mid-range torque. 
+
+Variable-length intake manifolds (Honda VTEC, BMW Valvetronic, Toyota VVTL-i) shift the VE peak across the rev range.
+
+#### VE Map
+
+In engine management, VE is stored as a **2D lookup table** (map) indexed by RPM and throttle position (or manifold pressure). The ECU multiplies the map value by ambient air density to compute the injected fuel mass — this is the basis of **speed-density fuelling**:
+
+$$m_{fuel} = \frac{\eta_v \cdot \rho_{air} \cdot V_{disp} \cdot n}{2 \cdot \lambda \cdot AFR_{stoich}}$$
+
+where $n$ is engine speed (rev/s), the factor of 2 accounts for the 4-stroke cycle, $\lambda$ is the air excess ratio, and $AFR_{stoich}$ is the stoichiometric air-fuel ratio (~14.7 for petrol).
+
+A VE map measured on a dyno (or estimated from pressure-trace data) is exactly the kind of table that feeds into the 0D combustion model from the heat transfer post — it sets the initial charge mass, which determines peak pressure and therefore the combustion force on the piston crown.
+
+VE map reference: [Tactrix open-source ECU data](https://www.tactrix.com/index.php?option=com_content&view=category&layout=blog&id=36)
 
 ### References
 

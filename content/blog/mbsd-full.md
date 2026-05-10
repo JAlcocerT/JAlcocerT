@@ -8,13 +8,15 @@ url: 'design-centric-mbsd'
 math: true
 ---
 
-https://github.com/JAlcocerT/engine-balance
-https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics
-https://github.com/JAlcocerT/mechanism
 
 **TL;DR**
 
 The start of a system to **ship mechanisms as a code**.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics" title="Previous MBSD | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd/3Design" title="3Design | Repo" icon="github" >}}
+{{< /cards >}}
 
 **Intro**
 
@@ -24,11 +26,11 @@ The era of drag and drop its slowly going to an end.
 
 And the time for concepts, semantics and **orchestrating outcomes**.
 
-
 I consolidated the initial mbsd repo via: https://github.com/juliusbrussee/caveman just to save tokens.
 
 ## Gabe Morris - Mechanism
 
+The one I forked because its so great: https://github.com/JAlcocerT/mechanism
 
 ```sh
 git clone https://github.com/JAlcocerT/mechanism
@@ -120,18 +122,55 @@ Ive been tinkering back :)
 
 ## Conclusions
 
-Believe it or not: this is another industry getting shaped by AI capabilities.
+Believe it or not: this is another industry getting shaped by AI capabilities:
 
-Because if mechanism 3D dynamics its *kind of* trivial now.
+- **Blender**: photorealistic rendering, rigged animation, organic shapes, video editing — see `z-cadquery/blender_scene.py`.
+- **FreeCAD**: assembly constraints, FEM simulation, technical drawings (TechDraw workbench), importing STEP/IGES from suppliers.
 
-So is web development.
+```sh
+sudo apt install openscad
+#cd ./Design/z-openscad
+make animate FRAME=60
+#  ffmpeg -stream_loop 9 -i slider_crank_os.mp4 -c copy slider_crank_os_10x.mp4
+```
+
+The sweet spot for OpenSCAD is **parametric mechanical parts and automated STL pipelines** — exactly what this folder does.
+
+
+Because if mechanism 3D dynamics its *kind of* trivial now: *at least with improved workflows like this one!*
+
+```
+kinematics.py  ──►  OpenSCAD  ──►  CadQuery  ──►  FreeCAD  ──►  Blender
+  (math)           (quick check)   (BREP/STEP)    (FEM/draw)   (render)
+```
+
+See [the mindmap](https://mermaid.live/edit#pako:eNplVE1vGzcQ_SsDnhJAFbxWLNW6OZJduJBRN3YvhS40OdpltfzokLS9MfwXigbJPceiQNBr_1Z-QmdX2k2q6CBwl4-cN--92SehvEYxF9Y4bWVYOwDyPr14MVliNKVbr93ZJVybgLVx-PJlCwD4_PGvf-BKpgpWskHavQTYMsTKZFQch6Z_qWWS49-id7DFZkPSYuy3zkp0aQ7xATHAG5BOwwpIuvIbiMaEKkE0rsy1JJNMD_n88f2f8FNAd7M4W_anLmRMUKK3mKiBKJ1JDagK1bZHLFaXXb0rucWNqRE0mXt0_fYVH9n4WsPN7Qo2niCQTz41gQkcUON_JJkQxlFJDRvyFmJAdQC7k0lVQOg0ElcuuWTXd9_Fh79hIfXPGWlQ7vWb8-uO5M0tL_AxeEr93vmjZD2YeY0pdqBUEUo9CHedCeG6SZV3I3AefvjlEhyiRn1A7IHVRAiSWF5FJvB1XQ_a2EMXZAh1sy8KEWu2xNPgw4dPcEGIX9twfgUxEcYdQ15KM0h8i6paknxoC6GLxjtkSIXcTw_p-ja27Xuva2YGBumQWNv5rkS2luMRsavtcwo5HWA3tSyh8ikG3yp35--x0y5W7Hffyx-f4HXdeTXoyUc816lN5ICD8tYiKSPrvadDFWd4BLgVxUkn2bGqTVmlr5JzF5p93qBi5jULVDeHecmG4xcVp2vvRz9HB8CUGdGWJCYT_1cPyJSDPe_-hVUr07kreUw5hBde5UHIJU8B30P4ezaEbMg-Vcq7nW1fXFlU3rPAlv3jKYkWkg--9uXQwY9ZlzsDWNVc800OJTEra77cchZ4pFrpfc0yOYWxmzMrXd5wtDm9Qz1WPbFYHBTixHFQOiTz_Ub8JSqjER4qVjZ54GB3k3kfOViGR02MRElGi3mijCPBBlnZPoqn9oa1SBW3vhZzXmpJ27VYu2c-E6T71XvbHyOfy0rMNyw3P-XAzuDSyJK_bQOko7Xw2SUxPz3urhDzJ_Eo5t8VRTE-fVUUr46ns2I6mRXfj0Qj5sXpeNL-Tk4nRydH0-nx80i87aoWYwafnEyLYjI7nkyPZrPn_wDcPuWa)
+
+Each tool has a distinct role — they are not interchangeable:
+
+| Stage | Tool | Job | Output |
+|-------|------|-----|--------|
+| 1 | **Python** (`kinematics.py`) | Solve positions, angles, constraints per frame | `data.json` |
+| 2 | **OpenSCAD** | Fast visual sanity check; lightweight STL for prototyping | `.stl`, `.png` |
+| 3 | **CadQuery** | Production-quality BREP geometry, exact fillets/threads | `.step`, `.stl` |
+| 4 | **FreeCAD** | FEM stress analysis, tolerance checks, technical drawings | `.pdf`, `.fcstd` |
+| 5 | **Blender** | Photorealistic commercial renders and animations | `.mp4`, `.png` |
+
+
+> Yea, openScad does [not render as beautiful](https://youtu.be/fPi-L7Qn7Xw) as blender does
+
+You need some guardrails not to end up like [the engine balance test](https://github.com/JAlcocerT/engine-balance)
+
+
+
+So... even more trivial is web development:
 
 ```sh
 #git clone https://github.com/JAlcocerT/Slider-Crank
 cd ./Slider-Crank/landing #https://multibodysystemdynamics.pages.dev/
 ```
 
-And here is the JAlcocerTech whitepaper about it.
+And here is the JAlcocerTech whitepaper about **AI powered design**.
 
 All models are wrong; some are useful.
 

@@ -1,5 +1,5 @@
 ---
-title: "Heat Transfer"
+title: "Heat Transfer (+ Go Solar PoC)"
 date: 2026-05-07
 draft: false
 tags: ["Black-Scholes","Fluid Dynamics","Ptolomeo","VPD","HeatraPy vs PyScipe"]
@@ -10,7 +10,9 @@ math: true
 
 **Tl;DR**
 
-Lisa, in this house...
+Lisa, in this house we obey the laws of thermodynamics. 
+
+Heat transfer is the fourth leg of the engineering loop: fluid mechanics computes combustion forces, MBSD propagates them through the mechanism, FEM checks if parts survive mechanically — and heat transfer tells you whether they survive thermally.
 
 **Intro**
 
@@ -19,6 +21,21 @@ Who could have guessed that behind some IoT for watering plants you could find o
 That can be also very helpful if your are planning to automate the windows of a future greenhouse with a PID.
 
 who.could.have.guessed.
+
+But there is a more direct line back to the MBSD series. Every engine post assumed rigid, isothermal parts.
+
+In reality, a crankshaft running at 6000 rpm is also a heat exchanger — combustion gases heat the piston crown, the cylinder wall carries that heat to the coolant, and the material properties of every part change with temperature. 
+
+A crank that passes FEM at room temperature may fail at operating temperature because yield strength drops. That is the domain of heat transfer.
+
+The full engineering loop across these posts is:
+
+| Discipline | Question | Feeds into |
+| :--- | :--- | :--- |
+| **Fluid mechanics** | Where do the combustion forces come from? | MBSD |
+| **MBSD** | How do bodies move under those forces? | FEM + Heat |
+| **FEM** | Does the part survive the mechanical load? | Design loop |
+| **Heat transfer** | Does the part survive the thermal load? | Design loop |
 
 ## The HEAT Physics
 
@@ -169,9 +186,26 @@ docker compose up -d --build webapp
 
 ### Heat transfer x MBSD x ICE
 
-Some time ago I had to make one fluid mechanics project in Matlab.
+In an ICE, only about 30% of the fuel's chemical energy reaches the crankshaft as useful work. The rest must go somewhere:
 
-its also time to have it in python, specially this month that im paying claude max.
+| Energy path | Share |
+| :--- | :--- |
+| Crankshaft (useful work) | ~30% |
+| Exhaust gases | ~30% |
+| Cooling system (heat transfer problem) | ~30% |
+| Friction and misc losses | ~10% |
+
+The cooling system share is a heat transfer problem in exactly the sense of the theory above: conduction through the piston crown and cylinder wall, convection to the coolant, and radiation from the exhaust manifold.
+
+**Why it matters for the MBSD design loop:**
+
+- **Piston crown**: surface temperatures reach 300–400 °C during the power stroke. Steel yield strength at 400 °C is roughly 70% of its room-temperature value — so the FEM stress check must use temperature-dependent material properties, not datasheet values.
+- **Exhaust valves**: face temperatures 700–800 °C. This is why exhaust valves are often sodium-filled (sodium melts and sloshes, carrying heat from the face to the stem) or made from Inconel instead of steel.
+- **Thermal expansion**: a piston at 300 °C expands by roughly $\alpha \Delta T \cdot D \approx 12 \times 10^{-6} \times 250 \times 90 \approx 0.27\,\text{mm}$ diametrically. This is why piston-to-bore clearances are set cold — the gap closes at temperature.
+
+The heat path is: combustion gas → piston crown (conduction) → piston rings → cylinder wall (conduction) → coolant (convection) → radiator (convection + radiation). Each interface has a thermal resistance; minimising the total resistance is the thermal design problem.
+
+Some time ago I had to make a fluid mechanics project in Matlab — it is time to bring it to Python.
 
 ### Solar (Thermal) Power
 
@@ -299,12 +333,137 @@ Are you looking to create a visual "heat map" of an object, or just calculate th
 
 ## Conclusions
 
-✅
+Heat transfer closes the loop that MBSD, fluid mechanics, and FEM opened.
+
+The combustion event produces forces (fluid), the forces drive motion (MBSD), the motion subjects parts to stress (FEM), and the same combustion event heats those parts — changing the material properties that FEM relied on. 
+
+Run them in sequence and you have a physics-grounded design loop. 
+
+Skip heat transfer and you are doing structural analysis with wrong material data.
 
 
 ---
 
 ## FAQ
+
+### Can FreeCAD do this?
+
+Yes. The **FEM Workbench** in FreeCAD handles thermal analysis alongside structural:
+
+- **Steady-state heat conduction**: apply a fixed temperature to one face, a convective boundary condition to another (you supply $h$ and $T_\infty$), and CalculiX solves for the temperature field and heat flux through the part
+- **Coupled thermo-mechanical**: run a thermal solve first, map the temperature field onto the structural mesh as a load, then run FEM — this is how you get thermally-corrected stress results
+- **Workflow**: the same STEP geometry used for structural FEM works unchanged; you just switch the analysis type and boundary conditions
+
+For the ICE use case: import the piston geometry from CadQuery, apply $T = 380\,°C$ on the crown face and a convective BC ($h = 3000\,\text{W/m}^2\text{K}$, $T_\infty = 90\,°C$) on the skirt, run CalculiX, and read off the temperature gradient and peak heat flux.
+
+---
+
+### A Minimal Heat Transfer Example in Python
+
+The following simulates 1D transient conduction through a piston crown using finite differences — the same physics as the heat diffusion equation $\partial T / \partial t = \alpha \nabla^2 T$, discretised by hand:
+
+```python
+import numpy as np
+
+# 1D transient conduction through a piston crown
+# Steel: k = 50 W/m·K, rho = 7800 kg/m³, cp = 500 J/kg·K
+k, rho, cp = 50, 7800, 500
+alpha = k / (rho * cp)   # thermal diffusivity m²/s ≈ 1.28e-5
+
+L  = 0.010   # 10 mm crown thickness
+N  = 20      # nodes
+dx = L / (N - 1)
+dt = 0.4 * dx**2 / alpha   # explicit stability: CFL < 0.5
+
+T = np.full(N, 90.0)       # start at coolant temperature
+T_hot  = 380.0             # combustion-side BC (°C)
+T_cool = 90.0              # coolant-side BC (°C)
+
+for _ in range(int(5.0 / dt)):   # simulate 5 s
+    T[1:-1] += alpha * dt / dx**2 * (T[2:] - 2*T[1:-1] + T[:-2])
+    T[0]  = T_hot
+    T[-1] = T_cool
+
+q_flux = k * (T[0] - T[1]) / dx   # W/m²
+
+print(f"Steady crown temperature profile: {T[[0,N//2,-1]].round(1)} °C")
+print(f"Heat flux into coolant: {q_flux/1e3:.1f} kW/m²")
+# → same q you would plug into Newton's law of cooling to size the coolant flow
+```
+
+The boundary conditions here feed directly into the convection calculation: the heat flux $q$ at the wall is what Newton's law of cooling ($q = h(T_s - T_\infty)$) must carry away. Size the coolant flow rate to handle that flux and you have closed the thermal design loop.
+
+---
+
+### Combustion Models and Heat Release
+
+The piston crown temperature used in the example above ($380\,°C$) has to come from somewhere — that is the combustion model's job. A combustion model computes the **heat release rate** $\dot{Q}(\theta)$ as a function of crank angle, which is what drives the in-cylinder temperature and pressure trace $P(\theta)$ from the fluids post.
+
+Models are ranked by complexity and computational cost:
+
+#### 0D / Single-Zone Models (Thermodynamic)
+
+The entire cylinder contents are treated as one uniform zone — one temperature, one pressure, one composition at each crank angle. All spatial gradients are ignored.
+
+**The Wiebe function** is the workhorse here. It describes the cumulative heat release as an S-curve:
+
+$$x_b(\theta) = 1 - \exp\!\left[-a\left(\frac{\theta - \theta_0}{\Delta\theta}\right)^{m+1}\right]$$
+
+where $\theta_0$ is the start of combustion, $\Delta\theta$ is the combustion duration, $a \approx 6.908$ (for 99.9% burn completion), and $m$ is a shape factor (~2 for SI engines, ~0.5 for diesel). The heat release rate is the derivative:
+
+$$\dot{Q}(\theta) = Q_{total} \cdot \frac{dx_b}{d\theta}$$
+
+This is cheap to compute and fits measured pressure traces well with two tuning parameters ($\Delta\theta$, $m$). It is the standard for engine cycle simulation tools (GT-Power, WAVE, Ricardo WAVE).
+
+**Heat transfer to the wall** in a 0D model uses the **Woschni correlation**:
+
+$$h_c = C \cdot B^{-0.2} \cdot P^{0.8} \cdot T^{-0.55} \cdot w^{0.8}$$
+
+where $B$ is the bore diameter, $w$ is a characteristic gas velocity (function of mean piston speed and pressure rise), and $C$ is a calibration constant. This gives the convective heat transfer coefficient $h$ at each crank angle — exactly the $h$ that appears in Newton's law of cooling.
+
+#### 2-Zone Models
+
+The cylinder is split into a **burned zone** (products, high temperature) and an **unburned zone** (fresh charge, lower temperature), each with its own temperature. This adds:
+
+- A flame front that propagates from the spark plug outward
+- Separate energy equations for each zone
+- More accurate prediction of knock (auto-ignition in the unburned zone) and NO$_x$ formation (strongly temperature-dependent)
+
+Still 0D spatially, but captures the burned/unburned temperature split that a single-zone model misses.
+
+#### Quasi-Dimensional (Flame Speed) Models
+
+Add a geometric model of the flame front — typically a sphere expanding from the spark plug clipped by the cylinder walls. The turbulent flame speed $S_T$ is modelled as a function of turbulence intensity $u'$ and laminar flame speed $S_L$:
+
+$$S_T \approx S_L + u'$$
+
+This links combustion to in-cylinder flow (tumble, swirl) without solving the Navier-Stokes equations. Useful for sensitivity studies of combustion chamber geometry.
+
+#### 3D CFD Combustion Models (Full Spatial)
+
+Solve the Navier-Stokes equations plus species transport and a combustion sub-model on a 3D mesh that moves with the piston and valves. The main approaches:
+
+| Model | Approach | Cost |
+| :--- | :--- | :--- |
+| **RANS + flamelet** | Time-averaged flow, tabulated chemistry | Hours per cycle |
+| **LES + flamelet** | Resolved large eddies, tabulated chemistry | Days per cycle |
+| **DNS** | All scales resolved, detailed chemistry | Research only |
+
+**OpenFOAM** (via the `reactingFoam` or `XiFoam` solvers) is the main OSS option. `XiFoam` implements the flame wrinkling model for SI engines; `reactingFoam` handles diesel spray combustion with injector models.
+
+#### Which Model for Which Question
+
+| Question | Model |
+| :--- | :--- |
+| Engine cycle efficiency, BSFC | 0D single-zone + Wiebe |
+| Knock prediction, NO$_x$ trend | 2-zone or quasi-dimensional |
+| Combustion chamber shape optimisation | Quasi-dimensional |
+| Injector spray, mixture formation | 3D CFD (OpenFOAM) |
+| Wall heat flux map for FEM thermal BC | 3D CFD or Woschni on 0D |
+
+For the MBSD design loop the practical answer is: run a **0D model with the Wiebe function** to get the pressure trace $P(\theta)$ and the Woschni $h(\theta)$, feed the cycle-averaged wall heat flux into the FEM thermal analysis, and only go to 3D CFD if the combustion chamber geometry is what you are optimising.
+
+---
 
 ### About Tools
 
