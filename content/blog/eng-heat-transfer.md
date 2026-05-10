@@ -2,7 +2,7 @@
 title: "Heat Transfer (+ Go Solar PoC)"
 date: 2026-05-07
 draft: false
-tags: ["Black-Scholes","Fluid Dynamics","Ptolomeo","VPD","HeatraPy vs PyScipe"]
+tags: ["Black-Scholes","ICE x Fluid Dynamics x NVH","Ptolomeo","VPD","HeatraPy vs PyScipe"]
 description: 'The physics of heat and thermodynamics. The solar plan B.'
 url: 'heat-transfer-ice'
 math: true
@@ -10,9 +10,7 @@ math: true
 
 **Tl;DR**
 
-Lisa, in this house we obey the laws of thermodynamics. 
-
-Heat transfer is the fourth leg of the engineering loop: fluid mechanics computes combustion forces, MBSD propagates them through the mechanism, FEM checks if parts survive mechanically — and heat transfer tells you whether they survive thermally.
+Lisa, in this house we obey the laws of thermodynamics!
 
 **Intro**
 
@@ -22,7 +20,9 @@ That can be also very helpful if your are planning to automate the windows of a 
 
 who.could.have.guessed.
 
-But there is a more direct line back to the MBSD series. Every engine post assumed rigid, isothermal parts.
+But there is a more direct line back to the MBSD series.
+
+Every engine post assumed rigid, isothermal parts.
 
 In reality, a crankshaft running at 6000 rpm is also a heat exchanger — combustion gases heat the piston crown, the cylinder wall carries that heat to the coolant, and the material properties of every part change with temperature. 
 
@@ -37,11 +37,16 @@ The full engineering loop across these posts is:
 | **FEM** | Does the part survive the mechanical load? | Design loop |
 | **Heat transfer** | Does the part survive the thermal load? | Design loop |
 
+
 ## The HEAT Physics
+
+Heat transfer is the fourth leg of the engineering loop: fluid mechanics computes combustion forces, MBSD propagates them through the mechanism, FEM checks if parts survive mechanically — and heat transfer tells you whether they survive thermally.
 
 In Electromagnetism, you have the four **Maxwell’s Equations** which cover everything from how charges create fields to how moving magnets create electricity.
 
-In Heat Transfer, while there is one "Master Equation," the complexity comes from the fact that heat moves in three fundamentally different ways. You can think of it as one law that wears three different "outfits."
+In Heat Transfer, while there is one "Master Equation," the complexity comes from the fact that heat moves in three fundamentally different ways. 
+
+You can think of it as one law that wears three different "outfits."
 
 
 ### The "Master" Equation (The Heat Equation)
@@ -123,8 +128,6 @@ To build a thermal "circuit," you simply replace electrical variables with therm
 | **Resistance ($R$)** | **Thermal Resistance ($R_{\theta}$)** | Ohms $\rightarrow$ $K/W$ |
 | **Capacitance ($C$)** | **Thermal Mass ($C_{th}$)** | Farads $\rightarrow$ $J/K$ |
 
-
-
 2. Translating the Components
 
 When you look at a physical object, you "see" it as a circuit board:
@@ -137,9 +140,13 @@ In a circuit, a resistor slows down electrons. In heat transfer, a "thermal resi
 
 Capacitors (The Buffers)
 
-In electronics, a capacitor stores charge. In heat, a capacitor represents **Thermal Mass**. 
+In electronics, a capacitor stores charge. 
 
-*   A giant cast-iron skillet is like a massive high-voltage capacitor. It takes a long time to "charge up" (get hot), but once it's charged, it holds that energy for a long time even after the "power" (the stove) is turned off.
+n heat, a capacitor represents **Thermal Mass**. 
+
+* A giant cast-iron skillet is like a massive high-voltage capacitor. 
+
+It takes a long time to "charge up" (get hot), but once it's charged, it holds that energy for a long time even after the "power" (the stove) is turned off.
 
 Current Sources (The Heat Gen)
 
@@ -147,8 +154,8 @@ A CPU, a laser, or a chemical reaction is modeled as a **Constant Current Source
 
 It is pushing a specific amount of "Current" (Watts) into the system regardless of what the temperature is.
 
-
 3. Applying Circuit Laws
+
 This is where the magic happens. You can use standard circuit rules to solve complex heat problems:
 
 *   **Ohm’s Law ($V = IR$):** Becomes **$\Delta T = q \cdot R_{\theta}$**. If you know your CPU is putting out 65W ($q$) and your heatsink has a resistance of 0.5 K/W ($R$), you instantly know the temperature rise will be 32.5 degrees above the room temperature.
@@ -192,8 +199,8 @@ docker compose up -d --build webapp
 ```
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/poc/tree/master/go-solar" title="Go Solar PoC | Repo" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/poc/tree/master/go-solar" title="Go Solar PoC | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/master/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc" title="Go Solar PoC | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/tree/master/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc" title="Go Solar PoC | Repo" icon="github" >}}
 {{< /cards >}}
 
 ### Heat transfer x MBSD x ICE
@@ -215,8 +222,30 @@ In an ICE, only about 30% of the fuel's chemical energy reaches the crankshaft a
   {{< card link="https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics" title="Fluids inside MBSD | Repo" icon="github" >}}
 {{< /cards >}}
 
+The rest, must go somewhere: *like those vibrations you try to avoid via nvh*
 
-The rest must go somewhere:
+
+**Step 1 — Thermodynamic ODE.**  The same 0D ODE used throughout the enhancement scripts (Woschni heat transfer, Wiebe combustion, isentropic nozzle valves) is integrated over 2048 uniformly-spaced time steps covering 720° at n = 3000 rpm.  Output: `P(θ)` at every sample point.
+
+**Step 2 — Force trace.**  `F_wiebe(θ) = (P(θ) − p_a) · A_piston`.  Gauge pressure is used so the force is zero when the cylinder is at atmospheric (the reference load on the bearing from gas pressure alone, subtracting the atmospheric force that acts on both sides of the piston).
+
+**Step 3 — FFT.**  A single `np.fft.rfft` over 2048 samples gives the single-sided amplitude spectrum `H_wiebe[k]` for k = 0, 1, …, 8.  These are the per-harmonic force amplitudes that the phasor framework consumes.
+
+Step 4 — Phasor sums. ....
+
+{{< callout type="info" >}}
+All the sauce to [go from thermodynamics to NVH](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/combustion-wiebe-nvh.md) plugging Wiebe
+{{< /callout >}}
+
+
+```sh
+#Woschni heat transfer, Wiebe combustion
+uv run ./mbsd/z-fluid-mechanics/combustion_analysis_wiebe.py
+```
+
+![alt text](/blog_img/mechanics/wiebe_fig2_harmonics.png)
+
+The general picture is:
 
 | Energy path | Share |
 | :--- | :--- |
@@ -225,7 +254,7 @@ The rest must go somewhere:
 | Cooling system (heat transfer problem) | ~30% |
 | Friction and misc losses | ~10% |
 
-The cooling system share is a heat transfer problem in exactly the sense of the theory above: conduction through the piston crown and cylinder wall, convection to the coolant, and radiation from the exhaust manifold.
+The cooling system share is a heat transfer problem in exactly the sense of the theory above: *conduction through the piston crown and cylinder wall, convection to the coolant, and radiation from the exhaust manifold.*
 
 **Why it matters for the MBSD design loop:**
 
@@ -365,12 +394,32 @@ Are you looking to create a visual "heat map" of an object, or just calculate th
 
 Heat transfer closes the loop that MBSD, fluid mechanics, and FEM opened.
 
+{{< callout type="info" >}}
+Which can be a good excuse to [recap thermodynamics and cycles](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-mcia-thermodynamic-cycles.md)
+{{< /callout >}}
+
 The combustion event produces forces (fluid), the forces drive motion (MBSD), the motion subjects parts to stress (FEM), and the same combustion event heats those parts — changing the material properties that FEM relied on. 
 
 Run them in sequence and you have a physics-grounded design loop. 
 
 Skip heat transfer and you are doing structural analysis with wrong material data.
 
+### I built some more
+
+As per [these next steps](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-next-steps.md)
+
+1. The effect of variable valve timming - [vvt](https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics/improvements/01_vvt)
+2. Forced induction (Compressor/Supercharger)
+3. Diesel (CI vs SI)
+4. NVH map
+5. TurboCharger
+6. Knock / detonation limit
+7. Cylinder deactivation
+8. torsional crankshaft dynamics
+
+99. volumetric efficiency
+
+![alt text](/blog_img/mechanics/fi_fig3_efficiency.png)
 
 ---
 

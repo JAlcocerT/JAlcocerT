@@ -25,6 +25,12 @@ You can setup that one very quick [with via MLT UI](#a-vpn-recap)
 
 But DNS is a rabbithole of its own.
 
+{{< callout type="info" >}}
+I put some notes about [DNS options here](https://github.com/JAlcocerT/Home-Lab/blob/main/z-homelab-setup/about-dns.md)
+{{< /callout >}}
+
+and ppl are voting whats [their favourite here](https://forocoches.com/foro/showthread.php?t=8106499)
+
 With this post, I want to explore the [latests on PiHole v6](#pihole) and use it as the default DNS for a smart TV.
 
 https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#programmatic-dns-updates
@@ -417,7 +423,7 @@ ip neigh
 
 ## Conclusions
 
-To configure your domains, you know you had: https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#programmatic-dns-updates
+To configure your domain DNS, you know you had: https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#programmatic-dns-updates
 
 See that everything is fine with your network:
 
@@ -437,7 +443,18 @@ curl -sS http://ip-api.com/json/ #provides info about country, ISP, ...
 #curl -6 ifconfig.me #ipv6 info 
 ```
 
-Optionally, have  alook to **Portmaster**: *just be aware that it might cause issues with tailscale*
+**IMPORTANT**
+
+Plain DNS on port 53 is unencrypted — your ISP (and anyone on the path) can see every query.
+
+DoH (DNS-over-HTTPS) and DoT (DNS-over-TLS) encrypt the traffic. 
+
+DoQ (DNS-over-QUIC) is newer and faster.
+
+For a homelab server, the most practical approach is to run **Pi-hole** or **AdGuard Home** as a local resolver and configure those to use DoT/DoH upstream — then your whole network gets encrypted DNS without configuring every device.
+
+
+Optionally, have a look to **Portmaster**: *just be aware that it might cause issues with tailscale*
 
 And check your uptime kuma monitoring: `http://192.168.1.2:3001/dashboard/`
 

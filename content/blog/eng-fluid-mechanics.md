@@ -1,9 +1,9 @@
 ---
-title: "Fluids"
+title: "Fluidssss"
 date: 2026-05-06
 draft: false
 tags: ["Fluid Dynamics","Betz","Volumetric Efficiency"]
-description: 'The physics of fluids.'
+description: 'The physics of fluids. With OpenFoam'
 url: 'fluids'
 math: true
 ---
@@ -117,6 +117,13 @@ I mean...when I was doing this kind of things in [matlab](https://jalcocert.gith
 
 
 But similarly as I did with [the bike simulator](https://jalcocert.github.io/JAlcocerT/cycling-and-the-4-bars-mechanism/#from-concepts-to-equations), it is time to bring them to python.
+
+
+{{< callout type="info" >}}
+The [heat/combustion model](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-mcia-heattransfer.md) is very important to improve [the initial model from my studies](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-course-summary.md)
+{{< /callout >}}
+
+
 
 
 
@@ -290,6 +297,12 @@ Yes. FreeCAD has two relevant workbenches:
 
 - **FEM Workbench** — structural and thermal FEM via CalculiX and Elmer solvers, with a GUI mesh generator. Good for static stress and simple heat transfer, not CFD.
 - **CfdOF Add-on** — a CFD workbench built on top of **OpenFOAM**. You define geometry in FreeCAD, mesh it (SnappyHexMesh or cfMesh), set boundary conditions, and run OpenFOAM in the background. Visualisation is done via ParaView. This is the closest you get to a free ANSYS Fluent workflow.
+
+```sh
+git clone /3Design
+cd /z-openfoam
+make all #make help
+```
 
 **GUI / standalone solvers:**
 

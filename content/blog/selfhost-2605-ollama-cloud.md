@@ -265,19 +265,53 @@ I gave it a try first via: *then, added to my usb drive with Ventoy and the othe
 gnome-boxes
 ```
 
+or...with [these other options](https://github.com/JAlcocerT/Home-Lab/blob/main/z-benchmarks/vm-101.md), like:
+
+```bash
+sudo mkdir -p /var/lib/libvirt/images
+sudo cp /home/jalcocert/Desktop/ubuntu-26.04-desktop-amd64.iso /var/lib/libvirt/images/
+```
+
+Yep, they need to be here:
+
+```sh
+find /var/lib/libvirt/images -maxdepth 1 -type f -iname '*.iso'
+```
+
+Then install from the copied `.ISO`:
+
+```bash
+sudo virt-install \
+  --name ubuntu-vm \
+  --memory 3096 \
+  --vcpus 2 \
+  --disk size=30 \
+  --cdrom /var/lib/libvirt/images/ubuntu-26.04-desktop-amd64.iso \
+  --os-variant generic \
+  --network network=default \
+  --graphics spice
+```
+
+Sitting at 1.2gb RAM at start up!
+
 Once ready, you can use the scripts at my repo to install all the goodies for your server:
 
 ```sh
 sudo apt install git
-git config --global user.name "JAlcocerT"
-git config --global user.email "JAlcocerT"
+#git config --global user.name "JAlcocerT"
+#git config --global user.email "JAlcocerT"
+```
 
+```sh
 #flatpak install flathub app.zen_browser.zen
 git clone https://github.com/JAlcocerT/Home-Lab
 
 #sudo ./z-benchmarks/Benchmark_101.sh
 #for a homelab that you wont use desktop, you are good to go with this
-sudo ./z-desktop-x-homelab/Linux_Setup_101.sh #You are good to go with browsers OBS tailscale etc
+#sudo ./z-desktop-x-homelab/Linux_Setup_101.sh #You are good to go with browsers OBS tailscale etc
+cd /home/ubuntu/Home-Lab
+#chmod +x z-homelab-setup/homelab-selfhosting.sh
+sudo ./z-homelab-setup/homelab-selfhosting.sh #make sure to know what you are doing!
 ```
 
 Get back to work with:
@@ -287,6 +321,18 @@ Get back to work with:
 uv --version
 uv python list #https://docs.astral.sh/uv/guides/install-python/
 ```
+
+Or put the [agents to work](https://jalcocert.github.io/JAlcocerT/poc-105/#using-the-latest-agents) as we have seen:
+
+```sh
+curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt install -y nodejs
+#node --version
+apt install npm
+#npm install -g @openai/codex #https://github.com/openai/codex/
+
+codex
+```
+
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/home-lab" title="home-lab | Repo ↗" icon="github" >}}
@@ -340,9 +386,9 @@ You can check these selfhosted and Linux docs.
 
 Or reach out for doubts:
 
-{{< cards >}}
+<!-- {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-{{< /cards >}}
+{{< /cards >}} -->
 
 
 {{< cards >}}

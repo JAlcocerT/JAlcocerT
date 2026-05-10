@@ -56,7 +56,6 @@ Neither that with some S2T transcripts, ffmpeg and yt-dl you can do sth nice:
 ```sh
 cd /poc/yt-distil
 #tmux new-session -d -s yt 'cd /home/jalcocert/poc/yt-distil && uv run yt-distil run "https://www.youtube.com/watch?v=qsXxckCbci0" --no-qna -y'
-
 ```
 
 
@@ -275,13 +274,25 @@ Last months it was all about [this](https://jalcocert.github.io/JAlcocerT/oss-au
 
 ---
 
-## FAQ
 
+## FAQ
 
 
 
 ### How to NextCloud
 
+This is the one im keeping for now: *remember that you can use it via cf tunnels and just make it available for certain ips/countries*
+
+```sh
+#! docker compose -f ~/Desktop/Home-Lab/nextcloud/docker-compose.yml up -d
+! docker exec -u www-data nc php occ user:resetpassword admin
+```
+
+About manual scans, see this:
+
+```sh
+docker exec nc chown -R www-data:www-data /var/www/html/data
+```
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="NextCloud | Docker Config 🐋 ↗" >}}
@@ -324,22 +335,28 @@ I didnt like the immich makes strange paths inside: /mnt/data2tb/immich/library/
 
 Immich stores files in an app-managed layout, not a human folder layout.
 
-  Example:
+Example:
 
+```
 /mnt/data2tb/immich/library/upload/<user-id>/<hash folders>/<asset-id>.jpg
 /mnt/data2tb/immich/library/thumbs/<user-id>/...
 /mnt/data2tb/immich/library/encoded-video/<user-id>/...
+```
 
-That is normal for Immich. It uses UUIDs, hash-like subfolders, thumbnails, encoded video copies, metadata, and a Postgres database to know what each file actually is. The folder
-names are optimized for the app, not for browsing manually.
+That is normal for Immich. It uses UUIDs, hash-like subfolders, thumbnails, encoded video copies, metadata, and a Postgres database to know what each file actually is.
+
+The folder names are optimized for the app, not for browsing manually.
 
 Nextcloud feels different because it exposes a user-facing filesystem:
 
+```
 nextcloud/data/<user>/files/Photos/...
 nextcloud/data/<user>/files/Documents/...
+```
 
-So Nextcloud’s storage mirrors what users see in the web UI. Immich’s storage is closer to an internal media database: the UI, albums, dates, people, locations, and search come from
-its database and generated assets, not from nice folder names.
+So Nextcloud’s storage mirrors what users see in the web UI. 
+
+Immich’s storage is closer to an internal media database: the UI, albums, dates, people, locations, and search come from its database and generated assets, not from nice folder names.
 
 Short version: Nextcloud is file-first. Immich is photo-library-first.
 
@@ -508,41 +525,41 @@ Baseline
 
   rclone config
 
-  Then choose roughly:
+Then choose roughly:
 
-  n) New remote
-  name: gdrive
-  storage: Google Drive
-  client_id: leave blank
-  client_secret: leave blank
-  scope: drive
-  root_folder_id: leave blank
-  service_account_file: leave blank
-  auto config: yes, if browser available
+n) New remote
+name: gdrive
+storage: Google Drive
+client_id: leave blank
+client_secret: leave blank
+scope: drive
+root_folder_id: leave blank
+service_account_file: leave blank
+auto config: yes, if browser available
 
-  After browser login, rclone saves credentials here:
+After browser login, rclone saves credentials here:
 
-  /home/jalcocert/.config/rclone/rclone.conf
+/home/jalcocert/.config/rclone/rclone.conf
 
-  Test it:
+Test it:
 
-  rclone lsd gdrive:
-  rclone mkdir gdrive:homelab-backups
-  rclone lsd gdrive:
+rclone lsd gdrive:
+rclone mkdir gdrive:homelab-backups
+rclone lsd gdrive:
 
-  If the server has no browser/GUI, run:
+If the server has no browser/GUI, run:
 
-  rclone config
+rclone config
 
-  and when asked:
+and when asked:
 
-  Use auto config?
-  n
+Use auto config?
+n
 
-  Then rclone gives you a URL. Open that URL on your laptop/desktop, sign in to Google, copy the token/code back into the server prompt.
+Then rclone gives you a URL. Open that URL on your laptop/desktop, sign in to Google, copy the token/code back into the server prompt.
 
-  For backups, the only artifact you need to preserve is:
+For backups, the only artifact you need to preserve is:
 
-  ~/.config/rclone/rclone.conf
+~/.config/rclone/rclone.conf
 
-  If using restic, also preserve your restic repository password. Without it, the encrypted backup is unrecoverable.
+If using restic, also preserve your restic repository password. Without it, the encrypted backup is unrecoverable.
