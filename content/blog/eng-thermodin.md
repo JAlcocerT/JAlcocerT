@@ -26,7 +26,7 @@ What Happens is that you can validate the results of ppl in forums.
 
 Or just create a way to check if aerothermics applies to you.
 
-
+![alt text](/blog_img/apps/aerotermia.png)
 
 
 Es una pregunta excelente, porque a primera vista parece que la aerotermia es una máquina de "energía infinita" o un movimiento perpetuo al darte **4 kWh** de calor por cada **1 kWh** que pagas.
@@ -200,3 +200,50 @@ Esta ecuación te dice que por cada grado de entropía que generas, multiplicas 
 Si la **Entalpía ($H$)** es todo el dinero que tienes en la cartera, el término **$T \cdot S$** es la parte de ese dinero que la inflación (la entropía) hace que no puedas gastar en nada útil. Lo que te queda para comprar (calentar la casa) es lo que realmente importa.
 
 ¿Te suena haber visto estos diagramas de **Temperatura-Entropía (T-s)** en algún momento de tu reforma o cuando investigabas la Panasonic? Son los que tienen forma de "campana".
+
+
+---
+
+## Conclusions
+
+Looking for similar **decision intelligence** tools?
+
+Reach out throughput and outcomes, ~~not availability~~:
+
+
+### Aerotermia PoC x RPi DHT22
+
+What if...you would actually have data for your in home temp and humidity?
+
+> yes, [your home](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-home-check.md)
+
+oh, it seems we [did that](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#current-setup-mqtt-dht22-pgsql) already :)
+
+```sh
+cd ./RPi/Z_MicroControllers/RPiPicoW/picow-dht-webapp
+```
+
+so...lets pull from pgsql
+
+```sh
+#docker ps | grep timescaledb
+docker exec -it timescaledb psql -U pico -d sensors -c "SELECT topic, count(*) AS rows, min(ts) AS first_seen, max(ts) AS last_seen FROM readings GROUP BY topic ORDER BY count(*) DESC;"
+```
+
+With
+
+```sh
+docker exec -i timescaledb psql -U pico -d sensors -c "\COPY (SELECT time_bucket('1 hour', ts) AS timestamp, avg(value) FILTER (WHERE topic = 'pico/temperature/dht22') AS T_indoor_C, avg(value) FILTER (WHERE topic = 'pico/humidity/dht22') AS RH_indoor_pct, count(*) FILTER (WHERE topic = 'pico/temperature/dht22') AS samples FROM readings WHERE topic IN ('pico/temperature/dht22', 'pico/humidity/dht22') AND ts >= NOW() - INTERVAL '1 year' GROUP BY 1 HAVING count(*) FILTER (WHERE topic = 'pico/temperature/dht22') > 0 ORDER BY 1) TO STDOUT WITH (FORMAT CSV, HEADER true)" > dht22_hourly.csv
+
+git commit -m "Add DHT22 hourly data"
+git push
+```
+
+Diurnal pattern (clean as a textbook):
+
+3-4 AM:   coolest, 22.08°C, RH peaks ~40%
+5-9 AM:   warming kicks in, 22.6 → 23.5°C
+13-14 PM: warmest, 24.10°C, RH lowest ~35%
+17-22 PM: gentle cooldown to 22.5°C
+
+There are some next steps for the end of this year :)

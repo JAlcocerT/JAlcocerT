@@ -288,7 +288,7 @@ tmux new-session -d -s mqtt 'uv run mqtt_to_db.py'
 tmux new-session -d -s webapp 'uv run uvicorn main:app --host 0.0.0.0 --port 8077'
 ```
 
-This will give you the trend and the last value read in real time:
+This will give you **the trend** and the last value read in real time:
 
 ```sh
 docker exec -it timescaledb psql -U pico -d sensors -c \
