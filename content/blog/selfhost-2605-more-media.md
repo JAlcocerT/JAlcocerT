@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Media"
-date: 2026-05-11T00:20:21+01:00
+date: 2026-05-12T00:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
 description: 'Organizing my media server with agents. Code too with forgejo.'
@@ -84,7 +84,7 @@ You can create your own torrent of your joined `.MP4` with:
 
 ### Jellyfin and QBit
 
-Because you will want to move those action cam videos:
+Because you will want to move [those action cam videos](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#ffmpeg-video-workflow-for-windows):
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin | Docker Config 🐋 ↗" >}}

@@ -161,7 +161,16 @@ For that, you can always:
 
 ### Volumetric efficiency
 
+One of the best videos to understand VE:
+
 {{< youtube "1eRsaOxxiUc" >}}
+
+You can also make an engineering BSc and port your matlab files to explore more:
+
+```sh
+git clone /mbsd
+cd ./mbsd/z-fluid
+```
 
 **Volumetric efficiency** ($\eta_v$) measures how well an engine breathes — how much fresh charge actually enters the cylinder compared to what could theoretically fit:
 
@@ -195,7 +204,9 @@ Variable-length intake manifolds (Honda VTEC, BMW Valvetronic, Toyota VVTL-i) sh
 
 #### VE Map
 
-In engine management, VE is stored as a **2D lookup table** (map) indexed by RPM and throttle position (or manifold pressure). The ECU multiplies the map value by ambient air density to compute the injected fuel mass — this is the basis of **speed-density fuelling**:
+In engine management, VE is stored as a **2D lookup table** (map) indexed by RPM and throttle position (or manifold pressure). 
+
+The ECU multiplies the map value by ambient air density to compute the injected fuel mass — this is the basis of **speed-density fuelling**:
 
 $$m_{fuel} = \frac{\eta_v \cdot \rho_{air} \cdot V_{disp} \cdot n}{2 \cdot \lambda \cdot AFR_{stoich}}$$
 
@@ -216,7 +227,9 @@ In fact, the "Triple Analogy" between **Electricity, Heat, and Fluid Mechanics**
 
 When you combine them, you get what engineers call **Lumped Element Modeling**.
 
-Just as we mapped heat to electricity, we can map fluid flow to both. The "Master Variable" in fluid mechanics that corresponds to Voltage or Temperature is **Pressure**.
+Just as we mapped heat to electricity, we can map fluid flow to both. 
+
+The "Master Variable" in fluid mechanics that corresponds to Voltage or Temperature is **Pressure**.
 
 
 1. The Fluid-Electric-Thermal Mapping
@@ -249,20 +262,20 @@ A large tank or an elastic balloon in a plumbing system acts like a capacitor.
 Fluid Inertance (The "Water Hammer")
 
 This is a unique fluid property that is the perfect analog for an **Inductor** ($L$) in a circuit. 
+
 *   When you suddenly shut a faucet and hear a "thump" in the walls, that is **Inductance**. The moving fluid has mass and "wants" to keep moving, just like an inductor resists a change in current. Heat transfer doesn't really have a natural version of this, which makes thermal systems much "simpler" (and more sluggish) than fluid or electric ones.
 
 
-
 3. The "Power" Connection
+
 In all three systems, **Power** is calculated by multiplying the "Push" (Across variable) by the "Flow" (Through variable):
 
 *   **Electric Power:** $P = V \cdot I$
 *   **Thermal Power:** $P = \Delta T \cdot q$ (Though $q$ is already a power unit, Watts)
 *   **Fluid Power:** $P = \Delta P \cdot Q$
 
-
-
 4. Why this matters for Heat Transfer
+
 In real engineering, these analogies often collide. Think of a **Liquid Cooling System** in a high-end PC:
 1.  **The CPU** creates "Current" (Heat).
 2.  **The Water** acts as a "Carrier" (Fluid Flow).
@@ -270,12 +283,13 @@ In real engineering, these analogies often collide. Think of a **Liquid Cooling 
 4.  **The Radiator** acts as a "Transformer," transferring the "Current" from the fluid system into the air.
 
 ### The Limits of the Analogy
+
 While the "math" matches up beautifully for **Laminar Flow** (smooth water), it breaks down once the fluid becomes **Turbulent**. 
+
 *   In electricity, $V=IR$ is almost always a straight line (linear).
 *   In fluids, if you double the flow, the pressure required might quadruple (non-linear).
 
 Does adding the "Pressure" and "Pipes" layer make the concept of Heat Resistance feel more like a physical "obstacle" to you?
-
 
 ### Tools
 
@@ -296,6 +310,7 @@ Does adding the "Pressure" and "Pipes" layer make the concept of Heat Resistance
 Yes. FreeCAD has two relevant workbenches:
 
 - **FEM Workbench** — structural and thermal FEM via CalculiX and Elmer solvers, with a GUI mesh generator. Good for static stress and simple heat transfer, not CFD.
+
 - **CfdOF Add-on** — a CFD workbench built on top of **OpenFOAM**. You define geometry in FreeCAD, mesh it (SnappyHexMesh or cfMesh), set boundary conditions, and run OpenFOAM in the background. Visualisation is done via ParaView. This is the closest you get to a free ANSYS Fluent workflow.
 
 ```sh
@@ -352,17 +367,31 @@ This gives you the combustion pressure that feeds directly into the MBSD slider-
 
 ### Betz's Law and the Limits of Fluid Energy Extraction
 
-The **Betz Limit** (formulated in 1919 by Albert Betz) is a fundamental result in fluid dynamics that establishes the maximum possible efficiency for any turbine operating in an open flow. It is a clean example of how continuity and momentum conservation together impose a hard ceiling on what engineering can achieve.
+The **Betz Limit** (formulated in 1919 by Albert Betz) is a fundamental result in fluid dynamics that establishes the maximum possible efficiency for any turbine operating in an open flow. 
 
-**What it states:** no turbine can capture more than **59.3%** of the kinetic energy in a flowing fluid. The maximum power coefficient is:
+It is a clean example of how continuity and momentum conservation together impose a hard ceiling on what engineering can achieve.
+
+**What it states:** no turbine can capture more than **59.3%** of the kinetic energy in a flowing fluid. 
+
+The maximum power coefficient is:
 
 $$C_p = \frac{16}{27} \approx 0.593$$
 
-The reasoning is elegant. If a turbine extracted 100% of the kinetic energy, the fluid downstream would be stationary — and stationary fluid cannot make room for incoming fluid, so the flow stalls. If the turbine extracts nothing, the fluid passes through unchanged. The optimum is somewhere in between: the fluid must leave with enough velocity to keep moving out of the way. Solving the momentum balance across a rotor disk gives exactly $16/27$.
+The reasoning is elegant.
+
+If a turbine extracted 100% of the kinetic energy, the fluid downstream would be stationary — and stationary fluid cannot make room for incoming fluid, so the flow stalls.
+
+If the turbine extracts nothing, the fluid passes through unchanged. 
+
+The optimum is somewhere in between: the fluid must leave with enough velocity to keep moving out of the way. 
+
+Solving the momentum balance across a rotor disk gives exactly $16/27$.
 
 #### Why Hydro Turbines Are Not Bound by Betz
 
-Betz Law applies specifically to **open-flow** systems — where the fluid can expand and divert around the rotor. Most hydroelectric turbines operate in **closed conduits**, which changes the physics entirely:
+Betz Law applies specifically to **open-flow** systems — where the fluid can expand and divert around the rotor. 
+
+Most hydroelectric turbines operate in **closed conduits**, which changes the physics entirely:
 
 1. **Open vs. closed systems** — in a pipe or casing, water cannot "escape" around the blades. Every kilogram of water must pass through the runner. This confinement allows pressure to do work that velocity alone cannot.
 
@@ -370,7 +399,9 @@ Betz Law applies specifically to **open-flow** systems — where the fluid can e
 
 3. **Incompressibility** — water is ~800× denser than air and effectively incompressible. In a wind turbine the stream tube must widen as air slows down. In a pipe the cross-section is fixed, so flow diversion is not an issue.
 
-The exception is **hydrokinetic turbines** (in open rivers or tidal streams without a dam). These sit in open flow just like wind turbines and are subject to the same 59.3% limit.
+The exception is **hydrokinetic turbines** (in open rivers or tidal streams without a dam). 
+
+These sit in open flow just like wind turbines and are subject to the same 59.3% limit.
 
 #### The Three Classic Hydro Turbines
 
@@ -378,15 +409,35 @@ Each is engineered for a specific combination of head (pressure) and flow rate:
 
 **Pelton (Impulse)**
 
-Designed for high head, low flow — mountain streams falling hundreds of metres through a narrow pipe. A nozzle converts pressure to a high-speed jet; the jet strikes spoon-shaped buckets at atmospheric pressure. Energy is extracted purely through momentum change. Because the water jet is concentrated and controlled, efficiencies above **90%** are routine. No open-flow diversion problem, hence no Betz limit.
+Designed for high head, low flow — mountain streams falling hundreds of metres through a narrow pipe. 
+
+A nozzle converts pressure to a high-speed jet; the jet strikes spoon-shaped buckets at atmospheric pressure. 
+
+Energy is extracted purely through momentum change. 
+
+Because the water jet is concentrated and controlled, efficiencies above **90%** are routine. 
+
+No open-flow diversion problem, hence no Betz limit.
 
 **Francis (Reaction)**
 
-The most common turbine in the world (Hoover Dam). Designed for medium head and medium-to-high flow. Water enters radially through a spiral casing, passes through the runner blades, and exits axially. It operates fully submerged and uses both velocity and pressure — the pressure drop across the blades "reacts" against them to produce torque. Efficiencies up to **95%**. Fully enclosed, so Betz does not apply.
+The most common turbine in the world (Hoover Dam).
+
+Designed for medium head and medium-to-high flow. Water enters radially through a spiral casing, passes through the runner blades, and exits axially. 
+
+It operates fully submerged and uses both velocity and pressure — the pressure drop across the blades "reacts" against them to produce torque. 
+
+Efficiencies up to **95%**. Fully enclosed, so Betz does not apply.
 
 **Kaplan (Reaction / Propeller)**
 
-Essentially a large ducted propeller. Designed for low head and very high flow — large, slow-moving rivers. Adjustable blades allow it to remain efficient as river levels change through the year. Like the Francis it is a reaction turbine enclosed in a housing, forcing all flow through the runner. Efficiencies typically **90–93%**.
+Essentially a large ducted propeller. Designed for low head and very high flow — large, slow-moving rivers. 
+
+Adjustable blades allow it to remain efficient as river levels change through the year. 
+
+Like the Francis it is a reaction turbine enclosed in a housing, forcing all flow through the runner. 
+
+Efficiencies typically **90–93%**.
 
 | Turbine | Type | Head | Flow | Best use case |
 | :--- | :--- | :--- | :--- | :--- |

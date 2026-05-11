@@ -10,7 +10,6 @@ math: true
 
 **Tl;DR**
 
-Lisa, in this house we obey the laws of thermodynamics!
 
 **Intro**
 

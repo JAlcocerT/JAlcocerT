@@ -1,6 +1,6 @@
 ---
 title: "Attraction Web Offer x Show a Problem"
-date: 2026-05-09T08:20:21+01:00
+date: 2026-05-10T08:20:21+01:00
 draft: false
 tags: ["Vertigo","NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey","PocketBase Leads","EayP v3 checks"]
 description: 'A scalable way to provide DIY websites. Free Web Audits and custom forms.'
@@ -433,6 +433,8 @@ If you are building websites, get inspired:
 
 
 #### How Ive improved my websites
+
+You can see:
 
 {{< cards >}}
   {{< card link="https://gitlab.com/JAlcocerT/fossengineer" title="foss | Github ↗" icon="github" >}}
