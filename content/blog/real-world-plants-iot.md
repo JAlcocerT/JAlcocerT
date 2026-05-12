@@ -198,16 +198,21 @@ Elasticsearch is much better at storing event records and searchable history tha
 
 ## Big Data Tech Talk 
 
-A tech talk that goes from embeded systems, to data engineering and to visualizations?
+A [tech talk](https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks/4-iot-to-bigdata/tech-talk) that goes from embeded systems, to data engineering and to visualizations?
 
-If someone would have let me know that id be doing these sessions so easily:
+If someone would have let me know that id be doing [these sessions](https://github.com/JAlcocerT/selfhosted-landing/tree/master/public/presentations) so easily...:
 
 ```sh
+#npx skills add https://github.com/alchaincyf/huashu-design --skill huashu-design
 #cd selfhosted-landing\y2026-tech-talks\4-iot-to-bigdata
-#html :)
+#html powered:)
 ```
 
-I mean...so hard, bc Im not using Slidev, not python-pptx nor just html for presentations.
+> `https://consulting.jalcocertech.com/presentations/techtalk-from-iot-to-big-data-engineering/ppt`
+
+I mean...so hard, bc Im not using Slidev, not `python-pptx` nor just html for presentations.
+
+But also promo videos via:
 
 ```sh
 cd .\tech-talk\sensor-to-dashboard

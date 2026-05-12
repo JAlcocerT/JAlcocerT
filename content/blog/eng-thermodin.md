@@ -22,9 +22,9 @@ cd poc/ #z-trip-planner-v4
 
 ```
 
-What Happens is that you can validate the results of ppl in forums.
+What Happens is that you can validate the [results of ppl in forums](https://forocoches.com/foro/showthread.php?t=9806597).
 
-Or just create a way to check if aerothermics applies to you.
+Or just create a way to check if aerothermics applies to you from such [dev plan](https://github.com/JAlcocerT/poc/blob/main/aerothermics/dev-plan.md):
 
 ![alt text](/blog_img/apps/aerotermia.png)
 

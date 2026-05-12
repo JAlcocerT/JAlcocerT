@@ -1,6 +1,6 @@
 ---
 title: "Energy Solutions in the AI era"
-date: 2026-05-12
+date: 2026-05-15
 draft: false
 tags: ["Aerotermia PoC","IoT x DHT22"]
 description: 'Boundary conditions are hard. Abstract them with sensors.'
@@ -13,7 +13,7 @@ math: true
 
 **Intro**
 
-Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-next-steps.md).
+Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-next-steps.md) to improve [the existing features](https://github.com/JAlcocerT/poc/blob/main/aerothermics/all-features.md).
 
 
 
@@ -23,4 +23,29 @@ Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aeroth
 
 
 
+### CheckList
+
+1. The aerotermia PoC:
+
+```sh
+git clone /poc
+cd ./poc/aero
+```
+
+2. The IoT setup: sensor pushing data via mqtt
+
+```shsh
+
+```
+
+3. The historical invoice records:
+
+
+4. Wrapping all together:
+
+
 ## FAQ
+
+### How much Tilt matters for FV
+
+https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-tilt-101.md
