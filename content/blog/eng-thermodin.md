@@ -246,4 +246,8 @@ Diurnal pattern (clean as a textbook):
 13-14 PM: warmest, 24.10°C, RH lowest ~35%
 17-22 PM: gentle cooldown to 22.5°C
 
-There are some next steps for the end of this year :)
+There are [some next steps](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-next-steps.md) for the end of this year :)
+
+Will this ever become a `energysolutions.jalcocertech.com`?
+
+Someone told me a long time ago that I would end up doing sth around energy and engineering, so who knows :)

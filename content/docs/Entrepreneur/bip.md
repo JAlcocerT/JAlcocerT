@@ -119,6 +119,8 @@ If you are one of those entrepreneurs who has managed to learn how to code.
 
 Chances are that you are using AI [models](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bots/#hosted-models)/vibe coding techniques to build your next product.
 
+Be the monkey hand who asks questions to homer before making directly what he asked (instead of what he really wanted, but didnt know how to express that it was important for him)
+
 ![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
 
 And you might have troubles getting the agents to understand what you want.

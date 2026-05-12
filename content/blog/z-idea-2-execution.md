@@ -202,7 +202,7 @@ I have refined the terminology to align with industry standards for an **AI-Augm
 
 I also added a few "Pro Tips" to clarify *why* certain metrics or methods are used.
 
-If you come from the business header, there is a WHAT: in this case, the product or service **enhanced with AI**
+If you come from the business header, there is **a WHAT**: in this case, the product or service **enhanced with AI**
 
 ![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
 

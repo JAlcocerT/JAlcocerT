@@ -779,6 +779,8 @@ xargs -0 awk '
 
 #### Quotes
 
+0. As the cost of replies goes down, the quality of our questions will matter most.
+
 Every business is a kind of game and you can see how many of them play: `https://wyszukiwarka-krs.ms.gov.pl/`
 
 * `https://rar.ms.gov.pl/rar/dane-podmiotu/0000053665?strona=1`
