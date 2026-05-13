@@ -1,8 +1,8 @@
 ---
 title: "Selfhosted Media"
-date: 2026-05-12T00:20:21+01:00
+date: 2026-05-12
 draft: false
-tags: ["Self-Hosting","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
+tags: ["Self-Hosting Nextcloud","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
 description: 'Organizing my media server with agents. Code too with forgejo.'
 url: 'selfhosting-media'
 ---
@@ -43,7 +43,7 @@ I know, you might be already familiar with **PairDrop**
 
 ## Music Media
 
-https://github.com/Fingel/gelly
+* https://github.com/Fingel/gelly
 
 >  A native, lightweight music client for Jellyfin and Subsonic. Built with Rust and GTK. 🦀🐧 
 
@@ -108,7 +108,6 @@ https://blog.bartzz.com/how-to-route-docker-container-through-another-container/
 
 -->
 
-
 Because this it not intended for you to use go to `wolfmax4k`, nor visiting [Anna](https://open-slum.pages.dev/).
 
 ### IPTV
@@ -154,7 +153,7 @@ Ive decided to get a code sync to my HomeLab: *with Forgejo (codeberg) OSS model
 {{< /cards >}}
 
 ```sh
-git clone /home-lab
+#git clone /home-lab
 cd home-lab/forgejo
 #make list-github-repos #make help
 make migrate-repo REPO_OWNER=JAlcocerT REPO_NAME=eda-f1                                    
@@ -162,14 +161,12 @@ make migrate-repo REPO_OWNER=JAlcocerT REPO_NAME=eda-f1
 
 ![alt text](/blog_img/selfh/forgejo.png)
 
-> http://localhost:3034/user/sign_up
-
+> `http://localhost:3034/user/sign_up`
 
 Wanna get ready for agents 24/7 in the Pi?
 
-
 ```sh
-# See all existing users                                        
+# See all existing users forgejo
 make list-users
 # Create a new non-admin user (will be forced to change password on first login)                                                                                                                                                            
 make create-user NEW_USER=hermesagent NEW_USER_EMAIL=alice@example.com NEW_USER_PASSWORD=changeme123
@@ -232,9 +229,7 @@ https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicat
 
 ## Conclusions
 
-
-
-
+That's it for this month containers recap:
 
 ```sh
 docker ps -a --filter status=exited --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}'
@@ -242,7 +237,7 @@ docker ps -a --filter status=exited --format 'table {{.Names}}\t{{.Image}}\t{{.S
 
 Problems with cognitive dilution due to AI usage?
 
-You might be seeking for a proper knowledge base for the agentic era.
+You might be seeking for a proper **knowledge base for the agentic era**.
 
 Why not starting using AI to make projects you could only dream about?
 
@@ -262,22 +257,23 @@ Last months it was all about [this](https://jalcocert.github.io/JAlcocerT/oss-au
 
 ### Codex x Ordering My Media
 
-1. [BAAAACK-ups](#backups-first)
+1. Again: [BAAAACK-ups](#backups-first)
 
 2. Continue at your own risk!
+
 3. 
 
 
 ```sh
 #codex
+#claude
+#hermes
+#gemini-cli
 ```
 
 ---
 
-
 ## FAQ
-
-
 
 ### How to NextCloud
 
@@ -343,7 +339,9 @@ Example:
 /mnt/data2tb/immich/library/encoded-video/<user-id>/...
 ```
 
-That is normal for Immich. It uses UUIDs, hash-like subfolders, thumbnails, encoded video copies, metadata, and a Postgres database to know what each file actually is.
+That is normal for Immich. 
+
+It uses UUIDs, hash-like subfolders, thumbnails, encoded video copies, metadata, and a Postgres database to know what each file actually is.
 
 The folder names are optimized for the app, not for browsing manually.
 

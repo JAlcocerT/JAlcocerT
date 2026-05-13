@@ -2,7 +2,7 @@
 title: "Energy Solutions in the AI era"
 date: 2026-05-15
 draft: false
-tags: ["Aerotermia PoC","IoT x DHT22"]
+tags: ["Rankine x Aerotermia PoC","IoT x DHT22"]
 description: 'Boundary conditions are hard. Abstract them with sensors.'
 url: 'how-to-check-hot-pump-viability'
 math: true

@@ -8,6 +8,12 @@ url: 'thermodynamics'
 math: true
 ---
 
+Poprawne podsumowanie:
+  - Prąd: ~100 kWh/m (avg 95.9)
+  - Ciepło worst month: ~2.5 GJ (Feb 2025) ≈ 684 kWh thermal
+  - Ciepło avg: ~0.8 GJ/m ≈ 220 kWh thermal/m
+
+  
 **Tl;DR**
 
 [Lisa](https://www.youtube.com/watch?v=oygSFCZZyoU), in this house we obey the laws of thermodynamics!
