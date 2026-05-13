@@ -113,6 +113,7 @@ sudo docker compose stop      # stop both containers (keeps them, fast restart)
 sudo docker compose start     # start them again
 sudo docker compose down      # stop + remove containers (network too)
 sudo docker compose up -d     # recreate from compose files (use after editing them)
+#docker stats frigate #50% of the cpu for my pi4
 ```
 
 ![DHT22 x VPD x pgsql Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_SelfHosting/frigate.png)

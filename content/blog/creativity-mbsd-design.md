@@ -464,6 +464,7 @@ Remember about: https://skills.sh/
 /login
 /resume
 #claude --dangerously-skip-permissions -p "promptwhateverrrr" #yolo
+#gemini --prompt "are you able to be queried with non interactive mode?" -m gemini-2.5-flash --yolo --debug
 ```
 
 

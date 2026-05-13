@@ -107,10 +107,13 @@ While it is based on temperature and humidity, the math involves the **Saturated
 1. The Core Components
 
 To calculate $VPD$, you need to find two values:
+
 1.  **$SVP$ (Saturated Vapor Pressure):** The maximum amount of water vapor the air can hold at a specific temperature.
+
 2.  **$AVP$ (Actual Vapor Pressure):** The amount of water vapor currently in the air.
 
 The formula is:
+
 $$VPD = SVP - AVP$$
 
 2. The Detailed Formulas
@@ -209,6 +212,8 @@ If someone would have let me know that id be doing [these sessions](https://gith
 ```
 
 > `https://consulting.jalcocertech.com/presentations/techtalk-from-iot-to-big-data-engineering/ppt`
+
+> > Recorded with fireflies AI, transcribed with OpenAI (bc summary is not enough) + auto feedback
 
 I mean...so hard, bc Im not using Slidev, not `python-pptx` nor just html for presentations.
 

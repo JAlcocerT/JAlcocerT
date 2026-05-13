@@ -31,7 +31,9 @@ Or just create a way to check if aerothermics applies to you from such [dev plan
 
 Es una pregunta excelente, porque a primera vista parece que la aerotermia es una máquina de "energía infinita" o un movimiento perpetuo al darte **4 kWh** de calor por cada **1 kWh** que pagas.
 
-Sin embargo, no violamos absolutamente ninguna ley; de hecho, la aerotermia es un ejemplo perfecto de cumplimiento estricto de la termodinámica. El truco está en que la gente suele confundir **eficiencia** con **rendimiento**.
+Sin embargo, no violamos absolutamente ninguna ley; de hecho, la aerotermia es un ejemplo perfecto de cumplimiento estricto de la termodinámica. 
+
+El truco está en que la gente suele confundir **eficiencia** con **rendimiento**.
 
 Aquí te explico por qué no estamos rompiendo el universo:
 

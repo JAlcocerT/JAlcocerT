@@ -1,6 +1,6 @@
 ---
 title: "Selfhosting local Gen-AI (LLMs x Agents)"
-date: 2026-05-12
+date: 2026-05-13
 draft: false
 description: "How to use Ollama x Gemma 4. With OpenClaw and Hermes."
 tags: ["Home-Lab x (x300 vs M2)","Kimi vs Deepseek","TTS"]
@@ -18,17 +18,12 @@ https://www.youtube.com/watch?v=tYg6T_DAP-k
 
 {{< youtube "tYg6T_DAP-k" >}}
 
-When was the last time you saw the fight club, matrix or Mr robot?
-
-a copy of a copy of a copy of a copy
-
-single serving things
 
 **Intro**
 
 Running LLMs locally, even on a [PI](#how-to-enhance-a-raspberry-pi-for-ai), should not be a problem in 2025.
 
-https://jalcocert.github.io/JAlcocerT/where-to-deploy/
+* https://jalcocert.github.io/JAlcocerT/where-to-deploy/
 
 ```sh
 sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml logs -f ollama
@@ -115,7 +110,7 @@ ollama list
 
 ## REST API
 
-<https://github.com/jmorganca/ollama/blob/main/docs/api.md>
+To connect via API to your Ollama instance: https://github.com/jmorganca/ollama/blob/main/docs/api.md
 
 ```sh
 curl -X POST http://localhost:11434/api/generate -d '{"model": "orca-mini:3b", "prompt":"What is a large language model?"}'
