@@ -465,7 +465,7 @@ And via OSS with Listmonk.
 
 ### Tested few ESP
 
-From the email service providers tested [here](https://jalcocert.github.io/JAlcocerT/emails-101/)
+From the **email service providers** tested [here](https://jalcocert.github.io/JAlcocerT/emails-101/)
 
 I decided to continue with Mailtrap API due to its nice deliverability.
 

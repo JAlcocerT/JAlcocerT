@@ -10,9 +10,9 @@ math: true
 
 **Tl;DR**
 
-How about doing `energysolutions` now?
+How about doing `energysolutions` NOW?
 
-+++ Solar assisted heat pump simulation
++++ Solar assisted heat pump simulation (SAHP)
 
 **Intro**
 
@@ -24,6 +24,22 @@ Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aeroth
 
 ## Conclusions
 
+```sh
+make deploy #https://main.aerothermics-landing.pages.dev/
+
+```
+
+Anti-barbell example (what I steered you away from):
+  - Free tier (limited)
+  - €9/mo (more bins, more years)
+  - €29/mo (API, batch)
+  - €99 consult
+  - Result: 4-way choice, weak free tier, no clear premium positioning
+
+Barbell example (what you have):
+- Free, unlimited tool
+- €80 paid call (or installer ref)
+- Done
 
 
 ### CheckList
