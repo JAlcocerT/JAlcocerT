@@ -506,7 +506,9 @@ Add **Open Graph** meta tags to your HTML <head> on the landing page:
 <meta property="og:url" content="https://yourdomain.com/">
 ```
 
-> Replace https://yourdomain.com/ with your actual domain!
+> Replace `https://yourdomain.com/` with your actual domain!
+
+> > Check with `https://www.opengraph.xyz/`
 
 ---
 

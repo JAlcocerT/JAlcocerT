@@ -60,6 +60,9 @@ It was time to put together all those nice animations related repositories to sh
 
 {{< youtube "MZTt8ICeF0Y" >}}
 
+Those bars moving?
+
+Done:
 
 {{< youtube "OL5UQaZc97E" >}}
 

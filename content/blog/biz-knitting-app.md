@@ -94,7 +94,6 @@ If you’re looking at something complex you want to make, ask yourself:
 
 > **Pro Tip:** If a shape has double curvature (like a ball), you cannot make it out of a single flat sheet of paper/fabric without wrinkling it. You *must* decompose it into smaller "gores" (triangular slices) or use a material that stretches (like knit yarn) to cheat the physics.
 
-Are you trying to figure out the "blueprint" for a specific project right now? If you describe the shape, we can try to deconstruct it together.
 
 ## The Linen Knit
 

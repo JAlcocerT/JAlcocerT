@@ -2,7 +2,7 @@
 title: "Improving a HomeLab Privacy with OSS DNS"
 date: 2026-03-01T07:20:21+01:00
 draft: false
-tags: ["Self-Hosting x ProtonDrive","Pihole v6 x UnboundDNS","DNS as Distributed DB","Privacy x Euria","iPerf3"]
+tags: ["Self-Hosting x ProtonDrive","Pihole v6 x UnboundDNS","DNS as Distributed DB","Privacy x Euria","iPerf3 PoC"]
 description: 'How to change DNS Servers and why it matters. From Portainer to Homepage-Lite.'
 url: 'private-dns-with-docker'
 ---

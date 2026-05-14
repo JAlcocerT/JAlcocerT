@@ -176,6 +176,8 @@ Failure mode + rollback:
 Owner after launch (person):
 ```
 
+MoSCoW (Must have, Should have, Could have, Won’t have aka Out of scope )
+
 If any line is blank or hand-wavy, the brief isn't ready.
 
 > **Rule of Thumb:** A brief that requires a 60-minute meeting to explain is a brief that isn't finished.

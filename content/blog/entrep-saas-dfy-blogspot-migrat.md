@@ -56,13 +56,14 @@ I mean...the photo gallery v2 things i was tinkering during xmas *now winter hol
 
 It incorporated a programmatic 101 web audit.
 
-
+<!-- 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="NEW-Web Magnet" image="/blog_img/apps/gh-jalcocert" subtitle="Vite x Astro x Web Audit" >}}
+{{< /cards >}} -->
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Magnet ↗" icon="github" >}}
 {{< /cards >}}
-
-
-
 
 People who have some product/service still need a website.
 
@@ -126,9 +127,9 @@ the id and web wshould be in the env variables of the prod yml
 <script defer src="https://weban.fossengineer.com/script.js" data-website-id="abcdef"></script>
 ```
 
-Powered by Gemini 3 Flash this time :)
+Powered by `Gemini 3 Flash` this time :)
 
-Built with Astro 5 & Tailwind 4!
+> Built with Astro 5 & Tailwind 4!
 
 
 ```sh
@@ -162,10 +163,9 @@ And this landing aims to show you that it can be done better.
 Also more eco :)
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/webcheck" title="N8N | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/linkchecker" title=" | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/webcheck" title="Web Check | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/linkchecker" title="LinkChecker | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 One option for a great lead magnets are those who show a problem.
 

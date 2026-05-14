@@ -4,7 +4,7 @@ date: 2025-09-23T08:20:21+01:00
 draft: false
 tags: ["Firebase","QuantUX vs GoClone","Firecrawl","Status Pages","Make-Landing"]
 url: 'micro-saas'
-description: 'A Blueprint for using Astro SSGx Authentication x (CSR + WebApp Features) to launch fast'
+description: 'A Blueprint for using Astro SSG x Authentication x (CSR + WebApp Features) to launch fast'
 ---
 
 **Tl;DR**
