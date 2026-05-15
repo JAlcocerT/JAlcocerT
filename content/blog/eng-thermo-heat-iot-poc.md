@@ -1,6 +1,6 @@
 ---
 title: "Energy Solutions in the AI era"
-date: 2026-05-15
+date: 2026-05-19
 draft: false
 tags: ["Rankine x Aerotermia PoC","IoT x DHT22","SAHP"]
 description: 'Boundary conditions are hard. Abstract them with sensors.'

@@ -214,7 +214,7 @@ How can a lead adquisition workflow look like?
 
 > In that way we have 1k leads for ~1.5 usd from apify only.
 
-```
+```md
 wedding planners - google one by one / scrapper de google maps por wedding planners
 serper google search api para buscar tb en google
 outscraper - para sacar por ej restaurantes tarragona
@@ -239,7 +239,8 @@ tb se puede conectar make a tu CRM, como para poner contactos categorizados como
 ```
 
 > lead gen Jay, nick saraev ($184 skool x 2600 members), kristian besser 1700 personas en slack de 92k pagando 4k
-manthan patel `https://www.agentpass.ai/`
+
+> > manthan patel `https://www.agentpass.ai/`
 
 
 #### GHL

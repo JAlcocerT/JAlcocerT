@@ -181,7 +181,7 @@ Even  `https://www.heyreach.io/`
 
 > 10x your linkedin outbound. Unlimited senders, one fixed cost
 
-> > Which can be used **together with n8n**: https://www.heyreach.io/n8n-templates
+> > Which can be used **together with n8n**: `https://www.heyreach.io/n8n-templates`
 
 Last but not least: `https://www.similarweb.com`
 
