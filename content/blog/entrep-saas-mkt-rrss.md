@@ -1,6 +1,6 @@
 ---
 title: "Mastering Social Media x InfoGraphics"
-date: 2026-07-01T11:20:21+01:00
+date: 2026-08-01T11:20:21+01:00
 draft: false
 tags: ["Twitter X vs Threads","Youtube","Latex vs Typst","Side-Quest26","YFinance"]
 description: 'Quality and automated content creation to build a community. Compared to just ads.'

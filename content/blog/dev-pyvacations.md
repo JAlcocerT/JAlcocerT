@@ -7,34 +7,10 @@ summary: 'Where am I going next? With Vibe Planning and scrapped wisdom of crowd
 url: 'py-vacations'
 ---
 
-https://wanderlog.com/
-
-https://selfh.st/apps/?search=trip
-
-trip software
-https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#trip-planner
-![Travel pack](/blog_img/hardware/travel-pakc.jpg)
-
-
-https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/
-
-![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
-
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-https://github.com/dedicatedcode/reitti
-immich with reitti
-
-https://github.com/MrModest/reisenotiz
-
-vpns: tailscale, wireguard
-
-`https://www.albertina.at/en/`
-
+```sh
+cd ./poc/z-poc-trip-planner-v4
+#https://github.com/JAlcocerT/poc/tree/main/z-poc-trip-planner-v4
+```
 
 **Tl;DR**
 
@@ -67,6 +43,33 @@ Because weather and cost is all that matter, right?
 
 AI search engine with web, news, and images. You will need firecrawl and groq Apis.
 
+https://wanderlog.com/
+
+https://selfh.st/apps/?search=trip
+
+trip software
+https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#trip-planner
+![Travel pack](/blog_img/hardware/travel-pakc.jpg)
+
+
+https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/
+
+![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+https://github.com/dedicatedcode/reitti
+immich with reitti
+
+https://github.com/MrModest/reisenotiz
+
+vpns: tailscale, wireguard
+
+`https://www.albertina.at/en/`
 
 ## Py Vacations
 

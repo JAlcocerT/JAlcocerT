@@ -1,6 +1,6 @@
 ---
 title: "Desktop Apps with RUST"
-date: 2026-07-16
+date: 2026-08-16
 draft: false
 tags: ["Rust x Vue","RemotionJS"]
 description: 'Using Rust Tauri instead of CustomTkinter and GoLang Wails.'

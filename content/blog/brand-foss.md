@@ -1,6 +1,6 @@
 ---
 title: "Improving a Blog"
-date: 2026-06-17T23:20:21+01:00
+date: 2026-06-01T23:20:21+01:00
 draft: false
 tags: ["FOSS","RoadMap26","Codex x HUGO"]
 description: 'Some SEO x Agent Engine Optimization.'
@@ -10,12 +10,17 @@ url: 'diy-webs-via-paas'
 
 **Tl;DR**
 
+It was time to stop those ads.
+
+
 https://github.com/openai/skills
 An excuse to try the free web audit engine
 https://developers.openai.com/codex/pricing
 
 
 **Intro**
+
+I made a review on the OSS 'portfolio'.
 
 https://developers.openai.com/showcase
 https://developers.openai.com/blog/designing-delightful-frontends-with-gpt-5-4

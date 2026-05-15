@@ -1,11 +1,18 @@
 ---
 title: "[IoT] Meeting AI. AIoT with a Raspberry Pi."
-date: 2026-06-23
+date: 2026-07-23
 draft: false
-tags: ["Tech Talk","IoT ebook","From obfuscaste towards 1toN eBooks","Roadmap26","Tinkering IRL"]
+tags: ["Tinkering IRL","M2M"]
 description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'
 url: 'just-about-iot'
 ---
+
+
+https://www.thingsmobile.com/business/plans/find-the-best-plan
+
+machine 2 machine - m2m
+
+https://www.youtube.com/watch?v=4Fx_3Mt1Ud4
 
 **TL;DR:** 
 

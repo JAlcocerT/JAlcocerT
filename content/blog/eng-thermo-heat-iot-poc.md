@@ -19,6 +19,8 @@ How about doing `energysolutions` NOW?
 Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-next-steps.md) to improve [the existing features](https://github.com/JAlcocerT/poc/blob/main/aerothermics/all-features.md).
 
 
+Its just all about [heat pumps](https://en.wikipedia.org/wiki/Heat_pump).
+
 
 ---
 
@@ -38,7 +40,7 @@ Anti-barbell example (what I steered you away from):
 
 Barbell example (what you have):
 - Free, unlimited tool
-- €80 paid call (or installer ref)
+- € paid call
 - Done
 
 

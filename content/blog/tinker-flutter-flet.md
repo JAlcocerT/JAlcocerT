@@ -1,6 +1,6 @@
 ---
 title: "Flutter Apps and Flet for Desktop Apps"
-date: 2026-07-10
+date: 2026-08-10
 draft: false
 tags: ["Android","Ente Photos","wger","Desktop Apps","FlutterFlow","DART"]
 description: 'Flutter Apps. Created with Python via Flet.'
