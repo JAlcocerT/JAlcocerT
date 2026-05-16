@@ -6,6 +6,10 @@ description: "How to use Ollama x Gemma 4. With OpenClaw and Hermes."
 tags: ["Home-Lab x (x300 vs M2)","Kimi vs Deepseek","TTS"]
 ---
 
+
+Get Forgejo ready as seen [here](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#code-is-also-media).
+
+
 **Tl;DR**
 
 Docker Model Run

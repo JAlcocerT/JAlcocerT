@@ -334,7 +334,7 @@ I set again Jellyfin *and company* at: `192.168.1.2:8096`
 #sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d jellyfin
 
 docker ps -a | grep -i jellyfin
-#udo docker stats jellyfin #~135mb idle
+#sudo docker stats jellyfin #~135mb idle
 ```
 
 If you see very **high CPU consumption** due to Jellyfin doing nothing, try:

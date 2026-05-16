@@ -9,7 +9,7 @@ url: 'selfhosting-media'
 
 **TL;DR**
 
-Despite google giving 5TB now: Is there a reliable way not to loose photos for good?
+Despite google giving 5TB now: *Is there a reliable way not to loose photos for good?*
 
 +++ Can I use [CLI agents to order my media](#codex-x-ordering-my-media)?
 
@@ -20,12 +20,19 @@ df -hT
 
 **Intro**
 
-Time to have a realiable selfhosted cold storage around nextcloud, tailscale and my old 2200G with 4TB HDD :)
+Time to have a realiable **selfhosted cold storage around nextcloud**, tailscale and my old 2200G with 4TB HDD :)
+
+```sh
+git clone https://github.com/JAlcocerT/Home-Lab
+cd Home-Lab
+```
 
 Or just...
 
-do some space to spin agents like crazy, have forgejo going and tmux to see how each project goes by
+1. Do some **space** to spin agents like crazy
+2. Have **forgejo** going and tmux to see how each project goes by
 
+Forgejo is an alternative to github (and to gitea):
 
 You can [try gram](https://codeberg.org/GramEditor/gram/releases/) to eat less ram: *which code is in forgejo/codeberg btw*
 
@@ -35,11 +42,15 @@ curl -fLO https://codeberg.org/GramEditor/gram/releases/download/1.2.1/gram_1.2.
 #npm install -g opencode-ai
 ```
 
+## Quick Media Transfers
+
 I know, you might be already familiar with **PairDrop**
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pairdrop" title="PairDrop | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+If what you want is sth that can be integrated with `WinSCP`
 
 ## Music Media
 
@@ -49,7 +60,7 @@ I know, you might be already familiar with **PairDrop**
 
 ### Podcasts or Transcripts
 
-Not telling you to remember that you can have your own podcast
+Not telling you to remember that you can have [your own podcast](https://jalcocert.github.io/JAlcocerT/make-podcast/)
 
 Neither that with some S2T transcripts, ffmpeg and yt-dl you can do sth nice:
 
@@ -61,14 +72,18 @@ cd /poc/yt-distil
 
 ## Video Media
 
-Im sure that you are already using qb and prowlarr at `6011` and `9696`.
-
-And that you know how to quickly join your videos via FFMPEG:
+Im sure that you are [already using qb](https://jalcocert.github.io/JAlcocerT/how-to-torrent-with-a-raspberry/#qbittorrent-with-the-raspberry-pi) and prowlarr at `6011` and `9696`.
 
 ```sh
+sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent
+#2601_docker-compose.yml up -d prowlarr
 sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml up -d prowlarr
 #sudo docker compose -f ./z-homelab-setup/evolution/2602_docker-compose.yml up -d prowlarr
+```
 
+And that you know how to quickly join your [videos via FFMPEG](https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/#ffmpeg):
+
+```sh
 #ffmpeg for oa5!
 ls *.MP4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
 ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original audio
@@ -90,6 +105,12 @@ Because you will want to move [those action cam videos](https://jalcocert.github
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/qbittorrent" title="QBittorrent Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+```sh
+#sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d jellyfin
+
+docker ps -a | grep -i jellyfin
+```
 
 <!-- https://www.youtube.com/watch?v=lRwGtPek1FQ -->
 
@@ -161,7 +182,7 @@ make migrate-repo REPO_OWNER=JAlcocerT REPO_NAME=eda-f1
 
 ![alt text](/blog_img/selfh/forgejo.png)
 
-> `http://localhost:3034/user/sign_up`
+> Go to forgejoUI at: `http://localhost:3034/user/sign_up`
 
 Wanna get ready for agents 24/7 in the Pi?
 
@@ -174,6 +195,12 @@ make create-user NEW_USER=hermesagent NEW_USER_EMAIL=alice@example.com NEW_USER_
 make add-collaborator NEW_USER=alice REPO_OWNER=JAlcocerT REPO_NAME=eda-f1
 make list-user-repos NEW_USER=hermesagent
 ```
+
+With that, instead of having agents doing weird stuff with access to your github pwd, they will just tinker with an non admin user of your forgejo instance.
+
+For additional security, you can have foregejo running separately from the Pi, like i did having it at my x300.
+
+
 
 ---
 
@@ -271,6 +298,49 @@ Last months it was all about [this](https://jalcocert.github.io/JAlcocerT/oss-au
 #gemini-cli
 ```
 
+#### Visualizing the Changes via WebDav
+
+Nextcloud brings its own WebDav:
+
+But as this will be for experimenting, just **go lean with a sftp-go** setup:
+
+```sh
+#cd ./Home-Lab/sftp-go
+docker compose -f docker-compose.pi.yml up -d #its just 2mb!
+#docker stats
+```
+
+> `http://192.168.1.18:8066/web/admin/setup` create an user with root directory as `/srv`
+
+Then try to connect even from the same Pi
+
+```sh
+sftp -P 2022 <username>@localhost
+#sftp -P 2022 jalcocert@192.168.1.18 #or from W11
+#scp... #for one time shares
+```
+
+If you prefer an UI: *try winSCP as sftp/webdav client*
+
+```sh
+choco install winscp #winget install WinSCP.WinSCP
+```
+
+![alt text](/blog_img/selfh/media/winscp-ftp.png)
+
+And for workstations/servers/x300:
+
+```yml
+volumes:                                                  - ./sftpgo-data:/var/lib/sftpgo   # persists users
+   - /home:/srv/home
+   - /mnt/data1tb:/srv/data1tb
+   - /mnt/data2tb:/srv/data2tb
+```
+
+```sh
+rsync -avhW --no-compress --progress --partial -e "ssh -p 2022" jalcocert@100.x.y.z:/source/ /destination/
+```
+
 ---
 
 ## FAQ
@@ -299,6 +369,19 @@ Last month I was doing by hand some maintainance [via CLIs to nextcloud](https:/
 
 ![NCDU tool to check disk space](/blog_img/selfh/HomeLab/ncdu-nextcloud.png)
 
+Nextcloud doesn't expose SSH/FTP; it exposes files over WebDAV on top of HTTPS.
+
+> In windows `add a network location` then `https://whatever.yourdomain.com/remote.php/dav/files/whateverusername` - File size limit: Windows WebClient caps downloads at 50 MB by default
+
+> > In linux
+
+Option 1 — GNOME Files / Nautilus (easiest, GUI)                                                                                                                                                          
+  Files → "Other Locations" → in the Connect to Server bar enter:                                                                                                                                          davs://nube.jalcocertech.com/remote.php/dav/files/<your-username>/
+  (davs:// = WebDAV over HTTPS; plain dav:// = HTTP). It'll prompt for username + app password. KDE's Dolphin uses the same scheme (webdavs://).                                                                                                                                                                                                         
+  Option 2 — davfs2 (mount as a real folder, works everywhere)                                                                                                                                                                                                                                                                                                                                                    
+  sudo apt install davfs2                                                                                                                                                                                  sudo mkdir /mnt/nextcloud                                                                                                                                                                                sudo mount -t davfs https://nube.jalcocertech.com/remote.php/dav/files/<user>/ /mnt/nextcloud                                                                                                            It'll prompt for credentials interactively. To persist:                                                                                                                                                
+                                                                                                                                                                                                           - Add to /etc/fstab:                                                                                                                                                                                     https://nube.jalcocertech.com/remote.php/dav/files/<user>/ /mnt/nextcloud davfs user,rw,noauto 0 0                                                                                                       - Store credentials in /etc/davfs2/secrets (mode 600):                                                                                                                                                 
+  /mnt/nextcloud <user> <app-password>                                                                                                                                                                     - For non-root mounting, add your user to the davfs2 group.            
 
 ### How to Immich
 
