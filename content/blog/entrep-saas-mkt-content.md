@@ -7,6 +7,11 @@ description: 'Is value based content dead? Prove it wrong with data animations.'
 url: 'social-media-content'
 ---
 
+Just in case you want to [share your plot/checks](https://github.com/JAlcocerT/DataInMotion/blob/libreportfolio/Generation/Y26WK13/readme.md)
+
+{{< callout type="warning" >}}
+For X to post images you need a paid plan, [threads might](https://github.com/JAlcocerT/DataInMotion/blob/libreportfolio/zzz-meta-next-steps.md)
+{{< /callout >}}
 
 **Tl;DR**
 

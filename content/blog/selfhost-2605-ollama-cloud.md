@@ -431,38 +431,6 @@ Or reach out for doubts:
 Prepare [Ventoy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started) if you are ready to go with [the latest ubuntu](#about-ubuntu-2604-lts)
 {{< /callout >}}
 
-### Hardening a Pi for Agents
-
-
-Then just choose whatever provider that allow for **24/7 queries**:
-
-1. `https://www.kimi.com/` and kimiclaw...
-
-2. 
-
-get ready for SDD: https://www.youtube.com/watch?v=b6cbxSaa4U4
-
-and openspec: https://www.youtube.com/watch?v=nFq4POtqom4
-
-because context is the new code: https://www.youtube.com/watch?v=bSG9wUYaHWU
-
-(It always was)
-
-Matt Potcock was a great inspiration with [the /grill-me](https://www.youtube.com/watch?v=EJyuu6zlQCg)
-
-
-#### OSS Models APIs x Agents
-
-Using Ollama with Gemma 4 is a reasonable option.
-
-You can also get some compute or pay API use for: Kimi vs Deepseek
-
-You also have: https://z.ai/blog/glm-5
-
-Which is at the top of the arena for now: https://arena.ai/leaderboard/code?license=open-source
-
-* https://chat.z.ai/auth
-
 ### About Protocols
 
 Is ADL the next big thing after MCP eating the context windows?
@@ -624,8 +592,8 @@ apt update && apt upgrade -y
 ```
 
 
-https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks
-https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab
+* https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks
+* https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab
 
 
 {{< callout type="info" >}}

@@ -94,7 +94,7 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original aud
 You can create your own torrent of your joined `.MP4` with:
 
 ```sh
-
+#croc send output-video.mp4
 ```
 
 ### Jellyfin and QBit
@@ -461,15 +461,29 @@ Make sure to understand [file types](https://github.com/JAlcocerT/Home-Lab/blob/
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/#video-as-a-code" title="Video Docs Section with consolidated info ↗" >}}
 {{< /cards >}}
 
+
+<!-- 
+covered at fossengineer x3
+
+Yes — same code, three different GitHub URLs, all serving SnapOtter v1.17.0 with the exact same commit hash 6e103d3:
+
+GitHub URL	What we found
+snapotter-hq/snapotter	Original — package.json name snapotter, homepage snapotter.com
+stirling-image/stirling-image	Identical clone — same package.json, same commit hash
+ashim-hq/ashim	Identical clone — same package.json, same commit hash
+All three repos still call themselves "snapotter" internally (in package.json, in the README, in branding assets) — only the outer GitHub org/repo name differs.
+
 https://github.com/frederikemmer/MediaLyze
 
 Self-hosted media library analysis for large video collections 
 
-https://github.com/ashim-hq/ashim
+https://github.com/ashim-hq/ashim same as snapotter
 
 A Self Hosted Image Manipulator - 45+ tools, local AI, and pipelines in a single Docker container. No cloud, no telemetry. Your images never leave your machine. 
 
-https://github.com/stirling-image/stirling-image
+https://github.com/stirling-image/stirling-image 
+
+-->
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Flask Intro" image="/blog_img/selfh/Photo/immich.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
@@ -496,7 +510,7 @@ Or just metube:
 ![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
 
 
-https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicates-files-in-the-system
+* https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicates-files-in-the-system
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/vert" title="Vert | Docker Config 🐋 ↗" >}}
@@ -603,9 +617,10 @@ This is the one im keeping for now: *remember that you can use it via cf tunnels
 ```sh
 #! docker compose -f ~/Desktop/Home-Lab/nextcloud/docker-compose.yml up -d
 ! docker exec -u www-data nc php occ user:resetpassword admin
+docker exec nextcloud php occ config:system:get trusted_domains #check the trusted domains
 ```
 
-About manual scans, see this:
+About **manual scans of data** you have scatter in folders, see this:
 
 ```sh
 docker exec nc chown -R www-data:www-data /var/www/html/data
@@ -620,18 +635,17 @@ Last month I was doing by hand some maintainance [via CLIs to nextcloud](https:/
 
 ![NCDU tool to check disk space](/blog_img/selfh/HomeLab/ncdu-nextcloud.png)
 
-Nextcloud doesn't expose SSH/FTP; it exposes files over WebDAV on top of HTTPS.
+Nextcloud doesn't expose SSH/FTP; it exposes files over **WebDAV on top of HTTPS**.
 
 > In windows `add a network location` then `https://whatever.yourdomain.com/remote.php/dav/files/whateverusername` - File size limit: Windows WebClient caps downloads at 50 MB by default
 
 The integration **in linux**:
 
-Option 1 — GNOME Files / Nautilus (easiest, GUI)                                                                                                                                                          
-Files → "Other Locations" → in the Connect to Server bar enter:                                                                                                                                          davs://nube.jalcocertech.com/remote.php/dav/files/<your-username>/
-(davs:// = WebDAV over HTTPS; plain dav:// = HTTP). It'll prompt for username + app password. 
+Via GNOME Files / Nautilus Files → "Other Locations" → in the Connect to Server bar enter: `davs://whatever.domain.com/remote.php/dav/files/<your-username>/`
 
+> (davs:// = WebDAV over HTTPS; plain dav:// = HTTP). It'll prompt for username + app password. 
 
-KDE's Dolphin uses the same scheme (webdavs://).                                                                                                                                                          
+                                                                                                                                           
 
 ### How to Immich
 
