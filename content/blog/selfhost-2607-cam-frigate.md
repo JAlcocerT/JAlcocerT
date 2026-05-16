@@ -63,9 +63,12 @@ But there are cool projects for computer vision that combine
 
 ```sh
 sudo docker compose -f ./z-homelab-setup/evolution/2607_docker-compose.yml logs -f frigate
+# NAMES      IMAGE                                    STATUS
+# frigate    ghcr.io/blakeblackshear/frigate:stable   Exited (137) 2 days ago
+# mediamtx   bluenviron/mediamtx:latest-rpi           Exited (0) 20 hours ago
 ```
 
-> Change the default at: http://192.168.1.18:5000/settings
+> Change the default at: `http://192.168.1.18:5000/settings`
 
 ## Tools
 

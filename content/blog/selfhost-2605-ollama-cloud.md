@@ -6,10 +6,6 @@ description: "How to use Ollama x Gemma 4. With OpenClaw and Hermes."
 tags: ["Home-Lab x (x300 vs M2)","Kimi vs Deepseek","TTS"]
 ---
 
-
-Get Forgejo ready as seen [here](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#code-is-also-media).
-
-
 **Tl;DR**
 
 Docker Model Run
@@ -33,20 +29,6 @@ Running LLMs locally, even on a [PI](#how-to-enhance-a-raspberry-pi-for-ai), sho
 sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml logs -f ollama
 ```
 
-## Large Language Models (LLMs)
-
-- [StreamingLLM Framework](https://www.reddit.com/r/LocalLLaMA/comments/16xzxwv/streamingllm_a_simple_and_efficient_framework/)
-- [Best 13B LLM Models Discussion](https://www.reddit.com/r/LocalLLaMA/comments/16s701v/this_is_one_of_the_best_13b_models_ive_tested_for/)
-
-* <https://ollama.ai/>
-* <https://github.com/jmorganca/ollama>
-  * <https://hub.docker.com/r/ollama/ollama>
-
-* 👉 <https://www.youtube.com/watch?v=rIRkxZSn-A8>
-* <https://www.youtube.com/watch?v=MGr1V4LyGFA>
-
-
-
 ## Ollama What?
 
 Ollama makes it easy to get up and running with large language models locally. It is **like Docker for managing LLMs**.
@@ -63,15 +45,35 @@ Install it with docker or with CLI:
 * <https://gpt-index.readthedocs.io/en/stable/examples/llm/ollama.html>
 
 ```sh
-docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
-podman run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+#docker ps -a --filter "name=ollama"
+docker run -d \
+  --name ollama \
+  --restart unless-stopped \
+  -v /srv/data/ollama:/root/.ollama \
+  -p 11434:11434 \
+  ollama/ollama
+#docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+#podman run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
 ```
 
+If you want it baremetal:
+
 ```sh
-#sudo systemctl status ollama
+curl https://ollama.ai/install.sh | sh
+#netstat -tuln
+#ss -tulnp | grep ':11434'
+```
+
+This will work:
+
+```sh
+sudo systemctl status ollama
 #sudo systemctl stop ollama
 ```
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Ollama | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ```yml
 version: '3'
@@ -88,48 +90,76 @@ volumes:
   ollama_data:
 ```
 
-```sh
-curl https://ollama.ai/install.sh | sh
-#netstat -tuln
-#ss -tulnp | grep ':11434'
-```
+### Ollama xCPU only
 
-## CPU only
+Get some models: https://ollama.com/search
+
+This time ill go: https://ollama.com/library/gemma4
 
 ```sh
-ollama --version #0.1.8
+#docker exec -it ollama bash
+ollama --version #0.24.0
 
-ollama run orca-mini:3b
-ollama run wizardcoder:13b-python
+#ollama run orca-mini:3b
+ollama pull gemma4 #this model is 10GB currently top ~40 at https://arena.ai/leaderboard/text
+#ollama run wizardcoder:13b-python
 #https://ollama.ai/library/sqlcoder
-ollama run codellama
+#ollama run codellama
 
 ollama list
+curl http://localhost:11434/api/tags #list them too
+docker exec ollama ollama show gemma4 #8B params
+docker exec -it ollama ollama run gemma4
 ```
 
-## OpenWebUI
+You can now also: https://docs.ollama.com/integrations
 
-* https://github.com/open-webui/open-webui
+```sh
+ollama launch openclaw
+```
+
+Or just:
+
+```sh
+#ollama launch codex
+ollama launch opencode
+```
+
+{{< callout type="warning" >}}
+Get Forgejo ready as seen [here](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#code-is-also-media).
+{{< /callout >}}
 
 
-## REST API
+### Ollama x REST API
 
 To connect via API to your Ollama instance: https://github.com/jmorganca/ollama/blob/main/docs/api.md
 
 ```sh
-curl -X POST http://localhost:11434/api/generate -d '{"model": "orca-mini:3b", "prompt":"What is a large language model?"}'
+# curl -X POST http://localhost:11434/api/generate -d '{"model": "orca-mini:3b", "prompt":"What is a large language model?"}'
 
 curl http://localhost:11434/api/generate -d '{
-  "model": "orca-mini:3b",
+  "model": "gemma4",
   "prompt":"Why is the sky blue?"
 }'
+```
 
-curl http://localhost:11434/api/generate -d '{
-  "model": "orca-mini:3b",
+For the **x300 5600g** this was 2min:
+
+```sh
+time curl http://localhost:11434/api/generate -d '{
+  "model": "gemma4",
   "prompt": "Why is the sky blue?",
   "stream": false
 }'
 ```
+
+For the mac M2:
+
+```sh
+
+```
+
+You can also:
 
 ```sh
 curl http://localhost:11434/api/generate -d '{
@@ -139,6 +169,10 @@ curl http://localhost:11434/api/generate -d '{
 }' | grep -o '"response":"[^"]*' | cut -d'"' -f4
 
 ```
+
+## OpenWebUI
+
+* https://github.com/open-webui/open-webui
 
 ## With Python - llama-index
 
@@ -157,7 +191,7 @@ ollama list
 ollama run mymodel
 ```
 
-## Ollama with LangChain
+#### Ollama with LangChain
 
 * 👉 <https://www.youtube.com/watch?v=k_1pOF1mj8k>
 
@@ -177,16 +211,11 @@ Ollama with a RAG: llama-index
 ```py
 #https://www.youtube.com/watch?v=k_1pOF1mj8k
 
-
-
 #sudo systemctl status ollama
 #sudo systemctl stop ollama
 
 #ollama list
 #ollama run orca-mini:3b
-
-
-
 
 #deepseek-coder:6.7b-base 
 
@@ -216,9 +245,7 @@ print(llm.complete("What is a vector database?"))
 
 * https://github.com/janhq/jan
 
-> AGPLv3 |  Jan is an open source alternative to ChatGPT that runs 100% offline on your computer 
-
-### 
+> AGPLv3 | Jan is an open source alternative to ChatGPT that runs 100% offline on your computer 
 
 
 ## Local Audio
@@ -227,11 +254,11 @@ print(llm.complete("What is a vector database?"))
 
 {{< youtube "dQ841Pd6YvQ" >}}
 
+---
 
 ## Conclusions
 
 Ollama with [the mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) has been interesting!
-
 
 What else am I running since last month?
 
@@ -248,7 +275,7 @@ After the initial setup and checking how fast the M2 is with blender
 
 Im not surprised the performance with Ollama
 
-> For a daily driver OS, ZORIN 18 is working nicely for me.
+> For a daily driver OS, `ZORIN 18` is working nicely for me.
 
 But it was about time to do a format C to [my x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/).
 
@@ -295,7 +322,7 @@ sudo virt-install \
 #
 ```
 
-Sitting at 1.2gb RAM at start up!
+Sitting at **1.2gb RAM** at start up!
 
 Once ready, you can use the scripts at my repo to install all the goodies for your server:
 
@@ -304,6 +331,8 @@ sudo apt install git
 #git config --global user.name "JAlcocerT"
 #git config --global user.email "JAlcocerT"
 ```
+
+Once git is ready, just tested the latest setup script:
 
 ```sh
 #flatpak install flathub app.zen_browser.zen
@@ -335,7 +364,6 @@ apt install npm
 
 codex
 ```
-
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/home-lab" title="home-lab | Repo ↗" icon="github" >}}
@@ -406,9 +434,9 @@ Prepare [Ventoy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025
 ### Hardening a Pi for Agents
 
 
-Then just choose whatever provider that allow for 24/7 queries:
+Then just choose whatever provider that allow for **24/7 queries**:
 
-1. https://www.kimi.com/ and kimiclaw...
+1. `https://www.kimi.com/` and kimiclaw...
 
 2. 
 
@@ -421,44 +449,6 @@ because context is the new code: https://www.youtube.com/watch?v=bSG9wUYaHWU
 (It always was)
 
 Matt Potcock was a great inspiration with [the /grill-me](https://www.youtube.com/watch?v=EJyuu6zlQCg)
-
-#### OpenClaw
-
-
-#### AgentOS
-https://github.com/buildermethods/agent-os
-
-
-> MIT | Agent OS is a system for injecting your codebase standards and writing better specs for spec-driven development.
-
-#### OpenSpec
-
-https://github.com/Fission-AI/OpenSpec
-
-
-> MIT | Spec-driven development (SDD) for AI coding assistants. 
-
-#### paperclip
-
-* https://github.com/paperclipai/paperclip
-
-> MIT | Open-source orchestration for zero-human companies
-
-#### Hermes
-
-As seen recently:
-
-```sh
-mkdir -p ~/.hermes
-docker run -it --rm \
-  -v ~/.hermes:/opt/data \
-  nousresearch/hermes-agent setup
-```
-
-I gave it a try with: https://aistudio.google.com/api-keys
-
-![alt text](/blog_img/GenAI/hermes-agent.png)
-
 
 
 #### OSS Models APIs x Agents
@@ -514,12 +504,12 @@ It is meant to sit alongside A2A, MCP, OpenAPI, and workflow systems as the **de
 
 ADL is a spec for describing an agent; RAG and similar tools are mechanisms an agent can use. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 
-## Role in the stack
+**Role in the stack**
 
 - ADL is a **definition layer**: it declares an agent’s goal, tools, RAG sources, permissions, and model config in a portable, vendor‑neutral file. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 - RAG, MCP, workflows, OpenAPI, etc., are **implementation layers**: they govern how the agent actually retrieves data, calls tools, or runs steps at runtime. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 
-## ADL vs RAG
+**ADL vs RAG**
 
 - RAG is a pattern: chunk, embed, and retrieve documents/code/images to augment prompts, implemented via vector DBs and retrieval libraries. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 - ADL does not replace RAG; instead, it describes which RAG indices/corpora an agent may access, where they live, and with what metadata and constraints. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
@@ -531,36 +521,34 @@ ADL is a spec for describing an agent; RAG and similar tools are mechanisms an a
 - ADL defines **what** tools exist for a given agent: names, parameter schemas, invocation mode (python_function, http, mcp), and categories. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 - You can use MCP and RAG under the hood, while ADL sits above them as the declarative contract that a security or platform team can inspect and version‑control. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 
-## Governance advantage
+Governance advantage
 
 - Existing RAG setups and tool registries are often scattered across YAML, code, and infra; ADL centralizes all that into one inspectable artifact. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 - This makes it easier to audit “what can this agent possibly do or access?” than with ad‑hoc RAG configs or per‑framework agent definitions. [nextmoca](https://www.nextmoca.com/blogs/agent-definition-language-adl-the-open-source-standard-for-defining-ai-agents)
 
 
-# AI agents
+AI agents
 
 **Semantic Kernel** (likely what you meant by "symantec kernal," as no Symantec product matches this term) is Microsoft's open-source SDK for building AI agents and integrating large language models (LLMs) into apps using C#, Python, or Java. It uses a central "kernel" to orchestrate semantic functions (natural language prompts), native code functions, memory, and planners for tasks like chaining prompts or agent workflows. [leanware](https://www.leanware.co/insights/langchain-vs-semantic-kernel-which-ai-framework-is-right-for-your-next-project)
 
-## Core Features
-- Supports prompt engineering, retrieval-augmented generation (RAG), memory stores, and multi-agent collaboration. [nuget](https://www.nuget.org/packages/Microsoft.SemanticKernel)
-- Enterprise-focused with Azure integrations, telemetry, dependency injection, and strong .NET support. [zenvanriel](https://zenvanriel.nl/ai-engineer-blog/semantic-kernel-vs-langchain/)
-- Lightweight and modular for production apps, including streaming and planning. [leanware](https://www.leanware.co/insights/langgraph-vs-semantic-kernel)
 
-## Framework Comparison
-
-| Aspect          | Semantic Kernel  [zenvanriel](https://zenvanriel.nl/ai-engineer-blog/semantic-kernel-vs-langchain/) | LangChain  [turing](https://www.turing.com/resources/ai-agent-frameworks) | LangGraph  [turing](https://www.turing.com/resources/ai-agent-frameworks) | AutoGen  [bravent](https://www.bravent.net/en/news/revolutionizing-ai-development-microsofts-agentic-frameworks-autogen-and-semantic-kernel/) |
-|-----------------|----------------------------------|--------------------------|---------------------------|--------------------------|
-| **Primary Languages** | C#, Python, Java | Python (JS/TS) | Python, JS | Python |
-| **Architecture** | Kernel-centric plugins, planners | Chains/expressions (LCEL) | Graph-based nodes/edges | Multi-agent conversations |
-| **Strengths** | Enterprise .NET/Azure, governance | Vast integrations, RAG tools | Stateful workflows, checkpoints | Agent collaboration, code execution |
-| **Best For** | Copilots in Microsoft ecosystems  [leanware](https://www.leanware.co/insights/langchain-vs-semantic-kernel-which-ai-framework-is-right-for-your-next-project) | Rapid prototyping, diverse LLMs  [zenvanriel](https://zenvanriel.nl/ai-engineer-blog/semantic-kernel-vs-langchain/) | Complex, visual agent graphs  [leanware](https://www.leanware.co/insights/langgraph-vs-semantic-kernel) | Autonomous multi-agent teams  [bravent](https://www.bravent.net/en/news/revolutionizing-ai-development-microsofts-agentic-frameworks-autogen-and-semantic-kernel/) |
-| **Weaknesses** | Fewer community examples | Can be complex/heavy  [zenvanriel](https://zenvanriel.nl/ai-engineer-blog/semantic-kernel-vs-langchain/) | Steeper for simple tasks | Less structured for single agents  [linkedin](https://www.linkedin.com/pulse/unlocking-ai-orchestration-exploring-semantic-kernel-its-choudhury-patnc) |
-
-Semantic Kernel suits structured enterprise apps, while LangChain/LangGraph excel in flexible Python workflows, and AutoGen in collaborative agents. [zenml](https://www.zenml.io/blog/semantic-kernel-alternatives)
 
 ---
 
 ## FAQ
+
+## Large Language Models (LLMs)
+
+- [StreamingLLM Framework](https://www.reddit.com/r/LocalLLaMA/comments/16xzxwv/streamingllm_a_simple_and_efficient_framework/)
+- [Best 13B LLM Models Discussion](https://www.reddit.com/r/LocalLLaMA/comments/16s701v/this_is_one_of_the_best_13b_models_ive_tested_for/)
+
+* <https://ollama.ai/>
+* <https://github.com/jmorganca/ollama>
+  * <https://hub.docker.com/r/ollama/ollama>
+
+* 👉 <https://www.youtube.com/watch?v=rIRkxZSn-A8>
+* <https://www.youtube.com/watch?v=MGr1V4LyGFA>
+
 
 ### AI x Data
 
