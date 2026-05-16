@@ -27,6 +27,8 @@ url: 'visualizing-suspension-nvh'
 
 2. Suspensions: Double Wishbone, macpherson...
 
+https://www.youtube.com/shorts/cx21pJaPVTc
+
 
 ## Suspension design space
 

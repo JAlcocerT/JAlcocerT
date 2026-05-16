@@ -8,6 +8,14 @@ url: 'how-to-check-hot-pump-viability'
 math: true
 ---
 
+Poprawne podsumowanie:
+  - Prąd: ~100 kWh/m (avg 95.9)
+  - Ciepło worst month: ~2.5 GJ (Feb 2025) ≈ 684 kWh thermal
+  - Ciepło avg: ~0.8 GJ/m ≈ 220 kWh thermal/m
+
+  coming fro, https://jalcocert.github.io/JAlcocerT/thermodynamics/
+  
+
 **Tl;DR**
 
 How about doing `energysolutions` NOW?
