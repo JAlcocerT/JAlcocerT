@@ -902,3 +902,32 @@ For backups, the only artifact you need to preserve is:
 ~/.config/rclone/rclone.conf
 
 If using restic, also preserve your restic repository password. Without it, the encrypted backup is unrecoverable.
+
+### How to Photos
+
+To open `RW2` photos I needed:
+
+```sh
+sudo apt install geeqie
+geeqie P1000130.RW2 
+
+```
+
+Geeqie: best if you want a lightweight viewer. It is focused on fast
+    browsing, thumbnails, zoom, and folder-based viewing, and it supports RW2
+    directly. It is not a RAW editor.
+  - RawTherapee: best if you want strong RAW processing and editing. It is much
+    heavier than a simple viewer, but it gives you serious control over
+    development.
+  - darktable: best if you want a full RAW workflow plus cataloging. It supports
+    RW2, but it is explicitly built as a RAW developer and uses substantial
+    memory, so it is the least lightweight of the three.
+  - gThumb or nomacs: decent general-purpose image viewers, but they are not as
+    clearly lightweight-and-RAW-focused as Geeqie, and Geeqie has the clearest
+    RW2 support documentation among the lightweight viewers I checked.
+
+  My recommendation for your use case:
+
+  - Just view RW2: Geeqie
+  - View and do quick RAW edits: RawTherapee
+  - Full photo workflow: darktable

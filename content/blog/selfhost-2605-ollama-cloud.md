@@ -580,7 +580,7 @@ They are also available as standalone chips from some manufacturers.
 
 ### About Ubuntu 2604 LTS
 
-https://releases.ubuntu.com/ coming with the kernel 7.
+The latest, `https://releases.ubuntu.com/` is coming with the kernel 7.
 
 I ended up trying it first [on a VM](https://jalcocert.github.io/JAlcocerT/testing-nix-os/#interesting-stuff-regarding-emulation), with a check with codex on the must follow steps for a reliable setup:
 
