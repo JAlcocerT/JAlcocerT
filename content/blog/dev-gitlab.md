@@ -7,7 +7,7 @@ description: 'How to use Gitlab for development'
 url: 'how-to-use-gitlab'
 ---
 
-Github is great, but there are other cool options, like **Gitlab**, codeberg or forgejo.
+Github is great, but there are other cool options, like **Gitlab**, codeberg...
 
 {{< callout type="info" >}}
 For Github 101 check [this post](https://jalcocert.github.io/JAlcocerT/github-gists)

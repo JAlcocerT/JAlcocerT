@@ -327,7 +327,7 @@ Lets move on:
 ```sh
 git clone forgejo-home:hermesagent/electronics-101.git
 git clone forgejo-home:hermesagent/mbsd.git
-git clone forgejo-home:jalcocert/eda-f1.git
+#git clone forgejo-home:jalcocert/eda-f1.git
 #docker system df #just check if you have enough space in the small Pi
 ```
 
@@ -786,10 +786,44 @@ czkawka_cli dup \
     -f /mnt/backup2tb/czkawka_old_synced_vs_zbackup.txt
 ```
 
+```sh
+  Even safer content-level compare, slower:
+
+  rsync -ainc --delete \
+    "/mnt/data2tb/Z_BackUP_HD-SDD/Z_FOTOS/" \
+    "/mnt/backup2tb/Z_FOTOS/"
+```
+
+  rsync -ainc --delete \
+    "/mnt/data2tb/Z_BackUP_HD-SDD/Z_FOTOS/" \
+    "/mnt/backup2tb/Z_FOTOS/" \
+    > /mnt/backup2tb/rsync_compare_Z_FOTOS_checksum.txt
+
+    if you get tired of waiting
+
+      rsync -a --info=progress2 \
+    "/mnt/data2tb/Z_BackUP_HD-SDD/Z_FOTOS/" \
+    "/mnt/backup2tb/Z_FOTOS/"
+
 I was using Immich wrong:
 
 * `/data/compose/14/library`  -> mounted into immich_server as /usr/src/app/upload
 * `/data/compose/14/postgres` -> mounted into immich_postgres as /var/lib/postgresql/data
+
+rclone authorize "drive" "someidcodewhatever" #you can do this from a laptop with browser access, then feedback the token it generates
+  rclone lsd googledrive:
+
+  tmux new -s gdrive-backup
+  rclone copy \
+    "/mnt/data2tb" \
+    "googledrive:x300-backup/data2tb" \
+    --progress \
+    --transfers 4 \
+    --checkers 8 \
+    --log-file "/home/jalcocert/rclone-data2tb-to-gdrive.log" \
+    --log-level INFO
+
+    tmux attach -t gdrive-backup
 
 Breakdown:
 

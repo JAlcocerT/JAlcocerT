@@ -32,6 +32,12 @@ But before going to the details about when, how to apply and so on...
 
 ...how much will you have to ask to stay with the same purchasing power as you started the year?
 
+
+
+{{< callout type="warning" >}}
+If you work for IT services, remember the unit economics: you are COGS in their gross margin (they make ~x2/3 of what you get so asking for a +10% once you have the offer and project assigned is a reasonable move BEFORE signing
+{{< /callout >}})
+
 ## Inflation and Jobs
 
 1. Some job market webpage have started including that info: https://zarobki.pracuj.pl/kalkulator-wynagrodzen

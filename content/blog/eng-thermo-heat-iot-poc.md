@@ -2,11 +2,13 @@
 title: "Energy Solutions in the AI era"
 date: 2026-05-22
 draft: false
-tags: ["Rankine x Aerotermia PoC","IoT x DHT22","PV vs SAHP vs HVAC"]
+tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment","PV vs SAHP vs HVAC"]
 description: 'Boundary conditions are hard. Abstract them with sensors.'
 url: 'how-to-check-hot-pump-viability'
 math: true
 ---
+
+https://www.youtube.com/shorts/ZcsaFZgWoEc
 
 Poprawne podsumowanie:
   - Prąd: ~100 kWh/m (avg 95.9)
@@ -18,11 +20,44 @@ Poprawne podsumowanie:
   Where some magic happend: https://go-solar.pages.dev/era5-cities/
 
 ```sh
-make eu-capitals-raw
-make era5-cities-bake       # resumable, only fetches new 31
-
+#make eu-capitals-raw
+make eu-capitals-status #-missing
+#make era5-cities-bake       # resumable, only fetches new 31
+make era5-cities-bake-local
+make ship
 ```
   
+> `https://go-solar.pages.dev/era5-cities/`
+
+![alt text](/blog_img/data-experiments/gosolar-eu-ui.png)
+
+
+  What to bring from the experiment:
+  - The 5 IR readings + DHT22 (T_surface_in_u, T_surface_in_t, T_air_in, optional T_surface_out_u, T_surface_out_t)
+  - Date + hour of the measurement (to look up the matching ERA5 GHI / T_air_out for that timestamp)
+  - Material used + €/m² actually paid
+  - Any photos of the patch + sensor placement (just nice to have)
+
+  What to bring from the bills:
+  - 12 monthly kWh totals
+  - Their real €/kWh (bill total ÷ kWh)
+  - Contracted power (kW)
+  - AC unit age/model if known
+  
+  The flow we'll run:
+  1. Plug measurements into /era5-cities/Sevilla measured-seasonal section
+  2. Calibrate AC COP using bills vs model prediction (per zzzzz-post-experiment.md step B5)
+  3. Run the three-scenario projection (best/likely/worst)
+  4. Generate the parent-facing one-pager from the template
+  5. Decide whether to scale to full roof
+  
+  The docs to reference when you're back:
+  - zzz-azotea-experiment-actionplan.md — execution checklist
+  - zzz-experiment-expectations.md — sanity-check bands for the readings
+  - zzzzz-post-experiment.md — workflow → parent presentation
+
+  Good luck with the measurement weekend. Pick a clear-sky day, 14:30–16:30, AC steady-state for an hour beforehand, and remember the slab needs 12+ hours after patch
+  application to equilibrate. See you on the other side of the empirical confirmation.
 
 **Tl;DR**
 
