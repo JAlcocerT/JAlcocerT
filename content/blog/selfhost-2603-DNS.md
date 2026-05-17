@@ -26,14 +26,14 @@ You can setup that one very quick [with via MLT UI](#a-vpn-recap)
 But DNS is a rabbithole of its own.
 
 {{< callout type="info" >}}
-I put some notes about [DNS options here](https://github.com/JAlcocerT/Home-Lab/blob/main/z-homelab-setup/about-dns.md)
+I put some notes about [**DNS** options here](https://github.com/JAlcocerT/Home-Lab/blob/main/z-homelab-setup/about-dns.md)
 {{< /callout >}}
 
 and ppl are voting whats [their favourite here](https://forocoches.com/foro/showthread.php?t=8106499)
 
-With this post, I want to explore the [latests on PiHole v6](#pihole) and use it as the default DNS for a smart TV.
+With this post, I want to explore the [latests on **PiHole** v6](#pihole) and use it as the default DNS for a smart TV.
 
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#programmatic-dns-updates
+* https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#programmatic-dns-updates
 
 <!-- https://www.youtube.com/watch?v=mnry95ay0Bk -->
 
@@ -68,9 +68,7 @@ docker compose -f piholev6-docker-compose.yml logs -f
 
 Then just go to `http://localhost:500/admin/login`, use the `FTLCONF_webserver_api_password` as password.
 
-
 Once you are done:
-
 
 ```sh
 #dig @9.9.9.9 google.com
@@ -124,10 +122,8 @@ Will you keep cloudflare 1.1.1.1, or wanna try sth?
     * Quad9
     * CLoudflare/Google...
 
-
 * How to use Raspberry Pi as WIFI **A**ccess **P**oint: https://jalcocert.github.io/RPi/posts/rpi-raspap/
 * How to use a RPi as a Wifi 2 Ethernet + VPN: https://jalcocert.github.io/RPi/posts/rpi-wifi-ethernet-bridge/
-
 
 ### Pihole regexp
 
@@ -147,7 +143,6 @@ Not a problem, you can add more domains so that they dont resolve:
 | Comprehensive | https://blocklistproject.github.io/Lists/everything.txt                                                       | Full (ads + malware + NSFW); overlaps heavily. |
 | Adult         | https://raw.githubusercontent.com/chadmayfield/my-pihole-blocklists/master/lists/pi_blocklist_porn_top1m.list | Family-friendly option.                        |
 | YouTube       | https://raw.githubusercontent.com/anudeepND/youtubeadsblacklist/master/domainlist.txt                         | Blocks YouTube ads.                            |
-
 
 Surprise, surprise, **sqlite** is around:
 
@@ -192,7 +187,9 @@ We can say that some domain name and their [DNS management is the 101 basic for 
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/listmonk/listmonk-api-py/Ebook-cover-SSGs.pdf" title="Get an ebook with all Data Analytics concepts you need" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Learn the concepts and tools to land a job in D&A" >}}
 {{< /cards >}}
 
+
 You can blame the raspberry Pi on how ive started learning about DNS
+
 You also learn a lot about DNS when tinkering with networking and setting your own VPN - wireguard server
 
 https://jalcocert.github.io/RPi/projects/rpi_wifi_ethernet_bridge/
