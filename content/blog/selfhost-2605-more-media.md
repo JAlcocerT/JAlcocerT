@@ -612,6 +612,91 @@ rsync -avhW --no-compress --progress --partial -e "ssh -p 2022" jalcocert@100.x.
 
 ### How to NextCloud
 
+/home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml
+
+```sh
+#docker network create nextcloud_test_internal
+
+docker run -d \
+  --name nextcloud-test-db \
+  --restart unless-stopped \
+  --network nextcloud_test_internal \
+  -e MYSQL_INITDB_SKIP_TZINFO=1 \
+  -e MYSQL_ROOT_PASSWORD='change-root-pass' \
+  -e MYSQL_PASSWORD='change-db-pass' \
+  -e MYSQL_DATABASE=nextcloud \
+  -e MYSQL_USER=nextcloud \
+  -v /mnt/data2tb/z-nextcloud/db:/config \
+  linuxserver/mariadb:11.4.8
+
+docker run -d \
+  --name nextcloud-test \
+  --restart unless-stopped \
+  --network nextcloud_test_internal \
+  -p 8100:80 \
+  -e MYSQL_PASSWORD='change-db-pass' \
+  -e MYSQL_DATABASE=nextcloud \
+  -e MYSQL_USER=nextcloud \
+  -e MYSQL_HOST=nextcloud-test-db \
+  -e NEXTCLOUD_TRUSTED_DOMAINS='192.168.1.2 localhost minube.jalcocertech.com' \
+  -e OVERWRITEPROTOCOL=http \
+  -v /mnt/data2tb/z-nextcloud/html:/var/www/html \
+  nextcloud:32.0
+```
+
+```sh
+ du -h --max-depth=1 .
+   df -hT /mnt/data2tb /mnt/backup2tb
+
+ ```
+
+/sftpgo
+  /mnt/data2tb:/srv/data2tb
+
+  So sftpgo has the whole /mnt/data2tb mounted inside it as /srv/data2tb.
+
+  I also found compose references for pigallery2:
+
+  /mnt/data2tb/Z_BackUP_HD-SDD/Z_FOTOS:/app/data/images:ro
+
+  That one is read-only and appears in the evolution compose files, including the active 2602_docker-compose.yml. But in the current docker ps output from earlier, pigallery2 was not running, so the live user of /mnt/
+  data2tb right now is sftpgo.
+
+  Summary:
+
+  - /mnt/data2tb is exFAT.
+  - Running container using it: sftpgo, mounted read/write.
+  - Compose-configured but not currently running from what I saw: pigallery2, read-only photo mount.
+  - Existing Nextcloud is not using the 2TB disk; it uses /mnt/data1tb/nextcloud/....
+
+   NTFS makes sense for this external backup drive if you want Windows compatibility. It’s a reasonable format for “copy files here and keep it portable.” It’s just not a good format for running Nextcloud/MariaDB
+  directly.
+
+  I can see the drive, but I can’t mount it from here because mounting requires local authorization/password and this shell cannot show the sudo/polkit prompt.
+
+  Please run this locally:
+
+  sudo mkdir -p /mnt/backup2tb
+  sudo mount /dev/sdc2 /mnt/backup2tb
+  df -hT /mnt/data2tb /mnt/backup2tb
+
+ 1.2T  /mnt/data2tb/Z_BackUP_HD-SDD
+  155G  /mnt/data2tb/nc
+  78G   /mnt/data2tb/old-Synced SEPT23
+  66G   /mnt/data2tb/pixel8pro
+  62G   /mnt/data2tb/immich
+  19G   /mnt/data2tb/sftpgo
+  14G   /mnt/data2tb/nextcloud
+  12G   /mnt/data2tb/Sync_Pixel
+  6.3G  /mnt/data2tb/2tbepam
+
+  Destination already has:
+
+  893G  /mnt/backup2tb/Z_FOTOS
+  41G   /mnt/backup2tb/Aficiones
+  20G   /mnt/backup2tb/.Trash-1000
+  12G   /mnt/backup2tb/Estudios
+
 This is the one im keeping for now: *remember that you can use it via cf tunnels and just make it available for certain ips/countries*
 
 ```sh
@@ -648,6 +733,58 @@ Via GNOME Files / Nautilus Files → "Other Locations" → in the Connect to Ser
                                                                                                                                            
 
 ### How to Immich
+
+ The generated folders are different:
+
+  thumbs          = resized preview images
+  encoded-video   = transcoded video versions
+  profile         = profile images
+
+  Those are not originals.
+
+  The caveat: Immich can only preserve what it was given. If your phone/client uploaded an already-processed JPEG instead of the camera RAW/HEIC original, then Immich’s “original” is that uploaded JPEG. Also, if metadata
+  was stripped before upload by the source app/device, Immich cannot recreate it.
+
+  So the practical answer:
+
+  /mnt/data2tb/immich/library/upload = keep/backup; contains original uploaded assets
+  /mnt/data2tb/immich/library/thumbs = generated
+  /mnt/data2tb/immich/library/encoded-video = generated
+
+```sh
+rsync -a --info=progress2 /mnt/data2tb/immich/library/upload/ /mnt/backup2tb/backup_from_data2tb_immich/library/upload/ #130mb/s to usbC
+```
+
+Got dups?
+
+```sh
+jdupes -r -S /mnt/data2tb/pixel8pro /mnt/data2tb/Sync_Pixel
+```
+
+```sh
+#sudo snap install czkawka #UI wont work
+
+  cd /tmp
+  wget https://github.com/qarmin/czkawka/releases/latest/download/linux_czkawka_cli_x86_64
+  chmod +x linux_czkawka_cli_x86_64
+  sudo install -m 755 linux_czkawka_cli_x86_64 /usr/local/bin/czkawka_cli
+
+  Test it:
+
+  czkawka_cli --help
+
+  Then your duplicate scan should work as:
+
+  czkawka_cli dup \
+    -d "/mnt/data2tb/old-Synced SEPT23" \
+    -d "/mnt/data2tb/Z_BackUP_HD-SDD" \
+    -f /mnt/backup2tb/czkawka_old_synced_vs_zbackup.txt
+
+czkawka_cli dup \
+    -d "/mnt/data2tb/old-Synced SEPT23" \
+    -d "/mnt/data2tb/Z_BackUP_HD-SDD" \
+    -f /mnt/backup2tb/czkawka_old_synced_vs_zbackup.txt
+```
 
 I was using Immich wrong:
 

@@ -3,7 +3,7 @@ title: "Selfhosting local Gen-AI (LLMs x Agents)"
 date: 2026-05-13
 draft: false
 description: "How to use Ollama x Gemma 4. With OpenClaw and Hermes."
-tags: ["Home-Lab x (x300 vs M2)","Kimi vs Deepseek","TTS"]
+tags: ["Home-Lab x (x300 vs M2)","Kimi vs Deepseek","TTS","DEFINE vs CREATE"]
 ---
 
 **Tl;DR**
@@ -603,11 +603,8 @@ You have them all updated into this script
 
 You can test the speed with this script, which now includes [the trip-planner v3](https://jalcocert.github.io/JAlcocerT/poc-101/#where-are-you-going):
 
-```sh
 
-```
-
-helium, zen...
+Helium, zen...are interesting browsers for you to give a try
 
 * https://winboat.app/
 
@@ -628,7 +625,7 @@ This is a good chance to make a system format from scratch and reset the system 
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/sftp-go" title="SFTPGo | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
-Hopefully, you have your important containers volumes pointing to external/non OS disks:
+Hopefully, you have your **important containers volumes** pointing to external/non OS disks:
 
 https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich
 ![Immich UI](/blog_img/selfh/Photo/immich.png)
@@ -647,28 +644,23 @@ docker ps -a --filter "status=running" --format "table {{.Names}}\t{{.Mounts}}"
 docker stats netdata
 ```
 
-You can also backup your logs:
-
-https://jalcocert.github.io/JAlcocerT/image-backup-tools/#server-maintainance
+You can also backup your logs: https://jalcocert.github.io/JAlcocerT/image-backup-tools/#server-maintainance
 
 ![Uptime Kuma Monitoring Page](/blog_img/selfh/HomeLab/statuspages/uptimekuma.png)
 
 
-1. Like...installing python? nah, manage everything via uv with whatever python version:
+1. Like...installing python? 
 
 ```sh
-
+curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh
+#powershell -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
+uv python install 3.12
+#uv run script.py
 ```
+
+Nah, manage everything via uv with whatever python version!
 
 > Similarly as I did with this mac M2 :)
-
-2. 
-
-
-```mermaid
-graph TD
-    A[ThinkPad] --> B[Orange Pi 5]
-```
 
 
 ### Prompting 101
@@ -687,41 +679,51 @@ While "Creating" is the act of generation, **D.E.F.I.N.E.** is the methodology p
 
 ---
 
-## **The D.E.F.I.N.E. Framework**
+#### **The D.E.F.I.N.E. Framework**
 
-### **D – Desired Outcome**
+**D – Desired Outcome**
+
 Pros start with the "Why" and the "Final Form."
+
 * **The Goal:** Don't just ask for "an email." Ask for "a persuasive email that secures a follow-up meeting."
 * **The Format:** Specify if you want a table, a code block, a list, or a JSON object.
 
-### **E – End User / Audience**
+**E – End User / Audience**
+
 This sets the tone and complexity level. 
+
 * **The Context:** Is the AI writing for a skeptical CFO, a 5-year-old, or a Senior DevOps Engineer?
 * **The Persona:** You might also define the AI’s persona here (e.g., "Act as a legal expert").
 
-### **F – Facts / Inputs**
+**F – Facts / Inputs**
+
 AI is only as good as the data it’s chewing on. 
+
 * **The Data:** Provide the raw text, the statistics, or the URL.
 * **The Reference:** "Base your answer *only* on the following transcript..."
 
-### **I – In-Scope / Out-of-Scope (OOS)**
+**I – In-Scope / Out-of-Scope (OOS)**
+
 This is the "Guardrail" phase. It prevents the AI from wandering into irrelevant topics.
+
 * **In-Scope:** "Focus specifically on the Q3 fiscal projections."
 * **Out-of-Scope:** "Do not mention the merger or the previous year’s losses."
 
-### **N – Needs, Constraints, & Dependencies**
+**N – Needs, Constraints, & Dependencies**
+
 This is the fine print that makes the output usable.
+
 * **Constraints:** "Must be under 200 words," "Avoid passive voice," or "No technical jargon."
 * **Dependencies:** "Assume the reader has already seen the first pitch deck."
 
-### **E – Evaluation & Execution**
+**E – Evaluation & Execution**
+
 The final check before the AI "runs" the task.
+
 * **Evaluation:** Ask the AI to critique its own work before presenting it. "Check your answer for logical fallacies."
 * **Execution:** Tell the AI how to finish. "Provide the summary first, then the detailed breakdown, then a list of follow-up questions."
 
----
-
-### **Example: Applying D.E.F.I.N.E. to a Task**
+#### Example: Applying D.E.F.I.N.E. to a Task
 
 Instead of saying: *"Write a marketing post about our new AI tool,"* a pro uses the framework:
 
@@ -732,9 +734,8 @@ Instead of saying: *"Write a marketing post about our new AI tool,"* a pro uses 
 > **N:** Use a professional yet punchy tone. Max 150 words. Use emojis sparingly.  
 > **E:** Evaluate the post for "cringe" corporate speak and remove it before outputting.
 
----
+**Why Pros Use This Over "Creating" Freehand**
 
-### **Why Pros Use This Over "Creating" Freehand**
 1. **Reduces Iteration:** You get what you want in one "hit" rather than five follow-up prompts.
 2. **Scalability:** You can turn a **D.E.F.I.N.E.** block into a template for any future task.
 3. **Control:** It moves the AI from "Creative Assistant" to "Precision Tool."
@@ -747,39 +748,43 @@ Here is how pro power users break down the **C.R.E.A.T.E.** framework:
 
 ---
 
-### **C – Character & Context**
+**C – Character & Context**
+
 Before the AI writes a single word, you must anchor its identity and the situation.
 *   **The Role:** Assign a specific "expert" persona (e.g., "You are a Senior Editor at a Tier-1 tech publication").
 *   **The Background:** Brief the AI on why this task is happening now.
 
-### **R – Reference & Resources**
+**R – Reference & Resources**
+
 Provide the "raw materials" for the build.
 *   **Examples (Few-Shot):** Give the AI 2–3 examples of the style or format you want.
 *   **Knowledge:** Attach documents, paste data, or provide links that the AI must use as its "source of truth."
 
-### **E – Explicit Instructions**
+**E – Explicit Instructions**
+
 This is the "meat" of the prompt where you give the direct command.
 *   **The Action:** Use strong verbs (e.g., "Synthesize," "Contrast," "Draft," "Refactor").
 *   **The Structure:** Tell it exactly how to organize the response (e.g., "Introduction, then 3 body paragraphs, then a TL;DR").
 
-### **A – Adjustments & Constraints**
+**A – Adjustments & Constraints**
+
 Set the boundaries to prevent "AI-isms" and hallucinations.
 *   **Tone/Voice:** "Professional but provocative," "Scientific and dry," or "Empathetic."
 *   **Negative Constraints:** Explicitly state what to avoid (e.g., "Do not use the word 'delve'," "No preamble," or "Don't mention competitors").
 
-### **T – Type of Output**
+**T – Type of Output**
+
 Define the technical delivery.
 *   **Format:** Do you need Markdown, a CSV table, a Python script, or a Mermaid diagram?
 *   **Length:** Set word counts or "one-page" limits.
 
-### **E – Evolutionary Iteration**
+**E – Evolutionary Iteration**
+
 Pro users rarely stop at the first output. This step turns a "chat" into a "workflow."
 *   **Feedback Loop:** Ask the AI to "Review your response against my constraints and highlight where you might have missed a detail."
 *   **Multi-step refinement:** "Now take that draft and rewrite it to be 20% more concise."
 
----
-
-### **The Distinction: DEFINE vs. CREATE**
+**The Distinction: DEFINE vs. CREATE**
 
 *   **DEFINE** is **Strategic**: It’s used for project management, aligning stakeholders, and ensuring you know *what* you need. It is the "Contract."
 *   **CREATE** is **Tactical**: It’s the actual prompt engineering syntax used to talk to the LLM to get the work done. It is the "Execution."
@@ -791,5 +796,3 @@ Pro users rarely stop at the first output. This step turns a "chat" into a "work
 | **Focus** | Dependencies and End Users | Persona and Iteration |
 
 **Pro Tip:** Use **DEFINE** to organize your thoughts in a scratchpad or document, then translate those requirements into a **CREATE** prompt for the AI.
-
-Which of these frameworks feels more natural to your current workflow?

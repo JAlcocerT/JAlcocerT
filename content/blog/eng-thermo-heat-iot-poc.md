@@ -1,8 +1,8 @@
 ---
 title: "Energy Solutions in the AI era"
-date: 2026-05-19
+date: 2026-05-22
 draft: false
-tags: ["Rankine x Aerotermia PoC","IoT x DHT22","SAHP"]
+tags: ["Rankine x Aerotermia PoC","IoT x DHT22","PV vs SAHP vs HVAC"]
 description: 'Boundary conditions are hard. Abstract them with sensors.'
 url: 'how-to-check-hot-pump-viability'
 math: true
@@ -13,7 +13,15 @@ Poprawne podsumowanie:
   - Ciepło worst month: ~2.5 GJ (Feb 2025) ≈ 684 kWh thermal
   - Ciepło avg: ~0.8 GJ/m ≈ 220 kWh thermal/m
 
-  coming fro, https://jalcocert.github.io/JAlcocerT/thermodynamics/
+  coming from https://jalcocert.github.io/JAlcocerT/thermodynamics/ and from
+
+  Where some magic happend: https://go-solar.pages.dev/era5-cities/
+
+```sh
+make eu-capitals-raw
+make era5-cities-bake       # resumable, only fetches new 31
+
+```
   
 
 **Tl;DR**
@@ -35,8 +43,10 @@ Its just all about [heat pumps](https://en.wikipedia.org/wiki/Heat_pump).
 ## Conclusions
 
 ```sh
+cd ./poc/go-solar
+make ship #https://go-solar.pages.dev/era5-cities/
+#cd ./poc/aerothermics
 make deploy #https://main.aerothermics-landing.pages.dev/
-
 ```
 
 Anti-barbell example (what I steered you away from):
