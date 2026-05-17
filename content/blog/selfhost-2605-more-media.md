@@ -801,9 +801,12 @@ czkawka_cli dup \
 
     if you get tired of waiting
 
+
+```sh
       rsync -a --info=progress2 \
     "/mnt/data2tb/Z_BackUP_HD-SDD/Z_FOTOS/" \
     "/mnt/backup2tb/Z_FOTOS/"
+```
 
 I was using Immich wrong:
 
