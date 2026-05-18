@@ -105,8 +105,8 @@ TAG=3.0.0 docker compose -f docker-compose-non-dev.yml up
 
 I tried MetaBase for Analytics with a Pi and a DHT sensor:
 
-https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/#metabase-dht-sensor-visualization
-https://jalcocert.github.io/RPi/img/metabase-mongoDB.JPG
+* https://jalcocert.github.io/RPi/posts/rpi-iot-dht1122-mongo/#metabase-dht-sensor-visualization
+* https://jalcocert.github.io/RPi/img/metabase-mongoDB.JPG
 
 ### Redash
 
@@ -828,8 +828,8 @@ Use Cases:
 - **Single-command Deployment**: Latitude can be deployed quickly with a single command, making it easier for developers to get up and running without complex configurations.
 - **Framework Integration**: Latitude integrates seamlessly with popular front-end frameworks like React, Svelte, and Vue, which are commonly used for building modern web applications.
 
-
 Current Status:
+
 - The project is **no longer maintained** as the focus has shifted to a new project, **Latitude LLM**, which likely focuses on new features or different capabilities.
 - Existing users can still use the codebase and license as-is, though no new updates are being released.
 

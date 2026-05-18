@@ -25,6 +25,8 @@ Destilled from one my [high-signal playbooks](https://github.com/JAlcocerT/jalco
 
 ## The Engineer’s "No-Fluff" Checklist
 
+Start [syncing expectations](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#syncing-expectations).
+
 **Stop building on top of vague assumptions. Use this checklist to turn "ASAP" requests into actionable briefs.**
 
 ---
