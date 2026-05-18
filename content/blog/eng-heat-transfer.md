@@ -294,7 +294,7 @@ Its all about the latitude, the tilt, the day of the year... all [those features
 
 ## Tools
 
-Assuming you are referring to **PySpice** (the Python interface for SPICE circuit simulators), the search for a direct equivalent in heat transfer depends on whether you want to solve thermal problems using **electrical analogies** or **physical simulation**.
+Assuming you are referring to **PyScipe** (the Python interface for SPICE circuit simulators), the search for a direct equivalent in heat transfer depends on whether you want to solve thermal problems using **electrical analogies** or **physical simulation**.
 
 In engineering, heat transfer is often modeled using "Lumped Element" models where:
 
@@ -385,7 +385,6 @@ Which should you choose?
 *   **Choose PySpice** if you are an **Electrical Engineer**.
     *   *Example:* You already have a circuit board designed in SPICE and you want to add a few "thermal resistors" to make sure the chips don't melt.
 
-Are you looking to create a visual "heat map" of an object, or just calculate the final temperature at a single point?
 
 ---
 
