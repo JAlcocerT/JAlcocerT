@@ -2,13 +2,36 @@
 title: "Selfhosted Connectivity"
 date: 2026-05-22
 draft: false
-tags: ["HomeLab","TapMap"]
-description: 'A homelab evaluation of WIFI metrics.'
-url: 'home-lab-tools-for-iot'
+tags: ["HomeLab","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark"]
+description: 'A homelab evaluation of WIFI metrics via EasyMesh'
+url: 'selfhosted-connectivity'
 ---
+
+adguard, Unbound, pihole...?
+
+https://www.youtube.com/watch?v=9buji0Vnbo0
+https://www.youtube.com/watch?v=H-tPCwxdxpY
+
+https://raspberrytips.com/openwrt-on-raspberry-pi/
+
+  sudo apt install -y nmap arp-scan tcpdump
 
 **TL;DR**
 
+http://192.168.1.2:3034/hermesagent/pi-connectivity
+
+gosolar-spain
+tmux new -s claude-gosolar-spain
+
+sudo apt install libssl-dev libcurl4-openssl-dev libsqlite3-dev libz-dev autoconf automake libtool pkg-config libmosquitto-dev libwebsockets-dev mosquitto mosquitto-clients
+
+
+```sh
+#tmux new -s claude-pi
+#tmux attach -t claude-pi #http://192.168.1.2:3034/hermesagent/pi-connectivity.git
+#forgejo-home:hermesagent/pi-connectivity.git (which is 192.168.1.2:2235, user git, key ~/.ssh/id_ed25519_forgejo). It's currently empty —
+claude --dangerously-skip-permissions
+```
 
 
 {{< callout type="warning" >}}
@@ -693,3 +716,161 @@ sudo airodump-ng -c 100 --band a wlan0mon
 - bbfdm (Linux→TR-181 mapper): <https://dev.iopsys.eu/iopsys/bbfdm>
 - nexmon (Pi 4 monitor mode firmware): <https://github.com/seemoo-lab/nexmon>
 - OpenWrt: <https://openwrt.org/>
+
+---
+
+ cat lan-check.md 
+# LAN Check — 192.168.1.0/24
+
+Date: 2026-05-18
+Host: Raspberry Pi (`192.168.1.18` on wlan0)
+Method: ARP-based discovery (ping sweep + `arp -an`) and OUI vendor lookup via `api.macvendors.com`. **No port scanning performed.**
+
+## Network
+
+- Subnet: `192.168.1.0/24`
+- Gateway: `192.168.1.1`
+- This host: `192.168.1.18` (wlan0), plus `100.101.108.118` (tailscale0) and `172.17.0.1` (docker0)
+
+## Discovered devices
+
+| IP    | MAC               | Vendor (OUI)                          | Likely device                                  |
+|-------|-------------------|---------------------------------------|------------------------------------------------|
+| .1    | 2c:ec:... | Shenzhen SDMC Technology              | Gateway/router (ISP CPE / set-top hybrid)      |
+| .2    | 9c:6b:... | ASRock Incorporation                  | Desktop PC (motherboard)                       |
+| .3    | 28:87:... | TP-Link Systems Inc                   | TP-Link device (router/AP/smart-plug/switch)   |
+| .5    | 28:cd:... | Raspberry Pi Trading Ltd              | Raspberry Pi                      |
+
+11 active hosts. Reverse DNS and NetBIOS lookups returned nothing.
+
+## Hosts worth a closer look
+
+Ranked by vendor reputation, not actual evidence of compromise.
+
+1. **`.11` Sichuan AI-Link** — Chinese IoT ODM (common in cheap WiFi cameras / smart devices). Frequently phones home to opaque cloud endpoints, rarely patched. Identify it first.
+2. **`.12` Espressif** — bare ESP32 MAC. Fine if intentionally deployed (Shelly, ESPHome, DIY); investigate if not recognized.
+3. **`.9` SJIT** — uncommon OEM. Treat like unknown IoT until identified.
+4. **`.1` SDMC gateway** — ISP boxes often ship with default admin creds and outdated firmware. Verify: firmware date, WAN-side admin disabled, UPnP off, WPS off.
+5. **`.17` Versuni** — Philips appliance spinoff (kitchen/health appliance). Smart-appliance firmware quality is generally poor.
+6. **`.3` TP-Link** — fine on current firmware; consumer line has had a steady stream of CVEs over the years.
+7. **`.7` / `.16` randomized MACs** — normal for modern phones/laptops. Confirm both are accounted for (family devices) and not unknown.
+
+## What this check cannot tell you
+
+- Which devices have open services (Telnet, old SMB, exposed admin UIs)
+- Firmware versions / known CVEs
+- Default-credential exposure
+- Whether any device is actively communicating with suspicious endpoints
+
+A port scan is required for any of the above.
+
+## Next steps
+
+### 1. Identify the unknowns (no scanning needed)
+- Check the router's DHCP client list (admin UI on `http://192.168.1.1`) — many gateways show hostnames the devices reported.
+- Power-cycle suspected IoT one at a time and watch which IP drops off (`arp -an`) to map IP → physical device.
+
+### 2. Targeted, low-risk port scan
+Install nmap and scan only the unknowns / suspicious hosts:
+
+```bash
+sudo apt-get install -y nmap
+sudo nmap -sV -sC -p- --script=safe 192.168.1.9 192.168.1.11 192.168.1.12 192.168.1.17
+```
+
+Why these flags:
+- `-sV` service/version detection
+- `-sC` default NSE scripts (informational)
+- `-p-` all 65535 ports (IoT often hides admin on odd ports)
+- `--script=safe` excludes intrusive/DoS-prone scripts
+
+Risk: low. Cheap IoT devices *occasionally* hang under version probes and need a power cycle. Scan one host at a time and watch it.
+
+### 3. Escalate only if needed
+If `-sV` reveals an interesting service (e.g., old HTTP server, exposed Telnet/RTSP), then run vuln scripts against that specific port:
+
+```bash
+sudo nmap --script=vuln -p <port> <ip>
+```
+
+Avoid `--script=vuln` on every host blindly — some checks can crash unpatched embedded services or trigger credential lockouts.
+
+### 4. Network hygiene regardless of scan results
+- Put IoT on a separate VLAN / guest network if the router supports it (isolates `.11`, `.12`, `.17`, possibly `.9`).
+- Disable UPnP on the gateway.
+- Disable WAN-side remote admin on the gateway.
+- Change default credentials on every smart device.
+- Block outbound traffic from IoT to the internet where the device doesn't need it (router firewall rules).
+
+### 5. Optional: ongoing monitoring
+- `arp -an` weekly, diff against this baseline to spot new devices.
+- Pi-hole or AdGuard Home as the LAN DNS resolver — gives visibility into what each IoT device is calling home to.
+
+
+Wi-Fi and home networking
+
+Q: **What is EasyMesh**? A Wi-Fi Alliance standard (originally 2018, currently R5) for multi-AP roaming inside a home. One "controller" AP coordinates several "agent" APs over a vendor-neutral protocol so a phone can hand off between them without dropping the connection. The agents share client metrics (RSSI, capability, load) with the controller, which decides when to steer a client to a better AP.
+
+It rides on the older IEEE 1905.1 abstraction (a layer-2 control plane that spans Wi-Fi, Ethernet, MoCA, powerline). The data those agents and controller exchange is exposed in TR-181 under Device.WiFi.DataElements.* — so a USP Controller can read the **full mesh topology** + per-station metrics through the same channel it reads everything else. Reference impl: prplMesh (https://github.com/prplfoundation/prplMesh). A planned deeper note lives at notes/wifi-easymesh.md.
+
+Q: SSID vs BSSID — what's the difference?
+
+    SSID is the network name (the string you see in the Wi-Fi list).
+    BSSID is the MAC of the AP's radio for that network. One SSID can have many BSSIDs: dual-band APs use different BSSIDs per band, mesh networks use one per node per band, and enterprise SSIDs span dozens of BSSIDs across a building.
+
+In our snapshot, "Piszymsiu" has three BSSIDs (one per band on the ISP's tri-band gateway).
+
+Q: Why does the AP know my RSSI better than I do? RSSI is asymmetric. The Pi measures the AP's signal as the Pi hears it; the AP measures the Pi's signal as the AP hears it. They're often within a few dB but they can differ wildly when the AP has more TX power than the client (typical). The AP also sees every other station on its radio — the Pi only sees itself. That's why Device.WiFi.AccessPoint.{i}.AssociatedDevice.{i}.SignalStrength exists only on the AP side of TR-181.
+
+Q: What is DFS and why is channel 100 special? DFS (Dynamic Frequency Selection) channels in 5 GHz (52–144) are shared with weather/military radar. APs that use them must listen for radar pulses and vacate within seconds. Channels 100–144 (UNII-2 Extended) are wider and less crowded than the indoor-only UNII-1 (36–48), which is why the Pi was steered to channel 100 in our snapshot.
+
+LAN discovery and MACs
+
+Q: What is an OUI? Organizationally Unique Identifier — the first 24 bits of a MAC, assigned by the IEEE to manufacturers. 2c:ec:f7 → Shenzhen SDMC, 28:cd:c1 → Raspberry Pi Trading. The IEEE publishes the full mapping as a CSV. scripts/lan-inventory.sh looks them up via api.macvendors.com and caches results.
+
+Q: Why do some MACs look "randomized"? Modern phones (iOS 14+, Android 10+) and many laptops join Wi-Fi networks with a locally administered MAC — the second-least- significant bit of the first byte is set to 1. The address is not in the IEEE OUI database because it's generated per-network by the client to defeat tracking. lan-inventory.sh detects this bit and labels these as *locally administered (randomized)* without hitting the OUI API.
+
+Q: What does ARP-based discovery miss?
+
+    Devices with no IP currently bound (sleeping, off, just-rebooted)
+    Hosts that don't answer ICMP echo (some IoT firmware drops it)
+    Hosts on a different VLAN / subnet
+    Hosts that talk only IPv6
+
+would the pi with openwrt have more dkb tr181 fields than it currently has? could i deploy one of those easymesh agents?                                                                                                                                                                               
+
+● Short answer: yes to both, with caveats.
+
+  More TR-181 fields on OpenWrt — how much more?
+
+  Depends on what role the Pi plays.
+
+  ┌────────────────────────────────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────┐
+  │                    Role                    │                                                                                What you'd gain vs Raspbian today                                                                                │                 What stays empty                 │
+  ├────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+  │ Pi as STA (still just a client) on OpenWrt │ Device.Hosts.Host.*, Device.Firewall.*, Device.NAT.*, Device.Routing.*, Device.DHCPv4.Client.* properly typed; a real USP Agent so leaves are writeable; LocalAgent.* for                       │ WiFi.AccessPoint.*, AssociatedDevice RSSI,       │
+  │  + bbfdm + obuspa                          │ Controller/MTP/Subscription                                                                                                                                                                     │ DSL/PON/MoCA, Voice                              │    ────
+  ├────────────────────────────────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────┤
+  │ Pi as AP/router (hostapd + dnsmasq,        │ All of the above, plus Device.WiFi.AccessPoint.* with config, Device.WiFi.AccessPoint.*.AssociatedDevice.*.SignalStrength for every client (the big one), Device.DHCPv4.Server.Pool.*.Client.*  │ DSL/PON line stats (no modem), MoCA, Voice       │
+  │ OpenWrt as the gateway)                    │ from dnsmasq leases, Device.UPnP.*, Device.QoS.* if you wire SQM                                                                                                                                │                                                  │
+  └────────────────────────────────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────┘
+
+  The jump from "Pi as STA on OpenWrt" → "Pi as AP on OpenWrt" is bigger than the jump from "Raspbian" → "OpenWrt as STA". The AP role is what unlocks per-client RSSI and the LAN client table — the things you'd actually want a Controller to read.
+
+  Hardware caveat: the Pi 4's onboard Broadcom (BCM43455c0) supports AP mode under OpenWrt's brcmfmac driver but is single-stream Wi-Fi 5 and not very reliable as a long-running AP. A USB adapter from the hardware.md shortlist (ALFA AWUS036ACH / NHA) gives a much better AP experience. Cleanest   tup:
+  setup: onboard radio = STA backhaul, USB radio = fronthaul AP.
+
+  EasyMesh agent — yes, but think about radios + Controller
+
+  Technically: opkg install prplmesh on OpenWrt/prplOS gets you a working EasyMesh R2/R3 Agent. The constraints:
+
+  1. One radio is awkward. EasyMesh wants a fronthaul AP (clients connect here) and a backhaul (uplink to another node). Same radio can't do both well — beacons interfere with backhaul scans. The Pi 4's onboard radio is single-radio, single-stream. Realistic minimum: one Pi + one USB Wi-Fi       r,
+  adapter, or two Pis.
+  2. You need a Controller somewhere. Options:
+    - Same Pi running both Controller and Agent — perfectly fine for learning. prplMesh supports it.
+    - A second OpenWrt box acting as Controller, your Pi as Agent.
+    - Your ISP gateway as Controller — only if it speaks EasyMesh and lets you enrol third-party agents. Most ISP gateways do not.
+  3. No interop with consumer mesh kits. prplMesh ↔ Eero / Google / Plume is not a thing. You'd be building an all-prplMesh network.
+
+  Most useful setup for this repo: a spare Pi (or USB SSD on the same Pi for dual-boot) with OpenWrt + USB Wi-Fi adapter as AP, running prplMesh in both Controller and Agent role, with bbfdm + obuspa exposing the whole thing as TR-181. That's the configuration that populates
+  Device.WiFi.DataElements.* for real — and it's already on the roadmap as notes/openwrt-tr181-lab.md (Phase 3 of plan.md).
