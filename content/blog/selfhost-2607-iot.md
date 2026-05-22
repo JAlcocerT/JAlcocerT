@@ -318,6 +318,7 @@ They are now...static!
 
 And you have one IoT basics ebook waiting for you in there :)
 
+
 ---
 
 ## FAQ

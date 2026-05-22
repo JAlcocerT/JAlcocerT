@@ -1,16 +1,25 @@
 ---
 title: "Vacations with Python"
-date: 2026-07-05T19:20:21+01:00
+date: 2026-07-01T09:20:21+01:00
 draft: false
 tags: ["PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs of Living"]
 summary: 'Where am I going next? With Vibe Planning and scrapped wisdom of crowds.'
 url: 'py-vacations'
 ---
 
+https://github.com/dawarich-app/atlas
+
+
+ Your favorite offline self-hostable maps. City, Country, Planet, you choose. 
+
+ https://atlas.dawarich.app/docs/quickstart
+ 
 ```sh
 cd ./poc/z-poc-trip-planner-v4
 #https://github.com/JAlcocerT/poc/tree/main/z-poc-trip-planner-v4
 ```
+
+> Which I have statically deployed at: `https://17e286bf.trip-planner-9lt.pages.dev/`
 
 **Tl;DR**
 

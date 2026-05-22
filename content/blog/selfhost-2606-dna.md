@@ -1,12 +1,16 @@
 ---
 title: "SelfHosted Data Analytics"
-date: 2026-10-01T23:20:21+01:00
+date: 2026-06-01T23:20:21+01:00
 draft: false
 tags: ["Rill vs WrenAI vs Vanna","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql"]
 description: 'Selfhosting D&A Tools. With WrenAI, Rill and Vanna.'
 url: 'selfhosting-data-analytics'
 ---
 
+
+https://github.com/Canner/WrenAI
+
+https://docs.getwren.ai/oss/concepts/architecture#correctness-is-a-system-not-a-switch
 
 **Tl;DR**
 
