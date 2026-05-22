@@ -1,6 +1,6 @@
 ---
 title: "Energy Solutions in the AI era"
-date: 2026-05-22
+date: 2026-05-25
 draft: false
 tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment","PV vs SAHP vs HVAC"]
 description: 'Boundary conditions are hard. Abstract them with sensors.'
@@ -20,6 +20,8 @@ Poprawne podsumowanie:
   Where some magic happend: https://go-solar.pages.dev/era5-cities/
 
 ```sh
+#git clone /poc
+#cd ./poc/go-solar
 #make eu-capitals-raw
 make eu-capitals-status #-missing
 #make era5-cities-bake       # resumable, only fetches new 31
@@ -62,6 +64,8 @@ make ship
 **Tl;DR**
 
 How about doing `energysolutions` NOW?
+
+![alt text](/blog_img/mechanics/heat_pump.gif)
 
 +++ Solar assisted heat pump simulation (SAHP)
 
@@ -117,9 +121,12 @@ cd ./poc/aero
 
 4. Wrapping all together:
 
+---
 
 ## FAQ
 
 ### How much Tilt matters for FV
 
-https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-tilt-101.md
+Depending on: latitude, day of the year, hour
+
+* https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-tilt-101.md

@@ -7,6 +7,11 @@ description: 'A homelab around IoT and sensors.'
 url: 'home-lab-tools-for-iot'
 ---
 
+iot sim card
+
+https://telnyx.com/pricing/iot-data-plans
+https://en.wikipedia.org/wiki/Machine_to_machine
+
 **TL;DR**
 
 Isnt it time to do some recap to IoT, HA and the solar panel?

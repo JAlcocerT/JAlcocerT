@@ -161,6 +161,8 @@ For that, you can always:
 
 ### Volumetric efficiency
 
+<!-- https://www.youtube.com/watch?v=1eRsaOxxiUc -->
+
 One of the best videos to understand VE:
 
 {{< youtube "1eRsaOxxiUc" >}}
@@ -171,6 +173,8 @@ You can also make an engineering BSc and port your matlab files to explore more:
 git clone /mbsd
 cd ./mbsd/z-fluid
 ```
+
+![alt text](/blog_img/mechanics/volumetric_map.gif)
 
 **Volumetric efficiency** ($\eta_v$) measures how well an engine breathes — how much fresh charge actually enters the cylinder compared to what could theoretically fit:
 

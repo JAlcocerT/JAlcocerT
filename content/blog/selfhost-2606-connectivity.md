@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Connectivity"
-date: 2026-06-01
+date: 2026-05-22
 draft: false
 tags: ["HomeLab","TapMap"]
 description: 'A homelab evaluation of WIFI metrics.'
@@ -8,6 +8,25 @@ url: 'home-lab-tools-for-iot'
 ---
 
 **TL;DR**
+
+
+
+{{< callout type="warning" >}}
+tr181-dump.sh
+{{< /callout >}}
+
+Saved at ~/wifi-tr181-notes.md (~9 KB). It covers:
+
+  1. Reading your own Wi-Fi state (iwconfig, iw dev wlan0 link, survey, scan) with the RSSI / band / channel reference tables and your actual readings
+  2. TR-181 + BBF + USP — what each is, how they relate (vocabulary vs grammar)
+  3. The tr181-dump.sh script — what branches it covers, how to invoke it
+  4. Why OpenWrt + bbfdm/obuspa unlocks more data, and the hardware-vs-OS tradeoff
+  5. Seeing other devices' RSSI — the three paths, nmap's role and limits, monitor mode caveats on the Pi 4
+  6. A quick-reference command block at the end
+  7. Links to the relevant projects (BBF, obuspa, bbfdm, nexmon, OpenWrt)
+
+  You now have two artifacts in ~: the runnable tr181-dump.sh and the reference wifi-tr181-notes.md.
+
 
 https://github.com/olalie/tapmap?ref=selfh.st#docker-linux-host-only
 https://olalie.github.io/tapmap/
