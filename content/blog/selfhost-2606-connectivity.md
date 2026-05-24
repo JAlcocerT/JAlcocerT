@@ -3,11 +3,65 @@ title: "Selfhosted Connectivity"
 date: 2026-05-22
 draft: false
 tags: ["HomeLab","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark"]
-description: 'A homelab evaluation of WIFI metrics via EasyMesh'
+description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
 url: 'selfhosted-connectivity'
 ---
 
 adguard, Unbound, pihole...?
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wireshark" title="Wireshark | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pihole" title="Pi Hole v6 | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+
+```sh
+git clone /Home-Lab
+cd .Home-Lab/z-homelab-setup/evolution
+#/home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml
+#printf '\nTERMIX_SALT=%s\n' "$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-32)" >> .env
+sudo docker compose -f 2605_docker-compose.yml up -d wireshark
+#sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml up -d wireshark
+```
+
+Wireshark lets you inspect live network traffic and saved packet captures. Common uses:
+
+  - Troubleshoot connectivity issues: DNS failures, TCP resets, timeouts, handshake problems.
+  - See where a service is talking: which IPs, ports, and protocols it uses.
+  - Inspect protocol behavior: HTTP, TLS, DHCP, DNS, SMB, mDNS, NTP, etc.
+  - Compare “working” vs “broken” traffic when something on the host or LAN changes.
+  - Capture packets to a .pcap file and analyze them later or share them with caution.
+
+  A few practical things you can do right away:
+
+  - Start a capture on your active interface and watch traffic live.
+  - Filter by host or port, for example:
+      - ip.addr == 192.168.1.50
+      - tcp.port == 443
+      - dns
+      - http
+  - Follow a conversation:
+      - Right-click a packet, then Follow -> TCP Stream
+  - Check DNS:
+      - Look for delays, NXDOMAINs, or wrong answers.
+  - Check TLS:
+      - Verify which server name is being requested and whether the handshake completes.
+  - Save a capture for later analysis.
+
+  One caution:
+
+  - Packet captures may include sensitive data, especially on unencrypted traffic or metadata around logins. Treat saved captures as confidential.
+
+  If you want, I can give you:
+
+  1. a set of Wireshark filters for common homelab troubleshooting, or
+  2. a quick “how to capture traffic from the host/container” walkthrough for your setup.
+
+
+
+
+https://github.com/JAlcocerT/Home-Lab/blob/main/z-homelab-setup/about-dns.md
 
 https://www.youtube.com/watch?v=9buji0Vnbo0
 https://www.youtube.com/watch?v=H-tPCwxdxpY
@@ -53,6 +107,23 @@ Saved at ~/wifi-tr181-notes.md (~9 KB). It covers:
 
 https://github.com/olalie/tapmap?ref=selfh.st#docker-linux-host-only
 https://olalie.github.io/tapmap/
+
+```sh
+docker run --rm \
+--network host \
+--pid host \
+-v ~/tapmap-data:/data \
+-e TAPMAP_IN_DOCKER=1 \
+olalie/tapmap:latest
+```
+
+> `http://localhost:8050/`
+
+
+What are the processes taking most cpu?
+```sh
+ps -eo pid,ppid,user,comm,%cpu,%mem --sort=-%cpu | head -n 11
+```
 
 **Intro**
 
@@ -874,3 +945,11 @@ would the pi with openwrt have more dkb tr181 fields than it currently has? coul
 
   Most useful setup for this repo: a spare Pi (or USB SSD on the same Pi for dual-boot) with OpenWrt + USB Wi-Fi adapter as AP, running prplMesh in both Controller and Agent role, with bbfdm + obuspa exposing the whole thing as TR-181. That's the configuration that populates
   Device.WiFi.DataElements.* for real — and it's already on the roadmap as notes/openwrt-tr181-lab.md (Phase 3 of plan.md).
+
+  ---
+
+## FAQ
+
+Connected to your family without big tech in between?
+
+> `http://127.0.0.1:8448/_matrix/client/versions

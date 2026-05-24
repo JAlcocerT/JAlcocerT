@@ -1,9 +1,9 @@
 ---
-title: "How to  "
-date: 2026-05-20
+title: "How is my Brand going?"
+date: 2026-06-20
 draft: false
 tags: ["PoC 104","Brand HUBs"]
-description: 'JAlcocerTech'
+description: 'A brand around JAlcocerTech'
 url: 'branded-jalcocertech'
 ---
 

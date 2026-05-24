@@ -17,7 +17,7 @@ Poprawne podsumowanie:
 
   coming from https://jalcocert.github.io/JAlcocerT/thermodynamics/ and from
 
-  Where some magic happend: https://go-solar.pages.dev/era5-cities/
+  Where some magic happend: `https://go-solar.pages.dev/era5-cities/`
 
 ```sh
 #git clone /poc

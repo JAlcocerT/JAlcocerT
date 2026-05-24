@@ -612,8 +612,47 @@ rsync -avhW --no-compress --progress --partial -e "ssh -p 2022" jalcocert@100.x.
 
 ### How to NextCloud
 
-/home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml
+Assuming:
 
+- cloudflared_tunnel already exists as an external Docker network
+- the host paths under /mnt/data2tb/nextcloud/... exist and are writable
+- your `.env` values are set as expected
+
+```sh
+ sync_root="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
+  sync_pass="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
+
+  set_var() {
+    key="$1"
+    value="$2"
+    if grep -q "^${key}=" .env; then
+      sed -i "s|^${key}=.*|${key}=${value}|" .env
+    else
+      printf '\n%s=%s\n' "$key" "$value" >> .env
+    fi
+  }
+
+  set_var MYSQL_ROOT_PASSWORD_SYNC "${sync_root}"
+  set_var MYSQL_PASSWORD_SYNC "${sync_pass}"
+  set_var MYSQL_DATABASE_SYNC "nextcloud_sync"
+  set_var MYSQL_USER_SYNC "nextcloud_sync"
+  set_var MYSQL_HOST_SYNC "nextclouddb-sync"
+  set_var NEXTCLOUD_TRUSTED_DOMAINS_SYNC "http://192.168.1.2:8069"
+```
+
+Then just:
+
+```sh
+git clone /Home-Lab
+cd .Home-Lab/z-homelab-setup/evolution
+#/home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml
+#     sudo docker compose --env-file .env -f 2605_docker-compose.yml up -d wireshark
+sudo docker compose -f 2605_docker-compose.yml up -d nextclouddb-sync nextcloud-app-sync
+#sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml up -d nextclouddb-sync nextcloud-app-sync
+#  sudo docker compose -f 2605_docker-compose.yml logs -f nextclouddb-sync nextcloud-app-sync
+```
+
+You can always do a quick CLI test:
 ```sh
 #docker network create nextcloud_test_internal
 
@@ -645,9 +684,8 @@ docker run -d \
 ```
 
 ```sh
- du -h --max-depth=1 .
-   df -hT /mnt/data2tb /mnt/backup2tb
-
+du -h --max-depth=1 .
+df -hT /mnt/data2tb /mnt/backup2tb
  ```
 
 /sftpgo
@@ -827,6 +865,24 @@ rclone authorize "drive" "someidcodewhatever" #you can do this from a laptop wit
     --log-level INFO
 
     tmux attach -t gdrive-backup
+
+After 1 week...
+
+  rclone copy \
+    "/mnt/data2tb/Z_BackUP_HD-SDD/OA5Pro" \
+    "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/OA5Pro" \
+    --progress \
+    --transfers 1 \
+    --checkers 2 \
+    --tpslimit 4 \
+    --log-file "/home/jalcocert/rclone-oa5pro-retry.log" \
+    --log-level INFO
+
+If you ever have to restore from this backup, you just run one command on your server to force Nextcloud to re-scan the folder and rebuild its database from the raw files:
+
+```sh
+sudo -u www-data php /var/www/nextcloud/occ files:scan --all
+```
 
 Breakdown:
 
