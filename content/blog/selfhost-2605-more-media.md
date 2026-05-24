@@ -2,7 +2,7 @@
 title: "Selfhosted Media"
 date: 2026-05-12
 draft: false
-tags: ["Self-Hosting Nextcloud","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex"]
+tags: ["Self-Hosting Nextcloud","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex","sftpGO"]
 description: 'Organizing my media server with agents. Code too with forgejo.'
 url: 'selfhosting-media'
 ---
@@ -596,7 +596,8 @@ choco install winscp #winget install WinSCP.WinSCP
 And for workstations/servers/x300:
 
 ```yml
-volumes:                                                  - ./sftpgo-data:/var/lib/sftpgo   # persists users
+volumes:                                                  
+   - ./sftpgo-data:/var/lib/sftpgo   # persists users
    - /home:/srv/home
    - /mnt/data1tb:/srv/data1tb
    - /mnt/data2tb:/srv/data2tb
@@ -619,25 +620,25 @@ Assuming:
 - your `.env` values are set as expected
 
 ```sh
- sync_root="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
-  sync_pass="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
+sync_root="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
+sync_pass="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
 
-  set_var() {
-    key="$1"
-    value="$2"
-    if grep -q "^${key}=" .env; then
-      sed -i "s|^${key}=.*|${key}=${value}|" .env
-    else
-      printf '\n%s=%s\n' "$key" "$value" >> .env
-    fi
-  }
+set_var() {
+  key="$1"
+  value="$2"
+  if grep -q "^${key}=" .env; then
+    sed -i "s|^${key}=.*|${key}=${value}|" .env
+  else
+    printf '\n%s=%s\n' "$key" "$value" >> .env
+  fi
+}
 
-  set_var MYSQL_ROOT_PASSWORD_SYNC "${sync_root}"
-  set_var MYSQL_PASSWORD_SYNC "${sync_pass}"
-  set_var MYSQL_DATABASE_SYNC "nextcloud_sync"
-  set_var MYSQL_USER_SYNC "nextcloud_sync"
-  set_var MYSQL_HOST_SYNC "nextclouddb-sync"
-  set_var NEXTCLOUD_TRUSTED_DOMAINS_SYNC "http://192.168.1.2:8069"
+set_var MYSQL_ROOT_PASSWORD_SYNC "${sync_root}"
+set_var MYSQL_PASSWORD_SYNC "${sync_pass}"
+set_var MYSQL_DATABASE_SYNC "nextcloud_sync"
+set_var MYSQL_USER_SYNC "nextcloud_sync"
+set_var MYSQL_HOST_SYNC "nextclouddb-sync"
+set_var NEXTCLOUD_TRUSTED_DOMAINS_SYNC "http://192.168.1.2:8069"
 ```
 
 Then just:
@@ -735,13 +736,63 @@ df -hT /mnt/data2tb /mnt/backup2tb
   20G   /mnt/backup2tb/.Trash-1000
   12G   /mnt/backup2tb/Estudios
 
+> `http://192.168.1.2:8069/`
+
+> > You can test adding it to files as webdav already `dav://192.168.1.2:8069/remote.php/dav/files/<your-username>/` which for me worked at 25mb/s locally
+
+
+```sh
+docker exec -u 1000 nextcloud-sync php occ status #pre-checks
+#docker exec -u 1000 nextcloud-sync php occ files:scan --path='jesusalcocertech/files/YoutubeVideos'
+#docker exec -u 1000 nextcloud-sync php occ files:scan jesusalcocertech # for the whole user
+#du . -sh
+```
+
+You can use those exact commands to connect your pixel via usb-c: *then just send the files via webdav (slow) or put them directly to your server*
+
+```sh
+#  find /run/user/1000/gvfs -maxdepth 1 -type d
+lsusb
+/run/user/1000/gvfs/mtp:host=Google_Pixel_9_Pro_52141FDAP000NM/Internal shared storage/DCIM/Camera
+dav://192.168.1.2:8069/remote.php/dav/files/<your-username>/
+```
+
+he trick was that the Pixel was mounted through GVFS MTP, not as a normal disk under /media or /mnt.
+
+  The actual mount path was:
+
+  /run/user/1000/gvfs/mtp:host=Google_Pixel_9_Pro_52141FDAP000NM
+
+  So to browse files:
+
+  cd '/run/user/1000/gvfs/mtp:host=Google_Pixel_9_Pro_52141FDAP000NM'
+  ls
+
+  Then usually:
+
+  cd 'Internal shared storage/DCIM/Camera'
+
+  To discover it next time:
+
+  find /run/user/1000/gvfs -maxdepth 1 -type d
+
+  Also, the phone must be unlocked and USB mode set to File transfer / Android Auto. Otherwise Linux may see the USB device but not expose the files.
+
+
+Files are at `/mnt/data2tb/nextcloud/html/data/whateveruseryoucreated/files`
+
 This is the one im keeping for now: *remember that you can use it via cf tunnels and just make it available for certain ips/countries*
 
 ```sh
 #! docker compose -f ~/Desktop/Home-Lab/nextcloud/docker-compose.yml up -d
-! docker exec -u www-data nc php occ user:resetpassword admin
+#! docker exec -u www-data nc php occ user:resetpassword admin
+docker exec -u 1000 nextcloud-sync php occ config:system:get trusted_domains
+docker exec -u 1000 nextcloud-sync php occ config:system:set trusted_domains 1 --value="192.168.1.2:8069"
+docker exec -u 1000 nextcloud-sync php occ config:system:set trusted_domains 1 --value="whatever.domain.com"
 docker exec nextcloud php occ config:system:get trusted_domains #check the trusted domains
 ```
+
+> Point correctly the `nextcloud-sync:80`
 
 About **manual scans of data** you have scatter in folders, see this:
 
@@ -878,6 +929,55 @@ After 1 week...
     --log-file "/home/jalcocert/rclone-oa5pro-retry.log" \
     --log-level INFO
 
+  
+What is backed up:
+
+  /mnt/data2tb -> Google Drive x300-backup/data2tb
+  1.745 TiB uploaded
+  196137 files transferred
+  388643 checks completed
+
+  Local backup drive also has key copies we made earlier:
+
+  /mnt/backup2tb/backup_from_data2tb_nc
+  /mnt/backup2tb/backup_from_data2tb_immich
+  /mnt/backup2tb/backup_from_data2tb_phone_sync
+  /mnt/backup2tb/backup_from_data2tb_old_synced_sept23
+
+  Before formatting, I’d do one last read-only check:
+
+  df -hT /mnt/data2tb /mnt/backup2tb
+  lsblk -f
+
+  Then we can identify the exact device behind /mnt/data2tb, unmount it, and format it to a Linux-native filesystem. For Docker/Nextcloud/DB data, I’d use:
+
+  ext4
+
+  Not exFAT, not NTFS.
+
+  Do not format until we confirm the exact disk/device path.
+
+  udo umount /mnt/backup2tb
+[sudo] password for jalcocert: 
+jalcocert@jalcocert-x300:~$ tmux ls
+gdrive-backup: 1 windows (created Sun May 17 16:19:54 2026)
+mqtt: 1 windows (created Wed May  6 09:52:13 2026)
+webapp: 1 windows (created Wed May  6 09:52:17 2026)
+jalcocert@jalcocert-x300:~$ 
+
+  tmux kill-session -t gdrive-backup
+
+Run these exactly.
+
+```sh
+#Unmount:
+sudo umount /mnt/data2tb
+#Format the internal NVMe partition as ext4:
+sudo mkfs.ext4 -L data2tb /dev/nvme0n1p1
+#Get the new UUID:
+sudo blkid /dev/nvme0n1p1
+#  sudo nano /etc/fstab
+```
 If you ever have to restore from this backup, you just run one command on your server to force Nextcloud to re-scan the folder and rebuild its database from the raw files:
 
 ```sh
@@ -1138,9 +1238,8 @@ If using restic, also preserve your restic repository password. Without it, the 
 To open `RW2` photos I needed:
 
 ```sh
-sudo apt install geeqie
+#sudo apt install geeqie
 geeqie P1000130.RW2 
-
 ```
 
 Geeqie: best if you want a lightweight viewer. It is focused on fast
@@ -1161,3 +1260,8 @@ Geeqie: best if you want a lightweight viewer. It is focused on fast
   - Just view RW2: Geeqie
   - View and do quick RAW edits: RawTherapee
   - Full photo workflow: darktable
+
+
+### How to youtube
+
+![alt text](/blog_img/apps/yt-distill.png)

@@ -953,3 +953,170 @@ would the pi with openwrt have more dkb tr181 fields than it currently has? coul
 Connected to your family without big tech in between?
 
 > `http://127.0.0.1:8448/_matrix/client/versions
+
+
+Backups?
+
+```sh
+df -hT /mnt/data2tb /mnt/data1tb /mnt/backup2tb
+```
+
+Results:
+
+Write speed: ~1.8 GB/s
+Read speed:  ~3.1 GB/s
+
+That is very good and consistent with an internal NVMe SSD.
+
+```sh
+#git clone /Home-Lab
+#cd ./Home-Lab/z-homelab-setup/evolution
+# cd /home/jalcocert/Home-Lab/z-homelab-setup/evolution && \
+  #grep -q '^TERMIX_SALT=' .env || printf '\nTERMIX_SALT=%s\n' "$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-32)" >> .env
+
+sync_root="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
+sync_pass="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
+
+set_var() {
+  key="$1"
+  value="$2"
+  if grep -q "^${key}=" .env; then
+    sed -i "s|^${key}=.*|${key}=${value}|" .env
+  else
+    printf '\n%s=%s\n' "$key" "$value" >> .env
+  fi
+}
+
+set_var MYSQL_ROOT_PASSWORD_SYNC "${sync_root}"
+set_var MYSQL_PASSWORD_SYNC "${sync_pass}"
+set_var MYSQL_DATABASE_SYNC "nextcloud_sync"
+set_var MYSQL_USER_SYNC "nextcloud_sync"
+set_var MYSQL_HOST_SYNC "nextclouddb-sync"
+set_var NEXTCLOUD_TRUSTED_DOMAINS_SYNC "http://192.168.1.2:8069"
+
+sudo docker compose -f 2605_docker-compose.yml up -d nextclouddb-sync nextcloud-app-sync
+#cd /home/jalcocert/Home-Lab/z-homelab-setup/evolution && docker compose -f 2605_docker-compose.yml --env-file .env up -d nextclouddb-sync nextcloud-app-sync
+#sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml up -d nextclouddb-sync nextcloud-app-sync
+```
+
+> `http://192.168.1.2:8069/` or `nextcloud-sync:80`
+
+![alt text](/blog_img/selfh/cf-sec-rules.png)
+
+{{< callout type="info" >}}
+You can use cloudflare to just [expose your services to certain countries/ips](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#cf-waf-vs-zero-trust-access)
+{{< /callout >}}
+
+* https://developers.cloudflare.com/waf/custom-rules/use-cases/allow-traffic-from-specific-countries/
+* https://developers.cloudflare.com/waf/custom-rules/create-dashboard/
+
+```sh
+curl -X PATCH \ 
+  "https://api.cloudflare.com/client/v4/zones/some/rulesets/thing/rules/secret" \
+  -H "Authorization: Bearer $CF_AUTH_TOKEN" \
+  -d '{
+    "action": "block",
+    "description": "allow countries",
+    "enabled": true,
+    "expression": "(http.host eq \"whatever.domain.com\" and not ip.src.country in {\"ES\" \"CH\"})",
+    "id": "sth",
+```
+
+```sh
+sudo apt install -y jmtpfs
+```
+
+```sh
+mkdir -p "/mnt/data2tb/nextcloud/html/data/jesusalcocertech/files/pixel9"
+rsync -av --info=progress2 \
+  "$HOME/pixel-mtp/Internal shared storage/DCIM/Camera/" \
+  "/mnt/data2tb/nextcloud/html/data/jesusalcocertech/files/pixel9/"
+
+#Then scan Nextcloud:
+docker exec -u 1000 nextcloud-sync php occ files:scan --path='jesusalcocertech/files/pixel9'  #1min and done
+#  fusermount -u ~/pixel-mtp
+```
+
+```sh
+time rclone copy \
+    "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/Musica" \
+    "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Musica" \
+    --progress
+# rclone size "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/Musica"
+```
+
+```sh
+#tmux new -s gcp-sync
+rclone copy \
+  "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/Z_FOTOS" \
+  "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Z_FOTOS" \
+  --progress \
+  --transfers 4 \
+  --checkers 8
+```
+
+
+  Afterward verify:
+
+  rclone check \
+    "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/Z_FOTOS" \
+    "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Z_FOTOS" \
+    --one-way
+
+  And local size:
+
+  du -sh "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Z_FOTOS"
+
+
+   You can mount them like this:
+
+  mkdir -p ~/osmo-internal ~/osmo-sd
+
+  sudo mount /dev/sdc ~/osmo-internal
+  sudo mount /dev/sdd ~/osmo-sd
+
+  Then inspect:
+
+  ls ~/osmo-internal
+  ls ~/osmo-sd
+  du -h --max-depth=2 ~/osmo-internal ~/osmo-sd | sort -hr | head -50
+
+  When done:
+
+  sudo umount ~/osmo-internal
+  sudo umount ~/osmo-sd
+
+
+docker inspect jellyfin --format '{{range .Mounts}}{{.Source}} -> {{.Destination}}{{println}}{{end}}'
+  /home/jalcocert/osmo-internal/DCIM/DJI_001
+  /home/jalcocert/osmo-sd/DCIM/DJI_001
+
+  mkdir -p "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/internal"
+  mkdir -p "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/sdcard"
+
+  Then copy:
+
+```sh
+  rsync -av --info=progress2 \
+    --include='*/' \
+    --include='*.MP4' \
+    --include='*.mp4' \
+    --exclude='*' \
+    "$HOME/osmo-internal/" \
+    "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/"
+
+  rsync -av --info=progress2 \
+    --include='*/' \
+    --include='*.MP4' \
+    --include='*.mp4' \
+    --exclude='*' \
+    "$HOME/osmo-sd/" \
+    "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/"
+
+# df -h | grep osmo
+```
+  
+  Then Jellyfin should see them under its existing /data/tvshows library after a library scan.
+
+
+> Then I could see them via Jellyfin at `http://192.168.1.2:8096/web/`
