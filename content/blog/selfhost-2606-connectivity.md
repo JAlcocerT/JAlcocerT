@@ -957,12 +957,22 @@ would the pi with openwrt have more dkb tr181 fields than it currently has? coul
 
 Connected to your family without big tech in between?
 
+```sh
+cd ./Home-Lab/matrix-conduit #matrix-conduit:6167
+  nano conduit.toml
+#  docker compose restart conduit
+docker compose up -d
+  curl -fsS https://what.everdomain.com/_matrix/client/versions
+```
+
 > `http://127.0.0.1:8448/_matrix/client/versions
 
+> > https://hermes-agent.ai/integrations/matrix
 
 Backups?
 
 ```sh
+#odex resume 019e34cd-b4de-7ab3-9b11-2fd344315782
 df -hT /mnt/data2tb /mnt/data1tb /mnt/backup2tb
 ```
 
