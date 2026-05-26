@@ -2,15 +2,66 @@
 title: "Energy Solutions in the AI era"
 date: 2026-05-26
 draft: false
-tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment","PV vs SAHP vs HVAC","EMQx"]
-description: 'Boundary conditions are hard. Abstract them with sensors.'
+tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment","PV vs SAHP vs HVAC","EMQx x DHT11"]
+description: 'Boundary conditions are hard. Abstract them with sensors.Blender and building shadows'
 url: 'how-to-check-hot-pump-viability'
 math: true
 ---
 
+go-solar.pages.dev/era5-cities/
+
+```sh
+sudo docker ps -q | xargs -r sudo docker stop
+sudo docker start mqtt-dht11-dashboard emqx 0ce58d132af6
+sudo docker container prune -f   
+```
+
+
+
+https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt-x-picow-x-dht22
+
+```sh
+git clone https://github.com/JAlcocerT/RPi/
+#npm start
+docker compose up --build -d
+```
+1. Stop the local Node process.                                                                                        
+  2. From mqtt-dht11-dashboard, run docker compose up --build -d                                                         
+  3. The container should continue using the existing data/readings.sqlite           
+
 {{< youtube "d6PyYCBft44" >}}
 
+```sh
+     sudo ufw status
+sudo ufw allow 1883/tcp
+mosquitto_sub -h 192.168.1.106 -p 1883 -t "esp32/temperature/dht11" -v
+mosquitto_sub -h 192.168.1.106 -p 1883 -t "esp32/humidity/dht11" -v
+```
 
+> the esp32 got `192.168.1.109`
+
+> > see Tools -> Serial Monitor at arduinoIDE for the logs
+
+
+// ---- Configuration ----
+const char* WIFI_SSID     = "your-wifi";
+const char* WIFI_PASSWORD = "your-password";  // const char* handles special chars ($, @, etc.)
+const char* MQTT_BROKER   = "192.168.1.106";
+const int   MQTT_PORT     = 1883;
+const int   DHT_PIN       = 4;   // GPIO4 (D4) — best category, no special boot functions
+const int   PUBLISH_MS    = 5000;
+
+https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-esp32-internal-temp.png
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt.cpp" title="ESP32 + DHT1 + MQTT ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+> Open ArduinoIDE and select `ESP32 Dev Module` + `CTRL + U` to compile the sketch `esp32-internal-temp-mqtt.cpp` into the board with the right wifi pwd.
+
+https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples
 
 ```sh
 ssh casa@192.168.1.106
@@ -18,14 +69,19 @@ ssh casa@192.168.1.106
 #docker compose up -d
 # Check if the container is running
 docker ps | grep emqx
-
 # Watch EMQX logs live
 docker logs emqx -f
 ```
 
-> Connect to the UI via: `http://192.168.1.106:18083` `admin/public`
+> Connect to the UI via: `http://192.168.1.106:18083` then add `admin/public`
+
+> > the new node app is at `http://192.168.1.106:3000/`
+
+https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard/dht11-telemetry.png
 
 
+https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard
+https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt-emqx.cpp
 
 https://www.youtube.com/shorts/ZcsaFZgWoEc
 
