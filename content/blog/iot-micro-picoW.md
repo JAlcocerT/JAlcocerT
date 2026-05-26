@@ -383,8 +383,8 @@ This separation of roles is what makes MQTT so efficient and scalable for IoT ap
 
 If you want to bring the *bigger* Pi4 to the MQTT game:
 
-<https://mqttx.app/>
-<https://github.com/emqx/MQTTX>
+* https://mqttx.app
+* https://github.com/emqx/MQTTX
 
 ```sh
 sudo apt install -y mosquitto

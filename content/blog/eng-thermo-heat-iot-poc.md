@@ -2,13 +2,29 @@
 title: "Energy Solutions in the AI era"
 date: 2026-05-26
 draft: false
-tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment","PV vs SAHP vs HVAC"]
+tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment","PV vs SAHP vs HVAC","EMQx"]
 description: 'Boundary conditions are hard. Abstract them with sensors.'
 url: 'how-to-check-hot-pump-viability'
 math: true
 ---
 
 {{< youtube "d6PyYCBft44" >}}
+
+
+
+```sh
+ssh casa@192.168.1.106
+#cd ./Home-Lab/emqx
+#docker compose up -d
+# Check if the container is running
+docker ps | grep emqx
+
+# Watch EMQX logs live
+docker logs emqx -f
+```
+
+> Connect to the UI via: `http://192.168.1.106:18083` `admin/public`
+
 
 
 https://www.youtube.com/shorts/ZcsaFZgWoEc

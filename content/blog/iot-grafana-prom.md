@@ -365,12 +365,8 @@ with mosquitto installed in the rpi:
 mosquitto_pub -h 192.168.3.200 -t temperature -m 25 -q 0
 ```
 
-emqx is running on the orange (.200)
-
-mqttx can run in windows and connect to the orange .200 to see that they are actually received
-
-
-
+* emqx is running on the orange (.200)
+* mqttx can run in windows and connect to the orange `.200` to see that they are actually received
 
 
 ```yml

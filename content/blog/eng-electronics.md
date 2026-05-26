@@ -216,6 +216,9 @@ docker ps | grep emqx
 docker logs emqx -f
 ```
 
+> Connect to the UI via: `http://192.168.1.11:18083`
+
+
 Or if you prefer a quick CLI way to check the pushed data:
 
 ```sh

@@ -39,8 +39,6 @@ UpTime Kuma can also **monitor MQTT**:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/IoT" title="Kind of NEW IoT" image="/blog_img/apps/gh-jalcocert.svg" subtitle="IoT Repository for Pi, PicoW and ESP32" >}}
 {{< /cards >}}
