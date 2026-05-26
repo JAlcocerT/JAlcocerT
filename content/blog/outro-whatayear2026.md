@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-05-25
+date: 2026-05-26
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -22,13 +22,7 @@ Have the [last 3 years](https://jalcocert.github.io/JAlcocerT/this-year-was-craz
 {{< /cards >}}
 
 
-
-
-
-
 ### Curated Posts / Videos
-
-
 
 
 **Side Quests**

@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Connectivity"
-date: 2026-05-22
+date: 2026-06-06
 draft: false
 tags: ["HomeLab","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark"]
 description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
@@ -8,6 +8,11 @@ url: 'selfhosted-connectivity'
 ---
 
 adguard, Unbound, pihole...?
+
+
+ `pi-connectivity`
+
+git clone
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wireshark" title="Wireshark | Docker Config 🐋 ↗" >}}

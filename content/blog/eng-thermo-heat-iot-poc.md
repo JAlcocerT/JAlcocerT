@@ -1,12 +1,15 @@
 ---
 title: "Energy Solutions in the AI era"
-date: 2026-05-25
+date: 2026-05-26
 draft: false
 tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment","PV vs SAHP vs HVAC"]
 description: 'Boundary conditions are hard. Abstract them with sensors.'
 url: 'how-to-check-hot-pump-viability'
 math: true
 ---
+
+{{< youtube "d6PyYCBft44" >}}
+
 
 https://www.youtube.com/shorts/ZcsaFZgWoEc
 

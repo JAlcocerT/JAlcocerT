@@ -36,10 +36,11 @@ ip route | grep default
 #default via 192.168.0.1 dev wlp3s0 proto dhcp metric 600 
 ```
 
-See other *local devices* connected to the same router:
+See other *local devices* connected to the same router: *aka same gateway*
 
 ```sh
 ip neigh
+#netsh wlan show profile name="Livebox6-2D8F" key=clear #get the pwd of the wifi on W11
 ```
 
 > Access the router admin panel, this example is at `192.168.0.1`.
