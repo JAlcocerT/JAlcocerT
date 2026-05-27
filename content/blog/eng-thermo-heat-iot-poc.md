@@ -8,6 +8,7 @@ url: 'how-to-check-hot-pump-viability'
 math: true
 ---
 
+Is this for you if your kwh is 0.26 eur?
 go-solar.pages.dev/era5-cities/
 
 ```sh
@@ -26,10 +27,20 @@ git clone https://github.com/JAlcocerT/RPi/
 docker compose up --build -d
 ```
 1. Stop the local Node process.                                                                                        
-  2. From mqtt-dht11-dashboard, run docker compose up --build -d                                                         
-  3. The container should continue using the existing data/readings.sqlite           
+2. From mqtt-dht11-dashboard, run docker compose up --build -d                                                         
+3. The container should continue using the existing data/readings.sqlite           
+
+![alt text](/blog_img/data-experiments/dht11-telemetry.png)
 
 {{< youtube "d6PyYCBft44" >}}
+
+
+
+{{< youtube "cHIPjAG2dkk" >}}
+
+<!-- 
+https://youtube.com/shorts/cHIPjAG2dkk 
+-->
 
 ```sh
      sudo ufw status
@@ -193,8 +204,11 @@ cd ./poc/aero
 
 3. The historical invoice records:
 
-
 4. Wrapping all together:
+
+### What about blender?
+
+
 
 ---
 
