@@ -2,11 +2,29 @@
 title: "Energy Solutions in the AI era"
 date: 2026-05-26
 draft: false
-tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment","PV vs SAHP vs HVAC","EMQx x DHT11"]
+tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment x ERA5","PV vs SAHP vs HVAC","EMQx x DHT11"]
 description: 'Boundary conditions are hard. Abstract them with sensors.Blender and building shadows'
 url: 'how-to-check-hot-pump-viability'
 math: true
 ---
+
+```sh
+git clone /poc
+cd ./poc/go-solar-trajectory
+#npm run build
+#npx wrangler pages deploy dist --project-name=solar-trajectory
+```
+
+> https://solar-trajectory.pages.dev/
+                                                                                          
+There are now two concepts:      
+  - Face sun now: sets the panel normal directly toward the current sun vector. This is the tracker-style    instantaneous optimum.                                                                               
+  - Use annual fixed: finds the best fixed tilt/azimuth for the selected latitude using a clear-sky      
+    geometry proxy: it samples the year and maximizes max(0, sun · panelNormal) * sin(solarAltitude).    
+                                                                                                         
+  Important: this is not yet a real PV yield optimum. It ignores clouds, shading, roof constraints, DNI/ 
+  DHI split, temperature losses, and self-consumption. It answers: “geometrically, what fixed panel      
+  orientation catches the most clear-sky sun at this latitude?”    
 
 Is this for you if your kwh is 0.26 eur?
 go-solar.pages.dev/era5-cities/
