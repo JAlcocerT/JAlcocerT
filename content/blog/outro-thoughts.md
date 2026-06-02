@@ -105,7 +105,8 @@ Some knew about my chemistry experiments, but not about me growing tomatoes nor 
 
 Its been very fun to:
 
-1. Listen (quietly) people fronting me on 121 conversations about 5k monthly paychecks
+1. Listen (quietly) people flexing about 5k monthly paychecks
+
 2. Listen (also quietly) poeple being so confused about switzerland not giving days off for people who get married
 
 > If you get similar confussions, you deliver value (if anywhere) far faaaar away from end customers

@@ -2,12 +2,12 @@
 title: "Improving a Blog"
 date: 2026-06-01T23:20:21+01:00
 draft: false
-tags: ["FOSS","RoadMap26","Codex x HUGO","JAlcocerTech WebAudits","LinkChecker","Leads"]
+tags: ["FOSS","RoadMap26","Codex x HUGO","JAlcocerTech WebAudits","Broken Links + Sitemap","Leads"]
 description: 'Some SEO x Agent Engine Optimization (AEO).'
 url: 'a-better-fossengineer'
 ---
 
-
+https://github.com/lycheeverse/lychee
 **Tl;DR**
 
 It was time to stop those ads.
@@ -99,5 +99,101 @@ Actually: Not doing more (DFY) websites for others.
 ### Detecting Broken Links
 
 {{% details title="How to use Lychee for broken link detection 🚀" closed="true" %}}
+
+I like [Lychee](https://github.com/lycheeverse/lychee) for static sites because it checks links from Markdown, HTML, and already deployed websites.
+
+For a quick check of the live GitHub Pages entry page:
+
+```sh
+lychee --verbose --no-progress https://jalcocert.github.io/JAlcocerT
+```
+
+My first run against the deployed entry page found:
+
+```txt
+471 Total
+464 Unique
+469 OK
+2 Errors
+1 Redirect
+```
+
+The two broken links were missing favicon assets:
+
+```txt
+https://jalcocert.github.io/JAlcocerT/favicon.svg
+https://jalcocert.github.io/JAlcocerT/favicon-dark.svg
+```
+
+I fixed those by publishing the existing `JAT.svg` logo as `static/favicon.svg` and `static/favicon-dark.svg`, which Hugo serves from the site root.
+
+When I tried the full sitemap-based external scan, lychee started checking outbound links from every deployed page. That surfaced rate-limit/backoff warnings from hosts linked in the blog, including `github.com` and `whois.jalcocertech.com`. The `whois.jalcocertech.com` link comes from older blog content, not from GitHub Pages hosting itself.
+
+For the full deployed Hugo site, use the sitemap as the input list:
+
+```sh
+curl -sS https://jalcocert.github.io/JAlcocerT/sitemap.xml \
+  | rg -o '<loc>[^<]+' \
+  | sed 's#<loc>##' \
+  > /tmp/jalcocert-urls.txt
+
+GITHUB_TOKEN=your_token_here \
+lychee --cache --no-progress --max-concurrency 16 --max-retries 0 --files-from /tmp/jalcocert-urls.txt
+```
+
+The token helps when the site has many GitHub links. If a third-party host keeps rate-limiting automated checks, add it to `.lycheeignore` or use `--exclude`.
+
+For a Hugo workflow, first build the site and then scan the generated HTML:
+
+```sh
+hugo
+lychee --root-dir public "public/**/*.html"
+```
+
+If some URLs are expected to fail, redirect, throttle bots, or require auth, keep them out of the noise with a `.lycheeignore` file:
+
+```txt
+# .lycheeignore
+https://example.com/private-area
+https://www.linkedin.com/.*
+```
+
+And for GitHub Actions, I placed the workflow at `.github/workflows/links.yml`:
+
+```yaml
+name: Links
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  schedule:
+    - cron: "21 4 * * 1"
+
+permissions:
+  contents: read
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: https://jalcocert.github.io/JAlcocerT
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build sitemap URL list
+        run: |
+          curl -fsSL "${SITE_URL}/sitemap.xml" \
+            | grep -o '<loc>[^<]*' \
+            | sed 's#<loc>##' \
+            > jalcocert-urls.txt
+
+      - uses: lycheeverse/lychee-action@v2
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: --cache --no-progress --max-concurrency 16 --max-retries 0 --files-from jalcocert-urls.txt
+```
 
 {{% /details %}}

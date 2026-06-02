@@ -1,0 +1,50 @@
+name: Links
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  schedule:
+    - cron: "21 4 * * 1"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "links"
+  cancel-in-progress: true
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  lychee:
+    runs-on: ubuntu-latest
+    env:
+      SITE_URL: https://jalcocert.github.io/JAlcocerT
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build sitemap URL list
+        run: |
+          curl -fsSL "${SITE_URL}/sitemap.xml" \
+            | grep -o '<loc>[^<]*' \
+            | sed 's#<loc>##' \
+            > jalcocert-urls.txt
+
+          wc -l jalcocert-urls.txt
+
+      - name: Check links with Lychee
+        uses: lycheeverse/lychee-action@v2
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: >-
+            --cache
+            --no-progress
+            --max-concurrency 16
+            --max-retries 0
+            --files-from jalcocert-urls.txt

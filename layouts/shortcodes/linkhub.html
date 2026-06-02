@@ -1,0 +1,48 @@
+{{- /*
+Render a compact Hextra-style link hub from repeated URL/label pairs.
+
+Usage:
+  {{< linkhub
+    "https://example.com/" "Example"
+    "/about/" "About"
+  >}}
+
+Homepage example:
+  {{< linkhub
+    "https://www.jalcocertech.com/" "JAlcocerTech ↗"
+    "https://consulting.jalcocertech.com" "Collaborations ↗"
+    "https://jalcocert.github.io/RPi/" "Raspberry Pi Guide ↗"
+  >}}
+*/ -}}
+
+{{- $params := .Params -}}
+{{- $count := len $params -}}
+
+{{- if eq $count 0 -}}
+  {{- errorf "linkhub shortcode: expected at least one URL/label pair (page: %s)" .Page.RelPermalink -}}
+{{- end -}}
+
+{{- if ne (mod $count 2) 0 -}}
+  {{- errorf "linkhub shortcode: expected URL/label pairs, got an odd number of arguments on page %s" .Page.RelPermalink -}}
+{{- end -}}
+
+<div class="hextra-cards mt-4 gap-4 grid not-prose" style="--rows: 3;">
+  {{- range $index, $value := $params -}}
+    {{- if eq (mod $index 2) 0 -}}
+      {{- $link := printf "%s" $value -}}
+      {{- $title := printf "%s" (index $params (add $index 1)) -}}
+      {{- $external := strings.HasPrefix $link "http" -}}
+      {{- $href := cond (strings.HasPrefix $link "/") ($link | relURL) $link -}}
+      <a
+        class="hextra-card group flex flex-col justify-start overflow-hidden rounded-lg border border-gray-200 text-current no-underline dark:shadow-none hover:shadow-gray-100 dark:hover:shadow-none shadow-gray-100 active:shadow-sm active:shadow-gray-200 transition-all duration-200 hover:border-gray-300 bg-transparent shadow-sm dark:border-neutral-800 hover:bg-slate-50 hover:shadow-md dark:hover:border-neutral-700 dark:hover:bg-neutral-900"
+        href="{{ $href | safeURL }}"
+        {{- if $external }} target="_blank" rel="noreferrer"{{ end -}}
+      >
+        <span class="flex font-semibold items-start gap-2 p-4 text-gray-700 hover:text-gray-900 dark:text-neutral-200 dark:hover:text-neutral-50">
+          {{- partial "utils/icon.html" (dict "name" "external-link") -}}
+          {{- $title -}}
+        </span>
+      </a>
+    {{- end -}}
+  {{- end -}}
+</div>

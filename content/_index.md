@@ -41,7 +41,8 @@ These connections can lead to collaborations, mentorship, and friendships that e
 
 ### More
 
-{{< cards >}}
-  {{< card link="https://www.jalcocertech.com/" title="JAlcocerTech ↗" icon="book-open" >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Collaborations ↗" icon="user" >}}
-{{< /cards >}}
+{{< linkrows
+  "https://www.jalcocertech.com/" "JAlcocerTech ↗"
+  "https://consulting.jalcocertech.com" "Collaborations ↗"
+  "https://jalcocert.github.io/RPi/" "Raspberry Pi Guide ↗"
+>}}
