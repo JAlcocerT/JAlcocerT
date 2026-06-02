@@ -819,6 +819,34 @@ Via GNOME Files / Nautilus Files → "Other Locations" → in the Connect to Ser
 
 > (davs:// = WebDAV over HTTPS; plain dav:// = HTTP). It'll prompt for username + app password. 
 
+
+```mermaid
+graph TD
+    %% Nodes
+    FIREBAT[Firebat Mini PC<br/>Nextcloud Desktop Client]
+    LAPTOP[Laptop<br/>Nextcloud Desktop Client]
+    BROWSER[Web Browser<br/>User Interface]
+    
+    subgraph Cloudflare_Infrastructure [Cloudflare Edge]
+        TUNNEL[Cloudflare Tunnel<br/>Cloudflared]
+    end
+
+    subgraph Home_Network [Local Network / X300]
+        X300[ASRock X300 Server<br/>Nextcloud Instance]
+    end
+
+    %% Connections
+    FIREBAT <== "HTTPS (Sync)" ==> TUNNEL
+    TUNNEL <== "Secure Pipe" ==> X300
+    
+    LAPTOP <== "Local/Remote Sync" ==> X300
+    BROWSER <== "Web Access" ==> X300
+
+    %% Styling
+    style FIREBAT fill:#f9f,stroke:#333,stroke-width:2px
+    style X300 fill:#0082c9,stroke:#fff,stroke-width:2px,color:#fff
+    style TUNNEL fill:#f38020,stroke:#333,stroke-width:2px,color:#fff
+```
                                                                                                                                            
 
 ### How to Immich
@@ -1265,3 +1293,8 @@ Geeqie: best if you want a lightweight viewer. It is focused on fast
 ### How to youtube
 
 ![alt text](/blog_img/apps/yt-distill.png)
+
+```sh
+cd ./poc/yt-distill
+make up
+```

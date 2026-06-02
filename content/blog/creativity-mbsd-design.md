@@ -456,7 +456,7 @@ codex
 #/skilss
 ```
 
-Remember about: https://skills.sh/
+Remember about: `https://skills.sh/`
 
 ```sh
 #npm install -g @anthropic-ai/claude-code #https://claude.ai/new

@@ -1,11 +1,20 @@
 ---
-title: "Vacations with Python"
-date: 2026-07-01T09:20:21+01:00
+title: "Vacations with Python + ADK"
+date: 2026-05-31T09:20:21+01:00
 draft: false
-tags: ["PyVacations","NomadList","Numbeo","Trip-Planner","Weather","Costs of Living"]
-summary: 'Where am I going next? With Vibe Planning and scrapped wisdom of crowds.'
+tags: ["PyVacations","NomadList","Numbeo","Trip-Planner x Weather","Costs of Living"]
+summary: 'Where am I going next? Vibe Planning and scrapped wisdom of crowds.'
 url: 'py-vacations'
 ---
+
+Already got freedom in time?
+
+`https://aegis-freedom.pages.dev/`
+
+  For simple static pages, Playwright is usually overkill. Prefer fetch, curl, cheerio, BeautifulSoup, or an API if available. Use Playwright when browser behavior matters.
+
+  Be careful with robots.txt, site terms, rate limits, login-protected content, personal data, and aggressive parallel scraping. Scraping with a browser is heavier and easier to
+  get blocked if you hit a site hard.
 
 https://github.com/dawarich-app/atlas
 
@@ -15,6 +24,7 @@ https://github.com/dawarich-app/atlas
  https://atlas.dawarich.app/docs/quickstart
  
 ```sh
+git clone /poc
 cd ./poc/z-poc-trip-planner-v4
 #https://github.com/JAlcocerT/poc/tree/main/z-poc-trip-planner-v4
 ```
@@ -110,7 +120,12 @@ And no API key!
 
 I got to know that something similar exists: `https://nomads.com/` from cool solopreneurs.
 
+```sh
+make cost-warsaw-capitals COST_ARGS="--limit 5 --delay-seconds 0.5 --fresh"
+  make cost-warsaw-capitals COST_ARGS="--delay-seconds 10"
 
+    make time-overlay-data
+```
 
 ---
 
@@ -130,7 +145,7 @@ I got to know that something similar exists: `https://nomads.com/` from cool sol
 
 * https://github.com/leoneljdias/tempo
 
-> MIT | Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
+> **MIT** | Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
 
 
 lastminute.com
