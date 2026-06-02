@@ -16,17 +16,20 @@ cd ./poc/go-solar-trajectory
 ```
 
 > https://solar-trajectory.pages.dev/
-                                                                                          
+
+> > https://17e286bf.trip-planner-9lt.pages.dev/?sid=06380&lat=50.9167&lon=5.7833&name=Maastricht+Airport+Zuid+Limburg&country=NL
+
 There are now two concepts:      
-  - Face sun now: sets the panel normal directly toward the current sun vector. This is the tracker-style    instantaneous optimum.                                                                               
-  - Use annual fixed: finds the best fixed tilt/azimuth for the selected latitude using a clear-sky      
-    geometry proxy: it samples the year and maximizes max(0, sun · panelNormal) * sin(solarAltitude).    
-                                                                                                         
-  Important: this is not yet a real PV yield optimum. It ignores clouds, shading, roof constraints, DNI/ 
-  DHI split, temperature losses, and self-consumption. It answers: “geometrically, what fixed panel      
-  orientation catches the most clear-sky sun at this latitude?”    
+- Face sun now: sets the panel normal directly toward the current sun vector. This is the tracker-style    instantaneous optimum.                                                                               
+- Use annual fixed: finds the best fixed tilt/azimuth for the selected latitude using a clear-sky      
+  geometry proxy: it samples the year and maximizes max(0, sun · panelNormal) * sin(solarAltitude).    
+                                                                                                        
+Important: this is not yet a real PV yield optimum. It ignores clouds, shading, roof constraints, DNI/ DHI split, temperature losses, and self-consumption.
+  
+It answers: “geometrically, what fixed panel orientation catches the most clear-sky sun at this latitude?”    
 
 Is this for you if your kwh is 0.26 eur?
+
 go-solar.pages.dev/era5-cities/
 
 ```sh
@@ -34,10 +37,7 @@ sudo docker ps -q | xargs -r sudo docker stop
 sudo docker start mqtt-dht11-dashboard emqx 0ce58d132af6
 sudo docker container prune -f   
 ```
-
-
-
-https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt-x-picow-x-dht22
+* https://jalcocert.github.io/JAlcocerT/messaging-protocols/#mqtt-x-picow-x-dht22
 
 ```sh
 git clone https://github.com/JAlcocerT/RPi/
@@ -90,7 +90,7 @@ https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/ardu
 
 > Open ArduinoIDE and select `ESP32 Dev Module` + `CTRL + U` to compile the sketch `esp32-internal-temp-mqtt.cpp` into the board with the right wifi pwd.
 
-https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples
+* https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples
 
 ```sh
 ssh casa@192.168.1.106
@@ -106,11 +106,10 @@ docker logs emqx -f
 
 > > the new node app is at `http://192.168.1.106:3000/`
 
-https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard/dht11-telemetry.png
+* https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard/dht11-telemetry.png
 
-
-https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard
-https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt-emqx.cpp
+* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard
+* https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt-emqx.cpp
 
 https://www.youtube.com/shorts/ZcsaFZgWoEc
 
@@ -214,13 +213,16 @@ git clone /poc
 cd ./poc/aero
 ```
 
-2. The IoT setup: sensor pushing data via mqtt
+2. The IoT setup: *sensor pushing data via mqtt*
 
-```shsh
-
+```sh
+git clone /RPi
+cd ./RPi/
 ```
 
-3. The historical invoice records:
+3. The historical invoice records: *use kreuzberg or your eyes for once*
+
+> If you dont go crazy, 100kwh/m avg seems reasonable, invoices in spain inform about neighbours, they do x2 (lol)
 
 4. Wrapping all together:
 

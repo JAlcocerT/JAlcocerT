@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-05-26
+date: 2026-06-20
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -37,6 +37,7 @@ and from SQL, to malloy: https://github.com/malloydata/malloy
 
 * https://docs.malloydata.dev/documentation/user_guides/sql_experts1
 
+> Because semantic matters, whatever you are building
 
 0. For social media outreach, `https://www.growchief.com/` was an inspiration.
 

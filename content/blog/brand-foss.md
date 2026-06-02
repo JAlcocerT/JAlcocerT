@@ -2,15 +2,23 @@
 title: "Improving a Blog"
 date: 2026-06-01T23:20:21+01:00
 draft: false
-tags: ["FOSS","RoadMap26","Codex x HUGO"]
-description: 'Some SEO x Agent Engine Optimization.'
-url: 'diy-webs-via-paas'
+tags: ["FOSS","RoadMap26","Codex x HUGO","JAlcocerTech WebAudits","LinkChecker","Leads"]
+description: 'Some SEO x Agent Engine Optimization (AEO).'
+url: 'a-better-fossengineer'
 ---
 
 
 **Tl;DR**
 
 It was time to stop those ads.
+
+And to use:
+
+
+1. https://diy.jalcocertech.com
+2. https://webaudit.jalcocertech.com/
+3. https://ebooks.jalcocertech.com/
+
 
 
 https://github.com/openai/skills
@@ -83,3 +91,13 @@ Actually: Not doing more (DFY) websites for others.
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com/" title="Consulting | DWY ↗" icon="book-open" >}}
 {{< /cards >}}
+
+---
+
+## FAQ
+
+### Detecting Broken Links
+
+{{% details title="How to use Lychee for broken link detection 🚀" closed="true" %}}
+
+{{% /details %}}

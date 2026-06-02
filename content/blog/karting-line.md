@@ -1,8 +1,8 @@
 ---
 title: "Optimal Karting Line"
-date: 2026-05-29
+date: 2026-06-10
 draft: false
-tags: ["Racing","GPS"]
+tags: ["Racing","GPS","Forgejo"]
 description: 'Go-Pro Telemetry gone wild.'
 url: 'optimal-karting-line'
 ---
@@ -11,6 +11,10 @@ url: 'optimal-karting-line'
 **TL;DR**
 
 Everything is good as long as you dont get 529 status on CC.
+
+```sh
+git clone 
+```
 
 **Intro**
 

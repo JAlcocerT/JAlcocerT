@@ -1,6 +1,6 @@
 ---
 title: "Vacations with Python + ADK"
-date: 2026-05-31T09:20:21+01:00
+date: 2026-06-02T09:20:21+01:00
 draft: false
 tags: ["PyVacations","NomadList","Numbeo","Trip-Planner x Weather","Costs of Living"]
 summary: 'Where am I going next? Vibe Planning and scrapped wisdom of crowds.'
@@ -113,6 +113,10 @@ And no API key!
 
 ### Cost of Living Data
 
+You could use playwright, or others like
+
+But you can get away with bs4 actually.
+
 
 ---
 
@@ -125,6 +129,7 @@ make cost-warsaw-capitals COST_ARGS="--limit 5 --delay-seconds 0.5 --fresh"
   make cost-warsaw-capitals COST_ARGS="--delay-seconds 10"
 
     make time-overlay-data
+    make cost-overlay-data
 ```
 
 ---

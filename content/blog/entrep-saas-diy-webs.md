@@ -1,9 +1,9 @@
 ---
-title: "Attraction Web Offer x Show a Problem"
+title: "[Attraction] Show a Problem"
 date: 2026-05-10T08:20:21+01:00
 draft: false
-tags: ["Vertigo","NextJS SaaS","BiP x DIY enhanced","RoadMap26","My Web Journey","PocketBase Leads","EayP v3 checks"]
-description: 'A scalable way to provide DIY websites. Free Web Audits and custom forms.'
+tags: ["Vertigo","NextJS SaaS","RoadMap26","My Web Journey","PocketBase Leads","EayP v3 checks"]
+description: 'A scalable way to get leads for DFY services. Free Web Audits and custom forms.'
 url: 'diy-webs-via-paas'
 ---
 
@@ -11,6 +11,9 @@ url: 'diy-webs-via-paas'
 **Tl;DR**
 
 If I ever talked with you about how to build a website: **its obsolete**.
+
+1. https://diy.jalcocertech.com
+2. https://webaudit.jalcocertech.com/
 
 +++ [Gitlab Pages](#what-about-gitlab-pages)
 
@@ -30,7 +33,6 @@ Time to put those together with a quick WebApp/SaaS to free my time and **enhanc
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/#initial-prompts-for-success" title="Vibe Coding | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
-
 
 How about **improving CX** for DIYs websites?
 
