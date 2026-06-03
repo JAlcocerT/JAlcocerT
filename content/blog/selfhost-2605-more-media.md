@@ -1270,18 +1270,20 @@ To open `RW2` photos I needed:
 geeqie P1000130.RW2 
 ```
 
-Geeqie: best if you want a lightweight viewer. It is focused on fast
-    browsing, thumbnails, zoom, and folder-based viewing, and it supports RW2
-    directly. It is not a RAW editor.
-  - RawTherapee: best if you want strong RAW processing and editing. It is much
-    heavier than a simple viewer, but it gives you serious control over
-    development.
-  - darktable: best if you want a full RAW workflow plus cataloging. It supports
-    RW2, but it is explicitly built as a RAW developer and uses substantial
-    memory, so it is the least lightweight of the three.
-  - gThumb or nomacs: decent general-purpose image viewers, but they are not as
-    clearly lightweight-and-RAW-focused as Geeqie, and Geeqie has the clearest
-    RW2 support documentation among the lightweight viewers I checked.
+Geeqie: best if you want a lightweight viewer. 
+
+It is focused on fast
+  browsing, thumbnails, zoom, and folder-based viewing, and it supports RW2
+  directly. It is not a RAW editor.
+- RawTherapee: best if you want strong RAW processing and editing. It is much
+  heavier than a simple viewer, but it gives you serious control over
+  development.
+- darktable: best if you want a full RAW workflow plus cataloging. It supports
+  RW2, but it is explicitly built as a RAW developer and uses substantial
+  memory, so it is the least lightweight of the three.
+- gThumb or nomacs: decent general-purpose image viewers, but they are not as
+  clearly lightweight-and-RAW-focused as Geeqie, and Geeqie has the clearest
+  RW2 support documentation among the lightweight viewers I checked.
 
   My recommendation for your use case:
 
@@ -1292,9 +1294,13 @@ Geeqie: best if you want a lightweight viewer. It is focused on fast
 
 ### How to youtube
 
+With claude code as a builder, ffmpeg, yt-dl and openai API key...
+
 ![alt text](/blog_img/apps/yt-distill.png)
 
 ```sh
 cd ./poc/yt-distill
-make up
+#make up
+PORT=8000 docker compose up --build
+#cd ./out #to get the transcripts
 ```

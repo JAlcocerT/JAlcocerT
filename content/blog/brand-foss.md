@@ -2,10 +2,26 @@
 title: "Improving a Blog"
 date: 2026-06-01T23:20:21+01:00
 draft: false
-tags: ["FOSS","RoadMap26","Codex x HUGO","JAlcocerTech WebAudits","Broken Links + Sitemap","Leads"]
-description: 'Some SEO x Agent Engine Optimization (AEO).'
+tags: ["FOSS","RoadMap26","Codex x HUGO","JAlcocerTech WebAudits","Broken Links + Sitemap","PocketBase x Leads"]
+description: 'Some SEO x Agent Engine Optimization (AEO). With Image generation.'
 url: 'a-better-fossengineer'
 ---
+
+
+The kind of thing i use now to test websites for people i Just met: `https://spanishflowacademy.com/`
+
+If [these audits show a problem](https://jalcocert.github.io/JAlcocerT/diy-webs-via-paas/) you might need:
+
+ set -a
+  . ./.env
+  set +a
+
+  uv run --with openai --with pillow \
+    "${CODEX_HOME:-$HOME/.codex}/skills/.system/imagegen/scripts/image_gen.py" \
+    generate-batch \
+    --input tmp/imagegen/playwright-symphony-komodo-cover-prompts.jsonl \
+    --out-dir output/imagegen/covers \
+    --concurrency 3
 
 https://github.com/lycheeverse/lychee
 **Tl;DR**
@@ -197,3 +213,111 @@ jobs:
 ```
 
 {{% /details %}}
+
+
+### Scanning SiteMaps
+
+Sitemap URL:
+
+  https://jalcocert.github.io/JAlcocerT/sitemap.xml
+
+  RSS feed for latest blog posts:
+
+  https://jalcocert.github.io/JAlcocerT/blog/index.xml
+
+  Curl latest 10 posts:
+
+```sh
+sudo snap install ripgrep --classic
+
+curl -sS https://jalcocert.github.io/JAlcocerT/blog/index.xml \
+  | rg -o '<item><title>[^<]+</title><link>[^<]+</link><pubDate>[^<]+</pubDate>' \
+  | sed -E 's#<item><title>([^<]+)</title><link>([^<]+)</link><pubDate>([^<]+)</pubDate>#- \1 | \3 | \2#' \
+  | head -n 10
+```
+  Current top result from that command is:
+
+  - Vacations with Python + ADK | Tue, 02 Jun 2026 09:20:21 +0100 | https://JAlcocerT.github.io/JAlcocerT/py-vacations/
+
+  To curl all URLs from the sitemap:
+
+```sh
+  curl -sS https://jalcocert.github.io/JAlcocerT/sitemap.xml \
+    | rg -o '<loc>[^<]+' \
+    | sed 's#<loc>##'
+  ```
+
+
+### Robots and Agents
+
+
+https://github.com/JAlcocerT/JAlcocerT/actions/runs/26818896547
+
+Sitemap URL:
+
+  https://jalcocert.github.io/JAlcocerT/sitemap.xml
+
+  RSS feed for latest blog posts:
+
+  https://jalcocert.github.io/JAlcocerT/blog/index.xml
+
+  Curl latest 10 posts:
+
+```sh
+sudo snap install ripgrep --classic
+
+curl -sS https://jalcocert.github.io/JAlcocerT/blog/index.xml \
+  | rg -o '<item><title>[^<]+</title><link>[^<]+</link><pubDate>[^<]+</pubDate>' \
+  | sed -E 's#<item><title>([^<]+)</title><link>([^<]+)</link><pubDate>([^<]+)</pubDate>#- \1 | \3 | \2#' \
+  | head -n 10
+```
+  Current top result from that command is:
+
+  - Vacations with Python + ADK | Tue, 02 Jun 2026 09:20:21 +0100 | https://JAlcocerT.github.io/JAlcocerT/py-vacations/
+
+  To curl all URLs from the sitemap:
+
+```sh
+  curl -sS https://jalcocert.github.io/JAlcocerT/sitemap.xml \
+    | rg -o '<loc>[^<]+' \
+    | sed 's#<loc>##'
+```
+
+For crawlers, I added a simple `robots.txt`:
+
+```txt
+User-agent: *
+Allow: /
+
+Sitemap: https://jalcocert.github.io/JAlcocerT/sitemap.xml
+```
+
+In Hugo, this lives at:
+
+```txt
+static/robots.txt
+```
+
+And after deployment it should be available at:
+
+```txt
+https://jalcocert.github.io/JAlcocerT/robots.txt
+```
+
+This file does not secure anything. It is just a crawler hint. The useful part here is the sitemap line, because it gives search engines and polite crawlers the canonical map of the site.
+
+For AI agents, the trendy file is `llms.txt`. The emerging convention is to publish a Markdown file at the site root:
+
+```txt
+https://jalcocert.github.io/JAlcocerT/llms.txt
+```
+
+So I added:
+
+```txt
+static/llms.txt
+```
+
+Think of it as a curated, LLM-friendly site index: what this site is about, which pages matter, and where agents should start. Some projects also publish `llms-full.txt`, which contains a larger Markdown dump of key content for agents that want more context in one request.
+
+I would treat `llms.txt` as a low-cost experiment, not as guaranteed SEO magic. It can help agents and AI coding tools understand a site faster, but classic signals still matter: sitemap, RSS, clean HTML, canonical URLs, metadata, and pages that answer specific questions.

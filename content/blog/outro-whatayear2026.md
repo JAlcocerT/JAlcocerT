@@ -7,6 +7,7 @@ description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
 
+https://www.youtube.com/watch?v=iwFSTYUL1yw
 <!-- 
 https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
 

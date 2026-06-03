@@ -1,5 +1,5 @@
 ---
-title: "Compliants mechanism for MultiBodySystemsDynamics dot com"
+title: "Compliant mechanisms for MultiBodySystemsDynamics dot com"
 date: 2026-06-10
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper"]
@@ -18,3 +18,22 @@ From the wedding conversation with Gilabert, my last mbsd post with [the framewo
 Because ideas are worthless and execution is everything
 
 The engine under https://multibodysystemsdynamics.com/ cant be closed source.
+
+## Showcase - Engine Vibrations
+
+Say that you can to simulate a new engine type:
+
+https://www.youtube.com/watch?v=HVqYlP1MC6E
+
+
+---
+
+## FAQ
+
+### Cool Builder Channels
+
+* https://www.youtube.com/@MiniDIY0/videos
+
+paillard fan
+
+https://www.youtube.com/watch?v=DudAEiP6lKU

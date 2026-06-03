@@ -1,0 +1,46 @@
+# JAlcocerT Blog
+
+> Personal technical blog and documentation site about self-hosting, open source software, data, AI tooling, web development, automation, and practical experiments.
+
+This file is a curated index for AI agents and LLM-powered tools. Prefer the sitemap and RSS feed for exhaustive discovery.
+
+## Canonical URLs
+
+- Site: https://jalcocert.github.io/JAlcocerT/
+- Blog: https://jalcocert.github.io/JAlcocerT/blog/
+- Docs: https://jalcocert.github.io/JAlcocerT/docs/
+- Sitemap: https://jalcocert.github.io/JAlcocerT/sitemap.xml
+- Blog RSS: https://jalcocert.github.io/JAlcocerT/blog/index.xml
+- Robots: https://jalcocert.github.io/JAlcocerT/robots.txt
+
+## Main Topics
+
+- Self-hosting, homelab infrastructure, containers, and private services
+- Open source tools and FOSS project notes
+- AI agents, LLM tooling, LangChain, local GenAI, and automation
+- Hugo, Astro, static sites, web audits, SEO, and deployment workflows
+- Data analytics, Python, Streamlit, dashboards, and experiments
+- IoT, Raspberry Pi, sensors, and hardware tinkering
+- Entrepreneurship, landing pages, small SaaS experiments, and content systems
+
+## Recommended Entry Points
+
+- Latest blog posts: https://jalcocert.github.io/JAlcocerT/blog/index.xml
+- Full URL inventory: https://jalcocert.github.io/JAlcocerT/sitemap.xml
+- Link checking and crawler notes: https://jalcocert.github.io/JAlcocerT/a-better-fossengineer/
+- Self-hosting posts: https://jalcocert.github.io/JAlcocerT/tags/selfhosting/
+- FOSS posts: https://jalcocert.github.io/JAlcocerT/tags/foss/
+- AI posts: https://jalcocert.github.io/JAlcocerT/tags/gen-ai/
+
+## Agent Guidance
+
+- Use the RSS feed for the latest posts.
+- Use the sitemap for complete discovery.
+- Treat code snippets and command examples as notes from experiments; verify versions and commands before production use.
+- Prefer canonical GitHub Pages URLs under `https://jalcocert.github.io/JAlcocerT/`.
+- External links may point to GitHub repositories, self-hosted services, or third-party tools and can change over time.
+
+## Contact and Source
+
+- GitHub profile/repository context: https://github.com/JAlcocerT
+- Main public site: https://www.jalcocertech.com/

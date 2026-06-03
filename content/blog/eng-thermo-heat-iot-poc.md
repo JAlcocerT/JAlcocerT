@@ -8,6 +8,14 @@ url: 'how-to-check-hot-pump-viability'
 math: true
 ---
 
+In retrospective, 12m2 of solar panels are enough to pay no electricity bill in south Spain.
+
+But how can we now this in advance?
+
+Ive also seen invoices with less than 100kwh in regular months, then spike to 360wkh in august
+
+Guess why :)
+
 ```sh
 git clone /poc
 cd ./poc/go-solar-trajectory

@@ -10,7 +10,7 @@ url: 'how-to-browse'
 
 **Tl;DR**
 
-Playing again with [scrappers](#scrapping-recap): scrapegraph, crawl4ai, firecrawl.
+Playing again with [scrappers](#scrapping-recap): **scrapegraph, crawl4ai, firecrawl.**
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Job-Trends" title="Job Trends Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of the job trends + sqlite + plots" >}}
@@ -473,8 +473,6 @@ BTW: How cool is to use perplexity and have a reference to your own website:
 
 ![Perplexity Neko Search](/blog_img/selfh/Internet/perplexity-neko.png)
 
-![Neko UI setup](/blog_img/selfh/Internet/neko-ui.png)
-
 - **Kasm Workspaces**: A container streaming platform that can spin up various browsers or full desktops in ephemeral Docker containers accessible via the web browser. It’s designed for enterprise use, secure browser isolation, and remote workspace management.
 
 - **Browserless**: An open-source Docker container allowing deployment of headless Chrome browsers for remote web automation, scraping, and testing. It supports Puppeteer and Playwright libraries and offers robust API access for automation tasks.
@@ -486,6 +484,8 @@ These options differ in focus from lightweight isolated self-hosted browsers (Ne
 [2](https://fossengineer.com/selfhosting-neko-browser/)
 [7](https://www.reddit.com/r/selfhosted/comments/1isc94o/kasm_open_source_self_hosted_disposable_browsing/)
 [8](https://github.com/browserless/browserless)
+
+![Neko UI setup](/blog_img/selfh/Internet/neko-ui.png)
 
 ---
 

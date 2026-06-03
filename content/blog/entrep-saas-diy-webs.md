@@ -3,9 +3,10 @@ title: "[Attraction] Show a Problem"
 date: 2026-05-10T08:20:21+01:00
 draft: false
 tags: ["Vertigo","NextJS SaaS","RoadMap26","My Web Journey","PocketBase Leads","EayP v3 checks"]
-description: 'A scalable way to get leads for DFY services. Free Web Audits and custom forms.'
+description: 'A scalable way to get leads for DFY services. Free Web Audits and custom forms. Not a PaaS.'
 url: 'diy-webs-via-paas'
 ---
+
 
 
 **Tl;DR**
