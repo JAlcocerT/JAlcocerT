@@ -86,9 +86,9 @@ So, in short: he seems to be a Spanish-born, Poland-based software/data engineer
 
 ## Conclusions
 
-I didnt mentiont about my bike trips across Europe, nor my adventure with fixing this old Civic.
+I didnt mentiont about my [bike](https://jalcocert.github.io/JAlcocerT/buying-bicycle-through-data-analytics/) trips across Europe, nor my adventure with fixing [this old Civic](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/).
 
-Some knew about my chemistry experiments, but not about me growing tomatoes nor doing soap with recycled oil.
+Some knew about [my bike simulator](https://jalcocert.github.io/JAlcocerT/3d-mbsd-bicycle/) and chemistry experiments, but not about me [growing tomatoes](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/) nor [doing soap with recycled oil](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/).
 
 Its been very fun to:
 
@@ -118,16 +118,17 @@ Because the tech part is more than covered.
 
 And as someone said: *I have everything pretty much automated*
 
-Anyway, leads...for?
+Anyway, [leads](https://jalcocert.github.io/JAlcocerT/how-to-get-customers-programmatically/)...for?
 
-1. Slubne - wedding planners
+1. [Slubne](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) - for wedding planners *potentially white-labelling it as I want to move away from b2c*
 2. Around the [heat sensor learnings](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/): Aerotermia / thermo viability + efficient gardening / crops intelligence
-3. Real Estate with the learnings of ADK and the UI/X of trip-planner and solar
-4. Agentic BI: Shopify thingy
+3. [Real Estate](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/) with the learnings of ADK and the UI/X of trip-planner and solar, also with the `poc/real-estate-calculator` in mind.
+4. Agentic BI: [Shopify thingy](https://jalcocert.github.io/JAlcocerT/shopify-business-data-analytics/)
 5. Fossengineer to go ad-less + better website SEO and [audits](https://jalcocert.github.io/JAlcocerT/diy-webs-via-paas/) + posts with images via codex and all new posts referencing docker-compose to my Home-Lab repo `/foss-post`
-6. Multibody to go OSS (probably the rigid version for now), like diode.computer does
-7. Not yet restaurants, nor the agentic KB (yet)
-
+6. Multibody to go OSS (probably [the rigid version](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) for now), like diode.computer does
+7. [Leads with UI](https://jalcocert.github.io/JAlcocerT/how-to-do-social-media-outreach/) - productize services after my learnings around `JAlcocerTech leads` tag
+8. Not yet restaurants, nor the agentic KB (yet)
+9. When all this code go on its own: the `electronics-101` repo has a lot of goodies simulated ready to get built, including drones :)
 
 
 ---

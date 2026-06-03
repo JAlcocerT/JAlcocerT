@@ -7,9 +7,8 @@ description: 'A scalable way to get leads for DFY services. Free Web Audits and 
 url: 'diy-webs-via-paas'
 ---
 
-
-
 **Tl;DR**
+
 
 If I ever talked with you about how to build a website: **its obsolete**.
 

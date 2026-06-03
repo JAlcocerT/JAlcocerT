@@ -1255,9 +1255,7 @@ n
 
 Then rclone gives you a URL. Open that URL on your laptop/desktop, sign in to Google, copy the token/code back into the server prompt.
 
-For backups, the only artifact you need to preserve is:
-
-~/.config/rclone/rclone.conf
+For backups, the only artifact you need to preserve is: `~/.config/rclone/rclone.conf`
 
 If using restic, also preserve your restic repository password. Without it, the encrypted backup is unrecoverable.
 

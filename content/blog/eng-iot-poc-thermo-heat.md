@@ -3,7 +3,7 @@ title: "Energy Solutions in the AI era"
 date: 2026-05-26
 draft: false
 tags: ["Rankine x Aerotermia PoC","IoT x DHT22 x Solar Experiment x ERA5","PV vs SAHP vs HVAC","EMQx x DHT11"]
-description: 'Boundary conditions are hard. Abstract them with sensors.Blender and building shadows'
+description: 'Boundary conditions are hard. Abstract them with sensors.'
 url: 'how-to-check-hot-pump-viability'
 math: true
 ---
@@ -28,6 +28,7 @@ cd ./poc/go-solar-trajectory
 > > https://17e286bf.trip-planner-9lt.pages.dev/?sid=06380&lat=50.9167&lon=5.7833&name=Maastricht+Airport+Zuid+Limburg&country=NL
 
 There are now two concepts:      
+
 - Face sun now: sets the panel normal directly toward the current sun vector. This is the tracker-style    instantaneous optimum.                                                                               
 - Use annual fixed: finds the best fixed tilt/azimuth for the selected latitude using a clear-sky      
   geometry proxy: it samples the year and maximizes max(0, sun · panelNormal) * sin(solarAltitude).    
@@ -96,7 +97,7 @@ https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/ardu
 {{< /cards >}}
 
 
-> Open ArduinoIDE and select `ESP32 Dev Module` + `CTRL + U` to compile the sketch `esp32-internal-temp-mqtt.cpp` into the board with the right wifi pwd.
+> Open **ArduinoIDE in W11** and select `ESP32 Dev Module` + `CTRL + U` to compile the sketch `esp32-internal-temp-mqtt.cpp` into the board with the right wifi pwd.
 
 * https://jalcocert.github.io/JAlcocerT/electronics-101/#quick-iot-samples
 
@@ -122,13 +123,14 @@ docker logs emqx -f
 https://www.youtube.com/shorts/ZcsaFZgWoEc
 
 Poprawne podsumowanie:
-  - Prąd: ~100 kWh/m (avg 95.9)
-  - Ciepło worst month: ~2.5 GJ (Feb 2025) ≈ 684 kWh thermal
-  - Ciepło avg: ~0.8 GJ/m ≈ 220 kWh thermal/m
 
-  coming from https://jalcocert.github.io/JAlcocerT/thermodynamics/ and from
+- Prąd: ~100 kWh/m (avg 95.9)
+- Ciepło worst month: ~2.5 GJ (Feb 2025) ≈ 684 kWh thermal
+- Ciepło avg: ~0.8 GJ/m ≈ 220 kWh thermal/m
 
-  Where some magic happend: `https://go-solar.pages.dev/era5-cities/`
+  coming from https://jalcocert.github.io/JAlcocerT/thermodynamics/ and from https://jalcocert.github.io/JAlcocerT/heat-transfer-ice/
+
+Where some magic happend: `https://go-solar.pages.dev/era5-cities/`
 
 ```sh
 #git clone /poc
@@ -233,9 +235,6 @@ cd ./RPi/
 > If you dont go crazy, 100kwh/m avg seems reasonable, invoices in spain inform about neighbours, they do x2 (lol)
 
 4. Wrapping all together:
-
-### What about blender?
-
 
 
 ---

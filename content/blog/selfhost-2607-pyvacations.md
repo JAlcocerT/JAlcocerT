@@ -7,14 +7,15 @@ summary: 'Where am I going next? Vibe Planning and scrapped wisdom of crowds.'
 url: 'py-vacations'
 ---
 
+New additions for the [technology for Trips stack](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/)
+
 Already got freedom in time?
 
 `https://aegis-freedom.pages.dev/`
 
-  For simple static pages, Playwright is usually overkill. Prefer fetch, curl, cheerio, BeautifulSoup, or an API if available. Use Playwright when browser behavior matters.
+For simple static pages, Playwright is usually overkill. Prefer fetch, curl, cheerio, BeautifulSoup, or an API if available. Use Playwright when browser behavior matters.
 
-  Be careful with robots.txt, site terms, rate limits, login-protected content, personal data, and aggressive parallel scraping. Scraping with a browser is heavier and easier to
-  get blocked if you hit a site hard.
+Be careful with robots.txt, site terms, rate limits, login-protected content, personal data, and aggressive parallel scraping. Scraping with a browser is heavier and easier to  get blocked if you hit a site hard.
 
 https://github.com/dawarich-app/atlas
 

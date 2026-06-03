@@ -1,39 +1,44 @@
 ---
-title: "Improving a Blog"
+title: "[WebAudits] Improving a Blog"
 date: 2026-06-01T23:20:21+01:00
 draft: false
-tags: ["FOSS","RoadMap26","Codex x HUGO","JAlcocerTech WebAudits","Broken Links + Sitemap","PocketBase x Leads"]
-description: 'Some SEO x Agent Engine Optimization (AEO). With Image generation.'
+tags: ["FOSS","RoadMap26","Codex x HUGO","Broken Links + Sitemap","JAlcocerTech Leads"]
+description: 'Some SEO x Agent Engine Optimization (AEO). With Image generation and commento.'
 url: 'a-better-fossengineer'
 ---
-
 
 The kind of thing i use now to test websites for people i Just met: `https://spanishflowacademy.com/`
 
 If [these audits show a problem](https://jalcocert.github.io/JAlcocerT/diy-webs-via-paas/) you might need:
 
- set -a
-  . ./.env
-  set +a
+To generate nice images with the latest openAI T2I:
+```sh
+# set -a
+# . ./.env
+# set +a
 
-  uv run --with openai --with pillow \
+uv run --with openai --with pillow \
     "${CODEX_HOME:-$HOME/.codex}/skills/.system/imagegen/scripts/image_gen.py" \
     generate-batch \
     --input tmp/imagegen/playwright-symphony-komodo-cover-prompts.jsonl \
     --out-dir output/imagegen/covers \
     --concurrency 3
+```
+
+This model is so good, that I could not avoid using it to improve my digital assets for `consulting.jalcocertech.com`
 
 https://github.com/lycheeverse/lychee
+
 **Tl;DR**
 
-It was time to stop those ads.
+Yes, its me.
 
-And to use:
+And tt was time to stop those ads.
 
 
-1. https://diy.jalcocertech.com
-2. https://webaudit.jalcocertech.com/
-3. https://ebooks.jalcocertech.com/
+1. `https://diy.jalcocertech.com`
+2. `https://webaudit.jalcocertech.com/` - to which im adding all the learnings of these improvements here
+3. `https://ebooks.jalcocertech.com/`
 
 
 
@@ -87,9 +92,21 @@ With that remota data (yaml) fetching from the home-lab repo.
 
 ### Posts
 
+Using the `foss-post` skill goes fine for me
+
+Which im improving each time at `./agents` to also spin up containers and test the real setup
+
+Then, that docker compose goes to `home-lab` which is the place that feeds the post.
+
 ### Videos
 
 https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#about-foss---repo-to-video
+
+### Comments
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Commento" title="Commento for Websites | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 ---
 
@@ -102,11 +119,58 @@ This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
 
 But I said no more to custom CMS integrations.
 
-Actually: Not doing more (DFY) websites for others.
+Actually: Not doing more (DFY) websites for others :(
+
+You can still get my feedback / time to unstuck if you are blocked while building one:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com/" title="Consulting | DWY ↗" icon="book-open" >}}
 {{< /cards >}}
+
+### Better JAlcocerTech Web Audits
+
+Ive been using codex CLI to combine the learnings around fossengineer SEO improvements and add it to
+
+
+```sh
+git clone
+```
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet/" title="PoC Web Magets ↗" icon="github" >}}
+{{< /cards >}}
+
+
+#### Applying webaudits to this blog
+
+Im keeping the CLI cool way for myself :)
+
+Ive also used this chance to add a reference to the main page to some cool static pages ive been doing:
+
+https://pm-pdm-checks.pages.dev with some questions for your PM/PdMs
+postmortems as I [built here](https://github.com/JAlcocerT/poc/tree/main/libg/why-postmortem)
+the static trip
+the solar checks, the rotating earth...
+the no bs finances, even a btc good looking graph
+
+
+#### To fossengineer
+
+#### To the latest eayp
+
+Because this setup is cool:
+
+```sh
+
+```
+
+#### To someone I just met - With email report
+
+Santi, this one goes for you to.
+
+#### Codex CLI WebAudit to Report
 
 ---
 
@@ -143,7 +207,9 @@ https://jalcocert.github.io/JAlcocerT/favicon-dark.svg
 
 I fixed those by publishing the existing `JAT.svg` logo as `static/favicon.svg` and `static/favicon-dark.svg`, which Hugo serves from the site root.
 
-When I tried the full sitemap-based external scan, lychee started checking outbound links from every deployed page. That surfaced rate-limit/backoff warnings from hosts linked in the blog, including `github.com` and `whois.jalcocertech.com`. The `whois.jalcocertech.com` link comes from older blog content, not from GitHub Pages hosting itself.
+When I tried the full sitemap-based external scan, lychee started checking outbound links from every deployed page.
+
+That surfaced rate-limit/backoff warnings from hosts linked in the blog, including `github.com` and `whois.jalcocertech.com`. The `whois.jalcocertech.com` link comes from older blog content, not from GitHub Pages hosting itself.
 
 For the full deployed Hugo site, use the sitemap as the input list:
 
@@ -320,4 +386,6 @@ static/llms.txt
 
 Think of it as a curated, LLM-friendly site index: what this site is about, which pages matter, and where agents should start. Some projects also publish `llms-full.txt`, which contains a larger Markdown dump of key content for agents that want more context in one request.
 
-I would treat `llms.txt` as a low-cost experiment, not as guaranteed SEO magic. It can help agents and AI coding tools understand a site faster, but classic signals still matter: sitemap, RSS, clean HTML, canonical URLs, metadata, and pages that answer specific questions.
+I would treat `llms.txt` as a low-cost experiment, not as guaranteed SEO magic. 
+
+It can help agents and AI coding tools understand a site faster, but classic signals still matter: sitemap, RSS, clean HTML, canonical URLs, metadata, and pages that answer specific questions.
