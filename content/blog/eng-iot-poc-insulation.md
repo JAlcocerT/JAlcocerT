@@ -23,9 +23,19 @@ How confy is going to be a flat that just exists over a conceptual drawing?
 With all that push of energy to us via radiation
 
 
-## What about blender?
+### What about blender?
+
+```sh
+sudo snap install blender --classic --channel=5.1/stable
+#cd ./poc/building-to-blender
+```
+
+Then, this happened:
+
+https://youtu.be/yS55Clb5_us
 
 
+## IoT, Walls, Sun and Heat Transfer
 
 ---
 

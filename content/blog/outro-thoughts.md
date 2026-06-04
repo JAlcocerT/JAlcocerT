@@ -158,13 +158,13 @@ herdr #claude /agent view
 ### How do you recommend me getting started?
 
 1. Get ready to pay 20$/m for an AI sub (massive time return)
-2. Get familiar with git (must) and markdown
+2. Get familiar with git (must) and markdown *and IDE like ~~vscodium~~ gram is a good companion*
 3. Prepare a safe (linux) environment for AI to work: a cheap VPS, old laptop, Pi... will do
 4. Use any of:
 
 ```sh
 claude #closed source, amazing performance, sub cant be used with other harnesses
-codex #
+codex #--yolo
 ```
 
 > Dont forget to use skills and create yours

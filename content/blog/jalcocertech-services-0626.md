@@ -25,10 +25,13 @@ Specially that im leveraging outreach
 
 Ive consolidating the `diy.jalcocertech` into the `ebook` one.
 
+Particularly at: https://ebooks.jalcocertech.com/books/web-diy/
+
 Bringing the images I had in there:
 
 {{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY JAlcocerTech x Obfuscation | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="ebboks JAlcocerTech | Github ↗" icon="github" >}}
 {{< /cards >}}
 
 
@@ -123,4 +126,3 @@ And continued:
 ## FAQ
 
 ### Whats your current agentic setup?
-
