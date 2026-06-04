@@ -12,6 +12,49 @@ url: 'jalcocertech-services-snapshot'
 
 The last piece to combince me that this is enough.
 
+The proof that you can make money with a shitty landing: `https://genkinfy.com/#faq`
+
+```md
+make audit-full-fast URL=https://genkinfy.com/
+SKIP_LINKS=false LINK_CHECK_METHOD=${LINK_CHECK_METHOD:-lychee-docker} ./audit-master.sh "https://genkinfy.com/"
+╔════════════════════════════════════════════════════════════╗
+║                Master Audit - Full Site Analysis           ║
+╚════════════════════════════════════════════════════════════╝
+
+Target: https://genkinfy.com/
+Orchestration:
+ - Lighthouse: ACTIVE
+ - Link Check: ACTIVE
+ - SEO Crawl:  ACTIVE
+ - Security:   ACTIVE
+
+Launching audit phases in parallel...
+ → Lighthouse PID=419907
+ → LinkCheck PID=419908
+ → SEO PID=419909
+ → Security PID=419910
+ → Latency PID=419911
+All phases finished in 32s
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+                FINAL AUDIT RESULTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Performance:              31/100
+SEO (Technical):          95/100
+Link Integrity:           70/100
+Security Headers:         0/100
+──────────────────────────────────────────────────────────
+OVERALL SITE GRADE:       45/100 ⭐
+
+Master report saved to: ./master-reports/master-20260604-192953.json
+```
+
+```sh
+LINK_CHECK_TIMEOUT_SECONDS=0 make audit-full URL=https://fossengineer.com
+LINK_CHECK_TIMEOUT_SECONDS=0 ./linkcheck-audit.sh https://fossengineer.com docker
+```
+
 **Intro**
 
 After the post-wedding thoughts, it was time to make this clear.
@@ -20,6 +63,8 @@ Specially that im leveraging outreach
 
 
 ## The services
+
+https://github.com/JAlcocerT/jalcocertech/tree/main-site-cloudflare-hub
 
 ### The free ones
 
@@ -42,8 +87,13 @@ Bringing the images I had in there:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-While creating some more via OpenAI to improve explainability:
+While creating some more images via OpenAI to improve explainability:
 
+
+
+Ive also improved the main `www.jalcocertech`
+
+• Done on branch main-site-cloudflare-hub.
 
 
 #### FOSSEngineer x HomeLab 
@@ -63,7 +113,13 @@ There has been several improvements in the foss workflow:
 {{< /cards >}}
 
 
-### Productized Services 
+### Productized Services
+
+from the consulting 
+
+
+which has received improvements: Committed on landing-improvements branch
+
 
 
 #### GenBI - Shopify QnA

@@ -9,6 +9,8 @@ math: true
 ---
 
 
+https://www.youtube.com/watch?v=9aFyLqJWCy0
+
 **Tl;DR**
 
 From the wedding conversation with Gilabert, my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and inspired by diode

@@ -1,5 +1,5 @@
 ---
-title: "[WebAudits] Improving a Blog"
+title: "[Web Audits] Improving a Blog"
 date: 2026-06-01T23:20:21+01:00
 draft: false
 tags: ["FOSS","RoadMap26","Codex x HUGO","Broken Links + Sitemap","JAlcocerTech Leads"]
@@ -39,6 +39,51 @@ And tt was time to stop those ads.
 1. `https://diy.jalcocertech.com`
 2. `https://webaudit.jalcocertech.com/` - to which im adding all the learnings of these improvements here
 3. `https://ebooks.jalcocertech.com/`
+
+```sh
+#https://github.com/JAlcocerT/poc_webs_magnet
+ make audit URL=https://ebooks.jalcocertech.com/ #https://example.com
+
+ #This runs the CLI suite through ./audit-master.sh with the default fast behavior, where link checks are skipped.
+
+ #Also added:
+
+make audit-full URL=https://ebooks.jalcocertech.com/ #https://example.com
+make audit-full URL=https://fossengineer.com
+make audit-full URL=https://spanishflowacademy.com/
+make audit-full URL=https://notenoughcylinders.com/
+
+make audit-full-fast URL=https://jmodels.net/
+# Or manually: LINK_CHECK_METHOD=lychee-docker make audit-full URL=https://jmodels.net/
+
+make audit-full URL=https://beyondajourney.lol/
+LINK_CHECK_TIMEOUT_SECONDS=0 make audit-full URL=https://clinicadentalrociomontero.com
+```
+
+```sh
+make audit-links-deep URL=https://clinicadentalrociomontero.com #https://fossengineer.com
+```
+  This runs:
+
+  LINK_CHECK_TIMEOUT_SECONDS=0 ./linkcheck-audit.sh "https://fossengineer.com" docker
+
+  3. Added lead generator
+
+  make lead-from-report TIMESTAMP=20260604-192953 DOMAIN=genkinfy.com
+
+  It creates a first-draft manual lead from matching report artifacts.
+
+  4. Fixed Lighthouse summary bug
+
+  Mobile-only runs now show desktop as skipped, not 0/100.
+
+  Validation passed:
+
+  bash -n lighthouse-audit.sh audit-master.sh linkcheck-audit.sh
+  node --check scripts/lead-from-report.mjs
+  npm run build
+  LH_FORM_FACTOR=mobile ./lighthouse-audit.sh https://example.com
+
 
 
 

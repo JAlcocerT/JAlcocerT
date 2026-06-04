@@ -1,5 +1,5 @@
 ---
-title: "Ive been in a wedding.."
+title: "[Stereo Love] Ive been in a wedding.."
 date: 2026-05-31T09:20:21+01:00
 draft: false
 tags: ["Thoughts Orchestration","Herdr vs tmux","Git","Semantics","DSL"]
@@ -123,7 +123,7 @@ Anyway, [leads](https://jalcocert.github.io/JAlcocerT/how-to-get-customers-progr
 1. [Slubne](https://jalcocert.github.io/JAlcocerT/bring-eyes-to-your-saas/) - for wedding planners *potentially white-labelling it as I want to move away from b2c*
 2. Around the [heat sensor learnings](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/): Aerotermia / thermo viability + efficient gardening / crops intelligence
 3. [Real Estate](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/) with the learnings of ADK and the UI/X of trip-planner and solar, also with the `poc/real-estate-calculator` in mind.
-4. Agentic BI: [Shopify thingy](https://jalcocert.github.io/JAlcocerT/shopify-business-data-analytics/)
+4. Agentic AI/BI: [Shopify thingy](https://jalcocert.github.io/JAlcocerT/shopify-business-data-analytics/)
 5. Fossengineer to go ad-less + better website SEO and [audits](https://jalcocert.github.io/JAlcocerT/diy-webs-via-paas/) + posts with images via codex and all new posts referencing docker-compose to my Home-Lab repo `/foss-post`
 6. Multibody to go OSS (probably [the rigid version](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) for now), like diode.computer does
 7. [Leads with UI](https://jalcocert.github.io/JAlcocerT/how-to-do-social-media-outreach/) - productize services after my learnings around `JAlcocerTech leads` tag
@@ -132,7 +132,6 @@ Anyway, [leads](https://jalcocert.github.io/JAlcocerT/how-to-get-customers-progr
 
 
 ---
-
 
 ## FAQ
 
@@ -152,6 +151,7 @@ Particularly: https://github.com/ogulcancelik/herdr#install
 ```sh
 #tmux
 #ghostty
+#codex --yolo #claude --dangerously-skip
 herdr #claude /agent view
 ```
 
