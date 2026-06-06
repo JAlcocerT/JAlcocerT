@@ -67,3 +67,17 @@ https://www.youtube.com/watch?v=cxQ-Ef4uIpw
 
 
 ![alt text](/blog_img/apps/yt-distill.png)
+
+### Steam vs CO2 turbines
+
+The main differences between supercritical CO2 turbines and steam turbines are:
+
+Working Fluid: Supercritical CO2 turbines use CO2 as the working fluid, while steam turbines use water vapor (steam).
+
+Phase Change: Supercritical CO2 does not undergo a phase change in the energy cycle, which is a wasteful step in steam turbines that goes from liquid to gas or gas to liquid. This allows for greater efficiency in supercritical CO2 systems (00:02:40).
+
+Size and Efficiency: Supercritical CO2 turbines can be around 10 times smaller than equivalent steam turbines, making them more compact and potentially leading to efficiency improvements (00:02:33).
+
+Energy Cycle: The compression of supercritical CO2 is more efficient because it can be compressed without needing to convert from liquid to gas, unlike steam which requires additional energy for this phase change (00:03:07).
+
+These differences contribute to the potential for supercritical CO2 turbines to be more efficient and compact compared to traditional steam turbines.

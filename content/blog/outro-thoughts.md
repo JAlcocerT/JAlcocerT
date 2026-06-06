@@ -21,13 +21,22 @@ It was quite interesting to see people I havent seen for like 10y
 One of them, even has a home-lab too!
 
 ```sh
-claude --dangerously-skip-permissions -p "promptwhateverrrr" #yolo
+#claude --dangerously-skip-permissions -p "promptwhateverrrr" #yolo
 #codex --dangerously-bypass-approvals-and-sandbox
 codex --yolo
-For non-interactive runs:
-
-codex exec --dangerously-bypass-approvals-and-sandbox "your task"
+#For non-interactive runs:
+#codex exec --dangerously-bypass-approvals-and-sandbox "your task"
 ```
+
+How is people not doing this for lead enrich?
+
+```sh
+codex --search
+#or for non-interactive mode:
+codex exec --search "Find the current docs for X and update this repo accordingly"
+```
+
+{{< details title="Codex CLI looking for me 📌" closed="true" >}}
 
 This skips approval prompts and sandboxing, and the docs say to use it only inside an externally hardened or isolated environment. (developers.openai.com
 (https://developers.openai.com/codex/cli/reference/))
@@ -61,15 +70,17 @@ or for non-interactive mode:
 
 codex exec --search "Find the current docs for X and update this repo accordingly"
 
-What it does: --search enables live web search for that run. The docs say it sets web_search = "live" instead of the default "cached" mode. (developers.openai.com
-(https://developers.openai.com/codex/cli/reference)) In practice, the model gets a web-search tool and decides when to call it based on your prompt. You can nudge it directly:
-“search the web”, “verify current docs”, “find the latest release notes”, etc.
+What it does: --search enables live web search for that run.
+
+The docs say it sets web_search = "live" instead of the default "cached" mode. (developers.openai.com
+(https://developers.openai.com/codex/cli/reference)) In practice, the model gets a web-search tool and decides when to call it based on your prompt. 
+
+You can nudge it directly: “search the web”, “verify current docs”, “find the latest release notes”, etc.
 tools.web_search = true
 
 or constrained:
 
 allowed_domains = ["developers.openai.com", "github.com"]
-
 
 Public web results identify Jesús/Jesus Alcocer Tagua as a software/data engineer and data analytics specialist, originally from Spain and based in Poland. Exadel lists him as a speaker for a 2025 RAG meetup and describes him as having 6+ years of experience building data products, with a mechanical engineering background. (events.exadel.com(https://events.exadel.com/event/rag-powered-real-estate))
 
@@ -79,6 +90,9 @@ He appears connected to Exadel: a LinkedIn post by Exadel People refers to him a
 There are also public business registry/directory records for JAlcocerTech - Jesus Alcocer Tagua, a Poland-based sole proprietorship in software/programming and IT consulting, started in 2024. (owg.pl (https://www.owg.pl/ceidg/jalcocertech_jesus_alcocer_tagua_9%2C74%2C525268%2C5252685135?utm_source=openai))
 
 Older academic traces point to a 2014 University of Seville mechanical/industrial engineering thesis authored by Jesús Alcocer Tagua on computational modeling of bicycle tire-ground interaction. (biblus.us.es (https://biblus.us.es/bibing/proyectos/abreproy/90128/fichero/Memoria%2BTFG.pdf))
+
+{{< /details >}}
+
 
 So, in short: he seems to be a Spanish-born, Poland-based software/data engineer with a mechanical engineering background, working in data/AI and running a small software/IT business.
 
@@ -112,7 +126,13 @@ Its been inspiring to:
 
 ### Whats next for me
 
-Leads leads leads.
+Are we close to live in a world where AI can build whatever we want for us?
+
+Something like the film Trascendence coming?
+
+I dont know
+
+So in the meantime: **leads leads leads**
 
 Because the tech part is more than covered.
 
@@ -139,20 +159,43 @@ Anyway, [leads](https://jalcocert.github.io/JAlcocerT/how-to-get-customers-progr
 
 Im still one person
 
-Just that im using:
+Shipping like crazy: *88 posts year to date, looking like it will be 139 EoY*
+
+```sh
+find content/blog -name '*.md' -print0 |
+xargs -0 awk '
+  FNR==1 { post_date=""; printed=0 }
+
+  /^date:/ && !printed {
+    gsub(/^date:[[:space:]]*/, "", $0)
+    post_date = substr($0, 1, 10)
+    if (post_date > "2026-01-01") {
+      print FILENAME ": " post_date
+      printed=1
+      count++
+    }
+  }
+
+  END {
+    print "TOTAL:", count
+  }
+'
+```
+
+Just that im aware [that code is media](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#code-is-also-media) and Im  using: *hermes
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="AI via CLIs | Post Section ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/forgejo" title="Forgejo | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Particularly: https://github.com/ogulcancelik/herdr#install
+Particularly: `https://github.com/ogulcancelik/herdr#install`
 
 ```sh
 #tmux
 #ghostty
 #codex --yolo #claude --dangerously-skip
-herdr #claude /agent view
+herdr #like claude /agent view and tmux together
 ```
 
 ### How do you recommend me getting started?

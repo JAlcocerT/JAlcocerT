@@ -204,7 +204,7 @@ make migrate-repo REPO_OWNER=JAlcocerT REPO_NAME=eda-f1
 
 Wanna get ready for agents 24/7 in the Pi?
 
-Better provide a separated user for agents to tinker: 
+Better provide a **separated user for Forgejo** so that the agents tinker safely: 
 
 ```sh
 # See all existing users forgejo

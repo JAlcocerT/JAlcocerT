@@ -1,37 +1,27 @@
 ---
 title: "[Web Audits] Improving a Blog"
-date: 2026-06-01T23:20:21+01:00
+date: 2026-06-04T23:20:21+01:00
 draft: false
 tags: ["FOSS","RoadMap26","Codex x HUGO","Broken Links + Sitemap","JAlcocerTech Leads"]
 description: 'Some SEO x Agent Engine Optimization (AEO). With Image generation and commento.'
 url: 'a-better-fossengineer'
 ---
 
-The kind of thing i use now to test websites for people i Just met: `https://spanishflowacademy.com/`
+* https://github.com/firecrawl/fireplexity
 
-If [these audits show a problem](https://jalcocert.github.io/JAlcocerT/diy-webs-via-paas/) you might need:
+> Open Source Perplexity like AI search engine with real-time citations, streaming responses, and live data powered by Firecrawl
 
-To generate nice images with the latest openAI T2I:
-```sh
-# set -a
-# . ./.env
-# set +a
-
-uv run --with openai --with pillow \
-    "${CODEX_HOME:-$HOME/.codex}/skills/.system/imagegen/scripts/image_gen.py" \
-    generate-batch \
-    --input tmp/imagegen/playwright-symphony-komodo-cover-prompts.jsonl \
-    --out-dir output/imagegen/covers \
-    --concurrency 3
-```
-
-This model is so good, that I could not avoid using it to improve my digital assets for `consulting.jalcocertech.com`
+AI search engine with web, news, and images. You will need firecrawl and groq Apis.
 
 https://github.com/lycheeverse/lychee
 
 **Tl;DR**
 
 Yes, its me.
+
+```sh
+git clone git@gitlab.com:fossengineer1/fossengineerpapermod.git
+```
 
 And tt was time to stop those ads.
 
@@ -42,12 +32,13 @@ And tt was time to stop those ads.
 
 ```sh
 #https://github.com/JAlcocerT/poc_webs_magnet
- make audit URL=https://ebooks.jalcocertech.com/ #https://example.com
+make audit URL=https://ebooks.jalcocertech.com/ #https://example.com
+#This runs the CLI suite through ./audit-master.sh with the default fast behavior, where link checks are skipped.
+```
 
- #This runs the CLI suite through ./audit-master.sh with the default fast behavior, where link checks are skipped.
-
- #Also added:
-
+Then, 
+```sh
+#Also added:
 make audit-full URL=https://ebooks.jalcocertech.com/ #https://example.com
 make audit-full URL=https://fossengineer.com
 make audit-full URL=https://spanishflowacademy.com/
@@ -63,28 +54,24 @@ LINK_CHECK_TIMEOUT_SECONDS=0 make audit-full URL=https://clinicadentalrociomonte
 ```sh
 make audit-links-deep URL=https://clinicadentalrociomontero.com #https://fossengineer.com
 ```
-  This runs:
+This runs: `LINK_CHECK_TIMEOUT_SECONDS=0 ./linkcheck-audit.sh "https://fossengineer.com" docker`
 
-  LINK_CHECK_TIMEOUT_SECONDS=0 ./linkcheck-audit.sh "https://fossengineer.com" docker
+3. Added lead generator
 
-  3. Added lead generator
+make lead-from-report TIMESTAMP=20260604-192953 DOMAIN=genkinfy.com
 
-  make lead-from-report TIMESTAMP=20260604-192953 DOMAIN=genkinfy.com
+It creates a first-draft manual lead from matching report artifacts.
 
-  It creates a first-draft manual lead from matching report artifacts.
+4. Fixed Lighthouse summary bug
 
-  4. Fixed Lighthouse summary bug
+Mobile-only runs now show desktop as skipped, not 0/100.
 
-  Mobile-only runs now show desktop as skipped, not 0/100.
+Validation passed:
 
-  Validation passed:
-
-  bash -n lighthouse-audit.sh audit-master.sh linkcheck-audit.sh
-  node --check scripts/lead-from-report.mjs
-  npm run build
-  LH_FORM_FACTOR=mobile ./lighthouse-audit.sh https://example.com
-
-
+bash -n lighthouse-audit.sh audit-master.sh linkcheck-audit.sh
+node --check scripts/lead-from-report.mjs
+npm run build
+LH_FORM_FACTOR=mobile ./lighthouse-audit.sh https://example.com
 
 
 https://github.com/openai/skills
@@ -143,14 +130,45 @@ Which im improving each time at `./agents` to also spin up containers and test t
 
 Then, that docker compose goes to `home-lab` which is the place that feeds the post.
 
+The kind of thing i use now to test websites for people i Just met: `https://spanishflowacademy.com/`
+
+If [these audits show a problem](https://jalcocert.github.io/JAlcocerT/diy-webs-via-paas/) you might need:
+
+To generate nice images with the latest openAI T2I:
+```sh
+# set -a
+# . ./.env
+# set +a
+
+uv run --with openai --with pillow \
+    "${CODEX_HOME:-$HOME/.codex}/skills/.system/imagegen/scripts/image_gen.py" \
+    generate-batch \
+    --input tmp/imagegen/playwright-symphony-komodo-cover-prompts.jsonl \
+    --out-dir output/imagegen/covers \
+    --concurrency 3
+```
+
+This model is so good, that I could not avoid using it to improve my digital assets for `consulting.jalcocertech.com`
+
+
 ### Videos
 
 https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#about-foss---repo-to-video
 
+Whats stoppin me from shipping JAlcocerTech videos of around 3 min, done with hyperframe, commented with some TTS and screen recorded via...playwright?
+
+A new skill?
+
+```sh
+
+```
+
 ### Comments
 
+Im very happy with the Commento setup:
+
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Commento" title="Commento for Websites | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/Commento" title="Commento for Websites | Config 🐋 ↗" >}}
 {{< /cards >}}
 
 ---
@@ -158,13 +176,21 @@ https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#about-f
 
 ## Conclusions
 
- Web CMS stuff: *Strapi directus...*?
+I was getting making this much complex than it is.
+
+The direction is not to go UI
+
+Agents live in the CLI and you better do the same (or pay the price of the abstraction) 
+
+So all that Web CMS stuff: *Strapi, directus...*?
 
 This was [how i Tinkered](https://youtu.be/UFxlU9gMp_A) last year actually.
 
 But I said no more to custom CMS integrations.
 
-Actually: Not doing more (DFY) websites for others :(
+Actually: Not doing more (DFY) websites for others :')
+
+Again: CLI power :)
 
 You can still get my feedback / time to unstuck if you are blocked while building one:
 
@@ -176,9 +202,9 @@ You can still get my feedback / time to unstuck if you are blocked while buildin
 
 Ive been using codex CLI to combine the learnings around fossengineer SEO improvements and add it to
 
-
 ```sh
-git clone
+git clone /poc_webs_magnet
+cd ./poc_webs_magnet
 ```
 
 
@@ -194,11 +220,16 @@ Im keeping the CLI cool way for myself :)
 
 Ive also used this chance to add a reference to the main page to some cool static pages ive been doing:
 
-https://pm-pdm-checks.pages.dev with some questions for your PM/PdMs
-postmortems as I [built here](https://github.com/JAlcocerT/poc/tree/main/libg/why-postmortem)
-the static trip
-the solar checks, the rotating earth...
-the no bs finances, even a btc good looking graph
+```sh
+#check cloudflare statically deployed projects
+cd ./poc #they are all here
+```
+
+* https://pm-pdm-checks.pages.dev with some questions for your PM/PdMs
+* postmortems as I [built here](https://github.com/JAlcocerT/poc/tree/main/libg/why-postmortem)
+* the static trip
+* the solar checks, the rotating earth...
+* the no bs finances, even a btc good looking graph
 
 
 #### To fossengineer
@@ -211,17 +242,13 @@ Because this setup is cool:
 
 ```
 
-#### To someone I just met - With email report
-
-Santi, this one goes for you to.
-
-#### Codex CLI WebAudit to Report
-
 ---
 
 ## FAQ
 
 ### Detecting Broken Links
+
+We can do so via linkchecker, also via Lychee!
 
 {{% details title="How to use Lychee for broken link detection 🚀" closed="true" %}}
 
@@ -328,15 +355,11 @@ jobs:
 
 ### Scanning SiteMaps
 
-Sitemap URL:
+Sitemap URL: `https://jalcocert.github.io/JAlcocerT/sitemap.xml`
 
-  https://jalcocert.github.io/JAlcocerT/sitemap.xml
+RSS feed for latest blog posts: `https://jalcocert.github.io/JAlcocerT/blog/index.xml`
 
-  RSS feed for latest blog posts:
-
-  https://jalcocert.github.io/JAlcocerT/blog/index.xml
-
-  Curl latest 10 posts:
+Curl latest 10 posts:
 
 ```sh
 sudo snap install ripgrep --classic
@@ -361,18 +384,15 @@ curl -sS https://jalcocert.github.io/JAlcocerT/blog/index.xml \
 
 ### Robots and Agents
 
+Have done so: `https://github.com/JAlcocerT/JAlcocerT/actions/runs/26818896547`
 
-https://github.com/JAlcocerT/JAlcocerT/actions/runs/26818896547
+I mean, have a sitemap and rss feed ready for agents:
 
-Sitemap URL:
+Sitemap URL: `https://jalcocert.github.io/JAlcocerT/sitemap.xml`
 
-  https://jalcocert.github.io/JAlcocerT/sitemap.xml
+RSS feed for latest blog posts: `https://jalcocert.github.io/JAlcocerT/blog/index.xml`
 
-  RSS feed for latest blog posts:
-
-  https://jalcocert.github.io/JAlcocerT/blog/index.xml
-
-  Curl latest 10 posts:
+Curl latest 10 posts:
 
 ```sh
 sudo snap install ripgrep --classic
@@ -382,11 +402,12 @@ curl -sS https://jalcocert.github.io/JAlcocerT/blog/index.xml \
   | sed -E 's#<item><title>([^<]+)</title><link>([^<]+)</link><pubDate>([^<]+)</pubDate>#- \1 | \3 | \2#' \
   | head -n 10
 ```
-  Current top result from that command is:
+
+Current top result from that command is:
 
   - Vacations with Python + ADK | Tue, 02 Jun 2026 09:20:21 +0100 | https://JAlcocerT.github.io/JAlcocerT/py-vacations/
 
-  To curl all URLs from the sitemap:
+To curl all URLs from the sitemap:
 
 ```sh
   curl -sS https://jalcocert.github.io/JAlcocerT/sitemap.xml \
@@ -415,9 +436,15 @@ And after deployment it should be available at:
 https://jalcocert.github.io/JAlcocerT/robots.txt
 ```
 
-This file does not secure anything. It is just a crawler hint. The useful part here is the sitemap line, because it gives search engines and polite crawlers the canonical map of the site.
+This file does not secure anything. 
 
-For AI agents, the trendy file is `llms.txt`. The emerging convention is to publish a Markdown file at the site root:
+It is just a crawler hint.
+
+The useful part here is the sitemap line, because it gives search engines and polite crawlers the canonical map of the site.
+
+For AI agents, the trendy file is `llms.txt`.
+
+The emerging convention is to publish a Markdown file at the site root:
 
 ```txt
 https://jalcocert.github.io/JAlcocerT/llms.txt
@@ -429,8 +456,14 @@ So I added:
 static/llms.txt
 ```
 
-Think of it as a curated, LLM-friendly site index: what this site is about, which pages matter, and where agents should start. Some projects also publish `llms-full.txt`, which contains a larger Markdown dump of key content for agents that want more context in one request.
+Think of it as a curated, LLM-friendly site index: what this site is about, which pages matter, and where agents should start. 
+
+Some projects also publish `llms-full.txt`, which contains a larger Markdown dump of key content for agents that want more context in one request.
 
 I would treat `llms.txt` as a low-cost experiment, not as guaranteed SEO magic. 
 
 It can help agents and AI coding tools understand a site faster, but classic signals still matter: sitemap, RSS, clean HTML, canonical URLs, metadata, and pages that answer specific questions.
+
+### Interesting Web UI/X Videos
+
+1. https://www.youtube.com/@bycrawford https://www.youtube.com/watch?v=f2mGqlLLqok

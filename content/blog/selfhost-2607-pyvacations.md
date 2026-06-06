@@ -32,6 +32,8 @@ cd ./poc/z-poc-trip-planner-v4
 
 > Which I have statically deployed at: `https://17e286bf.trip-planner-9lt.pages.dev/`
 
+> > And added some more goodies ``
+
 **Tl;DR**
 
 You should probably know the WHY you are going somewhere first.
@@ -40,7 +42,9 @@ This will just reply to the where/how.
 
 [AI] Vacation Planning - Recommendations, Costs, Weather
 
-Python App to explore vacAItion destination. LLMs ❤️ Data. While exploring Agents
+Python App to explore vacAItion destination. LLMs ❤️ Data. 
+
+While exploring Agents (ADK).
 
 **Intro**
 
@@ -57,44 +61,38 @@ Because weather and cost is all that matter, right?
 
 > This one goes for these people that claim to love Asia, without explainin' why :)
 
-* https://github.com/firecrawl/fireplexity
 
-> Open Source Perplexity like AI search engine with real-time citations, streaming responses, and live data powered by Firecrawl
-
-AI search engine with web, news, and images. You will need firecrawl and groq Apis.
 
 https://wanderlog.com/
 
 https://selfh.st/apps/?search=trip
 
-trip software
-https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/#trip-planner
-![Travel pack](/blog_img/hardware/travel-pakc.jpg)
+VPNs like: tailscale, wireguard do the trick while travelling
 
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Software for trips far from home" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/" title="GPX and routes with Wanderer" image="/blog_img/selfh/umbrel-os/wanderer-gpx.png" subtitle="Using umbrelOS and testing wanderer GPX" >}}
+{{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/
-
-![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
-
+<!--
+![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)-->
+For the container setup:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-https://github.com/dedicatedcode/reitti
-immich with reitti
+[Reitti](https://github.com/dedicatedcode/reitti) can be integrated with Immich btw
+
 
 https://github.com/MrModest/reisenotiz
 
-vpns: tailscale, wireguard
 
-`https://www.albertina.at/en/`
 
 ## Py Vacations
 
 I tried to add [AI capabilities to the trip planner](https://jalcocert.github.io/JAlcocerT/using-langchain-with-pandas-df/) but it didnt work out well.
-
 
 It all started [here, messed with other small projects](https://github.com/JAlcocerT/Private/tree/main/Py_Vacations)
 
@@ -105,19 +103,23 @@ It all started [here, messed with other small projects](https://github.com/JAlco
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/Python_apps/Python_Streamlit" title="Python Streamlit App Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-### Home Data
 
-#### Airbnb Listing with Smithery and MCP
+### Potential Additions
 
-And no API key!
+Home Data: Airbnb Listing with Smithery and MCP
 
+> And no API key!
 
 ### Cost of Living Data
 
 You could use playwright, or others like
 
-But you can get away with bs4 actually.
+But, you can get away with bs4 actually.
 
+```sh
+cd ./poc/-adk
+
+```
 
 ---
 
@@ -127,10 +129,10 @@ I got to know that something similar exists: `https://nomads.com/` from cool sol
 
 ```sh
 make cost-warsaw-capitals COST_ARGS="--limit 5 --delay-seconds 0.5 --fresh"
-  make cost-warsaw-capitals COST_ARGS="--delay-seconds 10"
+make cost-warsaw-capitals COST_ARGS="--delay-seconds 10"
 
-    make time-overlay-data
-    make cost-overlay-data
+make time-overlay-data
+make cost-overlay-data
 ```
 
 ---
@@ -146,7 +148,7 @@ make cost-warsaw-capitals COST_ARGS="--limit 5 --delay-seconds 0.5 --fresh"
 ![alt text](/blog_img/selfh/Photo/TRIP.png)
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trip" title="Selfhostable Trip | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trip" title="Selfhostable Trip | Config 🐋 ↗" >}}
 {{< /cards >}}
 
 * https://github.com/leoneljdias/tempo
@@ -154,19 +156,18 @@ make cost-warsaw-capitals COST_ARGS="--limit 5 --delay-seconds 0.5 --fresh"
 > **MIT** | Self-hosted weather API based on ECMWF data, serving colorized WebP maps and GeoJSON contours for easy integration with MapLibre, Leaflet, OpenLayers, and other GIS platforms 
 
 
-lastminute.com
-
 *Where to go. When to go. Can I go?*
 
 Some time ago, I made a [Trip Planner Web App](https://github.com/JAlcocerT/Py_Trip_Planner), based purely on weather patterns as [described here](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/).
 
 If you are tired of this:
 
+http://localhost:1313/excel-data-analytics-interviews/
 ![Karting Adventure](/blog_img/memes/oldnewjob.jpg)
 
 Why not taking a break in between?
 
-{{< details title="[How to] Spin the Python Trip Planner! 📌" closed="true" >}}
+{{< details title="[How to] Spin the old Python Trip Planner! 📌" closed="true" >}}
 
 * Follow the [repo instructions](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/Deploy)
 
@@ -190,7 +191,7 @@ docker run -d \
 Or...Use the following **docker compose**:
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trip-planner" title="Trip Planner | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trip-planner" title="Old Trip Planner | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 {{< /details >}}
@@ -205,53 +206,11 @@ Related project [**Source Code**](https://gitlab.com/fossengineer1/py_vacations)
 https://github.com/JAlcocerT/PyVacAItions
 {{< /callout >}} -->
 
-**THE USE CASE** - Plan a Trip To MRK
-
-<!-- 
-* Hotel 
-  * Avenue Houmane El Fatouaki, 30 APT N°1, Marrakech, Medina, 40000 Marrakesh, Morocco
-  * https://maps.app.goo.gl/PuPUZhHAykdFYrVa6
-* Marrakesh Menara Airport - RAK
-* To see in MRK
-  * https://en.wikipedia.org/wiki/Saadian_Tombs - 700m from Hotel
-  * https://en.wikipedia.org/wiki/Bahia_Palace - 600m
-  * Madrasa Ben Youssef - 1.5KM
-  * El Badi Palace - 1.6km
-  * https://el-fenn.com/majorelle-gardens/ - 3km
-* City Break
-  * Ouzoud Waterfalls - 150KM - https://www.viator.com/tours/Marrakech/Ouzoud-Waterfalls-Full-Day-Trip-from-Marrakech/d5408-7674P21
-  * Essaouira Athlantic Coast - 250km
-   
-To get to Essaouira, the coastal city from Marrakech, you have a few options:
-
-1. Bus:
-
-CTM: This is a reliable and affordable option. There's one departure per day, taking about 3 hours.
-Supratours: Offers multiple daily departures, also taking around 3 hours.
-2. Taxi:
-
-A faster option, taking about 2.5 hours. However, it's more expensive.
-3. Rental Car:
-
-Gives you the most flexibility to explore the scenic route and stop at your own pace.
-Time Zone:
-
-Morocco is on Western European Time (WET), which is the same as CET.
-
-Currency:
-
-The currency in Morocco is the Moroccan Dirham (MAD). As of November 2023, the exchange rate is approximately 10 Moroccan Dirham to 1 US Dollar. However, exchange rates fluctuate, so it's best to check the current rate before your trip.
-
--->
-
-
 ## Py-VacAItions
 
 The project to know [where/when to go and **IF** you can go](https://gitlab.com/fossengineer1/py_vacations)
 
-
 {{< details title="PyVacations Project Structure 📌" closed="true" >}}
-
 
 {{< filetree/container >}}
   {{< filetree/folder name="content" >}}
@@ -320,24 +279,13 @@ python3 Z_FireCrawl_Numbeo_Compare_v6.py "https://www.numbeo.com/cost-of-living/
 
 {{< details title="Pirate Weather 📌" closed="true" >}}
 
-* https://pirateweather.net/en/latest/API/
-* <https://www.latlong.net/>
+* `https://pirateweather.net/en/latest/API/`
+* `https://www.latlong.net/`
 
 {{< /details >}}
 
 > This is a new addition to the ones used at TripPlanner
 
-
-{{< details title="Weather Patterns with MeteoStat 📌" closed="true" >}}
-
-
-{{< /details >}}
-
-
-{{< details title="Weather Forecasts with OpenMeteo 📌" closed="true" >}}
-
-
-{{< /details >}}
 
 
 
@@ -346,31 +294,6 @@ python3 Z_FireCrawl_Numbeo_Compare_v6.py "https://www.numbeo.com/cost-of-living/
 {{< callout type="info" >}}
 It enhances the [python trip planner - with weather](https://github.com/JAlcocerT/Py_Trip_Planner), described [here](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/)
 {{< /callout >}}
-
-
-### Cost of Living Data
-
-
-* https://www.numbeo.com/common/api.jsp - Max 200,000 queries per month
-    * https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Philippines&country2=Poland&city1=Manila&city2=Warsaw&tracking=getDispatchComparison
-
-
-### Interactivity & Maps with Streamlit
-
-This is a really cool **new feature from Streamlit**.
-
-
-
-### The Agents
-
-Its been a while since I got to know about [**CrewAI**](https://fossengineer.com/ai-agents-crewai/)
-
-Not its time to do something with it
-
-
-#### Adding memory to the AI to know your preferences
-
-* https://docs.mem0.ai/examples/personal-travel-assistant
 
 ---
 
@@ -397,13 +320,22 @@ And now, there is even a fork of it
 
 {{< details title="More about SQLite Fork - libSQL [Optimized for AI] 📌" closed="true" >}}
 
-SQLite is the most deployed database in history, with over **1 trillion active users**. It was developed 25 years ago by **Richard Hipp** for a **US Navy damage control system**. This lightweight database is contained in a single **600 KB file**, requires **no server process**, and is an essential part of many modern applications.
+SQLite is the most deployed database in history, with over **1 trillion active users**. 
 
-Although **SQLite** is in the **public domain**, its development is managed by just **three people**, with **no outside contributions** allowed. Despite these limitations, SQLite has become ubiquitous due to its simplicity and reliability.
+It was developed 25 years ago by **Richard Hipp** for a **US Navy damage control system**.
 
-In **October 2022**, a new fork called **libSQL** was introduced, with a focus on **community-controlled development**. It retains **SQL-like compatibility** with SQLite, but introduces new features to address some of SQLite’s limitations.
+This lightweight database is contained in a single **600 KB file**, requires **no server process**, and is an essential part of many modern applications.
+
+Although **SQLite** is in the **public domain**, its development is managed by just **three people**, with **no outside contributions** allowed. 
+
+Despite these limitations, SQLite has become ubiquitous due to its simplicity and reliability.
+
+In **October 2022**, a new fork called **libSQL** was introduced, with a focus on **community-controlled development**. 
+
+It retains **SQL-like compatibility** with SQLite, but introduces new features to address some of SQLite’s limitations.
 
 Key features of **libSQL**:
+
 - **One database per user**: This approach could **improve performance**, **reduce latency**, and **enhance security**.
 - **Server mode**: Allows access to the database via **HTTP**.
 - **Native replication system**: Enables embedded **replica features**.
@@ -413,24 +345,26 @@ Key features of **libSQL**:
 - **Vector queries**: Optimized for **AI applications**, enabling complex data operations.
 
 Benefits and Challenges of libSQL:
+
 - **Performance**: The one-database-per-user model can significantly **boost performance** and reduce **latency**, but it may create challenges with **data retrieval** and **combining data** across different locations.
 - **Security**: Enhanced **security** through encryption and the isolated nature of individual user databases.
 - However, retrieving and combining data from different databases may **not be practical** in all cases, especially when data is spread across geographically distant locations.
 
-In conclusion, **libSQL** brings significant improvements over **SQLite** by offering a more **flexible, community-driven approach** to database management. With its new features and robust capabilities, it has the potential to **revolutionize** how we build and manage databases, especially for applications requiring high **performance**, **security**, and **AI integration**.
+In conclusion, **libSQL** brings significant improvements over **SQLite** by offering a more **flexible, community-driven approach** to database management. 
+
+With its new features and robust capabilities, it has the potential to **revolutionize** how we build and manage databases, especially for applications requiring high **performance**, **security**, and **AI integration**.
 
 SQLite may be **underappreciated**, but with libSQL, it becomes even more powerful and adaptable to modern needs.
-
 
 {{< /details >}}
 
 
 
-{{< details title="Reading SQLite DBs 📌" closed="true" >}}
+{{< details title="Reading SQLite DBs x SqliteBrowser 📌" closed="true" >}}
 
 You can explore a SQLite via a script, like we did [during the Scrapping Post](https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/#old-school-scrapping)
 
-There is a cool project for this - https://github.com/sqlitebrowser/sqlitebrowser
+There is a cool project for this - `https://github.com/sqlitebrowser/sqlitebrowser`
 
 **sqlitebrowser** - DB Browser for SQLite (DB4S) is an open-source tool for creating, designing, and editing SQLite database files.
 
@@ -470,7 +404,6 @@ DB4S is a valuable tool for users needing an intuitive interface for SQLite data
 
 - HeidiSQL: A lightweight SQL client for MySQL, SQL Server, and PostgreSQL.
 
-
 {{< /details >}}
 
 ### Interesting software for Vacations
@@ -502,10 +435,7 @@ It has very interestin [use cases](https://adventurelog.app/docs/usage/usage.htm
   {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Selfhosting Immich" image="/blog_img/selfh/Photo/immich-map.png" subtitle="Sring Y25 Post" >}}
 {{< /cards >}}
 
-
-Or the
-
-* https://github.com/itskovacs/trip?tab=License-1-ov-file#readme
+Or the: `https://github.com/itskovacs/trip?tab=License-1-ov-file#readme`
 
 Share media with your friends (airdrop for all devices):
 
@@ -518,17 +448,13 @@ Share media with your friends (airdrop for all devices):
   * Wireguird with `.conf` file you have vpn setup on ubuntu
   * and maybe a [travel router](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review)
 
-
 * https://github.com/rohitkumbhar/surmai
 
 > MIT | Surmai is a personal/family **travel organizer**
 
 ### HomeAssistant
 
-With HA we also can...
-
-* <https://pirateweather.net/en/latest/ha/>
-
+With HA we also can...`https://pirateweather.net/en/latest/ha/`
 
 {{< callout type="info" >}}
 After [Weather Planning](https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/), there is also the financial aspects of travelling. [**Source Code**](https://gitlab.com/fossengineer1/py_vacations)
@@ -547,3 +473,20 @@ Get Google Flights information with python.
   {{< card link="/" title="Left Card" >}}
   {{< card link="/" title="Right Card" >}}
 {{< /cards >}} -->
+
+### Cost of Living Data
+
+* `https://www.numbeo.com/common/api.jsp` - Max 200,000 queries per month
+    * `https://www.numbeo.com/cost-of-living/compare_cities.jsp?country1=Philippines&country2=Poland&city1=Manila&city2=Warsaw&tracking=getDispatchComparison`
+
+### Interactivity & Maps with Streamlit
+
+This is a really cool **new feature from Streamlit**.
+
+### Other Agents
+
+Its been a while since I got to know about [**CrewAI**](https://fossengineer.com/ai-agents-crewai/)
+
+Not its time to do something with it
+
+Adding memory to the AI to know your preferences: `https://docs.mem0.ai/examples/personal-travel-assistant`

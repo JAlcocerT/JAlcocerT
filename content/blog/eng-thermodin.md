@@ -209,6 +209,10 @@ Si la **Entalpía ($H$)** es todo el dinero que tienes en la cartera, el términ
 
 ## Conclusions
 
+I havent put together any stirling engines... yet
+
+But experimenting with thermodynamics have been great.
+
 Looking for similar **decision intelligence** tools?
 
 Reach out throughput and outcomes, ~~not availability~~:

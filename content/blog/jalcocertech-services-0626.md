@@ -1,9 +1,9 @@
 ---
 title: "[JAlcocerTech] Services Recap"
-date: 2026-06-07T23:20:21+01:00
+date: 2026-06-05T23:20:21+01:00
 draft: false
-tags: ["RoadMap26","Codex CLI x Hermes","Cold email outreach","APIFY"]
-description: 'JAlcocerTech Leads and Services mid 2026.'
+tags: ["RoadMap26","Herdr x Codex CLI x Hermes","Cold email outreach x Leads","APIFY"]
+description: 'JAlcocerTech Leads and Services mid 2026. Beyond growing tomatoes.'
 url: 'jalcocertech-services-snapshot'
 ---
 
@@ -106,7 +106,35 @@ There has been several improvements in the foss workflow:
 
 #### This blog
 
+I added a new skill to this repository to help me improve my writting:
+
+```sh
+
+```
+
+It incorporates the concept of zettelkasten: one post, one topic.
+
+
 #### JAlcocerTech WebAudits
+
+
+Ive done few web audits, to people I just met - With email report
+
+Santi, this one goes for you to.
+
+I mean, the new skill that i got:
+
+```sh
+
+```
+
+##### Codex CLI WebAudit to Report
+
+The new web audit is deployed normally at:
+
+But hey, if all the goodies are happening within a internal CLI and there is a `.json` that consolidates it all...
+
+cant that be passed to a one time codex prompt with a skill that generates a nice one pager branded report?
 
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
@@ -115,19 +143,28 @@ There has been several improvements in the foss workflow:
 
 ### Productized Services
 
-from the consulting 
-
-
-which has received improvements: Committed on landing-improvements branch
-
+From the consulting landing, which has received improvements: Committed on `landing-improvements branch`
 
 
 #### GenBI - Shopify QnA
 
+Initially this is coming from:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
+ {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
 {{< /cards >}}
+
+Now, I have:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
+ {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
+{{< /cards >}}
+
+```sh
+
+```
 
 ### The BEST - DFY
 
@@ -151,13 +188,22 @@ Because this resonated a lot with
 
 You name it.
 
-it all started her:
+it all started here:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/RPi" title="RPi Github with scripts ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
 {{< /cards >}}
 
 And continued:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
+{{< /cards >}}
+
+The final boss is:
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
@@ -165,11 +211,14 @@ And continued:
 
 #### Multi Body Systems Dynamics dot com
 
+I took all the goodies from the github and forgejo repos: *2D/3D
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
 {{< /cards >}}
 
+
+> I couldnt avoid to email again to 
 
 ---
 
@@ -177,8 +226,37 @@ And continued:
 
 ### My OutReach Setup
 
+
+{{< details title="Weather Patterns with MeteoStat 📌" closed="true" >}}
+
+
+{{< /details >}}
+
+### Inbound marketing x Branded Videos
+
+In theory, artifacts like ebooks, this blog, fossengineer... should give you inbound traffic.
+
+But
+
+The openAI image gpt 2 is so great that there is really no excuse not to get this right.
+
+Doing 3 min videos (with xyz words aka xyz tokens) and 30 second shorts...
+
+
+Its just one skill away:
+
+```sh
+
+```
+
 ---
 
 ## FAQ
 
 ### Whats your current agentic setup?
+
+Im using right now herdr *> tmux* to better orchestrate agents sessions and dont go crazy with deliveries waiting for my input.
+
+```sh
+herdr #go out with ctrl + b then q
+```

@@ -2,7 +2,7 @@
 title: "Launching a MBSD framework"
 date: 2026-05-02
 draft: false
-tags: ["Mechanism Analytics x Simulations","JAlcocerTech ebook x WhitePaper"]
+tags: ["Mechanism Analytics x Simulations","JAlcocerTech ebook"]
 description: 'A Dynamics x Kinematics HUB. Agentic centered design via CADQuery x Blender.'
 url: 'design-centric-mbsd'
 math: true
