@@ -39,7 +39,11 @@ menu:
     - identifier: blog
       name: Blog
       pageRef: /blog
-      weight: 2      
+      weight: 2
+    - identifier: notes
+      name: Notes
+      pageRef: /notes
+      weight: 3
     - name: Cool Stuff ↗
       url: "https://www.jalcocertech.com/"
       weight: 4

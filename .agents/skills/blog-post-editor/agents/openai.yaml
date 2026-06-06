@@ -1,0 +1,4 @@
+interface:
+  display_name: "Blog Post Editor"
+  short_description: "Improve draft posts before extracting notes."
+  default_prompt: "Improve this blog post while preserving my lab-note style, then add durable takeaways that can later become zettels."

@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services Recap"
-date: 2026-06-05T23:20:21+01:00
+date: 2026-06-06T11:20:21+01:00
 draft: false
 tags: ["RoadMap26","Herdr x Codex CLI x Hermes","Cold email outreach x Leads","APIFY"]
 description: 'JAlcocerTech Leads and Services mid 2026. Beyond growing tomatoes.'
@@ -106,13 +106,17 @@ There has been several improvements in the foss workflow:
 
 #### This blog
 
-I added a new skill to this repository to help me improve my writting:
+I added a new skill to this repository to help me improve my writting: `zettel-blog-notes` and `blog-post-editor`
 
 ```sh
 
 ```
 
 It incorporates the concept of zettelkasten: one post, one topic.
+
+> A word that i got to know thanks to the files.md project `https://app.files.md/`
+
+> > Now I have `http://localhost:1314/notes/` and skills for this: ``
 
 
 #### JAlcocerTech WebAudits

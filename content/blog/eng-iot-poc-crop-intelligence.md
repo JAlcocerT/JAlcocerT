@@ -1,6 +1,6 @@
 ---
 title: "Crops Intelligence in the AI era"
-date: 2026-06-06
+date: 2026-06-10
 draft: false
 tags: ["IoT x DHT22","MQTT x EMQx","JAlcocerTech Leads"]
 description: 'The learning after planting tomatoes. Ready to scale.'
@@ -39,7 +39,7 @@ Then this happened
 
 ---
 
-## COnclusions
+## Conclusions
 
 
 Too much to digest?
@@ -48,3 +48,18 @@ Go ask chatgpt
 
 Or get real results with a higher ROI:
 
+
+### Tomato Evolution
+
+After ~10 weeks:
+
+{{< youtube sCrMm5sLG-w >}}
+
+<!-- 
+https://youtube.com/shorts/sCrMm5sLG-w 
+-->
+
+### Interesting yt channels
+
+1. https://www.youtube.com/@FarmCraft101/videos
+2. https://www.youtube.com/@kirstendirksen/videos

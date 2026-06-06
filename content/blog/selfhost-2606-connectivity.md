@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Connectivity"
-date: 2026-06-06
+date: 2026-06-08
 draft: false
 tags: ["HomeLab","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark"]
 description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
@@ -9,6 +9,8 @@ url: 'selfhosted-connectivity'
 
 adguard, Unbound, pihole...?
 
+
+http://192.168.1.2:3034/hermesagent/pi-connectivity
 
  `pi-connectivity`
 
@@ -77,6 +79,8 @@ https://raspberrytips.com/openwrt-on-raspberry-pi/
   sudo apt install -y nmap arp-scan tcpdump
 
 **TL;DR**
+
+Wheter you have 4g, coax,fiber or starlink, you need proper connectivity at home.
 
 http://192.168.1.2:3034/hermesagent/pi-connectivity
 

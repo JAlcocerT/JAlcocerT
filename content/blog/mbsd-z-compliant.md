@@ -1,5 +1,5 @@
 ---
-title: "Compliant mechanisms for MultiBodySystemsDynamics dot com"
+title: "Compliant mechanisms and MultiBodySystemsDynamics dot com"
 date: 2026-06-07
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper"]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Zettel Blog Notes"
+  short_description: "Extract atomic notes from blog posts."
+  default_prompt: "Extract Zettelkasten-style atomic notes from the blog posts in this repository, skipping drafts and low-signal placeholders."

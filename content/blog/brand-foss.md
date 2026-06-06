@@ -135,6 +135,7 @@ The kind of thing i use now to test websites for people i Just met: `https://spa
 If [these audits show a problem](https://jalcocert.github.io/JAlcocerT/diy-webs-via-paas/) you might need:
 
 To generate nice images with the latest openAI T2I:
+
 ```sh
 # set -a
 # . ./.env

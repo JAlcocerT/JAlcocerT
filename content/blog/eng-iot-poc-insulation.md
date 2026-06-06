@@ -1,6 +1,6 @@
 ---
 title: "Insulation Intelligence in the AI era"
-date: 2026-06-06
+date: 2026-06-09
 draft: false
 tags: ["IoT x DHT22 x MLX90614","MQTT x EMQx","ESP-Now","JAlcocerTech Leads","Arduino-CLI"]
 description: 'Solving Boundary conditions with IoT. Blender and building shadows is possible '
