@@ -129,8 +129,11 @@ Santi, this one goes for you to.
 I mean, the new skill that i got:
 
 ```sh
-
+make docker-build
+make docker-prod-up
 ```
+
+![alt text](/blog_img/entrepre/webify/webaudits.png)
 
 ##### Codex CLI WebAudit to Report
 
@@ -139,6 +142,8 @@ The new web audit is deployed normally at:
 But hey, if all the goodies are happening within a internal CLI and there is a `.json` that consolidates it all...
 
 cant that be passed to a one time codex prompt with a skill that generates a nice one pager branded report?
+
+https://platform.openai.com/usage
 
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
@@ -222,7 +227,7 @@ I took all the goodies from the github and forgejo repos: *2D/3D
 {{< /cards >}}
 
 
-> I couldnt avoid to email again to 
+> I couldnt avoid to email again to Gabe Morris :)
 
 ---
 
@@ -264,3 +269,97 @@ Im using right now herdr *> tmux* to better orchestrate agents sessions and dont
 ```sh
 herdr #go out with ctrl + b then q
 ```
+
+
+### Open Physics
+
+Across the physics series, I have been building tinkering with this OSS stack:
+
+Geometry / CAD / Rendering
+
+- CadQuery - Python-first parametric CAD; your preferred agentic CAD bridge.
+- OpenSCAD - simple code-based CSG CAD, good for lightweight STL-style parts.
+- FreeCAD - GUI CAD, FEM workbench, STEP/IGES workflows.
+- Blender - mesh-based rendering, animation, visual realism, Python scripting.
+- Build123d - mentioned as a more Pythonic CadQuery-like alternative.
+- Three.js - WebGL visualization / web rendering.
+- Matter.js - 2D physics engine for web demos.
+
+MBSD / Mechanics / Symbolic Math
+
+- SymPy - deriving equations symbolically.
+- NumPy / SciPy - numerical math, transforms, FFT, simulation support.
+- Your own MBSD Python framework - JAlcocerT/mbsd.
+- Your own related repos: Slider-Crank, mechanism, Bike_dynamic_simulator, Py_Double_Pendulum, ThreeBodies.
+
+FEM / Structural / Multiphysics
+From content/blog/eng-fem.md:167:
+
+- FreeCAD FEM
+- CalculiX
+- Elmer FEM
+- Code_Aster
+- Salome-Meca
+- FEniCS / FEniCSx
+- Firedrake
+- SfePy
+- CALFEM for Python
+- Akantu
+- Gmsh
+- Netgen
+- PyVista
+- ParaView
+
+CFD / Fluids
+From content/blog/eng-fluid-mechanics.md:330:
+
+- OpenFOAM
+- FreeCAD CfdOF
+- Elmer FEM
+- pySPH
+- ParaView
+- OpenModelica
+
+Thermal / Thermodynamics
+From content/blog/eng-heat-transfer.md:594:
+
+- Modelica
+- OpenModelica
+- OMPython
+- PyMarl
+- HeatraPy
+- PySpice was also mentioned in the broader thermal/electronics tooling context.
+
+Electronics / Electromagnetism / IoT From content/blog/eng-electronics.md:390:
+
+- KiCad
+- Atopile
+- PySpice
+- OpenModelica
+- Schemdraw
+- Velxio
+- Arduino IDE
+- ESPHome
+- EMQX
+- MQTT
+- Prometheus
+- Grafana
+- TimescaleDB
+- Elasticsearch / Logstash as downstream telemetry/data options.
+
+Content / Visualization
+
+- Remotion - videos as code for physics/engineering explanations.
+- Matplotlib - plots, GIFs, validation visuals.
+- D3.js - mentioned as promising for data/visualization.
+
+If I had to reduce your physics OSS stack to the “core pipeline,” it is:
+
+SymPy / NumPy / SciPy
+→ MBSD Python framework
+→ CadQuery / OpenSCAD / FreeCAD
+→ Gmsh / CalculiX / Elmer / OpenFOAM
+→ PyVista / ParaView / Blender / Three.js / Remotion
+→ MQTT / EMQX / Grafana for real-world sensor feedback
+
+The strongest recurring pattern in your posts is: physics as code → geometry as code → simulation as code → visualization as code → sensors to ground the model.

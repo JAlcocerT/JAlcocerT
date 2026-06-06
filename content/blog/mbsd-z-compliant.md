@@ -4,7 +4,7 @@ date: 2026-06-07
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper"]
 description: 'Dynamics is trickier when solids are flexible. Mechanism agentic centered design.'
-url: 'design-centric-mbsd'
+url: 'whitepaper-mbsd'
 math: true
 ---
 
