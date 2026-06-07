@@ -12,12 +12,11 @@ math: true
 git clone https://github.com/JAlcocerT/RPi
 ```
 
-https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard
-https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt-emqx.cpp
-
-https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp
-https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
-https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp
+* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard
+* https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt-emqx.cpp
+* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp
+* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
+* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp
 
 **Tl;DR**
 
@@ -134,6 +133,24 @@ cd ./poc/iot-rpi-dht/
 
 ```
 
+We can have this view:
+
+![alt text](/blog_img/entrepre/rpi-dht.png)
+
+And improve it with these:
+
+![alt text](/blog_img/iot/mqtt-esp-pushing.png)
+
+```sh
+make mqtt-listen MQTT_HOST=192.168.1.2 MQTT_TOPIC='pico/#'
+#  make arduino-compile
+# make serial-fix PORT=/dev/ttyACM0
+# make flash # make flash PORT=/dev/ttyACM0
+make mqtt-listen MQTT_HOST=192.168.1.2 MQTT_TOPIC='esp32/#'
+```
+
+![alt text](/blog_img/iot/mqtt-dht.png)
+
 ### We need the MLX
 
 The DHT's are great, but they only measure ambient temperature. We need the MLX90614 to measure the surface temperature of the wall, because that is what will determine the heat transfer from the wall to the inside. Of course there is a lot of work on this topic, as you may guess:
@@ -150,10 +167,16 @@ cd ./poc/iot-rpi-mlx/
 The one that combines all the goodies of previous steps, with the UI/X ive polished:
 
 
+```sh
+cd ./poc/iot-rpi-dht-insulation
+```
+
 
 ---
 
 ## Conclusions
+
+Measure, dont model:
 
 
 ---

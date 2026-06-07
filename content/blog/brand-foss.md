@@ -15,8 +15,7 @@ Yes, its me.
 git clone git@gitlab.com:fossengineer1/fossengineerpapermod.git
 ```
 
-And tt was time to stop those ads.
-
+And it was time to stop those ads.
 
 1. `https://diy.jalcocertech.com`
 2. `https://webaudit.jalcocertech.com/` - to which im adding all the learnings of these improvements here
@@ -66,9 +65,17 @@ npm run build
 LH_FORM_FACTOR=mobile ./lighthouse-audit.sh https://example.com
 
 
-https://github.com/openai/skills
-An excuse to try the free web audit engine
-https://developers.openai.com/codex/pricing
+* https://github.com/openai/skills
+* https://www.skills.sh/coreyhaines31/marketingskills/seo-audit
+
+`seo-audit`
+
+```sh
+npx skills add https://github.com/coreyhaines31/marketingskills --skill seo-audit
+```
+
+
+An excuse forme to try the free web audit engine: `https://webaudit.jalcocertech.com/`
 
 
 **Intro**

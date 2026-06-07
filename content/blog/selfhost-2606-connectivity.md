@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Connectivity"
-date: 2026-06-08
+date: 2026-06-11
 draft: false
 tags: ["HomeLab","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark"]
 description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
@@ -10,7 +10,7 @@ url: 'selfhosted-connectivity'
 adguard, Unbound, pihole...?
 
 
-http://192.168.1.2:3034/hermesagent/pi-connectivity
+`http://192.168.1.2:3034/hermesagent/pi-connectivity`
 
  `pi-connectivity`
 

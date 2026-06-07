@@ -269,6 +269,20 @@ https://jalcocert.github.io/JAlcocerT/thermodynamics/
   {{< card link="https://github.com/JAlcocerT/PoC/iot-rpi-mlxdht-insulation" title="PoC ↗" icon="github" >}}
 {{< /cards >}}
 
+```sh
+make mqtt-listen MQTT_HOST=192.168.1.2 MQTT_TOPIC='pico/#'
+#  make arduino-compile
+# make serial-fix PORT=/dev/ttyACM0
+# make flash # make flash PORT=/dev/ttyACM0
+make mqtt-listen MQTT_HOST=192.168.1.2 MQTT_TOPIC='esp32/#'
+```
+
+```sh
+make sqlite-start MQTT_HOST=192.168.1.2
+make dev-clean
+```
+
+![alt text](/blog_img/iot/mqtt-sqlite-dht.png)
 
 This is coming soon:
 
@@ -280,7 +294,7 @@ This is coming soon:
 
 #### Multi Body Systems Dynamics dot com
 
-I took all the goodies from the github and forgejo repos: *2D/3D
+I took all the goodies from the github and forgejo repos: *2D/3D*
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
@@ -296,7 +310,7 @@ I took all the goodies from the github and forgejo repos: *2D/3D
 ### My OutReach Setup
 
 
-{{< details title="Weather Patterns with MeteoStat 📌" closed="true" >}}
+{{< details title=" 📌" closed="true" >}}
 
 
 {{< /details >}}
@@ -310,7 +324,6 @@ But
 The openAI image gpt 2 is so great that there is really no excuse not to get this right.
 
 Doing 3 min videos (with xyz words aka xyz tokens) and 30 second shorts...
-
 
 Its just one skill away:
 
@@ -330,7 +343,7 @@ Im using right now herdr *> tmux* to better orchestrate agents sessions and dont
 herdr #go out with ctrl + b then q
 ```
 
-Ive tried `https://chat.z.ai/`, Kimi, GLM and deepseek v4 which are well positioned at `https://arena.ai/leaderboard/agent` via `https://opencode.ai/go`
+Ive tried `https://chat.z.ai/`, Kimi, GLM, Qwen 3.6 Plus and deepseek v4 which are well positioned at `https://arena.ai/leaderboard/agent` via `https://opencode.ai/go`
 
 ![testing opencode with deepseek v4](/blog_img/dev/opencode-deepsekv4.png)
 

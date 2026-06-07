@@ -15,14 +15,17 @@ Already got freedom in time?
 
 For simple static pages, Playwright is usually overkill. Prefer fetch, curl, cheerio, BeautifulSoup, or an API if available. Use Playwright when browser behavior matters.
 
-Be careful with robots.txt, site terms, rate limits, login-protected content, personal data, and aggressive parallel scraping. Scraping with a browser is heavier and easier to  get blocked if you hit a site hard.
+Be careful with robots.txt, site terms, rate limits, login-protected content, personal data, and aggressive parallel scraping.
 
-https://github.com/dawarich-app/atlas
+Scraping with a browser is heavier and easier to  get blocked if you hit a site hard.
+
+* https://github.com/dawarich-app/atlas
 
 
- Your favorite offline self-hostable maps. City, Country, Planet, you choose. 
+> Your favorite offline self-hostable maps. City, Country, Planet, you choose. 
 
- https://atlas.dawarich.app/docs/quickstart
+
+https://atlas.dawarich.app/docs/quickstart
  
 ```sh
 git clone /poc
@@ -117,7 +120,7 @@ You could use playwright, or others like
 But, you can get away with bs4 actually.
 
 ```sh
-cd ./poc/-adk
+cd ./poc/z-poc-trip-planner-adk
 
 ```
 
@@ -128,12 +131,16 @@ cd ./poc/-adk
 I got to know that something similar exists: `https://nomads.com/` from cool solopreneurs.
 
 ```sh
+#git clone https://github.com/JAlcocerT/poc.git && cd ./poc/z-poc-trip-planner-adk
 make cost-warsaw-capitals COST_ARGS="--limit 5 --delay-seconds 0.5 --fresh"
 make cost-warsaw-capitals COST_ARGS="--delay-seconds 10"
 
 make time-overlay-data
 make cost-overlay-data
 ```
+
+
+![alt text](/blog_img/entrepre/tripplanner.png)
 
 ---
 
