@@ -1,5 +1,5 @@
 ---
-title: "Insulation Intelligence in the AI era"
+title: "[Energy Solutions] Insulation Intelligence in the AI era"
 date: 2026-06-09
 draft: false
 tags: ["IoT x DHT22 x MLX90614","MQTT x EMQx","ESP-Now","JAlcocerTech Leads","Arduino-CLI"]
@@ -18,11 +18,16 @@ https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp3
 https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp
 https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
 https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp
-https://github.com/JAlcocerT/RPi/blob/main/Z_SelfHosting/Emqx/docker-compose.yml
 
 **Tl;DR**
 
 The kind of simulation that people dont ask before commiting 300k+
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc/genbi-energy-solutions" title="Energy Solutions↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/poc/genbi-energy-solutions" title="building-to-blender↗" icon="github" >}}
+{{< /cards >}}
+
 
 **Intro**
 
@@ -74,11 +79,15 @@ const char* MQTT_BROKER   = "192.168.1.14";
 3. Upload:
 
 ```sh
- cd /home/jalcocert/Desktop/poc/iot-rpi-dht/scripts-arduino-setup
+cd /home/jalcocert/Desktop/poc/iot-rpi-dht/scripts-arduino-setup
 ./upload-deepsleep.sh /dev/ttyACM0
 ```
 
-> EMQX is already running on this laptop at 192.168.1.14:1883.
+> [EMQX](https://github.com/JAlcocerT/RPi/blob/main/Z_SelfHosting/Emqx/docker-compose.yml) is already running on this laptop at `192.168.1.14:1883`.
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 So you just need the storage layer:
 
@@ -90,7 +99,7 @@ sqlite3 data/readings.sqlite "select * from readings order by received_ms desc l
 1|esp32/temperature/dht11|temperature|25.3|2026-06-04T14:42:47.251Z|1780584167251
 ```
 
-I made it better: *because hardocding wifi/pwd is not nice*
+I made it better: *because hardcoding wifi/pwd is not nice*
 
 ```sh
 #make serial-sketch
@@ -107,7 +116,7 @@ make emqx-remote #admin/public.18083 #this one can work not only with the local 
 make mqtt-listen MQTT_HOST=192.168.1.2 MQTT_TOPIC='esp32/#
 ```
 
-Thensimilarly for the picow DHT22:
+Thensimilarly for the **picow DHT22**:
 
 ```sh
 make serial-fix PORT=/dev/ttyACM0

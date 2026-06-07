@@ -20,7 +20,6 @@ Guess what happens when you take [trip planner v4](https://github.com/JAlcocerT/
 ```sh
 git clone /poc
 cd poc/ #z-trip-planner-v4
-
 ```
 
 What Happens is that you can validate the [results of ppl in forums](https://forocoches.com/foro/showthread.php?t=9806597).

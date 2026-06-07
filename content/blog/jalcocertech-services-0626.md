@@ -135,6 +135,15 @@ make docker-prod-up
 
 ![alt text](/blog_img/entrepre/webify/webaudits.png)
 
+
+This can be a good addition going forward:
+
+* https://github.com/firecrawl/fireplexity
+
+> Open Source Perplexity like AI search engine with real-time citations, streaming responses, and live data powered by Firecrawl
+
+AI search engine with web, news, and images. You will need firecrawl and groq Apis.
+
 ##### Codex CLI WebAudit to Report
 
 The new web audit is deployed normally at:
@@ -185,6 +194,11 @@ My attention caring about your problems:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Tier of Service for the ones that cant wait to get value" >}}
 {{< /cards >}}
 
+With some tools:
+
+* https://why-postmortem-checks.pages.dev 
+* https://pm-pdm-checks.pages.dev
+
 #### Engineering services
 
 Couldnt resist to cold email to the founder of diode as it resonates with me
@@ -197,6 +211,8 @@ Because this resonated a lot with
 
 You name it.
 
+
+
 it all started here:
 
 {{< cards >}}
@@ -207,16 +223,60 @@ it all started here:
 And continued:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/PoC/iot-rpi-dht" title="PoC ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/PoC/iot-rpi-mlx" title="PoC ↗" icon="github" >}}
 {{< /cards >}}
 
-The final boss is:
+```sh
+npx wrangler pages project list
+```
+
+* https://go-solar.pages.dev/
+* https://aerothermics-landing.pages.dev
+* https://solar-trajectory.pages.dev  
+
+The final boss consolidates it all:
+
+```sh
+cd ./poc/aerothermics
+make dev
+
+cd ./poc/go-solar
+make ship
+```
+
+https://github.com/JAlcocerT/poc/blob/main/aerothermics/dev-plan.md
+
+Yep, heavily inspired by my latest trip planner: `trip-planner-9lt.pages.dev`
+
+https://jalcocert.github.io/JAlcocerT/thermodynamics/
+
+![alt text](/blog_img/apps/aerotermia.png)
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
+
+![alt text](/blog_img/entrepre/aerotermia.png)
+
+![alt text](/blog_img/entrepre/aerotermia-landing.png)
+
+![alt text](/blog_img/entrepre/gosolar.png)
 
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/PoC/iot-rpi-mlxdht-insulation" title="PoC ↗" icon="github" >}}
 {{< /cards >}}
+
+
+This is coming soon:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc/genbi-energy-solutions" title="Energy Solutions↗" icon="github" >}}
+{{< /cards >}}
+
+
 
 #### Multi Body Systems Dynamics dot com
 
@@ -269,6 +329,12 @@ Im using right now herdr *> tmux* to better orchestrate agents sessions and dont
 ```sh
 herdr #go out with ctrl + b then q
 ```
+
+Ive tried `https://chat.z.ai/`, Kimi, GLM and deepseek v4 which are well positioned at `https://arena.ai/leaderboard/agent` via `https://opencode.ai/go`
+
+![testing opencode with deepseek v4](/blog_img/dev/opencode-deepsekv4.png)
+
+> `https://opencode.ai/workspace/wrk_01KTF9F2H7HR7DDPCB6CY0RDD6/go`
 
 
 ### Open Physics

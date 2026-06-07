@@ -7,14 +7,6 @@ description: 'Some SEO x Agent Engine Optimization (AEO). With Image generation 
 url: 'a-better-fossengineer'
 ---
 
-* https://github.com/firecrawl/fireplexity
-
-> Open Source Perplexity like AI search engine with real-time citations, streaming responses, and live data powered by Firecrawl
-
-AI search engine with web, news, and images. You will need firecrawl and groq Apis.
-
-https://github.com/lycheeverse/lychee
-
 **Tl;DR**
 
 Yes, its me.
@@ -249,7 +241,7 @@ Because this setup is cool:
 
 ### Detecting Broken Links
 
-We can do so via linkchecker, also via Lychee!
+We can do so via linkchecker, also via Lychee: https://github.com/lycheeverse/lychee
 
 {{% details title="How to use Lychee for broken link detection 🚀" closed="true" %}}
 
@@ -467,4 +459,4 @@ It can help agents and AI coding tools understand a site faster, but classic sig
 
 ### Interesting Web UI/X Videos
 
-1. https://www.youtube.com/@bycrawford https://www.youtube.com/watch?v=f2mGqlLLqok
+1. https://www.youtube.com/@bycrawford like https://www.youtube.com/watch?v=f2mGqlLLqok
