@@ -284,6 +284,17 @@ make dev-clean
 
 ![alt text](/blog_img/iot/mqtt-sqlite-dht.png)
 
+It ended up working on my x300 at `http://192.168.1.2:3025/`: 
+
+```sh
+MQTT_HOST=192.168.1.2 make docker-up
+make docker-sqlite-last10
+```
+
+![alt text](/blog_img/iot/mqtt-sqlite.png)
+
+> The deepsleep mode of the esp32 has been great so far for this project!
+
 This is coming soon:
 
 {{< cards >}}

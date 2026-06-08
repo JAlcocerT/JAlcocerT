@@ -1,6 +1,6 @@
 ---
 title: "Optimal Karting Line"
-date: 2026-06-10
+date: 2026-07-10
 draft: false
 tags: ["Racing","GPS","Forgejo"]
 description: 'Go-Pro Telemetry gone wild.'

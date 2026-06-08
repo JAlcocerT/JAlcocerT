@@ -1,6 +1,6 @@
 ---
 title: "Connectivity observability starts at the LAN edge"
-date: 2026-06-08
+date: 2026-06-11
 tags: ["homelab", "networking", "observability"]
 description: "A homelab network becomes easier to trust when link quality, DNS, services, and devices are observable."
 ---
