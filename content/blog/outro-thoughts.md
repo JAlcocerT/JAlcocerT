@@ -2,7 +2,7 @@
 title: "[Stereo Love] Ive been in a wedding.."
 date: 2026-05-31T09:20:21+01:00
 draft: false
-tags: ["Thoughts Orchestration","Herdr vs tmux","Git","Semantics","DSL"]
+tags: ["Thoughts Orchestration","Herdr vs tmux","Git"]
 summary: 'And it has been quite difficult to explain what I do now for living.'
 url: 'what-do-i-do'
 ---

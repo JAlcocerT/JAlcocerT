@@ -8,6 +8,24 @@ url: 'whitepaper-mbsd'
 math: true
 ---
 
+```sh
+make list-user-repos NEW_USER=hermesagent
+make tinker-to-github #https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd
+```
+
+ Current behavior in scripts/tinker-to-github.sh:1:
+
+  - it clones each Forgejo repo as a mirror
+  - then it pushes only HEAD to one GitHub branch:
+      - refs/heads/<prefix>/<source-user>/<repo-name>
+
+  So for hermesagent/mbsd:
+
+  - if it has 1 branch, that one branch is what gets exported
+  - if it has 2 or more branches, only the repo’s current HEAD branch is sent
+  - the other branches are not sent
+
+![alt text](/blog_img/selfh/forgejo-to-github.png)
 
 https://www.youtube.com/watch?v=9aFyLqJWCy0
 

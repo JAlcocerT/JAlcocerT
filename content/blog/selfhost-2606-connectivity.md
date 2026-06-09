@@ -11,7 +11,7 @@ adguard, Unbound, pihole...?
 
 
 `http://192.168.1.2:3034/hermesagent/pi-connectivity`
-
+https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
  `pi-connectivity`
 
 

@@ -12,7 +12,7 @@ math: true
 
 I just wanted to plant tomatoes to stay away from the computer.
 
-Then this happened
+Then this happened...
 
 **Intro**
 
@@ -24,7 +24,7 @@ Then this happened
 ### The sensors you need
 
 1. DHT22 - For air temp & humidity
-2. - Soil himidity
+2. - Soil humidity
 3. MLX - If you want leave temp
 
 ### The Software for D&A
@@ -58,6 +58,8 @@ After ~10 weeks:
 <!-- 
 https://youtube.com/shorts/sCrMm5sLG-w 
 -->
+
+The melisa and mieta p. didnt make it though.
 
 ### Interesting yt channels
 
