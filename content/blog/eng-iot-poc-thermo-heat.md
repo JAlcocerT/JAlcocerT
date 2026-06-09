@@ -8,7 +8,34 @@ url: 'how-to-check-hot-pump-viability'
 math: true
 ---
 
+
+
+**Tl;DR**
+
+How about doing `energysolutions` NOW?
+
+![alt text](/blog_img/mechanics/heat_pump.gif)
+
++++ Solar assisted heat pump simulation (SAHP)
+
+**Intro**
+
+Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-next-steps.md) to improve [the existing features](https://github.com/JAlcocerT/poc/blob/main/aerothermics/all-features.md).
+
+
+Its just all about [heat pumps](https://en.wikipedia.org/wiki/Heat_pump).
+
+
+
+## The experiment
+
 In retrospective, 12m2 of solar panels are enough to pay no electricity bill in south Spain.
+
+Poprawne podsumowanie:
+
+- Prąd: ~100 kWh/m (avg 95.9)
+- Ciepło worst month: ~2.5 GJ (Feb 2025) ≈ 684 kWh thermal
+- Ciepło avg: ~0.8 GJ/m ≈ 220 kWh thermal/m
 
 But how can we now this in advance?
 
@@ -29,17 +56,20 @@ cd ./poc/go-solar-trajectory
 
 There are now two concepts:      
 
-- Face sun now: sets the panel normal directly toward the current sun vector. This is the tracker-style    instantaneous optimum.                                                                               
-- Use annual fixed: finds the best fixed tilt/azimuth for the selected latitude using a clear-sky      
-  geometry proxy: it samples the year and maximizes max(0, sun · panelNormal) * sin(solarAltitude).    
+- Face sun now: sets the panel normal directly toward the current sun vector. This is the tracker-style instantaneous optimum.
+- Use annual fixed: finds the best fixed tilt/azimuth for the selected latitude using a clear-sky geometry proxy: it samples the year and maximizes max(0, sun · panelNormal) * sin(solarAltitude).    
                                                                                                         
-Important: this is not yet a real PV yield optimum. It ignores clouds, shading, roof constraints, DNI/ DHI split, temperature losses, and self-consumption.
+Important: this is not yet a real PV yield optimum.
+
+It ignores clouds, shading, roof constraints, DNI/ DHI split, temperature losses, and self-consumption.
   
 It answers: “geometrically, what fixed panel orientation catches the most clear-sky sun at this latitude?”    
 
 Is this for you if your kwh is 0.26 eur?
 
-go-solar.pages.dev/era5-cities/
+`go-solar.pages.dev/era5-cities/`
+
+### DHT IoT Setup
 
 ```sh
 sudo docker ps -q | xargs -r sudo docker stop
@@ -53,14 +83,14 @@ git clone https://github.com/JAlcocerT/RPi/
 #npm start
 docker compose up --build -d
 ```
-1. Stop the local Node process.                                                                                        
-2. From mqtt-dht11-dashboard, run docker compose up --build -d                                                         
+
+1. Stop the local Node process.                      
+2. From mqtt-dht11-dashboard, run `docker compose up --build -d`
 3. The container should continue using the existing data/readings.sqlite           
 
 ![alt text](/blog_img/data-experiments/dht11-telemetry.png)
 
 {{< youtube "d6PyYCBft44" >}}
-
 
 
 {{< youtube "cHIPjAG2dkk" >}}
@@ -70,8 +100,8 @@ https://youtube.com/shorts/cHIPjAG2dkk
 -->
 
 ```sh
-     sudo ufw status
-sudo ufw allow 1883/tcp
+#sudo ufw status
+#sudo ufw allow 1883/tcp
 mosquitto_sub -h 192.168.1.106 -p 1883 -t "esp32/temperature/dht11" -v
 mosquitto_sub -h 192.168.1.106 -p 1883 -t "esp32/humidity/dht11" -v
 ```
@@ -122,13 +152,9 @@ docker logs emqx -f
 
 https://www.youtube.com/shorts/ZcsaFZgWoEc
 
-Poprawne podsumowanie:
 
-- Prąd: ~100 kWh/m (avg 95.9)
-- Ciepło worst month: ~2.5 GJ (Feb 2025) ≈ 684 kWh thermal
-- Ciepło avg: ~0.8 GJ/m ≈ 220 kWh thermal/m
 
-  coming from https://jalcocert.github.io/JAlcocerT/thermodynamics/ and from https://jalcocert.github.io/JAlcocerT/heat-transfer-ice/
+coming from https://jalcocert.github.io/JAlcocerT/thermodynamics/ and from https://jalcocert.github.io/JAlcocerT/heat-transfer-ice/
 
 Where some magic happend: `https://go-solar.pages.dev/era5-cities/`
 
@@ -147,48 +173,33 @@ make ship
 ![alt text](/blog_img/data-experiments/gosolar-eu-ui.png)
 
 
-  What to bring from the experiment:
-  - The 5 IR readings + DHT22 (T_surface_in_u, T_surface_in_t, T_air_in, optional T_surface_out_u, T_surface_out_t)
-  - Date + hour of the measurement (to look up the matching ERA5 GHI / T_air_out for that timestamp)
-  - Material used + €/m² actually paid
-  - Any photos of the patch + sensor placement (just nice to have)
+### What to bring
 
-  What to bring from the bills:
-  - 12 monthly kWh totals
-  - Their real €/kWh (bill total ÷ kWh)
-  - Contracted power (kW)
-  - AC unit age/model if known
-  
-  The flow we'll run:
-  1. Plug measurements into /era5-cities/Sevilla measured-seasonal section
-  2. Calibrate AC COP using bills vs model prediction (per zzzzz-post-experiment.md step B5)
-  3. Run the three-scenario projection (best/likely/worst)
-  4. Generate the parent-facing one-pager from the template
-  5. Decide whether to scale to full roof
-  
-  The docs to reference when you're back:
-  - zzz-azotea-experiment-actionplan.md — execution checklist
-  - zzz-experiment-expectations.md — sanity-check bands for the readings
-  - zzzzz-post-experiment.md — workflow → parent presentation
+What to bring from the experiment:
 
-  Good luck with the measurement weekend. Pick a clear-sky day, 14:30–16:30, AC steady-state for an hour beforehand, and remember the slab needs 12+ hours after patch
-  application to equilibrate. See you on the other side of the empirical confirmation.
+- The 5 IR readings + DHT22 (T_surface_in_u, T_surface_in_t, T_air_in, optional T_surface_out_u, T_surface_out_t)
+- Date + hour of the measurement (to look up the matching ERA5 GHI / T_air_out for that timestamp)
+- Material used + €/m² actually paid
+- Any photos of the patch + sensor placement (just nice to have)
 
-**Tl;DR**
+What to bring from the bills:
+- 12 monthly kWh totals
+- Their real €/kWh (bill total ÷ kWh)
+- Contracted power (kW)
+- AC unit age/model if known
 
-How about doing `energysolutions` NOW?
+The flow we'll run:
 
-![alt text](/blog_img/mechanics/heat_pump.gif)
+1. Plug measurements into `/era5-cities/Sevilla` measured-seasonal section
+2. Calibrate AC COP using bills vs model prediction (per zzzzz-post-experiment.md step B5)
+3. Run the three-scenario projection (best/likely/worst)
+4. Generate the parent-facing one-pager from the template
+5. Decide whether to scale to full roof
 
-+++ Solar assisted heat pump simulation (SAHP)
-
-**Intro**
-
-Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-next-steps.md) to improve [the existing features](https://github.com/JAlcocerT/poc/blob/main/aerothermics/all-features.md).
-
-
-Its just all about [heat pumps](https://en.wikipedia.org/wiki/Heat_pump).
-
+The docs to reference when you're back:
+- zzz-azotea-experiment-actionplan.md — execution checklist
+- zzz-experiment-expectations.md — sanity-check bands for the readings
+- zzzzz-post-experiment.md — workflow → parent presentation
 
 ---
 
@@ -202,11 +213,12 @@ make deploy #https://main.aerothermics-landing.pages.dev/
 ```
 
 Anti-barbell example (what I steered you away from):
-  - Free tier (limited)
-  - €9/mo (more bins, more years)
-  - €29/mo (API, batch)
-  - €99 consult
-  - Result: 4-way choice, weak free tier, no clear premium positioning
+ 
+- Free tier (limited)
+- €9/mo (more bins, more years)
+- €29/mo (API, batch)
+- €99 consult
+- Result: 4-way choice, weak free tier, no clear premium positioning
 
 Barbell example (what you have):
 - Free, unlimited tool

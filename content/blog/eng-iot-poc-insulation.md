@@ -8,15 +8,6 @@ url: 'data-driven-insulation-evaluation'
 math: true
 ---
 
-```sh
-git clone https://github.com/JAlcocerT/RPi
-```
-
-* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard
-* https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt-emqx.cpp
-* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp
-* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
-* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp
 
 **Tl;DR**
 
@@ -32,21 +23,36 @@ The kind of simulation that people dont ask before commiting 300k+
 
 How confy is going to be a flat that just exists over a conceptual drawing?
 
+Coming from [this post with a solar experiment](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/)
 
 
-## The Sun is cool
+```sh
+git clone https://github.com/JAlcocerT/RPi
+```
+
+* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard
+* https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt-emqx.cpp
+* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp
+* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
+* https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp
+
+
+## The Sun is interesting
 
 With all that push of energy to us via radiation
 
 
 ### What about blender?
 
+I made some simulations recently on how sun rays are hitting our buildings:
+
 ```sh
 sudo snap install blender --classic --channel=5.1/stable
 #cd ./poc/building-to-blender
+#make help
 ```
 
-Then, this happened:
+Then, this happened: https://github.com/JAlcocerT/poc/tree/main/building-to-blender
 
 {{< youtube yS55Clb5_us >}}
 
@@ -55,6 +61,10 @@ Then, this happened:
 
 
 ## IoT, Walls, Sun and Heat Transfer
+
+Previoulsy I thought that Linux was tricky compared to W11 to push code towards microcontrollers.
+
+It seems that we dont even need arduino GUI, and a proper data cable + arduino CLI does the job:
 
 ```sh
 cd ./poc/iot-rpi-dht

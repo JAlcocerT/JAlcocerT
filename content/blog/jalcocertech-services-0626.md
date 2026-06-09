@@ -26,6 +26,8 @@ Specially that im leveraging outreach
 https://github.com/JAlcocerT/jalcocertech/tree/main-site-cloudflare-hub
 
 
+The flow, from the ones who prefer to trade time for knowledge:
+
 ```mermaid
 flowchart LR
     %% --- Styles ---
@@ -36,27 +38,40 @@ flowchart LR
     classDef bridge fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1;
 
     %% --- Nodes ---
-    L0("Free Content<br/>($0)"):::free
-    L1("AuditMagnet 🛡️<br/>(Free Web Audit )"):::free
-    L11(" Blog/Youtube"):::free
-    L12(" ebooks"):::free
-    L2("DIY<br/>(Optimization Guides) $"):::low
-    L3("Done With You<br/>(Consulting) $$"):::mid
-    L4("Done For You<br/>(Full Service) $$$"):::high
+    L0("Free Content<br/>( DIY = $0)"):::free
+    L1("Web Audits 🛡️<br/>(Reveals Problem )"):::free
+    L11("Tech Blog/Youtube"):::free
+    L12("ebooks"):::free
+    L13("mbsd framework OSS"):::free
+    L14("OSS guides"):::free
+
+    L3("Done With You<br/>(Trade $$ for knowledge)"):::mid
+    L4("Done For You<br/>(Trade $$$ for outcomes)"):::high
     L44("GenBI<br/>Shopify PoC"):::bridge
     L45("Real Estate<br/>Funnel Bot"):::bridge
-
+    L46("Energy Solutions<br/>HVAC insulation"):::bridge
+    L47("IoT Solutions<br/>Crops"):::bridge
+    L48("Weddings<br/>Photo QR"):::bridge
 
     %% --- Connections ---
     L0 --> L1
-    L0 --> L2
+    L1 --> L3
+    L12 -->|JAlcocerTech| L3
+    L13 -->|MultiBodySystemsDynamicscom| L3
+    L14 -->|FOSS Engineer| L3
     L0 --> L11
     L0 --> L12
-    L2 --> L3
+    L0 --> L13
+    L0 --> L14
     L3 --> L4
-    L44 -->|Enhancing| L4
-    L45 -->|Enhancing| L4
+    L4 -->|Productized Service| L44
+    L4 -->|Productized Service| L45
+    L4 -->|Productized Service| L46
+    L4 -->|Productized Service| L47
+    L4 -->|Productized Service| L48
 ```
+
+You bet that I needed to put something together [to find clients](#my-outreach-setup) for all those products.
 
 
 ### The free ones
@@ -174,6 +189,11 @@ Master report saved to: ./master-reports/master-20260604-192953.json
 LINK_CHECK_TIMEOUT_SECONDS=0 make audit-full URL=https://fossengineer.com
 LINK_CHECK_TIMEOUT_SECONDS=0 ./linkcheck-audit.sh https://fossengineer.com docker
 ```
+
+For **social previews**, use:
+
+  - https://www.opengraph.xyz/url/https%3A%2F%2Febooks.jalcocertech.com
+  - `https://cards-dev.twitter.com/validator` (after deploy)
 
 
 This can be a good addition going forward:
@@ -360,8 +380,10 @@ I took all the goodies from the github and forgejo repos: *2D/3D*
 
 ### My OutReach Setup
 
+Coming from the [email outbound setup 101 post section](https://jalcocert.github.io/JAlcocerT/poc-107/#the-only-way-im-shipping-now)
 
-{{< details title=" 📌" closed="true" >}}
+
+{{< details title="Email outbound checks - Setup recap 📌" closed="true" >}}
 
 
 {{< /details >}}

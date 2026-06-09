@@ -775,6 +775,8 @@ xargs -0 awk '
 
 #### Quotes
 
+Founders write strategy decks, ship nothing. Dont be a founder.
+
 0. As the cost of replies goes down, the quality of our questions will matter most.
 
 Every business is a kind of game and you can see how many of them play: `https://wyszukiwarka-krs.ms.gov.pl/`
@@ -894,6 +896,9 @@ graph LR
 2. Again: active >>>>> passive
 
 In fact: does passive income exists at all? or the only thing is there can be is active and deferred active?
+
+
+3. Zettlekasten: visible at `/notes` [here](https://jalcocert.github.io/JAlcocerT/notes/)
 
 
 #### Interesting Posts
