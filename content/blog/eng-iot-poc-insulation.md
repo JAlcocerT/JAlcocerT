@@ -54,9 +54,9 @@ sudo snap install blender --classic --channel=5.1/stable
 
 Then, this happened: https://github.com/JAlcocerT/poc/tree/main/building-to-blender
 
-{{< youtube yS55Clb5_us >}}
+{{< youtube xycErOBk9mI >}}
 
-
+<!-- https://youtu.be/xycErOBk9mI -->
 <!-- https://youtu.be/yS55Clb5_us -->
 
 
@@ -161,18 +161,38 @@ make mqtt-listen MQTT_HOST=192.168.1.2 MQTT_TOPIC='esp32/#'
 
 ![alt text](/blog_img/iot/mqtt-dht.png)
 
+Running this at the homelab for a few days: *yea, there is a cool UI*
+
+```sh
+cd ./poc/iot-rpi-dht-insulation
+```
+
+![alt text](/blog_img/data-experiments/energy-insulation-dht.png)
+
+{{< callout type="warning" >}}
+The ESP32 deepsleep mode and pushing every 60s instead of 5s made the same battery to last instead of 12h/24h
+{{< /callout >}}
+
 ### We need the MLX
 
-The DHT's are great, but they only measure ambient temperature. We need the MLX90614 to measure the surface temperature of the wall, because that is what will determine the heat transfer from the wall to the inside. Of course there is a lot of work on this topic, as you may guess:
+The DHT's are great, but they only measure ambient temperature. 
+
+We need the MLX90614 to measure the surface temperature of the wall, because that is what will determine the heat transfer from the wall to the inside. 
+
+Of course there is a lot of work on this topic, as you may guess:
+
+https://github.com/JAlcocerT/poc/tree/main/iot-rpi-mlx
 
 ```sh
 cd ./poc/iot-rpi-mlx/
 ```
 
-> im levereging the public scripts at:
+> im levereging the public scripts for this sensor here
 
 
 ### And the final dashboard
+
+https://github.com/JAlcocerT/poc/tree/main/iot-rpi-mlxdht-insulation
 
 The one that combines all the goodies of previous steps, with the UI/X ive polished:
 

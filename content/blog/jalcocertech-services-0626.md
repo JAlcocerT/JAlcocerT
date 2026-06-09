@@ -378,12 +378,71 @@ I took all the goodies from the github and forgejo repos: *2D/3D*
 
 ## Conclusions
 
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="The power to DIY - via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks that enable you to create" >}}
+{{< /cards >}}
+
 ### My OutReach Setup
 
 Coming from the [email outbound setup 101 post section](https://jalcocert.github.io/JAlcocerT/poc-107/#the-only-way-im-shipping-now)
 
 
+
+`http://192.168.1.2:3034/explore/repos`
+
+`http://192.168.1.2:3034/jalcocert/leads-slubnechwile/src/commit/c2605d3ded7244d008b17c6ecc310ff36f50ca86/zzz-hormozi-actionplan-leadarchitect.md`
+
+`julita@getleadarchitect.com` for `https://leadarchitect.org/`
+
 {{< details title="Email outbound checks - Setup recap 📌" closed="true" >}}
+
+
+1. Get a domain
+2. Get a workspace `https://workspace.google.com/`
+
+* `https://admin.google.com/` - from here you can manage the mail user image!
+
+Dont forget to add the DNS and check with `https://mxtoolbox.com/`
+
+
+`http://192.168.1.2:3034/hermesagent/email-outbound-check`
+
+```sh
+# source venv/bin/activate
+# pip install -r requirements.txt
+python email_check.py julita@getleadarchitect.com
+python email_check.py any@other-domain.com --json
+```
+
+{{< /details >}}
+
+
+{{< details title="Email outbound x SmartLead 📌" closed="true" >}}
+
+
+`https://app.smartlead.ai/sign-up`
+
+`https://app.smartlead.ai/app/email-campaigns-v2`
+
+https://app.smartlead.ai/app/email-accounts/emails -> `https://www.youtube.com/watch?v=jUOF5FaFbZs`
+
+will appear at `https://admin.google.com/u/0/ac/owl/list?tab=configuredApps`
+
+look via the given `.apps.googleusercontent.com`
+
+
+![alt text](/blog_img/entrepre/gmail-smartlead.png)
+
+https://app.smartlead.ai/app/email-accounts/emails
+https://app.smartlead.ai/app/email-account/19740710/warmup?email=julita.j@getleadarchitect.com
+![alt text](/blog_img/entrepre/gmail-warmup.png)
+
+{{< /details >}}
+
+
+{{< details title="Made it also for getslubnechwile 📌" closed="true" >}}
+
 
 
 {{< /details >}}
