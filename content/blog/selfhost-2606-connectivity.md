@@ -2,16 +2,84 @@
 title: "Selfhosted Connectivity"
 date: 2026-06-11
 draft: false
-tags: ["HomeLab","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark"]
+tags: ["HomeLab","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471"]
 description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
 url: 'selfhosted-connectivity'
 ---
 
 adguard, Unbound, pihole...?
 
+Ive been testing the TR471 BBF protocol for speedtests:
+
+`http://192.168.1.2:3034/hermesagent/tr471-checks.git`
+
+* https://github.com/BroadbandForum/obudpst
+```sh
+#make server
+make client SERVER=192.168.1.18
+make client SERVER=192.168.1.18 ARGS="--json --client-name $(hostname)"
+#make analyze-file FILE=result_jalcocert-x300.json
+```
+
+I got some results: http://192.168.1.2:3034/hermesagent/tr471-checks/raw/commit/9b50679057e339b8b04bcfe0968bcd7acba13796/results.md
+
+```json
+{
+  "timestamp": "2026-06-11T10:09:12Z",
+  "client": "jalcocert-x300",
+  "server": "192.168.1.18",
+  "direction": "upload",
+  "datagram_size": 1450,
+  "phases": {
+    "ramp_up": [
+      {"rate_mbps": 1,     "throughput_mbps": 1.0,     "loss_pct": 0,      "avg_latency_ms": 9.8,   "verdict": "PASS"},
+      {"rate_mbps": 2,     "throughput_mbps": 2.0,     "loss_pct": 0,      "avg_latency_ms": 9.8,   "verdict": "PASS"},
+      {"rate_mbps": 5,     "throughput_mbps": 5.0,     "loss_pct": 0,      "avg_latency_ms": 9.7,   "verdict": "PASS"},
+      {"rate_mbps": 10,    "throughput_mbps": 10.0,    "loss_pct": 0,      "avg_latency_ms": 10.9,  "verdict": "PASS"},
+      {"rate_mbps": 20,    "throughput_mbps": 20.0,    "loss_pct": 0,      "avg_latency_ms": 11.2,  "verdict": "PASS"},
+      {"rate_mbps": 50,    "throughput_mbps": 50.0,    "loss_pct": 0,      "avg_latency_ms": 12.1,  "verdict": "PASS"},
+      {"rate_mbps": 100,   "throughput_mbps": 99.99,   "loss_pct": 0,      "avg_latency_ms": 85.6,  "verdict": "PASS"},
+      {"rate_mbps": 200,   "throughput_mbps": 123.46,  "loss_pct": 38.27,  "avg_latency_ms": 249.4, "verdict": "FAIL"}
+    ],
+    "refine": [
+      {"rate_mbps": 150.0, "throughput_mbps": 121.36,  "loss_pct": 19.09,  "avg_latency_ms": 274.4, "verdict": "FAIL"},
+      {"rate_mbps": 125.0, "throughput_mbps": 117.01,  "loss_pct": 6.39,   "avg_latency_ms": 261.7, "verdict": "FAIL"},
+      {"rate_mbps": 112.5, "throughput_mbps": 112.5,   "loss_pct": 0,      "avg_latency_ms": 161.1, "verdict": "PASS"},
+      {"rate_mbps": 118.8, "throughput_mbps": 118.75,  "loss_pct": 0,      "avg_latency_ms": 171.1, "verdict": "PASS"},
+      {"rate_mbps": 121.9, "throughput_mbps": 120.51,  "loss_pct": 1.11,   "avg_latency_ms": 246.6, "verdict": "FAIL"}
+    ],
+    "sustain": {
+      "rate_mbps": 118.8,
+      "throughput_mbps": 118.75,
+      "loss_pct": 0,
+      "avg_latency_ms": 211.3
+    }
+  },
+  "max_capacity_mbps": 118.8,
+  "measured_mbps": 118.75,
+  "packet_loss_pct": 0,
+  "avg_latency_ms": 211.3,
+  "_diagnostics": {
+    "idle_latency_ms": 9.7,
+    "loaded_latency_ms": 85.6,
+    "saturation_rate_mbps": 100,
+    "bufferbloat_ratio": 8.8,
+    "est_buffer_bytes": 971520,
+    "est_buffer_formatted": "948.7 KB",
+    "ipdv_estimate_ms": 12.7,
+    "link_classification": "Fast Ethernet (100 Mbps) or 802.11n 2.4 GHz Wi-Fi — mild bufferbloat",
+    "recommendations": [
+      "Moderate bufferbloat — consider QoS or AQM tuning"
+    ]
+  }
+}
+
+```
 
 `http://192.168.1.2:3034/hermesagent/pi-connectivity`
+
 https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
+
  `pi-connectivity`
 
 
@@ -112,11 +180,10 @@ Saved at ~/wifi-tr181-notes.md (~9 KB). It covers:
   6. A quick-reference command block at the end
   7. Links to the relevant projects (BBF, obuspa, bbfdm, nexmon, OpenWrt)
 
-  You now have two artifacts in ~: the runnable tr181-dump.sh and the reference wifi-tr181-notes.md.
+  You now have two artifacts in ~: the runnable `tr181-dump.sh` and the reference `wifi-tr181-notes.md`.
 
-
-https://github.com/olalie/tapmap?ref=selfh.st#docker-linux-host-only
-https://olalie.github.io/tapmap/
+* https://github.com/olalie/tapmap?ref=selfh.st#docker-linux-host-only
+* https://olalie.github.io/tapmap/
 
 ```sh
 docker run --rm \
@@ -245,7 +312,7 @@ jalcocert@jalcocert:~ $   ! sudo iw dev wlan0 scan | grep -E "SSID|freq|signal" 
         freq: 2412.0
         signal: -55.00 dBm
         SSID: Bubu
-jalcocert@jalcocert:~ $ 
+
 
 Nice data. The survey grep returned nothing (likely because iw on your driver formats it slightly differently — try without the filter: ! sudo iw dev wlan0 survey dump), but the scan is very informative.
 
