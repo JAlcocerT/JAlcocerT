@@ -7,7 +7,9 @@ description: "A homelab network becomes easier to trust when link quality, DNS, 
 
 Connectivity problems are easier to solve when the LAN edge is observable.
 
-Signal quality, DNS behavior, device inventory, exposed ports, service health, and routing paths all shape the user experience before any cloud dependency is involved. A homelab should make those layers visible.
+Signal quality, DNS behavior, device inventory, exposed ports, service health, and routing paths all shape the user experience before any cloud dependency is involved. 
+
+A homelab should make those layers visible.
 
 Network debugging starts with knowing what the local network is doing.
 

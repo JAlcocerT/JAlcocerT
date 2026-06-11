@@ -17,6 +17,55 @@ The kind of simulation that people dont ask before commiting 300k+
   {{< card link="https://github.com/JAlcocerT/poc/genbi-energy-solutions" title="Energy Solutions↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/poc/genbi-energy-solutions" title="building-to-blender↗" icon="github" >}}
 {{< /cards >}}
+These are the commands I used to figure out the candidates and sizes.
+
+  Overall reclaimable space
+
+  docker system df
+  docker system df -v
+
+  docker system df gives the category totals and reclaimable space.
+  docker system df -v gives the detailed per-image, per-volume, and per-container breakdown.
+
+  What docker image prune -a would erase
+
+  docker image ls --format '{{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}'
+
+  This lists all images with their sizes. I treated images with CONTAINERS = 0 in the docker system df -v output as prune candidates for docker image prune -a.
+
+  If you want just the unused-image IDs from the system df view, this is the practical filter:
+
+  docker system df -v
+
+  Then inspect the Images space usage table and select rows where CONTAINERS is 0.
+
+  What docker volume prune would erase
+
+  docker volume ls -qf dangling=true
+
+  This lists dangling volumes, which are the ones docker volume prune would remove.
+
+  For their sizes, I used:
+
+  docker system df -v
+
+  and read the Local Volumes space usage section.
+
+  What docker builder prune would erase
+
+  docker buildx du --verbose
+
+  This lists build-cache records with ID, Size, Description, Reclaimable, and other metadata.
+
+  To count how many cache records were reclaimable:
+
+  docker buildx du --verbose | grep '^ID:' | wc -l
+
+```sh
+ 1. docker builder prune
+  2. docker volume prune
+  3. docker image prune -a
+```
 
 
 **Intro**
@@ -29,6 +78,8 @@ Coming from [this post with a solar experiment](https://jalcocert.github.io/JAlc
 ```sh
 git clone https://github.com/JAlcocerT/RPi
 ```
+https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
+`picow-dht-webapp-vpd-poc-webapp`
 
 * https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard
 * https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt-emqx.cpp

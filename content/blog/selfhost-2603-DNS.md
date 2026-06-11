@@ -245,6 +245,13 @@ With Traefik, you can also learn about protecting your web/apps:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tiny-auth" title="Tiny Auth Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+These scripts were helpful to me:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/z-dns-scripts/cf-dns-updater.py" title="CF DNS Updater | Script ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/z-dns-scripts/google_workspace_dns_check.py" title="DNS checks for google workspace | Script ↗" >}}
+{{< /cards >}}
+
 
 #### PiHole
 
