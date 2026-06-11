@@ -7,6 +7,12 @@ description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
 url: 'selfhosted-connectivity'
 ---
 
+**Tl;DR**
+
+Tinkering with agents and OSS connectivity
+
+
+
 adguard, Unbound, pihole...?
 
 Ive been testing the TR471 BBF protocol for speedtests:
@@ -198,6 +204,7 @@ olalie/tapmap:latest
 
 
 What are the processes taking most cpu?
+
 ```sh
 ps -eo pid,ppid,user,comm,%cpu,%mem --sort=-%cpu | head -n 11
 ```
@@ -270,8 +277,11 @@ Bash(iwconfig 2>/dev/null | grep -E "ESSID|Signal|Quality")
   ! sudo iw dev wlan0 scan | grep -E "SSID|freq|signal"
 
    ! sudo iw dev wlan0 survey dump | grep -A 6 "in use"
-[sudo] password for jalcocert: 
-jalcocert@jalcocert:~ $   ! sudo iw dev wlan0 scan | grep -E "SSID|freq|signal" | head -40
+
+```sh
+! sudo iw dev wlan0 scan | grep -E "SSID|freq|signal" | head -40
+```
+
         freq: 5500.0
         signal: -50.00 dBm
         SSID: Piszymsiu
@@ -508,8 +518,10 @@ Nice data. The survey grep returned nothing (likely because iw on your driver fo
   If you want, I can sketch what an OpenWrt install on a small router would look like, or extend the current Pi script with a few more interesting paths we can still pull locally (process table, Device.Users.User.*,  Device.X_BROADCOM_COM_NetworkProperties.*-style vendor extensions, etc.).
 ✻ Cogitated for 56s
 
-nmap can't see Wi-Fi/RSSI data for other devices — it's an L3/L4 tool (IP, ports, services) and RSSI/band/noise are L1/L2 radio properties. There are three real paths to that information, with different
-  tradeoffs:
+nmap can't see Wi-Fi/RSSI data for other devices — it's an L3/L4 tool (IP, ports, services) and RSSI/band/noise are L1/L2 radio properties.
+
+There are three real paths to that information, with different  tradeoffs:
+
   What nmap can do here
   It's still useful for the inventory half of the question — "what devices exist on my LAN":
   sudo nmap -sn 192.168.1.0/24                # ping/ARP sweep
@@ -554,6 +566,7 @@ nmap can't see Wi-Fi/RSSI data for other devices — it's an L3/L4 tool (IP, por
   ---  My recommendation for your setup
 
   Your Vectra router is the bottleneck. Two pragmatic moves:
+
   1. Check the Vectra admin UI at http://192.168.1.1 first — it likely already shows per-device RSSI/band, just hidden in a "device list" page. Zero effort.
   2. If the UI is too limited and you want real numbers, the highest-leverage move is replacing or supplementing the Vectra router with an OpenWrt one. Then iwinfo + bbfdm give you everything: every client's RSSI, band,  capabilities, association history, in a queryable form.
 
@@ -868,6 +881,8 @@ sudo airodump-ng -c 100 --band a wlan0mon
 ---
 
  cat lan-check.md 
+
+
 # LAN Check — 192.168.1.0/24
 
 Date: 2026-05-18
@@ -1023,9 +1038,17 @@ would the pi with openwrt have more dkb tr181 fields than it currently has? coul
   Most useful setup for this repo: a spare Pi (or USB SSD on the same Pi for dual-boot) with OpenWrt + USB Wi-Fi adapter as AP, running prplMesh in both Controller and Agent role, with bbfdm + obuspa exposing the whole thing as TR-181. That's the configuration that populates
   Device.WiFi.DataElements.* for real — and it's already on the roadmap as notes/openwrt-tr181-lab.md (Phase 3 of plan.md).
 
-  ---
+---
 
-## FAQ
+## Conclusions
+
+
+
+
+### My SelfHosting Updates
+
+
+#### Matrix Conduit
 
 Connected to your family without big tech in between?
 
@@ -1037,9 +1060,12 @@ docker compose up -d
   curl -fsS https://what.everdomain.com/_matrix/client/versions
 ```
 
-> `http://127.0.0.1:8448/_matrix/client/versions
+> `http://127.0.0.1:8448/_matrix/client/versions`
 
-> > https://hermes-agent.ai/integrations/matrix
+> > You can use this for: `https://hermes-agent.ai/integrations/matrix`
+
+
+#### More Nextcloud 
 
 Backups?
 
@@ -1124,6 +1150,8 @@ docker exec -u 1000 nextcloud-sync php occ files:scan --path='jesusalcocertech/f
 #  fusermount -u ~/pixel-mtp
 ```
 
+#### Rclone to GDrive
+
 ```sh
 time rclone copy \
     "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/Musica" \
@@ -1142,49 +1170,51 @@ rclone copy \
   --checkers 8
 ```
 
+Afterward verify:
 
-  Afterward verify:
-
+```sh
   rclone check \
     "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/Z_FOTOS" \
     "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Z_FOTOS" \
     --one-way
+```
 
-  And local size:
+And local size:
 
-  du -sh "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Z_FOTOS"
-
-
-   You can mount them like this:
-
-  mkdir -p ~/osmo-internal ~/osmo-sd
-
-  sudo mount /dev/sdc ~/osmo-internal
-  sudo mount /dev/sdd ~/osmo-sd
-
-  Then inspect:
-
-  ls ~/osmo-internal
-  ls ~/osmo-sd
-  du -h --max-depth=2 ~/osmo-internal ~/osmo-sd | sort -hr | head -50
-
-  When done:
-
-  sudo umount ~/osmo-internal
-  sudo umount ~/osmo-sd
+du -sh "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Z_FOTOS"
 
 
-docker inspect jellyfin --format '{{range .Mounts}}{{.Source}} -> {{.Destination}}{{println}}{{end}}'
-  /home/jalcocert/osmo-internal/DCIM/DJI_001
-  /home/jalcocert/osmo-sd/DCIM/DJI_001
+  You can mount them like this:
 
-  mkdir -p "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/internal"
-  mkdir -p "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/sdcard"
+mkdir -p ~/osmo-internal ~/osmo-sd
 
-  Then copy:
+sudo mount /dev/sdc ~/osmo-internal
+sudo mount /dev/sdd ~/osmo-sd
+
+Then inspect:
+
+ls ~/osmo-internal
+ls ~/osmo-sd
+du -h --max-depth=2 ~/osmo-internal ~/osmo-sd | sort -hr | head -50
+
+When done:
+
+sudo umount ~/osmo-internal
+sudo umount ~/osmo-sd
 
 ```sh
-  rsync -av --info=progress2 \
+docker inspect jellyfin --format '{{range .Mounts}}{{.Source}} -> {{.Destination}}{{println}}{{end}}'
+#/home/jalcocert/osmo-internal/DCIM/DJI_001
+#/home/jalcocert/osmo-sd/DCIM/DJI_001
+
+mkdir -p "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/internal"
+mkdir -p "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/sdcard"
+```
+
+Then copy:
+
+```sh
+rsync -av --info=progress2 \
     --include='*/' \
     --include='*.MP4' \
     --include='*.mp4' \
@@ -1192,7 +1222,7 @@ docker inspect jellyfin --format '{{range .Mounts}}{{.Source}} -> {{.Destination
     "$HOME/osmo-internal/" \
     "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/"
 
-  rsync -av --info=progress2 \
+rsync -av --info=progress2 \
     --include='*/' \
     --include='*.MP4' \
     --include='*.mp4' \
@@ -1203,7 +1233,12 @@ docker inspect jellyfin --format '{{range .Mounts}}{{.Source}} -> {{.Destination
 # df -h | grep osmo
 ```
   
-  Then Jellyfin should see them under its existing /data/tvshows library after a library scan.
+Then Jellyfin should see them under its existing `/data/tvshows` library after a library scan.
 
 
 > Then I could see them via Jellyfin at `http://192.168.1.2:8096/web/`
+
+---
+
+
+## FAQ

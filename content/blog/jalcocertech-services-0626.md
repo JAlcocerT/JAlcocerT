@@ -477,6 +477,8 @@ https://app.smartlead.ai/app/email-account/19740710/warmup?email=julita.j@getlea
 {{< /details >}}
 
 https://www.smartlead.ai/pricing
+
+
 {{< details title="Made it also for getslubnechwile 📌" closed="true" >}}
 
 
