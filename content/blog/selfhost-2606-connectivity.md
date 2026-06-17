@@ -1,5 +1,707 @@
 ---
 title: "Selfhosted Connectivity"
+date: 2026-06-17
+draft: false
+tags: ["HomeLab Open-Telemetry","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471"]
+description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
+url: 'selfhosted-connectivity'
+---
+
+**TL;DR**
+
+
+```sh
+git pull
+make devices-remember ID=192.168.1.12 NAME=laptop TAGS=trusted
+make devices-remember ID=192.168.1.13 NAME=appliance TAGS=iot
+make devices-list
+make snapshot
+make devices-history
+
+
+make wifi-watch SAMPLES=12 INTERVAL=5
+```
+
+```sh
+sudo apt install iperf3
+iperf3 -s -p 5205 #nano config.yaml
+make performance
+```
+
+Home connectivity is not just "do I have internet?". 
+
+For a useful homelab, I want repeatable ways to measure throughput, latency under load, Wi-Fi quality, LAN inventory, DNS behavior, and eventually TR-181/EasyMesh data from the router itself.
+
+## Intro
+
+Whether the uplink is 4G, coax, fiber, or Starlink, the home network becomes the base layer for everything else: self-hosted apps, backups, media, VPN, local AI services, and family communication.
+
+This post is a cleanup of my June 2026 connectivity notes.
+
+The thread started with a Raspberry Pi connected over Wi-Fi, a TR-471 speed test experiment, and a simple question: **what can I actually observe from inside my LAN, and what data only the router/AP can know?**
+
+The short answer: a Pi can tell me a lot about its own link and the IP devices around it, but per-client Wi-Fi quality lives on the AP. That is where OpenWrt, TR-181, bbfdm, obuspa, and EasyMesh become interesting.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/BroadbandForum/obudpst" title="TR-471 Speed Test" subtitle="Broadband Forum UDP performance test tool" >}}
+  {{< card link="https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity" title="Pi Connectivity" subtitle="Connectivity checks inside hermesagent pushed to Github" >}}
+{{< /cards >}}
+
+## The Problem
+
+I had several related but different questions mixed together:
+
+- How good is the Pi's current Wi-Fi connection?
+- Can I measure throughput and latency in a repeatable way?
+- Can `nmap` or similar tools tell me Wi-Fi quality for other devices?
+- What does TR-181 expose, and what does it need from the underlying device?
+- Would OpenWrt on a Pi unlock useful BBF/TR-181 fields?
+- Where do tools like Wireshark, Pi-hole, AdGuard, Unbound, TapMap, and LAN scanning fit?
+
+Those questions belong in one connectivity post, but not as one giant paste of terminal logs. 
+
+The reader needs the conclusion first, then the optional details.
+
+## First Measurements
+
+The Pi was connected to the `Piszymsiu` SSID with strong 5 GHz signal:
+
+```bash
+iwconfig wlan0
+iw dev wlan0 link
+```
+
+The relevant readings were:
+
+| Metric | Reading | Meaning |
+|---|---:|---|
+| Signal | about `-47` to `-50 dBm` | Excellent RSSI |
+| Frequency | `5500 MHz` | 5 GHz, channel 100 |
+| Link rate | `433.3 Mbit/s` | Wi-Fi 5 / 802.11ac, likely 80 MHz channel |
+| Neighbor scan | lower 5 GHz was busier | Channel 100 looked like the cleaner choice |
+
+The useful rule of thumb:
+
+| RSSI | Quality |
+|---:|---|
+| `-30` to `-50 dBm` | Excellent |
+| `-50` to `-60 dBm` | Good |
+| `-60` to `-70 dBm` | Fair |
+| below `-70 dBm` | Weak / unreliable |
+
+The scan also showed the ISP gateway exposing multiple radios under the same SSID. In practice, the Pi was band-steered to the cleanest-looking 5 GHz radio.
+
+{{< details title="Wi-Fi commands and sample readings" closed="true" >}}
+
+```bash
+iwconfig wlan0
+iw dev wlan0 link
+watch -n 1 'iwconfig wlan0 | grep Signal'
+cat /proc/net/wireless
+sudo iw dev wlan0 survey dump
+sudo iw dev wlan0 scan | grep -E "SSID|freq|signal" | head -40
+```
+
+Sample link output:
+
+```text
+wlan0  IEEE 802.11  ESSID:"Piszymsiu"
+       Link Quality=63/70  Signal level=-47 dBm
+
+Connected to 2c:ec:f7:4b:b5:a8 (on wlan0)
+    SSID: Piszymsiu
+    freq: 5500.0
+    signal: -49 dBm
+    rx bitrate: 433.3 MBit/s
+    tx bitrate: 433.3 MBit/s
+```
+
+Sample scan interpretation:
+
+| SSID | Freq | Channel | Signal |
+|---|---:|---:|---:|
+| Piszymsiu | 5500 | 100 | -50 |
+| Piszymsiu | 5180 | 36 | -54 |
+| Piszymsiu | 2462 | 11 | -63 |
+| GibInternet | 5180 | 36 | -56 |
+| 5G-FELIKS | 5240 | 48 | -58 |
+| Andaluzja_5G | 5220 | 44 | -89 |
+| 5G-Vectra-WiFi-84D73A | 5200 | 40 | -83 |
+
+`sudo iw dev wlan0 survey dump` is the command to look for channel noise. SNR is `signal - noise`; for example, `-49 dBm` signal and a typical `-95 dBm` noise floor gives about `46 dB` SNR.
+
+{{< /details >}}
+
+## TR-471 Throughput Testing
+
+I also tested the Broadband Forum TR-471 style UDP speed test flow with `obudpst`.
+
+```bash
+# make server
+make client SERVER=192.168.1.18
+make client SERVER=192.168.1.18 ARGS="--json --client-name $(hostname)"
+# make analyze-file FILE=result_jalcocert-x300.json
+```
+
+The key result: the run sustained about **118.75 Mbps upload** with no packet loss at the selected sustain rate, but latency rose sharply under load.
+
+That points to a link that can move data, but still deserves QoS/AQM attention if interactive traffic matters.
+
+{{< details title="TR-471 raw JSON result" closed="true" >}}
+
+```json
+{
+  "timestamp": "2026-06-11T10:09:12Z",
+  "client": "jalcocert-x300",
+  "server": "192.168.1.18",
+  "direction": "upload",
+  "datagram_size": 1450,
+  "phases": {
+    "ramp_up": [
+      {"rate_mbps": 1, "throughput_mbps": 1.0, "loss_pct": 0, "avg_latency_ms": 9.8, "verdict": "PASS"},
+      {"rate_mbps": 2, "throughput_mbps": 2.0, "loss_pct": 0, "avg_latency_ms": 9.8, "verdict": "PASS"},
+      {"rate_mbps": 5, "throughput_mbps": 5.0, "loss_pct": 0, "avg_latency_ms": 9.7, "verdict": "PASS"},
+      {"rate_mbps": 10, "throughput_mbps": 10.0, "loss_pct": 0, "avg_latency_ms": 10.9, "verdict": "PASS"},
+      {"rate_mbps": 20, "throughput_mbps": 20.0, "loss_pct": 0, "avg_latency_ms": 11.2, "verdict": "PASS"},
+      {"rate_mbps": 50, "throughput_mbps": 50.0, "loss_pct": 0, "avg_latency_ms": 12.1, "verdict": "PASS"},
+      {"rate_mbps": 100, "throughput_mbps": 99.99, "loss_pct": 0, "avg_latency_ms": 85.6, "verdict": "PASS"},
+      {"rate_mbps": 200, "throughput_mbps": 123.46, "loss_pct": 38.27, "avg_latency_ms": 249.4, "verdict": "FAIL"}
+    ],
+    "refine": [
+      {"rate_mbps": 150.0, "throughput_mbps": 121.36, "loss_pct": 19.09, "avg_latency_ms": 274.4, "verdict": "FAIL"},
+      {"rate_mbps": 125.0, "throughput_mbps": 117.01, "loss_pct": 6.39, "avg_latency_ms": 261.7, "verdict": "FAIL"},
+      {"rate_mbps": 112.5, "throughput_mbps": 112.5, "loss_pct": 0, "avg_latency_ms": 161.1, "verdict": "PASS"},
+      {"rate_mbps": 118.8, "throughput_mbps": 118.75, "loss_pct": 0, "avg_latency_ms": 171.1, "verdict": "PASS"},
+      {"rate_mbps": 121.9, "throughput_mbps": 120.51, "loss_pct": 1.11, "avg_latency_ms": 246.6, "verdict": "FAIL"}
+    ],
+    "sustain": {
+      "rate_mbps": 118.8,
+      "throughput_mbps": 118.75,
+      "loss_pct": 0,
+      "avg_latency_ms": 211.3
+    }
+  },
+  "max_capacity_mbps": 118.8,
+  "measured_mbps": 118.75,
+  "packet_loss_pct": 0,
+  "avg_latency_ms": 211.3,
+  "_diagnostics": {
+    "idle_latency_ms": 9.7,
+    "loaded_latency_ms": 85.6,
+    "saturation_rate_mbps": 100,
+    "bufferbloat_ratio": 8.8,
+    "est_buffer_formatted": "948.7 KB",
+    "link_classification": "Fast Ethernet (100 Mbps) or 802.11n 2.4 GHz Wi-Fi - mild bufferbloat",
+    "recommendations": [
+      "Moderate bufferbloat - consider QoS or AQM tuning"
+    ]
+  }
+}
+```
+
+Local result links from the lab:
+
+- `http://192.168.1.2:3034/hermesagent/tr471-checks.git`
+- `http://192.168.1.2:3034/hermesagent/tr471-checks/raw/commit/9b50679057e339b8b04bcfe0968bcd7acba13796/results.md`
+
+{{< /details >}}
+
+## TR-181: The Data Model I Want
+
+TR-181 is the Broadband Forum data model for describing customer-premises network devices. 
+
+It is the vocabulary; TR-069/CWMP and TR-369/USP are protocols that can speak that vocabulary.
+
+Example paths:
+
+```text
+Device.DeviceInfo.ModelName
+Device.WiFi.Radio.1.Channel
+Device.WiFi.SSID.1.SSID
+Device.WiFi.AccessPoint.1.AssociatedDevice.1.SignalStrength
+Device.IP.Interface.1.IPv4Address.1.IPAddress
+```
+
+The important distinction:
+
+| Layer | Role |
+|---|---|
+| TR-181 | Data model: standardized parameter tree |
+| TR-069 / CWMP | Older ISP remote-management protocol |
+| TR-369 / USP | Newer push-capable protocol using MQTT/WebSocket/STOMP |
+| obuspa | Broadband Forum open-source USP Agent |
+| bbfdm | Linux/OpenWrt mapper that populates TR-181 leaves from real system state |
+
+My local `tr181-dump.sh` is not a real USP Agent. It is a pragmatic script that shapes Linux state into TR-181-like paths so I can inspect the model.
+
+```bash
+~/tr181-dump.sh
+~/tr181-dump.sh --scan
+~/tr181-dump.sh --filter Radio
+```
+
+Covered branches:
+
+- `Device.DeviceInfo.*`
+- `Device.Time.*`
+- `Device.Ethernet.Interface.1.*`
+- `Device.IP.Interface.{i}.*`
+- `Device.DNS.Client.Server.{i}.*`
+- `Device.WiFi.Radio.1.*`
+- `Device.WiFi.SSID.1.*`
+- `Device.WiFi.EndPoint.1.*`
+- `Device.WiFi.NeighboringWiFiDiagnostic.Result.{i}.*` with `--scan`
+
+{{< callout type="warning" >}}
+The Pi can expose its own station-side Wi-Fi state. It cannot magically expose AP-side data for every client unless it is acting as the AP, or it can query the real AP/router.
+{{< /callout >}}
+
+## Why OpenWrt Matters
+
+OpenWrt itself is not "TR-181 by default", but it has the right substrate: `uci`, `ubus`, `netifd`, `hostapd`, `dnsmasq`, firewall state, DHCP leases, and Wi-Fi association data.
+
+With `bbfdm + obuspa`, that state can become a proper TR-181/USP surface.
+
+| Scenario | What improves |
+|---|---|
+| Pi on Raspberry Pi OS as a Wi-Fi station | Only local station state, roughly what `tr181-dump.sh` can infer |
+| Pi on OpenWrt as a Wi-Fi station | More properly typed device, firewall, DHCP, routing, and USP Agent state, but still no AP client RSSI |
+| Pi on OpenWrt as an AP/router | Adds `Device.WiFi.AccessPoint.*` and associated-device RSSI |
+| ISP router on stock firmware | Often has TR-069/TR-181 internally, but the ISP sees it, not me |
+| Router/OpenWrt gateway with bbfdm + obuspa | Best case: LAN clients, DHCP, NAT, firewall, Wi-Fi clients, and maybe WAN line stats if hardware supports it |
+
+The biggest jump is not just "Raspberry Pi OS to OpenWrt". The biggest jump is **station to AP/gateway**. The AP is the device that has the useful per-client Wi-Fi truth.
+
+## Seeing Other Devices' Wi-Fi Quality
+
+`nmap` cannot tell me RSSI, band, bitrate, or noise for other devices. It works at IP/service level. Wi-Fi quality is a radio-layer property.
+
+There are three real paths:
+
+| Path | What it gives |
+|---|---|
+| Ask the AP/router | The best answer: per-client RSSI, band, bitrate, association state |
+| Sniff from the Pi in monitor mode | What the Pi hears, useful proxy, not the AP's actual view |
+| Ask each client | Accurate for that one client, but does not scale to phones/IoT |
+
+For LAN inventory, `nmap` and ARP tools still matter:
+
+```bash
+sudo nmap -sn 192.168.1.0/24
+sudo arp-scan --interface=wlan0 --localnet
+ip neigh show
+```
+
+For AP-side Wi-Fi state on OpenWrt:
+
+```bash
+iwinfo phy0-ap0 assoclist
+hostapd_cli all_sta
+obuspa -c get Device.WiFi.AccessPoint.*.AssociatedDevice.*.SignalStrength
+```
+
+For monitor mode on a Pi 4, the onboard Broadcom radio needs `nexmon` for proper monitor mode. In practice, a separate USB Wi-Fi adapter is cleaner because one radio cannot comfortably stay connected and sniff at the same time.
+
+## LAN Check
+
+I also generated a LAN inventory for `192.168.1.0/24`. This is useful for the device inventory side of connectivity, but it does not prove anything about Wi-Fi signal.
+
+The scan found 11 active hosts. A few devices were worth identifying more carefully: unknown IoT vendors, ESP32-style devices, randomized MACs, and the ISP gateway.
+
+{{< details title="LAN inventory notes" closed="true" >}}
+
+```text
+LAN Check - 192.168.1.0/24
+Date: 2026-05-18
+Host: Raspberry Pi (192.168.1.18 on wlan0)
+Method: ARP-based discovery and OUI lookup. No port scanning performed.
+```
+
+| IP | Vendor | Likely device |
+|---|---|---|
+| `.1` | Shenzhen SDMC Technology | Gateway/router |
+| `.2` | ASRock Incorporation | Desktop PC |
+| `.3` | TP-Link Systems Inc | TP-Link device |
+| `.5` | Raspberry Pi Trading Ltd | Raspberry Pi |
+
+Hosts worth a closer look:
+
+1. `.11` Sichuan AI-Link - likely IoT ODM device.
+2. `.12` Espressif - probably ESP32 or a smart device.
+3. `.9` SJIT - uncommon OEM.
+4. `.1` SDMC gateway - check firmware, remote admin, UPnP, WPS, credentials.
+5. `.17` Versuni - smart appliance class.
+6. `.3` TP-Link - verify firmware.
+7. `.7` / `.16` randomized MACs - probably normal phones/laptops, but still identify them.
+
+Targeted scan if needed:
+
+```bash
+sudo apt-get install -y nmap
+sudo nmap -sV -sC -p- --script=safe 192.168.1.9 192.168.1.11 192.168.1.12 192.168.1.17
+```
+
+Network hygiene regardless of scan results:
+
+- Put IoT on a guest network/VLAN when possible.
+- Disable UPnP on the gateway.
+- Disable WAN-side remote admin.
+- Change default credentials.
+- Use Pi-hole or AdGuard Home for DNS visibility.
+- Diff `arp -an` periodically to spot new devices.
+
+{{< /details >}}
+
+## Wireshark, DNS, and TapMap
+
+Connectivity debugging needs tools at different layers:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wireshark" title="Wireshark" subtitle="Packet capture and protocol inspection" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pihole" title="Pi-hole" subtitle="DNS-level visibility for the LAN" >}}
+{{< /cards >}}
+
+Wireshark is for packets and conversations: DNS failures, TCP resets, TLS handshakes, HTTP behavior, DHCP, mDNS, NTP, SMB, and `.pcap` captures.
+
+DNS tools such as Pi-hole, AdGuard Home, and Unbound answer a different question: what names are devices resolving, and which clients are talking to which services?
+
+TapMap is another useful local view for processes and traffic on the host:
+
+```bash
+docker run --rm \
+  --network host \
+  --pid host \
+  -v ~/tapmap-data:/data \
+  -e TAPMAP_IN_DOCKER=1 \
+  olalie/tapmap:latest
+```
+
+Then open:
+
+```text
+http://localhost:8050/
+```
+
+{{< details title="Optional Wireshark setup and filters" closed="true" >}}
+
+```bash
+git clone /Home-Lab
+cd .Home-Lab/z-homelab-setup/evolution
+sudo docker compose -f 2605_docker-compose.yml up -d wireshark
+```
+
+Useful Wireshark filters:
+
+```text
+ip.addr == 192.168.1.50
+tcp.port == 443
+dns
+http
+```
+
+Packet captures can contain sensitive metadata and sometimes application data. Treat saved `.pcap` files as confidential.
+
+{{< /details >}}
+
+## EasyMesh Direction
+
+EasyMesh is interesting because it standardizes multi-AP coordination.
+
+A controller coordinates one or more agents, and the mesh shares client metrics such as RSSI, capabilities, and load.
+
+That matters for TR-181 because EasyMesh data can surface under paths such as:
+
+```text
+Device.WiFi.DataElements.*
+```
+
+Could I deploy an EasyMesh agent on a Pi? Yes, but the practical caveats are real:
+
+- One radio is awkward because EasyMesh wants fronthaul and backhaul roles.
+- A Pi 4 onboard Wi-Fi radio is not a great long-running AP.
+- A USB Wi-Fi adapter makes the lab more realistic.
+- A controller is still needed; for learning, the same OpenWrt/prplMesh box can run both controller and agent.
+- Consumer mesh kits usually will not interoperate cleanly with a custom prplMesh lab.
+
+The most useful lab setup would be:
+
+1. Spare Pi or small router running OpenWrt.
+2. USB Wi-Fi adapter acting as AP.
+3. `bbfdm + obuspa` exposing TR-181/USP.
+4. `prplMesh` running controller and agent roles.
+5. Pi-hole/AdGuard providing DNS visibility.
+
+## Self-Hosting Updates
+
+These notes are not the core of the connectivity post, but they belong to the same maintenance window. I am keeping them collapsed so they remain findable without taking over the article.
+
+{{< details title="Matrix, Nextcloud, rclone, and media restore notes" closed="true" >}}
+
+Matrix Conduit:
+
+```bash
+cd ./Home-Lab/matrix-conduit
+nano conduit.toml
+docker compose up -d
+curl -fsS https://what.everdomain.com/_matrix/client/versions
+```
+
+Nextcloud sync instance:
+
+```bash
+df -hT /mnt/data2tb /mnt/data1tb /mnt/backup2tb
+
+sync_root="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
+sync_pass="$(openssl rand -base64 24 | tr -d '=+/' | cut -c1-16)"
+
+set_var() {
+  key="$1"
+  value="$2"
+  if grep -q "^${key}=" .env; then
+    sed -i "s|^${key}=.*|${key}=${value}|" .env
+  else
+    printf '\n%s=%s\n' "$key" "$value" >> .env
+  fi
+}
+
+set_var MYSQL_ROOT_PASSWORD_SYNC "${sync_root}"
+set_var MYSQL_PASSWORD_SYNC "${sync_pass}"
+set_var MYSQL_DATABASE_SYNC "nextcloud_sync"
+set_var MYSQL_USER_SYNC "nextcloud_sync"
+set_var MYSQL_HOST_SYNC "nextclouddb-sync"
+set_var NEXTCLOUD_TRUSTED_DOMAINS_SYNC "http://192.168.1.2:8069"
+
+sudo docker compose -f 2605_docker-compose.yml up -d nextclouddb-sync nextcloud-app-sync
+```
+
+Cloudflare WAF reminder:
+
+```bash
+curl -X PATCH \
+  "https://api.cloudflare.com/client/v4/zones/some/rulesets/thing/rules/secret" \
+  -H "Authorization: Bearer $CF_AUTH_TOKEN" \
+  -d '{
+    "action": "block",
+    "description": "allow countries",
+    "enabled": true,
+    "expression": "(http.host eq \"whatever.domain.com\" and not ip.src.country in {\"ES\" \"CH\"})",
+    "id": "sth"
+  }'
+```
+
+Rclone restore:
+
+```bash
+time rclone copy \
+  "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/Musica" \
+  "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Musica" \
+  --progress
+
+rclone copy \
+  "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/Z_FOTOS" \
+  "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Z_FOTOS" \
+  --progress \
+  --transfers 4 \
+  --checkers 8
+
+rclone check \
+  "googledrive:x300-backup/data2tb/Z_BackUP_HD-SDD/Z_FOTOS" \
+  "/mnt/data2tb/restored/Z_BackUP_HD-SDD/Z_FOTOS" \
+  --one-way
+```
+
+Osmo/Jellyfin media copy:
+
+```bash
+mkdir -p ~/osmo-internal ~/osmo-sd
+sudo mount /dev/sdc ~/osmo-internal
+sudo mount /dev/sdd ~/osmo-sd
+
+rsync -av --info=progress2 \
+  --include='*/' \
+  --include='*.MP4' \
+  --include='*.mp4' \
+  --exclude='*' \
+  "$HOME/osmo-internal/" \
+  "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/"
+
+rsync -av --info=progress2 \
+  --include='*/' \
+  --include='*.MP4' \
+  --include='*.mp4' \
+  --exclude='*' \
+  "$HOME/osmo-sd/" \
+  "/home/jalcocert/Desktop/YoutubeVideos/OsmoAction/"
+```
+
+{{< /details >}}
+
+## What I Learned
+
+- The Pi's own Wi-Fi metrics are easy to collect with `iwconfig`, `iw`, and scan/survey commands.
+- TR-471 style testing gives a better view than a simple speed test because it exposes loss and latency under load.
+- `nmap` is useful for LAN inventory, not Wi-Fi quality.
+- Per-client RSSI is AP-side truth. The router/AP is the device to query or replace.
+- OpenWrt becomes much more valuable when the device is acting as AP/gateway, not merely as another Wi-Fi client.
+- TR-181 is a useful schema, but it only becomes operationally rich when backed by real system state through something like `bbfdm`.
+
+## What I Would Do Differently
+
+I would separate future work into three smaller artifacts:
+
+1. A repeatable `pi-connectivity` script for local Wi-Fi, DNS, LAN, and latency checks.
+2. A router/AP lab note for OpenWrt, `bbfdm`, `obuspa`, and EasyMesh.
+3. A monthly self-hosting update post for Matrix, Nextcloud, rclone, and media maintenance.
+
+That split keeps the public post readable while still preserving the lab notebook trail.
+
+## Durable Takeaways
+
+- Connectivity observability starts at the LAN edge, but the richest Wi-Fi data lives on the AP.
+- A Pi as a station is a good measurement client, not a full network observability source.
+- TR-181 is most useful when a real agent maps it to live router state.
+- DNS observability and packet capture solve different layers of the same home-network debugging problem.
+- LAN inventory should be periodic, because self-hosted networks quietly accumulate devices.
+
+## Conclusion
+
+The current home network looks healthy from the Pi's point of view: strong 5 GHz RSSI, clean channel selection, and usable throughput.
+
+The weak spot is observability, not raw connectivity.
+
+The next serious step is not more ad hoc commands on the Pi. It is an AP/router-side lab: OpenWrt with `bbfdm`, `obuspa`, and possibly `prplMesh`, so the network can expose per-client Wi-Fi and LAN state through a standard model instead of scattered one-off checks.
+
+```md
+have a look to pi-connectivity and to tr471-vs-iperf3  wifi-tr181-notes.md and lan-check.md, do you think those repos and markdown provide some value for connectivity checks for a homelab?
+```
+
+```sh
+cd /home/jalcocert/selfhosted-connectivity
+make setup
+make snapshot
+make report
+make server #http://192.168.1.18:8080/
+```
+
+Test this:
+
+  cd /home/jalcocert/selfhosted-connectivity
+  git pull
+  make setup
+make devices-init  selfhosted-connectivity devices init
+make devices-list  selfhosted-connectivity devices list
+  make snapshot
+  make report
+  sed -n '1,140p' data/reports/latest.md
+  make server
+
+  Then open:
+
+  http://192.168.1.18:8080
+
+  If devices.yaml already exists, devices init will refuse to overwrite it. Use this only if you want to reset it:
+
+
+```sh
+make performance
+```
+
+![alt text](/blog_img/data-experiments/connectivity-pi.png)
+
+ git pull
+  make setup
+  make install-systemd-user
+  make scheduler-status
+
+  Run one scheduled snapshot immediately:
+
+  make scheduler-run
+  make scheduler-logs
+
+  Default interval is 15 minutes. To install with a different interval:
+
+  SELFHOSTED_CONNECTIVITY_INTERVAL=30min make install-systemd-user
+
+  This uses systemctl --user, installs under ~/.config/systemd/user/, and does not require root.
+
+
+```sh
+git init && git add . && git commit -m "Initial commit: Starting " && gh repo create connectivity-checks --private --source=. --remote=origin --push
+#git clone https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
+
+#git clone
+
+make install && make dev #requires .env.local
+```
+
+i have created this repo at forgejo for you, you have ssh access to it and can push the changes: http://192.168.1.2:3034/hermesagent/selfhosted-connectivity.git can we
+  differenciate in features that the raspberry pi will be able to run (or the homelab where this project will be tested) versus the ones that it will be a server and a local client
+  will need to interact with it?
+
+## FAQ
+
+### Can `nmap` show Wi-Fi signal for other devices?
+
+No. `nmap` works at the IP/service layer. RSSI, band, bitrate, and noise are radio-layer properties. Use the AP/router, monitor mode, or each client device.
+
+### What is the difference between SSID and BSSID?
+
+SSID is the network name. BSSID is the MAC address of a specific AP radio. One SSID can have several BSSIDs across bands, mesh nodes, or enterprise APs.
+
+### Why does the AP know client RSSI better than the Pi?
+
+RSSI is measured by the receiving radio. The Pi knows how loudly it hears the AP. The AP knows how loudly it hears each client. For client diagnostics, the AP-side number is usually the useful one.
+
+### What is DFS, and why is channel 100 interesting?
+
+DFS channels in 5 GHz are shared with radar systems. They can be less crowded, but the AP must move if radar is detected. Channel 100 was useful here because nearby lower 5 GHz channels looked busier.
+
+### Would OpenWrt on the Pi add more TR-181 fields?
+
+Yes, especially with `bbfdm + obuspa`, but the role matters. A Pi as a Wi-Fi station still cannot report AP-side client RSSI. A Pi or router acting as AP/gateway exposes much more useful network state.
+
+### Can I run an EasyMesh agent?
+
+Yes, with OpenWrt/prplMesh, but a practical lab wants at least one good USB Wi-Fi adapter and a controller. Running both controller and agent on the same lab box is fine for learning.
+
+### Pi-hole, AdGuard, or Unbound?
+
+They solve DNS visibility and resolution, not radio quality. Pi-hole or AdGuard Home are good for seeing what devices resolve. Unbound is useful when you want local recursive DNS behavior.
+
+## Related Notes
+
+- [Connectivity observability starts at the LAN edge](/notes/connectivity-observability-starts-at-the-lan-edge/)
+- [Self-hosted servers need periodic inventory](/notes/self-hosted-servers-need-periodic-inventory/)
+- [DNS is privacy infrastructure](/notes/dns-is-privacy-infrastructure/)
+- [Backups are recovery design, not storage](/notes/backups-are-recovery-design-not-storage/)
+- [Media servers need organization before more storage](/notes/media-servers-need-organization-before-more-storage/)
+
+## References
+
+- Broadband Forum: <https://www.broadband-forum.org/>
+- TR-181 spec page: <https://www.broadband-forum.org/technical/download/TR-181_Issue-2.html>
+- TR-369 / USP overview: <https://usp.technology/>
+- obuspa: <https://github.com/BroadbandForum/obuspa>
+- obudpst: <https://github.com/BroadbandForum/obudpst>
+- bbfdm: <https://dev.iopsys.eu/iopsys/bbfdm>
+- nexmon: <https://github.com/seemoo-lab/nexmon>
+- OpenWrt: <https://openwrt.org/>
+- prplMesh: <https://github.com/prplfoundation/prplMesh>
+- TapMap: <https://github.com/olalie/tapmap>
+- TapMap docs: <https://olalie.github.io/tapmap/>
+- OpenWrt on Raspberry Pi: <https://raspberrytips.com/openwrt-on-raspberry-pi/>
+
+## Raw Session Notes Archive
+
+The article above is the cleaned version. 
+
+This collapsed archive keeps the original raw session notes from the pre-cleanup Git version so the lab notebook material is still available without cluttering the main read.
+
+{{< details title="Original raw session notes" closed="true" >}}
+
+````md
+---
+title: "Selfhosted Connectivity"
 date: 2026-06-11
 draft: false
 tags: ["HomeLab","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471"]
@@ -442,6 +1144,7 @@ Nice data. The survey grep returned nothing (likely because iw on your driver fo
   reference Agent.
 
   It gives you a real Agent process that:
+
   1. Exposes a TR-181 data model
   2. Talks USP over MQTT/WebSocket to a Controller  3. Has a CLI (obuspa -c get Device.) for local inspection
 
@@ -451,6 +1154,7 @@ Nice data. The survey grep returned nothing (likely because iw on your driver fo
 
   1. The agent + mapper stack (software that fills TR-181 paths from live system state)
   2. The hardware sources (what data even exists to map)
+  
   ---
   1. OpenWrt is the natural home for serious TR-181 stacks
   Stock OpenWrt has no TR-181, but it has the right substrate for one — uci (config), ubus (IPC), netifd (interface abstraction), hostapd (Wi-Fi events). The Broadband Forum / iopsys / prpl ecosystems plug straight into
@@ -1242,3 +1946,6 @@ Then Jellyfin should see them under its existing `/data/tvshows` library after a
 
 
 ## FAQ
+````
+
+{{< /details >}}

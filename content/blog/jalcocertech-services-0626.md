@@ -12,6 +12,7 @@ url: 'jalcocertech-services-snapshot'
 
 The last piece to combince me that this is enough.
 
+https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md
 
 
 **Intro**
@@ -139,17 +140,31 @@ Santi, this one goes for you to.
 I mean, the new skill that i got:
 
 ```sh
-make docker-build
-make docker-prod-up
+#make docker-build
+#make docker-prod-up
+make docker-prod-refresh #make docker-refresh
 ```
 
 ![alt text](/blog_img/entrepre/webify/webaudits.png)
+
+For me stays the lead contact ofc:
+
+```sh
+make pb-latest-leads
+#docker exec auditmagnet-app bash -lc 'cd /app && AUDIT_REPORT_ROOT=/tmp/auditmagnet-webaudit-container ./seo-audit.sh https://webaudit.jalcocertech.com'
+docker exec auditmagnet-prod bash -lc 'cd /app && AUDIT_REPORT_ROOT=/tmp/auditmagnet-selftest SKIP_LINKS=false LINK_CHECK_METHOD=lychee-docker ./audit-master.sh │ https://webaudit.jalcocertech.com'
+```
 
 `https://cabesota.com/`
 
 ![alt text](/blog_img/entrepre/webaudit.png)
 
-The proof that you can make money with a shitty landing: `https://genkinfy.com/#faq`
+The proof that you can make *(a lot of)* money with a shitty landing: 
+
+{{< details title="See the example audit" closed="true" >}}
+
+`https://genkinfy.com/#faq`
+
 
 ```md
 make audit-full-fast URL=https://genkinfy.com/
@@ -192,19 +207,42 @@ LINK_CHECK_TIMEOUT_SECONDS=0 make audit-full URL=https://fossengineer.com
 LINK_CHECK_TIMEOUT_SECONDS=0 ./linkcheck-audit.sh https://fossengineer.com docker
 ```
 
+
+{{< /details >}}
+
+
 For **social previews**, use:
 
-  - https://www.opengraph.xyz/url/https%3A%2F%2Febooks.jalcocertech.com
-  - `https://cards-dev.twitter.com/validator` (after deploy)
+- https://www.opengraph.xyz/url/https%3A%2F%2Febooks.jalcocertech.com
+- `https://cards-dev.twitter.com/validator` (after deploy)
 
 
-This can be a good addition going forward:
 
-* https://github.com/firecrawl/fireplexity
+I also added some smoke tests to the product:
 
-> Open Source Perplexity like AI search engine with real-time citations, streaming responses, and live data powered by Firecrawl
+```sh
+#cd ./poc_webs_magnets
+make pb-smoke
+make prod-smoke
+make header-check
+#make pb-latest-leads
+```
 
-AI search engine with web, news, and images. You will need firecrawl and groq Apis.
+Ofc, [also skills](https://github.com/JAlcocerT/poc_webs_magnet/tree/master/.agents/skills):
+
+```sh
+/auditmagnet-stack
+/dog-food
+```
+
+If you wonder, you can also use uptime kuma or kener `http://192.168.1.2:3001/dashboard/6` as presented:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
 
 ##### Codex CLI WebAudit to Report
 
@@ -214,11 +252,23 @@ But hey, if all the goodies are happening within a internal CLI and there is a `
 
 cant that be passed to a one time codex prompt with a skill that generates a nice one pager branded report?
 
+using a skill?
+
+Dont really see why not.
+
 * https://platform.openai.com/usage
 
 {{< cards >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="PoC Web Magnet Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/poc/tree/main/web-audits" title="Web Audit PoC BluePrint ↗" icon="github" >}}
 {{< /cards >}}
+
+
+```sh
+#git clone https://github.com/JAlcocerT/poc #/tree/main/web-audits
+cd ./poc/web-audits
+
+```
 
 
 ### Productized Services
@@ -245,6 +295,11 @@ Now, I have:
 ```sh
 
 ```
+
+
+#### RevOps / GTM
+
+
 
 ### The BEST - DFY
 

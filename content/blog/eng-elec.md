@@ -1,6 +1,6 @@
 ---
 title: "Electr 101"
-date: 2026-06-20
+date: 2026-06-29
 draft: false
 tags: ["Electronics","Diode","PySpice","KiCad-CLI"]
 description: ''

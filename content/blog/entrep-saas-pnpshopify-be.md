@@ -241,13 +241,13 @@ graph
 
 Having several **public services** with a backend means that you have to be responsible for their uptime: *proving you can deliver!*
 
-1. https://webaudit.jalcocertech.com/
+1. `https://webaudit.jalcocertech.com/`
 
-2. https://genbi.jalcocertech.com/
+2. `https://genbi.jalcocertech.com/`
 
-3. https://realestate.jalcocertech.com/
+3. `https://realestate.jalcocertech.com/`
 
-4. https://slubnechwile.com/
+4. `https://slubnechwile.com/`
 
 I wanted to monitor all those automatically with my x300.
 
