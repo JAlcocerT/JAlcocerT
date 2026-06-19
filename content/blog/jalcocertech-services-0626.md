@@ -435,6 +435,30 @@ I took all the goodies from the github and forgejo repos: *2D/3D*
 
 ## Conclusions
 
+I cancelled `https://app.fireflies.ai/notebook/all` for a custom `https://recorder.google.com`
+
+Also, finally got [the dron exam](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#about-dron-regulations) ready :)
+
+![alt text](/blog_img/dron/a1a3.png)
+
+These might be interesting for you: https://uav.pansa.pl/pilot-profile
+
+* `https://www.pansa.pl/dronetower`
+* `https://uav.pansa.pl/dashboard`
+* `https://ulc.gov.pl/drony/informacje-ogolne/czesto-zadawane-pytania-faq`
+* `https://ulc.gov.pl/prawo/krajowe/ustawa-prawo-lotnicze`
+* `https://e2.aviationreporting.eu/reporting`
+* `https://ulc.gov.pl/` and `https://elearning.uav.pansa.pl/`
+* `https://www.easa.europa.eu/en/domains/civil-drones/naa`
+* ~~`https://drony.ulc.gov.pl/`~~ --> `https://drony.gov.pl/`
+* https://dronemap.pansa.pl/ and `checkin.pansa.pl` which is now https://drony.gov.pl/drone-tower
+
+
+
+The oa5 weights 146g, so i can build sth of 100g to carry it - aiming for Open Category :)
+
+Want some goodies?
+
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="The power to DIY - via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks that enable you to create" >}}

@@ -567,7 +567,9 @@ uv run f1_q3_short.py #Interactive Q3 animation video (15s Short)
 ```
 
 
-14. Twitter / X powered by pystocks / stonks / libreportfolio.
+14. Twitter / X powered by PyStocks / stonks / libreportfolio.
+
+`https://www.interactivebrokers.com/en/trading/ibkr-desktop-download.php`
 
 The continuation of the [programmatic Twitter API interaction](https://jalcocert.github.io/JAlcocerT/interesting-apis/#twitter): `http://x-api-tweet-creator:5000`, graficas...Data In Motion etc
 
@@ -774,6 +776,10 @@ xargs -0 awk '
 ### Outro
 
 #### Quotes
+
+Trading all risk/volatility is selling the tail probability of bigger success
+
+> How do many still complain about no upside when they have traded fully the upside for a 'risk free' promise?
 
 Founders write strategy decks, ship nothing. Dont be a founder.
 
