@@ -1,5 +1,5 @@
 ---
-title: "Aerospace 101"
+title: "Aerospace 101 x DIY Drone"
 date: 2026-06-28
 draft: false
 tags: ["MBSD","Electronics","RC","Drons vs FPV","IoT","Propulsion"]

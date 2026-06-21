@@ -1,6 +1,6 @@
 ---
 title: "[Energy Solutions] Insulation Intelligence in the AI era"
-date: 2026-06-09
+date: 2026-06-16
 draft: false
 tags: ["IoT x DHT22 x MLX90614","MQTT x EMQx","ESP-Now","JAlcocerTech Leads","Arduino-CLI"]
 description: 'Solving Boundary conditions with IoT (ESP32 and PicoW). Blender x building shadows is possible '

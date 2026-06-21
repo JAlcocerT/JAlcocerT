@@ -2,8 +2,8 @@
 title: "Electr 101"
 date: 2026-06-29
 draft: false
-tags: ["Electronics","Diode","PySpice","KiCad-CLI"]
-description: ''
+tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket"]
+description: 'The electronics you can learn for free now x Building a custom FPV Drone.'
 url: 'electr-diode'
 math: true
 ---
