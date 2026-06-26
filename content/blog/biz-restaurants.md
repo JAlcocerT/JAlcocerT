@@ -7,6 +7,7 @@ description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranea
 url: "webs-for-restaurants"
 ---
 
+https://github.com/karanshukla/openresto
 
 **TL;DR**
 

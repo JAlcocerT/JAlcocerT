@@ -146,7 +146,13 @@ make cost-overlay-data
 
 ## FAQ
 
+https://github.com/mortennordbye/homelab
+
 ### Other Trip Apps
+
+* https://github.com/mauriceboe/TREK
+
+> A self-hosted travel/trip planner with real-time collaboration, interactive maps, PWA support, SSO, budgets, packing lists, and more.
 
 * https://github.com/itskovacs/trip
 

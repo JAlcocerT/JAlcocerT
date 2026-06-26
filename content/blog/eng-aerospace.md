@@ -1,6 +1,6 @@
 ---
 title: "Aerospace 101 x DIY Drone"
-date: 2026-06-28
+date: 2026-06-25
 draft: false
 tags: ["MBSD","Electronics","RC","Drons vs FPV","IoT","Propulsion"]
 description: 'What are aerospace engineers having in mind?'

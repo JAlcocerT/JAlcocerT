@@ -1,6 +1,6 @@
 ---
 title: "SelfHosted Data Analytics"
-date: 2026-06-29T23:20:21+01:00
+date: 2026-07-29T23:20:21+01:00
 draft: false
 tags: ["ADK vs LangChain","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql","Malloy DSL","Semantics","DSL"]
 description: 'Selfhosting D&A Tools. With WrenAI, Rill and Vanna.'
