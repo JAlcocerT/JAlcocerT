@@ -36,7 +36,40 @@ Wondering about [buying a car](https://jalcocert.github.io/JAlcocerT/buying-car-
 
 ### AC
 
-### Modelling
+### Modelling Electrical Engines
+
+Is the classical R-L model enough?
+
+enough for what, right?
+
+These are not powered by slider cranks and powerful combustions
+
+But arent they simple, beautiful, elegant and massively efficient?
+
+#### AC Engines
+
+
+
+
+#### DC Engines
+
+These are the kind of motors propelling your [DJi Tello Dron](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/).
+
+Yea, the same for which I was recently making a [nicer desktop app](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter) with computer vision plugged in.
+
+```sh
+#git clone /dron
+cd ./dron
+uv sync
+uv run main.py
+```
+
+<!-- {{< youtube "nNMUY_GUw9s" >}} -->
+
+Yep, [private video](https://youtu.be/nNMUY_GUw9s) :)
+
+
+
 
 #### The L-R
 

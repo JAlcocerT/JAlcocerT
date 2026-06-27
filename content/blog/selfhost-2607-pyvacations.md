@@ -142,6 +142,19 @@ make cost-overlay-data
 
 ![alt text](/blog_img/entrepre/tripplanner.png)
 
+### My checklist before travelling
+
+
+```sh
+
+```
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Software for trips far from home" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard with Hetzner as VPS" image="/blog_img/apps/gh-jalcocert.svg" subtitle="OoO days after a wedding? VPN Setup" >}}
+{{< /cards >}}
+
+
 ---
 
 ## FAQ

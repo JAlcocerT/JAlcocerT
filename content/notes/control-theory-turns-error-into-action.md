@@ -1,6 +1,6 @@
 ---
 title: "Control theory turns error into action"
-date: 2026-07-01
+date: 2026-08-01
 tags: ["control-theory", "pid", "simulation"]
 description: "A controller is useful because it converts measured error into corrective action over time."
 ---

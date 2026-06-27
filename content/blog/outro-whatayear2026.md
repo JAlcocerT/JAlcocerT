@@ -13,9 +13,12 @@ https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktow
 
 **TL;DR**
 
-Have the [last 3 years](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/) been 9?
+Have the [last 3 years](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/) been...9?
 
 **Intro**
+
+Coming from [last year review](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/), with the habit i started [some time back](https://jalcocert.github.io/JAlcocerT/blog/summary20/).
+
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/" title=" | Post ↗" >}}
@@ -60,23 +63,15 @@ and feedback to the lead engine.
 
 
 
-0. Audio TTS/S2T
+0. Audio TTS/S2T: among all i tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/)
 
+1. Delivery Analytics
 
+2. Promote in subreddit to get feedback?
 
-
-0. Delivery Analytics
-
-
-0. Promote in subreddit to get feedback?
-
-
-0. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> ebook
+3. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> [D&A ebook](https://ebooks.jalcocertech.com/books/dna/)
 
 <!-- ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png) -->
-
-
-
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
@@ -89,22 +84,20 @@ But I Just continued here.
 
 The same blog as last year, public and even clonable :)
 
-
 People are using these platforms to do so: *and you have to place your email for later use*
 
 * `https://webinarjam.com/`
 
-0. Improved FOSS from blog to doc like.
+0. [Improved FOSS](https://fossengineer.com/apps/) from blog to doc like.
 
 Multilanguage and all that stuff. 
 
-Still as HUGO.
+Still *(and will be kept)* as HUGO.
 
 ```sh
 dig fossengineer.com any
 #ping fossengineer.com
 ```
-
 
 0. Talking about Home-Lab and selfhosting: I keep admiring the work that `selfh.st` puts weekly
 
@@ -175,26 +168,26 @@ Account for the bast amount of silos that there are in every industry that can b
   {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/). A Success Story!.
+0. Creating a [Custom **Real Estate Agency** with RAG ChatBoT](https://jalcocert.github.io/JAlcocerT/custom-re-rag/). A [Success Story](https://youtu.be/bCMs02nL2O4)!.
 
 Another example of why you need to know the business game you are playing.
 
-Build what it makes sense to build.
+> Build what it makes sense to build.
 
 Consider if you are supply or demand constrained!
 
-Then prospect your clients and create a proper offer:
+Then, prospect your clients and create a proper offer:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/custom-re-rag" title="Custom Real Estate WebApp with editor, scrapper and RAG ChatBot ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/moi-realestate-pro-astro-bot" title="Real Estate x Astro x ChatBot ↗" icon="github" >}}
 {{< /cards >}}
 
-No effort to get the right clients = dont complain and learn.
+> No effort to get the right clients = dont complain and learn.
 
 0. I did not know that **creating an/N ebook/s** was that simple.
 
-The captured knowledge on these [blog posts](https://jalcocert.github.io/JAlcocerT/blog/) and [docs](https://jalcocert.github.io/JAlcocerT/docs/) into ebooks *markdown driven* anyone can use for quick DIY.
+The captured knowledge on these [blog posts](https://jalcocert.github.io/JAlcocerT/blog/) and [docs](https://jalcocert.github.io/JAlcocerT/docs/) into ebooks *markdown driven* anyone can use for quick DIY. [HERE](https://ebooks.jalcocertech.com/).
 
 One of the start doing goals from last year. 
 
@@ -237,7 +230,7 @@ deeper Power BI expertise, particularly in BI semantic model design and self-ser
 consumer analytics - fmcg - consumer insights
 -->
 
-Forget about MMM marketing analytics, personalized outreach is the next big thing.
+Forget about MMM marketing analytics, **personalized outreach** is the next big thing.
 
 If you are a data engineer with some imagination: *become a GTM engineer*.
 
@@ -247,14 +240,14 @@ Selfhost it, provide an AI driven COO or do D&A to cluster users for proper reco
 
 0. Tinkered with **new APIs**
 
-* https://github.com/agustinusnathaniel/pub-apis
-* https://publicapis.sznm.dev/
+* `https://github.com/agustinusnathaniel/pub-apis`
+* `https://publicapis.sznm.dev/`
 
 0. Data driven stories
 
-* https://viborc.com/
+* `https://viborc.com/`
 
-0. About Posthog: *I used it for the wedding thingy*
+0. About [Posthog](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/#posthog): *I used it for the wedding thingy*
 
 Another idea was: Post an ebook page post on IG, then, the web session will be recorded and a YT video can be made out of that
 
@@ -267,13 +260,11 @@ Another idea was: Post an ebook page post on IG, then, the web session will be r
 
 0. Web Analytics x Link Analytics: *GDPR compliant*
 
-I still go fo Umami for Web Analytics.
+I still go for [Umami](https://github.com/JAlcocerT/Home-Lab/tree/main/umami) for Web Analytics.
 
 But in case you need the link analytics:
 
-
 * https://jalcocert.github.io/JAlcocerT/t3-like-chat/#selfhosted-webanalytics
-
 * https://github.com/idhamsy/openshortlink
 
 > OpenShort.link is the all-in-one, open-source, serverless URL shortener. It runs 100% on Cloudflare and offers one-click installation.
@@ -443,7 +434,12 @@ But not in [matlab, nor octave](https://jalcocert.github.io/JAlcocerT/matlab-vs-
 
 Just pure Python.
 
-{{< youtube "3A6fIKeBTRo" >}}
+This includes [the bicycle project](https://jalcocert.github.io/JAlcocerT/3d-mbsd-bicycle/#real-time-bike-simulator-in-python)
+
+<!-- https://ereding.etsi.us.es/bibing/proyectos/abreproy/90128/
+https://youtu.be/0CLNWADDrtY -->
+
+{{< youtube "0CLNWADDrtY" >}}
 
 Migrated with Claude Code btw.
 
@@ -464,20 +460,31 @@ All as a code, with [CadQuery as the bridge](https://jalcocert.github.io/JAlcoce
 
 So what?
 
-You can know simulate full engine vibrations:
+You can now [simulate engine vibrations](https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/) fully as code:
 
 {{< youtube "1WzRJM8HVKg" >}}
 
-
-Oh, but ive done simulations not only for mechanisms.
+Oh, but ive done simulations not only for mechanisms: https://ebooks.jalcocertech.com/books/mechanism-analytics/
 
 12. Because ive also done electronical simulations
 
-All started with the prep work around electromagnetism and electronics 101 for the tomatoes experiment.
+All started with the prep work around electromagnetism and electronics 101 for [the tomatoes experiment](https://jalcocert.github.io/JAlcocerT/plants-101/#1-tomato-seeds-pomidor).
 
-I later continued expanding on electric motors
+With [the electromagnetism recap](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) required to understand [the EMF kickback](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#how-to-avoid-frying-an-esp32-due-to-kickback)
 
-13. And heat transfer ones
+I later continued expanding on [electric motors](https://jalcocert.github.io/JAlcocerT/electromagnetism-for-ac-dc-motors/)
+
+13. Oh...and [heat transfer](https://jalcocert.github.io/JAlcocerT/heat-transfer-ice/#the-master-equation-the-heat-equation) and [fluid mechanic ones](https://jalcocert.github.io/JAlcocerT/fluids/#the-governing-equations)
+
+<!-- 
+https://youtu.be/xycErOBk9mI 
+-->
+
+You can get to know [how the rays of sun](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#what-about-blender) will hit your building along the year
+
+{{< youtube "xycErOBk9mI" >}}
+
+and plug to that some [iot to measure heat transfer](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer)
 
 12. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and HUD video overlays.
 
@@ -633,7 +640,7 @@ I finally uploaded some from last year, just with youtube music:
 * [Goose Desktop](https://youtu.be/ZW5eEocyrTU) 
 * [GrowChief](https://youtu.be/in8uTdLhFqI)
 
-Others, from the vibe coding sessions: helped to bring quick demos to their related product landing.
+Others, from the vibe coding sessions: helped to bring [quick demos](https://youtu.be/WFi0LD8Ux4A) to their related product landing.
 
 17. I made **some animations** instead.
 
@@ -738,6 +745,7 @@ Trying for the first time the mac ecosystem was also interesting.
 
 3. [Big Data x IoT](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk)
 
+4. 
 
 99. Duckdb x motherduck
 
@@ -1050,7 +1058,7 @@ YT Shorts/Videos 4K: Ufolding Data / IoTrack
 YT - GoPro/DJI Telemtry Overlay Python
 * ~~PyStocks - Publish it on X/Reddit (?) ? RStocks Re-Bump?~~
 * LibrePortfolio.fyi (ES)
-* PyVacAItions // TripAdvAIsor
+* [PyVacAItions](https://jalcocert.github.io/JAlcocerT/py-vacations/#conclusions) // TripAdvAIsor
 * ~~Real Estate Inv Calculator (Streamlit & Reflex)~~
 * ~~Real Estate Paint Estimaitor with AI~~
 * ~~app lista negra (orlandos)~~

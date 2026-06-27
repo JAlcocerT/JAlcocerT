@@ -166,6 +166,8 @@ uv run main.py --keyboard
 #python3 main.py --no-animate
 ```
 
+{{< youtube "0CLNWADDrtY" >}}
+
 Keyboard Controls (with `--keyboard`)
 
 | Key | Action |
@@ -501,3 +503,4 @@ v0 = [10, 0, 0, 0, 0, 0, 0, 10/0.34, 10/0.34]  # 10 m/s forward, wheels spinning
 
 ### References
 
+* https://ereding.etsi.us.es/bibing/proyectos/abreproy/90128/

@@ -2,7 +2,7 @@
 title: "Selfhosted Connectivity"
 date: 2026-06-17
 draft: false
-tags: ["HomeLab Open-Telemetry","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471"]
+tags: ["HomeLab Open-Telemetry","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471","iroh"]
 description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
 url: 'selfhosted-connectivity'
 ---
@@ -638,7 +638,19 @@ i have created this repo at forgejo for you, you have ssh access to it and can p
   differenciate in features that the raspberry pi will be able to run (or the homelab where this project will be tested) versus the ones that it will be a server and a local client
   will need to interact with it?
 
+---
+
 ## FAQ
+
+### Selfhosted networking tools
+
+1. https://github.com/n0-computer/iroh
+
+>  IP addresses break, dial keys instead. Modular networking stack in Rust. 
+
+2. [Wireshark](https://github.com/JAlcocerT/Home-Lab/tree/main/wireshark)
+
+3. [Selfhosted DNS post](https://jalcocert.github.io/JAlcocerT/private-dns-with-docker/)
 
 ### Can `nmap` show Wi-Fi signal for other devices?
 
@@ -1638,6 +1650,7 @@ A port scan is required for any of the above.
 - Power-cycle suspected IoT one at a time and watch which IP drops off (`arp -an`) to map IP → physical device.
 
 ### 2. Targeted, low-risk port scan
+
 Install nmap and scan only the unknowns / suspicious hosts:
 
 ```bash

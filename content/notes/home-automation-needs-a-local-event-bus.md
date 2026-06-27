@@ -1,6 +1,6 @@
 ---
 title: "Home automation needs a local event bus"
-date: 2026-07-10
+date: 2026-08-10
 tags: ["home-assistant", "iot", "homelab"]
 description: "Home automation works best when devices, sensors, and automations communicate through a reliable local layer."
 ---

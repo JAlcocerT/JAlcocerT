@@ -18,16 +18,53 @@ I saw a podcast on the beach and
 
 https://github.com/diodeinc/pcb
 
+---
 
 ## Conclusions
 
+https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#what-actually-happens-in-the-valve
 
 
 ---
 
 ## FAQ
 
+This \(\sigma(z) = \frac{1}{1 + e^{-z}}\) is an inline expression.
+
+then
+
+$$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
+
+more
+
+$$
+\begin{aligned}
+  \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
+  \nabla \cdot \mathbf{B} &= 0 \\
+  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
+  \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
+\end{aligned}
+$$
+
+$$
+\begin{aligned}
+  2x + 3 &= 7 \\
+  2x &= 4 \\
+  x &= 2
+\end{aligned}
+$$
+
+
+The logistic function:
+$$\sigma(z) = \frac{1}{1 + e^{-z}}$$
+
+The Fourier Transform:
+$$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
+
+
 ### IoT MQTT
+
+https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer
 
 
 So:
@@ -145,3 +182,16 @@ mosquitto_sub -h 127.0.0.1 -p 1883 -t 'pico/humidity/dht22' -v
 
 ### Tomatoes
 
+After [2-2.5 months of been planted](https://youtube.com/shorts/sCrMm5sLG-w), the [tomatoes](https://jalcocert.github.io/JAlcocerT/plants-101/#1-tomato-seeds-pomidor) started to take some other color than green.
+
+At 3 months, they went from [yellow shades to orange](https://youtube.com/shorts/_YBjNO8urfE):
+
+{{< youtube "_YBjNO8urfE" >}}
+
+### DC Boost vs Ram Pump
+
+If you [like analogies](https://jalcocert.github.io/JAlcocerT/fluids/#the-analogy), here you have a practical one between fluids and electronics.
+
+A DC boost does the oppositee of [a buck converter](https://jalcocert.github.io/JAlcocerT/electromagnetism-for-ac-dc-motors/#ac-vs-dc-power-transmission), it tries to rise DC voltage
+
+A ram pump

@@ -228,7 +228,7 @@ The ESP32 deepsleep mode and pushing every 60s instead of 5s made the same batte
 
 The DHT's are great, but they only measure ambient temperature. 
 
-We need the MLX90614 to measure the surface temperature of the wall, because that is what will determine the heat transfer from the wall to the inside. 
+We need [a MLX90614](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/) to measure the surface temperature of the wall, because that is what will determine the heat transfer from the wall to the inside. 
 
 Of course there is a lot of work on this topic, as you may guess:
 
@@ -238,7 +238,7 @@ https://github.com/JAlcocerT/poc/tree/main/iot-rpi-mlx
 cd ./poc/iot-rpi-mlx/
 ```
 
-> im levereging the public scripts for this sensor here
+> Im levereging the public [scripts for this sensor here](https://github.com/JAlcocerT/RPi/blob/main/Z_IoT/MLX90614-to-InfluxDB/Python2InfluxDB.py)
 
 
 ### And the final dashboard

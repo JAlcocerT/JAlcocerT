@@ -19,9 +19,9 @@ This is everything that I did (and what not) missed.
 
 ## Fluid Recap
 
-I tinkered a little bit with fluid mechanics again on this post.
+I tinkered a little bit with [fluid mechanics basics on this post](https://jalcocert.github.io/JAlcocerT/fluids/#the-governing-equations).
 
-All to get the ICE with a nicer model than the matlab one I had.
+All to get the ICE with [a nicer model](https://jalcocert.github.io/JAlcocerT/fluids/#volumetric-efficiency) than the matlab one I had.
 
 ## Propulsion
 

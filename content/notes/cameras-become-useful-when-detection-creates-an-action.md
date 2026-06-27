@@ -1,6 +1,6 @@
 ---
 title: "Cameras become useful when detection creates an action"
-date: 2026-07-01
+date: 2026-08-01
 tags: ["computer-vision", "homelab", "nvr"]
 description: "Object detection matters when it changes alerts, automation, storage, or decisions."
 ---

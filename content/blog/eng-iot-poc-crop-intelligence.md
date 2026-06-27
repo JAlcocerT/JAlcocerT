@@ -10,7 +10,7 @@ math: true
 
 **TL;DR**
 
-I just wanted to plant tomatoes to stay away from the computer.
+I just wanted to [plant tomatoes](https://jalcocert.github.io/JAlcocerT/plants-101/#1-tomato-seeds-pomidor) to stay away from the computer.
 
 Then this happened...
 

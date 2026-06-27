@@ -1,5 +1,5 @@
 ---
-title: "...2025"
+title: "About 2025"
 date: 2025-12-29
 draft: false
 tags: ["Year-Review","FY25","D&A Tech Stack"]

@@ -7,7 +7,9 @@ description: "Inductive loads resist sudden current changes, which matters for m
 
 Electromagnetic actuators store energy in magnetic fields.
 
-That stored energy matters when a circuit switches. Motors, relays, and solenoids resist sudden current changes, and the resulting voltage spike can damage control electronics if there is no safe path for the energy.
+That stored energy matters when a circuit switches. 
+
+Motors, relays, and solenoids resist sudden current changes, and the resulting voltage spike can damage control electronics if there is no safe path for the energy.
 
 For tinkerers, Faraday and Lenz are not abstract laws. They explain why inductive loads need protection.
 

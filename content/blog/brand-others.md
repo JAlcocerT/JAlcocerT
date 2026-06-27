@@ -1,6 +1,6 @@
 ---
 title: "How to create Brands "
-date: 2026-07-20
+date: 2026-08-20
 draft: false
 tags: ["PoC 104","Brand HUBs"]
 description: 'JAlcocerTech'

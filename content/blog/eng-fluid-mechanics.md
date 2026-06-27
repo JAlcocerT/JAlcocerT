@@ -52,7 +52,9 @@ That is a clean assumption for studying crankshaft balance and NVH, but it hides
 
 The answer is fluid mechanics. 
 
-Specifically, the thermodynamics of a gas being compressed and then ignited. Fluid mechanics is the discipline that lets you compute $P(\theta)$ — the cylinder pressure as a function of crank angle — rather than just assuming it.
+Specifically, the thermodynamics of a gas being compressed and then ignited. 
+
+Fluid mechanics is the discipline that lets you compute $P(\theta)$ — the cylinder pressure as a function of crank angle — rather than just assuming it.
 
 The conceptual shift mirrors the one from MBSD to FEM:
 
@@ -118,6 +120,7 @@ I mean...when I was doing this kind of things in [matlab](https://jalcocert.gith
 
 But similarly as I did with [the bike simulator](https://jalcocert.github.io/JAlcocerT/cycling-and-the-4-bars-mechanism/#from-concepts-to-equations), it is time to bring them to python.
 
+Isnt it nice to see [the volumetric efficiency interactively](https://jalcocert.github.io/JAlcocerT/fluids/#volumetric-efficiency)?
 
 {{< callout type="info" >}}
 The [heat/combustion model](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-mcia-heattransfer.md) is very important to improve [the initial model from my studies](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-course-summary.md)
@@ -286,14 +289,13 @@ In real engineering, these analogies often collide. Think of a **Liquid Cooling 
 3.  **The Pump** provides the "Voltage" (Pressure) to overcome the "Resistance" (Narrow tubes).
 4.  **The Radiator** acts as a "Transformer," transferring the "Current" from the fluid system into the air.
 
-### The Limits of the Analogy
+#### The Limits of the Analogy
 
 While the "math" matches up beautifully for **Laminar Flow** (smooth water), it breaks down once the fluid becomes **Turbulent**. 
 
 *   In electricity, $V=IR$ is almost always a straight line (linear).
 *   In fluids, if you double the flow, the pressure required might quadruple (non-linear).
 
-Does adding the "Pressure" and "Pipes" layer make the concept of Heat Resistance feel more like a physical "obstacle" to you?
 
 ### Tools
 

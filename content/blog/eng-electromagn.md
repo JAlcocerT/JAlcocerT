@@ -16,44 +16,6 @@ Before [tinkering with electronics](https://jalcocert.github.io/JAlcocerT/electr
 
 Lately, I was getting surprised on [how neccesary a Diode is](https://jalcocert.github.io/JAlcocerT/electronics-101/#conclusions) to avoid EMF blowing up such systems.
 
-This \(\sigma(z) = \frac{1}{1 + e^{-z}}\) is an inline expression.
-
-then
-
-$$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
-
-more
-
-$$
-\begin{aligned}
-  \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
-  \nabla \cdot \mathbf{B} &= 0 \\
-  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
-  \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-  2x + 3 &= 7 \\
-  2x &= 4 \\
-  x &= 2
-\end{aligned}
-$$
-
-To ensure each of your original equations sits on its own line while maintaining the proper mathematical formatting, here is the corrected version. 
-
-I have separated the inline expression into its own block and used the `aligned` environment for the Maxwell equations to keep them structured.
-
----
-
-### Corrected LaTeX Layout
-
-The logistic function:
-$$\sigma(z) = \frac{1}{1 + e^{-z}}$$
-
-The Fourier Transform:
-$$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
 
 Maxwell’s Equations:
 $$
@@ -65,15 +27,7 @@ $$
 \end{aligned}
 $$
 
-### What changed?
-
-* **Separation:** Each equation is now wrapped in its own set of `$$` delimiters.
-* **Alignment:** In the Maxwell section, the `\\` at the end of each line acts as a "hard return," and the `&` symbols ensure the equals signs stay perfectly stacked.
-* **Readability:** Breaking them up this way prevents the text from looking cluttered and makes each operation stand out.
-
-Are you planning to export these to a document or a Markdown editor?
-
-Maxwell’s equations are essentially the "Four Commandments" of electromagnetism. 
+**Maxwell’s equations** are essentially the "Four Commandments" of electromagnetism. 
 
 They describe how electric fields, magnetic fields, charges, and currents interact.
 
@@ -153,14 +107,15 @@ It states that the induced voltage will always try to keep the current flowing i
 
 ### What actually happens in the valve?
 
-Since the circuit is now open (disconnected), that generated energy has nowhere to go. The voltage across the switch or the motor terminals skyrockets—often to thousands of volts—to try and "push" the electricity through the air. 
+Since the circuit is now open (disconnected), that generated energy has nowhere to go.
+
+The voltage across the switch or the motor terminals skyrockets—often to thousands of volts—to try and "push" the electricity through the air. 
 
 * **The Spark:** If the voltage gets high enough, it ionizes the air, creating an **arc** (a literal spark) across the switch contacts.
 * **The Damage:** This "kickback" is why engineers put **flyback diodes** in parallel with motor coils. The diode gives that "kicked" current a safe path to loop back and dissipate slowly, rather than frying your electronics or pitting your switch contacts.
 
 In short: **Ampère’s Law** built the magnetic "momentum," and **Faraday’s Law** creates the violent "jolt" when you try to stop that momentum instantly.
 
-Does that help clarify why those sparks happen when you unplug high-power inductive loads?
 
 ## Applications
 
@@ -190,45 +145,13 @@ After sich simple project you can continue that [come back with more ad-ons](htt
 
 Like pluggint it to [a solar panel](https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/#solar-power--microcontrollers).
 
-### Electrical Engines
-
-Is the classical R-L model enough?
-
-enough for what, right?
-
-These are not powered by slider cranks and powerful combustions
-
-But arent they simple, beautiful, elegant and massively efficient?
-
-#### AC Engines
-
-
-
-
-#### DC Engines
-
-These are the kind of motors propelling your [DJi Tello Dron](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/).
-
-Yea, the same for which I was recently making a [nicer desktop app](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter) with computer vision plugged in.
-
-```sh
-#git clone /dron
-cd ./dron
-uv sync
-uv run main.py
-```
-
-<!-- {{< youtube "nNMUY_GUw9s" >}} -->
-
-Yep, [private video](https://youtu.be/nNMUY_GUw9s) :)
-
 ---
 
 ## Conclusions
 
-Beyond food and warm, do you have passions?
+Beyond food and warm, **do you have passions?**
 
-Some project that wanted to complete for long
+Got some projects that wanted to complete for long time...
 
 but not sure on the how?
 
