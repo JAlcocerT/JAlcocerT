@@ -2,8 +2,8 @@
 title: "People out there are really creative. Trackdays and Telemetry"
 date: 2025-02-24
 draft: false
-tags: ["Outro","Mechanics","Data Experiment","VK-162","Kalman Filter","Superset","BMW e36"]
-description: 'What I learnt after exchanging few words about car racing, canbus and telemetry.'
+tags: ["Outro","Mechanics","Data Experiment","VK-162","Superset","BMW e36"]
+description: 'What I learnt after exchanging few words about car racing and telemetry.'
 url: 'tinkering-telemetry-trackdays'
 ---
 
@@ -190,15 +190,3 @@ But I know you want something more and feel like you are in a **f1 car on board*
 {{< youtube "h8AN9rkedzk" >}}
 
 <!-- https://youtube.com/shorts/h8AN9rkedzk -->
-
----
-
-## FAQ
-
-**CANBUS VS ETHERLOOP**
-
-<!-- 
-https://www.youtube.com/watch?v=38H_8asDUfY
- -->
-
-{{< youtube "38H_8asDUfY" >}}

@@ -556,6 +556,13 @@ https://www.youtube.com/watch?v=fKz4TSvme6Q
 
 {{< youtube "fKz4TSvme6Q" >}}
 
+#### CANBUS VS ETHERLOOP
+
+<!-- 
+https://www.youtube.com/watch?v=38H_8asDUfY
+ -->
+
+{{< youtube "38H_8asDUfY" >}}
 
 ---
 
