@@ -1,5 +1,5 @@
 ---
-title: "Aerospace 101 x DIY Drone"
+title: "Aerospace 101 x DIY 1S Drone"
 date: 2026-06-25
 draft: false
 tags: ["Fluids","Electronics","Drons vs FPV","ERLS x Edge TX x Lua scripts","Propulsion"]
@@ -57,6 +57,56 @@ https://www.youtube.com/watch?v=cxQ-Ef4uIpw
 
 Now, im building a dron.
 
+### Building a DIY Dron
+
+
+Inspired [to get into FPV](https://www.youtube.com/watch?v=Xs_P7T9G49o) by these [summarized videos](https://github.com/JAlcocerT/poc/blob/main/yt-distil/docker-compose.yml):
+
+```sh
+cd ./poc/yt-distil
+make up #nano .env
+```
+
+
+{{% details title="How to Get Into FPV Drones (Beginners Guide) 🚀" closed="true" %}}
+
+Getting into FPV drones can be overwhelming, but starting with a budget-friendly setup is key. 
+
+Begin with a simple radio, a **tiny whoop quadcopter**, and analog goggles to practice flying in a simulator or indoors, minimizing costs and crashes.
+
+Key points:
+- FPV drones differ from cinematic drones; they require manual control and offer a more immersive flying experience.
+- Start with a budget radio like the Radio Master Pocket ELRS, priced around $75.
+- Use a simulator like Lift-Off (costing $10-20) to practice flying before using a real drone.
+- Tiny whoops are recommended for beginners; they are durable, cost around $100, and can be flown indoors.
+- Choose analog goggles for cost-effectiveness; the **Eachine 800D** is a popular beginner option at around $100.
+- Essential gear includes: **a radio, goggles, a tiny whoop, a charger, and batteries**.
+- Practice throttle control and camera angle adjustments to improve flying skills.
+- Always charge batteries properly and monitor voltage levels during flights.
+
+Notable quotes:
+- "This puts you on a roller coaster in three-dimensional space, and you're the pilot."
+- "Do yourself a favor: just go analog... it's not like you're gonna be filming crazy stuff in HD."
+
+Action items / takeaways:
+- Purchase a budget radio and a tiny whoop to start practicing.
+- Invest in analog goggles and a simulator for initial training.
+- Focus on practicing throttle control and navigating indoor spaces.
+
+{{% /details %}}
+
+
+
+> `http://192.168.1.2:8001/`
+
+{{< youtube "nuyB-qCQLR0" >}}
+
+
+{{< youtube "4nRgEmdwtJo" >}}
+
+
+---
+
 
 ## FAQ
 
@@ -86,7 +136,7 @@ These differences contribute to the potential for supercritical CO2 turbines to 
 
 ### Dron BOM
 
-1. RadioMaster Pocket ELRS ~ 70$
+1. RadioMaster Pocket ELRS ~ 70$ *I got this one by [selling my broken pixel 8pro](https://jalcocert.github.io/JAlcocerT/pixel-8-pro-tricks/)*
 
 {{% details title="Why the Pocket? 🚀" closed="true" %}}
 
@@ -260,7 +310,7 @@ In 2026, this usually means staying away from "locked" ecosystems like DJI and s
 
 * **Recommendation:** **RadioMaster Pocket (ELRS Version)**
 * **Why:** It runs **EdgeTX** (OSS Operating System) and uses **ExpressLRS** (OSS Protocol). It’s the most "OSS-compatible" radio for the price.
-* **Estimated Cost:** $65 – $75.
+* **Estimated Cost:** $75 – $85.
 * **Essential Mods:** Buy two high-quality **18650 Li-ion batteries** (e.g., Molicel P28A) separately, as they aren't usually included.
 
 #### The Aircraft (The DIY Tiny Whoop)
@@ -405,8 +455,42 @@ RC planes are fundamentally different from drones because they use **aerodynamic
 While you *can* technically put Betaflight on a plane, it is designed specifically for the physics of 4+ spinning rotors. For planes, pilots use different software (firmware):
 
 * **INAV:** This is the most popular choice for FPV planes. It’s a cousin of Betaflight but designed for "Fixed Wing" aircraft. It includes features Betaflight lacks, like **Auto-Launch** (you throw the plane and it flies itself until you take control) and **Cruise Mode** (it keeps the plane level and on course automatically).
+
 * **ArduPilot:** This is the "professional grade" software. It’s more complex but allows for total autonomy—you can program a 20km mission with waypoints and the plane will fly it and land itself.
+
 * **ELRS (The Radio Link):** Even though the internal software is different, you can use the same **ExpressLRS** radio and goggles you use for your BetaFPV drones to fly a plane.
+
+
+You’ve hit on the exact core debates of the DIY drone world! You understand the landscape perfectly.
+
+Let's break down how these firmware giants compare, and exactly how that 2.4GHz digital signal keeps your drone safely under your control.
+
+
+Think of these like specialized operating systems for different types of vehicles. 
+
+While any of them *can* fly a quadcopter, they are tuned for completely different missions.
+
+| Firmware | Best For | Pros | Cons |
+| --- | --- | --- | --- |
+| **Betaflight** | **Freestyle & Racing** | • Unmatched flight performance and stick feel.<br>
+
+<br>• Lightning-fast response to acro inputs.<br>
+
+<br>• Massive community and endless tutorials. | • Terrible at GPS autonomy (it can only "Rescue" a drone by flying back blindly and crashing softly). |
+| **iNav** | **Long Range & Exploration** | • Excellent balance of freestyle and GPS functions.<br>
+
+<br>• True Return-to-Home and position hold.<br>
+
+<br>• Great for fixed-wing planes and exploration quads. | • Flight feel is slightly "heavier" and less snappy than Betaflight for hardcore acro tricks. |
+| **Ardupilot** | **Commercial & Autonomous** | • Incredibly robust enterprise-grade software.<br>
+
+<br>• Can fly completely pre-programmed waypoint missions.<br>
+
+<br>• Supports advanced sensors (lidar, optical flow). | • Massive learning curve.<br>
+
+<br>• Setting it up feels like configuring a commercial satellite rather than a fun hobby drone. |
+
+> **The Verdict for You:** Since you want to **freestyle**, start with **Betaflight**. It is the absolute king of acro stick feel. If you later decide to add a GPS module and want to do long-range mountain cruising with automated flight paths, you can flash **iNav** onto that exact same hardware for free.
 
 
 
@@ -455,3 +539,182 @@ Even if the simulator itself is closed source, having an **OSS Radio (EdgeTX)** 
 
 {{% /details %}}
 
+### More about flight controllers
+
+To understand these boards, it helps to look at them not just as "drone parts," but as highly integrated, specialized mini-computers.
+
+**They are microcontrollers paired with sensors (like accelerometers) and specialized chips.**
+
+When you buy an All-In-One (AIO) board like the **HappyModel SuperX ELRS** or the **BetaFPV F4 1S**, you are buying **5 separate electronic devices** shrunk down and printed onto a single piece of fiberglass that weighs less than 5 grams.
+
+🔬 Anatomy of an FPV All-In-One (AIO) Board
+
+1. The Brain: The Microcontroller (MCU - Microcontroller Unit)
+
+Just like an Arduino or a Raspberry Pi Pico, the board features a main processor chip.
+
+* **What it is:** Usually an **STM32F411** or an **STM32G473** chip.
+* **What it does:** It runs **Betaflight** (the open-source drone operating system). It loops thousands of times per second, calculating physics equations to keep the drone stable reading data from the gyroscope/accelerometer sensor.
+
+2. The Inner Ear: The Gyroscope & Accelerometer (IMU - inertial measurement unit)
+
+* **What it is:** A tiny MEMS (micro-electromechanical system) chip, usually the **BMI270** or **ICM-42688-P**.
+* **What it does:** This is the sensor that measures rotation (gyroscope) and gravity/acceleration (accelerometer). It tells the processor exactly how many degrees the drone is tilting. If a gust of wind pushes the drone left, the accelerometer feels it instantly and alerts the brain.
+
+3. The Musketeers: The Electronic Speed Controllers (ESCs)
+
+* **What it is:** A collection of tiny MOSFETs (electronic switches) and dedicated driver chips.
+* **What it does:** A microcontroller cannot power a high-speed brushless motor directly—it would fry the chip. The ESCs take raw power straight from your 1S battery and pump high-frequency electrical pulses into the 4 motors to **control their RPM with microsecond precision**.
+
+4. The Ear: The ELRS Receiver (RX)
+
+* **What it is:** A 2.4GHz radio frequency chip (usually an **SX1280** or **SX1281** paired with an ESP32 or an ESP8285 chip).
+* **What it does:** This is the link that listens for your **RadioMaster Pocket**. It catches those LoRa packets flying through the air, extracts your stick inputs (throttle, pitch, roll), and hands them over to the main processor.
+
+5. The Megaphone: What is a VTX?
+
+**VTX stands for Video Transmitter.**
+
+* **What it is:** It is an analog radio transmitter tuned to the **5.8GHz frequency band**.
+* **What it does:** It takes the raw, live analog picture feed coming out of your tiny Caddx Ant camera via a copper wire, encodes it into a radio wave, and blasts it out into the room through the drone’s antenna. Your FPV monitor or USB dongle listens to that same 5.8GHz frequency to show you the video in real-time with zero delay.
+
+🥊 MEPS King vs. HappyModel SuperX vs. BetaFPV F4 1S
+
+While all three contain the items listed above, *how* they are built is what makes or breaks your DIY build:
+
+| Feature | MEPS King 1S | HappyModel SuperX ELRS | BetaFPV F4 1S 5A AIO |
+| --- | --- | --- | --- |
+| **Processor (MCU)** | STM32F411 (Standard) | **STM32G473** (Faster, newer) | STM32F411 (Standard) |
+| **Weight** | ~5.5g | **~4.4g** (Insanely light) | ~4.6g |
+| **VTX Power** | Up to 200mW | **Up to 400mW** (Stronger video through walls) | Up to 400mW |
+| **Motor Connections** | Must be soldered directly | **Plug-and-play sockets** (or solder pads) | **Plug-and-play sockets** |
+| **Linux / Betaflight Support** | Poor. Uses obscure firmware targets. | **Flawless.** Fully integrated into modern Betaflight. | **Flawless.** The global benchmark for 1S whoops. |
+
+#### Why avoid the MEPS King for a DIY project?
+
+Because the MEPS board requires you to solder everything directly to microscopic pads, a single tiny solder bridge (accidental blob connecting two pads) can easily let 4.2V from the battery instantly fry your MCU or Gyro sensor.
+
+With the **BetaFPV** or **HappyModel** boards, they come with tiny white plastic sockets pre-soldered onto the edges. 
+
+Your motors just plug straight in like a Lego piece—meaning **zero soldering required for the motors**. 
+
+You only have to solder three basic wires for the camera, making it vastly safer and friendlier for your first hardware build!
+
+### What it is UART?
+
+**UART** stands for **Universal Asynchronous Receiver-Transmitter**.
+
+It isn't a physical wire or a specific plug; it is a **hardware communication protocol** built directly into the silicon of microcontrollers to let them talk to each other over a simple pair of copper lines.
+
+Think of it as the ultimate minimalist, text-messaging system for computer chips.
+
+How it Works (The 2-Wire Principle)
+
+When two chips want to talk via UART, they only require two communication data lines:
+
+1. **TX (Transmit):** The line used to *send* data out.
+2. **RX (Receive):** The line used to *listen* for incoming data.
+
+To link two devices (like your drone's radio receiver and the main flight controller brain), you cross the wires: **TX goes to RX**, and **RX goes to TX**.
+
+```
+┌─────────────────┐                ┌─────────────────┐
+│     ESP32       │   TX ───►─── RX│     STM32       │
+│ (Radio Receiver)│   RX ◄───◄─── TX│(Flight Computer)│
+└─────────────────┘                └─────────────────┘
+
+```
+
+What makes it "Asynchronous"?
+
+In many computer protocols (like USB or HDMI), there is a third wire called a **Clock line (CLK)**.
+
+The clock line acts like a digital metronome, ticking constantly so both chips know exactly when to send and read a bit of data.
+
+UART is **Asynchronous**, meaning **there is no shared clock wire.**
+
+To prevent the data from turning into absolute gibberish, both chips have to agree completely on two rules *before* they start talking:
+
+1. **The Speed (Baud Rate):** They agree on exactly how fast they will shout bits across the wire (measured in bits-per-second). For example, your RadioMaster Pocket and drone talk over UART at a standard lightning-fast speed of **420,000 bits per second** (or even 3.75 Million bits per second on modern ELRS links!).
+2. **The "Start" Flag:** Because the wire is usually completely silent (sitting at a constant high voltage), the transmitting chip drops the voltage to zero for exactly one bit-period to signal: *"Hey! Wake up, a packet of data is starting right now!"*
+
+Why FPV Drones rely entirely on UARTs
+
+Your drone's All-In-One flight controller board has several sets of these TX and RX pins printed right onto the board, labeled as **UART1, UART2, UART3**, etc.
+
+Because UART is completely uncomplicated, lightweight, and uses almost zero processing power, it is the primary way everything connects to the brain:
+
+* **UART 1** might be connected to your **ESP32 ELRS Receiver** to feed stick inputs.
+* **UART 2** might be connected to your **Caddx Ant / VTX system** to stream text telemetry (like battery voltage and flight time) onto your video screen.
+* **UART 3** could be left open so you can solder an external **GPS module** onto the drone later.
+
+It is an absolute foundational concept in electronics, and as a Linux user, you'll love it because Linux natively handles UART devices as simple serial streams (like `/dev/ttyUSB0`) that you can read, write to, and debug straight from your terminal!
+
+#### Why not canbus or mqtt
+
+This is a brilliant architectural question. You have exactly the right intuition for systems design—why use an old, basic 2-wire serial protocol when much more modern network options exist?
+
+The answer comes down to three things: **extreme latency limits, weight/hardware simplicity, and network overhead.**
+
+Here is exactly why **UART** beats **CAN bus** and **MQTT** in the specialized world of micro FPV drones:
+
+1. Why not MQTT? (The Internet Protocol)
+
+MQTT is a phenomenal "Publish/Subscribe" protocol for IoT (Internet of Things) devices, but it is built on top of **TCP/IP** (the internet layer).
+
+* **The Speed Problem:** MQTT requires a network stack. Packaging a simple stick movement into an MQTT message means wrapping it in TCP headers, IP routing headers, and network handshakes.
+* **The Latency Nightmare:** MQTT network latency is measured in tens or hundreds of milliseconds. In an FPV drone, if your stick latency goes above **5 to 10 milliseconds**, the drone becomes unflyable. You will over-correct, drift, and crash.
+* **The Linux Analogy:** MQTT is what you use to send a sensor update from a weather station over Wi-Fi to a server. UART is what you use when you need two chips on the exact same motherboard to talk at millions of bits per second with zero software lag.
+
+2. Why not CAN bus? (The Automotive Standard)
+
+CAN bus is a beautifully engineered, message-based network protocol. It is used in cars because it is heavily shielded against electrical noise and lets 50 different microcontrollers (brakes, windows, airbags) all share the same pair of wires safely.
+
+While heavy enterprise industrial drones *do* use CAN bus, micro whoops avoid it for three reasons:
+
+* **The Hardware Tax:** To use CAN bus, every chip needs a physical hardware component called a **CAN Transceiver** built into the circuit board next to it. On a tiny 4-gram whoop board, adding 3 or 4 transceiver chips adds physical weight, consumes precious circuit board space, and sucks extra power from your tiny 1S battery.
+* **Overkill for the Size:** CAN bus is designed to send signals down a 5-meter copper wire past a noisy car engine. On your drone, the distance between the ESP32 radio chip and the STM32 brain chip is **less than 2 centimeters**. At that short distance, electrical interference is practically zero, so the heavy data protection of CAN bus isn't needed.
+* **Data Overhead:** CAN bus has built-in priority arbitration, identifiers, and error-checking bits attached to every single message. UART has zero metadata—it just slams raw, uncompressed bytes across the trace instantly.
+
+---
+
+A micro drone is a high-speed physics machine. It doesn't need a complex computer network or an automotive communication bus.
+
+**UART is chosen because it is beautifully dumb.** It strips away all the software layers, requires absolutely zero extra chips or transceivers on the board, and delivers your stick coordinates from the receiver chip to the flight computer brain with the absolute lowest latency physically possible.
+
+### How to assemble the DIy Dron
+
+Here is your optimal, zero-motor-soldering, high-value **Bill of Materials (BOM)** to build a modern 1S Indoor Tiny Whoop.
+
+This list ditches the awkward adapters and cheap parts from that video, giving you a clean, plug-and-play machine that will connect perfectly with your RadioMaster Pocket and Linux PC.
+
+#### 🚁 Core Drone Components (The Aircraft)
+
+| Component | What to Buy | Est. Price (PLN) | Connection Type | Why This Choice? |
+| --- | --- | --- | --- | --- |
+| **Flight Controller (AIO)** | **BetaFPV F4 1S 5A AIO (ELRS)** | ~250 PLN | Solder Camera / Plug Motors | Contains the brain, speed controllers, ELRS receiver, and 400mW video transmitter all in one board. |
+| **Motors** | **BetaFPV 0802SE 19500KV** (Pack of 4) | ~120 PLN | **Plug & Play** | Tiny, super-fast brushless motors that plug straight into the flight controller sockets. |
+| **Frame & Canopy** | **Meteor65** or **Meteor75** Frame + Micro Canopy | ~40 PLN | Screws together | Indestructible plastic duct frames that protect your props and home furniture from impacts. |
+| **Camera** | **Caddx Ant Nano** (Analog) | ~70 PLN | **Requires Solder** (3 Wires) | The single best budget camera available. Unmatched lighting control for indoors. |
+| **Propellers** | **Gemfan 31mm** (for 65mm frame) or **40mm** (for 75mm frame) | ~15 PLN | Push-fit onto motor shafts | Durable, cheap, and quiet matching sets. |
+
+
+#### Power & Video Setup (No Goggles Phase)
+
+| Component | What to Buy | Est. Price (PLN) | How It Connects | Why This Choice? |
+| --- | --- | --- | --- | --- |
+| **Batteries** | **Tattu 1S 300mAh (or 450mAh) BT2.0** | ~20 PLN each (Get 4) | Natively plugs into drone | Modern solid-pin BT2.0 connectors mean no power sag or fading performance. |
+| **Main Charger** | **VIFLY WhoopStor V3** | ~160 PLN | USB-C Power Input | The absolute gold standard charger. It can automatically bring your LiPos to a safe "Storage Voltage" so they don't break over time. |
+| **Video Receiver** | **5.8GHz UVC USB Receiver** (e.g., Rotguts / Skydroid) | ~90 PLN | USB into Linux PC / Phone | Acts like a digital webcam. Connect it to your PC, open a tool like `guvcview`, and watch your drone video live on your computer monitor! |
+
+> 💰 Total Estimated Cost: ~725 PLN (~$180 USD)
+
+#### What Your Building Process Looks Like
+
+Because you selected the premium AIO board layout, your building process is incredibly low-stress:
+
+1. **Solder the Camera:** Cut the camera wires to size, and solder its **3 lines** (Power, Ground, Video) to the clearly labeled pads on the Flight Controller. (This is the *only* soldering step!).
+2. **Mount to Frame:** Use the rubber grommets and small screws to mount the flight controller flat into the center of the plastic frame.
+3. **Plug the Motors:** Drop the 4 motors into their holes on the frame, screw them down, and simply feed their wires up to **plug into the white sockets** on the sides of the flight controller board.
+4. **Assemble the Top:** Pop your Caddx Ant camera inside the plastic protective canopy, and screw the canopy onto the frame directly over the circuit board.
+5. **Program via Linux:** Connect a USB-C cable from your Linux computer into the flight controller, open **Betaflight Configurator**, paste the standard setup profile, bind it to your RadioMaster Pocket, and you are ready to lift off!

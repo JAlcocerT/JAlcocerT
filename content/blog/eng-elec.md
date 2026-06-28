@@ -1,6 +1,6 @@
 ---
 title: "Enough Electronics for a Dron or Canbus"
-date: 2026-06-24
+date: 2026-06-26
 draft: false
 tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket","CANable x SMT"]
 description: 'The electronics you can learn for free x Building a custom FPV Drone.'
@@ -75,6 +75,9 @@ https://github.com/Elmue/CANable-2.5-firmware-Slcan-and-Candlelight
 ## Conclusions
 
 https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#what-actually-happens-in-the-valve
+
+
+![alt text](/blog_img/electronic/forgejo-electronics-mirror.png)
 
 
 ---
@@ -250,7 +253,7 @@ A ram pump
 
 
 
-### STM32G431 vs ESP 32
+### STM32G431 vs ESP32
 
 The **Jhoinrch RH-02 Plus** you are buying uses an **STM32G431** microcontroller chip (an ARM Cortex-M4 core).
 
@@ -265,10 +268,14 @@ To talk to a car, a microcontroller needs a dedicated internal hardware peripher
 
 2. High-Speed Native USB Support (The Critical Flaw of ESP32)
 
-Your adapter communicates with your laptop via USB. The way a chip handles USB completely changes its latency.
+Your adapter communicates with your laptop via USB. 
+
+The way a chip handles USB completely changes its latency.
 
 * **The STM32G431:** It features a **Native USB 2.0 Full-Speed device peripheral**. The USB lines from your laptop plug directly into the pins of the STM32 chip. It handles the data transfer instantly, creating a pure, direct pipeline to the Linux kernel.
+
 * **The ESP32:** The classic, most common ESP32 chip **has no native USB hardware**. If you see a micro-USB or USB-C port on an ESP32 board, it’s actually a completely separate, cheap USB-to-UART bridge chip (like the CH340 or CP2102) welded onto the side.
+
 * **The problem:** The ESP32 has to talk to the bridge chip via serial (UART), and then the bridge chip talks to your laptop. This creates a massive data bottleneck and adds latency, causing the system to drop packets when your car's CAN bus gets heavily saturated.
 
 3. Timing Precision & FreeRTOS vs. Bare Metal
@@ -276,8 +283,8 @@ Your adapter communicates with your laptop via USB. The way a chip handles USB c
 Car networks require microscopic timing precision. If a microcontroller delays a message by even a millisecond because it's doing something else, it can cause sync issues.
 
 * **The STM32G431:** It runs "bare-metal" or on ultra-light schedulers (like FreeRTOS). It uses a highly stable external crystal oscillator (HSE) as a heartbeat. When a CAN frame hits the chip, a dedicated hardware interrupt fires, processing the packet with absolute deterministic speed.
-* **The ESP32:** Because it has to manage complex wireless stacks (Wi-Fi and Bluetooth), it runs a heavy operating system background layer. The wireless radios frequently cause internal interrupts that steal processing time. If the chip pauses for a fraction of a millisecond to maintain a Bluetooth link or search for a Wi-Fi network, it will miss incoming CAN frames.
 
+* **The ESP32:** Because it has to manage complex wireless stacks (Wi-Fi and Bluetooth), it runs a heavy operating system background layer. The wireless radios frequently cause internal interrupts that steal processing time. If the chip pauses for a fraction of a millisecond to maintain a Bluetooth link or search for a Wi-Fi network, it will miss incoming CAN frames.
 
 | Feature | STM32G431 (Your USB Adapter) | ESP32 (Wireless Dongles) |
 | --- | --- | --- |
@@ -290,7 +297,7 @@ Car networks require microscopic timing precision. If a microcontroller delays a
 
 But because your goal is to **sniff a raw firehose of high-speed data directly into a Linux terminal over a wire**, the native USB and dedicated hardware CAN controller inside the STM32 chip make it vastly superior. You bought the mathematically correct chip for this specific job!
 
-### SMT vs PicoW
+### STM vs PicoW
 
 Here is how the **STM32G431** inside your USB adapter stacks up against the **RP2040** chip inside the Raspberry Pi Pico W:
 
@@ -299,6 +306,7 @@ Here is how the **STM32G431** inside your USB adapter stacks up against the **RP
 Both chips are built by licensing processor blueprints from **ARM**.
 
 * **Raspberry Pi Pico W (RP2040):** Uses two **ARM Cortex-M0+** cores running at $133\text{ MHz}$. The Cortex-M0+ is ARM's ultra-efficient, entry-level, low-power design.
+
 * **Your USB Adapter (STM32G431):** Uses a single **ARM Cortex-M4** core running at **$170\text{ MHz}$**.
 
 Even though the Pico has two cores, the single core in your STM32 is vastly more powerful.
@@ -307,12 +315,17 @@ The Cortex-M4 architecture includes dedicated hardware for complex math processi
 
 It can crunch complex data calculations significantly faster than the Pico's M0+ cores.
 
-2. The Internal Network Hardware (The Big Divergence)
+2. The Internal Network Hardware
 
 This is where the chips split paths based on what they were designed to do:
 
-* **The STM32G431 is an Automotive/Industrial Specialist:** STMicroelectronics designed the "G4" line specifically for digital power applications, motor control, and automotive networking. Because of this, it has an advanced **FDCAN hardware peripheral** baked right into the silicon. It doesn't need to use CPU processing power to monitor the CAN lines; the silicon handles it natively.
-* **The RP2040 is a General-Purpose Swiss Army Knife:** The Raspberry Pi Foundation designed the RP2040 to be an amazing, flexible chip for general electronics hobbists. However, it **does not have a CAN controller chip built into it.** If you wanted to use a Pico to talk to a car, you would have to buy an external chip module (like an MCP2515) and wire it up, or write highly complex software to fake a CAN controller using the Pico's unique Programmable I/O (PIO) blocks.
+* **The STM32G431 is an Automotive/Industrial Specialist:** STMicroelectronics designed the "G4" line specifically for digital power applications, motor control, and automotive networking. 
+
+Because of this, it has an advanced **FDCAN hardware peripheral** baked right into the silicon. It doesn't need to use CPU processing power to monitor the CAN lines; the silicon handles it natively.
+
+* **The RP2040 is a General-Purpose Swiss Army Knife:** The Raspberry Pi Foundation designed the RP2040 to be an amazing, flexible chip for general electronics hobbists. However, it **does not have a CAN controller chip built into it.** 
+
+If you wanted to use a Pico to talk to a car, you would have to buy an external chip module (like an MCP2515) and wire it up, or write highly complex software to fake a CAN controller using the Pico's unique Programmable I/O (PIO) blocks.
 
 | Feature | RP2040 (Raspberry Pi Pico W) | STM32G431 (Your USB Adapter) |
 | --- | --- | --- |
@@ -325,3 +338,41 @@ This is where the chips split paths based on what they were designed to do:
 You can think of the Pico W as the ultimate tool for wireless tinkering, smart-home automation, and connecting sensors to the internet.
 
 But for your car project, where you need a chip that can sit directly on an industrial automotive network, withstand massive data bursts without flinching, and route them instantly to a native USB stream, the heavy-duty Cortex-M4 inside the STM32 is exactly the upgrade you want.
+
+Yes, we were! Let's bring it back to those **1S All-In-One (AIO) flight controllers** for your indoor Whoop drone build.
+
+To help visualize how the electronic brains of your drone connect compared to your solar project, here is the complete breakdown of the 1S AIO system.
+
+### How the 1S AIO Simplifies Your Build
+
+An AIO board replaces a massive stack of separate components.
+
+On a single tiny circuit board (like the **BetaFPV F4 1S** or **HappyModel SuperX**), you have everything built right into the fiberglass:
+
+1. **The Brain (STM32 MCU):** Runs Betaflight to keep the drone stable.
+2. **The Gyro/Accelerometer:** Measures the drone's angles in the air.
+3. **The 4 ESCs (Speed Controllers):** Drive the high-speed brushless motors.
+4. **The Receiver (ESP32 ELRS):** Listens to your RadioMaster Pocket.
+5. **The VTX (Video Transmitter):** Blasts the 5.8GHz camera feed into the room.
+
+Easiest Way to Wire It (No-Solder Motor Plugs)
+
+Because you want to avoid advanced micro-soldering, choosing the **BetaFPV** or **HappyModel** boards is a lifesaver. 
+
+Here is exactly what you connect when building it:
+
+* **The 4 Motors:** They have tiny white plastic plugs on the ends of their wires. You literally just click them into the 4 pre-soldered sockets on the corners of the AIO board. **(Zero soldering)**
+
+* **The Battery Lead:** The board comes with a pre-soldered power cable (usually a BT2.0 or PH2.0 connector) dangling off it. You just plug your 1S LiPo battery straight into it. **(Zero soldering)**
+
+* **The Caddx Ant Camera:** This is the *only* part you solder. The camera has 3 wires: **Power (+)**, **Ground (-)**, and **Video (Yellow)**. You solder these 3 wires to the clearly marked pads on the AIO board.
+
+Once those 3 camera wires are soldered and the motors are plugged in, you screw the board onto your plastic indoor Whoop frame, snap the canopy on top, and plug it into your Linux PC to configure Betaflight!
+
+
+* **The Reality:** PH2.0 is an old toy-drone connector style that has high electrical resistance. It causes "voltage sag," meaning your drone thinks the battery is dead even when it isn't.
+* **The Modern Way:** Modern 1S flight controllers (like the BetaFPV or HappyModel ones we talked about) come with a **BT2.0 connector** pre-soldered right out of the box. You buy BT2.0 batteries (like the Tattu or BetaFPV Lava listed there) and plug them directly in. Buying adapters just adds dead weight and ruins your flight performance.
+
+* **The Caddx Ant Camera:** Keep this. It remains the absolute king of budget analog cameras.
+* **The Whoopstor V3 Charger:** This is the **best 1S battery charger on the market**. It safely charges six 1S batteries at once via USB-C, and more importantly, it has a "Storage" button. When you are done flying, it brings the batteries to a safe storage voltage so they don't degrade or puff up over time.
+* **The Tattu or BetaFPV Lava Batteries:** Excellent choices, but make sure you buy the ones with **BT2.0 plugs** natively on them.

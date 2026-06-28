@@ -2,8 +2,8 @@
 title: "[Energy Solutions] Insulation Intelligence in the AI era"
 date: 2026-06-16
 draft: false
-tags: ["IoT x DHT22 x MLX90614","MQTT x EMQx","ESP-Now","JAlcocerTech Leads","Arduino-CLI"]
-description: 'Solving Boundary conditions with IoT (ESP32 and PicoW). Blender x building shadows is possible '
+tags: ["DHT22 x MLX90614 x TP4056","MQTT x EMQx","ESP-Now","JAlcocerTech Leads","Arduino-CLI"]
+description: 'Solving Boundary conditions with IoT. Blender x building shadows is possible.'
 url: 'data-driven-insulation-evaluation'
 math: true
 ---
@@ -266,6 +266,8 @@ sqlite3 ingester/data/readings.sqlite \
 
 I also tried it from the homelab: `MQTT_HOST=192.168.1.2 docker compose up -d --build`
 
+
+
 ---
 
 ## Conclusions
@@ -286,3 +288,21 @@ In contrast, an equivalent 1 kW solar panel system would cost about $2,770 on av
 
 Source: https://www.youtube.com/watch?v=nPvTH7Siclg
 Channel: Undecided with Matt Ferrell
+
+### Solar x TP4056
+
+Together with a 3$ rechargable battery: `Samsung INR18650-35E`
+
+> Same that work for the radiomaster pocket!
+
+The TP4056 USB-C solar charging module is designed to charge batteries at a standard rate of 1 Amp (1000mA).
+
+The Samsung 35E datasheet states its ideal standard charge rate is 1.7 Amps, meaning your TP4056 board will charge this battery completely safely and well within its comfort zone without overheating the battery cell.  
+
+The Pi Pico W draws roughly 0.1 Amps maximum when its Wi-Fi radio is blasting a data packet. Since your cell can safely output up to 8 Amps, the Pico W won't even wake the battery up.
+
+![alt text](/blog_img/electronic/solar-tp4056-picow-18650.png)
+
+
+### Which AC is enough for my house?
+

@@ -79,8 +79,6 @@ you will need to restart and HDMI cable to enjoy :)
 
 ## Pixel 8 Pro Conclusions
 
-
-
 1. **For photos it is a beast**. 
 
 And I had a Huawei P30 Pro before.
@@ -217,12 +215,12 @@ Here's a breakdown of what it is and its relationship to Wayland:
 
 In summary, Waydroid leverages the Wayland display server protocol to provide a smooth and integrated Android experience on Linux systems.
 
-* https://github.com/waydroid/waydroid
-    * https://docs.waydro.id/
+* `https://github.com/waydroid/waydroid`
+    * `https://docs.waydro.id/`
 
 > The Android runtime environment ships with a minimal customized Android system image **based on LineageOS**.
 
-See how to install waydroid in linux: https://github.com/Aman9das/Waydroid_Setup_Guide
+See how to install waydroid in linux: `https://github.com/Aman9das/Waydroid_Setup_Guide`
 
 ```sh
 sudo apt install curl ca-certificates -y
@@ -279,3 +277,8 @@ https://github.com/darlinghq/darling
 I was very happy with both, the Huawei P30 Pro and the PocoPhone F1 (probably the best value for money I ever had til now).
 
 The Poco F1 was quite an interesting one and also the first phone I changed its battery (13Wh, 3.85V, called BM4E, 3900mAh)
+
+### What if my phone breaks
+
+
+If you loose it: `https://www.google.com/android/find/`

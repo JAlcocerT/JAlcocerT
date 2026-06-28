@@ -2,7 +2,7 @@
 title: "Electro-Magnetism for AC/DC engines"
 date: 2026-05-04
 draft: false
-tags: ["PyScipe Simulations","Electric Motors vs L-R Model","Solenoids","EMF"]
+tags: ["PyScipe Simulations","Electric Motors vs L-R Model","KV","Solenoids","EMF"]
 description: 'The physics you need for building. Drones and electric cars.'
 url: 'electromagnetism-for-ac-dc-motors'
 math: true
@@ -208,3 +208,71 @@ You are exactly right—a **Transformer** stays within the same "lane" (AC to AC
 | **Transformer**| AC | **AC** | Stepping voltage up/down for the grid. |
 
 **Pro Tip:** If you want to go from **DC to DC** (like changing the voltage of a battery), you use something called a **DC-DC Converter** (often a "Buck" or "Boost" converter).
+
+
+### What is KV in motors
+
+You are completely right to catch that! I snuck it into the component chart a few messages back when we built the initial blueprint for the indoor Whoop.
+
+I wrote down: **"0802SE 19500KV (Brushless)"** for the motors.
+
+Since KV is a highly specific and slightly confusing number in the drone world, let's look at exactly what it means and why that specific number matters for your build:
+
+What does "KV" actually mean?
+
+In FPV drones, KV does **not** stand for kilovolts, and it has nothing to do with television.
+
+It stands for the **Velocity Constant** of the motor.
+
+{{< callout type="info" >}}
+**The Rule:** KV is the theoretical number of Revolutions Per Minute (RPM) that a motor will spin for every **1 Volt** of electricity you feed it, with no propeller attached.
+{{< /callout >}}
+
+Let's look at the math for the **19500KV** motors on a fully charged 1S drone battery ($4.2\text{V}$):
+
+$$19,500 \text{ KV} \times 4.2 \text{ V} = 81,900 \text{ RPM}$$
+
+Those tiny brushless motors are spinning the propellers at over **81,000 times per minute** when you punch the throttle!
+
+---
+
+#### Why such a high KV for a small indoor drone?
+
+* **Small Propellers = Less Leverage:** Indoor Whoop propellers are tiny (only 31mm wide). Because the blades are so small, they don't grab a lot of air. To create enough thrust to lift the drone, they have to spin at astronomical speeds. High KV motors give you that raw speed.
+
+* **Low Voltage (1S):** Since you are only using a single-cell battery ($3.7\text{V}$ to $4.2\text{V}$), the voltage is quite low. To get high RPMs out of low voltage, the motor needs a high KV rating.
+
+* **The Contrast:** If you were building a massive 5-inch outdoor camera drone that runs on a heavy 6S battery ($25.2\text{V}$), you would use low KV motors (like **1700KV to 1900KV**) because the larger propellers grab massive amounts of air and would burn out the motor if spun too fast.
+
+When you go to buy your motors, sticking around **19500KV to 22000KV** in the **0802** size is the absolute sweet spot for a snappy, controllable indoor flyer!
+
+#### KV x Dron size
+
+Choosing the right motor KV isn’t *just* about the drone’s size—it is a balancing act between **Propeller Size** and **Battery Voltage (Cell Count / "S")**.
+
+The fundamental rule of thumb is: **Big propellers and higher voltage need lower KV (more torque). Small propellers and lower voltage need higher KV (more raw RPM).**
+
+If you pair a big propeller with a high KV motor, the motor will try to spin way too fast, overheat, draw massive current, and likely burn out your ESC or the motor itself.
+
+The drone's "size" is typically measured by its propeller diameter (in inches).
+
+| Drone Type / Prop Size | Motor Size (Stator) | 4S Battery Platform | 6S Battery Platform | Best Use Case |
+| --- | --- | --- | --- | --- |
+| **Tiny Whoop** (1.6" - 2") | 0802 to 1103 | *N/A (Uses 1S/2S)*<br>
+<br>**18,000–25,000 KV** | *N/A* | Micro indoor flying / Backyard racing |
+| **Micro / Toothpick** (3") | 1404 to 1505 | **3500 – 4000 KV** | **2500 – 3000 KV** | Lightweight freestyle, sub-250g builds |
+| **Cinewhoop** (3" protected) | 2004 to 2203.5 | **2500 – 3500 KV** | **1800 – 2200 KV** | Heavy, stable cinematic filming around people |
+| **Standard FPV** (5") | 2207 or 2306 | **2400 – 2700 KV** | **1750 – 1950 KV** | The standard choice for racing and freestyle |
+| **Long Range / Cinematic** (7") | 2806.5 to 2808 | **1500 – 1900 KV** | **1100 – 1350 KV** | Heavy GoPro haulers, mountain surfing, ArduPilot |
+| **Heavy Lift / Commercial** (10"+) | 3110 to 4114+ | *N/A* | **400 – 900 KV** *(Uses 6S to 12S)* | Large mapping planes, multi-kg cameras, endurance |
+
+
+💡 Understanding the Stator Numbers
+
+> When you see a motor size like **2207**, the numbers stand for the internal dimensions in millimeters:
+> * **22** = Stator Width (Wider = more torque and efficiency at low RPM)
+> * **07** = Stator Height (Taller = more raw power and bite at high RPM)
+
+
+### DC vs BLDC vs AC Engines
+
