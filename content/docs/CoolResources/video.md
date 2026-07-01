@@ -96,7 +96,7 @@ ffmpeg -f concat -safe 0 -i file_list.txt -c copy output_video.mp4 #original aud
 #ffmpeg -f concat -safe 0 -i file_list.txt -c:v copy -an silenced_output_video.mp4 #silenced video
 ```
 
-You can also do same tricks for [Windows like so](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11), as seen [here](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg)
+You can also do same tricks for [Windows like so](https://github.com/JAlcocerT/YT-Video-Edition/tree/main/With_FFmpeg/W11), as seen [with the moto blogger](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#chocolatey-and-ffmpeg), particularly [this section](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#ffmpeg-video-workflow-for-windows).
 
 ```sh
 #choco install ffmpeg -y

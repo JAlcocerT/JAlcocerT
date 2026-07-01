@@ -263,6 +263,10 @@ The Pocket's battery bay is tight and only fits Flat Top `18650s` at 3.7V, not t
 | **Model Memory** | None (Single model) | **Unlimited (SD Card)** |
 | **Compatibility** | Locked to one protocol | **Expandable via Module Bay** |
 
+{{< youtube "AKUXxsIrtek" >}}
+<!-- 
+https://youtube.com/shorts/AKUXxsIrtek -->
+
 
 Most BetaFPV gear is **2.4GHz**, which is the standard for the Pocket. 
 

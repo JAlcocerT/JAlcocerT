@@ -7,6 +7,14 @@ description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
 
+la hula kula
+
+https://youtu.be/2xAx08rBejc
+
+
+
+otto vs atkinson vs miller https://www.youtube.com/watch?v=2SyONV_EruQ
+
 {{< youtube "iwFSTYUL1yw" >}}
 
 <!-- https://www.youtube.com/watch?v=iwFSTYUL1yw -->

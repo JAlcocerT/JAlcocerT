@@ -2,7 +2,7 @@
 title: "Enough Electronics for a Dron or Canbus"
 date: 2026-06-26
 draft: false
-tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket","CANable x SMT"]
+tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable x SMT"]
 description: 'The electronics you can learn for free x Building a custom FPV Drone.'
 url: 'electr-diode'
 math: true
@@ -24,7 +24,7 @@ https://github.com/diodeinc/pcb
 
 Tried this with an [outlander](https://en.wikipedia.org/wiki/Mitsubishi_Outlander)
 
-I mean passive canbus sniffing
+I mean passive canbus sniffing!
 
 With the **Jhoinrch RH02 USB adapter** and the **XMSJSIY OBD2 pigtail cable** currently in your cart, you have a perfect, fully complete hardware package to hack your fleet of cars.
 
@@ -34,9 +34,167 @@ Just a final quick layout checklist for when your package arrives on Tuesday:
 
 The terminal block order on the **Jhoinrch RH02** is clearly marked right next to the green ports:
 
-* **CAN_H** ➔ Connect to the wire from **OBD Pin 6**
-* **CAN_L** ➔ Connect to the wire from **OBD Pin 14**
-* **GND** ➔ Connect to the wire from **OBD Pin 4 or 5**
+* **CAN_H** ➔ Connect to the wire from **OBD Pin 6** - Green
+* **CAN_L** ➔ Connect to the wire from **OBD Pin 14** - Brown
+* **GND** ➔ Connect to the wire from **OBD Pin 4 or 5** - Yellow
+
+{{< callout type="info" >}}
+Used a multimeter to test continuity and map the colors
+{{< /callout >}}
+
+When looking at your car connection you'll see:
+
+```md
+WIDER TOP SIDE
+         _______________________________
+        \  1   2   3  (4) (5) (6)  7   8  /
+         \ 9  10  11  12  13 (14) 15 (16)/
+          -------------------------------
+                NARROWER BOTTOM
+```
+
+Withing the obd they are reversed, see the details next to your obd pins to do this properly:
+
+{{< youtube "aooXkGFk5xI" >}}
+
+<!-- https://youtube.com/shorts/aooXkGFk5xI -->
+
+```sh
+sudo dmesg | tail -n 20
+```
+
+Which provided:
+
+```md
+usb 1-1: Product: CANable2 b158aa7 github.com/normaldotcom/canable2.git
+cdc_acm 1-1:1.0: ttyACM0: USB ACM device
+```
+
+According to these lines: Your adapter uses CANable 2 open-source firmware and is initializing as a virtual serial modem interface under ttyACM0. This means it is running in slcan (serial CAN) mode.
+
+This log output is perfect! It tells us exactly what firmware your Jhoinrch adapter is running under the hood.
+
+According to these lines:
+
+```text
+usb 1-1: Product: CANable2 b158aa7 github.com/normaldotcom/canable2.git
+cdc_acm 1-1:1.0: ttyACM0: USB ACM device
+```
+
+Your adapter uses **CANable 2** open-source firmware and is initializing as a virtual serial modem interface under **`ttyACM0`**. This means it is running in **slcan (serial CAN)** mode.
+
+Let's initialize the network adapter link on your laptop right now so the software interface is completely ready for the car.
+
+Step 1: Bind the Serial Device to a Linux Network Interface
+
+We will use the `slcand` (Serial CAN Daemon) utility from `can-utils` to attach the serial port `ttyACM0` to a network socket called `can0`, setting the speed to **500k** ($500\text{ kbps}$), which is the standard speed for most modern car diagnostic buses.
+
+Run this command in your terminal:
+
+```bash
+sudo apt update && sudo apt install can-utils -y
+sudo slcand -o -c -s6 /dev/ttyACM0 can0
+```
+
+*(Note: The `-s6` flag specifies the 500,000 bits/sec speed).*
+
+Step 2: Bring the Network Interface Up
+
+Now, tell Linux to activate the newly created network adapter interface:
+
+```bash
+sudo ifconfig can0 up
+```
+
+Step 3: Verify It's Ready
+
+To double-check that the interface is alive and configured properly, run:
+
+```bash
+ifconfig can0
+```
+
+You should see `can0` listed in your terminal as an active network interface!
+
+Since the device is not connected to a vehicle network yet, if you try to run a sniffing command like `candump can0`, the screen will stay blank because there are no electronic data frames passing through the wires yet.
+
+
+```text
+can0: flags=193<UP,RUNNING,NOARP>  mtu 16
+```
+
+The `UP` and `RUNNING` flags mean your Linux system has successfully accepted the custom Jhoinrch hardware interface as a native network card. 
+
+Test locally before going to the car (Optional couch test)
+
+If you want to absolutely prove the software layers can talk to the stick right now without leaving your seat, open up a **second, separate terminal window** and run this command to start listening:
+
+```bash
+candump can0
+```
+
+Then go back to your **first terminal window** and fire a fake packet into the void:
+
+```bash
+cansend can0 123#DEADBEEF
+```
+
+Because there is no car network connected to absorb or respond to the signal, your `candump` might stay quiet or the device might throw a silent internal transmit error.
+
+But if you see *anything* pop up, your link is golden. (If nothing shows, don't worry—CAN buses physically require at least two alive nodes on the circuit to acknowledge a packet).
+
+
+> Pack up the laptop, grab your custom cable, and head out to the vehicle—you are ready to connect to the OBD2 port!
+
+Seeing that `123  [4]  DE AD BE EF` pop up in your other terminal is a beautiful sight! It means your loopback/tx validation is working perfectly on your laptop. You have officially built a fully functioning CAN node.
+
+And you are exactly right about the car—depending on the model and year, you will see anywhere from **500 to well over 2,000 messages per second** screaming across the screen. It looks like a matrix waterfall and is impossible to read with the human eye.
+
+Fortunately, the `can-utils` suite has a built-in tool specifically designed for recording this chaos so you can analyze it later on your couch.
+
+---
+
+How to Record 10 Seconds of Data
+
+Instead of `candump`, you will use a tool called **`cangen`** or **`candump` with logging flags**. The best tool for this job is `candump` combined with a timeout command.
+
+To record exactly 10 seconds of raw car data and save it to a file, run this command in your terminal:
+
+```bash
+timeout 10s candump -l can0
+
+```
+
+What this command does:
+
+* **`timeout 10s`**: Automatically stops the process and cuts the recording off after exactly 10 seconds.
+* **`-l` (Log flag)**: Tells candump *not* to print the text to the screen, but instead write it directly into a highly optimized log file.
+
+When the 10 seconds are up, the command will exit, and you will find a new file in your current folder named something like:
+📁 **`candump-2026-07-01_180449.log`**
+
+How to "Play Back" the Recording on Your Couch
+
+This is where the real hacking magic happens. Once you have that log file saved, you can unplug from the car, go back inside, and replay those 10 seconds through your laptop as if you were still plugged into the live vehicle!
+
+To replay your log file, use **`canplayer`**:
+
+```bash
+canplayer -I candump-2026-07-01_180449.log
+
+```
+
+*(Just replace the filename with your exact log file name).*
+
+If you have `candump can0` running in another window while you run `canplayer`, you will see all 10,000+ messages stream past your screen at the exact same speed and timing they happened inside the car. This lets you isolate packet IDs, search for button presses, and reverse-engineer the data safely at your desk.
+
+when youll be done:
+
+```sh
+sudo ip link set can0 down
+sudo killall slcand
+```
+
 
 2. The 120Ω Switch (R120)
 
@@ -51,7 +209,6 @@ Make sure to insulate those remaining 13 loose wires from the pigtail cable with
 Once that's done, pop the OBD2 connector into your vehicle, plug the USB port into your Linux laptop, fire up `candump can0`, and enjoy mapping out your dashboard metrics!
 
 1. It is 100% Plug-and-Play on Linux
-Reviewer artin kiany specifically notes:
 
 "Excellent USB-to-CAN FD adapter. Plug-and-play on Linux and works reliably for CAN communication. It comes pre-flashed with candlelight firmware and you can easily update it."
 
@@ -76,6 +233,8 @@ https://github.com/Elmue/CANable-2.5-firmware-Slcan-and-Candlelight
 
 https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#what-actually-happens-in-the-valve
 
+
+https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101
 
 ![alt text](/blog_img/electronic/forgejo-electronics-mirror.png)
 
@@ -376,3 +535,73 @@ Once those 3 camera wires are soldered and the motors are plugged in, you screw 
 * **The Caddx Ant Camera:** Keep this. It remains the absolute king of budget analog cameras.
 * **The Whoopstor V3 Charger:** This is the **best 1S battery charger on the market**. It safely charges six 1S batteries at once via USB-C, and more importantly, it has a "Storage" button. When you are done flying, it brings the batteries to a safe storage voltage so they don't degrade or puff up over time.
 * **The Tattu or BetaFPV Lava Batteries:** Excellent choices, but make sure you buy the ones with **BT2.0 plugs** natively on them.
+
+### Pocket and EdgeTX
+
+* https://github.com/edgetx/edgetx
+
+> EdgeTX is the cutting edge **open source firmware for your R/C radio**
+
+{{< youtube "AKUXxsIrtek" >}}
+
+<!-- 
+https://youtube.com/shorts/AKUXxsIrtek -->
+
+
+### About J1962
+
+The official name for the OBD-II port is the **J1962 connector**. 
+
+It was standardized back in 1966 so that environmental regulators could check any vehicle's emissions system using a single tool.
+
+Because it had to support dozens of car brands over the decades, the 16 pins are divided into three categories: **The Standard Modern Pins** (what you are using), **The Legacy/Old Protocols** (from before 2008), and **Manufacturer Discretionary Pins** (wildcards).
+
+1. The Power & Ground Core (Your Essentials)
+
+These pins are mandatory on *every single car* to keep the diagnostic tools alive and safe.
+
+* **Pin 4 — Chassis Ground:** Connects straight to the bare metal frame of the car. It safely dumps heavy electrical noise from things like wipers and headlights.
+* **Pin 5 — Signal Ground:** A clean, isolated electrical reference line running straight to the main vehicle computer (ECU). **This is what you connected your Yellow wire to.**
+* **Pin 16 — Battery Power (`+12V`):** Tied directly to the vehicle’s battery. It has constant power even if the engine is completely off and the keys are out.
+
+2. The Modern CAN Bus Network (Your Target)
+
+Since 2008, all cars sold are legally required to use this specific pair of wires for emission tracking. This is the exact high-speed digital highway you are hacking into right now.
+
+* **Pin 6 — CAN High (`CAN_H`):** The positive data stream line running at $500\text{ kbps}$. **This is your Green wire.**
+* **Pin 14 — CAN Low (`CAN_L`):** The negative data stream line. It runs in an inverted loop to cancel out external electromagnetic interference. **This is your Brown wire.**
+
+
+3. The Manufacturer Wildcards (Discretionary)
+
+The regulatory bodies left these pins entirely unassigned. Car manufacturers can use them for whatever proprietary internal factory tasks they want.
+
+* **Pins 1, 3, 8, 9, 11, 12, 13:** These are often empty, but if a wire is attached, it’s a dealer secret. For example, BMW often uses Pin 8 as a secondary K-Line for body electronics/infotainment, Ford uses Pin 3 for a secondary Medium-Speed CAN network, and some modern cars map these out to a hidden Ethernet line for fast flashing.
+
+4. Legacy Diagnostic Protocols (The History)
+
+Before CAN bus became the absolute king in 2008, different car companies used completely different physical languages to communicate. If you look inside older cars, you'll find pins wired up here instead of pins 6 and 14:
+
+* **Pin 2 & Pin 10 (`SAE J1850`):** Used mostly by older Ford (PWM method) and General Motors/Chrysler (VPW method) vehicles.
+* **Pin 7 & Pin 15 (`ISO 9141-2 / K-Line`):** The old standard used by European and Asian imports up until the mid-2000s. Pin 7 (K-Line) handled bidirectional commands, while Pin 15 (L-Line) acted like an alarm clock to wake up the car's computer before testing began.
+
+| Pin | Standard Assignment | What it Does in Modern Cars |
+| --- | --- | --- |
+| **1** | Manufacturer Discretionary | Often used for OEM specific ignition or brand features. |
+| **2** | SAE J1850 Bus+ | Old Ford/GM data communication stream. |
+| **3** | Manufacturer Discretionary | Often a secondary body-control network. |
+| **4** | **Chassis Ground** | Safety ground connected to the car frame. |
+| **5** | **Signal Ground** | Clean electronic logic ground (**Your Yellow Wire**). |
+| **6** | **ISO 15765-4 CAN High** | Main High-Speed vehicle communication network (**Your Green Wire**). |
+| **7** | ISO 9141-2 K-Line | Older diagnostic communications line. |
+| **8** | Manufacturer Discretionary | Often used to trigger programming modes or multimedia lines. |
+| **9** | Manufacturer Discretionary | Frequently used for Tachometer/Engine RPM tracking signals. |
+| **10** | SAE J1850 Bus- | Old Ford network return line. |
+| **11** | Manufacturer Discretionary | Custom OEM slot. |
+| **12** | Manufacturer Discretionary | Custom OEM slot. |
+| **13** | Manufacturer Discretionary | Custom OEM slot. |
+| **14** | **ISO 15765-4 CAN Low** | Main High-Speed vehicle network return line (**Your Brown Wire**). |
+| **15** | ISO 9141-2 L-Line | Old vehicle computer wake-up trigger line. |
+| **16** | **Battery Power (+12V)** | Unswitched 12V juice directly from the battery (Always Live). |
+
+Your custom interface maps exactly to pins **5**, **6**, and **14**, which isolates the vehicle's high-speed brain network while safely disregarding all the unneeded noise! Ready to make your trip to the vehicle cabin?
