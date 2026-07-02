@@ -402,6 +402,20 @@ At 3 months, they went from [yellow shades to orange](https://youtube.com/shorts
 
 {{< youtube "_YBjNO8urfE" >}}
 
+
+#### Tomatoes x Solar
+
+Want a  a micro-scale proof of concept for energy independence right on your balcony?
+
+* https://www.reddit.com/r/esp32/comments/xsv2zz/bluetti_db_bridge_a_esp32_based_bluetooth_and/
+* https://github.com/SSMCD/bluetti2mqtt
+
+#### Solar x Travel
+
+If you need sth more than software and a glm for workations.
+
+> You can repurpose this later on for your homelab / garden!
+
 ### DC Boost vs Ram Pump
 
 If you [like analogies](https://jalcocert.github.io/JAlcocerT/fluids/#the-analogy), here you have a practical one between fluids and electronics.
@@ -410,7 +424,7 @@ A DC boost does the oppositee of [a buck converter](https://jalcocert.github.io/
 
 A ram pump
 
-
+#### Buck Converter
 
 ### STM32G431 vs ESP32
 

@@ -47,13 +47,11 @@ See how to use [Iotawatt + Grafana](https://blog.networkprofile.org/power-monito
 > GPL 3/0 |  IoTaWatt Open WiFi Electric Energy Monitor
 
 
-https://github.com/superduper-io/superduper
-https://github.com/superduper-io/superduper?tab=Apache-2.0-1-ov-file#readme
+* https://github.com/superduper-io/superduper
 
 > Superduper: Bring AI to your database! Integrate AI models and workflows with your database to implement custom AI applications, without moving your data. Including streaming inference, scalable model hosting, training and vector search.
 
-
-https://github.com/DoTheEvo/selfhosted-apps-docker/tree/master/prometheus_grafana_loki
+* https://github.com/DoTheEvo/selfhosted-apps-docker/tree/master/prometheus_grafana_loki
 
 ## The Grafana Project
 

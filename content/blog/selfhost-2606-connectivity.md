@@ -1962,3 +1962,9 @@ Then Jellyfin should see them under its existing `/data/tvshows` library after a
 ````
 
 {{< /details >}}
+
+
+## FAQ
+
+### RRSi vs SNR vs Bandwith
+
