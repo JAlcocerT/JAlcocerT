@@ -2,7 +2,7 @@
 title: "Enough Electronics for a Dron or Canbus"
 date: 2026-06-26
 draft: false
-tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable x SMT"]
+tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable x SMT","ELM327 vs STM32G431"]
 description: 'The electronics you can learn for free x Building a custom FPV Drone.'
 url: 'electr-diode'
 math: true
@@ -24,7 +24,7 @@ https://github.com/diodeinc/pcb
 
 Tried this with an [outlander](https://en.wikipedia.org/wiki/Mitsubishi_Outlander)
 
-I mean passive canbus sniffing!
+I mean passive **canbus sniffing**!
 
 With the **Jhoinrch RH02 USB adapter** and the **XMSJSIY OBD2 pigtail cable** currently in your cart, you have a perfect, fully complete hardware package to hack your fleet of cars.
 
@@ -39,7 +39,7 @@ The terminal block order on the **Jhoinrch RH02** is clearly marked right next t
 * **GND** ➔ Connect to the wire from **OBD Pin 4 or 5** - Yellow
 
 {{< callout type="info" >}}
-Used a multimeter to test continuity and map the colors
+Used a **multimeter** to test continuity and map the colors 1 by 1
 {{< /callout >}}
 
 When looking at your car connection you'll see:
@@ -81,7 +81,9 @@ usb 1-1: Product: CANable2 b158aa7 github.com/normaldotcom/canable2.git
 cdc_acm 1-1:1.0: ttyACM0: USB ACM device
 ```
 
-Your adapter uses **CANable 2** open-source firmware and is initializing as a virtual serial modem interface under **`ttyACM0`**. This means it is running in **slcan (serial CAN)** mode.
+Your adapter uses **CANable 2** open-source firmware and is initializing as a virtual serial modem interface under **`ttyACM0`**. 
+
+This means it is running in **slcan (serial CAN)** mode.
 
 Let's initialize the network adapter link on your laptop right now so the software interface is completely ready for the car.
 
@@ -227,9 +229,323 @@ https://github.com/Elmue/CANable-2.5-firmware-Slcan-and-Candlelight
 
 * https://github.com/candle-usb/candleLight_fw
 
+#### Outlander MK2 Test 1
+
+That’s fine. You confirmed the laptop/CANable side works, so the remaining problem was vehicle-side.
+
+  For a Mitsubishi Outlander Mk2, the “nothing on candump” result could mean:
+
+  - The OBD port CAN pins you used were not carrying broadcast traffic.
+  - The car gateway keeps the diagnostic port quiet until queried.
+  - The bitrate was not 500k.
+  - The gear/selector signal is on another internal CAN bus, not exposed directly at OBD.
+  - If it was a manual gearbox, gear position may not be directly broadcast while stationary.
+
+  Next time you have access to the car, use this order:
+
+```sh
+sudo pkill slcand
+sudo slcand -o -c -s6 /dev/ttyACM1 can0
+sudo ip link set can0 up
+candump -tz can0
+```
+
+  Try with:
+
+  1. Ignition ON
+  2. Engine ON
+  3. Brake pressed
+  4. Gear selector moved slowly through states, if automatic/CVT
+
+  If still nothing, capture stats:
+
+  ip -details -statistics link show can0
+
+  Then try other passive bitrates:
+
+```sh
+#250k
+sudo pkill slcand
+sudo slcand -o -c -s5 /dev/ttyACM1 can0
+sudo ip link set can0 up
+candump -tz can0
+
+#125k
+sudo pkill slcand
+sudo slcand -o -c -s4 /dev/ttyACM1 can0
+sudo ip link set can0 up
+candump -tz can0
+```
+
+For gear detection specifically, once frames appear, we’ll want short logs per state: P, R, N, D, 1, 2, etc. 
+
+Then we can diff changing CAN IDs/bytes.
+
+Worked
+
+  - Linux detected the USB adapter:
+
+    CANable2 b158aa7 github.com/normaldotcom/canable2.git
+    Manufacturer: Openlight Labs
+    ttyACM0 / later ttyACM1
+
+  - Confirmed it is a CANable2-style device running as USB serial ACM, suitable for slcan.
+  - Installed can-utils successfully:
+
+    sudo apt install -y can-utils
+
+  - Loaded the correct kernel module after typo correction:
+
+    sudo modprobe slcan
+
+  - Created can0 with slcand:
+
+    sudo slcand -o -c -s6 /dev/ttyACM0 can0
+    # later after replug:
+    sudo slcand -o -c -s6 /dev/ttyACM1 can0
+
+  - Brought can0 up:
+
+    sudo ip link set can0 up
+
+  - Verified can0 was healthy:
+
+    can0: <NOARP,UP,LOWER_UP>
+    can state ERROR-ACTIVE
+
+  - Bench/local test worked between two terminals:
+
+    candump can0
+    cansend can0 123#DEADBEEF
+
+  That proves the laptop, CANable, slcand, SocketCAN, and can-utils path works.
+
+  Did Not Work / Inconclusive
+
+  - Initial typo:
+
+    sudo modprobe sclan
+    failed because the module is slcan, not sclan.
+    failed because the module is slcan, not sclan.
+
+  - After unplug/replug, can0 disappeared. That is normal; it needed to be recreated.
+  - My sandbox could see the adapter in sysfs but could not access /dev/ttyACM0 or /dev/ttyACM1, so I could not fully run slcand for you from here.
+  - Connected to the Mitsubishi Outlander Mk2, passive listening showed no frames:
+
+    candump -tz can0
+
+  Likely Reasons Nothing Came From The Car
+
+  - Ignition/modules may not have been awake.
+  - Wrong bitrate. We only confirmed 500k setup; 250k and 125k were suggested but not confirmed tried.
+  - OBD port may not expose raw broadcast CAN traffic.
+  - Gear data may be on another internal CAN bus behind a gateway.
+  - Wrong pins, missing ground, or CAN-H/CAN-L issue.
+  - The car may only respond to diagnostic requests instead of broadcasting on OBD.
+
+  Final Status
+
+  Your CAN adapter setup works locally. The unresolved part is vehicle access/traffic from the Outlander. Next time, the key checks are passive candump at 500k, then 250k, then 125k, plus ip -details -statistics link show can0 to see
+  whether it is silence or bus errors.
+
+Tried and Still No Frames
+
+  - can0 was up and healthy:
+
+    <NOARP,UP,LOWER_UP>
+    can state ERROR-ACTIVE
+
+  - Passive listen at 500k:
+
+    candump -tz can0
+
+    Result: no frames.
+
+  - Restarted slcand at 250k:
+
+    sudo pkill slcand
+    sudo slcand -o -c -s5 /dev/ttyACM1 can0
+    sudo ip link set can0 up
+    candump -tz can0
+
+    Result: no frames.
+
+  One correction: you accidentally ran slcand twice here:
+
+  sudo slcand -o -c -s5 /dev/ttyACM1 can0
+  sudo slcand -o -c -s5 /dev/ttyACM1 can0
+
+  That usually is not helpful, but since you later did ip link set can0 up, the 250k attempt was still basically valid.
+
+  The most useful thing missing was the statistics version:
+
+  ip -details -statistics link show can0
+
+  Your shown command was without -statistics, so we did not see RX/error counters.
+
+  Current conclusion: the adapter and can0 were fine, but the Outlander OBD port did not produce passive broadcast frames at the settings you tried. Most likely: gateway quiet on OBD, wrong bus/pins, or gear data not exposed there.
+
+```sh
+#ip -details link show can0
+18: can0: <NOARP,UP,LOWER_UP> mtu 16 qdisc pfifo_fast state UP mode DEFAULT group default qlen 10
+    link/can  promiscuity 0  allmulti 0 minmtu 0 maxmtu 0 
+    can state ERROR-ACTIVE restart-ms 0 
+	  bitrate 0
+	     [   10000,    20000,    50000,   100000,   125000,   250000, 
+	        500000,   800000,  1000000 ]
+	  clock 0 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535 tso_max_size 65536 tso_max_segs 65535 gro_max_size 65536 
+```
+
+Partly helpful. It confirms the laptop side was okay:
+
+  can0 is UP
+  LOWER_UP
+  can state ERROR-ACTIVE
+
+  That means slcand created the interface and the CAN controller was not in BUS-OFF or an obvious error state.
+
+  But it does not show whether any frames or errors were received. For that, the more useful command is:
+
+```sh
+  ip -details -statistics link show can0
+```
+  The missing -statistics part would show counters like:
+
+  RX: bytes  packets  errors  dropped
+  TX: bytes  packets  errors  dropped
+
+  That would tell us:
+
+  - RX packets = 0, errors = 0: no traffic reaching adapter.
+  - RX packets = 0, errors increasing: likely wrong bitrate/wiring.
+  - RX packets > 0: traffic existed, and we need to check how candump was run.
+
+  Your output still supports the current conclusion: the CANable setup was healthy, but the car/OBD side did not expose passive traffic at the time.
+
+You had:
+
+  CANable2 detected
+  ttyACM0 / ttyACM1
+  can0 created
+  can0 UP, LOWER_UP
+  can state ERROR-ACTIVE
+  bench test with candump + cansend worked
+
+  So I would not suspect the USB adapter or Linux setup first.
+
+  Yes, the next thing to check is the cable mapping.
+
+  For standard OBD2 high-speed CAN:
+
+  OBD pin 6  = CAN-H
+  OBD pin 14 = CAN-L
+  OBD pin 4 or 5 = Ground
+
+  Make sure your CANable wiring matches:
+
+  CANable CAN-H -> OBD pin 6
+  CANable CAN-L -> OBD pin 14
+  CANable GND   -> OBD pin 4 or 5
+
+  Also check:
+
+  - CAN-H and CAN-L are not swapped.
+  - Ground is connected.
+  - The DB9/screw-terminal pinout for your CANable cable is actually what you think it is.
+  - You are not accidentally using OBD pin 16 power as signal or ground.
+  - If your adapter has a termination jumper/switch, avoid adding termination on a real vehicle OBD bus unless you know it is needed. Vehicle CAN is already terminated internally.
+
+  Given your results, cable mapping or vehicle gateway behavior are the top suspects.
+
+
+  candump -tz can0
+
+  If nothing:
+
+  ip -details -statistics link show can0
+
+  Then try a standard scanner/ELM327 on the same OBD port. 
+  
+If the scanner reads RPM, the port is alive and your passive sniffing is likely blocked by gateway behavior. If the scanner also fails, suspect OBD port, fuse, pin contact, or ignition state.
+
+
+That’s useful. It means the OBD port, vehicle power, ground, and at least one diagnostic path were working with a normal scanner.
+
+  So your situation narrows down to this:
+
+  - Your CANable/Linux setup worked locally.
+  - Your cable mapping sounds correct.
+  - The car’s OBD port can answer diagnostic tools.
+  - But passive candump saw nothing.
+
+  Most likely explanation: the Outlander’s OBD CAN is quiet until queried, or the gateway does not forward normal broadcast traffic to the OBD connector.
+
+  A normal scanner does not just listen. It sends diagnostic requests like “give me RPM,” and the ECU replies. Passive candump will not show those replies unless some other device is making requests at the same time.
+
+  Next time, useful passive test:
+
+  1. Connect CANable and run:
+
+     candump -tz can0
+
+  2. At the same time, plug/use a scanner app if possible.
+
+  If your CANable is correctly connected to the same diagnostic CAN, you may see the scanner’s request/response frames appear while the scanner reads RPM.
+
+  The more direct next step is to send a standard OBD request from the CANable, but that is active traffic. Safer than random cansend, but still not passive. Example for RPM on 11-bit OBD CAN is usually:
+
+  cansend can0 7DF#02010C0000000000
+
+  Expected response would be from something like 7E8:
+
+  7E8 ... 04 41 0C ...
+
+  I would only do that after verifying can0 is up and you’re comfortable sending a standard diagnostic request. It’s normal OBD scanner behavior, not arbitrary control traffic.
+
 ---
 
 ## Conclusions
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
+
+For your use case I’d split it by adapter type:
+
+For the CANable
+Use SavvyCAN first. It is a Qt desktop CAN tool for capturing, saving, visualizing, reverse engineering, and debugging CAN frames, and it supports Qt SerialBus drivers including socketcan, which matches your can0 setup. (github.com
+(https://github.com/collin80/SavvyCAN))
+
+Workflow would be:
+
+sudo slcand -o -c -s6 /dev/ttyACM1 can0
+sudo ip link set can0 up
+SavvyCAN
+
+Then connect SavvyCAN to socketcan / can0. This is better than staring at raw candump when frames are flowing.
+
+Also keep using can-utils: candump, cansniffer, cansend, canplayer. The official can-utils project is the standard Linux SocketCAN userspace toolkit. (github.com (https://github.com/linux-can/can-utils))
+
+For ELM327
+For Linux specifically, I’d use python-OBD or a serial terminal first, not a heavy desktop app. python-OBD works with ELM327 adapters and can query normal OBD-II values like RPM, speed, coolant temp, throttle, VIN, etc. (github.com
+(https://github.com/brendan-w/python-OBD))
+
+Quick test:
+
+pip install obd
+python3
+
+import obd
+c = obd.OBD()
+print(c.query(obd.commands.RPM))
+print(c.query(obd.commands.SPEED))
+
+For a GUI OBD app, OBD Auto Doctor is decent, but current official downloads are Windows/macOS/mobile, not Linux. It supports ELM327-type adapters and real-time sensor data, but on your Linux laptop it may not be the best fit unless you
+run it elsewhere. (obdautodoctor.com (https://www.obdautodoctor.com/download))
+
+My recommendation: next time take CANable + SavvyCAN for passive raw CAN work, and ELM327 + python-OBD for normal RPM/speed/diagnostic checks. Keep them conceptually separate.
+
 
 https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#what-actually-happens-in-the-valve
 
@@ -277,6 +593,10 @@ $$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
 
 
 ### IoT MQTT
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Get some of my time ↗" icon="user" >}}
+{{< /cards >}}
 
 https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer
 
@@ -469,6 +789,34 @@ Car networks require microscopic timing precision. If a microcontroller delays a
 **The Takeaway:** If you were building a standalone device to sit under the dash and text your phone when the car alarm goes off, the ESP32 wins hands down because of its wireless radios.
 
 But because your goal is to **sniff a raw firehose of high-speed data directly into a Linux terminal over a wire**, the native USB and dedicated hardware CAN controller inside the STM32 chip make it vastly superior. You bought the mathematically correct chip for this specific job!
+
+### ELM327 vs STM
+
+Understandable, but they are different kinds of devices.
+
+  Your CANable-style USB adapter is basically a raw CAN interface:
+
+  Linux/can-utils -> can0 -> CANable -> raw CAN frames
+
+  It lets you see/send CAN frames directly, but it does not automatically know OBD commands, protocols, headers, PIDs, or vehicle-specific meanings.
+
+  An ELM327 is more like an OBD interpreter/modem:
+
+  App -> ELM327 AT commands -> ELM327 sends OBD requests -> ECU replies -> ELM327 formats response
+
+  So when an app asks for RPM, the ELM327 handles the diagnostic conversation. It sends the request, receives the ECU reply, and presents it in a simpler way.
+
+  Roughly:
+
+  CANable:
+    "Here are raw CAN frames. You figure out what they mean."
+
+  ELM327:
+    "Ask me for RPM, coolant temp, DTCs, etc. I’ll query the car."
+
+  Your CANable can do what an ELM327 does, but only if you send the correct OBD diagnostic frames yourself or use software that speaks OBD over SocketCAN. Passive candump alone will not ask the ECU for RPM.
+
+
 
 ### STM vs PicoW
 

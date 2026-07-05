@@ -41,12 +41,16 @@ Then this happened...
 
 ## Conclusions
 
-
 Too much to digest?
 
 Go ask chatgpt
 
-Or get real results with a higher ROI:
+Or...get real results with a higher time ROI:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 
 ### Tomato Evolution
@@ -60,6 +64,17 @@ https://youtube.com/shorts/sCrMm5sLG-w
 -->
 
 The melisa and mieta p. didnt make it though.
+
+And some time later, the mieta polej also died  *most likely Spider Mites (przędziorki) or Thrips (wciornastki)*
+
+3 months later:
+
+{{< youtube "_YBjNO8urfE" >}}
+
+Tomatoes continued, and after week ~13:
+
+{{< youtube sCrMm5sLG-w >}}
+
 
 ### Interesting yt channels
 

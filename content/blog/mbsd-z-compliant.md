@@ -1,6 +1,6 @@
 ---
 title: "Compliant mechanisms and MultiBodySystemsDynamics dot com"
-date: 2026-06-15
+date: 2026-07-15
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper"]
 description: 'Dynamics is trickier when solids are flexible. Mechanism agentic centered design.'
@@ -60,6 +60,13 @@ The engine under `https://multibodysystemsdynamics.com/` cant be closed source.
 Say that you can to simulate a new engine type:
 
 https://www.youtube.com/watch?v=HVqYlP1MC6E
+
+## Conclusions
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 
 ---

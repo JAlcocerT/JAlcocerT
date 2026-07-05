@@ -642,7 +642,12 @@ This will output a large JSON object containing every transaction, including inp
 
 2. **Inspect the Mempool (Unconfirmed Transactions)**
 
-The mempool is the queue of transactions waiting for confirmation. Analyzing it gives you a real-time view of network congestion and fee pressure.
+The mempool is the queue of transactions waiting for confirmation. 
+
+Analyzing it gives you a real-time view of network congestion and fee pressure.
+
+
+> See [mempool/mempool](https://github.com/mempool/mempool)
 
 ```bash
 docker exec bitcoin_app_1 bitcoin-cli getrawmempool

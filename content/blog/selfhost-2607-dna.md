@@ -191,6 +191,11 @@ Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/
 
 ## Conclusions
 
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
+
 - **Apache DevLake** = DevOps/SDLC Analytics & Metrics
 - **Delta Lake** = Data Storage Layer for Data Lakes
 

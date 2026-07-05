@@ -132,7 +132,7 @@ Sample scan interpretation:
 
 {{< /details >}}
 
-## TR-471 Throughput Testing
+### TR-471 Throughput Testing
 
 I also tested the Broadband Forum TR-471 style UDP speed test flow with `obudpst`.
 
@@ -206,7 +206,7 @@ Local result links from the lab:
 
 {{< /details >}}
 
-## TR-181: The Data Model I Want
+### TR-181: The Data Model I Want
 
 TR-181 is the Broadband Forum data model for describing customer-premises network devices. 
 
@@ -270,11 +270,17 @@ With `bbfdm + obuspa`, that state can become a proper TR-181/USP surface.
 | ISP router on stock firmware | Often has TR-069/TR-181 internally, but the ISP sees it, not me |
 | Router/OpenWrt gateway with bbfdm + obuspa | Best case: LAN clients, DHCP, NAT, firewall, Wi-Fi clients, and maybe WAN line stats if hardware supports it |
 
-The biggest jump is not just "Raspberry Pi OS to OpenWrt". The biggest jump is **station to AP/gateway**. The AP is the device that has the useful per-client Wi-Fi truth.
+The biggest jump is not just "Raspberry Pi OS to OpenWrt". 
+
+The biggest jump is **station to AP/gateway**. 
+
+The AP is the device that has the useful per-client Wi-Fi truth.
 
 ## Seeing Other Devices' Wi-Fi Quality
 
-`nmap` cannot tell me RSSI, band, bitrate, or noise for other devices. It works at IP/service level. Wi-Fi quality is a radio-layer property.
+`nmap` cannot tell me RSSI, band, bitrate, or noise for other devices. 
+
+It works at IP/service level. Wi-Fi quality is a radio-layer property.
 
 There are three real paths:
 
@@ -300,13 +306,19 @@ hostapd_cli all_sta
 obuspa -c get Device.WiFi.AccessPoint.*.AssociatedDevice.*.SignalStrength
 ```
 
-For monitor mode on a Pi 4, the onboard Broadcom radio needs `nexmon` for proper monitor mode. In practice, a separate USB Wi-Fi adapter is cleaner because one radio cannot comfortably stay connected and sniff at the same time.
+For monitor mode on a Pi 4, the onboard Broadcom radio needs `nexmon` for proper monitor mode. 
+
+In practice, a separate USB Wi-Fi adapter is cleaner because one radio cannot comfortably stay connected and sniff at the same time.
 
 ## LAN Check
 
-I also generated a LAN inventory for `192.168.1.0/24`. This is useful for the device inventory side of connectivity, but it does not prove anything about Wi-Fi signal.
+I also generated a LAN inventory for `192.168.1.0/24`. 
 
-The scan found 11 active hosts. A few devices were worth identifying more carefully: unknown IoT vendors, ESP32-style devices, randomized MACs, and the ISP gateway.
+This is useful for the device inventory side of connectivity, but it does not prove anything about Wi-Fi signal.
+
+The scan found 11 active hosts.
+
+A few devices were worth identifying more carefully: unknown IoT vendors, ESP32-style devices, randomized MACs, and the ISP gateway.
 
 {{< details title="LAN inventory notes" closed="true" >}}
 
@@ -433,7 +445,9 @@ The most useful lab setup would be:
 
 ## Self-Hosting Updates
 
-These notes are not the core of the connectivity post, but they belong to the same maintenance window. I am keeping them collapsed so they remain findable without taking over the article.
+These notes are not the core of the connectivity post, but they belong to the same maintenance window.
+
+I am keeping them collapsed so they remain findable without taking over the article.
 
 {{< details title="Matrix, Nextcloud, rclone, and media restore notes" closed="true" >}}
 
@@ -536,33 +550,6 @@ rsync -av --info=progress2 \
 
 {{< /details >}}
 
-## What I Learned
-
-- The Pi's own Wi-Fi metrics are easy to collect with `iwconfig`, `iw`, and scan/survey commands.
-- TR-471 style testing gives a better view than a simple speed test because it exposes loss and latency under load.
-- `nmap` is useful for LAN inventory, not Wi-Fi quality.
-- Per-client RSSI is AP-side truth. The router/AP is the device to query or replace.
-- OpenWrt becomes much more valuable when the device is acting as AP/gateway, not merely as another Wi-Fi client.
-- TR-181 is a useful schema, but it only becomes operationally rich when backed by real system state through something like `bbfdm`.
-
-## What I Would Do Differently
-
-I would separate future work into three smaller artifacts:
-
-1. A repeatable `pi-connectivity` script for local Wi-Fi, DNS, LAN, and latency checks.
-2. A router/AP lab note for OpenWrt, `bbfdm`, `obuspa`, and EasyMesh.
-3. A monthly self-hosting update post for Matrix, Nextcloud, rclone, and media maintenance.
-
-That split keeps the public post readable while still preserving the lab notebook trail.
-
-## Durable Takeaways
-
-- Connectivity observability starts at the LAN edge, but the richest Wi-Fi data lives on the AP.
-- A Pi as a station is a good measurement client, not a full network observability source.
-- TR-181 is most useful when a real agent maps it to live router state.
-- DNS observability and packet capture solve different layers of the same home-network debugging problem.
-- LAN inventory should be periodic, because self-hosted networks quietly accumulate devices.
-
 ## Conclusion
 
 The current home network looks healthy from the Pi's point of view: strong 5 GHz RSSI, clean channel selection, and usable throughput.
@@ -638,9 +625,41 @@ i have created this repo at forgejo for you, you have ssh access to it and can p
   differenciate in features that the raspberry pi will be able to run (or the homelab where this project will be tested) versus the ones that it will be a server and a local client
   will need to interact with it?
 
+
+### What I Learned
+
+- The Pi's own Wi-Fi metrics are easy to collect with `iwconfig`, `iw`, and scan/survey commands.
+- TR-471 style testing gives a better view than a simple speed test because it exposes loss and latency under load.
+- `nmap` is useful for LAN inventory, not Wi-Fi quality.
+- Per-client RSSI is AP-side truth. The router/AP is the device to query or replace.
+- OpenWrt becomes much more valuable when the device is acting as AP/gateway, not merely as another Wi-Fi client.
+- TR-181 is a useful schema, but it only becomes operationally rich when backed by real system state through something like `bbfdm`.
+
+#### What I Would Do Differently
+
+I would separate future work into three smaller artifacts:
+
+1. A repeatable `pi-connectivity` script for local Wi-Fi, DNS, LAN, and latency checks.
+2. A router/AP lab note for OpenWrt, `bbfdm`, `obuspa`, and EasyMesh.
+3. A monthly self-hosting update post for Matrix, Nextcloud, rclone, and media maintenance.
+
+That split keeps the public post readable while still preserving the lab notebook trail.
+
+#### Durable Takeaways
+
+- Connectivity observability starts at the LAN edge, but the richest Wi-Fi data lives on the AP.
+- A Pi as a station is a good measurement client, not a full network observability source.
+- TR-181 is most useful when a real agent maps it to live router state.
+- DNS observability and packet capture solve different layers of the same home-network debugging problem.
+- LAN inventory should be periodic, because self-hosted networks quietly accumulate devices.
+
+
 ---
 
 ## FAQ
+
+### RRSi vs SNR vs Bandwith
+
 
 ### Selfhosted networking tools
 
@@ -796,14 +815,15 @@ I got some results: http://192.168.1.2:3034/hermesagent/tr471-checks/raw/commit/
 
 ```
 
-`http://192.168.1.2:3034/hermesagent/pi-connectivity`
+* `http://192.168.1.2:3034/hermesagent/pi-connectivity`
 
-https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
+```sh
+#git clone http://192.168.1.2:3034/hermesagent/pi-connectivity
+git clone https://github.com/JAlcocerT/hermesagent/ #tree/tinker/hermesagent/pi-connectivity
+cd tinker/hermesagent/pi-connectivity
+```
 
- `pi-connectivity`
 
-
-git clone
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wireshark" title="Wireshark | Docker Config 🐋 ↗" >}}
@@ -864,7 +884,10 @@ https://www.youtube.com/watch?v=H-tPCwxdxpY
 
 https://raspberrytips.com/openwrt-on-raspberry-pi/
 
-  sudo apt install -y nmap arp-scan tcpdump
+```sh
+sudo apt install -y nmap arp-scan tcpdump
+```
+
 
 **TL;DR**
 
@@ -872,11 +895,13 @@ Wheter you have 4g, coax,fiber or starlink, you need proper connectivity at home
 
 http://192.168.1.2:3034/hermesagent/pi-connectivity
 
+
+```sh
 gosolar-spain
 tmux new -s claude-gosolar-spain
 
 sudo apt install libssl-dev libcurl4-openssl-dev libsqlite3-dev libz-dev autoconf automake libtool pkg-config libmosquitto-dev libwebsockets-dev mosquitto mosquitto-clients
-
+```
 
 ```sh
 #tmux new -s claude-pi
@@ -931,6 +956,7 @@ Bash(iwconfig 2>/dev/null | grep -E "ESSID|Signal|Quality")
   ⎿  wlan0     IEEE 802.11  ESSID:"Piszymsiu"         
                Link Quality=63/70  Signal level=-47 dBm
 
+```md
 ● Yes — your Pi is connected to "Piszymsiu" with RSSI = -47 dBm (Link Quality 63/70, which is excellent — anything above -50 dBm is a strong signal).
 
   A few ways to check it:
@@ -941,8 +967,6 @@ Bash(iwconfig 2>/dev/null | grep -E "ESSID|Signal|Quality")
   For reference:
   - -30 to -50 dBm → excellent  - -50 to -60 dBm → good  - -60 to -70 dBm → fair
   - < -70 dBm → weak / unreliable
-✻ Cogitated for 10s
-
 
  Bash(iw dev wlan0 link)
   ⎿  Connected to 2c:ec:f7:4b:b5:a8 (on wlan0)
@@ -986,61 +1010,68 @@ Bash(iwconfig 2>/dev/null | grep -E "ESSID|Signal|Quality")
       channel active time: ... 
       channel busy time: ...
       
-  SNR (Signal-to-Noise Ratio) = signal − noise. With your -49 dBm signal and a typical -95 dBm noise floor, SNR ≈ 46 dB → excellent (>40 dB is essentially the ceiling, sustaining max bitrates).
-  If you want, you can also see all nearby APs and their channels/signals with:
-  ! sudo iw dev wlan0 scan | grep -E "SSID|freq|signal"
+SNR (Signal-to-Noise Ratio) = signal − noise. 
+  
+With your -49 dBm signal and a typical -95 dBm noise floor, SNR ≈ 46 dB → excellent (>40 dB is essentially the ceiling, sustaining max bitrates).
+```
 
-   ! sudo iw dev wlan0 survey dump | grep -A 6 "in use"
+If you want, you can also see all nearby APs and their channels/signals with:
 
+```sh
+! sudo iw dev wlan0 scan | grep -E "SSID|freq|signal"
+! sudo iw dev wlan0 survey dump | grep -A 6 "in use"
+```
+
+Then 
 ```sh
 ! sudo iw dev wlan0 scan | grep -E "SSID|freq|signal" | head -40
 ```
 
-        freq: 5500.0
-        signal: -50.00 dBm
-        SSID: Piszymsiu
-                 * center freq segment 1: 106
-                 * center freq segment 2: 0
-        freq: 5180.0
-        signal: -54.00 dBm
-        SSID: Piszymsiu
-                 * center freq segment 1: 42
-                 * center freq segment 2: 50
-        freq: 2462.0
-        signal: -63.00 dBm
-        SSID: Piszymsiu
-        freq: 5240.0
-        signal: -58.00 dBm
-        SSID: 5G-FELIKS
-                 * center freq segment 1: 42
-                 * center freq segment 2: 0
-        freq: 5200.0
-        signal: -83.00 dBm
-        SSID: 5G-Vectra-WiFi-84D73A
-                 * center freq segment 1: 42
-                 * center freq segment 2: 0
-        freq: 5180.0
-        signal: -56.00 dBm
-        SSID: GibInternet
-                 * center freq segment 1: 42
-                 * center freq segment 2: 0
-        freq: 5180.0
-        signal: -54.00 dBm
-                 * center freq segment 1: 42
-                 * center freq segment 2: 50
-        freq: 5220.0
-        signal: -89.00 dBm
-        SSID: Andaluzja_5G
-                 * center freq segment 1: 42
-                 * center freq segment 2: 0
-        freq: 2412.0
-        signal: -55.00 dBm
-        SSID: Bubu
+```md
+freq: 5500.0
+signal: -50.00 dBm
+SSID: Piszymsiu
+          * center freq segment 1: 106
+          * center freq segment 2: 0
+freq: 5180.0
+signal: -54.00 dBm
+SSID: Piszymsiu
+          * center freq segment 1: 42
+          * center freq segment 2: 50
+freq: 2462.0
+signal: -63.00 dBm
+SSID: Piszymsiu
+freq: 5240.0
+signal: -58.00 dBm
+SSID: 5G-FELIKS
+          * center freq segment 1: 42
+          * center freq segment 2: 0
+freq: 5200.0
+signal: -83.00 dBm
+SSID: 5G-Vectra-WiFi-84D73A
+          * center freq segment 1: 42
+          * center freq segment 2: 0
+freq: 5180.0
+signal: -56.00 dBm
+SSID: GibInternet
+          * center freq segment 1: 42
+          * center freq segment 2: 0
+freq: 5180.0
+signal: -54.00 dBm
+          * center freq segment 1: 42
+          * center freq segment 2: 50
+freq: 5220.0
+signal: -89.00 dBm
+SSID: Andaluzja_5G
+          * center freq segment 1: 42
+          * center freq segment 2: 0
+freq: 2412.0
+signal: -55.00 dBm
+SSID: Bubu
+```
 
+The AP "Piszymsiu" has 3 radios:
 
-Nice data. The survey grep returned nothing (likely because iw on your driver formats it slightly differently — try without the filter: ! sudo iw dev wlan0 survey dump), but the scan is very informative.
-
-  Your AP "Piszymsiu" has 3 radios:
   ┌──────────┬─────────┬─────────────┬────────────────────────────┐
   │   Freq   │ Channel │    Band     │           Signal           │
   ├──────────┼─────────┼─────────────┼────────────────────────────┤
@@ -1060,67 +1091,64 @@ Nice data. The survey grep returned nothing (likely because iw on your driver fo
   ├──────────────┼─────────┼─────────┼──────────────────────────┤  │ Andaluzja_5G │ 44      │ -89 dBm │ very weak                │
   └──────────────┴─────────┴─────────┴──────────────────────────┘
 
-  Takeaways:  - You're on channel 100, 80 MHz wide (spans 100–112) with no other AP anywhere near it — that's why you're hitting 433 Mbit/s cleanly.
-  - The lower 5 GHz band (ch 36–48) is congested at your location — staying on ch 100 is the right choice.
-  - Your AP's band-steering picked the best radio for the Pi.
-  To also see the noise floor, try:
-  ! sudo iw dev wlan0 survey dump
-  (without the grep — paste the whole output and I'll pull the noise figure for channel 100)
+Takeaways:  - You're on channel 100, 80 MHz wide (spans 100–112) with no other AP anywhere near it — that's why you're hitting 433 Mbit/s cleanly.
+- The lower 5 GHz band (ch 36–48) is congested at your location — staying on ch 100 is the right choice.
+- Your AP's band-steering picked the best radio for the Pi.
 
- TR-181 is a standardized data model from the Broadband Forum (https://www.broadband-forum.org/) — specifically "TR-181: Device:2 Data Model for TR-069 Devices and USP Agents." It defines a hierarchical tree of
-  parameters that describe and control a network device (router, ONT, set-top box, etc.).
+To also see the noise floor, try: `! sudo iw dev wlan0 survey dump`
 
-  It's transported by:
-  - TR-069 (CWMP) — older ISP remote-management protocol, used by an ACS server
-  - TR-369 (USP) — newer replacement, MQTT/WebSocket-based
+TR-181 is a standardized data model from the Broadband Forum (https://www.broadband-forum.org/) — specifically "TR-181: Device:2 Data Model for TR-069 Devices and USP Agents." 
+ 
+It defines a hierarchical tree of parameters that describe and control a network device (router, ONT, set-top box, etc.).
 
-  Example paths (the same Wi-Fi data we've been looking at, but exposed as standardized parameters):
-  Device.WiFi.Radio.1.OperatingFrequencyBand        → "5GHz"
-  Device.WiFi.Radio.1.Channel                       → 100
-  Device.WiFi.SSID.1.SSID                           → "Piszymsiu"  Device.WiFi.AccessPoint.1.AssociatedDevice.1.SignalStrength  → -50  ← RSSI
-  Device.WiFi.AccessPoint.1.AssociatedDevice.1.MACAddress
-  Device.DeviceInfo.SoftwareVersion
-  Device.IP.Interface.1.IPv4Address.1.IPAddress
+It's transported by:
+- TR-069 (CWMP) — older ISP remote-management protocol, used by an ACS server
+- TR-369 (USP) — newer replacement, MQTT/WebSocket-based
+
+Example paths (the same Wi-Fi data we've been looking at, but exposed as standardized parameters):
+
+Device.WiFi.Radio.1.OperatingFrequencyBand        → "5GHz"
+Device.WiFi.Radio.1.Channel                       → 100
+Device.WiFi.SSID.1.SSID                           → "Piszymsiu"  Device.WiFi.AccessPoint.1.AssociatedDevice.1.SignalStrength  → -50  ← RSSI
+Device.WiFi.AccessPoint.1.AssociatedDevice.1.MACAddress
+Device.DeviceInfo.SoftwareVersion
+Device.IP.Interface.1.IPv4Address.1.IPAddress
+
+Why it matters for you: ISPs (Vectra, Orange, VF, UPC etc. — the kind of equipment around you) use TR-181 over TR-069 to:
+- read your router's status (RSSI of connected devices, channel, errors)  - push config changes (Wi-Fi password, channel, firmware updates)
+- diagnose your line remotely
+
+So in essence: everything we just queried locally with `iw` and `iwconfig` is the same data your ISP can see on their side via TR-181 — just standardized into a vendor-neutral schema.
+
+> If you want to play with it yourself, open-source agents that implement TR-181 include OpenWrt's easycwmp (https://github.com/pivasoftware/easycwmp) and obuspa (https://github.com/BroadbandForum/obuspa) (the BBF's  reference USP agent).
+
+What you've got now (at ~/tr181-dump.sh):
+
+- ./tr181-dump.sh — dump everything (no sudo needed)
+- ./tr181-dump.sh --scan — also adds Device.WiFi.NeighboringWiFiDiagnostic.Result.* from a Wi-Fi scan (will prompt for sudo)
+- ./tr181-dump.sh --filter Radio — only paths containing "Radio"
+
+Notable findings from the dump:
+
+- Pi 4B Rev 1.5, kernel 6.12.75, uptime ~4.7 days (403923s)  - eth0 unplugged; you're on Wi-Fi only  
+- Connected to Piszymsiu BSSID 2c:ec:f7:4b:b5:a8, 5 GHz ch 100 / 80 MHz, RSSI -48 dBm, 433.3 Mbit/s both ways
+- ~8.4 GB up / 1.66 GB down since boot, zero errors on wlan0 — healthy link
+- Tailscale interface up (100.101.108.118), Docker bridge present
+
+To grab neighbors too: `! ~/tr181-dump.sh --scan`
+
+What you've got now (at ~/tr181-dump.sh):
+
+- ./tr181-dump.sh — dump everything (no sudo needed)
+- ./tr181-dump.sh --scan — also adds Device.WiFi.NeighboringWiFiDiagnostic.Result.* from a Wi-Fi scan (will prompt for sudo)
+- ./tr181-dump.sh --filter Radio — only paths containing "Radio"
+
+>  BBF — Broadband Forum (broadband-forum.org (https://www.broadband-forum.org/))
+
+  A non-profit industry consortium (ISPs, chipset vendors, router vendors, software vendors) that writes the standards for how broadband networks and customer-premises equipment are managed. 
   
-  Why it matters for you: ISPs (Vectra, Orange, etc. — the kind of equipment around you) use TR-181 over TR-069 to:
-  - read your router's status (RSSI of connected devices, channel, errors)  - push config changes (Wi-Fi password, channel, firmware updates)
-  - diagnose your line remotely
+Their specs are numbered  "TR-xxx" (Technical Reports). Key ones you've now touched:
 
-  So in essence: everything we just queried locally with iw and iwconfig is the same data your ISP can see on their side via TR-181 — just standardized into a vendor-neutral schema.
-
-  If you want to play with it yourself, open-source agents that implement TR-181 include OpenWrt's easycwmp (https://github.com/pivasoftware/easycwmp) and obuspa (https://github.com/BroadbandForum/obuspa) (the BBF's  reference USP agent).
-
-   What you've got now (at ~/tr181-dump.sh):
-
-  - ./tr181-dump.sh — dump everything (no sudo needed)
-  - ./tr181-dump.sh --scan — also adds Device.WiFi.NeighboringWiFiDiagnostic.Result.* from a Wi-Fi scan (will prompt for sudo)
-  - ./tr181-dump.sh --filter Radio — only paths containing "Radio"
-
-  Notable findings from the dump:
-  - Pi 4B Rev 1.5, kernel 6.12.75, uptime ~4.7 days (403923s)  - eth0 unplugged; you're on Wi-Fi only  - Connected to Piszymsiu BSSID 2c:ec:f7:4b:b5:a8, 5 GHz ch 100 / 80 MHz, RSSI -48 dBm, 433.3 Mbit/s both ways
-  - ~8.4 GB up / 1.66 GB down since boot, zero errors on wlan0 — healthy link
-  - Tailscale interface up (100.101.108.118), Docker bridge present
-
-  To grab neighbors too:
-  ! ~/tr181-dump.sh --scan
-
-   What you've got now (at ~/tr181-dump.sh):
-
-  - ./tr181-dump.sh — dump everything (no sudo needed)
-  - ./tr181-dump.sh --scan — also adds Device.WiFi.NeighboringWiFiDiagnostic.Result.* from a Wi-Fi scan (will prompt for sudo)
-  - ./tr181-dump.sh --filter Radio — only paths containing "Radio"
-
-  Notable findings from the dump:
-  - Pi 4B Rev 1.5, kernel 6.12.75, uptime ~4.7 days (403923s)  - eth0 unplugged; you're on Wi-Fi only  - Connected to Piszymsiu BSSID 2c:ec:f7:4b:b5:a8, 5 GHz ch 100 / 80 MHz, RSSI -48 dBm, 433.3 Mbit/s both ways
-  - ~8.4 GB up / 1.66 GB down since boot, zero errors on wlan0 — healthy link
-  - Tailscale interface up (100.101.108.118), Docker bridge present
-
-  To grab neighbors too:
-  ! ~/tr181-dump.sh --scan
-
-   BBF — Broadband Forum (broadband-forum.org (https://www.broadband-forum.org/))
-
-  A non-profit industry consortium (ISPs, chipset vendors, router vendors, software vendors) that writes the standards for how broadband networks and customer-premises equipment are managed. Their specs are numbered  "TR-xxx" (Technical Reports). Key ones you've now touched:
   ┌────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
   │  Spec  │                                                      What it defines                                                      │
   ├────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
@@ -1131,46 +1159,60 @@ Nice data. The survey grep returned nothing (likely because iw on your driver fo
   │ TR-143 │ Diagnostic tests (speedtest, ping, traceroute) — modeled as TR-181 parameters                                             │
   ├────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤  │ TR-157 │ Software module management (firmware/component install)                                                                   │
   └────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-  So: TR-181 is the vocabulary, TR-069 and TR-369 are two grammars for speaking it.
 
-  ---  USP — User Services Platform
+TR-181 is the vocabulary, TR-069 and TR-369 are two grammars for speaking it.
 
-  The protocol defined in TR-369. It has two roles:
+USP — User Services Platform
 
-  - USP Agent — runs on the device (your router, ONT, set-top, or in this case the Pi). It owns the device's TR-181 data model and answers Get / Set / Operate / Add / Delete messages.
-  - USP Controller — runs at the ISP, in a cloud service, or even on your phone. It sends those messages to the Agent.
-  Communication between them goes through a Message Transfer Protocol (MTP) — usually MQTT, WebSocket, or STOMP — with TLS and certificate-based auth.
-  A typical exchange:
-  Controller → Agent:  Get Device.WiFi.SSID.*.SSID
-  Agent → Controller:  Device.WiFi.SSID.1.SSID = "Piszymsiu"                       Device.WiFi.SSID.2.SSID = "Piszymsiu-Guest"
-  Controller → Agent:  Set Device.WiFi.Radio.1.Channel = 36  Agent → Controller:  OK
-  Why USP replaced TR-069:
-  - TR-069 polls (the device asks the ACS "anything for me?" every ~hour) → slow
-  - USP is push-capable (Controller sends a message and Agent acts now) → real-time
-  - USP supports multiple Controllers (your ISP, and your own app, and a mesh-coordination Controller)
-  - USP is designed for IoT scale — IPv6, low-bandwidth, low-power devices
-  - USP uses Protocol Buffers (not the verbose SOAP/XML of TR-069)
-  ---
-  The reference Agent implementation: OB-USP-AGENT (obuspa)  
-  BBF publishes the official open-source USP Agent: https://github.com/BroadbandForum/obuspa (written in C, "OB" = Open Broadband). When earlier I mentioned option B was "build obuspa from source" — that's the BBF
-  reference Agent.
-
-  It gives you a real Agent process that:
-
-  1. Exposes a TR-181 data model
-  2. Talks USP over MQTT/WebSocket to a Controller  3. Has a CLI (obuspa -c get Device.) for local inspection
-
-  The catch I mentioned: out of the box its data model is mostly stubs. Real router firmwares (Vectra, Orange, AVM Fritz!Box, Sagemcom…) ship a fork of obuspa where they've written the C code that maps each TR-181  parameter to their actual hardware drivers. The tr181-dump.sh we just wrote is essentially a tiny, read-only, shell-based version of what that vendor-specific layer does — but in 200 lines instead of tens of thousands.
-
- Yes — substantially more, but it depends on which OpenWrt setup and what the device actually is (router vs station). Two orthogonal things matter:
-
-  1. The agent + mapper stack (software that fills TR-181 paths from live system state)
-  2. The hardware sources (what data even exists to map)
+The protocol defined in TR-369. 
   
-  ---
-  1. OpenWrt is the natural home for serious TR-181 stacks
-  Stock OpenWrt has no TR-181, but it has the right substrate for one — uci (config), ubus (IPC), netifd (interface abstraction), hostapd (Wi-Fi events). The Broadband Forum / iopsys / prpl ecosystems plug straight into
-  those. Available as opkg packages:
+It has two roles:
+
+- USP Agent — runs on the device (your router, ONT, set-top, or in this case the Pi). It owns the device's TR-181 data model and answers Get / Set / Operate / Add / Delete messages.
+- USP Controller — runs at the ISP, in a cloud service, or even on your phone. It sends those messages to the Agent.
+Communication between them goes through a Message Transfer Protocol (MTP) — usually MQTT, WebSocket, or STOMP — with TLS and certificate-based auth.
+
+A typical exchange:
+Controller → Agent:  Get Device.WiFi.SSID.*.SSID
+Agent → Controller:  Device.WiFi.SSID.1.SSID = "Piszymsiu"                       Device.WiFi.SSID.2.SSID = "Piszymsiu-Guest"
+Controller → Agent:  Set Device.WiFi.Radio.1.Channel = 36  Agent → Controller:  OK
+
+Why USP replaced TR-069:
+- TR-069 polls (the device asks the ACS "anything for me?" every ~hour) → slow
+- USP is push-capable (Controller sends a message and Agent acts now) → real-time
+- USP supports multiple Controllers (your ISP, and your own app, and a mesh-coordination Controller)
+- USP is designed for IoT scale — IPv6, low-bandwidth, low-power devices
+- USP uses Protocol Buffers (not the verbose SOAP/XML of TR-069)
+
+The reference Agent implementation: OB-USP-AGENT (obuspa)  
+
+BBF publishes the official open-source USP Agent: https://github.com/BroadbandForum/obuspa (written in C, "OB" = Open Broadband). 
+
+When earlier I mentioned option B was "build obuspa from source" — that's the BBF reference Agent.
+
+It gives you a real Agent process that:
+
+1. Exposes a TR-181 data model
+2. Talks USP over MQTT/WebSocket to a Controller  3. Has a CLI (obuspa -c get Device.) for local inspection
+
+The catch I mentioned: out of the box its data model is mostly stubs. Real router firmwares (Vectra, Orange, AVM Fritz!Box, Sagemcom…) ship a fork of obuspa where they've written the C code that maps each TR-181  parameter to their actual hardware drivers. 
+
+The tr181-dump.sh we just wrote is essentially a tiny, read-only, shell-based version of what that vendor-specific layer does — but in 200 lines instead of tens of thousands.
+
+Yes — substantially more, but it depends on which OpenWrt setup and what the device actually is (router vs station). 
+
+Two orthogonal things matter:
+
+1. The agent + mapper stack (software that fills TR-181 paths from live system state)
+2. The hardware sources (what data even exists to map)
+
+---
+
+1. OpenWrt is the natural home for serious TR-181 stacks
+
+Stock OpenWrt has no TR-181, but it has the right substrate for one — uci (config), ubus (IPC), netifd (interface abstraction), hostapd (Wi-Fi events). 
+
+The Broadband Forum / iopsys / prpl ecosystems plug straight into those. Available as opkg packages:
 
   ┌──────────────────┬─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐  │     Package      │                                                      What it adds                                                       │
   ├──────────────────┼─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
@@ -1183,12 +1225,15 @@ Nice data. The survey grep returned nothing (likely because iw on your driver fo
   │ prplmesh         │ Multi-AP mesh / EasyMesh agent                                                                                          │
   └──────────────────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 
-  With bbfdm + obuspa installed you'd actually run:
-  obuspa -c get Device.
-  …and see the full schema populated, including writable parameters.
-  2. What you'd see that we don't see now
+With bbfdm + obuspa installed you'd actually run: `obuspa -c get Device.
 
-  Concrete examples that go from "empty/missing in our shell script" → "populated with real values":
+
+…and see the full schema populated, including writable parameters.
+
+
+2. What you'd see that we don't see now
+
+Concrete examples that go from "empty/missing in our shell script" → "populated with real values":
 
   ┌─────────────────────────────────────────────────────────────────┬──────────────────────────────────────────────────────────────────────────────────────────────┐  │                              Path                               │                                 Why it lights up on OpenWrt                                  │
   ├─────────────────────────────────────────────────────────────────┼──────────────────────────────────────────────────────────────────────────────────────────────┤  │ Device.WiFi.AccessPoint.{i}.AssociatedDevice.{i}.SignalStrength │ Pi-as-AP via hostapd — every connected client's RSSI                                         │
@@ -1212,9 +1257,9 @@ Nice data. The survey grep returned nothing (likely because iw on your driver fo
   │ Writable params                                                 │ Set Device.WiFi.Radio.1.Channel=36 actually changes the channel                              │
   └─────────────────────────────────────────────────────────────────┴──────────────────────────────────────────────────────────────────────────────────────────────┘
 
-  vs. our current shell script which is read-only and ~50 parameters.
+vs. our current shell script which is read-only and ~50 parameters.
 
-  3. But the device matters more than the OS
+3. But the device matters more than the OS
 
   ┌──────────────────────────────────────────────────────────┬───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐  │                         Scenario                         │                                                                      TR-181 richness                                                                      │
   ├──────────────────────────────────────────────────────────┼───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
@@ -1227,12 +1272,14 @@ Nice data. The survey grep returned nothing (likely because iw on your driver fo
   │ ISP modem/router on OpenWrt + bbfdm                      │ The gold standard — DSL/PON line stats, voice, NAT, full client visibility, you own the data                                                              │
   └──────────────────────────────────────────────────────────┴───────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 
-  4. Practical recommendation
-  If your interest is learning the schema and seeing it filled in properly → install OpenWrt on a spare router (even a cheap TP-Link), add bbfdm + obuspa. ~1 hour of work, no migration pain on your Pi.
+4. Practical recommendation
 
-  If your interest is monitoring your home network (clients, RSSI per device, line stats) → that data lives on your router, not your Pi. The Pi as a station can only see itself. Running OpenWrt + bbfdm on the box that's  actually the AP/gateway is where the goodies are.
-  If you want, I can sketch what an OpenWrt install on a small router would look like, or extend the current Pi script with a few more interesting paths we can still pull locally (process table, Device.Users.User.*,  Device.X_BROADCOM_COM_NetworkProperties.*-style vendor extensions, etc.).
-✻ Cogitated for 56s
+If your interest is learning the schema and seeing it filled in properly → install OpenWrt on a spare router (even a cheap TP-Link), add bbfdm + obuspa. ~1 hour of work, no migration pain on your Pi.
+
+If your interest is monitoring your home network (clients, RSSI per device, line stats) → that data lives on your router, not your Pi. The Pi as a station can only see itself. Running OpenWrt + bbfdm on the box that's  actually the AP/gateway is where the goodies are.
+
+If you want, I can sketch what an OpenWrt install on a small router would look like, or extend the current Pi script with a few more interesting paths we can still pull locally (process table, Device.Users.User.*,  Device.X_BROADCOM_COM_NetworkProperties.*-style vendor extensions, etc.).
+
 
 nmap can't see Wi-Fi/RSSI data for other devices — it's an L3/L4 tool (IP, ports, services) and RSSI/band/noise are L1/L2 radio properties.
 
@@ -1480,10 +1527,9 @@ populated and become writable:
 | `Device.PeriodicStatistics.*` | Built-in time-series |
 | Operate methods | `Reboot()`, `FactoryReset()`, `IPPing()`, `TraceRoute()`, `Download()` — actually invokable |
 
-**But hardware matters more than the OS.** A Pi running OpenWrt as a
-station still has no DSL line, no GPON, no associated AP clients to
-report on. The richest TR-181 surface lives on a device that is *the
-router* and has real WAN hardware.
+**But hardware matters more than the OS.** A Pi running OpenWrt as a station still has no DSL line, no GPON, no associated AP clients to
+report on. The richest TR-181 surface lives on a device that is *the router* and has real WAN hardware.
+
 
 | Scenario | TR-181 surface |
 |----------|----------------|
@@ -1497,9 +1543,11 @@ router* and has real WAN hardware.
 
 ## 5. Seeing *other* devices' Wi-Fi state from the Pi
 
-Key constraint: **RSSI, band, and noise are L1/L2 radio properties measured
-per-radio.** No L3/L4 tool (nmap, ping, etc.) can read another device's
-RSSI to its AP. Three real paths:
+Key constraint: **RSSI, band, and noise are L1/L2 radio properties measured per-radio.**
+
+No L3/L4 tool (nmap, ping, etc.) can read another device's RSSI to its AP.
+
+Three real paths:
 
 ### Path 1 — Ask the AP (the only one with the truth)
 
@@ -1512,25 +1560,22 @@ The AP is the only device that knows every client's RSSI as the AP sees it.
 
 ### Path 2 — Sniff from the Pi in monitor mode
 
-The Pi captures all frames in the air and reads RSSI **as the Pi hears
-each device** (a proxy for the AP's view, useful if the Pi sits near the AP).
+The Pi captures all frames in the air and reads RSSI **as the Pi hears each device** (a proxy for the AP's view, useful if the Pi sits near the AP).
 
-The Pi 4's built-in Wi-Fi (BCM43455c0) needs the **nexmon** patched firmware
-for proper monitor mode: [github.com/seemoo-lab/nexmon](https://github.com/seemoo-lab/nexmon).
+The Pi 4's built-in Wi-Fi (BCM43455c0) needs the **nexmon** patched firmware for proper monitor mode: [github.com/seemoo-lab/nexmon](https://github.com/seemoo-lab/nexmon).
 
 ```bash
 sudo airmon-ng start wlan0
 sudo airodump-ng -c 100 --band a wlan0mon   # watch channel 100
 ```
 
-Caveat: monitor mode disables the station role on the same radio — the
-Pi loses Wi-Fi internet while sniffing. Workaround: a USB Wi-Fi adapter
-(ALFA AWUS036 and similar) dedicated to monitor mode.
+Caveat: monitor mode disables the station role on the same radio — the Pi loses Wi-Fi internet while sniffing. 
+
+Workaround: a USB Wi-Fi adapter (ALFA AWUS036 and similar) dedicated to monitor mode.
 
 ### Path 3 — Ask each client device
 
-Each client knows only its own RSSI. Practical for a few Linux boxes
-(`iw dev wlan0 link` on each), not realistic for phones/IoT.
+Each client knows only its own RSSI. Practical for a few Linux boxes (`iw dev wlan0 link` on each), not realistic for phones/IoT.
 
 ### What `nmap` is and isn't good for here
 
@@ -1547,9 +1592,9 @@ ip neigh show                               # whatever the kernel already learne
 
 ### Noise floor for other devices
 
-Same story: `iw dev wlan0 survey dump` only reports noise for the Pi's
-own radio. There is no protocol — TR-181 or otherwise — that carries
-per-client noise readings from other devices to neighbors.
+Same story: `iw dev wlan0 survey dump` only reports noise for the Pi's own radio.
+
+There is no protocol — TR-181 or otherwise — that carries per-client noise readings from other devices to neighbors.
 
 ---
 
@@ -1689,9 +1734,17 @@ Avoid `--script=vuln` on every host blindly — some checks can crash unpatched 
 
 Wi-Fi and home networking
 
-Q: **What is EasyMesh**? A Wi-Fi Alliance standard (originally 2018, currently R5) for multi-AP roaming inside a home. One "controller" AP coordinates several "agent" APs over a vendor-neutral protocol so a phone can hand off between them without dropping the connection. The agents share client metrics (RSSI, capability, load) with the controller, which decides when to steer a client to a better AP.
+Q: **What is EasyMesh**? A Wi-Fi Alliance standard (originally 2018, currently R5) for multi-AP roaming inside a home. 
 
-It rides on the older IEEE 1905.1 abstraction (a layer-2 control plane that spans Wi-Fi, Ethernet, MoCA, powerline). The data those agents and controller exchange is exposed in TR-181 under Device.WiFi.DataElements.* — so a USP Controller can read the **full mesh topology** + per-station metrics through the same channel it reads everything else. Reference impl: prplMesh (https://github.com/prplfoundation/prplMesh). A planned deeper note lives at notes/wifi-easymesh.md.
+One "controller" AP coordinates several "agent" APs over a vendor-neutral protocol so a phone can hand off between them without dropping the connection. 
+
+The agents share client metrics (RSSI, capability, load) with the controller, which decides when to steer a client to a better AP.
+
+It rides on the older IEEE 1905.1 abstraction (a layer-2 control plane that spans Wi-Fi, Ethernet, MoCA, powerline). 
+
+The data those agents and controller exchange is exposed in TR-181 under Device.WiFi.DataElements.* — so a USP Controller can read the **full mesh topology** + per-station metrics through the same channel it reads everything else. 
+
+Reference impl: prplMesh (https://github.com/prplfoundation/prplMesh). A planned deeper note lives at notes/wifi-easymesh.md.
 
 Q: SSID vs BSSID — what's the difference?
 
@@ -1757,7 +1810,6 @@ would the pi with openwrt have more dkb tr181 fields than it currently has? coul
 
 ---
 
-## Conclusions
 
 
 
@@ -1962,9 +2014,3 @@ Then Jellyfin should see them under its existing `/data/tvshows` library after a
 ````
 
 {{< /details >}}
-
-
-## FAQ
-
-### RRSi vs SNR vs Bandwith
-

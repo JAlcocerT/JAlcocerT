@@ -159,6 +159,6 @@ but not sure on the how?
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
 {{< /cards >}} -->
 
-{{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Get some of my time ↗" icon="user" >}}
-{{< /cards >}}
+  {{< cards >}}
+    {{< card link="https://consulting.jalcocertech.com" title="Get some of my time ↗" icon="user" >}}
+  {{< /cards >}}

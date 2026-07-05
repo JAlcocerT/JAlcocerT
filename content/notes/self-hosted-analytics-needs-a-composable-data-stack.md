@@ -7,7 +7,9 @@ description: "A self-hosted analytics stack works when storage, modeling, queryi
 
 Self-hosted analytics is not one tool.
 
-It is a composed stack: databases, object storage, catalogs, notebooks, semantic layers, dashboards, agents, and governance practices. The pieces should match the scale and skill of the operator.
+It is a composed stack: databases, object storage, catalogs, notebooks, semantic layers, dashboards, agents, and governance practices. 
+
+The pieces should match the scale and skill of the operator.
 
 Owning analytics means owning the interfaces between tools.
 
