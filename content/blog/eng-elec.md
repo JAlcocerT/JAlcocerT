@@ -932,8 +932,18 @@ At 3 months, they went from [yellow shades to orange](https://youtube.com/shorts
 
 Want a  a micro-scale proof of concept for energy independence right on your balcony?
 
+
+I got a `elite 30 v2` battery which i can use with solar panels or as USP (SAI) for my home-lab.
+
+Oh...and i can integrate it via mqtt:
+
 * https://www.reddit.com/r/esp32/comments/xsv2zz/bluetti_db_bridge_a_esp32_based_bluetooth_and/
 * https://github.com/SSMCD/bluetti2mqtt
+* https://github.com/mariolukas/Bluetti_ESP32_Bridge
+
+<!-- https://www.youtube.com/watch?v=ek0IjREfz9o -->
+
+{{< youtube "ek0IjREfz9o" >}}
 
 #### Solar x Travel
 
@@ -947,7 +957,7 @@ If you [like analogies](https://jalcocert.github.io/JAlcocerT/fluids/#the-analog
 
 A DC boost does the oppositee of [a buck converter](https://jalcocert.github.io/JAlcocerT/electromagnetism-for-ac-dc-motors/#ac-vs-dc-power-transmission), it tries to rise DC voltage
 
-A ram pump
+A **ram pump** does sth similar to the DC boost but with fluids!
 
 #### Buck Converter
 

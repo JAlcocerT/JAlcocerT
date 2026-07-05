@@ -104,6 +104,10 @@ Action items / takeaways:
 
 {{< youtube "4nRgEmdwtJo" >}}
 
+> I went for parts to replicate a [Meteor75 Pro](https://betafpv.com/products/meteor75-pro-brushless-whoop-quadcopter?srsltid=AfmBOooBxjLk7PHA3ndjBqdQq0y1dVYGTmZ8IihKwFFLER1TUZqD0Cam) (Matrix 1S 5IN1 FC version) with 22k kv, ELRS signal a MCU STM32G473CEU6 and as FC a [Matrix 1S](https://betafpv.com/products/matrix-1s-brushless-flight-controller)
+
+> > https://support.betafpv.com/hc/en-us/articles/16846305078297-CLI-for-Meteor75-Pro-2026
+
 
 ---
 
@@ -428,8 +432,6 @@ If you decide to build a 2-meter long RC plane next month, your **RadioMaster Po
 Because they prioritize agility and staying under that 100g weight limit, they use very small batteries that offer short, high-intensity bursts of flight.
 
 1. Typical Flight Times (BetaFPV Series)
-
-As of 2026, here is what you can realistically expect from the most popular models:
 
 | Model Type | Battery Size | Average Flight Time |
 | --- | --- | --- |
