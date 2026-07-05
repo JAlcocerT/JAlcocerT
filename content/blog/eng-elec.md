@@ -2,7 +2,7 @@
 title: "Enough Electronics for a Dron or Canbus"
 date: 2026-06-26
 draft: false
-tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable x SMT","ELM327 vs STM32G431"]
+tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable","ELM327 vs STM32G431"]
 description: 'The electronics you can learn for free x Building a custom FPV Drone.'
 url: 'electr-diode'
 math: true
@@ -14,9 +14,10 @@ Someone is already doing this!
 
 **Intro**
 
-I saw a podcast on the beach and 
+I saw a podcast on the beach and luckily, this exists: https://github.com/diodeinc/pcb
 
-https://github.com/diodeinc/pcb
+* https://fossengineer.com/pcb-zener-kicad/
+* https://fossengineer.com/pyspice-python-circuit-simulation/
 
 ### Dron electronics
 
@@ -513,26 +514,224 @@ That’s useful. It means the OBD port, vehicle power, ground, and at least one 
 
 For your use case I’d split it by adapter type:
 
-For the CANable
-Use SavvyCAN first. It is a Qt desktop CAN tool for capturing, saving, visualizing, reverse engineering, and debugging CAN frames, and it supports Qt SerialBus drivers including socketcan, which matches your can0 setup. (github.com
-(https://github.com/collin80/SavvyCAN))
+For the CANable Use SavvyCAN first.
+
+It is a Qt desktop CAN tool for capturing, saving, visualizing, reverse engineering, and debugging CAN frames, and it supports Qt SerialBus drivers including socketcan, which matches your can0 setup. See https://github.com/collin80/SavvyCAN
+
+{{% details title="Installing SavvyCAN 🚀" closed="true" %}}
+
+avvyCAN is a CAN bus analysis tool. You can use it to inspect, record, replay, decode, and reverse-engineer CAN traffic from vehicles, embedded devices, battery systems, motor controllers, chargers, etc.
+
+  Common things you can do:
+
+  - Open CAN log files
+    Load captures like candump, GVRET, CSV, BusMaster, Microchip logs, Vector trace files, PCAP SocketCAN captures, and others.
+  - Watch live CAN traffic
+    Connect to CAN hardware through supported interfaces such as SocketCAN, GVRET/CANDue-style serial devices, PEAK, Vector, TinyCAN, and other Qt SerialBus drivers.
+  - Filter frames
+    Narrow traffic by CAN ID, bus, data pattern, timing, or message behavior.
+  - Graph signals
+    Plot byte values or decoded signals over time to find things like throttle position, brake state, speed, voltage, temperature, current, SOC, etc.
+  - Load DBC files
+    Import a .dbc database so raw CAN frames become named messages and signals.
+  - Create/edit DBC definitions
+    Useful when reverse-engineering an unknown vehicle/device network.
+  - Replay CAN captures
+    Play recorded traffic back into SavvyCAN or onto a real CAN interface, depending on your setup.
+  - Send custom CAN frames
+    Manually transmit specific IDs/data payloads for testing ECUs or devices.
+  - Compare logs
+    Compare two captures to find which messages changed between two conditions, for example “door open vs closed” or “pedal pressed vs released.”
+  - Sniff changing values
+    Use reverse-engineering tools to find frames/signals that correlate with a physical action.
+  - Decode protocols
+    It has tools for things like ISO-TP, UDS scanning, J1939-related handling, and firmware upload/testing workflows.
+
+  A practical beginner workflow:
+
+  1. Open SavvyCAN.
+  2. Load a sample log from /home/jalcocert/Desktop/SavvyCAN/examples.
+  3. Look at the main frame list.
+  4. Try filtering by CAN ID.
+  5. Open graphing tools to plot bytes/signals.
+  6. Load a .dbc from the examples, such as ThinkCity.dbc or LeafPowertrainBus.dbc.
+  7. If you have CAN hardware, configure it under the connection window and capture live traffic.
+
+  Be careful with sending frames on a real vehicle or live device. Reading/logging is usually low risk; transmitting arbitrary frames can cause unexpected behavior.
+
+
+I installed Qt
+  locally in your home directory instead.
+
+  Steps I ran:
+
+  cd /home/jalcocert/Desktop/SavvyCAN
+
+  Checked the project docs/scripts and confirmed it is a Qt5/qmake app requiring
+  Qt 5.14+.
+
+  Checked local tools:
+
+  command -v qmake
+  command -v apt-get
+  command -v g++
+  command -v make
+  command -v 7z
+  command -v curl
+
+  qmake was missing, but g++, make, 7z, and curl were already installed.
+
+  Tried system package update:
+
+  sudo -n apt-get update
+
+  That failed because sudo needs your password, so I avoided system install.
+
+  Installed Qt locally:
+
+  ./install-qt.sh --version 5.15.2 --directory "$HOME/.local/Qt" qtbase
+  qtdeclarative qtserialbus qtserialport qttools
+
+  Then qmake initially complained about missing ICU 56 libraries, so I installed
+  Qt’s bundled ICU component:
+
+  ./install-qt.sh --force --version 5.15.2 --directory "$HOME/.local/Qt" icu
+
+  Generated the Makefile:
+
+  LD_LIBRARY_PATH="$HOME/.local/Qt/5.15.2/gcc_64/lib:$LD_LIBRARY_PATH" \
+  "$HOME/.local/Qt/5.15.2/gcc_64/bin/qmake" CONFIG+=release
+  PREFIX="$HOME/.local" SavvyCAN.pro
+
+  Built SavvyCAN:
+
+  make -j"$(nproc)"
+
+  That produced:
+
+  /home/jalcocert/Desktop/SavvyCAN/SavvyCAN
+
+  Checked runtime libraries:
+
+  file SavvyCAN
+  ldd SavvyCAN | rg 'not found|Qt5|icu|xcb|GL'
+
+  No missing libraries showed up.
+
+  Installed user-level launchers:
+
+  mkdir -p "$HOME/.local/share/applications" "$HOME/Desktop"
+
+  sed \
+    -e "s|^Exec=.*|Exec=/home/jalcocert/Desktop/SavvyCAN/SavvyCAN|" \
+    -e "s|^Icon=.*|Icon=/home/jalcocert/Desktop/SavvyCAN/icons/SavvyIcon.png|" \
+    SavvyCAN.desktop > "$HOME/.local/share/applications/SavvyCAN.desktop"
+
+  cp "$HOME/.local/share/applications/SavvyCAN.desktop" "$HOME/Desktop/
+  SavvyCAN.desktop"
+  chmod +x "$HOME/Desktop/SavvyCAN.desktop"
+
+  Refreshed desktop database if available:
+
+  update-desktop-database "$HOME/.local/share/applications"
+
+  Added terminal command:
+
+  mkdir -p "$HOME/.local/bin"
+  ln -sf /home/jalcocert/Desktop/SavvyCAN/SavvyCAN "$HOME/.local/bin/SavvyCAN"
+
+
+
+The repo includes several example CAN logs and DBC files in: `/home/jalcocert/Desktop/SavvyCAN/examples`
+
+Most car-relevant ones:
+
+- candump.log - SocketCAN-style CAN capture
+- CarBusAnalyzer.trc - small vehicle trace-style log
+- LeafPowertrainBus.dbc - Nissan Leaf powertrain DBC
+- ThinkCity.dbc - Think City EV DBC, much larger
+- GVRET_Log.csv - CAN log in GVRET format
+- BusMasterLog.log - BusMaster CAN log
+
+In SavvyCAN, try:
+
+1. Open SavvyCAN.
+2. Go to File → Load Log File.
+3. Pick /home/jalcocert/Desktop/SavvyCAN/examples/candump.log.
+4. Then try DBC → Load DBC File and open ThinkCity.dbc or LeafPowertrainBus.dbc.
+
+The `.dbc` files are the “decoder ring”: they turn raw CAN IDs/bytes into named signals when the log matches that vehicle/network.
+
+> Some ppl share theirs: `https://github.com/jamiejones85/DBC-files/`
+
+{{% /details %}}
+
+{{% details title="DBC files and reverse engineering logs 🚀" closed="true" %}}
+
+ good matching DBC can save you a lot of reverse engineering. It tells SavvyCAN things like:
+
+  - CAN ID 0x123 is “vehicle speed”
+  - byte/bit positions for each signal
+  - scale and offset, for example raw value 1234 = 61.7 km/h
+  - units
+  - signed/unsigned values
+  - sometimes enums, like gear position or door state
+
+  So if you get a DBC that truly matches your exact car / model year / ECU network, SavvyCAN can decode raw frames into readable signals.
+
+  But there are catches:
+
+  - A DBC for “Laguna Mk2” might not match every engine, year, trim, gearbox, or market.
+  - Cars often have multiple CAN buses: powertrain, body, multimedia, diagnostics. One DBC may cover only one.
+  - OBD port traffic may be gateway-filtered, so the DBC may describe messages you cannot see from OBD.
+  - Some DBCs are partial or community-made, so important signals may still be missing.
+  - Diagnostic data via UDS/OBD is different from normal broadcast CAN frames. A DBC usually describes broadcast frames, not every diagnostic request/response.
+
+  So the practical answer:
+
+  - Exact DBC + correct bus = little or no reverse engineering.
+  - Partial/wrong DBC = still useful, but you’ll validate and fill gaps.
+  - No DBC = you reverse-engineer by logging actions and finding changing IDs/signals.
+
+  For your use case, I’d still record baseline logs even with a DBC:
+
+  1. Ignition off.
+  2. Ignition on.
+  3. Engine running.
+  4. Press brake.
+  5. Turn indicators on/off.
+  6. Move steering.
+  7. Change gears if safe.
+  8. Drive slowly in a safe/private area if needed.
+
+  Then load the DBC and check whether decoded values make physical sense. For example, speed should be zero when stopped, RPM should match idle, brake switch should toggle when pressed.
+
+{{% /details %}}
+
+
 
 Workflow would be:
 
+```sh
 sudo slcand -o -c -s6 /dev/ttyACM1 can0
 sudo ip link set can0 up
 SavvyCAN
+```
 
-Then connect SavvyCAN to socketcan / can0. This is better than staring at raw candump when frames are flowing.
+Then connect SavvyCAN to socketcan / can0. 
+
+This is better than staring at raw candump when frames are flowing.
 
 Also keep using can-utils: candump, cansniffer, cansend, canplayer. The official can-utils project is the standard Linux SocketCAN userspace toolkit. (github.com (https://github.com/linux-can/can-utils))
 
 For ELM327
-For Linux specifically, I’d use python-OBD or a serial terminal first, not a heavy desktop app. python-OBD works with ELM327 adapters and can query normal OBD-II values like RPM, speed, coolant temp, throttle, VIN, etc. (github.com
-(https://github.com/brendan-w/python-OBD))
+For Linux specifically, I’d use python-OBD or a serial terminal first, not a heavy desktop app. python-OBD works with ELM327 adapters and can query normal OBD-II values like RPM, speed, coolant temp, throttle, VIN, etc. 
+
+* https://github.com/brendan-w/python-OBD
 
 Quick test:
 
+```sh
 pip install obd
 python3
 
@@ -540,11 +739,17 @@ import obd
 c = obd.OBD()
 print(c.query(obd.commands.RPM))
 print(c.query(obd.commands.SPEED))
+```
 
-For a GUI OBD app, OBD Auto Doctor is decent, but current official downloads are Windows/macOS/mobile, not Linux. It supports ELM327-type adapters and real-time sensor data, but on your Linux laptop it may not be the best fit unless you
-run it elsewhere. (obdautodoctor.com (https://www.obdautodoctor.com/download))
+For a GUI OBD app, OBD Auto Doctor is decent, but current official downloads are Windows/macOS/mobile, not Linux. 
 
-My recommendation: next time take CANable + SavvyCAN for passive raw CAN work, and ELM327 + python-OBD for normal RPM/speed/diagnostic checks. Keep them conceptually separate.
+It supports ELM327-type adapters and real-time sensor data, but on your Linux laptop it may not be the best fit unless you run it elsewhere.
+
+> https://www.obdautodoctor.com/download
+
+My recommendation: next time take CANable + SavvyCAN for passive raw CAN work, and ELM327 + python-OBD for normal RPM/speed/diagnostic checks.
+
+Keep them conceptually separate.
 
 
 https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#what-actually-happens-in-the-valve
@@ -748,7 +953,7 @@ A ram pump
 
 ### STM32G431 vs ESP32
 
-The **Jhoinrch RH-02 Plus** you are buying uses an **STM32G431** microcontroller chip (an ARM Cortex-M4 core).
+The **Jhoinrch RH-02 Plus** I got uses an **STM32G431** microcontroller chip (an ARM Cortex-M4 core).
 
 While it is tempting to look at a powerhouse like the **ESP32** (with its built-in dual-core processor, Wi-Fi, and Bluetooth) and think it would be better, the STM32 is chosen for a USB-to-CAN adapter for three massive reasons: **native hardware CAN integration, ultra-low latency, and reliable USB clocking.**
 
