@@ -2,7 +2,7 @@
 title: "Selfhosted Connectivity"
 date: 2026-06-17
 draft: false
-tags: ["HomeLab Open-Telemetry","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471","iroh"]
+tags: ["HomeLab Open-Telemetry","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471","iroh","Friis x Path Loss"]
 description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
 url: 'selfhosted-connectivity'
 ---
@@ -551,6 +551,16 @@ rsync -av --info=progress2 \
 {{< /details >}}
 
 ## Conclusion
+
+Most AI PoCs (19/20) fail
+
+Knowing what you are doing before starting, helps:
+
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 The current home network looks healthy from the Pi's point of view: strong 5 GHz RSSI, clean channel selection, and usable throughput.
 

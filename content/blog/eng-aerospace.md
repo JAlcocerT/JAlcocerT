@@ -2,7 +2,7 @@
 title: "Aerospace 101 x DIY 1S Drone"
 date: 2026-06-25
 draft: false
-tags: ["Fluids","Electronics","Drons vs FPV","ERLS x Edge TX x Lua scripts","Propulsion"]
+tags: ["Fluids","Electronics","Betaflight FPV","ERLS x Edge TX x Lua scripts","Propulsion"]
 description: 'What are aerospace engineers having in mind? Dron BOM to figure out.'
 url: 'aerospace-101'
 math: true
@@ -108,6 +108,12 @@ Action items / takeaways:
 
 > > https://support.betafpv.com/hc/en-us/articles/16846305078297-CLI-for-Meteor75-Pro-2026
 
+```sh
+#Betaflight Configurator
+flatpak install flathub org.betaflight.BetaflightConfigurator
+#radio link to test the pocket
+#flatpak install flathub org.expresslrs.ExpressLRSConfigurator
+```
 
 ---
 

@@ -46,6 +46,7 @@ Nah, Time to bridge digital with real world:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting 121" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled FREE knowledge via web/ooks - GO CREATE" >}}
 {{< /cards >}}
+
 ---
 
 
@@ -57,6 +58,9 @@ Nah, Time to bridge digital with real world:
   * https://makerspet.com/blog/how-to-source-bom-for-oomwoo-open-source-vacuum-robot/
   * https://github.com/makerspet/oomwoo/blob/main/docs/design-document.md
 
+```sh
+choco install helium
+```
 
 ---
 

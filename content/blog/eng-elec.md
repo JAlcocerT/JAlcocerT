@@ -2,7 +2,7 @@
 title: "Enough Electronics for a Dron or Canbus"
 date: 2026-06-26
 draft: false
-tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable","ELM327 vs STM32G431"]
+tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable","ELM327 vs STM32G431","Betaflight PWA"]
 description: 'The electronics you can learn for free x Building a custom FPV Drone.'
 url: 'electr-diode'
 math: true
@@ -20,6 +20,72 @@ I saw a podcast on the beach and luckily, this exists: https://github.com/diodei
 * https://fossengineer.com/pyspice-python-circuit-simulation/
 
 ### Dron electronics
+
+<!-- 
+https://www.youtube.com/watch?v=ndUVyEo2URM 
+-->
+
+{{< youtube "ndUVyEo2URM" >}}
+
+* https://github.com/betaflight/betaflight-configurator/releases
+
+```sh
+choco install betaflight-configurator
+```
+
+Oh wait!
+
+[Now](https://github.com/betaflight/betaflight-configurator/releases/tag/2025.12.2) its a **pwa**: https://app.betaflight.com/
+
+
+```sh
+dump #exit
+```
+
+Then you save as `.txt` somewhere safe, in case you want to restore factory defaults.
+
+![alt text](/blog_img/dron/betaflight-cli.png)
+
+Once the factory dump file is completely clean and officially safe, go ahead and type `exit` in the CLI box to restart the drone back to its regular mode.
+
+Next up, let's look at a couple of important lines from the dump you shared:
+
+```text
+set serialrx_provider = CRSF
+aux 0 0 0 1700 2100 0 0
+```
+
+This confirms two things:
+
+1. **Serial ELRS is perfectly ready:** The communication is set to `CRSF` (Crossfire protocol, which ExpressLRS uses natively to talk to the flight controller).
+2. **Arming Switch is Pre-configured:** BetaFPV pre-configured your main Arming switch (`aux 0`) to activate when a channel value hits between $1700$ and $2100$.
+
+Calibrate the pitch and roll: 
+
+![alt text](/blog_img/dron/betaflight-setup-calibrate.png)
+
+Now, we can proceed with pairing your **RadioMaster Pocket**.
+
+#### Setting Up the Radio Link
+
+Since you have a **Serial ELRS** system, you can use the built-in Betaflight binding button:
+
+![alt text](/blog_img/dron/betaflight-receiver.png)
+
+1. Click onto the **Receiver** tab on the left-hand menu of Betaflight.
+2. Scroll down on the right-hand side and click the button labeled **Bind Receiver**. (The flashing green light on your drone will alter its pattern or freeze).
+3. Turn on your **RadioMaster Pocket**.
+4. Press the **SYS** button on the radio casing to pull up the system tools menu.
+5. Select the **ExpressLRS** Lua script and click enter.
+6. Scroll all the way down to the bottom of the internal radio menu and click **[Bind]**.
+
+If they link up successfully, the blinking green LED on the drone will instantly turn **solid green**.
+
+
+
+{{< callout type="warning" >}}
+A fully charged battery will read around 4.2V to 4.35V. Land and unplug the battery the moment that number dips down to 3.5V.
+{{< /callout >}}
 
 ### Canbus electronics
 
