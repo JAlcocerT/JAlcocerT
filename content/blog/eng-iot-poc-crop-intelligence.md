@@ -8,6 +8,8 @@ url: 'iot-crop-intelligence'
 math: true
 ---
 
+https://youtu.be/oPznvdWmcTQ
+
 **TL;DR**
 
 I just wanted to [plant tomatoes](https://jalcocert.github.io/JAlcocerT/plants-101/#1-tomato-seeds-pomidor) to stay away from the computer.

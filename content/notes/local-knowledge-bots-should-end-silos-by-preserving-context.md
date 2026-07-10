@@ -1,6 +1,6 @@
 ---
 title: "Local knowledge bots should end silos by preserving context"
-date: 2026-07-02
+date: 2026-08-02
 tags: ["knowledge-bots", "rag", "local-ai"]
 description: "A knowledge bot is useful when it makes scattered local context searchable and actionable."
 ---

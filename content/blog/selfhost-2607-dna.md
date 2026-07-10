@@ -7,7 +7,7 @@ description: 'Selfhosting D&A Tools. With WrenAI, Rill and Vanna.'
 url: 'selfhosting-data-analytics'
 ---
 
-
+https://pydantic.dev/
 https://github.com/Canner/WrenAI
 
 https://docs.getwren.ai/oss/concepts/architecture#correctness-is-a-system-not-a-switch
