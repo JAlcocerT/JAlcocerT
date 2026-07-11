@@ -138,7 +138,7 @@ make findings
 make plot-throttle-current                                         
 ```
 
-![alt text](../../static/blog_img/dron/bb-logs.png)
+![alt text](/blog_img/dron/bb-logs.png)
 
 ## Betaflight
 

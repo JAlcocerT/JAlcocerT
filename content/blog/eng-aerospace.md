@@ -337,7 +337,18 @@ https://www.youtube.com/watch?v=m2O8MBCbXy0
 
 {{< youtube "m2O8MBCbXy0" >}}
 
+3. https://www.youtube.com/watch?v=geljbqJz1ro
 
+{{< youtube "geljbqJz1ro" >}}
+
+https://www.youtube.com/watch?v=geljbqJz1ro&list=PLL1VnFOukxRUQJ23OKtzp6Ws3ftkHIjCM&index=2
+
+https://www.youtube.com/watch?v=hL31UtWpVAo
+
+4. https://www.youtube.com/watch?v=AT6d3Jk7CeY
+
+
+5. https://www.youtube.com/watch?v=cU1I7qbWosg
 
 ![alt text](/blog_img/apps/yt-distill.png)
 
