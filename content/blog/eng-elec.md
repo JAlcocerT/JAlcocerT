@@ -66,9 +66,18 @@ Calibrate the pitch and roll:
 
 Now, we can proceed with pairing your **RadioMaster Pocket**.
 
+The Pocket uses two 18650 Li-ion cells wired in a series ($2\text{S}$).
+
+* **Fully Charged:** $\approx 8.2\text{V}$
+* **Current Voltage ($7.7\text{V}$):** This is the sweet spot! You have plenty of juice left.
+* **When to stop/charge:** Land and charge the radio when it hits **$6.4\text{V}$**.
+
+At $6.4\text{V}$, the internal cells sit around $3.2\text{V}$ each, which is the standard safety floor. The radio has a built-in voice alarm that will start actively nagging you saying *"Radio Battery Low"* if it drops past this point. Since it draws very little power compared to the drone, it will take *many* hours of flying to go from $7.7\text{V}$ down to $6.4\text{V}$.
+
+
 #### Setting Up the Radio Link
 
-Since you have a **Serial ELRS** system, you can use the built-in Betaflight binding button:
+With a **Serial ELRS** system, you can use the built-in Betaflight binding button:
 
 ![alt text](/blog_img/dron/betaflight-receiver.png)
 
@@ -82,9 +91,8 @@ Since you have a **Serial ELRS** system, you can use the built-in Betaflight bin
 If they link up successfully, the blinking green LED on the drone will instantly turn **solid green**.
 
 
-
 {{< callout type="warning" >}}
-A fully charged battery will read around 4.2V to 4.35V. Land and unplug the battery the moment that number dips down to 3.5V.
+A fully charged dron battery will read around 4.2V to 4.35V. Land and unplug the battery the moment that number dips down to 3.5V.
 {{< /callout >}}
 
 ### Canbus electronics

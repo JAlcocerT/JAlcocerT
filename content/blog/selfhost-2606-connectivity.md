@@ -707,7 +707,17 @@ Yes, with OpenWrt/prplMesh, but a practical lab wants at least one good USB Wi-F
 
 ### Pi-hole, AdGuard, or Unbound?
 
-They solve DNS visibility and resolution, not radio quality. Pi-hole or AdGuard Home are good for seeing what devices resolve. Unbound is useful when you want local recursive DNS behavior.
+They solve DNS visibility and resolution, not radio quality. Pi-hole or AdGuard Home are good for seeing what devices resolve. 
+
+Unbound is useful when you want local recursive DNS behavior.
+
+
+### Friis Law
+
+Starting from [some electro-magnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) foundations
+
+
+
 
 ## Related Notes
 

@@ -2,7 +2,7 @@
 title: "Aerospace 101 x DIY 1S Drone"
 date: 2026-06-25
 draft: false
-tags: ["Fluids","Electronics","Betaflight FPV","ERLS x Edge TX x Lua scripts","Propulsion"]
+tags: ["Fluids","Electronics","Betaflight FPV","ERLS x Edge TX","Propulsion x Aerodynamics"]
 description: 'What are aerospace engineers having in mind? Dron BOM to figure out.'
 url: 'aerospace-101'
 math: true
@@ -23,7 +23,10 @@ I tinkered a little bit with [fluid mechanics basics on this post](https://jalco
 
 All to get the ICE with [a nicer model](https://jalcocert.github.io/JAlcocerT/fluids/#volumetric-efficiency) than the matlab one I had.
 
+### Aerodynamics
+
 ## Propulsion
+
 
 For inline and V engines you have some simulations already:
 
@@ -37,9 +40,209 @@ Even rotary: *not the mazda RX8 ones, the one of ww1 planes*
 
 https://www.youtube.com/watch?v=-pxpNivvpw8
 
+### Dron Props
+
+Combining **Motor RPM/Amperes** with **Accelerometer G-forces** is exactly how aerodynamic engineers and professional FPV tuners measure a propeller's performance and efficiency without a wind tunnel.
+
+By analyzing these variables in Python, you can calculate the exact physics of your drone's propulsion.
+
+Three most fascinating things you can infer about your propellers using that data:
+
+1. 💨 Propeller Efficiency (Thrust-to-Power Ratio)
+
+You can calculate how much mechanical "push" your propellers give you for every unit of electrical energy they consume.
+
+* **The Inputs:** * `vbatLatest` $\times$ `amperageLatest` = **Total Electrical Power (Watts)**
+* `accSmooth[2]` (Z-axis acceleration) = **Raw Thrust Force**
+
+* **The Python Analysis:** Plot your vertical acceleration against the total Watts consumed during a sharp throttle punch.
+* **What it tells you:** A highly efficient propeller will give you a steep spike in vertical G-force while drawing minimal Amps. If you ever swap to a different brand of propellers, you can run the exact same test; the propeller that achieves the same G-force with fewer Watts is the aerodynamically superior prop!
+
+---
+
+2. 🛞 Propeller Slip (Aerodynamic "Grip")
+
+Propellers act like screws turning through the air, but because air is a fluid, they "slip" (like car tires spinning on ice).
+
+* **The Inputs:** `motor RPM` vs. `accSmooth` (Acceleration).
+* **The Python Analysis:** When you slam the throttle up, the RPMs instantly skyrocket to 90,000+. However, the drone's actual speed and acceleration take a split second to catch up because the propellers have to "bite" into the air.
+* **What it tells you:** By measuring the time delay (latency) between the motor hitting maximum RPM and the accelerometer hitting maximum G-force, you are measuring **propeller slip**. A propeller with more blades (e.g., a quad-blade vs. a tri-blade) will usually have less slip and bite the air faster, showing a shorter delay in your Python timestamps.
+
+3. 🚨 Propeller Damage & Deformation (The "Vibration" Test)
+
+This is the most practical use of Python analysis for FPV. When tiny plastic props bend, get nicked by furniture, or spin so fast that the blades flex out of shape, they generate high-frequency mechanical noise.
+
+* **The Inputs:** Raw Gyroscope data (`gyroData[0,1,2]`).
+* **The Python Analysis:** You can run a Fast Fourier Transform (FFT) on your gyro data to look at the frequency spectrum.
+* **What it tells you:** Healthy propellers will show a very clean, tiny spike at the exact frequency of your motor RPM. If a propeller is bent or structurally weak, it will create a massive, chaotic "noise blanket" across all frequencies (seen as jagged, thick "grass" on your data plots). If you see your gyro noise increasing over several flight logs, it means your plastic props are wearing out and need to be replaced!
+
+Propeller thrust and power consumption do NOT scale linearly with RPM—they scale **exponentially**. 
+
+This is one of the most fundamental laws of aerodynamics, known as the **Propeller Affinity Laws**.
+
+1. Thrust vs. RPM (The Square Law)
+
+Thrust scales with the **square** of the RPM ($Thrust \propto RPM^2$).
+
+* If you double your motor RPM, your propellers don't get double the thrust—they generate **4 times** more thrust.
+
+2. Power vs. RPM (The Cube Law)
+
+Power consumption (the Watts pulled from your 680mAh battery) scales with the **cube** of the RPM ($Power \propto RPM^3$).
+
+* This is the killer for battery life. If you double your RPM to go fast, the aerodynamic drag increases so brutally that your motors require **8 times** more electrical power to turn the blades!
+
+If you write a script to plot **Thrust-to-Power Efficiency** (Vertical G-force divided by Watts) against **RPM**, you will get a graph that looks like this:
+
+| RPM Range | What's Happening Aerodynamically | Efficiency Status |
+| --- | --- | --- |
+| **Low RPM** (Smooth Hover) | The propeller blades easily slice through clean air with minimal drag. | **Highest Efficiency:** You get a lot of float for very little battery drain. This is why your indoor cruising gets an amazing 6 minutes! |
+| **High RPM** (100% Throttle Punch) | The propeller tips approach supersonic speeds (nearly 100,000 RPM!). The blades stall slightly, creating massive air turbulence and drag. | **Lowest Efficiency:** The battery sags instantly as Amps skyrocket, but you gain diminishing returns on actual upward acceleration. |
+
+How to use this for tuning:
+
+In Python, you can find the "sweet spot" RPM of your Meteor75 Pro by looking for the peak of that efficiency curve.
+
+FPV pilots look at this data to set a **Throttle Limit** or a **Throttle Curve** in Betaflight.
+
+If the data shows that pushing your motors past 85,000 RPM gives you almost zero extra acceleration but destroys 30% of your battery life, you can cap your radio stick to stop right at that aerodynamic cliff!
+
+---
+
+You have fantastic intuition—this is one of the most critical design bottlenecks in all of aviation engineering!
+
+Aeronautical engineers absolute tweak the length (diameter) and the rotation speed of propellers to keep the tips from crossing into the supersonic zone.
+
+When a propeller blade tip approaches or breaks the speed of sound (Mach 1), it triggers a massive aerodynamic crisis. Here is exactly what happens, how the physics limits big aircraft, and how it applies to your tiny Meteor75 Pro.
+
+---
+
+### 🛑 The "Sound Barrier" Crisis: Shockwaves & Stall
+
+As a propeller spins, the center of the prop moves slowly, but the tips have to cover a much larger distance in the exact same amount of time. The tips are always moving the fastest.
+
+If the tips hit the speed of sound, a local **shockwave** forms right on the blade.
+
+This shockwave causes three catastrophic problems:
+
+1. **Extreme Wave Drag:** Drag increases exponentially, acting like an invisible brick wall. The engine has to work brutally hard just to push through it.
+2. **Aerodynamic Stall:** The smooth airflow over the blade completely detaches, causing the propeller to instantly lose its lifting efficiency (thrust drops off a cliff).
+3. **Deafening Noise:** It creates a continuous sonic boom. This is why the historical *Republic X-84H "Thunderscreech"* airplane (which had supersonic prop tips) was so loud it literally caused nausea and seizures in ground crews.
+
+---
+
+### 📐 The Engineering Trade-off: Diameter vs. RPM
+
+To prevent this, engineers use a strict mathematical limit for Tip Speed ($V_{tip}$), which combines how fast the drone/plane is moving forward ($V_{forward}$) with how fast the propeller is spinning rotationally ($V_{rotational}$):
+
+$$V_{tip} = \sqrt{V_{forward}^2 + (\pi \times \text{Diameter} \times \text{RPS})^2}$$
+
+*(Where RPS is Revolutions Per Second)*
+
+To keep $V_{tip}$ safely below Mach 1, engineers have to play a balancing game:
+
+* **On Big Airplanes:** Because the propeller diameter is massive (e.g., 3 to 4 meters), the tips travel a huge distance per turn. To keep them subsonic, the engines must spin **incredibly slowly** (often only 1,200 to 2,000 RPM), utilizing gearboxes to drop the engine speed.
+* **On Commercial Turbofans (Airliners):** The fan blades inside a Boeing 777 engine are so large that their tips naturally push right up against Mach 1.05. Engineers use advanced supercomputers to twist and sculpt the blade tips to handle the shockwaves smoothly.
+
+---
+
+### 🛸 How this applies to your Meteor75 Pro
+
+Your tiny drone actually exploits the opposite end of this physics equation!
+
+Because your propellers are incredibly tiny (a diameter of only **45mm**, or $0.045\text{ meters}$), they have a very small circumference. Let's look at the math for your drone at its absolute maximum speed of 95,700 RPM (1,595 RPS):
+
+$$V_{rotational} = \pi \times 0.045\text{m} \times 1,595\text{ RPS} \approx 225.5\text{ m/s}$$
+
+The speed of sound is roughly **$343\text{ m/s}$**.
+
+Your tiny whoop's prop tips are traveling at roughly **$225\text{ m/s}$ (about 810 km/h / 500 mph)**. That means even at full throttle, your tips are sitting safely around **Mach 0.65**.
+
+Because the props are so small, you can spin them at a mind-boggling 100,000 RPM without ever worrying about breaking the sound barrier! It’s the ultimate loophole of micro-drone physics.
+
+Yes, you are exactly right! Mathematically, that formula calculates the **magnitude (or module) of the resultant velocity vector** at the absolute tip of the propeller blade.
+
+Because the propeller is doing two motions simultaneously—spinning around in a circle and moving forward through the air—its tip speed is a combination of two perpendicular velocity vectors.
+
+Here is how those vectors break down geometrically:
+
+### 1. The Rotational Velocity Vector ($V_{rotational}$)
+
+This vector represents the speed of the tip spinning around the motor axis. It acts tangentially to the propeller's circular path:
+
+$$V_{rotational} = \pi \times \text{Diameter} \times \text{RPS}$$
+
+### 2. The Forward Velocity Vector ($V_{forward}$)
+
+This vector represents the speed of the entire drone (or airplane) moving forward through space. It acts perpendicular to the rotation plane.
+
+---
+
+### 📐 Combining Them (Pythagorean Theorem)
+
+Because these two vectors are at a perfect $90^\circ$ angle to each other, they form a right triangle. To find the total actual speed of the tip slicing through the air mass (the resultant vector), engineers use the Pythagorean theorem:
+
+$$\text{Total Tip Speed} = \sqrt{V_{forward}^2 + V_{rotational}^2}$$
+
+### 💡 Why this matters for real flight:
+
+This vector math reveals a sneaky trap for aeronautical engineers: an airplane's propeller tips actually get **faster** the faster the plane flies forward, even if the engine RPM stays exactly the same!
+
+If an engineer designs a propeller tip to sit right at Mach 0.9 while the plane is parked on the runway ($V_{forward} = 0$), the moment the pilot takes off and starts flying fast down the runway, that extra $V_{forward}$ vector will push the total magnitude right over Mach 1.0, sending the propeller into a supersonic stall.
+
+When evaluating drone flight physics and analyzing data logs, looking at **energy efficiency per kilometer** and **total flight time** covers the core of logistics. However, aeronautical engineers and FPV pilots look at several other crucial metrics to fully measure a drone's performance.
+
+If you expand your Python analysis, here are the other major performance pillars you can extract from your flight data:
+
+---
+
+### 1. 🎛️ Volumetric and Aerodynamic Efficiency (The Lift Coefficient)
+
+This measures how effectively your propeller shape converts motor spinning speed into actual vertical lifting force.
+
+* **The Metric:** **Thrust per RPM ($\text{Grams} / \text{RPM}$)**.
+* **Why it matters:** As a propeller spins faster, air resistance increases exponentially. By plotting your vertical G-force divided by your average motor RPM, you can map out exactly where your propeller blades begin to stall or slip. This tells you the aerodynamically optimal speed for your specific blade shape.
+
+---
+
+### 2. 🧮 Specific Power (The Weight-to-Power Penalty)
+
+This looks at how hard the drone has to work just to carry its own structural weight.
+
+* **The Metric:** **Watts per Gram ($\text{W}/\text{g}$)**.
+* **Why it matters:** If you add a heavier battery (like moving from $550\text{mAh}$ to $680\text{mAh}$), your drone gains capacity, but it also demands more Watts just to stay in a hover. By calculating the total Watts divided by the takeoff weight, you can find the mathematical point of diminishing returns—the exact weight where adding a bigger battery actually *decreases* your performance because the motors waste too much energy just carrying the fuel tank.
+
+---
+
+### 3. 🌡️ Thermal Efficiency & Motor Health
+
+Motors convert electrical energy into kinetic energy (spinning), but a portion of that energy is always lost as wasted heat.
+
+* **The Metric:** **Core Temperature & Resistance Degradation**.
+* **Why it matters:** In your very first Betaflight screenshot, you can see a readout for **Temperature: 62°C** inside the *System Info* box. While the flight controller has a thermometer, the motors do not. In Python, you can infer motor heating by tracking **Voltage vs. Expected RPM**. As motors get hot, their copper windings become less efficient and draw more Amps to maintain the same RPM. If a log shows a motor drawing rising current over a 6-minute flight while your throttle stick stays perfectly still, it means the motor is heating up and losing thermal efficiency.
+
+---
+
+### 4. 🎚️ Control Responsiveness & Latency (The Delay Factor)
+
+For FPV pilots, how the drone *feels* is just as important as how long it flies. This tracks the system's reaction time.
+
+* **The Metric:** **Stick-to-Gyro Latency (Milliseconds)**.
+* **Why it matters:** You can use Python to calculate the exact millisecond delay between moving your finger on the RadioMaster Pocket (`rcCommand`) and the physical drone actually rotating (`gyroData`).
+
+A highly efficient, rigid frame with crisp propellers will have a tiny latency (e.g., under $10\text{ms}$), making the drone feel perfectly locked into your hands. If your propellers get bent or the frame gets soft, that latency number will spike, and the drone will start to feel sluggish and delayed.
+
+When you start digging into your code, combining all of these metrics gives you a complete, top-to-bottom aerodynamic profile of your quad! Which of these data paths sounds like the most fun to plot out first?
+
 ### Turboshaft
 
-https://www.youtube.com/watch?v=cxQ-Ef4uIpw
+<!-- 
+https://www.youtube.com/watch?v=cxQ-Ef4uIpw 
+-->
+
+{{< youtube "cxQ-Ef4uIpw" >}}
+
+### TurboJet
 
 
 
@@ -126,6 +329,14 @@ flatpak install flathub org.betaflight.BetaflightConfigurator
 1. https://www.youtube.com/@LetsGoAviate
 
 2. https://www.youtube.com/@neuronautics_Lab/videos
+
+
+<!-- 
+https://www.youtube.com/watch?v=m2O8MBCbXy0 
+-->
+
+{{< youtube "m2O8MBCbXy0" >}}
+
 
 
 ![alt text](/blog_img/apps/yt-distill.png)
