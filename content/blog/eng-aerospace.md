@@ -19,6 +19,8 @@ This is everything that I did (and what not) missed.
 
 ## Fluid Recap
 
+https://www.youtube.com/watch?v=KeTh-TIhL9M
+
 I tinkered a little bit with [fluid mechanics basics on this post](https://jalcocert.github.io/JAlcocerT/fluids/#the-governing-equations).
 
 All to get the ICE with [a nicer model](https://jalcocert.github.io/JAlcocerT/fluids/#volumetric-efficiency) than the matlab one I had.
@@ -37,6 +39,16 @@ https://youtube.com/shorts/fkx65D_QE7o
 
 {{< youtube "fkx65D_QE7o" >}}
 
+
+<!-- https://www.youtube.com/watch?v=hObWTCserzA -->
+
+{{< youtube "hObWTCserzA" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=o6FMjOl0TRA -->
+
+
+{{< youtube "o6FMjOl0TRA" >}}
 
 ## Propulsion
 
@@ -57,6 +69,12 @@ https://www.youtube.com/watch?v=-pxpNivvpw8
 ### Dron Props
 
 Combining **Motor RPM/Amperes** with **Accelerometer G-forces** is exactly how aerodynamic engineers and professional FPV tuners measure a propeller's performance and efficiency without a wind tunnel.
+
+{{< youtube "mwTCFvbxkzY" >}}
+
+<!-- 
+https://youtube.com/shorts/mwTCFvbxkzY
+-->
 
 By analyzing these variables in Python, you can calculate the exact physics of your drone's propulsion.
 
@@ -264,8 +282,150 @@ https://www.youtube.com/watch?v=cxQ-Ef4uIpw
 
 ### Structures
 
-### Electronics
+### Electr Stuff
 
+$20\text{ A}$ from a $95\text{C}$ 1S drone battery is absolutely reasonable—in fact, it's exactly what those batteries are engineered to do!
+
+
+To understand why $20\text{ A}$ is normal, you look at the **C-Rating**. The C-rating tells you how fast a battery can safely discharge relative to its capacity.
+
+A typical 1S toothpick or tiny whoop drone battery has a capacity of around **$450\text{ mAh}$ to $550\text{ mAh}$** (which is $0.45\text{ A}$ to $0.55\text{ Ah}$).
+
+Using the formula $\text{Max Amps} = \text{Capacity in Ah} \times \text{C-Rating}$:
+
+
+$$0.50\text{ Ah} \times 95\text{C} = 47.5\text{ Amps peak!}$$
+
+Because a 1S LiPo sits at a nominal voltage of **$3.7\text{V}$ or $3.8\text{V}$ (LiHV)**, pulling $20\text{ A}$ means your tiny drone is drawing roughly **$75\text{ Watts}$** of power. It dumps its entire energy reserve in about 1.5 minutes of hard flying, which is why drone batteries are so light but have such a short overall lifespan.
+
+
+An electric car battery operates on a completely different scale.
+
+It uses a high-voltage architecture to push thousands of times more power without needing wires as thick as tree trunks.
+
+* **The Voltage:** The Cupra Born uses a standard **$400\text{V}$ electrical architecture** (specifically, the nominal voltage sits right around **$397\text{V}$** when calculated across its 216 individual cells).
+* **The Power Output:** The standard Cupra Born with the $58\text{ kWh}$ battery has a motor rated at **$150\text{ kW}$** (or $170\text{ kW}$ if it has the e-Boost pack). 150 Kilowatts is **$150,000\text{ Watts}$** of electrical power.
+
+Using the electrical formula $\text{Amps} = \text{Watts} / \text{Volts}$:
+
+
+$$150,000\text{ W} / 397\text{V} \approx \mathbf{378\text{ Amps}}$$
+
+
+When you slam your foot flat on the accelerator in that Cupra, the battery pack is instantly dumping roughly **$380\text{ to } 430\text{ Amps}$ at $400\text{ Volts}$** to the rear motor.
+
+| Metric | Your 1S Drone | The Cupra Born ($58\text{kWh}$) |
+| --- | --- | --- |
+| **Voltage** | $3.8\text{V}$ | **$397\text{V}$** |
+| **Max Current (Amps)** | $\sim 20\text{A} - 45\text{A}$ | **$\sim 380\text{A} - 430\text{A}$** |
+| **Total Power Punch** | $\sim 0.075\text{ kW}$ | **$150\text{ kW} - 170\text{ kW}$** ($204 - 231\text{ hp}$) |
+| **The "C" Discharge Rate** | $95\text{C}$ (Insanely aggressive) | **$\sim 2.5\text{C} - 3\text{C}$** (Very relaxed) |
+
+**The coolest part of the math:** Because the Cupra's battery is so massive ($150\text{ Ah}$ capacity cells vs the drone's $0.5\text{ Ah}$), it only needs to discharge at about **$3\text{C}$** to achieve that massive horsepower. 
+
+Running at $3\text{C}$ instead of $95\text{C}$ is the exact reason the car battery stays cool, handles thousands of cycles, and lasts for decades instead of puffing up after a few dozen flights like a drone battery!
+
+If we play out this thought experiment—where the vehicle's body, engine, wheels, and frame weigh absolutely nothing and the vehicle is purely the weight of its own battery cells—we are looking at the ultimate boundary of **Power-to-Weight Ratio** ($kW/kg$).
+
+In battery engineering, this metric is called **Specific Power** (expressed in Watts per kilogram, $W/kg$). 
+
+If a 1S drone battery and a Cupra EV cells compare at their theoretical max if they *were* the vehicle itself...
+
+This reveals the classic engineering trade-off between **Power Density** (the sprint) and **Energy Density** (the marathon):
+
+* **The Drone Vehicle ($10 \text{ kW/kg}$):** It can accelerate with face-melting, gravity-defying speed, but because it burns through its energy so fast, it would run out of battery in exactly **37 seconds** of continuous full-throttle driving.
+* **The EV Vehicle ($3 \text{ kW/kg}$):** It has less explosive punch, but because its cells are built to store massive capacities, it could maintain its maximum power output for about **20 straight minutes** before emptying.
+
+```python
+# Energy density comparison
+# Jet A-1 fuel energy density: ~43 MJ/kg
+# 43 MJ to kWh: 43 / 3.6
+jet_fuel_kwh_per_kg = 43 / 3.6
+
+# Best current EV batteries (NMC): ~0.25 to 0.30 kWh/kg
+battery_kwh_per_kg = 0.25
+
+# System efficiency
+jet_engine_efficiency = 0.40 # 40%
+electric_motor_efficiency = 0.90 # 90%
+
+# Useful energy per kg
+useful_jet_fuel = jet_fuel_kwh_per_kg * jet_engine_efficiency
+useful_battery = battery_kwh_per_kg * electric_motor_efficiency
+
+print(f"Jet fuel total energy: {jet_fuel_kwh_per_kg:.2f} kWh/kg")
+print(f"Jet fuel useful energy: {useful_jet_fuel:.2f} kWh/kg")
+print(f"Battery useful energy: {useful_battery:.2f} kWh/kg")
+print(f"Ratio of useful energy: {useful_jet_fuel / useful_battery:.1f}x")
+
+
+```
+
+```text
+Jet fuel total energy: 11.94 kWh/kg
+Jet fuel useful energy: 4.78 kWh/kg
+Battery useful energy: 0.23 kWh/kg
+Ratio of useful energy: 21.2x
+
+
+```
+
+When it comes to aviation, the electric vs. fossil fuel debate is brutally unforgiving, and it all boils down to one critical metric: **weight**.
+
+In a car, if the battery is heavy, you lose a bit of efficiency but you stay on the ground. In an airplane, if the battery is too heavy, you simply don’t take off.
+
+While the engine type matters slightly for fossil fuels, the real battlefield is the **energy density of the fuel versus the battery**.
+
+---
+
+#### The Massive Energy Density Gap
+
+To see why electric aviation is struggling to replace commercial jet fuel, let's look at the raw energy stored per kilogram of weight ($kWh/kg$):
+
+* **Jet A-1 Fuel:** Contains roughly **$11.9 \text{ kWh/kg}$** of chemical energy.
+* **Modern EV Batteries:** Your Cupra’s cells pack about **$0.25 \text{ kWh/kg}$**.
+
+Even though a jet turbine engine is only about $40\%$ efficient at converting that fuel into motion (wasting the rest as heat), it still delivers roughly **$4.78 \text{ kWh}$ of useful work** per kilogram.
+
+An electric motor is incredibly efficient ($90\%+$), but because the battery starts with so little energy, it only delivers **$0.23 \text{ kWh}$ of useful work** per kilogram.
+
+> **The Bottom Line:** Pound for pound, fossil jet fuel holds about **21 times more useful energy** than the best batteries available today.
+
+#### The "Burning Weight" Paradox (Why Jets Win Long Range)
+
+Fossil fuel airplanes have a massive built-in trick that batteries cannot replicate: **they get lighter as they fly.**
+
+When a Boeing 777 takes off for a long-haul flight, up to $45\%$ of its total weight is pure jet fuel. 
+
+As it flies, it burns that fuel and vents the exhaust into the sky. 
+
+By the time it lands, it is nearly half the weight, meaning it requires significantly less lift and less energy to stay airborne for the second half of the trip.
+
+An electric airplane lands at the **exact same weight** it took off with. You are forced to carry the dead weight of empty battery cells for all 10 hours of a flight.
+
+Does the Fossil Engine Type Matter?
+
+Yes, the engine type changes the efficiency equation slightly, but not enough to let batteries win commercial routes:
+
+* **Turboprops (Propeller planes):** These are highly efficient at lower speeds and altitudes. For short regional flights (under $500 \text{ km}$), electric turboprops are actually viable and being aggressively tested right now, because the flights are short enough that the heavy battery pack doesn't completely kill the payload capacity.
+* **Turbofans (Commercial Jet Engines):** These are designed to push massive amounts of thrust at $35,000 \text{ feet}$ and $800 \text{ km/h}$. Trying to replace a massive jet engine with electric fans requires so many batteries that the plane would be too heavy to carry passengers.
+
+
+Aviation is currently breaking down into three distinct tiers:
+
+* **Short Range & Training (Electric Wins Soon):** Small 2-seater flight-training aircraft and short 9-passenger island-hopper routes are perfectly suited for electric flight. The low maintenance and cheap electricity make it a massive win.
+* **Regional Flights (The Hybrid Solution):** For flights under 2 hours, companies are building hybrid-electric planes—using fossil fuel engines for takeoff (maximum power) and electric motors to cruise, similar to a Toyota Prius.
+* **Long-Haul International (Fossil Fuel Stays King):** For transatlantic flights, batteries are mathematically impossible with current technology. Instead, the aviation industry is betting on **SAF (Sustainable Aviation Fuel)**—biofuels or synthetic fuels that burn exactly like jet fuel but are made from captured carbon or plants, keeping the high energy density without the fossil footprint.
+
+### Control
+
+You will get to know about Systems theory and PID controllers.
+
+<!-- 
+https://www.youtube.com/watch?v=XPXN0QejqM0 
+-->
+
+{{< youtube "XPXN0QejqM0" >}}
 
 
 ---
@@ -975,3 +1135,11 @@ Because you selected the premium AIO board layout, your building process is incr
 3. **Plug the Motors:** Drop the 4 motors into their holes on the frame, screw them down, and simply feed their wires up to **plug into the white sockets** on the sides of the flight controller board.
 4. **Assemble the Top:** Pop your Caddx Ant camera inside the plastic protective canopy, and screw the canopy onto the frame directly over the circuit board.
 5. **Program via Linux:** Connect a USB-C cable from your Linux computer into the flight controller, open **Betaflight Configurator**, paste the standard setup profile, bind it to your RadioMaster Pocket, and you are ready to lift off!
+
+In this video you have more details about the binding process:
+
+<!-- 
+https://www.youtube.com/watch?v=Vn91hH05-zI 
+-->
+
+{{< youtube "Vn91hH05-zI" >}}

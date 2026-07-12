@@ -2,13 +2,23 @@
 title: "Selfhosted Connectivity"
 date: 2026-06-17
 draft: false
-tags: ["HomeLab Open-Telemetry","TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471","iroh","Friis x Path Loss"]
-description: 'A homelab evaluation of WIFI metrics via EasyMesh and TR-181.'
+tags: ["TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471","iroh","Friis x Path Loss","QoS/AQM"]
+description: 'A homelab Open-Telemetry evaluation of WIFI metrics via EasyMesh and TR-181.'
 url: 'selfhosted-connectivity'
+math: true
 ---
 
 **TL;DR**
 
+Home connectivity is not just "do I have internet?". 
+
+For a useful homelab, I want repeatable ways to measure throughput, latency under load, Wi-Fi quality, LAN inventory, DNS behavior, and eventually TR-181/EasyMesh data from the router itself.
+
+## Intro
+
+Whether the uplink is 4G, coax, fiber, or Starlink, the home network becomes the base layer for everything else: self-hosted apps, backups, media, VPN, local AI services, and family communication.
+
+This post is a cleanup of my June 2026 connectivity notes.
 
 ```sh
 git pull
@@ -28,19 +38,13 @@ iperf3 -s -p 5205 #nano config.yaml
 make performance
 ```
 
-Home connectivity is not just "do I have internet?". 
+The thread started with a Raspberry Pi connected over Wi-Fi, a TR-471 speed test experiment, and a simple question:
 
-For a useful homelab, I want repeatable ways to measure throughput, latency under load, Wi-Fi quality, LAN inventory, DNS behavior, and eventually TR-181/EasyMesh data from the router itself.
+**what can I actually observe from inside my LAN, and what data only the router/AP can know?**
 
-## Intro
+The short answer: a Pi can tell me a lot about its own link and the IP devices around it, but per-client Wi-Fi quality lives on the AP.
 
-Whether the uplink is 4G, coax, fiber, or Starlink, the home network becomes the base layer for everything else: self-hosted apps, backups, media, VPN, local AI services, and family communication.
-
-This post is a cleanup of my June 2026 connectivity notes.
-
-The thread started with a Raspberry Pi connected over Wi-Fi, a TR-471 speed test experiment, and a simple question: **what can I actually observe from inside my LAN, and what data only the router/AP can know?**
-
-The short answer: a Pi can tell me a lot about its own link and the IP devices around it, but per-client Wi-Fi quality lives on the AP. That is where OpenWrt, TR-181, bbfdm, obuspa, and EasyMesh become interesting.
+That is where OpenWrt, TR-181, bbfdm, obuspa, and EasyMesh become interesting.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/BroadbandForum/obudpst" title="TR-471 Speed Test" subtitle="Broadband Forum UDP performance test tool" >}}
@@ -89,7 +93,9 @@ The useful rule of thumb:
 | `-60` to `-70 dBm` | Fair |
 | below `-70 dBm` | Weak / unreliable |
 
-The scan also showed the ISP gateway exposing multiple radios under the same SSID. In practice, the Pi was band-steered to the cleanest-looking 5 GHz radio.
+The scan also showed the ISP gateway exposing multiple radios under the same SSID. 
+
+In practice, the Pi was band-steered to the cleanest-looking 5 GHz radio.
 
 {{< details title="Wi-Fi commands and sample readings" closed="true" >}}
 
@@ -134,7 +140,7 @@ Sample scan interpretation:
 
 ### TR-471 Throughput Testing
 
-I also tested the Broadband Forum TR-471 style UDP speed test flow with `obudpst`.
+I also tested the Broadband Forum **TR-471 *style* UDP speed test** flow with `obudpst`.
 
 ```bash
 # make server
@@ -145,7 +151,7 @@ make client SERVER=192.168.1.18 ARGS="--json --client-name $(hostname)"
 
 The key result: the run sustained about **118.75 Mbps upload** with no packet loss at the selected sustain rate, but latency rose sharply under load.
 
-That points to a link that can move data, but still deserves QoS/AQM attention if interactive traffic matters.
+That points to a link that can move data, but still deserves **QoS/AQM** attention if interactive traffic matters.
 
 {{< details title="TR-471 raw JSON result" closed="true" >}}
 
@@ -229,10 +235,12 @@ The important distinction:
 | TR-181 | Data model: standardized parameter tree |
 | TR-069 / CWMP | Older ISP remote-management protocol |
 | TR-369 / USP | Newer push-capable protocol using MQTT/WebSocket/STOMP |
-| obuspa | Broadband Forum open-source USP Agent |
+| [obuspa](https://github.com/BroadbandForum/obuspa) | Broadband Forum open-source USP Agent |
 | bbfdm | Linux/OpenWrt mapper that populates TR-181 leaves from real system state |
 
-My local `tr181-dump.sh` is not a real USP Agent. It is a pragmatic script that shapes Linux state into TR-181-like paths so I can inspect the model.
+The `tr181-dump.sh` is not a real USP Agent.
+
+It is a pragmatic script that shapes Linux state into **TR-181-like** paths so I can inspect the model.
 
 ```bash
 ~/tr181-dump.sh
@@ -278,9 +286,11 @@ The AP is the device that has the useful per-client Wi-Fi truth.
 
 ## Seeing Other Devices' Wi-Fi Quality
 
-`nmap` cannot tell me RSSI, band, bitrate, or noise for other devices. 
+Notice that `nmap` cannot tell about: RSSI, band, bitrate, or noise for other devices. 
 
-It works at IP/service level. Wi-Fi quality is a radio-layer property.
+It works at IP/service level. 
+
+Wi-Fi quality is a radio-layer property.
 
 There are three real paths:
 
@@ -308,7 +318,7 @@ obuspa -c get Device.WiFi.AccessPoint.*.AssociatedDevice.*.SignalStrength
 
 For monitor mode on a Pi 4, the onboard Broadcom radio needs `nexmon` for proper monitor mode. 
 
-In practice, a separate USB Wi-Fi adapter is cleaner because one radio cannot comfortably stay connected and sniff at the same time.
+In practice, a **separate USB Wi-Fi adapter** is cleaner because one radio cannot comfortably stay connected and sniff at the same time.
 
 ## LAN Check
 
@@ -318,7 +328,7 @@ This is useful for the device inventory side of connectivity, but it does not pr
 
 The scan found 11 active hosts.
 
-A few devices were worth identifying more carefully: unknown IoT vendors, ESP32-style devices, randomized MACs, and the ISP gateway.
+A few devices were worth identifying more carefully: *unknown IoT vendors, ESP32-style devices, randomized MACs, and the ISP gateway*.
 
 {{< details title="LAN inventory notes" closed="true" >}}
 
@@ -373,11 +383,11 @@ Connectivity debugging needs tools at different layers:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pihole" title="Pi-hole" subtitle="DNS-level visibility for the LAN" >}}
 {{< /cards >}}
 
-Wireshark is for packets and conversations: DNS failures, TCP resets, TLS handshakes, HTTP behavior, DHCP, mDNS, NTP, SMB, and `.pcap` captures.
+**Wireshark is for packets** and conversations: DNS failures, TCP resets, TLS handshakes, HTTP behavior, DHCP, mDNS, NTP, SMB, and `.pcap` captures.
 
-DNS tools such as Pi-hole, AdGuard Home, and Unbound answer a different question: what names are devices resolving, and which clients are talking to which services?
+**DNS tools** such as Pi-hole, AdGuard Home, and Unbound answer a different question: what names are devices resolving, and which clients are talking to which services?
 
-TapMap is another useful local view for processes and traffic on the host:
+**TapMap** is another useful local view for processes and traffic on the host:
 
 ```bash
 docker run --rm \
@@ -393,6 +403,7 @@ Then open:
 ```text
 http://localhost:8050/
 ```
+
 
 {{< details title="Optional Wireshark setup and filters" closed="true" >}}
 
@@ -411,13 +422,25 @@ dns
 http
 ```
 
-Packet captures can contain sensitive metadata and sometimes application data. Treat saved `.pcap` files as confidential.
+Packet captures can contain sensitive metadata and sometimes application data. 
+
+Treat saved `.pcap` files as confidential.
 
 {{< /details >}}
 
+
+- **[SimpleWall](https://github.com/henrypp/simplewall)** — a lightweight Windows firewall GUI for controlling network activity and blocking IPs.  
+- **TinyWall** — a simple, open-source Windows firewall companion with minimal overhead.  
+- **[OpenSnitch](https://github.com/evilsocket/opensnitch)** — a Linux application firewall that monitors and controls outbound connections per app.  
+- **IPBan** — an automated blocker that bans abusive IPs on Windows and Linux based on logs.  
+- **iplock** — a firewall rule manager for quickly blocking IP addresses on Linux.  
+- **[Portmaster](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#portmaster-and-https)** — a privacy-focused desktop firewall for Windows and Linux with per-app connection control.  
+- **TapMap** — a map-based network visualizer that shows where your computer connects around the world.
+
+
 ## EasyMesh Direction
 
-EasyMesh is interesting because it standardizes multi-AP coordination.
+EasyMesh is interesting because it **standardizes multi-AP coordination.**
 
 A controller coordinates one or more agents, and the mesh shares client metrics such as RSSI, capabilities, and load.
 
@@ -427,7 +450,9 @@ That matters for TR-181 because EasyMesh data can surface under paths such as:
 Device.WiFi.DataElements.*
 ```
 
-Could I deploy an EasyMesh agent on a Pi? Yes, but the practical caveats are real:
+Could I deploy an EasyMesh agent on a Pi? 
+
+Yes, but the practical caveats are real:
 
 - One radio is awkward because EasyMesh wants fronthaul and backhaul roles.
 - A Pi 4 onboard Wi-Fi radio is not a great long-running AP.
@@ -552,10 +577,16 @@ rsync -av --info=progress2 \
 
 ## Conclusion
 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000 Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/" title="More Telco Stuff" image="/blog_img/outro/telecom/2cm.png" subtitle="Concepts and Tools for the telecom industry" >}}
+{{< /cards >}}
+
+
 Most AI PoCs (19/20) fail
 
-Knowing what you are doing before starting, helps:
-
+Knowing what you are doing before starting, get you closer to be the 1/20:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
@@ -566,7 +597,9 @@ The current home network looks healthy from the Pi's point of view: strong 5 GHz
 
 The weak spot is observability, not raw connectivity.
 
-The next serious step is not more ad hoc commands on the Pi. It is an AP/router-side lab: OpenWrt with `bbfdm`, `obuspa`, and possibly `prplMesh`, so the network can expose per-client Wi-Fi and LAN state through a standard model instead of scattered one-off checks.
+The next serious step is not more ad hoc commands on the Pi. 
+
+It is an AP/router-side lab: OpenWrt with `bbfdm`, `obuspa`, and possibly `prplMesh`, so the network can expose per-client Wi-Fi and LAN state through a standard model instead of scattered one-off checks.
 
 ```md
 have a look to pi-connectivity and to tr471-vs-iperf3  wifi-tr181-notes.md and lan-check.md, do you think those repos and markdown provide some value for connectivity checks for a homelab?
@@ -582,6 +615,7 @@ make server #http://192.168.1.18:8080/
 
 Test this:
 
+```sh
   cd /home/jalcocert/selfhosted-connectivity
   git pull
   make setup
@@ -595,8 +629,9 @@ make devices-list  selfhosted-connectivity devices list
   Then open:
 
   http://192.168.1.18:8080
+```
 
-  If devices.yaml already exists, devices init will refuse to overwrite it. Use this only if you want to reset it:
+If devices.yaml already exists, devices init will refuse to overwrite it. Use this only if you want to reset it:
 
 
 ```sh
@@ -605,6 +640,7 @@ make performance
 
 ![alt text](/blog_img/data-experiments/connectivity-pi.png)
 
+```sh
  git pull
   make setup
   make install-systemd-user
@@ -618,8 +654,9 @@ make performance
   Default interval is 15 minutes. To install with a different interval:
 
   SELFHOSTED_CONNECTIVITY_INTERVAL=30min make install-systemd-user
+```
 
-  This uses systemctl --user, installs under ~/.config/systemd/user/, and does not require root.
+This uses systemctl --user, installs under `~/.config/systemd/user/`, and does not require root.
 
 
 ```sh
@@ -631,10 +668,9 @@ git init && git add . && git commit -m "Initial commit: Starting " && gh repo cr
 make install && make dev #requires .env.local
 ```
 
-i have created this repo at forgejo for you, you have ssh access to it and can push the changes: http://192.168.1.2:3034/hermesagent/selfhosted-connectivity.git can we
-  differenciate in features that the raspberry pi will be able to run (or the homelab where this project will be tested) versus the ones that it will be a server and a local client
-  will need to interact with it?
-
+```md
+i have created this repo at forgejo for you, you have ssh access to it and can push the changes: http://192.168.1.2:3034/hermesagent/selfhosted-connectivity.git can we differenciate in features that the raspberry pi will be able to run (or the homelab where this project will be tested) versus the ones that it will be a server and a local client will need to interact with it?
+```
 
 ### What I Learned
 
@@ -675,7 +711,7 @@ That split keeps the public post readable while still preserving the lab noteboo
 
 1. https://github.com/n0-computer/iroh
 
->  IP addresses break, dial keys instead. Modular networking stack in Rust. 
+>  IP addresses break, dial keys instead. **Modular networking** stack in Rust. 
 
 2. [Wireshark](https://github.com/JAlcocerT/Home-Lab/tree/main/wireshark)
 
@@ -683,11 +719,19 @@ That split keeps the public post readable while still preserving the lab noteboo
 
 ### Can `nmap` show Wi-Fi signal for other devices?
 
-No. `nmap` works at the IP/service layer. RSSI, band, bitrate, and noise are radio-layer properties. Use the AP/router, monitor mode, or each client device.
+No. `nmap` works at the IP/service layer. 
+
+RSSI, band, bitrate, and noise are radio-layer properties.
+
+Use the AP/router, monitor mode, or each client device.
 
 ### What is the difference between SSID and BSSID?
 
-SSID is the network name. BSSID is the MAC address of a specific AP radio. One SSID can have several BSSIDs across bands, mesh nodes, or enterprise APs.
+SSID is the network name. 
+
+BSSID is the MAC address of a specific AP radio. 
+
+One SSID can have several BSSIDs across bands, mesh nodes, or enterprise APs.
 
 ### Why does the AP know client RSSI better than the Pi?
 
@@ -716,6 +760,8 @@ Unbound is useful when you want local recursive DNS behavior.
 
 Starting from [some electro-magnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) foundations
 
+
+### What it is QoS/AQM
 
 
 

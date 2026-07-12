@@ -401,7 +401,7 @@ Termix, is another service that has also been great to manage couple of homelab 
 http://192.168.1.11:8090
 ```
 
-You have NextTerm as an alternative: https://noted.lol/nexterm/
+You have NextTerm as an alternative: `https://noted.lol/nexterm/`
 
 If you will be connecting to remote computers, remember to:
 
