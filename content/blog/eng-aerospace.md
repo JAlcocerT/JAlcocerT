@@ -412,6 +412,7 @@ The Pocket runs **EdgeTX** as its native OS. This is currently the most advanced
 * **Fully Open:** It isn't locked down like a DJI or a high-end Futaba. You can customize every sound, screen, and logic switch.
 * **Model Memory:** Unlike the T8 or BetaFPV LiteRadios, the Pocket lets you store **60+ different models**. You can have one setup for your BetaFPV Meteor65 and another for an RC Plane, and switch between them in seconds.
 * **Lua Script Support:** You can run "mini-apps" (Lua scripts) on the radio. This is how you change your drone's camera settings or VTX power directly from the radio screen.
+     * https://github.com/betaflight/betaflight-tx-lua-scripts
 
 2. Protocol Compatibility (The "Radio Link")
 

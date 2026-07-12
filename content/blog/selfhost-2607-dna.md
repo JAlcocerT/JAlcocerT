@@ -7,6 +7,8 @@ description: 'Selfhosting D&A Tools. With WrenAI, Rill and Vanna.'
 url: 'selfhosting-data-analytics'
 ---
 
+https://github.com/clidey/whodb
+
 https://github.com/obra/superpowers
 
 https://pydantic.dev/

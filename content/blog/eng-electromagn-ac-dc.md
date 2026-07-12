@@ -23,7 +23,7 @@ git clone /electronics-101/samples-motors
 ## Circuits Recap
 
 {{< cards >}}
-  {{< card link="https://github.com/clidey/electronics-101" title="Electronics-101 Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics-101 Github ↗" icon="github" >}}
 {{< /cards >}}
 
 
@@ -300,9 +300,8 @@ More about [electric cars motors](https://github.com/JAlcocerT/electronics-101/b
 | **Mild Hybrid** | BLDC/PMSM | 10-50 kW | 48V | Efficient, regenerates | ~30% duty |
 | **Plug-in Hybrid** | PMSM | 50-100 kW | 400V | Full electric mode, regenerative | 40-60% duty |
 
----
 
-## Durable Takeaways
+### Durable Takeaways
 
 - DC brushed motors are simple because mechanical commutation hides the switching problem, but the brushes become the maintenance limit.
 - BLDC and PMSM motors are not magic DC motors; the battery is DC, but the controller creates rotating phase currents.

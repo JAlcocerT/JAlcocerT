@@ -631,89 +631,90 @@ avvyCAN is a CAN bus analysis tool. You can use it to inspect, record, replay, d
   6. Load a .dbc from the examples, such as ThinkCity.dbc or LeafPowertrainBus.dbc.
   7. If you have CAN hardware, configure it under the connection window and capture live traffic.
 
-  Be careful with sending frames on a real vehicle or live device. Reading/logging is usually low risk; transmitting arbitrary frames can cause unexpected behavior.
+Be careful with sending frames on a real vehicle or live device.
+
+Reading/logging is usually low risk; transmitting arbitrary frames can cause unexpected behavior.
 
 
-I installed Qt
-  locally in your home directory instead.
-
-  Steps I ran:
-
-  cd /home/jalcocert/Desktop/SavvyCAN
-
-  Checked the project docs/scripts and confirmed it is a Qt5/qmake app requiring
-  Qt 5.14+.
-
-  Checked local tools:
-
-  command -v qmake
-  command -v apt-get
-  command -v g++
-  command -v make
-  command -v 7z
-  command -v curl
-
-  qmake was missing, but g++, make, 7z, and curl were already installed.
-
-  Tried system package update:
-
-  sudo -n apt-get update
-
-  That failed because sudo needs your password, so I avoided system install.
-
-  Installed Qt locally:
-
-  ./install-qt.sh --version 5.15.2 --directory "$HOME/.local/Qt" qtbase
-  qtdeclarative qtserialbus qtserialport qttools
-
-  Then qmake initially complained about missing ICU 56 libraries, so I installed
-  Qt’s bundled ICU component:
-
-  ./install-qt.sh --force --version 5.15.2 --directory "$HOME/.local/Qt" icu
-
-  Generated the Makefile:
-
-  LD_LIBRARY_PATH="$HOME/.local/Qt/5.15.2/gcc_64/lib:$LD_LIBRARY_PATH" \
-  "$HOME/.local/Qt/5.15.2/gcc_64/bin/qmake" CONFIG+=release
-  PREFIX="$HOME/.local" SavvyCAN.pro
-
-  Built SavvyCAN:
-
-  make -j"$(nproc)"
-
-  That produced:
-
-  /home/jalcocert/Desktop/SavvyCAN/SavvyCAN
-
-  Checked runtime libraries:
-
-  file SavvyCAN
-  ldd SavvyCAN | rg 'not found|Qt5|icu|xcb|GL'
-
-  No missing libraries showed up.
-
-  Installed user-level launchers:
-
-  mkdir -p "$HOME/.local/share/applications" "$HOME/Desktop"
-
-  sed \
-    -e "s|^Exec=.*|Exec=/home/jalcocert/Desktop/SavvyCAN/SavvyCAN|" \
-    -e "s|^Icon=.*|Icon=/home/jalcocert/Desktop/SavvyCAN/icons/SavvyIcon.png|" \
-    SavvyCAN.desktop > "$HOME/.local/share/applications/SavvyCAN.desktop"
-
-  cp "$HOME/.local/share/applications/SavvyCAN.desktop" "$HOME/Desktop/
-  SavvyCAN.desktop"
-  chmod +x "$HOME/Desktop/SavvyCAN.desktop"
-
-  Refreshed desktop database if available:
-
-  update-desktop-database "$HOME/.local/share/applications"
-
-  Added terminal command:
-
-  mkdir -p "$HOME/.local/bin"
-  ln -sf /home/jalcocert/Desktop/SavvyCAN/SavvyCAN "$HOME/.local/bin/SavvyCAN"
+I installed Qt locally in your home directory instead.
   
+Steps I ran:
+
+cd /home/jalcocert/Desktop/SavvyCAN
+
+Checked the project docs/scripts and confirmed it is a Qt5/qmake app requiring
+Qt 5.14+.
+
+Checked local tools:
+
+command -v qmake
+command -v apt-get
+command -v g++
+command -v make
+command -v 7z
+command -v curl
+
+qmake was missing, but g++, make, 7z, and curl were already installed.
+
+Tried system package update:
+
+sudo -n apt-get update
+
+That failed because sudo needs your password, so I avoided system install.
+
+Installed Qt locally:
+
+./install-qt.sh --version 5.15.2 --directory "$HOME/.local/Qt" qtbase
+qtdeclarative qtserialbus qtserialport qttools
+
+Then qmake initially complained about missing ICU 56 libraries, so I installed
+Qt’s bundled ICU component:
+
+./install-qt.sh --force --version 5.15.2 --directory "$HOME/.local/Qt" icu
+
+Generated the Makefile:
+
+LD_LIBRARY_PATH="$HOME/.local/Qt/5.15.2/gcc_64/lib:$LD_LIBRARY_PATH" \
+"$HOME/.local/Qt/5.15.2/gcc_64/bin/qmake" CONFIG+=release
+PREFIX="$HOME/.local" SavvyCAN.pro
+
+Built SavvyCAN:
+
+make -j"$(nproc)"
+
+That produced:
+
+/home/jalcocert/Desktop/SavvyCAN/SavvyCAN
+
+Checked runtime libraries:
+
+file SavvyCAN
+ldd SavvyCAN | rg 'not found|Qt5|icu|xcb|GL'
+
+No missing libraries showed up.
+
+Installed user-level launchers:
+
+mkdir -p "$HOME/.local/share/applications" "$HOME/Desktop"
+
+sed \
+  -e "s|^Exec=.*|Exec=/home/jalcocert/Desktop/SavvyCAN/SavvyCAN|" \
+  -e "s|^Icon=.*|Icon=/home/jalcocert/Desktop/SavvyCAN/icons/SavvyIcon.png|" \
+  SavvyCAN.desktop > "$HOME/.local/share/applications/SavvyCAN.desktop"
+
+cp "$HOME/.local/share/applications/SavvyCAN.desktop" "$HOME/Desktop/
+SavvyCAN.desktop"
+chmod +x "$HOME/Desktop/SavvyCAN.desktop"
+
+Refreshed desktop database if available:
+
+update-desktop-database "$HOME/.local/share/applications"
+
+Added terminal command:
+
+mkdir -p "$HOME/.local/bin"
+ln -sf /home/jalcocert/Desktop/SavvyCAN/SavvyCAN "$HOME/.local/bin/SavvyCAN"
+
 The repo includes several example CAN logs and DBC files in: `/home/jalcocert/Desktop/SavvyCAN/examples`
 
 Most car-relevant ones:

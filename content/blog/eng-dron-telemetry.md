@@ -20,6 +20,11 @@ https://youtube.com/shorts/KeT0DuWryEI
 
 {{< youtube "KeT0DuWryEI" >}}
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics-101 ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor 75 Pro x Betaflight Logs ↗" icon="github" >}}
+{{< /cards >}}
+
 
 ```sh
   make coast                                                         
@@ -56,13 +61,11 @@ https://youtube.com/shorts/KeT0DuWryEI
   .json --log-index 1 --duration-s 158.4
 ```
 
-You hit the nail on the head! You are looking right at the heart of what makes an FPV drone feel so intensely athletic: an absurd **Power-to-Weight Ratio**, and a fascinating look at how much energy is spent just "coasting" (hovering) versus sprinting.
+You are looking right at the heart of what makes an FPV drone feel so intensely athletic: an absurd **Power-to-Weight Ratio**, and a fascinating look at how much energy is spent just "coasting" (hovering) versus sprinting.
 
 Let’s look at the actual physics of your specific setup (Meteor75 Pro + 680mAh battery) to see how the numbers divide up.
 
----
-
-### 🏋️‍♂️ 1. The Insane Power-to-Weight Ratio
+1. The Insane Power-to-Weight Ratio
 
 Your drone weighs roughly **31 grams** empty. With the new 680mAh battery ($\approx 16\text{g}$), your total takeoff weight is about **47 grams**.
 
@@ -71,12 +74,13 @@ Your drone weighs roughly **31 grams** empty. With the new 680mAh battery ($\app
 $$\frac{64\text{ Watts}}{0.047\text{ kg}} \approx 1,361\text{ Watts per Kilogram}$$
 
 
+To put that into perspective, a high-performance sports car like a **Ferrari or Bugatti** usually has a power-to-weight ratio around **400 to 600 Watts per kilogram**. 
 
-To put that into perspective, a high-performance sports car like a **Ferrari or Bugatti** usually has a power-to-weight ratio around **400 to 600 Watts per kilogram**. Your tiny plastic micro-drone packs nearly **triple** the proportional power of a hypercar! That's why it accelerates like a rocket ship when you punch the throttle.
+Your tiny plastic micro-drone packs nearly **triple** the proportional power of a hypercar! 
 
----
+That's why it accelerates like a rocket ship when you punch the throttle.
 
-### 🛸 2. Look at the Thrust Profile (Grams of Lift)
+2. Look at the Thrust Profile (Grams of Lift)
 
 Your four 1102 motors spinning those 45mm propellers at full blast generate a combined maximum of roughly **200 grams of total upward thrust**.
 
@@ -84,9 +88,7 @@ $$\text{Thrust-to-Weight Ratio} = \frac{200\text{g Max Thrust}}{47\text{g Total 
 
 Your drone can push up into the sky with over **4 times its own weight**.
 
----
-
-### 🎈 3. Coasting vs. Sprinting: Where is the energy going?
+3. Coasting vs. Sprinting: Where is the energy going?
 
 This is where your observation about "coasting" efficiency gets really interesting. Because of those exponential aerodynamic laws we talked about earlier, the energy map of your flight splits cleanly into two modes:
 
@@ -135,7 +137,8 @@ make findings
 {{< youtube "ndUVyEo2URM" >}}
 
 ```sh
-make plot-throttle-current                                         
+make plot-throttle-current
+#  make telemetry-latest
 ```
 
 ![alt text](/blog_img/dron/bb-logs.png)
@@ -184,12 +187,47 @@ python .\run_blackbox_report.py --index 1 --mass-g 44.0
 ### Oa5 Pro x Telemetry
 
 ```sh
-make telemetry-overlay-preview VIDEO="DJI_20260710093712_0013_D.MP4" VIDEO_OFFSET=18.4
+make telemetry-latest
+#make telemetry-overlay-preview VIDEO="DJI_20260710093712_0013_D.MP4" VIDEO_OFFSET=18.4
+make telemetry-overlay-preview VIDEO=DJI_20260712121438_0020_D.MP4 VIDEO_OFFSET=29 COMPOSITE_PREVIEW_OUT=DJI_20260712121438_0020_D_with_telemetry_preview60.mp4
+                                                        
+#If the timing looks right, render the full overlay:
+
+#make telemetry-overlay VIDEO=DJI_20260712121438_0020_D.MP4 VIDEO_OFFSET=29     
+#COMPOSITE_OUT=DJI_20260712121438_0020_D_with_telemetry.mp4
+
+#TELEMETRY_MP4=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260712_115632_BETAFPVG473_telemetry_s2_161s.mp4
+                                                          
+#You can override it if needed:                                                  
+#make telemetry-overlay-preview VIDEO=DJI_20260712121438_0020_D.MP4 VIDEO_OFFSET=29     
+#TELEMETRY_MP4=your_telemetry.mp4 
 ```
+
+<!-- 
+https://youtu.be/drupGz_-R38 
+-->
+
+{{< youtube "drupGz_-R38" >}}
+
+```sh
+make telemetry TELEMETRY_DECODED=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260712_130543_BETAFPVG473_decoded.json TELEMETRY_SEQUENCE=0,1 DURATION=126 FPS=30
+
+make telemetry-overlay-preview VIDEO=DJI_20260712124329_0021_D.MP4 VIDEO_OFFSET=27 TELEMETRY_MP4=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260712_130543_BETAFPVG473_telemetry_s0-1_126s.mp4 COMPOSITE_PREVIEW_OUT=DJI_20260712124329_0021_D_with_telemetry_preview60.mp4
+```
+
+{{< youtube "fb_zY9PMAO4" >}}
+
+<!-- 
+https://youtu.be/fb_zY9PMAO4 -->
+
 
 ---
 
 ## Conclusions
+
+
+
+
 
 ---
 
@@ -200,3 +238,6 @@ make telemetry-overlay-preview VIDEO="DJI_20260710093712_0013_D.MP4" VIDEO_OFFSE
 1. Check applicable regulations: like `https://uav.pansa.pl/pilot-profile` and https://dronemap.pansa.pl/ , `https://drony.gov.pl/drone-tower`
 
 2. Check [weather patterns](https://jalcocert.github.io/JAlcocerT/py-vacations/#conclusions): `https://www.windy.com`
+
+### Interesting PWAs
+
