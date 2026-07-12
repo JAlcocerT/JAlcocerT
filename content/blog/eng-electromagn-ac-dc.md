@@ -8,7 +8,7 @@ url: 'electromagnetism-for-ac-dc-motors'
 math: true
 ---
 
-**Tl;DR**
+**TL;DR**
 
 Post [electro-magnetism 101](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) and [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/)
 
@@ -34,7 +34,39 @@ Wondering about [buying a car](https://jalcocert.github.io/JAlcocerT/buying-car-
 
 ### DC
 
+DC motors are the easiest place to start because the electrical side maps cleanly to the mechanical side: more current means more torque, and more voltage usually means more speed until losses, back EMF, and heating catch up.
+
+The classic brushed DC motor does the commutation mechanically with brushes and a segmented commutator. 
+
+That makes it cheap and intuitive, but the brushes wear, spark, add friction, and limit how cleanly you can control it at high power.
+
+Brushless DC (BLDC) motors keep the useful DC control idea, but move the commutation into electronics.
+
+The controller energizes the stator phases in sequence while the permanent-magnet rotor follows the rotating field.
+
+That is why drones, fans, e-bikes, robots, and many EV auxiliaries use BLDC/PMSM-style machines instead of brushed motors.
+
+| Type | What creates torque | What changes speed | Main compromise |
+|---|---|---|---|
+| Brushed DC | Armature current through a commutator | Applied voltage / PWM duty | Brushes wear and spark |
+| BLDC | Electronically switched stator phases | ESC timing, PWM, field-oriented control | Needs controller and rotor position estimate |
+| Stepper | Sequentially energized stator teeth | Step frequency | Inefficient if held energized; can miss steps |
+
 ### AC
+
+AC motors are built around a rotating magnetic field. 
+
+Instead of flipping current mechanically, the supply itself changes direction over time, and multi-phase windings create a field that rotates through the stator.
+
+That makes AC machines very attractive at medium and large power: no brushes are needed, the construction can be rugged, and the grid already gives you AC. 
+
+The catch is that useful speed control usually needs power electronics, normally a variable-frequency drive (VFD) or an inverter.
+
+| Type | What creates torque | What changes speed | Main compromise |
+|---|---|---|---|
+| Induction | Rotor currents induced by slip | Supply frequency via VFD | Needs slip; lower power factor |
+| Synchronous / PMSM | Rotor field locked to stator field | Electrical frequency and rotor angle | Needs synchronization/control |
+| Switched reluctance | Rotor moves toward lowest reluctance | Phase switching timing | Torque ripple and acoustic noise |
 
 ### Modelling Electrical Engines
 
@@ -48,8 +80,31 @@ But arent they simple, beautiful, elegant and massively efficient?
 
 #### AC Engines
 
+For an AC engine, the first question is not only "how much voltage?" but also "what frequency and phase relationship?" 
 
+Frequency sets the rotating field speed, and torque depends on the interaction between that field and the rotor.
 
+An induction motor can start directly from AC because the rotating field induces currents in the rotor.
+
+The rotor must lag the field slightly: that lag is slip, and slip is what creates torque. 
+
+This is why induction machines are robust and common in industry, but their control story gets interesting when you want precise speed or high efficiency over a wide range.
+
+Synchronous motors do not rely on slip in the same way.
+
+The rotor field locks to the stator field, so the machine runs at synchronous speed. 
+
+With permanent magnets, this becomes the PMSM family used in many EV traction systems because it can be compact, efficient, and very controllable with a good inverter.
+
+Switched reluctance motors are a different branch: the rotor has no magnets and no windings, and torque comes from the magnetic circuit trying to reduce reluctance. 
+
+They are mechanically simple and heat-tolerant, but the control, noise, and torque ripple are the price.
+
+| AC family | Why it matters | Where it shows up |
+|---|---|---|
+| Induction | Rugged, cheap, no permanent magnets | Pumps, fans, factories, some EVs |
+| Synchronous / PMSM | High efficiency and torque density | EV traction, servos, robotics |
+| Switched reluctance | Simple rotor, fault-tolerant potential | EV research, harsh-duty drives |
 
 #### DC Engines
 
@@ -64,16 +119,106 @@ uv sync
 uv run main.py
 ```
 
+In small drones the motor is usually called "brushless DC", but electromagnetically it behaves much closer to a small permanent-magnet synchronous machine driven by an ESC. 
+
+The battery is DC, the controller creates timed phase currents, and the rotor follows the rotating field.
+
+For brushed DC motors, a simple voltage source and PWM can already be enough for useful control. For BLDC/PMSM, the controller has to decide which phase to energize and when. 
+
+That decision can come from Hall sensors, back-EMF sensing, or full field-oriented control.
+
+| DC family | Control style | Practical note |
+|---|---|---|
+| Brushed DC | PWM voltage, polarity reversal | Great for cheap actuators, starters, toys |
+| BLDC trapezoidal | Six-step commutation with ESC | Common in drones and fans |
+| PMSM / FOC | Sinusoidal current control | Smooth, efficient, common in EVs and servos |
+| Stepper | Open-loop or closed-loop steps | Great for positioning, poor as a general efficiency machine |
+
 <!-- {{< youtube "nNMUY_GUw9s" >}} -->
 
 Yep, [private video](https://youtu.be/nNMUY_GUw9s) :)
 
 
-
-
 #### The L-R
 
+The L-R model is the smallest useful electrical model for a winding:
 
+$$V = R i + L \frac{di}{dt} + e_{back}$$
+
+Where:
+
+- $R i$ is copper loss and voltage drop.
+- $L \frac{di}{dt}$ is the winding fighting rapid current change.
+- $e_{back}$ is the voltage generated by motion through the magnetic field.
+
+This model is enough when you want intuition about current rise, PWM ripple, kickback, and why a coil cannot change current instantly. 
+
+It is not enough when geometry, saturation, rotor position, multi-phase coupling, thermal limits, or controller timing become the point of the analysis.
+
+| Question | L-R model useful? | Better model when it is not enough |
+|---|---|---|
+| How fast does current rise in a coil? | Yes | Add driver limits and PWM details |
+| Why does a relay/solenoid kick back? | Yes | Add diode/MOSFET clamp behavior |
+| What torque will this motor make at speed? | Partly | Add back EMF and torque constant |
+| How does a BLDC behave across phases? | Limited | Use dq/FOC, SPICE, FEM, or motor simulation |
+
+#### Equations Behind the Motor Types
+
+The comparison table below is mostly justified by a few compact equations.
+
+For a DC motor, the useful first-order model is:
+
+$$
+\begin{aligned}
+  v &= Ri + L\frac{di}{dt} + e_b \\
+  e_b &= K_e \omega \\
+  \tau &= K_t i
+\end{aligned}
+$$
+
+This is why DC motors feel intuitive: current creates torque, speed creates back EMF, and the winding inductance fights rapid current changes.
+
+Mechanical power is the bridge between the electrical and rotating sides:
+
+$$P_{mech} = \tau \omega$$
+
+Copper loss explains why high current heats small motors quickly:
+
+$$P_{cu} = i^2R$$
+
+For AC machines, frequency matters because it sets the rotating field speed. In RPM:
+
+$$n_s = \frac{120f}{p}$$
+
+where $f$ is electrical frequency and $p$ is the number of poles. The same relation in angular speed is:
+
+$$\omega_s = \frac{4\pi f}{p}$$
+
+Induction motors need slip to make torque:
+
+$$s = \frac{n_s - n_r}{n_s}$$
+
+If $s = 0$, the rotor sees no changing field, no induced rotor current, and therefore no induction torque. That is the short mathematical reason why squirrel-cage motors are called asynchronous motors.
+
+For synchronous and PMSM motors, the rotor tracks the rotating stator field. A simplified torque relationship is:
+
+$$\tau \propto \Phi I \sin\delta$$
+
+where $\Phi$ is magnetic flux, $I$ is stator current, and $\delta$ is the torque angle between rotor and stator fields. With field-oriented control, the common PMSM form is:
+
+$$\tau = \frac{3}{2}p_p\lambda_m i_q$$
+
+where $p_p$ is the number of pole pairs, $\lambda_m$ is permanent-magnet flux linkage, and $i_q$ is the torque-producing current component.
+
+For BLDC/FPV motors, the KV rating is the speed constant:
+
+$$\omega_{no-load} \approx K_V V$$
+
+In drone terms, with KV in RPM/V:
+
+$$RPM_{no-load} \approx KV \cdot V$$
+
+That is the equation behind the practical rule: higher battery voltage or higher KV gives more no-load RPM, but the propeller load decides how much current and heat the motor must survive.
 
 ---
 
@@ -154,6 +299,16 @@ More about [electric cars motors](https://github.com/JAlcocerT/electronics-101/b
 | **EV Traction (modern)** | PMSM | 100-300+ kW | 400-900V | Higher efficiency, compact | Continuous variable |
 | **Mild Hybrid** | BLDC/PMSM | 10-50 kW | 48V | Efficient, regenerates | ~30% duty |
 | **Plug-in Hybrid** | PMSM | 50-100 kW | 400V | Full electric mode, regenerative | 40-60% duty |
+
+---
+
+## Durable Takeaways
+
+- DC brushed motors are simple because mechanical commutation hides the switching problem, but the brushes become the maintenance limit.
+- BLDC and PMSM motors are not magic DC motors; the battery is DC, but the controller creates rotating phase currents.
+- AC induction motors are rugged because the rotor current is induced, but useful control depends on slip and frequency.
+- Synchronous motors trade control complexity for efficiency, torque density, and precise field alignment.
+- The L-R model is the first motor model, not the final one: it explains current dynamics, but not full electromagnetic geometry.
 
 ---
 
@@ -276,4 +431,53 @@ The drone's "size" is typically measured by its propeller diameter (in inches).
 
 ### DC vs BLDC vs AC Engines
 
+The naming can be confusing because "DC" and "AC" can describe either the power source or the electromagnetic behavior.
+
+| Label | Power source | Field behavior | Commutation | Best mental model |
+|---|---|---|---|---|
+| Brushed DC | DC | Rotor current switches mechanically | Brushes/commutator | Simple current-to-torque actuator |
+| BLDC | DC battery + inverter/ESC | Rotating stator field | Electronic six-step or sinusoidal | DC-powered synchronous motor |
+| PMSM | DC link + inverter | Sinusoidal rotating field | Electronic FOC | High-efficiency synchronous machine |
+| Induction AC | AC or inverter-fed AC | Rotating stator field induces rotor current | No brushes | Slip creates torque |
+| Stepper | DC supply + driver | Discrete rotating field positions | Electronic steps | Positioning motor, not efficiency-first motor |
+
+So, a drone BLDC motor is "DC" from the battery perspective, but the useful physics inside the stator is a rotating multi-phase magnetic field. 
+
+An EV PMSM is similar: the pack is DC, the inverter creates controlled AC phase currents, and torque comes from field alignment.
+
+The equations also reveal the naming problem:
+
+$$\tau = K_t i$$
+
+is a good DC-style control intuition, while:
+
+$$n_s = \frac{120f}{p}$$
+
+is the AC rotating-field intuition. BLDC/PMSM machines mix both worlds: a DC battery feeds an inverter, and the inverter creates the rotating field.
+
+| If you care about... | Usually choose... | Why |
+|---|---|---|
+| Cheapest simple actuator | Brushed DC | Minimal electronics |
+| Small fast propeller | BLDC | High RPM and power density |
+| Precise efficient traction | PMSM | Smooth torque and high efficiency |
+| Rugged industrial drive | Induction | Robust rotor and mature VFD ecosystem |
+| Cheap position holding | Stepper | Simple open-loop positioning |
+
+### What is a squirrel-cage motor?
+
+In Spanish, **jaula de ardilla** refers to the **squirrel-cage induction motor**.
+
+So in the motor tables above, it corresponds to **Induction (Squirrel Cage)**, also called:
+
+- **motor de induccion de jaula de ardilla**
+- **motor asincrono de jaula de ardilla**
+- **rotor de jaula de ardilla**, when referring only to the rotor
+
+The rotor is made of conductive bars shorted by end rings, visually similar to a cage. 
+
+There are no brushes, no permanent magnets, and no external electrical connection to the rotor.
+
+The stator creates a rotating magnetic field, that field induces current in the rotor cage, and the interaction between both fields creates torque.
+
 ### Using a ClampMeter
+

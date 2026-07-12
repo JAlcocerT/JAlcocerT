@@ -8,7 +8,7 @@ url: 'electromagnetism-101'
 math: true
 ---
 
-**Tl;DR**
+**TL;DR**
 
 Before [tinkering with electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/), how about understanding what we are doing?
 
@@ -35,6 +35,14 @@ They describe how electric fields, magnetic fields, charges, and currents intera
 
 $$\nabla \cdot \mathbf{E} = \frac{\rho}{\varepsilon_0}$$
 
+Integral form:
+
+$$\iint_{\partial V} \mathbf{E} \cdot d\mathbf{A} = \frac{Q_{enc}}{\varepsilon_0}$$
+
+For a single point charge, that becomes the inverse-square field:
+
+$$\mathbf{E}(r) = \frac{1}{4\pi\varepsilon_0}\frac{q}{r^2}\hat{\mathbf{r}}$$
+
 **What it means:** Electric charges produce electric fields. 
 
 This law states that the "outward flow" (divergence) of an electric field from a volume is proportional to the charge inside it. 
@@ -45,6 +53,14 @@ If you have a positive charge, field lines point away from it; if you have a neg
 ### 2. Gauss’s Law for Magnetism
 
 $$\nabla \cdot \mathbf{B} = 0$$
+
+Integral form:
+
+$$\iint_{\partial V} \mathbf{B} \cdot d\mathbf{A} = 0$$
+
+Magnetic flux through a surface is:
+
+$$\Phi_B = \int_S \mathbf{B} \cdot d\mathbf{A}$$
 
 **What it means:** There are no "magnetic charges" (monopoles).
 
@@ -58,6 +74,14 @@ Because of this, magnetic field lines always form closed loops—whatever goes o
 
 $$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$$
 
+Integral form:
+
+$$\oint_C \mathbf{E} \cdot d\mathbf{l} = -\frac{d\Phi_B}{dt}$$
+
+For a coil with $N$ turns:
+
+$$\mathcal{E} = -N\frac{d\Phi_B}{dt}$$
+
 **What it means:** A changing magnetic field creates an electric field.
 
 This is the principle behind power generators and wireless charging. 
@@ -67,6 +91,23 @@ If you move a magnet through a coil of wire, the magnetic field changes over tim
 ### 4. Ampère’s Circuital Law (with Maxwell’s Addition)
 
 $$\nabla \times \mathbf{B} = \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)$$
+
+Integral form:
+
+$$\oint_C \mathbf{B} \cdot d\mathbf{l} = \mu_0 I_{enc} + \mu_0\varepsilon_0\frac{d\Phi_E}{dt}$$
+
+where electric flux is:
+
+$$\Phi_E = \int_S \mathbf{E} \cdot d\mathbf{A}$$
+
+For a long air-core solenoid, the practical approximation is:
+
+$$B \approx \mu_0 n I$$
+
+With a magnetic core:
+
+$$B \approx \mu n I = \mu_0\mu_r n I$$
+
 **What it means:** Magnetic fields are created by moving charges (current) **OR** by changing electric fields.
 
 Ampère originally figured out that current ($J$) creates a magnetic field (like in an electromagnet).
@@ -94,6 +135,16 @@ Here is how the physics plays out the moment you cut the power:
 $$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$$
 
 This equation tells us that a **changing magnetic field** ($\frac{\partial \mathbf{B}}{\partial t}$) creates an **electric field** ($\mathbf{E}$). 
+
+At circuit level, that shows up as the inductor voltage law:
+
+$$v_L = L\frac{di}{dt}$$
+
+And the energy stored in the coil is:
+
+$$E_L = \frac{1}{2}LI^2$$
+
+That stored energy must go somewhere when the switch opens. If the circuit does not provide a diode, TVS, snubber, or other path, the voltage rises until it finds one.
 
 1.  **The Setup:** When the valve motor (which is essentially a big inductor/coil) is running, Ampère’s Law is at work: the current flowing through the coils creates a steady magnetic field.
 2.  **The Disconnection:** When you flip the switch, the current tries to drop to zero instantly. This causes the magnetic field to collapse almost at the speed of light.

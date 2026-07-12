@@ -435,9 +435,11 @@ I took all the goodies from the github and forgejo repos: *2D/3D*
 
 ## Conclusions
 
-I cancelled `https://app.fireflies.ai/notebook/all` for a custom `https://recorder.google.com`
+I cancelled `https://app.fireflies.ai/notebook/all` 
 
-Also, finally got [the dron exam](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#about-dron-regulations) ready :)
+for a custom setup around`https://recorder.google.com` and openAI key for S2T.
+
+Oh, also got [the dron exam](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#about-dron-regulations) ready :)
 
 ![alt text](/blog_img/dron/a1a3.png)
 
@@ -453,9 +455,7 @@ These might be interesting for you: https://uav.pansa.pl/pilot-profile
 * ~~`https://drony.ulc.gov.pl/`~~ --> `https://drony.gov.pl/`
 * https://dronemap.pansa.pl/ and `checkin.pansa.pl` which is now https://drony.gov.pl/drone-tower
 
-
-
-The oa5 weights 146g, so i can build sth of 100g to carry it - aiming for Open Category :)
+The oa5 weights 146g, so I can *potentially* build sth of ~100g to carry it - aiming for Open Category and not be over the 249g :)
 
 Want some goodies?
 

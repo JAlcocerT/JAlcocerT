@@ -194,3 +194,9 @@ make telemetry-overlay-preview VIDEO="DJI_20260710093712_0013_D.MP4" VIDEO_OFFSE
 ---
 
 ## FAQ
+
+### Important before flying
+
+1. Check applicable regulations: like `https://uav.pansa.pl/pilot-profile` and https://dronemap.pansa.pl/ , `https://drony.gov.pl/drone-tower`
+
+2. Check [weather patterns](https://jalcocert.github.io/JAlcocerT/py-vacations/#conclusions): `https://www.windy.com`

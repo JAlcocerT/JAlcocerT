@@ -25,20 +25,34 @@ All to get the ICE with [a nicer model](https://jalcocert.github.io/JAlcocerT/fl
 
 ### Aerodynamics
 
+<!-- 
+https://youtube.com/shorts/RGh4EBOy-E0 
+-->
+
+{{< youtube "RGh4EBOy-E0" >}}
+
+<!-- 
+https://youtube.com/shorts/fkx65D_QE7o
+-->
+
+{{< youtube "fkx65D_QE7o" >}}
+
+
 ## Propulsion
 
-
 For inline and V engines you have some simulations already:
-
 
 See the differences with mechanism vibrations
 
 versus how uniform is the power output of these engines: *which obviusly is better as the number of cylinder increases*
 
-
 Even rotary: *not the mazda RX8 ones, the one of ww1 planes*
 
-https://www.youtube.com/watch?v=-pxpNivvpw8
+{{< youtube "-pxpNivvpw8" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=-pxpNivvpw8 
+-->
 
 ### Dron Props
 
@@ -347,8 +361,16 @@ https://www.youtube.com/watch?v=hL31UtWpVAo
 
 4. https://www.youtube.com/watch?v=AT6d3Jk7CeY
 
+https://www.youtube.com/watch?v=hL31UtWpVAo
 
 5. https://www.youtube.com/watch?v=cU1I7qbWosg
+
+https://www.youtube.com/watch?v=y_kCA_rvtJI
+
+6. https://www.youtube.com/watch?v=d2R0BU_1qBo
+
+{{< youtube "d2R0BU_1qBo" >}}
+
 
 ![alt text](/blog_img/apps/yt-distill.png)
 

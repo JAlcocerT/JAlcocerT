@@ -713,9 +713,7 @@ I installed Qt
 
   mkdir -p "$HOME/.local/bin"
   ln -sf /home/jalcocert/Desktop/SavvyCAN/SavvyCAN "$HOME/.local/bin/SavvyCAN"
-
-
-
+  
 The repo includes several example CAN logs and DBC files in: `/home/jalcocert/Desktop/SavvyCAN/examples`
 
 Most car-relevant ones:

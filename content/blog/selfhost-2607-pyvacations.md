@@ -146,8 +146,12 @@ make cost-overlay-data
 
 
 ```sh
-
+#git clone
+cd ./poc/z-poc-trip-planner-adk
 ```
+
+> `https://trip-planner-9lt.pages.dev/`
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/" title="Tech for a Trip" image="/blog_img/hardware/travel-pakc.jpg" subtitle="Software for trips far from home" >}}
