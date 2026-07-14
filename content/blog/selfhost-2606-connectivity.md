@@ -575,8 +575,11 @@ rsync -av --info=progress2 \
 
 {{< /details >}}
 
-## Conclusion
+---
 
+## Conclusions
+
+Are you into these?
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000 Review" >}}

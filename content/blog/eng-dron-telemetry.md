@@ -220,13 +220,95 @@ make telemetry-overlay-preview VIDEO=DJI_20260712124329_0021_D.MP4 VIDEO_OFFSET=
 <!-- 
 https://youtu.be/fb_zY9PMAO4 -->
 
+All thanks to [ffmpeg](https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/#ffmpeg), [just FYI](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#ffmpeg-video-workflow-for-windows):
+
+```sh
+ffmpeg -y -i "DJI_20260713180204_0003_D.MP4" `       
+  -map 0:v:0 -map 0:a? `                             
+  -vf "scale=1280:-2" `                              
+  -c:v libx264 `                                     
+  -pix_fmt yuv420p `                                 
+  -crf 23 `                                          
+  -preset veryfast `                                 
+  -c:a aac `                                         
+  -b:a 160k `                                        
+  -movflags +faststart `                             
+  "DJI_20260713180204_0003_D_browser.mp4"  
+
+#ffmpeg -f concat -safe 0 -i file_list.txt -c copy D:\DCIM\DJI_001\output.mp4
+```
+
+![alt text](/blog_img/dron/telemetry-dashboard-101.png)
+
+{{< callout type="info" >}}
+Each segment in the logs is a new run. Segment 0 seems to be the latest.
+{{< /callout >}}
+
+```sh
+make timeline-viewer TIMELINE_DECODED=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260714_152410_BETAFPVG473_decoded.json TIMELINE_VIDEO=DJI_20260714154902_0002_D_browser.mp4 TIMELINE_LOG_INDEX=5 TIMELINE_OFFSET=0
+```
+
+{{< youtube "0zhNqTwm0oY" >}}
+<!-- https://youtu.be/0zhNqTwm0oY -->
+
 
 ---
 
 ## Conclusions
 
+{{< callout type="warning" >}}
+Remember to use betaflight to get the telemetry for a limited time not to overheat your controller with the rising temp
+{{< /callout >}}
 
 
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled free value!" >}}
+{{< /cards >}}
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+    classDef bridge fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>( DIY = $0)"):::free
+    L1("Web Audits 🛡️<br/>(Reveals Problem )"):::free
+    L11("Tech Blog/Youtube"):::free
+    L12("ebooks"):::free
+    L13("mbsd framework OSS"):::free
+    L14("OSS guides"):::free
+
+    L3("Done With You<br/>(Trade $$ for knowledge)"):::mid
+    L4("Done For You<br/>(Trade $$$ for outcomes)"):::high
+    L44("GenBI<br/>Shopify PoC"):::bridge
+    L45("Real Estate<br/>Funnel Bot"):::bridge
+    L46("Energy Solutions<br/>HVAC"):::bridge
+    L47("IoT Solutions<br/>Crops"):::bridge
+    L48("Weddings<br/>Photo QR"):::bridge
+
+    %% --- Connections ---
+    L0 --> L1
+    L1 --> L3
+    L12 --> L3
+    L13 -->|MultiBodySystemsDynamicscom| L3
+    L14 -->|FOSS Engineer| L3
+    L0 --> L11
+    L0 --> L12
+    L0 --> L13
+    L0 --> L14
+    L3 --> L4
+    L4 -->|Productized Service| L44
+    L4 -->|Productized Service| L45
+    L4 -->|Productized Service| L46
+    L4 -->|Productized Service| L47
+    L4 -->|Productized Service| L48
+```
 
 
 ---

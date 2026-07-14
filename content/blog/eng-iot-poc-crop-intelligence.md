@@ -1,6 +1,6 @@
 ---
 title: "Crops Intelligence in the AI era"
-date: 2026-07-25
+date: 2026-08-15
 draft: false
 tags: ["IoT x DHT22","MQTT x EMQx","JAlcocerTech Leads"]
 description: 'The learning after planting tomatoes. Ready to scale.'

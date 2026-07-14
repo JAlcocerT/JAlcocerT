@@ -1,17 +1,32 @@
 ---
 title: "SelfHosted Data Analytics"
-date: 2026-07-29T23:20:21+01:00
+date: 2026-07-31T23:20:21+01:00
 draft: false
 tags: ["ADK vs LangChain","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql","Malloy DSL","Semantics","DSL"]
 description: 'Selfhosting D&A Tools. With WrenAI, Rill and Vanna.'
 url: 'selfhosting-data-analytics'
 ---
 
+
+D&A is more about semantics than you could think in the first place:
+
+1. **Does this separation of facts, assumptions, your understanding, and the next validation step make sense for you?**
+ 
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/the-ideas-bucket-can-be-empty/#the-top-down-hierarchy-of-right" title="Top-Down Semantics" image="/blog_img/memes/data-deadlock.png" subtitle="Using LangChain Chains" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
+{{< /cards >}}
+
+
 https://github.com/clidey/whodb
 
 https://github.com/obra/superpowers
 
 https://pydantic.dev/
+
+I talked about Rill and WrenAI [sometime back](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#existing-genbi-solutions)
+
 https://github.com/Canner/WrenAI
 
 https://docs.getwren.ai/oss/concepts/architecture#correctness-is-a-system-not-a-switch

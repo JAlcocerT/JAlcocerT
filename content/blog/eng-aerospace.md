@@ -410,7 +410,6 @@ Yes, the engine type changes the efficiency equation slightly, but not enough to
 * **Turboprops (Propeller planes):** These are highly efficient at lower speeds and altitudes. For short regional flights (under $500 \text{ km}$), electric turboprops are actually viable and being aggressively tested right now, because the flights are short enough that the heavy battery pack doesn't completely kill the payload capacity.
 * **Turbofans (Commercial Jet Engines):** These are designed to push massive amounts of thrust at $35,000 \text{ feet}$ and $800 \text{ km/h}$. Trying to replace a massive jet engine with electric fans requires so many batteries that the plane would be too heavy to carry passengers.
 
-
 Aviation is currently breaking down into three distinct tiers:
 
 * **Short Range & Training (Electric Wins Soon):** Small 2-seater flight-training aircraft and short 9-passenger island-hopper routes are perfectly suited for electric flight. The low maintenance and cheap electricity make it a massive win.

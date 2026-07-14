@@ -1,6 +1,6 @@
 ---
 title: "Robotics 101"
-date: 2026-07-31
+date: 2026-08-31
 draft: false
 tags: ["Electronics","RC","IoT"]
 description: ''

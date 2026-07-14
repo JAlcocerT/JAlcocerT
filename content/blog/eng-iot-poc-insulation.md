@@ -274,6 +274,10 @@ I also tried it from the homelab: `MQTT_HOST=192.168.1.2 docker compose up -d --
 
 Measure, dont model:
 
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled free value!" >}}
+{{< /cards >}}
 
 ---
 
@@ -309,7 +313,9 @@ Mine is a simple 15W:
 
 ![Solar Panel](/blog_img/outro/solar-panel.jpg)
 
-
+And who knows, I might be making some IoT x DSc project with tech talk around it.
 
 ### Which AC is enough for my house?
+
+There is a rule of thumb [that experts in the field mentioned](https://forocoches.com/foro/showthread.php?t=10355892&page=6):
 

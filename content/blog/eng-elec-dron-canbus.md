@@ -1,5 +1,5 @@
 ---
-title: "Enough Electronics for a Dron or Canbus"
+title: "Enough Electronics for a Dron or...Canbus"
 date: 2026-06-26
 draft: false
 tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable","ELM327 vs STM32G431","Betaflight PWA"]
@@ -96,6 +96,10 @@ A fully charged dron battery will read around 4.2V to 4.35V. Land and unplug the
 {{< /callout >}}
 
 ### Canbus electronics
+
+{{< youtube "evCUEQrAkn0" >}}
+<!-- 
+https://www.youtube.com/watch?v=evCUEQrAkn0 -->
 
 Tried this with an [outlander](https://en.wikipedia.org/wiki/Mitsubishi_Outlander)
 
@@ -223,9 +227,13 @@ But if you see *anything* pop up, your link is golden. (If nothing shows, don't 
 
 > Pack up the laptop, grab your custom cable, and head out to the vehicle—you are ready to connect to the OBD2 port!
 
-Seeing that `123  [4]  DE AD BE EF` pop up in your other terminal is a beautiful sight! It means your loopback/tx validation is working perfectly on your laptop. You have officially built a fully functioning CAN node.
+Seeing that `123  [4]  DE AD BE EF` pop up in your other terminal is a beautiful sight!
 
-And you are exactly right about the car—depending on the model and year, you will see anywhere from **500 to well over 2,000 messages per second** screaming across the screen. It looks like a matrix waterfall and is impossible to read with the human eye.
+It means your loopback/tx validation (via a functioning CAN node) is working perfectly on your laptop.
+
+And you are exactly right about the car—depending on the model and year, you will see anywhere from **500 to well over 2,000 messages per second** screaming across the screen. 
+
+It looks like a matrix waterfall and is impossible to read with the human eye.
 
 Fortunately, the `can-utils` suite has a built-in tool specifically designed for recording this chaos so you can analyze it later on your couch.
 
@@ -233,7 +241,9 @@ Fortunately, the `can-utils` suite has a built-in tool specifically designed for
 
 How to Record 10 Seconds of Data
 
-Instead of `candump`, you will use a tool called **`cangen`** or **`candump` with logging flags**. The best tool for this job is `candump` combined with a timeout command.
+Instead of `candump`, you will use a tool called **`cangen`** or **`candump` with logging flags**. 
+
+The best tool for this job is `candump` combined with a timeout command.
 
 To record exactly 10 seconds of raw car data and save it to a file, run this command in your terminal:
 
@@ -252,7 +262,9 @@ When the 10 seconds are up, the command will exit, and you will find a new file 
 
 How to "Play Back" the Recording on Your Couch
 
-This is where the real hacking magic happens. Once you have that log file saved, you can unplug from the car, go back inside, and replay those 10 seconds through your laptop as if you were still plugged into the live vehicle!
+This is where the real hacking magic happens.
+
+Once you have that log file saved, you can unplug from the car, go back inside, and replay those 10 seconds through your laptop as if you were still plugged into the live vehicle!
 
 To replay your log file, use **`canplayer`**:
 
@@ -263,7 +275,9 @@ canplayer -I candump-2026-07-01_180449.log
 
 *(Just replace the filename with your exact log file name).*
 
-If you have `candump can0` running in another window while you run `canplayer`, you will see all 10,000+ messages stream past your screen at the exact same speed and timing they happened inside the car. This lets you isolate packet IDs, search for button presses, and reverse-engineer the data safely at your desk.
+If you have `candump can0` running in another window while you run `canplayer`, you will see all 10,000+ messages stream past your screen at the exact same speed and timing they happened inside the car.
+
+This lets you isolate packet IDs, search for button presses, and reverse-engineer the data safely at your desk.
 
 when youll be done:
 
@@ -289,9 +303,12 @@ Once that's done, pop the OBD2 connector into your vehicle, plug the USB port in
 
 "Excellent USB-to-CAN FD adapter. Plug-and-play on Linux and works reliably for CAN communication. It comes pre-flashed with candlelight firmware and you can easily update it."
 
-This is the best part for you. Since it already has the native candlelight firmware installed, you don't need to flash anything or mess around with Windows COM ports. You just plug it into your laptop, use the standard Linux network commands (ip link), and can-utils will talk to it natively.
+This is the best part for you. Since it already has the native candlelight firmware installed, you don't need to flash anything or mess around with Windows COM ports. 
+
+You just plug it into your laptop, use the standard Linux network commands (ip link), and can-utils will talk to it natively.
 
 2. High Stability for Older and Newer Cars
+
 Reviewers alex and Mr.Schmidt point out that it uses an external clock crystal (HSE) for high temporal stability and seamlessly supports standard CAN 1.0 and 2.0 up to 1 Mbps, alongside CAN-FD up to 5 Mbps. This means it will downscale perfectly to read the 500 kbps signals on your Laguna, Outlander, Mondeo, or Golf 7 without dropping a single frame.
 
 ```sh
@@ -300,23 +317,22 @@ codex
 #can-utils
 ```
 
-https://github.com/Elmue/CANable-2.5-firmware-Slcan-and-Candlelight
-
+* https://github.com/Elmue/CANable-2.5-firmware-Slcan-and-Candlelight
 * https://github.com/candle-usb/candleLight_fw
 
 #### Outlander MK2 Test 1
 
 That’s fine. You confirmed the laptop/CANable side works, so the remaining problem was vehicle-side.
 
-  For a Mitsubishi Outlander Mk2, the “nothing on candump” result could mean:
+For a Mitsubishi Outlander Mk2, the “nothing on candump” result could mean:
 
-  - The OBD port CAN pins you used were not carrying broadcast traffic.
-  - The car gateway keeps the diagnostic port quiet until queried.
-  - The bitrate was not 500k.
-  - The gear/selector signal is on another internal CAN bus, not exposed directly at OBD.
-  - If it was a manual gearbox, gear position may not be directly broadcast while stationary.
+- The OBD port CAN pins you used were not carrying broadcast traffic.
+- The car gateway keeps the diagnostic port quiet until queried.
+- The bitrate was not 500k.
+- The gear/selector signal is on another internal CAN bus, not exposed directly at OBD.
+- If it was a manual gearbox, gear position may not be directly broadcast while stationary.
 
-  Next time you have access to the car, use this order:
+Next time you have access to the car, use this order:
 
 ```sh
 sudo pkill slcand
@@ -325,18 +341,18 @@ sudo ip link set can0 up
 candump -tz can0
 ```
 
-  Try with:
+Try with:
 
-  1. Ignition ON
-  2. Engine ON
-  3. Brake pressed
-  4. Gear selector moved slowly through states, if automatic/CVT
+1. Ignition ON
+2. Engine ON
+3. Brake pressed
+4. Gear selector moved slowly through states, if automatic/CVT
 
-  If still nothing, capture stats:
+If still nothing, capture stats:
 
-  ip -details -statistics link show can0
+ip -details -statistics link show can0
 
-  Then try other passive bitrates:
+Then try other passive bitrates:
 
 ```sh
 #250k
@@ -358,107 +374,107 @@ Then we can diff changing CAN IDs/bytes.
 
 Worked
 
-  - Linux detected the USB adapter:
+- Linux detected the USB adapter:
 
-    CANable2 b158aa7 github.com/normaldotcom/canable2.git
-    Manufacturer: Openlight Labs
-    ttyACM0 / later ttyACM1
+  CANable2 b158aa7 github.com/normaldotcom/canable2.git
+  Manufacturer: Openlight Labs
+  ttyACM0 / later ttyACM1
 
-  - Confirmed it is a CANable2-style device running as USB serial ACM, suitable for slcan.
-  - Installed can-utils successfully:
+- Confirmed it is a CANable2-style device running as USB serial ACM, suitable for slcan.
+- Installed can-utils successfully:
 
-    sudo apt install -y can-utils
+  sudo apt install -y can-utils
 
-  - Loaded the correct kernel module after typo correction:
+- Loaded the correct kernel module after typo correction:
 
-    sudo modprobe slcan
+  sudo modprobe slcan
 
-  - Created can0 with slcand:
+- Created can0 with slcand:
 
-    sudo slcand -o -c -s6 /dev/ttyACM0 can0
-    # later after replug:
-    sudo slcand -o -c -s6 /dev/ttyACM1 can0
+  sudo slcand -o -c -s6 /dev/ttyACM0 can0
+  # later after replug:
+  sudo slcand -o -c -s6 /dev/ttyACM1 can0
 
-  - Brought can0 up:
+- Brought can0 up:
 
-    sudo ip link set can0 up
+  sudo ip link set can0 up
 
-  - Verified can0 was healthy:
+- Verified can0 was healthy:
 
-    can0: <NOARP,UP,LOWER_UP>
-    can state ERROR-ACTIVE
+  can0: <NOARP,UP,LOWER_UP>
+  can state ERROR-ACTIVE
 
-  - Bench/local test worked between two terminals:
+- Bench/local test worked between two terminals:
 
-    candump can0
-    cansend can0 123#DEADBEEF
+  candump can0
+  cansend can0 123#DEADBEEF
 
-  That proves the laptop, CANable, slcand, SocketCAN, and can-utils path works.
+That proves the laptop, CANable, slcand, SocketCAN, and can-utils path works.
 
-  Did Not Work / Inconclusive
+Did Not Work / Inconclusive
 
-  - Initial typo:
+- Initial typo:
 
-    sudo modprobe sclan
-    failed because the module is slcan, not sclan.
-    failed because the module is slcan, not sclan.
+  sudo modprobe sclan
+  failed because the module is slcan, not sclan.
+  failed because the module is slcan, not sclan.
 
-  - After unplug/replug, can0 disappeared. That is normal; it needed to be recreated.
-  - My sandbox could see the adapter in sysfs but could not access /dev/ttyACM0 or /dev/ttyACM1, so I could not fully run slcand for you from here.
-  - Connected to the Mitsubishi Outlander Mk2, passive listening showed no frames:
+- After unplug/replug, can0 disappeared. That is normal; it needed to be recreated.
+- My sandbox could see the adapter in sysfs but could not access /dev/ttyACM0 or /dev/ttyACM1, so I could not fully run slcand for you from here.
+- Connected to the Mitsubishi Outlander Mk2, passive listening showed no frames:
 
-    candump -tz can0
+  candump -tz can0
 
-  Likely Reasons Nothing Came From The Car
+Likely Reasons Nothing Came From The Car
 
-  - Ignition/modules may not have been awake.
-  - Wrong bitrate. We only confirmed 500k setup; 250k and 125k were suggested but not confirmed tried.
-  - OBD port may not expose raw broadcast CAN traffic.
-  - Gear data may be on another internal CAN bus behind a gateway.
-  - Wrong pins, missing ground, or CAN-H/CAN-L issue.
-  - The car may only respond to diagnostic requests instead of broadcasting on OBD.
+- Ignition/modules may not have been awake.
+- Wrong bitrate. We only confirmed 500k setup; 250k and 125k were suggested but not confirmed tried.
+- OBD port may not expose raw broadcast CAN traffic.
+- Gear data may be on another internal CAN bus behind a gateway.
+- Wrong pins, missing ground, or CAN-H/CAN-L issue.
+- The car may only respond to diagnostic requests instead of broadcasting on OBD.
 
-  Final Status
+Final Status
 
-  Your CAN adapter setup works locally. The unresolved part is vehicle access/traffic from the Outlander. Next time, the key checks are passive candump at 500k, then 250k, then 125k, plus ip -details -statistics link show can0 to see
-  whether it is silence or bus errors.
+Your CAN adapter setup works locally. The unresolved part is vehicle access/traffic from the Outlander. Next time, the key checks are passive candump at 500k, then 250k, then 125k, plus ip -details -statistics link show can0 to see
+whether it is silence or bus errors.
 
 Tried and Still No Frames
 
-  - can0 was up and healthy:
+- can0 was up and healthy:
 
-    <NOARP,UP,LOWER_UP>
-    can state ERROR-ACTIVE
+  <NOARP,UP,LOWER_UP>
+  can state ERROR-ACTIVE
 
-  - Passive listen at 500k:
+- Passive listen at 500k:
 
-    candump -tz can0
+  candump -tz can0
 
-    Result: no frames.
+  Result: no frames.
 
-  - Restarted slcand at 250k:
+- Restarted slcand at 250k:
 
-    sudo pkill slcand
-    sudo slcand -o -c -s5 /dev/ttyACM1 can0
-    sudo ip link set can0 up
-    candump -tz can0
-
-    Result: no frames.
-
-  One correction: you accidentally ran slcand twice here:
-
+  sudo pkill slcand
   sudo slcand -o -c -s5 /dev/ttyACM1 can0
-  sudo slcand -o -c -s5 /dev/ttyACM1 can0
+  sudo ip link set can0 up
+  candump -tz can0
 
-  That usually is not helpful, but since you later did ip link set can0 up, the 250k attempt was still basically valid.
+  Result: no frames.
 
-  The most useful thing missing was the statistics version:
+One correction: you accidentally ran slcand twice here:
 
-  ip -details -statistics link show can0
+sudo slcand -o -c -s5 /dev/ttyACM1 can0
+sudo slcand -o -c -s5 /dev/ttyACM1 can0
 
-  Your shown command was without -statistics, so we did not see RX/error counters.
+That usually is not helpful, but since you later did ip link set can0 up, the 250k attempt was still basically valid.
 
-  Current conclusion: the adapter and can0 were fine, but the Outlander OBD port did not produce passive broadcast frames at the settings you tried. Most likely: gateway quiet on OBD, wrong bus/pins, or gear data not exposed there.
+The most useful thing missing was the statistics version:
+
+ip -details -statistics link show can0
+
+Your shown command was without -statistics, so we did not see RX/error counters.
+
+Current conclusion: the adapter and can0 were fine, but the Outlander OBD port did not produce passive broadcast frames at the settings you tried. Most likely: gateway quiet on OBD, wrong bus/pins, or gear data not exposed there.
 
 ```sh
 #ip -details link show can0
@@ -583,7 +599,7 @@ That’s useful. It means the OBD port, vehicle power, ground, and at least one 
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
-  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled free value!" >}}
 {{< /cards >}}
 
 For your use case I’d split it by adapter type:

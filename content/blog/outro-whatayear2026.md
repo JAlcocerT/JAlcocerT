@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-07-26
+date: 2026-07-24
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
