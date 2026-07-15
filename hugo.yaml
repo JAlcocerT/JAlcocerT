@@ -21,6 +21,25 @@ params:
   #   label: "JAlcocerT Assistant"
   #   description: "Ask me anything about development, tech, or this site!"
 
+  navbar:
+    displayTitle: true
+    displayLogo: false
+    logo:
+      path: images/logo.svg
+      dark: images/logo.svg
+      width: 40
+      height: 20
+      link: /JAlcocerT #base for github pages
+    width: wide    
+
+  footer:
+    displayCopyright: false
+    displayPoweredBy: false
+
+  editURL:
+    enable: true
+    base: "https://github.com/JAlcocerT/JAlcocerT/edit/main/content"
+
 markup:
   # allow raw html
   goldmark:
@@ -78,24 +97,4 @@ menu:
     - identifier: HomeLab
       name: "HomeLab Config Files↗"
       url: "https://github.com/JAlcocerT/Home-Lab/"
-      weight: 5              
-                        
-params:
-  navbar:
-    displayTitle: true
-    displayLogo: false
-    logo:
-      path: images/logo.svg
-      dark: images/logo.svg
-      width: 40
-      height: 20
-      link: /JAlcocerT #base for github pages
-    width: wide    
-
-  footer:
-    displayCopyright: false
-    displayPoweredBy: false
-
-  editURL:
-    enable: true
-    base: "https://github.com/JAlcocerT/JAlcocerT/edit/main/content"
+      weight: 5

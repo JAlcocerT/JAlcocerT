@@ -13,5 +13,5 @@ This makes travel planning part of a personal knowledge system instead of a one-
 
 Related:
 
-- [Vacations with Python + ADK]({{< relref "/blog/selfhost-2607-pyvacations.md" >}})
+- [Vacations with Python + ADK]({{< relref "/blog/selfhost-2606-pyvacations.md" >}})
 - [Why-first travel planning]({{< relref "/notes/why-first-travel-planning.md" >}})

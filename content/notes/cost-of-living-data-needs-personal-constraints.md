@@ -13,6 +13,6 @@ A useful trip planner should ask for constraints before ranking places. Otherwis
 
 Related:
 
-- [Vacations with Python + ADK]({{< relref "/blog/selfhost-2607-pyvacations.md" >}})
+- [Vacations with Python + ADK]({{< relref "/blog/selfhost-2606-pyvacations.md" >}})
 - [Weather is a filter, not a travel decision engine]({{< relref "/notes/weather-is-a-filter-not-a-travel-decision-engine.md" >}})
 - [Why-first travel planning]({{< relref "/notes/why-first-travel-planning.md" >}})

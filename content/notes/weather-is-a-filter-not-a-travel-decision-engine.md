@@ -13,6 +13,6 @@ This keeps the product honest: data can rank viable windows and places, but it s
 
 Related:
 
-- [Vacations with Python + ADK]({{< relref "/blog/selfhost-2607-pyvacations.md" >}})
+- [Vacations with Python + ADK]({{< relref "/blog/selfhost-2606-pyvacations.md" >}})
 - [Cost of living data needs personal constraints]({{< relref "/notes/cost-of-living-data-needs-personal-constraints.md" >}})
 - [Why-first travel planning]({{< relref "/notes/why-first-travel-planning.md" >}})

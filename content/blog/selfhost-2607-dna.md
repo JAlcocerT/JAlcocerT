@@ -490,3 +490,25 @@ Databricks notebooks and Vertex AI Workbench offer Jupyter-compatible interfaces
 | **Self-Hosting** | Possible but primarily managed. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks) | Fully managed; customizable via user-managed instances. [i636c6f7564o676f6f676c65o636f6dz.oszar](https://i636c6f7564o676f6f676c65o636f6dz.oszar.com/vertex-ai/docs/workbench/introduction) |
 
 Databricks emphasizes data engineering and unified analytics beyond notebooks, while Workbench prioritizes streamlined ML experimentation in Google's ecosystem. [deepnote](https://deepnote.com/compare/databricks-vs-vertexai)
+
+### Too many calls?
+
+After applying you are getting tons of calls bc your profile is great?
+
+Yes — an open-source Android option that can do **prefix/wildcard blocking** is **Fossify Phone**; community reports describe it as able to block calls by number pattern, like prefixes, which fits something such as `+34 68*`. [reddit](https://www.reddit.com/r/FrancePirate/comments/1lo2phh/ya_une_appli_android_pour_bloquer_les_0568_0424/)
+
+Another option is **SpamBlocker (Call & SMS)**, which is described as open source and supports regex/pattern-based blocking, so it should also be suitable for blocking Spanish mobile prefixes. [discuss.privacyguides](https://discuss.privacyguides.net/t/yet-another-call-blocker-another-updated-alternative/19276)
+
+If you want something simpler, **Yet Another Call Blocker** is also mentioned as a FOSS blocker with wildcard-style blacklisting, though it appears older and less actively maintained. [f-droid](https://f-droid.org/en/packages/dummydomain.yetanothercallblocker/)
+
+
+For a prefix like `+34 68`, you typically want a rule like:
+
+- `+3468*`
+- or `3468*`
+- or `068*` depending on how your phone formats incoming numbers.
+
+The exact matching style depends on how the app stores caller IDs, so the safest approach is to test with one or two formats first. [play.google](https://play.google.com/store/apps/details?id=callfilter.app&hl=en)
+
+
+If you want the most privacy-friendly and flexible choice, I’d start with **SpamBlocker** or **Fossify Phone**. [converter.brightcoding](https://converter.brightcoding.dev/blog/spamblocker-the-powerful-android-call-shield-developers-love)

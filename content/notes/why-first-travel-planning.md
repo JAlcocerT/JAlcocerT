@@ -13,6 +13,6 @@ Once the purpose is explicit, weather, cost, route, and accommodation data becom
 
 Related:
 
-- [Vacations with Python + ADK]({{< relref "/blog/selfhost-2607-pyvacations.md" >}})
+- [Vacations with Python + ADK]({{< relref "/blog/selfhost-2606-pyvacations.md" >}})
 - [Weather is a filter, not a travel decision engine]({{< relref "/notes/weather-is-a-filter-not-a-travel-decision-engine.md" >}})
 - [Cost of living data needs personal constraints]({{< relref "/notes/cost-of-living-data-needs-personal-constraints.md" >}})
