@@ -87,17 +87,29 @@ Instead of using a rigid metal cylinder (like your 18650 cells) or a massive hea
 
 ### How they behave compared to your other batteries:
 
-* **Compared to your 1S Drone:** Your drone also uses soft LiPo pouches for pure weight savings, but your drone battery is optimized for *explosive discharge* (high C-rate) to fight gravity, meaning it degrades within 150–200 cycles. Your laptop and Pixel 8 batteries are optimized for *slow, steady endurance* (low C-rate). They are built to cycle about 800 to 1,000 times before dropping to 80% health.
+* **Compared to your 1S Drone:** Your drone also uses soft LiPo pouches for pure weight savings, but your drone battery is optimized for *explosive discharge* (high C-rate) to fight gravity, meaning it degrades within 150–200 cycles. 
 
-* **Compared to your 18650:** While an 18650 is rugged and tough to puncture because of its steel armor shell, a laptop or phone battery is physically vulnerable. If you bend, puncture, or crush a Li-Polymer pouch cell, it can easily short-circuit internally.
+Your laptop and Pixel 8 batteries are optimized for *slow, steady endurance* (low C-rate). They are built to cycle about 800 to 1,000 times before dropping to 80% health.
 
-* **Compared to your Bluetti (LFP):** Your laptop and phone will degrade much faster than your Bluetti. While your Bluetti can sit at 100% charge with very little stress, keeping your laptop plugged into the wall at 100% all day, or letting your Pixel 8 fast-charge to 100% in a hot environment overnight, accelerates degradation.
+* **Compared to your 18650:** While an 18650 is rugged and tough to puncture because of its steel armor shell, a laptop or phone battery is physically vulnerable. 
+
+If you bend, puncture, or crush a Li-Polymer pouch cell, it can easily short-circuit internally.
+
+{{< callout type="info" >}}
+Maximum (Fully Charged): 8.4V | Nominal (Middle of the pack): 7.4 | Safe Low Limit (Time to Charge): 6.6V - 6.8V
+{{< /callout >}}
+
+* **Compared to your Bluetti (LFP):** Your laptop and phone will degrade much faster than your Bluetti.
+
+While your Bluetti can sit at 100% charge with very little stress, keeping your laptop plugged into the wall at 100% all day, or letting your Pixel 8 fast-charge to 100% in a hot environment overnight, accelerates degradation.
 
 ### Others
 
 * **The RadioMaster Pocket takes two 18650s:** Because your transmitter needs to broadcast a rock-solid, high-frequency signal (especially running an ELRS module) and power a backlit operating system for hours, it skips old-school AA batteries entirely and opts for the punchier **3.7V Lithium-ion 18650s**.
 
-* **Your mouse uses standard AA (NiMH):** Computer mice draw a tiny, slow trickle of current. A **1.2V NiMH AA** is the perfect fit—extremely safe, cheap, and capable of keeping a mouse awake for months before needing a charge.
+* **Your mouse uses standard AA (NiMH):** Computer mice draw a tiny, slow trickle of current.
+
+A **1.2V NiMH AA** is the perfect fit—extremely safe, cheap, and capable of keeping a mouse awake for months before needing a charge.
 
 So, in your current setup, you've got an incredibly diverse, high-tech battery ecosystem running everything from your desk to the sky!
 

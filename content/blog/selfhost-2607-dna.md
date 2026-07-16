@@ -1,9 +1,9 @@
----
+﻿---
 title: "SelfHosted Data Analytics"
-date: 2026-07-31T23:20:21+01:00
+date: 2026-07-15T23:20:21+01:00
 draft: false
 tags: ["ADK vs LangChain","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql","Malloy DSL","Semantics","DSL"]
-description: 'Selfhosting D&A Tools. With WrenAI, Rill and Vanna.'
+description: 'Selfhosting D&A Tools. WrenAI, Rill and Vanna mean nothing w/o a proper capability framework to avoid noise.'
 url: 'selfhosting-data-analytics'
 ---
 
@@ -11,6 +11,7 @@ url: 'selfhosting-data-analytics'
 D&A is more about semantics than you could think in the first place:
 
 1. **Does this separation of facts, assumptions, your understanding, and the next validation step make sense for you?**
+2. Get [written semantic contracts](https://jalcocert.github.io/JAlcocerT/the-ideas-bucket-can-be-empty/#still-doing-ppts) before its too late
  
 
 {{< cards >}}
@@ -413,11 +414,284 @@ Yea...again.
 trazability matrix, dependencies...
 
 
+### Soft Skills for D&As
+
+These notes are useful, especially for D&A roles where the technical work is only half of the job.
+
+A good analyst is not just someone who can find the issue.
+
+The higher-impact analyst can explain what is known, what is still uncertain, who should own the next step, and what decision is needed.
+
+#### Stakeholder Leadership Toolkit
+
+The point of the toolkit is simple: help mid-level analysts move from *reporting problems* to *driving outcomes*.
+
+Most professional communication should not be optimized for sharing information. It should be **optimized for creating an outcome.**
+
+Before sending an email, scheduling a sync, or opening a ticket, ask:
+
+> What specific outcome am I trying to create, and what communication pattern does it require?
+
+
+{{< callout type="warning" >}}
+A D&A capability framework for the ones who are 'no-hello' aware.
+{{< /callout >}}
+
+#### Stakeholder Maturity Model
+
+| Level | Role | Core communication profile |
+|---|---|---|
+| L1 | Junior analyst | Reports issues, escalates quickly, and focuses mostly on isolated technical findings. |
+| L2 | Mid-level analyst | Investigates before escalating, identifies correct owners, facilitates discussions, and produces evidence-based recommendations. |
+| L3 | Senior analyst | Drives alignment across teams, frames business decisions, anticipates stakeholder concerns, and creates clear execution plans. |
+| L4 | Lead / Principal | Shapes strategy, resolves organizational ambiguity, influences without authority, and builds repeatable operating models. |
+
+#### Anti-Patterns vs Better Framing
+
+| Anti-pattern | Better framing |
+|---|---|
+| "I found an issue." | "I investigated the issue, ruled out X and Y, and believe Z is the most likely cause based on our logs." |
+| "Can we discuss this on a call?" | "The decision required is whether we should adopt Option A or Option B. I have mapped the trade-offs below." |
+| "This other team needs to fix it." | "Based on the lineage mapping, Team X is the logical owner because they manage the upstream ingestion layer." |
+| "There is missing data." | "Current evidence suggests a lineage mismatch rather than missing source data. I have outlined the discrepancy here." |
+
+#### Six Stakeholder Communication Patterns
+
+Use these patterns depending on the business situation. The goal is to make the communication shape match the outcome you need.
+
+##### 1. Investigation: DFIR
+
+Use this for root cause analysis, data discrepancies, bug investigation, stakeholder concerns, RCA documents, and executive questions about reported issues.
+
+| Element | Meaning |
+|---|---|
+| Discover | Observation |
+| Facts | Evidence and findings |
+| Interpretation | Root cause and business interpretation |
+| Recommendation | Decision required and recommended action |
+
+**Outcome created:** shared understanding of reality before ownership, fixes, or priorities are discussed.
+
+**Typical deliverables:** RCA documents, investigation summaries, Jira bug analysis, stakeholder updates, and executive briefings.
+
+**Goal:** establish a single source of truth before proposing solutions.
+
+**What good looks like:** the analyst separates facts from assumptions and builds a narrative that lets stakeholders reach the same conclusion from the evidence.
+
+**Common mistake:** jumping from observation directly to a proposed fix without proving the root cause.
+
+**Mindset:** investigate before advocating.
+
+Example:
+
+- **Observation:** stakeholders report that two applications show deployment metrics despite appearing to have no deployment data.
+- **Evidence:** deployment records exist in the raw fact table.
+- **Findings:** the deployment records are stored under historical project names.
+- **Root cause:** the application identity is linked by `BitID`, not `project_name`.
+- **Business interpretation:** the dashboard is behaving correctly; this is a data lineage issue rather than a calculation defect.
+- **Decision required:** should deployment history follow the application across project-name changes?
+- **Recommendation:** if `BitID` is the canonical application identifier, retain the current logic and document the behavior.
+
+##### 2. Alignment Sync: COAST
+
+Use this for release readiness reviews, cross-team status meetings, open issue reviews, program updates, and dependency tracking.
+
+| Element | Meaning |
+|---|---|
+| Context | The situation |
+| Open points | Unresolved issues |
+| Accountability | Owners |
+| Status | Current progress |
+| Trigger | Next action / target date |
+
+**Outcome created:** clarity, accountability, and momentum across multiple stakeholders.
+
+**Typical deliverables:** release readiness emails, program status updates, weekly stakeholder syncs, and dependency review meetings.
+
+**Goal:** make sure everyone understands what remains open, who owns it, and what happens next.
+
+**What good looks like:** every issue has an owner, a current status, and a defined next action.
+
+**Common mistake:** discussing problems without formally establishing ownership.
+
+**Mindset:** alignment is not agreement; alignment is shared understanding.
+
+Example:
+
+- **Context:** Q3 dashboard release is scheduled for next Tuesday.
+- **Open points:** the user access matrix for the Finance team has not been verified.
+- **Accountability:** Sarah, the D&A analyst, owns it.
+- **Status:** the test group has been created, but sign-off from the Finance Lead is pending.
+- **Trigger:** Sarah pings the Finance Lead by Friday at 12 PM. If there is no response, escalate to the release manager.
+
+##### 3. Follow-Up and Execution: DRIVE
+
+Use this for open requests, pending approvals, access requests, and stalled delivery items.
+
+| Element | Meaning |
+|---|---|
+| Desired outcome | What is needed |
+| Reference | Context, links, PRs |
+| Information | Required data |
+| Validate | Next-step verification |
+| Easy response | Yes/no or multiple-choice options |
+
+**Outcome created:** reduced delays and faster stakeholder response times.
+
+**Typical deliverables:** follow-up emails, approval requests, access requests, and escalation reminders.
+
+**Goal:** create forward momentum while minimizing cognitive effort for the recipient.
+
+**What good looks like:** the stakeholder can respond in less than one minute because the request, context, links, and options are clear.
+
+**Common mistake:** sending vague nudges like "just following up" without restating the exact request.
+
+**Mindset:** make it easier to help you than to ignore you.
+
+Example:
+
+- **Desired outcome:** approval for PR #402, a schema update for the customer table.
+- **Reference:** PR link: [github.com/org/pull/402](https://github.com/org/pull/402). This unblocks tonight's pipeline migration.
+- **Information:** the schema change only adds a nullable field, `loyalty_tier_id`; there is no impact on existing downstream views.
+- **Validate:** all unit tests passed.
+- **Easy response:** reply with `Approved` or click the GitHub link to sign off.
+
+##### 4. Architecture and Decision Meetings: ADAPT
+
+Use this for future-state architecture, platform decisions, technical strategy, major dependencies, and solution alternatives.
+
+| Element | Meaning |
+|---|---|
+| As-is state | Current setup |
+| Dependency / problem | Why we must change |
+| Alternatives | Pros and cons of each option |
+| Path forward | Recommended route |
+| Target outcome | Desired end state |
+
+**Outcome created:** a documented decision and agreed path forward.
+
+**Typical deliverables:** architecture review meetings, option assessments, future-state proposals, and decision workshops.
+
+**Goal:** drive a concrete business or technical decision instead of hosting an open-ended discussion.
+
+**What good looks like:** participants leave with a recommended direction, implementation owners, and clear next steps.
+
+**Common mistake:** scheduling a meeting to discuss the problem without defining the decision that needs to be made.
+
+**Mindset:** every architecture conversation should end with a decision, an action, or a deliberate deferment.
+
+Example:
+
+- **As-is state:** reporting data is processed through daily batch runs on a legacy server.
+- **Dependency / problem:** batch size is growing 15% month over month, and jobs are starting to spill into business hours.
+- **Alternatives:** Option A is scaling the legacy server, which is costly and temporary. Option B is migrating to Snowflake, which needs upfront effort but gives longer-term scalability.
+- **Path forward:** recommend Option B and run a 2-week proof of concept.
+- **Target outcome:** reporting finishes before 7 AM daily, saving 4 hours of processing time.
+
+##### 5. Cross-Team Handoff: FACT
+
+Use this for technical handoffs, upstream data-quality issues, system-owner validation, vendor escalations, and ownership transfer after an investigation.
+
+| Element | Meaning |
+|---|---|
+| Finding | What we discovered |
+| Analysis | Why we believe it happens |
+| Confirmation | Proof / evidence |
+| Take action | What the other team should do |
+
+**Outcome created:** ownership transfer without ambiguity or rework.
+
+**Typical deliverables:** team handoffs, vendor escalations, upstream data-quality requests, and ownership transfer discussions.
+
+**Goal:** transfer operational ownership using evidence rather than assumptions.
+
+**What good looks like:** the receiving team understands what was found, why it matters, why they are the logical owner, and what action is being requested.
+
+**Common mistake:** tossing issues over the fence without investigation or a clear ownership rationale.
+
+**Mindset:** investigate first, escalate second.
+
+Example:
+
+- **Finding:** `transaction_amount` is arriving null for all checkout events.
+- **Analysis:** the checkout payload format changed in yesterday's API deployment, `v2.1`.
+- **Confirmation:** comparing payloads before and after deployment shows the key changed from `amount` to `checkout_amount`.
+- **Take action:** the Checkout Service team should update the payload output mapping or rollback `v2.1`.
+
+##### 6. Complex Technical Investigations: TRACE
+
+Use this for multi-system failures, ambiguous ownership, end-to-end data lineage investigations, integration issues, and telemetry problems.
+
+| Element | Meaning |
+|---|---|
+| Trace | Follow the path |
+| Rule out | Eliminate working systems |
+| Analyze | Isolate the gap |
+| Conclude | Locate the failure |
+| Execute | Fix or hand off |
+
+**Outcome created:** focused investigation effort and faster root cause isolation.
+
+**Typical deliverables:** multi-system incident investigations, data lineage reviews, telemetry investigations, and integration troubleshooting.
+
+**Goal:** focus stakeholder attention on the most likely failure point while eliminating unnecessary tangential investigation.
+
+**What good looks like:** the analyst can explain the end-to-end flow, which layers were tested, which explanations were ruled out, and where the evidence points.
+
+**Common mistake:** escalating a broad technical problem without first narrowing the failure domain.
+
+**Mindset:** follow the journey of the data.
+
+Example:
+
+- **Trace:** followed the pipeline from Salesforce to Kafka Topic to Databricks Lakehouse to PowerBI.
+- **Rule out:** Salesforce API sent the payloads; Kafka shows messages received; Databricks raw table contains the records.
+- **Analyze:** the Databricks aggregation job failed at midnight because of a cluster credentials error.
+- **Conclude:** the failure point is inside the internal Databricks ETL layer, not the upstream systems.
+- **Execute:** re-authenticate the cluster credentials, re-run the job, and verify that PowerBI populated.
+
+#### Expected Benefits
+
+By adopting these structured patterns, a D&A team can expect:
+
+- **Faster issue resolution:** less back-and-forth guessing.
+- **Better documentation:** clearer tickets, RCAs, and stakeholder updates.
+- **Reduced management overhead:** more independent analysts who can resolve roadblocks autonomously.
+- **More productive meetings:** syncs designed around decisions rather than passive status updates.
+
+#### Quick Reference
+
+| Business situation | Recommended pattern | Target outcome |
+|---|---|---|
+| Bug / root cause analysis | DFIR: Investigation | Establish facts and suggest recommendations. |
+| Release status / multi-issue sync | COAST: Alignment Sync | Define ownership and next triggers. |
+| Approvals / chasing deliverables | DRIVE: Follow-Up and Execution | Get a fast, frictionless response. |
+| Designing future solutions | ADAPT: Architecture and Decision | Reach a decision on the technical path forward. |
+| Handoff to an upstream team | FACT: Cross-Team Handoff | Move ownership without assumptions. |
+| Multi-system diagnostic | TRACE: Complex Technical Investigation | Keep technical teams focused on data evidence. |
+
+#### Golden Rule of Stakeholder Communication
+
+Although each framework serves a different purpose, they all answer the same five stakeholder questions:
+
+1. What happened? *(Context)*
+2. What do we know? *(Evidence)*
+3. Who owns it? *(Accountability)*
+4. What decision is needed? *(Action)*
+5. What happens next? *(Trigger)*
+
+Analysts who answer these questions proactively move beyond reporting background activity. They start driving outcomes across teams, programs, and the broader D&A organization.
+
 ### Different ways to JHUB
 
 Typical ways to connect to a PySpark cluster include managed notebooks like Databricks or Google Vertex AI Workbench, programmatic drivers via SparkSession, and job submission tools. 
 
 [spark.apache](https://spark.apache.org/docs/latest/api/python/getting_started/quickstart_connect.html)
+
+
+{{< callout type="info" >}}
+You can get CLI agents connected to a JHUB instance and query agains the spark session for you
+{{< /callout >}}
 
 Managed Notebook Interfaces
 

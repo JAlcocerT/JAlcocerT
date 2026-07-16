@@ -1,6 +1,6 @@
 ---
-title: "Robotics 101"
-date: 2026-08-31
+title: "Cibernetica 101"
+date: 2026-08-30
 draft: false
 tags: ["Electronics","RC","IoT"]
 description: ''
@@ -11,11 +11,9 @@ math: true
 
 **TL;DR**
 
-
-**Intro**
-
 Ya estan los chavales con la cibernetica :)
 
+**Intro**
 
 Coming from this section with [the BOM](https://jalcocert.github.io/JAlcocerT/aerospace-101/#dron-bom).
 
@@ -28,6 +26,9 @@ https://www.youtube.com/watch?v=ndUVyEo2URM -->
 {{< youtube "ndUVyEo2URM" >}}
 
 Because having SOA models reasoning at **1k tokens/s** processed by groq, xiaomi or serebras will have consecuences to the digital world expectations.
+
+
+Yes, including to you if you are doing drag'n drop powerpoints
 
 {{< callout type="info" >}}
 We speak at ~ write at and read at ~
@@ -44,7 +45,6 @@ Nah, Time to bridge digital with real world:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting 121" >}}
-  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled FREE knowledge via web/ooks - GO CREATE" >}}
 {{< /cards >}}
 
 ---

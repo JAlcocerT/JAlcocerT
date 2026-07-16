@@ -30,6 +30,8 @@ But more on:
 
 
 
+
+
 ## Notes
 
 Obsidian or Notion?
@@ -268,6 +270,10 @@ And for questions:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
+
+{{< callout type="warning" >}}
+Believe it or not, costs dont dictate prices. Prices (what people is willing to pay) dictate which costs can you afford to provide them what they want
+{{< /callout >}}
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}

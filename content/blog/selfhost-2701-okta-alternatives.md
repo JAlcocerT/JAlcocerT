@@ -1,6 +1,6 @@
 ---
 title: "Okta Alternatives? Selfhosted SSO Tools"
-date: 2026-12-05
+date: 2027-01-05
 draft: false
 tags: ["TinyAuth v6","Supabase Auth vs PB","Authelia vs Authentik","PocketID"]
 description: 'A look to F/OSS Selfhosted Single Sign On and authentication Tools'
@@ -14,6 +14,10 @@ url: 'open-source-sso-tools'
 Claude [Mythos](https://red.anthropic.com/2026/mythos-preview/) is out-there, you better take security measures.
 
 **Intro**
+
+There is kind of a rush for shipping PoCs now.
+
+And when they have to go from PoC to MVP phase, they need auth.
 
 
 * https://www.awesome-homelab.com/item/pocket-id
