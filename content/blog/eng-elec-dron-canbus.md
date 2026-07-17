@@ -37,7 +37,6 @@ Oh wait!
 
 [Now](https://github.com/betaflight/betaflight-configurator/releases/tag/2025.12.2) its a **pwa**: https://app.betaflight.com/
 
-
 ```sh
 dump #exit
 ```
@@ -152,7 +151,9 @@ usb 1-1: Product: CANable2 b158aa7 github.com/normaldotcom/canable2.git
 cdc_acm 1-1:1.0: ttyACM0: USB ACM device
 ```
 
-According to these lines: Your adapter uses CANable 2 open-source firmware and is initializing as a virtual serial modem interface under ttyACM0. This means it is running in slcan (serial CAN) mode.
+According to these lines: Your adapter uses CANable 2 open-source firmware and is initializing as a virtual serial modem interface under `ttyACM0`. 
+
+This means it is running in slcan (serial CAN) mode.
 
 This log output is perfect! It tells us exactly what firmware your Jhoinrch adapter is running under the hood.
 
@@ -252,7 +253,6 @@ To record exactly 10 seconds of raw car data and save it to a file, run this com
 
 ```bash
 timeout 10s candump -l can0
-
 ```
 
 What this command does:
@@ -289,7 +289,6 @@ sudo ip link set can0 down
 sudo killall slcand
 ```
 
-
 2. The 120Ω Switch (R120)
 
 You will notice a tiny physical switch labeled **R120** on the black plastic body.
@@ -304,7 +303,7 @@ Once that's done, pop the OBD2 connector into your vehicle, plug the USB port in
 
 1. It is 100% Plug-and-Play on Linux
 
-"Excellent USB-to-CAN FD adapter. Plug-and-play on Linux and works reliably for CAN communication. It comes pre-flashed with candlelight firmware and you can easily update it."
+"Excellent USB-to-CAN FD adapter. Plug-and-play on Linux and works reliably for CAN communication.It comes pre-flashed with candlelight firmware and you can easily update it."
 
 This is the best part for you. Since it already has the native candlelight firmware installed, you don't need to flash anything or mess around with Windows COM ports. 
 
@@ -312,7 +311,9 @@ You just plug it into your laptop, use the standard Linux network commands (ip l
 
 2. High Stability for Older and Newer Cars
 
-Reviewers alex and Mr.Schmidt point out that it uses an external clock crystal (HSE) for high temporal stability and seamlessly supports standard CAN 1.0 and 2.0 up to 1 Mbps, alongside CAN-FD up to 5 Mbps. This means it will downscale perfectly to read the 500 kbps signals on your Laguna, Outlander, Mondeo, or Golf 7 without dropping a single frame.
+Reviewers alex and Mr.Schmidt point out that it uses an external clock crystal (HSE) for high temporal stability and seamlessly supports standard CAN 1.0 and 2.0 up to 1 Mbps, alongside CAN-FD up to 5 Mbps.
+
+This means it will downscale perfectly to read the 500 kbps signals on your Laguna, Outlander, Mondeo, or Golf 7 without dropping a single frame.
 
 ```sh
 codex
@@ -426,7 +427,7 @@ Did Not Work / Inconclusive
 - My sandbox could see the adapter in sysfs but could not access /dev/ttyACM0 or /dev/ttyACM1, so I could not fully run slcand for you from here.
 - Connected to the Mitsubishi Outlander Mk2, passive listening showed no frames:
 
-  candump -tz can0
+candump -tz can0
 
 Likely Reasons Nothing Came From The Car
 
@@ -477,7 +478,9 @@ ip -details -statistics link show can0
 
 Your shown command was without -statistics, so we did not see RX/error counters.
 
-Current conclusion: the adapter and can0 were fine, but the Outlander OBD port did not produce passive broadcast frames at the settings you tried. Most likely: gateway quiet on OBD, wrong bus/pins, or gear data not exposed there.
+Current conclusion: the adapter and can0 were fine, but the Outlander OBD port did not produce passive broadcast frames at the settings you tried. 
+
+Most likely: gateway quiet on OBD, wrong bus/pins, or gear data not exposed there.
 
 ```sh
 #ip -details link show can0
@@ -492,103 +495,103 @@ Current conclusion: the adapter and can0 were fine, but the Outlander OBD port d
 
 Partly helpful. It confirms the laptop side was okay:
 
-  can0 is UP
-  LOWER_UP
-  can state ERROR-ACTIVE
+can0 is UP
+LOWER_UP
+can state ERROR-ACTIVE
 
-  That means slcand created the interface and the CAN controller was not in BUS-OFF or an obvious error state.
+That means slcand created the interface and the CAN controller was not in BUS-OFF or an obvious error state.
 
-  But it does not show whether any frames or errors were received. For that, the more useful command is:
+But it does not show whether any frames or errors were received. For that, the more useful command is:
 
 ```sh
-  ip -details -statistics link show can0
+ip -details -statistics link show can0
 ```
-  The missing -statistics part would show counters like:
+The missing -statistics part would show counters like:
 
-  RX: bytes  packets  errors  dropped
-  TX: bytes  packets  errors  dropped
+RX: bytes  packets  errors  dropped
+TX: bytes  packets  errors  dropped
 
-  That would tell us:
+That would tell us:
 
-  - RX packets = 0, errors = 0: no traffic reaching adapter.
-  - RX packets = 0, errors increasing: likely wrong bitrate/wiring.
-  - RX packets > 0: traffic existed, and we need to check how candump was run.
+- RX packets = 0, errors = 0: no traffic reaching adapter.
+- RX packets = 0, errors increasing: likely wrong bitrate/wiring.
+- RX packets > 0: traffic existed, and we need to check how candump was run.
 
-  Your output still supports the current conclusion: the CANable setup was healthy, but the car/OBD side did not expose passive traffic at the time.
+Your output still supports the current conclusion: the CANable setup was healthy, but the car/OBD side did not expose passive traffic at the time.
 
 You had:
 
-  CANable2 detected
-  ttyACM0 / ttyACM1
-  can0 created
-  can0 UP, LOWER_UP
-  can state ERROR-ACTIVE
-  bench test with candump + cansend worked
+CANable2 detected
+ttyACM0 / ttyACM1
+can0 created
+can0 UP, LOWER_UP
+can state ERROR-ACTIVE
+bench test with candump + cansend worked
 
-  So I would not suspect the USB adapter or Linux setup first.
+So I would not suspect the USB adapter or Linux setup first.
 
-  Yes, the next thing to check is the cable mapping.
+Yes, the next thing to check is the cable mapping.
 
-  For standard OBD2 high-speed CAN:
+For standard OBD2 high-speed CAN:
 
-  OBD pin 6  = CAN-H
-  OBD pin 14 = CAN-L
-  OBD pin 4 or 5 = Ground
+OBD pin 6  = CAN-H
+OBD pin 14 = CAN-L
+OBD pin 4 or 5 = Ground
 
-  Make sure your CANable wiring matches:
+Make sure your CANable wiring matches:
 
-  CANable CAN-H -> OBD pin 6
-  CANable CAN-L -> OBD pin 14
-  CANable GND   -> OBD pin 4 or 5
+CANable CAN-H -> OBD pin 6
+CANable CAN-L -> OBD pin 14
+CANable GND   -> OBD pin 4 or 5
 
-  Also check:
+Also check:
 
-  - CAN-H and CAN-L are not swapped.
-  - Ground is connected.
-  - The DB9/screw-terminal pinout for your CANable cable is actually what you think it is.
-  - You are not accidentally using OBD pin 16 power as signal or ground.
-  - If your adapter has a termination jumper/switch, avoid adding termination on a real vehicle OBD bus unless you know it is needed. Vehicle CAN is already terminated internally.
+- CAN-H and CAN-L are not swapped.
+- Ground is connected.
+- The DB9/screw-terminal pinout for your CANable cable is actually what you think it is.
+- You are not accidentally using OBD pin 16 power as signal or ground.
+- If your adapter has a termination jumper/switch, avoid adding termination on a real vehicle OBD bus unless you know it is needed. Vehicle CAN is already terminated internally.
 
-  Given your results, cable mapping or vehicle gateway behavior are the top suspects.
+Given your results, cable mapping or vehicle gateway behavior are the top suspects.
 
 
-  candump -tz can0
+candump -tz can0
 
-  If nothing:
+If nothing:
 
-  ip -details -statistics link show can0
+ip -details -statistics link show can0
 
-  Then try a standard scanner/ELM327 on the same OBD port. 
-  
+Then try a standard scanner/ELM327 on the same OBD port. 
+
 If the scanner reads RPM, the port is alive and your passive sniffing is likely blocked by gateway behavior. If the scanner also fails, suspect OBD port, fuse, pin contact, or ignition state.
 
 
 That’s useful. It means the OBD port, vehicle power, ground, and at least one diagnostic path were working with a normal scanner.
 
-  So your situation narrows down to this:
+So your situation narrows down to this:
 
-  - Your CANable/Linux setup worked locally.
-  - Your cable mapping sounds correct.
-  - The car’s OBD port can answer diagnostic tools.
-  - But passive candump saw nothing.
+- Your CANable/Linux setup worked locally.
+- Your cable mapping sounds correct.
+- The car’s OBD port can answer diagnostic tools.
+- But passive candump saw nothing.
 
-  Most likely explanation: the Outlander’s OBD CAN is quiet until queried, or the gateway does not forward normal broadcast traffic to the OBD connector.
+Most likely explanation: the Outlander’s OBD CAN is quiet until queried, or the gateway does not forward normal broadcast traffic to the OBD connector.
 
-  A normal scanner does not just listen. It sends diagnostic requests like “give me RPM,” and the ECU replies. Passive candump will not show those replies unless some other device is making requests at the same time.
+A normal scanner does not just listen. It sends diagnostic requests like “give me RPM,” and the ECU replies. Passive candump will not show those replies unless some other device is making requests at the same time.
 
-  Next time, useful passive test:
+Next time, useful passive test:
 
-  1. Connect CANable and run:
+1. Connect CANable and run:
 
-     candump -tz can0
+    candump -tz can0
 
-  2. At the same time, plug/use a scanner app if possible.
+2. At the same time, plug/use a scanner app if possible.
 
-  If your CANable is correctly connected to the same diagnostic CAN, you may see the scanner’s request/response frames appear while the scanner reads RPM.
+If your CANable is correctly connected to the same diagnostic CAN, you may see the scanner’s request/response frames appear while the scanner reads RPM.
 
-  The more direct next step is to send a standard OBD request from the CANable, but that is active traffic. Safer than random cansend, but still not passive. Example for RPM on 11-bit OBD CAN is usually:
+The more direct next step is to send a standard OBD request from the CANable, but that is active traffic. Safer than random cansend, but still not passive. Example for RPM on 11-bit OBD CAN is usually:
 
-  cansend can0 7DF#02010C0000000000
+cansend can0 7DF#02010C0000000000
 
   Expected response would be from something like 7E8:
 

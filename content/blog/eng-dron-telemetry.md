@@ -241,7 +241,7 @@ ffmpeg -y -i "DJI_20260713180204_0003_D.MP4" `
 ![alt text](/blog_img/dron/telemetry-dashboard-101.png)
 
 {{< callout type="info" >}}
-Each segment in the logs is a new run. Segment 0 seems to be the latest.
+Each segment in the logs seems to be a new run.
 {{< /callout >}}
 
 ```sh
@@ -250,6 +250,10 @@ make timeline-viewer TIMELINE_DECODED=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260714_15
 
 {{< youtube "0zhNqTwm0oY" >}}
 <!-- https://youtu.be/0zhNqTwm0oY -->
+
+
+## Creating a PWA
+
 
 
 ---
@@ -321,5 +325,12 @@ flowchart LR
 
 2. Check [weather patterns](https://jalcocert.github.io/JAlcocerT/py-vacations/#conclusions): `https://www.windy.com`
 
+
+### Buying second hand drons x Telemetry
+
 ### Interesting PWAs
 
+* https://forocoches.com/foro/showthread.php?t=10665137
+* https://gasolinapp.inforapida.es/
+
+> WHich can be interesting for road trips!

@@ -2,7 +2,7 @@
 title: "SelfHosted Data Analytics"
 date: 2026-07-15T23:20:21+01:00
 draft: false
-tags: ["ADK vs LangChain","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql","Malloy DSL","Semantics","DSL"]
+tags: ["ADK vs LangChain","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql","Malloy DSL","Semantics x CV","DSL"]
 description: 'Selfhosting D&A Tools. WrenAI, Rill and Vanna mean nothing w/o a proper capability framework to avoid noise.'
 url: 'selfhosting-data-analytics'
 ---
@@ -10,8 +10,9 @@ url: 'selfhosting-data-analytics'
 
 D&A is more about semantics than you could think in the first place:
 
-1. **Does this separation of facts, assumptions, your understanding, and the next validation step make sense for you?**
-2. Get [written semantic contracts](https://jalcocert.github.io/JAlcocerT/the-ideas-bucket-can-be-empty/#still-doing-ppts) before its too late
+1. **Does the separation of facts, assumptions, your understanding, and the next validation step make sense for you?** Because I have [a framework](#stakeholder-leadership-toolkit)...
+
+2. Get [written semantic contracts](https://jalcocert.github.io/JAlcocerT/the-ideas-bucket-can-be-empty/#still-doing-ppts) before its too late and the preassure goes for you
  
 
 {{< cards >}}
@@ -210,6 +211,8 @@ Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/
 ---
 
 ## Conclusions
+
+I said bye recently to the vasagle desk that has seen me grown in the D&A space these years.
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
@@ -413,14 +416,76 @@ Yea...again.
 
 trazability matrix, dependencies...
 
-
 ### Soft Skills for D&As
 
-These notes are useful, especially for D&A roles where the technical work is only half of the job.
+These notes are useful, especially for [D&A roles](https://jalcocert.github.io/JAlcocerT/career/#other-roles) where the technical work is only half of the job.
 
 A good analyst is not just someone who can find the issue.
 
 The higher-impact analyst can explain what is known, what is still uncertain, who should own the next step, and what decision is needed.
+
+You can think of this as a capability framework built on top of the [no-hello movement](https://nohello.net/en/). 
+
+"No hello" reduces conversational latency by putting the actual request in the first message.
+
+This goes one level higher: choose the communication pattern that creates the next useful state.
+
+
+{{< details title="Converging vs Non-Converging 📌" closed="true" >}}
+
+This connects three related ideas:
+
+- **No-hello** prevents empty communication.
+- **Non-converging asking** prevents vague, endless clarification loops.
+- **This capability framework** turns communication into an outcome-producing system.
+
+A non-converging ask usually sounds like:
+
+> Can we look into this?
+>
+> Thoughts?
+>
+> Can someone check?
+>
+> Is this expected?
+
+Those questions create motion, but not convergence. They often do not specify evidence, owner, decision, deadline, or acceptable next action.
+
+A better pattern is:
+
+> I found X. I ruled out Y and Z. Current evidence points to A.
+>
+> Can Team B confirm whether they own this upstream field mapping by Friday 12 PM?
+>
+> If yes, we can proceed with Option 1. If not, I will reroute to Team C.
+
+That maps directly to the framework:
+
+- **DFIR:** what happened, what evidence exists, and what interpretation is likely.
+- **FACT:** who the likely owner is and why.
+- **DRIVE:** the request is easy to answer.
+- **COAST:** there is an owner, status, and trigger.
+- **ADAPT:** if a decision is needed, options are framed.
+
+So yes: this section is also about making asks converge. A good analyst does not just "raise visibility"; they reduce ambiguity until the next action becomes obvious.
+
+Converging is good when the goal is execution, but risky when the goal is still sense-making.
+
+| Situation | Better mode | Why |
+|---|---|---|
+| Bug triage, RCA, ownership handoff, approval, release blocker | **Converge** | You need facts, owner, decision, and next action. |
+| Discovery, strategy, architecture exploration, product direction, unclear problem framing | **Diverge first, then converge** | Premature closure can hide better options or wrong assumptions. |
+| Stakeholder conflict, ambiguous business ask, unclear metric definition | **Clarify / frame** | The real problem may be semantic, political, or organizational rather than technical. |
+
+The danger is not convergence itself. The danger is converging too early.
+
+For D&A, this matters a lot. If the dashboard number is "wrong", you should converge on evidence. But if the question is "what should this metric mean for the business?", converging too quickly can lock in a bad semantic contract.
+
+
+
+{{< /details >}}
+
+> Good stakeholder communication is not always about converging immediately. It is about knowing when to diverge for context, when to clarify meaning, and when to converge into ownership, decision, and action.
 
 #### Stakeholder Leadership Toolkit
 
@@ -732,7 +797,7 @@ Core Similarities
 
 All three platforms handle big data processing, ETL pipelines, and Spark-based compute.
 
-They integrate with Azure services like Data Lake Storage and support notebooks for SQL, Python, and Spark jobs. [learn.microsoft](https://learn.microsoft.com/en-us/answers/questions/2258999/choosing-the-right-azure-data-platform-synapse-fab)
+They integrate with Azure services like Data Lake Storage and support notebooks for SQL, Python, and Spark jobs. 
 
 Key Differences
 | Feature | Databricks | Azure Synapse | Microsoft Fabric |
@@ -751,11 +816,10 @@ Databricks is similar to Google Vertex AI Workbench (likely what you mean by "Go
 
 Both support scalable compute, integrations with cloud storage and big data tools, and collaborative coding, though neither is built directly on JupyterHub (a multi-user server spawner). [cloudbank](https://www.cloudbank.org/tool/google-vertex-ai-workbench)
 
-## Core Similarities
+Databricks notebooks and Vertex AI Workbench offer Jupyter-compatible interfaces with multi-language support (Python, SQL, Scala), built-in visualizations, and enterprise features like Git integration and scheduling. 
 
-Databricks notebooks and Vertex AI Workbench offer Jupyter-compatible interfaces with multi-language support (Python, SQL, Scala), built-in visualizations, and enterprise features like Git integration and scheduling. They both enable seamless access to cloud services—Databricks with Delta Lake/Spark, Workbench with BigQuery/Cloud Storage—for ETL, ML model training, and deployment. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks)
+They both enable seamless access to cloud services—Databricks with Delta Lake/Spark, Workbench with BigQuery/Cloud Storage—for ETL, ML model training, and deployment. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks)
 
-## Key Differences
 | Feature | Databricks | Vertex AI Workbench |
 |---------|------------|---------------------|
 | **Focus** | Lakehouse analytics, Spark-optimized big data/ML at scale. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks) | ML-centric development with Vertex AI pipelines, AutoML integration. [cloudbank](https://www.cloudbank.org/tool/google-vertex-ai-workbench) |
@@ -764,6 +828,22 @@ Databricks notebooks and Vertex AI Workbench offer Jupyter-compatible interfaces
 | **Self-Hosting** | Possible but primarily managed. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks) | Fully managed; customizable via user-managed instances. [i636c6f7564o676f6f676c65o636f6dz.oszar](https://i636c6f7564o676f6f676c65o636f6dz.oszar.com/vertex-ai/docs/workbench/introduction) |
 
 Databricks emphasizes data engineering and unified analytics beyond notebooks, while Workbench prioritizes streamlined ML experimentation in Google's ecosystem. [deepnote](https://deepnote.com/compare/databricks-vs-vertexai)
+
+### When was the last time you applied?
+
+Tired to explain the same to the same people that wont learn?
+
+Do you have clear oportunities out there?
+
+Then, whats stopping you from applying?
+
+Bc you have your daily notes that can drive [the updates to your CV](https://jalcocert.github.io/JAlcocerT/about-inflation/#a-cv-via-yamlresume-vs-overleaf) as a code...right?
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/cv-laitex" title="Latex x CV ↗" icon="github" >}}
+{{< /cards >}}
+
 
 ### Too many calls?
 

@@ -5,7 +5,6 @@ description: 'Career tools and recap. From self-learning to D&A '
 url: 'career'
 ---
 
-
 Enough [Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/) and [R](https://jalcocert.github.io/JAlcocerT/useful-r-stuff/).
 
 Can you actually build a career and be useful, solve problems with those analytical skills?
@@ -30,15 +29,12 @@ For the ones that would like to share their experience, [creating and publishing
 
 So is preparing your **CV and your interviews**:
 
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends Repo" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV Latex - Offer Tracker ↗" icon="github" >}}
 {{< /cards >}}
 
-
 ---
-
 
 For a career in D&A you will need to be familiar with certain tools.
 
@@ -442,6 +438,10 @@ flowchart LR
 ```
 
 ## Other Roles
+
+The information flow plays a massive part in your D&A job.
+
+Make sure you build and improve a [framework like this one](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#soft-skills-for-das) for interacting effectively with stakeholders.
 
 ### BA Stuff
 
