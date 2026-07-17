@@ -7,13 +7,15 @@ description: 'Selfhosting D&A Tools. WrenAI, Rill and Vanna mean nothing w/o a p
 url: 'selfhosting-data-analytics'
 ---
 
+**Tl;DR**
 
 D&A is more about semantics than you could think in the first place:
 
-1. **Does the separation of facts, assumptions, your understanding, and the next validation step make sense for you?** Because I have [a framework](#stakeholder-leadership-toolkit)...
+1. Does the separation of facts, assumptions, your understanding, and the next validation step make sense for you? Because I have [a framework](#stakeholder-leadership-toolkit) to drive outcomes waiting for you
 
 2. Get [written semantic contracts](https://jalcocert.github.io/JAlcocerT/the-ideas-bucket-can-be-empty/#still-doing-ppts) before its too late and the preassure goes for you
  
+**Intro**
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/the-ideas-bucket-can-be-empty/#the-top-down-hierarchy-of-right" title="Top-Down Semantics" image="/blog_img/memes/data-deadlock.png" subtitle="Using LangChain Chains" >}}
@@ -33,8 +35,6 @@ https://github.com/Canner/WrenAI
 
 https://docs.getwren.ai/oss/concepts/architecture#correctness-is-a-system-not-a-switch
 
-**Tl;DR**
-
 JHub is great. Is there [anything else](#different-ways-to-jhub)?
 
 Data -> Decision -> Delivery
@@ -45,9 +45,6 @@ Speed matters
 - **Delta Lake** = Data Storage Layer for Data Lakes
 
 > https://devlake.apache.org/docs/Metrics/DeploymentFrequency/
-
-
-**Intro**
 
 Your career might have started with MySQL and Dbeaver.
 
@@ -60,7 +57,6 @@ sudo docker compose -f ./z-homelab-setup/evolution/2610_docker-compose.yml logs 
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
 {{< /cards >}}
-
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dbchart" title="ChartDB | Docker Config Setup 🐋 ↗" >}}
@@ -75,10 +71,7 @@ Since the last time, chartbrew reached version 5:
 
 [![shields.io Stars](https://img.shields.io/github/stars/chartdb/chartdb)](https://github.com/chartdb/chartdb/stargazers)
 
-
-
 [![shields.io Stars](https://img.shields.io/github/stars/chartdb/chartdb)](https://github.com/chartbrew/chartbrew/stargazers)
-
 
 https://github.com/chartbrew/chartbrew
 
@@ -88,12 +81,11 @@ https://github.com/chartbrew/chartbrew
 
 chartDB or DB2rest
 
-
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen" title="AIGen | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
-### New
+### Whats New
 
 Rill vs WrenAI vs Vanna
 
@@ -148,7 +140,7 @@ Combine storage + table format + catalog + query engine for Fabric-like function
 | **Orchestration**| Apache Airflow, NiFi            | Custom pipelines; Fabric Data Factory alternative  [reddit](https://www.reddit.com/r/dataengineering/comments/1jqrxyq/open_source_alternatives_to_fabric_data_factory/) |
 | **Full Platforms**| Alluxio + Tabular, Openlake stack | Complete lakehouse; avoids proprietary OneLake shortcuts |
 
-**Why OSS?** Cost savings (no per-compute fees), customization (e.g., Iceberg governance across Spark/Trino), no lock-in (use AWS S3/GCP/etc.), community velocity—ideal for advanced users like devs building micro-SaaS. Fabric suits quick Azure starts; OSS for long-term control. [promethium](https://promethium.ai/guides/microsoft-fabric-alternatives-2025/)
+**Why OSS?** Cost savings (no per-compute fees), customization (e.g., Iceberg governance across Spark/Trino), no lock-in (use AWS S3/GCP/etc.), community velocity—ideal for advanced users like devs building micro-SaaS. Fabric suits quick Azure starts; OSS for long-term control.
 
 What can happen with OSS?
 
@@ -214,6 +206,8 @@ Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/
 
 I said bye recently to the vasagle desk that has seen me grown in the D&A space these years.
 
+### BLUF
+
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
@@ -251,7 +245,7 @@ I got you covered on the D&A book
 
 Or if you are ready for that big next step, at the consulting ;)
 
-.....
+---
 
 Not all of them are 100% Open Source Software (OSS). 
 
@@ -306,7 +300,7 @@ However, they each approach "orchestration" from a very different architectural 
 
 Here is how they stack up in 2026:
 
-## 1. LangGraph (The "State Machine" Approach)
+#### 1. LangGraph (The "State Machine" Approach)
 
 LangGraph is currently the industry favorite for **complex, reliable agents**. 
 
@@ -316,7 +310,7 @@ Unlike standard LangChain (which is more linear), LangGraph treats an agent like
 * **Best for:** Tasks where the agent needs to loop back, retry, or follow a very specific "plan-act-check" cycle.
 * **Key Feature:** Built-in persistence (the agent can "sleep" and wake up exactly where it left off).
 
-## 2. AutoGen (The "Conversation" Approach)
+#### 2. AutoGen (The "Conversation" Approach)
 
 Born out of Microsoft Research, AutoGen views agentic work as a **dialogue**.
 
@@ -324,17 +318,13 @@ Born out of Microsoft Research, AutoGen views agentic work as a **dialogue**.
 * **Best for:** Creative problem solving, multi-agent collaboration, and scenarios where agents need to critique each other's work.
 * **Update:** As of late 2025, Microsoft released the **Microsoft Agent Framework**, which converges AutoGen’s conversation patterns with Semantic Kernel’s stability.
 
-## 3. Semantic Kernel (The "Enterprise" Approach)
+#### 3. Semantic Kernel (The "Enterprise" Approach)
 
 This is Microsoft’s SDK for integrating AI into professional software (C#, Python, Java).
 
 * **Philosophy:** It treats AI functions as **"Skills" or "Plugins"** that can be called by a central "Planner."
 * **Best for:** Large-scale enterprise apps where you need strict security, telemetry (logging), and integration with existing corporate APIs.
 * **Key Feature:** It is "Strongly Typed," making it much easier for traditional software engineers to use than the more "fluid" Python frameworks.
-
----
-
-### Comparison Table: Which one is right for you?
 
 | Tool | Core Mechanism | Complexity | Best Use Case |
 | --- | --- | --- | --- |
@@ -347,9 +337,6 @@ This is Microsoft’s SDK for integrating AI into professional software (C#, Pyt
 In 2026, standard **LangChain** is often viewed more as a "utility belt" or a collection of connectors (to databases, PDFs, etc.). 
 
 Most developers use LangChain for the *data* and LangGraph for the *logic*.
-
-**Would you like me to show you a simple code snippet comparing how a "Research Agent" would look in LangGraph vs. AutoGen?**
-
 
 The distinction you’ve highlighted regarding **Semantic Kernel** being "Kernel-centric" versus the "Chain" or "Graph" approach of the others is the most critical takeaway. 
 
@@ -405,7 +392,6 @@ JSON, YML or TooN?
 The MSSQL Extension for Visual Studio Code is designed to empower developers by providing a seamless and modern database development experience. 
 
 Our goal is to make SQL development more productive and intuitive by integrating essential features such as schema management, query execution, and AI-powered assistance.
-
 
 ### Data Modelling Approaches
 
@@ -479,24 +465,27 @@ Converging is good when the goal is execution, but risky when the goal is still 
 
 The danger is not convergence itself. The danger is converging too early.
 
-For D&A, this matters a lot. If the dashboard number is "wrong", you should converge on evidence. But if the question is "what should this metric mean for the business?", converging too quickly can lock in a bad semantic contract.
+For D&A, this matters a lot. If the dashboard number is "wrong", you should converge on evidence.
 
-
+But if the question is "what should this metric mean for the business?", converging too quickly can lock in a bad semantic contract.
 
 {{< /details >}}
 
-> Good stakeholder communication is not always about converging immediately. It is about knowing when to diverge for context, when to clarify meaning, and when to converge into ownership, decision, and action.
+Good stakeholder communication is not always about converging immediately. 
+
+It is about knowing when to diverge for context, when to clarify meaning, and when to converge into ownership, decision, and action.
 
 #### Stakeholder Leadership Toolkit
 
 The point of the toolkit is simple: help mid-level analysts move from *reporting problems* to *driving outcomes*.
 
-Most professional communication should not be optimized for sharing information. It should be **optimized for creating an outcome.**
+Most professional communication should not be optimized for sharing information. 
+
+It should be **optimized for creating an outcome.**
 
 Before sending an email, scheduling a sync, or opening a ticket, ask:
 
 > What specific outcome am I trying to create, and what communication pattern does it require?
-
 
 {{< callout type="warning" >}}
 A D&A capability framework for the ones who are 'no-hello' aware.
@@ -522,7 +511,9 @@ A D&A capability framework for the ones who are 'no-hello' aware.
 
 #### Six Stakeholder Communication Patterns
 
-Use these patterns depending on the business situation. The goal is to make the communication shape match the outcome you need.
+Use these patterns depending on the business situation. 
+
+The goal is to make the communication shape match the outcome you need.
 
 ##### 1. Investigation: DFIR
 
@@ -745,7 +736,9 @@ Although each framework serves a different purpose, they all answer the same fiv
 4. What decision is needed? *(Action)*
 5. What happens next? *(Trigger)*
 
-Analysts who answer these questions proactively move beyond reporting background activity. They start driving outcomes across teams, programs, and the broader D&A organization.
+Analysts who answer these questions proactively move beyond reporting background activity. 
+
+They start driving outcomes across teams, programs, and the broader D&A organization.
 
 ### Different ways to JHUB
 
@@ -755,7 +748,7 @@ Typical ways to connect to a PySpark cluster include managed notebooks like Data
 
 
 {{< callout type="info" >}}
-You can get CLI agents connected to a JHUB instance and query agains the spark session for you
+You can get CLI agents connected to a JHUB instance & query agains the spark session
 {{< /callout >}}
 
 Managed Notebook Interfaces
@@ -814,11 +807,11 @@ Databricks excels in code-driven, scalable data science workloads, while Synapse
 
 Databricks is similar to Google Vertex AI Workbench (likely what you mean by "Google Workbench") in providing managed JupyterLab-based notebook environments for data science and ML workflows.
 
-Both support scalable compute, integrations with cloud storage and big data tools, and collaborative coding, though neither is built directly on JupyterHub (a multi-user server spawner). [cloudbank](https://www.cloudbank.org/tool/google-vertex-ai-workbench)
+Both support scalable compute, integrations with cloud storage and big data tools, and collaborative coding, though neither is built directly on JupyterHub (a multi-user server spawner). 
 
 Databricks notebooks and Vertex AI Workbench offer Jupyter-compatible interfaces with multi-language support (Python, SQL, Scala), built-in visualizations, and enterprise features like Git integration and scheduling. 
 
-They both enable seamless access to cloud services—Databricks with Delta Lake/Spark, Workbench with BigQuery/Cloud Storage—for ETL, ML model training, and deployment. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks)
+They both enable seamless access to cloud services—Databricks with Delta Lake/Spark, Workbench with BigQuery/Cloud Storage—for ETL, ML model training, and deployment. 
 
 | Feature | Databricks | Vertex AI Workbench |
 |---------|------------|---------------------|
@@ -833,17 +826,18 @@ Databricks emphasizes data engineering and unified analytics beyond notebooks, w
 
 Tired to explain the same to the same people that wont learn?
 
+Have you been told that you dont have enough *role maturity*, aka you just have to wait?
+
 Do you have clear oportunities out there?
 
 Then, whats stopping you from applying?
 
-Bc you have your daily notes that can drive [the updates to your CV](https://jalcocert.github.io/JAlcocerT/about-inflation/#a-cv-via-yamlresume-vs-overleaf) as a code...right?
+Bc you have [your daily notes](https://github.com/JAlcocerT/my-logseq-notes/tree/main/journals) that can drive [the updates to your CV](https://jalcocert.github.io/JAlcocerT/about-inflation/#a-cv-via-yamlresume-vs-overleaf) as a code...right?
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/job-trends" title="Job Trends ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/cv-laitex" title="Latex x CV ↗" icon="github" >}}
 {{< /cards >}}
-
 
 ### Too many calls?
 
@@ -855,14 +849,12 @@ Another option is **SpamBlocker (Call & SMS)**, which is described as open sourc
 
 If you want something simpler, **Yet Another Call Blocker** is also mentioned as a FOSS blocker with wildcard-style blacklisting, though it appears older and less actively maintained. [f-droid](https://f-droid.org/en/packages/dummydomain.yetanothercallblocker/)
 
-
 For a prefix like `+34 68`, you typically want a rule like:
 
 - `+3468*`
 - or `3468*`
 - or `068*` depending on how your phone formats incoming numbers.
 
-The exact matching style depends on how the app stores caller IDs, so the safest approach is to test with one or two formats first. [play.google](https://play.google.com/store/apps/details?id=callfilter.app&hl=en)
+The exact matching style depends on how the app stores caller IDs, so the safest approach is to test with one or two formats first.
 
-
-If you want the most privacy-friendly and flexible choice, I’d start with **SpamBlocker** or **Fossify Phone**. [converter.brightcoding](https://converter.brightcoding.dev/blog/spamblocker-the-powerful-android-call-shield-developers-love)
+If you want the most privacy-friendly and flexible choice, I’d start with **SpamBlocker** or **Fossify Phone**.

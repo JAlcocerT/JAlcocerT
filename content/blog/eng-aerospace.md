@@ -182,7 +182,9 @@ To keep $V_{tip}$ safely below Mach 1, engineers have to play a balancing game:
 
 Your tiny drone actually exploits the opposite end of this physics equation!
 
-Because your propellers are incredibly tiny (a diameter of only **45mm**, or $0.045\text{ meters}$), they have a very small circumference. Let's look at the math for your drone at its absolute maximum speed of 95,700 RPM (1,595 RPS):
+Because your propellers are incredibly tiny (a diameter of only **45mm**, or $0.045\text{ meters}$), they have a very small circumference. 
+
+Let's look at the math for your drone at its absolute maximum speed of 95,700 RPM (1,595 RPS):
 
 $$V_{rotational} = \pi \times 0.045\text{m} \times 1,595\text{ RPS} \approx 225.5\text{ m/s}$$
 
@@ -190,7 +192,9 @@ The speed of sound is roughly **$343\text{ m/s}$**.
 
 Your tiny whoop's prop tips are traveling at roughly **$225\text{ m/s}$ (about 810 km/h / 500 mph)**. That means even at full throttle, your tips are sitting safely around **Mach 0.65**.
 
-Because the props are so small, you can spin them at a mind-boggling 100,000 RPM without ever worrying about breaking the sound barrier! It’s the ultimate loophole of micro-drone physics.
+Because the props are so small, you can spin them at a mind-boggling 100,000 RPM without ever worrying about breaking the sound barrier!
+
+It’s the ultimate loophole of micro-drone physics.
 
 Yes, you are exactly right! Mathematically, that formula calculates the **magnitude (or module) of the resultant velocity vector** at the absolute tip of the propeller blade.
 
@@ -198,37 +202,42 @@ Because the propeller is doing two motions simultaneously—spinning around in a
 
 Here is how those vectors break down geometrically:
 
-### 1. The Rotational Velocity Vector ($V_{rotational}$)
+1. The Rotational Velocity Vector ($V_{rotational}$)
 
-This vector represents the speed of the tip spinning around the motor axis. It acts tangentially to the propeller's circular path:
+This vector represents the speed of the tip spinning around the motor axis. 
+
+It acts tangentially to the propeller's circular path:
 
 $$V_{rotational} = \pi \times \text{Diameter} \times \text{RPS}$$
 
-### 2. The Forward Velocity Vector ($V_{forward}$)
+2. The Forward Velocity Vector ($V_{forward}$)
 
 This vector represents the speed of the entire drone (or airplane) moving forward through space. It acts perpendicular to the rotation plane.
 
----
+Combining Them (Pythagorean Theorem)
 
-### 📐 Combining Them (Pythagorean Theorem)
+Because these two vectors are at a perfect $90^\circ$ angle to each other, they form a right triangle.
 
-Because these two vectors are at a perfect $90^\circ$ angle to each other, they form a right triangle. To find the total actual speed of the tip slicing through the air mass (the resultant vector), engineers use the Pythagorean theorem:
+To find the total actual speed of the tip slicing through the air mass (the resultant vector), engineers use the Pythagorean theorem:
 
 $$\text{Total Tip Speed} = \sqrt{V_{forward}^2 + V_{rotational}^2}$$
 
-### 💡 Why this matters for real flight:
+Why this matters for real flight:
 
 This vector math reveals a sneaky trap for aeronautical engineers: an airplane's propeller tips actually get **faster** the faster the plane flies forward, even if the engine RPM stays exactly the same!
 
 If an engineer designs a propeller tip to sit right at Mach 0.9 while the plane is parked on the runway ($V_{forward} = 0$), the moment the pilot takes off and starts flying fast down the runway, that extra $V_{forward}$ vector will push the total magnitude right over Mach 1.0, sending the propeller into a supersonic stall.
 
-When evaluating drone flight physics and analyzing data logs, looking at **energy efficiency per kilometer** and **total flight time** covers the core of logistics. However, aeronautical engineers and FPV pilots look at several other crucial metrics to fully measure a drone's performance.
+When evaluating drone flight physics and analyzing data logs, looking at **energy efficiency per kilometer** and **total flight time** covers the core of logistics. 
+
+However, aeronautical engineers and FPV pilots look at several other crucial metrics to fully measure a drone's performance.
 
 If you expand your Python analysis, here are the other major performance pillars you can extract from your flight data:
 
----
 
-### 1. 🎛️ Volumetric and Aerodynamic Efficiency (The Lift Coefficient)
+### Interesting KPIs
+
+1. 🎛️ Volumetric and Aerodynamic Efficiency (The Lift Coefficient)
 
 This measures how effectively your propeller shape converts motor spinning speed into actual vertical lifting force.
 
@@ -237,7 +246,7 @@ This measures how effectively your propeller shape converts motor spinning speed
 
 ---
 
-### 2. 🧮 Specific Power (The Weight-to-Power Penalty)
+2. 🧮 Specific Power (The Weight-to-Power Penalty)
 
 This looks at how hard the drone has to work just to carry its own structural weight.
 
@@ -246,7 +255,7 @@ This looks at how hard the drone has to work just to carry its own structural we
 
 ---
 
-### 3. 🌡️ Thermal Efficiency & Motor Health
+3. 🌡️ Thermal Efficiency & Motor Health
 
 Motors convert electrical energy into kinetic energy (spinning), but a portion of that energy is always lost as wasted heat.
 
@@ -255,14 +264,16 @@ Motors convert electrical energy into kinetic energy (spinning), but a portion o
 
 ---
 
-### 4. 🎚️ Control Responsiveness & Latency (The Delay Factor)
+4. 🎚️ Control Responsiveness & Latency (The Delay Factor)
 
 For FPV pilots, how the drone *feels* is just as important as how long it flies. This tracks the system's reaction time.
 
 * **The Metric:** **Stick-to-Gyro Latency (Milliseconds)**.
 * **Why it matters:** You can use Python to calculate the exact millisecond delay between moving your finger on the RadioMaster Pocket (`rcCommand`) and the physical drone actually rotating (`gyroData`).
 
-A highly efficient, rigid frame with crisp propellers will have a tiny latency (e.g., under $10\text{ms}$), making the drone feel perfectly locked into your hands. If your propellers get bent or the frame gets soft, that latency number will spike, and the drone will start to feel sluggish and delayed.
+A highly efficient, rigid frame with crisp propellers will have a tiny latency (e.g., under $10\text{ms}$), making the drone feel perfectly locked into your hands. 
+
+If your propellers get bent or the frame gets soft, that latency number will spike, and the drone will start to feel sluggish and delayed.
 
 When you start digging into your code, combining all of these metrics gives you a complete, top-to-bottom aerodynamic profile of your quad! Which of these data paths sounds like the most fun to plot out first?
 
@@ -287,7 +298,9 @@ https://www.youtube.com/watch?v=cxQ-Ef4uIpw
 $20\text{ A}$ from a $95\text{C}$ 1S drone battery is absolutely reasonable—in fact, it's exactly what those batteries are engineered to do!
 
 
-To understand why $20\text{ A}$ is normal, you look at the **C-Rating**. The C-rating tells you how fast a battery can safely discharge relative to its capacity.
+To understand why $20\text{ A}$ is normal, you look at the **C-Rating**. 
+
+The C-rating tells you how fast a battery can safely discharge relative to its capacity.
 
 A typical 1S toothpick or tiny whoop drone battery has a capacity of around **$450\text{ mAh}$ to $550\text{ mAh}$** (which is $0.45\text{ A}$ to $0.55\text{ Ah}$).
 
@@ -296,7 +309,9 @@ Using the formula $\text{Max Amps} = \text{Capacity in Ah} \times \text{C-Rating
 
 $$0.50\text{ Ah} \times 95\text{C} = 47.5\text{ Amps peak!}$$
 
-Because a 1S LiPo sits at a nominal voltage of **$3.7\text{V}$ or $3.8\text{V}$ (LiHV)**, pulling $20\text{ A}$ means your tiny drone is drawing roughly **$75\text{ Watts}$** of power. It dumps its entire energy reserve in about 1.5 minutes of hard flying, which is why drone batteries are so light but have such a short overall lifespan.
+Because a 1S LiPo sits at a nominal voltage of **$3.7\text{V}$ or $3.8\text{V}$ (LiHV)**, pulling $20\text{ A}$ means your tiny drone is drawing roughly **$75\text{ Watts}$** of power. 
+
+It dumps its entire energy reserve in about 1.5 minutes of hard flying, which is why drone batteries are so light but have such a short overall lifespan.
 
 
 An electric car battery operates on a completely different scale.
@@ -431,10 +446,9 @@ https://www.youtube.com/watch?v=XPXN0QejqM0
 
 ## Conclusions
 
-Now, im building a dron.
+Now, im building a dron :)
 
 ### Building a DIY Dron
-
 
 Inspired [to get into FPV](https://www.youtube.com/watch?v=Xs_P7T9G49o) by these [summarized videos](https://github.com/JAlcocerT/poc/blob/main/yt-distil/docker-compose.yml):
 

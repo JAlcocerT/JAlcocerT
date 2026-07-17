@@ -495,11 +495,9 @@ A story that starts with "the user logs into the app."
 * [ ] **State Persistence:** User session is maintained (JWT or Session cookie) so they don't have to re-login on refresh.
 * [ ] **Password Masking:** The password field characters must be hidden by default.
 
-
 ### PM/Architect
 
 These are **higher level** roles where [decisions](https://jalcocert.github.io/JAlcocerT/decision-making-data-analytics/) about where to go next are made.
-
 
 As data professionals, we often focus on building models and pipelines.
 
