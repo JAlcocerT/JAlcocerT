@@ -208,6 +208,12 @@ I said bye recently to the vasagle desk that has seen me grown in the D&A space 
 
 ### BLUF
 
+Bottom line up front - Just another TL;DR!
+
+The narrative and story lines are important to go sell and fund PoCs so that they become MVPs
+
+For the day to day, elevate your operations to get more done:
+
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
@@ -228,9 +234,6 @@ FROM [Stg].[Snowflake]
 WHERE [EaId] LIKE 'sth123%';
 ```
 
-```sh
-
-```
 
 * https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction
 
@@ -273,14 +276,11 @@ These are not open source. They are commercial products, though they may have fr
 * **DataGrip:** Proprietary (JetBrains). As of late 2025/early 2026, it is **free for non-commercial use** (students, hobbyists, open-source contributors), but requires a paid subscription for professional/work use.
 * **PowerBI Desktop:** Proprietary (Microsoft). It is "Free to use" but is closed-source software.
 
----
-
 Which should you choose?
 
 * If you want **maximum power for free**: **DBeaver Community** is the winner.
 * If you want something **simple and truly OSS**: **HeidiSQL** (Windows) or **Beekeeper Studio Community**.
 * If you are on a **Mac**: **Sequel Ace** is a fantastic open-source native choice.
-
 
 ### Agentic Orchestration Layer
 
@@ -297,8 +297,6 @@ They are essentially the "nervous system" for AI.
 While a Large Language Model (LLM) acts as the "brain," these **Agentic Orchestration Layers** provide the structure, memory, and routing logic required to turn a static model into a functional, autonomous agent.
 
 However, they each approach "orchestration" from a very different architectural philosophy. 
-
-Here is how they stack up in 2026:
 
 #### 1. LangGraph (The "State Machine" Approach)
 

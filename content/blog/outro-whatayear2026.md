@@ -76,11 +76,13 @@ and feedback to the lead engine.
 
 0. Audio TTS/S2T: among all i tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/)
 
-1. Delivery Analytics
+1. Delivery Analytics - Bc you better [drive outcomes](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#bluf)
 
 2. Promote in subreddit to get feedback?
 
 3. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> [D&A ebook](https://ebooks.jalcocertech.com/books/dna/)
+
+
 
 <!-- ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png) -->
 

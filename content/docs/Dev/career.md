@@ -459,13 +459,13 @@ This ensures that when you switch from "Manager" to "Developer," you know exactl
 
 1. Scope of Work - SoW / WoW - Way of Working
 2. [BRD,PRD,FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data-analytics/)
-3. PoC, MVP
-4. SMART and INVEST
+3. PoC < MVP
+4. [SMART and INVEST](https://jalcocert.github.io/JAlcocerT/data-analytics-architecture/#smart-vs-invest)
+5. STAR ~~situation task action result~~
 
 See also this [Project Charter](https://github.com/Azure/Azure-TDSP-ProjectTemplate/blob/master/Docs/Project/Charter.md) for Reference
 
 > Hey, if you are a SoloPreneur BiP, you can simplify all of this overhead to match your resources!
-
 
 #### The User Story Skeleton
 
@@ -532,6 +532,7 @@ The ultimate goal? To [Plan and monitor the project status](https://jalcocert.gi
 In such positions you cant forget [the Pareto](https://jalcocert.github.io/JAlcocerT/pareto-principle-for-data-analytics/) factor, specially when shaping [product features](https://jalcocert.github.io/JAlcocerT/product-skills-for-data-analytics/).
 
 Focus on becoming a **T-Shaped Professional**:
+
 *   **The Horizontal Bar**: Broad knowledge of data stacks (GCP, Azure, Open Source), orchestration, and governance.
 *   **The Vertical Stem**: Deep expertise in one or two core skills (e.g., SQL and PySpark, or Data Modeling and dbt).
 
@@ -600,8 +601,6 @@ A solid knowledge [around Bayes](https://jalcocert.github.io/JAlcocerT/bayes-the
 My repository to learn [ML with Python](https://github.com/JAlcocerT/Python_is_awesome/tree/main/ML%20-%20EDA) 
 
 You also have a TF playground [here](https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.18371&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false)
-
-
 
 {{< details title="Examples of tasks and skills in ML/DSc | How you could demonstrate them using Python 📌" closed="true" >}}
 
@@ -694,8 +693,6 @@ You also have a TF playground [here](https://playground.tensorflow.org/#activati
   {{< card link="https://jalcocert.github.io/JAlcocerT/fuzzy-matching-python/" title="Text Processing Post ↗" icon="book-open" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/nlp-tools/" title="NLP - PII / Sentiment Analysis ↗" icon="user" >}}
 {{< /cards >}}
-
-
 
 {{< details title="Preparing a DSc Interview 📌" closed="true" >}}
 

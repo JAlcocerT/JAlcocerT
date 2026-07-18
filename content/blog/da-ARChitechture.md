@@ -445,23 +445,35 @@ The key components that a successful user story typically contains, often rememb
 
 **I - Independent:**
 
-* **The story should be self-contained and not heavily dependent on other stories.** This allows the team to prioritize and work on stories in a flexible order. Dependencies can lead to delays and complexities in planning and execution.
+* **The story should be self-contained and not heavily dependent on other stories.** 
+
+This allows the team to prioritize and work on stories in a flexible order. 
+
+Dependencies can lead to delays and complexities in planning and execution.
 
 **N - Negotiable:**
 
-* **The story is a starting point for a conversation, not a contract.** The details of the story can be discussed and refined collaboratively between the product owner, development team, and stakeholders during backlog refinement or sprint planning. It leaves room for technical implementation details and alternative approaches.
+* **The story is a starting point for a conversation, not a contract.** The details of the story can be discussed and refined collaboratively between the product owner, development team, and stakeholders during backlog refinement or sprint planning. 
+
+It leaves room for technical implementation details and alternative approaches.
 
 **V - Valuable:**
 
-* **The story must deliver value to the end-user or the business.** It should clearly articulate the benefit or outcome the user will experience by having this feature. This ensures the team is working on things that matter.
+* **The story must deliver value to the end-user or the business.** It should clearly articulate the benefit or outcome the user will experience by having this feature.
+
+This ensures the team is working on things that matter.
 
 **E - Estimable:**
 
-* **The story should be small enough that the development team can estimate the effort required to implement it.** This helps with sprint planning and forecasting. If a story is too large or vague, it becomes difficult to estimate accurately.
+* **The story should be small enough that the development team can estimate the effort required to implement it.** This helps with sprint planning and forecasting. 
+
+If a story is too large or vague, it becomes difficult to estimate accurately.
 
 **S - Small:**
 
-* **The story should be sized appropriately to be completed within a single sprint.** Smaller stories allow for faster feedback loops, easier tracking of progress, and reduced risk. Large epics should be broken down into smaller, manageable stories.
+* **The story should be sized appropriately to be completed within a single sprint.** Smaller stories allow for faster feedback loops, easier tracking of progress, and reduced risk.
+
+Large epics should be broken down into smaller, manageable stories.
 
 **T - Testable:**
 
@@ -504,7 +516,6 @@ SMART helps you define clear, measurable, and achievable objectives, whether *fo
 * You wouldn't say "a user story should be SMART" in place of "a user story should be INVEST."
 * Instead, you'd say, "The **acceptance criteria** for a user story should be SMART."
 
-
 {{< /details >}}
 
 **In addition to the core structure and INVEST principles, a successful user story often benefits from:**
@@ -522,7 +533,6 @@ SMART helps you define clear, measurable, and achievable objectives, whether *fo
 * **Prioritization:** While not part of the story itself, clearly prioritizing user stories helps the team understand which ones to work on first based on business value and urgency.
 
 By including these elements, a user story becomes a powerful tool for communication, collaboration, and ensuring that the development team is building the right product for the right users.
-
 
 > These are very helpful on end to end projects - where we went from raw data modelling to [BI solutions](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#syncing-expectations):
 
@@ -614,11 +624,9 @@ You can store files in all three formats on **HDFS (Hadoop Distributed File Syst
 
 {{< /details >}}
 
-
-
 ### More T-Shaped Skills
 
-There are 2 kind of knowledge you can have:
+There are **2 kind of knowledge** you can have:
 
 * Declarative - To know that something is possible
 * Procedural - To know how to do something
@@ -636,18 +644,34 @@ The Vertical Bar (Deep Specialization)
 
 The vertical bar of the T is where a person's **deep expertise** lies. This depth requires a strong blend of both declarative and procedural knowledge, often with a heavy emphasis on the latter.
 
-* **Deep Declarative Knowledge:** Within their specialization, a T-shaped individual possesses a vast amount of declarative knowledge. They know the foundational theories, the history, the best practices, the common pitfalls, and the nuances of their field. For a software engineer, this would be a deep understanding of data structures, algorithms, system architecture patterns, and the specific APIs of their chosen framework.
-* **Deep Procedural Knowledge:** This is where the "mastery" comes in. They have spent countless hours applying their declarative knowledge through practice. They can *do* the work efficiently, effectively, and with high quality. They know the shortcuts, the debugging techniques, the refactoring patterns, and how to optimize for performance. For a software engineer, this means they can write clean, efficient code, design robust systems, and troubleshoot complex issues quickly. Their procedural knowledge becomes almost intuitive.
+* **Deep Declarative Knowledge:** Within their specialization, a T-shaped individual possesses a vast amount of declarative knowledge.
+
+They know the foundational theories, the history, the best practices, the common pitfalls, and the nuances of their field.
+
+For a software engineer, this would be a deep understanding of data structures, algorithms, system architecture patterns, and the specific APIs of their chosen framework.
+
+* **Deep Procedural Knowledge:** This is where the "mastery" comes in. They have spent countless hours applying their declarative knowledge through practice. 
+
+They can *do* the work efficiently, effectively, and with high quality. They know the shortcuts, the debugging techniques, the refactoring patterns, and how to optimize for performance.
+
+For a software engineer, this means they can write clean, efficient code, design robust systems, and troubleshoot complex issues quickly. 
+
+Their procedural knowledge becomes almost intuitive.
 
 **In essence, the vertical bar is where deep declarative knowledge is *applied and transformed* into highly effective procedural knowledge.**
 
 The Horizontal Bar (Broad Understanding)
 
-The horizontal bar represents the **breadth of knowledge** across various related fields. This broad understanding is primarily driven by **declarative knowledge**, but it also involves a foundational level of procedural awareness.
+The horizontal bar represents the **breadth of knowledge** across various related fields. 
+
+This broad understanding is primarily driven by **declarative knowledge**, but it also involves a foundational level of procedural awareness.
 
 * **Broad Declarative Knowledge:** This is about "knowing *what* other disciplines do" and "knowing *why* they do it."
     * For a software engineer, this might mean understanding the basics of UX design principles (knowing *what* good design looks like and *why* it's important for usability), marketing strategies (knowing *what* marketing does and *why* it matters for product adoption), or business operations (knowing *what* the company's business model is and *why* certain features are prioritized). They don't need to be able to *do* UX design, marketing, or business operations at an expert level, but they understand the concepts and how these areas interact with their own.
-* **Foundational Procedural Awareness:** While not deep, the horizontal bar also implies an appreciation for the *how* in other areas. The T-shaped individual might not *do* the work, but they understand the general processes, challenges, and tools involved. This helps them communicate effectively and empathize with colleagues in different roles. For example, a developer might not be a UX designer, but they understand the basic steps of user research and wireframing, which helps them collaborate better with the design team.
+
+* **Foundational Procedural Awareness:** While not deep, the horizontal bar also implies an appreciation for the *how* in other areas. The T-shaped individual might not *do* the work, but they understand the general processes, challenges, and tools involved. 
+
+This helps them communicate effectively and empathize with colleagues in different roles. For example, a developer might not be a UX designer, but they understand the basic steps of user research and wireframing, which helps them collaborate better with the design team.
 
 **The horizontal bar facilitates communication, collaboration, and problem-solving across disciplines, largely by providing a shared declarative vocabulary and an appreciation for different procedural approaches.**
 

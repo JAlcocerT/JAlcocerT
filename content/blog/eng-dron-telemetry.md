@@ -333,7 +333,13 @@ flowchart LR
 
 ### Buying second hand drons x Telemetry
 
+What to do before connecting to your laptop:
 
+1. Props out
+2. No loose wires
+3. VTX antena on *or it will fry in 60s*
+
+Then just `https://app.betaflight.com/` and get the logs
 
 ### Interesting PWAs
 
