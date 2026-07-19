@@ -9,6 +9,18 @@ math: true
 ---
 
 
+
+water stuff
+
+seems like hydrofoil bikes have been a thing for a while now
+https://www.youtube.com/watch?v=RaYhyeGxYoA
+
+
+https://www.youtube.com/watch?v=In8f0C_B9HA
+
+and there are DFY already `https://manta5.com/collections/hydrofoil-bikes`
+
+
 **TL;DR**
 
 Ya estan los chavales con la cibernetica :)
@@ -61,6 +73,12 @@ Nah, Time to bridge digital with real world:
 ```sh
 choco install helium
 ```
+
+## Drones
+
+Go get some air to some bando:
+
+https://youtu.be/sltfe_XCvXk?si=ju4SEBudONaR1uF6
 
 ---
 

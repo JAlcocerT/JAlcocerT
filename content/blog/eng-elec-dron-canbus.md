@@ -16,10 +16,20 @@ Someone is already doing this!
 
 I saw a podcast on the beach and luckily, this exists: https://github.com/diodeinc/pcb
 
+Which complemented beautifully these OSS for electronics:
+
 * https://fossengineer.com/pcb-zener-kicad/
 * https://fossengineer.com/pyspice-python-circuit-simulation/
 
+What do i mean?
+
+That it was a matter of time for someone to do electronic design and simulation as a code
+
+Better said: to make agents do so, with proper physical rails.
+
 ### Dron electronics
+
+This is why I decided to give it a try to dron and its electronics
 
 <!-- 
 https://www.youtube.com/watch?v=ndUVyEo2URM 
@@ -354,8 +364,9 @@ Try with:
 
 If still nothing, capture stats:
 
+```sh
 ip -details -statistics link show can0
-
+```
 Then try other passive bitrates:
 
 ```sh
@@ -380,38 +391,46 @@ Worked
 
 - Linux detected the USB adapter:
 
+```md
   CANable2 b158aa7 github.com/normaldotcom/canable2.git
   Manufacturer: Openlight Labs
   ttyACM0 / later ttyACM1
-
+```
 - Confirmed it is a CANable2-style device running as USB serial ACM, suitable for slcan.
 - Installed can-utils successfully:
 
+```sh
   sudo apt install -y can-utils
+```
 
 - Loaded the correct kernel module after typo correction:
 
+```sh
   sudo modprobe slcan
-
+```
 - Created can0 with slcand:
 
+```sh
   sudo slcand -o -c -s6 /dev/ttyACM0 can0
   # later after replug:
   sudo slcand -o -c -s6 /dev/ttyACM1 can0
+```
 
 - Brought can0 up:
-
+```sh
   sudo ip link set can0 up
-
+```
 - Verified can0 was healthy:
 
+```sh
   can0: <NOARP,UP,LOWER_UP>
   can state ERROR-ACTIVE
-
+```
 - Bench/local test worked between two terminals:
-
+```sh
   candump can0
   cansend can0 123#DEADBEEF
+```
 
 That proves the laptop, CANable, slcand, SocketCAN, and can-utils path works.
 
@@ -427,7 +446,9 @@ Did Not Work / Inconclusive
 - My sandbox could see the adapter in sysfs but could not access /dev/ttyACM0 or /dev/ttyACM1, so I could not fully run slcand for you from here.
 - Connected to the Mitsubishi Outlander Mk2, passive listening showed no frames:
 
+```sh
 candump -tz can0
+```
 
 Likely Reasons Nothing Came From The Car
 
@@ -440,7 +461,9 @@ Likely Reasons Nothing Came From The Car
 
 Final Status
 
-Your CAN adapter setup works locally. The unresolved part is vehicle access/traffic from the Outlander. Next time, the key checks are passive candump at 500k, then 250k, then 125k, plus ip -details -statistics link show can0 to see
+Your CAN adapter setup works locally. The unresolved part is vehicle access/traffic from the Outlander. 
+
+Next time, the key checks are passive candump at 500k, then 250k, then 125k, plus ip -details -statistics link show can0 to see
 whether it is silence or bus errors.
 
 Tried and Still No Frames
@@ -589,7 +612,11 @@ Next time, useful passive test:
 
 If your CANable is correctly connected to the same diagnostic CAN, you may see the scanner’s request/response frames appear while the scanner reads RPM.
 
-The more direct next step is to send a standard OBD request from the CANable, but that is active traffic. Safer than random cansend, but still not passive. Example for RPM on 11-bit OBD CAN is usually:
+The more direct next step is to send a standard OBD request from the CANable, but that is active traffic. 
+
+Safer than random cansend, but still not passive. 
+
+Example for RPM on 11-bit OBD CAN is usually:
 
 cansend can0 7DF#02010C0000000000
 
@@ -603,20 +630,38 @@ cansend can0 7DF#02010C0000000000
 
 ## Conclusions
 
+There is quite a lot of OSS for CAN bus reverse engineering, from SavvyCAN to can-utils to open DBC parsers and vehicle-specific CAN decoders. 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor Dron x Telemetry ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor Dron x Telemetry ↗" icon="github" >}}
+{{< /cards >}}
+
+It is a rich ecosystem.
+
+
+Same happens around ESCs and motors:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor Dron x Telemetry ↗" icon="github" >}}
+{{< /cards >}}
+
+To shorten those weekend projects with the knowledge from someone who has done them before:
+
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled free value!" >}}
 {{< /cards >}}
 
-For your use case I’d split it by adapter type:
+For your use case I’d split it by adapter type: **For the CANable Use SavvyCAN first.**
 
-For the CANable Use SavvyCAN first.
+It is a Qt desktop CAN tool for capturing, saving, visualizing, reverse engineering, and debugging CAN frames, and it supports Qt SerialBus drivers including socketcan, which matches your can0 setup. 
 
-It is a Qt desktop CAN tool for capturing, saving, visualizing, reverse engineering, and debugging CAN frames, and it supports Qt SerialBus drivers including socketcan, which matches your can0 setup. See https://github.com/collin80/SavvyCAN
+> See https://github.com/collin80/SavvyCAN
 
 {{% details title="Installing SavvyCAN 🚀" closed="true" %}}
 
-avvyCAN is a CAN bus analysis tool. You can use it to inspect, record, replay, decode, and reverse-engineer CAN traffic from vehicles, embedded devices, battery systems, motor controllers, chargers, etc.
+SavvyCAN is a CAN bus analysis tool. You can use it to inspect, record, replay, decode, and reverse-engineer CAN traffic from vehicles, embedded devices, battery systems, motor controllers, chargers, etc.
 
   Common things you can do:
 
@@ -656,7 +701,6 @@ avvyCAN is a CAN bus analysis tool. You can use it to inspect, record, replay, d
 Be careful with sending frames on a real vehicle or live device.
 
 Reading/logging is usually low risk; transmitting arbitrary frames can cause unexpected behavior.
-
 
 I installed Qt locally in your home directory instead.
   

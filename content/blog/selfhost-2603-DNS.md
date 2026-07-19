@@ -1009,9 +1009,11 @@ Before LLMs, you might have needed: https://github.com/composerize/composerize  
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="CF x Porkbun DNS API Py Scripts ↗" >}}
 {{< /cards >}}
 
-### Wireshark - Checking which adds are going through
+### Wireshark - Checking which ads are going through
 
 * https://docs.linuxserver.io/images/docker-wireshark/
+
+![alt text](/blog_img/networking/wireshark-ui.png)
 
 
 ### Business OSS Driven

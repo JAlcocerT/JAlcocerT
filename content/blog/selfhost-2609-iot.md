@@ -2,7 +2,7 @@
 title: "Selfhosted IoT x HA"
 date: 2026-09-10
 draft: false
-tags: ["Home Assistant x EMQX","Sonoff x Zigbee","Tinkering IRL","M2M"]
+tags: ["Home Assistant x EMQX","Sonoff x Zigbee","Tinkering IRL","M2M","Tech Talk"]
 description: 'A homelab around IoT and sensors.'
 url: 'home-lab-tools-for-iot'
 ---
@@ -306,6 +306,26 @@ What else am I running since last month?
 
 ```sh
 sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx jellyfin
+```
+
+You need some clean up?
+
+```sh
+uv cache clean
+#  docker stop dawarich_app dawarich_sidekiq dawarich_db dawarich_redis
+docker rm dawarich_app dawarich_sidekiq dawarich_db dawarich_redis
+
+docker volume rm \
+  dawarich_dawarich_shared \
+  dawarich_dawarich_public \
+  dawarich_dawarich_storage \
+  dawarich_dawarich_watched \
+  dawarich_dawarich_db_data \
+  velxio_arduino-libs
+
+docker image rm ghcr.io/opengeos/geolibre:latest
+
+docker builder prune
 ```
 
 * https://jellyfin.org/posts/state-of-the-fin-2026-01-06/

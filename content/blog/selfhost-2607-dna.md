@@ -1,6 +1,6 @@
 ﻿---
 title: "SelfHosted Data Analytics"
-date: 2026-07-15T23:20:21+01:00
+date: 2026-07-18T20:20:21+01:00
 draft: false
 tags: ["ADK vs LangChain","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","mssql","Malloy DSL","Semantics x CV","DSL"]
 description: 'Selfhosting D&A Tools. WrenAI, Rill and Vanna mean nothing w/o a proper capability framework to avoid noise.'
@@ -96,6 +96,22 @@ Rill vs WrenAI vs Vanna
 
 ## Fabric One Catalogue or...
 
+If you have been using PowerBI, you know that there is this notion of [data catalog](https://powerbi.microsoft.com/en-us/data-catalog/) 
+
+Well, **OneLake Catalog** is Microsoft's answer to that need, and it's built right into the Fabric ecosystem. [learn.microsoft](https://learn.microsoft.com/en-us/fabric/governance/onelake-catalog-overview)
+
+This is why as part of your **Data Strategy** you should be thinking about semantics first and foremost.
+
+Because the semantic layer is what makes sense of your data and allows you to make decisions based on it. 
+
+Plus...the hard tech part...is [cooked for a while now](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/#animations-or-dashboards)
+
+| File | Contents |
+|---|---|
+| `model.bim` | Full semantic model — tables, Power Query (M) transformations, DAX measures, calculated columns, relationships, hierarchies |
+| `report.json` | Report layout — pages, visuals, positions, filters, slicers, bookmarks, field bindings |
+| `diagramlayout.json` | Visual positioning of tables in the model relationship diagram (cosmetic only) |
+
 > A `procedural.md` is all you might need to know everything you ever wanted from ~~pbix~~ .pbip powerbi dashboards
 
 **OneLake Catalog** is a Microsoft Fabric feature—a centralized data discovery and governance tool within OneLake, Microsoft's unified data lake (like "OneDrive for data"). 
@@ -129,6 +145,7 @@ This matches official docs and demos exactly. [blog.fabric.microsoft](https://bl
 They prioritize vendor independence, lower costs, flexibility, and multi-cloud support over Fabric's seamless Azure integration. [peliqan](https://peliqan.io/blog/microsoft-fabric-alternatives-competitors/)
 
 ## OSS Stack Alternatives
+
 Combine storage + table format + catalog + query engine for Fabric-like functionality (data ingestion, lakehouse, governance). [reddit](https://www.reddit.com/r/dataengineering/comments/1jqrxyq/open_source_alternatives_to_fabric_data_factory/)
 
 | Component       | OSS Alternative                  | Why Better Than Fabric  [peliqan](https://peliqan.io/blog/microsoft-fabric-alternatives-competitors/) |
@@ -819,6 +836,44 @@ They both enable seamless access to cloud services—Databricks with Delta Lake/
 | **Self-Hosting** | Possible but primarily managed. [datasciencenotebook](https://datasciencenotebook.org/compare/jupyter/databricks) | Fully managed; customizable via user-managed instances. [i636c6f7564o676f6f676c65o636f6dz.oszar](https://i636c6f7564o676f6f676c65o636f6dz.oszar.com/vertex-ai/docs/workbench/introduction) |
 
 Databricks emphasizes data engineering and unified analytics beyond notebooks, while Workbench prioritizes streamlined ML experimentation in Google's ecosystem. [deepnote](https://deepnote.com/compare/databricks-vs-vertexai)
+
+### Geo Analytics
+
+https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#selfhosted-gpx
+
+1. GeoLibre - https://github.com/opengeos/GeoLibre that you can find https://geolibre.app/
+
+2. Dawarich `https://play.google.com/store/apps/details?id=com.zeitflow.dawarich&pli=1`
+
+http://localhost:3333/settings/integrations
+
+https://fossengineer.com/selfhosting-velomate/
+
+3. https://github.com/tess1o/geopulse
+
+<!-- 
+https://www.youtube.com/watch?v=pK_fSEp_OzQ -->
+
+{{< youtube "pK_fSEp_OzQ" >}}
+
+
+This is a good chance:
+
+1. To have a look to [French Real estate again](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/#real-estate):
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="French Real Estate ↗" icon="github" >}}
+{{< /cards >}}
+
+
+2. To check how household income is evolving in spain as [a recap of this post](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/)
+
+### Tomatoes Progress
+
+Since the [last time](https://jalcocert.github.io/JAlcocerT/electr-diode/#tomatoes-x-solar), this is how they are growing the second batch:
+
+{{< youtube "_WAJ1y8Mdr0" >}}
+<!-- https://youtube.com/shorts/_WAJ1y8Mdr0 -->
 
 ### When was the last time you applied?
 

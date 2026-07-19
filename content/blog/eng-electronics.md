@@ -168,7 +168,7 @@ Interesting [engineering tools](https://jalcocert.github.io/Linux/docs/debian/fo
 2. Atopile
 3. **PySpice**: the discovery of today :)
 
-To **simulate** the behaviour of ESP32, picoW, even arduinos: https://github.com/davidmonterocrespo24/velxio
+To **simulate** the behaviour of ESP32, picoW, even arduino's we have [Velxio](https://fossengineer.com/selfhosting-velxio-arduino/): https://github.com/davidmonterocrespo24/velxio
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}

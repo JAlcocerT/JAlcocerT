@@ -602,10 +602,9 @@ choco install opencode
 
 > `https://opencode.ai/workspace/wrk_01KTF9F2H7HR7DDPCB6CY0RDD6/go`
 
-
 ### Open Physics
 
-Across the physics series, I have been building tinkering with this OSS stack:
+Across the physics series, I have been building tinkering with **this OSS stack**:
 
 Geometry / CAD / Rendering
 
@@ -624,8 +623,7 @@ MBSD / Mechanics / Symbolic Math
 - Your own MBSD Python framework - JAlcocerT/mbsd.
 - Your own related repos: Slider-Crank, mechanism, Bike_dynamic_simulator, Py_Double_Pendulum, ThreeBodies.
 
-FEM / Structural / Multiphysics
-From content/blog/eng-fem.md:167:
+FEM / Structural / Multiphysics: From content/blog/eng-fem.md:167:
 
 - FreeCAD FEM
 - CalculiX
@@ -642,8 +640,7 @@ From content/blog/eng-fem.md:167:
 - PyVista
 - ParaView
 
-CFD / Fluids
-From content/blog/eng-fluid-mechanics.md:330:
+CFD / Fluids: From content/blog/eng-fluid-mechanics.md:330:
 
 - OpenFOAM
 - FreeCAD CfdOF
@@ -652,8 +649,7 @@ From content/blog/eng-fluid-mechanics.md:330:
 - ParaView
 - OpenModelica
 
-Thermal / Thermodynamics
-From content/blog/eng-heat-transfer.md:594:
+Thermal / Thermodynamics: From content/blog/eng-heat-transfer.md:594:
 
 - Modelica
 - OpenModelica
@@ -662,14 +658,14 @@ From content/blog/eng-heat-transfer.md:594:
 - HeatraPy
 - PySpice was also mentioned in the broader thermal/electronics tooling context.
 
-Electronics / Electromagnetism / IoT From content/blog/eng-electronics.md:390:
+Electronics / Electromagnetism / IoT: From content/blog/eng-electronics.md:390:
 
 - KiCad
 - Atopile
 - PySpice
 - OpenModelica
 - Schemdraw
-- Velxio
+- [Velxio](https://fossengineer.com/selfhosting-velxio-arduino/)
 - Arduino IDE
 - ESPHome
 - EMQX
@@ -708,7 +704,9 @@ YOu could expect that from the [recent selfhosted post around DNS](https://jalco
 
 While you wait for Google's internal cache to catch up, it’s the perfect time to look at what you actually just built.
 
-Think of your email domain like a digital house. Without these 5 checks, your house has no locked doors, no mailbox, and anyone can pretend to be you.
+Think of your email domain like a digital house. 
+
+Without these 5 checks, your house has no locked doors, no mailbox, and anyone can pretend to be you.
 
 Here is exactly why each of those 5 checks matters for your domain `getslubnechwile.com`:
 
@@ -750,7 +748,7 @@ When you send an email from Google Workspace now, the receiving server checks:
 
 Because your script shows a clean sweep of **OK**, your domain now has a stellar reputation with global spam filters. Your emails are highly likely to go straight to the inbox!
 
-https://admin.google.com/ac/apps/gmail/authenticateemail
+* https://admin.google.com/ac/apps/gmail/authenticateemail
 
 This is excellent news! Your script is spot on. Seeing `MX: OK`, `SPF: OK`, and `NS: OK` means the absolute hardest part is over: **your domain `getslubnechwile.com` is now successfully linked to Google Workspace**, and you can actively send and receive emails.
 
@@ -758,10 +756,11 @@ The two remaining items (`DKIM: missing` and `DMARC: missing`) are security laye
 
 Here is exactly how to knock out those last two checks:
 
-
+```sh
 python3 /home/jalcocert/Home-Lab/z-dns-scripts/google_workspace_dns_check.py getslubnechwile.com --selector google
-Domain: getslubnechwile.com
-Verdict: ready
+#Domain: getslubnechwile.com
+#Verdict: ready
+```
 
 ```md
 [OK] NS
@@ -783,7 +782,7 @@ Verdict: ready
 
 ---
 
-### 1. Fix DKIM (DomainKeys Identified Mail)
+#### 1. Fix DKIM (DomainKeys Identified Mail)
 
 DKIM adds a hidden cryptographic signature to your emails, proving they actually came from you and weren't tampered with.
 
@@ -806,7 +805,7 @@ DKIM adds a hidden cryptographic signature to your emails, proving they actually
 
 ---
 
-### 2. Fix DMARC (Domain-based Message Authentication)
+#### 2. Fix DMARC (Domain-based Message Authentication)
 
 DMARC builds on top of your SPF and DKIM. It tells mailbox providers what to do if someone tries to spoof your email address.
 
@@ -821,13 +820,17 @@ In your domain registrar's DNS settings, add this record:
 
 ---
 
-### The Final Test
+#### The Final DNS Test
 
-Once you save those two records in your DNS manager, give it about 30–60 minutes for the servers to update. Then, run your script again. You should get a perfect clean sweep of `OK` straight down the line!
+Once you save those two records in your DNS manager, give it about 30–60 minutes for the servers to update.
+
+Then, run your script again. You should get a perfect clean sweep of `OK` straight down the line!
 
 **No, you do not need to get any specific value from your Google Workspace admin console for DMARC.**
 
-Unlike DKIM, which requires a unique, long cryptographic key generated specifically for your account by Google, DMARC is completely generic. You construct the text value yourself.
+Unlike DKIM, which requires a unique, long cryptographic key generated specifically for your account by Google, DMARC is completely generic. 
+
+You construct the text value yourself.
 
 As long as you create a new **TXT record** in your domain registrar with these exact details, Google (and all other mail servers) will automatically recognize it:
 
@@ -835,8 +838,12 @@ As long as you create a new **TXT record** in your domain registrar with these e
 * **Host/Name:** `_dmarc`
 * **Value:** `v=DMARC1; p=none;`
 
-### Why don't you need a Google value?
+#### Why don't you need a Google value?
 
-DMARC is an open, industry-wide standard rather than a Google-proprietary feature. By placing `_dmarc` in your DNS, you are telling the entire internet (Gmail, Yahoo, Outlook, etc.): *"Hey, look at my SPF and DKIM records to verify my emails. If they don't match, just log it (`p=none`) for now."*
+DMARC is an open, industry-wide standard rather than a Google-proprietary feature. 
+
+By placing `_dmarc` in your DNS, you are telling the entire internet (Gmail, Yahoo, Outlook, etc.): *"Hey, look at my SPF and DKIM records to verify my emails. 
+
+If they don't match, just log it (`p=none`) for now."*
 
 Once you save that record, your script should flip to a perfect **OK** for DMARC!

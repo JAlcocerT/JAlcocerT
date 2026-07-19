@@ -647,13 +647,14 @@ Then just:
 git clone /Home-Lab
 cd .Home-Lab/z-homelab-setup/evolution
 #/home/jalcocert/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml
-#     sudo docker compose --env-file .env -f 2605_docker-compose.yml up -d wireshark
+#sudo docker compose --env-file .env -f 2605_docker-compose.yml up -d wireshark
 sudo docker compose -f 2605_docker-compose.yml up -d nextclouddb-sync nextcloud-app-sync
 #sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml up -d nextclouddb-sync nextcloud-app-sync
 #  sudo docker compose -f 2605_docker-compose.yml logs -f nextclouddb-sync nextcloud-app-sync
 ```
 
 You can always do a quick CLI test:
+
 ```sh
 #docker network create nextcloud_test_internal
 

@@ -2,13 +2,20 @@
 title: "Crops Intelligence in the AI era"
 date: 2026-08-15
 draft: false
-tags: ["IoT x DHT22","MQTT x EMQx","JAlcocerTech Leads"]
+tags: ["IoT x DHT22","MQTT x EMQx","JAlcocerTech Leads","18650 x solar","Tech Talk"]
 description: 'The learning after planting tomatoes. Ready to scale.'
 url: 'iot-crop-intelligence'
 math: true
 ---
 
-https://youtu.be/oPznvdWmcTQ
+A 15W solar panel setup is great: 
+<!-- 
+https://youtu.be/oPznvdWmcTQ -->
+
+{{< youtube "oPznvdWmcTQ" >}}
+
+
+Just that sometimes, there is not enough juice
 
 **TL;DR**
 

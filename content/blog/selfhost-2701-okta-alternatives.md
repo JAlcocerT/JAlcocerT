@@ -1,13 +1,14 @@
 ---
-title: "Okta Alternatives? Selfhosted SSO Tools"
+title: "Okta Alternatives? Go for Selfhosted SSO Tools"
 date: 2027-01-05
 draft: false
-tags: ["TinyAuth v6","Supabase Auth vs PB","Authelia vs Authentik","PocketID"]
+tags: ["TinyAuth v6","Supabase Auth vs PB","Authelia vs Authentik vs KeyCloak","PocketID"]
 description: 'A look to F/OSS Selfhosted Single Sign On and authentication Tools'
 url: 'open-source-sso-tools'
 ---
 
-
+https://github.com/pocket-id/pocket-id
+https://github.com/tinyauthapp/tinyauth/releases/tag/v5.1.0?ref=selfh.st
 
 **TL;DR**
 

@@ -2,7 +2,7 @@
 title: "Dron Telemetry 101"
 date: 2026-07-10
 draft: false
-tags: ["Electronics","RC","Betaflight x BBL Logs","DC Motor",]
+tags: ["Electronics","RC","Betaflight x BBL Logs","DC Motor","ERLS TX and RX"]
 description: 'Creating a PWA around dron flight data.'
 url: 'betaflight-dron-telemetry'
 math: true
@@ -12,6 +12,10 @@ math: true
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor Dron x Telemetry ↗" icon="github" >}}
 {{< /cards >}}
+
+```sh
+google-chrome --new-window /home/jalcocert/Desktop/meteor-dron/Eachine/my-first-flight/btfl_all_report.html
+```
 
 
 
@@ -150,7 +154,7 @@ make plot-throttle-current
 
 ## Betaflight
 
-Recently I got to know how OSS is baked into a PWA https://app.betaflight.com/#
+Recently I got to know how [OSS is baked](https://github.com/betaflight/betaflight-configurator) into a PWA https://app.betaflight.com/#
 
 ![alt text](/blog_img/dron/betaflight-setup-calibrate.png)
 
@@ -165,9 +169,13 @@ Also available as PWA: https://blackbox.betaflight.com/
 
 For the meteor 75 pro, one session of 6min filled ~13mb of the 16mb available for BBL logs.
 
+```md
   looptime = 312 us -> ~3205 Hz loop                                 
   Blackbox 1/4 -> ~801 Hz logging                                    
   gyro scaled -> human-usable gyro rate values    
+```
+
+I built mine with:
 
 ```sh
 Start-Process .\meteor75_blackbox_report.html 
@@ -177,19 +185,20 @@ python .\run_blackbox_report.py --index 1 --mass-g 44.0
 ```
 
 ```sh
-  For your July 10 segment 0, full duration is about 192.3s, so run: 
-                                                                     
-  python .\telemetry_video.py --decoded .                            
-  \BTFL_BLACKBOX_LOG_METEOR75_PRO_20260710_103204_BETAFPVG473_decoded
-  .json --log-index 0 --start-s 0 --duration-s 192.3 --fps 30        
-                                                                     
-  Or add a Make override:                                            
-                                                                     
-  make telemetry DURATION=192.3   
+#For your July 10 segment 0, full duration is about 192.3s, so run: 
+                                                                    
+python .\telemetry_video.py --decoded .                            
+\BTFL_BLACKBOX_LOG_METEOR75_PRO_20260710_103204_BETAFPVG473_decoded
+.json --log-index 0 --start-s 0 --duration-s 192.3 --fps 30        
+                                                                    
+#Or add a Make override:                                                                                                               
+make telemetry DURATION=192.3   
 ```
 
 
 ### Oa5 Pro x Telemetry
+
+Why not bringing the action cam and bake the logs?
 
 ```sh
 make telemetry-latest
@@ -410,11 +419,8 @@ The machine we just finished fixing the wiring maps on is the **iFlight Cidora S
 {{% details title="Eachine Novice-IV 🚀" closed="true" %}}
 
 
-### Bottom Line Up Front (BLUF)
 
 **Yes, we are exactly at the same step for both drones!** Both quads are structurally fully configured inside Betaflight, and both are completely stuck on the exact same roadblock: a mismatching ExpressLRS security handshake.
-
-And your technical intuition is 100% correct—it makes absolute sense that you can't see a separate ELRS receiver module on this smaller one.
 
 ---
 
@@ -424,22 +430,22 @@ And your technical intuition is 100% correct—it makes absolute sense that you 
 
 However, there is a major hardware plot twist hiding inside the blueprint you just pulled: **This drone didn’t originally come with ExpressLRS.**
 
-From the factory, the Novice-IV shipped with a tiny **RadioMaster R81 receiver running the legacy FrSky D8 protocol** wired directly to UART6. When the previous owner converted it over to ExpressLRS, they did one of two things:
+From the factory, the Novice-IV shipped with a tiny **RadioMaster R81 receiver running the legacy FrSky D8 protocol** wired directly to UART6.
+
+When the previous owner converted it over to ExpressLRS, they did one of two things:
 
 1. They tucked a microscopic ELRS nano receiver somewhere completely hidden (like underneath the main AIO board or wrapped inside heat shrink right behind the camera).
 2. Or they completely replaced the stock flight controller stack with a newer AIO board that has a modern ExpressLRS receiver chip baked directly into the main circuit board.
 
 ---
 
-Because both quads are now fully mapped and ready inside Betaflight, our computer work here is officially done! 
-
-We are at the final endgame for both drones.
 
 To get your sticks moving, we just need to get one of them successfully through the ExpressLRS Wi-Fi override page.
 
 Since the Novice-IV is plugged in right now, let's look for that **`ExpressLRS RX`** hotspot network on your phone or laptop. 
 
-Once we change that phrase on the webpage, this machine will finally spring to life! Can you see the network broadcasting nearby?
+Once we change that phrase on the webpage, this machine will finally spring to life!
+
 
 Inspected and documented it in Eachine/README.md.
 
@@ -618,10 +624,8 @@ Inside the https://github.com/ExpressLRS/ExpressLRS portal `http://10.0.0.1/`: `
 
 If you need to change between them, the receiver is easier: https://expresslrs.github.io/web-flasher/
 
-
-FCC = ISM (The global standard profile that matches your RadioMaster Pocket's ism2g4 setting).
-
-LBT = CE_LBT (The specific European protocol your drone was previously locked onto).
+* FCC = ISM (The global standard profile that matches your RadioMaster Pocket's ism2g4 setting).
+* LBT = CE_LBT (The specific European protocol your drone was previously locked onto).
 
 ```md
 Download Firmware File(s)
@@ -751,6 +755,12 @@ The Meteor (SPI): On most Meteor tiny whoops, the ExpressLRS receiver isn't a se
 Your New Drone (Serial UART): The firmware you just flashed (DIY_2400_RX_ESP8285_SX1280) is for a true, standalone external serial receiver. It acts like its own independent little computer. Betaflight just listens to it over a serial wire, but has no control over its actual radio pairing settings.
 
 
+#### Testing Motors
+
+Props out first!
+
+![alt text](/blog_img/dron/betaflight-motors-test.png)
+
 #### The Golden Pre-Flight Checklist
 
 Before you head outside and throw this thing in the air, you need to do **three critical hardware checks** on the bench (with the USB plugged into Betaflight, but **absolutely NO PROPELLERS ON THE DRONE**).
@@ -818,3 +828,101 @@ Then, I went and place the modes im getting confortable with
 * https://gasolinapp.inforapida.es/
 
 > Which can be interesting for road trips!
+
+### ISM vs LBT
+
+### ESP8285 vs IoT ESP32
+
+Yes, it is conceptually similar to the ESP boards you use for IoT, but it is not the same job.
+
+  Your receiver is likely an ExpressLRS 2.4GHz receiver built around two main chips:
+
+  ESP8285 + SX1280
+
+  The name tells us a lot:
+
+  DIY_2400_RX_ESP8285_SX1280
+
+  Meaning:
+
+  DIY      generic/DIY ExpressLRS target family
+  2400     2.4GHz radio band
+  RX       receiver
+  ESP8285  microcontroller
+  SX1280   Semtech 2.4GHz LoRa radio chip
+
+  ESP8285 vs ESP32
+
+  The ESP8285 is like a smaller/older cousin of the ESP8266/ESP32 family. It has WiFi and runs firmware, but it is much less powerful than an ESP32.
+
+  Roughly:
+
+  ESP8285: small MCU + WiFi + 1MB embedded flash
+  ESP8266: similar family, usually external flash
+  ESP32: much more powerful, dual-core variants, Bluetooth, more GPIO, more RAM
+
+  In your ELRS receiver, the ESP8285 is not used as a general IoT web server most of the time. It is the “brain” of the radio receiver. It:
+
+  runs ExpressLRS firmware
+  controls the SX1280 radio chip
+  decodes packets from your RadioMaster Pocket
+  outputs CRSF serial data to the flight controller
+  starts the ExpressLRS RX WiFi hotspot for config/flashing
+  stores options like domain, UID, WiFi settings
+
+  The SX1280 is the actual long-range 2.4GHz radio transceiver. The ESP8285 handles logic; the SX1280 handles RF.
+
+  Why Receiver And Flight Controller?
+
+  Because they do different jobs.
+
+  The receiver answers:
+
+  What is the pilot commanding?
+
+  The flight controller answers:
+
+  How do I keep the drone stable and make the motors do that safely?
+
+  Flow:
+
+  RadioMaster Pocket
+     ↓ 2.4GHz ExpressLRS packets
+  SX1280 radio chip on receiver
+     ↓
+  ESP8285 running ExpressLRS
+     ↓ CRSF serial protocol over UART
+  Flight controller running Betaflight
+     ↓ motor commands
+  ESC / 4-in-1 ESC
+     ↓
+  Motors
+
+  The receiver does not fly the drone. It only receives your stick positions, switches, link telemetry, and packet timing.
+
+  The flight controller has the IMU/gyro/accelerometer and runs the control loop thousands of times per second. It mixes your input with stabilization math:
+
+  pilot wants roll right
+  gyro says drone is rotating too slowly/too quickly
+  PID loop calculates correction
+  motor outputs are adjusted
+
+  So even if your receiver says “roll right 30%”, the FC decides exactly how much each motor should spin.
+
+  Why Not Put Everything In One Chip?
+
+  Sometimes they do. Tiny whoops and AIO boards often integrate:
+
+  flight controller + ESC + receiver
+
+  But architecturally they are still separate functions.
+
+  Separate receiver modules are common because:
+
+  radio protocols change faster than flight controllers
+  receiver placement matters for antenna performance
+  you can swap ELRS / Crossfire / FrSky / etc.
+  RF design is specialized
+  Betaflight should not have to implement every radio stack directly
+
+  In your case, the ESP8285 receiver is basically a tiny dedicated IoT-like computer whose only serious job is: talk ExpressLRS to your radio and CRSF to Betaflight.

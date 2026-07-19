@@ -2,7 +2,7 @@
 title: "Selfhosted Connectivity"
 date: 2026-06-17
 draft: false
-tags: ["TapMap vs PortMaster","Bind9 vs PiHole vs Technitum","WireShark","TR471","iroh","Friis x Path Loss","QoS/AQM"]
+tags: ["TapMap vs PortMaster vs WireShark","Bind9 vs PiHole vs Technitum","TR471","iroh","Friis x Path Loss","QoS/AQM"]
 description: 'A homelab Open-Telemetry evaluation of WIFI metrics via EasyMesh and TR-181.'
 url: 'selfhosted-connectivity'
 math: true
@@ -60,7 +60,7 @@ I had several related but different questions mixed together:
 - Can `nmap` or similar tools tell me Wi-Fi quality for other devices?
 - What does TR-181 expose, and what does it need from the underlying device?
 - Would OpenWrt on a Pi unlock useful BBF/TR-181 fields?
-- Where do tools like Wireshark, Pi-hole, AdGuard, Unbound, TapMap, and LAN scanning fit?
+- Where do tools like [Wireshark](https://fossengineer.com/setup-wireshark-with-docker/), Pi-hole, AdGuard, Unbound, TapMap, and LAN scanning fit?
 
 Those questions belong in one connectivity post, but not as one giant paste of terminal logs. 
 
@@ -383,7 +383,11 @@ Connectivity debugging needs tools at different layers:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pihole" title="Pi-hole" subtitle="DNS-level visibility for the LAN" >}}
 {{< /cards >}}
 
-**Wireshark is for packets** and conversations: DNS failures, TCP resets, TLS handshakes, HTTP behavior, DHCP, mDNS, NTP, SMB, and `.pcap` captures.
+**[Wireshark](https://fossengineer.com/setup-wireshark-with-docker/) is for packets** and conversations: DNS failures, TCP resets, TLS handshakes, HTTP behavior, DHCP, mDNS, NTP, SMB, and `.pcap` captures.
+
+<!-- ![alt text](/blog_img/networking/wireshark-ui.png) -->
+
+https://fossengineer.com/img/wireshark-ui.png
 
 **DNS tools** such as Pi-hole, AdGuard Home, and Unbound answer a different question: what names are devices resolving, and which clients are talking to which services?
 
@@ -398,12 +402,7 @@ docker run --rm \
   olalie/tapmap:latest
 ```
 
-Then open:
-
-```text
-http://localhost:8050/
-```
-
+Then open: `http://localhost:8050/`
 
 {{< details title="Optional Wireshark setup and filters" closed="true" >}}
 
@@ -428,14 +427,14 @@ Treat saved `.pcap` files as confidential.
 
 {{< /details >}}
 
-
+- [Wireshark](https://fossengineer.com/setup-wireshark-with-docker/)
 - **[SimpleWall](https://github.com/henrypp/simplewall)** — a lightweight Windows firewall GUI for controlling network activity and blocking IPs.  
 - **TinyWall** — a simple, open-source Windows firewall companion with minimal overhead.  
 - **[OpenSnitch](https://github.com/evilsocket/opensnitch)** — a Linux application firewall that monitors and controls outbound connections per app.  
 - **IPBan** — an automated blocker that bans abusive IPs on Windows and Linux based on logs.  
 - **iplock** — a firewall rule manager for quickly blocking IP addresses on Linux.  
 - **[Portmaster](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#portmaster-and-https)** — a privacy-focused desktop firewall for Windows and Linux with per-app connection control.  
-- **TapMap** — a map-based network visualizer that shows where your computer connects around the world.
+- **[TapMap](https://fossengineer.com/selfhosting-tapmap/)** — a map-based network visualizer that shows where your computer connects around the world.
 
 
 ## EasyMesh Direction

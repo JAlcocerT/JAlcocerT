@@ -32,7 +32,6 @@ On top of: *avg household income in ES*
 
 PostGIS: Free Open Source Spatial Database
 
-
 <!-- https://www.youtube.com/watch?v=e3XG_A2KUhg -->
 
 {{< youtube "e3XG_A2KUhg" >}}
@@ -101,6 +100,8 @@ Average Price per m2: 2551.91 €/m2
 Average Transaction Price: 172833.33 €
 ```
 
+Then just;
+
 ```sh
 find . -name "*.shx" -o -name "*.dbf" -o -name "*.prj"
 ```
@@ -152,7 +153,7 @@ uv run map_french_communes.py
 
 ## Conclusions
 
-Few years ago with the R language I enjoyed their geo capabilities.
+Few years ago with [the R language](https://jalcocert.github.io/JAlcocerT/useful-r-stuff/) I enjoyed their geo capabilities.
 
 Maps and data are cool, lets agree on that.
 
@@ -270,3 +271,5 @@ As you might know, [gpx is great](https://jalcocert.github.io/JAlcocerT/selfhost
 The perfect open-source alternative to Google Timeline with automatic trip detection, Immich integration, and detailed analytics.
 
 * https://github.com/itskovacs/trip
+
+You can also try with GeoLibre!

@@ -281,21 +281,16 @@ uv run animate_dk_pop_delta.py
 
 Maybe other factors like: *ease of credit have sth to do?*
 
-```sh
-
-```
-
 Specially for those booms?
 
-Just asking: *bring your own theory of how the world works here*
+Just asking: *bring your own theory of how the world works here :)*
 
 ## Geospatial
 
-nuts2 arcgis
+Have a look to `nuts2 arcgis` as an example
 
-* https://www.arcgis.com/home/item.html?id=48f0d1a2006c4e89a85712a618fcff89
-
-
+* `https://www.arcgis.com/home/item.html?id=48f0d1a2006c4e89a85712a618fcff89`
+* I wrote more about maps and data: https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/
 
 ## Financial Data x YFinance
 
@@ -310,7 +305,6 @@ Plus you can get some insights in between the noise: *does it really matter when
 
 ```sh
 #git clone DataInMotion
-
 ```
 
 {{< youtube "ctfGunPZwJ4" >}}
@@ -734,7 +728,9 @@ These three files are sufficient to fully reconstruct the data model, all transf
 
 > Same with [Kilo Code](https://kilo.ai/pricing)!
 
-So...What if I told you that all this is very cheap to do nowadays?
+So...
+
+What if I told you that all this is very cheap to do nowadays?
 
 It is if you have the right knowledge: *part of today's know-how are [prompts](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)* 
 
