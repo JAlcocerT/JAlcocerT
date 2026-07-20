@@ -21,6 +21,8 @@ https://github.com/commaai/openpilot
 
 ### Location
 
+https://github.com/dedicatedcode/reitti
+
 1. [Wanderer](#wanderer) - awsome way to track your routes
 2. [Dawarich](#dawarich) - Self-hosted alternative to Google Location History - Privacy-focused location tracking with API key authentication
 3. Endurain - https://github.com/joaovitoriasilva/endurain

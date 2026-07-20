@@ -11,8 +11,7 @@ We own the how.
 
 its time we take over the Why and What.
 
-Shifting the engineer's role from a **passive order-taker** to a **strategic friction-point**, you 
-ensure that the "skin in the game" is shared before the first line of code is written.
+Shifting the engineer's role from a **passive order-taker** to a **strategic friction-point**, you  ensure that the "skin in the game" is shared before the first line of code is written.
 
 This aims to solve the "Garbage In, Garbage Out" problem of product development.
 
@@ -22,12 +21,15 @@ This aims to solve the "Garbage In, Garbage Out" problem of product development.
 Destilled from one my [high-signal playbooks](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-z-destilled/playbook-brd-prd-challenger.md) 
 {{< /callout >}}
 
-
 ## The Engineer’s "No-Fluff" Checklist
 
 Start [syncing expectations](https://jalcocert.github.io/JAlcocerT/setup-bi-tools-docker/#syncing-expectations).
 
-**Stop building on top of vague assumptions. Use this checklist to turn "ASAP" requests into actionable briefs.**
+**Stop building on top of vague assumptions.**
+
+Use this checklist to turn "ASAP" requests into actionable briefs.
+
+That's also for you if you are [into D&A](https://jalcocert.github.io/JAlcocerT/career/#questions)
 
 ---
 
@@ -158,7 +160,6 @@ To avoid being seen as the "Department of No," frame this playbook as **Risk Mit
 ## The Final "Acid Test" for a PRD
 
 If you can't fill out the **One-Page Challenger** using only the text provided in the PRD, the document is a "Draft," not a "Brief."
-
 
 Paste at top of every BRD/PRD review. 
 

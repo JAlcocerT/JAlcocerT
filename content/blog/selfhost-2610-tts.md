@@ -16,6 +16,10 @@ https://fossengineer.com/kittentts-local-cpu-tts/
 
 ## FAQ
 
+https://github.com/mortennordbye/homelab
+
+https://github.com/lfnovo/open-notebook
+
 https://github.com/Priveetee/TypeType
 
 `yt-distill` poc

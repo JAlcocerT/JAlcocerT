@@ -11,9 +11,6 @@ draft: false
 
 
 
-{{< callout type="info" >}}
-Wifi is also used for dron control!
-{{< /callout >}}
 
 
 

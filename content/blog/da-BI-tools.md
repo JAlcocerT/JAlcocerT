@@ -621,10 +621,6 @@ You can use serverless version of it at - `https://preset.io/`
 
 See https://www.metabase.com/product/embedded-analytics
 
-node.js
-ruby
-python...
-
 {{< youtube "eCplQYrvabk" >}}
 
 <!-- https://youtu.be/eCplQYrvabk -->
@@ -643,7 +639,6 @@ python...
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mariadb" title="MariaDB | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/metabase" title="Metabase | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 ### Superset
 

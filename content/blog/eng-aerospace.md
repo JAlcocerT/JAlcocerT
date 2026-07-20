@@ -16,7 +16,6 @@ I almost became an aerospace student
 
 This is everything that I did (and what not) missed.
 
-
 ## Fluid Recap
 
 https://www.youtube.com/watch?v=KeTh-TIhL9M
@@ -66,7 +65,23 @@ Even rotary: *not the mazda RX8 ones, the one of ww1 planes*
 https://www.youtube.com/watch?v=-pxpNivvpw8 
 -->
 
-### Dron Props
+### Turbines
+
+### Props
+
+{{< youtube "vrFaLrS0Ixs" >}}
+
+<!-- 
+https://youtube.com/shorts/vrFaLrS0Ixs 
+-->
+
+#### Dron Props
+
+You better get these in the right position:
+
+{{< youtube "mwTCFvbxkzY" >}}
+
+Yep, that's what happens when you dont - The dron gets pushes to the ground like an F1 instead of flying.
 
 Combining **Motor RPM/Amperes** with **Accelerometer G-forces** is exactly how aerodynamic engineers and professional FPV tuners measure a propeller's performance and efficiency without a wind tunnel.
 
@@ -147,11 +162,11 @@ Aeronautical engineers absolute tweak the length (diameter) and the rotation spe
 
 When a propeller blade tip approaches or breaks the speed of sound (Mach 1), it triggers a massive aerodynamic crisis. Here is exactly what happens, how the physics limits big aircraft, and how it applies to your tiny Meteor75 Pro.
 
----
+🛑 The "Sound Barrier" Crisis: Shockwaves & Stall
 
-### 🛑 The "Sound Barrier" Crisis: Shockwaves & Stall
+As a propeller spins, the center of the prop moves slowly, but the tips have to cover a much larger distance in the exact same amount of time. 
 
-As a propeller spins, the center of the prop moves slowly, but the tips have to cover a much larger distance in the exact same amount of time. The tips are always moving the fastest.
+The tips are always moving the fastest.
 
 If the tips hit the speed of sound, a local **shockwave** forms right on the blade.
 
@@ -161,9 +176,7 @@ This shockwave causes three catastrophic problems:
 2. **Aerodynamic Stall:** The smooth airflow over the blade completely detaches, causing the propeller to instantly lose its lifting efficiency (thrust drops off a cliff).
 3. **Deafening Noise:** It creates a continuous sonic boom. This is why the historical *Republic X-84H "Thunderscreech"* airplane (which had supersonic prop tips) was so loud it literally caused nausea and seizures in ground crews.
 
----
-
-### 📐 The Engineering Trade-off: Diameter vs. RPM
+📐 The Engineering Trade-off: Diameter vs. RPM
 
 To prevent this, engineers use a strict mathematical limit for Tip Speed ($V_{tip}$), which combines how fast the drone/plane is moving forward ($V_{forward}$) with how fast the propeller is spinning rotationally ($V_{rotational}$):
 
@@ -174,11 +187,10 @@ $$V_{tip} = \sqrt{V_{forward}^2 + (\pi \times \text{Diameter} \times \text{RPS})
 To keep $V_{tip}$ safely below Mach 1, engineers have to play a balancing game:
 
 * **On Big Airplanes:** Because the propeller diameter is massive (e.g., 3 to 4 meters), the tips travel a huge distance per turn. To keep them subsonic, the engines must spin **incredibly slowly** (often only 1,200 to 2,000 RPM), utilizing gearboxes to drop the engine speed.
+
 * **On Commercial Turbofans (Airliners):** The fan blades inside a Boeing 777 engine are so large that their tips naturally push right up against Mach 1.05. Engineers use advanced supercomputers to twist and sculpt the blade tips to handle the shockwaves smoothly.
 
----
-
-### 🛸 How this applies to your Meteor75 Pro
+🛸 How this applies to your Meteor75 Pro
 
 Your tiny drone actually exploits the opposite end of this physics equation!
 
@@ -235,7 +247,7 @@ However, aeronautical engineers and FPV pilots look at several other crucial met
 If you expand your Python analysis, here are the other major performance pillars you can extract from your flight data:
 
 
-### Interesting KPIs
+#### Interesting KPIs
 
 1. 🎛️ Volumetric and Aerodynamic Efficiency (The Lift Coefficient)
 
@@ -275,7 +287,9 @@ A highly efficient, rigid frame with crisp propellers will have a tiny latency (
 
 If your propellers get bent or the frame gets soft, that latency number will spike, and the drone will start to feel sluggish and delayed.
 
-When you start digging into your code, combining all of these metrics gives you a complete, top-to-bottom aerodynamic profile of your quad! Which of these data paths sounds like the most fun to plot out first?
+When you start digging into your code, combining all of these metrics gives you a complete, top-to-bottom aerodynamic profile of your quad! 
+
+Which of these data paths sounds like the most fun to plot out first?
 
 ### Turboshaft
 
@@ -441,12 +455,15 @@ https://www.youtube.com/watch?v=XPXN0QejqM0
 
 {{< youtube "XPXN0QejqM0" >}}
 
-
 ---
 
 ## Conclusions
 
 Now, im building a dron :)
+
+Is it time to [learn to fly](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#about-flying) a ULM?
+
+* `https://aeroilipamagna.es/cursos-de-iniciacion-al-vuelo-en-ultraligero/`
 
 ### Building a DIY Dron
 
@@ -457,14 +474,12 @@ cd ./poc/yt-distil
 make up #nano .env
 ```
 
-
 {{% details title="How to Get Into FPV Drones (Beginners Guide) 🚀" closed="true" %}}
 
 Getting into FPV drones can be overwhelming, but starting with a budget-friendly setup is key. 
 
 Begin with a simple radio, a **tiny whoop quadcopter**, and analog goggles to practice flying in a simulator or indoors, minimizing costs and crashes.
 
-Key points:
 - FPV drones differ from cinematic drones; they require manual control and offer a more immersive flying experience.
 - Start with a budget radio like the Radio Master Pocket ELRS, priced around $75.
 - Use a simulator like Lift-Off (costing $10-20) to practice flying before using a real drone.
@@ -485,8 +500,6 @@ Action items / takeaways:
 
 {{% /details %}}
 
-
-
 > `http://192.168.1.2:8001/`
 
 {{< youtube "nuyB-qCQLR0" >}}
@@ -505,11 +518,11 @@ flatpak install flathub org.betaflight.BetaflightConfigurator
 #flatpak install flathub org.expresslrs.ExpressLRSConfigurator
 ```
 
+Or just use the PWAs :)
+
 ---
 
-
 ## FAQ
-
 
 ### Cool Aerospace Channels
 
@@ -572,6 +585,8 @@ These differences contribute to the potential for supercritical CO2 turbines to 
 
 {{% /details %}}
 
+If you want to be 'offline', aka no phone apps...a radio is key.
+
 {{% details title="Pocket x OSS (ExpressLRS x EdgeTX) 🚀" closed="true" %}}
 
 The **RadioMaster Pocket** is widely considered the "gold standard" for open-source compatibility in its price bracket. 
@@ -580,7 +595,9 @@ In the world of RC, "compatibility" usually refers to the **Operating System (OS
 
 1. Operating System: EdgeTX (The "Linux" of Radios)
 
-The Pocket runs **EdgeTX** as its native OS. This is currently the most advanced, open-source firmware for radio controllers.
+The Pocket runs **EdgeTX** as its native OS. 
+
+This is currently the most advanced, **open-source firmware** for radio controllers.
 
 * **Fully Open:** It isn't locked down like a DJI or a high-end Futaba. You can customize every sound, screen, and logic switch.
 * **Model Memory:** Unlike the T8 or BetaFPV LiteRadios, the Pocket lets you store **60+ different models**. You can have one setup for your BetaFPV Meteor65 and another for an RC Plane, and switch between them in seconds.
@@ -604,8 +621,6 @@ This makes it effectively "compatible with everything."
 * **USB-C Simulator Support:** You can plug the Pocket into any PC/Mac/Linux machine, and it will be recognized as a standard "Joystick." This makes it 100% compatible with flight simulators like **Liftoff** or **Uncrashed**.
 
 * **Battery:** It uses standard **18650 Li-ion cells** (the same ones found in many flashlights and power tools). You aren't forced to buy a proprietary battery pack from the manufacturer.
-
-
 
 {{% /details %}}
 
@@ -631,7 +646,6 @@ Here is the difference between them:
 {{% /details %}}
 
 
-
 {{% details title="is ELRS enrypted?" closed="true" %}}
 
 This is where ExpressLRS shines. 
@@ -644,13 +658,19 @@ It is practically impossible for someone to steal your control link while flying
 
 When you set up your RadioMaster Pocket and your BetaFPV drone, you will type in a custom secret passphrase (for example: `"YosuaCerdoFPV2026"`).
 
-The radio doesn't actually broadcast this text over the air. Instead, it uses a cryptographic algorithm (MD5 hashing) to turn your text into a unique string of 6 numbers called **UID Bytes**.
+The radio doesn't actually broadcast this text over the air. 
+
+Instead, it uses a cryptographic algorithm (MD5 hashing) to turn your text into a unique string of 6 numbers called **UID Bytes**.
 
 Those UID bytes do two major things to secure your connection:
 
-1. **The Seed for Frequency Hopping:** Remember how LoRa hops frequencies hundreds of times per second? Your UID bytes are used as the mathematical "seed" to generate that specific, randomized frequency hopping pattern. A thief's radio won't even know *which* frequency your drone is listening to at any given millisecond.
+1. **The Seed for Frequency Hopping:** Remember how LoRa hops frequencies hundreds of times per second? Your UID bytes are used as the mathematical "seed" to generate that specific, randomized frequency hopping pattern. 
 
-2. **The Key Check:** Even if someone miraculously lands on the exact same frequency at the exact same millisecond, every tiny packet of data your Pocket sends contains an integrated check code based on those UID bytes. If a receiver gets a packet from a radio with a different phrase, it immediately ignores it as background noise.
+A thief's radio won't even know *which* frequency your drone is listening to at any given millisecond.
+
+2. **The Key Check:** Even if someone miraculously lands on the exact same frequency at the exact same millisecond, every tiny packet of data your Pocket sends contains an integrated check code based on those UID bytes. 
+
+If a receiver gets a packet from a radio with a different phrase, it immediately ignores it as background noise.
 
 **Is it actually encrypted?**
 
@@ -682,7 +702,6 @@ It prevents you from accidentally launching the wrong aircraft!
 The Pocket's battery bay is tight and only fits Flat Top `18650s` at 3.7V, not the 1.5V from AA's. It has a built-in charger for those `Molicel P28A` or `Samsung 30Q`
 {{< /callout >}}
 
-
 | Feature | BetaFPV LiteRadio 3 | RadioMaster Pocket |
 | --- | --- | --- |
 | **OS** | Proprietary (Limited) | **EdgeTX (Full Open Source)** |
@@ -694,7 +713,6 @@ The Pocket's battery bay is tight and only fits Flat Top `18650s` at 3.7V, not t
 {{< youtube "AKUXxsIrtek" >}}
 <!-- 
 https://youtube.com/shorts/AKUXxsIrtek -->
-
 
 Most BetaFPV gear is **2.4GHz**, which is the standard for the Pocket. 
 
@@ -727,8 +745,9 @@ Here are the most typical community scripts every pilot uses:
 * **Model Image Scripts:** Since the Pocket has a small screen, people write scripts to display custom icons for each drone or plane you own.
 * **Games:** Because it's open-source, people have actually ported simple games like *Snake* or *Tetris* to the radio. Not very useful for flying, but great for when you're waiting for your batteries to charge!
 
+You don't "program" them yourself (unless you want to). 
 
-You don't "program" them yourself (unless you want to). Most pilots use the **EdgeTX Buddy** website or the **ExpressLRS Configurator** on their PC. 
+Most pilots use the **EdgeTX Buddy** website or the **ExpressLRS Configurator** on their PC. 
 
 You just plug your radio in via USB-C, and it "sideloads" the scripts onto the SD card for you.
 
@@ -765,10 +784,8 @@ To stay true to OSS and budget, **Analog** is the "most open" because it has no 
 * **Budget Entry:** **Eachine EV800D** ($80 - $100).
 * *Why:* They can be used as goggles or a standalone monitor, and they are easily "hackable."
 
-
 * **Mid-Range (Pro-OSS):** **Skyzone SKY04O Pro** ($350+).
 * *Why:* Skyzone uses open-source friendly firmware and allows for modular receivers.
-
 
 * **The "Open" Digital Choice:** Look into **OpenIPC / ArtLynk** modules if you want digital quality with an open-source spirit.
 
@@ -816,15 +833,12 @@ They match the "value for money" and "DIY" spirit of your BetaFPV/RadioMaster se
 
 Since they can convert into a monitor, they are the most versatile piece of gear you can buy as a beginner.
 
-
 {{% /details %}}
-
 
 #### 4. Charging & Power
 
 * **Charger:** **VIFLY Whoop VIPER** or **SkyRC B6neo** ($25 - $35).
 * *Why:* The B6neo is tiny, powerful, and runs open-source-friendly firmware.
-
 
 * **Batteries:** **LAVA 1S 300mAh (BT2.0)** ($25 for a 4-pack).
 * *Note:* Stick to the **BT2.0 connector**; it’s the community standard for performance in 2026.
@@ -890,7 +904,6 @@ While you *can* technically put Betaflight on a plane, it is designed specifical
 
 * **ELRS (The Radio Link):** Even though the internal software is different, you can use the same **ExpressLRS** radio and goggles you use for your BetaFPV drones to fly a plane.
 
-
 You’ve hit on the exact core debates of the DIY drone world! You understand the landscape perfectly.
 
 Let's break down how these firmware giants compare, and exactly how that 2.4GHz digital signal keeps your drone safely under your control.
@@ -921,9 +934,6 @@ While any of them *can* fly a quadcopter, they are tuned for completely differen
 <br>• Setting it up feels like configuring a commercial satellite rather than a fun hobby drone. |
 
 > **The Verdict for You:** Since you want to **freestyle**, start with **Betaflight**. It is the absolute king of acro stick feel. If you later decide to add a GPS module and want to do long-range mountain cruising with automated flight paths, you can flash **iNav** onto that exact same hardware for free.
-
-
-
 
 ### Flying a DRON
 
@@ -1052,7 +1062,6 @@ To link two devices (like your drone's radio receiver and the main flight contro
 │     ESP32       │   TX ───►─── RX│     STM32       │
 │ (Radio Receiver)│   RX ◄───◄─── TX│(Flight Computer)│
 └─────────────────┘                └─────────────────┘
-
 ```
 
 What makes it "Asynchronous"?
@@ -1066,6 +1075,7 @@ UART is **Asynchronous**, meaning **there is no shared clock wire.**
 To prevent the data from turning into absolute gibberish, both chips have to agree completely on two rules *before* they start talking:
 
 1. **The Speed (Baud Rate):** They agree on exactly how fast they will shout bits across the wire (measured in bits-per-second). For example, your RadioMaster Pocket and drone talk over UART at a standard lightning-fast speed of **420,000 bits per second** (or even 3.75 Million bits per second on modern ELRS links!).
+
 2. **The "Start" Flag:** Because the wire is usually completely silent (sitting at a constant high voltage), the transmitting chip drops the voltage to zero for exactly one bit-period to signal: *"Hey! Wake up, a packet of data is starting right now!"*
 
 Why FPV Drones rely entirely on UARTs
@@ -1082,7 +1092,9 @@ It is an absolute foundational concept in electronics, and as a Linux user, you'
 
 #### Why not canbus or mqtt
 
-This is a brilliant architectural question. You have exactly the right intuition for systems design—why use an old, basic 2-wire serial protocol when much more modern network options exist?
+This is a brilliant architectural question. 
+
+You have exactly the right intuition for systems design—why use an old, basic 2-wire serial protocol when much more modern network options exist?
 
 The answer comes down to three things: **extreme latency limits, weight/hardware simplicity, and network overhead.**
 
@@ -1098,19 +1110,25 @@ MQTT is a phenomenal "Publish/Subscribe" protocol for IoT (Internet of Things) d
 
 2. Why not CAN bus? (The Automotive Standard)
 
-CAN bus is a beautifully engineered, message-based network protocol. It is used in cars because it is heavily shielded against electrical noise and lets 50 different microcontrollers (brakes, windows, airbags) all share the same pair of wires safely.
+CAN bus is a beautifully engineered, message-based network protocol. 
+
+It is used in cars because it is heavily shielded against electrical noise and lets 50 different microcontrollers (brakes, windows, airbags) all share the same pair of wires safely.
 
 While heavy enterprise industrial drones *do* use CAN bus, micro whoops avoid it for three reasons:
 
 * **The Hardware Tax:** To use CAN bus, every chip needs a physical hardware component called a **CAN Transceiver** built into the circuit board next to it. On a tiny 4-gram whoop board, adding 3 or 4 transceiver chips adds physical weight, consumes precious circuit board space, and sucks extra power from your tiny 1S battery.
+
 * **Overkill for the Size:** CAN bus is designed to send signals down a 5-meter copper wire past a noisy car engine. On your drone, the distance between the ESP32 radio chip and the STM32 brain chip is **less than 2 centimeters**. At that short distance, electrical interference is practically zero, so the heavy data protection of CAN bus isn't needed.
+
 * **Data Overhead:** CAN bus has built-in priority arbitration, identifiers, and error-checking bits attached to every single message. UART has zero metadata—it just slams raw, uncompressed bytes across the trace instantly.
 
 ---
 
 A micro drone is a high-speed physics machine. It doesn't need a complex computer network or an automotive communication bus.
 
-**UART is chosen because it is beautifully dumb.** It strips away all the software layers, requires absolutely zero extra chips or transceivers on the board, and delivers your stick coordinates from the receiver chip to the flight computer brain with the absolute lowest latency physically possible.
+**UART is chosen because it is beautifully dumb.** 
+
+It strips away all the software layers, requires absolutely zero extra chips or transceivers on the board, and delivers your stick coordinates from the receiver chip to the flight computer brain with the absolute lowest latency physically possible.
 
 ### How to assemble the DIy Dron
 

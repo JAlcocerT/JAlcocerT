@@ -9,6 +9,8 @@ url: 'home-lab-tools-for-iot'
 
 iot sim card
 
+m2m = machine to machine
+
 https://telnyx.com/pricing/iot-data-plans
 https://en.wikipedia.org/wiki/Machine_to_machine
 

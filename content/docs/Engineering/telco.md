@@ -10,6 +10,14 @@ Or because you ever wanted to access your router at `192.168.` and that ended up
 
 ![Fiber vs Coax CMs](/blog_img/outro/telecom/cm-fiber-coax.png)
 
+## Signals
+
+
+{{< callout type="info" >}}
+Wifi is also used for *some* dron control!
+{{< /callout >}}
+
+### The Friis Law
 
 ## TCP vs UDP
 

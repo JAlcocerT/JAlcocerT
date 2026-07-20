@@ -86,10 +86,9 @@ For the container setup:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/wanderer/" title="Wanderer | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-[Reitti](https://github.com/dedicatedcode/reitti) can be integrated with Immich btw
+[Reitti](https://github.com/dedicatedcode/reitti) can be integrated [with Immich](https://fossengineer.com/selfhosting-immich/) btw
 
 
-https://github.com/MrModest/reisenotiz
 
 
 
@@ -117,11 +116,10 @@ Home Data: Airbnb Listing with Smithery and MCP
 
 You could use playwright, or others like
 
-But, you can get away with bs4 actually.
+But, you can get away with bs4 actually:
 
 ```sh
 cd ./poc/z-poc-trip-planner-adk
-
 ```
 
 ---
@@ -138,7 +136,6 @@ make cost-warsaw-capitals COST_ARGS="--delay-seconds 10"
 make time-overlay-data
 make cost-overlay-data
 ```
-
 
 ![alt text](/blog_img/entrepre/tripplanner.png)
 
@@ -158,12 +155,9 @@ cd ./poc/z-poc-trip-planner-adk
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Wireguard with Hetzner as VPS" image="/blog_img/apps/gh-jalcocert.svg" subtitle="OoO days after a wedding? VPN Setup" >}}
 {{< /cards >}}
 
-
 ---
 
 ## FAQ
-
-https://github.com/mortennordbye/homelab
 
 ### Other Trip Apps
 

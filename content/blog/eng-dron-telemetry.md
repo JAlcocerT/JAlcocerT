@@ -824,13 +824,17 @@ Then, I went and place the modes im getting confortable with
 
 ![alt text](/blog_img/dron/betaflight-modes.png)
 
-
 ### Interesting PWAs
 
 * https://forocoches.com/foro/showthread.php?t=10665137
 * https://gasolinapp.inforapida.es/
 
-> Which can be interesting for road trips!
+> Which can be interesting for road [trips](https://jalcocert.github.io/JAlcocerT/py-vacations/#my-checklist-before-travelling)!
+
+* https://github.com/MrModest/reisenotiz
+
+> Offline-first travel notes for tracking trips, flights, accommodations, and travel documents
+
 
 ### ISM vs LBT
 

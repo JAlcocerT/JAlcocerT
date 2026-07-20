@@ -85,19 +85,20 @@ Testing to control the dji dron with my laptop:
 
 ### About Dron Regulations
 
-* Most likely than not, you need some licenses/permissions: https://drony.gov.pl/
-* https://www.seguridadaerea.gob.es/es/particulares/piloto-de-drones
+* Most likely than not, you need some licenses/permissions: `https://drony.gov.pl/`
+* `https://www.seguridadaerea.gob.es/es/particulares/piloto-de-drones`
 
-* **Remember** 
-    * An exam is generally required for drones weighing over 250 grams (0.55 pounds) in most countries.
-    * Check your local regulations to ensure compliance, as rules can differ significantly by region.
+**Remember** 
+
+* An exam is generally required for drones weighing over 250 grams (0.55 pounds) in most countries.
+* Check your local regulations to ensure compliance, as rules can differ significantly by region.
 
 ### About Flying
 
 A very interesting [**video series about learning to fly**](https://www.youtube.com/watch?v=rPCMsYS-4oE&list=PLJZONA27OlBqEmWMyuyXD6p1xiFxQXk_K) on a Ultra Light Plane.
 
-* They also teach how to pilot drones: www.aeroilipamagna.es
-* But i discovered them for their initiation course
+* They also teach how to pilot drones: `www.aeroilipamagna.es`
+* But I discovered them for their initiation course
 
 {{< details title="What you need to know about ULM's 📌" closed="true" >}}
 
@@ -133,6 +134,5 @@ A very interesting [**video series about learning to fly**](https://www.youtube.
     - **Duet Paramotor**: French-made two-seater.
 
 - **Conclusion**: ULMs provide affordable flying, but require proper training and safety regulations. Consider cost, performance, and maintenance when choosing a model.
-
 
 {{< /details >}}

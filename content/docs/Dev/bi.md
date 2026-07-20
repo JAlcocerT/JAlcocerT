@@ -8,7 +8,6 @@ url: 'BI'
 
 Within your [D&A Career](https://jalcocert.github.io/JAlcocerT/career/), you will find several **BI** Tools.
 
-
 Most popular within enterprises are: *all of these are paid products*
 
 1. [PowerBI](https://jalcocert.github.io/JAlcocerT/about-powerbi/)
@@ -194,3 +193,15 @@ Browsing,Abandoned (Stage 3),150
 Immediate Purchase,Converted (Buyer),350
 Delayed Purchase,Converted (Buyer),100
 ``` -->
+
+## Semantics
+
+It's not about swapping one table for another.
+
+You better get clarity and [ask questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/) around:
+
+1. What main stakeholders want to get
+2. 
+3. Who is the owner of each input sources your model uses
+
+> Bonus: Make a wiki around your ETL so everyone is aligned

@@ -279,11 +279,11 @@ WA, but also calcom bouble could be embeded:
 
 Few months ago, I [read about Latitude](https://jalcocert.github.io/JAlcocerT/live-search-and-research-with-ai/#gaps-to-cover).
 
-But not the prompt engineering platform, the embedded analytics one: https://github.com/latitude-dev/latitude
+But not the prompt engineering platform, the embedded analytics one: `https://github.com/latitude-dev/latitude`
 
 > Which is ofc, no longer mantained as now its all about agents :)
 
-> > https://docs-analytics.latitude.so/guides/getting-started/introduction
+> > `https://docs-analytics.latitude.so/guides/getting-started/introduction`
 
 
 ### Graphic Walker

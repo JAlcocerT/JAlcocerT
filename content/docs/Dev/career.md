@@ -542,7 +542,7 @@ Always blueprint your pipelines before writing a single line of code.
 
 #### Questions!
 
-Requirement Elicitation: *its all about **Key Questions to Ask:***
+Requirement Elicitation: *its all about **Key [Questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/) to Ask:***
 
 1. **Objectives**: What are the key goals (OKRs)?
 2. **Users**: Who are the primary end-users?
