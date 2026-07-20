@@ -879,7 +879,33 @@ Since the [last time](https://jalcocert.github.io/JAlcocerT/electr-diode/#tomato
 
 Tired to explain the same to the same people that wont learn?
 
+{{% details title="Ideas Checklist 🚀" closed="true" %}}
+
+For this I dedicated a full post few weeks ago.
+
+The general idea checklist is as follows:
+
+
+
+{{% /details %}}
+
+{{% details title="Prospects/Clients Checklist 🚀" closed="true" %}}
+
+
+
+{{% /details %}}
+
 Have you been told that you dont have enough *role maturity*, aka you just have to wait?
+
+{{% details title="QnA to the team to avoid accountability laundring 🚀" closed="true" %}}
+
+
+{{% /details %}}
+
+{{% details title="QnA for Product teams 🚀" closed="true" %}}
+
+{{% /details %}}
+
 
 Do you have clear oportunities out there?
 

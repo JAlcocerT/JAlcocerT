@@ -24,7 +24,9 @@ Making dividend or market cap race, is no longer a problem.
 
 {{< youtube "G7u_KuvKK24" >}}
 
-GoPro overlays? Nah, thats [sth of the past](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/)
+GoPro overlays? 
+
+Nah, thats [sth of the past](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/)
 
 {{< youtube "M03HU4DWhyE" >}}
 
@@ -158,22 +160,6 @@ This will help you to understand how to disqualify business ideas: https://jalco
 
 And with [some psyc](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#psyco), you'll better understand your clients.
 
-{{% details title="Ideas Checklist 🚀" closed="true" %}}
-
-For this I dedicated a full post few weeks ago.
-
-The general idea checklist is as follows:
-
-
-
-{{% /details %}}
-
-{{% details title="Prospects/Clients Checklist 🚀" closed="true" %}}
-
-
-
-{{% /details %}}
-
 ### Still doing PPTs?
 
 You know that im in love with slidevJS for my tech talks.
@@ -224,9 +210,11 @@ If you start with the code, they tune out. If you start with the concept, they t
 Here is the **Top-Down Alignment Protocol** redesigned for that flow.
 
 ## The Top-Down Hierarchy of "Right"
- **Phase 1: The Semantic Concept (The "Why")**
+
+**Phase 1: The Semantic Concept (The "Why")**
 
 *Focus: Business Intent*
+
 At this level, don't mention databases or SQL. Talk about the real world.
 
 * **The Question:** "Let's ignore the numbers for a second. What is the **business event** we are trying to capture? For example, when we say 'Customer Acquisition,' do we mean the moment they sign a contract, or the moment they pay their first invoice?"
@@ -236,6 +224,7 @@ At this level, don't mention databases or SQL. Talk about the real world.
 **Phase 2: The Logical Formula (The "How")**
 
 *Focus: The Mathematical Blueprint*
+
 Now that you have the concept, translate it into logic.
 
 * **The Question:** "Now that we’ve defined the event, how do we turn it into a KPI? To get the 'Net Margin' we just described, are we subtracting **Gross COGS** or **Net COGS** including shipping? Are we excluding internal test accounts?"
@@ -246,6 +235,7 @@ Now that you have the concept, translate it into logic.
 **Phase 3: The Data Source (The "Where")**
 
 *Focus: The Source of Truth*
+
 Identify which system is "The Law."
 
 * **The Question:** "Every system tells a slightly different story. For this specific formula, which system is the **Golden Record**? Is it the CRM (Sales view) or the ERP (Accounting view)?"
@@ -255,6 +245,7 @@ Identify which system is "The Law."
 **Phase 4: The Technical Execution (The Code)**
 
 *Focus: Verification*
+
 This is your domain. You only show this if they challenge the first three steps.
 
 * **The Statement:** "Now that we’ve agreed on the **Concept**, the **Formula**, and the **Source**, my job is purely to ensure the code reflects those three things perfectly. If you ever feel the data is 'wrong' from here on out, we can check the code together to ensure it hasn't drifted from our agreed-upon definitions."
@@ -303,7 +294,6 @@ They are picking a shiny shovel before they even know where they want to dig a h
 * **The "C" Failure:** If they can't define the "Hierarchy of Right" for a simple dashboard, they certainly cannot define the "Rules of Engagement" for an AI Agent that is supposed to make decisions, spend money, or talk to customers.
 * **The Result:** They aren't coordinating resources; they are **delegating their confusion** to the technology.
 
-
 2. Is this how they are "supposed" to coordinate?
 
 Technically, **no**. In management theory (like OKRs or V2MOM), the C-Suite is supposed to provide the *What* and the *Why*, and the engineers/managers provide the *How*. 
@@ -316,7 +306,6 @@ However, in reality, many coordinate through **Iterative Disappointment**:
 4.  **Repeat:** Until they accidentally stumble upon a shared semantic meaning.
 
 As a solopreneur, you see this as a waste of time. In a corporation, this is often just called "The Q3 Planning Cycle."
-
 
 3. The Solopreneur Advantage: "The CEO as Lead Architect"
 
@@ -336,7 +325,6 @@ The Comparison: Corporate vs. Solopreneur (AI-Driven)
 | **Feedback** | Quarterly reviews (Too slow). | Real-time Error Logs (Immediate). |
 | **Metric for 'Right'** | "The CEO likes the slide." | "The output matches the Semantic Contract." |
 | **Resource Use** | Throwing more people at the confusion. | Refining the prompt/logic of the agent. |
-
 
 ### The "Agentic" Reality Check
 
@@ -378,7 +366,6 @@ In an AI-driven dashboard, waste is **"Information Defects"** caused by a lack o
 * **Defects:** This is your "Data is wrong" moment. The defect isn't the code; it’s the **misalignment** between the business intent and the technical output.
 * **Waiting:** An Executive waiting 3 weeks for a report only to find out the "Concept" was misunderstood.
 
-
 2. Value Stream Mapping: The "Semantic" Bottleneck
 
 In any Value Stream, there is a bottleneck. For most "Agentic" or Dashboard projects, the bottleneck isn't the **processing power** or the **coding speed**—it is the **Definition Phase**.
@@ -403,7 +390,6 @@ In Lean Service Design, if the customer doesn't perceive it as useful, it isn't 
 
 * **The Transparency Paradox:** An Executive perceives *more* value in a simple, manual spreadsheet they understand than in a complex AI dashboard they don't.
 * **Bridging the Gap:** By using the "Hierarchy of Right," you are essentially performing **Value Stream Alignment**. You are making the "Invisible" logic "Visible." When an Executive sees exactly how $Revenue$ is calculated, their **Perceived Value** of the dashboard skyrockets because their **Trust** has been engineered.
-
 
 ## The Solopreneur’s "Lean AI" Edge
 
@@ -438,7 +424,9 @@ A large corporation is a **Wall**: It is heavy, slow, and expensive to move, but
 
 2. Middle Management as "Institutional Shock Absorbers"
 
-You see middle management as a source of confusion (the "agentic stuff" requests). However, in a large system, they act as **Buffers**.
+You see middle management as a source of confusion (the "agentic stuff" requests). 
+
+However, in a large system, they act as **Buffers**.
 
 * When the C-Suite changes their mind on a whim, middle management "filters" that chaos so the whole company doesn't collapse every Tuesday.
 * They translate the "Vibes" into "Standard Operating Procedures." It’s inefficient, but it’s **stable**. Stability is what allows a company to sign a 10-year contract.
@@ -474,4 +462,6 @@ The reason you feel this is "ridiculous" is that you are seeing the **Arbitrage 
 
 **The Bottom Line:** Corporations make money because they own the **Market**. You will make money because you own the **Logic**. 
 
-Over the next decade, the "Spears" (you) will start chipping away at the "Walls" (them) because AI has finally given David the same firepower as Goliath, without the 10,000-person payroll.
+Over the next decade, the "Spears" (you) will start chipping away at the "Walls" (them)
+
+because AI has finally given David the same firepower as Goliath, without the 10,000-person payroll.

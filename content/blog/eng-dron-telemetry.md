@@ -439,7 +439,6 @@ When the previous owner converted it over to ExpressLRS, they did one of two thi
 
 ---
 
-
 To get your sticks moving, we just need to get one of them successfully through the ExpressLRS Wi-Fi override page.
 
 Since the Novice-IV is plugged in right now, let's look for that **`ExpressLRS RX`** hotspot network on your phone or laptop. 
@@ -449,27 +448,27 @@ Once we change that phrase on the webpage, this machine will finally spring to l
 
 Inspected and documented it in Eachine/README.md.
 
+```md
   Short read: this Eachine / Novice-IV log looks mostly healthy. It decoded into 9 segments, with no failsafe samples, no RX-lost samples, and no voltage problem. Voltage/current look much more plausible than the iFlight current readings:
   worst active voltage is 14.02 V, and peak current is 29.24 A.
 
   Main caveat: segment #4 shows meaningful motor saturation. About 39.12% of active samples have a motor pinned at >=2040, mainly motors 1 and 3. That could just be a short hard maneuver, but on a second-hand drone I’d physically check
   props, motor smoothness, frame twist, and whether one diagonal is working harder than it should.
+```
 
-  Telemetry notes:
+Telemetry notes:
 
-  - Voltage/current/power: available and usable.
-  - GPS fields: present in segments #5-#8, but GPS_numSat stays 0, so it does not look like useful GPS fix data.
-  - eRPM: absent, same as iFlight. Use motor[0..3] only as a command proxy, not measured RPM.
+- Voltage/current/power: available and usable.
+- GPS fields: present in segments #5-#8, but GPS_numSat stays 0, so it does not look like useful GPS fix data.
+- eRPM: absent, same as iFlight. Use motor[0..3] only as a command proxy, not measured RPM.
 
-  Generated report is here: Eachine/BTFL_BLACKBOX_LOG_NOVICE-IV_20260718_120247_BETAFLIGHTF4_report.html.
+Generated report is here: Eachine/BTFL_BLACKBOX_LOG_NOVICE-IV_20260718_120247_BETAFLIGHTF4_report.html.
 
- - Logged max power: 428 W in segment #5 - This is ~ x4 to the one i saw in the meteor
-  - Same segment: 29.24 A peak current
-  - Long flights: segment #7 peaks at 336 W, segment #8 peaks at 274 W
-
+- Logged max power: 428 W in segment #5 - This is ~ x4 to the one i saw in the meteor
+- Same segment: 29.24 A peak current
+- Long flights: segment #7 peaks at 336 W, segment #8 peaks at 274 W
 
 {{% /details %}}
-
 
 The Second Drone: The "8MB Flash" Quad
 
@@ -496,7 +495,7 @@ The Features: Every master setting, channel map, and hidden configuration the pr
 
 Here is exactly what is inside this second machine according to the data:
 
-The Drone Identity: This is an Eachine Novice-IV quad running a classic BETAFLIGHTF4 target on an STM32F405 processor.
+The Drone Identity: This is an `Eachine Novice-IV` quad running a classic BETAFLIGHTF4 target on an STM32F405 processor.
 
 The Receiver Port: Your ExpressLRS receiver is configured on UART6 (serial 5 64).
 
@@ -522,63 +521,67 @@ I’d treat the first power-up as a bench check, not “ready to rip”.
 
   4S LiPo voltage guide
 
-  - Fully charged: 16.8 V total, 4.20 V/cell
-  - Nominal: 14.8 V total, 3.70 V/cell
-  - Good landing target under load: 14.0-14.4 V, 3.50-3.60 V/cell
-  - Avoid pushing below under load: 13.2 V, 3.30 V/cell
-  - Resting after flight should ideally rebound to: 14.4-15.2 V, 3.60-3.80 V/cell
-  - Storage charge: 15.2-15.4 V, 3.80-3.85 V/cell
+- Fully charged: 16.8 V total, 4.20 V/cell
+- Nominal: 14.8 V total, 3.70 V/cell
+- Good landing target under load: 14.0-14.4 V, 3.50-3.60 V/cell
+- Avoid pushing below under load: 13.2 V, 3.30 V/cell
+- Resting after flight should ideally rebound to: 14.4-15.2 V, 3.60-3.80 V/cell
+- Storage charge: 15.2-15.4 V, 3.80-3.85 V/cell
 
-  For your first flights, be conservative:
+For your first flights, be conservative:
 
-  - Set OSD warning around 14.4 V.
-  - Land around 14.0 V under load.
-  - After landing, check resting voltage. If it rebounds to around 14.6-15.0 V, you are in a healthy range.
-  - If it rests below 14.0 V, you flew it too low.
+- Set OSD warning around 14.4 V.
+- Land around 14.0 V under load.
+- After landing, check resting voltage. If it rebounds to around 14.6-15.0 V, you are in a healthy range.
+- If it rests below 14.0 V, you flew it too low.
 
-  For the specific drones:
+For the specific drones:
 
-  - Eachine: looks safer/cleaner electrically. Check props/motors because motors 1 and 3 worked hard in one segment.
-  - iFlight: be more cautious. The voltage sag in segment #63 and weird current spikes mean I’d do very short hover tests first and check battery/XT60/ESC heat.
+- Eachine: looks safer/cleaner electrically. Check props/motors because motors 1 and 3 worked hard in one segment.
+- iFlight: be more cautious. The voltage sag in segment #63 and weird current spikes mean I’d do very short hover tests first and check battery/XT60/ESC heat.
 
-  Biggest practical advice: on 4S, voltage sag happens fast when you punch throttle. Do your first packs gently, land early, and inspect motor/ESC/battery temperature after each minute-long test.
+Biggest practical advice: on 4S, voltage sag happens fast when you punch throttle.
+
+Do your first packs gently, land early, and inspect motor/ESC/battery temperature after each minute-long test.
 
 ---
 
-Correct: if both connect to Betaflight Configurator, the flight controllers are alive. The MCU, USB interface, firmware, and basic board power path are working.
+Correct: if both connect to Betaflight Configurator, the flight controllers are alive. 
 
-  But that does not prove the whole drone is healthy. Betaflight login does not fully validate:
+The MCU, USB interface, firmware, and basic board power path are working.
 
-  - ESCs / 4-in-1 ESC
-  - motors
-  - receiver link and failsafe
-  - VTX
-  - GPS
-  - current/voltage sensor calibration
-  - gyro health under vibration
-  - motor output pads/signals under LiPo power
-  - power system under load
+But that does not prove the whole drone is healthy. Betaflight login does not fully validate:
 
-  Best next checks, props off:
+- ESCs / 4-in-1 ESC
+- motors
+- receiver link and failsafe
+- VTX
+- GPS
+- current/voltage sensor calibration
+- gyro health under vibration
+- motor output pads/signals under LiPo power
+- power system under load
 
-  1. USB only
-      - Check gyro moves correctly in Setup tab.
-      - Check receiver channels move correctly.
-      - Check modes: arm, angle/acro, beeper if present.
-      - Check failsafe by turning radio off and seeing RX loss behavior.
-  2. LiPo plugged in, props still off
-      - Listen for ESC startup tones.
-      - Check Betaflight sees battery voltage correctly.
-      - Check nothing heats quickly: FC, ESC, VTX, motors.
-      - Use Motors tab very gently to spin each motor.
-      - Confirm motor order and direction.
-  3. Before props
-      - Verify prop orientation.
-      - Verify arming angle/settings.
-      - Set OSD voltage warning conservatively.
-      - Set a beeper or turtle mode only if configured correctly.
+Best next checks, props off:
 
-  So: not fried FCs, yes. Fully proven airworthy, not yet.
+1. USB only
+- Check gyro moves correctly in Setup tab.
+- Check receiver channels move correctly.
+- Check modes: arm, angle/acro, beeper if present.
+- Check failsafe by turning radio off and seeing RX loss behavior.
+2. LiPo plugged in, props still off
+- Listen for ESC startup tones.
+- Check Betaflight sees battery voltage correctly.
+- Check nothing heats quickly: FC, ESC, VTX, motors.
+- Use Motors tab very gently to spin each motor.
+- Confirm motor order and direction.
+3. Before props
+- Verify prop orientation.
+- Verify arming angle/settings.
+- Set OSD voltage warning conservatively.
+- Set a beeper or turtle mode only if configured correctly.
+
+So: not fried FCs, yes. Fully proven airworthy, not yet.
 
 {{% details title="WHY binding the meteor was easier? " closed="true" %}}
 
