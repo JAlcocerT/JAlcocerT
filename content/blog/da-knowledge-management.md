@@ -51,8 +51,11 @@ These are some knowledge management tools, noting their data storage method:
 {{< /cards >}}
 
 * **Joplin:** A feature-rich, open-source note-taking and to-do app that uses a **database** (SQLite by default, or other databases via sync targets) to store notes, with robust Markdown support and synchronization.
-* **Logseq:** An open-source, local-first knowledge base and outliner that stores its content as Markdown or Org-mode **flat files** directly on your filesystem, focusing on bi-directional linking and block-based editing.
+
+* **Logseq:** An open-source, local-first knowledge base and outliner that stores its content as **Markdown or Org-mode flat files** directly on your filesystem, focusing on bi-directional linking and block-based editing.
+
 * **BookStack:** A user-friendly, self-hosted platform ideal for organizing documentation and wikis, relying on a **database** (MySQL/MariaDB) to manage its structured content.
+
 * **Raneto:** A simple, flat-file Markdown knowledge base built with Node.js, requiring **no database** and storing all content as simple **Markdown files**.
 
 {{< cards cols="1" >}}

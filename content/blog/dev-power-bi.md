@@ -101,7 +101,9 @@ graph TD
 Why this structure matters for you:
 
 1. **OneLake is the "Center":** Everything (Agents, Data Factory, and Power BI) talks to OneLake. This is why you don't need to "import" data manually like the old days.
-2. **Power BI is the "Window":** It sits on top of the lake. When you use **DAX Studio**, you are actually looking at the **Semantic Model** inside that yellow box.
+
+2. **Power BI is the "Window":** It sits on top of the lake. When you use **[DAX Studio](https://daxstudio.org/docs/intro/)**, you are actually looking at the **Semantic Model** inside that yellow box.
+
 3. **The F-SKU is the "Fence":** Everything inside that dotted line is what your company pays for with that Fabric Capacity.
 
 Summary of the "Landscape"
@@ -115,14 +117,16 @@ We still have Service accounts and Gateways...**BUT**
 
 Not entirely, but it **massively simplifies** it. 
 
-In the 2026 landscape, the "old way" (manual ETL and constant gateway babysitting) is being replaced by **SaaS-ified connectivity**.
+The "old way" (manual ETL and constant gateway babysitting) is being replaced by **SaaS-ified connectivity**.
 
 Here is the reality of what stays and what goes:
 
 ### 1. The Gateway: "VNet" is the new "On-Prem"
 
 * **What goes away:** The heavy, physical "On-premises Data Gateway" installed on a local Windows PC is being phased out for most cloud-to-cloud work.
+
 * **What stays:** If your MySQL database is physically inside your office (not in the cloud), you still need a gateway. However, most companies are switching to the **Fabric VNet Gateway**.
+
 * *The benefit:* It’s a managed service. You don't have to manage the hardware or the Windows updates for it; Microsoft handles the "pipe" between your network and Fabric.
 
 
@@ -151,8 +155,6 @@ graph LR
     style User fill:#f9f,stroke:#333,stroke-width:2px
     style SA fill:#bbf,stroke:#333,stroke-width:4px
 ```
-
-
 
 ### 3. The "Zero-ETL" Shift (Mirroring)
 
@@ -204,10 +206,11 @@ It was a mess of silos. **OneLake** fixes this by giving your entire organizatio
 
 This means your **AKS** microservices (using Python/Spark) and your **Power BI** reports can read the exact same file at the same time.
 
-
 ### 3. How they work together (Direct Lake)
 
-This is the most important part for you. There is a new way to connect your **Semantic Model** to **OneLake** called **Direct Lake mode**.
+This is the most important part for you. 
+
+There is a new way to connect your **Semantic Model** to **OneLake** called **Direct Lake mode**.
 
 * **Import Mode (Old):** You had to "load" data into the Semantic Model. It was fast but needed refreshing.
 * **DirectQuery (Old):** You didn't load data, so it was always fresh, but it was slow as hell.
@@ -281,19 +284,16 @@ WHERE table_name = '_dora_csr_metric_details';
 
 * **Gateways** act as a secure bridge that allows the Power BI cloud service to "reach back" into your private network to refresh data from on-premises databases like MySQL.
 
- 
 
 {{< callout type="warning" >}}
 Calc groups are NOT data tables. They're DAX templates keyed by their column value (Period Mode).
 {{< /callout >}}
 
-Calc group itself has zero rows of "data" feeding any fact. It's pure    
-  expression substitution. No relationships involved on the group's own    
-  connection — it leverages the relationships already in the model (Dates ↔
-   YearMonthNums ↔ fact tables) once it adds its filter to Dates.
+Calc group itself has zero rows of "data" feeding any fact. It's pure  expression substitution. 
 
-  That's why this approach scales — every measure inherits the date shift  
-  through the existing date dim. No model schema changes.
+No relationships involved on the group's own connection — it leverages the relationships already in the model (Dates ↔YearMonthNums ↔ fact tables) once it adds its filter to Dates.
+
+That's why this approach scales — every measure inherits the date shift through the existing date dim. No model schema changes.
 
 ### PBIX vs PBIP vs PBIT
 
@@ -368,7 +368,9 @@ mindmap
 
 Yes, they are using different "SQL flavors," and this is one of the most important things for a Power BI developer to get right.
 
-While both use SQL, they speak different **dialects**. If you try to use a T-SQL command in a MySQL database, it will throw an error.
+While both use SQL, they speak different **dialects**. 
+
+If you try to use a T-SQL command in a MySQL database, it will throw an error.
 
 SQL Flavors Comparison
 
@@ -396,7 +398,9 @@ Pro-Tip: Let Power BI do the work
 
 If you are uncomfortable with the different flavors, try to avoid "Native Queries" (manual SQL). 
 
-Instead, connect to the tables directly and use the **Power Query Editor** (the UI). Power BI will automatically write the correct "Flavor" of SQL in the background—this is called **Query Folding**.
+Instead, connect to the tables directly and use the **Power Query Editor** (the UI).
+
+Power BI will automatically write the correct "Flavor" of SQL in the background—this is called **Query Folding**.
 
 #### Dbeaver FTW
 
@@ -493,7 +497,6 @@ Here is the "No-BS" breakdown of everything we've covered, one line at a time:
 #### Gateway
 
 In the Power BI world, the **Gateway** is the "Secure Bridge" that connects the Microsoft Cloud (where your reports live) to data that is hidden behind a firewall (like your `10.1.x.x` MySQL servers).
-
 
 If you didn't have a gateway, the Power BI cloud service would try to reach your internal MySQL server, hit your company's firewall, and get blocked.
 
@@ -692,19 +695,18 @@ Think of **Workspaces** and **Apps** as the "Kitchen" and the "Dining Room" of y
 The distinction between where you *build* and where you *consume* is critical for a developer.
 
 * **Workspaces (The Kitchen):**
-* This is the collaborative area where you and other developers live.
-* It's where the **Semantic Models** (datasets), reports, and **OneLake** items (like Lakehouses) are stored and edited.
-* In the Fabric era, every Workspace is essentially a folder in **OneLake**.
-
+  * This is the collaborative area where you and other developers live.
+  * It's where the **Semantic Models** (datasets), reports, and **OneLake** items (like Lakehouses) are stored and edited.
+  * In the Fabric era, every Workspace is essentially a folder in **OneLake**.
 
 * **Apps (The Dining Room):**
-* This is the finished product you "publish" for your end-users.
-* Users in an App cannot see your "messy" work-in-progress reports or the underlying Semantic Model. They only see what you’ve chosen to include.
-* **Pro Tip:** You can now create multiple audiences within a single App, so the "Sales" team sees different reports than the "Finance" team, even though they are in the same App.
+  * This is the finished product you "publish" for your end-users.
+  * Users in an App cannot see your "messy" work-in-progress reports or the underlying Semantic Model. They only see what you’ve chosen to include.
+  * **Pro Tip:** You can now create multiple audiences within a single App, so the "Sales" team sees different reports than the "Finance" team, even though they are in the same App.
 
 2. Dashboards vs. Reports: Still Different?
 
-**Yes, absolutely.** This is the most common point of confusion. In 2026, they serve two very different psychological purposes for the user.
+**Yes, absolutely.** They serve two very different psychological purposes for the user.
 
 | Feature | **Power BI Report** | **Power BI Dashboard** |
 | --- | --- | --- |
@@ -731,9 +733,7 @@ One-Liner Review:
 * **Report:** Deep-dive, multi-page analysis.
 * **Dashboard:** High-level, single-page summary.
 
-You’re right—if you’ve been in the Power BI world for a few years, **Workspace**, **App**, and **Dashboard** feel like old news.
-
-But Microsoft has done a "stealth upgrade" on them.
+MSFT has done a "stealth upgrade" on them.
 
 While the *names* stayed the same, the *engine* under the hood was completely replaced when **Fabric** arrived in 2024/2025.
 
@@ -750,7 +750,9 @@ The Big Shift: Direct Lake
 
 This is the one concept that definitely **wasn't** there before.
 
-Previously, you had to choose between **Import** (Fast but needs refresh) and **DirectQuery** (Slow but real-time). **Direct Lake** is the "Holy Grail" that only exists because of Fabric and OneLake. 
+Previously, you had to choose between **Import** (Fast but needs refresh) and **DirectQuery** (Slow but real-time). 
+
+**Direct Lake** is the "Holy Grail" that only exists because of Fabric and OneLake. 
 
 It allows the Power BI engine to reach into OneLake and read the data files directly—giving you the speed of Import with the freshness of DirectQuery.
 
@@ -770,7 +772,9 @@ One-Liner Summary of the "Evolution":
 
 ### You Better Have Questions
 
-To provide a "360-degree" discovery for any new dashboard, you need to look beyond the code. A successful discovery bridge the gap between **what is technically possible** and **what the business actually needs**.
+To provide a "360-degree" discovery for any new dashboard, you need to look beyond the code.
+
+A successful discovery bridge the gap between **what is technically possible** and **what the business actually needs**.
 
 Here is the distilled list of existing questions from your specific report, followed by a **Strategic Discovery Framework** for any future dashboard projects.
 
@@ -928,6 +932,6 @@ Here are the essential sections for a comprehensive **Technical Specification (T
 * **Term Mapping:** Mapping of technical column names to business labels (e.g., `sys_created_on` → `Incident Date`).
 * **Synonyms:** List of synonyms for Q&A (Natural Language) queries.
 
- The "Architect's Checklist"
+The "Architect's Checklist"
 
 If you are missing any of these sections, you have a **Technical Debt** risk.

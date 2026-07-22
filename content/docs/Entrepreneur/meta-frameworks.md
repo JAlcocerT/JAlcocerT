@@ -41,3 +41,18 @@ Although each framework serves a different purpose, they all answer the same fiv
 3. Who owns it? *(Accountability)*
 4. What decision is needed? *(Action)*
 5. What happens next? *(Trigger)*
+
+{{< details title="Converging vs Diverging 📌" closed="true" >}}
+
+
+{{< /details >}}
+
+{{< details title="Sync vs Async 📌" closed="true" >}}
+
+
+{{< /details >}}
+
+
+## Logic
+
+Unit Economics

@@ -2,7 +2,7 @@
 title: "Fluidssss"
 date: 2026-05-06
 draft: false
-tags: ["Fluid Dynamics","Betz","Volumetric Efficiency"]
+tags: ["Fluid Dynamics","Betz","Volumetric Efficiency","Bernuli"]
 description: 'The physics of fluids. With OpenFoam'
 url: 'fluids'
 math: true
@@ -43,6 +43,8 @@ https://www.youtube.com/watch?v=7xwODOr-xTo
 
 
 ## About Fluid Mechanics
+
+### Bernuli
 
 ### The Missing Half of the MBSD Picture
 

@@ -7,7 +7,9 @@ description: "Self-hosted tools can reduce coordination cost when they make smal
 
 Business tools change what a small team can coordinate.
 
-When notes, CRM, analytics, forms, automation, and communication are owned and integrated, the organization can handle more complexity without adding the same amount of overhead. But the maintenance burden also rises.
+When notes, CRM, analytics, forms, automation, and communication are owned and integrated, the organization can handle more complexity without adding the same amount of overhead. 
+
+But the maintenance burden also rises.
 
 Self-hosting helps when control lowers coordination cost.
 

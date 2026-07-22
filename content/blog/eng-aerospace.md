@@ -18,6 +18,8 @@ This is everything that I did (and what not) missed.
 
 ## Fluid Recap
 
+https://jalcocert.github.io/JAlcocerT/fluids/#the-governing-equations
+
 https://www.youtube.com/watch?v=KeTh-TIhL9M
 
 I tinkered a little bit with [fluid mechanics basics on this post](https://jalcocert.github.io/JAlcocerT/fluids/#the-governing-equations).
@@ -26,11 +28,7 @@ All to get the ICE with [a nicer model](https://jalcocert.github.io/JAlcocerT/fl
 
 ### Aerodynamics
 
-<!-- 
-https://youtube.com/shorts/RGh4EBOy-E0 
--->
 
-{{< youtube "RGh4EBOy-E0" >}}
 
 <!-- 
 https://youtube.com/shorts/fkx65D_QE7o
@@ -48,6 +46,35 @@ https://www.youtube.com/watch?v=o6FMjOl0TRA -->
 
 
 {{< youtube "o6FMjOl0TRA" >}}
+
+#### Stall Speed
+
+<!-- 
+https://www.youtube.com/watch?v=al8d8BU-rT0 -->
+
+{{< youtube "al8d8BU-rT0" >}}
+
+#### Spins
+
+Aka Barrena
+
+Much more dangerous than stalls
+
+#### Ground Effect
+
+<!-- 
+https://youtube.com/shorts/RGh4EBOy-E0 
+-->
+
+{{< youtube "RGh4EBOy-E0" >}}
+
+#### Prop wash
+
+<!-- 
+https://www.youtube.com/watch?v=1WDcEJ2DHBA 
+-->
+
+{{< youtube "1WDcEJ2DHBA" >}}
 
 ## Propulsion
 
