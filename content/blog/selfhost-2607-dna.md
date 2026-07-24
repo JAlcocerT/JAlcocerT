@@ -839,6 +839,8 @@ Databricks emphasizes data engineering and unified analytics beyond notebooks, w
 
 ### Geo Analytics
 
+
+
 https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#selfhosted-gpx
 
 1. GeoLibre - https://github.com/opengeos/GeoLibre that you can find https://geolibre.app/
@@ -858,6 +860,11 @@ https://www.youtube.com/watch?v=pK_fSEp_OzQ -->
 
 
 This is a good chance:
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/" title="TrackDays and GoPro Telemetry " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="GPS Telemetry from a GoPro | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro MetaData Magic 101 " image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 Firmware and comparison with GoPro" >}}
+{{< /cards >}}
 
 1. To have a look to [French Real estate again](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/#real-estate):
 

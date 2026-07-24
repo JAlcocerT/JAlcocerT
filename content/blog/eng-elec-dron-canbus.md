@@ -618,13 +618,18 @@ Safer than random cansend, but still not passive.
 
 Example for RPM on 11-bit OBD CAN is usually:
 
+
+```sh
 cansend can0 7DF#02010C0000000000
+```
 
   Expected response would be from something like 7E8:
 
   7E8 ... 04 41 0C ...
 
-  I would only do that after verifying can0 is up and you’re comfortable sending a standard diagnostic request. It’s normal OBD scanner behavior, not arbitrary control traffic.
+I would only do that after verifying can0 is up and you’re comfortable sending a standard diagnostic request. 
+
+It’s normal OBD scanner behavior, not arbitrary control traffic.
 
 ---
 
@@ -636,6 +641,8 @@ There is quite a lot of OSS for CAN bus reverse engineering, from SavvyCAN to ca
   {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor Dron x Telemetry ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor Dron x Telemetry ↗" icon="github" >}}
 {{< /cards >}}
+
+{{< youtube "q-BlvhkLqcU" >}}
 
 It is a rich ecosystem.
 
@@ -663,40 +670,40 @@ It is a Qt desktop CAN tool for capturing, saving, visualizing, reverse engineer
 
 SavvyCAN is a CAN bus analysis tool. You can use it to inspect, record, replay, decode, and reverse-engineer CAN traffic from vehicles, embedded devices, battery systems, motor controllers, chargers, etc.
 
-  Common things you can do:
+Common things you can do:
 
-  - Open CAN log files
-    Load captures like candump, GVRET, CSV, BusMaster, Microchip logs, Vector trace files, PCAP SocketCAN captures, and others.
-  - Watch live CAN traffic
-    Connect to CAN hardware through supported interfaces such as SocketCAN, GVRET/CANDue-style serial devices, PEAK, Vector, TinyCAN, and other Qt SerialBus drivers.
-  - Filter frames
-    Narrow traffic by CAN ID, bus, data pattern, timing, or message behavior.
-  - Graph signals
-    Plot byte values or decoded signals over time to find things like throttle position, brake state, speed, voltage, temperature, current, SOC, etc.
-  - Load DBC files
-    Import a .dbc database so raw CAN frames become named messages and signals.
-  - Create/edit DBC definitions
-    Useful when reverse-engineering an unknown vehicle/device network.
-  - Replay CAN captures
-    Play recorded traffic back into SavvyCAN or onto a real CAN interface, depending on your setup.
-  - Send custom CAN frames
-    Manually transmit specific IDs/data payloads for testing ECUs or devices.
-  - Compare logs
-    Compare two captures to find which messages changed between two conditions, for example “door open vs closed” or “pedal pressed vs released.”
-  - Sniff changing values
-    Use reverse-engineering tools to find frames/signals that correlate with a physical action.
-  - Decode protocols
-    It has tools for things like ISO-TP, UDS scanning, J1939-related handling, and firmware upload/testing workflows.
+- Open CAN log files
+  Load captures like candump, GVRET, CSV, BusMaster, Microchip logs, Vector trace files, PCAP SocketCAN captures, and others.
+- Watch live CAN traffic
+  Connect to CAN hardware through supported interfaces such as SocketCAN, GVRET/CANDue-style serial devices, PEAK, Vector, TinyCAN, and other Qt SerialBus drivers.
+- Filter frames
+  Narrow traffic by CAN ID, bus, data pattern, timing, or message behavior.
+- Graph signals
+  Plot byte values or decoded signals over time to find things like throttle position, brake state, speed, voltage, temperature, current, SOC, etc.
+- Load DBC files
+  Import a .dbc database so raw CAN frames become named messages and signals.
+- Create/edit DBC definitions
+  Useful when reverse-engineering an unknown vehicle/device network.
+- Replay CAN captures
+  Play recorded traffic back into SavvyCAN or onto a real CAN interface, depending on your setup.
+- Send custom CAN frames
+  Manually transmit specific IDs/data payloads for testing ECUs or devices.
+- Compare logs
+  Compare two captures to find which messages changed between two conditions, for example “door open vs closed” or “pedal pressed vs released.”
+- Sniff changing values
+  Use reverse-engineering tools to find frames/signals that correlate with a physical action.
+- Decode protocols
+  It has tools for things like ISO-TP, UDS scanning, J1939-related handling, and firmware upload/testing workflows.
 
-  A practical beginner workflow:
+A practical beginner workflow:
 
-  1. Open SavvyCAN.
-  2. Load a sample log from /home/jalcocert/Desktop/SavvyCAN/examples.
-  3. Look at the main frame list.
-  4. Try filtering by CAN ID.
-  5. Open graphing tools to plot bytes/signals.
-  6. Load a .dbc from the examples, such as ThinkCity.dbc or LeafPowertrainBus.dbc.
-  7. If you have CAN hardware, configure it under the connection window and capture live traffic.
+1. Open SavvyCAN.
+2. Load a sample log from /home/jalcocert/Desktop/SavvyCAN/examples.
+3. Look at the main frame list.
+4. Try filtering by CAN ID.
+5. Open graphing tools to plot bytes/signals.
+6. Load a .dbc from the examples, such as ThinkCity.dbc or LeafPowertrainBus.dbc.
+7. If you have CAN hardware, configure it under the connection window and capture live traffic.
 
 Be careful with sending frames on a real vehicle or live device.
 
@@ -706,61 +713,70 @@ I installed Qt locally in your home directory instead.
   
 Steps I ran:
 
+```sh
 cd /home/jalcocert/Desktop/SavvyCAN
+```
 
 Checked the project docs/scripts and confirmed it is a Qt5/qmake app requiring
 Qt 5.14+.
 
 Checked local tools:
 
+```sh
 command -v qmake
 command -v apt-get
 command -v g++
 command -v make
 command -v 7z
 command -v curl
-
+```
 qmake was missing, but g++, make, 7z, and curl were already installed.
 
 Tried system package update:
 
+```sh
 sudo -n apt-get update
+```
 
 That failed because sudo needs your password, so I avoided system install.
 
 Installed Qt locally:
-
+```sh
 ./install-qt.sh --version 5.15.2 --directory "$HOME/.local/Qt" qtbase
 qtdeclarative qtserialbus qtserialport qttools
-
+```
 Then qmake initially complained about missing ICU 56 libraries, so I installed
 Qt’s bundled ICU component:
 
+```sh
 ./install-qt.sh --force --version 5.15.2 --directory "$HOME/.local/Qt" icu
+```
 
 Generated the Makefile:
-
+```sh
 LD_LIBRARY_PATH="$HOME/.local/Qt/5.15.2/gcc_64/lib:$LD_LIBRARY_PATH" \
 "$HOME/.local/Qt/5.15.2/gcc_64/bin/qmake" CONFIG+=release
 PREFIX="$HOME/.local" SavvyCAN.pro
-
+```
 Built SavvyCAN:
 
+```sh
 make -j"$(nproc)"
-
+```
 That produced:
 
+```sh
 /home/jalcocert/Desktop/SavvyCAN/SavvyCAN
-
+```
 Checked runtime libraries:
-
+```sh
 file SavvyCAN
 ldd SavvyCAN | rg 'not found|Qt5|icu|xcb|GL'
-
+```
 No missing libraries showed up.
 
 Installed user-level launchers:
-
+```sh
 mkdir -p "$HOME/.local/share/applications" "$HOME/Desktop"
 
 sed \
@@ -771,15 +787,20 @@ sed \
 cp "$HOME/.local/share/applications/SavvyCAN.desktop" "$HOME/Desktop/
 SavvyCAN.desktop"
 chmod +x "$HOME/Desktop/SavvyCAN.desktop"
+```
 
 Refreshed desktop database if available:
 
+```sh
 update-desktop-database "$HOME/.local/share/applications"
+```
 
 Added terminal command:
 
+```sh
 mkdir -p "$HOME/.local/bin"
 ln -sf /home/jalcocert/Desktop/SavvyCAN/SavvyCAN "$HOME/.local/bin/SavvyCAN"
+```
 
 The repo includes several example CAN logs and DBC files in: `/home/jalcocert/Desktop/SavvyCAN/examples`
 
@@ -807,47 +828,49 @@ The `.dbc` files are the “decoder ring”: they turn raw CAN IDs/bytes into na
 
 {{% details title="DBC files and reverse engineering logs 🚀" closed="true" %}}
 
- good matching DBC can save you a lot of reverse engineering. It tells SavvyCAN things like:
+Good matching DBC can save you a lot of reverse engineering. 
 
-  - CAN ID 0x123 is “vehicle speed”
-  - byte/bit positions for each signal
-  - scale and offset, for example raw value 1234 = 61.7 km/h
-  - units
-  - signed/unsigned values
-  - sometimes enums, like gear position or door state
+It tells SavvyCAN things like:
 
-  So if you get a DBC that truly matches your exact car / model year / ECU network, SavvyCAN can decode raw frames into readable signals.
+- CAN ID 0x123 is “vehicle speed”
+- byte/bit positions for each signal
+- scale and offset, for example raw value 1234 = 61.7 km/h
+- units
+- signed/unsigned values
+- sometimes enums, like gear position or door state
 
-  But there are catches:
+So if you get a DBC that truly matches your exact car / model year / ECU network, SavvyCAN can decode raw frames into readable signals.
 
-  - A DBC for “Laguna Mk2” might not match every engine, year, trim, gearbox, or market.
-  - Cars often have multiple CAN buses: powertrain, body, multimedia, diagnostics. One DBC may cover only one.
-  - OBD port traffic may be gateway-filtered, so the DBC may describe messages you cannot see from OBD.
-  - Some DBCs are partial or community-made, so important signals may still be missing.
-  - Diagnostic data via UDS/OBD is different from normal broadcast CAN frames. A DBC usually describes broadcast frames, not every diagnostic request/response.
+But there are catches:
 
-  So the practical answer:
+- A DBC for “Laguna Mk2” might not match every engine, year, trim, gearbox, or market.
+- Cars often have multiple CAN buses: powertrain, body, multimedia, diagnostics. One DBC may cover only one.
+- OBD port traffic may be gateway-filtered, so the DBC may describe messages you cannot see from OBD.
+- Some DBCs are partial or community-made, so important signals may still be missing.
+- Diagnostic data via UDS/OBD is different from normal broadcast CAN frames. A DBC usually describes broadcast frames, not every diagnostic request/response.
 
-  - Exact DBC + correct bus = little or no reverse engineering.
-  - Partial/wrong DBC = still useful, but you’ll validate and fill gaps.
-  - No DBC = you reverse-engineer by logging actions and finding changing IDs/signals.
+So the practical answer:
 
-  For your use case, I’d still record baseline logs even with a DBC:
+- Exact DBC + correct bus = little or no reverse engineering.
+- Partial/wrong DBC = still useful, but you’ll validate and fill gaps.
+- No DBC = you reverse-engineer by logging actions and finding changing IDs/signals.
 
-  1. Ignition off.
-  2. Ignition on.
-  3. Engine running.
-  4. Press brake.
-  5. Turn indicators on/off.
-  6. Move steering.
-  7. Change gears if safe.
-  8. Drive slowly in a safe/private area if needed.
+For your use case, I’d still record baseline logs even with a DBC:
 
-  Then load the DBC and check whether decoded values make physical sense. For example, speed should be zero when stopped, RPM should match idle, brake switch should toggle when pressed.
+1. Ignition off.
+2. Ignition on.
+3. Engine running.
+4. Press brake.
+5. Turn indicators on/off.
+6. Move steering.
+7. Change gears if safe.
+8. Drive slowly in a safe/private area if needed.
+
+Then load the DBC and check whether decoded values make physical sense. 
+
+For example, speed should be zero when stopped, RPM should match idle, brake switch should toggle when pressed.
 
 {{% /details %}}
-
-
 
 Workflow would be:
 
@@ -861,9 +884,12 @@ Then connect SavvyCAN to socketcan / can0.
 
 This is better than staring at raw candump when frames are flowing.
 
-Also keep using can-utils: candump, cansniffer, cansend, canplayer. The official can-utils project is the standard Linux SocketCAN userspace toolkit. (github.com (https://github.com/linux-can/can-utils))
+Also keep using can-utils: candump, cansniffer, cansend, canplayer. 
+
+The official can-utils project is the standard Linux SocketCAN userspace toolkit. (github.com (https://github.com/linux-can/can-utils))
 
 For ELM327
+
 For Linux specifically, I’d use python-OBD or a serial terminal first, not a heavy desktop app. python-OBD works with ELM327 adapters and can query normal OBD-II values like RPM, speed, coolant temp, throttle, VIN, etc. 
 
 * https://github.com/brendan-w/python-OBD
@@ -893,11 +919,9 @@ Keep them conceptually separate.
 
 https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#what-actually-happens-in-the-valve
 
-
 https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101
 
 ![alt text](/blog_img/electronic/forgejo-electronics-mirror.png)
-
 
 ---
 
@@ -938,27 +962,27 @@ $$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
 
 ### IoT MQTT
 
+Want some real goodies?
+
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Get some of my time ↗" icon="user" >}}
 {{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer
 
+This is how i get temp and humidity going
+
+To measure [heat transfer through walls](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer) or whatever you want
 
 So:
 
-  - connected client from 192.168.1.15 = yes
-  - active Pico message traffic right now = not observed in the brief trace
+- connected client from `192.168.1.15` = yes
+- active Pico message traffic right now = not observed in the brief trace
 
-  If you want, I can keep a live trace running for longer or check the exact topic the Pico should be publishing to.
+If you want, I can keep a live trace running for longer or check the exact topic the Pico should be publishing to.
 
-─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+These are the commands I ran from the host to confirm it:
 
-› can you share with me the commands you run on the container to confirmed all that?
-
-
-• Yes. These are the commands I ran from the host to confirm it:
-
+```sh
   docker ps --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}'
   docker ps -a --format 'table {{.Names}}\t{{.Image}}\t{{.Status}}\t{{.Ports}}'
 
@@ -986,72 +1010,76 @@ So:
   docker exec emqx sh -lc '/opt/emqx/bin/emqx_ctl trace stop topic pico/temperature/dht22 >/dev/null 2>&1; /opt/emqx/bin/emqx_ctl trace start topic pico/# /tmp/pico-all.trace info json 2>&1 | sed -n
   "1,120p"'
   sleep 5; docker exec emqx sh -lc 'wc -c /tmp/pico-all.trace 2>/dev/null; echo ---; sed -n "1,120p" /tmp/pico-all.trace 2>/dev/null'
+```
 
-  A couple of the key ones:
+A couple of the key ones:
 
-  - emqx_ctl clients list to see connected clients
-  - emqx_ctl topics list to see active topics in broker state
-  - emqx_ctl trace start topic ... to watch live publishes
+- emqx_ctl clients list to see connected clients
+- emqx_ctl topics list to see active topics in broker state
+- emqx_ctl trace start topic ... to watch live publishes
 
 
+```sh
 docker exec emqx sh -lc '/opt/emqx/bin/emqx_ctl clients list'
   docker exec emqx sh -lc '/opt/emqx/bin/emqx_ctl topics list'
   docker exec emqx sh -lc '/opt/emqx/bin/emqx_ctl trace start topic pico/# /tmp/pico.trace info json'
+```
 
-  To check whether messages arrived after starting the trace:
+To check whether messages arrived after starting the trace:
 
-  sleep 5
-  docker exec emqx sh -lc 'wc -c /tmp/pico.trace; echo ---; sed -n "1,120p" /tmp/pico.trace'
+```sh
+sleep 5
+docker exec emqx sh -lc 'wc -c /tmp/pico.trace; echo ---; sed -n "1,120p" /tmp/pico.trace'
+```
 
-  To stop the trace:
+To stop the trace:
 
-  docker exec emqx sh -lc '/opt/emqx/bin/emqx_ctl trace stop topic pico/#'
+```sh
+docker exec emqx sh -lc '/opt/emqx/bin/emqx_ctl trace stop topic pico/#'
+```
 
-  If you want a single command for live monitoring, I can give you a one-liner that loops and shows new trace output as it lands.
+If you have mosquitto_sub installed:
 
-  The usual way is to open a long-lived subscriber and keep it connected.
+```sh
+mosquitto_sub -h 127.0.0.1 -p 1883 -t 'pico/#' -v
+```
+That will stay open and print every message on any pico/... topic.
 
-  If you have mosquitto_sub installed:
+Useful variants:
 
-  mosquitto_sub -h 127.0.0.1 -p 1883 -t 'pico/#' -v
+- All topics:
 
-  That will stay open and print every message on any pico/... topic.
+```sh
+mosquitto_sub -h 127.0.0.1 -p 1883 -t '#' -v
+```
 
-  Useful variants:
+- Only one sensor topic:
 
-  - All topics:
+```sh
+mosquitto_sub -h 127.0.0.1 -p 1883 -t 'pico/temperature/dht22' -v
+```
+- Show connection/debug details:
+```sh
+mosquitto_sub -h 127.0.0.1 -p 1883 -t 'pico/#' -v -d
+```
+If you need TLS on EMQX:
 
-    mosquitto_sub -h 127.0.0.1 -p 1883 -t '#' -v
+```sh
+mosquitto_sub -h 127.0.0.1 -p 8883 --cafile ca.crt -t 'pico/#' -v
+```
 
-  - Only one sensor topic:
+I found it here: `poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite`
 
-    mosquitto_sub -h 127.0.0.1 -p 1883 -t 'pico/temperature/dht22' -v
+What I verified:
 
-  - Show connection/debug details:
-
-    mosquitto_sub -h 127.0.0.1 -p 1883 -t 'pico/#' -v -d
-
-  If you need TLS on EMQX:
-
-  mosquitto_sub -h 127.0.0.1 -p 8883 --cafile ca.crt -t 'pico/#' -v
-
-  If mosquitto_sub is not installed, I can give you the equivalent using a container or another MQTT client.
-
-
-  I found it here:
-
-  - poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite
-
-  What I verified:
-
-  - It has a readings table.
-  - It currently contains 40 rows.
-  - The newest rows are from 2026-06-07, including:
-      - pico/temperature/dht22
-      - pico/humidity/dht22
-      - pico/temperature/internal
-      - esp32/temperature/dht11
-      - esp32/humidity/dht11
+- It has a readings table.
+- It currently contains 40 rows.
+- The newest rows are from 2026-06-07, including:
+    - pico/temperature/dht22
+    - pico/humidity/dht22
+    - pico/temperature/internal
+    - esp32/temperature/dht11
+    - esp32/humidity/dht11
 
 ```sh
 mosquitto_sub -h 127.0.0.1 -p 1883 -t 'pico/temperature/dht22' -v
@@ -1099,6 +1127,8 @@ A DC boost does the oppositee of [a buck converter](https://jalcocert.github.io/
 A **ram pump** does sth similar to the DC boost but with fluids!
 
 #### Buck Converter
+
+You got one of those to lower the voltage inside your dron electronics to the 5V that they like :)
 
 ### STM32G431 vs ESP32
 
@@ -1246,6 +1276,7 @@ Once those 3 camera wires are soldered and the motors are plugged in, you screw 
 
 
 * **The Reality:** PH2.0 is an old toy-drone connector style that has high electrical resistance. It causes "voltage sag," meaning your drone thinks the battery is dead even when it isn't.
+
 * **The Modern Way:** Modern 1S flight controllers (like the BetaFPV or HappyModel ones we talked about) come with a **BT2.0 connector** pre-soldered right out of the box. You buy BT2.0 batteries (like the Tattu or BetaFPV Lava listed there) and plug them directly in. Buying adapters just adds dead weight and ruins your flight performance.
 
 * **The Caddx Ant Camera:** Keep this. It remains the absolute king of budget analog cameras.
@@ -1290,15 +1321,20 @@ Since 2008, all cars sold are legally required to use this specific pair of wire
 
 3. The Manufacturer Wildcards (Discretionary)
 
-The regulatory bodies left these pins entirely unassigned. Car manufacturers can use them for whatever proprietary internal factory tasks they want.
+The regulatory bodies left these pins entirely unassigned. 
+
+Car manufacturers can use them for whatever proprietary internal factory tasks they want.
 
 * **Pins 1, 3, 8, 9, 11, 12, 13:** These are often empty, but if a wire is attached, it’s a dealer secret. For example, BMW often uses Pin 8 as a secondary K-Line for body electronics/infotainment, Ford uses Pin 3 for a secondary Medium-Speed CAN network, and some modern cars map these out to a hidden Ethernet line for fast flashing.
 
 4. Legacy Diagnostic Protocols (The History)
 
-Before CAN bus became the absolute king in 2008, different car companies used completely different physical languages to communicate. If you look inside older cars, you'll find pins wired up here instead of pins 6 and 14:
+Before CAN bus became the absolute king in 2008, different car companies used completely different physical languages to communicate. 
+
+If you look inside older cars, you'll find pins wired up here instead of pins 6 and 14:
 
 * **Pin 2 & Pin 10 (`SAE J1850`):** Used mostly by older Ford (PWM method) and General Motors/Chrysler (VPW method) vehicles.
+
 * **Pin 7 & Pin 15 (`ISO 9141-2 / K-Line`):** The old standard used by European and Asian imports up until the mid-2000s. Pin 7 (K-Line) handled bidirectional commands, while Pin 15 (L-Line) acted like an alarm clock to wake up the car's computer before testing began.
 
 | Pin | Standard Assignment | What it Does in Modern Cars |

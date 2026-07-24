@@ -2,7 +2,7 @@
 title: "Selfhosted Tools for your Car"
 date: 2027-02-05
 draft: false
-tags: ["OpenPilot","LubeLog"]
+tags: ["OpenPilot","LubeLog","Canbus Mapping","GPS"]
 description: 'A look to F/OSS '
 url: 'open-source-car-tools'
 ---
@@ -10,6 +10,66 @@ url: 'open-source-car-tools'
 https://github.com/hargata/lubelog
 
 https://github.com/commaai/openpilot
+
+
+https://fossengineer.com/savvycan-canbus-reverse-engineering/
+https://fossengineer.com/opendbc-python-api-for-your-car/
+
+### Wiring a Canbus Properly
+
+
+To sniff and reverse-engineer CAN messages from a Renault, you only need **3 connections** between your USB CAN FD analyzer and the male OBD-II plug:
+
+1. Required Wiring Setup
+
+| USB CAN FD Terminal | Plug Connection | OBD-II Male Plug Pin |
+| --- | --- | --- |
+| **`CAN H >`** | Connects to | **Pin 6** (CAN High) |
+| **`CAN L >`** | Connects to | **Pin 14** (CAN Low) |
+| **`GND`** ($\stackrel{\text{}}{\text{⏚}}$) | Connects to | **Pin 4** or **Pin 5** (Ground) |
+
+> **Note on Power:** You do **not** need to connect the vehicle's +12V (Pin 16) to this analyzer. The USB port on your laptop powers the board completely.
+
+2. Pin Identification on Your Male Plug
+
+When looking at the **front face** of your male OBD-II plug (pins pointing toward you, wider edge on top):
+
+```text
+       WIDER TOP EDGE
+  ┌─────────────────────────────────┐
+  │ 1   2   3  [4] [5] [6]  7   8   │  <- Pins 4, 5, 6 (Top row)
+   \ 9  10  11  12  13 [14] 15  16 /   <- Pin 14 (Bottom row)
+    └───────────────────────────────┘
+
+```
+
+* **Pin 6 ($CAN\_H$):** 6th pin from the left on the top row.
+* **Pin 14 ($CAN\_L$):** 6th pin from the left on the bottom row (directly below Pin 6).
+* **Pin 4 or 5 ($GND$):** 4th or 5th pin from the left on the top row.
+
+
+<!-- 
+https://youtube.com/shorts/q-BlvhkLqcU -->
+
+{{< youtube "q-BlvhkLqcU" >}}
+
+
+3. Recommended Settings for Reverse Engineering
+
+1. **Baud Rate:** High-Speed powertrain CAN on most Renault vehicles operates at **500 kbps** (500,000 bps).
+2. **Termination Resistor ($120\,\Omega$):** Since you are plugging into an active, already-terminated vehicle bus, you generally **do not** need to enable an extra $120\,\Omega$ resistor on your USB tool. If you experience frame drops or errors, test with the $120\,\Omega$ jumper/setting enabled.
+3. **Software:** You can use tools like **SavvyCAN**, **CANDump / SocketCAN** (Linux), or the dedicated software provided with your USB-CAN tool to record and analyze traffic when pressing buttons, changing gears, or starting the engine.
+
+
+## Conclusions
+
+When was the last time tat you questioned if you are optimizing sth that is worth to be optimized?
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled free value!" >}}
+{{< /cards >}}
+
 
 ## FAQ
 
