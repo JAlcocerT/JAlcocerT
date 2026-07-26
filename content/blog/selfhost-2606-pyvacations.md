@@ -159,6 +159,16 @@ cd ./poc/z-poc-trip-planner-adk
 
 ## FAQ
 
+
+```sh
+cd ./poc/z-poc-trip-planner-v4
+make help
+make trip-bake #npm run bake:trip
+#make trip-deploy CF_PROJECT=trip-planner
+make trip-ship CF_PROJECT=trip-planner
+#npx wrangler pages deploy out --project-name=trip-planner --branch=main
+```
+
 ### Other Trip Apps
 
 * https://github.com/mauriceboe/TREK

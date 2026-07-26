@@ -47,9 +47,10 @@ And if for some reason you are no table to do **port forwarding** with your home
 
 ## GL-MT3000 Travel Router
 
-The [GL.iNet](https://www.gl-inet.com/community/) GL-MT3000 has been a very interestin surprise this year.
+The [GL.iNet](https://www.gl-inet.com/community/) GL-MT3000 has been a very interesting surprise this year.
 
 * It uses OpenWRT as firmware and has AX3000 Wifi6 capabilities
+* Consumes ~2/3 W
 * Currently using it with 
 
 > The **forum** was very helpful [here ](https://forum.gl-inet.com/t/gl-mt3000-stops-working-when-connecting-to-tailscale-exit-node/34146) and [here](https://forum.gl-inet.com/t/beryl-ax-gl-mt3000-using-a-tailscale-exit-node/47744)

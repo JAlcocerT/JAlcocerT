@@ -1,6 +1,6 @@
 ---
 title: "ESP32 projects benefit from power-aware design"
-date: 2026-07-20
+date: 2026-08-20
 tags: ["esp32", "iot", "solar"]
 description: "Microcontroller projects become field-ready when power, sleep, sensing, and communication are designed together."
 ---

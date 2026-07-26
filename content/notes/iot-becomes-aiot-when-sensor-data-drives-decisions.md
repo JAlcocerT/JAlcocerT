@@ -1,6 +1,6 @@
 ---
 title: "IoT becomes AIoT when sensor data drives decisions"
-date: 2026-07-23
+date: 2026-08-23
 tags: ["iot", "aiot", "automation"]
 description: "AIoT is useful when models transform sensor data into decisions, predictions, or actions."
 ---
