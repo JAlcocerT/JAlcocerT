@@ -1,6 +1,6 @@
 ---
 title: "Waiting lists are demand tests when they qualify intent"
-date: 2026-08-01
+date: 2026-09-01
 tags: ["waiting-list", "leads", "product"]
 description: "A waiting list is useful when it captures who wants the product, why, and how urgently."
 ---

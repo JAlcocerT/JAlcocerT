@@ -1,6 +1,6 @@
 ---
 title: "Python desktop apps can be bridges to native UI"
-date: 2026-08-10
+date: 2026-09-10
 tags: ["desktop-apps", "python", "flutter"]
 description: "Python-first desktop tools can reach richer interfaces when paired with native or cross-platform UI layers."
 ---

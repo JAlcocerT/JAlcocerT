@@ -1,16 +1,16 @@
 ---
 title: "Batteries 101"
-date: 2026-08-15
+date: 2026-08-01
 draft: false
-tags: ["Bluetti elite 30 v2","DC Motor","Cupra"]
-description: '.'
+tags: ["Bluetti elite 30 v2","DC Motor","Cupra","LiPo vs Li-Ion","BLE"]
+description: 'Another rabbit-hole. Understanding batteries with the 18860 x ESP32.'
 url: 'understanding-batteries'
 math: true
 ---
 
 **TL;DR**
 
-
+Ive ended up learning sth about batteries thx to the fpv drones, electric car tests and a now bluetti.
 
 **Intro**
 
@@ -26,15 +26,14 @@ You are dealing with three distinctly different types of lithium battery chemist
 
 Each one is engineered for a completely different purpose: one values balanced driving performance, one is built for extreme safety and longevity, and the other is optimized for pure, lightweight power.
 
-
-
 ### Car batteries
 
-The EV you rented uses **Lithium NMC** chemistry.
+The EV I rented uses **Lithium NMC** chemistry.
 
 * **The Goal:** Maximizing energy density (range) while keeping weight reasonable.
-* **How it compares:** NMC batteries can pack a massive amount of energy into a heavy vehicle chassis. They offer incredible power delivery for acceleration and handle fast-charging stations well. However, they are chemically more sensitive than your Bluetti—which is why EV manufacturers built in software buffers (the "zombie cells" we talked about) and recommend only charging them to 80% or 90% for daily use to prevent faster degradation.
+* **How it compares:** NMC batteries can pack a massive amount of energy into a heavy vehicle chassis. They offer incredible power delivery for acceleration and handle fast-charging stations well.
 
+However, they are chemically more sensitive than your Bluetti—which is why EV manufacturers built in software buffers (the "zombie cells" we talked about) and recommend only charging them to 80% or 90% for daily use to prevent faster degradation.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/" title="Civic 6" image="/blog_img/outro/honda-road.jpg" subtitle="With car analytics" >}}
@@ -47,20 +46,27 @@ The financial and energy breakdown for a trip in the Cupra EV::
 * **Energy Consumption:** **$13.03 \text{ kWh}$ per $100 \text{ km}$** (or $0.13 \text{ kWh}$ per single km).
 * **Financial Running Cost:** **$0.05 \text{ USD}$ per km** (which translates to $4.98 \text{ USD}$ per $100 \text{ km}$, or roughly $0.50 \text{ NOK}$ per km based on the total $811.40 \text{ NOK}$ spent over the $1630 \text{ km}$ trip).
 
-
 ### Bluetti 
 
 Your portable power station utilizes **LiFePO4** chemistry. LFP (Lithium Iron Phosphate)
 
 * **The Goal:** Absolute longevity, safety, and stability.
-* **How it compares:** This is the marathon runner of the group. LFP batteries can easily handle 3,000 to 3,500+ charge cycles before dropping to 80% health (compared to the ~1,000 to 1,500 typical of an automotive NMC battery). They are highly resistant to thermal runaway (catching fire) and you can safely charge them to 100% regularly without heavily damaging their lifespan. The trade-off? They are significantly heavier and bulkier per kWh than NMC, which is fine for a power station sitting on the ground, but tougher for a nimble sports car.
+* **How it compares:** This is the marathon runner of the group. LFP batteries can easily handle 3,000 to 3,500+ charge cycles before dropping to 80% health (compared to the ~1,000 to 1,500 typical of an automotive NMC battery). 
+
+They are highly resistant to thermal runaway (catching fire) and you can safely charge them to 100% regularly without heavily damaging their lifespan.
+
+The trade-off? They are significantly heavier and bulkier per kWh than NMC, which is fine for a power station sitting on the ground, but tougher for a nimble sports car.
 
 ### A 1S Drone 
 
 A tiny 1S drone battery uses **LiPo** or **LiHV** chemistry. (Lithium Polymer / Lithium High Voltage).
 
 * **The Goal:** Maximum power punch with absolute minimum weight.
-* **How it compares:** Drones need to fight gravity, so weight is the enemy. LiPo batteries don't use a heavy rigid metal casing like your car or Bluetti cells; instead, they use a soft polymer pouch. They have a massive "C-rating," meaning they can discharge almost their entire capacity in just 3 to 5 minutes of aggressive flying without melting. The catch is that they are fragile, have a short lifespan (often showing degradation after just 100–200 cycles), and require strict care (like discharging them to a storage voltage of 3.8V when not in use) to prevent them from puffing up or becoming fire hazards.
+* **How it compares:** Drones need to fight gravity, so weight is the enemy. LiPo batteries don't use a heavy rigid metal casing like your car or Bluetti cells; instead, they use a soft polymer pouch.
+
+They have a massive "C-rating," meaning they can discharge almost their entire capacity in just 3 to 5 minutes of aggressive flying without melting. 
+
+The catch is that they are fragile, have a short lifespan (often showing degradation after just 100–200 cycles), and require strict care (like discharging them to a storage voltage of 3.8V when not in use) to prevent them from puffing up or becoming fire hazards.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/" title="DJI Tello 101" image="/blog_img/outro/honda-road.jpg" subtitle="With car analytics" >}}
@@ -89,7 +95,9 @@ Instead of using a rigid metal cylinder (like your 18650 cells) or a massive hea
 
 * **Compared to your 1S Drone:** Your drone also uses soft LiPo pouches for pure weight savings, but your drone battery is optimized for *explosive discharge* (high C-rate) to fight gravity, meaning it degrades within 150–200 cycles. 
 
-Your laptop and Pixel 8 batteries are optimized for *slow, steady endurance* (low C-rate). They are built to cycle about 800 to 1,000 times before dropping to 80% health.
+Your laptop and Pixel 8 batteries are optimized for *slow, steady endurance* (low C-rate). 
+
+They are built to cycle about 800 to 1,000 times before dropping to 80% health.
 
 * **Compared to your 18650:** While an 18650 is rugged and tough to puncture because of its steel armor shell, a laptop or phone battery is physically vulnerable. 
 
@@ -117,11 +125,15 @@ So, in your current setup, you've got an incredibly diverse, high-tech battery e
 
 If your "flat 3V" is a shiny, button-shaped battery like a CR2032 (often found in PC motherboards, car key fobs, or small smart home sensors), it is a **Lithium Manganese Dioxide ($\text{Li-MnO}_2$)** disposable cell.
 
-* **The Chemistry:** Unlike your rechargeable phone or drone, this is a **primary (non-rechargeable)** lithium chemistry. It uses lithium metal as the anode and manganese dioxide as the cathode.
+* **The Chemistry:** Unlike your rechargeable phone or drone, this is a **primary (non-rechargeable)** lithium chemistry. 
+
+It uses lithium metal as the anode and manganese dioxide as the cathode.
 
 * **The Voltage:** It sits perfectly at **$3.0\text{V}$ nominal** when fresh (often reading around $3.2\text{V}$ or $3.3\text{V}$ on a multimeter).
 
-* **The Design Intent:** It is engineered for ultra-low, steady power drain over an incredibly long time (sometimes lasting 5 to 10 years in a device that sleeps most of the time). It cannot dump massive current like an 18650 or your drone battery; if you try to draw a lot of power out of it quickly, the voltage will collapse instantly.
+* **The Design Intent:** It is engineered for ultra-low, steady power drain over an incredibly long time (sometimes lasting 5 to 10 years in a device that sleeps most of the time).
+
+It cannot dump massive current like an 18650 or your drone battery; if you try to draw a lot of power out of it quickly, the voltage will collapse instantly.
 
 * The Multimeter Battery: **9V Rectangular Block**
 
@@ -131,7 +143,9 @@ Traditional standalone 5V batteries don't really exist in consumer electronics, 
 
 * **The Chemistry:** If it's a standard supermarket battery, it's **Alkaline** (Zinc/Manganese Dioxide). Inside that rectangular 9V shell, there are actually **six tiny 1.5V cells** stacked in a row (series) to add up to $9\text{V}$.
 
-* **Why it's in your multimeter:** Multimeters need to measure high resistance and test things like diodes or LEDs. To do that, the meter needs to push a small "sensing voltage" out of its probes into the component you are testing. A 1.2V AA or a 1.5V cell isn't high enough voltage to illuminate or read many types of diodes, but a 9V source gives the multimeter plenty of headroom to do its job.
+* **Why it's in your multimeter:** Multimeters need to measure high resistance and test things like diodes or LEDs. To do that, the meter needs to push a small "sensing voltage" out of its probes into the component you are testing. 
+
+A 1.2V AA or a 1.5V cell isn't high enough voltage to illuminate or read many types of diodes, but a 9V source gives the multimeter plenty of headroom to do its job.
 
 * **The Behavior:** These are also non-rechargeable primary cells. They have very low self-discharge, which is why your multimeter can sit in a drawer for two years and still turn on perfectly when you need it.
 
@@ -155,8 +169,10 @@ If you have an older cordless drill or a landline cordless phone from the 2000s 
 
 * **The Reality:** This chemistry is largely being phased out because cadmium is highly toxic. These were the infamous batteries that suffered from the **"memory effect"**—if you didn't fully empty them before recharging, they would "forget" their full capacity and lose their runtime drastically. Lithium completely solved this issue.
 
-
 ## Testing the Bluetti v2
+
+
+### Bluetti x MQTT x BLE
 
 
 
@@ -181,3 +197,19 @@ If you have an older cordless drill or a landline cordless phone from the 2000s 
 
 What is this for?
 
+
+### ESP32 x 18860
+
+Ive been doing one more experiment around battery duration
+
+### Tomatoes x Bluetti
+
+Coming from [this section](https://jalcocert.github.io/JAlcocerT/electr-diode/#tomatoes) for the tomatoes.
+
+They already gave me x2 harvests, say ~1kg total (first bigger)
+
+---
+
+## FAQ
+
+### 

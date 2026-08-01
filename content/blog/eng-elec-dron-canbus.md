@@ -1094,15 +1094,13 @@ At 3 months, they went from [yellow shades to orange](https://youtube.com/shorts
 
 {{< youtube "_YBjNO8urfE" >}}
 
-
 #### Tomatoes x Solar
 
 Want a  a micro-scale proof of concept for energy independence right on your balcony?
 
-
 I got a `elite 30 v2` battery which i can use with solar panels or as USP (SAI) for my home-lab.
 
-Oh...and i can integrate it via mqtt:
+Oh...and i can integrate it via mqtt with ESP32's:
 
 * https://www.reddit.com/r/esp32/comments/xsv2zz/bluetti_db_bridge_a_esp32_based_bluetooth_and/
 * https://github.com/SSMCD/bluetti2mqtt

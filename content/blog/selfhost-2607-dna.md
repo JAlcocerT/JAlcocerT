@@ -7,6 +7,8 @@ description: 'Selfhosting D&A Tools. WrenAI, Rill and Vanna mean nothing w/o a p
 url: 'selfhosting-data-analytics'
 ---
 
+https://github.com/TabularEditor/TabularEditor/releases
+
 **Tl;DR**
 
 D&A is more about semantics than you could think in the first place:
@@ -839,8 +841,6 @@ Databricks emphasizes data engineering and unified analytics beyond notebooks, w
 
 ### Geo Analytics
 
-
-
 https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#selfhosted-gpx
 
 1. GeoLibre - https://github.com/opengeos/GeoLibre that you can find https://geolibre.app/
@@ -874,6 +874,16 @@ This is a good chance:
 
 
 2. To check how household income is evolving in spain as [a recap of this post](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/)
+
+3. To use PyRouteTracker against more karting or trackday data:
+
+{{< callout type="warning" >}}
+Just this GoPro telemetry bc doing the reverse engineering to a Laguna mk2 was tricky and doing `candump` turned off the car before going to spa
+{{< /callout >}}
+
+4. Just imagine how a Drone x GPS could be:
+
+5. Phyphox take off data:
 
 ### Tomatoes Progress
 

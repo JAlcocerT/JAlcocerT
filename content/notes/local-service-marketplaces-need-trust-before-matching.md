@@ -1,6 +1,6 @@
 ---
 title: "Local service marketplaces need trust before matching"
-date: 2026-08-01
+date: 2026-09-01
 tags: ["marketplaces", "lead-generation", "services"]
 description: "A local service marketplace works only when both sides trust the request, provider, and price signal."
 ---

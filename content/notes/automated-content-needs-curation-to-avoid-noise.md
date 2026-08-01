@@ -1,6 +1,6 @@
 ---
 title: "Automated content needs curation to avoid noise"
-date: 2026-08-01
+date: 2026-10-01
 tags: ["content", "social-media", "automation"]
 description: "Automated content is valuable only when curation preserves quality, point of view, and audience fit."
 ---

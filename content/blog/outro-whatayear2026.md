@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-07-24
+date: 2026-08-24
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -9,8 +9,9 @@ url: 'tech-recap-2026'
 
 la hula kula
 
-https://youtu.be/2xAx08rBejc
+<!-- https://youtu.be/2xAx08rBejc -->
 
+{{< youtube "2xAx08rBejc" >}}
 
 
 otto vs atkinson vs miller https://www.youtube.com/watch?v=2SyONV_EruQ
@@ -475,7 +476,10 @@ So what?
 
 You can now [simulate engine vibrations](https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/) fully as code:
 
-{{< youtube "1WzRJM8HVKg" >}}
+
+{{< youtube "QQq3d_QHmns" >}}
+<!-- 
+{{< youtube "1WzRJM8HVKg" >}} -->
 
 Oh, but ive done simulations not only for mechanisms: https://ebooks.jalcocertech.com/books/mechanism-analytics/
 
@@ -501,7 +505,7 @@ You can get to know [how the rays of sun](https://jalcocert.github.io/JAlcocerT/
 
 and plug to that some [iot to measure heat transfer](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer)
 
-12. Geolocation - Geospatial data recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and HUD video overlays.
+12. Geolocation - [Geospatial data](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#geo-analytics) recap [for racing](https://jalcocert.github.io/JAlcocerT/blog/tinker-racing/) and HUD video overlays.
 
 This was huge.
 
@@ -512,7 +516,9 @@ From the initial public repo, I created another one:
   {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
 {{< /cards >}}
 
-I made some **HUD overlays for GoPro videos** to have their telemetry in place, without having to use closed sourced apps that in most cases dont work on Linux.
+I made some **HUD overlays for GoPro videos** to have their telemetry in place
+
+all without having to use closed sourced apps that in most cases dont work on Linux.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/coolresources/race/#geo-data" title="Geo | Docs ↗" >}}
@@ -524,7 +530,6 @@ The results?
 Well, a first [Go Desktop App](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails) that makes this: *with Wails*
 
 {{< youtube "M03HU4DWhyE" >}}
-
 
 13. So was coming back to maps, but with animations this time:
 
@@ -760,7 +765,9 @@ Trying for the first time the mac ecosystem was also interesting.
 
 3. [Big Data x IoT](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk)
 
-4. 
+4. Dron Telemetry
+
+5. Tomatoes IoT
 
 99. Duckdb x motherduck
 
