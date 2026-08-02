@@ -1,21 +1,12 @@
 ---
 title: "Crops Intelligence in the AI era"
-date: 2026-08-15
+date: 2026-08-13
 draft: false
 tags: ["IoT x DHT22","MQTT x EMQx","JAlcocerTech Leads","18650 x solar","Tech Talk"]
-description: 'The learning after planting tomatoes. Ready to scale.'
+description: 'All the learning after planting tomatoes. Ready to scale.'
 url: 'iot-crop-intelligence'
 math: true
 ---
-
-A 15W solar panel setup is great: 
-<!-- 
-https://youtu.be/oPznvdWmcTQ -->
-
-{{< youtube "oPznvdWmcTQ" >}}
-
-
-Just that sometimes, there is not enough juice
 
 **TL;DR**
 
@@ -25,8 +16,27 @@ Then this happened...
 
 **Intro**
 
+With this chaotic selflearning project, ive made:
+
+1. An [electromagnetism recap to avoid frying my esp32](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#how-to-avoid-frying-an-esp32-due-to-kickback)
+2. Some simulations around PySpice: here and here
+3. 
 
 ## The setup
+
+
+A 15W solar panel setup is great: 
+<!-- 
+https://youtu.be/oPznvdWmcTQ -->
+
+{{< youtube "oPznvdWmcTQ" >}}
+
+
+Just that sometimes, there is not enough juice for the ESP32's
+
+And you'll want to measure temp and humidity during the night as well
+
+But without the 250$ of [a bluetti](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#tomatoes-x-bluetti)
 
 
 
@@ -35,6 +45,20 @@ Then this happened...
 1. DHT22 - For air temp & humidity
 2. - Soil humidity
 3. MLX - If you want leave temp
+
+#### More BoM
+
+4. Battery 18650 - *I got Samsung 35E (INR18650-35E)*
+5. ESP32
+6. Solar panel
+7. TP4056 x DW01A
+
+* **TP4056** = Stops it from going above $4.2\text{V}$ (Overcharge Protection).
+* **DW01A Circuit** = Stops it from dropping below ~$2.4\text{V}$ (Over-discharge Protection).
+
+> With a  `AZDelivery board` has **both**, the Samsung 35E battery is 100% safe in both directions!
+
+The TP with the ~3400mha battery + esp32 deepsleep will take you without power connection to a [lifetime of ~9 days as per my experiment](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#esp32-x-18650)
 
 ### The Software for D&A
 
@@ -84,8 +108,31 @@ Tomatoes continued, and after week ~13:
 
 {{< youtube sCrMm5sLG-w >}}
 
+I got a couple of harvests:
+
+{{< youtube sCrMm5sLG-w >}}
+
+{{< callout type="info" >}}
+The yield so far ~1kg tomatoes out of xyz plants and xyz kg of soil and ~ L of water
+{{< /callout >}}
+
+You can buy that kg for xyz $ in the market, so for next season there is definitely room for improvements!
 
 ### Interesting yt channels
 
 1. https://www.youtube.com/@FarmCraft101/videos
 2. https://www.youtube.com/@kirstendirksen/videos
+
+---
+
+## FAQ
+
+Tomatoe one timer?
+
+1. Get them sun
+2. Get them water in the early morning
+3. Get them space for the roots: ~20L for 1 plant worked well for me
+
+### Tomatoe Prep for Next Year
+
+What would I do different next year?

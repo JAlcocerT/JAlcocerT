@@ -1,9 +1,9 @@
 ---
-title: "[AIoT] How to use LangChain to QnA Sensor Data"
-date: 2026-08-15T21:20:21+01:00
+title: "[AIoT] How to QnA Sensor Data"
+date: 2026-08-14T21:20:21+01:00
 draft: false
 tags: ["DB2Rest","ekuiper","Embeded Analytics","Roadmap26 x Tech Talk"]
-description: 'Using LangChain to get Temperature & Humidity data from a DHT22 sensor.'
+description: 'Using LangChain/ADK to get Temperature & Humidity data from a DHT22 sensor.'
 url: 'langchain-chat-with-sensor-data'
 ---
 

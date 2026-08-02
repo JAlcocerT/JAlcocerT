@@ -1,9 +1,9 @@
 ---
-title: "Selfhosting Business Tools vs Coasean Ceiling "
+title: "Selfhosting Business Tools vs Coasean Ceiling"
 date: 2026-09-01T23:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Notes","Marketing","No Code","Link Shortener x Web Analytics"]
-description: 'Computer '
+description: 'Are certifications still worth it?'
 url: 'selfhosting-business'
 ---
 
@@ -329,3 +329,16 @@ Or just via bluetooth: https://github.com/permissionlesstech/bitchat
 {{< /cards >}}
 
 ### About The Coasean Ceiling
+
+
+### Certifications and CVs
+
+I registered to `Claude Certified Architect –Foundations`
+
+* https://anthropic-partners.skilljar.com/ai-fluency-framework-foundations
+
+```sh
+cd C:\Users\j--e-\Desktop\claude-architect
+python -m http.server 8080
+#then open http://localhost:8080.
+```

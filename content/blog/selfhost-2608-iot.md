@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted IoT x HA"
-date: 2026-08-20
+date: 2026-08-15
 draft: false
 tags: ["Home Assistant x EMQX","Sonoff x Zigbee","Tinkering IRL","M2M","Tech Talk"]
 description: 'A homelab around IoT and sensors.'

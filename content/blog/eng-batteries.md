@@ -2,15 +2,15 @@
 title: "Batteries 101"
 date: 2026-08-01
 draft: false
-tags: ["Bluetti elite 30 v2","DC Motor","Cupra","LiPo vs Li-Ion","BLE"]
-description: 'Another rabbit-hole. Understanding batteries with the 18860 x ESP32.'
+tags: ["Bluetti elite 30 v2","DC Motor","Cupra","LiPo vs Li-Ion","BLE","W Engine"]
+description: 'Another rabbit-hole. Testing a 18860 x ESP32.'
 url: 'understanding-batteries'
 math: true
 ---
 
 **TL;DR**
 
-Ive ended up learning sth about batteries thx to the fpv drones, electric car tests and a now bluetti.
+Ive ended up learning sth about batteries thx to the fpv drones, electric car tests and a now a portable bluetti.
 
 **Intro**
 
@@ -55,7 +55,42 @@ Your portable power station utilizes **LiFePO4** chemistry. LFP (Lithium Iron Ph
 
 They are highly resistant to thermal runaway (catching fire) and you can safely charge them to 100% regularly without heavily damaging their lifespan.
 
-The trade-off? They are significantly heavier and bulkier per kWh than NMC, which is fine for a power station sitting on the ground, but tougher for a nimble sports car.
+The trade-off? 
+
+They are significantly heavier and bulkier per kWh than NMC, which is fine for a power station sitting on the ground, but tougher for a nimble sports car.
+
+> To load my x13 from ~low to 100% took ~35% of the bluetti capacity
+
+> > To charge back again the bluetti you do it at 200W, so expected ~
+
+That "click" sound is **100% normal and expected**. 
+
+You are hearing the sound of a physical, mechanical switch moving inside the Bluetti.
+
+Here is the engineering difference between why AC clicks and DC is silent:
+
+---
+
+#### ⚡ The AC Side: Physical Mechanical Relay
+
+Because AC electricity runs at high voltage ($230\text{V}$), safety standards require physical separation between the inverter board and the outlets when the port is turned off.
+
+* Inside the Elite 30 V2, there is an **electromechanical relay** (a physical switch operated by a tiny electromagnet).
+* **When you hit AC ON:** The unit sends a current through a tiny coil, creating a magnetic field that physically slams a metal contact arm shut to complete the circuit. **(CLICK!)**
+* **When you hit AC OFF:** The coil de-energizes, and an internal spring snaps the metal arm back open to isolate the outlets. **(CLICK!)**
+
+---
+
+#### 🔋 The DC Side: Solid-State Semiconductors (MOSFETs)
+
+Low-voltage DC power (like your 12V car outlet and USB-C ports) doesn't need physical mechanical switches to be safe.
+
+* Instead of mechanical arms, the DC circuit is controlled by **MOSFETs** (solid-state semiconductor transistors).
+* These are digital chips with **zero moving mechanical parts**. Turning a DC port on or off is done purely by changing voltage on a silicon gate—making it completely instantaneous and dead silent.
+
+---
+
+> **Bottom Line:** The click is actually a reassuring safety feature. It tells you the high-voltage relay just physically clamped shut and is ready to safely handle up to 600W of AC power!
 
 ### A 1S Drone 
 
@@ -75,6 +110,12 @@ The catch is that they are fragile, have a short lifespan (often showing degrada
 
 https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/
 
+#### Be careful with FPV bateries
+
+Get a good charger
+
+I got ahead with a `ISDT 608AC charger`and so far no issues
+
 ### Laptops and Phones
 
 Both the **Lenovo ThinkPad X13** and the **Google Pixel 8** belong to the same core chemical family as your Cupra EV and your 1S drone—they use variations of **Lithium-ion** technology.
@@ -87,6 +128,7 @@ Instead of using a rigid metal cylinder (like your 18650 cells) or a massive hea
 
 * **The Chemistry:** Chemically, they are nearly identical to standard Lithium-ion (often using a Lithium Cobalt Oxide or NMC variant as the base).
 * **The Difference:** The big change is the *electrolyte container*. Instead of a liquid electrolyte held inside a rigid metal tube, a polymer pouch uses a gel-like or porous polymer matrix inside a flexible, laminated aluminum foil pouch.
+
 * **Why they are used here:**
 * **Space & Shape:** Manufacturers can press these pouches into incredibly thin, flat rectangles or specific shapes. This allows Lenovo to fit a flat 41Wh or 54.7Wh battery flush under your laptop keyboard, and lets Google cram a thin 4,575 mAh battery right behind the Pixel 8 screen.
 * **Weight:** Removing the heavy steel or aluminum cylindrical walls saves a massive amount of weight, keeping your phone and laptop highly portable.
@@ -174,6 +216,41 @@ If you have an older cordless drill or a landline cordless phone from the 2000s 
 
 ### Bluetti x MQTT x BLE
 
+Here's my take: **NimBLE is a lightweight, open-source Bluetooth Low Energy (BLE) software stack** designed specifically for microcontrollers.
+
+Originally developed under the Apache Mynewt project, it is the engine that lets low-power chips (like your ESP32) talk to Bluetooth devices.
+
+In the context of your ESP32 project, **NimBLE** (specifically the `NimBLE-Arduino` library) is the software tool you use to scan, connect to, and read data from your Bluetti power station over Bluetooth.
+
+---
+
+### Why Engineers Use NimBLE Over Standard Bluetooth
+
+The ESP32 comes by default with a built-in Bluetooth library called **Bluedroid**. 
+
+However, Bluedroid has a major downside: it was built to handle both old-school Bluetooth Classic (like wireless audio) and Bluetooth Low Energy at the same time. Because of that, Bluedroid is huge, slow to boot up, and consumes a massive chunk of your ESP32’s RAM and flash memory.
+
+NimBLE was created to fix this:
+
+1. **Massive Memory Savings:** NimBLE drops all legacy Bluetooth Classic features. It uses **~50% less RAM** and significantly less flash storage on your ESP32.
+2. **More Room for Code:** Because NimBLE is so light, your ESP32 has plenty of leftover RAM to run Wi-Fi, MQTT connections, and handle sensor readings from your DHT22 simultaneously without running out of memory.
+3. **Faster Connections:** It initializes rapidly, meaning your ESP32 can connect to the Bluetti, grab the battery/solar numbers, and send them to your Raspberry Pi in milliseconds.
+4. **Multiple Devices:** NimBLE can comfortably maintain connections to multiple BLE sensors at the same time.
+
+How it Fits into Your Setup
+
+```
+[ Bluetti Elite 30 V2 ]
+         │ (BLE Radio Signal)
+         ▼
+ [ ESP32 Microcontroller ]  ◄── ( NimBLE Library handles the BLE connection )
+         │ (Wi-Fi / MQTT)
+         ▼
+ [ Raspberry Pi Homelab ]
+```
+
+When you write your C++ sketch in the Arduino IDE, calling `#include <NimBLEDevice.h>` tells the ESP32 to use this lightweight engine to pair with your Bluetti.
+
 
 
 ---
@@ -194,13 +271,96 @@ If you have an older cordless drill or a landline cordless phone from the 2000s 
 * **RC Control & Household:** RadioMaster & Mouse (**18650 Li-ion** or **AA NiMH** — Steady, reusable)
 * **Legacy Engine Starters:** Gas/Diesel Car (**Lead-Acid** — Cheap, heavy, massive cold-cranking power)
 
-
 What is this for?
 
+1. An experiment with a [18650 x ESP32](#esp32-x-18650)
 
-### ESP32 x 18860
+2. Upcoming offgrid [experiment for crops/tomatoes x bluetti](#tomatoes-x-bluetti)
+
+
+### ESP32 x 18650
 
 Ive been doing one more experiment around battery duration
+
+Checking it with a multimeter is completely safe and a great way to double-check that your DIY setup is working exactly as intended.
+
+Here is what you are looking for when you test it:
+
+📊 The Voltage Scale for a Samsung 18650:
+
+* **$4.20\text{ V}$(or very close, like $4.15\text{ V} - $4.19\text{ V}$):** This means the battery is **100% fully charged** and the AZDelivery board did its job and cut off the power perfectly.
+* **$3.6\text{ V} - 3.7\text{ V}$:** This is the nominal/halfway voltage.
+* **$3.0\text{ V}$:** The battery is empty.
+
+When we talk about "battery life," there are two different ways to look at it: **how long the drone/ESP32 will run if the sun completely disappears (Autonomy)**, and **how many years the physical battery will last before it degrades and needs to be thrown away (Lifespan)**.
+
+1. Running Time with Zero Sun (Autonomy)
+
+If there is a massive storm and your solar panel gets **absolutely zero light** for days, how long will your project stay powered on a single full charge?
+
+Assuming you are using a standard, high-quality **$3000\text{ mAh}$ 18650 battery**:
+
+* **At constant $100\text{ mA}$ draw (ESP32 fully awake 24/7):**
+
+$$\text{Running Time} = \frac{3000\text{ mAh}}{100\text{ mA}} = \mathbf{30\text{ hours}}$$
+
+
+* *Verdict:* Your project will survive for exactly **1.2 days** of total darkness.
+
+
+* **Using Deep Sleep (Average draw of $5\text{ mA}$):**
+
+$$\text{Running Time} = \frac{3000\text{ mAh}}{5\text{ mA}} = 600\text{ hours} = \mathbf{25\text{ days}}$$
+
+
+* *Verdict:* Your project will easily survive almost **a full month** of complete darkness!
+
+2. Physical Lifespan (How many years before replacing it)
+
+Standard 18650 Lithium-Ion chemistry is incredibly durable, but it does degrade slowly over time as you charge and discharge it.
+
+The Cycle Count
+
+A typical quality 18650 cell (like a Samsung, LG, or Sony/Murata) is rated for **300 to 500 full charge/discharge cycles** before its maximum capacity drops to 80% of its original state.
+
+Since your solar setup will cycle once per day (discharging at night, charging during the day), 500 cycles theoretically equals about **1.5 years of daily use**.
+
+The "Shallow Discharge" Cheat Code (Why it will actually last longer!)
+
+Batteries only degrade quickly if you drain them down to 0% and charge them up to 100% every time.
+
+Because your ESP32 only uses about **$1400\text{ mAh}$** during the night (which is only about 45% of a $3000\text{ mAh}$ battery's total capacity), you are doing what is called **shallow cycling**.
+
+* Discharging a battery only halfway and recharging it is incredibly gentle on the chemistry.
+* Because of this, your battery's lifespan will easily double, lasting **1,000 to 1,500 partial cycles**.
+
+> 📅 **Real-World Lifespan:** You can realistically expect your single 18650 cell to run your solar ESP32 station for **2 to 3 years** of continuous daily outdoor operation before you need to swap it out for a fresh one!
+
+#### TP4056 x DW01A
+
+Actually, **no**—the TP4056 chip itself does **not** protect against over-discharge!
+
+That is one of the biggest misconceptions with these boards. 
+
+The TP4056 is strictly a **charging** chip—it only controls power *going into* the battery from the USB port.
+
+The component that stops your 18650 from dropping below a safe voltage (around $2.4\text{V} - 2.8\text{V}$) is a separate **protection circuit** built onto that black AZDelivery board.
+
+The Two Chips Working Together:
+
+If you look closely at the little black board, you'll see two tiny 8-pin chips near the USB ports:
+
+1. **TP4056 (The Charger):** Handles incoming power, limits current to ~$600\text{ mA}$, and cuts power off when the battery reaches $4.2\text{ V}$.
+
+2. **DW01A + FS8205A MOSFET (The Guard Dogs):** This is the **protection circuit**.
+
+* **DW01A:** Constantly measures the battery voltage. The moment the voltage drops below about $2.4\text{V}$, it commands the MOSFET to instantly **cut the connection** between the battery and your ESP32.
+* This completely shuts down the circuit so the battery doesn't drain into the "dead zone" where lithium chemistry gets permanently ruined.
+
+* **TP4056** = Stops it from going above $4.2\text{V}$ (Overcharge Protection).
+* **DW01A Circuit** = Stops it from dropping below ~$2.4\text{V}$ (Over-discharge Protection).
+
+> Because my `AZDelivery board` has **both**, the Samsung 35E battery is 100% safe in both directions!
 
 ### Tomatoes x Bluetti
 
@@ -212,4 +372,20 @@ They already gave me x2 harvests, say ~1kg total (first bigger)
 
 ## FAQ
 
-### 
+### Car batteries
+
+#### W Engine simulation
+
+Recently I got to know that the W engine inside m4a's was 5xI6 with 20L
+
+Those had a 24V battery system for the startup, which required ~500-1000A
+
+meaning... ~24KW or ~30hp!
+
+All of that to get started a ~300-400 hp @ 2400 rpm engine
+
+Its crazy how much more compact and efficient engines had got along the way
+
+example: a laguna 1.9 td has 110cv and is fine with a 660Ah 12V battery
+
+But, im telling this just to give you the simulation of the W engine, following the previous [Inline](https://jalcocert.github.io/JAlcocerT/visualizing-engine-nvh/#inlines) and [V posts](https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/):

@@ -2,10 +2,21 @@
 title: "How is my Brand going?"
 date: 2026-08-21
 draft: false
-tags: ["PoC 104","Brand HUBs"]
+tags: ["PoC 104","Brand HUBs","Email marketing"]
 description: 'A brand around JAlcocerTech'
 url: 'branded-jalcocertech'
 ---
+
+**Tl;DR**
+
+Hows my brand and outbound email marketing going?
+
+**Intro**
+
+
+---
+
+## Conclusions
 
 
 For the ones that dont want to read an ebook neither to pay consulting or the DFY...

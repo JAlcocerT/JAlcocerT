@@ -1,6 +1,6 @@
 ---
-title: "EMbedded x The ESP32 comeback"
-date: 2026-08-20
+title: "Embedded x The ESP32 comeback"
+date: 2026-08-12
 draft: false
 description: "A solar panel, summer and the ESP32 microcontroller"
 tags: ["Self-Hosting","IoT","MicroControllers","NodeRed","18650 vs Bluetti"]
