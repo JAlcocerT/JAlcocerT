@@ -1,6 +1,6 @@
 ---
 title: "Compliant mechanisms and MultiBodySystemsDynamics dot com"
-date: 2026-08-20
+date: 2026-08-02
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper"]
 description: 'Dynamics is trickier when solids are flexible. Mechanism agentic centered design.'
@@ -76,6 +76,8 @@ https://www.youtube.com/watch?v=HVqYlP1MC6E -->
 ### W
 
 Yep, these can get 20L displacement and require a huge power spike to get started.
+
+https://jalcocert.github.io/JAlcocerT/understanding-batteries/#w-engine-simulation
 
 ### Rotatory
 

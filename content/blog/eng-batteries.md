@@ -1,5 +1,5 @@
 ---
-title: "Batteries 101"
+title: "Batteries are a thing"
 date: 2026-08-01
 draft: false
 tags: ["Bluetti elite 30 v2","DC Motor","Cupra","LiPo vs Li-Ion","BLE","W Engine"]
