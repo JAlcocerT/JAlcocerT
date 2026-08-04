@@ -228,7 +228,9 @@ In the context of your ESP32 project, **NimBLE** (specifically the `NimBLE-Ardui
 
 The ESP32 comes by default with a built-in Bluetooth library called **Bluedroid**. 
 
-However, Bluedroid has a major downside: it was built to handle both old-school Bluetooth Classic (like wireless audio) and Bluetooth Low Energy at the same time. Because of that, Bluedroid is huge, slow to boot up, and consumes a massive chunk of your ESP32’s RAM and flash memory.
+However, Bluedroid has a major downside: it was built to handle both old-school Bluetooth Classic (like wireless audio) and Bluetooth Low Energy at the same time. 
+
+Because of that, Bluedroid is huge, slow to boot up, and consumes a massive chunk of your ESP32’s RAM and flash memory.
 
 NimBLE was created to fix this:
 
@@ -250,8 +252,6 @@ How it Fits into Your Setup
 ```
 
 When you write your C++ sketch in the Arduino IDE, calling `#include <NimBLEDevice.h>` tells the ESP32 to use this lightweight engine to pair with your Bluetti.
-
-
 
 ---
 
@@ -276,7 +276,6 @@ What is this for?
 1. An experiment with a [18650 x ESP32](#esp32-x-18650)
 
 2. Upcoming offgrid [experiment for crops/tomatoes x bluetti](#tomatoes-x-bluetti)
-
 
 ### ESP32 x 18650
 
@@ -311,7 +310,6 @@ $$\text{Running Time} = \frac{3000\text{ mAh}}{100\text{ mA}} = \mathbf{30\text{
 * **Using Deep Sleep (Average draw of $5\text{ mA}$):**
 
 $$\text{Running Time} = \frac{3000\text{ mAh}}{5\text{ mA}} = 600\text{ hours} = \mathbf{25\text{ days}}$$
-
 
 * *Verdict:* Your project will easily survive almost **a full month** of complete darkness!
 
@@ -377,6 +375,12 @@ They already gave me x2 harvests, say ~1kg total (first bigger)
 #### W Engine simulation
 
 Recently I got to know that the W engine inside m4a's was 5xI6 with 20L
+
+<!-- 
+https://youtube.com/shorts/x6NAMwPo6hI 
+-->
+
+{{< youtube "x6NAMwPo6hI" >}}
 
 Those had a 24V battery system for the startup, which required ~500-1000A
 

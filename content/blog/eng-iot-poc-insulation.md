@@ -3,7 +3,7 @@ title: "[Energy Solutions] Insulation Intelligence in the AI era"
 date: 2026-06-16
 draft: false
 tags: ["DHT22 x MLX90614 x TP4056","MQTT x EMQx","ESP-Now","JAlcocerTech Leads","Arduino-CLI"]
-description: 'Solving Boundary conditions with IoT. Blender x building shadows is possible.'
+description: 'Boundary conditions with IoT. Blender x building shadows is possible.'
 url: 'data-driven-insulation-evaluation'
 math: true
 ---
@@ -17,56 +17,6 @@ The kind of simulation that people dont ask before commiting 300k+
   {{< card link="https://github.com/JAlcocerT/poc/genbi-energy-solutions" title="Energy Solutions↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/poc/genbi-energy-solutions" title="building-to-blender↗" icon="github" >}}
 {{< /cards >}}
-These are the commands I used to figure out the candidates and sizes.
-
-  Overall reclaimable space
-
-  docker system df
-  docker system df -v
-
-  docker system df gives the category totals and reclaimable space.
-  docker system df -v gives the detailed per-image, per-volume, and per-container breakdown.
-
-  What docker image prune -a would erase
-
-  docker image ls --format '{{.Repository}}\t{{.Tag}}\t{{.ID}}\t{{.Size}}'
-
-  This lists all images with their sizes. I treated images with CONTAINERS = 0 in the docker system df -v output as prune candidates for docker image prune -a.
-
-  If you want just the unused-image IDs from the system df view, this is the practical filter:
-
-  docker system df -v
-
-  Then inspect the Images space usage table and select rows where CONTAINERS is 0.
-
-  What docker volume prune would erase
-
-  docker volume ls -qf dangling=true
-
-  This lists dangling volumes, which are the ones docker volume prune would remove.
-
-  For their sizes, I used:
-
-  docker system df -v
-
-  and read the Local Volumes space usage section.
-
-  What docker builder prune would erase
-
-  docker buildx du --verbose
-
-  This lists build-cache records with ID, Size, Description, Reclaimable, and other metadata.
-
-  To count how many cache records were reclaimable:
-
-  docker buildx du --verbose | grep '^ID:' | wc -l
-
-```sh
- 1. docker builder prune
-  2. docker volume prune
-  3. docker image prune -a
-```
-
 
 **Intro**
 
@@ -92,10 +42,9 @@ https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht
 
 With all that push of energy to us via radiation
 
-
 ### What about blender?
 
-I made some simulations recently on how sun rays are hitting our buildings:
+I made some simulations recently on how **sun rays** are hitting our buildings:
 
 ```sh
 sudo snap install blender --classic --channel=5.1/stable
@@ -103,7 +52,7 @@ sudo snap install blender --classic --channel=5.1/stable
 #make help
 ```
 
-Then, this happened: https://github.com/JAlcocerT/poc/tree/main/building-to-blender
+Then, [this](https://github.com/JAlcocerT/poc/tree/main/building-to-blender) happened.
 
 {{< youtube xycErOBk9mI >}}
 

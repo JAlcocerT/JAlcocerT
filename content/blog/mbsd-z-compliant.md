@@ -1,6 +1,6 @@
 ---
 title: "Compliant mechanisms and MultiBodySystemsDynamics dot com"
-date: 2026-08-02
+date: 2026-08-03
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper"]
 description: 'Dynamics is trickier when solids are flexible. Mechanism agentic centered design.'
@@ -23,7 +23,7 @@ make list-user-repos NEW_USER=hermesagent
 make tinker-to-github #https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd
 ```
 
-Current behavior in scripts/tinker-to-github.sh:1:
+Current behavior in `scripts/tinker-to-github.sh:1`:
 
 - it clones each Forgejo repo as a mirror
 - then it pushes only HEAD to one GitHub branch:
@@ -75,9 +75,8 @@ https://www.youtube.com/watch?v=HVqYlP1MC6E -->
 
 ### W
 
-Yep, these can get 20L displacement and require a huge power spike to get started.
+Yep, [these can get 20L displacement](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#w-engine-simulation) and require a huge power spike to get started.
 
-https://jalcocert.github.io/JAlcocerT/understanding-batteries/#w-engine-simulation
 
 ### Rotatory
 

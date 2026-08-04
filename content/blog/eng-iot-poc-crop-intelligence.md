@@ -53,6 +53,8 @@ But without the 250$ of [a bluetti](https://jalcocert.github.io/JAlcocerT/unders
 6. Solar panel
 7. TP4056 x DW01A
 
+https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#home-solar-test-x-tp4056
+
 * **TP4056** = Stops it from going above $4.2\text{V}$ (Overcharge Protection).
 * **DW01A Circuit** = Stops it from dropping below ~$2.4\text{V}$ (Over-discharge Protection).
 

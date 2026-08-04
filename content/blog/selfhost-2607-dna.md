@@ -841,23 +841,20 @@ Databricks emphasizes data engineering and unified analytics beyond notebooks, w
 
 ### Geo Analytics
 
-https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#selfhosted-gpx
 
 1. GeoLibre - https://github.com/opengeos/GeoLibre that you can find https://geolibre.app/
 
 2. Dawarich `https://play.google.com/store/apps/details?id=com.zeitflow.dawarich&pli=1`
 
-http://localhost:3333/settings/integrations
+You have several integrations `http://localhost:3333/settings/integrations` like with [Velomate](https://fossengineer.com/selfhosting-velomate/)
 
-https://fossengineer.com/selfhosting-velomate/
-
-3. https://github.com/tess1o/geopulse
+3. More [Selfhosted GPX](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#selfhosted-gpx) like https://github.com/tess1o/geopulse
 
 <!-- 
-https://www.youtube.com/watch?v=pK_fSEp_OzQ -->
+https://www.youtube.com/watch?v=pK_fSEp_OzQ 
+-->
 
 {{< youtube "pK_fSEp_OzQ" >}}
-
 
 This is a good chance:
 
@@ -872,7 +869,6 @@ This is a good chance:
   {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="French Real Estate ↗" icon="github" >}}
 {{< /cards >}}
 
-
 2. To check how household income is evolving in spain as [a recap of this post](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/)
 
 3. To use PyRouteTracker against more karting or trackday data:
@@ -884,6 +880,26 @@ Just this GoPro telemetry bc doing the reverse engineering to a Laguna mk2 was t
 4. Just imagine how a Drone x GPS could be:
 
 5. Phyphox take off data:
+
+```sh
+cd ./poc/airplane-phyphox
+
+```
+
+6. To think how the [solar rays simulations of a building](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#the-sun-is-interesting) need more context of their surrounding:
+
+```sh
+#sudo snap install blender --classic --channel=5.1/stable
+#cd ./poc/building-to-blender
+#claude --dangerously-skip-permissions
+cd ./poc/building-geo-to-blender
+```
+
+| Date | Astronomical daylight | Direct sun | Lost to terrain |
+|---|---|---|---|
+| 21 Dec 2026 | 8.8 h | **3.3 h** | **62%** |
+| 1 Jul 2026 | 15.0 h | 12.0 h | 20% |
+
 
 ### Tomatoes Progress
 
