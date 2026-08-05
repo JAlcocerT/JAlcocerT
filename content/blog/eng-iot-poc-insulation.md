@@ -139,8 +139,6 @@ So with both pushing data:
 ```sh
 #git clone /poc
 cd ./poc/iot-rpi-dht/
-
-
 ```
 
 We can have this view:

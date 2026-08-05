@@ -10,19 +10,15 @@ math: true
 
 **TL;DR**
 
-Ive ended up learning sth about batteries thx to the fpv drones, electric car tests and a now a portable bluetti.
+From 3v to a [car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/) battery
 
 **Intro**
 
-From 3v to a car battery
-
-
-https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/
-
+Ive ended up learning sth about batteries thx to the fpv drones, electric car tests and a now a portable bluetti.
 
 ## About Batteries
 
-You are dealing with three distinctly different types of lithium battery chemistries. 
+Dealing with three distinctly different types of lithium battery chemistries.?
 
 Each one is engineered for a completely different purpose: one values balanced driving performance, one is built for extreme safety and longevity, and the other is optimized for pure, lightweight power.
 
@@ -40,7 +36,7 @@ However, they are chemically more sensitive than your Bluetti—which is why EV 
   {{< card link="https://jalcocert.github.io/JAlcocerT/electr-diode/#canbus-electronics" title="Car telemetry" image="/blog_img/outro/honda-road.jpg" subtitle="Canbus x AI" >}}
 {{< /cards >}}
 
-The financial and energy breakdown for a trip in the Cupra EV::
+The financial and energy breakdown for a trip in the Cupra EV:
 
 * **Inferred Battery Size:** **$62.60 \text{ kWh}$** (This aligns perfectly with Cupra’s standard **$62 \text{ kWh}$ Gross / $58 \text{ kWh}$ Usable** battery pack option found in the Cupra Born).
 * **Energy Consumption:** **$13.03 \text{ kWh}$ per $100 \text{ km}$** (or $0.13 \text{ kWh}$ per single km).
@@ -94,7 +90,7 @@ Low-voltage DC power (like your 12V car outlet and USB-C ports) doesn't need phy
 
 ### A 1S Drone 
 
-A tiny 1S drone battery uses **LiPo** or **LiHV** chemistry. (Lithium Polymer / Lithium High Voltage).
+A tiny 1S drone battery uses **LiPo** Lithium Polymer or **LiHV** Lithium High Voltage chemistry.
 
 * **The Goal:** Maximum power punch with absolute minimum weight.
 * **How it compares:** Drones need to fight gravity, so weight is the enemy. LiPo batteries don't use a heavy rigid metal casing like your car or Bluetti cells; instead, they use a soft polymer pouch.
@@ -387,6 +383,8 @@ They already gave me x2 harvests, say ~1kg total (first bigger)
 ## FAQ
 
 ### Car batteries
+
+https://www.youtube.com/watch?v=NMkQib8CTZs
 
 #### W Engine simulation
 

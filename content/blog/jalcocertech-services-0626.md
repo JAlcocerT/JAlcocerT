@@ -12,20 +12,13 @@ url: 'jalcocertech-services-snapshot'
 
 The last piece to combince me that this is enough.
 
-https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md
-
-
 **Intro**
 
-After the post-wedding thoughts, it was time to make this clear.
+After the post-wedding thoughts, it was time to [make this](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md) clear.
 
 Specially that im leveraging outreach
 
-
 ## The services
-
-https://github.com/JAlcocerT/jalcocertech/tree/main-site-cloudflare-hub
-
 
 The flow, from the ones who prefer to trade time for knowledge:
 
@@ -101,7 +94,6 @@ While creating some more images via OpenAI to improve explainability:
 
 Ive also improved the main `www.jalcocertech` ,done on the branch `main-site-cloudflare-hub`.
 
-
 #### FOSSEngineer x HomeLab 
 
 There has been several improvements in the foss workflow:
@@ -114,16 +106,11 @@ There has been several improvements in the foss workflow:
 
 I added [agent skills to this public repository](https://github.com/JAlcocerT/JAlcocerT/tree/main/.agents/skills) to help me improve my writting: `zettel-blog-notes` and `blog-post-editor`
 
-```sh
-
-```
-
 It incorporates the **concept of zettelkasten**: one post, one topic.
 
 > A word that i got to know thanks to the files.md project `https://app.files.md/`
 
 > > Now I have `http://localhost:1314/notes/` and skills for this :)
-
 
 #### JAlcocerTech WebAudits
 
@@ -210,8 +197,6 @@ For **social previews**, use:
 - https://www.opengraph.xyz/url/https%3A%2F%2Febooks.jalcocertech.com
 - `https://cards-dev.twitter.com/validator` (after deploy)
 
-
-
 I also added some smoke tests to the product:
 
 ```sh
@@ -236,8 +221,6 @@ If you wonder, you can also use uptime kuma or kener `http://192.168.1.2:3001/da
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/beszel" title="Beszel | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
-
 ##### Codex CLI WebAudit to Report
 
 The new web audit is deployed normally at:
@@ -261,14 +244,11 @@ Dont really see why not.
 ```sh
 #git clone https://github.com/JAlcocerT/poc #/tree/main/web-audits
 cd ./poc/web-audits
-
 ```
-
 
 ### Productized Services
 
 From the consulting landing, which has received improvements: Committed on `landing-improvements branch`
-
 
 #### GenBI - Shopify QnA
 
@@ -290,10 +270,15 @@ Now, I have:
 
 ```
 
-
 #### RevOps / GTM
 
+This was supposed to be a collaboration.
 
+But its just the last time im partnering for such thing.
+
+```sh
+leadarchitect.org
+```
 
 ### The BEST - DFY
 
@@ -322,8 +307,6 @@ Because this resonated a lot with
 
 You name it.
 
-
-
 it all started here:
 
 {{< cards >}}
@@ -338,6 +321,8 @@ And continued:
   {{< card link="https://github.com/JAlcocerT/PoC/iot-rpi-mlx" title="PoC ↗" icon="github" >}}
 {{< /cards >}}
 
+Im already pushing some of these as static web/apps:
+
 ```sh
 npx wrangler pages project list
 ```
@@ -346,7 +331,7 @@ npx wrangler pages project list
 * https://aerothermics-landing.pages.dev
 * https://solar-trajectory.pages.dev  
 
-The final boss consolidates it all:
+The final boss [consolidates it all](https://github.com/JAlcocerT/poc/blob/main/aerothermics/dev-plan.md):
 
 ```sh
 cd ./poc/aerothermics
@@ -356,25 +341,26 @@ cd ./poc/go-solar
 make ship
 ```
 
-https://github.com/JAlcocerT/poc/blob/main/aerothermics/dev-plan.md
-
-Yep, heavily inspired by my latest trip planner: `trip-planner-9lt.pages.dev`
+Yep, heavily inspired by my latest UI/X with trip planner: `trip-planner-9lt.pages.dev`
 
 https://jalcocert.github.io/JAlcocerT/thermodynamics/
 
-![alt text](/blog_img/apps/aerotermia.png)
+<!-- 
+![alt text](/blog_img/apps/aerotermia.png) 
+-->
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/flask-nginx-duckdns.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
-  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/get-started-with-flask/" title="Flask Intro" image="/blog_img/apps/aerotermia.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main" title="Data Chat Repo" image="/blog_img/entrepre/aerotermia.png" subtitle="Source Code on Github" >}}
 {{< /cards >}}
 
-![alt text](/blog_img/entrepre/aerotermia.png)
+<!-- 
+![alt text](/blog_img/entrepre/aerotermia.png) 
+-->
 
 ![alt text](/blog_img/entrepre/aerotermia-landing.png)
 
 ![alt text](/blog_img/entrepre/gosolar.png)
-
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PoC/iot-rpi-mlxdht-insulation" title="PoC ↗" icon="github" >}}
@@ -404,26 +390,13 @@ make docker-sqlite-last10
 
 ![alt text](/blog_img/iot/mqtt-sqlite.png)
 
-> The deepsleep mode of the esp32 has been great so far for this project!
+> The **deepsleep mode** of the esp32 has been great so far for this project!
 
 This is coming soon:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc/genbi-energy-solutions" title="Energy Solutions↗" icon="github" >}}
 {{< /cards >}}
-
-
-
-#### Multi Body Systems Dynamics dot com
-
-I took all the goodies from the github and forgejo repos: *2D/3D*
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
-{{< /cards >}}
-
-
-> I couldnt avoid to email again to Gabe Morris :)
 
 ---
 
@@ -463,7 +436,7 @@ Want some goodies?
 Coming from the [email outbound setup 101 post section](https://jalcocert.github.io/JAlcocerT/poc-107/#the-only-way-im-shipping-now)
 
 
-https://github.com/JAlcocerT/Home-Lab/blob/main/z-dns-scripts/google_workspace_dns_check.py
+I published [the script here](https://github.com/JAlcocerT/Home-Lab/blob/main/z-dns-scripts/google_workspace_dns_check.py):
 
 ```sh
 python3 /home/jalcocert/Home-Lab/z-dns-scripts/google_workspace_dns_check.py getslubnechwile.com
@@ -472,31 +445,31 @@ python3 /home/jalcocert/Home-Lab/z-dns-scripts/google_workspace_dns_check.py get
 
 I checked the DNS for getslubnechwile.com.
 
-  What’s already in place:
+What’s already in place:
 
-  - NS points to Porkbun nameservers: fortaleza, maceio, curitiba, salvador.
-  - MX is set to 1 smtp.google.com., which matches Google Workspace’s current MX target.
-  - SPF is present as v=spf1 include:_spf.google.com ~all, which is the Google Workspace-only SPF value. (support.google.com (https://support.google.com/a/answer/140034?hl=en))
+- NS points to Porkbun nameservers: fortaleza, maceio, curitiba, salvador.
+- MX is set to 1 smtp.google.com., which matches Google Workspace’s current MX target.
+- SPF is present as v=spf1 include:_spf.google.com ~all, which is the Google Workspace-only SPF value. (support.google.com (https://support.google.com/a/answer/140034?hl=en))
 
-  What is not in place yet:
+What is not in place yet:
 
-  - I did not find a DKIM TXT record at google._domainkey.getslubnechwile.com or default._domainkey.getslubnechwile.com.
-  - I did not find a DMARC TXT record at _dmarc.getslubnechwile.com.
-  - Google’s DKIM setup expects a TXT record under a selector._domainkey host, and DMARC expects a TXT record under _dmarc.example.com. (support.google.com
-    (https://support.google.com/a/answer/174124?hl=en))
+- I did not find a DKIM TXT record at google._domainkey.getslubnechwile.com or default._domainkey.getslubnechwile.com.
+- I did not find a DMARC TXT record at _dmarc.getslubnechwile.com.
+- Google’s DKIM setup expects a TXT record under a selector._domainkey host, and DMARC expects a TXT record under _dmarc.example.com. (support.google.com
+  (https://support.google.com/a/answer/174124?hl=en))
 
-  Verdict:
+Verdict:
 
-  - Partially ready, not fully ready yet.
-  - DNS is good for Google Workspace mail routing and SPF, but you still need DKIM and DMARC before I’d call it complete.
-  - Google also recommends having SPF and DKIM working before enabling DMARC, and waiting up to 48 hours after SPF/DKIM changes before turning DMARC on. (support.google.com
-    (https://support.google.com/a/answer/2466580?hl=en))
+- Partially ready, not fully ready yet.
+- DNS is good for Google Workspace mail routing and SPF, but you still need DKIM and DMARC before I’d call it complete.
+- Google also recommends having SPF and DKIM working before enabling DMARC, and waiting up to 48 hours after SPF/DKIM changes before turning DMARC on. (support.google.com
+  (https://support.google.com/a/answer/2466580?hl=en))
 
-  One extra note:
+One extra note:
 
-  - There is also a Google verification TXT record present: google-site-verification=..., which is useful for Google services but is separate from Workspace mail auth.
+- There is also a Google verification TXT record present: google-site-verification=..., which is useful for Google services but is separate from Workspace mail auth.
 
-  If you want, I can give you the exact missing DKIM and DMARC records to add in Porkbun.
+If you want, I can give you the exact missing DKIM and DMARC records to add in Porkbun.
 
 `http://192.168.1.2:3034/explore/repos`
 
@@ -506,14 +479,13 @@ I checked the DNS for getslubnechwile.com.
 
 {{< details title="Email outbound checks - Setup recap 📌" closed="true" >}}
 
-
 1. Get a domain
+
 2. Get a workspace `https://workspace.google.com/`
 
 * `https://admin.google.com/` - from here you can manage the mail user image!
 
 Dont forget to add the DNS and check with `https://mxtoolbox.com/` or with `https://toolbox.googleapps.com/apps/checkmx/`
-
 
 `http://192.168.1.2:3034/hermesagent/email-outbound-check`
 
@@ -526,9 +498,7 @@ python email_check.py any@other-domain.com --json
 
 {{< /details >}}
 
-
 {{< details title="Email outbound x SmartLead 📌" closed="true" >}}
-
 
 `https://app.smartlead.ai/sign-up`
 
@@ -540,39 +510,17 @@ will appear at `https://admin.google.com/u/0/ac/owl/list?tab=configuredApps`
 
 look via the given `.apps.googleusercontent.com`
 
-
 ![alt text](/blog_img/entrepre/gmail-smartlead.png)
 
 https://app.smartlead.ai/app/email-accounts/emails
+
 https://app.smartlead.ai/app/email-account/19740710/warmup?email=julita.j@getleadarchitect.com
+
 ![alt text](/blog_img/entrepre/gmail-warmup.png)
 
 {{< /details >}}
 
-https://www.smartlead.ai/pricing
-
-
-{{< details title="Made it also for getslubnechwile 📌" closed="true" >}}
-
-
-
-{{< /details >}}
-
-### Inbound marketing x Branded Videos
-
-In theory, artifacts like ebooks, this blog, fossengineer... should give you inbound traffic.
-
-But
-
-The openAI image gpt 2 is so great that there is really no excuse not to get this right.
-
-Doing 3 min videos (with xyz words aka xyz tokens) and 30 second shorts...
-
-Its just one skill away:
-
-```sh
-
-```
+* https://www.smartlead.ai/pricing
 
 ---
 
@@ -617,7 +565,7 @@ MBSD / Mechanics / Symbolic Math
 - Your own MBSD Python framework - JAlcocerT/mbsd.
 - Your own related repos: Slider-Crank, mechanism, Bike_dynamic_simulator, Py_Double_Pendulum, ThreeBodies.
 
-FEM / Structural / Multiphysics: From content/blog/eng-fem.md:167:
+FEM / Structural / Multiphysics:
 
 - FreeCAD FEM
 - CalculiX
@@ -634,7 +582,7 @@ FEM / Structural / Multiphysics: From content/blog/eng-fem.md:167:
 - PyVista
 - ParaView
 
-CFD / Fluids: From content/blog/eng-fluid-mechanics.md:330:
+CFD / Fluids:
 
 - OpenFOAM
 - FreeCAD CfdOF
@@ -643,7 +591,7 @@ CFD / Fluids: From content/blog/eng-fluid-mechanics.md:330:
 - ParaView
 - OpenModelica
 
-Thermal / Thermodynamics: From content/blog/eng-heat-transfer.md:594:
+Thermal / Thermodynamics:
 
 - Modelica
 - OpenModelica
@@ -652,7 +600,7 @@ Thermal / Thermodynamics: From content/blog/eng-heat-transfer.md:594:
 - HeatraPy
 - PySpice was also mentioned in the broader thermal/electronics tooling context.
 
-Electronics / Electromagnetism / IoT: From content/blog/eng-electronics.md:390:
+Electronics / Electromagnetism / IoT:
 
 - KiCad
 - Atopile
@@ -686,7 +634,6 @@ SymPy / NumPy / SciPy
 
 The strongest recurring pattern in your posts is: physics as code → geometry as code → simulation as code → visualization as code → sensors to ground the model.
 
-
 ### DNS is a thing
 
 YOu could expect that from the [recent selfhosted post around DNS](https://jalcocert.github.io/JAlcocerT/private-dns-with-docker/#conclusions)
@@ -707,6 +654,7 @@ Here is exactly why each of those 5 checks matters for your domain `getslubnechw
 1. NS (Name Servers) — *The Map*
 
 * **What it does:** Tells the entire internet exactly where your domain's DNS records are stored (in your case, Porkbun).
+
 * **Why it matters:** If your Name Servers are broken or misconfigured, your website won't load, and your email servers can't be found. It is the absolute foundation. If NS is down, nothing else works.
 
 2. MX (Mail Exchange) — *The Mailbox*
@@ -731,7 +679,6 @@ Here is exactly why each of those 5 checks matters for your domain `getslubnechw
 * With your current policy (`p=none`), it tells servers: *"If an email fails SPF/DKIM, let it through but log it so I can see who is trying to spoof me."*
 * In the future, you can upgrade this to `p=quarantine` (send failures to spam) or `p=reject` (block them entirely), giving you total control over who can use your domain name.
 
-
 Summary: The Ultimate Filter
 
 When you send an email from Google Workspace now, the receiving server checks:
@@ -744,9 +691,11 @@ Because your script shows a clean sweep of **OK**, your domain now has a stellar
 
 * https://admin.google.com/ac/apps/gmail/authenticateemail
 
-This is excellent news! Your script is spot on. Seeing `MX: OK`, `SPF: OK`, and `NS: OK` means the absolute hardest part is over: **your domain `getslubnechwile.com` is now successfully linked to Google Workspace**, and you can actively send and receive emails.
+Seeing `MX: OK`, `SPF: OK`, and `NS: OK` means the absolute hardest part is over: **your domain `getslubnechwile.com` is now successfully linked to Google Workspace**, and you can actively send and receive emails.
 
-The two remaining items (`DKIM: missing` and `DMARC: missing`) are security layers. Without them, your emails have a much higher chance of hitting the spam folder, especially when sending to other Gmail or Yahoo accounts.
+The two remaining items (`DKIM: missing` and `DMARC: missing`) are security layers. 
+
+Without them, your emails have a much higher chance of hitting the spam folder, especially when sending to other Gmail or Yahoo accounts.
 
 Here is exactly how to knock out those last two checks:
 
@@ -773,7 +722,6 @@ python3 /home/jalcocert/Home-Lab/z-dns-scripts/google_workspace_dns_check.py get
   - DMARC record: v=DMARC1; p=none;
   - Policy: none
 ```
-
 ---
 
 #### 1. Fix DKIM (DomainKeys Identified Mail)
@@ -783,11 +731,13 @@ DKIM adds a hidden cryptographic signature to your emails, proving they actually
 1. Log into your [Google Admin Console](https://admin.google.com).
 2. Go to **Apps** > **Google Workspace** > **Gmail** > **Authenticate email**.
 3. Select your domain `getslubnechwile.com` from the dropdown.
-4. Click **Generate New Record**.
-* *Keep the default settings (2048-bit key length and `google` as the prefix selector).*
 
+4. Click **Generate New Record**.
+
+*Keep the default settings (2048-bit key length and `google` as the prefix selector).*
 
 5. Google will output a **TXT record Name** (usually `google._domainkey`) and a very long **TXT record Value**. Copy both.
+
 6. Log into your domain registrar (where you manage your DNS) and add a new record:
 * **Type:** `TXT`
 * **Host / Name:** `google._domainkey`
@@ -795,7 +745,9 @@ DKIM adds a hidden cryptographic signature to your emails, proving they actually
 * **TTL:** `1 Hour` (or 3600)
 
 
-7. **Crucial Step:** Go back to that same Google Admin page and click **Start Authentication**. *(Note: Google won't let you activate this until it detects the DNS change, which can take anywhere from a few minutes to an hour).*
+7. **Crucial Step:** Go back to that same Google Admin page and click **Start Authentication**. 
+
+*(Note: Google won't let you activate this until it detects the DNS change, which can take anywhere from a few minutes to an hour).*
 
 ---
 
@@ -803,7 +755,9 @@ DKIM adds a hidden cryptographic signature to your emails, proving they actually
 
 DMARC builds on top of your SPF and DKIM. It tells mailbox providers what to do if someone tries to spoof your email address.
 
-Since you are just setting it up, you should start with a **"none"** policy. This tells servers: *"Just monitor my emails for now; don't block anything yet."*
+Since you are just setting it up, you should start with a **"none"** policy. 
+
+This tells servers: *"Just monitor my emails for now; don't block anything yet."*
 
 In your domain registrar's DNS settings, add this record:
 
