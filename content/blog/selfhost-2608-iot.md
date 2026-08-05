@@ -297,6 +297,8 @@ docker ps -a | grep -i home-assistant
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant" title="HA with Docker 🐋 ↗" >}}
 {{< /cards >}}
 
+## IoT BoM
+
 
 ---
 
@@ -304,10 +306,55 @@ docker ps -a | grep -i home-assistant
 
 After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the [electro-magnetic foundations](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/), this post was the next step.
 
+### HomeLab Updates 0826
+
 What else am I running since last month?
 
 ```sh
 sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx jellyfin
+```
+
+Needed a cool `.md` compatible way to keep my daily notes for when im not working with my laptop...
+
+
+{{% details title="Why Starting a Tech Blog? 🚀" closed="true" %}}
+
+Logseq Web is the wrong model for your specific setup.
+
+If you want to use Logseq from another laptop and have notes write into the repo on your home machine, that won’t happen automatically. Logseq Web in the browser writes to a folder
+the browser can access on that same laptop, not to a remote folder on your home server.
+
+So the practical split is:
+
+- Good fit
+    - Using Logseq on a machine that has the notes folder locally
+    - Or using Logseq on each laptop with its own local clone of the repo
+    - Then syncing via git, Syncthing, etc.
+
+- Poor fit
+    - Opening Logseq Web from a work laptop and expecting it to write directly into /home/jalcocert/my-logseq-notes on another machine
+
+If your goal is simply “capture daily notes from anywhere and keep them in this repo,” then Logseq is only a good fit if you use it with local storage + sync.
+
+{{% /details %}}
+
+After trying logseq and silverbullet, i went with: 
+
+{{< cards cols="1" >}}
+{{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/silverbullet" title="silverbullet | Docker Configs 🐋 ↗" >}}
+{{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Configs 🐋 ↗" >}}
+{{< /cards >}}
+
+I needed to fix nextcloud after a restart:
+
+```sh
+sudo mount /mnt/data1tb
+sudo systemctl daemon-reload
+sudo docker restart nextcloud nextclouddb
+docker exec nextcloud php /var/www/html/occ status
+
+docker exec nextcloud php /var/www/html/occ config:system:get trusted_domains
+docker exec nextcloud-sync php /var/www/html/occ config:system:get trusted_domains
 ```
 
 You need some clean up?
@@ -325,7 +372,7 @@ docker volume rm \
   dawarich_dawarich_db_data \
   velxio_arduino-libs
 
-docker image rm ghcr.io/opengeos/geolibre:latest
+#docker image rm ghcr.io/opengeos/geolibre:latest
 
 docker builder prune
 ```
@@ -337,13 +384,12 @@ I removed the services for my ebooks and consulting subdomains.
 
 They are now...static!
 
-
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-And you have one IoT basics ebook waiting for you in there :)
+And you have one [IoT basics ebook](https://ebooks.jalcocertech.com/books/iot/) waiting for you in there :)
 
 
 ---
@@ -362,7 +408,7 @@ lazydocker
 
 glances #htop btop
 #sudo snap install ghostty --classic
-#tmux #ghostty
+#tmux #ghostty #herdr
 ```
 
 
@@ -395,7 +441,6 @@ On your 30-pin ESP-WROOM-32, these are labeled as **D21** and **D22**.
 
 3.  **Library Compatibility:** Most code examples you find online for the MLX90614 will assume you are using 21 and 22. It saves you the headache of debugging "Sensor not found" errors.
 
-
 Can you use the DHT11 and MLX90614 at the same time?
 
 Absolutely!
@@ -412,7 +457,6 @@ Here is your "Master Plan" for wiring both:
 | **MLX90614** | **D21** (SDA) | **D22** (SCL) | 3.3V & GND |
 
 > **Pro Tip:** Since the ESP32 only has one `3V3` pin and a couple of `GND` pins, you might need a small **breadboard** to share the power and ground lines between the two sensors. 
-
 
 Most **MLX90614 modules** (the GY-906 version) come with those 4 pins. 
 
@@ -433,7 +477,9 @@ Why 4 pins instead of 3 (like the DHT11)?
 
 The DHT11 uses a custom **1-wire protocol** where the "clock" and "data" are mashed into a single wire. It’s simple, but a bit slow and error-prone.
 
-The MLX90614 uses **I2C (Inter-Integrated Circuit)**. This requires two wires for data communication:
+The MLX90614 uses **I2C (Inter-Integrated Circuit)**.
+
+This requires two wires for data communication:
 
 1.  **SDA:** Sends the actual bits of temperature data.
 2.  **SCL:** Sends a steady pulse (the clock) so the ESP32 knows exactly when to "read" each bit on the SDA line.
@@ -442,8 +488,9 @@ This makes I2C much faster and more reliable than the DHT11's method.
 
 Plus, you can actually hook up **multiple different I2C sensors** to the same two pins (D21 and D22), and the ESP32 can talk to them individually using their "addresses."
 
-A Quick Tip for your ESP-WROOM-32
+A Quick Tip for a `ESP-WROOM-32`
 
 Since you are likely using a breadboard now to connect both sensors:
+
 * **The "Power Rail":** Connect the ESP32's **3V3** pin to the red (+) rail on your breadboard and **GND** to the blue (-) rail. 
 * **Shared Power:** Now you can just plug the VIN and GND from both the DHT11 and the MLX90614 into those rails.

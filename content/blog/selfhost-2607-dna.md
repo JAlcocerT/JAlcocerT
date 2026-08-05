@@ -755,7 +755,116 @@ Although each framework serves a different purpose, they all answer the same fiv
 
 Analysts who answer these questions proactively move beyond reporting background activity. 
 
-They start driving outcomes across teams, programs, and the broader D&A organization.
+Start **driving outcomes** across teams, programs, and the broader D&A organization.
+
+
+### How to's about SQLite
+
+SQLite is a very handy and portable DB to place some logs.
+
+{{< details title="Storing in SQLite 📌" closed="true" >}}
+
+
+{{< /details >}}
+
+{{< details title="Reading SQLite 📌" closed="true" >}}
+
+
+{{< /details >}}
+
+
+And now, there is even a fork of it:
+
+{{< youtube "PGpL5hYpY1o" >}}
+
+{{< details title="More about SQLite Fork - libSQL [Optimized for AI] 📌" closed="true" >}}
+
+SQLite is the most deployed database in history, with over **1 trillion active users**. 
+
+It was developed 25 years ago by **Richard Hipp** for a **US Navy damage control system**.
+
+This lightweight database is contained in a single **600 KB file**, requires **no server process**, and is an essential part of many modern applications.
+
+Although **SQLite** is in the **public domain**, its development is managed by just **three people**, with **no outside contributions** allowed. 
+
+Despite these limitations, SQLite has become ubiquitous due to its simplicity and reliability.
+
+In **October 2022**, a new fork called **libSQL** was introduced, with a focus on **community-controlled development**. 
+
+It retains **SQL-like compatibility** with SQLite, but introduces new features to address some of SQLite’s limitations.
+
+Key features of **libSQL**:
+
+- **One database per user**: This approach could **improve performance**, **reduce latency**, and **enhance security**.
+- **Server mode**: Allows access to the database via **HTTP**.
+- **Native replication system**: Enables embedded **replica features**.
+- **Encryption at rest**: Adds an extra layer of **security** for data storage.
+- **Web Assembly triggers**: Lets you run **code when specific events** occur in the database.
+- **Shared schema across multiple databases**: Makes it easier to manage databases together.
+- **Vector queries**: Optimized for **AI applications**, enabling complex data operations.
+
+Benefits and Challenges of libSQL:
+
+- **Performance**: The one-database-per-user model can significantly **boost performance** and reduce **latency**, but it may create challenges with **data retrieval** and **combining data** across different locations.
+- **Security**: Enhanced **security** through encryption and the isolated nature of individual user databases.
+- However, retrieving and combining data from different databases may **not be practical** in all cases, especially when data is spread across geographically distant locations.
+
+In conclusion, **libSQL** brings significant improvements over **SQLite** by offering a more **flexible, community-driven approach** to database management. 
+
+With its new features and robust capabilities, it has the potential to **revolutionize** how we build and manage databases, especially for applications requiring high **performance**, **security**, and **AI integration**.
+
+SQLite may be **underappreciated**, but with libSQL, it becomes even more powerful and adaptable to modern needs.
+
+{{< /details >}}
+
+
+
+{{< details title="Reading SQLite DBs x SqliteBrowser 📌" closed="true" >}}
+
+You can explore a SQLite via a script, like we did [during the Scrapping Post](https://jalcocert.github.io/JAlcocerT/scrap-and-chat-with-the-web/#old-school-scrapping)
+
+There is a cool project for this - `https://github.com/sqlitebrowser/sqlitebrowser`
+
+**sqlitebrowser** - DB Browser for SQLite (DB4S) is an open-source tool for creating, designing, and editing SQLite database files.
+
+It simplifies database management for users and developers, eliminating the need for complex SQL commands.
+
+**Key Features:**
+
+- Visual interface resembling a spreadsheet.
+
+- Allows creation and modification of database files.
+
+- Supports searching, editing, and deleting database records.
+
+- Facilitates importing/exporting of data in various formats (CSV, SQL).
+
+- Offers SQL query capabilities with result inspection.
+
+- Provides graphical plotting of data.
+
+**Key Information:**
+
+- Continuous and nightly builds are available for download.
+
+- Compatible with Windows, macOS, Linux, and FreeBSD.
+
+- Installation options include package managers like Chocolatey, Homebrew, and Snap.
+
+- The project has a rich history of community contributions and updates.
+
+**Conclusions:**
+
+DB4S is a valuable tool for users needing an intuitive interface for SQLite database management. 
+
+**Similar Projects:**
+
+- DBeaver: A universal database tool for developers.
+
+- HeidiSQL: A lightweight SQL client for MySQL, SQL Server, and PostgreSQL.
+
+{{< /details >}}
+
 
 ### Different ways to JHUB
 

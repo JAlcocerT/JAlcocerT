@@ -1,6 +1,6 @@
 ---
 title: "Compliant mechanisms and MultiBodySystemsDynamics dot com"
-date: 2026-08-03
+date: 2026-08-05
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper"]
 description: 'Dynamics is trickier when solids are flexible. Mechanism agentic centered design.'

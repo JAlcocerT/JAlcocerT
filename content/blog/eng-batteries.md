@@ -283,19 +283,35 @@ Ive been doing one more experiment around battery duration
 
 Checking it with a multimeter is completely safe and a great way to double-check that your DIY setup is working exactly as intended.
 
-Here is what you are looking for when you test it:
-
 📊 The Voltage Scale for a Samsung 18650:
 
 * **$4.20\text{ V}$(or very close, like $4.15\text{ V} - $4.19\text{ V}$):** This means the battery is **100% fully charged** and the AZDelivery board did its job and cut off the power perfectly.
 * **$3.6\text{ V} - 3.7\text{ V}$:** This is the nominal/halfway voltage.
 * **$3.0\text{ V}$:** The battery is empty.
 
-When we talk about "battery life," there are two different ways to look at it: **how long the drone/ESP32 will run if the sun completely disappears (Autonomy)**, and **how many years the physical battery will last before it degrades and needs to be thrown away (Lifespan)**.
+When we talk about "battery life," there are two different ways to look at it: *how long the drone/ESP32 will run if the sun completely disappears (Autonomy)*, and *how many years the physical battery will last before it degrades and needs to be thrown away (Lifespan)*.
 
-1. Running Time with Zero Sun (Autonomy)
+1. Running Time with Zero Sun (Autonomy): *just in case you are [in a cabin between mountains](https://github.com/JAlcocerT/poc/tree/main/building-geo-to-blender) and snow covering your panels during winter*
+
+```sh
+cd ./poc/iot-rpi-dht-insulation/ingester #http://192.168.1.2:3011/
+#configure the mqtt host properly and
+docker compose up -d && docker compose logs --tail 10
+#mosquitto_sub -h 127.0.0.1 -p 1883 -t 'esp32/temperature/dht11' -v
+```
 
 If there is a massive storm and your solar panel gets **absolutely zero light** for days, how long will your project stay powered on a single full charge?
+
+Precisely: [11 days](https://jalcocert.github.io/JAlcocerT/engineering-101/#iot) @ 60 seconds!
+
+```sh
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value
+  FROM readings WHERE metric = 'temperature' GROUP BY day ORDER BY day;"
+```
+
+> The battery stopped with xyz V
+
+> > I tried again with bigger `@ 10 min` deep sleep and got xyz days
 
 Assuming you are using a standard, high-quality **$3000\text{ mAh}$ 18650 battery**:
 
@@ -313,7 +329,7 @@ $$\text{Running Time} = \frac{3000\text{ mAh}}{5\text{ mA}} = 600\text{ hours} =
 
 * *Verdict:* Your project will easily survive almost **a full month** of complete darkness!
 
-2. Physical Lifespan (How many years before replacing it)
+2. Physical Lifespan: *How many years before replacing it*
 
 Standard 18650 Lithium-Ion chemistry is incredibly durable, but it does degrade slowly over time as you charge and discharge it.
 
@@ -336,7 +352,7 @@ Because your ESP32 only uses about **$1400\text{ mAh}$** during the night (which
 
 #### TP4056 x DW01A
 
-Actually, **no**—the TP4056 chip itself does **not** protect against over-discharge!
+The TP4056 chip itself does **not** protect against over-discharge!
 
 That is one of the biggest misconceptions with these boards. 
 

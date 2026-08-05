@@ -93,18 +93,13 @@ Bringing the images I had in there:
 
 #### JAlcocerTech Ebooks 
 
-
 {{< cards >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
 While creating some more images via OpenAI to improve explainability:
 
-
-
-Ive also improved the main `www.jalcocertech`
-
-• Done on branch main-site-cloudflare-hub.
+Ive also improved the main `www.jalcocertech` ,done on the branch `main-site-cloudflare-hub`.
 
 
 #### FOSSEngineer x HomeLab 
@@ -132,7 +127,6 @@ It incorporates the **concept of zettelkasten**: one post, one topic.
 
 #### JAlcocerTech WebAudits
 
-
 Ive done few web audits, to people I just met - With email report
 
 Santi, this one goes for you to.
@@ -155,7 +149,7 @@ make pb-latest-leads
 docker exec auditmagnet-prod bash -lc 'cd /app && AUDIT_REPORT_ROOT=/tmp/auditmagnet-selftest SKIP_LINKS=false LINK_CHECK_METHOD=lychee-docker ./audit-master.sh │ https://webaudit.jalcocertech.com'
 ```
 
-`https://cabesota.com/`
+See, for example: `https://cabesota.com/`
 
 ![alt text](/blog_img/entrepre/webaudit.png)
 
@@ -173,7 +167,7 @@ SKIP_LINKS=false LINK_CHECK_METHOD=${LINK_CHECK_METHOD:-lychee-docker} ./audit-m
 ║                Master Audit - Full Site Analysis           ║
 ╚════════════════════════════════════════════════════════════╝
 
-Target: https://genkinfy.com/
+Target: `https://genkinfy.com/`
 Orchestration:
  - Lighthouse: ACTIVE
  - Link Check: ACTIVE

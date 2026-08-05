@@ -23,13 +23,7 @@ And not [the other way around](#conclusions).
 
 {{< youtube "FPvFHcQEEj0" >}}
 
-## Termodinamics
 
-https://en.wikipedia.org/wiki/Boyle%27s_law
-
-PV=nrT
-
-And i could feel that while riding my bicycle during winter.
 
 
 ## Electrical Engineering
@@ -248,7 +242,7 @@ I used Wolfram and Matlab during my studies.
 
 3. Wolfram alfa, but FOSS calculator: <https://www.opensourcealternative.to/project/Kalker>
 
-* https://kalker.xyz
+* `https://kalker.xyz`
 
 > **MIT** | A scientific calculator that supports math-like syntax with user-defined variables, functions, differentiation, integration, and complex numbers. 
 
@@ -256,6 +250,10 @@ I used Wolfram and Matlab during my studies.
 
 > Matlab had a similar feature, which I used on [this thesis](https://github.com/JAlcocerT/Bike_dynamic_simulator)
 
+
+---
+
+## FAQ
 
 ### SelfHosted Calculators
 
