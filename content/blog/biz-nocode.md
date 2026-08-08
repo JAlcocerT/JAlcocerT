@@ -17,7 +17,7 @@ Aiming for High*er* ltv, high*er* cac?
 
 You can just use classic spreadsheets.
 
-Or level up with: https://www.quadratichq.com/
+Or level up with: `https://www.quadratichq.com/`
 
 > Source Open | Infinite spreadsheet with Python, SQL, and AI.
 
@@ -59,14 +59,13 @@ Why dont you try Twenty?
 
 {{< youtube "UZBy_n4XjGs" >}}
 
-
 ### Note Tools
 
 For PDFs you have:
 
 * https://github.com/freedomofpress/dangerzone
 
-> agpl |  Take potentially dangerous PDFs, office documents, or images and convert them to safe PDFs 
+> agpl | Take potentially dangerous PDFs, office documents, or images and convert them to safe PDFs 
 
 [Notion](https://www.notion.com/product/notion-for-product-development)? Obsidian?
 
@@ -77,7 +76,6 @@ https://youtu.be/jyzcDIudczA
 -->
 
 {{< youtube "jyzcDIudczA" >}}
-
 
 Why not just **Affine**?
 
@@ -104,7 +102,7 @@ wget -P ~/Applications https://github.com/logseq/logseq/releases/download/0.10.1
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-| Aspect | Logseq | Affine | Joplin  |
+| Aspect | **Logseq** | Affine | Joplin  |
 |--------|--------|--------|--------------------------|
 | **Storage** | Flat Markdown files (git-native) | Database/blocks (export MD) | SQLite (export MD)  [slashdot](https://slashdot.org/software/comparison/Joplin-vs-Logseq/) |
 | **Paradigm** | Block outliner, bi-links, queries | Canvas + docs + DBs (Notion-like) | Hierarchical notebooks/tags  [zblesk](https://zblesk.net/blog/tried-and-ditched-logseq-and-affine/) |
@@ -121,11 +119,9 @@ And be prepared for **more vibe coded tools** to appear, like: https://github.co
 
 >  Ironpad is a local-first, file-based project management system I've been building with AI. Rust backend (Axum), Vue 3 frontend, markdown files as the database, Git integration for versioning 
 
-
 If you are starting out some new business adventure: *logseq + markdown + git* can be your friend.
 
 Plus, you can use it via Nekko in few environment via web.
-
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nekko" title="Nekko | Docker Config 🐋 ↗" >}}

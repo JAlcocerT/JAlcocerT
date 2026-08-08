@@ -7,7 +7,7 @@ description: "How to use the Structured Output Feature with OpenAI"
 url: "how-to-use-structured-outputs-LLM"
 ---
 
-Lately, I heard about s**tructure outputs for LLMs**:
+Lately, I heard about **structured outputs for LLMs**:
 
 * https://openai.com/index/introducing-structured-outputs-in-the-api/
 
@@ -38,8 +38,6 @@ And I could not just but to think on the possibilities for projects...
 
 Therefore, while the underlying goal is the same (allowing the LLM to interact with external tools), the implementation details and the level of "nativeness" in the API design differ slightly.
 
-
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="Multi-Chat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github where ive tested Structured Outputs" >}}
 {{< /cards >}}
@@ -55,9 +53,7 @@ This is a great feature that can be applied to project like:
 3. aaaand more
 
 {{< cards >}}
-  {{< card link="" title="CV as a Code" icon="book-open" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat/tree/main/Z_Tests/OpenAI/StructureOutput_1" title="Structured outputs script to create md post and related image ↗" icon="book-open" >}}
-  
 {{< /cards >}}
 
 ---
@@ -98,4 +94,4 @@ services:
 
 {{< /details >}}
 
-> Definitely structure outputs is a feature to have a look together with Overleaf (Latex) or this kind of projects!
+> Definitely structured outputs is a feature to have a look together with Overleaf (Latex) or this kind of projects!

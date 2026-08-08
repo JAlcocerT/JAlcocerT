@@ -2,7 +2,7 @@
 title: "[JAlcocerTech] Services Recap"
 date: 2026-09-01T11:20:21+01:00
 draft: false
-tags: ["RoadMap26","Energy Solutions"]
+tags: ["RoadMap26","Energy Solutions","OSS Journaling x Filesmd x Forgejo"]
 description: 'Beyond software.'
 url: 'jalcocertech-services-update'
 ---
@@ -164,7 +164,54 @@ flowchart LR
 
 * `https://www.seangoedecke.com/llms-reward-expertise/`
 
-### Inbound marketing x Branded Videos
+### OSS Journaling
+
+I started a repo to use logseq and do `.md` notes.
+
+I ended up just writing `.md` via vscode
+
+the downside? 
+
+I can just do so in laptops that i own to get the sync via github
+
+In case that you will work outside hardware you control, you can always go with other alternatives like silverbullet, or: https://fossengineer.com/files-md-local-first-markdown-notes/
+
+Its an **awsome PWA** that can write local files *and `.weba` audios*: `https://app.files.md/`
+
+{{< callout type="info" >}}
+Underpaid in the D&A space? Document all that you do and put together an awsome CV.
+{{< /callout >}}
+
+You can also do this with the forgejo setup if you are not afraid of .md:
+
+```sh
+
+```
+
+### Skills im using 
+
+Created a Codex skill for this workflow:                    
+C:/Users/j--e-/.codex/skills/weekly-work-summarizer/SKILL.md 
+  It includes:
+                                                                                                                
+  - EOW summary workflow                                                                                        
+  - director TL;DR email workflow                                                                               
+  - daily ticket/hour bullet allocation workflow                                                                
+  - CV/career evidence note workflow                                                                            
+  - style rules for Jira/Teams/email-safe output                                                                
+  - reusable templates in C:/Users/j--e-/.codex/skills/weekly-work-summarizer/references/templates.md           
+  - UI metadata in agents/openai.yaml                                                                           
+                                                                                                                
+  Validation passed: Skill is valid!                                                                            
+                                                                                                                
+  Future trigger examples:                                                                                      
+                                                                                                                
+  - “Use weekly-work-summarizer to create this week’s EOW”                                                      
+  - “Make the director TLDR from this week’s notes”                                                             
+  - “Create CV bullets from this week”                                                                          
+  - “Generate hours reporting bullets from Monday to Friday”                                                    
+                    
+#### Inbound marketing x Branded Videos
 
 In theory, artifacts like ebooks, this blog, fossengineer... should give you inbound traffic.
 
@@ -179,4 +226,3 @@ Its just one skill away:
 ```sh
 
 ```
-

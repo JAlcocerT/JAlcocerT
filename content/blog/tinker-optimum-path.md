@@ -152,6 +152,8 @@ gh auth login
 git init && git add . && git commit -m "Initial commit: simple optimum path" && gh repo create optimum-path --private --source=. --remote=origin --push
 ```
 
+> https://github.com/JAlcocerT/optimum-path
+
 **Minimum Curvature Path (MCP)**: *not the [AI MCP](https://jalcocert.github.io/JAlcocerT/ai-understanding-mcp-framework/), but the curvature one*
 - Optimizes: Smoothness
 - Fast but wrong objective for racing
@@ -204,6 +206,10 @@ https://youtu.be/81wY9E29x-E
 ## Conclusions
 
 Im **impressed** on how a simple model can provide realistic results.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo" icon="github" >}}
+{{< /cards >}}
 
 A point with all the mass of the kart and the driver.
 

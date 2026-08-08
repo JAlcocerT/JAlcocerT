@@ -73,9 +73,7 @@ get proper data lineage trazability to see what worked (what are the *features* 
 
 and feedback to the lead engine.
 
-
-
-0. Audio TTS/S2T: among all i tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/)
+0. Audio TTS/S2T: among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/)
 
 1. Delivery Analytics - Bc you better [drive outcomes](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#bluf)
 
@@ -226,17 +224,19 @@ Again: if you dont have a distribution, expect that nobody will care.
 
 0. A better CV: *because being a [pro D&A professional](https://jalcocert.github.io/JAlcocerT/excel-data-analytics-interviews/) is a little bit harder nowadays*
 
+Having regular [notes](https://jalcocert.github.io/JAlcocerT/no-code-tools-for-business/#note-tools) / journal in place will help you to get the narrative right.
+
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/my-logseq-notes" title="My LogseQ notes ↗" icon="github" >}}
 {{< /cards >}}
 
-Ive also added some D&A industry use cases: https://www.jalcocertech.com/support/articles/
+Ive also added some D&A industry use cases and [articles](https://www.jalcocertech.com/support/articles/)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="Ebooks Repo- D&A ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/cv-laitex" title="CV Latex - Offer Tracker ↗" icon="github" >}}
 {{< /cards >}}
-
 
 <!-- 
 deeper Power BI expertise, particularly in BI semantic model design and self-service analytics. 
@@ -246,7 +246,7 @@ consumer analytics - fmcg - consumer insights
 
 Forget about MMM marketing analytics, **personalized outreach** is the next big thing.
 
-If you are a data engineer with some imagination: *become a GTM engineer*.
+If you are a data engineer with some imagination: *go become a GTM engineer*.
 
 0. ecommerce
 
@@ -286,7 +286,6 @@ But in case you need the link analytics:
 1. Weddings and ads 101: *a micro-SaaS ,game' has great GM, it just needs OpEx to get rolling!*
 
 ![Slubne Chwile google ads](/blog_img/biz/gads/google-ads.png)
-
 
 1. Landing Page essentials *a DIY boilerplate way with most sections you might need*
 
@@ -391,7 +390,6 @@ flowchart LR
   {{< card link="https://jalcocert.github.io/JAlcocerT/improving-healthcare-analytics/" title="Hospital Github Actions CI/CD Implementation | Post ↗" >}}
 {{< /cards >}}
 
-
 9. Authentication Post: *flowing directly to BiP*
 
 Because [social sign](https://jalcocert.github.io/JAlcocerT/social-signin-101/#conclusions) is not only cool, but useful for your SaaS.
@@ -426,8 +424,6 @@ Which I used for the first **tech [talk](#tech-talks)** of this year.
 
 10. Thanks to those series of doing things: the D&A / Agentic COO / for Shopify came into my mind.
 
-
-
 {{< cards >}}
   {{< card link="https://github.com/" title="SliDev Repo | Pre Y26 Tech Talks ↗" icon="github" >}}
   {{< card link="https://github.com/" title="Consulting / Landing Repo | Y26 Tech Talks ↗" icon="github" >}}
@@ -440,13 +436,27 @@ Should I call this Embeded analytics?
 
 I ended up [planting tomatoes around IoT](https://jalcocert.github.io/JAlcocerT/plants-101/)
 
-11. Mechanisms reloaded. *With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) back in place*
+With very interesting yield results for the tomatoes
+
+Also along the way, I made a solid IoT setups
+
+Which are ground work for energy solutions
+
+11. Oh, yea, energy is a thing!
+
+
+
+
+
+11. Mechanisms reloaded.
+
+*With [algebra](https://jalcocert.github.io/JAlcocerT/algebra-101/) and [calculus](https://jalcocert.github.io/JAlcocerT/calculus-101/) back in place*
 
 Simulations are back.
 
 But not in [matlab, nor octave](https://jalcocert.github.io/JAlcocerT/matlab-vs-octave/).
 
-Just pure Python.
+Just [pure Python](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/#uv).
 
 This includes [the bicycle project](https://jalcocert.github.io/JAlcocerT/3d-mbsd-bicycle/#real-time-bike-simulator-in-python)
 
@@ -457,7 +467,7 @@ https://youtu.be/0CLNWADDrtY -->
 
 Migrated with Claude Code btw.
 
-For racers, see how to estimate the [**optimum circuit path** based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and gradient descent.
+For racers, see how to estimate the [**optimum circuit path** based with a simple model](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/) based on a go pro data and [gradient descent](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/#the-mass-point-model--gradient-based-optimization).
 
 {{< youtube "3A6fIKeBTRo" >}}
 
@@ -468,7 +478,9 @@ For racers, see how to estimate the [**optimum circuit path** based with a simpl
 
 Dont ask me how, but I managed to [plug Blender](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/) into [mbsd](https://jalcocert.github.io/JAlcocerT/2d-mbsd/).
 
-All as a code, with [CadQuery as the bridge](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/).
+All as a code
+
+With [CadQuery as the bridge](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/).
 
 {{< youtube "1WzRJM8HVKg" >}}
 
@@ -476,16 +488,19 @@ So what?
 
 You can now [simulate engine vibrations](https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/) fully as code:
 
-
 {{< youtube "QQq3d_QHmns" >}}
-<!-- 
-{{< youtube "1WzRJM8HVKg" >}} -->
 
-Oh, but ive done simulations not only for mechanisms: https://ebooks.jalcocertech.com/books/mechanism-analytics/
+<!-- 
+{{< youtube "1WzRJM8HVKg" >}} 
+-->
+
+Oh, but ive done simulations not only for mechanisms
+
+And not only an ebook: https://ebooks.jalcocertech.com/books/mechanism-analytics/
 
 12. Because ive also done electronical simulations
 
-All started with the prep work around electromagnetism and electronics 101 for [the tomatoes experiment](https://jalcocert.github.io/JAlcocerT/plants-101/#1-tomato-seeds-pomidor).
+All started with the prep work around [electromagnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101) and electronics 101 for [the tomatoes experiment](https://jalcocert.github.io/JAlcocerT/plants-101/#1-tomato-seeds-pomidor).
 
 With [the electromagnetism recap](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) required to understand [the EMF kickback](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#how-to-avoid-frying-an-esp32-due-to-kickback)
 
@@ -498,6 +513,8 @@ https://youtu.be/xycErOBk9mI
 -->
 
 You can get to know [how the rays of sun](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#what-about-blender) will hit your building along the year
+
+Even if your building does not exist yet:
 
 <!-- https://youtu.be/xycErOBk9mI -->
 
@@ -530,6 +547,8 @@ The results?
 Well, a first [Go Desktop App](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails) that makes this: *with Wails*
 
 {{< youtube "M03HU4DWhyE" >}}
+
+12. Which made me go deeper into **GPX, OSM and GIS**
 
 13. So was coming back to maps, but with animations this time:
 
@@ -578,8 +597,6 @@ Taking the learnings of optimum path and the route tracker, I just put this toge
 {{< /cards >}}
 
 
-
-
 15. Talking about racing...whats going on with F1 this year?
 
 {{< cards >}}
@@ -592,7 +609,6 @@ git clone https://github.com/JAlcocerT/eda-f1
 cd eda-f1
 uv run f1_q3_short.py #Interactive Q3 animation video (15s Short)
 ```
-
 
 14. Twitter / X powered by PyStocks / stonks / libreportfolio.
 
@@ -620,7 +636,7 @@ Because the datainmotion `libreportfolio` branch with gweiss method and so on wa
 uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePortfolio" --warmup-days 400
 ```
 
-All powered via: https://gitlab.com/fossengineer1/unfolding-data
+All powered via [Unfolding Data](https://gitlab.com/fossengineer1/unfolding-data)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
@@ -649,7 +665,7 @@ Talking about trends, what happened with crypto bros?
 
 The sha256 still holds strong, it was all about hashing https://www.devtoolbox.co/tools/hash-generator
 
-And electrum, metamask and mymonero keep working.
+And electrum, metamask and mymonero kept working.
 
 16. Tech videos were not a priority this year.
 
@@ -662,17 +678,15 @@ I finally uploaded some from last year, just with youtube music:
 
 Others, from the vibe coding sessions: helped to bring [quick demos](https://youtu.be/WFi0LD8Ux4A) to their related product landing.
 
-17. I made **some animations** instead.
+17. I made **some animations**.
 
 I mean...[several animations](https://jalcocert.github.io/JAlcocerT/youtube-video-as-a-code/).
 
 Including [data races](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/#yfinance-x-remotionjs).
 
-
 18. That was true until in March/April I tinkered more and more with RemotionJS and HyperFrames
 
 From that point I started making quick videos: from [intro to tech talks](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk), ...
-
 
 ### Serverless
 
@@ -698,7 +712,6 @@ Just that you dont manage it for once.
 > Pulling registered users from those tables and setting automatic emails campaigns *(lean DRIP)* [with Mailtrap and GHA](https://jalcocert.github.io/JAlcocerT/iterating-and-improving-a-micro-saas/#mailtrap-orchestrated-via-gha) was so cool
 
 > > The magic happens at [this gha workflow](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/drip.yml)
-
 
 Plus a cool example of [lean engineering](https://jalcocert.github.io/JAlcocerT/lean/). 
 

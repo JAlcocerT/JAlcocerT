@@ -263,7 +263,7 @@ If you have a smart tv, probably those are already installed, or you can add the
 
 The main difference is that Kodi is a unified server+client application, Jellyfin has the server and the clients separated into different apps. 
 
-Jellyfin will use the CPU, unless you do this trick: https://jellyfin.org/docs/general/administration/hardware-acceleration/amd/
+Jellyfin will use the CPU, unless you do this trick for the APU to do its job: `https://jellyfin.org/docs/general/administration/hardware-acceleration/amd/`
 
 Offline [video workflow](https://jalcocert.github.io/JAlcocerT/my-action-cam-video-workflow/): *Action cam -> Server -> Jellyfin -> SmartTV* 
 
@@ -288,8 +288,6 @@ See how the tool looks live: https://it-tools.tech/
 <!--
  https://www.youtube.com/watch?v=UCsYWXEuvms 
 -->
-
-
 
 #### NextCloud
 

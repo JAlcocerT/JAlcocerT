@@ -138,3 +138,24 @@ Tomatoe one timer?
 ### Tomatoe Prep for Next Year
 
 What would I do different next year?
+
+
+### Geo Matters
+
+```sh
+cd ./poc/building-geo-osm-blender
+make osm2world-obj
+```
+
+sudo apt update                                                                               
+  sudo apt install openjdk-17-jre unzip wget                                                    
+                                                                                                
+  mkdir -p ~/tools/osm2world                                                                    
+  cd ~/tools/osm2world                                                                          
+                                                                                                
+  wget https://osm2world.org/download/files/latest/OSM2World-latest-bin.zip                     
+  unzip OSM2World-latest-bin.zip                                                                
+                                                                                                
+  Then from this repo:                                                                          
+                                                                                                
+  make osm2world-obj OSM2WORLD=~/tools/osm2world/osm2world   

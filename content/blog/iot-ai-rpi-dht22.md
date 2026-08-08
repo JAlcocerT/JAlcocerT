@@ -7,7 +7,6 @@ description: 'Using LangChain/ADK to get Temperature & Humidity data from a DHT2
 url: 'langchain-chat-with-sensor-data'
 ---
 
-
 **TL;DR**
 
 Coming from the pgsql x langchain post...

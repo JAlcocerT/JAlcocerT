@@ -1,22 +1,22 @@
 ---
-title: "Compliant mechanisms and MultiBodySystemsDynamics dot com"
-date: 2026-08-05
+title: "Time for MultiBodySystemsDynamics (dot) com"
+date: 2026-08-08
 draft: false
-tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper"]
-description: 'Dynamics is trickier when solids are flexible. Mechanism agentic centered design.'
+tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper","Forgejo"]
+description: 'Mechanism agentic centered design.'
 url: 'whitepaper-mbsd'
 math: true
 ---
 
 **Tl;DR**
 
-From the wedding conversation with Gilabert, my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and inspired by diode
+Because ideas are worthless and execution is everything
+
+The engine behind `https://multibodysystemsdynamics.com/` cant be closed source.
 
 **Intro**
 
-Because ideas are worthless and execution is everything
-
-The engine under `https://multibodysystemsdynamics.com/` cant be closed source.
+From the [wedding conversation with Gilabert](https://jalcocert.github.io/JAlcocerT/what-do-i-do/), my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and inspired by diode Inc.
 
 ```sh
 make list-user-repos NEW_USER=hermesagent
@@ -59,7 +59,6 @@ Yes. The intended meaning is:
 
 So 0.5 should include all earlier 2D functionality plus the first public 3D namespace.
 
-
 ## Showcase - Engine Vibrations
 
 Say that you can to simulate a new engine type:
@@ -77,7 +76,6 @@ https://www.youtube.com/watch?v=HVqYlP1MC6E -->
 
 Yep, [these can get 20L displacement](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#w-engine-simulation) and require a huge power spike to get started.
 
-
 ### Rotatory
 
 ## The Web x Leads
@@ -91,11 +89,16 @@ The landing and the leads are mine :)
 
 ## Conclusions
 
+
+
+### Compliant Mechanism
+
+Dynamics is trickier when solids are flexible
+
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
-
 
 ---
 
@@ -107,4 +110,8 @@ The landing and the leads are mine :)
 
 Paillard fan
 
-https://www.youtube.com/watch?v=DudAEiP6lKU
+<!-- 
+https://www.youtube.com/watch?v=DudAEiP6lKU 
+-->
+
+{{< youtube "DudAEiP6lKU" >}}
