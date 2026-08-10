@@ -16,7 +16,7 @@ The engine behind `https://multibodysystemsdynamics.com/` cant be closed source.
 
 **Intro**
 
-From the [wedding conversation with Gilabert](https://jalcocert.github.io/JAlcocerT/what-do-i-do/), my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and inspired by diode Inc.
+From the [wedding conversation with Gilabert](https://jalcocert.github.io/JAlcocerT/what-do-i-do/), my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and [inspired by diode Inc](https://www.youtube.com/watch?v=B8DbMJ1Zr4I).
 
 ```sh
 make list-user-repos NEW_USER=hermesagent

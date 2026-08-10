@@ -82,8 +82,6 @@ Low-voltage DC power (like your 12V car outlet and USB-C ports) doesn't need phy
 * Instead of mechanical arms, the DC circuit is controlled by **MOSFETs** (solid-state semiconductor transistors).
 * These are digital chips with **zero moving mechanical parts**. Turning a DC port on or off is done purely by changing voltage on a silicon gate—making it completely instantaneous and dead silent.
 
----
-
 > **Bottom Line:** The click is actually a reassuring safety feature. It tells you the high-voltage relay just physically clamped shut and is ready to safely handle up to 600W of AC power!
 
 #### Power vs Energy Density
@@ -98,6 +96,11 @@ This indicates the power station uses a **4S LiFePO4 battery pack configuration*
 
 * Nominal voltage per LiFePO4 cell = $3.2 \text{ V}$
 * Pack nominal voltage = $4 \times 3.2 \text{ V} = 12.8 \text{ V}$ to $16 \text{ V}$ (depending on whether it is calculated using nominal or full charge voltage)
+
+
+{{< callout type="warning" >}}
+You wont be able to carry this on a flight as they are limited to 100 Wh at the time of writing!
+{{< /callout >}}
 
 2. Weight vs. Chemistry: 4.3 kg with LiFePO4
 

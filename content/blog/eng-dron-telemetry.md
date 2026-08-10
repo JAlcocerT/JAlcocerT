@@ -787,6 +787,7 @@ Skipping these checks is the #1 reason custom drones instantly flip over, freak 
 2. Look at the 3D model of the drone on the screen.
 3. Pick up your actual drone and tilt its nose down. Does the 3D model tilt its nose down?
 4. Roll it to the right. Does the 3D model roll to the right?
+
 *If the model moves in the opposite or wrong direction, your flight controller orientation settings are wrong, and the drone will instantly flip and crash the moment you try to take off.*
 
 3️⃣ Check 3: Failsafe Test

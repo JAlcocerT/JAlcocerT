@@ -950,7 +950,50 @@ Databricks emphasizes data engineering and unified analytics beyond notebooks, w
 
 ### Geo Analytics
 
-`/geo-maps-and-data`
+https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#geo-from-r-to-py
+
+https://penotariado.com/inmobiliario/en/housing-price-finder
+
+https://www.ine.es/ADRH/?config=config_ADRH_2023.json&showLayers=ADRH_2023_Renta_media_por_hogar_cache&level=5
+
+```sh
+python scripts/build_transaction_map.py
+start maps\dvf_eaux_bonnes_2025_transactions.html
+```
+
+![alt text](/blog_img/data-experiments/geo/gourette-dfv-osm.png)
+
+```sh
+python scripts/build_france_transaction_map.py --max-mutations 1000
+#  python scripts/build_france_transaction_map.py --department 64
+maps\dvf_france_2025_transactions_preview.html
+
+#start maps\dvf_france_2025_transactions_preview.html
+start maps\dvf_combined_lyon_dept64_2025_transactions_preview.html
+```
+
+I put together a [quick video here](https://github.com/JAlcocerT/poc/tree/main/building-geo-fr-osm) around those
+
+```sh
+python -m py_compile scripts\build_price_video.py
+```
+
+<!-- 
+https://youtu.be/bgx9B_77tYU 
+-->
+
+{{< youtube "bgx9B_77tYU" >}}
+
+
+
+https://github.com/domlysz/BlenderGIS
+https://www.youtube.com/watch?v=cSTCZVzS1fs
+
+https://www.youtube.com/watch?v=4R4xRH-Nyac
+
+https://www.youtube.com/watch?v=uPM2gNSWX9o&list=PLAxJ4-o7ZoPcfLJ0w7k-woHJXkbjSiKb3
+
+https://www.youtube.com/results?search_query=f4map
 
 1. GeoLibre - https://github.com/opengeos/GeoLibre that you can find https://geolibre.app/
 

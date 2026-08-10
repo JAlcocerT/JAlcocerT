@@ -1,11 +1,29 @@
 ---
-title: "[Prototyping] Restaurants x Astro SSR."
+title: "[Prototyping] Restaurants."
 date: 2027-12-30
 draft: false
-tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads x APIFY x Web Audit"]
+tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads x APIFY x Web Audit","Astro SSR vs PWA"]
 description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranean x OpenClaw x Gems."
 url: "webs-for-restaurants"
 ---
+
+https://github.com/usememos/memos
+
+https://github.com/ZhFahim/anchor
+
+Why was so hard to have an offline editor like: https://app.files.md/
+
+Download static themes from a repo one
+
+select which one you want
+
+make the ui/x tweaks with AI
+
+Configure the ci/cd and domain once
+
+Then edit locally and own your text, with a potential connection to the CI/CD to push whatever you wrote when you have internet
+
+Why - was - that - hard
 
 https://github.com/karanshukla/openresto
 

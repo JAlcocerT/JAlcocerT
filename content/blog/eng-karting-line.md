@@ -45,6 +45,13 @@ git clone
 
 ### Spa
 
+<!-- 
+https://www.youtube.com/watch?v=v1I5b4-JE00&t=9s 
+-->
+
+{{< youtube "v1I5b4-JE00" >}}
+
+
 
 #### Karting
 
@@ -114,7 +121,7 @@ here is sth more:
 
 3. Rsync
 
-4. You can play your own music and videos via: jellyfin and ultrasonic in android / ios / desktop
+4. You can play your own music and videos via: jellyfin and ultrasonic in android / ios / [supersonic](https://github.com/supersonic-app/supersonic/releases) (connects to subsonic or jellyfin) for desktop
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin | Docker Config 🐋 ↗" >}}
@@ -141,3 +148,23 @@ If you need more:
 
 
 ### Tools and Tech for Trips
+
+1. https://github.com/spliit-app/spliit
+2. A trip planner like [this](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/poc-trip-planner-v4) https://trip-planner-9lt.pages.dev/?sid=07621&lat=43.1833&lon=0&name=Tarbes+Ossun+Lourdes&country=FR
+
+3. https://github.com/itskovacs/trip/releases/tag/1.47.0
+
+### My fav PWAs
+
+
+
+[Spliit](https://spliit.app/), and a [quick pwa poc](https://github.com/JAlcocerT/poc/tree/main/pwa-spliit-analyzer) i created around it
+
+```sh
+cd ./poc/pwa-spliit-analyzer
+C:\Python312\python.exe -m http.server 5173 --bind 127.0.0.1
+```
+
+Some, like https://app.files.md/ allow you to interact with your local files!
+
+Or with your fpv/drones hardware: `https://app.betaflight.com/#`
