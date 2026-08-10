@@ -7,7 +7,9 @@ description: "A lead is only useful when there is a concrete reason to believe t
 
 A lead list is a set of hypotheses.
 
-Each record should imply why this person or company might care now: a broken site, hiring signal, regulation, growth event, visible inefficiency, or recent trigger. Without that reason, outreach becomes generic interruption.
+Each record should imply why this person or company might care now: a broken site, hiring signal, regulation, growth event, visible inefficiency, or recent trigger. 
+
+Without that reason, outreach becomes generic interruption.
 
 Good lead generation starts with evidence of pain.
 

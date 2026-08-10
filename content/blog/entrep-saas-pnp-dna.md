@@ -51,7 +51,6 @@ Going through PDF's:
 
 And most importantly: [LangChain can be **connected to our databases**](https://jalcocert.github.io/JAlcocerT/langchain-chat-with-database/)
 
-
 ```sh
 #git clone https://github.com/JAlcocerT/Data-Chat #see for yourself the previous langachain x db chat - tinkering
 #git clone --depth 1 --single-branch -b main https://github.com/JAlcocerT/Data-Chat
@@ -308,7 +307,6 @@ While it lacks modern features like **SEO metadata** or **JSON blobs** for flexi
 
 To use Northwind for advanced analytics (OLAP), you would typically transform this normalized schema into a **Star Schema** with a central `Fact_Sales` table connected to various "Dimension" tables (Time, Product, Employee, Customer).
 
-
 #### Sample 3 - OLAP
 
 DuckDB, PostgreSQL, and ClickHouse serve overlapping but distinct roles: *DuckDB for embedded/local OLAP analysis, PostgreSQL for versatile OLTP/OLAP hybrid (especially with extensions), and ClickHouse for high-scale distributed OLAP*.
@@ -361,13 +359,15 @@ pg_conn_str = "host=localhost user=admin password=securepassword port=5432 dbnam
 
 This "Hybrid" approach gives you the best of both worlds: **PostgreSQL** for safe data storage (OLTP) and **DuckDB** for lightning-fast reports (OLAP).
 
-DuckDB loads only the columns it needs into RAM (vectorized processing), spilling to disk for huge datasets. Redis requires everything in RAM upfront.
+DuckDB loads only the columns it needs into RAM (vectorized processing), spilling to disk for huge datasets. 
+
+Redis requires everything in RAM upfront.
 
 DuckDB = "SQLite for analytics" (embedded, disk-based). 
 
 Redis = "in-memory cache/broker". 
 
-Completely different categories despite both being fast.
+Completely different categories despite both being fast!
 
 ##### PG OLTP to OLAP
 
@@ -779,10 +779,9 @@ Time to demonstrate *once again* that adaptability skills for the transition tha
 
 * https://github.com/Kanaries/graphic-walker
 
-> Apache v2 | An open source alternative to Tableau. **Embeddable visual analytic**
+> **Apache v2** | An open source alternative to Tableau. **Embeddable visual analytic**
 
 See also [this section](#understanding-existing-solutions).
-
 
 ---
 
@@ -1175,7 +1174,6 @@ This is the **output phase**. Once the Agentic Layer has found the answer, the R
 
 * **Role:** It formats the data based on the end-user's needs, whether that is a chart, a text summary, or a table.
 
-
 End-User Deliverables
 
 The diagram ends with three primary ways users interact with this processed data:
@@ -1183,9 +1181,6 @@ The diagram ends with three primary ways users interact with this processed data
 * **Embedded Analytics:** Pushing these insights directly into other software applications.
 * **Dashboards & Reports:** Traditional visual summaries of Key Performance Indicators (KPIs).
 * **Conversational Interface:** A "Chat with your data" experience where users ask questions in plain English and get immediate answers (the core value of WrenAI).
-
-Would you like me to dive deeper into how the **Semantic Layer** specifically helps the AI avoid making mistakes?
-
 
 
 ### Whats a composable

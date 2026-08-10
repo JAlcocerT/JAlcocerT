@@ -9,6 +9,8 @@ url: 'tech-recap-2026'
 
 la hula kula
 
+Whats working, whats not and whats next?
+
 <!-- https://youtu.be/2xAx08rBejc -->
 
 {{< youtube "2xAx08rBejc" >}}

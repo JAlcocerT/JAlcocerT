@@ -7,7 +7,9 @@ description: "A product can survive high churn if the customer job is finite and
 
 Not every software business needs recurring usage.
 
-Some jobs are naturally finite: a wedding, a migration, an audit, a launch, a move. In those cases, churn is not failure if the product captures enough value during the event and acquisition cost stays below lifetime value.
+Some jobs are naturally finite: a wedding, a migration, an audit, a launch, a move. 
+
+In those cases, churn is not failure if the product captures enough value during the event and acquisition cost stays below lifetime value.
 
 The business model should fit the job duration.
 

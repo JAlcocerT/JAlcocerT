@@ -7,7 +7,6 @@ tags: ["Free Web Audits","PoC Lead Magnet","Roadmap26","BiP","Wordpress","Blogsp
 url: 'how-to-perform-free-web-audit'
 ---
 
-
 **Tl;DR**
 
 Creating **Lead Magnet**: get a FREE web audit
@@ -28,7 +27,6 @@ I have been following couple of sites on blogspot.
 
 Could they have a responsive (and nice looking site), without loosing its old content?
 
-
 ## Programmatic Free Audits for Websites
 
 Give me your contact details and I will move the world.
@@ -36,7 +34,6 @@ Give me your contact details and I will move the world.
 Or in this case: verify your email and select which if these audits you want to perform against your site for free (by default some will be selected).
 
 Ive seen some good examples: `https://www.beedigital.es/analisis-seo-gratuito/`
-
 
 Btw, the **pages speed insights**, can be done via **API**: *see [this .md](https://github.com/JAlcocerT/morita-web/blob/main/z-pagespeedinsight-101.md)*
 
@@ -77,6 +74,8 @@ Let's make them see how good is their current one.
 #git init && git add . && git commit -m "Initial commit: Starting a landing with lead magnet" && gh repo create poc_webs_magnet --private --source=. --remote=origin --push
 ```
 
+I started with:
+
 ```md
 what i want to create with this project is a modern landing page that acts as a lead magnet, by providing a free web audit for anyone that provides its website and contact details. 
 
@@ -86,6 +85,8 @@ could we create a z-brd.md to describe this?
 
 could we also add a functional requirement, so that all the copy from the landing will be controlled from a site.md file?
 ```
+
+Then continued:
 
 ```md
 what it needs to happen so that when i do make dev it will be exposed to the local network not just localhost?
@@ -268,7 +269,6 @@ You are moving from a **Productized Commodity** (WebApp) to **Bespoke Strategic 
 
 In the **Value Ladder**, the difference is between **Efficiency (Save me effort)** and **Results (Make me money).**
 
-
 #### 1. The Value Ladder Mapping
 
 | Level | Route | Value Proposition | "The Vibe" |
@@ -398,11 +398,8 @@ If you start **fresh on a VPS** and have Docker and WordPress set up, bringing y
   {{< card link="https://jalcocert.github.io/JAlcocerT/where-to-deploy/" title="Where to Deploy" image="/blog_img/selfh/hetzner-sharedcpu.png" subtitle="A VPS Recap on Hetzner, DO to ship PoCs and more" >}}
 {{< /cards >}}
 
-
 * https://jalcocert.github.io/JAlcocerT/automating-ghost-and-wordpress/
-
 * https://jalcocert.github.io/JAlcocerT/no-code-websites/
-
 
 1. Step 1: Prepare Your Docker WordPress Setup
 
@@ -443,7 +440,6 @@ As an alternative, through the WordPress Admin UI:
 - Go to **Appearance → Themes → Add New → Upload Theme**.
 - Upload a zip archive of your theme; WordPress will install and activate it.
 
-
 | Method | Description | When to Use |
 |--------|-------------|-------------|
 | SCP/SFTP Copy | Manually copy theme files | Direct file control, VPS access |
@@ -463,19 +459,13 @@ These can be used, studied, modified, or forked for your own projects.
 
 Some of the most widely used and high-quality open-source WordPress themes include:
 
-- **[Roots / Sage](https://github.com/roots/sage)** — a Laravel Blade-based WordPress starter theme with Tailwind CSS and full block editor support; a favorite among professional developers (over 13k stars).[1]
+- **[Roots / Sage](https://github.com/roots/sage)** — a Laravel Blade-based WordPress starter theme with Tailwind CSS and full block editor support; a favorite among professional developers (over 13k stars).
 - **Automattic / themes** — a collection of official free themes built by the WordPress.com team, released under GPL-2.0.[2]
-- **WordPress / community-themes** — a repository of block-based themes demonstrating WordPress’s new Full Site Editing (FSE) capabilities, developed collaboratively by the community.[3]
+- **WordPress / community-themes** — a repository of block-based themes demonstrating WordPress’s new Full Site Editing (FSE) capabilities, developed collaboratively by the community.
 - **digitoimistodude / air-light** — a lightweight (<20 kB) starter theme optimized for developers, using HTML5 and minimal dependencies.[6]
-- **them.es** — open-source starter themes built with Bootstrap or Material Design that support full site editing, responsive design, localization, and build automation.[8]
+- **them.es** — open-source starter themes built with Bootstrap or Material Design that support full site editing, responsive design, localization, and build automation.
 - **solstice23 / Argon** and **mirai-mamori / Sakurairo** — popular modern community-maintained designs supporting internationalization and colorful UI.[1]
 
-You can explore thousands more in the **GitHub “wordpress-theme” topic**, which currently includes over 4,000 public repositories across PHP, CSS, and JavaScript projects.[1]
+You can explore thousands more in the **GitHub “wordpress-theme” topic**, which currently includes over 4,000 public repositories across PHP, CSS, and JavaScript projects.
 
-**Installing Themes from GitHub**
-
-You can manually download a theme ZIP file from GitHub and install it through **WordPress → Appearance → Themes → Upload Theme**.  
-
-Alternatively, use tools like **WP Pusher** or **GitHub Updater** to install and automatically update WordPress themes directly from public GitHub repositories.[5][9]
-
-All of these themes respect GPL open-source licensing, meaning you can modify or even resell them under your own distribution as long as you retain the same license.
+**Installing Themes from GitHub**: You can manually download a theme ZIP file from GitHub and install it through **WordPress → Appearance → Themes → Upload Theme**.  

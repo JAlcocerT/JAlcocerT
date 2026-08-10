@@ -30,12 +30,10 @@ So consider it a WIP until the year has ended - or AI took over civilization :)
 > Its *Kind of new*, because I created the repo on [this post](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-december-2025), based on the 2025 path :)
 
 > > The content of the n ebooks will be modified across the year as I distill it from this blog/docs
-
-
+a
 I saw this post coming up next and inmediately thought that I should put *at some point* an IoT related ebook after this.
 
 Specially after the learnings of the [Obfuscator project](https://github.com/JAlcocerT/obfuscate), where I merged the source code of serving an ebook via FastAPI to the one of rendering the PDF via R.
-
 
 The idea is to use this to consolidate Docs - web/ooks, case studies and slidev ptts.
 
@@ -59,14 +57,12 @@ And the ebooks are supposed to help me with the DIY tier.
 
 {{% /details %}}
 
-
 Expect ,n' to be: *these content driven ebooks from the repo*
 
 1. Webpage creator: Because you can own your brand. *You can [DIY](https://diy.jalcocertech.com/api/book) btw*
 2. Homelabs/Servers: I started this ebook because everything has potential failures
 3. IoT: This is the one I want to put together as I write this post :)
 4. D&A...
-
 
 This time, adding more languages for the ebooks is on the table. Locale i18n!
 

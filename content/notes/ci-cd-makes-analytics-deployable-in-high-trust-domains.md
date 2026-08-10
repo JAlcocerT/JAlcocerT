@@ -7,7 +7,9 @@ description: "In high-trust domains, analytics apps need repeatable deployment m
 
 Analytics work becomes operational only when it can be deployed repeatedly.
 
-In healthcare or medical physics, a useful dashboard is not just a notebook with charts. It needs versioning, reproducible builds, container images, and a deployment path that reduces manual drift.
+In healthcare or medical physics, a useful dashboard is not just a notebook with charts. 
+
+It needs versioning, reproducible builds, container images, and a deployment path that reduces manual drift.
 
 CI/CD turns analytical output into maintainable software.
 

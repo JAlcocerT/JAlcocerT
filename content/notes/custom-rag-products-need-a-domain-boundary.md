@@ -7,7 +7,9 @@ description: "A RAG product becomes useful when it is constrained to a clear dom
 
 A custom RAG product should not try to answer everything.
 
-It works best when the knowledge base, user role, allowed questions, and next action are bounded. For a real estate agency, that might mean answering property, neighborhood, process, and lead-qualification questions inside a specific workflow.
+It works best when the knowledge base, user role, allowed questions, and next action are bounded. 
+
+For a real estate agency, that might mean answering property, neighborhood, process, and lead-qualification questions inside a specific workflow.
 
 Narrow scope makes retrieval easier to trust.
 

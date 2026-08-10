@@ -129,7 +129,6 @@ Coming from here:
   {{< card link="https://github.com/JAlcocerT/Data-Chat" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code for DB Chat with Langchain" >}}
 {{< /cards >}}
 
-
 * https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/
 
 {{< cards >}}
@@ -161,7 +160,6 @@ These projects are providing much more value than a one time fee.
 And if they dont - go find better clients who would get the real potential value out of it.
 
 Now...**lets get started** with this one.
-
 
 {{< details title="Create a Web/Apps with editor and ChatBot for Real Estate 📌" closed="true" >}}
 
@@ -217,10 +215,9 @@ How It All Works Together:
 - 🎨 Bundles JavaScript, CSS, images, etc.
 
 **Architecture:**
-- ✅ **Astro** web app (framework) - Hybrid rendering (SSR for `/edit` & `/api`, SSG for public pages)
-- ✅ Powered by **Vite** (build tool) - Development server & production bundler
-- ✅ Running on **Node.js** (runtime) - Server-side JavaScript execution
-
+- **Astro** web app (framework): Hybrid rendering (SSR for `/edit` & `/api`, SSG for public pages)
+- Powered by **Vite** (build tool): Development server & production bundler
+- Running on **Node.js** (runtime): Server-side JavaScript execution
 
 | Component | Technology | Details |
 |-----------|-----------|---------|
@@ -496,8 +493,6 @@ Chatting with Gemini, I got to know some JS alternatives to bs4: *The "best" cho
 | **Difficulty** | Easy | Moderate | Moderate/High |
 | **Use Case** | Simple data extraction | Complex interaction | Large scale crawling |
 
-
-
 **Cheerio** is the industry standard and the closest direct equivalent to **BeautifulSoup**.
 
 * **Why it's great:** It is incredibly fast because it does not launch a browser; it only parses the raw text of the HTML. It uses **jQuery-style selectors** (`$('.price').text()`), which makes it very intuitive for JS developers.
@@ -568,7 +563,6 @@ Test the lighthouse metrics:
 
 ```sh
 ./lighthouse-audit.sh https://test.entreagujaypunto.com
-
 
 Category             Desktop         Mobile         
 ────────────────────────────────────────────────────────────

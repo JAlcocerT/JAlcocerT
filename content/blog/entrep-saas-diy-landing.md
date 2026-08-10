@@ -8,7 +8,6 @@ description: 'Showing how to build landings realiably (and fast) with AI Agents 
 url: 'diy-landing-boilerplate'
 ---
 
-
 **TL;DR**
 
 When thinking about **ways to decouple time and value delivery**...
@@ -64,14 +63,11 @@ Im moving towards *productionazing it* with the shape of...**code + life time ac
 
 {{< youtube "P6MQBU3YpmM" >}}
 
-
-
 Kind of...
 
 People are using them to sell ebooks `https://readmake.com/` or ways to code: `https://codefa.st/#pricing`, `https://shipfa.st/?ref=indiepage`
 
 Or to sell simple microSaaS services like: `https://poopup.co/`
-
 
 Lets get to it.
 
@@ -202,7 +198,6 @@ If you are coming from Next.js, here is how the core "app" features translate:
 | **Routing** | File-based (`page.tsx`) | File-based (`index.astro`) |
 | **Layouts** | `layout.tsx` (nested) | Standard components with `<slot />` |
 
-
 3. Key Differences in "The Feel"
 
 While the capabilities are similar, the execution differs in two major ways:
@@ -234,7 +229,6 @@ For your specific goal—a high-performing landing page with a chatbot, a calend
 
 It allows you to build the "brochure" parts of your site with zero JavaScript while "plugging in" a React component for the chatbot only where it's needed.
 
-
 **Astro (The Performance King)**
 
 Astro uses **Islands Architecture**.
@@ -260,7 +254,6 @@ It is designed for complex, state-heavy applications where the user stays on the
 | **Server Actions:** Extremely mature way to handle form submissions (like your email capture) without writing API routes. | **Complexity:** The "App Router" has a steep learning curve regarding caching, revalidation, and server/client boundaries. |
 | **Ecosystem:** Almost every 3rd-party service (Calendly, Stripe, etc.) has a first-class Next.js "plug-and-play" library. | **Vendor Lock-in:** It is heavily optimized for Vercel. Hosting it elsewhere (like a private VPS) can be more difficult. |
 | **ISR (Incremental Static Regeneration):** Updates static content in the background without a full rebuild—great for huge sites. | **Build Times:** As the project grows, Next.js build times can become significantly longer than Astro's. |
-
 
 **The Verdict for Your Project**
 
@@ -386,11 +379,9 @@ This is where Astro shines compared to other frameworks. You can "plug in" diffe
 | **Calendar** | `.jsx` or Embed | `client:visible` | Don't load JS until needed. |
 | **Email Form** | `.astro` + Action | SSR (Server) | Securely write to SQLite. |
 
-
 To get started with "plug-and-play" components in Astro, I recommend checking out **[AstroWind](https://astrowind.vercel.app/)** or **[shadcn/ui for Astro](https://www.google.com/search?q=https://github.com/shadcn-ux/shadcn-astro)**. 
 
 They give you the blocks (Hero, Features, Pricing) ready to go, and you just add your custom Chatbot and SQLite logic on top.
-
 
 To maximize conversions, your landing page needs to move the user from **Curiosity** to **Trust** and finally to **Action**. 
 

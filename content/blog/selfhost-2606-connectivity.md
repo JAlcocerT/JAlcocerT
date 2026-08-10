@@ -3,7 +3,7 @@ title: "Selfhosted Connectivity"
 date: 2026-06-17
 draft: false
 tags: ["TapMap vs PortMaster vs WireShark","Bind9 vs PiHole vs Technitum","TR471","iroh","Friis x Path Loss","QoS/AQM"]
-description: 'A homelab Open-Telemetry evaluation of WIFI metrics via EasyMesh and TR-181.'
+description: 'A homelab Open-Telemetry evaluation of WIFI metrics via EasyMesh, TR-181 and nmap.'
 url: 'selfhosted-connectivity'
 math: true
 ---
@@ -21,7 +21,7 @@ Whether the uplink is 4G, coax, fiber, or Starlink, the home network becomes the
 This post is a cleanup of my June 2026 connectivity notes.
 
 ```sh
-git pull
+#git pull
 make devices-remember ID=192.168.1.12 NAME=laptop TAGS=trusted
 make devices-remember ID=192.168.1.13 NAME=appliance TAGS=iot
 make devices-list
@@ -51,7 +51,7 @@ That is where OpenWrt, TR-181, bbfdm, obuspa, and EasyMesh become interesting.
   {{< card link="https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity" title="Pi Connectivity" subtitle="Connectivity checks inside hermesagent pushed to Github" >}}
 {{< /cards >}}
 
-## The Problem
+### The Problem
 
 I had several related but different questions mixed together:
 
@@ -66,7 +66,7 @@ Those questions belong in one connectivity post, but not as one giant paste of t
 
 The reader needs the conclusion first, then the optional details.
 
-## First Measurements
+### First Measurements
 
 The Pi was connected to the `Piszymsiu` SSID with strong 5 GHz signal:
 
@@ -138,7 +138,7 @@ Sample scan interpretation:
 
 {{< /details >}}
 
-### TR-471 Throughput Testing
+## TR-471 Throughput Testing
 
 I also tested the Broadband Forum **TR-471 *style* UDP speed test** flow with `obudpst`.
 
@@ -212,7 +212,7 @@ Local result links from the lab:
 
 {{< /details >}}
 
-### TR-181: The Data Model I Want
+## TR-181: The Data Model I Want
 
 TR-181 is the Broadband Forum data model for describing customer-premises network devices. 
 
@@ -260,8 +260,10 @@ Covered branches:
 - `Device.WiFi.EndPoint.1.*`
 - `Device.WiFi.NeighboringWiFiDiagnostic.Result.{i}.*` with `--scan`
 
+The Pi can expose its own station-side Wi-Fi state
+
 {{< callout type="warning" >}}
-The Pi can expose its own station-side Wi-Fi state. It cannot magically expose AP-side data for every client unless it is acting as the AP, or it can query the real AP/router.
+It cannot magically expose AP-side data for every client unless it is acting as the AP, or it can query the real AP/router.
 {{< /callout >}}
 
 ## Why OpenWrt Matters
@@ -585,7 +587,6 @@ Are you into these?
   {{< card link="https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/" title="More Telco Stuff" image="/blog_img/outro/telecom/2cm.png" subtitle="Concepts and Tools for the telecom industry" >}}
 {{< /cards >}}
 
-
 Most AI PoCs (19/20) fail
 
 Knowing what you are doing before starting, get you closer to be the 1/20:
@@ -749,18 +750,27 @@ Yes, especially with `bbfdm + obuspa`, but the role matters. A Pi as a Wi-Fi sta
 
 ### Can I run an EasyMesh agent?
 
-Yes, with OpenWrt/prplMesh, but a practical lab wants at least one good USB Wi-Fi adapter and a controller. Running both controller and agent on the same lab box is fine for learning.
+Yes, with OpenWrt/prplMesh, but a practical lab wants at least one good USB Wi-Fi adapter and a controller. 
+
+Running both controller and agent on the same lab box is fine for learning.
 
 ### Pi-hole, AdGuard, or Unbound?
 
-They solve DNS visibility and resolution, not radio quality. Pi-hole or AdGuard Home are good for seeing what devices resolve. 
+Pi-hole or AdGuard Home are good for seeing what devices resolve. 
+
+{{< callout type="info" >}}
+They solve DNS visibility and resolution, NOT radio quality.
+{{< /callout >}}
 
 Unbound is useful when you want local recursive DNS behavior.
-
 
 ### Friis Law
 
 Starting from [some electro-magnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) foundations
+
+What it is Friis for?
+
+And why it matters?
 
 
 ### What it is QoS/AQM

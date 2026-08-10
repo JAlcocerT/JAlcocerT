@@ -136,10 +136,9 @@ Knowing how to control infrastructure (servers/homelab) and providing SSL/https 
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/https/" title="Https | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-PS: You can use github actions not only to build and push images, but also your ssg powered websites
+PS1: You can use github actions not only to build and push images, but also your ssg powered websites
 
 PS2: combine GHA with email ESP like mailtrap to have code driven automatic email campaigns!
-
 
 **Healthcare Analytics** is a broad field, and it can be applied to many different areas of healthcare:
 

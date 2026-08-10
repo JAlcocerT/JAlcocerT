@@ -2,7 +2,7 @@
 title: "The enterprise insights are behind T-SQL and OracleSQL"
 date: 2026-01-15T23:20:21+01:00
 draft: false
-tags: ["BAML","AI Tech Talk 3","MindWendell x SliDev","DuckDB vs ClickHouse vs SQlite","Malloy"]
+tags: ["BAML","AI Tech Talk 3","MindWendell x SliDev","DuckDB vs ClickHouse vs SQlite","Malloy vs SQL"]
 description: 'From LangChain to BAML for insights extraction reliability. Lets go get them.'
 url: 'using-baml-to-query-a-database'
 ---
@@ -23,9 +23,9 @@ This is all around:
 
 ## Enterprise Insights
 
-We are going to simulate these with containers.
+We are going to simulate these insights / datapoints with containers.
 
-Just as demostrated here with pgsql.
+Just as demostrated in this post with pgsql.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/postgresql" title="PostgreSQL | Docker Config 🐋 ↗" >}}
@@ -42,7 +42,6 @@ python3 baml-extract-schema.py --db-uri "postgresql://admin:securepassword@local
 That part, BAML can take care of.
 
 But first, a look to few popular storage for enterprises.
-
 
 ### TSQL
 
@@ -75,15 +74,17 @@ The most common shorthand is: *DuckDB is to Redshift (both columnar, OLAP) what 
 
 SQLite and DuckDB are both embedded, but they target almost opposite workloads: SQLite is for small transactional apps, DuckDB is for local analytics on larger datasets. [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/)
 
-## Mental model (when to use which)
+## Mental model 
+
+When to use which?
 
 - Use **SQLite** when you need:  
-  - A simple embedded OLTP store for apps (mobile, desktop, IoT, local cache). [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison)
+  - A simple embedded **OLTP store** for apps (mobile, desktop, IoT, local cache). [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison)
   - Lots of small inserts/updates, point lookups, and very low overhead. [sqlflash](https://sqlflash.ai/article/20251119_sqlite_vs_duckdb/)
   - A stable, tiny dependency you can ship everywhere, with conservative resource usage. [sqlite](https://www.sqlite.org/about.html)
 
 - Use **DuckDB** when you need:  
-  - OLAP‑style queries: big scans, joins, aggregations over millions of rows. [duckdb](https://duckdb.org/why_duckdb.html)
+  - **OLAP‑style** queries: big scans, joins, aggregations over millions of rows. [duckdb](https://duckdb.org/why_duckdb.html)
   - Columnar / vectorized execution, parallelism, and larger‑than‑memory analytical queries. [docs.kanaries](https://docs.kanaries.net/topics/DuckDB/duckdb-vs-sqlite)
   - To query Parquet/CSV files or power local analytics / BI / data‑science workflows. [docs.rilldata](https://docs.rilldata.com/reference/olap-engines/duckdb)
 
@@ -174,7 +175,6 @@ Side‑by‑side overview
 | Scale sweet spot | MB–few GB, single‑user/small multi‑user.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | GB–tens/hundreds of GB on one machine.  [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison) | Hundreds of GB–TB+ across many nodes.  [airbyte](https://airbyte.com/data-engineering-resources/clickhouse-vs-duckdb) |
 | Typical use | App DB, offline storage.  [betterstack](https://betterstack.com/community/guides/scaling-python/duckdb-vs-sqlite/) | Notebook/ETL analytics, local dashboards.  [datacamp](https://www.datacamp.com/blog/duckdb-vs-sqlite-complete-database-comparison) | Logging, metrics, product analytics, BI.  [airbyte](https://airbyte.com/data-engineering-resources/clickhouse-vs-duckdb) |
 
-
 This is where it all connects [in the D&A space](https://jalcocert.github.io/JAlcocerT/career/):
 
 ```mermaid
@@ -252,7 +252,6 @@ mindmap
 ### Using BAML
 
 I was testing BAML last year [here](https://jalcocert.github.io/JAlcocerT/ai-tools-for-cli/#baml).
-
 
 Its not as popular as langchain, but still: https://github.com/BoundaryML/baml
 
@@ -404,19 +403,25 @@ Thats coming up next: `z-baml-genbi`
 
 Another example of how we are moving *From how to what and why*.
 
-Code is cheap now. Software isnt *at least for now*.
+Code is cheap now. 
+
+Software isnt *at least for now*.
 
 > From [this great post](https://www.chrisgregori.dev/opinion/code-is-cheap-now-software-isnt) and [video](https://www.youtube.com/watch?v=28z6OjsNsUk)
 
-The danger is now more on not to get distracted with the daily tool or workflow that gets released.
+The danger is now more on not to get distracted with the daily tool or new workflow that gets released.
 
 Go with whatever: *cursor, antigravity, claude code, lovable, opencode, crush...*
 
 But just go and try.
 
-The challenge is now the **distribution / orchestration / marketing**, which are other OpEx, not the coding thing.
+The challenge is now the **distribution / orchestration / marketing**, 
 
-Do you even know the audience? is it even listening?
+which is probably one of the OpEx that you havent considered yet, not the coding thing.
+
+Do you even know the audience? 
+
+is it anyone even listening?
 
 Are you building sth for an empty room?
 
@@ -438,11 +443,9 @@ cd y2026-tech-talks/4-baml-db-insights
 * https://www.mindwendel.com/
   * https://github.com/b310-digital/mindwendel
 
-
 ---
 
 ## FAQ
-
 
 ### A Recap on D&A for Interviews
 
@@ -458,7 +461,6 @@ cd y2026-tech-talks/4-baml-db-insights
     *   *Examples:* `visit_count`, `revenue`, `quantity_sold`.
 *   **Dimension Tables:** Answer **"WHO / WHERE / WHICH context?"**
     *   *Examples:* `customer_name`, `product_category`, `country_origin`.
-
 
 If you were to grow your Northwind project into a "Big Data" architecture:
 
@@ -482,7 +484,7 @@ To demonstrate the value of Gen-BI, we must first understand the manual effort r
 
 **The Bridge from Raw Data to Insights**
 
-Building a professional Power BI solution involves a rigorous 4-step process:
+Building a professional Power BI solution involves a rigorous **4-step process**:
 
 1.  **Data Acquisition (DL - Data Layer)**: Connecting to raw sources via SQL or Power Query. This is where the physical connection lives.
 2.  **Dimensional Modeling (The Foundation)**: Implementing **Kimball Methodology**.
@@ -509,8 +511,7 @@ Data Logic (The Analytics):
 * Dimension Tables: Answer "WHO / WHERE / WHICH context?"
   * Examples: customer_name, product_category, country_origin.
 
-In the world of data engineering, these concepts form the fundamental "fork in the road" between how we store data for **action** versus how we store it for **analysis**.
-
+For data engineering, these concepts form the fundamental "fork in the road" between how we store data for **action** versus how we store it for **analysis**.
 
 1. OLTP: The "Action" Layer
 
@@ -547,7 +548,11 @@ The best way to see the difference between Lloyd Tabb’s **Looker** and Microso
 
 #### 1. The Power BI Way (DAX)
 
-In Power BI, you write a **Measure**. This is a formula that lives inside your report file. It looks very similar to an advanced Excel formula.
+In Power BI, you write a **Measure**. 
+
+This is a formula that lives inside your report file. 
+
+It looks very similar to an advanced Excel formula.
 
 **The Code (DAX):**
 
@@ -558,7 +563,6 @@ DIVIDE(
     SUM(Sales[Revenue]), 
     0
 )
-
 ```
 
 * **Where it lives:** Inside a specific `.pbix` file or a specific dataset.
@@ -569,7 +573,9 @@ DIVIDE(
 
 #### 2. The Looker Way (LookML)
 
-In Looker, you don't write a formula for a specific report. You define the **Logic** in a central code file called **LookML**.
+In Looker, you don't write a formula for a specific report. 
+
+You define the **Logic** in a central code file called **LookML**.
 
 **The Code (LookML):**
 
@@ -593,16 +599,11 @@ view: orders {
     value_format_name: percent_2
   }
 }
-
 ```
 
 * **Where it lives:** In a centralized Git repository (like GitHub).
 * **The User Experience:** The business user never sees this code. They just see a button labeled **"Gross Profit Margin"** in a browser.
 * **The Benefit:** Because the logic is defined in **one central place**, it is impossible for two people to have different "Profit Margin" numbers. If you update the code, every dashboard in the entire company updates instantly.
-
----
-
-Summary of the Difference
 
 | Feature | Power BI (DAX) | Looker (LookML) |
 | --- | --- | --- |
@@ -613,11 +614,9 @@ Summary of the Difference
 
 **Lloyd Tabb’s big "Aha!" moment** was realizing that data analysts should act more like software engineers—writing reusable, version-controlled code rather than building one-off spreadsheets.
 
-
 To understand semantic modeling in Power BI, it helps to think of it as the "Translation Layer."
 
 While **Dimensional Modeling** is about how you *organize* data in the warehouse, **Semantic Modeling** is about how you *present* that data to humans.
-
 
 1. Semantic vs. Dimensional Modeling
 
@@ -627,8 +626,6 @@ While **Dimensional Modeling** is about how you *organize* data in the warehouse
 | **Common Shapes** | Star Schema, Snowflake Schema. | Power BI Datasets, Looker LookML, Metrics Layer. |
 | **Key Components** | Facts (Numbers) and Dimensions (Attributes). | Measures (DAX), Hierarchies, Relationships, Metadata. |
 | **Analogy** | The way books are categorized and stored on library shelves. | The searchable digital catalog that helps you find and understand the books. |
-
----
 
 2. Approaches to Semantic Modeling in Power BI
 
@@ -658,8 +655,6 @@ Instead of defining logic inside Power BI, you define it in a tool that sits *be
 * **How it works:** You write your metrics in YAML or SQL. Power BI connects to these tools as if they were a database.
 * **Pro:** If you switch from Power BI to Tableau or Looker, your metrics stay exactly the same.
 
----
-
 3. How to "Do" Semantic Modeling Right
 
 Regardless of the approach, follow these rules to ensure your Power BI model is "Semantic":
@@ -669,8 +664,9 @@ Regardless of the approach, follow these rules to ensure your Power BI model is 
 3. **Folders and Descriptions:** Use "Display Folders" to group measures (e.g., "Time Intelligence," "Profitability") and add descriptions to fields so users see a tooltip explaining what the data means.
 4. **Hierarchies:** Create "Drill-down" paths (Country > State > City) so the model feels intuitive to browse.
 
+If you are coming from the **Lloyd Tabb/Looker** world, Power BI feels different because the "Semantic" part is often bundled inside the report file. 
 
-If you are coming from the **Lloyd Tabb/Looker** world, Power BI feels different because the "Semantic" part is often bundled inside the report file. However, by using **Power BI Datasets (Live Connection)**, you can replicate that "Looker Vibe" where the logic is centralized and separated from the visuals.
+However, by using **Power BI Datasets (Live Connection)**, you can replicate that "Looker Vibe" where the logic is centralized and separated from the visuals.
 
 ### SQL vs Malloy
 
@@ -679,13 +675,14 @@ If you are coming from the **Lloyd Tabb/Looker** world, Power BI feels different
 * https://github.com/malloydata/malloy
 * https://www.malloydata.dev/
   * https://docs.malloydata.dev/documentation/user_guides/sql_experts1
+
 <!-- 
   https://www.youtube.com/watch?v=fzb1Ez0bHCA
 
-  {{< youtube "fzb1Ez0bHCA" >}} -->
+  {{< youtube "fzb1Ez0bHCA" >}} 
+-->
 
-
-> MIT | Malloy is a modern open source language for describing data relationships and transformations.
+> **MIT** | Malloy is a modern open source language for describing data relationships and transformations.
 
 If **LookML** was Lloyd Tabb’s first attempt to fix SQL, **Malloy** is his "clean slate" version. 
 
@@ -697,9 +694,13 @@ What makes Malloy special?
 
 1. "Escaping the Rectangle"
 
-Standard SQL forces data into "rectangles" (rows and columns). If you want to see an Order and all its Items, you have to "flatten" the data, which leads to duplicate rows and complex `JOIN` logic.
+Standard SQL forces data into "rectangles" (rows and columns).
 
-* **Malloy's Fix:** It natively handles **nested data** and hierarchies. You can query a "Table within a Table" naturally, which makes it much easier to build dashboards that show a summary and a breakdown in the same view.
+If you want to see an Order and all its Items, you have to "flatten" the data, which leads to duplicate rows and complex `JOIN` logic.
+
+* **Malloy's Fix:** It natively handles **nested data** and hierarchies.
+
+You can query a "Table within a Table" naturally, which makes it much easier to build dashboards that show a summary and a breakdown in the same view.
 
 2. Reusable "Measures" (The Semantic Part)
 
@@ -731,15 +732,17 @@ You write Malloy code, and it converts it into optimized SQL for:
 * **PostgreSQL**.
 * **Snowflake**.
 
-### Is it still "Experimental"?
+#### Is Malloy still "Experimental"?
 
-As of late 2023, the team released **Malloy 4.0**, which they officially called the "end of the experimental phase."
+In late 2023, the team released **Malloy 4.0**, which they officially called the "end of the experimental phase."
 
 It is now considered a stable, open-source language that is ready for production use, primarily through their excellent **VS Code Extension**.
 
 Comparing **Malloy** to **DuckDB**, **SQLite**, **ClickHouse**, and **Redshift** is a bit like comparing a **GPS system** to different types of **Engines**.
 
-Malloy is the **Language/Interface** (the GPS), while the others are the **Databases/Engines** (the car). You need one of each to actually "drive" your data.
+Malloy is the **Language/Interface** (the GPS), while the others are the **Databases/Engines** (the car). 
+
+You need one of each to actually "drive" your data.
 
 1. The Big Distinction: Language vs. Engine
 
@@ -842,8 +845,6 @@ Power BI handles this slightly differently depending on your setup:
 * **User-Defined Aggregations:** You can tell Power BI to create a hidden, summarized version of a huge "DirectQuery" table. When a user asks for a high-level chart (e.g., "Sales by Year"), Power BI hits the "materialized" summary instead of the billion-row table.
 
 
-Summary Comparison
-
 | Tool | Feature Name | Stored In... |
 | --- | --- | --- |
 | **Database** (e.g., Postgres) | Materialized View | The database disk. |
@@ -880,7 +881,9 @@ The most critical difference is how they store and process data.
 
 2. Is it Serverless?
 
-Amazon offers a product called **Redshift Serverless**, which allows you to run analytical queries without managing clusters or nodes. However, this is still a **Data Warehouse**, not a general-purpose transactional database.
+Amazon offers a product called **Redshift Serverless**, which allows you to run analytical queries without managing clusters or nodes.
+
+However, this is still a **Data Warehouse**, not a general-purpose transactional database.
 
 If you are looking for a **Serverless PostgreSQL**, the actual AWS equivalent is **Amazon Aurora Serverless**.
 
@@ -920,8 +923,6 @@ While it is a "competitor" to Neon in the sense that it provides a serverless da
 
 * **Best for:** Developers already using **Cloudflare Workers**. It is designed to be geographically close to your users (at the "edge").
 * **The Trade-off:** SQLite has a different SQL dialect than Postgres. If your app relies on Postgres-specific features (like JSONB or specific extensions), you can't easily switch to D1.
-
-Comparison Table
 
 | Feature | Neon | Cloudflare D1 | Amazon Redshift |
 | --- | --- | --- | --- |
@@ -980,13 +981,11 @@ BAML gives you stronger typing and parsing; OpenAI tools are simpler if you’re
 
 This come from a YouTube video titled **“The Inevitable Evolution of SQLite”** from the DevOps Toolbox series, published on Jan 16, 2026, about an 11‑minute overview of libSQL and related tooling. 
 
-
 - Presents **libSQL** as an open‑source fork of SQLite that accepts external contributions and is designed for replication, distribution, and scale.   
 - Shows **LibSQL server (sqld)** providing remote access similar to PostgreSQL/MySQL, with a core in C and new server features in Rust.   
 - Mentions Turso’s in‑progress Rust rewrite (Torso, previously Limbo) as “next evolution of SQLite,” but that is left for another video. 
 
-
 Key ideas about SQLite vs libSQL
 
 - SQLite’s **limitations** called out: it is a single file on disk that is great for many workloads but not straightforward to cluster, shard, or distribute.   
-- libSQL adds **replication**, **remote access**, **vector types**, and nicer CLIs on top of SQLite semantics while still relying on a WAL file for write‑ahead logging and data integrity.   
+- libSQL adds **replication**, **remote access**, **vector types**, and nicer CLIs on top of SQLite semantics while still relying on a WAL file for write‑ahead logging and data integrity.

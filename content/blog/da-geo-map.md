@@ -2,7 +2,7 @@
 title: "Just maps"
 date: 2026-02-21T08:00:21+01:00
 draft: false
-tags: ["Real Estate","GeoJSON","PostGis","OpenRoute","Reitti vs Wanderer","Py vs R"]
+tags: ["Real Estate","GeoJSON","PostGIS","OpenRoute","Reitti vs Wanderer","Py vs R"]
 description: 'About GeoSpatial analysis and some videos as a code.'
 url: 'geo-maps-and-data'
 math: true

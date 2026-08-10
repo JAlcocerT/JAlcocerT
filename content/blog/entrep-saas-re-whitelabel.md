@@ -153,7 +153,14 @@ flowchart LR
 
 ###  Why this pricing?
 
-1. **The "Expert" Barrier**: You are solving a complex problem (Scraping + AI + SSR). If they could do it for $100, they would have. The $1k+ price tag signals that this is a **Managed Enterprise Solution**.
+1. **The "Expert" Barrier**: You are solving a complex problem (Scraping + AI + SSR). 
+
+> If they could do it for $100, they would have. 
+
+> > The $1k+ price tag signals that this is a **Managed Enterprise Solution**.
+
 2. **Filtering**: It filters out the "difficult" clients who want the world for $100. A client who pays $1k+ respects your time.
+
 3. **Cash Flow**: This covers the 2-5 hours of manual work you put into initial configuration, DNS, and styling.
+
 4. **Maintenance (The Value Loop)**: The monthly fee covers the server cost, OpenAI tokens, and the "scraper maintenance" (since real estate portals change their HTML often).

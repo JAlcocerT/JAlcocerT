@@ -7,7 +7,9 @@ description: "White-labeling works when customization wraps a stable product cor
 
 White-labeling is not the same as rebuilding for every client.
 
-The product needs a repeatable core: authentication, data model, workflows, support, deployment, and analytics. Branding and domain-specific copy can change, but the operational skeleton should stay stable.
+The product needs a repeatable core: authentication, data model, workflows, support, deployment, and analytics. 
+
+Branding and domain-specific copy can change, but the operational skeleton should stay stable.
 
 Otherwise white-labeling becomes custom consulting with a product mask.
 

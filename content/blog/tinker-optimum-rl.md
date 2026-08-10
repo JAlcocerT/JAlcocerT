@@ -1,7 +1,6 @@
 ---
 title: "Optimum Path x Reinforced Learning"
 date: 2026-02-27
-#date: 2026-01-02
 draft: false
 tags: ["Car Simulation","RL Neuronal Network"]
 description: 'Finally doing this - ApexSim RL-Edition'

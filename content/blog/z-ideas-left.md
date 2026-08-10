@@ -3,7 +3,7 @@ title: "Which ideas are left?"
 date: 2026-04-13
 draft: false
 tags: ["Unit Economics 202","Remotion Video x Data Animations","Python PPTx"]
-description: 'To define whats wrong, we need to define whats the desired state.'
+description: 'To define whats wrong, we need to define whats the desired state. Ideas checklist.'
 url: 'the-ideas-bucket-can-be-empty'
 math: true
 ---
@@ -15,6 +15,8 @@ Pretending to be a *polymath* and charging you for caring about solving your pro
 +++ With [quick content creation](#quick-content-creation).
 
 +++ [High-Value Engineering](#lean-thinking-x-semantic-clarity)
+
++++ [Ideas checklist](#ideas-checklist)
 
 **Intro**
 
@@ -138,7 +140,7 @@ or...
 
 ### The market of time
 
-Some people think that two of the most important factors to predict success are:
+Some people think that two of the most important **factors to predict success are**:
 
 1. The RISK that you allow yourself to take
 2. The amount of TIME that you can wait without possitive rewards to keep going in a certain direction (~persistency)
@@ -156,7 +158,7 @@ This idea might suggest you [open questions](https://jalcocert.github.io/JAlcoce
 
 2. https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/#business-idea-checklist
 
-This will help you to understand how to disqualify business ideas: https://jalcocert.github.io/JAlcocerT/ideas-to-execution/
+This will help you to understand how to [disqualify business ideas](https://jalcocert.github.io/JAlcocerT/ideas-to-execution/).
 
 And with [some psyc](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/#psyco), you'll better understand your clients.
 
@@ -166,11 +168,10 @@ You know that im in love with slidevJS for my tech talks.
 
 But ~~I got to know~~ [reminded about](https://jalcocert.github.io/JAlcocerT/ai-driven-presentations/#other-ppt-as-a-code) **python-pptx**.
 
-
 So for the pocs if you were doing slidev or giving a prompt to notebookllm or copilot: You are outdated.
 
 ```sh
-git clone /PBi
+git clone .../PBi
 cd ./PBi/executive-dashboard-pptx #a sample with dummy data on how to use python-pptx :)
 
 #git clone /selfhosted-landing/y2026-tech-talks #yea tech talks are here for now :)
@@ -180,8 +181,7 @@ So...go the slidev, the html or whatever route
 
 but just do impactful presentations, with nice UI/X
 
-Specially for your solo-preneur sales pitches
-
+Specially for your *solo-preneur* sales pitches
 
 Take one branded pptx, tell to write the store with the branded slides and move on :)
 
@@ -205,17 +205,21 @@ That is a much more strategic way to handle a room full of executives.
 
 By starting at the **Concept**, you are speaking their language first (Business Strategy) and only moving toward your language (Code/Data) once the foundation is poured.
 
-If you start with the code, they tune out. If you start with the concept, they take ownership of the result.
+If you start with the code, they tune out. 
 
-Here is the **Top-Down Alignment Protocol** redesigned for that flow.
+If you start with the concept, they take ownership of the result.
 
 ## The Top-Down Hierarchy of "Right"
+
+Here is the **Top-Down Alignment Protocol** redesigned for that flow.
 
 **Phase 1: The Semantic Concept (The "Why")**
 
 *Focus: Business Intent*
 
-At this level, don't mention databases or SQL. Talk about the real world.
+At this level, don't mention databases or SQL. 
+
+Talk about the real world.
 
 * **The Question:** "Let's ignore the numbers for a second. What is the **business event** we are trying to capture? For example, when we say 'Customer Acquisition,' do we mean the moment they sign a contract, or the moment they pay their first invoice?"
 * **The Conflict Resolver:** "If we have two different views on what an 'Active User' is, we don't have a data problem; we have a strategy gap. Which definition drives our decision-making today?"
@@ -231,7 +235,6 @@ Now that you have the concept, translate it into logic.
 * **The "Corner Case" Test:** "If a customer signs today but cancels tomorrow, does our formula for 'Growth' include them or filter them out?"
 * **The Goal:** An agreed-upon formula: $$(Total Revenue - Returns) \times Tax Rate = Net$$.
 
-
 **Phase 3: The Data Source (The "Where")**
 
 *Focus: The Source of Truth*
@@ -246,7 +249,9 @@ Identify which system is "The Law."
 
 *Focus: Verification*
 
-This is your domain. You only show this if they challenge the first three steps.
+This is your domain.
+
+You only show this if they challenge the first three steps.
 
 * **The Statement:** "Now that we’ve agreed on the **Concept**, the **Formula**, and the **Source**, my job is purely to ensure the code reflects those three things perfectly. If you ever feel the data is 'wrong' from here on out, we can check the code together to ensure it hasn't drifted from our agreed-upon definitions."
 * **The Goal:** Technical confidence. You are now just the "translator" of their own rules.
@@ -260,7 +265,8 @@ When an executive says "the data is wrong" after this meeting, your response bec
 
 **90% of the time, the answer is 1, 2, or 3.**
 
-By starting at the top, you've made them the "Product Owners" of the logic, leaving you to simply be the master of the execution.
+By starting at the top, you've made them the "Product Owners" of the logic,
+leaving you to simply be the master of the execution.
 
 When the logic is "wrong," it’s often because a new business reality exists that hasn't been coded yet.
 
@@ -268,7 +274,9 @@ The "New Variable" Question: "We agreed on this formula last month.
 
 Has a new business factor been introduced—like a new tax code, a seasonal discount, or a 'friends and family' rate—that our current math isn't subtracting yet?"
 
-The "Inclusion" Question: "Is there a specific transaction you’re looking at that should be in this total but isn't? If so, what 'tag' or 'category' does it have in the spreadsheet that our formula might be filtering out?"
+The "Inclusion" Question: "Is there a specific transaction you’re looking at that should be in this total but isn't?
+
+If so, what 'tag' or 'category' does it have in the spreadsheet that our formula might be filtering out?"
 
 ## SoloPreneur + AI versus Oldschool
 
@@ -278,7 +286,9 @@ It is a classic case of **"Vibe-Based Management"** meeting **"Deterministic Exe
 
 The reason it feels ridiculous to you as a developer/solopreneur is that you are used to the **High-Fidelity Feedback Loop** of AI.
 
-If you give an AI a "vibe," it gives you "garbage." You are forced to be precise to get results. 
+If you give an AI a "vibe," it gives you "garbage." 
+
+You are forced to be precise to get results. 
 
 In a traditional corporate structure, Middle Management has historically acted as a **Human Buffer** that absorbs the "vague vibes" from the C-Suite and translates them into something actionable. 
 
@@ -305,7 +315,9 @@ However, in reality, many coordinate through **Iterative Disappointment**:
 3.  **C-Suite:** Says "That's not what I meant/That data is wrong."
 4.  **Repeat:** Until they accidentally stumble upon a shared semantic meaning.
 
-As a solopreneur, you see this as a waste of time. In a corporation, this is often just called "The Q3 Planning Cycle."
+As a solopreneur, you see this as a waste of time.
+
+In a corporation, this is often just called "The Q3 Planning Cycle."
 
 3. The Solopreneur Advantage: "The CEO as Lead Architect"
 
@@ -340,11 +352,9 @@ It feels "stupid" to you because you are operating at a higher level of **Operat
 
 You've learned that if the "C" doesn't provide the Concept, the Agent (the resource) is just a very expensive random number generator.
 
-Do you think this "Vibe-Based Management" is exactly why these executive dashboards always end up with "wrong data" in the first place?
-
 ## Lean Thinking x Semantic Clarity
 
-You are touching on the absolute heart of **Lean Thinking**. 
+The absolute heart of **Lean Thinking**. 
 
 Whether you are a Fortune 500 CEO or a solopreneur with an AI agent, the enemy is the same: **Waste (Muda)**.
 
@@ -352,7 +362,7 @@ In Lean, "Value" is strictly defined by the customer (or the stakeholder).
 
 If you build a dashboard with 100 perfect charts, but the Executive says "the data is wrong," you have produced **Zero Value**. 
 
-In fact, you’ve produced negative value because you’ve created confusion and distrust.
+> In fact, you’ve produced negative value because you’ve created confusion and distrust.
 
 Here is how the "Hierarchy of Right" and "Semantic Clarity" map directly to Lean delivery and Value.
 
@@ -368,10 +378,20 @@ In an AI-driven dashboard, waste is **"Information Defects"** caused by a lack o
 
 2. Value Stream Mapping: The "Semantic" Bottleneck
 
-In any Value Stream, there is a bottleneck. For most "Agentic" or Dashboard projects, the bottleneck isn't the **processing power** or the **coding speed**—it is the **Definition Phase**.
+In any Value Stream, there is a bottleneck.
 
-* **Corporate Reality:** They try to "Optimize" the delivery (using AI, hiring more devs) without fixing the **Input** (the vague strategy). This is like putting a Ferrari engine in a car with no steering wheel.
+For most "Agentic" or Dashboard projects, the bottleneck isn't the **processing power** or the **coding speed** —it is the **Definition Phase**.
+
+* **Corporate Reality:** They try to "Optimize" the delivery (using AI, hiring more devs) without fixing the **Input** (the vague strategy). 
+
+> This is like putting a Ferrari engine in a car with no steering wheel.
+
 * **Solopreneur Reality:** You realize that **Value = Validated Learning**. Every time you iterate on a prompt or a definition, you are performing a Lean "Kaizen" (continuous improvement) on your logic until the "Value" (the insight) is realized.
+
+
+{{< callout type="info" >}}
+Bottlenecks have been moving recently...
+{{< /callout >}}
 
 3. "Pull" vs. "Push" Information
 
@@ -380,7 +400,10 @@ Lean emphasizes a "Pull" system—only producing what is needed, when it’s nee
 * **Push (The Wrong Way):** The developer "pushes" a dashboard full of data they *think* is cool onto the Executive. The Executive rejects it because it doesn't solve their specific problem.
 * **Pull (The Lean Way):** The Executive "pulls" a specific insight. You start with the **Concept** (The Value) and work backward to the **Source** (The Raw Material). 
 
-> **Value is not the data itself. Value is the confidence to make a decision based on that data.**
+{{< callout type="info" >}}
+Value is not the data itself. **Value is the confidence to make a decision based on that data.**
+{{< /callout >}}
+
 
 4. Perceived Value is the Only Value
 
@@ -419,12 +442,16 @@ A small company is a **Spear**: It is sharp, precise, and can pivot instantly to
 
 A large corporation is a **Wall**: It is heavy, slow, and expensive to move, but it is already standing in the way of everyone.
 
-* **Distribution is King:** A big bank might have a "wrong" dashboard, but they have 50 million customers who are too lazy to switch. They make money through **retention**, not innovation.
+* **Distribution is King:** A big bank might have a "wrong" dashboard, but they have 50 million customers who are too lazy to switch. 
 * **The "Good Enough" Threshold:** Most clients don't actually need "Perfect" (your semantic precision). They need "Reliable and Insured." Corporations provide a level of perceived safety and scale that a solopreneur—no matter how brilliant—cannot yet match in the eyes of a risk-averse CFO.
+
+{{< callout type="info" >}}
+Large companies make money through **retention**, not innovation.
+{{< /callout >}}
 
 2. Middle Management as "Institutional Shock Absorbers"
 
-You see middle management as a source of confusion (the "agentic stuff" requests). 
+You see middle management as a source of confusion (the "lets make something agentic stuff" requests). 
 
 However, in a large system, they act as **Buffers**.
 
@@ -437,12 +464,11 @@ We are actually in the middle of the greatest shift in this direction in history
 
 But there are three massive "anchors" holding people back:
 
-| The Barrier | Why it stops the Solopreneur | How AI (and you) are breaking it |
+| **The Barrier** | Why it stops the Solopreneur | How AI (and you) are breaking it |
 | :--- | :--- | :--- |
 | **Cognitive Load** | One human can only manage so many "Semantic Contracts" before burning out. | **AI Agents** act as your "Digital Middle Management," handling the "How" so you stay in the "Why." |
 | **Risk Tolerance** | Most people prefer a "predictable salary" over "variable value." | Lower cost of entry (no office, no staff) makes the risk of starting much lower. |
 | **The "Trust Gap"** | Corporations buy from corporations because of "Nobody ever got fired for buying IBM." | You win by being **Closer to the Client**. Your "Hierarchy of Right" creates a level of trust that a faceless corp can't touch. |
-
 
 4. The Lean Paradox: Why Inefficiency Pays
 

@@ -54,13 +54,7 @@ Ive consolidated a list of ecommerce Ive encountered around the world:
 
 You can always check more examples `https://awweso.me/e-commerce/`
 
-
-Existen múltiples alternativas open source y autoalojadas a Shopify y WordPress con WooCommerce en 2025, cada una con distintos enfoques según la escala del negocio, el nivel técnico y la arquitectura deseada (monolítica o headless).
-
-
 You can understand how these works to be able to sell them D&A services for business optimization.
-
-
 
 ## Selfhosted Ecommerce
 
@@ -105,8 +99,9 @@ As WooCommerce alternative:
 | nopCommerce [6] | C# (.NET) | Modular | Negocios Microsoft | Soporta multi-tienda y B2B |
 | OpenCart [7] | PHP | Tradicional | Pequeñas tiendas | Sencilla y ligera |
 
-En resumen, **Medusa.js**, **Bagisto** y **Saleor** representan la nueva generación de plataformas headless modernas, mientras que **Magento**, **PrestaShop** y **nopCommerce** siguen siendo las opciones más sólidas para quienes buscan ecosistemas maduros y autogestionados.
+En resumen, **Medusa.js**, **Bagisto** y **Saleor** representan la nueva generación de plataformas headless modernas,
 
+mientras que **Magento**, **PrestaShop** y **nopCommerce** siguen siendo las opciones más sólidas para quienes buscan ecosistemas maduros y autogestionados.
 
 ### Drupal
 
@@ -126,7 +121,6 @@ This one makes the trick:
   * https://docs.medusajs.com/starters/nextjs-medusa-starter  
 
 > MIT | The world's most flexible **commerce platform**. 
-
 
 ### Thelia
 
@@ -149,7 +143,6 @@ This one makes the trick:
 Saleor Core: the high performance, composable, headless commerce API. 
 
 * <https://github.com/JAlcocerT/Docker/blob/main/Web/posthog_docker-compose.md>
-
 
 Gumroad is an e-commerce platform that enables creators to sell products directly to consumers. 
 
@@ -208,7 +201,6 @@ Hosting an eCommerce
 
 https://www.shoper.pl/premium like https://sklepmakunki.pl/ which theme comes from https://netplace.com.pl/ see https://netplace.com.pl/portfolio/magicznypokoik-pl/
 
-
 #### Astro as Ecommerce
 
 1. https://github.com/unfolding-io/nebulix
@@ -223,10 +215,9 @@ https://www.shoper.pl/premium like https://sklepmakunki.pl/ which theme comes fr
 
 4. https://github.com/michael-andreuzza/microstore
 
-https://microstoretheme.netlify.app/#_
+* `https://microstoretheme.netlify.app/#_`
 
 5. https://github.com/jazsouf/astro-shopify-sanity
-
 
 6. https://github.com/themefisher/astrofront-astro
 
@@ -240,7 +231,6 @@ npm install
 npm run dev #you will need shopif credentials for the .env
 ```
 
-
 #### Streamlit as eCommerce
 
 You would need proper file connection and some decent auth:
@@ -248,8 +238,7 @@ You would need proper file connection and some decent auth:
 * https://github.com/streamlit/files-connection
 * https://github.com/bleumink/streamlit-keycloak
 
-And be a proper geek to get this running.
-
+And be a proper geek to get this running :)
 
 ---
 
@@ -404,11 +393,9 @@ However, as soon as the business hits a certain volume, it often "breaks" operat
 
 That is the exact moment an e-commerce business hires a **COO** to stabilize the chaos.
 
-
 ---
 
 ### Getting Here
-
 
 Tried Wordpress and Ghost.
 

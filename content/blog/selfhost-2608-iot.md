@@ -306,6 +306,19 @@ docker ps -a | grep -i home-assistant
 
 After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the [electro-magnetic foundations](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/), this post was the next step.
 
+
+How much deflation is enough for you to start?
+
+Save you effort or make you money?
+
+Deal:
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
+{{< /cards >}}
+
+
 ### HomeLab Updates 0826
 
 What else am I running since last month?

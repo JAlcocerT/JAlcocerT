@@ -82,7 +82,6 @@ Or that I gave up too quickly :)
 | **Key Metric** | Cost Per Lead (CPL) | Customer Lifetime Value (LTV) / Revenue |
 | **Success looks like...** | A database full of "Hot" leads. | A predictable, growing bank account. |
 
-
 ---
 
 ## Conclusions
@@ -171,11 +170,12 @@ Also, because I tried it some time back, [here](https://jalcocert.github.io/JAlc
 
 Plus, it allows to feed a `.mp3`: `https://fireflies.ai/`
 
-So you can have a workflow: obs - ffmpeg - fireflies:
+So you can have a workflow: `obs - ffmpeg - fireflies`:
 
 ```sh
 ffmpeg -i "2026-01-29 18-04-26.mp4" -q:a 0 -map a "2026-01-29 18-04-26.mp3"
 ```
+
 <!-- 
 https://youtu.be/XQXf2230WUE 
 -->
@@ -198,16 +198,24 @@ Buyers now conduct extensive research inside AI chatbots (17x longer conversatio
 This means brands must optimize for Answer Engine Optimization (AEO) rather than traditional SEO.
 
 2. **Brand Power in the AI Era**
-Brand importance hasn't diminished but has shifted. Traditional mass-market branding has given way to focus on product quality, distribution, and leadership narrative. AI commoditizes generic content, making authentic creative voice and design more valuable than ever[^1].
+
+Brand importance hasn't diminished but has shifted. Traditional mass-market branding has given way to focus on product quality, distribution, and leadership narrative.
+
+AI commoditizes generic content, making authentic creative voice and design more valuable than ever.
 
 3. **Go-to-Market Evolution**
+
 Three critical GTM components are emerging:
+
 - **Answer Engine Optimization** - appearing in AI chatbot results
 - **AI-powered personalized prospecting** - 30% increase in meeting bookings through AI-enhanced inbound flows
-- **Conversational AI interfaces** - replacing traditional website experiences as the "front door"[^2]
+- **Conversational AI interfaces** - replacing traditional website experiences as the "front door"
 
 4. **AI Proficiency Gap**
-There's a critical disconnect: only 3% of marketers are truly AI proficient (using AI for real work cases), while most are "experimenters" using AI as a Google replacement or grammar tool. Leadership vastly overestimates their teams' AI adoption[^3].
+
+There's a critical disconnect: only 3% of marketers are truly AI proficient (using AI for real work cases), while most are "experimenters" using AI as a Google replacement or grammar tool.
+
+Leadership vastly overestimates their teams' AI adoption
 
 5. **Organizational Challenges**
 - Most companies stall in the "enablement" phase of AI maturity, unable to move to transformation
@@ -291,14 +299,6 @@ Medium-term Actions (2026)
     - Measure AI impact on revenue, not vanity metrics[^2]
 
 
-[^1]: [2026-01-29 18-04-26.mp3 - Tani Perry & Scott Galloway sessions](https://app.fireflies.ai/view/01KGCD6ZG40PPW1TDYN7Y5BG8Q?t=0)
-[^2]: [2026-01-29 18-04-26.mp3 - Kieran Flanagan (HubSpot) & Greg Shove (Section) session](https://app.fireflies.ai/view/01KGCD6ZG40PPW1TDYN7Y5BG8Q?t=3480)
-[^3]: [2026-01-29 18-04-26.mp3 - Taylor (Section) AI Proficiency Lightning Insight](https://app.fireflies.ai/view/01KGCD6ZG40PPW1TDYN7Y5BG8Q?t=5340)
-[^4]: [2026-01-29 18-04-26.mp3 - Shiv Singh 2026 Trends session](https://app.fireflies.ai/view/01KGCD6ZG40PPW1TDYN7Y5BG8Q?t=10560)
-[^5]: [2026-01-29 18-04-26.mp3 - Jocelyn Arthur (Palo Alto Networks) content strategy session](https://app.fireflies.ai/view/01KGCD6ZG40PPW1TDYN7Y5BG8Q?t=12840)
-[^6]: [2026-01-29 18-04-26.mp3 - Jacob Beneta (Grafana Labs) hyper-personalization session](https://app.fireflies.ai/view/01KGCD6ZG40PPW1TDYN7Y5BG8Q?t=14400) 
-
-
 <!-- https://app.fireflies.ai/view/2026-01-29-18-04-26-mp3::01KGCD6ZG40PPW1TDYN7Y5BG8Q?utm_source=AskFredResponseCopied -->
 
 {{% /details %}}
@@ -313,8 +313,7 @@ I could have also tried: https://github.com/thepersonalaicompany/amurex
 
 Or https://github.com/chaskiq/chaskiq`
 
-But I need results fast: so pragmatism mode turned ON, tinkering mode OFF.
-
+> > But I need results fast: so pragmatism mode turned ON, tinkering mode OFF.
 
 #### My Phoner or Zoom
 
@@ -330,9 +329,18 @@ https://youtu.be/UVeXMTIpCB0
 
 Some people make seem easy to cold call:
 
-https://youtu.be/tdYvRKVr0pk?
+<!-- 
+https://youtu.be/tdYvRKVr0pk? 
+-->
 
-https://youtu.be/jvFLW5EClgk?si=bbVnbpjqPEB6R-hw
+
+{{< youtube "tdYvRKVr0pk" >}}
+
+<!-- https://youtu.be/jvFLW5EClgk?si=bbVnbpjqPEB6R-hw -->
+
+
+{{< youtube "jvFLW5EClgk" >}}
+
 
 #### The full Workflow?
 
@@ -344,7 +352,6 @@ With all the business tools you might ever need to grow.
 ---
 
 ## FAQ
-
 
 ### The HOW behind this idea
 
@@ -588,11 +595,11 @@ Instead of generic leads, you give them **Market Intelligence**.
 * **The Offer:** "The Autonomous Freight Pipeline."
 * **The Price:** **2,500€ - 5,000€/month**.
 * **The Delivery:** You build a system that:
+
 1. Scrapes new manufacturer leads daily.
 2. Uses AI to check if they have a "shipping/logistics" contact.
 3. Pushes those leads into their CRM.
 4. Automates a "Value-First" email sequence to the manufacturer's logistics head.
-
 
 
 3. LinkedIn Outreach Script (Logistics Puddle)
@@ -616,8 +623,6 @@ This follows the **"Engaged Lead"** strategy:
 Why this works in Poland:
 
 The "Old School" Polish TSL owner values **efficiency and "concrete" results.** By showing them a list of actual manufacturers (The Lead Magnet), you move from being a "tech guy" to a "business growth partner."
-
-**Would you like me to help you refine the technical "Big Fast Value" you could offer? For example, which specific data points from Firecrawl would be most 'mouth-watering' for a logistics owner?**
 
 #### Why are we doing this?
 
@@ -667,20 +672,21 @@ You’ve linked the "Core Four" (the ways you get leads) with the "Attraction Of
 4. The "Big Fast Value" (BFV) Principle
 
 You mentioned "Blowing their minds in 30 seconds." This is a key metric in *$100M Leads*.
+
+{{< callout type="info" >}}
 Hormozi says the **Time to Value (TTV)** determines the conversion rate of a stranger.
+{{< /callout >}}
 
 * **High TTV:** "Read my 100-page book." (Stranger leaves).
 * **Low TTV:** "Enter your URL and see 5 mistakes you're making right now." (Stranger becomes Engaged Lead).
 
-
-You are correctly identifying that **Lead Generation is actually "Trust Generation" at scale.**
+**Lead Generation is actually "Trust Generation" at scale.**
 
 You don't buy leads; you earn the right to talk to them.
 
 Which is exactly what this person does in the first seconds of each call:
 
 {{< youtube "1Q_MDOWaljk" >}}
-
 
 ## GTM Engineer vs RevOps
 

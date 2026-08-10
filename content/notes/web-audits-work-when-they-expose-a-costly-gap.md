@@ -7,7 +7,9 @@ description: "A web audit is valuable when it makes an invisible business proble
 
 A web audit is not valuable because it produces a report.
 
-It is valuable when it exposes a gap the owner already cares about: speed, trust, conversion, broken links, discoverability, accessibility, or missed leads. The report should connect the technical issue to business cost.
+It is valuable when it exposes a gap the owner already cares about: speed, trust, conversion, broken links, discoverability, accessibility, or missed leads. 
+
+The report should connect the technical issue to business cost.
 
 The audit is a diagnostic, not a decoration.
 

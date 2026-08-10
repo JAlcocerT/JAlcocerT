@@ -58,7 +58,6 @@ A grist document is **both**, a db and a spreadsheet. Contains all the data and 
 
 The data in Grist is stored in **SQLite** databases, which is a key part of its design for portability.
 
-
 ### Data Storage 💾
 
 Grist's approach to data storage is unique and what makes it so portable.
@@ -98,7 +97,6 @@ Grist's API is fully documented and includes endpoints for not only adding recor
 
 You can use it to build a full-featured waiting list management system, including adding a dashboard within Grist to see sign-ups in real-time.
 
-
 ## Alternatives
 
 These are the 2 most popular:
@@ -108,7 +106,6 @@ These are the 2 most popular:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/baserow" title="BaseRow | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
 ### AirTable
 
 Imagine a **spreadsheet on steroids** that's also secretly a **lightweight database**. 
@@ -116,7 +113,6 @@ Imagine a **spreadsheet on steroids** that's also secretly a **lightweight datab
 That's a pretty good way to think about Airtable.
 
 **Airtable is a cloud-based collaborative platform that combines the simplicity of a spreadsheet with the power of a database.**
-
 
 * **Spreadsheet-like Interface:** It looks and feels familiar to anyone who has used a spreadsheet program like Google Sheets or Microsoft Excel. You have rows, columns, and cells where you can enter data.
 * **Database Functionality:** Unlike a simple spreadsheet, Airtable allows you to define **column types** beyond just text and numbers. You can have:
@@ -161,7 +157,6 @@ You can import excel, json or databases to nocodb tables: *locally will be at lo
 
 * `http://localhost:8080/dashboard/#/nc/integrations`
 * And use scripts as well: https://nocodb.com/docs/scripts
-
 
 Then, query programatically if required: *also allows for webhooks to get notified when sth happens*
 

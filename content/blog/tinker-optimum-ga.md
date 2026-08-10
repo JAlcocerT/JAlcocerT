@@ -1,7 +1,6 @@
 ---
 title: "Optimum Path x Genetic Algorithm"
 date: 2026-02-26
-#date: 2026-01-02
 draft: false
 tags: ["Car Simulation","GA vs RL","Polynomial Approximation"]
 description: 'Finally doing this - ApexSim GA-Edition'
@@ -51,7 +50,7 @@ What WILL Happen: the GA will learn from scratch:
 * Gen 10-30: Evolution finds basic control patterns that complete laps
 * Gen 30-100: Refinement toward optimal ~80s
 
-The gradient seeds aren't helping much due to the physics mismatch, but that's OK - the GA will evolve its own solution! 🧬
+The gradient seeds aren't helping much due to the physics mismatch, but that's OK - the GA 🧬 will evolve its own solution!
 
 Let it run - you should see improvement soon!
 
@@ -260,7 +259,9 @@ So...given that the MCP path was smootha and i got the actions: *how about creat
 python3 simulate_and_check_path.py
 ```
 
-![alt text](/blog_img/karting/path_simulation_check.png)
+<!-- 
+![alt text](/blog_img/karting/path_simulation_check.png) 
+-->
 
 ![alt text](/blog_img/karting/path_simulation_check.png)
 
@@ -277,7 +278,6 @@ I got inspired by:
 <!-- https://www.youtube.com/watch?v=60FV5vpZYPQ -->
 
 {{< youtube "60FV5vpZYPQ" >}}
-
 
 and its code https://github.com/kleberandrade/evolve-kart-unity
 
@@ -311,7 +311,9 @@ Why splines are better for tracks:
 
 ### Heading angle vs Curvature
 
-The heading angle represents the direction the vehicle is pointing, while curvature represents how sharply the path is bending. These are related but distinct concepts.
+The heading angle represents the direction the vehicle is pointing, while curvature represents how sharply the path is bending. 
+
+These are related but distinct concepts.
 
 The relationship between them is given by the derivative of the heading angle with respect to arc length, which equals the curvature.
 

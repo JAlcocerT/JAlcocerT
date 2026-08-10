@@ -13,8 +13,6 @@ Creating **green field POCs** based on this pattern helped me a lot.
 
 Get the benefits of it, without having to build it from scratch.
 
-
-
 **Intro**
 
 How good are your ideas? 
@@ -32,7 +30,6 @@ Previously I was thinking to have this in a separated repo:
 * https://github.com/JAlcocerT/bip-boilerplate-saas
 * https://github.com/JAlcocerT/boilerplate
 
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="~NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate for SaaS - Source Code on Github" >}}
   {{< card link="https://diy.jalcocertech.com" title="D&A e-book" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Start your D&A Career" >}}
@@ -44,10 +41,9 @@ But for now, im putting it together here: *as im not focusing on free community 
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="1ton ebooks x Ideas | Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-
 ## Why Creating like a BA
 
-Are you a BA/PM/Product Manager?
+Are you a BA/PM/Product Manager (PdM)?
 
 Well, before moving forward answer these questions:
 
@@ -81,7 +77,6 @@ Agentic development abstract the *how to* so that if you have a Why and a What y
 This is exactly what I did to put together **an UI** to the [Database QnA plug and play analytics around langchain](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/).
 
 ![langchain db qna via UI PoC](/blog_img/DA/sql/langchain-vite-pgsql.png)
-
 
 How about an example around: Selfservice data analytics?
 
@@ -191,7 +186,7 @@ All deliverables — whether committed to repositories or shared with clients �
 
 Let’s explore how to craft effective prompts for AI, so you get accurate, structured, and actionable outputs.
 
-The key is to think of prompting as a flow:
+The key is to think of **prompting as a flow**:
 
 Goal -> Context -> Instruction -> Contrains -> Output Format
 
@@ -218,16 +213,14 @@ However, if a file is too large to fit entirely, some information may fall outsi
 Each model has its own limit for how much information it can process at once. Here are some examples:
 
 * GPT-4-Turbo: up to 128k tokens (~100–200 pages of text)
-
 * Claude 3 Opus: up to 200k tokens
-
 * GPT-3.5: up to 16k tokens (~10–15 pages)
-
 * LLaMA 2 70B: ~65k tokens
 
 Include only relevant information — keep files, snippets, and docs focused; minimize noise.
 
 Work iteratively — avoid dumping entire repos or huge logs at once.
+
 Use RAG or indexing for large projects — load only necessary data into the context on demand.
 
 Be aware of limits — information beyond the model’s context window is “forgotten.”

@@ -545,11 +545,9 @@ sudo apt update && sudo apt install ncdu -y
 sudo ncdu /mnt/data2tb
 ```
 
-
 ---
 
 ## FAQ
-
 
 ### Setup Containers
 

@@ -1,7 +1,6 @@
 ---
 title: "Are agents and DAOs the inevitable future?"
 date: 2026-02-23T07:00:21+01:00
-#date: 2026-02-28T07:00:21+01:00
 draft: false
 tags: ["Crypto","LLMs","Gresham","Cinematic Landing Prompt","Ikigai"]
 description: 'The AI Driven Business x Unit Economics 107'

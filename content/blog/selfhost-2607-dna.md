@@ -950,6 +950,7 @@ Databricks emphasizes data engineering and unified analytics beyond notebooks, w
 
 ### Geo Analytics
 
+`/geo-maps-and-data`
 
 1. GeoLibre - https://github.com/opengeos/GeoLibre that you can find https://geolibre.app/
 

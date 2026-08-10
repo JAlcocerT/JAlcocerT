@@ -156,8 +156,6 @@ And as you can expect, it works locally:
 
 ![alt text](/blog_img/AIBI/wrenai-ui.png)
 
-
-
 ## Pre-Building 
 
 But first, some recap on what drove me to this point.
@@ -463,7 +461,6 @@ https://youtu.be/eCvZxjSw6rE
 
 {{< youtube "eCvZxjSw6rE" >}}
 
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/langchain-db-ui" title="LangChain or BAML x DB + UI" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Connect to PGSQL - Get insights with automatic charts." >}}
 {{< /cards >}}
@@ -500,7 +497,6 @@ Be smart, turn your **Data Layer** into a **Self-Service Agent**.
 ### Related Tech Talk
 
 There is a huge difference between [pbi - looker and such *custom gen-bi* solution](https://mermaid.live/edit#pako:eNp9U02P2jAQ_SuWDz0B3XyRkEMllrARaraim7Zb1dmDIbPEAmxkOy0f4r93QliU7aE52dZ7M--9mZzoUpVAY7rSfFeRb0khCX6mXrQP8_sZYXP1BzS5n8Xkkcuab8gH8kMYPLy06OabO2yipISlJVaRhFv-Qvr9T2Tusispt1yTfFnBlpMEjFjJLt1t0R571sICScY_ySNwU2swXZjXwnyWaL5CHYlWu6uYdzi_xQVsXi82wlTkCXZK2ysEZFnIf5xmn58Iy5Rag47JBEPpPwhtLPaYgLSab8QRyk6L7J3hZ66hUrWB1nXmshTkx2kpLGlqPmaXkl16azjzWAKvQsLNLRHySumiW9-Zz6b73UZpIDlsmtYPAjZl13nWOs8ClvPf0EjLK9RW4khMtVBcl__JIG2mjcL7zazHK_Qtlk3IB8m3Ytnpkjq4FELeZr3gb85Tl41nZFxb1Z_uMbalNWhdWtjbLr91n3rsu8HVGpu1IV-4rTFm8rUGY4Xqbkfa2k_9pjbqA80tmEukKC-3zXV16BLaFNKAzaSxHIVePVx3RRx5pwVGQXv4B4iSxlbX0KNb0FveXOmpgRTU4tpCQWM8llyvC1rIM3J2XP5SavtG06peVTR-xWXEW70rUVciOIa7vb1q7AZ6omppaeyE_qUIjU90T-O-4zn-IHADxx_6ke-FQY8eaOzd3Q1cbxhGQRRFw9AZnXv0eGnrDMKRFzpO6HijUeS67vD8F4GgJbw).
-
 
 
 ```sh
@@ -543,13 +539,19 @@ Here is a breakdown of what this graph suggests and why it is a powerful (though
 
 1. The Engine: Business System (Focus)
 
-The starting point is a single "Business System" generating roughly **5x your life expenses.** * **The "Focus" Tag:** This is critical. It suggests that before you worry about complex investing or lifestyle upgrades, you must first build a singular, scalable engine that produces high cash flow.
+The starting point is a single "Business System" generating roughly **5x your life expenses.** 
 
-* **The 5x Target:** By aiming for 5x your expenses, you create a massive "margin of safety." Most people live on 1x or 1.2x their income; this model demands you over-earn significantly relative to your needs to fuel the rest of the system.
+* **The "Focus" Tag:** This is critical. 
+
+It suggests that before you worry about complex investing or lifestyle upgrades, you must first build a singular, scalable engine that produces high cash flow.
+
+* **The 5x Target:** By aiming for 5x your expenses, you create a massive "margin of safety." 
+
+Most people live on 1x or 1.2x their income; this model demands you over-earn significantly relative to your needs to fuel the rest of the system.
 
 2. The Multiplier Strategy
 
-The blue numbers (, , ) represent the allocation weight relative to your lifestyle:
+The blue numbers represent the allocation weight relative to your lifestyle:
 
 * **Lifestyle (x1):** This is your baseline. If your lifestyle costs $10,000/month, that is your "1 unit."
 * **Tax (x1.5):** This assumes a roughly 30% tax bracket on the total. It treats tax as a mandatory "expense" that is actually larger than your personal lifestyle costs.
@@ -559,8 +561,12 @@ The blue numbers (, , ) represent the allocation weight relative to your lifesty
 
 Once the cash flows through the "Focus" phase, it is split into three buckets:
 
-* **50% Keep & Grow Wealth [Diversify]:** Half of every dollar earned goes into assets (stocks, real estate, etc.). This is where the transition from "Active Income" (Business) to "Passive Wealth" happens.
+* **50% Keep & Grow Wealth [Diversify]:** Half of every dollar earned goes into assets (stocks, real estate, etc.). 
+
+> This is where the transition from "Active Income" (Business) to "Passive Wealth" happens.
+
 * **30% Tax:** A realistic, conservative estimate for high-earning individuals to ensure no legal or cash-flow surprises.
+
 * **20% Lifestyle:** This is the "Golden Handcuffs" prevention. By capping lifestyle at 20% of total earnings, you ensure that even if you have a massive year, you don't inflate your spending to a level that requires the business to run forever.
 
 My Assessment

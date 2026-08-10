@@ -164,7 +164,6 @@ Taking this to the project: *I needed some orchestrator, but it wont be driven b
 node --env-file=.env scripts/orchestrate-drip.mjs --dry-run
 ```
 
-
 Creating and testing the templates is simple:
 
 ![alt text](/blog_img/biz/email-mkt-old.png)
@@ -252,7 +251,6 @@ The Goal: You want a "Deliver" workflow so efficient (high Gross Profit) and a "
 *   Running hourly (24 times/day) = ~720 runs per month.
 *   720 runs * 0.75 minutes = **540 minutes per month**.
 *   This is well within the 2,000-minute free allowance.
-
 
 All working with this architecture around the email marketing.
 

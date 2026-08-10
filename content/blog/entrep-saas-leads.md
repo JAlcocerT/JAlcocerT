@@ -200,7 +200,7 @@ Depending on your technical skill and what you need the data for:
 | **Clay** | Integrating scraped data with AI to write personalized outreach emails. | Data Enrichment |
 | **ScrapingBee** | Developers who want a simple API to handle proxies and headless browsers. | Developer API |
 
-Or prefer to keep your Ego safe vs take this bet and see if people/b2B want your services?
+Or prefer to keep your Ego safe (vs) take this bet and see if people/B2B **actually want** your services?
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}

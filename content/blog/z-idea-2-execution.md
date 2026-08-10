@@ -15,7 +15,6 @@ Just read this, if an idea does not fit this framework: NEXT.
 
 +++ Consider using formbricks for people that claim to want to build with you and avoid non-sense
 
-
 **Intro**
 
 Every idea can be a potential business game.
@@ -440,8 +439,6 @@ A log listing Category, Probability (1-5), Impact (1-5), and Mitigation.
 2. **Clarified MoSCoW vs. WSJF:** I noted that MoSCoW is for *filtering* (In/Out) while WSJF is for *ranking* (Order). Using both simultaneously can be confusing without this distinction.
 3. **Added "Contextual Bias":** This is a huge risk in AI. If you only feed the AI notes from the CEO, the requirements will be biased toward the CEO.
 
-**Would you like me to generate a "System Prompt" you could use to ensure an AI writes User Stories that follow these strict quality rules?**
-
 
 ## Phase 2: AI-Augmented Design
 
@@ -451,11 +448,11 @@ A log listing Category, Probability (1-5), Impact (1-5), and Mitigation.
 - Document the chosen approach in an ADR (Architecture Decision Record) and create a High-Level Design (HLD) outlining system components, data flow, and integrations.
 - Simultaneously, produce UX prototypes to validate user flows and interfaces before development begins.
 
-
-
 ### Part A: System Architecture (The "Skeleton")
 
-In this phase, AI acts as a **Devil's Advocate**. It doesn't just design one system; it helps you compare three different ways to build it so you can choose the best one.
+In this phase, AI acts as a **Devil's Advocate**.
+
+It doesn't just design one system; it helps you compare three different ways to build it so you can choose the best one.
 
 1. Core Tasks
 
@@ -542,7 +539,6 @@ The inclusion of **"Over-generation"** as a risk is particularly insightful—ma
 
 AI tends to write verbose, "bloated" code if not constrained, which creates technical debt.
 
-
 ## Phase 3: AI-Augmented Development
 
 *Goal: maintain high velocity without sacrificing code quality or security.*
@@ -558,6 +554,7 @@ The workflow you outlined follows the "Human-AI-Human" sandwich pattern:
 2. Key Prompts & Templates
 
 **A. The Builder Prompt (Module + Tests)**
+
 *Use this when starting a new feature.*
 
 > **Role:** Senior Python Engineer
@@ -568,8 +565,8 @@ The workflow you outlined follows the "Human-AI-Human" sandwich pattern:
 > * **NO external dependencies** other than the standard library.
 > * Add logging for all failed auth attempts.
 
-
 **B. The Strategist Prompt (API Migration)**
+
 *Use this for complex refactoring.*
 
 > **Role:** Backend Architect
@@ -582,6 +579,7 @@ The workflow you outlined follows the "Human-AI-Human" sandwich pattern:
 
 
 **C. The Reviewer Prompt (JSON Output)**
+
 *Use this to automate PR reviews in your CI/CD pipeline.*
 
 > **Role:** Security Auditor
@@ -639,8 +637,6 @@ In the Development phase, the biggest failure point is **Context Window manageme
 This is the final piece of the puzzle! Your notes for **Stage 4: Testing** are good, but they miss a critical nuance: **The "Echo Chamber" Risk.**
 
 If you use AI to write the code (Stage 3) and then use the *same* AI to write the tests (Stage 4), it might make the exact same logical error in both places, causing the test to pass even though the feature is broken.
-
-Here is the structured, professionalized version of your **Testing** notes, with that critical risk added.
 
 ---
 
@@ -715,7 +711,6 @@ Here is the structured, professionalized version of your **Testing** notes, with
 * **Risk 3: Hallucinated Scenarios**
 * *The Issue:* AI generating tests for buttons that don't exist on the screen.
 * *Control:* **Grounding.** Feed the AI the specific HTML/DOM structure or the Figma file context before asking for UI tests.
-
 
 ---
 

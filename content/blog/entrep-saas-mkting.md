@@ -216,7 +216,6 @@ Or.......pocketbase + ESP.
 * https://fmhy.net/
 
 
-
 ---
 
 ## FAQ
@@ -398,7 +397,7 @@ You are essentially a **high-margin entity** masquerading as two standard-margin
 
 In our formula, you have successfully decoupled **Volume of Output** from **Volume of Time**.
 
-Here is how you should think about your next move using the frameworks we’ve discussed.
+My next move using the frameworks we’ve discussed.
 
 #### 1. The Reality Check: "The Arbitrage of Expertise"
 
@@ -408,9 +407,10 @@ You have refined your **[EXECUTION]** so well that your "Cost of Production" (Ti
 
 However, you are currently **Demand-Constrained** by the 40-hour-week contract.
 
+{{< callout type="info" >}}
 To move forward, you have to decide if you want to remain a "Hidden High-Margin Agency" or step into a "Scalable Model."
+{{< /callout >}}
 
----
 
 #### 2. Three Strategic Paths Forward
 
@@ -439,13 +439,19 @@ To move forward, you have to decide if you want to remain a "Hidden High-Margin 
 
 Before you choose, look at your "Internal Dashboard":
 
-1. **Burnout Risk (Discipline):** Can you maintain this  indefinitely, or is your "Engine" starting to overheat?
-2. **Skill Obsolescence (R&D):** Are these two jobs making you a better "Analyst," or are you just getting faster at boring tasks? If you aren't doing **Product Refinement** on yourself, your  will eventually drop.
-3. **Solvency:** How many months of "Runway" have you saved from these two salaries? If you have 12 months of cash, the risk of starting the **WebApp** drops to near zero.
+1. **Burnout Risk (Discipline):** Can you maintain this indefinitely, or is your "Engine" starting to overheat?
+
+2. **Skill Obsolescence (R&D):** Are these two jobs making you a better "Analyst," or are you just getting faster at boring tasks? 
+
+> If you aren't doing **Product Refinement** on yourself, your  will eventually drop.
+
+3. **Solvency:** How many months of "Runway" have you saved from these two salaries? 
+
+> If you have 12 months of cash, the risk of starting the **WebApp** drops to near zero.
 
 My Recommendation
 
-Since you have already proven you can handle the **[EXECUTION]** of two jobs in 10 hours, you have a rare gift for **Efficiency**.
+Since you have already proven you can handle the **[EXECUTION]** of two jobs in ~10 hours, you have a rare gift for **Efficiency**.
 
 **The most "Indie Hacker" move:**
 
@@ -488,15 +494,16 @@ This is where Path C sits compared to the giants and the solo-SaaS model.
 | **CapEx Role** | Massive (Warehouses) | High (Data Centers) | **Zero (Your Brand/Expertise)** |
 | **Strategic Tag** | **[EXECUTION]** | **[BET]** | **[DISCIPLINE]** |
 
-
 3. Why Path C is the "Arbitrage" Play
 
-You mentioned you can finish 16 hours of work in 10 hours.
+If you can finish 16 hours of work in ~10 hours.
 
 In Path C, you **weaponize** this efficiency:
 
-* **In a Job:** If you work faster, you just get more work. Your  (hourly rate) effectively stays the same.
-* **In Path C:** If you work faster, your **Gross Margin ()** increases. If you can do a "Monthly Analytics Review" for a client in 2 hours instead of 10, your profit-per-hour skyrockets.
+* **In a Job:** If you work faster, you just get more work. Your (hourly rate) effectively stays the same.
+* **In Path C:** If you work faster, your **Gross Margin ()** increases.
+
+> If you can do a "Monthly Analytics Review" for a client in 2 hours instead of 10, your profit-per-hour skyrockets.
 
 4. Offer & Pricing Strategy for Path C
 
@@ -530,9 +537,13 @@ In the **WebApp** and **Education** models, your biggest pain point is **Demand*
 
 You have infinite supply, but no one knows you.
 
-In the **Fractional/Agency** model, your biggest pain point is **Supply**. Everyone wants you, but you only have one brain and 24 hours.
+In the **Fractional/Agency** model, your biggest pain point is **Supply**. 
 
-**The Hybrid Goal:** Use the **Fractional** income (high ) to pay for the ads (high ) of your **WebApp**. This solves the **Solvency** issue of the app and the **Time** issue of the consultant.
+Everyone wants you, but you only have one brain and 24 hours.
+
+**The Hybrid Goal:** Use the **Fractional** income (high ) to pay for the ads (high ) of your **WebApp**. 
+
+This solves the **Solvency** issue of the app and the **Time** issue of the consultant.
 
 With a **$100k+ net asset cushion** and a proven **10-hour work week** efficiency, you are in a position of extreme strength. 
 
@@ -540,7 +551,7 @@ You aren't just an Indie Hacker; you are a "Capital-Armed Operator."
 
 Your $100k serves as your **[STRUCTURE]** layer—it removes the "Solvency" pressure that kills most startups, allowing you to focus entirely on the **[GROWTH BET]**.
 
-Here is your transition plan to move *from moonlighting to a WebApp founder*.
+Ever needed a transition plan like the example above to move *from moonlighting to a WebApp founder*?
 
 ---
 

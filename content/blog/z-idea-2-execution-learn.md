@@ -27,20 +27,22 @@ Context windows and context rotting is a thing.
 
 > MIT | Ralph is an autonomous AI agent loop that runs repeatedly until all PRD items are complete.
 
-PRDs? where have I heard about thos?
+PRDs? 
+
+Where have I heard about those?
 
 * https://www.atlassian.com/agile/product-management/requirements
 * PRD/BRD/FRD
 
 Innovate, imitate or... stay incompetent?
 
-Are you one of those that choses stay incompotent, because learning and doing is just getting easier?
+Are you one of those that choses stay incompotent?
+
+learning (and doing) is just getting easier
 
 Like, I could have skipped doing all those astro clones and directly vibe coded with [this cool UI prompt](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders)
 
 But...have you ever tried?
-
-How much deflation is enough?
 
 ---
 
@@ -48,7 +50,7 @@ How much deflation is enough?
 
 Not been eager to learn today feels like:
 
-![alt text](/blog_img/memes/bike.png)
+![meme self savotage](/blog_img/memes/bike.png)
 
 At least, you got the time to know yourself by [asking questions](#questions), like these of [ikigai](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#about-ikigai)?
 

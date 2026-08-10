@@ -217,7 +217,7 @@ https://developers.cloudflare.com/pages/framework-guides/nextjs/
 <https://jamstackthemes.dev/theme/nextjs-notion-starter-kit/>
 <https://transitivebullsh.it/nextjs-notion-starter-kit>
 
-<https://transitivebullsh.it/
+<https://transitivebullsh.it>
 
 
 ### DFY for a close one

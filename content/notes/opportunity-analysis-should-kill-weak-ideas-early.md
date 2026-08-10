@@ -7,7 +7,9 @@ description: "A business opportunity framework is useful when it prevents bad pr
 
 Opportunity analysis should be a filter, not a justification machine.
 
-Before building, an idea should survive basic questions about pain, buyer, urgency, willingness to pay, acquisition channel, delivery cost, competition, and personal fit. If it fails early, that is a good outcome.
+**Before building**: an idea should survive basic questions about pain, buyer, urgency, willingness to pay, acquisition channel, delivery cost, competition, and personal fit. 
+
+If it fails early, that is a good outcome.
 
 Focus improves when weak ideas die before implementation.
 

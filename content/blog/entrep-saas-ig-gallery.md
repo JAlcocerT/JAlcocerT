@@ -8,7 +8,6 @@ description: 'BiP an NextJS Photo Gallery with built-in editor for the upcoming 
 url: 'do-your-instagram'
 ---
 
-
 **Tl;DR**
 
 A better [entreagujaypunto v1](https://github.com/JAlcocerT/EntreAgujayPunto) vibe coded from scratch with NextJS and potentially to be used from anyone via my PaaS offering.
