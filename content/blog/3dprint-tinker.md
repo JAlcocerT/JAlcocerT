@@ -7,6 +7,15 @@ description: abcd
 url: 'starting-with-3dprinting'
 ---
 
+
+**Tl;DR**
+
+One of those things in the bucket list of every tinkerer.
+
+**Intro**
+
+I was trying to document myself on forums, like [fc](https://forocoches.com/foro/showthread.php?t=10360182) and reddit.
+
 <!-- 
 https://youtu.be/d6PyYCBft44?si=vsgHCiL2k2Fswwxd 
 -->
@@ -17,20 +26,13 @@ https://youtu.be/d6PyYCBft44?si=vsgHCiL2k2Fswwxd
 
 {{< youtube "d6PyYCBft44" >}}
 
-
-**Tl;DR**
-
-One of those things in the bucket list of every tinkerer.
-
-**Intro**
-
-I was trying to document myself on forums, like [fc](https://forocoches.com/foro/showthread.php?t=10360182) and reddit.
-
 ## Choosing a Printer
 
 People recommended me: [Prusa](https://www.prusa3d.com/) or BambuLabs
 
 * https://www.prusa3d.com/page/how-to-choose-a-3d-printer_229126/
+
+> There has been some controversy about bambu printers this year
 
 {{< details title="What to Know before choosing a 3D Printer 📌" closed="true" >}}
 
@@ -43,6 +45,7 @@ I found interesting the following resources:
 * https://www.reddit.com/r/BambuLab/comments/1cqn7ua/why_bambu_over_prusa_specifically_p1s_vs_prusa_mk4/
 
 1. Type of 3D Printer (Technology)
+
 - **FDM (Fused Deposition Modeling):** 
   - Uses [filament](https://www.prusa3d.com/category/filament/).
   - Great for functional prototypes, larger objects, and lower-cost printing.
@@ -57,41 +60,51 @@ I found interesting the following resources:
 **Recommendation:** If you're a beginner or hobbyist, an FDM printer is usually a good starting point.
 
 2. Build Volume
+
 - **What to Know:** Build volume refers to the maximum size of objects you can print. Larger build volumes allow you to print bigger objects in one go, but they also mean a bigger, often more expensive printer.
 - **Questions to Ask:** What size do you need? Are you printing small, intricate models or larger prototypes?
 
 3. Print Material Compatibility
+
 - **FDM Materials:** PLA, ABS, PETG, and flexible filaments like TPU.
 - **SLA Materials:** Different types of resins (standard, tough, flexible, etc.).
 - **What to Know:** Each material has different properties (strength, flexibility, temperature resistance), and some printers handle specific materials better. Ensure the printer supports the materials you intend to use.
 
 4. Resolution and Print Quality
+
 - **Layer Height:** The smaller the layer height, the finer the print details. 
   - FDM printers: 0.1-0.3 mm.
   - SLA printers: As low as 0.025 mm.
 - **What to Know:** Higher resolution usually means longer print times. If detail is crucial, SLA might be better; otherwise, FDM offers a good balance.
 
 5. Ease of Use
+
 - **What to Know:** Some 3D printers are more user-friendly, especially for beginners, while others require advanced knowledge for calibration, maintenance, or troubleshooting.
 - **Features to Look For:** Auto-bed leveling, filament sensors, touchscreen interfaces, and good support/documentation can make the printer easier to use.
 
 6. Cost
-- **Upfront Cost:** Includes the printer’s price, assembly (if you choose a kit vs. pre-assembled), accessories, and upgrades.
+
+- **Upfront Cost:** Includes the printer’s price, assembly (if 
+you choose a kit vs. pre-assembled), accessories, and upgrades.
 - **Operating Costs:** Filament or resin, replacement parts (nozzles, print beds), electricity, and time spent troubleshooting.
 - **What to Know:** An affordable printer may be enticing, but factor in long-term costs and reliability. Mid-range printers (like Prusa i3 MK4) often offer better durability and support, reducing headaches over time.
 
 7. Post-Processing
+
 - **What to Know:** Some printers, especially SLA, require post-processing (e.g., cleaning and curing). For FDM, you might need to remove supports and sand the prints. Consider how much post-processing effort you’re willing to handle.
 
 8. Community and Support
+
 - **What to Know:** A strong user community and customer support can be invaluable, especially if you're new to 3D printing. 
 - **Check:** Does the manufacturer provide regular software updates? Is there an active forum or helpdesk for troubleshooting?
 
 9. Software Compatibility
+
 - **Slicing Software:** Most 3D printers use slicer software to convert 3D models into G-code instructions.
 - **What to Know:** Ensure the printer supports widely-used, open-source slicers like PrusaSlicer, Cura, or others. Check if the printer's software is easy to use, frequently updated, and supports various file formats (STL, OBJ, 3MF).
 
 10. Print Speed
+
 - **What to Know:** Faster printing speeds save time, but they can reduce print quality, especially on complex objects. FDM printers typically print slower than SLA printers, but this varies based on the model and settings.
 
 - **For Beginners:** Focus on ease of use, price, and material compatibility. The **Prusa Mini+** or **i3 MK4** are great choices.
@@ -126,7 +139,9 @@ What cool things you can do? How about a **3d printed Hydrofoil**?
 
 ### Software for DYI Designs
 
-Prusa 3D printers primarily require files in G-code format for printing. G-code is the standard language used by most 3D printers to control the movements of the printer's components and manage the printing process.
+Prusa 3D printers primarily require files in G-code format for printing. 
+
+G-code is the standard language used by most 3D printers to control the movements of the printer's components and manage the printing process.
 
 * Model File Formats: STL, OBJ, 3MF (input files for slicing).
 * Print File Format: G-code (file format used by Prusa printers to execute the print).
@@ -223,7 +238,9 @@ Very interesting video: western vs eastern design - https://www.youtube.com/watc
 
 1. **GIMP with python** - https://docs.gimp.org/2.10/en_GB/gimp-filters-python-fu.html
 
-Before we start writing Python scripts in GIMP, we need to install the Python-Fu plug-in. This plug-in enables GIMP to run Python scripts.
+Before we start writing Python scripts in GIMP, we need to install the Python-Fu plug-in. 
+
+This plug-in enables GIMP to run Python scripts.
 
 2. **FreeCAD with Python** - https://wiki.freecad.org/Python_scripting_tutorial
     * Query2CAD: [Generating CAD models using natural language queries](https://arxiv.org/html/2406.00144v1)
@@ -266,6 +283,8 @@ https://github.com/dune3d/dune3d -->
 
 https://mariushosting.com/synology-best-docker-containers-for-3d-printers/
 
+---
+
 ## Conclusions
 
 Blender
@@ -275,7 +294,7 @@ What can you use 3D printing for IRL?
 
 From here...
 
-Whats stopping us to buy a 3-axis 
+Whats stopping us to buy a 3-axis CNC machine?
 
 ---
 
@@ -318,6 +337,3 @@ HOWTO Raspberry Pi + LCD 16x2 i2c
 
 
 https://github.com/the-raspberry-pi-guy/lcd
-
-
----

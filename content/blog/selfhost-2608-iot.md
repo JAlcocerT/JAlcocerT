@@ -1,14 +1,17 @@
 ---
 title: "Selfhosted IoT x HA"
-date: 2026-08-15
+date: 2026-08-25
 draft: false
 tags: ["Home Assistant x EMQX","Sonoff x Zigbee","Tinkering IRL","M2M","Tech Talk"]
-description: 'A homelab around IoT and sensors.'
+description: 'A homelab around IoT and sensors. The BoM to get you started.'
 url: 'home-lab-tools-for-iot'
 ---
 
 
 https://github.com/andrewdavidmackenzie/pigg
+
+[![shields.io Stars](https://img.shields.io/github/stars/chartdb/chartdb)](https://github.com/chartbrew/chartbrew/stargazers)
+
 
 iot sim card
 
@@ -62,6 +65,7 @@ But about ways to send information
 1. MqttX
 2. Mqtt Explorer
 3. MQTTy
+4. EMQx
 
 Or simply with this CLI tool:
 
@@ -310,9 +314,11 @@ docker ps -a | grep -i home-assistant
 After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the [electro-magnetic foundations](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/), this post was the next step.
 
 
-How much deflation is enough for you to start?
+How much deflation is enough for you to start doing?
 
-Save you effort or make you money?
+Whatever.
+
+Save you effort or make money?
 
 Deal:
 
@@ -510,3 +516,10 @@ Since you are likely using a breadboard now to connect both sensors:
 
 * **The "Power Rail":** Connect the ESP32's **3V3** pin to the red (+) rail on your breadboard and **GND** to the blue (-) rail. 
 * **Shared Power:** Now you can just plug the VIN and GND from both the DHT11 and the MLX90614 into those rails.
+
+### IoT BoM to get started
+
+1. ESP32 or a PicoW: ~5/10$
+2. DHT11/22: 
+3. MLX90614 infrared sensors:
+4. 

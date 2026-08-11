@@ -14,7 +14,9 @@ I dared to call [2024 crazy](https://jalcocert.github.io/JAlcocerT/this-year-was
 
 Then 2025 happened.
 
-Where 900 min of LISTENING to a podcast makes you be the top...5%?
+Where 900 min of LISTENING to a podcast makes you be the top
+
+...5%?
 
 Really?
 
@@ -29,7 +31,6 @@ This year, Ive abused again of my *unfair advantage*.
 ![Just working](/blog_img/outro/work-unfair-advantage.png)
 
 If I was pushing from the [start of 2023](https://jalcocert.github.io/JAlcocerT/blog/summary22/), So ive done this year.
-
 
 Building a brand is not easy.
 

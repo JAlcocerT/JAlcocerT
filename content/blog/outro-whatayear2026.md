@@ -106,12 +106,15 @@ People are using these platforms to do so: *and you have to place your email for
 
 Multilanguage and all that stuff. 
 
+
 Still *(and will be kept)* as HUGO.
 
 ```sh
 dig fossengineer.com any
 #ping fossengineer.com
 ```
+
+Added some articles like: https://fossengineer.com/no-hello/
 
 0. Talking about Home-Lab and selfhosting: I keep admiring the work that `selfh.st` puts weekly
 
