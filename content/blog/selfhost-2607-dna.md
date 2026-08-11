@@ -7,7 +7,6 @@ description: 'Selfhosting D&A Tools. WrenAI, Rill and Vanna mean nothing w/o a p
 url: 'selfhosting-data-analytics'
 ---
 
-https://github.com/TabularEditor/TabularEditor/releases
 
 **Tl;DR**
 
@@ -115,6 +114,7 @@ Plus...the hard tech part...is [cooked for a while now](https://jalcocert.github
 | `diagramlayout.json` | Visual positioning of tables in the model relationship diagram (cosmetic only) |
 
 > A `procedural.md` is all you might need to know everything you ever wanted from ~~pbix~~ .pbip powerbi dashboards
+
 
 **OneLake Catalog** is a Microsoft Fabric feature—a centralized data discovery and governance tool within OneLake, Microsoft's unified data lake (like "OneDrive for data"). 
 
@@ -950,108 +950,9 @@ Databricks emphasizes data engineering and unified analytics beyond notebooks, w
 
 ### Geo Analytics
 
-https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#geo-from-r-to-py
+I tinkered with maps [earlier this year](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#geo-from-r-to-py)
 
-https://penotariado.com/inmobiliario/en/housing-price-finder
-
-https://www.ine.es/ADRH/?config=config_ADRH_2023.json&showLayers=ADRH_2023_Renta_media_por_hogar_cache&level=5
-
-```sh
-python scripts/build_transaction_map.py
-start maps\dvf_eaux_bonnes_2025_transactions.html
-```
-
-![alt text](/blog_img/data-experiments/geo/gourette-dfv-osm.png)
-
-```sh
-python scripts/build_france_transaction_map.py --max-mutations 1000
-#  python scripts/build_france_transaction_map.py --department 64
-maps\dvf_france_2025_transactions_preview.html
-
-#start maps\dvf_france_2025_transactions_preview.html
-start maps\dvf_combined_lyon_dept64_2025_transactions_preview.html
-```
-
-I put together a [quick video here](https://github.com/JAlcocerT/poc/tree/main/building-geo-fr-osm) around those
-
-```sh
-python -m py_compile scripts\build_price_video.py
-```
-
-<!-- 
-https://youtu.be/bgx9B_77tYU 
--->
-
-{{< youtube "bgx9B_77tYU" >}}
-
-
-
-https://github.com/domlysz/BlenderGIS
-https://www.youtube.com/watch?v=cSTCZVzS1fs
-
-https://www.youtube.com/watch?v=4R4xRH-Nyac
-
-https://www.youtube.com/watch?v=uPM2gNSWX9o&list=PLAxJ4-o7ZoPcfLJ0w7k-woHJXkbjSiKb3
-
-https://www.youtube.com/results?search_query=f4map
-
-1. GeoLibre - https://github.com/opengeos/GeoLibre that you can find https://geolibre.app/
-
-2. Dawarich `https://play.google.com/store/apps/details?id=com.zeitflow.dawarich&pli=1`
-
-You have several integrations `http://localhost:3333/settings/integrations` like with [Velomate](https://fossengineer.com/selfhosting-velomate/)
-
-3. More [Selfhosted GPX](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#selfhosted-gpx) like https://github.com/tess1o/geopulse
-
-<!-- 
-https://www.youtube.com/watch?v=pK_fSEp_OzQ 
--->
-
-{{< youtube "pK_fSEp_OzQ" >}}
-
-This is a good chance:
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/" title="TrackDays and GoPro Telemetry " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="GPS Telemetry from a GoPro | Post" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro MetaData Magic 101 " image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 Firmware and comparison with GoPro" >}}
-{{< /cards >}}
-
-1. To have a look to [French Real estate again](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/#real-estate):
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="French Real Estate ↗" icon="github" >}}
-{{< /cards >}}
-
-2. To check how household income is evolving in spain as [a recap of this post](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/)
-
-3. To use PyRouteTracker against more karting or trackday data:
-
-{{< callout type="warning" >}}
-Just this GoPro telemetry bc doing the reverse engineering to a Laguna mk2 was tricky and doing `candump` turned off the car before going to spa
-{{< /callout >}}
-
-4. Just imagine how a Drone x GPS could be:
-
-5. Phyphox take off data:
-
-```sh
-cd ./poc/airplane-phyphox
-
-```
-
-6. To think how the [solar rays simulations of a building](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#the-sun-is-interesting) need more context of their surrounding:
-
-```sh
-#sudo snap install blender --classic --channel=5.1/stable
-#cd ./poc/building-to-blender
-#claude --dangerously-skip-permissions
-cd ./poc/building-geo-to-blender
-```
-
-| Date | Astronomical daylight | Direct sun | Lost to terrain |
-|---|---|---|---|
-| 21 Dec 2026 | 8.8 h | **3.3 h** | **62%** |
-| 1 Jul 2026 | 15.0 h | 12.0 h | 20% |
+And recently made [a reloaded version](https://jalcocert.github.io/JAlcocerT/geo-data-analytics/)
 
 
 ### Tomatoes Progress
@@ -1064,6 +965,8 @@ Since the [last time](https://jalcocert.github.io/JAlcocerT/electr-diode/#tomato
 ### When was the last time you applied?
 
 Tired to explain the same to the same people that wont learn?
+
+A friend is using CC with [pdf parsing libraries](https://github.com/jsvine/pdfplumber) to start his D&A career.
 
 {{% details title="Ideas Checklist 🚀" closed="true" %}}
 

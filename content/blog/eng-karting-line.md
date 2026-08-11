@@ -1,6 +1,6 @@
 ---
 title: "Optimal Karting Line"
-date: 2026-08-10
+date: 2026-08-14
 draft: false
 tags: ["Racing x PWA","GPS","Nürburgring x SPA","Proton CLI","OSS Photo stack"]
 description: 'Go-Pro Telemetry gone wild.'
@@ -20,7 +20,7 @@ Coming from [here](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop
   {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="ebboks JAlcocerTech | Github ↗" icon="github" >}}
 {{< /cards >}}
 
-The GD was the one that worked best so far: https://jalcocert.github.io/JAlcocerT/kart-optimum-path/#the-results
+The GD was the one that [worked best so far](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/#the-results)
 
 {{< youtube "orzYl6u35ec" >}}
 
@@ -28,7 +28,7 @@ The GD was the one that worked best so far: https://jalcocert.github.io/JAlcocer
 
 ## Go Pro Telemetry Overlay
 
-Let's tinker around some new gopro telemetry and the **Spa and Nurburgring** circuits:
+Tinker around your [gopro gps telemetry](https://jalcocert.github.io/JAlcocerT/geo-data-analytics/) and the **Spa and Nurburgring** circuits:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY JAlcocerTech x Obfuscation | Github ↗" icon="github" >}}
@@ -42,8 +42,19 @@ git clone
 
 ### Nurburgring
 
+The kind of track day that you wouldnt miss with your friends for anything in the world
+
+
+{{< youtube "v1I5b4-JE00" >}}
+
 
 ### Spa
+
+
+
+
+#### Karting
+
 
 <!-- 
 https://www.youtube.com/watch?v=v1I5b4-JE00&t=9s 
@@ -52,12 +63,7 @@ https://www.youtube.com/watch?v=v1I5b4-JE00&t=9s
 {{< youtube "v1I5b4-JE00" >}}
 
 
-
-#### Karting
-
 > Where are these videos from? An [European roadtrip](#tools-and-tech-for-trips)!
-
-
 
 
 ## Optimum path

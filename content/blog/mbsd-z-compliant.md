@@ -1,6 +1,6 @@
 ---
 title: "Time for MultiBodySystemsDynamics (dot) com"
-date: 2026-08-08
+date: 2026-08-19
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper","Forgejo"]
 description: 'Mechanism agentic centered design.'
