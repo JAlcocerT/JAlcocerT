@@ -495,7 +495,7 @@ create partition primary
 
 ### Which Linux to get started?
 
-To not complicate things: Just get Ubuntu LTS with GNOME.
+To not complicate things: Just get Ubuntu LTS with GNOME or Zorin OS.
 
 If this is your first time, take it easy on the learning journey and for now, dont trust your new miniPC as unique storage of anything
 

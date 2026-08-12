@@ -279,9 +279,7 @@ And SteamOS recently [here](https://jalcocert.github.io/JAlcocerT/selfhosted-app
 
 When you think nothing can surprise you...
 
-You get to know a new Arch based OS:
-
-* https://omarchy.org/
+You get to know a new Arch based OS: `https://omarchy.org/`
 
 That is done by...a [racing driver](https://www.youtube.com/watch?v=iNQl0x6WS3M)?
 
@@ -297,9 +295,11 @@ I downloaded the `omarchy-3.2.0.iso` of the OS and tried it via VM.
 
 ![alt text](/blog_img/selfh/omarchy/omarchy-setup.png)
 
-It took ~5min to complete the install.
+It took ~5min to complete the install:
 
 ![alt text](/blog_img/selfh/omarchy/omarchy-ui.png)
+
+This is how the desktop looks:
 
 ![Omarchy OS](/blog_img/selfh/omarchy/omarchy-desktop.png)
 
@@ -316,8 +316,6 @@ Virtualization made simple: https://flathub.org/apps/org.gnome.Boxes
 ```sh
 flatpak install flathub org.gnome.Boxes
 ```
-
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#thoughts-on-steamos-and-os-for-nas
 
 ![download steam os](/blog_img/outro/steamos.png)
 

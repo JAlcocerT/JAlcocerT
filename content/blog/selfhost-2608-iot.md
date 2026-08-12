@@ -28,7 +28,7 @@ Isnt it time to do some recap to IoT, HA and the solar panel?
 
 **Intro**
 
-* Why Im writting this post: 
+* WHY Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 Summer is coming!
@@ -555,3 +555,9 @@ git clone
 #### Other learnings
 
 1. Using a Multimeter / ClampMeter: from [continuity tests](https://www.youtube.com/shorts/q-BlvhkLqcU) / resistance measuring, to wall voltage readings
+
+
+2. Pumps also go around P/Q: ~~price/quantity~~ Power, Flow *and height, Best Efficiency Point (BEP)...*
+
+
+3. 

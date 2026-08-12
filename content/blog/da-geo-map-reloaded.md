@@ -203,6 +203,8 @@ To put e-bike assistance in perspective relative to human effort:
 
 ```
 
+{{< youtube "cSTCZVzS1fs" >}}
+
 For a non-professional cyclist, power output depends heavily on fitness level, body weight, and duration.
 
 Cycling power is typically measured at **FTP** (Functional Threshold Power—the maximum average wattage you can hold for roughly 1 hour) or measured in **Watts per kilogram ($\text{W/kg}$)**.
@@ -234,7 +236,7 @@ If you ask a non-professional to stomp on the pedals as hard as possible for a b
 
 ---
 
-## COnclusions
+## Conclusions
 
 Not sure about you, but im doing:
 

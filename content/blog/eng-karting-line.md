@@ -1,6 +1,6 @@
 ---
 title: "Optimal Karting Line"
-date: 2026-08-14
+date: 2026-08-12
 draft: false
 tags: ["Racing x PWA","GPS","Nürburgring x SPA","Proton CLI","OSS Photo stack"]
 description: 'Go-Pro Telemetry gone wild.'
@@ -122,6 +122,7 @@ here is sth more:
 
 ### Linux 101
 
+Download an [OS like **ZorinOS**](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started) to get started.
 
 #### Files Sync
 
@@ -155,23 +156,34 @@ If you need more:
 
 #### Gaming
 
-You should be good to go with Steam in Linux for most games.
+You should be good with [gaming via Steam in Linux](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#thoughts-on-steamos-and-os-for-nas) for most games.
 
 Just be careful with online ones as some anticheats dont work outofthebox.
 
+I also [tested SteamOS](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-december-2025/#gaming-and-linux) via a VM with [gnome boxes](https://jalcocert.github.io/JAlcocerT/testing-nix-os/#getting-started-with-nixos):
+
+```sh
+#flatpak install flathub org.gnome.Boxes
+```
 
 
 
 ### Tools and Tech for Trips
 
 1. https://github.com/spliit-app/spliit
+
 2. A trip planner like [this](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/poc-trip-planner-v4) https://trip-planner-9lt.pages.dev/?sid=07621&lat=43.1833&lon=0&name=Tarbes+Ossun+Lourdes&country=FR
+
+```sh
+cd ./poc/z-poc-trip-planner-adk # cd ../z-poc-trip-planner-v4
+make compose #http://192.168.1.2:3021
+```
+
+![trip planner with weather time zone and costs](/blog_img/data-experiments/trip-planner-tz.png)
 
 3. https://github.com/itskovacs/trip/releases/tag/1.47.0
 
 ### My fav PWAs
-
-
 
 [Spliit](https://spliit.app/), and a [quick pwa poc](https://github.com/JAlcocerT/poc/tree/main/pwa-spliit-analyzer) i created around it
 
