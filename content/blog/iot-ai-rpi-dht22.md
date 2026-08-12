@@ -22,6 +22,12 @@ https://github.com/superlinked/superlinked -->
 
 **Intro**
 
+**Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 Recently I was doing a setup and [tech talk around plugandplay analytics with langchain](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions) connected to our dbs.
 
 I used the opportunity also bring life data once again to the presentation ppt.

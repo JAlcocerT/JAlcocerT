@@ -11,9 +11,10 @@ url: '3d-printing-101'
 **Tl;DR**
 
 
-
 **Intro**
 
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 

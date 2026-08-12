@@ -7,3 +7,7 @@ description: 'A look to F/OSS '
 url: 'daily-notes-with-oss'
 ---
 
+**Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*

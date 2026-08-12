@@ -20,11 +20,10 @@ There is kind of a rush for shipping PoCs now.
 
 And when they have to go from PoC to MVP phase, they need auth.
 
-
 * https://www.awesome-homelab.com/item/pocket-id
   * https://pocket-id.org/
 
-  > See https://github.com/petervdpas/goop2 Goop² is an ephemeral, peer-to-peer system for personal web spaces.
+> See https://github.com/petervdpas/goop2 Goop² is an ephemeral, peer-to-peer system for personal web spaces.
 
 Some time back, when working at a popular *,ecommerce'*, they were using Okta everywhere.
 

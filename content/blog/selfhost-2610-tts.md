@@ -7,11 +7,19 @@ description: 'A homelab .'
 url: 'selfhosted-tts'
 ---
 
+
+**Intro**
+
+* Why Im writting this post:
+* What Ive learnt with it:
+
 https://fossengineer.com/voicebox-local-ai-voice-studio/
 
 https://fossengineer.com/chatterbox-local-open-source-tts/
 
 https://fossengineer.com/kittentts-local-cpu-tts/
+
+---
 
 
 ## FAQ

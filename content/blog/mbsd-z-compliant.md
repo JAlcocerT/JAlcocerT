@@ -16,6 +16,9 @@ The engine behind `https://multibodysystemsdynamics.com/` cant be closed source.
 
 **Intro**
 
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 From the [wedding conversation with Gilabert](https://jalcocert.github.io/JAlcocerT/what-do-i-do/), my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and [inspired by diode Inc](https://www.youtube.com/watch?v=B8DbMJ1Zr4I).
 
 ```sh
@@ -67,6 +70,10 @@ Say that you can to simulate a new engine type:
 
 <!-- 
 https://www.youtube.com/watch?v=HVqYlP1MC6E -->
+
+```sh
+git clone 
+```
 
 ### Inline
 

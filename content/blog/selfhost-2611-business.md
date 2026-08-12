@@ -11,9 +11,15 @@ url: 'selfhosting-business'
 
 Avoid silos and the [Coasean Ceiling](#about-the-coasean-ceiling).
 
+
+
 * https://github.com/uvdesk/community-skeleton
 
+
 **Intro**
+
+* Why Im writting this post:
+* What Ive learnt with it:
 
 Tools to avoid silos in your business.
 

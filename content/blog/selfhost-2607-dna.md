@@ -100,6 +100,162 @@ Rill vs WrenAI vs Vanna
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartbrew/" title="Vanna | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+
+- **Apache DevLake** = DevOps/SDLC Analytics & Metrics
+- **Delta Lake** = Data Storage Layer for Data Lakes
+
+You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/)
+
+It doesnt matter if you stack is: `powerbi+dbeaver+mssql/dbcode` extensions at vscode...
+
+```sql
+SELECT TOP 10 * FROM INFORMATION_SCHEMA.TABLES;
+
+SELECT [EaId], [Name], [LifecycleState]
+FROM [Stg].[Snowflake]
+WHERE [EaId] LIKE 'sth123%';
+```
+
+
+* https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction
+
+Or the `Grafana+Pypsark+graphite/ES` one...
+
+I got you covered on the D&A book
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
+
+Or if you are ready for that big next step, at the consulting ;)
+
+---
+
+Not all of them are 100% Open Source Software (OSS). 
+
+🟢 Fully Open Source (100% Free & OSS)
+
+These tools are free for both personal and commercial use without "Pro" versions.
+
+* **MySQL Workbench:** Licensed under GPL.
+* **HeidiSQL:** Licensed under GPL; completely free.
+* **phpMyAdmin / Adminer:** Both are fully open source web-based tools.
+* **Sequel Ace:** A popular, fully open-source Mac alternative to Sequel Pro.
+
+🟡 Open Core / Freemium (Free version + Paid version)
+
+These have a free community version that is open source, but they sell a separate "Enterprise" or "Ultimate" version with extra features.
+
+* **DBeaver:** The **Community Edition** is fully open source (Apache License). The Enterprise version (paid) adds support for NoSQL (MongoDB, etc.) and cloud integrations.
+* **Beekeeper Studio:** The **Community Edition** is open source (GPL). The "Ultimate" version adds features like team workspaces and a specialized table creator.
+
+🔴 Proprietary / Paid (With Free Tiers)
+
+These are not open source. They are commercial products, though they may have free versions for specific users.
+
+* **TablePlus:** Proprietary. It has a free trial, but it limits you to opening only 2 tabs/windows at a time.
+* **DataGrip:** Proprietary (JetBrains). As of late 2025/early 2026, it is **free for non-commercial use** (students, hobbyists, open-source contributors), but requires a paid subscription for professional/work use.
+* **PowerBI Desktop:** Proprietary (Microsoft). It is "Free to use" but is closed-source software.
+
+Which should you choose?
+
+* If you want **maximum power for free**: **DBeaver Community** is the winner.
+* If you want something **simple and truly OSS**: **HeidiSQL** (Windows) or **Beekeeper Studio Community**.
+* If you are on a **Mac**: **Sequel Ace** is a fantastic open-source native choice.
+
+### Agentic Orchestration Layer
+
+The article says the Zvec team’s ecosystem roadmap targets integrations with:
+
+- **LangChain**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+- **LlamaIndex**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+- **DuckDB**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+- **PostgreSQL**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+- “Real device deployments” (i.e., on-device / edge environments, not a specific framework, but mentioned as a target). [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
+
+They are essentially the "nervous system" for AI.
+
+While a Large Language Model (LLM) acts as the "brain," these **Agentic Orchestration Layers** provide the structure, memory, and routing logic required to turn a static model into a functional, autonomous agent.
+
+However, they each approach "orchestration" from a very different architectural philosophy. 
+
+#### 1. LangGraph (The "State Machine" Approach)
+
+LangGraph is currently the industry favorite for **complex, reliable agents**. 
+
+Unlike standard LangChain (which is more linear), LangGraph treats an agent like a "cycle" or a flow chart.
+
+* **Philosophy:** Everything is a **Directed Acyclic Graph (DAG)** or a state machine.
+* **Best for:** Tasks where the agent needs to loop back, retry, or follow a very specific "plan-act-check" cycle.
+* **Key Feature:** Built-in persistence (the agent can "sleep" and wake up exactly where it left off).
+
+#### 2. AutoGen (The "Conversation" Approach)
+
+Born out of Microsoft Research, AutoGen views agentic work as a **dialogue**.
+
+* **Philosophy:** You create a "team" of specialized agents (e.g., a "Coder," a "Reviewer," and a "Manager") who talk to each other to solve a problem.
+* **Best for:** Creative problem solving, multi-agent collaboration, and scenarios where agents need to critique each other's work.
+* **Update:** As of late 2025, Microsoft released the **Microsoft Agent Framework**, which converges AutoGen’s conversation patterns with Semantic Kernel’s stability.
+
+#### 3. Semantic Kernel (The "Enterprise" Approach)
+
+This is Microsoft’s SDK for integrating AI into professional software (C#, Python, Java).
+
+* **Philosophy:** It treats AI functions as **"Skills" or "Plugins"** that can be called by a central "Planner."
+* **Best for:** Large-scale enterprise apps where you need strict security, telemetry (logging), and integration with existing corporate APIs.
+* **Key Feature:** It is "Strongly Typed," making it much easier for traditional software engineers to use than the more "fluid" Python frameworks.
+
+| Tool | Core Mechanism | Complexity | Best Use Case |
+| --- | --- | --- | --- |
+| **LangGraph** | Graphs / State Nodes | High | Robust, custom loops and specific workflows. |
+| **AutoGen** | Agent Conversations | Medium | Dynamic "brainstorming" and multi-agent teams. |
+| **Semantic Kernel** | Plugins / Planners | Enterprise | Production apps needing security and C# support. |
+
+Where does standard LangChain fit?
+
+In 2026, standard **LangChain** is often viewed more as a "utility belt" or a collection of connectors (to databases, PDFs, etc.). 
+
+Most developers use LangChain for the *data* and LangGraph for the *logic*.
+
+The distinction you’ve highlighted regarding **Semantic Kernel** being "Kernel-centric" versus the "Chain" or "Graph" approach of the others is the most critical takeaway. 
+
+**Semantic Kernel** is the Microsoft orchestration powerhouse!
+
+The "Logic" Evolution
+
+* **Semantic Kernel's "Planners":** In early versions, planners were a bit unpredictable. Now, they have matured into highly reliable "Function Calling" mechanisms. Instead of the LLM just guessing what to do, the Kernel provides a strict set of "Tools" (Plugins) that make it much safer for enterprise use.
+
+* **LangGraph's "Persistence":** Your mention of "Stateful workflows" is spot on. One of its biggest edges over Semantic Kernel for developers is **"Human-in-the-loop"** capability. You can pause a graph, wait for a human to approve a database edit, and then resume.
+
+Integration Depth
+
+* **Azure Native:** If a company is already on the Azure OpenAI stack, Semantic Kernel is almost a "default" choice because it handles things like **Managed Identities** and **Virtual Networks** in a way that Python-centric frameworks often struggle with.
+
+* **AutoGen's "Code Interpreter":** AutoGen’s standout feature remains its ability to spin up a "Dockerized" environment where an agent can write Python code, execute it, see the error, and fix it—all without human intervention. This makes it the "smartest" for raw data science tasks.
+
+---
+
+### Expanded Comparison Table
+
+To add to your existing data, here is how they handle **Memory** and **Tooling**:
+
+| Feature | Semantic Kernel | LangGraph | AutoGen |
+| --- | --- | --- | --- |
+| **Memory Type** | Specialized "Memories" (Vector DBs) | State snapshots (Checkpoints) | Chat History / Context windows |
+| **Tool Calling** | "Plugins" (C# Classes/Methods) | "Nodes" (Python Functions) | "Skills" (Function calls) |
+| **Development Style** | Software Engineering (OOP) | Flowchart / Logic Design | Social Engineering (Persona) |
+
+
+Final Verdict
+
+Your summary is perfect:
+
+* **Semantic Kernel** = The "Boring" (in a good way) Enterprise Choice. It follows rules.
+* **LangGraph** = The "Architect's" Choice. It follows a map.
+* **AutoGen** = The "Researcher's" Choice. It follows a conversation.
+* And...how about Google **ADK**?!
+
 ## Fabric One Catalogue or...
 
 If you have been using PowerBI, you know that there is this notion of [data catalog](https://powerbi.microsoft.com/en-us/data-catalog/) 
@@ -243,163 +399,6 @@ For the day to day, elevate your operations to get more done:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-- **Apache DevLake** = DevOps/SDLC Analytics & Metrics
-- **Delta Lake** = Data Storage Layer for Data Lakes
-
-You can also try with [Python Venvs or Conda](https://jalcocert.github.io/JAlcocerT/useful-python-stuff/)
-
-It doesnt matter if you stack is: `powerbi+dbeaver+mssql/dbcode` extensions at vscode...
-
-```sql
-SELECT TOP 10 * FROM INFORMATION_SCHEMA.TABLES;
-
-SELECT [EaId], [Name], [LifecycleState]
-FROM [Stg].[Snowflake]
-WHERE [EaId] LIKE 'sth123%';
-```
-
-
-* https://learn.microsoft.com/en-us/power-bi/create-reports/copilot-introduction
-
-Or the `Grafana+Pypsark+graphite/ES` one...
-
-I got you covered on the D&A book
-
-{{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
-{{< /cards >}}
-
-Or if you are ready for that big next step, at the consulting ;)
-
----
-
-Not all of them are 100% Open Source Software (OSS). 
-
-🟢 Fully Open Source (100% Free & OSS)
-
-These tools are free for both personal and commercial use without "Pro" versions.
-
-* **MySQL Workbench:** Licensed under GPL.
-* **HeidiSQL:** Licensed under GPL; completely free.
-* **phpMyAdmin / Adminer:** Both are fully open source web-based tools.
-* **Sequel Ace:** A popular, fully open-source Mac alternative to Sequel Pro.
-
-🟡 Open Core / Freemium (Free version + Paid version)
-
-These have a free community version that is open source, but they sell a separate "Enterprise" or "Ultimate" version with extra features.
-
-* **DBeaver:** The **Community Edition** is fully open source (Apache License). The Enterprise version (paid) adds support for NoSQL (MongoDB, etc.) and cloud integrations.
-* **Beekeeper Studio:** The **Community Edition** is open source (GPL). The "Ultimate" version adds features like team workspaces and a specialized table creator.
-
-🔴 Proprietary / Paid (With Free Tiers)
-
-These are not open source. They are commercial products, though they may have free versions for specific users.
-
-* **TablePlus:** Proprietary. It has a free trial, but it limits you to opening only 2 tabs/windows at a time.
-* **DataGrip:** Proprietary (JetBrains). As of late 2025/early 2026, it is **free for non-commercial use** (students, hobbyists, open-source contributors), but requires a paid subscription for professional/work use.
-* **PowerBI Desktop:** Proprietary (Microsoft). It is "Free to use" but is closed-source software.
-
-Which should you choose?
-
-* If you want **maximum power for free**: **DBeaver Community** is the winner.
-* If you want something **simple and truly OSS**: **HeidiSQL** (Windows) or **Beekeeper Studio Community**.
-* If you are on a **Mac**: **Sequel Ace** is a fantastic open-source native choice.
-
-### Agentic Orchestration Layer
-
-The article says the Zvec team’s ecosystem roadmap targets integrations with:
-
-- **LangChain**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
-- **LlamaIndex**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
-- **DuckDB**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
-- **PostgreSQL**. [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
-- “Real device deployments” (i.e., on-device / edge environments, not a specific framework, but mentioned as a target). [marktechpost](https://www.marktechpost.com/2026/02/10/alibaba-open-sources-zvec-an-embedded-vector-database-bringing-sqlite-like-simplicity-and-high-performance-on-device-rag-to-edge-applications/)
-
-They are essentially the "nervous system" for AI.
-
-While a Large Language Model (LLM) acts as the "brain," these **Agentic Orchestration Layers** provide the structure, memory, and routing logic required to turn a static model into a functional, autonomous agent.
-
-However, they each approach "orchestration" from a very different architectural philosophy. 
-
-#### 1. LangGraph (The "State Machine" Approach)
-
-LangGraph is currently the industry favorite for **complex, reliable agents**. 
-
-Unlike standard LangChain (which is more linear), LangGraph treats an agent like a "cycle" or a flow chart.
-
-* **Philosophy:** Everything is a **Directed Acyclic Graph (DAG)** or a state machine.
-* **Best for:** Tasks where the agent needs to loop back, retry, or follow a very specific "plan-act-check" cycle.
-* **Key Feature:** Built-in persistence (the agent can "sleep" and wake up exactly where it left off).
-
-#### 2. AutoGen (The "Conversation" Approach)
-
-Born out of Microsoft Research, AutoGen views agentic work as a **dialogue**.
-
-* **Philosophy:** You create a "team" of specialized agents (e.g., a "Coder," a "Reviewer," and a "Manager") who talk to each other to solve a problem.
-* **Best for:** Creative problem solving, multi-agent collaboration, and scenarios where agents need to critique each other's work.
-* **Update:** As of late 2025, Microsoft released the **Microsoft Agent Framework**, which converges AutoGen’s conversation patterns with Semantic Kernel’s stability.
-
-#### 3. Semantic Kernel (The "Enterprise" Approach)
-
-This is Microsoft’s SDK for integrating AI into professional software (C#, Python, Java).
-
-* **Philosophy:** It treats AI functions as **"Skills" or "Plugins"** that can be called by a central "Planner."
-* **Best for:** Large-scale enterprise apps where you need strict security, telemetry (logging), and integration with existing corporate APIs.
-* **Key Feature:** It is "Strongly Typed," making it much easier for traditional software engineers to use than the more "fluid" Python frameworks.
-
-| Tool | Core Mechanism | Complexity | Best Use Case |
-| --- | --- | --- | --- |
-| **LangGraph** | Graphs / State Nodes | High | Robust, custom loops and specific workflows. |
-| **AutoGen** | Agent Conversations | Medium | Dynamic "brainstorming" and multi-agent teams. |
-| **Semantic Kernel** | Plugins / Planners | Enterprise | Production apps needing security and C# support. |
-
-### Where does standard LangChain fit?
-
-In 2026, standard **LangChain** is often viewed more as a "utility belt" or a collection of connectors (to databases, PDFs, etc.). 
-
-Most developers use LangChain for the *data* and LangGraph for the *logic*.
-
-The distinction you’ve highlighted regarding **Semantic Kernel** being "Kernel-centric" versus the "Chain" or "Graph" approach of the others is the most critical takeaway. 
-
-**Semantic Kernel** is the Microsoft orchestration powerhouse.
-
-To refine that perspective even further for 2026, here are a few nuances that complement your framework comparison:
-
-
-### The "Logic" Evolution
-
-* **Semantic Kernel's "Planners":** In early versions, planners were a bit unpredictable. Now, they have matured into highly reliable "Function Calling" mechanisms. Instead of the LLM just guessing what to do, the Kernel provides a strict set of "Tools" (Plugins) that make it much safer for enterprise use.
-
-* **LangGraph's "Persistence":** Your mention of "Stateful workflows" is spot on. One of its biggest edges over Semantic Kernel for developers is **"Human-in-the-loop"** capability. You can pause a graph, wait for a human to approve a database edit, and then resume.
-
-### Integration Depth
-
-* **Azure Native:** If a company is already on the Azure OpenAI stack, Semantic Kernel is almost a "default" choice because it handles things like **Managed Identities** and **Virtual Networks** in a way that Python-centric frameworks often struggle with.
-
-* **AutoGen's "Code Interpreter":** AutoGen’s standout feature remains its ability to spin up a "Dockerized" environment where an agent can write Python code, execute it, see the error, and fix it—all without human intervention. This makes it the "smartest" for raw data science tasks.
-
----
-
-### Expanded Comparison Table
-
-To add to your existing data, here is how they handle **Memory** and **Tooling**:
-
-| Feature | Semantic Kernel | LangGraph | AutoGen |
-| --- | --- | --- | --- |
-| **Memory Type** | Specialized "Memories" (Vector DBs) | State snapshots (Checkpoints) | Chat History / Context windows |
-| **Tool Calling** | "Plugins" (C# Classes/Methods) | "Nodes" (Python Functions) | "Skills" (Function calls) |
-| **Development Style** | Software Engineering (OOP) | Flowchart / Logic Design | Social Engineering (Persona) |
-
-
-Final Verdict
-
-Your summary is perfect:
-
-* **Semantic Kernel** = The "Boring" (in a good way) Enterprise Choice. It follows rules.
-* **LangGraph** = The "Architect's" Choice. It follows a map.
-* **AutoGen** = The "Researcher's" Choice. It follows a conversation.
-* And...how about Google **ADK**?!
 
 ---
 
@@ -539,7 +538,7 @@ Use these patterns depending on the business situation.
 
 The goal is to make the communication shape match the outcome you need.
 
-##### 1. Investigation: DFIR
+1. Investigation: DFIR
 
 Use this for root cause analysis, data discrepancies, bug investigation, stakeholder concerns, RCA documents, and executive questions about reported issues.
 
@@ -572,7 +571,7 @@ Example:
 - **Decision required:** should deployment history follow the application across project-name changes?
 - **Recommendation:** if `BitID` is the canonical application identifier, retain the current logic and document the behavior.
 
-##### 2. Alignment Sync: COAST
+2. Alignment Sync: COAST
 
 Use this for release readiness reviews, cross-team status meetings, open issue reviews, program updates, and dependency tracking.
 
@@ -604,7 +603,7 @@ Example:
 - **Status:** the test group has been created, but sign-off from the Finance Lead is pending.
 - **Trigger:** Sarah pings the Finance Lead by Friday at 12 PM. If there is no response, escalate to the release manager.
 
-##### 3. Follow-Up and Execution: DRIVE
+3. Follow-Up and Execution: DRIVE
 
 Use this for open requests, pending approvals, access requests, and stalled delivery items.
 
@@ -636,7 +635,7 @@ Example:
 - **Validate:** all unit tests passed.
 - **Easy response:** reply with `Approved` or click the GitHub link to sign off.
 
-##### 4. Architecture and Decision Meetings: ADAPT
+4. Architecture and Decision Meetings: ADAPT
 
 Use this for future-state architecture, platform decisions, technical strategy, major dependencies, and solution alternatives.
 
@@ -668,7 +667,7 @@ Example:
 - **Path forward:** recommend Option B and run a 2-week proof of concept.
 - **Target outcome:** reporting finishes before 7 AM daily, saving 4 hours of processing time.
 
-##### 5. Cross-Team Handoff: FACT
+5. Cross-Team Handoff: FACT
 
 Use this for technical handoffs, upstream data-quality issues, system-owner validation, vendor escalations, and ownership transfer after an investigation.
 
@@ -698,7 +697,7 @@ Example:
 - **Confirmation:** comparing payloads before and after deployment shows the key changed from `amount` to `checkout_amount`.
 - **Take action:** the Checkout Service team should update the payload output mapping or rollback `v2.1`.
 
-##### 6. Complex Technical Investigations: TRACE
+6. Complex Technical Investigations: TRACE
 
 Use this for multi-system failures, ambiguous ownership, end-to-end data lineage investigations, integration issues, and telemetry problems.
 
@@ -834,6 +833,8 @@ Start **driving outcomes** across teams, programs, and the broader D&A organizat
 
 SQLite is a very handy and portable DB to place some logs.
 
+Like the ones of some DHT telemetry :)
+
 {{< details title="Storing in SQLite 📌" closed="true" >}}
 
 
@@ -844,8 +845,7 @@ SQLite is a very handy and portable DB to place some logs.
 
 {{< /details >}}
 
-
-And now, there is even a fork of it:
+And now, there is even a fork:
 
 {{< youtube "PGpL5hYpY1o" >}}
 
@@ -1000,6 +1000,8 @@ Key Differences
 Databricks excels in code-driven, scalable data science workloads, while Synapse (now evolving into Fabric) prioritizes Azure-integrated warehousing and simpler governance. [learn.microsoft](https://learn.microsoft.com/en-us/answers/questions/587071/differnce-between-synapse-and-databricks)
 
 #### GCP VWB
+
+If you are familiar with virtual machines and the cloud, you are good to go with Google version of it.
 
 #### Databricks
 

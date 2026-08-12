@@ -11,7 +11,11 @@ url: 'selfhosting-and-servers-review'
 
 Five (+) years with selfhosting...
 
+
 **Intro**
+
+* Why Im writting this post:
+* What Ive learnt with it:
 
 Put the time and the digital world is yours.
 

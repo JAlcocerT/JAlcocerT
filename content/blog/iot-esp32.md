@@ -23,6 +23,11 @@ Despite the PicoW lasting x2 in the same battery, for some reason the esp is les
 
 **Intro**
 
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 https://github.com/micropython/micropython
 
 People are transforming everything to a smart device with a simple ESP

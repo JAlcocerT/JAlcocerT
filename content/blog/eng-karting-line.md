@@ -13,6 +13,10 @@ The tailwind is strong as long as you dont get 529 status on CC.
 
 **Intro**
 
+
+* Why Im writting this post: *Want to share with my friends my refreshed gopro telemetry setup*
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 Coming from [here](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/) and [here](https://jalcocert.github.io/JAlcocerT/reinforce-learning-racing-simulator/#conclusions)
 
 {{< cards >}}
@@ -121,9 +125,9 @@ here is sth more:
 
 #### Files Sync
 
-1. Nextcloud
+1. Nextcloud: a personal cloud, one of the first setups for any homelab and working perfectly in Linux
 
-2. Proton CLI
+2. Proton CLI: finally it arrived!
 
 3. Rsync
 
@@ -150,6 +154,11 @@ If you need more:
 3. 
 
 #### Gaming
+
+You should be good to go with Steam in Linux for most games.
+
+Just be careful with online ones as some anticheats dont work outofthebox.
+
 
 
 

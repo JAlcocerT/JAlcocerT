@@ -6,6 +6,10 @@ tags: ["OpenPilot","LubeLog"]
 description: 'A look to F/OSS '
 url: 'open-source-dna'
 ---
+**Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 ## FAQ

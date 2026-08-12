@@ -114,7 +114,7 @@ dig fossengineer.com any
 #ping fossengineer.com
 ```
 
-Added some articles like: https://fossengineer.com/no-hello/
+Added some articles like: https://fossengineer.com/no-hello/ from the [learnings here](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#quick-reference)
 
 0. Talking about Home-Lab and selfhosting: I keep admiring the work that `selfh.st` puts weekly
 

@@ -14,7 +14,10 @@ From 3v to a [car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analyti
 
 **Intro**
 
-Ive ended up learning sth about batteries thx to the fpv drones, electric car tests and a now a portable bluetti.
+Its been inspiring [this post from Sean](https://www.seangoedecke.com/blog-about-things-you-dont-understand-yet/), with a framework that ill be copying in my intros:
+
+* Why Im writting this post: 
+* What Ive learnt with it: *Ive ended up learning sth about batteries thx to the FPV drones, electric car tests and a now...a portable bluetti for home project.*
 
 ## About Batteries
 

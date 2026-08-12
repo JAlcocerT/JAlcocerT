@@ -34,19 +34,19 @@ Wondering about [buying a car](https://jalcocert.github.io/JAlcocerT/buying-car-
 
 ### DC
 
-DC motors are the easiest place to start because the electrical side maps cleanly to the mechanical side: more current means more torque, and more voltage usually means more speed until losses, back EMF, and heating catch up.
+DC motors are the easiest place to start because the electrical side maps cleanly to the mechanical side: *more current means more torque, and more voltage usually means more speed until losses, back EMF, and heating catch up*.
 
-The classic brushed DC motor does the commutation mechanically with brushes and a segmented commutator. 
+The classic **brushed DC motor** does the commutation mechanically with brushes and a segmented commutator. 
 
 That makes it cheap and intuitive, but the brushes wear, spark, add friction, and limit how cleanly you can control it at high power.
 
-Brushless DC (BLDC) motors keep the useful DC control idea, but move the commutation into electronics.
+**Brushless DC** (BLDC) motors keep the useful DC control idea, but move the commutation into electronics ~ESCs ~ MOSFETs.
 
 The controller energizes the stator phases in sequence while the permanent-magnet rotor follows the rotating field.
 
-That is why drones, fans, e-bikes, robots, and many EV auxiliaries use BLDC/PMSM-style machines instead of brushed motors.
+That is why FPV drones, fans, e-bikes, robots, and many EV auxiliaries use BLDC/PMSM-style machines instead of brushed motors.
 
-| Type | What creates torque | What changes speed | Main compromise |
+| **Type** | What creates torque | What changes speed | Main compromise |
 |---|---|---|---|
 | Brushed DC | Armature current through a commutator | Applied voltage / PWM duty | Brushes wear and spark |
 | BLDC | Electronically switched stator phases | ESC timing, PWM, field-oriented control | Needs controller and rotor position estimate |
@@ -58,11 +58,11 @@ AC motors are built around a rotating magnetic field.
 
 Instead of flipping current mechanically, the supply itself changes direction over time, and multi-phase windings create a field that rotates through the stator.
 
-That makes AC machines very attractive at medium and large power: no brushes are needed, the construction can be rugged, and the grid already gives you AC. 
+That makes AC machines very attractive at medium and large power: *no brushes are needed, the construction can be rugged, and the grid already gives you AC*.
 
 The catch is that useful speed control usually needs power electronics, normally a variable-frequency drive (VFD) or an inverter.
 
-| Type | What creates torque | What changes speed | Main compromise |
+| **Type** | What creates torque | What changes speed | Main compromise |
 |---|---|---|---|
 | Induction | Rotor currents induced by slip | Supply frequency via VFD | Needs slip; lower power factor |
 | Synchronous / PMSM | Rotor field locked to stator field | Electrical frequency and rotor angle | Needs synchronization/control |
@@ -72,7 +72,7 @@ The catch is that useful speed control usually needs power electronics, normally
 
 Is the classical R-L model enough?
 
-enough for what, right?
+> enough for what, right?
 
 These are not powered by slider cranks and powerful combustions
 
@@ -100,7 +100,7 @@ Switched reluctance motors are a different branch: the rotor has no magnets and 
 
 They are mechanically simple and heat-tolerant, but the control, noise, and torque ripple are the price.
 
-| AC family | Why it matters | Where it shows up |
+| **AC family** | Why it matters | Where it shows up |
 |---|---|---|
 | Induction | Rugged, cheap, no permanent magnets | Pumps, fans, factories, some EVs |
 | Synchronous / PMSM | High efficiency and torque density | EV traction, servos, robotics |
@@ -123,11 +123,13 @@ In small drones the motor is usually called "brushless DC", but electromagnetica
 
 The battery is DC, the controller creates timed phase currents, and the rotor follows the rotating field.
 
-For brushed DC motors, a simple voltage source and PWM can already be enough for useful control. For BLDC/PMSM, the controller has to decide which phase to energize and when. 
+For brushed DC motors, a simple voltage source and PWM can already be enough for useful control. 
+
+For BLDC/PMSM, the controller has to decide which phase to energize and when. 
 
 That decision can come from Hall sensors, back-EMF sensing, or full field-oriented control.
 
-| DC family | Control style | Practical note |
+| **DC family** | Control style | Practical note |
 |---|---|---|
 | Brushed DC | PWM voltage, polarity reversal | Great for cheap actuators, starters, toys |
 | BLDC trapezoidal | Six-step commutation with ESC | Common in drones and fans |
@@ -198,13 +200,17 @@ Induction motors need slip to make torque:
 
 $$s = \frac{n_s - n_r}{n_s}$$
 
-If $s = 0$, the rotor sees no changing field, no induced rotor current, and therefore no induction torque. That is the short mathematical reason why squirrel-cage motors are called asynchronous motors.
+If $s = 0$, the rotor sees no changing field, no induced rotor current, and therefore no induction torque. 
+
+That is the short mathematical reason why squirrel-cage motors are called asynchronous motors.
 
 For synchronous and PMSM motors, the rotor tracks the rotating stator field. A simplified torque relationship is:
 
 $$\tau \propto \Phi I \sin\delta$$
 
-where $\Phi$ is magnetic flux, $I$ is stator current, and $\delta$ is the torque angle between rotor and stator fields. With field-oriented control, the common PMSM form is:
+where $\Phi$ is magnetic flux, $I$ is stator current, and $\delta$ is the torque angle between rotor and stator fields. 
+
+With field-oriented control, the common PMSM form is:
 
 $$\tau = \frac{3}{2}p_p\lambda_m i_q$$
 
@@ -226,6 +232,8 @@ That is the equation behind the practical rule: higher battery voltage or higher
 
 Why all of this?
 
+There is some IRL tinkering coming up :)
+
 | Property | DC (Brushed) | Induction (Squirrel Cage) | Synchronous | BLDC | Stepper |
 |----------|---|---|---|---|---|
 | **Torque-Current** | Linear (τ ∝ I) | Slip-dependent | Sine (τ ∝ sin δ) | Linear (τ ∝ I) | Detent only |
@@ -241,7 +249,7 @@ Why all of this?
 | **Typical Uses** | Old tools, low speed | Industrial baseline | Power plants, precision | EV, robotics, drones | CNC, 3D printers |
 
 
-Well, you can use this knowledge for fpv/drons:
+You can use this knowledge for fpv/drons:
 
 <!-- https://www.youtube.com/watch?v=MxG22nbBNvQ -->
 
@@ -256,9 +264,10 @@ $$\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}$$
 Remember: A changing magnetic field creates an electric field!
 
 {{< callout type="info" >}}
-"kV" on drone motors is **NOT kilovolts.** It's **motor constant:** volts of back-EMF per 1000 RPM. More [about dron motors](https://github.com/JAlcocerT/electronics-101/blob/master/samples-theory/motors-ac-dc/drone_motors.md).
+"kV" on drone motors is **NOT kilovolts.**
 {{< /callout >}}
 
+It's **motor constant:** volts of back-EMF per 1000 RPM. More [about dron motors](https://github.com/JAlcocerT/electronics-101/blob/master/samples-theory/motors-ac-dc/drone_motors.md).
 
 Or to understand electric cars [before buying one](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/#car-costs-analytics)
 
@@ -392,7 +401,11 @@ Those tiny brushless motors are spinning the propellers at over **81,000 times p
 
 #### Why such a high KV for a small indoor drone?
 
-* **Small Propellers = Less Leverage:** Indoor Whoop propellers are tiny (only 31mm wide). Because the blades are so small, they don't grab a lot of air. To create enough thrust to lift the drone, they have to spin at astronomical speeds. High KV motors give you that raw speed.
+* **Small Propellers = Less Leverage:** Indoor Whoop propellers are tiny (only 31mm wide). Because the blades are so small, they don't grab a lot of air. 
+
+To create enough thrust to lift the drone, they have to spin at astronomical speeds.
+
+High KV motors give you that raw speed.
 
 * **Low Voltage (1S):** Since you are only using a single-cell battery ($3.7\text{V}$ to $4.2\text{V}$), the voltage is quite low. To get high RPMs out of low voltage, the motor needs a high KV rating.
 
@@ -404,7 +417,9 @@ When you go to buy your motors, sticking around **19500KV to 22000KV** in the **
 
 Choosing the right motor KV isn’t *just* about the drone’s size—it is a balancing act between **Propeller Size** and **Battery Voltage (Cell Count / "S")**.
 
-The fundamental rule of thumb is: **Big propellers and higher voltage need lower KV (more torque). Small propellers and lower voltage need higher KV (more raw RPM).**
+The fundamental rule of thumb is: 
+
+**Big propellers and higher voltage need lower KV (more torque). Small propellers and lower voltage need higher KV (more raw RPM).**
 
 If you pair a big propeller with a high KV motor, the motor will try to spin way too fast, overheat, draw massive current, and likely burn out your ESC or the motor itself.
 
@@ -420,19 +435,17 @@ The drone's "size" is typically measured by its propeller diameter (in inches).
 | **Long Range / Cinematic** (7") | 2806.5 to 2808 | **1500 – 1900 KV** | **1100 – 1350 KV** | Heavy GoPro haulers, mountain surfing, ArduPilot |
 | **Heavy Lift / Commercial** (10"+) | 3110 to 4114+ | *N/A* | **400 – 900 KV** *(Uses 6S to 12S)* | Large mapping planes, multi-kg cameras, endurance |
 
-
 💡 Understanding the Stator Numbers
 
 > When you see a motor size like **2207**, the numbers stand for the internal dimensions in millimeters:
 > * **22** = Stator Width (Wider = more torque and efficiency at low RPM)
 > * **07** = Stator Height (Taller = more raw power and bite at high RPM)
 
-
 ### DC vs BLDC vs AC Engines
 
 The naming can be confusing because "DC" and "AC" can describe either the power source or the electromagnetic behavior.
 
-| Label | Power source | Field behavior | Commutation | Best mental model |
+| **Label** | Power source | Field behavior | Commutation | Best mental model |
 |---|---|---|---|---|
 | Brushed DC | DC | Rotor current switches mechanically | Brushes/commutator | Simple current-to-torque actuator |
 | BLDC | DC battery + inverter/ESC | Rotating stator field | Electronic six-step or sinusoidal | DC-powered synchronous motor |
@@ -452,7 +465,9 @@ is a good DC-style control intuition, while:
 
 $$n_s = \frac{120f}{p}$$
 
-is the AC rotating-field intuition. BLDC/PMSM machines mix both worlds: a DC battery feeds an inverter, and the inverter creates the rotating field.
+is the AC rotating-field intuition.
+
+BLDC/PMSM machines mix both worlds: a DC battery feeds an inverter, and the inverter creates the rotating field.
 
 | If you care about... | Usually choose... | Why |
 |---|---|---|
@@ -477,6 +492,3 @@ The rotor is made of conductive bars shorted by end rings, visually similar to a
 There are no brushes, no permanent magnets, and no external electrical connection to the rotor.
 
 The stator creates a rotating magnetic field, that field induces current in the rotor cage, and the interaction between both fields creates torque.
-
-### Using a ClampMeter
-

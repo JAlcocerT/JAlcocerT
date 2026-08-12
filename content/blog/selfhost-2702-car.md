@@ -7,6 +7,14 @@ description: 'A look to F/OSS '
 url: 'open-source-car-tools'
 ---
 
+**Tl;DR**
+
+
+**Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 https://github.com/hargata/lubelog
 
 https://github.com/commaai/openpilot
@@ -18,7 +26,7 @@ https://fossengineer.com/opendbc-python-api-for-your-car/
 ### Wiring a Canbus Properly
 
 
-To sniff and reverse-engineer CAN messages from a Renault, you only need **3 connections** between your USB CAN FD analyzer and the male OBD-II plug:
+To sniff and reverse-engineer CAN messages from a Renault Laguna mk2, you only need **3 connections** between your USB CAN FD analyzer and the male OBD-II plug:
 
 1. Required Wiring Setup
 
@@ -47,6 +55,7 @@ When looking at the **front face** of your male OBD-II plug (pins pointing towar
 * **Pin 14 ($CAN\_L$):** 6th pin from the left on the bottom row (directly below Pin 6).
 * **Pin 4 or 5 ($GND$):** 4th or 5th pin from the left on the top row.
 
+I was doing continuity tests to map them properly:
 
 <!-- 
 https://youtube.com/shorts/q-BlvhkLqcU -->
@@ -54,12 +63,15 @@ https://youtube.com/shorts/q-BlvhkLqcU -->
 {{< youtube "q-BlvhkLqcU" >}}
 
 
-3. Recommended Settings for Reverse Engineering
+3. Recommended Settings for Reverse Engineering:
 
 1. **Baud Rate:** High-Speed powertrain CAN on most Renault vehicles operates at **500 kbps** (500,000 bps).
+
 2. **Termination Resistor ($120\,\Omega$):** Since you are plugging into an active, already-terminated vehicle bus, you generally **do not** need to enable an extra $120\,\Omega$ resistor on your USB tool. If you experience frame drops or errors, test with the $120\,\Omega$ jumper/setting enabled.
+
 3. **Software:** You can use tools like **SavvyCAN**, **CANDump / SocketCAN** (Linux), or the dedicated software provided with your USB-CAN tool to record and analyze traffic when pressing buttons, changing gears, or starting the engine.
 
+---
 
 ## Conclusions
 
@@ -70,6 +82,8 @@ When was the last time tat you questioned if you are optimizing sth that is wort
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled free value!" >}}
 {{< /cards >}}
 
+
+---
 
 ## FAQ
 

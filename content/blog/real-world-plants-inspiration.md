@@ -14,16 +14,19 @@ Prep work for when you [go on a trip](https://jalcocert.github.io/JAlcocerT/tech
 
 **Intro**
 
-We come from:
+We come from the tinkering at:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
 
-And I know you love [travelling](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/).
+And I know: you love [travelling](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/).
+
+I got a setup for you to not get stucked at home taking care of your non-cactus plants.
 
 You can use the setups I will explain accordingly to [the typical weather](#when-is-the-best-weather-to-plant-what) while you are not at home.
+
 
 
 ### The IoT and Controlled Watering
@@ -36,16 +39,18 @@ Watchout for [that EMF kickback](https://jalcocert.github.io/JAlcocerT/electroma
   {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion/tree/main/remotion-electronics" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
 
-This was possible by combining PySpice with RemotionJS:
+This **simulation** was possible by combining PySpice with RemotionJS:
 
 {{< youtube "1veGKSFzqcQ" >}}
-
-
 
 
 ### The Capilarity approach
 
 Aka just physics approach.
+
+Take a bottle, a thread and see how it flows:
+
+{{< youtube "1veGKSFzqcQ" >}}
 
 
 ## Monitoring Plants while Travelling

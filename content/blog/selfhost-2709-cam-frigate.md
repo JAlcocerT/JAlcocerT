@@ -7,11 +7,16 @@ description: 'Computer vision for HomeLabs.'
 url: 'selfhosting-frigate'
 ---
 
+https://jalcocert.github.io/JAlcocerT/plants-103-inspiration/#monitoring-plants-while-travelling
+
 **Tl;DR**
 
 If you like computer vision and homelabs, you will enjoy this one :)
 
 **Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 To tinker with Computer Vision, you could also use a Pi: *as I did [here](https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/)*
 

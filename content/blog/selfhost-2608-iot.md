@@ -1,9 +1,9 @@
 ---
-title: "Selfhosted IoT x HA"
+title: "Selfhosted IoT"
 date: 2026-08-25
 draft: false
-tags: ["Home Assistant x EMQX","Sonoff x Zigbee","Tinkering IRL","M2M","Tech Talk"]
-description: 'A homelab around IoT and sensors. The BoM to get you started.'
+tags: ["Sonoff x Zigbee","Tinkering IRL","M2M","Tech Talk"]
+description: 'A homelab and sensors. The 101 BoM to get you started.'
 url: 'home-lab-tools-for-iot'
 ---
 
@@ -24,7 +24,12 @@ https://en.wikipedia.org/wiki/Machine_to_machine
 
 Isnt it time to do some recap to IoT, HA and the solar panel?
 
+
+
 **Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 Summer is coming!
 
@@ -519,7 +524,34 @@ Since you are likely using a breadboard now to connect both sensors:
 
 ### IoT BoM to get started
 
-1. ESP32 or a PicoW: ~5/10$
-2. DHT11/22: 
-3. MLX90614 infrared sensors:
-4. 
+1. ESP32 or a PicoW ~5/10$
+2. DHT11/22 ~
+3. MLX90614 infrared sensors ~20$
+4. TP4056 - to control the battery charge ~10$ with shield
+
+For your [automatic watering setup](https://jalcocert.github.io/JAlcocerT/plants-103-inspiration/#the-iot-and-controlled-watering): 
+
+5. Pump with [a BLDC](https://jalcocert.github.io/JAlcocerT/electromagnetism-for-ac-dc-motors/#dc-vs-bldc-vs-ac-engines) 12v 30W for ~20$ or smaller 19w for 15$
+6. A battery: I got [a bluetti](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#testing-the-bluetti-v2) for 200$, but i was considering a Pb battery
+
+
+{{< details title="Measure & Simulate like so before buying the Diode Resistors and Mosfet  📌"closed="true" >}}
+
+```sh
+git clone 
+```
+
+
+
+
+{{< /details >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
+{{< /cards >}}
+
+
+#### Other learnings
+
+1. Using a Multimeter / ClampMeter: from [continuity tests](https://www.youtube.com/shorts/q-BlvhkLqcU) / resistance measuring, to wall voltage readings
