@@ -14,51 +14,119 @@ The tailwind is strong as long as you dont get 529 status on CC.
 **Intro**
 
 
-* Why Im writting this post: *Want to share with my friends my refreshed gopro telemetry setup*
+* WHY Im writting this post: *Want to share with my friends my refreshed gopro telemetry setup*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 Coming from [here](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/) and [here](https://jalcocert.github.io/JAlcocerT/reinforce-learning-racing-simulator/#conclusions)
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY JAlcocerTech x Obfuscation | Github ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="ebboks JAlcocerTech | Github ↗" icon="github" >}}
-{{< /cards >}}
-
 The GD was the one that [worked best so far](https://jalcocert.github.io/JAlcocerT/kart-optimum-path/#the-results)
-
-{{< youtube "orzYl6u35ec" >}}
-
-<!-- https://youtu.be/orzYl6u35ec -->
 
 ## Go Pro Telemetry Overlay
 
 Tinker around your [gopro gps telemetry](https://jalcocert.github.io/JAlcocerT/geo-data-analytics/) and the **Spa and Nurburgring** circuits:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/obfuscate" title="DIY JAlcocerTech x Obfuscation | Github ↗" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/1ton-ebooks" title="PyRouteTracker | Github ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Py_RouteTracker" title="Py Route Tracker ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Github ↗" icon="github" >}}
 {{< /cards >}}
 
-
 ```sh
-git clone 
+git clone https://github.com/JAlcocerT/optimum-path
+cd ./optimum-path/overlay
 ```
 
-### Nurburgring
+For a quick check before rendering video:
 
-The kind of track day that you wouldnt miss with your friends for anything in the world
+```sh
+uv run python gopro_h13_hud_fastlap.py \
+  --config ../configs/GX010021_spa.json \
+  --yes \
+  --png 5
+```
 
+when happy, just:
 
-{{< youtube "v1I5b4-JE00" >}}
+```sh
+uv run python gopro_h13_hud_fastlap.py \
+    --config ../configs/GX010021_spa.json \
+    --yes \
+    --embed
+```
+
+<!-- https://youtu.be/CPR7IV0UaBw -->
+
+{{< youtube "CPR7IV0UaBw" >}}
 
 
 ### Spa
 
 
+With the VW Golf:
+
+```sh
+uv run python gopro_h9_racing_hud.py --config ../configs/GH010437_GH020437_spa_francorchamps.json --yes --embed
+```
+
+<!-- 
+https://youtu.be/hqBfgEptcJs 
+-->
+
+{{< youtube "hqBfgEptcJs" >}}
 
 
-#### Karting
+With the laguna mk2:
 
+```sh
+make -C /home/jalcocert/Desktop/optimum-path spa-francorchamps-hud
+```
+
+{{< youtube "VDa-78bc-dk" >}}
+
+<!-- 
+https://youtu.be/VDa-78bc-dk 
+-->
+
+Yep, sth was terribly wrong with the GPS here...
+
+
+
+{{< youtube "v1I5b4-JE00" >}}
+
+
+#### Golf vs Laguna Fast Lap Comparison
+
+#### Karting and Theoretical Optimum Path
+
+
+
+| Method | Result | Status | Notes |
+|---|---:|---|---|
+| Real best lap from GoPro/HUD | `61.27s` | valid reference | From generated HUD output `flying_lap_61.27s.mp4`. |
+| GPS best lap used for track generation | `61.20s` | valid reference | From raw Hero 13 GPS rows after DOP filtering. |
+| Centerline theoretical | `59.71s` | valid model result | Point-mass velocity model on generated Spa centerline. |
+| Gradient/SLSQP racing line | `59.25s` | valid model result | Direct lap-time optimizer, same vehicle parameters. |
+| Minimum-curvature path + velocity profile | `60.68s` | valid model result | Optimizes smoothness first, then computes speed profile. |
+| GA direct-control quick run | `1001.80s` | DNF / invalid comparison | Quick 24-pop, 8-generation pass did not complete a lap. |
+| RL/PPO evaluation | n/a | not run | `stable_baselines3` is not installed locally; existing model was trained on a different track. |
+
+<!-- 
+https://youtu.be/qeWhYHjU6X8
+ -->
+
+{{< youtube "qeWhYHjU6X8" >}}
+
+For gradient-descent artifacts and the driver-action/circuit-position video:
+
+
+```sh
+make spa-gd-all
+
+#Or step by step:
+
+make spa-track
+make spa-gd
+make spa-gd-video
+```
 
 <!-- 
 https://www.youtube.com/watch?v=v1I5b4-JE00&t=9s 
@@ -70,7 +138,7 @@ https://www.youtube.com/watch?v=v1I5b4-JE00&t=9s
 > Where are these videos from? An [European roadtrip](#tools-and-tech-for-trips)!
 
 
-## Optimum path
+Optimum path
 
 Under the honest κ-fix physics, the real driver is 3.35 s faster than the model says is theoretically possible. 
 
@@ -82,10 +150,12 @@ The exact numbers:
 
 That doesn't mean the driver is magically beating physics — it means the model is under-stating what the kart can actually do. Two consistent stories from today's analyses:
 
-1. The driver is faster in both corners and straights, but more on straights:    - corners: −1.08 s (driver gains 1.1 s net)
+1. The driver is faster in both corners and straights, but more on straights:    
 
-  - straights: −2.26 s (driver gains 2.3 s)
-  - total: −3.35 s
+- corners: −1.08 s (driver gains 1.1 s net)
+
+- straights: −2.26 s (driver gains 2.3 s)
+- total: −3.35 s
 
 2. The sensitivity sweep says the model's max_lateral_g = 0.95 is the most sensitive parameter at −27.5 s/g. Bumping it to 1.07 g (+12%) would bring the sim down to ~78 s and match your fast lap. That's a believable  correction: the calibrated 0.95 g came from yaw-rate-κ-based lap-time matching, which slightly under-counts true peaks. The sustained-vs-transient-peak distinction is exactly what Phase 4's load-transfer model would
 capture.
@@ -103,18 +173,48 @@ The driver isn't superhuman; the model is leaving 3 s on the table because it ca
 > Real-beats-sim by 3 s, mostly explainable by transient grip the ellipse can't represent is exactly what richer dynamics should fix.
 
 
-### Nurburgring World Record
+### Nurburgring
 
-## PWA - gopro telemetry extractor
+The kind of track day that you wouldnt miss with your friends for anything in the world
 
-Not enough with the ulm/ppl exam to get traffic at jalcocretech?
 
-here is sth more:
+
+With the VW Golf:
+
+
+{{< youtube "v1I5b4-JE00" >}}
+
+
+With the laguna mk2:
+
+#### Nurburgring World Record
+
+And what do i get by adding the car parameters to my model?
+
 
 ---
 
 ## Conclusions
 
+I had a lot of fun in this circuit :)
+
+{{< youtube "orzYl6u35ec" >}}
+
+<!-- https://youtu.be/orzYl6u35ec -->
+
+
+
+
+### PWA - GoPro telemetry extractor
+
+Not enough with the ulm/ppl exam to get traffic at jalcocretech?
+
+here is sth more:
+
+```sh
+cd ./optimum-path/overlay-pwa
+
+```
 
 ---
 
@@ -128,7 +228,48 @@ Download an [OS like **ZorinOS**](https://jalcocert.github.io/JAlcocerT/selfhost
 
 1. Nextcloud: a personal cloud, one of the first setups for any homelab and working perfectly in Linux
 
-2. Proton CLI: finally it arrived!
+2. [Proton CLI](https://proton.me/support/drive-cli): finally  arrived!
+
+Download https://proton.me/download/drive/cli/index.html
+
+```sh
+https://proton.me/download/drive/cli/index.html
+
+  cd /home/jalcocert/Downloads
+  chmod +x proton-drive
+  install -m 0755 proton-drive "$HOME/.local/bin/proton-drive"
+
+```
+
+You will auth with a link and get https://account.proton.me/auth-desktop
+
+```sh
+proton-drive auth login
+proton-drive filesystem list /
+proton-drive filesystem list /my-files
+```
+
+ To upload one local file with the Proton Drive CLI:
+
+  proton-drive auth login
+  proton-drive filesystem upload /path/to/local-file "/destination/folder"
+
+  Example, uploading ~/Downloads/report.pdf to the root of Proton Drive:
+
+  proton-drive filesystem upload ~/Downloads/report.pdf "/"
+
+  To see folders first:
+
+  proton-drive filesystem list "/"
+
+  To create a folder:
+
+  proton-drive filesystem create-folder "/" "Uploads"
+  proton-drive filesystem upload ~/Downloads/report.pdf "/Uploads"
+
+```sh
+proton-drive filesystem upload ~/Desktop/DJI_20260726095445_0040_D.MP4 /my-files/Oa5Pro-Rysy
+```
 
 3. Rsync
 
@@ -161,6 +302,9 @@ You should be good with [gaming via Steam in Linux](https://jalcocert.github.io/
 Just be careful with online ones as some anticheats dont work outofthebox.
 
 I also [tested SteamOS](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-december-2025/#gaming-and-linux) via a VM with [gnome boxes](https://jalcocert.github.io/JAlcocerT/testing-nix-os/#getting-started-with-nixos):
+
+
+Download the ~3gb and:
 
 ```sh
 #flatpak install flathub org.gnome.Boxes

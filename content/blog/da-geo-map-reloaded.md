@@ -233,6 +233,17 @@ If you ask a non-professional to stomp on the pedals as hard as possible for a b
 * **5–10 Second Max Sprint:** An average non-pro can burst **$500\text{ to }900\text{ Watts}$**. A strong amateur sprinter can peak around **$1,000\text{ to }1,200\text{ Watts}$**.
 * **1-Minute Hard Effort:** A healthy non-pro can hold **$300\text{ to }450\text{ Watts}$** before severe fatigue and acid buildup set in.
 
+#### Bike Reverse Engineering Experiment
+
+
+I remember that we made an experiment during the studies where we logged bike sensor data
+
+This can be useful to estimate the power i applied to the bike
+
+```sh
+git clone 
+cd ./
+```
 
 ---
 
