@@ -9,6 +9,13 @@ url: 'langchain-chat-with-sensor-data'
 
 **TL;DR**
 
+The tailwind is strong as long as you dont get 529 status on CC.
+
+**Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 Coming from the pgsql x langchain post...
 
 https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
@@ -17,15 +24,45 @@ together with langchain RAG + db queries
 
 How about some IoT as a companion?
 
-<!-- A compute framework for turning complex data into vectors.
-https://github.com/superlinked/superlinked -->
 
-**Intro**
+```sh
+#cd ./poc/iot-rpi-dht
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE metric = 'temperature' GROUP BY day ORDER BY day;"
 
-**Intro**
+  sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT device, metric, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE received_ms >=
+  (strftime('%s','now') - 24*60*60)*1000 GROUP BY device, metric ORDER BY device, metric;"
 
-* Why Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+ sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT topic, metric, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE received_ms >=
+  (strftime('%s','now') - 24*60*60)*1000 GROUP BY topic, metric ORDER BY topic, metric;"
+
+  sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "WITH ranked AS (SELECT device, metric, topic, value, received_at, received_ms, strftime('%Y-%m-%d %H:00:00',
+  received_at) AS hour_bucket, ROW_NUMBER() OVER (PARTITION BY device, metric, strftime('%Y-%m-%d %H', received_at) ORDER BY received_ms ASC) AS rn FROM readings WHERE received_ms >=
+  (strftime('%s','now') - 24*60*60)*1000) SELECT device, metric, hour_bucket, topic, value, received_at FROM ranked WHERE rn = 1 ORDER BY hour_bucket, device, metric;"
+```
+
+The SQLite backend subscribes to that broker over the network and stores readings locally. 
+
+The Next.js dashboard reads the local SQLite file directly — no MQTT access needed.
+
+```
+Server (192.168.1.2)              Your laptop / dev machine
+┌──────────────┐              ┌───────────────────────────┐
+│ ESP32 DHT11  │──MQTT──┐     │                           │
+│ Pico W DHT22 │──MQTT──┤     │  ┌─────────────────────┐  │
+│              │        │     │  │ SQLite backend       │  │
+└──────────────┘        ▼     │  │ (port 3011)          │  │
+                   ┌──────────┐│  │ MQTT → SQLite       │  │
+                   │  EMQX    ││  │ + vanilla dashboard  │  │
+                   │  broker  ││  └──────┬──────────────┘  │
+                   └──────────┘│         │ reads local file │
+                        │      │         ▼                  │
+                        │ MQTT │  ┌─────────────────────┐  │
+                        │ over │  │ Next.js dashboard    │  │
+                        │ WiFi │  │ (port 3007)          │  │
+                        │      │  │ VPD / charts / export│  │
+                               │  └─────────────────────┘  │
+                               └───────────────────────────┘
+```
 
 
 Recently I was doing a setup and [tech talk around plugandplay analytics with langchain](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions) connected to our dbs.

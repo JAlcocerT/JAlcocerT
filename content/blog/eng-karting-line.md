@@ -9,13 +9,12 @@ url: 'optimal-karting-line'
 
 **TL;DR**
 
-The tailwind is strong as long as you dont get 529 status on CC.
 
 **Intro**
 
 
 * WHY Im writting this post: *Want to share with my friends my refreshed gopro telemetry setup*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* What [Ive learnt](#conclusions) with it: *Ive ended up making my first [PWA around ffmpeg](#pwa---gopro-telemetry-extractor)*
 
 Coming from [here](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/) and [here](https://jalcocert.github.io/JAlcocerT/reinforce-learning-racing-simulator/#conclusions)
 
@@ -94,7 +93,6 @@ This is a great reason to finally get a separated GPS module for my FPVs and oth
 {{< youtube "v1I5b4-JE00" >}}
 
 
-#### Golf vs Laguna Fast Lap Comparison
 
 #### Karting and Theoretical Optimum Path
 
@@ -191,6 +189,9 @@ With the laguna mk2:
 #### Nurburgring World Record
 
 And what do i get by adding the car parameters to my model?
+
+
+#### Golf vs Laguna Fast Lap Comparison
 
 
 ---

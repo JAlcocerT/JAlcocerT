@@ -27,6 +27,15 @@ Despite the PicoW lasting x2 in the same battery, for some reason the esp is les
 * Why Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+```sh
+#cd ./poc/iot-rpi-dht
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE metric = 'temperature' GROUP BY day ORDER BY day;"
+
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE device = 'esp32' AND metric = 'temperature' GROUP BY day ORDER BY day;"
+
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE device = 'esp32' AND
+  metric = 'humidity' GROUP BY day ORDER BY day;"
+```
 
 https://github.com/micropython/micropython
 

@@ -22,6 +22,11 @@ With this chaotic selflearning project, ive made:
 2. Some simulations around PySpice: here and here
 3. 
 
+
+```sh
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE metric = 'temperature' GROUP BY day ORDER BY day;"
+```
+
 ## The setup
 
 
@@ -112,13 +117,29 @@ Tomatoes continued, and after week ~13:
 
 I got a couple of harvests:
 
-{{< youtube sCrMm5sLG-w >}}
+{{< youtube "sCrMm5sLG-w" >}}
 
 {{< callout type="info" >}}
 The yield so far ~1kg tomatoes out of xyz plants and xyz kg of soil and ~ L of water
 {{< /callout >}}
 
 You can buy that kg for xyz $ in the market, so for next season there is definitely room for improvements!
+
+#### Watering System for next seson
+
+https://indystry.cc/diy-solar-powered-garden-watering-system/
+
+{{< youtube "s-xkdfNeIVw" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=s-xkdfNeIVw 
+-->
+
+<!-- www.youtube.com/watch?v=ijI3iOOcEog -->
+
+
+{{< youtube "ijI3iOOcEog" >}}
+
 
 ### Interesting yt channels
 
@@ -141,6 +162,8 @@ What would I do different next year?
 
 
 ### Geo Matters
+
+Ive recaped recently how cool is [geo analytics](https://jalcocert.github.io/JAlcocerT/geo-data-analytics/):
 
 ```sh
 cd ./poc/building-geo-osm-blender

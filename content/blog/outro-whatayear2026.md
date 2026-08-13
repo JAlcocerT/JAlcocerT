@@ -6,7 +6,8 @@ tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
-
+<!-- A compute framework for turning complex data into vectors.
+https://github.com/superlinked/superlinked -->
 la hula kula
 
 Whats working, whats not and whats next?
