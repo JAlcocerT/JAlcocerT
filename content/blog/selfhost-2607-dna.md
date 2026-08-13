@@ -1067,6 +1067,10 @@ Have you been told that you dont have enough *role maturity*, aka you just have 
 
 You better [ask questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/) on time
 
+{{< callout type="info" >}}
+Starting with: WHO will do WHAT by WHEN
+{{< /callout >}}
+
 {{% details title="QnA for Product teams 🚀" closed="true" %}}
 
 {{% /details %}}

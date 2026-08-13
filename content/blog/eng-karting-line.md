@@ -2,7 +2,7 @@
 title: "Optimal Karting Line"
 date: 2026-08-12
 draft: false
-tags: ["Racing x PWA","GPS","Nürburgring x SPA","Proton CLI","OSS Photo stack"]
+tags: ["Racing x PWA GPS Overlay","Nürburgring x SPA","Proton CLI","OSS Photo stack"]
 description: 'Go-Pro Telemetry gone wild.'
 url: 'optimal-karting-line'
 ---
@@ -211,13 +211,22 @@ I had a lot of fun in this circuit :)
 
 Not enough with the ulm/ppl exam to get traffic at jalcocretech?
 
-here is sth more:
+here is sth more: https://gopro-telemetry-overlay.pages.dev
 
 ```sh
 cd ./optimum-path/overlay-pwa
+make dev #make deploy
 # npm cache clean --force
+
+#npx wrangler pages deployment list 
+#npx wrangler pages deploy dist
+
+npx wrangler pages deploy dist --project-name=gopro-telemetry-overlay
 ```
 
+<!-- https://youtu.be/1l7Q3Ul4Yh0 -->
+
+{{< youtube "1l7Q3Ul4Yh0" >}}
 
 
 {{< filetree/container >}}
