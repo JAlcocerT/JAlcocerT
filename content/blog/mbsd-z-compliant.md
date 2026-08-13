@@ -7,7 +7,7 @@ description: 'Mechanism agentic centered design.'
 url: 'whitepaper-mbsd'
 math: true
 ---
-
+https://multibodysystemdynamics.pages.dev/
 **Tl;DR**
 
 Because ideas are worthless and execution is everything
@@ -20,6 +20,8 @@ The engine behind `https://multibodysystemsdynamics.com/` cant be closed source.
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 From the [wedding conversation with Gilabert](https://jalcocert.github.io/JAlcocerT/what-do-i-do/), my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and [inspired by diode Inc](https://www.youtube.com/watch?v=B8DbMJ1Zr4I).
+
+We are coming from [this agentic mbsd centered design post](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#mbsd-framework-applications):
 
 ```sh
 make list-user-repos NEW_USER=hermesagent

@@ -7,6 +7,9 @@ description: 'A homelab and sensors. The 101 BoM to get you started.'
 url: 'home-lab-tools-for-iot'
 ---
 
+https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks/6-fpv-telemetry
+
+https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks/7-tomatoes
 
 https://github.com/andrewdavidmackenzie/pigg
 

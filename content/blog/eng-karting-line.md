@@ -88,6 +88,7 @@ https://youtu.be/VDa-78bc-dk
 
 Yep, sth was terribly wrong with the GPS here...
 
+This is a great reason to finally get a separated GPS module for my FPVs and other experiments
 
 
 {{< youtube "v1I5b4-JE00" >}}
@@ -213,8 +214,22 @@ here is sth more:
 
 ```sh
 cd ./optimum-path/overlay-pwa
-
+# npm cache clean --force
 ```
+
+
+
+{{< filetree/container >}}
+  {{< filetree/folder name="config" >}}
+    {{< filetree/file name="acme.json" >}}
+    {{< filetree/file name="config.yml - Automatically created" >}}
+    {{< filetree/file name="traefik.yml" >}}
+    {{< /filetree/folder >}}
+  {{< filetree/file name="docker-compose.x300.yaml" >}}
+  {{< filetree/file name=".env" >}}
+  {{< filetree/file name="cf-token" >}}
+{{< /filetree/container >}}
+
 
 ---
 
@@ -273,7 +288,16 @@ proton-drive filesystem upload ~/Desktop/DJI_20260726095445_0040_D.MP4 /my-files
 
 3. Rsync
 
-4. You can play your own music and videos via: jellyfin and ultrasonic in android / ios / [supersonic](https://github.com/supersonic-app/supersonic/releases) (connects to subsonic or jellyfin) for desktop
+4. You can play your own music and videos via: jellyfin and ultrasonic in android / ios / [supersonic](https://github.com/supersonic-app/supersonic/releases) or [sonixd](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#more-stuff-lately) (connects to subsonic or jellyfin) for desktop
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+winget install sonixd
+```
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin | Docker Config 🐋 ↗" >}}
@@ -314,6 +338,8 @@ Download the ~3gb and:
 
 ### Tools and Tech for Trips
 
+[Tech for a trip](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/), like a [travel router with VPN](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/) and some interesting 
+
 1. https://github.com/spliit-app/spliit
 
 2. A trip planner like [this](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/poc-trip-planner-v4) https://trip-planner-9lt.pages.dev/?sid=07621&lat=43.1833&lon=0&name=Tarbes+Ossun+Lourdes&country=FR
@@ -335,6 +361,9 @@ make compose #http://192.168.1.2:3021
 cd ./poc/pwa-spliit-analyzer
 C:\Python312\python.exe -m http.server 5173 --bind 127.0.0.1
 ```
+
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/spliit_analyzer.ipynb)
 
 Some, like https://app.files.md/ allow you to interact with your local files!
 

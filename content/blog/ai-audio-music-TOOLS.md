@@ -2,8 +2,8 @@
 title: "How to create music with AI Tools"
 date: 2025-11-27T07:20:21+01:00
 draft: false
-tags: ["Gen-AI","SunoAI vs CoquiTTS","Gonic vs Navidrome"]
-description: 'Tryign to Make music with AI.'
+tags: ["Gen-AI","SunoAI vs CoquiTTS","Gonic vs Navidrome","Supersonic vs Sonixd"]
+description: 'Tryign to Make music with AI?'
 url: 'music-with-ai-tools'
 ---
 
@@ -18,7 +18,12 @@ But can we now do music with AI?
 
 **Intro**
 
-Not a post about Gonic nor Sonixd.
+Not a post about [Gonic nor Sonixd](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#more-stuff-lately).
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
 
 Neither to talk about how I ended up collaborating on a troll song that got uploaded to Spotify.
 

@@ -1,5 +1,5 @@
 ---
-title: "Launching a MBSD framework"
+title: "Launching a MBSD framework?"
 date: 2026-05-02
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech ebook"]
@@ -46,17 +46,19 @@ You can import the STLs to blender manually or with:
 blender --background --python blender-export/blender_import.py
 ```
 
-Kinematics only. No dynamics.                                   
-                  
-  Evidence:                                                                                                     
-  - Zero mass/inertia/torque/force-balance code in mechanism/. Sole "forces" mention = stray word in origin       docstring (mechanism.py:270).                                                                                 
-  - Solver = vector-loop position/velocity/acceleration via numerical iteration. No Newton-Euler, no kinetics.  
-  - Cam output = SVAJ (geometric). No follower spring/preload force calc.
-  - Gears = involute geometry only. No bending/contact stress, no power transmission.
-  - README confirms: "perform kinematic analysis by utilizing degrees of freedom".
+Kinematics only.
 
-  What you get = θ, ω, α, position, velocity, acceleration of points/vectors. What you don't get = required     
-  input torque, joint reaction forces, link stresses, dynamic balancing.
+No dynamics.                                   
+                
+Evidence:                                                                                                     
+- Zero mass/inertia/torque/force-balance code in mechanism/. Sole "forces" mention = stray word in origin       docstring (mechanism.py:270).                                                                                 
+- Solver = vector-loop position/velocity/acceleration via numerical iteration. No Newton-Euler, no kinetics.  
+- Cam output = SVAJ (geometric). No follower spring/preload force calc.
+- Gears = involute geometry only. No bending/contact stress, no power transmission.
+- README confirms: "perform kinematic analysis by utilizing degrees of freedom".
+
+What you get = θ, ω, α, position, velocity, acceleration of points/vectors. What you don't get = required     
+input torque, joint reaction forces, link stresses, dynamic balancing.
 
 ```sh
 #git clone https://github.com/JAlcocerT/multi-body
@@ -75,13 +77,12 @@ git commit -m "Add mbsd repo as submodule"
 
 ## Computational Mechanics
 
-
-Familiar now. Repo = 2D MBSD simulator (Python) + e-book chaining engine NVH source→driver and suspension arc.
+Repo = 2D MBSD simulator (Python) + e-book chaining engine NVH source→driver and suspension arc.
 
 Simulator core (2D-Dynamics/)
 
 - Saddle-point system: M·a + Cqᵀ·λ = Q, Cq·a = γ. Bodies, joints, constraints, contact, cam, terrain.   - Outputs motions + Lagrange reactions.
-                                                                                                      
+                                                                                                     
 E-book (z-destilled-ebook/) = 12 engine-NVH chapters + 4 suspension + 4 reference. Pipeline: cylinder
 → block → mounts → chassis → cabin → driver.
 
@@ -90,7 +91,6 @@ Examples under 2D-Dynamics/examples/:
 chassis modal
 - suspension-terrain/ — quarter_car, road_profile_psd, design_space_sweep, active_suspension
 - Adjacent: cam-follower, four-bar, pendulums, scotch-yoke, terrain-wheel
-
 
 ## MBSD Framework Applications
 
@@ -136,8 +136,11 @@ For in-line engines the moment check adds a $z_k$ arm (cylinder spacing along th
 Key takeaways from the series:
 
 - **I4** is the most common compromise: primary balance achieved cheaply, secondary $2\times$ shaking accepted or suppressed with Lanchester balance shafts spinning at $2\omega$ in opposite directions.
+
 - **Flat-plane V8** (Ferrari 458, Ford GT500R) trades the cross-plane's moment advantage for even $90°$ firing intervals — every bank fires evenly, which improves exhaust scavenging and high-RPM breathing, but the $2\times$ secondary forces require counter-rotating balance shafts or stiff mounts.
+
 - **Boxer-4** feels balanced on paper but the lateral offset between opposing cylinders ($\Delta z \neq 0$) produces a rocking couple that a true opposed-piston engine (with zero offset) would not have.
+
 - **V12** is the engineering endpoint: two I6 crankshafts joined at the middle — every order cancels, no free moments, no balance shafts needed. Cost and length are the only constraints.
 
 {{< cards >}}
@@ -156,7 +159,9 @@ Key takeaways from the series:
 
 NVH (Noise, Vibration, Harshness) is what happens *after* the engine balance analysis.
 
-Even a perfectly balanced engine produces vibration — combustion pulses, torque ripple, tyre inputs. NVH engineering is the discipline of preventing that energy from reaching the driver.
+Even a perfectly balanced engine produces vibration — combustion pulses, torque ripple, tyre inputs. 
+
+NVH engineering is the discipline of preventing that energy from reaching the driver.
 
 The pipeline across the MBSD posts follows a single chain:
 
@@ -216,7 +221,9 @@ Typical production pockets from the series:
 | Sport | ~35 kN/m | ~2500 N·s/m | 0.50 |
 | Truck | ~55 kN/m | ~4000 N·s/m | 0.62 |
 
-The body-bounce resonance sits at ~1.3 Hz for a typical family car. Passive damping that flattens this peak worsens high-frequency isolation — this is the fundamental Pareto trade-off.
+The body-bounce resonance sits at ~1.3 Hz for a typical family car. 
+
+Passive damping that flattens this peak worsens high-frequency isolation — this is the fundamental Pareto trade-off.
 
 **Stage 4 — Active and semi-active control**
 
@@ -230,7 +237,11 @@ The stability check for any active suspension loop uses the transfer function $G
 
 **ISO 2631 — the human weighting filter**
 
-All RMS metrics in the suspension and engine posts are implicitly frequency-weighted by **ISO 2631**, which models human sensitivity to vibration. The weighting peaks around 4–8 Hz for vertical vibration (where humans are most sensitive) and rolls off at low and high frequencies. A $2\times$ engine harmonic at idle (~33 Hz) is weighted lower than the body-bounce resonance at 1.3 Hz even if its raw amplitude is larger — which is why mount tuning focuses on the $\sqrt{2}\,\omega_n$ criterion rather than raw force magnitudes.
+All RMS metrics in the suspension and engine posts are implicitly frequency-weighted by **ISO 2631**, which models human sensitivity to vibration.
+
+The weighting peaks around 4–8 Hz for vertical vibration (where humans are most sensitive) and rolls off at low and high frequencies.
+
+A $2\times$ engine harmonic at idle (~33 Hz) is weighted lower than the body-bounce resonance at 1.3 Hz even if its raw amplitude is larger — which is why mount tuning focuses on the $\sqrt{2}\,\omega_n$ criterion rather than raw force magnitudes.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/engine-nvh-visuals/" title="Engine NVH Visuals | Post" icon="book-open" >}}
@@ -283,7 +294,11 @@ $$R_1 \cos\theta - R_2 \cos\phi + R_3 = \cos(\theta - \phi)$$
 
 where $R_1 = L_0/L_3$, $R_2 = L_0/L_1$, $R_3 = (L_0^2 + L_1^2 - L_2^2 + L_3^2)/(2L_1 L_3)$.
 
-Substituting the three precision points gives a $3\times3$ linear system in $(R_1, R_2, R_3)$ — no iteration, no nonlinear solver. From those three ratios you recover the four link lengths directly. This is the fastest route from a functional specification ("output must follow input according to this table of three values") to a physical four-bar.
+Substituting the three precision points gives a $3\times3$ linear system in $(R_1, R_2, R_3)$ — no iteration, no nonlinear solver.
+
+From those three ratios you recover the four link lengths directly.
+
+This is the fastest route from a functional specification ("output must follow input according to this table of three values") to a physical four-bar.
 
 #### Burmester — Motion Generation
 

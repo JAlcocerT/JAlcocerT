@@ -270,7 +270,7 @@ Setup [Nextcloud as Docker container](https://github.com/JAlcocerT/Docker/tree/m
 2. Piwigo
 3. [Photoview](https://fossengineer.com/selfhosting-Photoview-docker/)
 4. Ente, PhotoPrism, Immich...
-5. And...**PiGallery2**: which provides the following cool web UI!
+5. And...**PiGallery2**: *which provides the following cool web UI!*
 
 ![PiGallery2 Map Zoom](/blog_img/selfh/Photo/PiGallery2-MapZoom.png)
 
@@ -387,9 +387,9 @@ You can also have a look to: https://github.com/gpxstudio/gpx.studio
 
 And to https://github.com/JAlcocerT/pigallery2 because is so cool that displayes your photos and their GPX metadata
 
-The gallery also render the GPX files!
+The PiGallery also **renders the GPX** files!
 
-> it's very simple to [setup 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGallery_docker-compose.yml)
+> It's very simple to [setup 🐳](https://github.com/JAlcocerT/Docker/blob/main/Backups/Photos/PiGallery_docker-compose.yml)
 
 
 **Bonus**
