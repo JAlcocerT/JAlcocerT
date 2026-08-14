@@ -1,8 +1,8 @@
 ---
 title: "[AIoT] How to QnA Sensor Data"
-date: 2026-08-14T21:20:21+01:00
+date: 2026-08-14T07:20:21+01:00
 draft: false
-tags: ["DB2Rest","ekuiper","Embeded Analytics","Roadmap26 x Tech Talk"]
+tags: ["DB2Rest","ekuiper x eMQX x MQTT","Embeded Analytics","Roadmap26 x Tech Talk"]
 description: 'Using LangChain/ADK to get Temperature & Humidity data from a DHT22 sensor.'
 url: 'langchain-chat-with-sensor-data'
 ---
@@ -13,17 +13,14 @@ The tailwind is strong as long as you dont get 529 status on CC.
 
 **Intro**
 
-* Why Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* Why Im writting this post: *This was a rescue post from my RPi static page that deserved some love and clean up*
+* What [Ive learnt](#conclusions) with it: *Ive ended up putting together AI intelligence around the data capture setup oh the DHT22.*
 
-Coming from the pgsql x langchain post...
+Coming from the [pgsql x langchain post](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/)...
 
-https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
+...together with [langchain RAG + db queries](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/) even [BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database/).
 
-together with langchain RAG + db queries
-
-How about some IoT as a companion?
-
+How about some IoT x AI as a companion?
 
 ```sh
 #cd ./poc/iot-rpi-dht
@@ -273,7 +270,9 @@ If worked on few IoT projects with the Pi.
 
 See [more here](https://jalcocert.github.io/RPi/categories/iot-data-analytics/)
 
-Push to MongoDB. See the data properly.
+Push to MongoDB. 
+
+See the data properly.
 
 * https://github.com/anasjaber/mongo-explorer
 
@@ -281,7 +280,6 @@ Push to MongoDB. See the data properly.
 * Domotica para pobres - https://forocoches.com/foro/showthread.php?t=6655749
 
 * MicroPython - https://awesome-micropython.com/
-
 
 ### Preparing the Tech Talk
 
@@ -363,6 +361,8 @@ python3 setup.py install --force-pi
 * https://pypi.org/project/questionary/ - Create CLI utilities with python
 * https://docs.pytest.org/en/stable/
 
+
+
 ### Running LLMs in SBCs
 
 It should not be strange, we can do so by using tools like Ollama:
@@ -411,34 +411,3 @@ NPUs are often integrated into mobile processors from companies like Apple, Huaw
 You can also see them in SBCs like the OrangePi or new Pis.
 
 Stream Processing at the IoT Edge, or...**AIoT**?
-
-
-## IoT Tools
-
-Ekuiper works great when combined with [EMQx Broker](https://jalcocert.github.io/RPi/posts/rpi-mqtt/#install-mqtt-broker)
-
-### Setup Ekuiper
-
-You can get started with Ekuiper by following the [quick start guide](https://ekuiper.org/docs/en/latest/getting_started/quick_start_docker.html).
-
-* https://github.com/lf-edge/ekuiper
-
-> Apache v2 | Lightweight **data stream processing engine** for IoT edge
-
-Lets use the [Ekuiper Docker Image](https://hub.docker.com/r/lfedge/ekuiper)
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ekuiper" title="Ekuiper | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-```sh
-docker run -p 9081:9081 -d --name ekuiper -e MQTT_SOURCE__DEFAULT__SERVER=tcp://broker.emqx.io:1883 lfedge/ekuiper:latest
-```
-
-> Go to `http://localhost:9081/`
-
-
-You could also do AI/ML with Ekuiper
-
-* TF Lite - https://ekuiper.org/docs/en/latest/guide/ai/python_tensorflow_lite_tutorial.html
-    * https://www.tensorflow.org/lite/guide

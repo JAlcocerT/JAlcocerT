@@ -6,6 +6,7 @@ tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
+
 <!-- A compute framework for turning complex data into vectors.
 https://github.com/superlinked/superlinked -->
 la hula kula
@@ -762,13 +763,13 @@ I have been still using my homelab
 
 Just that the **focus** this year has been **stability**.
 
-Specially around nextcloud for the family
+Specially around nextcloud for the family and friends
 
 The crucial P3 Plus nvme with up to 5000mb/s is doing good. 
 
 I got a 1tb samsung 870 qvo as SO drive with up to 560mb/s
 
-I kept enjoying termix and since recently, also tmux: *and ghostty*
+I kept enjoying termix and since recently, also tmux, *ghostty and herdr*:
 
 ```sh
 sudo apt update && sudo apt install tmux -y
@@ -784,9 +785,9 @@ Trying for the first time the mac ecosystem was also interesting.
 
 3. [Big Data x IoT](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk)
 
-4. Dron Telemetry
+4. Dron Telemetry, FPVs...
 
-5. Tomatoes IoT
+5. Tomatoes IoT end to end setup
 
 99. Duckdb x motherduck
 
@@ -823,6 +824,18 @@ xargs -0 awk '
 ```
 
 ### Outro
+
+#### How this year surprised me
+
+
+I was not expecting to:
+
+1. Learn about plants
+2. Make a decent come back to real *world* engineering: the mbsd framework with NVH analysis, the electronics simulations for EMR kickback that helped me relate with fpv/drone builds, watering plant systems and the cool hydrofoils
+3. That the FPV A1/A3 license made me prepare the ULM/PPL for bigger flying things
+4. To see the gap between whats possible vs whats expected grow instead of shrinking
+5. for the nth time realize that we are not doing good questions at all neither improve our questioning process
+6. still find people at 30+ y.o with the startup mode of 0 earnings now, no reasonable process to get better, but trust me bro that ill reach 150k MRO soon *(and finding ppl who buy those stories)*
 
 #### Quotes
 
@@ -899,8 +912,9 @@ There are questions that dont have a single reply:
 4. **What you can be paid for:** The market demand or career paths that provide financial stability.
 
 
-* Whats freedom?: Possibility of acting or the absence of obstacles?
+* Whats freedom?: *Possibility of acting or the absence of obstacles*?
   * https://aegis-freedom.pages.dev/
+  * https://option-wheel.pages.dev/
 * Will we ever get to value the spark more than the shadow it casts?
 * is blockchain the ultimate database?
 * Is some official/certified the prohibition of any other alternative?
@@ -952,7 +966,6 @@ graph LR
 
 In fact: does passive income exists at all? or the only thing is there can be is active and deferred active?
 
-
 3. Zettlekasten: visible at `/notes` [here](https://jalcocert.github.io/JAlcocerT/notes/)
 
 
@@ -997,7 +1010,9 @@ Which has not happened at all.
 
 Special mention to the ones that pay more in car insurance that what they spend in finding new clients.
 
-Yes, those also state that have a business about to be started. Always.
+Yep
+
+those also state that have a business about to be started. Always.
 
 For the ones who say that will do things, but the thing they do post 9-5 is nothing.
 

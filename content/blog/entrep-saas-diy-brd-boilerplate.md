@@ -53,9 +53,9 @@ Well, before moving forward answer these questions:
 * Can you give feedback?
 * How good are you at articulating ideas?
 
-Wanna ship like an entire dev team?
+Wanna **ship like** an entire dev team?
 
-If you got ideas and now how to manage a project and people, excuses are over.
+If you got ideas and now how to manage a project and people, **excuses are over**.
 
 This is what it will make you ship.
 

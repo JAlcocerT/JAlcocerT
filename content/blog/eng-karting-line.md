@@ -3,7 +3,7 @@ title: "Optimal Karting Line"
 date: 2026-08-12
 draft: false
 tags: ["Racing x PWA GPS Overlay","Nürburgring x SPA","Proton CLI","OSS Photo stack"]
-description: 'Go-Pro Telemetry gone wild.'
+description: 'Go-Pro Telemetry gone wild wia a PWA.'
 url: 'optimal-karting-line'
 ---
 
@@ -59,7 +59,6 @@ uv run python gopro_h13_hud_fastlap.py \
 
 ### Spa
 
-
 With the VW Golf:
 
 ```sh
@@ -97,7 +96,6 @@ This is a great reason to finally get a separated GPS module for my FPVs and oth
 #### Karting and Theoretical Optimum Path
 
 
-
 | Method | Result | Status | Notes |
 |---|---:|---|---|
 | Real best lap from GoPro/HUD | `61.27s` | valid reference | From generated HUD output `flying_lap_61.27s.mp4`. |
@@ -115,7 +113,6 @@ https://youtu.be/qeWhYHjU6X8
 {{< youtube "qeWhYHjU6X8" >}}
 
 For gradient-descent artifacts and the driver-action/circuit-position video:
-
 
 ```sh
 make spa-gd-all
@@ -137,7 +134,7 @@ https://www.youtube.com/watch?v=v1I5b4-JE00&t=9s
 > Where are these videos from? An [European roadtrip](#tools-and-tech-for-trips)!
 
 
-Optimum path
+{{< details title="What I learnt prior to this about real vs simulated results 📌" closed="true" >}}
 
 Under the honest κ-fix physics, the real driver is 3.35 s faster than the model says is theoretically possible. 
 
@@ -169,20 +166,18 @@ Once Phase 4's bicycle model captures the transient grip from load transfer, the
 
 The driver isn't superhuman; the model is leaving 3 s on the table because it can't represent trail-braking and load transfer.
 
-> Real-beats-sim by 3 s, mostly explainable by transient grip the ellipse can't represent is exactly what richer dynamics should fix.
 
+{{< /details >}}
+
+> Real-beats-sim by 3 s, mostly explainable by transient grip the ellipse can't represent is exactly what richer dynamics should fix, [tinkered here](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/optimum-path).
 
 ### Nurburgring
 
 The kind of track day that you wouldnt miss with your friends for anything in the world
 
-
-
 With the VW Golf:
 
-
 {{< youtube "v1I5b4-JE00" >}}
-
 
 With the laguna mk2:
 

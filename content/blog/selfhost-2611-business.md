@@ -1,6 +1,6 @@
 ---
 title: "Selfhosting Business Tools vs Coasean Ceiling"
-date: 2026-09-01T23:20:21+01:00
+date: 2026-11-01T23:20:21+01:00
 draft: false
 tags: ["Self-Hosting","Notes","Marketing","No Code","Link Shortener x Web Analytics"]
 description: 'Are certifications still worth it? A look to CCAR-F'

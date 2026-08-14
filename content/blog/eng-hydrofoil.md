@@ -1,16 +1,20 @@
 ---
 title: "Hydrofoil"
-date: 2026-08-13
+date: 2026-08-18
 draft: false
 tags: ["IRL","Betaflight vs VESC"]
 description: '.'
 url: 'hydro-foil-engineering'
 ---
 
-
+**Tl;DR**
 
 
 **Intro**
+
+* Why Im writting this post: 
+* What Ive learnt with it: *.*
+
 
 I finally tried this: `https://wakeschool.pl/oferta/#szkola-e-foil`
 

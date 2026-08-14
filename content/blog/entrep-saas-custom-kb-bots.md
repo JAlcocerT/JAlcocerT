@@ -1,8 +1,8 @@
 ---
 title: "KB and Local Bots to end Silos for good"
-date: 2026-09-01T23:20:21+01:00
+date: 2026-10-01T23:20:21+01:00
 draft: false
-tags: ["Custom Chatbots x Local AI and KB","Tech Talk 99","RoadMap26","Docs Bot","Scribbly"]
+tags: ["Custom Chatbots x Local AI and KB","Tech Talk 99","RoadMap26","Docs Bot","Scribbly","Forgejo"]
 description: 'Building a custom BOT platform to end with silos.'
 url: 'custom-bots-kb'
 math: true
@@ -14,11 +14,54 @@ https://www.mindstudio.ai/blog/andrej-karpathy-llm-wiki-knowledge-base-claude-co
 
 **Tl;DR**
 
-Delete before you Automate.
+DELETE before you Automate.
 
 Data first, then AI centric.
 
 **Intro**
+
+## For SoloPreneurs
+
+
+### Selfhosted Forgejo
+
+I got this ready in my x300 [some time ago to tinker with agents](https://jalcocert.github.io/JAlcocerT/poc-107/):
+
+Having termix ready `http://192.168.1.2:8090/` and Forgejo `http://192.168.1.2:3034/`
+
+```sh
+docker ps -a --filter "name=forgejo"
+```
+
+The syncing setup to github so that each forgejo repo has a [gh backup in a branch](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/):
+
+```sh
+gh status
+```
+
+In this case, what i want is to do: GH <-> Forgejo for [my daily notes](https://github.com/JAlcocerT/my-logseq-notes)
+
+```sh
+cd ./Home-Lab/forgejo
+make migrate-repo REPO_OWNER=JAlcocerT REPO_NAME=my-logseq-notes #makes a mirror of gh
+#make sync-repo REPO_OWNER=JAlcocerT REPO_NAME=my-logseq-notes
+```
+
+If you want to expose this:
+
+```sh
+docker inspect forgejo --format '{{range $name, $_ := .NetworkSettings.Networks}}{{println $name}}{{end}}'
+#docker network connect cloudflared_tunnel forgejo
+```
+
+Check that `forgejo:3000` ready:
+
+```sh
+#dig fossengineer.com any
+```
+
+
+## For SMBs
 
 How about some Document Intelligence?
 

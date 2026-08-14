@@ -8,9 +8,6 @@ url: 'selfhosting-information-flow'
 ---
 
 
-
-https://github.com/hedgedoc/hedgedoc
-
 **TL;DR**
 
 **Intro**
@@ -19,8 +16,30 @@ https://github.com/hedgedoc/hedgedoc
 * What Ive learnt with it:
 
 
+## The Setup
+
+### Tools
+
+https://github.com/hedgedoc/hedgedoc
+
+
 ---
 
 ## Conclusions
 
 For some cases, you can consider to just write into your Forgejo instance, in case that github is non accesible.
+
+---
+
+## FAQ
+
+### Selfhosted Forgejo
+
+
+
+### Kodi
+
+with kodi adons
+
+* <https://www.youtube.com/@proyectosmicropic/videos>
+

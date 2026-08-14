@@ -222,8 +222,6 @@ For an average adult male weighing around $75\text{ kg } (165\text{ lbs})$:
 | **Fit Amateur (Club Rider)** | **$200\text{ -- }260\text{ W}$** | $2.7 \text{--} 3.5\text{ W/kg}$ | Trains regularly, does weekend group rides, fast on flats. |
 | **Strong Amateur Racer** | **$260\text{ -- }320\text{ W}$** | $3.5 \text{--} 4.2\text{ W/kg}$ | Competes in local races (Cat 3/4), very fast on climbs. |
 
-*(Note: Female cyclists average roughly 15–20% lower raw wattage for similar fitness tiers due to lower average body mass and muscle fraction, sitting around $80\text{--}120\text{ W}$ for casual up to $180\text{--}240\text{ W}$ for top amateurs).*
-
 ---
 
 Short-Burst / Sprint Power
@@ -234,7 +232,6 @@ If you ask a non-professional to stomp on the pedals as hard as possible for a b
 * **1-Minute Hard Effort:** A healthy non-pro can hold **$300\text{ to }450\text{ Watts}$** before severe fatigue and acid buildup set in.
 
 #### Bike Reverse Engineering Experiment
-
 
 I remember that we made an experiment during the studies where we logged bike sensor data
 
@@ -316,3 +313,8 @@ You can correlate [with household income](https://www.ine.es/ADRH/?config=config
 3. For DK:
 
 4. For PL: 
+
+### GPS Tracker
+
+https://www.traccar.org/docker/
+https://github.com/traccar/traccar-docker

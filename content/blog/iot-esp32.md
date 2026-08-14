@@ -1,17 +1,24 @@
 ---
 title: "Embedded x The ESP32 comeback"
-date: 2026-08-16
+date: 2026-08-15
 draft: false
-description: "A solar panel, summer and the ESP32 microcontroller"
-tags: ["Self-Hosting","IoT","MicroControllers","NodeRed","18650 vs Bluetti"]
+description: "A solar panel, summer and the ESP32 microcontroller."
+tags: [,"IoT","NodeRed","TP4056 x DW01A x 18650 vs Bluetti"]
 url: 'esp32-x-solar-x-plants'
 ---
-
-https://github.com/gsampallo/mqtt_valvula
 
 **TL;DR**
 
 How much solar is enough for the mqtt x dht setup with a ESP32?
+
+**Intro**
+
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+https://github.com/gsampallo/mqtt_valvula
 
 https://fossengineer.com/selfhosting-velxio-arduino/
 
@@ -20,12 +27,6 @@ https://fossengineer.com/selfhosting-velxio-arduino/
 {{< /cards >}}
 
 Despite the PicoW lasting x2 in the same battery, for some reason the esp is less picky to connect and send the data over the same solar pannel
-
-**Intro**
-
-
-* Why Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 ```sh
 #cd ./poc/iot-rpi-dht
@@ -680,19 +681,42 @@ It works for few other microcontrollers as well, bookmark this one!
 
 * https://pinout.xyz/
 
+```sh
+pinout
+```
 
-### Kodi
 
-with kodi adons
+## IoT Tools
 
-* <https://www.youtube.com/@proyectosmicropic/videos>
+Ekuiper works great when combined with [EMQx Broker](https://jalcocert.github.io/RPi/posts/rpi-mqtt/#install-mqtt-broker)
 
-### GPS Tracker
+### Setup Ekuiper
 
-https://www.traccar.org/docker/
-https://github.com/traccar/traccar-docker
+You can get started with Ekuiper by following the [quick start guide](https://ekuiper.org/docs/en/latest/getting_started/quick_start_docker.html).
 
-## HA 
+* https://github.com/lf-edge/ekuiper
+
+> Apache v2 | Lightweight **data stream processing engine** for IoT edge
+
+Lets use the [Ekuiper Docker Image](https://hub.docker.com/r/lfedge/ekuiper)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ekuiper" title="Ekuiper | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+docker run -p 9081:9081 -d --name ekuiper -e MQTT_SOURCE__DEFAULT__SERVER=tcp://broker.emqx.io:1883 lfedge/ekuiper:latest
+```
+
+> Go to `http://localhost:9081/`
+
+
+You could also do AI/ML with Ekuiper
+
+* TF Lite - https://ekuiper.org/docs/en/latest/guide/ai/python_tensorflow_lite_tutorial.html
+    * https://www.tensorflow.org/lite/guide
+
+
 
 https://github.com/tevonsb/homeassistant-mcp
 
@@ -942,49 +966,4 @@ This is coming up as some shape of tech talk this year.
 
 And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
 
-##### Offer Configuration
 
-This has been just for pleasure.
-
-* Whats Working:
-* Whats not:
-* Whats next:
-
-So all below is not applicable.
-
----
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-The **launch strategy**: *aka, focus strategy*
-
-| Element | Decision |
-| :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
-
-The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
-
-The **Tech Stack**:
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | Astro | |
-| **Styling/UI Library** | Sassify MIT like theme | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)** | | |
-| **Database** | FireStore | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | Firebase Auth | |
-| **E-mail/ESP** | MailTrap | |
-| **Analytics** | Posthog | |
-| **Hosting** | Container | |

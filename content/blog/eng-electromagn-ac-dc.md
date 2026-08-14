@@ -2,7 +2,7 @@
 title: "Electro-Magnetism for AC/DC engines"
 date: 2026-05-04
 draft: false
-tags: ["PyScipe Simulations","Electric Motors vs L-R Model","KV","Solenoids","EMF"]
+tags: ["PyScipe Simulations","Electric Motors vs L-R Model","KV","Solenoids","EMF","HBridge vs ESC"]
 description: 'The physics you need for building. Drones and electric cars.'
 url: 'electromagnetism-for-ac-dc-motors'
 math: true
@@ -492,3 +492,71 @@ The rotor is made of conductive bars shorted by end rings, visually similar to a
 There are no brushes, no permanent magnets, and no external electrical connection to the rotor.
 
 The stator creates a rotating magnetic field, that field induces current in the rotor cage, and the interaction between both fields creates torque.
+
+
+### H-Bridge vs ESCs
+
+At a glance: an **H-bridge is a circuit topology**, whereas an **Electronic Speed Controller (ESC) is a complete, intelligent control unit** that often contains bridge circuits inside it.
+
+1. What is an H-Bridge?
+
+An **H-bridge** is an electronic circuit named for its visual layout: four switches (typically MOSFETs, BJTs, or relays) arranged with a load—usually a **brushed DC motor**—bridging the center.
+
+```
+       + V (Power)
+          |
+     [S1]   [S3]
+       |     |
+       +-[M]-+   <-- Motor in the middle
+       |     |
+     [S2]   [S4]
+          |
+       - GND
+
+```
+
+* **Forward:** Close **S1** and **S4**. Current flows left-to-right through the motor.
+* **Reverse:** Close **S3** and **S2**. Current flows right-to-left through the motor.
+* **Speed Control:** Pulsing one of the active switches on and off using **PWM (Pulse-Width Modulation)** regulates effective voltage and motor speed.
+* **Braking:** Closing both low-side switches (**S2** and **S4**) shorts the motor terminals, causing dynamic regenerative braking.
+
+> **Shoot-Through Warning:** If S1 and S2 (or S3 and S4) turn on at the same time, power connects straight to ground, creating a direct short circuit.
+
+2. What is an ESC (Electronic Speed Controller)?
+
+An **ESC** is a complete, self-contained electronic module.
+
+It takes a control signal from a flight controller, receiver, or microcontroller (via PWM, DShot, CAN bus, etc.) and precisely manages power delivery to the motor.
+
+While you can get **brushed ESCs** (which are essentially an H-bridge wrapped with an onboard microcontroller), modern ESCs are predominantly built for **3-phase Brushless DC (BLDC) motors**:
+
+* **Hardware:** Uses **6 MOSFETs** arranged as a 3-phase inverter (three half-bridges) to power the 3 motor wires ($U, V, W$).
+* **Firmware & Intelligence:** Contains an onboard microcontroller running complex switching algorithms. It monitors rotor position—either through hall sensors or by measuring **Back-EMF (electromotive force)** on unpowered coils—to time the electronic commutation cycles thousands of times per second.
+
+
+| Feature | H-Bridge | ESC (Electronic Speed Controller) |
+| --- | --- | --- |
+| **What it is** | A basic **circuit topology** / driver chip (e.g., L298N, DRV8833). | A **complete control device** with microcontrollers and firmware. |
+| **Typical Target Motor** | Standard **2-wire brushed DC** motors or stepper coils. | **3-wire brushless DC** (BLDC) motors, multirotors, RC vehicles. |
+| **Control Signal** | Raw logic signals (e.g., direct GPIO high/low and PWM from an Arduino). | High-level control protocols (Standard RC PWM, OneShot, DShot, CAN). |
+| **Intelligence** | None. It blindly switches gates whenever driven. | High. Manages phase timing, start-up torque, commutation, and telemetry. |
+| **Protection & Features** | Requires external control logic to prevent shoot-through. | Built-in thermal protection, current limiting, active braking, and low-voltage cutoff. |
+
+
+* If you are driving a **simple 2-wire brushed motor** and writing your own PWM control loop from an Arduino, you need an **H-bridge IC/module**.
+* If you are driving a **high-RPM brushless motor** (like in drones, RC planes, or electric skateboards), you need an **ESC** to handle the 3-phase commutation for you.
+
+
+1. Scalextric: Mechanical "Brushes"
+
+Classic Scalextric slot cars rely on brushed technology in two ways:
+
+1. **Track Pickups ("Braids"):** Underneath the chassis, small braided copper brushes press directly onto the metal rails of the slot track to pull DC power into the car.
+2. **Inside the Motor:** The car uses a standard, miniature **brushed DC motor** (2 terminals). Inside, tiny carbon/metal brushes rub against a rotating mechanical **commutator** to flip the magnetic polarity as the shaft turns.
+
+2. A Drone: Electronic "Brushless" Commutation
+
+A drone motor does not have physical brushes or a mechanical commutator to rub against the spinning shaft. Instead, it relies on an ESC to handle that switching electrically.
+
+Scalextric (Brushed)       --> Mechanical Commutator (flips polarity via friction)
+Drone Motor (Brushless)    --> ESC (flips polarity electronically across 3 phases)

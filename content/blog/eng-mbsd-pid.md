@@ -8,6 +8,13 @@ url: 'pid-for-bicycle-mbsd-model'
 math: true
 ---
 
+
+**Tl;DR**
+
+How different control theory from my automatic watering setup for crop intelligence?
+
+**Intro**
+
 PID
 
 margen de fase
@@ -15,10 +22,6 @@ margen de fase
 <!-- https://www.youtube.com/watch?v=dFudZiQ5ocY -->
 
 {{< youtube dFudZiQ5ocY >}}
-
-
-
-**Intro**
 
 How could I not play by opening and closing windows to see how the temp/humidity that [the PicoW and/or the ESP32 are pusshing via MQTT](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/dht-webapp)
 

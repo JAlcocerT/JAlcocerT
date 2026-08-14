@@ -10,27 +10,34 @@ math: true
 
 **TL;DR**
 
-Home connectivity is not just "do I have internet?". 
+Home connectivity is not just "do I have internet?"
 
-For a useful homelab, I want repeatable ways to measure throughput, latency under load, Wi-Fi quality, LAN inventory, DNS behavior, and eventually TR-181/EasyMesh data from the router itself.
 
 ## Intro
+
+For a useful homelab, I want repeatable ways to measure throughput, latency under load, Wi-Fi quality, LAN inventory, DNS behavior, and eventually TR-181/EasyMesh data from the router itself.
 
 Whether the uplink is 4G, coax, fiber, or Starlink, the home network becomes the base layer for everything else: self-hosted apps, backups, media, VPN, local AI services, and family communication.
 
 This post is a cleanup of my June 2026 connectivity notes.
 
+With all the learnings from a MV1 Compal and a NME5410
+
 ```sh
 #git pull
+#http://192.168.1.2:3034/hermesagent/tr471-checks
+#http://192.168.1.2:3034/hermesagent/selfhosted-connectivity
+#https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
 make devices-remember ID=192.168.1.12 NAME=laptop TAGS=trusted
 make devices-remember ID=192.168.1.13 NAME=appliance TAGS=iot
 make devices-list
 make snapshot
 make devices-history
 
-
 make wifi-watch SAMPLES=12 INTERVAL=5
 ```
+
+For quick checks:
 
 ```sh
 sudo apt install iperf3

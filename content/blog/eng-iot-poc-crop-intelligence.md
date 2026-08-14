@@ -1,12 +1,15 @@
 ---
 title: "Crops Intelligence in the AI era"
-date: 2026-08-15
+date: 2026-08-17
 draft: false
-tags: ["IoT x DHT22","MQTT x EMQx","JAlcocerTech Leads","18650 x solar","Tech Talk"]
+tags: ["MQTT x EMQx","JAlcocerTech Leads","18650 x solar","Tech Talk"]
 description: 'All the learning after planting tomatoes. Ready to scale.'
 url: 'iot-crop-intelligence'
 math: true
 ---
+
+https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
+
 
 **TL;DR**
 
@@ -15,6 +18,10 @@ I just wanted to [plant tomatoes](https://jalcocert.github.io/JAlcocerT/plants-1
 Then this happened...
 
 **Intro**
+
+
+* Why Im writting this post: 
+* What Ive learnt with it: *.*
 
 With this chaotic selflearning project, ive made:
 
@@ -63,9 +70,21 @@ https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#home-so
 * **TP4056** = Stops it from going above $4.2\text{V}$ (Overcharge Protection).
 * **DW01A Circuit** = Stops it from dropping below ~$2.4\text{V}$ (Over-discharge Protection).
 
-> With a  `AZDelivery board` has **both**, the Samsung 35E battery is 100% safe in both directions!
+> The `AZDelivery board` has **both**, the Samsung 35E battery is 100% safe in both directions!
 
 The TP with the ~3400mha battery + esp32 deepsleep will take you without power connection to a [lifetime of ~9 days as per my experiment](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#esp32-x-18650)
+
+The 12V BLDC *centrifugal* pump: 
+
+{{< youtube "mKVvW_jl3UI" >}}
+
+<!-- 
+https://youtube.com/shorts/mKVvW_jl3UI -->
+
+Came together with some fuses: 
+
+And rectifier diodes:
+
 
 ### The Software for D&A
 
@@ -170,9 +189,13 @@ cd ./poc/building-geo-osm-blender
 make osm2world-obj
 ```
 
-sudo apt update                                                                               
-  sudo apt install openjdk-17-jre unzip wget                                                    
-                                                                                                
+How does it relate for this crop intelligence project?
+
+Well, how about simulating in advance sun hours, orientations, expected energy, rainny days...?
+
+```sh
+sudo apt update
+sudo apt install openjdk-17-jre unzip wget                                                                                                                                                    
   mkdir -p ~/tools/osm2world                                                                    
   cd ~/tools/osm2world                                                                          
                                                                                                 
@@ -182,3 +205,54 @@ sudo apt update
   Then from this repo:                                                                          
                                                                                                 
   make osm2world-obj OSM2WORLD=~/tools/osm2world/osm2world   
+```
+
+
+### Offer Configuration
+
+This has been just for pleasure.
+
+* Whats Working:
+* Whats not:
+* Whats next:
+
+So all below is not applicable.
+
+**For now :)**
+
+---
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/" title="BiP | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/#offers/" title="Offers | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+The **launch strategy**: *aka, focus strategy*
+
+| Element | Decision |
+| :--- | :--- |
+| **One Avatar** | |
+| **One Product** | |
+| **One Channel** | |
+
+The **Tier of Service**: DIY (1b - *leverages on actual tech stack Ive put together - PaaS x (WP/Ghost or SSG+CMS)*)
+
+The **Tech Stack**:
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | | |
+| **Styling/UI Library** | | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
+
+| Requirement | Specification | Clarification / Decision |
+| :--- | :--- | :--- |
+| **Frontend Framework** | Astro | |
+| **Styling/UI Library** | Sassify MIT like theme | |
+| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)** | | |
+| **Database** | FireStore | |
+| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | Firebase Auth | |
+| **E-mail/ESP** | MailTrap | |
+| **Analytics** | Posthog | |
+| **Hosting** | Container | |
