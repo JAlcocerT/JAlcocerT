@@ -163,7 +163,10 @@ Si integramos esto, tenemos que el calor total es:
 $$Q = \int T \, dS$$
 
 **¿Para qué sirve en tu aerotermia?**
-En el diagrama de tu ciclo (específicamente en un diagrama **T-s**, Temperatura vs Entropía), el área encerrada bajo la curva representa el calor que estás moviendo. Multiplicar la temperatura por el cambio de entropía te da la cantidad de energía en forma de calor que has logrado "bombear" desde el aire de la calle hacia tus fancoils.
+
+En el diagrama de tu ciclo (específicamente en un diagrama **T-s**, Temperatura vs Entropía), el área encerrada bajo la curva representa el calor que estás moviendo. 
+
+Multiplicar la temperatura por el cambio de entropía te da la cantidad de energía en forma de calor que has logrado "bombear" desde el aire de la calle hacia tus fancoils.
 
 ---
 
@@ -203,18 +206,21 @@ Si la **Entalpía ($H$)** es todo el dinero que tienes en la cartera, el términ
 
 ¿Te suena haber visto estos diagramas de **Temperatura-Entropía (T-s)** en algún momento de tu reforma o cuando investigabas la Panasonic? Son los que tienen forma de "campana".
 
-
 ---
 
 ## Conclusions
 
 I havent put together any stirling engines... yet
 
+![alt text](/blog_img/mechanics/stirling_engine.gif)
+
 But experimenting with thermodynamics have been great.
+
+![alt text](/blog_img/mechanics/vapor_compression_fridge.gif)
 
 Looking for similar **decision intelligence** tools?
 
-Reach out throughput and outcomes, ~~not availability~~:
+Reach out for throughput and outcomes, ~~not availability~~:
 
 
 ### Aerotermia PoC x RPi DHT22

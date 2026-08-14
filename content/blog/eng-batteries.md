@@ -32,7 +32,7 @@ The EV I rented uses **Lithium NMC** chemistry.
 * **The Goal:** Maximizing energy density (range) while keeping weight reasonable.
 * **How it compares:** NMC batteries can pack a massive amount of energy into a heavy vehicle chassis. They offer incredible power delivery for acceleration and handle fast-charging stations well.
 
-However, they are chemically more sensitive than your Bluetti—which is why EV manufacturers built in software buffers (the "zombie cells" we talked about) and recommend only charging them to 80% or 90% for daily use to prevent faster degradation.
+However, they are chemically more sensitive than a Bluetti — which is why EV manufacturers built in software buffers (the "zombie cells" we talked about) and recommend only charging them to 80% or 90% for daily use to prevent faster degradation.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/" title="Civic 6" image="/blog_img/outro/honda-road.jpg" subtitle="With car analytics" >}}
@@ -47,7 +47,7 @@ The financial and energy breakdown for a trip in the Cupra EV:
 
 ### Bluetti 
 
-Your portable power station utilizes **LiFePO4** chemistry. LFP (Lithium Iron Phosphate)
+Your portable power station utilizes **LiFePO4** chemistry, LFP (Lithium Iron Phosphate)
 
 * **The Goal:** Absolute longevity, safety, and stability.
 * **How it compares:** This is the marathon runner of the group. LFP batteries can easily handle 3,000 to 3,500+ charge cycles before dropping to 80% health (compared to the ~1,000 to 1,500 typical of an automotive NMC battery). 
@@ -64,9 +64,9 @@ They are significantly heavier and bulkier per kWh than NMC, which is fine for a
 
 That "click" sound is **100% normal and expected**. 
 
-You are hearing the sound of a physical, mechanical switch moving inside the Bluetti.
+You are hearing the sound of a physical, **mechanical switch** moving inside the Bluetti.
 
-Here is the engineering difference between why AC clicks and DC is silent:
+There is some engineering difference between why AC clicks and DC is silent
 
 #### ⚡ The AC Side: Physical Mechanical Relay
 
@@ -75,8 +75,6 @@ Because AC electricity runs at high voltage ($230\text{V}$), safety standards re
 * Inside the Elite 30 V2, there is an **electromechanical relay** (a physical switch operated by a tiny electromagnet).
 * **When you hit AC ON:** The unit sends a current through a tiny coil, creating a magnetic field that physically slams a metal contact arm shut to complete the circuit. **(CLICK!)**
 * **When you hit AC OFF:** The coil de-energizes, and an internal spring snaps the metal arm back open to isolate the outlets. **(CLICK!)**
-
----
 
 #### 🔋 The DC Side: Solid-State Semiconductors (MOSFETs)
 
@@ -481,7 +479,15 @@ Standard Li-ion is optimal when aiming for maximum total energy capacity per kil
 
 ### Car batteries
 
-https://www.youtube.com/watch?v=NMkQib8CTZs
+<!-- https://www.youtube.com/watch?v=NMkQib8CTZs -->
+
+{{< youtube "NMkQib8CTZs" >}}
+
+{{< youtube "VnGRFwDrLHo" >}}
+
+<!-- 
+<https://www.youtube.com/watch?v=VnGRFwDrLHo> 
+-->
 
 #### W Engine simulation
 
@@ -492,6 +498,15 @@ https://youtube.com/shorts/x6NAMwPo6hI
 -->
 
 {{< youtube "x6NAMwPo6hI" >}}
+
+Thats x30 of these:
+
+![alt text](/blog_img/mechanics/inline1_thermo.gif)
+
+Or x5 of these:
+
+![alt text](/blog_img/mechanics/inline6_combustion.gif)
+
 
 Those had a 24V battery system for the startup, which required ~500-1000A
 
@@ -516,7 +531,6 @@ Gasoline completely dwarfs batteries in energy density—it is in an entirely di
 | **Gravimetric (Energy per kg)** | **$\approx 12,200 \text{ Wh/kg}$** | **$\approx 67 \text{ Wh/kg}$** | Gasoline is **$\approx 180\times$ denser** |
 | **Volumetric (Energy per Liter)** | **$\approx 9,700 \text{ Wh/L}$** | **$\approx 38.6 \text{ Wh/L}$** | Gasoline is **$\approx 250\times$ denser** |
 
-
 2. Real-World Usable Energy (Accounting for Efficiency)
 
 Gasoline must be burned in an internal combustion engine (like a portable gas generator) to generate electricity.
@@ -530,12 +544,9 @@ Practical Comparison: 1 Litre of Gasoline vs. the BLUETTI
 
 $$\text{Raw Energy} = 9,700 \text{ Wh} \xrightarrow{20\% \text{ generator efficiency}} \mathbf{1,940 \text{ Wh usable electricity}}$$
 
-
 * **BLUETTI Power Station ($4.3 \text{ kg}$ total weight):**
 
 $$\text{Raw Stored Energy} = 288 \text{ Wh} \xrightarrow{85\% \text{ inverter efficiency}} \mathbf{245 \text{ Wh usable electricity}}$$
-
-
 
 **Even after losing 80% of its energy as waste heat, 1 liter of gasoline (weighing under 1 kg) delivers roughly 8 times more usable electricity than this entire 4.3 kg power station.**
 
@@ -561,7 +572,6 @@ The Calculation
 1. **Convert mAh to Ah:**
 
 $$770 \text{ mAh} \div 1000 = 0.77 \text{ Ah}$$
-
 
 2. **Multiply by Nominal Voltage (7.2 V):**
 
@@ -619,9 +629,8 @@ Batteries deliver current over time.
 ### Why Standard Li-ion Holds More Energy per kg
 
 1. **Electrolyte Composition:** Traditional Li-ion uses a liquid organic electrolyte, which allows lithium ions to move very quickly and efficient chemical packing. LiPo uses a gel-like or polymer matrix electrolyte, which is slightly bulkier and less energy-dense at a chemical level.
-2. **Active Material Ratio:** Standard cylindrical cells (like 18650 or 21070 cells) can compress active chemistry inside a rigid metal shell very tightly, packing more energy into the internal material relative to its weight.
 
----
+2. **Active Material Ratio:** Standard cylindrical cells (like 18650 or 21070 cells) can compress active chemistry inside a rigid metal shell very tightly, packing more energy into the internal material relative to its weight.
 
 ### The Trade-off: System vs. Cell Level
 

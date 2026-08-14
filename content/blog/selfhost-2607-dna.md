@@ -1034,6 +1034,7 @@ And recently made [a reloaded version](https://jalcocert.github.io/JAlcocerT/geo
 Since the [last time](https://jalcocert.github.io/JAlcocerT/electr-diode/#tomatoes-x-solar), this is how they are growing the second batch:
 
 {{< youtube "_WAJ1y8Mdr0" >}}
+
 <!-- https://youtube.com/shorts/_WAJ1y8Mdr0 -->
 
 ### When was the last time you applied?
@@ -1042,38 +1043,7 @@ Tired to explain the same to the same people that wont learn?
 
 A friend is using CC with [pdf parsing libraries](https://github.com/jsvine/pdfplumber) to start his D&A career.
 
-{{% details title="Ideas Checklist 🚀" closed="true" %}}
-
-For this I dedicated a full post few weeks ago.
-
-The general idea checklist is as follows:
-
-
-
-{{% /details %}}
-
-{{% details title="Prospects/Clients Checklist 🚀" closed="true" %}}
-
-
-
-{{% /details %}}
-
 Have you been told that you dont have enough *role maturity*, aka you just have to wait?
-
-{{% details title="QnA to the team to avoid accountability laundring 🚀" closed="true" %}}
-
-
-{{% /details %}}
-
-You better [ask questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/) on time
-
-{{< callout type="info" >}}
-Starting with: WHO will do WHAT by WHEN
-{{< /callout >}}
-
-{{% details title="QnA for Product teams 🚀" closed="true" %}}
-
-{{% /details %}}
 
 Specilly if your career feel stucked.
 

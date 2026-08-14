@@ -3,13 +3,14 @@ title: "Heat Transfer (+ Go Solar PoC)"
 date: 2026-05-07
 draft: false
 tags: ["Black-Scholes","ICE x Fluid Dynamics x NVH","Ptolomeo","VPD","HeatraPy vs PyScipe"]
-description: 'The physics of heat and thermodynamics. The solar plan B - FV and Aerotermia.'
+description: 'The physics of heat & thermodynamics. The solar plan B - FV and Aerotermia.'
 url: 'heat-transfer-ice'
 math: true
 ---
 
 **Tl;DR**
 
+![alt text](/blog_img/mechanics/vapor_compression_fridge.gif)
 
 **Intro**
 

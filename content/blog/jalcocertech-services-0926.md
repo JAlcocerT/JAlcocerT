@@ -94,6 +94,11 @@ Go ask unconfortable questions: *smart or it does NOT ship*
 
 ### Attract and Convert
 
+Every business has its own delivery
+
+But every business owner will resonate when you ask [how they are getting customers](https://jalcocert.github.io/JAlcocerT/poc-107/#the-service-to-rule-them-all)
+
+
 1. With a proper website: webaudits here
 
 2. With outbound marketing: get leads, enrich leads, reachout via email

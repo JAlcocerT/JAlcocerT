@@ -695,9 +695,16 @@ Common things you can do:
 - Decode protocols
   It has tools for things like ISO-TP, UDS scanning, J1939-related handling, and firmware upload/testing workflows.
 
+<!-- 
+https://www.youtube.com/watch?v=pontoaAcyZM 
+-->
+
+{{< youtube "pontoaAcyZM" >}}
+
+
 A practical beginner workflow:
 
-1. Open SavvyCAN.
+1. Open SavvyCAN *its like wireshark, but instead network traffic, the canbus!*
 2. Load a sample log from /home/jalcocert/Desktop/SavvyCAN/examples.
 3. Look at the main frame list.
 4. Try filtering by CAN ID.

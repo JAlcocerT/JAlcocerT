@@ -845,6 +845,8 @@ Trading all risk/volatility is selling the tail probability of bigger success
 
 Founders write strategy decks, ship nothing. Dont be a founder.
 
+No premature pivot. Continue in one direction. The missing piece is usually applying the [previous book harder](https://jalcocert.github.io/JAlcocerT/poc-107/#destilling-read-books).
+
 0. As the cost of replies goes down, the quality of our questions will matter most.
 
 Every business is a kind of game and you can see how many of them play: `https://wyszukiwarka-krs.ms.gov.pl/`
@@ -1005,6 +1007,10 @@ The fwk: keep / stop / start.
 I said: < 2/week **AND <60/year** <<< 170
 
 Which has not happened at all.
+
+> Having a daily information framework / journal in place helps, condense with zetlekasten
+
+> > But just publish quolume (QxV) to my domain
 
 7. Keep far (far away), from people that: *say that want X, do Z instead*.
 

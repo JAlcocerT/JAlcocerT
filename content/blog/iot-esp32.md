@@ -3,7 +3,7 @@ title: "Embedded x The ESP32 comeback"
 date: 2026-08-15
 draft: false
 description: "A solar panel, summer and the ESP32 microcontroller."
-tags: [,"IoT","NodeRed","TP4056 x DW01A x 18650 vs Bluetti"]
+tags: ["IoT","NodeRed","TP4056 x DW01A x 18650 vs Bluetti","BLE"]
 url: 'esp32-x-solar-x-plants'
 ---
 
@@ -26,7 +26,7 @@ https://fossengineer.com/selfhosting-velxio-arduino/
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Despite the PicoW lasting x2 in the same battery, for some reason the esp is less picky to connect and send the data over the same solar pannel
+Despite the PicoW lasting x2 in the same test battery, for some reason the esp is less picky to connect and send the data over the same 15W solar pannel
 
 ```sh
 #cd ./poc/iot-rpi-dht
@@ -38,7 +38,7 @@ sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite
   metric = 'humidity' GROUP BY day ORDER BY day;"
 ```
 
-https://github.com/micropython/micropython
+
 
 People are transforming everything to a smart device with a simple ESP
 
@@ -66,14 +66,11 @@ An interesting tool I found to simulate these projects in the browser is: <https
 
 ## Testing ESP32
 
-I have to say thanks to Tomasz and his great content that helped me get started with this: <https://www.youtube.com/watch?v=tc3Qnf79Ny8&t=0s>
-
-* <https://github.com/ttarnowski/get-started-with-esp32/blob/main/src/main.cpp>
-
+I have to say [thanks to Tomasz](https://www.youtube.com/watch?v=tc3Qnf79Ny8&t=0s) and his great [content that helped me get started with the ESP32](https://github.com/ttarnowski/get-started-with-esp32/blob/main/src/main.cpp): 
 
 To 'upload' the code to the ESP32, please make sure that you have the proper cable (*I was expending too many hours because of this*).
 
-
+Basically: not all usb cables are data cables
 
 ## ESP32 and DHT11
 
@@ -108,19 +105,18 @@ Dont forget to include the libraries: `Tools -> Manage Libraries -> DHT sensor l
 
 ### With VScode and PlatformIO
 
-I recommend you also the **Serial Monitor** extension
+I recommend you also the **Serial Monitor** extension if you go this route
 
 <!-- <https://www.youtube.com/watch?v=W6i88k0LOiA> -->
 
 {{< youtube "W6i88k0LOiA" >}}
 
 
-
-
+## ESP x Clouds
 
 ### Sending DHT11 Data to Arduino Cloud
 
-You can create an account: <https://cloud.arduino.cc/home/>
+You can create an account: `https://cloud.arduino.cc/home/`
 
 <!-- <https://www.youtube.com/watch?v=rcCxGcRwCVk> -->
 
@@ -185,9 +181,7 @@ void setup() {
 void loop() {
   ArduinoCloud.update();
   // Your code here 
-  DHT_SENSOR_READ();
-  
-  
+  DHT_SENSOR_READ();  
 }
 
 
@@ -222,14 +216,10 @@ void DHT_SENSOR_READ()
   delay(2000);
   
 }
-
 ```
 
 
-### DHT11 - Blink IoT Platform
-
-
-## ESP32 with AWS
+### ESP32 with AWS
 
  ESP32 GPIO pins in real-time with AWS API Gateway WebSockets
 
@@ -242,7 +232,7 @@ void DHT_SENSOR_READ()
 
 ## Industry 4.0 and the MQTT Protocol
 
-You can have have the industry 4.0 at home:
+You can have have the industry 4.0 at home: *call this the IoT DIY pro way*
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/node-red" title="Node-Red | Config File 🐳 ↗"  >}}
@@ -273,7 +263,7 @@ sudo pip3 install paho-mqtt
 sudo systemctl status mosquitto.service
 ```
 
-But hey, you have the containers...
+But hey, you have [the containers](#containers-whats-that)...
 
 Publish sample data (from the RPi to the Rpi): https://github.com/jiteshsaini/mqtt-demo/blob/main/rpi_mqtt_clients/client_pub.py
 
@@ -284,7 +274,6 @@ import paho.mqtt.client as mqtt
 
 def on_publish(client, userdata, mid):
     print("message published")
-
 
 client = mqtt.Client("rpi_client2") #this name should be unique
 client.on_publish = on_publish
@@ -314,7 +303,7 @@ while True:
     time.sleep(2)
 ```
 
-This will receive the sample data when both scripts are running- (in the RPi): <https://github.com/jiteshsaini/mqtt-demo/blob/main/rpi_mqtt_clients/client_sub.py>
+This will receive the sample data when [both scripts](https://github.com/jiteshsaini/mqtt-demo/blob/main/rpi_mqtt_clients/client_sub.py) are running - (in the RPi):
 
 ```py
 import paho.mqtt.client as mqtt
@@ -367,12 +356,9 @@ while True:
         print("trying to connect MQTT server..")
 ```
 
+Now, to publish data from the ESP32 [use this script](https://github.com/jiteshsaini/mqtt-demo/blob/main/esp32_clients/esp_mqtt_client1/esp_mqtt_client1.ino)
 
-Now, to publish data from the ESP32: <https://github.com/jiteshsaini/mqtt-demo/blob/main/esp32_clients/esp_mqtt_client1/esp_mqtt_client1.ino>
-
-You will need <https://registry.platformio.org/libraries/knolleary/PubSubClient/installation> in the platformio.ini as
-
-lib_deps = knolleary/PubSubClient@^2.8
+You will need <https://registry.platformio.org/libraries/knolleary/PubSubClient/installation> in the `platformio.ini` as `lib_deps = knolleary/PubSubClient@^2.8`
 
 ```cpp
 /*********
@@ -532,35 +518,23 @@ void loop() {
 
 
 
-
-
-
-
-
-
 ## ESP32 + MLX90614
 
 <https://www.youtube.com/watch?v=HpsvNIAtjm4>
 
 
-## car battery
-
-<https://www.youtube.com/watch?v=VnGRFwDrLHo>
-
 ---
 
-# Conclusions
+## Conclusions
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing
 cd y2026-tech-talks/4-baml-db-insights
 ```
 
+### Other Projects
 
-
-# Other Projects
-
-
+With these learnings you are ready to make a [weather station like this guy did](https://www.youtube.com/watch?v=U0kPgFcALac)
 
 **Intro**: [IoT] Ansible and Raspberry Pi 
 
@@ -577,9 +551,10 @@ If that resonates with you, keep reading - I will show you how to **leverage Ans
 {{< /cards >}}
 
 > Yep, still, you will have to connect the cables 😝
+
 <!-- {: .prompt-info } -->
 
-## Ansible with Raspberry Pi
+#### Ansible with Raspberry Pi
 
 0. Get a Pi :)
 
@@ -631,7 +606,6 @@ docker exec -it mongodb sh
 docker exec -it dht_sensor_mongo sh
 ```
 
-
 > Working for me on [RaspiOS Bullseye](https://downloads.raspberrypi.com/raspios_armhf/images/raspios_armhf-2023-05-03/), **not in Bookworm** due to Adafruit not detecting the platform properly.
 
 
@@ -647,6 +621,8 @@ ansible-playbook ./RPi/Z_ansible/Ansible_py_dht_influx_grafana.yml -i inventory.
 ---
 
 ## FAQ
+
+https://github.com/micropython/micropython
 
 ### Containers? What's that?
 
@@ -710,7 +686,6 @@ docker run -p 9081:9081 -d --name ekuiper -e MQTT_SOURCE__DEFAULT__SERVER=tcp://
 
 > Go to `http://localhost:9081/`
 
-
 You could also do AI/ML with Ekuiper
 
 * TF Lite - https://ekuiper.org/docs/en/latest/guide/ai/python_tensorflow_lite_tutorial.html
@@ -722,7 +697,11 @@ https://github.com/tevonsb/homeassistant-mcp
 
 ### ESP32 HA + Batteries
 
-<https://www.youtube.com/watch?v=aR044Dk6c_0>
+A nice video around batteries and the esp:
+
+{{< youtube "aR044Dk6c_0" >}}
+<!-- 
+https://www.youtube.com/watch?v=aR044Dk6c_0 -->
 
 ### ESP32 HA w ESPHome
 
@@ -967,3 +946,12 @@ This is coming up as some shape of tech talk this year.
 And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
 
 
+### What it is esp home
+
+https://github.com/espressif/esptool
+
+## What it is tasmota
+
+https://github.com/arendst/Tasmota
+
+https://github.com/tasmota/tasmotizer

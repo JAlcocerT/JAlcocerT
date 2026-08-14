@@ -94,6 +94,10 @@ https://www.youtube.com/watch?v=-pxpNivvpw8
 
 ### Turbines
 
+<!-- https://www.youtube.com/watch?v=fT7Zi_xF8Ts -->
+
+{{< youtube "fT7Zi_xF8Ts" >}}
+
 ### Props
 
 {{< youtube "vrFaLrS0Ixs" >}}
