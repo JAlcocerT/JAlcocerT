@@ -19,6 +19,10 @@ The bar to create *slop* is lower than ever.
 
 **Intro**
 
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 Can we generate mass produced & quality information content?
 
 {{< cards >}}

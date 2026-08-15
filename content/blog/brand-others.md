@@ -8,6 +8,9 @@ url: 'creating-brands'
 ---
 
 
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 
 
 ### Eayp

@@ -14,6 +14,10 @@ Guess what goes after mechanics and electronics
 
 **Intro**
 
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 
 <!-- https://www.youtube.com/watch?v=3bSO_Xedhx8 -->
 

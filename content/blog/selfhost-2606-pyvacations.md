@@ -7,37 +7,12 @@ summary: 'Where am I going next? Vibe Planning and scrapped wisdom of crowds.'
 url: 'py-vacations'
 ---
 
-New additions for the [technology for Trips stack](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/)
-
-Already got freedom in time?
-
-`https://aegis-freedom.pages.dev/`
-
-For simple static pages, Playwright is usually overkill. Prefer fetch, curl, cheerio, BeautifulSoup, or an API if available. Use Playwright when browser behavior matters.
-
-Be careful with robots.txt, site terms, rate limits, login-protected content, personal data, and aggressive parallel scraping.
-
-Scraping with a browser is heavier and easier to  get blocked if you hit a site hard.
-
-* https://github.com/dawarich-app/atlas
-
-
-> Your favorite offline self-hostable maps. City, Country, Planet, you choose. 
-
-
-https://atlas.dawarich.app/docs/quickstart
- 
-```sh
-git clone /poc
-cd ./poc/z-poc-trip-planner-v4
-#https://github.com/JAlcocerT/poc/tree/main/z-poc-trip-planner-v4
-```
-
-> Which I have statically deployed at: `https://17e286bf.trip-planner-9lt.pages.dev/`
-
-> > And added some more goodies ``
 
 **Tl;DR**
+
+New additions for the [technology for Trips stack](https://jalcocert.github.io/JAlcocerT/tech-for-a-trip/)
+
+**Intro**
 
 You should probably know the WHY you are going somewhere first.
 
@@ -49,7 +24,6 @@ Python App to explore vacAItion destination. LLMs ❤️ Data.
 
 While exploring Agents (ADK).
 
-**Intro**
 
 Following the TripPlanner, I thought that bringing cost of living data was a good idea.
 
@@ -88,9 +62,29 @@ For the container setup:
 
 [Reitti](https://github.com/dedicatedcode/reitti) can be integrated [with Immich](https://fossengineer.com/selfhosting-immich/) btw
 
+For simple static pages, Playwright is usually overkill. 
 
+Prefer fetch, curl, cheerio, BeautifulSoup, or an API if available. 
 
+Use Playwright when browser behavior matters.
 
+Be careful with `robots.txt`, site terms, rate limits, login-protected content, personal data, and aggressive parallel scraping.
+
+Scraping with a browser is heavier and easier to  get blocked if you hit a site hard.
+
+* https://github.com/dawarich-app/atlas
+
+> Your favorite offline self-hostable maps. City, Country, Planet, you choose. 
+
+https://atlas.dawarich.app/docs/quickstart
+ 
+```sh
+git clone /poc
+cd ./poc/z-poc-trip-planner-v4
+#https://github.com/JAlcocerT/poc/tree/main/z-poc-trip-planner-v4
+```
+
+> Which I have statically deployed at: `https://17e286bf.trip-planner-9lt.pages.dev/`
 
 ## Py Vacations
 
@@ -138,6 +132,11 @@ make cost-overlay-data
 ```
 
 ![alt text](/blog_img/entrepre/tripplanner.png)
+
+Already got freedom in time?
+
+`https://aegis-freedom.pages.dev/`
+
 
 ### My checklist before travelling
 
@@ -195,7 +194,8 @@ Some time ago, I made a [Trip Planner Web App](https://github.com/JAlcocerT/Py_T
 
 If you are tired of this:
 
-http://localhost:1313/excel-data-analytics-interviews/
+<!-- http://localhost:1313/excel-data-analytics-interviews/ -->
+
 ![Karting Adventure](/blog_img/memes/oldnewjob.jpg)
 
 Why not taking a break in between?
@@ -299,8 +299,6 @@ python3 firecrawl_test4.py "https://www.numbeo.com/cost-of-living/in/Warsaw" "ou
 python3 Z_FireCrawl_Numbeo_Compare_v6.py "https://www.numbeo.com/cost-of-living/in/Warsaw" "https://www.numbeo.com/cost-of-living/in/Barcelona"
 ```
 {{< /details >}}
-
-
 
 ### Weather Analytics
 

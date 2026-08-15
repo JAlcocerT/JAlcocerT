@@ -88,9 +88,29 @@ https://gpx.studio/app#10.96/42.9481/-0.2867/0/70
 
 1. GeoLibre - https://github.com/opengeos/GeoLibre that you can find https://geolibre.app/
 
-2. Dawarich - with [Android app](#mobile-gpx-apps)
+2. [Dawarich](https://fossengineer.com/selfhosting-dawarich/) - with [Android app](#mobile-gpx-apps)
 
 You have several integrations `http://localhost:3333/settings/integrations` like with [Velomate](https://fossengineer.com/selfhosting-velomate/)
+
+https://github.com/JAlcocerT/Home-Lab/tree/main/dawarich
+
+> Make sure to have proper [Application hosts in the .env](https://github.com/JAlcocerT/Home-Lab/blob/main/dawarich/.env.sample#L9)
+
+> > on a fresh self-hosted install you should be able to sign in with the seeded default account:
+
+  - Username: demo@dawarich.app
+  - Password: safepassword (github.com (https://github.com/Freika/dawarich))
+
+For Cloudflare exposure, the important bit is that the app container must join the shared tunnel network, and Rails must allow the public hostname in APPLICATION_HOSTS.
+  - If you expose the same service both locally and through Cloudflare, the local port mapping can stay in place. The tunnel just adds another path in.
+  - The tunnel side does not need a separate reverse proxy here; your existing cloudflared container can route directly to dawarich_app:3000.
+  - Browser issues can look like app failures, but in this case the service was fine; the problem was the client path and DNS/IPv6 timing.
+
+```sh
+
+```
+
+Go to CF and add `dawarich_app:3000`
 
 3. More [Selfhosted GPX](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#selfhosted-gpx) like https://github.com/tess1o/geopulse
 
@@ -99,6 +119,10 @@ https://www.youtube.com/watch?v=pK_fSEp_OzQ
 -->
 
 {{< youtube "pK_fSEp_OzQ" >}}
+
+4. Geolibre
+
+5. Owntracks
 
 ### Mobile GPX Apps
 

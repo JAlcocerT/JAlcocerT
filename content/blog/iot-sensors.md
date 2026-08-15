@@ -1,11 +1,15 @@
 ---
 title: "[IoT] Sensors"
-date: 2026-10-25
+date: 2026-09-25
 draft: false
 tags: ["Polanduino x Arduino","Solar x DHT x MLX"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 
 https://github.com/855princekumar/sense-hive
 

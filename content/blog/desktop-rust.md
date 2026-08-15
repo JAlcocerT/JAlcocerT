@@ -1,6 +1,6 @@
 ---
 title: "Desktop Apps with RUST"
-date: 2026-10-16
+date: 2026-11-16
 draft: false
 tags: ["Rust x Vue","RemotionJS"]
 description: 'Using Rust Tauri instead of CustomTkinter and GoLang Wails.'
@@ -14,7 +14,11 @@ From [Go](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/
 
 **Intro**
 
-This year I have used Go to make one of my first desktop apps.
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+This year I have used Go to make one of my first desktop apps *around the GoPro telemetry and ffmpeg*
 
 Also...flutter to some extent: for the tello here, and a comparison with flet
 

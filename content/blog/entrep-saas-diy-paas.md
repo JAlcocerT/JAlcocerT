@@ -1,6 +1,6 @@
 ---
 title: "Making an enhanced DIY offering via PaaS"
-date: 2026-10-01T09:20:21+01:00
+date: 2026-12-01T09:20:21+01:00
 draft: false
 tags: ["DIY Platform Service","RoadMap26","PostgreSQL","Web Audit"]
 description: 'A platform service offering for B2C to get up to speed with services that dont require any customization.'
@@ -22,6 +22,10 @@ Benefit from what's automated for the masses.
 +++ Selfhosting [Postgres](#selfhost-postgres) 101
 
 **Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 
 I want to **combine a Landing x PaaS Tool**s to enable B2C users to get up to speed quickly with certain services that dont require any customization.
 

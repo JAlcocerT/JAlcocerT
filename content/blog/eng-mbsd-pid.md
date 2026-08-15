@@ -15,6 +15,10 @@ How different control theory from my automatic watering setup for crop intellige
 
 **Intro**
 
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 PID
 
 margen de fase

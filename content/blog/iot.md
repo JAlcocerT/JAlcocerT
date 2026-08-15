@@ -24,6 +24,10 @@ BTW, this is the [last ebook](#conclusions) of [the DIY series](https://jalcocer
 
 ## Intro
 
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 Its been a while since ive been tinkering around [MQTT and messaging protocols](https://jalcocert.github.io/JAlcocerT/messaging-protocols/)
 
 I wont lie, mqtt allow us to achieve interesting things thanks to its pub-sub nature, similar to [the streamr network](https://jalcocert.github.io/JAlcocerT/streamr-network/#comparison-with-mqtt)

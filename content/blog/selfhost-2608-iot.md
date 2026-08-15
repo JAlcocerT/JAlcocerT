@@ -396,7 +396,7 @@ You need some clean up?
 
 ```sh
 uv cache clean
-#  docker stop dawarich_app dawarich_sidekiq dawarich_db dawarich_redis
+# docker stop dawarich_app dawarich_sidekiq dawarich_db dawarich_redis
 docker rm dawarich_app dawarich_sidekiq dawarich_db dawarich_redis
 
 docker volume rm \
@@ -424,8 +424,7 @@ They are now...static!
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-And you have one [IoT basics ebook](https://ebooks.jalcocertech.com/books/iot/) waiting for you in there :)
-
+You have one [IoT basics ebook](https://ebooks.jalcocertech.com/books/iot/) waiting  :)
 
 ---
 

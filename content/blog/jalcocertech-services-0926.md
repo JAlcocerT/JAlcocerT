@@ -7,12 +7,14 @@ description: 'Beyond software.'
 url: 'jalcocertech-services-update'
 ---
 
-
 **Tl;DR**
 
 
 
 **Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 Coming from [this post](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/).
 
@@ -116,7 +118,21 @@ But every business owner will resonate when you ask [how they are getting custom
 
 ## Conclusions
 
+This is getting traction:
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/jalcocertech-services/" title="JAlcocerTech Services ↗" icon="github" >}}
+{{< /cards >}}
+
+
+I was clearing the initial real estate and genbi independent PoCs done with gemini earlier this year and brought them/improved at the PoC repo, here and here:
+
+```sh
+http://realestate-landing-prod:4321
+http://shopify-landing-prod:4321
+```
+
+For webaudits, ive done some improvements `http://auditmagnet-prod:3001`
 
 ```mermaid
 flowchart LR

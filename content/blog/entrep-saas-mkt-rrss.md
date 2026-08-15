@@ -15,6 +15,10 @@ Can you create quality content and build a community with social media (Twitter/
 
 **Intro**
 
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 What's the actual value of a follower?
 
 Hard to calculate, but not impossible.

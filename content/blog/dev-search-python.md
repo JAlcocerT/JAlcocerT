@@ -1,6 +1,6 @@
 ---
 title: "Programatic Web Search"
-date: 2026-10-09
+date: 2026-11-09
 draft: false
 tags: ["Dev","DuckDuckGo","SerpAPI vs SerpBear","SimilarWeb"]
 url: 'search-web-with-python'
@@ -14,6 +14,10 @@ This is not scrapping.
 But programmatic live web search, like the [local deep researcher](https://jalcocert.github.io/JAlcocerT/live-search-and-research-with-ai/#local-deep-researcher) does with DDG.
 
 **Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 
 I forked a project that was not only doing programatic web search, but also using agents.
 
