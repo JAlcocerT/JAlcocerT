@@ -18,7 +18,7 @@ You better write daily/weekly notes and work with them
 
 ## Why you need this
 
-I dont care if you are a director, an IC that moonlights, or a solo-preneur:
+I dont care if you are a director, an IC that ~~moonlights~~ has independent consilting work, or a solo-preneur:
 
 
 {{% details title="QnA to the team to avoid accountability laundring 🚀" closed="true" %}}
@@ -64,6 +64,13 @@ EOD Accountability Review:
 - What ambiguity did I convert into owner/action/trigger?
 - What is still exposed?
 - What should be visible in the weekly summary?
+
+<!-- 
+https://youtu.be/6SyqMqIPQiI 
+-->
+
+{{< youtube "6SyqMqIPQiI" >}}
+
 
 
 ## The Setup
@@ -113,6 +120,14 @@ The general idea checklist is as follows:
 
 {{% /details %}}
 
+
+#### Info to Video
+
+You are already aware, PoC, make a [hyperframe](https://jalcocert.github.io/JAlcocerT/youtube-video-as-a-code/) video [about it, or about yourself](https://github.com/JAlcocerT/poc/tree/main/libg/accountability-communication)
+
+{{< youtube "4sSa28Xk5Yw" >}}
+
+<!-- https://youtu.be/4sSa28Xk5Yw -->
 
 ---
 
@@ -164,8 +179,9 @@ flowchart TD
 
 ### Architect or Principal
 
-The easiest way to understand the difference is **scope of execution vs. scope of design**:
+Just in case you are preparing for an internal promo / outside CV or how to frame what you do for prospects.
 
+The easiest way to understand the difference is **scope of execution vs. scope of design**:
 
 +------------------------------------+------------------------------------+
 | Software Architect                 | Principal Engineer                 |
@@ -202,6 +218,15 @@ Architects get pulled into endless discovery calls with product managers and cli
 Managers get pulled into HR drama. Principals are insulated from most of that. 
 
 Your value comes from your output, your technical direction, and the documentation (like your wikis) that you build to make the rest of the team self-sufficient.
+
+
+**So ask honestly**: do you want *status, control, income, or optionality**? 
+
+They are NOT the same game.
+
+What are you optimizing for next?
+
+
 
 ---
 
@@ -251,3 +276,7 @@ Check that `forgejo:3000` ready:
 with kodi adons
 
 * <https://www.youtube.com/@proyectosmicropic/videos>
+
+### How Im using AI to prep for ULM/PPL
+
+https://github.com/anthropics/claude-cookbooks

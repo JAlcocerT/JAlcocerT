@@ -13,11 +13,6 @@ math: true
 
 An excuse to upgrade to Claude Max plan and [burn tokens](https://claude.ai/settings/usage).
 
-Drop if the wordd free still has meaning for you.
-* https://github.com/carboneio/carbone
-
->  Fast and simple report generator, from JSON to pdf, xslx, docx, odt... 
-
 
 **Intro**
 
@@ -52,8 +47,11 @@ Same as Ive distilled my brand assets [here](https://jalcocert.github.io/JAlcoce
 
 It was time to put together all those nice animations related repositories to ship consistently.
 
-
 ### Science Animations
+
+
+{{< youtube "MZTt8ICeF0Y" >}}
+
 
 ### Financial Animations
 
@@ -74,6 +72,12 @@ This engine is a yoke
 
 ## Conclusions
 
+Drop if the word free still has meaning for you.
+
+* https://github.com/carboneio/carbone
+
+>  Fast and simple report generator, from JSON to pdf, xslx, docx, odt... 
+
 There are 2 HUBs so far:
 
 1. the jalcocertech one
@@ -85,8 +89,8 @@ There are 2 HUBs so far:
 ```
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/yt-videos-as-a-code" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NEW - Source Code HUB for multi-purpose video as a code" >}}
-  {{< card link="https://github.com/JAlcocerT/jalcocertech-services" title="Data Chat Repository" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code brand HUB for jalcocertech" >}}
+  {{< card link="https://github.com/JAlcocerT/yt-videos-as-a-code" title="YT Video as Code" image="/blog_img/apps/gh-jalcocert.svg" subtitle="NEW - Source Code HUB for multi-purpose video as a code" >}}
+  {{< card link="https://github.com/JAlcocerT/jalcocertech-services" title="JAlcocerTech Services" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code brand HUB for jalcocertech" >}}
 {{< /cards >}}
 
 And a 3rd one coming...
@@ -95,7 +99,10 @@ Does this mean that...is possible to... do 1, do on top and...3 HUBs?
 
 oh shat...
 
+---
 
 ## FAQ
 
+### Remotion 101
 
+### Hyperframes 101
