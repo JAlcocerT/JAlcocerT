@@ -2,13 +2,18 @@
 title: "[JAlcocerTech] Services Recap"
 date: 2026-09-01T11:20:21+01:00
 draft: false
-tags: ["RoadMap26","Energy Solutions","OSS Journaling x Filesmd x Forgejo"]
-description: 'Beyond software.'
+tags: ["Energy Solutions","OSS Journaling x Filesmd x Forgejo"]
+description: 'Beyond software. PV vs SAHP vs HVAC Simulations.'
 url: 'jalcocertech-services-update'
 ---
 
 **Tl;DR**
 
+coming from the [experiment on heat pump viability](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/#the-experiment)
+
+and the [data driven insulation](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/)
+
+![alt text](/blog_img/mechanics/heat_pump.gif)
 
 
 **Intro**
@@ -104,8 +109,6 @@ A residential air-to-water heat pump operates using **two separate, sealed fluid
 2. **Compressor:** Squeezes the gaseous refrigerant into a high-pressure, superheated gas ($60^\circ\text{C}\text{–}85^\circ\text{C}$).
 3. **Expansion Valve:** Drops the refrigerant pressure back down to restart the cycle.
 
-
-
 ---
 
 ### The Bridge: Brazed Plate Heat Exchanger (BPHE)
@@ -127,11 +130,7 @@ A compact block composed of dozens of corrugated, razor-thin stainless steel pla
 2. Circulates through underfloor heating loops, radiators, or the domestic hot water (DHW) cylinder coil.
 3. Returns to the heat exchanger after radiating thermal energy into the living space.
 
-
-
----
-
-### Monobloc vs. Split Architecture
+Monobloc vs. Split Architecture
 
 Where these two circuits meet depends on the heat pump's design:
 
@@ -140,17 +139,180 @@ Where these two circuits meet depends on the heat pump's design:
 | **Monobloc** | The heat exchanger is inside the **outdoor unit** | **Water pipes** run through the wall into the home |
 | **Split System** | The heat exchanger is inside the **indoor unit** (hydrobox) | **Refrigerant copper lines** run through the wall |
 
+
+Modern residential heat pump compressors use a 3-phase **Brushless DC (BLDC) motor**—specifically referred to in HVAC terminology as a **PMSM** (Permanent Magnet Synchronous Motor) or simply an **Inverter Compressor**.
+
+The electrical setup brings the concept full circle back to your FPV drone:
+
+---
+
+### How the Compressor Motor is Driven
+
+Unlike your 19W pump (which hides its tiny DC driver internally) and older legacy heat pumps (which used single-speed AC induction motors), a modern heat pump compressor is driven by an external, high-power **Inverter Drive** (essentially a giant industrial ESC).
+
+```
+Mains AC Power (230V/400V)
+          │
+          ▼
+   [ Rectifier / PFC ]      ──> Converts AC into High-Voltage DC (~320V–600V DC)
+          │
+          ▼
+ [ Inverter Board (ESC) ]   ──> Fast IGBT / SiC MOSFET power switches
+          │
+          ▼  (3 Phase Wires: U, V, W)
+ [ BLDC / PMSM Compressor ] ──> Sealed twin-rotary or scroll motor inside refrigerant dome
+
+```
+
+---
+
+### Connecting the Concepts: FPV Drone vs. Pump vs. Compressor
+
+| Feature | Your FPV Drone Motor | Your 19W Watering Pump | Heat Pump Inverter Compressor |
+| --- | --- | --- | --- |
+| **Motor Type** | 3-Phase Sensorless BLDC | 3-Phase BLDC | 3-Phase Permanent Magnet BLDC / PMSM |
+| **ESC / Inverter** | **External** (4-in-1 ESC board) | **Internal** (Epoxy-potted micro-IC) | **External** (Large aluminum heatsink Inverter Board) |
+| **Operating Voltage** | Low Voltage DC (e.g., 4S–6S / 16V–25V) | Low Voltage DC (e.g., 12V / 24V) | High Voltage DC (rectified **~350V to 600V DC**) |
+| **Wiring** | **3 Phase Wires** (U, V, W) | **2 DC Wires** (+ / -) | **3 Heavy Terminals** (U, V, W) sealed through glass-to-metal pins |
+| **Control Logic** | Back-EMF / Zero-crossing (or FOC) | Hall-sensor / Basic commutation IC | **Field-Oriented Control (FOC)** with Space Vector PWM |
+
+They are called **"inverters"** because the electrical circuit literally **inverts direct current (DC) back into alternating current (AC)** at an adjustable frequency to control motor speed.
+
+In **electrical engineering** terms:
+
+* **Rectifier:** Converts **AC $\rightarrow$ DC**
+* **Inverter:** Converts **DC $\rightarrow$ AC**
+
+
+> In fact, I was simulating rectifiers and inverters :)
+
+---
+
+The Problem with Direct Grid AC
+
+Grid power from your wall outlet is locked at a fixed frequency and voltage (e.g., $230\text{V}$ at $50\text{Hz}$ or $120\text{V}$ at $60\text{Hz}$).
+
+An AC motor plugged straight into the wall is forced to spin at a fixed speed governed by that frequency:
+
+$$\text{Speed (RPM)} = \frac{120 \times \text{Frequency}}{\text{Number of Motor Poles}}$$
+
+At a fixed $50\text{Hz}$, a standard 2-pole motor will always spin at roughly **$3000\text{ RPM}$**. It has only two states: **100% full speed** or **0% completely off**.
+
+
+How the "Inverter" Solves This in 3 Stages
+
+To make the motor run at any custom speed (e.g., 20%, 45%, or 90%), the system must create its own custom frequency on demand. It does this in three steps:
+
+```
+Step 1: Rectification        Step 2: DC Bus          Step 3: INVERSION
+  Mains AC (50Hz fixed)   ──>   Raw DC Power   ──>   Synthesized AC/Pulsed Drive
+     [ AC to DC ]                 [ Clean ]            [ DC to AC (Variable Hz) ]
+
+```
+
+1. **Rectification (AC $\rightarrow$ DC):** Diodes convert the fixed $50\text{Hz}$ grid AC power into raw DC voltage ($\sim 325\text{V} \text{ DC}$).
+2. **Filtering (DC Link):** Heavy capacitors smooth the voltage into a stable DC reservoir.
+3. **Inversion (DC $\rightarrow$ AC) — *Where the name comes from*:** High-power electronic switches (IGBTs or MOSFETs) switch on and off thousands of times per second. By chopping the DC voltage, the circuit **inverts** that steady DC back into a simulated 3-phase AC waveform with an **infinitely adjustable frequency** (e.g., anywhere from $10\text{Hz}$ up to $120\text{Hz}$).
+
+Why Marketing Kept the Name
+
+The stage that creates the variable speed is the **DC-to-AC Inverter stage**.
+
+Manufacturers began labeling entire appliances (air conditioners, heat pumps, refrigerators, washing machines) as **"Inverter" models** to distinguish these modern, variable-speed, energy-saving units from old-fashioned, noisy "On/Off" appliances.
+
+---
+
+### Why Use a BLDC Inverter Instead of Basic AC?
+
+* **Stepless Modulation (10%–100% capacity):** Instead of noisily banging on and off at full blast like older single-speed fridges/ACs, the inverter varies the driving frequency smoothly. On a mild day, it throttles down to run slowly and whisper-quiet on just 300W–500W.
+* **Extreme Efficiency:** Permanent magnet BLDC rotors eliminate the rotor electrical losses ($I^2R$ copper losses) inherent in traditional AC induction motors.
+* **No Massive Inrush Current:** Soft-starting the BLDC motor eliminates the huge 50A–80A starting surge (locked-rotor amps) typical of legacy compressors, preventing home lights from flickering.
+
+### Conversion Losses in the Inverter Drive
+
+The conversion from grid AC $\rightarrow$ DC $\rightarrow$ synthesized 3-phase AC has an overall electrical efficiency of **95% to 98%**, meaning the conversion loss is only **2% to 5%**.
+
+```
+AC Grid In (100%) ──> [Rectifier / PFC] ──> [DC Bus] ──> [Inverter / IGBTs] ──> Motor (95–98%)
+                         (~1–2% loss)                       (~1–3% loss)
+
+```
+
+* **Where the loss goes:** Mainly switching losses and internal resistance in the power transistors (IGBTs / MOSFETs), dissipating as low-grade heat on the drive’s aluminum heatsink.
+* **Why it is worth it:** Sacrificing **3%** of power in electronic conversion allows the compressor to modulate to lower speeds, saving **30% to 50%** in thermodynamic energy compared to cycling an on/off motor at full blast.
+
+---
+
+### Are Solar-Assisted Heat Pumps Using AC or DC Compressors?
+
+Solar-assisted heat pumps divide into two architectures depending on their system design:
+
+#### 1. Standard Grid-Tied PV Systems (AC Coupled)
+
+Most residential rooftop solar installations use standard inverter heat pumps powered via the home's main AC electrical panel.
+
+* **Flow:** Solar Panels (DC) $\rightarrow$ Solar Inverter (AC) $\rightarrow$ Heat Pump Inverter (DC $\rightarrow$ 3-Phase AC).
+* **Why it's common:** Allows the heat pump to draw from the electrical grid at night and feed excess solar power back to the grid during sunny peaks without dedicated proprietary wiring.
+
+#### 2. Direct-DC / Hybrid Solar Heat Pumps (DC Coupled)
+
+Specialized off-grid or solar-hybrid systems (e.g., Solimpeks, Masterflux, Boyard) feed solar energy directly into the DC link:
+
+* **Flow:** Solar PV (DC) $\rightarrow$ MPPT DC-DC Regulator $\rightarrow$ Internal Compressor Inverter $\rightarrow$ 3-Phase BLDC motor.
+* **No Solar AC Inverter Needed:** Because the compressor's inverter runs internally on a high-voltage DC bus, DC solar power feeds straight into that DC stage. This eliminates the round-trip conversion penalty ($10\%\text{–}15\%$ saved).
+* **Grid Backup:** If a cloud passes, the onboard rectifier seamlessly draws supplemental power from the AC grid to keep the DC bus charged.
+
+**MPPT** and **HEMS** are two key technologies that optimize energy flow in modern solar and smart-home setups: MPPT handles **hardware-level electrical efficiency**, while HEMS handles **system-level software automation**.
+
+---
+
+### 1. MPPT (Maximum Power Point Tracking)
+
+**MPPT** is an electronic algorithm and DC-DC converter circuit built inside solar inverters and charge controllers. Its job is to extract the maximum possible electrical power from your solar panels under varying sunlight and temperature conditions.
+
+* **The Problem:** Solar panels have a non-linear relationship between voltage and current. If you draw too much current, the panel voltage collapses; if you don't draw enough, current drops. Power output ($\text{Watts} = \text{Volts} \times \text{Amps}$) peaks at only one exact combination of voltage and current, called the **Maximum Power Point ($V_{\text{mp}}, I_{\text{mp}}$)**.
+* **How It Works:** As clouds pass or the panels heat up, this sweet spot constantly shifts. The MPPT controller continuously sweeps and adjusts its internal electrical resistance thousands of times a second to keep the panels operating at peak power.
+* **Impact:** An MPPT controller harvests **20% to 30% more energy** than an older, direct-connection PWM controller.
+
+---
+
+### 2. HEMS (Home Energy Management System)
+
+**HEMS** is the "central brain" (software and smart controller hardware) that orchestrates energy generation, storage, and consumption across the entire house.
+
+Instead of having isolated devices operating blindly, a HEMS coordinates:
+
+* **Solar PV Generation** (rooftop panels)
+* **Home Battery Storage** (charging/discharging)
+* **EV Chargers** (dynamic car charging)
+* **Heat Pumps & Water Heaters** (SG-Ready / thermal storage)
+* **Dynamic Grid Tariffs** (hourly electricity pricing)
+
+---
+
+### How They Compare & Work Together
+
+| Feature | MPPT | HEMS |
+| --- | --- | --- |
+| **Primary Role** | Hardware-level power extraction | Whole-home energy scheduling & optimization |
+| **Where It Lives** | Inside the solar inverter / charge controller | Dedicated gateway box or cloud/local software hub |
+| **Decides...** | *"What is the best voltage to pull maximum watts from the panels right now?"* | *"Should excess solar go into the EV, the home battery, or heat the hot water tank?"* |
+| **Timescale** | Milliseconds (electrical tracking) | Minutes to hours (pricing, weather, and load forecasts) |
+
+**In practice:** The **MPPT** ensures your panels generate the absolute maximum wattage possible; the **HEMS** decides in real-time where those watts can be used to save the most money.
+
 ### IoT
 
 https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
+
 ![alt text](/blog_img/entrepre/rpi-dht.png)
 
 
 ### FPV
 
-You can prepare to ULM/PPL:
+You can [prepare to ULM/PPL](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl):
 
-Or just get ready to DYOR and make a DIY dron:
+Or just get ready to *DYOR* and make a DIY dron:
 
 #### FPV Telemetry
 
@@ -305,6 +467,7 @@ You can also do this with the forgejo setup if you are not afraid of .md:
 ```sh
 
 ```
+
 
 ### Skills im using 
 

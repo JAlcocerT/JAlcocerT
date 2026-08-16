@@ -10,9 +10,7 @@ math: true
 
 **Tl;DR**
 
-How about doing `energysolutions` NOW?
-
-![alt text](/blog_img/mechanics/heat_pump.gif)
+How about doing some `energysolutions` NOW?
 
 +++ Solar assisted heat pump simulation (SAHP)
 
@@ -20,8 +18,9 @@ How about doing `energysolutions` NOW?
 
 Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-next-steps.md) to improve [the existing features](https://github.com/JAlcocerT/poc/blob/main/aerothermics/all-features.md).
 
-
 Its just all about [heat pumps](https://en.wikipedia.org/wiki/Heat_pump).
+
+![alt text](/blog_img/mechanics/heat_pump.gif)
 
 ## The experiment
 
@@ -37,7 +36,7 @@ But how can we now this in advance?
 
 Ive also seen invoices with less than 100kwh in regular months
 
-then spike to 360wkh in august
+then spikes to ~360wkh in august
 
 Guess why :)
 
@@ -122,12 +121,11 @@ https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/ardu
 
 ![Arduino IDE ESP32 internal temperature example](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-esp32-internal-temp.png) 
 
-  <img                                                                                                          
-    src="https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-    
-  esp32-internal-temp.png"                                                                                      
-    alt="Arduino IDE ESP32 internal temperature example"                                                        
-    loading="lazy"                                                                                              
-  />
+<img         
+  src="https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-esp32-internal-temp.png"
+  alt="Arduino IDE ESP32 internal temperature example"                                                        
+  loading="lazy"                     
+/>
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt.cpp" title="ESP32 + DHT1 + MQTT ↗" >}}
@@ -261,8 +259,8 @@ cd ./RPi/
 
 ## FAQ
 
-### How much Tilt matters for FV
+### How much Tilt matters for PV
 
-Depending on: latitude, day of the year, hour
+Depending on: *latitude, day of the year, hour*
 
 * https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-tilt-101.md

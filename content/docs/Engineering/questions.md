@@ -9,11 +9,13 @@ The most underated skill for engineers: **QUESTIONING**
 
 We own the how.
 
-its time we take over the Why and What.
+Its time we take over the Why and What.
 
 Shifting the engineer's role from a **passive order-taker** to a **strategic friction-point**, you  ensure that the "skin in the game" is shared before the first line of code is written.
 
 This aims to solve the "Garbage In, Garbage Out" problem of product development.
+
+> [Smart or it does not ship](https://jalcocert.github.io/JAlcocerT/poc-103/#helping-pms-and-pdms)
 
 ---
 

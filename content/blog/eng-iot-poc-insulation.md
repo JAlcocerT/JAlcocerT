@@ -64,7 +64,11 @@ Then, [this](https://github.com/JAlcocerT/poc/tree/main/building-to-blender) hap
 
 Previoulsy I thought that Linux was tricky compared to W11 to push code towards microcontrollers.
 
-It seems that we dont even need arduino GUI, and a proper data cable + arduino CLI does the job:
+I was wrong
+
+It seems that we dont even need arduino GUI
+
+A proper data cable + arduino CLI **does the job**:
 
 ```sh
 cd ./poc/iot-rpi-dht
@@ -175,7 +179,7 @@ The ESP32 deepsleep mode and pushing every 60s instead of 5s made the same batte
 
 The DHT's are great, but they only measure ambient temperature. 
 
-We need [a MLX90614](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/) to measure the surface temperature of the wall, because that is what will determine the heat transfer from the wall to the inside. 
+We need [a MLX90614](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/) to measure the **surface temperature of the wall**, because that is what will determine the heat transfer from the wall to the inside. 
 
 Of course there is a lot of [work on this topic](https://github.com/JAlcocerT/poc/tree/main/iot-rpi-mlx), as you may guess:
 
@@ -201,7 +205,8 @@ Run this any time to check:
 ```sh
 sqlite3 ingester/data/readings.sqlite \
   "SELECT device, metric, COUNT(*), ROUND(AVG(value),1) FROM readings GROUP BY device, metric;"
-Or see the latest readings:
+
+#Or see the latest readings:
 sqlite3 ingester/data/readings.sqlite \
   "SELECT device, metric, value, received_at FROM readings ORDER BY received_ms DESC LIMIT 10;"
 ```
@@ -232,8 +237,8 @@ The cost of a small wind turbine for a home ranges from $3,000 to $8,000 per kil
 
 In contrast, an equivalent 1 kW solar panel system would cost about $2,770 on average in the U.S. (SRT 00:07:46 - 00:08:04).
 
-Source: https://www.youtube.com/watch?v=nPvTH7Siclg
-Channel: Undecided with Matt Ferrell
+* Source: https://www.youtube.com/watch?v=nPvTH7Siclg
+* Channel: Undecided with Matt Ferrell
 
 ### Home Solar Test x TP4056
 

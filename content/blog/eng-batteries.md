@@ -328,6 +328,13 @@ When you write your C++ sketch in the Arduino IDE, calling `#include <NimBLEDevi
 
 ## Conclusions
 
+<!-- 
+https://youtube.com/shorts/_msLOGVlX-I 
+-->
+
+{{< youtube "_msLOGVlX-I" >}}
+
+
 | Metric | Cupra EV (NMC) | Your Bluetti (LiFePO4) | Your 1S Drone (LiPo) |
 | --- | --- | --- | --- |
 | **Priority** | High range + power density | Longevity + safety | Featherweight + explosive power |

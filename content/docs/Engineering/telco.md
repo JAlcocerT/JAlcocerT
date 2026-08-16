@@ -277,3 +277,5 @@ You can always measures these with your homelab
 ## Fiber vs Coax
 
 ### Snell Law
+
+### Friis

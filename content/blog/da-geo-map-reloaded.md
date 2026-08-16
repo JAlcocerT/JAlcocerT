@@ -189,6 +189,7 @@ More info about other [housing data points](#finding-interesting-housing-data)
 
 ### Solar Rays x Buildings in a Geolocation
 
+https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#the-sun-is-interesting
 
 #### Blender x GIS
 
