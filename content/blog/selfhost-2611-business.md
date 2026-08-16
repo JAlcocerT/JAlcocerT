@@ -1086,7 +1086,7 @@ When tools are enabled, responses from Claude and inputs from the user become mu
                   ┌──────────────────────────────────────────────┐
                   │     User Tool Result Input (Multi-Block)     │
                   ├──────────────────────────────────────────────┤
-                  │ 1. Tool Result Block: "2026-08-02 19:12:00" │
+                  │ 1. Tool Result Block: "2026-11-02 19:12:00" │
                   └──────────────────────────────────────────────┘
 
 ```
@@ -1243,12 +1243,12 @@ For example, when a user asks **"What day is 103 days from today?"**, Claude mus
                                ▼
 ┌──────────────────────────────────────────────────────────────┐
 │ TURN 1: Claude calls tool #1 (get_current_datetime)           │
-│         Server executes Python function & returns "2026-08-02"│
+│         Server executes Python function & returns "2026-11-02"│
 └──────────────────────────────┬───────────────────────────────┘
                                │
                                ▼
 ┌──────────────────────────────────────────────────────────────┐
-│ TURN 2: Claude reads "2026-08-02" & calls tool #2            │
+│ TURN 2: Claude reads "2026-11-02" & calls tool #2            │
 │         (add_duration_to_datetime with days=103)             │
 │         Server executes Python function & returns "2026-11-13"│
 └──────────────────────────────┬───────────────────────────────┘

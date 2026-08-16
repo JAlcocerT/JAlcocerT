@@ -2,7 +2,7 @@
 title: "[IoT] Sensors"
 date: 2026-09-25
 draft: false
-tags: ["Polanduino x Arduino","Solar x DHT x MLX"]
+tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---

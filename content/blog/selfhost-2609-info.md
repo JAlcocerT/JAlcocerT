@@ -269,6 +269,12 @@ Check that `forgejo:3000` ready:
 #dig fossengineer.com any
 ```
 
+### Selfhosted Communication
+
+1. https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.0
+
+2. Matrix with the flavour [conduit](https://fossengineer.com/selfhosting-matrix-conduit-server-with-docker/) or [synapse](https://fossengineer.com/selfhosting-matrix-synapse-docker/)
+
 ### Selfhosted Media
 
 #### Kodi vs Jellyfin
@@ -279,4 +285,4 @@ with kodi adons
 
 ### How Im using AI to prep for ULM/PPL
 
-https://github.com/anthropics/claude-cookbooks
+* https://github.com/anthropics/claude-cookbooks

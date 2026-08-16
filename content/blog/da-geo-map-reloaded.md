@@ -124,6 +124,19 @@ https://www.youtube.com/watch?v=pK_fSEp_OzQ
 
 5. Owntracks
 
+6. https://github.com/traccar/traccar
+
+7. [GeoPulse](https://fossengineer.com/selfhosting-geopulse/)
+
+8. Others:
+
+https://github.com/mendhak/gpslogger/
+
+https://github.com/dietrichmax/colota
+
+
+https://github.com/dawarich-app/atlas
+
 ### Mobile GPX Apps
 
 `https://apps.apple.com/us/app/open-gpx-tracker/id984503772`

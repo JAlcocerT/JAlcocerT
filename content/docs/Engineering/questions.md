@@ -183,6 +183,6 @@ MoSCoW (Must have, Should have, Could have, Won’t have aka Out of scope )
 
 If any line is blank or hand-wavy, the brief isn't ready.
 
-> **Rule of Thumb:** A brief that requires a 60-minute meeting to explain is a brief that isn't finished.
+> **Rule of Thumb:** A brief that requires a [60-minute meeting](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner) to explain is a brief that isn't finished.
 
 > > How does your current team culture typically react when an engineer asks "How am I supposed to do that?"—is it met with collaboration or defensiveness?

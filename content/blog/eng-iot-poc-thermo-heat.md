@@ -8,8 +8,6 @@ url: 'how-to-check-hot-pump-viability'
 math: true
 ---
 
-
-
 **Tl;DR**
 
 How about doing `energysolutions` NOW?
@@ -25,11 +23,9 @@ Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aeroth
 
 Its just all about [heat pumps](https://en.wikipedia.org/wiki/Heat_pump).
 
-
-
 ## The experiment
 
-In retrospective, 12m2 of solar panels are enough to pay no electricity bill in south Spain.
+In retrospective, ~12m2 (~10k$) of solar panels are enough to pay ~ no electricity bill in south Spain.
 
 Poprawne podsumowanie:
 
@@ -39,7 +35,9 @@ Poprawne podsumowanie:
 
 But how can we now this in advance?
 
-Ive also seen invoices with less than 100kwh in regular months, then spike to 360wkh in august
+Ive also seen invoices with less than 100kwh in regular months
+
+then spike to 360wkh in august
 
 Guess why :)
 
@@ -57,15 +55,15 @@ cd ./poc/go-solar-trajectory
 There are now two concepts:      
 
 - Face sun now: sets the panel normal directly toward the current sun vector. This is the tracker-style instantaneous optimum.
+
 - Use annual fixed: finds the best fixed tilt/azimuth for the selected latitude using a clear-sky geometry proxy: it samples the year and maximizes max(0, sun · panelNormal) * sin(solarAltitude).    
-                                                                                                        
-Important: this is not yet a real PV yield optimum.
+                                                                                          Important: this is not yet a real PV yield optimum.
 
 It ignores clouds, shading, roof constraints, DNI/ DHI split, temperature losses, and self-consumption.
   
 It answers: “geometrically, what fixed panel orientation catches the most clear-sky sun at this latitude?”    
 
-Is this for you if your kwh is 0.26 eur?
+> Is this for you if your kwh is 0.26 eur?
 
 `go-solar.pages.dev/era5-cities/`
 
@@ -110,7 +108,7 @@ mosquitto_sub -h 192.168.1.106 -p 1883 -t "esp32/humidity/dht11" -v
 
 > > see Tools -> Serial Monitor at arduinoIDE for the logs
 
-
+```cpp
 // ---- Configuration ----
 const char* WIFI_SSID     = "your-wifi";
 const char* WIFI_PASSWORD = "your-password";  // const char* handles special chars ($, @, etc.)
@@ -118,8 +116,18 @@ const char* MQTT_BROKER   = "192.168.1.106";
 const int   MQTT_PORT     = 1883;
 const int   DHT_PIN       = 4;   // GPIO4 (D4) — best category, no special boot functions
 const int   PUBLISH_MS    = 5000;
+```
+<!-- 
+https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-esp32-internal-temp.png -->
 
-https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-esp32-internal-temp.png
+![Arduino IDE ESP32 internal temperature example](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-esp32-internal-temp.png) 
+
+  <img                                                                                                          
+    src="https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-    
+  esp32-internal-temp.png"                                                                                      
+    alt="Arduino IDE ESP32 internal temperature example"                                                        
+    loading="lazy"                                                                                              
+  />
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt.cpp" title="ESP32 + DHT1 + MQTT ↗" >}}

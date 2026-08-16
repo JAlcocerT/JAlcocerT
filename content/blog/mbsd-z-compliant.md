@@ -1,13 +1,15 @@
 ---
 title: "Time for MultiBodySystemsDynamics (dot) com"
-date: 2026-08-19
+date: 2026-08-25
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper","Forgejo"]
 description: 'Mechanism agentic centered design.'
 url: 'whitepaper-mbsd'
 math: true
 ---
+
 https://multibodysystemdynamics.pages.dev/
+
 **Tl;DR**
 
 Because ideas are worthless and execution is everything

@@ -384,7 +384,11 @@ Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/
 
 ## Conclusions
 
-I said bye recently to the vasagle desk that has seen me grown in the D&A space these years.
+I said bye recently to the *vasagle desk* that has seen me grown in the D&A space these last years.
+
+Also said bye to any[stupid meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner) thanks to [my daily framework](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-frameworks) coming my way thanks [to agents](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-frameworks).
+
+TL;DR: after every meeting, MoM with: WHO is going to do WHAT by WHEN
 
 ### BLUF
 
@@ -398,7 +402,6 @@ For the day to day, elevate your operations to get more done:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
-
 
 ---
 

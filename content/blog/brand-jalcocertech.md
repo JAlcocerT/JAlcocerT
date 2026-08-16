@@ -1,8 +1,8 @@
 ---
 title: "How is my Brand going?"
-date: 2026-08-28
+date: 2026-10-28
 draft: false
-tags: ["PoC 104","Brand HUBs","Email marketing"]
+tags: ["Brand HUBs","Email marketing"]
 description: 'A brand around JAlcocerTech'
 url: 'branded-jalcocertech'
 ---

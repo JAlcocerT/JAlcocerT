@@ -28,8 +28,8 @@ Coming from [this post with a solar experiment](https://jalcocert.github.io/JAlc
 ```sh
 git clone https://github.com/JAlcocerT/RPi
 ```
-https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc
-`picow-dht-webapp-vpd-poc-webapp`
+
+You got it [here](https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/picow-dht-webapp-vpd-poc): `picow-dht-webapp-vpd-poc-webapp`
 
 * https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/ESP32/esp32-c/mqtt-dht11-dashboard
 * https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt-emqx.cpp
@@ -177,9 +177,7 @@ The DHT's are great, but they only measure ambient temperature.
 
 We need [a MLX90614](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/) to measure the surface temperature of the wall, because that is what will determine the heat transfer from the wall to the inside. 
 
-Of course there is a lot of work on this topic, as you may guess:
-
-https://github.com/JAlcocerT/poc/tree/main/iot-rpi-mlx
+Of course there is a lot of [work on this topic](https://github.com/JAlcocerT/poc/tree/main/iot-rpi-mlx), as you may guess:
 
 ```sh
 cd ./poc/iot-rpi-mlx/
@@ -190,10 +188,7 @@ cd ./poc/iot-rpi-mlx/
 
 ### And the final dashboard
 
-https://github.com/JAlcocerT/poc/tree/main/iot-rpi-mlxdht-insulation
-
-The one that combines all the goodies of previous steps, with the UI/X ive polished:
-
+The one that combines all the goodies of previous steps, [with the UI/X ive polished](https://github.com/JAlcocerT/poc/tree/main/iot-rpi-mlxdht-insulation):
 
 ```sh
 cd ./poc/iot-rpi-dht-insulation
@@ -202,18 +197,18 @@ MQTT_HOST=192.168.1.2 docker compose up -d --build dashboard #so that emqx at ho
 ```
 
 Run this any time to check:
+
+```sh
 sqlite3 ingester/data/readings.sqlite \
   "SELECT device, metric, COUNT(*), ROUND(AVG(value),1) FROM readings GROUP BY device, metric;"
 Or see the latest readings:
 sqlite3 ingester/data/readings.sqlite \
   "SELECT device, metric, value, received_at FROM readings ORDER BY received_ms DESC LIMIT 10;"
-
+```
 
 ![alt text](/blog_img/iot/mqtt-insulation.png)
 
 I also tried it from the homelab: `MQTT_HOST=192.168.1.2 docker compose up -d --build`
-
-
 
 ---
 
