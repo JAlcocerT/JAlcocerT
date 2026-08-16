@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted IoT"
-date: 2026-08-25
+date: 2026-08-21
 draft: false
 tags: ["Sonoff x Zigbee","Tinkering IRL","M2M","Tech Talk"]
 description: 'A homelab and sensors. The 101 BoM to get you started.'

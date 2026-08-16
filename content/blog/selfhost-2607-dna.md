@@ -386,7 +386,7 @@ Its all about nurturing the [psyc aspect](https://jalcocert.github.io/JAlcocerT/
 
 I said bye recently to the *vasagle desk* that has seen me grown in the D&A space these last years.
 
-Also said bye to any[stupid meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner) thanks to [my daily framework](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-frameworks) coming my way thanks [to agents](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-frameworks).
+Also said bye to any[stupid meetings](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner) thanks to [my daily framework](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-frameworks) coming my way thanks [to agents](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-frameworks) that you can feed with [these productivity ideas](https://fossengineer.com/docs/#productivity)
 
 TL;DR: after every meeting, MoM with: WHO is going to do WHAT by WHEN
 

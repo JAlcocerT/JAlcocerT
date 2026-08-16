@@ -832,7 +832,7 @@ I was not expecting to:
 
 1. Learn about plants
 2. Make a decent come back to real *world* engineering: the mbsd framework with NVH analysis, the electronics simulations for EMR kickback that helped me relate with fpv/drone builds, watering plant systems and the cool hydrofoils
-3. That the FPV A1/A3 license made me prepare the ULM/PPL for bigger flying things
+3. That the FPV A1/A3 license made me [prepare the ULM/PPL](https://ulm-ppl-test.pages.dev/) for bigger flying things [here](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl)
 4. To see the gap between whats possible vs whats expected grow instead of shrinking
 5. for the nth time realize that we are not doing good questions at all neither improve our questioning process
 6. still find people at 30+ y.o with the startup mode of 0 earnings now, no reasonable process to get better, but trust me bro that ill reach 150k MRO soon *(and finding ppl who buy those stories)*

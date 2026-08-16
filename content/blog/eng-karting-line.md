@@ -204,7 +204,7 @@ I had a lot of fun in this circuit :)
 
 ### PWA - GoPro telemetry extractor
 
-Not enough with the ulm/ppl exam to get traffic at jalcocretech?
+Not enough with the [ulm/ppl exam prep](https://ulm-ppl-test.pages.dev/) to get traffic at jalcocretech?
 
 here is sth more: https://gopro-telemetry-overlay.pages.dev
 
@@ -246,9 +246,9 @@ Download an [OS like **ZorinOS**](https://jalcocert.github.io/JAlcocerT/selfhost
 
 #### Files Sync
 
-1. Nextcloud: a personal cloud, one of the first setups for any homelab and working perfectly in Linux
+1. Nextcloud: a personal cloud, one of the first setups for any homelab and working perfectly in Linux. Now with a [native linux desktop client](https://fossengineer.com/nextcloud-native-client/).
 
-2. [Proton CLI](https://proton.me/support/drive-cli): finally  arrived!
+2. [Proton CLI](https://proton.me/support/drive-cli): finally arrived!
 
 Download https://proton.me/download/drive/cli/index.html
 
