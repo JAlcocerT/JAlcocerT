@@ -318,6 +318,74 @@ I placed [here some initial esp32 smoke test](https://github.com/JAlcocerT/elect
 
 Then, the final version is here.
 
+#### Controlling the ESP32 from the homelab
+
+WebSockets are excellent for low-latency bidirectional communication, you can also evaluate other protocols standard in homelabs:
+
+| Protocol | Latency / Overhead | Best Use Case | Popular Homelab Tools |
+| --- | --- | --- | --- |
+| **WebSockets** | Very Low / Persistent | Real-time streams, custom dashboards, direct low-latency control | Node.js (`ws`), Python (`websockets`), custom UIs |
+| **MQTT** | Extremely Low / Lightweight | Decoupled pub/sub, fleet of IoT sensors, event-driven setups | **Mosquitto**, **Home Assistant**, Node-RED |
+| **HTTP REST** | Medium / Request-Reply | Infrequent commands, basic webhooks | Express, Flask, Home Assistant Webhooks |
+| **ESPHome API** | Native Native-TCP | Zero-code firmware, direct Home Assistant integration | **Home Assistant** + ESPHome dashboard |
+
+
+WebSockets is the most direct and lowest-latency option, but for overall reliability in a homelab environment, **MQTT is generally considered the industry standard.**
+
+While WebSockets works well, it leaves the burden of connection recovery, message delivery guarantees, and state management entirely on your custom code.
+
+Why MQTT is Considered More "Reliable" for IoT
+
+| Feature | WebSockets | MQTT (e.g., Mosquitto Broker) |
+| --- | --- | --- |
+| **Delivery Guarantees** | None built-in (you must write custom ACKs/retry logic). | Built-in **QoS levels** (QoS 0, 1, or 2) ensuring message delivery even over flaky Wi-Fi. |
+| **Connection Drops** | You must manually handle reconnection loops and queue unsent messages. | The broker handles automatic reconnection, keep-alives, and packet buffering. |
+| **Last Will & Testament (LWT)** | No native concept; server has to detect missing pings manually. | **Native feature:** If the ESP32 crashes or loses power, the broker automatically alerts the homelab (`status: offline`). |
+| **Retained Messages** | If the ESP32 restarts, it doesn't know its last target state unless it asks for it. | **Retained topics:** The moment the ESP32 reconnects, it immediately receives its last commanded state without the homelab resending. |
+| **Coupling** | **Point-to-Point:** Server and ESP32 must know about each other's connection lifecycle. | **Decoupled (Pub/Sub):** The homelab and ESP32 only talk to a lightweight broker (like Mosquitto). |
+
+Where WebSockets Wins Over MQTT
+
+* **Lower latency & streaming:** If you are streaming audio, high-frequency IMU sensor data (50–100Hz), or fast video frames, WebSockets has less protocol overhead for continuous raw streams.
+* **Direct browser interaction:** You can connect directly to a browser UI without running a broker or bridge in the middle.
+* **No middleware:** You don't need to spin up an extra Docker container for an MQTT broker if you already have a backend API.
+
+The Verdict for Your Homelab
+
+* **Use WebSockets if:** You are building a custom, highly responsive dashboard/stream (e.g., high-frequency telemetry, live canvas drawing, low-latency robot control) where occasional lost packets during a Wi-Fi blip don't break the system.
+* **Use MQTT if:** You want a reliable **set-and-forget** home automation setup (toggling relays, controlling lights, periodic sensor reads) where messages must not be dropped and devices need to recover gracefully from reboots.
+* **Use ESPHome (Native API) if:** Your homelab runs **Home Assistant**—it handles firmware, encryption, state syncing, and reconnection out of the box with zero custom C++ needed.
+
+
+That bidirectional workflow—publishing sensor readings while subscribing to command topics—is the core design pattern of **MQTT in IoT**.
+
+1. How Two-Way MQTT Works
+
+An MQTT client can simultaneously **Publish** and **Subscribe** over the same broker connection:
+
+```text
+               ┌───────────────────────────────┐
+               │    Homelab MQTT Broker        │
+               │      (e.g., Mosquitto)        │
+               └───────▲───────────────┬───────┘
+                       │               │
+       Publish Sensor  │               │ Subscribe Commands
+       (e.g., moisture)│               │ (e.g., "PUMP_ON")
+                       │               │
+               ┌───────┴───────────────▼───────┐
+               │             ESP32             │
+               │   • Soil Moisture Sensor      │
+               │   • Relay / Pump              │
+               └───────────────────────────────┘
+
+```
+
+1. **ESP32 $\rightarrow$ Homelab:** ESP32 reads the sensor (e.g., soil moisture, water level) every few seconds and publishes data to `garden/sensor/moisture`.
+2. **Homelab Automation:** Your homelab (Home Assistant, Node-RED, or a Python automation script) monitors that topic. When the value drops below a threshold, it runs logic (like checking weather forecasts, time-of-day limits) and decides whether to water.
+3. **Homelab $\rightarrow$ ESP32:** Homelab publishes `{"action": "ON", "duration": 10}` to `garden/pump/set`.
+4. **Action:** The ESP32 receives the message in its `callback()` function and pulls the relay pin `HIGH` to fire the pump.
+
+
 ### The sensors you need
 
 You can make of these sensors good companions:
