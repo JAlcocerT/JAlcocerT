@@ -1,6 +1,6 @@
 ---
 title: "Hydrofoil"
-date: 2026-08-18
+date: 2026-08-21
 draft: false
 tags: ["IRL","Betaflight vs VESC"]
 description: '.'
@@ -9,6 +9,7 @@ url: 'hydro-foil-engineering'
 
 **Tl;DR**
 
+These things can be quite expensive ~10k$
 
 **Intro**
 

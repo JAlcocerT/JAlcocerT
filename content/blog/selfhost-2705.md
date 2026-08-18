@@ -17,6 +17,8 @@ url: 'selfhosting-opsec-tools'
 
 ### DNS
 
+dns4eu
+
 What dig can show:
 
   - Records for the exact name you ask for, like fossengineer.com

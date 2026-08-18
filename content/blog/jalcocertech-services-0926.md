@@ -307,6 +307,9 @@ https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
 
 ![alt text](/blog_img/entrepre/rpi-dht.png)
 
+#### Crops
+
+
 
 ### FPV
 
@@ -315,6 +318,21 @@ You can [prepare to ULM/PPL](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl)
 Or just get ready to *DYOR* and make a DIY dron:
 
 #### FPV Telemetry
+
+1. Make sure to understand the limit of your batteries: 18650 (), LiPo 1S (3.5-4.2)
+
+| Parameter | Standard 18650 Li-ion | Standard 1S LiPo |
+| --- | --- | --- |
+| **Fully Charged** | **4.2V** | **4.2V** |
+| **Nominal (Average)** | **3.6V – 3.7V** | **3.7V** |
+| **Cut-off / Empty** | **2.8V – 3.0V** | **3.0V** |
+
+> You can configure EdgeTX to inform you about battery level in real time
+
+2. Get ready to perform RCA from telemetry when you'll have [a fpv crash](https://youtu.be/4opTp09Ne7A)
+
+Then perform [damage diagnosis](https://youtube.com/shorts/OPuNbaIYuRM)
+
 
 
 ### Mechanism Design
@@ -339,7 +357,7 @@ https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#productize
 
 ### D&A
 
-Go ask unconfortable questions: *smart or it does NOT ship*
+Go ask unconfortable [questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/): *smart or it does NOT ship*
 
 * https://why-postmortem-checks.pages.dev
 * https://pm-pdm-checks.pages.dev

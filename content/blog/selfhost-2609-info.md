@@ -7,6 +7,8 @@ description: 'From The algorithm to a daily information frameworks.'
 url: 'selfhosting-information-flow'
 ---
 
+https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
+
 **TL;DR**
 
 You better write daily/weekly notes and work with them
@@ -287,4 +289,4 @@ with kodi adons
 
 * https://github.com/anthropics/claude-cookbooks
 
-* https://ulm-ppl-test.pages.dev/
+* https://ulm-ppl-test.pages.dev/ from `./poc/ulm-ppl`

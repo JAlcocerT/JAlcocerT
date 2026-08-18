@@ -693,7 +693,10 @@ Including [data races](https://jalcocert.github.io/JAlcocerT/video-creation-with
 
 18. That was true until in March/April I tinkered more and more with RemotionJS and HyperFrames
 
-From that point I started making quick videos: from [intro to tech talks](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk), ...
+From that point I started making quick videos: from [intro to tech talks](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk), to [quick about me's](https://youtu.be/4sSa28Xk5Yw) ...
+
+19. How i [mapped a canbus](https://youtube.com/shorts/q-BlvhkLqcU) and failed to connect it properly to a car
+
 
 ### Serverless
 

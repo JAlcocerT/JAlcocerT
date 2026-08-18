@@ -1,15 +1,12 @@
 ---
 title: "Crops Intelligence in the AI era"
-date: 2026-08-17
+date: 2026-08-18
 draft: false
 tags: ["MQTT x EMQx","JAlcocerTech Leads","18650 x solar","Tech Talk"]
 description: 'All the learning after planting tomatoes. Ready to scale.'
 url: 'iot-crop-intelligence'
 math: true
 ---
-
-https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
-
 
 **TL;DR**
 
@@ -19,14 +16,15 @@ Then this happened...
 
 **Intro**
 
+* Why Im writting this post: *bc its time to put together all the noise, from [DC adapters](https://youtube.com/shorts/HwavCMkah0o), [the BoM](https://youtube.com/shorts/mKVvW_jl3UI) with [electronics](https://youtube.com/shorts/oxZVchAZV0U), the [bluetti](https://youtube.com/shorts/1nK0-MDh7LY), the microcontroller...*
+* What Ive learnt with it: *...*
 
-* Why Im writting this post: 
-* What Ive learnt with it: *.*
-
-With this chaotic selflearning project, ive made:
+With this *chaotic* selflearning project, Ive made:
 
 1. An [electromagnetism recap to avoid frying my esp32](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#how-to-avoid-frying-an-esp32-due-to-kickback)
+
 2. Some simulations around PySpice: here and here
+
 3. 
 
 
@@ -38,13 +36,14 @@ sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite
 
 
 A 15W solar panel setup is great: 
+
 <!-- 
 https://youtu.be/oPznvdWmcTQ -->
 
 {{< youtube "oPznvdWmcTQ" >}}
 
 
-Just that sometimes, there is not enough juice for the ESP32's
+Just that sometimes, there is not enough juice from the sun flowing for the ESP32's
 
 And you'll want to measure temp and humidity during the night as well
 
@@ -102,7 +101,9 @@ Key Differences: 2-Wire BLDC Pump vs. 3-Wire FPV Motor
 
 How the 2-Wire BLDC Pump Operates Internally
 
-A brushless motor cannot run directly on continuous DC power without electronic phase switching. Inside the sealed enclosure of your 19W pump:
+A brushless motor cannot run directly on continuous DC power without electronic phase switching. 
+
+Inside the sealed enclosure of your 19W pump:
 
 * **Integrated PCB:** A miniature circuit board receives the incoming DC power.
 * **Driver IC / Hall Sensor:** A micro-driver detects the rotor’s magnetic position and electronically switches the internal stator coils (Phases U, V, W) in sequence.
@@ -152,7 +153,7 @@ https://youtube.com/shorts/sCrMm5sLG-w
 
 The melisa and mieta p. didnt make it though.
 
-And some time later, the mieta polej also died  *most likely Spider Mites (przędziorki) or Thrips (wciornastki)*
+And some time later, the mieta polej and mint also died  *most likely Spider Mites (przędziorki)*
 
 3 months later:
 
@@ -166,13 +167,18 @@ I got a couple of harvests:
 
 {{< youtube "sCrMm5sLG-w" >}}
 
+Probably a 3rd one is coming:
+
+{{< youtube "-0UkzDSMusI" >}}
+
+
 {{< callout type="info" >}}
-The yield so far ~1kg tomatoes out of xyz plants and xyz kg of soil and ~ L of water
+[The yield](https://youtube.com/shorts/cDfu-i_XnIE) so far ~1kg tomatoes out of xyz plants and xyz kg of soil and ~ L of water
 {{< /callout >}}
 
 You can buy that kg for xyz $ in the market, so for next season there is definitely room for improvements!
 
-#### Watering System for next seson
+#### A Watering System for next seson
 
 https://indystry.cc/diy-solar-powered-garden-watering-system/
 
@@ -199,9 +205,9 @@ https://www.youtube.com/watch?v=s-xkdfNeIVw
 
 Tomatoe one timer?
 
-1. Get them sun
+1. Get them as much sun as possible
 2. Get them water in the early morning
-3. Get them space for the roots: ~20L for 1 plant worked well for me
+3. Get them space for the roots: *~20L for 1 plant worked well for me*
 
 ### Tomatoe Prep for Next Year
 
@@ -219,26 +225,24 @@ make osm2world-obj
 
 How does it relate for this crop intelligence project?
 
-Well, how about simulating in advance sun hours, orientations, expected energy, rainny days...?
+Well, how about **simulating in advance**: sun hours, orientations, expected energy, rainny days...?
 
 ```sh
 sudo apt update
 sudo apt install openjdk-17-jre unzip wget                                                                                                                                                    
   mkdir -p ~/tools/osm2world                                                                    
-  cd ~/tools/osm2world                                                                          
-                                                                                                
-  wget https://osm2world.org/download/files/latest/OSM2World-latest-bin.zip                     
-  unzip OSM2World-latest-bin.zip                                                                
-                                                                                                
-  Then from this repo:                                                                          
-                                                                                                
-  make osm2world-obj OSM2WORLD=~/tools/osm2world/osm2world   
+  cd ~/tools/osm2world                                                                                                                                                                       
+wget https://osm2world.org/download/files/latest/OSM2World-latest-bin.zip
+  unzip OSM2World-latest-bin.zip
+                                                                           
+#Then from this repo:
+make osm2world-obj OSM2WORLD=~/tools/osm2world/osm2world   
 ```
 
 
 ### Offer Configuration
 
-This has been just for pleasure.
+This project has been just for pleasure.
 
 * Whats Working:
 * Whats not:

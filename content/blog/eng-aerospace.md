@@ -10,7 +10,7 @@ math: true
 
 **Tl;DR**
 
-I almost became an aerospace student
+I *almost* became an aerospace student
 
 **Intro**
 
@@ -20,7 +20,9 @@ This is everything that I did (and what not) missed.
 
 https://jalcocert.github.io/JAlcocerT/fluids/#the-governing-equations
 
-https://www.youtube.com/watch?v=KeTh-TIhL9M
+<!-- https://www.youtube.com/watch?v=KeTh-TIhL9M -->
+
+{{< youtube "KeTh-TIhL9M" >}}
 
 I tinkered a little bit with [fluid mechanics basics on this post](https://jalcocert.github.io/JAlcocerT/fluids/#the-governing-equations).
 
@@ -742,12 +744,14 @@ The Pocket's battery bay is tight and only fits Flat Top `18650s` at 3.7V, not t
 | **Compatibility** | Locked to one protocol | **Expandable via Module Bay** |
 
 {{< youtube "AKUXxsIrtek" >}}
+
 <!-- 
-https://youtube.com/shorts/AKUXxsIrtek -->
+https://youtube.com/shorts/AKUXxsIrtek 
+-->
 
 Most BetaFPV gear is **2.4GHz**, which is the standard for the Pocket. 
 
-Do not accidentally buy a 915MHz/868MHz module unless you are doing extreme long-range flying!
+> Do not accidentally buy a 915MHz/868MHz module unless you are doing extreme long-range flying!
 
 Because the **RadioMaster Pocket** runs **EdgeTX** (an open-source operating system), it can run **Lua scripts**.
 
@@ -757,7 +761,7 @@ Here are the most typical community scripts every pilot uses:
 
 1. The "Essential" Scripts
 
-* **ExpressLRS (ELRS) Configurator:** This is the most important one. It lets you change your radio's transmit power, "packet rate" (speed of connection), and binding settings directly from the screen. In 2026, the new **ELRS 4.0** script even includes "Automatic Antenna Mode" for pilots using Gemini (dual-link) hardware.
+* **ExpressLRS (ELRS) Configurator:** This is the most important one. It lets you change your **radio's transmit power**, "packet rate" (speed of connection), and binding settings directly from the screen. In 2026, the new **ELRS 4.0** script even includes "Automatic Antenna Mode" for pilots using Gemini (dual-link) hardware.
 * **Betaflight TX Script:** This is a game-changer. It allows you to change your drone's internal settings via the radio screen. You can adjust:
 * **PIDs & Rates:** How fast the drone flips and how it handles wind.
 * **VTX Settings:** Change your video channel or boost your signal strength (e.g., from 25mW to 400mW) if you're getting static.
@@ -826,7 +830,9 @@ To receive the video feed on the setup we’ve discussed, you need a **Video Rec
 
 In the FPV world, your choice of receiver is dictated by the **Video Transmitter (VTX)** inside the drone.
 
-Since the DIY BOM we built uses the **BetaFPV Air 5-in-1 FC**, it has an **Analog 5.8GHz VTX** built-in. Here is what you need to see through its eyes:
+Since the DIY BOM we built uses the **BetaFPV Air 5-in-1 FC**, 
+
+it has an **Analog 5.8GHz VTX** built-in. Here is what you need to see through its eyes:
 
 1. The Goggles (The Standard Way)
 

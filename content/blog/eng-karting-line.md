@@ -354,6 +354,12 @@ cd ./poc/z-poc-trip-planner-adk # cd ../z-poc-trip-planner-v4
 make compose #http://192.168.1.2:3021
 ```
 
+```sh
+cd ./poc/z-poc-trip-planner-mama
+#docker compose -f docker-compose.prod.yml up --build #3022
+docker compose -f docker-compose.prod.yml up --build -d # http://trip-planner-web:3000
+```
+
 ![trip planner with weather time zone and costs](/blog_img/data-experiments/trip-planner-tz.png)
 
 3. https://github.com/itskovacs/trip/releases/tag/1.47.0

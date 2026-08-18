@@ -1,6 +1,6 @@
 ---
 title: "[Learning] 3D Printing"
-date: 2026-08-20
+date: 2026-09-20
 draft: false
 tags: ["Tinkering IRL","Blender"]
 description: 'Toys or Additive manufacturing at home?'

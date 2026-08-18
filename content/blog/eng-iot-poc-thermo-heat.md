@@ -89,6 +89,7 @@ docker compose up --build -d
 
 {{< youtube "d6PyYCBft44" >}}
 
+See the IR sensor shows a massive T difference:
 
 {{< youtube "cHIPjAG2dkk" >}}
 
@@ -264,3 +265,7 @@ cd ./RPi/
 Depending on: *latitude, day of the year, hour*
 
 * https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-tilt-101.md
+
+> `https://solar-trajectory.pages.dev/`
+
+> > `https://go-solar.pages.dev/`

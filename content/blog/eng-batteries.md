@@ -2,7 +2,7 @@
 title: "Batteries are a thing"
 date: 2026-08-01
 draft: false
-tags: ["Bluetti elite 30 v2","DC Motor","Cupra","LiPo vs Li-Ion","BLE","W Engine"]
+tags: ["Bluetti elite 30 v2 x UVX","DC Motor","Cupra","LiPo vs Li-Ion","BLE","W Engine"]
 description: 'Another rabbit-hole. Testing a 18860 x ESP32.'
 url: 'understanding-batteries'
 math: true
@@ -24,6 +24,11 @@ Its been inspiring [this post from Sean](https://www.seangoedecke.com/blog-about
 Dealing with three distinctly different types of lithium battery chemistries.?
 
 Each one is engineered for a completely different purpose: one values balanced driving performance, one is built for extreme safety and longevity, and the other is optimized for pure, lightweight power.
+<!-- 
+https://www.youtube.com/watch?v=454yPdhbPWs -->
+
+{{< youtube "454yPdhbPWs" >}}
+
 
 ### Car batteries
 
@@ -46,6 +51,87 @@ The financial and energy breakdown for a trip in the Cupra EV:
 * **Financial Running Cost:** **$0.05 \text{ USD}$ per km** (which translates to $4.98 \text{ USD}$ per $100 \text{ km}$, or roughly $0.50 \text{ NOK}$ per km based on the total $811.40 \text{ NOK}$ spent over the $1630 \text{ km}$ trip).
 
 ### Bluetti 
+
+This has been very useful for my automatic watering setup
+
+<!-- https://youtube.com/shorts/1nK0-MDh7LY -->
+
+{{< youtube "1nK0-MDh7LY" >}}
+
+
+Also learnt along the way about [DC plugs anatomy](https://youtube.com/shorts/HwavCMkah0o)
+
+And that the bluetti can bring interesting MQTT data:
+
+* https://github.com/warhammerkid/bluetti_mqtt 3/4 yo
+* https://github.com/empicano/aiomqtt 3/4 months
+
+```sh
+uv tool install bluetti-mqtt
+uvx --with 'paho-mqtt<2' bluetti-mqtt --broker 192.168.1.2 --interval 10 E8:3D:C1:05:B6:52
+```
+
+uv fixed the Python dependency problem. The new failure is unrelated: your machine does not have the BlueZ Bluetooth service available.
+
+  The key line is:
+
+  bleak.exc.BleakDBusError: [org.freedesktop.systemd1.NoSuchUnit] Unit dbus-org.bluez.service not found.
+
+  That means bluetti-mqtt can talk to MQTT now, but it cannot access Linux Bluetooth.
+
+  Do this on the host:
+
+  sudo apt update
+  sudo apt install -y bluez
+  sudo systemctl enable --now bluetooth
+  systemctl status bluetooth
+
+  Then verify Bluetooth is visible:
+
+  bluetoothctl show
+  bluetoothctl scan on
+
+  After that, rerun:
+
+  uvx --with 'paho-mqtt<2' bluetti-mqtt --broker 192.168.1.2 --interval 10 E8:3D:C1:05:B6:52
+
+  If bluetoothctl still fails, then one of these is true:
+
+  - you’re in a VM or container without Bluetooth passthrough
+  - the host has no working Bluetooth adapter
+  - dbus / bluetoothd is not running correctly
+
+  If you want, I can help you check whether this is a missing package, a stopped service, or a container/VM Bluetooth passthrough issue.
+
+ 
+
+ uv fixed the Python dependency problem. The new failure is unrelated: your machine does not have the BlueZ Bluetooth service available.
+
+  The key line is:
+
+  That means bluetti-mqtt can talk to MQTT now, but it cannot access Linux Bluetooth.
+
+  Do this on the host:
+
+  sudo apt update
+  sudo apt install -y bluez
+  sudo systemctl enable --now bluetooth
+  systemctl status bluetooth
+
+  Then verify Bluetooth is visible:
+
+  bluetoothctl show
+  bluetoothctl scan on
+
+  After that, rerun:
+
+  uvx --with 'paho-mqtt<2' bluetti-mqtt --broker 192.168.1.2 --interval 10 E8:3D:C1:05:B6:52
+
+  If bluetoothctl still fails, then one of these is true:
+
+  - you’re in a VM or container without Bluetooth passthrough
+  - the host has no working Bluetooth adapter
+  - dbus / bluetoothd is not running correctly
 
 Your portable power station utilizes **LiFePO4** chemistry, LFP (Lithium Iron Phosphate)
 
