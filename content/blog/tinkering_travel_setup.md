@@ -292,7 +292,7 @@ To bring with you, a [compact laptop](https://jalcocert.github.io/JAlcocerT/lapt
 
 > This one is **~1.2kg**, a tablet can be ~500g
 
-You can also take a **4G LTE Wingle**, like the OLAX:
+You can also take a **4G LTE Wingle**, like the OLAX: *4G LTE wingle U90-E, with defaults  192.168.0.1 and pwd `admin`*
 
 ![4g-OLAX-Portable-Router](/blog_img/mini_pc/4g-router.png)
 

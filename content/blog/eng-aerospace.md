@@ -56,6 +56,8 @@ https://www.youtube.com/watch?v=al8d8BU-rT0 -->
 
 {{< youtube "al8d8BU-rT0" >}}
 
+Sometimes, [inestability means agility or efficiency](https://www.youtube.com/watch?v=iQ03qMD9u90)
+
 #### Spins
 
 Aka Barrena

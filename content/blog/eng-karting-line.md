@@ -193,6 +193,8 @@ And what do i get by adding the car parameters to my model?
 
 ## Conclusions
 
+Despite not having gps in my action cam...
+
 I had a lot of fun in this circuit :)
 
 {{< youtube "orzYl6u35ec" >}}
@@ -314,15 +316,15 @@ winget install sonixd
 For photo:
 
 1. Upscayl
-2. 
+2. [RawTherapee](https://github.com/RawTherapee/RawTherapee)
 
 For video I tend to get away with ffmpeg
 
 If you need more:
 
-1. 
-2. 
-3. 
+1. KDEnlive
+2. OBSStudio for recording
+3. Openshot
 
 #### Gaming
 

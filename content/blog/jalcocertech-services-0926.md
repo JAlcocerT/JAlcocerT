@@ -7,6 +7,11 @@ description: 'Beyond software. PV vs SAHP vs HVAC Simulations.'
 url: 'jalcocertech-services-update'
 ---
 
+<!-- www.youtube.com/watch?v=ijI3iOOcEog -->
+
+
+{{< youtube "ijI3iOOcEog" >}}
+
 **Tl;DR**
 
 coming from the [experiment on heat pump viability](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/#the-experiment)
@@ -315,7 +320,9 @@ https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
 
 You can [prepare to ULM/PPL](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl): `https://ulm-ppl-test.pages.dev/`
 
-Or just get ready to *DYOR* and make a DIY dron:
+Or just get ready to *DYOR* and make a DIY dron.
+
+Before flying, make sure you are aware about licenses, permissions, insurances and limitations
 
 #### FPV Telemetry
 
@@ -480,7 +487,7 @@ Its an **awsome PWA** that can write local files *and `.weba` audios*: `https://
 Underpaid in the D&A space? Document all that you do and put together an awsome CV.
 {{< /callout >}}
 
-You can also do this with the forgejo setup if you are not afraid of .md:
+You can also do this with the forgejo setup if you are not afraid of `.md`: `https://speedtest.fossengineer.com/jalcocert/my-logseq-notes`
 
 ```sh
 
