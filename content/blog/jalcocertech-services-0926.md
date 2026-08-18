@@ -2,7 +2,7 @@
 title: "[JAlcocerTech] Services Recap"
 date: 2026-09-01T11:20:21+01:00
 draft: false
-tags: ["Energy Solutions","OSS Journaling x Filesmd x Forgejo"]
+tags: ["Energy Solutions","OSS Journaling x Filesmd x Forgejo","JAlcocerTech Leads"]
 description: 'Beyond software. PV vs SAHP vs HVAC Simulations.'
 url: 'jalcocertech-services-update'
 ---

@@ -495,7 +495,7 @@ The Features: Every master setting, channel map, and hidden configuration the pr
 
 Here is exactly what is inside this second machine according to the data:
 
-The Drone Identity: This is an `Eachine Novice-IV` quad running a classic BETAFLIGHTF4 target on an STM32F405 processor.
+The Drone Identity: This is an `Eachine Novice-IV` quad running a classic BETAFLIGHTF4 target on an `STM32F405` processor.
 
 The Receiver Port: Your ExpressLRS receiver is configured on UART6 (serial 5 64).
 

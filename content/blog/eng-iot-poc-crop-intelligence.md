@@ -2,7 +2,7 @@
 title: "Crops Intelligence in the AI era"
 date: 2026-08-18
 draft: false
-tags: ["MQTT x EMQx","JAlcocerTech Leads","18650 x solar","Tech Talk"]
+tags: ["MQTT x EMQx","ESP32 x IRLZ44N x 1N4007","Tomatoes x Watering","Tech Talk"]
 description: 'All the learning after planting tomatoes. Ready to scale.'
 url: 'iot-crop-intelligence'
 math: true
@@ -54,10 +54,18 @@ But without the 250$ of [a bluetti](https://jalcocert.github.io/JAlcocerT/unders
 
 Testing with a manual switch is the best way to verify a **power circuit** before adding microcontrollers and software.
 
+```sh
+git clone https://github.com/JAlcocerT/electronics-101
+cd electronics-101/watering-plants/power-circuit-1
+```
+
+> I ended up making a [`components.json` to get clarity](https://github.com/JAlcocerT/electronics-101/blob/master/watering-plants/power-circuit-1/components.json) of the protoboard setup
+
 What Can Be Skipped
 
 * **The LED & its resistor:** 100% optional. It is only a visual power indicator.
 * **The 1 k$\Omega$ series gate resistor:** You can skip it for this manual switch test. You can wire the switch directly between **+12V** and the **Gate (Pin 1)**.
+
 *(The IRLZ44N gate can handle up to $\pm 16\text{ V}$, so direct +12V is within its safe limit).*
 
 The Two Components You Must NEVER Skip
@@ -144,27 +152,188 @@ Row 22 (Source): Contains only MOSFET Pin 3 (E22), one side of the 10k resistor 
 
 Diode Orientation: Double-check that the silver band is firmly plugged into the + Rail, not Row 21.
 
+You can verify the MOSFET connections before turning on the power using a few quick multimeter checks.
+
+1. Physical Pin Orientation Check
+
+Hold the **IRLZ44N** upright so you are looking directly at the **printed text on the front plastic face** (the metal tab with the mounting hole is facing away from you):
+
+```
+       ┌──────────────┐
+       │   IRLZ44N    │  <-- Front text facing you
+       │              │  <-- Metal heatsink tab on the back
+       └──┬────┬────┬─┘
+          │    │    │
+          1    2    3
+        Gate Drain Source
+
+```
+
+* **Pin 1 (Left - Gate):** Must be in **Row 20** (connects to switch & 10 k$\Omega$ resistor).
+* **Pin 2 (Middle - Drain):** Must be in **Row 21** (connects to pump negative & diode anode).
+* **Pin 3 (Right - Source):** Must be in **Row 22** (connects to ground & 10 k$\Omega$ resistor).
+
+For the vast majority of standard N-channel Power MOSFETs in a TO-220 package (like your IRLZ44N, as well as IRFZ44N, IRF540N, IRLB8721, IRF3205, STP16NF06L, etc.), yes, the industry standard pinout is almost always:$$\textbf{Pin 1 = Gate (G)} \quad\mid\quad \textbf{Pin 2 = Drain (D)} \quad\mid\quad \textbf{Pin 3 = Source (S)}$$(With text facing you, leads pointing down, and the metal tab internally tied to Pin 2 / Drain).
+
+2. Cold Resistance / Continuity Checks (Power Disconnected)
+
+Keep the Bluetti disconnected and use your multimeter in **Resistance ($\Omega$)** or **Continuity mode**:
+
+* **Drain to Tab Check:**
+* Probe the **metal tab on the back of the MOSFET** and **Row 21 (Drain / Pin 2)**.
+* **Result:** Should read $\approx 0\ \Omega$ (solid beep). The metal tab and the center pin are internally connected.
+
+
+* **Source to Ground Rail Check:**
+* Probe **Row 22 (Source / Pin 3)** and the **`-` Rail (Blue GND)**.
+* **Result:** Should read $\approx 0\ \Omega$ (solid beep). This confirms the MOSFET has a complete return path to ground.
+
+
+* **Gate to Source Pull-Down Check:**
+* Probe **Row 20 (Gate / Pin 1)** and **Row 22 (Source / Pin 3)**.
+* **Result:** Should read **$\approx 10\text{ k}\Omega$**. This confirms your pull-down resistor is correctly seated and pulling the gate to ground.
+
+
+* **Gate to Drain Isolation Check:**
+* Probe **Row 20 (Gate / Pin 1)** and **Row 21 (Drain / Pin 2)**.
+* **Result:** Should show **`OL` (infinite resistance / open circuit)**. If you see $0\ \Omega$, the pins are accidentally bridged on the breadboard.
+
+
+3. Switch Continuity Check (Power Still Disconnected)
+
+* Measure resistance between the **`+` Rail (Red)** and **Row 20 (Gate / Pin 1)**:
+* **Switch OPEN (OFF):** Should show **`OL` (open circuit)**.
+* **Switch CLOSED (ON):** Should show **$\approx 0\ \Omega$** (or near zero).
+
+
+
+If all these checks pass, your MOSFET is wired with the correct pinout, isolated from shorts, and ready for power.
+
+Awesome! Seeing it switch cleanly on the first try means your node wiring, polarities, and gate pull-down are all dialed in.
+
+Here are **3 quick live multimeter tests** to confirm your circuit is operating under textbook electrical conditions:
+
+Set your multimeter dial to **DC Voltage (V$\overline{\ldots}$)**. Keep the **Black probe** grounded on the **`-` Rail (Blue GND)** for all three tests, and touch the **Red probe** to the target rows:
+
+
+1. Gate Voltage Test ($V_{GS}$) — *Checks the Control Signal*
+
+* **Where to probe:** Red probe on **Row 20 (Gate)**.
+* **Switch OFF:** Should read **$0.0\text{ V}$**. (Confirms the 10 k$\Omega$ resistor pulls the gate all the way down to prevent phantom running).
+* **Switch ON:** Should read **$\approx 12.0\text{ V} - 13.5\text{ V}$**. (Confirms the MOSFET gets full gate overdrive to turn on with minimal resistance).
+
+2. Drain-to-Source Voltage Test ($V_{DS}$) — *Checks MOSFET Efficiency*
+
+* **Where to probe:** Red probe on **Row 21 (Drain)**.
+* **Switch OFF:** Should read **$\approx 12.0\text{ V} - 13.5\text{ V}$**. (The pump isn't conducting, so the drain is pulled up to +12V through the motor coils).
+* **Switch ON:** Should drop to **almost $0\text{ V}$ (typically $0.02\text{ V} - 0.1\text{ V}$)**.
+* *Why this matters:* The closer to $0\text{ V}$ it is while the pump runs, the more completely the MOSFET is saturated, meaning virtually zero wasted power/heat in the transistor.
+
+
+3. Pump Terminal Voltage — *Checks Available Motor Power*
+
+* **Where to probe:** Red probe on the **`+` Rail (Red)**, Black probe on **Row 21 (Drain)**.
+* **Switch OFF:** Reads **$0.0\text{ V}$**.
+* **Switch ON:** Reads the full **$\approx 12.0\text{ V} - 13.5\text{ V}$** delivered directly across the pump terminals.
+
+Put the minus (Black probe) in any hole along the - Rail (the Blue Ground rail) or directly in Row 22 (Source / Pin 3).Both spots are your 0V Ground reference.What to Look For:Switch OFF: The multimeter should read $0.0\text{ V}$.Switch ON: The multimeter should read $\approx 12.0\text{ V} - 13.5\text{ V}$ (your full Bluetti supply voltage).
+
+Fantastic! Having the gate read 0.0 V when OFF and the full 12 V when ON confirms your control circuit and pull-down resistor are working under ideal conditions.Now check the Drain (Pin 2 / Row 21) while keeping your Black probe on the - Rail (Ground):Switch OFF: Touch Red probe to Row 21 (Drain).Expected: Reads full supply voltage ($\approx 12.0\text{ V} - 13.5\text{ V}$).Switch ON: Touch Red probe to Row 21 (Drain) while the pump is spinning.Expected: Drops to nearly zero ($0.02\text{ V} - 0.1\text{ V}$).That drop to near $0\text{ V}$ confirms the MOSFET is fully saturated and acting like a solid closed switch with virtually zero power loss or heat.
+
+---
+
+Bonus: Clamp Meter Current Test (If you have a current clamp)
+
+If your meter has a DC clamp head, clamp it around **only the Pump Red wire** (or only the Black wire, never both together) while running:
+
+* **Dry running:** Expect around **$0.7\text{ A} - 0.9\text{ A}$** ($\approx 8 - 11\text{ W}$).
+
 {{< /details >}}
+
+<!-- https://youtube.com/shorts/vOa2auALcY0 -->
+
+I got [this simulated here ](https://github.com/JAlcocerT/electronics-101/tree/master/watering-plants/power-circuit-1)before plugging DC on in the bluetti. 
+
+{{< youtube "vOa2auALcY0" >}}
+
+> Yep, I used TooN instead of json to make it with the 5k yt chars limit
 
 
 ### The Control Circuit
 
+With this configuration: the manual switch moves from “driving the MOSFET gate with 12 V” to “enabling the pump’s +12 V feed.” The ESP32 drives the MOSFET gate separately at 3.3 V through a gate resistor. ESP32 GND, MOSFET source, and 12 V supply negative must share ground.
 
+The only additional component you need is : the esp32 and a 220 ohm resistor to limit current
+
+- ESP32
+  - 100 Ω to 220 Ω gate resistor between ESP32 GPIO and MOSFET gate
+  - Keep the existing 10 kΩ gate pulldown from gate to source/GND
+  - Keep the existing flyback diode
+  - Keep the existing pump/MOSFET wiring
+  - Move the manual switch so it enables the pump’s +12 V feed, not the MOSFET gate
+
+  Connections:
+
+  ESP32 GPIO -> 220 Ω -> MOSFET gate
+  MOSFET gate -> 10 kΩ -> MOSFET source/GND
+  ESP32 GND -> same GND as MOSFET source and 12 V supply negative
+
+  Do not connect 12 V to any ESP32 pin.
+
+  The caution: your IRLZ44N was excellent with 12 V on the gate. With ESP32, the gate only gets 3.3 V. It may work for a 1.6 A pump, but check the MOSFET temperature after a short pulse. If it gets warm/hot, use a proper 3.3 V logic-level MOSFET or add a small gate-driver/level-shift stage.
+
+Because a MOSFET is not just “on/off”; the gate voltage controls how strongly on it is.
+
+  For an N-channel MOSFET:
+
+  higher Vgs -> lower Rds(on) -> less heat
+  lower Vgs  -> higher Rds(on) -> more heat
+
+  The pump current flows through the MOSFET drain-source path. The MOSFET behaves like a small resistor when on. Heat is:
+
+  Pheat = I^2 * Rds(on)
+
+  Your pump is about:
+
+  19 W / 12 V ≈ 1.6 A
+
+  Example:
+
+  If Rds(on) = 0.03 Ω:
+  P = 1.6^2 * 0.03 ≈ 0.08 W   cool
+
+  If Rds(on) = 0.30 Ω:
+  P = 1.6^2 * 0.30 ≈ 0.77 W   noticeably warm/hot
+
+  With 12 V on the gate, the IRLZ44N is driven very hard on, so Rds(on) is low. With 3.3 V, it may only be partially enhanced, so Rds(on) can be much higher.
+
+  Also, Vgs(th) is misleading. If a datasheet says threshold is 1-2 V, that only means the MOSFET barely starts conducting a tiny current. It does not mean it can handle a pump efficiently at that
+  gate voltage.
+
+  So for ESP32 control, the best part is a MOSFET whose datasheet explicitly specifies low Rds(on) at Vgs = 2.5 V or 3.3 V.
+
+#### The ESP Logic
+
+I placed [here some initial esp32 smoke test](https://github.com/JAlcocerT/electronics-101/tree/master/watering-plants/power-circuit-2).
+
+Then, the final version is here.
 
 ### The sensors you need
 
+You can make of these sensors good companions:
+
 1. DHT22 - For air temp & humidity
 2. - Soil humidity
-3. MLX - If you want leave temp
+3. MLX - If you want surface, like leaves temp
+4. DB if you want water temp
+
 
 #### More BoM
 
 4. Battery 18650 - *I got Samsung 35E (INR18650-35E)*
 5. ESP32
 6. Solar panel
-7. TP4056 x DW01A
-
-https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#home-solar-test-x-tp4056
+7. [TP4056](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#home-solar-test-x-tp4056) x DW01A
 
 * **TP4056** = Stops it from going above $4.2\text{V}$ (Overcharge Protection).
 * **DW01A Circuit** = Stops it from dropping below ~$2.4\text{V}$ (Over-discharge Protection).
@@ -178,12 +347,12 @@ The 12V BLDC *centrifugal* pump:
 {{< youtube "mKVvW_jl3UI" >}}
 
 <!-- 
-https://youtube.com/shorts/mKVvW_jl3UI -->
+https://youtube.com/shorts/mKVvW_jl3UI 
+-->
 
 Came together with some fuses: 
 
 And rectifier diodes:
-
 
 #### More stuff
 
@@ -367,7 +536,7 @@ Practical Considerations
 {{< /details >}}
 
 
-{{< details title="TRIAC vs MOSFET... 📌" closed="true" >}}
+{{< details title="TRIAC vs MOSFET 📌" closed="true" >}}
 
 They serve a similar purpose—acting as solid-state electronic switches—but they operate on fundamentally different principles and target completely different types of circuits.
 
@@ -513,6 +682,45 @@ Common Applications
 
 {{< /details >}}
 
+> Needed to do an additional [experiment here to make sure the mosfet wont overheat](https://github.com/JAlcocerT/electronics-101/blob/master/watering-plants/power-circuit-2/multimeter-test.md)...
+
+
+  1. First test power-circuit-1 manually
+
+  This proves the high-current path is good before adding ESP32 complexity.
+
+  Measure:
+
+  Vgs OFF
+  Vgs ON
+  Vds while pump runs
+  Bluetti power
+  MOSFET temperature
+
+  In this setup you expect:
+
+  Vgs ON ≈ 12 V
+  Vds very low
+  MOSFET cool
+
+  If this fails, the issue is wiring, MOSFET orientation, diode placement, pump path, or power path. Fix that before adding ESP32.
+
+  2. Then test power-circuit-2 with ESP32
+
+  This checks the new question: is 3.3 V gate drive enough?
+
+  In this setup you expect:
+
+  Vgs ON ≈ 3.3 V
+  Vds still low
+  MOSFET still cool
+
+  The comparison is the whole point:
+
+  manual 12 V gate: Vds = ?
+  ESP32 3.3 V gate: Vds = ?
+
+  If Vds is low in both, your MOSFET is fine with ESP32. If Vds is low at 12 V but high at 3.3 V, the MOSFET needs stronger gate drive or replacement.
 
 
 {{< details title="The 1N4007 diode to prevent kickback... 📌" closed="true" >}}
