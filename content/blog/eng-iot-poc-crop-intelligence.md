@@ -611,7 +611,7 @@ Practical Considerations
 
 
 
-{{< details title=IRLZ44N MOSFET... 📌" closed="true" >}}
+{{< details title="IRLZ44N MOSFET... 📌" closed="true" >}}
 
 The **IRLZ44N** is an **N-channel Logic-Level Power MOSFET**.
 
