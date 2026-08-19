@@ -2,17 +2,11 @@
 title: "[IoT] Meeting AI. AIoT with a Raspberry Pi."
 date: 2026-09-23
 draft: false
-tags: ["Tinkering IRL","M2M"]
+tags: ["Tinkering IRL","M2M","Arduino-CLI x Velxio"]
 description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'
 url: 'just-about-iot'
 ---
 
-
-https://www.thingsmobile.com/business/plans/find-the-best-plan
-
-machine 2 machine - m2m
-
-https://www.youtube.com/watch?v=4Fx_3Mt1Ud4
 
 **TL;DR:** 
 
@@ -26,6 +20,47 @@ BTW, this is the [last ebook](#conclusions) of [the DIY series](https://jalcocer
 
 * WHY Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+
+### Pi Cool Stuff
+
+I keep finding more and more cool things about the Raspberry Pis, like:
+
+* https://pabramsor.com/graphical-interface-for-raspberry-pi-gpio/
+
+```sh
+git clone https://github.com/Bardo91/rpi_gpio_gui
+#pip install PyQt5 RPi.GPIO
+#pip3 install PyQt5 RPi.GPIO
+
+python3 rpi_gpio_gui.py
+```
+
+#### Pi and leds
+
+**LEDs**
+
+* https://github.com/awawa-dev/HyperHDR
+
+* https://github.com/appleimperio/docker-hyperhdr
+
+> MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
+
+#### Zigbee
+
+If you have been playing with IoT and some home devices, you will come to know Zigbee.
+
+* https://www.zigbee2mqtt.io/supported-devices/#
+
+Probably also `https://esphome.io` if you like ESP32 boards!
+
+
+https://www.thingsmobile.com/business/plans/find-the-best-plan
+
+machine 2 machine - m2m
+
+https://www.youtube.com/watch?v=4Fx_3Mt1Ud4
 
 
 Its been a while since ive been tinkering around [MQTT and messaging protocols](https://jalcocert.github.io/JAlcocerT/messaging-protocols/)

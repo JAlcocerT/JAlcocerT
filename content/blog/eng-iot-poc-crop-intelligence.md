@@ -250,6 +250,8 @@ If your meter has a DC clamp head, clamp it around **only the Pump Red wire** (o
 
 {{< /details >}}
 
+
+
 <!-- https://youtube.com/shorts/vOa2auALcY0 -->
 
 I got [this simulated here ](https://github.com/JAlcocerT/electronics-101/tree/master/watering-plants/power-circuit-1)before plugging DC on in the bluetti. 
@@ -257,6 +259,24 @@ I got [this simulated here ](https://github.com/JAlcocerT/electronics-101/tree/m
 {{< youtube "vOa2auALcY0" >}}
 
 > Yep, I used TooN instead of json to make it with the 5k yt chars limit
+
+
+Placing that $470\,\mu\text{F}$ capacitor across your power rails addresses two transient issues:
+
+* **Voltage Sags / Dips:** When the motor starts up, it demands a sudden burst of current (inrush). The capacitor acts like a local reservoir, instantly dumping charge to prevent the 12V rail voltage from dipping and causing the Bluetti port or ESP32 to brown out.
+* **Transient Voltage Spikes / Ringing:** When the motor switches off, wire inductance can bounce electrical energy back into the power lines. The capacitor helps smooth out those fluctuations alongside your flyback diode.
+
+omponent Roles Summary
+
+| Component | Main Job |
+| --- | --- |
+| **$470\,\mu\text{F}$ Capacitor** | Buffers the power supply against sudden voltage drops and line ripple during motor start/run. |
+| **1N4007 Diode** | Clamps the massive high-voltage reverse spike (inductive kickback) when the motor shuts off. |
+| **$10\text{ k}\Omega$ Resistor** | Pulls the gate to 0V to prevent floating/false triggers. |
+| **$220\,\Omega$ Resistor** | Limits gate inrush current to protect the ESP32 GPIO pin. |
+| **IRLZ44N MOSFET** | Performs the actual solid-state low-side switching. |
+
+With the capacitor, diode, pull-down, and gate resistor in place, your circuit has all the standard protection stages needed for reliable, long-term switching.
 
 
 ### The Control Circuit
@@ -314,8 +334,7 @@ Because a MOSFET is not just “on/off”; the gate voltage controls how strongl
 
 #### The ESP Logic
 
-I placed [here some initial esp32 smoke test](https://github.com/JAlcocerT/electronics-101/tree/master/watering-plants/power-circuit-2).
-
+I placed [here some initial esp32 smoke test](https://github.com/JAlcocerT/electronics-101/tree/master/watering-plants/power-circuit-2) to make sure that [the components](https://github.com/JAlcocerT/electronics-101/blob/master/watering-plants/power-circuit-2/components.toon) wont be fried for neither setup 1 w/o esp and with it.
 
 It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer) to deploy the code to the ESP32
 
@@ -326,12 +345,59 @@ It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlc
 ./upload-deepsleep.sh /dev/ttyACM0
 ```
 
+
+  cd /home/jalcocert/Desktop/poc/iot-rpi-dht
+
+  make arduino-install-cli
+  make arduino-setup
+  make arduino-board-list
+  make flash PORT=/dev/ttyUSB0
+
+  make flash-picow
+
+  ESP32 firmware files are under:
+
+  iot-rpi-dht/scripts-microcontrollers/firmware-esp32/
+
+  Pico W firmware files are under:
+
+  iot-rpi-dht/scripts-microcontrollers/firmware-picow/
+
+```sh
+cd ./poc/iot-esp-water
+
+make board-list
+make compile
+make upload PORT=/dev/ttyACM0
+make monitor PORT=/dev/ttyACM0
+```
+
+<!-- 
+https://youtube.com/shorts/Jyd-0OEG5RQ 
+-->
+
+{{< youtube "Jyd-0OEG5RQ" >}}
+
+You now have a fully functional, safe, and protected **dual-control circuit**:
+
+* **Hardware Safety:** The physical toggle switch acts as a true master cut-off on the 12V high side.
+* **Firmware Control:** The ESP32 safely triggers the low-side IRLZ44N MOSFET at 3.3V via GPIO 23.
+* **Circuit Protection:** The flyback diode handles inductive voltage spikes, the bulk capacitor prevents rail sagging, and the pull-down/gate resistors protect the microcontroller and gate.
+
+Final Check (Optional Sanity Check)
+
+If you have your multimeter handy, perform one quick 2-second pulse reading across the MOSFET:
+
+* **Red probe:** Row 21 (Drain)
+* **Black probe:** Blue Rail (GND)
+
+If that reading is **$< 0.15\text{ V}$** while the pump spins, your MOSFET is running ice-cold and **fully saturated**.
+
 > Then, the final esp code version is here.
 
-You can also try to build around [HA and MQTT like i did here](https://jalcocert.github.io/JAlcocerT/pico-w/#ha-x-mqtt) or nodered
+You can also try to build around [HA and MQTT like i did here](https://jalcocerT.github.io/JAlcocerT/pico-w/#ha-x-mqtt) or nodered
 
-* https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant
-and node red
+* https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant and node red
 
 #### Controlling the ESP32 from the homelab
 
@@ -568,11 +634,11 @@ If you are looking for a precise and versatile magnetometer sensor, the GY-273 i
 
 For a basic bench test, the circuit can function without one, but for a reliable, permanent setup, adding capacitors is strongly recommended.
 
-When a DC motor turns on, it draws an instant inrush current (3–5× its running current) and generates high-frequency brush noise. This causes voltage dips and electrical spikes that can randomly reset or crash the ESP32.
+When a DC motor turns on, it draws an instant inrush current (3–5× its running current) and generates high-frequency brush noise. 
 
----
+This causes voltage dips and electrical spikes that can randomly reset or crash the ESP32.
 
-### Where Capacitors Help Most
+Where Capacitors Help Most
 
 * **1. Bulk Decoupling Capacitor on the 12V Rail (Highly Recommended)**
 * **Value:** $100\,\mu\text{F}\text{ to }470\,\mu\text{F}$ electrolytic (rated for $\ge 25\text{V}$).
@@ -585,20 +651,10 @@ When a DC motor turns on, it draws an instant inrush current (3–5× its runnin
 * **Placement:** Directly across the pump's `+` and `-` terminals (or between the `+` Rail and Row 21).
 * **Purpose:** Absorbs high-frequency EMI/RF sparks created by the motor's internal carbon brushes.
 
-
-
----
-
-### Where You Should NOT Put a Capacitor
+Where You Should NOT Put a Capacitor
 
 * **Do not put a capacitor on the MOSFET Gate (Row 20 to GND).**
 * Adding capacitance directly on the gate slows down the switching speed. This forces the MOSFET to spend more time transitioning through its resistive "linear region," causing unnecessary heat.
-
-
-
----
-
-### Summary Checklist
 
 | Capacitor | Value | Where It Goes | Is It Essential? |
 | --- | --- | --- | --- |
@@ -807,42 +863,42 @@ Common Applications
 > Needed to do an additional [experiment here to make sure the mosfet wont overheat](https://github.com/JAlcocerT/electronics-101/blob/master/watering-plants/power-circuit-2/multimeter-test.md)...
 
 
-  1. First test power-circuit-1 manually
+1. First test power-circuit-1 manually
 
-  This proves the high-current path is good before adding ESP32 complexity.
+This proves the high-current path is good before adding ESP32 complexity.
 
-  Measure:
+Measure:
 
-  Vgs OFF
-  Vgs ON
-  Vds while pump runs
-  Bluetti power
-  MOSFET temperature
+Vgs OFF
+Vgs ON
+Vds while pump runs
+Bluetti power
+MOSFET temperature
 
-  In this setup you expect:
+In this setup you expect:
 
-  Vgs ON ≈ 12 V
-  Vds very low
-  MOSFET cool
+Vgs ON ≈ 12 V
+Vds very low
+MOSFET cool
 
-  If this fails, the issue is wiring, MOSFET orientation, diode placement, pump path, or power path. Fix that before adding ESP32.
+If this fails, the issue is wiring, MOSFET orientation, diode placement, pump path, or power path. Fix that before adding ESP32.
 
-  2. Then test power-circuit-2 with ESP32
+2. Then test power-circuit-2 with ESP32
 
-  This checks the new question: is 3.3 V gate drive enough?
+This checks the new question: is 3.3 V gate drive enough?
 
-  In this setup you expect:
+In this setup you expect:
 
-  Vgs ON ≈ 3.3 V
-  Vds still low
-  MOSFET still cool
+Vgs ON ≈ 3.3 V
+Vds still low
+MOSFET still cool
 
-  The comparison is the whole point:
+The comparison is the whole point:
 
-  manual 12 V gate: Vds = ?
-  ESP32 3.3 V gate: Vds = ?
+manual 12 V gate: Vds = ?
+ESP32 3.3 V gate: Vds = ?
 
-  If Vds is low in both, your MOSFET is fine with ESP32. If Vds is low at 12 V but high at 3.3 V, the MOSFET needs stronger gate drive or replacement.
+If Vds is low in both, your MOSFET is fine with ESP32. If Vds is low at 12 V but high at 3.3 V, the MOSFET needs stronger gate drive or replacement.
 
 I cannot generate images directly with an image model in this text-based mode, but I can provide detailed visual descriptions or a structured diagram showing the transfer and output curves for an N-channel logic-level MOSFET like the IRLZ44N.
 
@@ -1046,6 +1102,7 @@ Powering It Safely
 
 ### The Software for D&A
 
+
 #### MicroControllers
 
 
@@ -1058,6 +1115,8 @@ Powering It Safely
 
 ## Conclusions
 
+This project is the proof of concept showing the basic and foundational building blocks of electronics and embedded systems: **MCU logic (ESP32)**, **power switching (Logic-Level N-MOSFET)**, and **transient load protection (flyback diode, decoupling capacitor, pull-down/gate resistors)**.
+
 Too much to digest?
 
 Go ask chatgpt
@@ -1068,6 +1127,103 @@ Or...get real results with a higher time ROI:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
+
+
+### Other similar projects
+
+
+Tier 1: Natural Extensions of Your Current Setup
+
+* **Automated Soil-Moisture Plant Watering System**
+* **Concept:** Add a capacitive soil moisture sensor to read analog values. When the soil drops below a calibrated threshold, run the 12V pump for 3 seconds.
+* **New Skill:** Analog reading (`analogRead()`), calibration curves, and conditional logic.
+
+
+* **Variable Speed Fan / Motor Controller (PWM)**
+* **Concept:** Use the ESP32’s hardware PWM (`ledcWrite`) to smoothly control the speed of a 12V fan or pump instead of basic ON/OFF switching.
+* **New Skill:** Pulse Width Modulation, understanding switching frequency effects on inductive loads.
+
+
+* **12V Dimmable LED Strip Controller**
+* **Concept:** Replace the pump with a 12V analog LED strip (single color or 3 MOSFETs for RGB).
+* **New Skill:** Smooth fading effects, driving purely resistive high-current loads without back-EMF.
+
+
+Tier 2: IoT & Remote Control
+
+* **Home Assistant / ESPHome Smart Valve**
+* **Concept:** Flash ESPHome onto the ESP32 and integrate your 12V pump or a 12V solenoid valve directly into Home Assistant via Wi-Fi.
+* **New Skill:** No-code IoT firmware, MQTT/API communication, remote scheduling.
+
+
+* **Wi-Fi / Web Dashboard Water Doser**
+* **Concept:** Host a lightweight web server directly on the ESP32 (`WebServer.h`) to display system status and trigger watering bursts from your phone's browser.
+* **New Skill:** Asynchronous web servers, handling HTTP POST requests.
+
+
+Tier 3: Adding High-Power Actuators
+
+* **12V Solenoid Door Lock / Pet Feeder**
+* **Concept:** Use the exact same MOSFET circuit to drive a high-force 12V pull-type solenoid or linear actuator for automated locking or feeding mechanisms.
+* **New Skill:** Fast-acting inductive actuation.
+
+
+* **Bidirectional Motor Control (H-Bridge)**
+* **Concept:** Expand from a single MOSFET (unidirectional) to an H-Bridge driver (like the L298N or DRV8833) to drive a DC motor forward and reverse for motorized blinds or robotics.
+* **New Skill:** Directional switching logic and high-side/low-side driver pairs.
+
+
+| Project | Hardware Added | Key Concept Learned | Difficulty |
+| --- | --- | --- | --- |
+| **Plant Watering** | Capacitive Moisture Sensor | Analog inputs & calibration | Beginner |
+| **PWM Speed Control** | None (same circuit) | Hardware PWM / duty cycles | Beginner |
+| **IoT Web Doser** | None (same circuit) | Wi-Fi / Web server on ESP32 | Intermediate |
+| **12V Solenoid Lock** | 12V Push-Pull Solenoid | High-force pulse actuation | Beginner |
+| **Motorized Blinds** | H-Bridge module + Geared Motor | Bidirectional current control | Intermediate |
+
+**PC fans are ideal for testing PWM.**
+
+In fact, they give you two different ways to run the test depending on which fan you choose.
+
+Understanding the Wires
+
+| Fan Type | Wire Colors (Typical) | Pin Functions |
+| --- | --- | --- |
+| **3-Pin Fan** | Black, Red, Yellow | 1: GND, 2: +12V, 3: Tachometer (RPM speed sensor) |
+| **4-Pin Fan** | Black, Yellow, Green, Blue | 1: GND, 2: +12V, 3: Tachometer, 4: Native PWM Control |
+
+Option A: Using the 3-Pin Fan (Uses Your Exact Existing MOSFET Circuit)
+
+A 3-pin fan is controlled by **chopping the ground line via your MOSFET**, exactly like your water pump:
+
+* **Wiring:**
+* **Fan Red (+12V):** Connects to breadboard **`+` Rail (Red)**.
+* **Fan Black (GND):** Connects to **Row 21 (MOSFET Drain)**.
+* **Fan Yellow (Tach):** Leave disconnected for now.
+* *Keep your 1N4007 flyback diode in place across `+` and Row 21.*
+
+* **How it works:** The ESP32 sends a PWM signal to the MOSFET gate, pulsing power to the fan motor to change its speed.
+
+Option B: Using the 4-Pin Fan (Direct ESP32 Control — No MOSFET Needed)
+
+4-pin fans have an internal MOSFET and driver chip built right into the fan hub:
+
+* **Wiring:**
+* **Fan Yellow/Red (+12V):** Directly to **+12V Rail**.
+* **Fan Black (GND):** Directly to **`-` (GND) Rail**.
+* **Fan Blue (PWM Pin):** Directly to **ESP32 GPIO 23** (via a $220\,\Omega$ resistor for protection).
+* **Fan Green (Tach):** Leave disconnected.
+
+
+* **How it works:** The fan receives constant 12V power, and the ESP32 speaks directly to the fan’s internal logic using a standard $25\text{ kHz}$ PWM signal.
+
+
+* If your goal is to **learn how your IRLZ44N MOSFET behaves with PWM**, use the **3-pin fan** (or just the $+12\text{V}$ and $\text{GND}$ wires of the 4-pin fan connected to Row 21).
+* If your goal is the **quietest and most standard PC fan control**, use the **4-pin fan's blue wire**.
+
+---
+
+## FAQ
 
 
 ### Tomato Evolution
@@ -1118,26 +1274,23 @@ https://www.youtube.com/watch?v=s-xkdfNeIVw
 -->
 
 
-
-
-### Interesting yt channels
-
-1. https://www.youtube.com/@FarmCraft101/videos
-2. https://www.youtube.com/@kirstendirksen/videos
-
----
-
-## FAQ
-
 Tomatoe one timer?
 
 1. Get them as much sun as possible
 2. Get them water in the early morning
 3. Get them space for the roots: *~20L for 1 plant worked well for me*
 
-### Tomatoe Prep for Next Year
+### Tomatoes Prep for Next Year
 
 What would I do different next year?
+
+
+
+
+### Interesting yt channels
+
+1. https://www.youtube.com/@FarmCraft101/videos
+2. https://www.youtube.com/@kirstendirksen/videos
 
 
 ### Geo Matters

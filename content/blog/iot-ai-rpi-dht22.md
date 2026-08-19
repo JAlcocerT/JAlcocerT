@@ -20,7 +20,7 @@ Coming from the [pgsql x langchain post](https://jalcocert.github.io/JAlcocerT/c
 
 ...together with [langchain RAG + db queries](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/) even [BAML](https://jalcocert.github.io/JAlcocerT/using-baml-to-query-a-database/).
 
-How about some IoT x AI as a companion?
+How about some **IoT x AI** as a companion?
 
 ```sh
 #cd ./poc/iot-rpi-dht
@@ -307,38 +307,6 @@ We can do IoT projects with the Pi that push sensor data to Databricks.
 ![Mongo to Databricks](/blog_img/dev/databricks-mongo.JPG) 
 -->
 
-
-### Pi Cool Stuff
-
-I keep finding more and more cool things about the Raspberry Pis, like:
-
-* https://pabramsor.com/graphical-interface-for-raspberry-pi-gpio/
-
-```sh
-git clone https://github.com/Bardo91/rpi_gpio_gui
-#pip install PyQt5 RPi.GPIO
-#pip3 install PyQt5 RPi.GPIO
-
-python3 rpi_gpio_gui.py
-```
-
-#### Pi and leds
-
-**LEDs**
-
-* https://github.com/awawa-dev/HyperHDR
-
-* https://github.com/appleimperio/docker-hyperhdr
-
-> MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
-
-#### Zigbee
-
-If you have been playing with IoT and some home devices, you will come to know Zigbee.
-
-* https://www.zigbee2mqtt.io/supported-devices/#
-
-Probably also `https://esphome.io` if you like ESP32 boards!
 
 ---
 

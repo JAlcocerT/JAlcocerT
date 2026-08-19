@@ -1,15 +1,31 @@
 ---
 title: "[IoT] Sensors"
-date: 2026-09-25
+date: 2026-09-23
 draft: false
 tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
 
+
+
+**Tl;DR**
+
+Isnt it time to build something real?
+
+**Intro**
+
 * WHY Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+
+Recently, arduino has been bought by QCOM.
+
+Historically, Arduino has maintained a strong open-source philosophy for both its hardware and software.
+
+The schematics, PCB designs, and core firmware for Arduino boards like the Uno, Mega, and others have been openly available, allowing manufacturers and hobbyists to create compatible clones or customize designs. 
+
+The Arduino Integrated Development Environment (IDE) and associated libraries are also open-source, supporting collaborative development and community-driven improvements.
 
 https://github.com/855princekumar/sense-hive
 
@@ -50,21 +66,6 @@ A raspberry Pi inside a container - https://github.com/ptrsr/pi-ci
 ## IoT with Arduino
 
 ## IoT with RISC-V
-
-
-**Tl;DR**
-
-Isnt it time to build something real?
-
-**Intro**
-
-Recently, arduino has been bought by QCOM.
-
-Historically, Arduino has maintained a strong open-source philosophy for both its hardware and software.
-
-The schematics, PCB designs, and core firmware for Arduino boards like the Uno, Mega, and others have been openly available, allowing manufacturers and hobbyists to create compatible clones or customize designs. 
-
-The Arduino Integrated Development Environment (IDE) and associated libraries are also open-source, supporting collaborative development and community-driven improvements.
 
 {{< details title="AI Asisted Web Search... 📌" closed="true" >}}
 

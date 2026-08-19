@@ -1,19 +1,21 @@
 ---
 title: "Embedded"
-date: 2026-10-21
+date: 2026-09-24
 draft: false
 description: "A solar panel, summer and the ESP32 microcontroller"
 tags: ["Self-Hosting","IoT","MicroControllers"]
 url: 'iot-vs-embedded'
 ---
 
-
-
-**Tl;DR**
+**TL;DR:** 
 
 Are you IoT capable or even embedded?
 
+
 **Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 By the time I was putting together my [last can-do snapshot](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/), aka services recap
 
