@@ -220,7 +220,7 @@ make list-user-repos NEW_USER=hermesagent
 
 With that, instead of having agents doing weird stuff with access to your github pwd, they will just tinker with an non admin user of your forgejo instance.
 
-For additional security, you can have foregejo running separately from the Pi, like i did having it at my x300: `http://192.168.1.12:3034`
+For additional security, you can have foregejo running separately from **the Pi**, like i did having it at my x300: `http://192.168.1.12:3034`
 
 > Make sure you adjusted [this env variable](https://github.com/JAlcocerT/Home-Lab/blob/main/forgejo/docker-compose.yml#L21) accordingly
 

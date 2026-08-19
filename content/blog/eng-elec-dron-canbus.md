@@ -923,10 +923,9 @@ My recommendation: next time take CANable + SavvyCAN for passive raw CAN work, a
 
 Keep them conceptually separate.
 
+* https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#what-actually-happens-in-the-valve
 
-https://jalcocert.github.io/JAlcocerT/electromagnetism-101/#what-actually-happens-in-the-valve
-
-https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101
+* https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101
 
 ![alt text](/blog_img/electronic/forgejo-electronics-mirror.png)
 

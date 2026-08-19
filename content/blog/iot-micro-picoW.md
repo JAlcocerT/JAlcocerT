@@ -684,7 +684,9 @@ The Backend (Flask)
 The Flask side of the application would be the "server" that receives the MQTT messages. You would:
 
 1.  **Initialize the Flask app** and an MQTT client.
+
 2.  **Define an MQTT callback function** that gets triggered whenever a new temperature message arrives from your Pico W.
+
 3.  Inside this callback, you would store the most recent temperature value and then broadcast it to any connected web clients using a library like **Flask-SocketIO**. 
 
 This backend script would be continuously running, listening for both MQTT data and requests from web browsers.
@@ -698,7 +700,9 @@ The frontend is the simple web page that displays the data. You would create a s
 3.  A JavaScript script that connects to your Flask server via **SocketIO**.
 4.  Once connected, the script would listen for the temperature data broadcast from the server and update the content of the `<div>` with the new temperature value.
 
-This setup is efficient because it avoids traditional page reloads. Instead, the server pushes new data to the browser as soon as it's available, creating a real-time, dynamic display.
+This setup is efficient because it avoids traditional page reloads. 
+
+Instead, the server pushes new data to the browser as soon as it's available, creating a real-time, dynamic display.
 
 {{% /details %}}
 

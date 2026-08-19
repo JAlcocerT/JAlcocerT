@@ -2,14 +2,14 @@
 title: "Jira 101 vs ADO | PDF to md with Kreuzberg"
 date: 2025-09-08T00:20:21+01:00
 draft: false
-description: 'Jira DataModel with AI. Pandoc is great, more if you are not alergic to Latex.'
+description: 'Jira DataModel with AI. Pandoc is great - if you are not alergic to Latex.'
 url: 'jira-data-model-with-ai'
 tags: ["D&A","Azure DevOps","Pandoc","PDF ipynb md","ER Diagram Mermaid","PowerBI","Jira API"]
 ---
 
 **TL;DR**
 
-As tech lead, you will need to analyze requirements/proposal to clients.
+As tech lead, you will need to [analyze requirements/proposal to clients](https://github.com/JAlcocerT/jira-datamodel).
 
 +++ Create the technical solution document in pdf and probably create some [ppt with slidev](#conclusions).
 

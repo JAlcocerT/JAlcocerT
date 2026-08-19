@@ -3,7 +3,7 @@ title: "Embedded x The ESP32 comeback"
 date: 2026-08-15
 draft: false
 description: "A solar panel, summer and the ESP32 microcontroller."
-tags: ["IoT","NodeRed","TP4056 x DW01A x 18650 vs Bluetti","BLE"]
+tags: ["IoT x Arduino-CLI","TP4056 x DW01A x 18650 vs Bluetti","BLE"]
 url: 'esp32-x-solar-x-plants'
 ---
 
@@ -17,6 +17,15 @@ How much solar is enough for the mqtt x dht setup with a ESP32?
 * Why Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+
+It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer) to deploy the code to the ESP32
+
+```sh
+#cd ./poc/iot-rpi-dht
+#arduino-cli board list #make serial-list
+#cd /home/jalcocert/Desktop/poc/iot-rpi-dht/scripts-arduino-setup
+./upload-deepsleep.sh /dev/ttyACM0
+```
 
 https://github.com/gsampallo/mqtt_valvula
 

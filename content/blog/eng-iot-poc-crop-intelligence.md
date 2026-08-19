@@ -2,8 +2,8 @@
 title: "Crops Intelligence in the AI era"
 date: 2026-08-18
 draft: false
-tags: ["MQTT x EMQx","ESP32 x IRLZ44N x 1N4007","Tomatoes x Watering","Tech Talk"]
-description: 'All the learning after planting tomatoes. Ready to scale.'
+tags: ["MQTT x EMQx","ESP32 x IRLZ44N x 1N4007","Tomatoes x Watering","Arduino-CLI"]
+description: 'Learning after planting in spring. Ready to scale.'
 url: 'iot-crop-intelligence'
 math: true
 ---
@@ -209,7 +209,7 @@ Keep the Bluetti disconnected and use your multimeter in **Resistance ($\Omega$)
 
 If all these checks pass, your MOSFET is wired with the correct pinout, isolated from shorts, and ready for power.
 
-Awesome! Seeing it switch cleanly on the first try means your node wiring, polarities, and gate pull-down are all dialed in.
+Seeing it switch cleanly on the first try means your node wiring, polarities, and gate pull-down are all dialed in.
 
 Here are **3 quick live multimeter tests** to confirm your circuit is operating under textbook electrical conditions:
 
@@ -316,7 +316,22 @@ Because a MOSFET is not just “on/off”; the gate voltage controls how strongl
 
 I placed [here some initial esp32 smoke test](https://github.com/JAlcocerT/electronics-101/tree/master/watering-plants/power-circuit-2).
 
-Then, the final version is here.
+
+It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer) to deploy the code to the ESP32
+
+```sh
+#cd ./poc/iot-rpi-dht
+#arduino-cli board list #make serial-list
+#cd /home/jalcocert/Desktop/poc/iot-rpi-dht/scripts-arduino-setup
+./upload-deepsleep.sh /dev/ttyACM0
+```
+
+> Then, the final esp code version is here.
+
+You can also try to build around [HA and MQTT like i did here](https://jalcocert.github.io/JAlcocerT/pico-w/#ha-x-mqtt) or nodered
+
+* https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant
+and node red
 
 #### Controlling the ESP32 from the homelab
 
@@ -551,6 +566,45 @@ If you are looking for a precise and versatile magnetometer sensor, the GY-273 i
 
 {{< /details >}}
 
+For a basic bench test, the circuit can function without one, but for a reliable, permanent setup, adding capacitors is strongly recommended.
+
+When a DC motor turns on, it draws an instant inrush current (3–5× its running current) and generates high-frequency brush noise. This causes voltage dips and electrical spikes that can randomly reset or crash the ESP32.
+
+---
+
+### Where Capacitors Help Most
+
+* **1. Bulk Decoupling Capacitor on the 12V Rail (Highly Recommended)**
+* **Value:** $100\,\mu\text{F}\text{ to }470\,\mu\text{F}$ electrolytic (rated for $\ge 25\text{V}$).
+* **Placement:** Across the breadboard power rails: positive leg to the **`+12V` Rail**, negative leg (marked with a stripe) to the **`-` (GND) Rail**.
+* **Purpose:** Acts as a tiny local energy reserve. When the pump kicks on, it supplies the instant inrush current so the 12V rail voltage doesn't sag.
+
+
+* **2. Motor Noise Suppression Capacitor (Optional / Best Practice)**
+* **Value:** $0.1\,\mu\text{F}$ ($100\text{nF}$) ceramic capacitor (labeled `104`).
+* **Placement:** Directly across the pump's `+` and `-` terminals (or between the `+` Rail and Row 21).
+* **Purpose:** Absorbs high-frequency EMI/RF sparks created by the motor's internal carbon brushes.
+
+
+
+---
+
+### Where You Should NOT Put a Capacitor
+
+* **Do not put a capacitor on the MOSFET Gate (Row 20 to GND).**
+* Adding capacitance directly on the gate slows down the switching speed. This forces the MOSFET to spend more time transitioning through its resistive "linear region," causing unnecessary heat.
+
+
+
+---
+
+### Summary Checklist
+
+| Capacitor | Value | Where It Goes | Is It Essential? |
+| --- | --- | --- | --- |
+| **Bulk Electrolytic** | $100\,\mu\text{F} - 470\,\mu\text{F}$ ($25\text{V}+$) | `+12V` Rail to `GND` Rail | **Recommended** (prevents voltage dips) |
+| **Ceramic Snubber** | $0.1\,\mu\text{F}$ (`104`) | Directly across pump `+` and `–` | **Optional** (cleans electrical noise) |
+| **Gate Filter** | — | Gate pin to GND | **Do NOT use** |
 
 
 {{< details title="XL6009E1 DC to DC boost... 📌" closed="true" >}}
@@ -790,10 +844,74 @@ Common Applications
 
   If Vds is low in both, your MOSFET is fine with ESP32. If Vds is low at 12 V but high at 3.3 V, the MOSFET needs stronger gate drive or replacement.
 
+I cannot generate images directly with an image model in this text-based mode, but I can provide detailed visual descriptions or a structured diagram showing the transfer and output curves for an N-channel logic-level MOSFET like the IRLZ44N.
+
+---
+
+### MOSFET Output Characteristics ($I_D\text{ vs. }V_{DS}$)
+
+```text
+ Drain Current (Id)
+    ▲
+    │                                              Vgs = 10.0V - 12.0V
+    │                                            .───────────────────────────
+    │                                           /   Deep Ohmic (Rds ≈ 0.024 Ω)
+    │                                          /    Vds drop: ~0.04V
+    │                                         /
+    │                                        /     Vgs = 5.0V
+    │                                       /    .───────────────────────────
+    │                                      /    /
+ 1.6A ┼───────────────────────────────────/────/──── Vgs = 3.3V (ESP32)
+(Pump)│                                  /    /   .──────────────────────────
+    │                                 /    /   /
+ 0.8A ┼───────────────────────────────/────/───/────
+(Dry) │                              /    /   /
+    │                             /    /   /       Vgs = 2.0V - 2.5V (Knee)
+    │                            /    /   /      .───────────────────────────
+    │                           /    /   /      /   Pinch-off / Linear Mode
+    │                          /    /   /      /    Vds drop: ~3.0V - 4.0V
+    │                         /    /   /      /     Heavy heat dissipation!
+    │                        /    /   /      /
+  0 ┼───────────────────────┴────┴───┴──────┴────────────────────────────────►
+    0                    0.05V  0.10V 0.15V 0.5V        3.0V             Vds
+                         ▲
+                         │
+             TRIODE / OHMIC REGION                 ACTIVE / SATURATION REGION
+       (Channel Wide Open - Low Loss)          (Channel Pinched - High Loss/Heat)
+
+```
+
+---
+
+### Breakdown of the Graph Elements
+
+1. **The X-Axis ($V_{DS}$ — Drain-to-Source Voltage Drop):**
+* Represents the voltage "stuck" across the MOSFET switch rather than reaching the load.
+* **Target:** As close to $0.0\text{ V}$ as possible.
+
+
+2. **The Y-Axis ($I_D$ — Drain Current):**
+* Represents the motor's operating current ($0.8\text{ A}$ free-running / dry, up to $\approx 1.6\text{ A}$ pumping water under full load).
+
+
+3. **The Family of Curves ($V_{GS}$ Lines):**
+* **$12.0\text{ V}$ Line:** The curve has a very steep initial slope ($\frac{1}{R_{DS(on)}}$). At $1.6\text{ A}$, the voltage drop across the transistor ($V_{DS}$) is only about **$0.04\text{ V}$**.
+* **$3.3\text{ V}$ Line (ESP32):** The slope is slightly shallower, but for an IRLZ44N at $1.6\text{ A}$, it still easily intersects within the steep Ohmic region, dropping only around **$0.07\text{ V} - 0.12\text{ V}$**.
+* **$2.0\text{ V}$ Line (Underdriven):** The curve flattens out early at a low current ceiling. At $1.6\text{ A}$, the operating point shifts far to the right into the saturation region, causing a large $V_{DS}$ drop of **$3\text{ V} - 4\text{ V}$** and dissipating heavy heat.
+
+
+
+---
+
+### Safe Operating Area (SOA) Check for $1.6\text{ A}$ Load
+
+* **At $V_{GS} = 12\text{ V}$:** $P_{\text{heat}} = 0.04\text{ V} \times 1.6\text{ A} \approx 0.064\text{ W}$ (Virtually cold)
+* **At $V_{GS} = 3.3\text{ V}$:** $P_{\text{heat}} = 0.10\text{ V} \times 1.6\text{ A} \approx 0.16\text{ W}$ (Slightly warm, well within safe limits without a heatsink)
+* **At $V_{GS} = 2.0\text{ V}$:** $P_{\text{heat}} = 3.5\text{ V} \times 1.6\text{ A} \approx 5.6\text{ W}$ (Overheats rapidly without cooling)
 
 {{< details title="The 1N4007 diode to prevent kickback... 📌" closed="true" >}}
 
-The **1N4007** is a standard silicon rectifier diode that acts as a one-way electrical valve, allowing current to flow in only one direction (from Anode to Cathode) while blocking reverse flow.
+The **1N4007** is a standard silicon **rectifier diode** that acts as a one-way electrical valve, **allowing current to flow in only one direction** (from Anode to Cathode) while blocking reverse flow.
 
 In microcontroller and motor circuits, its primary role is as a **flyback (snubber/freewheeling) diode** to protect transistors from destructive inductive voltage spikes.
 

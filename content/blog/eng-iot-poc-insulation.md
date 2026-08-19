@@ -68,7 +68,7 @@ I was wrong
 
 It seems that we dont even need arduino GUI
 
-A proper data cable + arduino CLI **does the job**:
+A proper data cable + **arduino CLI does the job**:
 
 ```sh
 cd ./poc/iot-rpi-dht

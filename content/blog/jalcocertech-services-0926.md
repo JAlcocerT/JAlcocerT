@@ -2,17 +2,198 @@
 title: "[JAlcocerTech] Services Recap"
 date: 2026-09-01T11:20:21+01:00
 draft: false
-tags: ["Energy Solutions","OSS Journaling x Filesmd x Forgejo","JAlcocerTech Leads"]
-description: 'Beyond software. PV vs SAHP vs HVAC Simulations.'
+tags: ["Tmux vs CMUX vs Herdr","OSS Journaling x Filesmd x Forgejo","JAlcocerTech Leads"]
+description: 'Beyond software, AI Fluency. PV vs SAHP vs HVAC - Energy Solutions Simulations.'
 url: 'jalcocertech-services-update'
 ---
 
+**Tl;DR**
+
+Ive tried [t3 code](https://github.com/pingdotgg/t3code/releases) with my Pi.
+
+**Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+As always i go to termix and see whats going on:
+
+```sh
+#ssh http://192.168.1.18:3034
+htop #btop
+```
+
+I had an [hermes agent](https://fossengineer.com/hermes-agent-self-improving-ai-agent/) that pushed to [this repo](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101) after I reviewed the quality at my local Forgejo.
+
+
+```sh
+ssh -T -o BatchMode=yes forgejo-home
+# gh auth status #I disabled mine to avoid conflicts while tinkering
+```
+
+* Get a repo
+* Then made it available at forgejo for the agent http://192.168.1.2:3034/hermesagent/electronics-101
+* Then put it back to [gh here](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101)
+* And test with https://webaudit.jalcocertech.com/
+
+{{% details title="Why  🚀" closed="true" %}}
+
+Forgejo Write Access Validation
+
+Date: 2026-08-19  
+Local machine user: `jalcocert`  
+Forgejo SSH account validated: `hermesagent`  
+Forgejo host alias: `forgejo-home`  
+Forgejo SSH endpoint: `git@192.168.1.2:2235`
+
+## Summary
+
+Write access to the local Forgejo instance was validated successfully for the configured SSH user `hermesagent`.
+
+The validation checked:
+
+- Local Git identity and repository remotes.
+- SSH authentication to Forgejo.
+- Actual repository write permission by pushing a temporary branch.
+- Cleanup by deleting the temporary branch.
+- Confirmation that no temporary test refs remained afterward.
+
+HTTP/password-based remotes were not validated. The successful validation applies to the configured SSH access through `forgejo-home`.
+
+## SSH Configuration Found
+
+The local SSH config contains:
+
+```sshconfig
+Host forgejo-home
+    HostName 192.168.1.2
+    Port 2235
+    User git
+    IdentityFile ~/.ssh/id_ed25519_forgejo
+    IdentitiesOnly yes
+```
+
+The Forgejo SSH key files found locally were:
+
+- `~/.ssh/id_ed25519_forgejo`
+- `~/.ssh/id_ed25519_forgejo.pub`
+
+## Global Git Identity
+
+The global Git config includes:
+
+```text
+user.name=hermesagent
+user.email=alice@example.com
+```
+
+
+## Authentication Check
+
+Command run:
+
+```bash
+ssh -T -o BatchMode=yes forgejo-home
+```
+
+Result:
+
+```text
+Hi there, hermesagent! You've successfully authenticated with the key named hermesagent@pi-home, but Forgejo does not provide shell access.
+If this is unexpected, please log in with password and setup Forgejo under another user.
+```
+
+Conclusion: SSH authentication to Forgejo succeeded as `hermesagent`.
+
+## Write Permission Check
+
+A temporary branch was pushed and then deleted from each Forgejo SSH remote.
+
+Temporary branch used:
+
+```text
+codex-write-test-20260819150805-3599
+```
+
+Test method:
+
+```bash
+git push <remote> HEAD:refs/heads/codex-write-test-20260819150805-3599
+git push <remote> :refs/heads/codex-write-test-20260819150805-3599
+```
+
+This validates actual write access because Forgejo accepted creation of a new remote branch. The following deletion validates cleanup permission and confirms the test branch did not remain.
+
+## Repositories Validated
+
+| Local repository | Forgejo remote | Result |
+| --- | --- | --- |
+| `/home/jalcocert/electronics-101` | `forgejo-home:hermesagent/electronics-101.git` | Write OK, cleaned up |
+| `/home/jalcocert/email-outbound-checks` | `forgejo-home:hermesagent/email-outbound-check.git` | Write OK, cleaned up |
+
+| `/home/jalcocert/gosolar-spain` | `forgejo-home:hermesagent/gosolar-spain.git` | Write OK, cleaned up |
+| `/home/jalcocert/mbsd` | `forgejo-home:hermesagent/mbsd.git` | Write OK, cleaned up |
+| `/home/jalcocert/pi-connectivity` | `forgejo-home:hermesagent/pi-connectivity.git` | Write OK, cleaned up |
+| `/home/jalcocert/selfhosted-connectivity` | `forgejo-home:hermesagent/selfhosted-connectivity.git` | Write OK, cleaned up |
+| `/home/jalcocert/optimum-path` | `forgejo-home:hermesagent/optimum-path.git` | Write OK, cleaned up |
+
+## Cleanup Verification
+
+After deletion, each repository was checked with:
+
+```bash
+git ls-remote --heads <remote> codex-write-test-20260819150805-3599
+```
+
+Results:
+
+```text
+forgejo-home:hermesagent/electronics-101.git remaining_test_refs=0
+forgejo-home:hermesagent/email-outbound-check.git remaining_test_refs=0
+forgejo-home:hermesagent/gosolar-spain.git remaining_test_refs=0
+forgejo-home:hermesagent/mbsd.git remaining_test_refs=0
+forgejo-home:hermesagent/pi-connectivity.git remaining_test_refs=0
+forgejo-home:hermesagent/selfhosted-connectivity.git remaining_test_refs=0
+forgejo-home:hermesagent/optimum-path.git remaining_test_refs=0
+```
+
+
+Conclusion: the temporary validation branch was removed from all checked Forgejo repositories.
+
+## Additional Remotes Observed
+
+The following local repositories use GitHub remotes and were not part of the Forgejo write validation:
+
+- `/home/jalcocert/Home-Lab`
+- `/home/jalcocert/RPi`
+- `/home/jalcocert/poc`
+- `/home/jalcocert/RPi/Z_SelfHosting/rpi-mjpg-streamer`
+- `/home/jalcocert/.hermes/hermes-agent`
+
+The following local repositories use HTTP remotes to the local Forgejo web endpoint and were not validated for HTTP/password write access:
+
+- `/home/jalcocert/leads-slubnechwile`: `http://192.168.1.2:3034/JAlcocerT/leads-slubnechwile`
+- `/home/jalcocert/optimum-path`: `http://192.168.1.2:3034/jalcocert/optimum-path`
+
+## Final Result
+
+SSH-based Forgejo write access is confirmed for `hermesagent` on the validated repositories.
+
+{{% /details %}}
+
+
+{{% details title="Why Starting a Tech Blog? 🚀" closed="true" %}}
+
+
+{{% /details %}}
+
+
+[Herdr](https://fossengineer.com/herdr-terminal-agent-multiplexer/) was interesting on top of tmux
+
 <!-- www.youtube.com/watch?v=ijI3iOOcEog -->
 
-
 {{< youtube "ijI3iOOcEog" >}}
-
-**Tl;DR**
 
 coming from the [experiment on heat pump viability](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/#the-experiment)
 
@@ -20,11 +201,6 @@ and the [data driven insulation](https://jalcocert.github.io/JAlcocerT/data-driv
 
 ![alt text](/blog_img/mechanics/heat_pump.gif)
 
-
-**Intro**
-
-* WHY Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 Coming from [this post](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/).
 
@@ -350,6 +526,11 @@ With the release of this OSS framework for mbsd:
 #### Multi Body Systems Dynamics dot com
 
 I took all the goodies from the github and forgejo repos: *2D/3D*
+
+not https://multibodysystemdynamics.pages.dev/ [this](https://github.com/JAlcocerT/Slider-Crank/tree/main/landing) but 
+https://multibodysystemsdynamics.com/
+
+So you can [continue where you left it](http://192.168.1.2:3034/hermesagent/mbsd/src/branch/oss-core-2d/web) `http://192.168.1.18:5173/`
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PoC/" title="MBSD OSS ↗" icon="github" >}}
