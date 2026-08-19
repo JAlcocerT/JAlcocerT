@@ -17,7 +17,7 @@ Then this happened...
 **Intro**
 
 * Why Im writting this post: *bc its time to put together all the noise, from [DC adapters](https://youtube.com/shorts/HwavCMkah0o), [the BoM](https://youtube.com/shorts/mKVvW_jl3UI) with [electronics](https://youtube.com/shorts/oxZVchAZV0U), the [bluetti](https://youtube.com/shorts/1nK0-MDh7LY), the microcontroller...*
-* What Ive learnt with it: *...*
+* What Ive learnt with it: *How to use a breadboard. How a mosfet, a diode, a capacitor play together. Validate with a multimeter. Use mqtt to control an esp32 to make a BLDC pump work, with firmware updated via arduino-cli...*
 
 With this *chaotic* selflearning project, Ive made:
 
@@ -465,6 +465,38 @@ An MQTT client can simultaneously **Publish** and **Subscribe** over the same br
 2. **Homelab Automation:** Your homelab (Home Assistant, Node-RED, or a Python automation script) monitors that topic. When the value drops below a threshold, it runs logic (like checking weather forecasts, time-of-day limits) and decides whether to water.
 3. **Homelab $\rightarrow$ ESP32:** Homelab publishes `{"action": "ON", "duration": 10}` to `garden/pump/set`.
 4. **Action:** The ESP32 receives the message in its `callback()` function and pulls the relay pin `HIGH` to fire the pump.
+
+> I went ahead with some test and see [how an ESP32 LED replies to MQTT commands](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-cpp-mqtt-blinks) from my homelab
+
+```sh
+printf '%s' 'your-password' > /tmp/iot-water-wifi-pass
+
+make mqtt-blinks-upload \
+  PORT=/dev/ttyACM0 \
+  WIFI_SSID='Piszymsiu' \
+  WIFI_PASSWORD_FILE=/tmp/iot-water-wifi-pass
+
+#make mqtt-blinks-compile WIFI_SSID='test' WIFI_PASSWORD='test'
+# make mqtt-blinks-upload \
+#     PORT=/dev/ttyACM0 \
+#     WIFI_SSID='test' \
+#     WIFI_PASSWORD='test'
+```
+
+Once ready, you can send commands via MQTT and see how the ESP replies:
+
+```sh
+make mqtt-blinks-pub MQTT_TEST_CMD=blink
+make mqtt-blinks-pub MQTT_TEST_CMD=on
+make mqtt-blinks-pub MQTT_TEST_CMD=off
+make mqtt-blinks-listen
+```
+
+{{< youtube "io585eybww0" >}}
+
+<!-- 
+https://youtube.com/shorts/io585eybww0 
+-->
 
 
 ### The sensors you need
@@ -1181,11 +1213,11 @@ Tier 3: Adding High-Power Actuators
 | **12V Solenoid Lock** | 12V Push-Pull Solenoid | High-force pulse actuation | Beginner |
 | **Motorized Blinds** | H-Bridge module + Geared Motor | Bidirectional current control | Intermediate |
 
+#### PC Fans
+
 **PC fans are ideal for testing PWM.**
 
-In fact, they give you two different ways to run the test depending on which fan you choose.
-
-Understanding the Wires
+In fact, they give you [two different ways](https://github.com/JAlcocerT/poc/tree/main/iot-esp32-motors) to run the test depending on which fan you choose.
 
 | Fan Type | Wire Colors (Typical) | Pin Functions |
 | --- | --- | --- |
@@ -1213,7 +1245,6 @@ Option B: Using the 4-Pin Fan (Direct ESP32 Control — No MOSFET Needed)
 * **Fan Black (GND):** Directly to **`-` (GND) Rail**.
 * **Fan Blue (PWM Pin):** Directly to **ESP32 GPIO 23** (via a $220\,\Omega$ resistor for protection).
 * **Fan Green (Tach):** Leave disconnected.
-
 
 * **How it works:** The fan receives constant 12V power, and the ESP32 speaks directly to the fan’s internal logic using a standard $25\text{ kHz}$ PWM signal.
 

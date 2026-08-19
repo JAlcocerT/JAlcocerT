@@ -66,73 +66,6 @@ And that the bluetti can bring interesting MQTT data:
 * https://github.com/warhammerkid/bluetti_mqtt 3/4 yo
 * https://github.com/empicano/aiomqtt 3/4 months
 
-```sh
-uv tool install bluetti-mqtt
-uvx --with 'paho-mqtt<2' bluetti-mqtt --broker 192.168.1.2 --interval 10 E8:3D:C1:05:B6:52
-```
-
-uv fixed the Python dependency problem. The new failure is unrelated: your machine does not have the BlueZ Bluetooth service available.
-
-  The key line is:
-
-  bleak.exc.BleakDBusError: [org.freedesktop.systemd1.NoSuchUnit] Unit dbus-org.bluez.service not found.
-
-  That means bluetti-mqtt can talk to MQTT now, but it cannot access Linux Bluetooth.
-
-  Do this on the host:
-
-  sudo apt update
-  sudo apt install -y bluez
-  sudo systemctl enable --now bluetooth
-  systemctl status bluetooth
-
-  Then verify Bluetooth is visible:
-
-  bluetoothctl show
-  bluetoothctl scan on
-
-  After that, rerun:
-
-  uvx --with 'paho-mqtt<2' bluetti-mqtt --broker 192.168.1.2 --interval 10 E8:3D:C1:05:B6:52
-
-  If bluetoothctl still fails, then one of these is true:
-
-  - you’re in a VM or container without Bluetooth passthrough
-  - the host has no working Bluetooth adapter
-  - dbus / bluetoothd is not running correctly
-
-  If you want, I can help you check whether this is a missing package, a stopped service, or a container/VM Bluetooth passthrough issue.
-
- 
-
- uv fixed the Python dependency problem. The new failure is unrelated: your machine does not have the BlueZ Bluetooth service available.
-
-  The key line is:
-
-  That means bluetti-mqtt can talk to MQTT now, but it cannot access Linux Bluetooth.
-
-  Do this on the host:
-
-  sudo apt update
-  sudo apt install -y bluez
-  sudo systemctl enable --now bluetooth
-  systemctl status bluetooth
-
-  Then verify Bluetooth is visible:
-
-  bluetoothctl show
-  bluetoothctl scan on
-
-  After that, rerun:
-
-  uvx --with 'paho-mqtt<2' bluetti-mqtt --broker 192.168.1.2 --interval 10 E8:3D:C1:05:B6:52
-
-  If bluetoothctl still fails, then one of these is true:
-
-  - you’re in a VM or container without Bluetooth passthrough
-  - the host has no working Bluetooth adapter
-  - dbus / bluetoothd is not running correctly
-
 Your portable power station utilizes **LiFePO4** chemistry, LFP (Lithium Iron Phosphate)
 
 * **The Goal:** Absolute longevity, safety, and stability.
@@ -290,7 +223,7 @@ Instead of using a rigid metal cylinder (like your 18650 cells) or a massive hea
 * **Space & Shape:** Manufacturers can press these pouches into incredibly thin, flat rectangles or specific shapes. This allows Lenovo to fit a flat 41Wh or 54.7Wh battery flush under your laptop keyboard, and lets Google cram a thin 4,575 mAh battery right behind the Pixel 8 screen.
 * **Weight:** Removing the heavy steel or aluminum cylindrical walls saves a massive amount of weight, keeping your phone and laptop highly portable.
 
-### How they behave compared to your other batteries:
+**How they behave compared to your other batteries:**
 
 * **Compared to your 1S Drone:** Your drone also uses soft LiPo pouches for pure weight savings, but your drone battery is optimized for *explosive discharge* (high C-rate) to fight gravity, meaning it degrades within 150–200 cycles. 
 
@@ -677,7 +610,7 @@ Batteries use **mAh** and **Wh** instead of **Joules** because they align direct
 
 While **Joules** ($J$) is the SI unit for energy ($1 \text{ Wh} = 3,600 \text{ Joules}$), converting to Joules creates three major practical problems:
 
-### 1. The Numbers Get Unmanageably Large
+1. The Numbers Get Unmanageably Large
 
 A standard, small phone battery (e.g., 4,000 mAh at 3.85 V) holds **55,440 Joules**.
 
@@ -686,25 +619,25 @@ A standard, small phone battery (e.g., 4,000 mAh at 3.85 V) holds **55,440 Joule
 
 Watt-hours keep numbers in clean, human-friendly ranges (usually between 5 and 100 Wh for consumer electronics).
 
-### 2. Direct Math with Device Power Ratings
+2. Direct Math with Device Power Ratings
 
-Electrical devices are rated in **Watts** ($W$), not Joules per second, in consumer markets. Having the battery capacity in **Watt-hours** ($Wh$) makes calculating runtime instant:
+Electrical devices are rated in **Watts** ($W$), not Joules per second, in consumer markets.
+
+Having the battery capacity in **Watt-hours** ($Wh$) makes calculating runtime instant:
 
 $$\text{Runtime (Hours)} = \frac{\text{Battery Energy (Wh)}}{\text{Device Power Draw (W)}}$$
 
 * **Example:** A laptop draws 15 W. If its battery is 60 Wh, it runs for $60 \div 15 = 4 \text{ hours}$.
 * If capacity were given as $216,000 \text{ Joules}$, you would have to divide by $3,600$ every single time to calculate simple runtime.
 
-### 3. Current (mA) and Time (h) are What We Measure
+3. Current (mA) and Time (h) are What We Measure
 
 Batteries deliver current over time.
 
 * **mAh (milliamp-hours)** tells an electrical engineer how many milliamps of current the battery can output for how many hours at a given voltage.
 * Since circuit components, LED displays, and chips draw specific amounts of current (e.g., a chip drawing 50 mA), knowing the mAh rating instantly tells you how many hours the system will run.
 
----
-
-### Unit Conversion Summary
+Unit Conversion Summary
 
 | Unit | What it Measures | Formula | Best Used For |
 | --- | --- | --- | --- |

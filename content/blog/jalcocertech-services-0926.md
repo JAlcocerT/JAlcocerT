@@ -47,7 +47,7 @@ Forgejo SSH account validated: `hermesagent`
 Forgejo host alias: `forgejo-home`  
 Forgejo SSH endpoint: `git@192.168.1.2:2235`
 
-## Summary
+Summary
 
 Write access to the local Forgejo instance was validated successfully for the configured SSH user `hermesagent`.
 
@@ -61,7 +61,7 @@ The validation checked:
 
 HTTP/password-based remotes were not validated. The successful validation applies to the configured SSH access through `forgejo-home`.
 
-## SSH Configuration Found
+SSH Configuration Found
 
 The local SSH config contains:
 
@@ -79,7 +79,7 @@ The Forgejo SSH key files found locally were:
 - `~/.ssh/id_ed25519_forgejo`
 - `~/.ssh/id_ed25519_forgejo.pub`
 
-## Global Git Identity
+Global Git Identity
 
 The global Git config includes:
 
@@ -89,7 +89,7 @@ user.email=alice@example.com
 ```
 
 
-## Authentication Check
+Authentication Check
 
 Command run:
 
@@ -106,7 +106,7 @@ If this is unexpected, please log in with password and setup Forgejo under anoth
 
 Conclusion: SSH authentication to Forgejo succeeded as `hermesagent`.
 
-## Write Permission Check
+Write Permission Check
 
 A temporary branch was pushed and then deleted from each Forgejo SSH remote.
 
@@ -123,22 +123,23 @@ git push <remote> HEAD:refs/heads/codex-write-test-20260819150805-3599
 git push <remote> :refs/heads/codex-write-test-20260819150805-3599
 ```
 
-This validates actual write access because Forgejo accepted creation of a new remote branch. The following deletion validates cleanup permission and confirms the test branch did not remain.
+This validates actual write access because Forgejo accepted creation of a new remote branch. 
 
-## Repositories Validated
+The following deletion validates cleanup permission and confirms the test branch did not remain.
+
+Repositories Validated
 
 | Local repository | Forgejo remote | Result |
 | --- | --- | --- |
 | `/home/jalcocert/electronics-101` | `forgejo-home:hermesagent/electronics-101.git` | Write OK, cleaned up |
 | `/home/jalcocert/email-outbound-checks` | `forgejo-home:hermesagent/email-outbound-check.git` | Write OK, cleaned up |
-
 | `/home/jalcocert/gosolar-spain` | `forgejo-home:hermesagent/gosolar-spain.git` | Write OK, cleaned up |
 | `/home/jalcocert/mbsd` | `forgejo-home:hermesagent/mbsd.git` | Write OK, cleaned up |
 | `/home/jalcocert/pi-connectivity` | `forgejo-home:hermesagent/pi-connectivity.git` | Write OK, cleaned up |
 | `/home/jalcocert/selfhosted-connectivity` | `forgejo-home:hermesagent/selfhosted-connectivity.git` | Write OK, cleaned up |
 | `/home/jalcocert/optimum-path` | `forgejo-home:hermesagent/optimum-path.git` | Write OK, cleaned up |
 
-## Cleanup Verification
+Cleanup Verification
 
 After deletion, each repository was checked with:
 
@@ -161,7 +162,7 @@ forgejo-home:hermesagent/optimum-path.git remaining_test_refs=0
 
 Conclusion: the temporary validation branch was removed from all checked Forgejo repositories.
 
-## Additional Remotes Observed
+Additional Remotes Observed
 
 The following local repositories use GitHub remotes and were not part of the Forgejo write validation:
 
@@ -176,9 +177,7 @@ The following local repositories use HTTP remotes to the local Forgejo web endpo
 - `/home/jalcocert/leads-slubnechwile`: `http://192.168.1.2:3034/JAlcocerT/leads-slubnechwile`
 - `/home/jalcocert/optimum-path`: `http://192.168.1.2:3034/jalcocert/optimum-path`
 
-## Final Result
-
-SSH-based Forgejo write access is confirmed for `hermesagent` on the validated repositories.
+Final Result: SSH-based Forgejo write access is confirmed for `hermesagent` on the validated repositories.
 
 {{% /details %}}
 
