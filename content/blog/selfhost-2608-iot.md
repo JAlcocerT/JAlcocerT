@@ -2,7 +2,7 @@
 title: "Selfhosted IoT"
 date: 2026-08-21
 draft: false
-tags: ["Sonoff x Zigbee","Tinkering IRL","M2M","Tech Talk"]
+tags: ["Sonoff x Zigbee","Z2M","Tinkering IRL","M2M","Tech Talk"]
 description: 'A homelab and sensors. The 101 BoM to get you started.'
 url: 'home-lab-tools-for-iot'
 ---
@@ -280,6 +280,9 @@ https://fossengineer.com/selfhosting-velxio-arduino/
 
 ESPHome
 
+Probably also `https://esphome.io` if you like ESP32 boards!
+
+
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/node-red/" title="Node Red | Docker Config 🐋 ↗" >}}
@@ -342,6 +345,16 @@ Deal:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
 {{< /cards >}}
+
+
+
+### The Software for D&A
+
+#### MicroControllers
+
+
+#### In the server
+
 
 
 ### HomeLab Updates 0826
@@ -420,7 +433,7 @@ docker builder prune
 
 I removed the services for my ebooks and consulting subdomains.
 
-They are now...static!
+They are now...**static**!
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
@@ -451,9 +464,94 @@ glances #htop btop
 
 ### Interesting Sensors
 
-* https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-humidity-sensor
+* `https://sonoff.tech/en-pl/products/sonoff-snzb-02d-zigbee-lcd-smart-temperature-humidity-sensor`
 
-Zigbee?
+#### Zigbee
+
+If you have been playing with IoT and some home devices, you will [come to know Zigbee](https://fossengineer.com/zigbee2mqtt-self-hosted-zigbee-bridge/).
+
+Zigbee devices cannot speak MQTT directly out of the box.
+
+MQTT is an IP-based protocol (it requires Wi-Fi, Ethernet, and a TCP/IP network stack), whereas Zigbee is a low-power RF radio protocol (IEEE 802.15.4) that does not understand Wi-Fi or IP addresses.
+
+To bridge the gap between the two technologies, you need an intermediary coordinator.
+
+A USB Zigbee Coordinator: A ~$15–$25 USB dongle (such as the Sonoff ZBDongle-E or SLZB-06) plugged into whatever computer/server hosts your MQTT broker.
+
+Zigbee2MQTT (Z2M): A lightweight open-source service that pairs with the dongle, handles the device drivers locally, and outputs pure MQTT.
+
+* https://www.zigbee2mqtt.io/supported-devices/
+* https://fossengineer.com/zigbee2mqtt-self-hosted-zigbee-bridge/
+
+
+They are often mentioned in the same breath because they dominate the budget smart home market, but they represent three distinct things: a **protocol**, an **IoT platform**, and a **hardware brand**.
+
+The Three Entities Defined
+
+| Name | What It Actually Is | Primary Role |
+| --- | --- | --- |
+| **Zigbee** | An open wireless standard/protocol (like Wi-Fi or Bluetooth) | The low-power radio language devices use to talk to each other. |
+| **Tuya** | A massive IoT platform / white-label software provider | Supplies turnkey chips, firmware, and cloud backends to hundreds of OEM factories (Moes, Zemismart, generic brands). |
+| **Sonoff** | A specific hardware manufacturer (brand owned by ITEAD) | Builds smart home hardware (Wi-Fi and Zigbee relays, sensors, dongles, and switches). |
+
+How They Intersect
+
+```
+                    ┌── Zigbee Protocol ──► (Used by both Sonoff & Tuya hardware)
+                    │
+Smart Home Landscape ┼── Tuya Ecosystem   ──► (White-label firmware/cloud across 1,000s of brands)
+                    │
+                    └── Sonoff (ITEAD)    ──► (A single manufacturer with its own eWeLink app)
+```
+
+1. **Zigbee is the common language:** Both Sonoff and Tuya make devices that speak the Zigbee protocol instead of Wi-Fi.
+2. **They make competing ecosystems:**
+* A Tuya Zigbee device connects by default to a Tuya hub (Smart Life app).
+* A Sonoff Zigbee device connects by default to a Sonoff hub (eWeLink app).
+
+standard Zigbee broadcasts on the same 2.4 GHz frequency band as Wi-Fi and Bluetooth, it uses a different physical layer format (IEEE 802.15.4 instead of 802.11 or BLE). A smartphone or standard router cannot decode its beacon signals.
+
+3. **Open-source bridges unite them:** Tools like **Zigbee2MQTT** ignore both the Tuya and Sonoff proprietary clouds. As long as the device speaks Zigbee, a single open USB dongle (often made by Sonoff) can control Tuya sensors, Sonoff switches, Philips Hue bulbs, and IKEA blinds on one unified MQTT network.
+
+* **Zigbee** is the *radio layer*.
+* **Tuya** is the *turnkey software/chip ecosystem* behind most generic smart gadgets on AliExpress/Amazon.
+* **Sonoff** is a *hardware vendor* famous in the DIY community for making hacker-friendly, flashable ESP8266/ESP32 devices and cheap Zigbee hardware.
+
+
+**Wi-Fi** is high-bandwidth, high-power, and connects devices directly to your router over standard TCP/IP. **Zigbee** is ultra-low-power, low-bandwidth, and creates a local mesh network designed specifically for tiny sensor packets and battery-operated hardware.
+
+Core Differences: Zigbee vs. Wi-Fi
+
+| Feature | Wi-Fi (802.11) | Zigbee (802.15.4) |
+| --- | --- | --- |
+| **Topology** | **Star:** Every device connects directly to your main router. | **Mesh:** Mains-powered devices relay signals to extend range and self-heal. |
+| **Power Consumption** | **High:** Drains coin/small batteries in days to weeks. | **Extremely Low:** Battery devices sleep and last 1–3+ years on a coin cell. |
+| **Addressing / Network** | Full IP stack (MAC, IP, Subnet, DNS, TCP/UDP). | 16-bit short address inside a local PAN (Personal Area Network). No IP. |
+| **Bandwidth** | High (54 Mbps to 1+ Gbps) — handles video, web, streaming. | Low (~250 kbps) — sends only tiny command and state payloads. |
+| **Router Load** | 30–50+ Wi-Fi smart devices can congest standard home routers. | Handles 100+ devices easily via a dedicated USB coordinator. |
+| **Native Protocols** | HTTP, WebSockets, standard TCP MQTT clients. | Zigbee Cluster Library (ZCL) byte commands. |
+
+How Zigbee2MQTT (Z2M) Works
+
+Zigbee devices don't have IP addresses and can't run an MQTT client. **Zigbee2MQTT acts as a software/hardware translator** that bridges the physical Zigbee radio network to your local IP network and MQTT broker.
+
+```
+ [ Battery Sensor / Blind ] 
+             │
+             │ (Raw Zigbee RF Packets: IEEE 802.15.4)
+             ▼
+   [ USB Coordinator ]  (e.g., Sonoff ZBDongle-E / Texas Instruments chip)
+             │
+             │ (Serial / UART over USB)
+             ▼
+   [ Zigbee2MQTT Service ] (Runs on Raspberry Pi / Home Server)
+             │
+             │ (JSON payloads over TCP/IP)
+             ▼
+   [ MQTT Broker (Mosquitto) ] ◄──► [ ESP32 / Home Assistant / Custom Scripts ]
+
+```
+
 
 #### One ESP - Few Sensors
 

@@ -1,6 +1,6 @@
 ---
 title: "Crops Intelligence in the AI era"
-date: 2026-08-18
+date: 2026-08-20
 draft: false
 tags: ["MQTT x EMQx","ESP32 x IRLZ44N x 1N4007","Tomatoes x Watering","Arduino-CLI"]
 description: 'Learning after planting in spring. Ready to scale.'
@@ -17,7 +17,7 @@ Then this happened...
 **Intro**
 
 * Why Im writting this post: *bc its time to put together all the noise, from [DC adapters](https://youtube.com/shorts/HwavCMkah0o), [the BoM](https://youtube.com/shorts/mKVvW_jl3UI) with [electronics](https://youtube.com/shorts/oxZVchAZV0U), the [bluetti](https://youtube.com/shorts/1nK0-MDh7LY), the microcontroller...*
-* What Ive learnt with it: *How to use a breadboard. How a mosfet, a diode, a capacitor play together. Validate with a multimeter. Use mqtt to control an esp32 to make a BLDC pump work, with firmware updated via arduino-cli...*
+* What Ive learnt with it: *How to use a breadboard. How a mosfet, a diode, a capacitor play together. Validate with a multimeter. Use mqtt to control an esp32 to make a BLDC pump (and not only) work, with firmware updated via arduino-cli...*
 
 With this *chaotic* selflearning project, Ive made:
 
@@ -238,7 +238,17 @@ Set your multimeter dial to **DC Voltage (V$\overline{\ldots}$)**. Keep the **Bl
 
 Put the minus (Black probe) in any hole along the - Rail (the Blue Ground rail) or directly in Row 22 (Source / Pin 3).Both spots are your 0V Ground reference.What to Look For:Switch OFF: The multimeter should read $0.0\text{ V}$.Switch ON: The multimeter should read $\approx 12.0\text{ V} - 13.5\text{ V}$ (your full Bluetti supply voltage).
 
-Having the gate read 0.0 V when OFF and the full 12 V when ON confirms your control circuit and pull-down resistor are working under ideal conditions.Now check the Drain (Pin 2 / Row 21) while keeping your Black probe on the - Rail (Ground):Switch OFF: Touch Red probe to Row 21 (Drain).Expected: Reads full supply voltage ($\approx 12.0\text{ V} - 13.5\text{ V}$).Switch ON: Touch Red probe to Row 21 (Drain) while the pump is spinning.Expected: Drops to nearly zero ($0.02\text{ V} - 0.1\text{ V}$).That drop to near $0\text{ V}$ confirms the MOSFET is fully saturated and acting like a solid closed switch with virtually zero power loss or heat.
+Having the gate read 0.0 V when OFF and the full 12 V when ON confirms your control circuit and pull-down resistor are working under ideal conditions.
+
+Now check the Drain (Pin 2 / Row 21) while keeping your Black probe on the - Rail (Ground):Switch OFF: Touch Red probe to Row 21 (Drain).
+
+Expected: Reads full supply voltage ($\approx 12.0\text{ V} - 13.5\text{ V}$).
+
+Switch ON: Touch Red probe to Row 21 (Drain) while the pump is spinning.
+
+Expected: Drops to nearly zero ($0.02\text{ V} - 0.1\text{ V}$).
+
+That drop to near $0\text{ V}$ confirms the MOSFET is fully saturated and acting like a solid closed switch with virtually zero power loss or heat.
 
 ---
 
@@ -260,13 +270,12 @@ I got [this simulated here ](https://github.com/JAlcocerT/electronics-101/tree/m
 
 > Yep, I used TooN instead of json to make it with the 5k yt chars limit
 
-
 Placing that $470\,\mu\text{F}$ capacitor across your power rails addresses two transient issues:
 
 * **Voltage Sags / Dips:** When the motor starts up, it demands a sudden burst of current (inrush). The capacitor acts like a local reservoir, instantly dumping charge to prevent the 12V rail voltage from dipping and causing the Bluetti port or ESP32 to brown out.
+
 * **Transient Voltage Spikes / Ringing:** When the motor switches off, wire inductance can bounce electrical energy back into the power lines. The capacitor helps smooth out those fluctuations alongside your flyback diode.
 
-omponent Roles Summary
 
 | Component | Main Job |
 | --- | --- |
@@ -276,14 +285,28 @@ omponent Roles Summary
 | **$220\,\Omega$ Resistor** | Limits gate inrush current to protect the ESP32 GPIO pin. |
 | **IRLZ44N MOSFET** | Performs the actual solid-state low-side switching. |
 
-With the capacitor, diode, pull-down, and gate resistor in place, your circuit has all the standard protection stages needed for reliable, long-term switching.
+With the capacitor, diode, pull-down, and gate resistor in place, the circuit has all the standard protection stages needed for reliable, long-term switching.
+
+And you bet it pushes water: *at 20/22w, while promised 19w @12v, notice that when pumping air drops to ~10w*
+
+<!-- 
+https://youtube.com/shorts/kDPNhy8Ep7o
+ -->
+
+{{< youtube "kDPNhy8Ep7o" >}}
 
 
 ### The Control Circuit
 
-With this configuration: the manual switch moves from “driving the MOSFET gate with 12 V” to “enabling the pump’s +12 V feed.” The ESP32 drives the MOSFET gate separately at 3.3 V through a gate resistor. ESP32 GND, MOSFET source, and 12 V supply negative must share ground.
+With this configuration: the manual switch moves from “driving the MOSFET gate with 12 V” to “enabling the pump’s +12 V feed.”
 
-The only additional component you need is : the esp32 and a 220 ohm resistor to limit current
+The ESP32 drives the MOSFET gate separately at 3.3 V through a gate resistor. 
+
+ESP32 GND, MOSFET source, and 12 V supply negative must share ground.
+
+The only additional components you need is : *the esp32 and a 220 ohm resistor to limit current*
+
+And some rewiring ofc, bc now the Mosfet gate will be dictating if the pump moves or not
 
 - ESP32
   - 100 Ω to 220 Ω gate resistor between ESP32 GPIO and MOSFET gate
@@ -292,45 +315,56 @@ The only additional component you need is : the esp32 and a 220 ohm resistor to 
   - Keep the existing pump/MOSFET wiring
   - Move the manual switch so it enables the pump’s +12 V feed, not the MOSFET gate
 
-  Connections:
+Connections:
 
-  ESP32 GPIO -> 220 Ω -> MOSFET gate
-  MOSFET gate -> 10 kΩ -> MOSFET source/GND
-  ESP32 GND -> same GND as MOSFET source and 12 V supply negative
+ESP32 GPIO -> 220 Ω -> MOSFET gate
+MOSFET gate -> 10 kΩ -> MOSFET source/GND
+ESP32 GND -> same GND as MOSFET source and 12 V supply negative
 
-  Do not connect 12 V to any ESP32 pin.
+Do not connect 12 V to any ESP32 pin.
 
-  The caution: your IRLZ44N was excellent with 12 V on the gate. With ESP32, the gate only gets 3.3 V. It may work for a 1.6 A pump, but check the MOSFET temperature after a short pulse. If it gets warm/hot, use a proper 3.3 V logic-level MOSFET or add a small gate-driver/level-shift stage.
+The caution: your IRLZ44N was excellent with 12 V on the gate. With ESP32, the gate only gets 3.3 V.
+
+It may work for a 1.6 A pump, but check the MOSFET temperature after a short pulse.
+
+If it gets warm/hot, use a proper 3.3 V logic-level MOSFET or add a small gate-driver/level-shift stage.
 
 Because a MOSFET is not just “on/off”; the gate voltage controls how strongly on it is.
 
-  For an N-channel MOSFET:
+For an N-channel MOSFET:
 
-  higher Vgs -> lower Rds(on) -> less heat
-  lower Vgs  -> higher Rds(on) -> more heat
+higher Vgs -> lower Rds(on) -> less heat
+lower Vgs  -> higher Rds(on) -> more heat
 
-  The pump current flows through the MOSFET drain-source path. The MOSFET behaves like a small resistor when on. Heat is:
+The pump current flows through the MOSFET drain-source path. 
 
-  Pheat = I^2 * Rds(on)
+The MOSFET behaves like a small resistor when on. Heat is:
 
-  Your pump is about:
+Pheat = I^2 * Rds(on)
 
-  19 W / 12 V ≈ 1.6 A
+Your pump is about:
 
-  Example:
+19 W / 12 V ≈ 1.6 A
 
-  If Rds(on) = 0.03 Ω:
-  P = 1.6^2 * 0.03 ≈ 0.08 W   cool
+Example:
 
-  If Rds(on) = 0.30 Ω:
-  P = 1.6^2 * 0.30 ≈ 0.77 W   noticeably warm/hot
+If Rds(on) = 0.03 Ω:
+P = 1.6^2 * 0.03 ≈ 0.08 W   cool
 
-  With 12 V on the gate, the IRLZ44N is driven very hard on, so Rds(on) is low. With 3.3 V, it may only be partially enhanced, so Rds(on) can be much higher.
+If Rds(on) = 0.30 Ω:
+P = 1.6^2 * 0.30 ≈ 0.77 W   noticeably warm/hot
 
-  Also, Vgs(th) is misleading. If a datasheet says threshold is 1-2 V, that only means the MOSFET barely starts conducting a tiny current. It does not mean it can handle a pump efficiently at that
-  gate voltage.
+With 12 V on the gate, the IRLZ44N is driven very hard on, so Rds(on) is low. 
 
-  So for ESP32 control, the best part is a MOSFET whose datasheet explicitly specifies low Rds(on) at Vgs = 2.5 V or 3.3 V.
+With 3.3 V, it may only be partially enhanced, so Rds(on) can be much higher.
+
+Also, Vgs(th) is misleading.
+
+If a datasheet says threshold is 1-2 V, that only means the MOSFET barely starts conducting a tiny current.
+
+It does not mean it can handle a pump efficiently at that gate voltage.
+
+So for ESP32 control, the best part is a MOSFET whose datasheet explicitly specifies low Rds(on) at Vgs = 2.5 V or 3.3 V.
 
 #### The ESP Logic
 
@@ -968,10 +1002,7 @@ I cannot generate images directly with an image model in this text-based mode, b
        (Channel Wide Open - Low Loss)          (Channel Pinched - High Loss/Heat)
 
 ```
-
----
-
-### Breakdown of the Graph Elements
+Breakdown of the Graph Elements
 
 1. **The X-Axis ($V_{DS}$ — Drain-to-Source Voltage Drop):**
 * Represents the voltage "stuck" across the MOSFET switch rather than reaching the load.
@@ -987,11 +1018,7 @@ I cannot generate images directly with an image model in this text-based mode, b
 * **$3.3\text{ V}$ Line (ESP32):** The slope is slightly shallower, but for an IRLZ44N at $1.6\text{ A}$, it still easily intersects within the steep Ohmic region, dropping only around **$0.07\text{ V} - 0.12\text{ V}$**.
 * **$2.0\text{ V}$ Line (Underdriven):** The curve flattens out early at a low current ceiling. At $1.6\text{ A}$, the operating point shifts far to the right into the saturation region, causing a large $V_{DS}$ drop of **$3\text{ V} - 4\text{ V}$** and dissipating heavy heat.
 
-
-
----
-
-### Safe Operating Area (SOA) Check for $1.6\text{ A}$ Load
+**Safe Operating Area (SOA) Check for $1.6\text{ A}$ Load**
 
 * **At $V_{GS} = 12\text{ V}$:** $P_{\text{heat}} = 0.04\text{ V} \times 1.6\text{ A} \approx 0.064\text{ W}$ (Virtually cold)
 * **At $V_{GS} = 3.3\text{ V}$:** $P_{\text{heat}} = 0.10\text{ V} \times 1.6\text{ A} \approx 0.16\text{ W}$ (Slightly warm, well within safe limits without a heatsink)
@@ -1100,48 +1127,6 @@ Component checks for your components:
 {{< details title="AI Asisted Web Search... 📌" closed="true" >}}
 
 {{< /details >}}
-
-
-#### Pump BLDC with 2 wires but not 3 like an FPV
-
-If your brushless DC (BLDC) pump has only **2 wires** (typically positive and ground) instead of 3, the Electronic Speed Controller (ESC) or commutation drive circuitry is integrated directly inside the pump housing.
-
-Key Differences: 2-Wire BLDC Pump vs. 3-Wire FPV Motor
-
-| Feature | 2-Wire BLDC Pump | 3-Wire FPV Drone Motor |
-| --- | --- | --- |
-| **Driver Location** | **Internal** (built into the pump's sealed base) | **External** (separate 4-in-1 or individual ESC) |
-| **Input Power** | Pure **DC Voltage** (e.g., 12V or 24V) | **3-Phase AC/Pulsed DC** generated by the external ESC |
-| **Commutation** | Handled internally by a small microcontroller or Hall-effect driver IC | Commutated externally via Back-EMF sensing (sensorless BLDC) |
-| **Control** | Fixed speed upon power connection (or variable by varying DC voltage) | Variable high-speed throttle control via digital protocols (DShot, PWM) |
-| **Target Application** | Continuous, single-direction liquid flow | Dynamic, high-torque directional and rotational speed changes |
-
-How the 2-Wire BLDC Pump Operates Internally
-
-A brushless motor cannot run directly on continuous DC power without electronic phase switching. 
-
-Inside the sealed enclosure of your 19W pump:
-
-* **Integrated PCB:** A miniature circuit board receives the incoming DC power.
-* **Driver IC / Hall Sensor:** A micro-driver detects the rotor’s magnetic position and electronically switches the internal stator coils (Phases U, V, W) in sequence.
-* **Hermetic Sealing:** The electronics and stator windings are potted in epoxy resin to isolate them from moisture, allowing the wet rotor/impeller to spin maintenance-free.
-
-Powering It Safely
-
-* **Connect Direct to DC:** Connect the wires directly to a rated DC power supply (e.g., 12V DC matching the pump's label).
-* **Observe Polarity:** Unlike a raw 3-phase motor (where swapping two wires simply reverses spin direction), connecting a 2-wire BLDC pump in reverse polarity can destroy the internal drive circuit unless it features built-in reverse-polarity protection.
-
-
-### The Software for D&A
-
-
-#### MicroControllers
-
-
-#### In the server
-
-
-
 
 ---
 
@@ -1359,6 +1344,36 @@ wget https://osm2world.org/download/files/latest/OSM2World-latest-bin.zip
 #Then from this repo:
 make osm2world-obj OSM2WORLD=~/tools/osm2world/osm2world   
 ```
+
+
+#### Pump BLDC with 2 wires but not 3 like an FPV
+
+If your brushless DC (BLDC) pump has only **2 wires** (typically positive and ground) instead of 3, the Electronic Speed Controller (ESC) or commutation drive circuitry is integrated directly inside the pump housing.
+
+Key Differences: 2-Wire BLDC Pump vs. 3-Wire FPV Motor
+
+| Feature | 2-Wire BLDC Pump | 3-Wire FPV Drone Motor |
+| --- | --- | --- |
+| **Driver Location** | **Internal** (built into the pump's sealed base) | **External** (separate 4-in-1 or individual ESC) |
+| **Input Power** | Pure **DC Voltage** (e.g., 12V or 24V) | **3-Phase AC/Pulsed DC** generated by the external ESC |
+| **Commutation** | Handled internally by a small microcontroller or Hall-effect driver IC | Commutated externally via Back-EMF sensing (sensorless BLDC) |
+| **Control** | Fixed speed upon power connection (or variable by varying DC voltage) | Variable high-speed throttle control via digital protocols (DShot, PWM) |
+| **Target Application** | Continuous, single-direction liquid flow | Dynamic, high-torque directional and rotational speed changes |
+
+How the 2-Wire BLDC Pump Operates Internally
+
+A brushless motor cannot run directly on continuous DC power without electronic phase switching. 
+
+Inside the sealed enclosure of your 19W pump:
+
+* **Integrated PCB:** A miniature circuit board receives the incoming DC power.
+* **Driver IC / Hall Sensor:** A micro-driver detects the rotor’s magnetic position and electronically switches the internal stator coils (Phases U, V, W) in sequence.
+* **Hermetic Sealing:** The electronics and stator windings are potted in epoxy resin to isolate them from moisture, allowing the wet rotor/impeller to spin maintenance-free.
+
+Powering It Safely
+
+* **Connect Direct to DC:** Connect the wires directly to a rated DC power supply (e.g., 12V DC matching the pump's label).
+* **Observe Polarity:** Unlike a raw 3-phase motor (where swapping two wires simply reverses spin direction), connecting a 2-wire BLDC pump in reverse polarity can destroy the internal drive circuit unless it features built-in reverse-polarity protection.
 
 
 ### Offer Configuration

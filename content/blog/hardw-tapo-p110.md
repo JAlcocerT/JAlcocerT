@@ -112,7 +112,7 @@ The energy/power monitoring can be used to optimied our home.
 
 Remembre about the **2.4G Wifi required**, *like its typical for IoT devices* and the 16A and 3680W max power limitation.
 
-> There are some other smartplugs like the Zigbee Forta IGZ-K20A which allow for 3600/16A or 4400w/20A, but...its not well integrated with the TUYA App neither it provides the energy monitoring.
+> There are some other smartplugs like the *Zigbee Forta IGZ-K20A* which allow for 3600/16A or 4400w/20A, but...its not well integrated with the TUYA App neither it provides the energy monitoring if you dont have the gateway or Z2M dongle and just try with wifi/bluetooth
 
 ---
 

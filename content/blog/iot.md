@@ -1,25 +1,27 @@
 ---
 title: "[IoT] Meeting AI. AIoT with a Raspberry Pi."
-date: 2026-09-23
+date: 2026-09-10
 draft: false
-tags: ["Tinkering IRL","M2M","Arduino-CLI x Velxio"]
-description: 'IoT Meets AI. Using MQTT and AI Together. The Internet of Tomorrow.'
+tags: ["Tinkering IRL","M2M","Arduino-CLI x Velxio","ADK x TTS"]
+description: 'IoT Meets AI via MQTT. The Internet of Tomorrow.'
 url: 'just-about-iot'
 ---
 
 
 **TL;DR:** 
 
-Putting together some ~2year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
 
 +++ Destiling knowledge to ebooks - IoT edition
 
-BTW, this is the [last ebook](#conclusions) of [the DIY series](https://jalcocert.github.io/JAlcocerT/interesting-books) that I will be publishing!
 
 ## Intro
 
-* WHY Im writting this post: 
+* WHY Im writting this post: *a*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
+
+Ive been recently putting together some ~3year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
+
+BTW, this is the [last ebook](#conclusions) of [the DIY series](https://jalcocert.github.io/JAlcocerT/interesting-books) that I will be publishing!
 
 
 
@@ -47,14 +49,7 @@ python3 rpi_gpio_gui.py
 
 > MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
 
-#### Zigbee
-
-If you have been playing with IoT and some home devices, you will come to know Zigbee.
-
-* https://www.zigbee2mqtt.io/supported-devices/#
-
-Probably also `https://esphome.io` if you like ESP32 boards!
-
+#### M2M
 
 https://www.thingsmobile.com/business/plans/find-the-best-plan
 
@@ -439,6 +434,65 @@ This got me nothing so far: https://ko-fi.com/s/86175d7928
 
 With this post, I pretend to 
 
+Building on microcontrollers and motor drivers, these core circuits form the backbone of embedded systems, power electronics, and automation.
+
+---
+
+### 1. Buck & Boost Switching Regulators
+
+Linear regulators (like the AMS1117 or 7805) burn off excess voltage as pure heat. Switching converters store energy in inductors and capacitors at high frequencies to step voltage up or down with **85% to 95% efficiency**.
+
+* **Why master it:** Essential for powering an ESP32 efficiently from a high-voltage solar panel, 12V battery, or stepping up a single 18650 cell (3.7V) to 5V/12V.
+* **Key concepts:** Duty cycle ($V_{out} = D \times V_{in}$ for Buck), inductor saturation current, diode reverse recovery, and output ripple filtering.
+
+---
+
+### 2. Low-Side and High-Side MOSFET Switches
+
+A simple transistor circuit that lets a 3.3V GPIO pin turn high-current, high-voltage DC loads (LED strips, heaters, solenoids, valves) fully on and off.
+
+* **Low-Side (N-Channel MOSFET):** Switch is between Load and GND. Simple to drive directly from 3.3V logic (using a logic-level MOSFET like the IRLZ44N).
+* **High-Side (P-Channel MOSFET):** Switch is between Power and Load. Keeps load grounded at all times, making it safer for automotive or exposed outdoor wiring.
+* **Key concepts:** Gate threshold voltage ($V_{GS(th)}$), gate pull-down resistors (to prevent floating triggers), and flyback diodes across inductive loads.
+
+---
+
+### 3. Shunt Resistor & Op-Amp Current Sensing
+
+Microcontrollers only read voltage, not current. To measure how much power a motor, battery, or solar panel draws, place a tiny resistor ($0.01\Omega - 0.1\Omega$) in the current path and amplify the small voltage drop across it.
+
+* **Why master it:** Essential for battery fuel gauges (Coulomb counters), motor stall/jam detection, and solar MPPT (Maximum Power Point Tracking) algorithms.
+* **Key concepts:** Differential amplifiers, non-inverting gain ($1 + \frac{R_f}{R_g}$), rail-to-rail op-amps, and high-side dedicated ICs (like the INA219).
+
+---
+
+### 4. Optocoupler / Galvanic Isolation Circuit
+
+Optocouplers transfer electrical signals using a tiny internal LED and phototransistor across an air gap, with no physical electrical connection.
+
+* **Why master it:** Completely isolates the ESP32 from electrical noise, inductive spikes from large motors, ground loops, or high-voltage AC mains.
+* **Key concepts:** Current transfer ratio (CTR), input forward current ($I_F$), and noise suppression.
+
+---
+
+### 5. RC Snubber & Flyback Clamp Circuits
+
+When an inductive load (motor, relay coil, solenoid) suddenly turns off, its collapsing magnetic field generates a massive reverse voltage spike (often hundreds of volts) known as inductive kickback.
+
+* **DC Loads:** A **Flyback Diode** (e.g., 1N4007 or Schottky) placed anti-parallel across the coil safely recirculates this energy.
+* **AC Loads:** An **RC Snubber** (resistor + capacitor in series) absorbs the transient energy across relay contacts to prevent arc damage and microcontroller lockups.
+
+---
+
+### Summary of Fundamentals
+
+| Circuit | Primary Purpose | Best Application |
+| --- | --- | --- |
+| **Buck / Boost** | High-efficiency DC voltage conversion | Battery power & Solar systems |
+| **MOSFET Switch** | Solid-state power switching | Solenoids, heaters, high-power LEDs |
+| **Current Sense + Op-Amp** | Real-time current & power monitoring | Motor stall protection, MPPT trackers |
+| **Optocoupler** | Electrical noise & ground isolation | Industrial sensors, AC zero-cross detection |
+| **Flyback / RC Snubber** | Inductive spike protection | Protecting transistors & relay contacts |
 
 
 <!-- 

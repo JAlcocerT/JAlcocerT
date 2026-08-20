@@ -124,39 +124,6 @@ Old speed tests used **TCP**, but because TCP slows itself down when it sees *an
 Each of these technologies chooses a protocol based on whether they prioritize **reliability** (not losing data) or **efficiency** (speed and low overhead).
 
 
-1. Web Browsers (Chrome, Safari, Firefox)
-
-Browsers have traditionally been the kingdom of **TCP**, but they are currently in the middle of a massive transition.
-
-* **Classic Web (HTTP/1.1 and HTTP/2):** These use **TCP**. When you load a bank statement or a news article, every pixel and character must be perfect. If a packet is lost, TCP re-sends it.
-* **Modern Web (HTTP/3):** Most modern browsers now use **QUIC** (which runs on top of **UDP**). This is what happens when you use Google services, YouTube, or Facebook. It provides the reliability of TCP but starts connections much faster.
-* **Real-Time Video (WebRTC):** If you use Google Meet or Zoom *inside* a browser, it uses **UDP** to keep the video from lagging.
-
-2. P2P (Peer-to-Peer / BitTorrent)
-
-P2P is unique because it often uses **both** simultaneously to balance speed and management.
-
-* **For Finding Files (DHT):** Uses **UDP**. It’s like shouting into a crowd to see who has a file; it doesn't need a formal "handshake" for every person it asks.
-* **For Transferring Data:** Traditionally uses **TCP** to ensure the file isn't corrupted. However, modern BitTorrent uses a protocol called **uTP (Micro Transport Protocol)** which runs on **UDP**.
-* **Why UDP for P2P?** It helps with "NAT Traversal" (getting through home firewalls) and prevents the P2P upload from "choking" your entire home internet connection.
-
-
-3. MQTT (Message Queuing Telemetry Transport)
-
-MQTT is the "language of the Smart Home" (IoT). 
-
-It is designed for tiny sensors with very little battery power.
-
-* **Standard MQTT:** Uses **TCP**. Because IoT devices (like a smart lock or a temperature sensor) often send very important commands, they need the guarantee that the message actually arrived.
-
-* **MQTT-SN (Sensor Networks):** This version uses **UDP**. It is used for devices that are so small or have such bad connections (like Zigbee or long-range radio) that the "overhead" of a TCP handshake would drain the battery too fast.
-
-| Technology | Primary Protocol | Why? |
-| :--- | :--- | :--- |
-| **Web Browser** | **TCP / QUIC (UDP)** | Needs 100% accuracy for text/images; uses QUIC for speed. |
-| **P2P (Torrent)** | **UDP (uTP)** | To bypass firewalls and manage congestion without crashing the router. |
-| **MQTT (IoT)** | **TCP** | Needs to ensure the "Turn off stove" command actually reached the device. |
-
 
 
 ### A Quick Note on Layers

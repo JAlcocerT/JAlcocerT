@@ -31,5 +31,3 @@ https://fossengineer.com/selfhosting-ekuiper/
 
 https://fossengineer.com/selfhosting-emqx/
 https://fossengineer.com/selfhosting-esphome/
-
-https://fossengineer.com/zigbee2mqtt-self-hosted-zigbee-bridge/

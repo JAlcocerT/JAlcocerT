@@ -3,7 +3,7 @@ title: "[JAlcocerTech] Services Recap"
 date: 2026-09-01T11:20:21+01:00
 draft: false
 tags: ["Tmux vs CMUX vs Herdr","OSS Journaling x Filesmd x Forgejo","JAlcocerTech Leads"]
-description: 'Beyond software, AI Fluency. PV vs SAHP vs HVAC - Energy Solutions and mbsd Simulations.'
+description: 'Beyond software, AI Fluency.'
 url: 'jalcocertech-services-update'
 ---
 
@@ -37,11 +37,11 @@ ssh -T -o BatchMode=yes forgejo-home
 * Then put it back to [gh here](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101)
 * And test with https://webaudit.jalcocertech.com/
 
-{{% details title="Why  🚀" closed="true" %}}
+{{% details title="How to make sure your agent can write to the local Forgejo 🚀" closed="true" %}}
 
 Forgejo Write Access Validation
 
-Date: 2026-08-19  
+Date: 2026-09-19  
 Local machine user: `jalcocert`  
 Forgejo SSH account validated: `hermesagent`  
 Forgejo host alias: `forgejo-home`  

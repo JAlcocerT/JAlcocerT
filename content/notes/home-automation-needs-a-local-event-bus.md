@@ -1,13 +1,15 @@
 ---
 title: "Home automation needs a local event bus"
-date: 2026-09-10
+date: 2026-08-25
 tags: ["home-assistant", "iot", "homelab"]
 description: "Home automation works best when devices, sensors, and automations communicate through a reliable local layer."
 ---
 
 Home automation needs a reliable local event layer.
 
-Sensors, switches, brokers, dashboards, and automations should keep working even when cloud services are flaky. MQTT, Home Assistant, Zigbee, and local APIs are useful because they keep control close to the environment.
+Sensors, switches, brokers, dashboards, and automations should keep working even when cloud services are flaky.
+
+MQTT, Home Assistant, Zigbee, and local APIs are useful because they keep control close to the environment.
 
 The home should not depend on distant glue for basic behavior.
 

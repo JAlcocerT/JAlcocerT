@@ -9,9 +9,9 @@ url: 'optimal-karting-line'
 
 **TL;DR**
 
+GoPros telemetry is not always so reliable and a PWA can prove it
 
 **Intro**
-
 
 * WHY Im writting this post: *Want to share with my friends my refreshed gopro telemetry setup*
 * What [Ive learnt](#conclusions) with it: *Ive ended up making my first [PWA around ffmpeg](#pwa---gopro-telemetry-extractor)*
