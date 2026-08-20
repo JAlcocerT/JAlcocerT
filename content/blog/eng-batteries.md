@@ -3,7 +3,7 @@ title: "Batteries are a thing"
 date: 2026-08-01
 draft: false
 tags: ["Bluetti elite 30 v2 x UVX","DC Motor","Cupra","LiPo vs Li-Ion","BLE","W Engine"]
-description: 'Another rabbit-hole. Testing a 18860 x ESP32.'
+description: 'Another rabbit-hole. Testing a 18860 x ESP32 and bluetooth BLE.'
 url: 'understanding-batteries'
 math: true
 ---
@@ -65,6 +65,10 @@ And that the bluetti can bring interesting MQTT data:
 
 * https://github.com/warhammerkid/bluetti_mqtt 3/4 yo
 * https://github.com/empicano/aiomqtt 3/4 months
+
+{{< callout type="warning" >}}
+I didnt manage to use [uvx to connect via BLE to the bluetti](https://github.com/JAlcocerT/poc/tree/main/iot-bluetti)
+{{< /callout >}}
 
 Your portable power station utilizes **LiFePO4** chemistry, LFP (Lithium Iron Phosphate)
 

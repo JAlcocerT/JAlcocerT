@@ -2,7 +2,7 @@
 title: "Launching a MBSD framework?"
 date: 2026-05-02
 draft: false
-tags: ["Mechanism Analytics x Simulations","JAlcocerTech ebook"]
+tags: ["Mechanism Analytics x Simulations","JAlcocerTech ebook x multibody"]
 description: 'A Dynamics x Kinematics HUB. Agentic centered design via CADQuery x Blender.'
 url: 'design-centric-mbsd'
 math: true
@@ -252,7 +252,11 @@ A $2\times$ engine harmonic at idle (~33 Hz) is weighted lower than the body-bou
 
 ### Synthesis
 
-Mechanism **analysis** asks: given this linkage, what does it do? Mechanism **synthesis** asks the inverse: given what it must do, what linkage should I build? The synthesis posts introduce the three classical tools — one for each layer of the problem.
+Mechanism **analysis** asks: given this linkage, what does it do? 
+
+Mechanism **synthesis** asks the inverse: given what it must do, what linkage should I build? 
+
+The synthesis posts introduce the three classical tools — one for each layer of the problem.
 
 The three grandfathers of kinematic synthesis:
 
@@ -302,7 +306,11 @@ This is the fastest route from a functional specification ("output must follow i
 
 #### Burmester — Motion Generation
 
-Where Freudenstein solves for function (angle-to-angle), **Burmester theory** solves for **motion generation**: the coupler must pass through a sequence of full poses (position + orientation). For four prescribed poses, the locus of valid fixed pivot locations traces the **center point curve** (a fifth-degree algebraic curve). Intersecting two such curves for the two pivots gives the complete set of four-bars that guide the coupler through all four poses.
+Where Freudenstein solves for function (angle-to-angle), **Burmester theory** solves for **motion generation**: the coupler must pass through a sequence of full poses (position + orientation).
+
+For four prescribed poses, the locus of valid fixed pivot locations traces the **center point curve** (a fifth-degree algebraic curve).
+
+Intersecting two such curves for the two pivots gives the complete set of four-bars that guide the coupler through all four poses.
 
 Burmester synthesis introduces two classic problems that pure algebra misses:
 
@@ -313,7 +321,9 @@ Both are checked in simulation after synthesis via the Jacobian and position con
 
 #### Transmission Angle — The Design Diagnostic
 
-Across both analysis and synthesis the single most useful scalar is the **transmission angle** $\mu$: the angle between the coupler and the output rocker. Force efficiency scales as $\sin(\mu)$:
+Across both analysis and synthesis the single most useful scalar is the **transmission angle** $\mu$: the angle between the coupler and the output rocker. 
+
+Force efficiency scales as $\sin(\mu)$:
 
 $$F_{useful} = F_{coupler} \cdot \sin(\mu)$$
 
@@ -337,7 +347,9 @@ Once link lengths pass the Grashof and transmission-angle checks, the mechanism 
 
 $$\begin{bmatrix} M & C_q^T \\ C_q & 0 \end{bmatrix} \begin{bmatrix} a \\ \lambda \end{bmatrix} = \begin{bmatrix} Q_{total} \\ \gamma \end{bmatrix}$$
 
-The Lagrange multipliers $\lambda$ are the joint reaction forces — the same forces that feed into FEM for stress analysis. Synthesis provides the geometry; the MBSD solver provides the loads; FEM checks whether the chosen geometry survives them.
+The Lagrange multipliers $\lambda$ are the joint reaction forces — the same forces that feed into FEM for stress analysis.
+
+Synthesis provides the geometry; the MBSD solver provides the loads; FEM checks whether the chosen geometry survives them.
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/2d-mechanism-synthesis/" title="2D Synthesis | Post" icon="book-open" >}}
@@ -348,13 +360,14 @@ The Lagrange multipliers $\lambda$ are the joint reaction forces — the same fo
 
 ---
 
-
 ## Conclusions
 
 Believe it or not: this is another industry getting shaped by AI capabilities:
 
 - **Blender**: photorealistic rendering, rigged animation, organic shapes, video editing — see `z-cadquery/blender_scene.py`.
 - **FreeCAD**: assembly constraints, FEM simulation, technical drawings (TechDraw workbench), importing STEP/IGES from suppliers.
+
+> You have this ebook for context for your agents: `https://ebooks.jalcocertech.com/books/mechanism-analytics/`
 
 ```sh
 sudo apt install openscad
@@ -364,7 +377,6 @@ make animate FRAME=60
 ```
 
 The sweet spot for OpenSCAD is **parametric mechanical parts and automated STL pipelines** — exactly what this folder does.
-
 
 Because if mechanism 3D dynamics its *kind of* trivial now: *at least with improved workflows like this one!*
 
@@ -385,12 +397,9 @@ Each tool has a distinct role — they are not interchangeable:
 | 4 | **FreeCAD** | FEM stress analysis, tolerance checks, technical drawings | `.pdf`, `.fcstd` |
 | 5 | **Blender** | Photorealistic commercial renders and animations | `.mp4`, `.png` |
 
-
 > Yea, openScad does [not render as beautiful](https://youtu.be/fPi-L7Qn7Xw) as blender does
 
-You need some guardrails not to end up like [the engine balance test](https://github.com/JAlcocerT/engine-balance)
-
-
+You need some guardrails not to end up like [this engine balance test](https://github.com/JAlcocerT/engine-balance)
 
 So... even more trivial is web development:
 
@@ -410,19 +419,15 @@ To decide which one is the best fit for you:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-
-
 ### Launching MultiBodySystemsDynamics
 
 How could have I guessed that this domain was available to buy.
-
 
 I made a quick web wrap: `https://trends.google.com/`
 
 ```sh
 #git clone https://github.com/JAlcocerT/Slider-Crank #kineo bridge :) #https://multibodysystemdynamics.pages.dev/
 #git clone https://github.com/JAlcocerT/multi-body
-
 ```
 
 Superseeding [this](https://github.com/JAlcocerT/Slider-Crank/blob/main/prompt-blueprint.md).
@@ -474,31 +479,13 @@ Ask 2-3 technical questions:
 * **Why?** High-end clients *prefer* a form that asks for specifics. It tells them you are a professional who values time and understands the complexity of their problem.
 
 
-
-### Whats next?
-
-Understanding suspensions?
-
-<!-- https://www.youtube.com/watch?v=VbReLNi2JP4 -->
-
-{{< youtube "VbReLNi2JP4" >}}
-
----
-
-## FAQ
-
-
 ### Is this an epic launch?
 
 The **launch strategy**: *aka, focus strategy*
 
-In theory, for Non comercial purposes :)
+In theory: for **Non comercial** purposes, MIT License :)
 
-1. maximizar active income
-2. ahorrar
-3. **Value based or nothing**
-
-The **Tier of Service**: DFY 
+The **Tier of Service**: ~DIY ~DFY on demand 
 
 The **Tech Stack**:
 
@@ -519,6 +506,21 @@ The **Tech Stack**:
 | **E-mail/ESP** | MailTrap | |
 | **Analytics** | Posthog | |
 | **Hosting** | Container | |
+
+
+
+### Whats next?
+
+Understanding suspensions?
+
+<!-- https://www.youtube.com/watch?v=VbReLNi2JP4 -->
+
+{{< youtube "VbReLNi2JP4" >}}
+
+---
+
+## FAQ
+
 
 ### How did you started doing mechanical simulations?
 
@@ -546,7 +548,11 @@ Now with agents, there is no excuse not to do this just bc is not my job.
 
 ### Agentic Blender?
 
- https://www.youtube.com/watch?v=LZMWsZbZU5w
+<!-- 
+https://www.youtube.com/watch?v=LZMWsZbZU5w 
+-->
+
+{{< youtube LZMWsZbZU5w >}}
 
 Some references: `https://github.com/agmmnn/awesome-blender`
 

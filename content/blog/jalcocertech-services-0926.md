@@ -3,7 +3,7 @@ title: "[JAlcocerTech] Services Recap"
 date: 2026-09-01T11:20:21+01:00
 draft: false
 tags: ["Tmux vs CMUX vs Herdr","OSS Journaling x Filesmd x Forgejo","JAlcocerTech Leads"]
-description: 'Beyond software, AI Fluency. PV vs SAHP vs HVAC - Energy Solutions Simulations.'
+description: 'Beyond software, AI Fluency. PV vs SAHP vs HVAC - Energy Solutions and mbsd Simulations.'
 url: 'jalcocertech-services-update'
 ---
 
@@ -13,7 +13,7 @@ Ive tried [t3 code](https://github.com/pingdotgg/t3code/releases) with my Pi.
 
 **Intro**
 
-* WHY Im writting this post: 
+* WHY Im writting this post: *Bc I was supposed to launch [a mbsd fwk here](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics), but I just [released an ebook](https://ebooks.jalcocertech.com/books/mechanism-analytics/) so far*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
@@ -489,6 +489,10 @@ https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
 
 #### Crops
 
+```sh
+
+```
+
 
 
 ### FPV
@@ -521,10 +525,18 @@ Then perform [damage diagnosis](https://youtube.com/shorts/OPuNbaIYuRM)
 
 With the release of this OSS framework for mbsd:
 
+```
+kinematics.py  ──►  OpenSCAD  ──►  CadQuery  ──►  FreeCAD  ──►  Blender
+  (math)           (quick check)   (BREP/STEP)    (FEM/draw)   (render)
+```
+
 
 #### Multi Body Systems Dynamics dot com
 
 I took all the goodies from the github and forgejo repos: *2D/3D*
+
+The idea is to finally launch the [overdue oss mbsd framework](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics)
+
 
 not https://multibodysystemdynamics.pages.dev/ [this](https://github.com/JAlcocerT/Slider-Crank/tree/main/landing) but 
 https://multibodysystemsdynamics.com/
@@ -532,11 +544,17 @@ https://multibodysystemsdynamics.com/
 So you can [continue where you left it](http://192.168.1.2:3034/hermesagent/mbsd/src/branch/oss-core-2d/web) `http://192.168.1.18:5173/`
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/PoC/" title="MBSD OSS ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT//" title="MBSD OSS Framework ↗" icon="github" >}}
 {{< /cards >}}
+
+app.multibodysystemsdynamics.com
+multibodysystemsdynamics.com
+multibodysystemsdynamics.com/roadmap
 
 
 > I couldnt avoid to email again to Gabe Morris :)
+
+> > And email to selfh.st
 
 ## Others
 
@@ -549,7 +567,9 @@ Go ask unconfortable [questions](https://jalcocert.github.io/JAlcocerT/questions
 * https://why-postmortem-checks.pages.dev
 * https://pm-pdm-checks.pages.dev
 
-### homelab
+### HomeLab
+
+This setup is working quite nicely thanks to skills:
 
 {{< cards cols="2" >}}
   {{< card link="https://fossengineer.com" title="F/OSS Engineer ↗" icon="book-open" >}}
@@ -563,9 +583,12 @@ Every business has its own delivery
 But every business owner will resonate when you ask [how they are getting customers](https://jalcocert.github.io/JAlcocerT/poc-107/#the-service-to-rule-them-all)
 
 
-1. With a proper website: webaudits here
+1. With a proper website: [webaudits here](https://webaudit.jalcocertech.com/)
 
 2. With outbound marketing: get leads, enrich leads, reachout via email
+
+3. Dont forget about the attribution
+
 
 
 {{< details title="Made the DNS setup also for getslubnechwile 📌" closed="true" >}}
@@ -580,7 +603,11 @@ But every business owner will resonate when you ask [how they are getting custom
 
 ## Conclusions
 
-This is getting traction:
+1. Do 
+2. Maximize active income and save
+3. **Value based or nothing**
+
+This value-based is getting traction:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/jalcocertech-services/" title="JAlcocerTech Services ↗" icon="github" >}}

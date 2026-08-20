@@ -25,6 +25,8 @@ iot sim card
 
 m2m = machine to machine
 
+I heard that teltonika also do routers for EV stations to send telemetry
+
 https://telnyx.com/pricing/iot-data-plans
 https://en.wikipedia.org/wiki/Machine_to_machine
 
@@ -280,10 +282,11 @@ ESPHome
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/node-red/" title="Node Red | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
-Node-Red
+<!-- https://github.com/JAlcocerT/Home-Lab/tree/main/
+Node-Red -->
 
 ### HA
 

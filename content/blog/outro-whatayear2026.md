@@ -790,13 +790,15 @@ Trying for the first time the mac ecosystem was also interesting.
 
 4. Dron Telemetry, FPVs...
 
-5. Tomatoes IoT end to end setup
+5. Tomatoes IoT end to end setup: *with arduino-cli, electronics simulations, components and their connections, velxio...*
 
 99. Duckdb x motherduck
 
 ~33...now 46...60 and 16post/22 days january
 
 And ending Q1 of 2026...89.
+
+Passed 100 published in Aug.
 
 Ok, its cooked.
 
@@ -841,6 +843,8 @@ I was not expecting to:
 6. still find people at 30+ y.o with the startup mode of 0 earnings now, no reasonable process to get better, but trust me bro that ill reach 150k MRO soon *(and finding ppl who buy those stories)*
 
 #### Quotes
+
+
 
 Trading all risk/volatility is selling the tail probability of bigger success
 

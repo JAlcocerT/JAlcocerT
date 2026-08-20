@@ -26,15 +26,14 @@ How about some **IoT x AI** as a companion?
 #cd ./poc/iot-rpi-dht
 sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE metric = 'temperature' GROUP BY day ORDER BY day;"
 
-  sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT device, metric, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE received_ms >=
-  (strftime('%s','now') - 24*60*60)*1000 GROUP BY device, metric ORDER BY device, metric;"
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT device, metric, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE received_ms >=(strftime('%s','now') - 24*60*60)*1000 GROUP BY device, metric ORDER BY device, metric;"
 
- sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT topic, metric, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE received_ms >=
-  (strftime('%s','now') - 24*60*60)*1000 GROUP BY topic, metric ORDER BY topic, metric;"
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT topic, metric, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE received_ms >=
+(strftime('%s','now') - 24*60*60)*1000 GROUP BY topic, metric ORDER BY topic, metric;"
 
-  sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "WITH ranked AS (SELECT device, metric, topic, value, received_at, received_ms, strftime('%Y-%m-%d %H:00:00',
-  received_at) AS hour_bucket, ROW_NUMBER() OVER (PARTITION BY device, metric, strftime('%Y-%m-%d %H', received_at) ORDER BY received_ms ASC) AS rn FROM readings WHERE received_ms >=
-  (strftime('%s','now') - 24*60*60)*1000) SELECT device, metric, hour_bucket, topic, value, received_at FROM ranked WHERE rn = 1 ORDER BY hour_bucket, device, metric;"
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "WITH ranked AS (SELECT device, metric, topic, value, received_at, received_ms, strftime('%Y-%m-%d %H:00:00',received_at) AS hour_bucket, ROW_NUMBER() OVER (PARTITION BY device, metric, strftime('%Y-%m-%d %H', received_at) ORDER BY received_ms ASC) AS rn FROM readings WHERE received_ms >=(strftime('%s','now') - 24*60*60)*1000) SELECT device, metric, hour_bucket, topic, value, received_at FROM ranked WHERE rn = 1 ORDER BY hour_bucket, device, metric;"
+
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE device = 'esp32' AND metric = 'humidity' GROUP BY day ORDER BY day;"
 ```
 
 The SQLite backend subscribes to that broker over the network and stores readings locally. 
@@ -104,8 +103,6 @@ To be able to **chat with a DB where the DHT22 sensor data** (temp and humidity)
 
 1. Get the **DB Ready** - We will do it with a [MariaDB SQL Container](https://github.com/JAlcocerT/Docker/blob/main/Dev/DBs/MariaDB_docker-compose.yml), but you can use a [MYSQL container](https://github.com/JAlcocerT/Docker/blob/main/Dev/DBs/MySQL_docker-compose.yml) or with [MYSQL baremetal as in the initial example post](https://jalcocert.github.io/JAlcocerT/how-to-chat-with-your-data/#chat-with-a-db-with-langchain)
 
-
-
 We just need a [MariaDB](https://github.com/JAlcocerT/Docker/blob/main/Dev/DBs/MariaDB_docker-compose.yml) or [MySQL](https://github.com/JAlcocerT/Docker/blob/main/Dev/DBs/MySQL_docker-compose.yml) **container deployed**
 
 {{< cards cols="2" >}}
@@ -157,7 +154,6 @@ pip install -r requirements.txt
 Lets save all the sensor reads into a **SQL database**.
 
 {{< details title="Python | DHT Data to SQL DB 📌" closed="true" >}}
-
 
 ```py
 import Adafruit_DHT
@@ -226,12 +222,13 @@ Is the IoT Part already working?
 
 Lets go with the **AI part**.
 
+
+ADK, BAML...?
+
 {{< details title="What it is ? 📌" closed="true" >}}
 
 
 {{< /details >}}
-
-
 
 When you are done:
 
@@ -253,7 +250,6 @@ I just cant help but think of the Raspberry Pi, that I got [some time back](http
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/RPi/" title="Raspberry Pi Projects" image="/blog_img/hardware/sbcs-x13.jpg" subtitle="Jekyll site with Pi Projects and their related code" >}}
 {{< /cards >}}
-
 
 Then it was AI.
 

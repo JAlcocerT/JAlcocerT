@@ -238,7 +238,7 @@ Set your multimeter dial to **DC Voltage (V$\overline{\ldots}$)**. Keep the **Bl
 
 Put the minus (Black probe) in any hole along the - Rail (the Blue Ground rail) or directly in Row 22 (Source / Pin 3).Both spots are your 0V Ground reference.What to Look For:Switch OFF: The multimeter should read $0.0\text{ V}$.Switch ON: The multimeter should read $\approx 12.0\text{ V} - 13.5\text{ V}$ (your full Bluetti supply voltage).
 
-Fantastic! Having the gate read 0.0 V when OFF and the full 12 V when ON confirms your control circuit and pull-down resistor are working under ideal conditions.Now check the Drain (Pin 2 / Row 21) while keeping your Black probe on the - Rail (Ground):Switch OFF: Touch Red probe to Row 21 (Drain).Expected: Reads full supply voltage ($\approx 12.0\text{ V} - 13.5\text{ V}$).Switch ON: Touch Red probe to Row 21 (Drain) while the pump is spinning.Expected: Drops to nearly zero ($0.02\text{ V} - 0.1\text{ V}$).That drop to near $0\text{ V}$ confirms the MOSFET is fully saturated and acting like a solid closed switch with virtually zero power loss or heat.
+Having the gate read 0.0 V when OFF and the full 12 V when ON confirms your control circuit and pull-down resistor are working under ideal conditions.Now check the Drain (Pin 2 / Row 21) while keeping your Black probe on the - Rail (Ground):Switch OFF: Touch Red probe to Row 21 (Drain).Expected: Reads full supply voltage ($\approx 12.0\text{ V} - 13.5\text{ V}$).Switch ON: Touch Red probe to Row 21 (Drain) while the pump is spinning.Expected: Drops to nearly zero ($0.02\text{ V} - 0.1\text{ V}$).That drop to near $0\text{ V}$ confirms the MOSFET is fully saturated and acting like a solid closed switch with virtually zero power loss or heat.
 
 ---
 
@@ -1149,6 +1149,11 @@ Powering It Safely
 
 This project is the proof of concept showing the basic and foundational building blocks of electronics and embedded systems: **MCU logic (ESP32)**, **power switching (Logic-Level N-MOSFET)**, and **transient load protection (flyback diode, decoupling capacitor, pull-down/gate resistors)**.
 
+{{< callout type="info" >}}
+With all the final goodies here
+{{< /callout >}}
+
+
 Too much to digest?
 
 Go ask chatgpt
@@ -1215,9 +1220,15 @@ Tier 3: Adding High-Power Actuators
 
 #### PC Fans
 
+
+
 **PC fans are ideal for testing PWM.**
 
 In fact, they give you [two different ways](https://github.com/JAlcocerT/poc/tree/main/iot-esp32-motors) to run the test depending on which fan you choose.
+
+{{< callout type="info" >}}
+To avoid having more posts, I made [the setups directly here](https://github.com/JAlcocerT/poc/tree/main/iot-esp32-motors)
+{{< /callout >}}
 
 | Fan Type | Wire Colors (Typical) | Pin Functions |
 | --- | --- | --- |
