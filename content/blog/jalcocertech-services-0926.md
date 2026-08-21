@@ -504,7 +504,7 @@ Or just get ready to *DYOR* and make a DIY dron.
 Before flying, make sure you are aware about licenses, permissions, insurances and limitations
 
 #### FPV Telemetry
-
+https://www.youtube.com/watch?v=hw_CAQCFCmA
 1. Make sure to understand the limit of your batteries: 18650 (), LiPo 1S (3.5-4.2)
 
 | Parameter | Standard 18650 Li-ion | Standard 1S LiPo |
@@ -550,7 +550,7 @@ So you can [continue where you left it](http://192.168.1.2:3034/hermesagent/mbsd
 app.multibodysystemsdynamics.com
 multibodysystemsdynamics.com
 multibodysystemsdynamics.com/roadmap
-
+multibodysystemsdynamics.com/whitepaper
 
 > I couldnt avoid to email again to Gabe Morris :)
 

@@ -12,13 +12,86 @@ https://multibodysystemdynamics.pages.dev/
 
 **Tl;DR**
 
-Because ideas are worthless and execution is everything
+Some people are were billing 50$/h and paying 5$/h for such expertise.
 
-The engine behind `https://multibodysystemsdynamics.com/` cant be closed source.
+Now its OSS and thats fine.
+
+Because ideas are worthless and **execution is everything**
+
+
+
+{{< details title="Executing with CC 📌" closed="true" >}}
+
+
+
+Claude Code - Start with this agentic coding assistant that runs in your terminal
+Computer Use - Explore this set of tools that lets Claude interact with desktop applications
+Agents - Understand what makes these applications successful as agents
+
+Claude Code has access to generic, flexible tools like:
+
+bash - Run any command
+read - Read any file
+write - Create any file
+edit - Modify files
+glob - Find files
+grep - Search file contents
+It notably doesn't have specialized tools like "refactor code" or "install dependencies." Instead, Claude figures out how to use the basic tools to accomplish these complex tasks. This abstraction allows it to handle countless programming scenarios that the developers never explicitly planned for.
+
+```sh
+claude 
+#/goal work until my webaudit framework returns a 100%
+#/goal clear
+```
+
+Use workflows when you can picture the exact flow or steps that Claude should go through to solve a problem, or when your app's UX constrains users to a set of tasks
+Use agents when you're not sure exactly what task or task parameters you'll give to Claude
+
+> Managed Policy > User > Project > Local
+
+Use `Claude.md` for conventions `skills` for procedures tied to tasks and `Hooks` for rules that cant be skipped
+
+A skill isn't just a single skill.md file. The folder around it can carry other things, and this is what makes skills powerful for verification.
+
+Drop a reference.md next to the skill for detailed material, then link to it from skill.md. Claude only reads it when it actually needs that depth. Your main file stays short.
+Put scripts in the folder too. Claude executes them rather than loading their contents into context. That means a skill can carry its own tooling, like a check.sh that runs all the gates.
+The takeaway: keep skill.md itself lean. Push the heavy material, the long explanations and the executable scripts, into side files. The lean file describes what to do; the side files hold the depth and the tools.
+
+With this one:
+
+```sh
+/schedule daily audit for blabla at 9am #this runs at anthropic servers
+#/routine #routine can runs on Anthropic infrastructure on a cron trigger
+```
+
+```sh
+claude -p "summarize the changes in this diff"
+```
+
+Get a cold second opinion
+The sub-agent code review you'd run before a pull request works here too. Point it at an unsupervised run.
+
+Open a fresh session or sub-agent and have it review the changed code with no memory of how the code was built. Because it has no stake in the approach, it catches the things the original run talked itself past. A second reviewer with fresh eyes finds what the author rationalized away.
+
+**PLUGINS** are how CC packages a setup and moves it between ppl https://agent-plugins.org/
+
+```sh
+#these execute code with your user permissions, be careful
+/plugin install #marketplace add abc/def
+```
+
+![alt text](/blog_img/GenAI/plugins.png)
+
+{{< /details >}}
+
+{{< details title="Executing with CC 📌" closed="true" >}}
+
+
+{{< /details >}}
 
 **Intro**
 
-* Why Im writting this post: 
+* Why Im writting this post: *Bc The engine behind `https://multibodysystemsdynamics.com/` cant be closed source.*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 From the [wedding conversation with Gilabert](https://jalcocert.github.io/JAlcocerT/what-do-i-do/), my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and [inspired by diode Inc](https://www.youtube.com/watch?v=B8DbMJ1Zr4I).
@@ -100,7 +173,10 @@ The landing and the leads are mine :)
 
 ## Conclusions
 
-
+app.multibodysystemsdynamics.com
+multibodysystemsdynamics.com
+multibodysystemsdynamics.com/roadmap
+multibodysystemsdynamics.com/whitepaper
 
 ### Compliant Mechanism
 

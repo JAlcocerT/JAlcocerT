@@ -7,6 +7,16 @@ description: 'Are certifications still worth it? A look to CCAR-F and AI fluency
 url: 'selfhosting-business'
 ---
 
+https://github.com/Notifuse/notifuse
+
+Open-source, self-hosted newsletter, email marketing and transactional email platform. Visual MJML editor, Liquid templating, 7 sending providers.
+
+https://github.com/zonelessdev/zoneless
+Open-source Stripe alternative for stablecoins. Checkout, subscriptions, and marketplace payouts. Stripe-compatible API. Your very own payments stack with no fees.
+
+
+
+
 **TL;DR**
 
 Avoid silos and the [Coasean Ceiling](#about-the-coasean-ceiling).

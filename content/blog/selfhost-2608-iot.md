@@ -7,6 +7,15 @@ description: 'A homelab and sensors. The 101 BoM to get you started.'
 url: 'home-lab-tools-for-iot'
 ---
 
+
+```sh
+cd ./poc/iot-dashboard
+ docker compose up -d --build
+  curl -s localhost:3037/api/health
+```
+
+http://192.168.1.2:3037/?range=7d
+
 <!-- https://youtube.com/shorts/mKVvW_jl3UI -->
 
 {{< youtube "mKVvW_jl3UI" >}}
