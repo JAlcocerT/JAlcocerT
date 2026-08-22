@@ -3,7 +3,7 @@ title: "Just maps v2"
 date: 2026-07-17T08:00:21+01:00
 draft: false
 tags: ["Real Estate x DFV","GeoJSON vs GPX","PostGIS","Go Pro GPS"]
-description: 'More GeoSpatial analysis.'
+description: 'More GeoSpatial analysis to help home buyers looking for energy efficiency.'
 url: 'geo-data-analytics'
 math: true
 ---
@@ -186,8 +186,60 @@ https://youtu.be/bgx9B_77tYU
 More info about other [housing data points](#finding-interesting-housing-data)
 {{< /callout >}}
 
+See where the sold houses are and how much sun they are getting in December, by combining: *22.8% of the inhabited corridor gets zero direct sun in December.*
+
+
+![alt text](/blog_img/data-experiments/geo/sun_december_over_map.png)
+
+Roughly nine steps, and the ordering has one non-obvious dependency: **the prices decide how big the DEM has to be**, so you can't fetch terrain first.
+
+Pass 1 — the transaction study
+
+**1. Probe the source before writing anything.** `curl -sI` on `files.data.gouv.fr/geo-dvf/latest/csv/{year}/communes/64/64204.csv` to find out what actually exists. Result: 2021–2025 only (`latest` is a rolling five-year window; 2014–2020 all 404). That single check decided the sample size for everything downstream.
+
+**2. Look at raw rows before designing the €/m² rule.** Downloaded the five files (~180 KB total) and dumped a few multi-row mutations. That's where the rule came from: `Dépendance` rows carry *no* `surface_reelle_bati` at all, so `Appartement; Dépendance` is one flat sold with its cellar — keep it, and use the flat's surface as the denominator. Had I written the ingest first I'd have excluded those and thrown away most of the sample.
+
+**3. Ingest → `fetch_geodvf.py`.** Group by `id_mutation` (the official key — no date+value+address heuristic needed), apply the pricing rule, log a *reason* for every rejection. → 485 mutations, 481 geocoded, 397 priced, median 1686 €/m².
+
+**4. Now size the terrain from the prices.** Bbox of the transaction coordinates: 3.1 × 6.9 km, furthest point 3.8 km from centre. Since the horizon march needs 30 km, the DEM radius must be 30 + 3.8 ≈ 34 km. That's the dependency — terrain extent is a function of where the sales are.
+
+**5. DEM fetch → `fetch_terrain.py`** (copied verbatim from `building-geo-to-blender`). 110 terrarium tiles, 34 MB, 80 s, no API key, no GDAL.
+
+**6. Horizon per parcel → `sun_by_point.py`.** The one piece of genuinely new geometry: the sibling project marches rays from the *centre* of its DEM, this marches from an arbitrary offset inside a shared one. Deduped to **117 distinct coordinates** rather than 481 mutations, because DVF geocodes to the parcel. 17 s.
+
+**7. Join and test → `join_analyze.py`.** Correlations, cluster-robust regressions, the faceted scatter, the Leaflet map. → the null result, which I then blamed on a +0.92 elevation/sun collinearity.
+
+```
+geo-DVF csv ──> mutations.csv ──┬──> bbox ──> DEM ──> horizons ──> sun_by_point.csv
+                                │                                        │
+                                └────────────────  join  ────────────────┘
+                                                     ↓
+                                        findings.json, chart, map
+```
+
+Pass 2 — the raster that overturned step 7's diagnosis
+
+**8. Same DEM, grid instead of points → `build_sun_raster.py`.** 4 515 cells, 5 min 20 s. Then — before trusting a single number — **cross-check**: sample the raster at the 117 parcel coordinates and compare against pass 1. r = 0.999, mean absolute difference 1.5 h, signed difference −0.05 h.
+
+**9. Bin by elevation → `analyze_bands.py`.** This is where the reframing happened: over the terrain the collinearity is only +0.24, versus +0.74 over sold parcels and +0.92 over sales. So the matched-elevation test became possible, and it made the null stronger.
+
+**10. Composite → `composite_map.py`.** Blend the raster onto real OSM tiles. Nominally an illustration; actually the georeferencing check — the pale corridor lands exactly on the Valentin and the D918.
+
+## The shape underneath it
+
+Three habits did most of the work, and they're all lifted from your existing projects rather than invented:
+
+- **Inspect the data before writing the parser.** Steps 1 and 2 each changed the design.
+- **Two independent paths, then check they agree.** Your `building-geo-to-blender` cross-checks its analytic horizon against a Cycles render (38.4% vs 38.9%); here the raster cross-checks the point run, and the composite cross-checks the georeferencing. Every expensive claim has a cheap second opinion.
+- **Refuse rather than degrade.** Both the point script and the raster script *exit* with the march radius that would fit instead of letting rays edge-clamp — because edge-clamping silently flattens distant ridges into a sunnier answer and leaves no trace in the output.
+
+Stack: Python stdlib for the data plumbing, numpy for the marching, scipy for the statistics, Pillow for the rasters, matplotlib for the charts, Leaflet for the maps. No database, no GDAL, no npm.
 
 ### Solar Rays x Buildings in a Geolocation
+
+For an off-grid or heat-pump build, annual totals are the
+wrong statistic and December is the whole design constraint.
+
 
 https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#the-sun-is-interesting
 

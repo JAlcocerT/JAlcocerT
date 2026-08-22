@@ -342,6 +342,10 @@ docker ps -a | grep -i home-assistant
 After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the [electro-magnetic foundations](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/), this post was the next step.
 
 
+```sh
+#docker system prune -a --volumes
+```
+
 How much deflation is enough for you to start doing?
 
 Whatever.
@@ -354,7 +358,6 @@ Deal:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
 {{< /cards >}}
-
 
 
 ### The Software for D&A
@@ -483,6 +486,9 @@ Zigbee devices cannot speak MQTT directly out of the box.
 
 MQTT is an IP-based protocol (it requires Wi-Fi, Ethernet, and a TCP/IP network stack), whereas Zigbee is a low-power RF radio protocol (IEEE 802.15.4) that does not understand Wi-Fi or IP addresses.
 
+
+{{< details title="Zigbee, Tuya, Sonof...? 📌" closed="true" >}}
+
 To bridge the gap between the two technologies, you need an intermediary coordinator.
 
 A USB Zigbee Coordinator: A ~$15–$25 USB dongle (such as the Sonoff ZBDongle-E or SLZB-06) plugged into whatever computer/server hosts your MQTT broker.
@@ -492,16 +498,16 @@ Zigbee2MQTT (Z2M): A lightweight open-source service that pairs with the dongle,
 * https://www.zigbee2mqtt.io/supported-devices/
 * https://fossengineer.com/zigbee2mqtt-self-hosted-zigbee-bridge/
 
-
-They are often mentioned in the same breath because they dominate the budget smart home market, but they represent three distinct things: a **protocol**, an **IoT platform**, and a **hardware brand**.
+They are often mentioned in the same breath because they dominate the budget smart home market, but they represent three 
+distinct things: a **protocol**, an **IoT platform**, and a **hardware brand**.
 
 The Three Entities Defined
 
 | Name | What It Actually Is | Primary Role |
 | --- | --- | --- |
-| **Zigbee** | An open wireless standard/protocol (like Wi-Fi or Bluetooth) | The low-power radio language devices use to talk to each other. |
-| **Tuya** | A massive IoT platform / white-label software provider | Supplies turnkey chips, firmware, and cloud backends to hundreds of OEM factories (Moes, Zemismart, generic brands). |
-| **Sonoff** | A specific hardware manufacturer (brand owned by ITEAD) | Builds smart home hardware (Wi-Fi and Zigbee relays, sensors, dongles, and switches). |
+| **Zigbee** | An open wireless **standard/protocol** (like Wi-Fi or Bluetooth) | The low-power radio language devices use to talk to each other. |
+| **Tuya** | A massive IoT **platform / white-label software provider** | Supplies turnkey chips, firmware, and cloud backends to hundreds of OEM factories (Moes, Zemismart, generic brands). |
+| **Sonoff** | A specific **hardware manufacturer** (brand owned by ITEAD) | Builds smart home hardware (Wi-Fi and Zigbee relays, sensors, dongles, and switches). |
 
 How They Intersect
 
@@ -561,6 +567,14 @@ Zigbee devices don't have IP addresses and can't run an MQTT client. **Zigbee2MQ
 
 ```
 
+{{< /details >}}
+
+
+<!-- 
+https://youtube.com/shorts/4IGedKLDSFM 
+-->
+
+{{< youtube "4IGedKLDSFM" >}}
 
 #### One ESP - Few Sensors
 

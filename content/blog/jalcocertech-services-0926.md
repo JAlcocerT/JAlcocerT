@@ -9,7 +9,31 @@ url: 'jalcocertech-services-update'
 
 **Tl;DR**
 
+
+https://open-design.ai/agents/
+
 Ive tried [t3 code](https://github.com/pingdotgg/t3code/releases) with my Pi.
+
+```sh
+#https://github.com/pingdotgg/t3code/releases/tag/v0.0.33 #and appimagelauncher
+curl -L \
+    -o /home/jalcocert/Applications/T3-Code-0.0.33-x86_64.AppImage \
+    https://github.com/pingdotgg/t3code/releases/download/v0.0.33/T3-Code-0.0.33-x86_64.AppImage && \
+  chmod +x /home/jalcocert/Applications/T3-Code-0.0.33-x86_64.AppImage
+```
+
+https://github.com/fathah/hermes-desktop/releases/download/v0.7.3/hermes-desktop-0.7.3.AppImage
+
+https://github.com/nousresearch/hermes-agent
+
+
+```sh
+#https://github.com/nousresearch/hermes-agent/releases/download/v0.5.15/hermes-agent
+curl -L \
+    -o /home/jalcocert/Applications/hermes-agent-0.5.15-linux-x64.AppImage \
+    https://github.com/nousresearch/hermes-agent/releases/download/v0.5.15/hermes-agent-0.5.15-linux-x64.AppImage && \
+  chmod +x /home/jalcocert/Applications/T3-Code-0.0.33-x86_64.AppImage
+```
 
 **Intro**
 
@@ -529,6 +553,8 @@ With the release of this OSS framework for mbsd:
 kinematics.py  ──►  OpenSCAD  ──►  CadQuery  ──►  FreeCAD  ──►  Blender
   (math)           (quick check)   (BREP/STEP)    (FEM/draw)   (render)
 ```
+
+> And the bike W calculator :)
 
 
 #### Multi Body Systems Dynamics dot com

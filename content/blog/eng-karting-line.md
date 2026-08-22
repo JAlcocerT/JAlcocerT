@@ -335,11 +335,19 @@ Just be careful with online ones as some anticheats dont work outofthebox.
 I also [tested SteamOS](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-december-2025/#gaming-and-linux) via a VM with [gnome boxes](https://jalcocert.github.io/JAlcocerT/testing-nix-os/#getting-started-with-nixos):
 
 
-Download the ~3gb and:
+Download the ~3gb and: `https://store.steampowered.com/steamos/download?ver=steamdeck`
 
 ```sh
+#bunzip2 steamdeck-oobe-repair-20260707.10-3.8.14.img.bz2
+gnome-boxes --open-uuid 0d42c90e-9c8c-4507-a166-2c82c41bccf2
+
 #flatpak install flathub org.gnome.Boxes
 ```
+
+
+<!-- https://www.youtube.com/watch?v=7EIk0crvc0k -->
+
+{{< youtube "7EIk0crvc0k" >}}
 
 
 

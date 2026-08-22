@@ -379,23 +379,24 @@ It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlc
 ./upload-deepsleep.sh /dev/ttyACM0
 ```
 
+```sh
+cd /home/jalcocert/Desktop/poc/iot-rpi-dht
 
-  cd /home/jalcocert/Desktop/poc/iot-rpi-dht
+make arduino-install-cli
+make arduino-setup
+make arduino-board-list
+make flash PORT=/dev/ttyUSB0
 
-  make arduino-install-cli
-  make arduino-setup
-  make arduino-board-list
-  make flash PORT=/dev/ttyUSB0
+make flash-picow
 
-  make flash-picow
+ESP32 firmware files are under:
 
-  ESP32 firmware files are under:
+iot-rpi-dht/scripts-microcontrollers/firmware-esp32/
 
-  iot-rpi-dht/scripts-microcontrollers/firmware-esp32/
+Pico W firmware files are under:
 
-  Pico W firmware files are under:
-
-  iot-rpi-dht/scripts-microcontrollers/firmware-picow/
+iot-rpi-dht/scripts-microcontrollers/firmware-picow/
+```
 
 ```sh
 cd ./poc/iot-esp-water

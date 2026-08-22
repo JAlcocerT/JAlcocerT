@@ -109,6 +109,11 @@ They are mechanically simple and heat-tolerant, but the control, noise, and torq
 #### DC Engines
 
 These are the kind of motors propelling your [DJi Tello Dron](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/).
+<!-- 
+https://www.youtube.com/watch?v=jP-afZDXxa8 -->
+
+{{< youtube "jP-afZDXxa8" >}}
+
 
 Yea, the same for which I was recently making a [nicer desktop app](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter) with computer vision plugged in.
 
