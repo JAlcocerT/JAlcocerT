@@ -139,6 +139,9 @@ Yes. The intended meaning is:
 
 So 0.5 should include all earlier 2D functionality plus the first public 3D namespace.
 
+PWA coming up as subdomain: http://192.168.1.2:3034/hermesagent/mbsd/src/branch/oss-core-2d/web
+
+
 ## Showcase - Engine Vibrations
 
 Say that you can to simulate a new engine type:

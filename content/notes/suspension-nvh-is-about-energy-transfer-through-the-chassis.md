@@ -7,7 +7,7 @@ description: "Suspension vibration depends on how road inputs, springs, dampers,
 
 Suspension NVH is an energy-transfer problem.
 
-Road inputs enter through tires, pass through springs and dampers, excite chassis modes, and reach the passenger as motion, sound, or harshness. Visualizations help when they show that path.
+Road inputs enter through tires, pass through springs and dampers, excite chassis modes, and reach the passenger as motion, sound, or harshness. 
 
 The question is not only how parts move, but how vibration travels.
 

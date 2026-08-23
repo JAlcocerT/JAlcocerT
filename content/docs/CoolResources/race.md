@@ -22,6 +22,8 @@ For which we need:
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-iot/" title="IoT | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+The output: a cool PWA https://gopro-telemetry-overlay.pages.dev/
+
 ## Racing Data
 
 The following is based on the repositories: 
@@ -110,10 +112,8 @@ But in case it does, you will need to take this into consideration: *Maaax Powee
 
 The [Optimum Gears](https://github.com/JAlcocerT/Private/tree/main/Py_optimum_gears) can be applied similarly if yo go for track days with your daily driver.
 
-
 ## Other Racing Resources
 
 If you like Mechanisms and animations [as a code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/#animations-as-a-code)
 
 You will probably enjoy [this engineering section](https://jalcocert.github.io/JAlcocerT/docs/engineering/mech/).
-

@@ -41,14 +41,33 @@ https://en.wikipedia.org/wiki/Machine_to_machine
 
 **TL;DR**
 
-Isnt it time to do some recap to IoT, HA and the solar panel?
 
+Ok, you can [buy this](#conclusions).
 
+Next.
 
 **Intro**
 
-* WHY Im writting this post: 
+* WHY Im writting this post: *Isnt it time to do some recap to IoT, HA and the solar panel?* 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+Is it just about having few sensors and NFC tags enough?
+
+Automatic plant watering?
+
+Be a system theory pro with PIDs?
+
+Oh no...will I also have to learn [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/), take into account [electromagnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) to avoid EMF  kickbacks
+
+what else will it be?
+
+That plants care [about VPD](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#from-t-and-h-to-vpd) and it would be great to know about thermodynamics and heat transfer?
+
+suuuure
+
+
+
 
 Summer is coming!
 
@@ -359,6 +378,11 @@ Deal:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
 {{< /cards >}}
 
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 ### The Software for D&A
 
