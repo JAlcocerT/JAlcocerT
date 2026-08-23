@@ -263,6 +263,8 @@ https://github.com/domlysz/BlenderGIS
 
 The amount of power (assistance) an e-bike provides depends on the **motor rating**, the **jurisdiction/legal limits**, and the difference between **continuous** vs. **peak** power.
 
+* https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm
+
 1. Typical Power Ratings (Nominal / Continuous)
 
 * **250 Watts (Standard / EU, UK, Australia):** In Europe, the UK, and Australia, the legal maximum for a standard pedal-assist bike (pedelec) is **250 W continuous rated power**.

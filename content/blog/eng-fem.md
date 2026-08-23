@@ -27,7 +27,7 @@ But real parts do deform. The cyclic loading from a firing I4 engine ([see the e
 
 The question MBSD cannot answer is: *what does that do to the material?*
 
-That is the domain of **Finite Element Analysis**.
+That is the domain of **Finite Element Analysis**: https://github.com/JAlcocerT/3Design/tree/main/z-freecad
 
 ---
 

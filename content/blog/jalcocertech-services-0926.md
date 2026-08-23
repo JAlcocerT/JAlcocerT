@@ -547,7 +547,7 @@ Then perform [damage diagnosis](https://youtube.com/shorts/OPuNbaIYuRM)
 
 ### Mechanism Design
 
-With the release of this OSS framework for mbsd:
+With the release of this OSS framework for mbsd: https://github.com/JAlcocerT/mbsd-core
 
 ```
 kinematics.py  ──►  OpenSCAD  ──►  CadQuery  ──►  FreeCAD  ──►  Blender
