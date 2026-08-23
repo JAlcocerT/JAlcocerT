@@ -362,7 +362,7 @@ Synthesis provides the geometry; the MBSD solver provides the loads; FEM checks 
 
 ## Conclusions
 
-Believe it or not: this is another industry getting shaped by AI capabilities:
+Believe it or not - *this is another industry getting shaped by AI capabilities*:
 
 - **Blender**: photorealistic rendering, rigged animation, organic shapes, video editing — see `z-cadquery/blender_scene.py`.
 - **FreeCAD**: assembly constraints, FEM simulation, technical drawings (TechDraw workbench), importing STEP/IGES from suppliers.

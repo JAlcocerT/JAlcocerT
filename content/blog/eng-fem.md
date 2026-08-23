@@ -11,7 +11,7 @@ math: true
 
 **Tl;DR**
 
-In the MBSD series we asked *where does each part go and how fast*. 
+In the [MBSD series](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#conclusions) we asked *where does each part go and how fast*. 
 
 FEM asks *what happens to the material when it gets there*. 
 
@@ -23,7 +23,11 @@ Every post in the MBSD series treated mechanical bodies as **rigid**: a crank do
 
 That assumption is what makes the equations of motion tractable — you get a clean ODE system for generalised coordinates $q(t)$ and integrate forward in time.
 
-But real parts do deform. The cyclic loading from a firing I4 engine ([see the engine NVH post](https://jalcocert.github.io/JAlcocerT/inline-4-engine-analysis/)) subjects the crankshaft to millions of bending and torsion cycles. The question MBSD cannot answer is: *what does that do to the material?* That is the domain of **Finite Element Analysis**.
+But real parts do deform. The cyclic loading from a firing I4 engine ([see the engine NVH post](https://jalcocert.github.io/JAlcocerT/inline-4-engine-analysis/)) subjects the crankshaft to millions of bending and torsion cycles. 
+
+The question MBSD cannot answer is: *what does that do to the material?*
+
+That is the domain of **Finite Element Analysis**.
 
 ---
 
@@ -94,7 +98,9 @@ The dimensional reduction idea from the MBSD series still applies here: a 2D pla
 
 ## Conclusions
 
-MBSD tells you how parts move. FEM tells you whether they survive the trip. 
+MBSD tells you how parts move. 
+
+FEM tells you whether they survive the trip. 
 
 * https://github.com/JAlcocerT/3Design/blob/main/z-freecad/fem-guide.md
 
@@ -134,9 +140,8 @@ Solver: True
 
 
 {{< callout type="warning" >}}
-FreeCAD FEM is a first-pass sanity check, not a production analysis tool.
+[FreeCAD](https://fossengineer.com/selfhosting-freecad/) FEM is a first-pass sanity check, not a production analysis tool.
 {{< /callout >}}
-
 
 Running them in sequence — loads from dynamics, stress from FEM, geometry update, repeat — is what the self-optimising loop in the title actually means.
 
@@ -146,7 +151,9 @@ Running them in sequence — loads from dynamics, stress from FEM, geometry upda
 
 ### Can FreeCAD do this?
 
-Yes. FreeCAD’s **FEM Workbench** is a fully capable GUI-driven FEM environment at no cost:
+Yes. 
+
+FreeCAD’s **FEM Workbench** is a fully capable GUI-driven FEM environment at no cost:
 
 - **Solver backend**: CalculiX for structural and thermal analysis; Elmer for multiphysics (electromagnetics, fluid-structure interaction)
 - **Meshing**: Gmsh or Netgen built in — you define the geometry in FreeCAD’s Part/PartDesign workbench and mesh it directly
@@ -172,7 +179,7 @@ The **CfdOF add-on** adds CFD (via OpenFOAM) to the same geometry, so you can do
 
 **Python libraries:**
 
-### The Heavyweights (Research and Multiphysics)
+1. The Heavyweights (Research and Multiphysics)
 
 For solving complex PDEs — structural stress, heat dissipation, electromagnetics:
 
@@ -180,7 +187,7 @@ For solving complex PDEs — structural stress, heat dissipation, electromagneti
 * **Firedrake** — same UFL input language as FEniCS, different parallel backend. Excellent for unstructured tetrahedral meshes.
 * **SfePy** — batteries-included: pre-built solvers for fluid-structure interaction, heat conduction, acoustics. Less setup than FEniCS.
 
-### Specialised for Engineering
+2. Specialised for Engineering
 
 * **Akantu** — C++ core with a Python interface; designed for solid mechanics, contact, and fracture.
 * **CALFEM for Python** — port of the Lund University MATLAB toolkit. Transparent and educational; ideal if you want to see every matrix assembly step.
@@ -195,7 +202,7 @@ For solving complex PDEs — structural stress, heat dissipation, electromagneti
 | **Solving** | FEniCS, SfePy, or CalculiX |
 | **Visualisation** | PyVista (VTK wrapper) or ParaView |
 
-### Which one should you pick?
+Which one should you pick?
 
 | If you want... | Use this |
 | :--- | :--- |
@@ -242,4 +249,6 @@ print(f"Stress element 1: {sigma[0]/1e6:.1f} MPa")
 print(f"Stress element 2: {sigma[1]/1e6:.1f} MPa")
 ```
 
-This is the same $\mathbf{K}\mathbf{u} = \mathbf{F}$ the theory describes, assembled by hand. Real FEM libraries do the same thing — just for thousands of elements in 3D, with shape functions handling the geometry automatically.
+This is the same $\mathbf{K}\mathbf{u} = \mathbf{F}$ the theory describes, assembled by hand. 
+
+Real FEM libraries do the same thing — just for thousands of elements in 3D, with shape functions handling the geometry automatically.
