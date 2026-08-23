@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted IoT"
-date: 2026-08-21
+date: 2026-08-22
 draft: false
 tags: ["Sonoff x Zigbee","Z2M","Tinkering IRL","M2M","Tech Talk"]
 description: 'A homelab and sensors. The 101 BoM to get you started.'
@@ -8,17 +8,80 @@ url: 'home-lab-tools-for-iot'
 ---
 
 
-```sh
-cd ./poc/iot-dashboard
- docker compose up -d --build
-  curl -s localhost:3037/api/health
+```bash
+cd ~/Desktop/poc/building-geo-pl
+make pull-data
 ```
+
+```sh
+
+  cd /home/jalcocert/Desktop/poc/iot-esp32-mlx
+  make upload PORT=/dev/ttyACM0 WIFI_SSID='Piszymsiu' WIFI_PASSWORD_FILE=/tmp/iot-fan-wifi-pass
+  printf '%s' 'your-wifi-password' > /tmp/iot-mlx-wifi-pass
+  - Fan projects: /tmp/iot-fan-wifi-pass
+  - Water project: /tmp/iot-water-wifi-pass
+  - New MLX project I added: /tmp/iot-mlx-wifi-pass
+```
+
+```sh
+cd /home/jalcocert/Desktop/poc/iot-esp32-motors/3-pin-fan-mosfet-pwm-mqtt
+make upload \
+   PORT=/dev/ttyUSB0 \
+   WIFI_SSID='your-wifi-name' \
+   WIFI_PASSWORD_FILE=/tmp/iot-fan-wifi-pass
+
+make monitor PORT=/dev/ttyACM0 BAUD=115200
+
+make pub MQTT_TEST_CMD=status
+make pub MQTT_TEST_CMD=full #make pub MQTT_TEST_CMD=on
+make pub MQTT_TEST_CMD=freq:250
+make pub MQTT_TEST_CMD=duty:50
+# make pub MQTT_TEST_CMD=freq:1000
+# make pub MQTT_TEST_CMD=duty:40
+
+# make pub MQTT_TEST_CMD=freq:25000
+# make pub MQTT_TEST_CMD=duty:40
+```
+
+```sh
+#iot-rpi-dht-insulation
+cd ./poc/iot-dashboard
+docker compose up -d --build
+curl -s localhost:3037/api/health #http://localhost:3030/?range=1h #which can reference z2m at http://localhost:8080/
+
+#make db-tail
+```
+
+
 
 http://192.168.1.2:3037/?range=7d
 
 <!-- https://youtube.com/shorts/mKVvW_jl3UI -->
 
 {{< youtube "mKVvW_jl3UI" >}}
+
+<!--
+https://www.youtube.com/watch?v=XDYZoMRJFeQ
+-->
+
+{{< youtube "XDYZoMRJFeQ" >}}
+
+
+I got to understand DC PWM thanks to: https://github.com/JAlcocerT/poc/tree/main/iot-esp32-motors
+
+{{< youtube "nqNyRvu7_KM" >}}
+<!--
+https://youtube.com/shorts/nqNyRvu7_KM-->
+
+3wire and 4 wires DC are not the same
+
+With a 4-wire fan, you can control speed directly without a MOSFET, diode, or external power-switching circuit.
+
+And learn a couple of things while [tinkering with Zigbee](https://github.com/JAlcocerT/poc/tree/main/iot-sonoff-dongle), which got integrated: https://github.com/JAlcocerT/poc/tree/main/iot-dashboard
+<!--
+https://youtube.com/shorts/WAa7nOc5z9g-->
+
+{{< youtube "WAa7nOc5z9g" >}}
 
 
 https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks/6-fpv-telemetry
@@ -715,4 +778,4 @@ git clone
 2. Pumps also go around P/Q: ~~price/quantity~~ Power, Flow *and height, Best Efficiency Point (BEP)...*
 
 
-3. 
+3.
