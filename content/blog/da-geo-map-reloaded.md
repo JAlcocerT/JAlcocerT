@@ -245,15 +245,17 @@ https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#the-sun
 
 #### Blender x GIS
 
-
-
-
-https://github.com/domlysz/BlenderGIS
+* https://github.com/domlysz/BlenderGIS
 
 <!-- https://www.youtube.com/watch?v=cSTCZVzS1fs -->
 
 {{< youtube "cSTCZVzS1fs" >}}
 
+And [with blenderGIS](https://fossengineer.com/blendergis-geodata-in-blender/) you can create interesting simulations:
+
+<!-- https://www.youtube.com/watch?v=K9aOr2y4J5s -->
+
+{{< youtube "K9aOr2y4J5s" >}}
 
 
 ### Video x GPX matching

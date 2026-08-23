@@ -9,6 +9,18 @@ url: 'jalcocertech-services-update'
 
 **Tl;DR**
 
+```sh
+ncdu /
+#sudo journalctl --vacuum-time=7d
+```
+
+lynx browser
+
+btop > htop, herdr > ghostty, 
+
+Gram > vscode
+
+If you are using FreeCad, be prepare to have 15GB, and for Arduino CLI ~8GB, for Kicad ~4gb
 
 https://open-design.ai/agents/
 
