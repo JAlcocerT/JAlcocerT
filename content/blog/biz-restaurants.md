@@ -2,10 +2,12 @@
 title: "[Prototyping] Restaurants."
 date: 2027-12-30
 draft: false
-tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","Roadmap26","B2B Leads x APIFY x Web Audit","Astro SSR vs PWA"]
-description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranean x OpenClaw x Gems."
+tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","B2B Leads x APIFY x Web Audit","CSR vs PWA"]
+description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
+
+https://github.com/JAlcocerT/markdown-plus-plus
 
 https://github.com/usememos/memos
 
@@ -28,6 +30,7 @@ Why - was - that - hard
 https://github.com/karanshukla/openresto
 
 **TL;DR**
+
 
 QR Restaurantes Free + Web if ~~Pay~~ you qualify.
 
@@ -408,3 +411,11 @@ also good to filter cards -->
 https://github.com/steamwebapi/steam-inventory-next.js?ref=statichunt.com 
 https://github.com/hassonor/apps-play?ref=statichunt.com
 -->
+
+### In which stage are you?
+
+1. I dont need a brand
+2. I have no idea about websites
+3. I registered at wordpress/wix, but i got nothing done yet
+4. I have something, but SEO/performances is so bad as validated via `https://webaudit.jalcocertech.com/`
+5. Ive followed the free `ebooks.jalcocertech.com/books/web-diy/` but want sth more

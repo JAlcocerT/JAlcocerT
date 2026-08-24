@@ -17,6 +17,8 @@ This aims to solve the "Garbage In, Garbage Out" problem of product development.
 
 > [Smart or it does not ship](https://jalcocert.github.io/JAlcocerT/poc-103/#helping-pms-and-pdms)
 
+> > ps://pm-pdm-checks.pages.dev and this [communication framework](https://fossengineer.com/stakeholder-communication-framework/)
+
 ---
 
 {{< callout type="info" >}}

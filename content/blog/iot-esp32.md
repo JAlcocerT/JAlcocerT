@@ -532,6 +532,14 @@ void loop() {
 
 <https://www.youtube.com/watch?v=HpsvNIAtjm4>
 
+WIth the [Pi4 was kinda simple](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/):
+
+```sh
+pinout #this assumes that the usb and eth port are looking down, so 5V is top right
+i2cdetect -y 1
+```
+
+https://jalcocert.github.io/RPi/img/RPi4-DHT22.png
 
 ---
 

@@ -318,7 +318,9 @@ Other ways people might refer to this:
 
 {{< /details >}}
 
-This is a great example: https://www.acquisition.com/ Which btw they do some changes into the mobile app version.
+This is a great example: `https://www.acquisition.com/`
+
+Which btw they do some changes into the mobile app version.
 
 You will need some **CTAs and clear value proposition**:
 

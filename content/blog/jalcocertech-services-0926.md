@@ -1,9 +1,9 @@
 ---
-title: "[JAlcocerTech] Services Recap"
+title: "[JAlcocerTech] Services Recap x Outbound System"
 date: 2026-09-01T11:20:21+01:00
 draft: false
-tags: ["Tmux vs CMUX vs Herdr","OSS Journaling x Filesmd x Forgejo","JAlcocerTech Leads"]
-description: 'Beyond software, AI Fluency.'
+tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads"]
+description: 'Beyond software, AI Fluency and distribution.'
 url: 'jalcocertech-services-update'
 ---
 
@@ -252,6 +252,17 @@ Lets use [open physics](https://jalcocert.github.io/JAlcocerT/jalcocertech-servi
 ### Energy Solutions
 
 Because this matters
+
+{{< youtube "05GzJoGKdfo" >}}
+
+<!-- 
+https://youtu.be/05GzJoGKdfo -->
+
+
+{{< youtube "Jf6WlQyYer0" >}}
+
+<!-- 
+https://youtu.be/Jf6WlQyYer0 -->
 
 1. PV optimum orientation
 2. PV+Heat
@@ -519,6 +530,11 @@ Instead of having isolated devices operating blindly, a HEMS coordinates:
 
 ### IoT
 
+<!-- https://youtu.be/6McNDPk7-j8 -->
+
+{{< youtube "6McNDPk7-j8" >}}
+
+
 https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
 
 ![alt text](/blog_img/entrepre/rpi-dht.png)
@@ -641,7 +657,18 @@ But every business owner will resonate when you ask [how they are getting custom
 
 ## Conclusions
 
-1. Do 
+**What do I do?**
+
+I bridge the gap between messy raw data and executive strategy. 
+
+By standardizing data models, governance, and architecture, I make sure analytics systems deliver accurate metrics consistently
+
+{{< youtube "4sSa28Xk5Yw" >}}
+
+
+What can I recommend you if you are starting out?
+
+1. Do *and avoid bs* `https://aegis-freedom.pages.dev/`
 2. Maximize active income and save
 3. **Value based or nothing**
 
@@ -651,6 +678,10 @@ This value-based is getting traction:
   {{< card link="https://github.com/JAlcocerT/jalcocertech-services/" title="JAlcocerTech Services ↗" icon="github" >}}
 {{< /cards >}}
 
+Domain mechanincs come first:
+
+{{< youtube "4sSa28Xk5Yw" >}}
+https://youtu.be/xVJbUA0jGXY
 
 I was clearing the initial real estate and genbi independent PoCs done with gemini earlier this year and brought them/improved at the PoC repo, here and here:
 
@@ -704,7 +735,7 @@ flowchart LR
     L4 -->|Productized Service| L48
 ```
 
-Also, the daily notes have stopped to flow here and the cv-laitex similarly, just to be part of a personal / career folders inside my services.
+Also, the daily notes have stopped to flow here and the `cv-laitex` similarly, just to be part of a personal / career folders inside my services.
 
 ---
 

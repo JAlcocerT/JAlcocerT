@@ -94,19 +94,36 @@ Older academic traces point to a 2014 University of Seville mechanical/industria
 {{< /details >}}
 
 
-So, in short: he seems to be a Spanish-born, Poland-based software/data engineer with a mechanical engineering background, working in data/AI and running a small software/IT business.
+So, in short: he *seems to be* a Spanish-born, Poland-based software/data engineer with a mechanical engineering background, working in data/AI and running a small software/IT business.
+
+~~Jesus worked on many technical details.~~
+
+> I create business outcomes by building trusted enterprise analytics systems
+
+{{< youtube "4sSa28Xk5Yw" >}}
+
+> > I build trusted enterprise analytics systems by turning ambiguous data/reporting issues into source-backed evidence, semantic modelling, governance decisions, and release-ready outcomes. I make the team/system deliver better because of how I structure work, decisions, standards, evidence, and architecture/ownership. Reducing platform risk while enabling AI readiness.
+
+You know whats best, beyond https://why-postmortem-checks.pages.dev ?
+
+I do independent ~~data~~ consulting work: *what are you optimizing for: status, control, money, optionality?*
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
+{{< /cards >}}
 
 ---
 
 ## Conclusions
 
-I didnt mentiont about my [bike](https://jalcocert.github.io/JAlcocerT/buying-bicycle-through-data-analytics/) trips across Europe, nor my adventure with fixing [this old Civic](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/).
+I didnt mention about my [bike](https://jalcocert.github.io/JAlcocerT/buying-bicycle-through-data-analytics/) trips across Europe, nor my adventure with fixing [this old Civic](https://jalcocert.github.io/JAlcocerT/buying-car-data-analytics/).
 
 Some knew about [my bike simulator](https://jalcocert.github.io/JAlcocerT/3d-mbsd-bicycle/) and chemistry experiments, but not about me [growing tomatoes](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/) nor [doing soap with recycled oil](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/).
 
 Its been very fun to:
 
-1. Listen (quietly) people flexing about 5k monthly paychecks
+1. Listen (quietly) people flexing about 5k monthly paychecks. *with regulations inthe sector blocking getting flushed by market with younger/better employees*
 
 2. Listen (also quietly) poeple being so confused about switzerland not giving days off for people who get married
 
@@ -135,6 +152,8 @@ I dont know
 So in the meantime: **leads leads leads**
 
 Because the tech part is more than covered.
+
+So time to focus on distribution
 
 And as someone said: *I have everything pretty much automated*
 
@@ -182,7 +201,7 @@ xargs -0 awk '
 '
 ```
 
-Just that im aware [that code is media](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#code-is-also-media) and Im  using: *hermes
+Just that im aware [that code is media](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#code-is-also-media) and Im  using: *hermes*
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gitea" title="AI via CLIs | Post Section ↗" >}}
