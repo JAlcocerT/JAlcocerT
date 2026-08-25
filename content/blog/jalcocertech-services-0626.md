@@ -531,6 +531,7 @@ https://app.smartlead.ai/app/email-account/19740710/warmup?email=julita.j@getlea
 Im using right now herdr *> tmux* to better orchestrate agents sessions and dont go crazy with deliveries waiting for my input.
 
 ```sh
+#curl -fsSL https://herdr.dev/install.sh | sh
 herdr #go out with ctrl + b then q
 ```
 

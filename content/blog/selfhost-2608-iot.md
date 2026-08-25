@@ -421,7 +421,10 @@ docker ps -a | grep -i home-assistant
 
 ## Conclusions
 
-After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the [electro-magnetic foundations](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/), this post was the next step.
+After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/) and the [electro-magnetic foundations](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/), this post was the clear next step.
+
+
+{{< youtube "6McNDPk7-j8" >}}
 
 
 ```sh
@@ -495,7 +498,7 @@ After trying logseq and silverbullet, i went with:
 {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Configs 🐋 ↗" >}}
 {{< /cards >}}
 
-I needed to fix nextcloud after a restart:
+I needed to **fix nextcloud** after my x300 restarted:
 
 ```sh
 sudo mount /mnt/data1tb
@@ -510,6 +513,7 @@ docker exec nextcloud-sync php /var/www/html/occ config:system:get trusted_domai
 You need some clean up?
 
 ```sh
+#ncdu /
 uv cache clean
 # docker stop dawarich_app dawarich_sidekiq dawarich_db dawarich_redis
 docker rm dawarich_app dawarich_sidekiq dawarich_db dawarich_redis
@@ -567,7 +571,7 @@ glances #htop btop
 
 #### Zigbee
 
-If you have been playing with IoT and some home devices, you will [come to know Zigbee](https://fossengineer.com/zigbee2mqtt-self-hosted-zigbee-bridge/).
+If you have been playing with IoT and some home devices, you will [come to know **Zigbee**](https://fossengineer.com/zigbee2mqtt-self-hosted-zigbee-bridge/).
 
 Zigbee devices cannot speak MQTT directly out of the box.
 
@@ -585,8 +589,7 @@ Zigbee2MQTT (Z2M): A lightweight open-source service that pairs with the dongle,
 * https://www.zigbee2mqtt.io/supported-devices/
 * https://fossengineer.com/zigbee2mqtt-self-hosted-zigbee-bridge/
 
-They are often mentioned in the same breath because they dominate the budget smart home market, but they represent three 
-distinct things: a **protocol**, an **IoT platform**, and a **hardware brand**.
+They are often mentioned in the same breath because they dominate the budget smart home market, but they represent three distinct things: a **protocol**, an **IoT platform**, and a **hardware brand**.
 
 The Three Entities Defined
 
@@ -611,14 +614,15 @@ Smart Home Landscape ┼── Tuya Ecosystem   ──► (White-label firmware/
 * A Tuya Zigbee device connects by default to a Tuya hub (Smart Life app).
 * A Sonoff Zigbee device connects by default to a Sonoff hub (eWeLink app).
 
-standard Zigbee broadcasts on the same 2.4 GHz frequency band as Wi-Fi and Bluetooth, it uses a different physical layer format (IEEE 802.15.4 instead of 802.11 or BLE). A smartphone or standard router cannot decode its beacon signals.
+standard Zigbee broadcasts on the same 2.4 GHz frequency band as Wi-Fi and Bluetooth, it uses a different physical layer format (IEEE 802.15.4 instead of 802.11 or BLE). 
+
+A smartphone or standard router cannot decode its beacon signals.
 
 3. **Open-source bridges unite them:** Tools like **Zigbee2MQTT** ignore both the Tuya and Sonoff proprietary clouds. As long as the device speaks Zigbee, a single open USB dongle (often made by Sonoff) can control Tuya sensors, Sonoff switches, Philips Hue bulbs, and IKEA blinds on one unified MQTT network.
 
 * **Zigbee** is the *radio layer*.
 * **Tuya** is the *turnkey software/chip ecosystem* behind most generic smart gadgets on AliExpress/Amazon.
 * **Sonoff** is a *hardware vendor* famous in the DIY community for making hacker-friendly, flashable ESP8266/ESP32 devices and cheap Zigbee hardware.
-
 
 **Wi-Fi** is high-bandwidth, high-power, and connects devices directly to your router over standard TCP/IP. **Zigbee** is ultra-low-power, low-bandwidth, and creates a local mesh network designed specifically for tiny sensor packets and battery-operated hardware.
 
@@ -635,7 +639,9 @@ Core Differences: Zigbee vs. Wi-Fi
 
 How Zigbee2MQTT (Z2M) Works
 
-Zigbee devices don't have IP addresses and can't run an MQTT client. **Zigbee2MQTT acts as a software/hardware translator** that bridges the physical Zigbee radio network to your local IP network and MQTT broker.
+Zigbee devices don't have IP addresses and can't run an MQTT client. 
+
+**Zigbee2MQTT acts as a software/hardware translator** that bridges the physical Zigbee radio network to your local IP network and MQTT broker.
 
 ```
  [ Battery Sensor / Blind ] 
@@ -651,7 +657,6 @@ Zigbee devices don't have IP addresses and can't run an MQTT client. **Zigbee2MQ
              │ (JSON payloads over TCP/IP)
              ▼
    [ MQTT Broker (Mosquitto) ] ◄──► [ ESP32 / Home Assistant / Custom Scripts ]
-
 ```
 
 {{< /details >}}
@@ -747,7 +752,24 @@ Since you are likely using a breadboard now to connect both sensors:
 3. MLX90614 infrared sensors ~20$
 4. TP4056 - to control the battery charge ~10$ with shield
 
-For your [automatic watering setup](https://jalcocert.github.io/JAlcocerT/plants-103-inspiration/#the-iot-and-controlled-watering): 
+For your [automatic watering setup](https://jalcocert.github.io/JAlcocerT/plants-103-inspiration/#the-iot-and-controlled-watering):
+
+{{< youtube "nwK4nr8uqpo" >}}
+
+<!-- https://youtube.com/shorts/nwK4nr8uqpo -->
+
+
+{{< youtube "kDPNhy8Ep7o" >}}
+
+<!-- 
+https://youtube.com/shorts/kDPNhy8Ep7o 
+-->
+
+{{< youtube "cDfu-i_XnIE" >}}
+
+<!-- https://youtube.com/shorts/cDfu-i_XnIE -->
+
+
 
 5. Pump with [a BLDC](https://jalcocert.github.io/JAlcocerT/electromagnetism-for-ac-dc-motors/#dc-vs-bldc-vs-ac-engines) 12v 30W for ~20$ or smaller 19w for 15$
 6. A battery: I got [a bluetti](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#testing-the-bluetti-v2) for 200$, but i was considering a Pb battery
@@ -758,9 +780,6 @@ For your [automatic watering setup](https://jalcocert.github.io/JAlcocerT/plants
 ```sh
 git clone 
 ```
-
-
-
 
 {{< /details >}}
 
@@ -777,5 +796,4 @@ git clone
 
 2. Pumps also go around P/Q: ~~price/quantity~~ Power, Flow *and height, Best Efficiency Point (BEP)...*
 
-
-3.
+3. 
