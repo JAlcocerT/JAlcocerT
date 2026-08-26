@@ -24,12 +24,13 @@ It was also the time to set [a LogTo example](https://jalcocert.github.io/JAlcoc
 
 **TL;DR**
 
-Discovering [lazydocker](https://github.com/jesseduffield/lazydocker/releases) tool has been very interesting, together with Makefile and uv package manager.
+Discovering [lazydocker](https://github.com/jesseduffield/lazydocker/releases) tool has been very interesting, together with **Makefile and uv package manager**:
 
 ```sh
 #docker stats
-sudo apt  install golang-go
+sudo apt install golang-go
 go install github.com/jesseduffield/lazydocker@latest #another project using GoLanguage!
+#source ~/.bashrc
 export PATH=$PATH:$(go env GOPATH)/bin
 #docker stats --no-stream --format "{{.Name}}\t{{.CPUPerc}}" | head -n -1 | sort -nrk 2
 ```

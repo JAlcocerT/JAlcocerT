@@ -7,11 +7,16 @@ description: "Using Stable Difussion with DreamBooth"
 url: 'stable-difussion-free-generation'
 ---
 
+**TL;DR**
+
+**Intro**
+
 ### How to Install Stable Difussion
 
 * https://aman.ai/primers/ai/diffusion-models/
 
 > Great explanation on how these model work
+
 ## AI Generated Video
 
 

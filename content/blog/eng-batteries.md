@@ -537,6 +537,12 @@ Or x5 of these:
 
 ![alt text](/blog_img/mechanics/inline6_combustion.gif)
 
+This is the **W30** in action:
+
+{{< youtube "0rjA6ua8oUk" >}}
+<!-- 
+https://youtu.be/0rjA6ua8oUk -->
+
 
 Those had a 24V battery system for the startup, which required ~500-1000A
 

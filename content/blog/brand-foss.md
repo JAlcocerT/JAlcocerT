@@ -15,6 +15,18 @@ Yes, its me.
 git clone git@gitlab.com:fossengineer1/fossengineerpapermod.git
 ```
 
+
+**Intro**
+
+I made a review on the OSS 'portfolio'.
+
+* https://developers.openai.com/showcase
+* https://developers.openai.com/blog/designing-delightful-frontends-with-gpt-5-4
+
+Could foss/ still be HUGO and look as sleek?
+
+
+
 And it was time to stop those ads.
 
 1. `https://diy.jalcocertech.com`
@@ -59,11 +71,12 @@ Mobile-only runs now show desktop as skipped, not 0/100.
 
 Validation passed:
 
+```sh
 bash -n lighthouse-audit.sh audit-master.sh linkcheck-audit.sh
 node --check scripts/lead-from-report.mjs
 npm run build
 LH_FORM_FACTOR=mobile ./lighthouse-audit.sh https://example.com
-
+```
 
 * https://github.com/openai/skills
 * https://www.skills.sh/coreyhaines31/marketingskills/seo-audit
@@ -74,23 +87,10 @@ LH_FORM_FACTOR=mobile ./lighthouse-audit.sh https://example.com
 npx skills add https://github.com/coreyhaines31/marketingskills --skill seo-audit
 ```
 
-
 An excuse forme to try the free web audit engine: `https://webaudit.jalcocertech.com/`
 
-
-**Intro**
-
-I made a review on the OSS 'portfolio'.
-
-https://developers.openai.com/showcase
-https://developers.openai.com/blog/designing-delightful-frontends-with-gpt-5-4
-
-
-Could foss/ still be HUGO and look as sleek?
-
-
-{{< callout type="warning" >}}
-Id keep JAMstack to avoid Mythos and similar coming inside my homelab :)
+{{< callout type="info" >}}
+I'd keep **JAMstack** to avoid Mythos and similar coming inside my homelab :)
 {{< /callout >}}
 
 ```sh
@@ -118,8 +118,6 @@ To offer this via fossengineer, I can try: *these are next steps*
 4. Finally remodel the webpage to avoid the shape of a blog, as is more a news/docs one - vibe coding ofc.
 
 With that remota data (yaml) fetching from the home-lab repo.
-
-
 
 ### Posts
 
@@ -153,15 +151,11 @@ This model is so good, that I could not avoid using it to improve my digital ass
 
 ### Videos
 
-https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#about-foss---repo-to-video
+Going from [repo to video is simple](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#about-foss---repo-to-video), actually.
 
 Whats stoppin me from shipping JAlcocerTech videos of around 3 min, done with hyperframe, commented with some TTS and screen recorded via...playwright?
 
 A new skill?
-
-```sh
-
-```
 
 ### Comments
 
@@ -180,7 +174,7 @@ I was getting making this much complex than it is.
 
 The direction is not to go UI
 
-Agents live in the CLI and you better do the same (or pay the price of the abstraction) 
+**Agents live in the CLI** and you better do the same (or pay the price of the abstraction) 
 
 So all that Web CMS stuff: *Strapi, directus...*?
 

@@ -586,6 +586,13 @@ kinematics.py  ──►  OpenSCAD  ──►  CadQuery  ──►  FreeCAD  ─
   (math)           (quick check)   (BREP/STEP)    (FEM/draw)   (render)
 ```
 
+```sh
+#herdr #lazydocker #lazygit
+git clone https://github.com/JAlcocerT/mbsd-core
+git clone https://github.com/JAlcocerT/mbsd-examples
+#codex --yolo
+```
+
 > And the bike W calculator :)
 
 
@@ -661,6 +668,10 @@ But every business owner will resonate when you ask [how they are getting custom
 
 ## Conclusions
 
+Lately I was asked: *how can we work together?*
+
+Very interesting converging questions, but zooming out the real one is: do we really want to work together? have we validated our ideas and we can create a win-win situation?
+
 **What do I do?**
 
 I bridge the gap between messy raw data and executive strategy. 
@@ -685,7 +696,8 @@ This value-based is getting traction:
 Domain mechanincs come first:
 
 {{< youtube "4sSa28Xk5Yw" >}}
-https://youtu.be/xVJbUA0jGXY
+
+<!-- https://youtu.be/xVJbUA0jGXY -->
 
 I was clearing the initial real estate and genbi independent PoCs done with gemini earlier this year and brought them/improved at the PoC repo, here and here:
 
@@ -803,12 +815,28 @@ In theory, artifacts like ebooks, this blog, fossengineer... should give you inb
 
 But
 
-The openAI image gpt 2 is so great that there is really no excuse not to get this right.
+The openAI `image gpt 2` is so great that there is really no excuse not to get this right.
 
 Doing 3 min videos (with xyz words aka xyz tokens) and 30 second shorts...
 
-Its just one skill away:
+Its just one logo and skill away: `./poc/zzz-`
+
+{{< youtube "4sSa28Xk5Yw" >}}
+
+And this can serve to do QR x Guerrilla Marketing or send personalized video demos to high quality leads.
+
+### FOSS
+
+Just [get gitlab setup](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/), use skills and continuing [the F/OSS brand](https://jalcocert.github.io/JAlcocerT/a-better-fossengineer/):
 
 ```sh
+#ssh jalcocert@192.168.1.2
+#cat ~/.ssh/id_ed25519.pub
+#ssh -T git@gitlab.com
+git clone git@gitlab.com:fossengineer1/fossengineerpapermod.git
+```
 
+
+```md
+Add Zoneless as an optional USDC payout method to this marketplace while preserving checkout and every existing payout method; start by reading https://zoneless.com/docs/agent-marketplace-quickstart.md and follow it.
 ```

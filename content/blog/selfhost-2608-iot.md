@@ -78,6 +78,7 @@ https://youtube.com/shorts/nqNyRvu7_KM-->
 With a 4-wire fan, you can control speed directly without a MOSFET, diode, or external power-switching circuit.
 
 And learn a couple of things while [tinkering with Zigbee](https://github.com/JAlcocerT/poc/tree/main/iot-sonoff-dongle), which got integrated: https://github.com/JAlcocerT/poc/tree/main/iot-dashboard
+
 <!--
 https://youtube.com/shorts/WAa7nOc5z9g-->
 
@@ -233,6 +234,22 @@ tmux ls
 ### ESP32 x MQTT x MLX90614
 
 Few years ago, I [wrote this post](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/) explaining how to use the MLX sensor with a Pi4 2GB.
+
+ pinout is the correct tool, and it confirms this is a Raspberry Pi 4B.
+
+  Use the J8 section:
+
+  J8:
+  3V3    (1) (2)  5V
+  GPIO2  (3) (4)  5V
+  GPIO3  (5) (6)  GND
+
+  So your MLX90614 should be:
+
+  VIN -> 3V3    pin 1
+  SDA -> GPIO2  pin 3
+  SCL -> GPIO3  pin 5
+  GND -> GND    pin 6
 
 Its time to make the setup work with a ESP32 and MQTT.
 

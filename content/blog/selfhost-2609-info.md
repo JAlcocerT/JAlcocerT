@@ -234,6 +234,10 @@ What are you optimizing for next?
 
 ## FAQ
 
+### Useful CLI Tools
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/
+
 ### Selfhosted Forgejo
 
 I got this ready in my x300 [some time ago to tinker with agents](https://jalcocert.github.io/JAlcocerT/poc-107/):
