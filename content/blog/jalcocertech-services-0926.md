@@ -14,8 +14,7 @@ ncdu /
 #sudo journalctl --vacuum-time=7d
 ```
 
-lynx browser
-
+lynx browser and helium
 btop > htop, herdr > ghostty, 
 
 Gram > vscode

@@ -1,6 +1,6 @@
 ---
 title: "Hydrofoil"
-date: 2026-08-26
+date: 2026-09-10
 draft: false
 tags: ["IRL","Betaflight vs VESC"]
 description: '.'

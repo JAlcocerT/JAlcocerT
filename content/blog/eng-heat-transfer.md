@@ -26,7 +26,9 @@ Every engine post assumed rigid, isothermal parts.
 
 In reality, a crankshaft running at 6000 rpm is also a heat exchanger — combustion gases heat the piston crown, the cylinder wall carries that heat to the coolant, and the material properties of every part change with temperature. 
 
-A crank that passes FEM at room temperature may fail at operating temperature because yield strength drops. That is the domain of heat transfer.
+A crank that passes FEM at room temperature may fail at operating temperature because yield strength drops. 
+
+That is the domain of heat transfer.
 
 The full engineering loop across these posts is:
 
