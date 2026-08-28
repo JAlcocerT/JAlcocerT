@@ -26,3 +26,7 @@ If you got a Tello, you will get the chance to learn Python to make [computer vi
 You will be also able to make/tinker with flutter apps: *because the official one is not available for [android](https://jalcocert.github.io/JAlcocerT/docs/coolresources/android/) anymore*
 
 Best of all, it can motivate you to get into DIY.
+
+Whatever you do, make sure to follow the applicable licenses and legislations 
+
+* https://dronemap.pansa.pl/

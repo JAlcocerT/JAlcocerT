@@ -652,6 +652,8 @@ But every business owner will resonate when you ask [how they are getting custom
 
 2. With outbound marketing: get leads, enrich leads, reachout via email
 
+> You just need email x DNS done right
+
 3. Dont forget about the attribution
 
 
@@ -667,6 +669,8 @@ But every business owner will resonate when you ask [how they are getting custom
 ---
 
 ## Conclusions
+
+You get what you ~~deserve~~ negotiate
 
 Lately I was asked: *how can we work together?*
 

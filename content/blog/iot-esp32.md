@@ -539,6 +539,8 @@ pinout #this assumes that the usb and eth port are looking down, so 5V is top ri
 i2cdetect -y 1
 ```
 
+https://pinout.xyz/pinout/3v3_power
+
 https://jalcocert.github.io/RPi/img/RPi4-DHT22.png
 
 ---
@@ -719,6 +721,7 @@ https://github.com/tevonsb/homeassistant-mcp
 A nice video around batteries and the esp:
 
 {{< youtube "aR044Dk6c_0" >}}
+
 <!-- 
 https://www.youtube.com/watch?v=aR044Dk6c_0 -->
 
@@ -740,16 +743,14 @@ https://www.youtube.com/watch?v=cPac-9K2xEc
 
 ### Pico DHT22
 
+{{< youtube "eNF3X3D0cH4" >}}
 
-
-https://www.youtube.com/watch?v=eNF3X3D0cH4
+<!-- 
+https://www.youtube.com/watch?v=eNF3X3D0cH4 -->
 
 https://github.com/neeraj95575/Temperature-sensor-connect-to-raspberry-pi-pico
 
 ### ESP DHT22
-
-
-
 
 
 GND
@@ -763,8 +764,6 @@ D23
 in platformio.ini
 
 adafruit/DHT sensor library@^1.4.4
-
-
 
 lib_deps=
 https://github.com/blynkkk/blynk-library.git
@@ -800,7 +799,14 @@ MPU-6050: This is a popular and versatile accelerometer that is also compatible 
 
 **biblioman09**
 
-<https://www.youtube.com/watch?v=JXyHuZyqjxU>
+
+<!-- 
+<https://www.youtube.com/watch?v=JXyHuZyqjxU> 
+-->
+
+
+{{< youtube "JXyHuZyqjxU" >}}
+
 
 ### DSB18B20
 
@@ -825,7 +831,11 @@ Scrypted
 
 ### RPi weather station
 
-https://www.youtube.com/watch?v=5JfPzvcm0E8
+<!-- 
+https://www.youtube.com/watch?v=5JfPzvcm0E8 
+-->
+
+{{< youtube "5JfPzvcm0E8" >}}
 
 
 ## Hardware for HA
@@ -838,7 +848,6 @@ https://forocoches.com/foro/showthread.php?t=6655749
 
 * Contenedores docker utilizas - https://forocoches.com/foro/showthread.php?t=7806376
 
-
 ---
 
 DHT11
@@ -850,11 +859,14 @@ YV91RQKZZ8HEKPSZHWA7
 DS18B20 - Temp
 
 
-
 DTH11
 DTH22
+<!-- 
+https://www.youtube.com/watch?v=ffg3_1AgtyA&t=3s -->
 
-https://www.youtube.com/watch?v=ffg3_1AgtyA&t=3s
+
+{{< youtube "ffg3_1AgtyA" >}}
+
 
 MQTT on Raspberry Pi and ESP8266 with Mosquitto and Micro Python | IoT Essential
 
@@ -910,7 +922,10 @@ Raspberry Pi IoT Server Tutorial: InfluxDB, MQTT, Grafana, Node-RED & Docker
 
 
 Continuacion con BME680 (P, T, air quality)
-https://www.youtube.com/watch?v=x5A5S0hoyJ0
+
+<!-- https://www.youtube.com/watch?v=x5A5S0hoyJ0 -->
+
+{{< youtube "x5A5S0hoyJ0" >}}
 
 
 RPI pico 
