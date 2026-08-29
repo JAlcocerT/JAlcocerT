@@ -558,8 +558,20 @@ Or just get ready to *DYOR* and make a DIY dron.
 
 Before flying, make sure you are aware about licenses, permissions, insurances and limitations
 
+I even made my own build for ELRS https://github.com/JAlcocerT/meteor-dron/tree/main/ExpressLRS-build
+
 #### FPV Telemetry
-https://www.youtube.com/watch?v=hw_CAQCFCmA
+
+<!-- 
+https://www.youtube.com/watch?v=hw_CAQCFCmA 
+-->
+
+{{< youtube "hw_CAQCFCmA" >}}
+
+<!-- https://youtube.com/shorts/QIdvhrRx49s -->
+
+{{< youtube "QIdvhrRx49s" >}}
+
 1. Make sure to understand the limit of your batteries: 18650 (), LiPo 1S (3.5-4.2)
 
 | Parameter | Standard 18650 Li-ion | Standard 1S LiPo |
@@ -592,10 +604,28 @@ git clone https://github.com/JAlcocerT/mbsd-examples
 #codex --yolo
 ```
 
-> And the bike W calculator :)
+https://www.youtube.com/watch?v=CPLdltN7wgE
+
+You can also do FEM with 3dcad https://github.com/JAlcocerT/3Design/tree/main/z-freecad
+
+
+
+> And the bike W calculator from [this old practice](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm) :)
+
+![alt text](/blog_img/mechanics/path_power_colored.png)
+
+You can learn mbsd theory here: https://github.com/moorepants/learn-multibody-dynamics/
+
+or here: ebooks.jalcocertech
 
 
 #### Multi Body Systems Dynamics dot com
+
+http://192.168.1.2:3034/hermesagent/mbsd/src/branch/master
+http://192.168.1.2:3034/hermesagent/electronics-101/src/branch/master/samples-motors
+https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101
+http://192.168.1.2:3034/hermesagent/pi-connectivity
+http://192.168.1.2:3034/hermesagent/mbsd/commit/5751bd7702319119ffc3cac7165ef59f194d1b1c#diff-c3c9e15a6c85805e37f84b9ce1c44b1db55a0d95
 
 I took all the goodies from the github and forgejo repos: *2D/3D*
 
@@ -615,6 +645,26 @@ app.multibodysystemsdynamics.com
 multibodysystemsdynamics.com
 multibodysystemsdynamics.com/roadmap
 multibodysystemsdynamics.com/whitepaper
+
+```sh
+#herdr
+scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/*.md .
+cd /home/jalcocert/multibody-tests #x300
+```
+
+Tomorrow, publish in this order:
+
+  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+  git push origin main
+  git push origin v0.2.0
+
+  Then:
+
+  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+  git push origin main
+  git push origin v0.2.0
+
+  Create the GitHub releases after pushing tags, core first, examples second.
 
 > I couldnt avoid to email again to Gabe Morris :)
 
@@ -682,6 +732,25 @@ I bridge the gap between messy raw data and executive strategy.
 By standardizing data models, governance, and architecture, I make sure analytics systems deliver accurate metrics consistently
 
 {{< youtube "4sSa28Xk5Yw" >}}
+
+https://youtu.be/K-eXcT1XgdE
+
+
+Concerned about time to value?
+
+Do not let the MVP date become the product.
+
+```sh
+cd ./poc/libg/telecom-executive #https://executive-check.pages.dev/ #https://pm-pdm-checks.pages.dev/
+npx wrangler pages deploy telecom-executive --project-name executive-check --branch main
+```
+
+
+{{< youtube "K-eXcT1XgdE" >}}
+
+<!-- 
+https://youtu.be/K-eXcT1XgdE 
+-->
 
 
 What can I recommend you if you are starting out?

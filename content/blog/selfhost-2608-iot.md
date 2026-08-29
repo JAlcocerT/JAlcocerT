@@ -814,3 +814,56 @@ git clone
 2. Pumps also go around P/Q: ~~price/quantity~~ Power, Flow *and height, Best Efficiency Point (BEP)...*
 
 3. 
+
+
+
+Omarchy
+
+
+Your VM has 8192 MB RAM, but your host has ~14 GB total and 0 swap, so Linux killed qemu-system-x86.
+
+  Run this to lower the VM to 4 GB RAM and 2 CPUs:
+
+  virsh --connect qemu:///session shutdown omarchy-4.0.1 2>/dev/null || true
+
+  virsh --connect qemu:///session setmaxmem omarchy-4.0.1 4096M --config
+  virsh --connect qemu:///session setmem omarchy-4.0.1 4096M --config
+  virsh --connect qemu:///session setvcpus omarchy-4.0.1 2 --config
+
+  virsh --connect qemu:///session start omarchy-4.0.1
+  gnome-boxes
+
+  If Boxes still acts weird, open the same running VM with:
+
+  virt-viewer --connect qemu:///session --attach omarchy-4.0.1
+
+  Your 30 GB disk is fine. The immediate problem is RAM.
+
+──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+› perfect that works, now how can i provide a .env that i have in my pc to the vm?
+
+
+• Best simple/safe way: use a temporary local HTTP server on your host, then download it inside the VM.
+
+  On your host, from the directory containing .env:
+
+  cd /path/to/directory/with/env
+  python3 -m http.server 8765 --bind 127.0.0.1
+
+  Inside the VM, download it using QEMU’s user-network host alias:
+
+  curl -o .env http://10.0.2.2:8765/.env
+
+  Then stop the server on your host with Ctrl+C.
+
+  If 10.0.2.2 does not work, try:
+
+  curl -o .env http://192.168.122.1:8765/.env
+
+  For a sensitive .env, clean up after:
+
+  chmod 600 .env
+
+  And make sure you stop the Python server right after transfer.

@@ -698,6 +698,8 @@ From that point I started making quick videos: from [intro to tech talks](https:
 19. How i [mapped a canbus](https://youtube.com/shorts/q-BlvhkLqcU) and failed to connect it properly to a car
 
 
+https://www.youtube.com/shorts/j3N4mu-YAaI
+
 ### Serverless
 
 Im not forgetting the [CSR learnings](https://jalcocert.github.io/JAlcocerT/csr-and-js/) from last year.
