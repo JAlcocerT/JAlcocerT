@@ -1,13 +1,28 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-09-01T11:20:21+01:00
+date: 2026-09-01T07:20:21+01:00
 draft: false
-tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads"]
-description: 'Beyond software, AI Fluency and distribution.'
+tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads","MailPit"]
+description: 'Beyond software, AI Fluency and proper distribution.'
 url: 'jalcocertech-services-update'
 ---
 
 **Tl;DR**
+
+
+**Intro**
+
+* WHY Im writting this post: *Bc I was supposed to launch [a mbsd fwk here](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics), but I just [released an ebook](https://ebooks.jalcocertech.com/books/mechanism-analytics/) so far*
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+As always i go to termix and see whats going on:
+
+```sh
+#ssh http://192.168.1.18:3034
+htop #btop
+```
+
 
 ```sh
 ncdu /
@@ -44,19 +59,6 @@ curl -L \
     -o /home/jalcocert/Applications/hermes-agent-0.5.15-linux-x64.AppImage \
     https://github.com/nousresearch/hermes-agent/releases/download/v0.5.15/hermes-agent-0.5.15-linux-x64.AppImage && \
   chmod +x /home/jalcocert/Applications/T3-Code-0.0.33-x86_64.AppImage
-```
-
-**Intro**
-
-* WHY Im writting this post: *Bc I was supposed to launch [a mbsd fwk here](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics), but I just [released an ebook](https://ebooks.jalcocertech.com/books/mechanism-analytics/) so far*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
-
-
-As always i go to termix and see whats going on:
-
-```sh
-#ssh http://192.168.1.18:3034
-htop #btop
 ```
 
 I had an [hermes agent](https://fossengineer.com/hermes-agent-self-improving-ai-agent/) that pushed to [this repo](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101) after I reviewed the quality at my local Forgejo.
@@ -610,7 +612,7 @@ You can also do FEM with 3dcad https://github.com/JAlcocerT/3Design/tree/main/z-
 
 
 
-> And the bike W calculator from [this old practice](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm) :)
+> And [added](https://github.com/JAlcocerT/mbsd/commit/0ca8b9ba376e4d7887a47bda15ab1c70837a61c9) the bike W calculator from [this old practice](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm) :)
 
 ![alt text](/blog_img/mechanics/path_power_colored.png)
 
@@ -648,23 +650,28 @@ multibodysystemsdynamics.com/whitepaper
 
 ```sh
 #herdr
-scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/*.md .
-cd /home/jalcocert/multibody-tests #x300
+scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/*.md . #v-0-2-0-concerns.md
+cd /home/jalcocert/multibody-tests #x300 
+#cd /home/jalcocert/mbsd
 ```
 
-Tomorrow, publish in this order:
+Im just publishing in this order:
 
-  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
-  git push origin main
-  git push origin v0.2.0
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+git push origin main
+git push origin v0.2.0
+```
 
-  Then:
+Then:
 
-  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
-  git push origin main
-  git push origin v0.2.0
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+git push origin main
+git push origin v0.2.0
+```
 
-  Create the GitHub releases after pushing tags, core first, examples second.
+Create the GitHub releases after pushing tags, core first, examples second.
 
 > I couldnt avoid to email again to Gabe Morris :)
 
@@ -701,7 +708,29 @@ But every business owner will resonate when you ask [how they are getting custom
 
 2. With outbound marketing: get leads, enrich leads, reachout via email
 
-> You just need email x DNS done right
+```sh
+cd ./fossengineerpapermod/custom-mail #for organic/custom newsletter
+#make prod-up
+
+  cd custom-mail
+  cp .env.production.sample .env.production
+  # edit .env.production
+  make prod-up
+  docker compose -f docker-compose.prod.yml config
+  Then in your existing Cloudflare Tunnel config, point the public hostname to:
+
+  http://custom-mail:8088
+
+cd ./poc/genbi-energy-solutions/waitlist/ #it can be re-used nicely for lead-gen for other projects
+```
+
+> Its just an couple of API calls, captchas / CF turnstile and a couple of templates so you can do branded DRIP, nurturing and convert those leads.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/capjs" title="CapJS | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+> You just need email x DNS done right for outbound
 
 3. Dont forget about the attribution
 

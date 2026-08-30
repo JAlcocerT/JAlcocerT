@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-08-28
+date: 2026-09-20
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -749,6 +749,9 @@ At this [post](https://jalcocert.github.io/JAlcocerT/csr-and-js/#csr-examples).
 
 It just keeps working with the power of CSR under the hood.
 
+5. Betaflight pwa is just amazing and it works offline too
+
+6. Getting GoPro Telemetry embedded in a video via PWA is also amazing
 1. https://github.com/neondatabase/neon
 
 > Apache v2 | Neon: Serverless Postgres. We separated storage and compute to offer autoscaling, code-like database branching, and scale to zero.
@@ -968,14 +971,16 @@ graph LR
 
 #### Interesting Concepts
 
-1. Nonchalant
+1. Non-chalant
 
 * Options -> Things and not controlable
 * Choices -> Actions and are controlable
 
 2. Again: active >>>>> passive
 
-In fact: does passive income exists at all? or the only thing is there can be is active and deferred active?
+In fact: does passive income exists at all? 
+
+or the only thing is there can be is active and deferred active?
 
 3. Zettlekasten: visible at `/notes` [here](https://jalcocert.github.io/JAlcocerT/notes/)
 
