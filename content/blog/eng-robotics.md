@@ -1,6 +1,6 @@
 ---
 title: "Robotics 101"
-date: 2026-09-30
+date: 2026-10-30
 draft: false
 tags: ["MBSD","Electronics","RC","Drons vs FPV","IoT"]
 description: ''

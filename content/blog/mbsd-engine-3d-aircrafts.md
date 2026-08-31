@@ -1,6 +1,6 @@
 ---
 title: "3D vibrations for aircrafts"
-date: 2026-09-25T08:20:21+01:00
+date: 2026-09-18T08:20:21+01:00
 draft: false
 tags: ["Mechanical Engineering","MBSD x Airplanes Engine Mount","ULM/PPL"]
 description: 'Simulating .'
@@ -15,6 +15,10 @@ https://www.youtube.com/watch?v=TiTb08qBEKY
 The moment 2D mechanics is not enough.
 
 **Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 
 The dimension reduction worked great for cars.
 

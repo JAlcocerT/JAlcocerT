@@ -373,7 +373,15 @@ Summary of your "Super-Sensor" ESP32:
 * **D21:** SDA for **both** MLX90614 and HMC5883L
 * **D22:** SCL for **both** MLX90614 and HMC5883L
 
+### ESP32 x Water Pump
 
+{{< youtube "u5m470h2U" >}}
+
+{{< youtube "kDPNhy8Ep7o" >}}
+
+<!-- https://youtube.com/shorts/U-u5m470h2U -->
+<!-- 
+https://youtube.com/shorts/kDPNhy8Ep7o -->
 
 ## SelfHosted IoT Tools
 
@@ -430,6 +438,12 @@ docker ps -a | grep -i home-assistant
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/termix" title="Termix with Docker 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant" title="HA with Docker 🐋 ↗" >}}
 {{< /cards >}}
+
+### Custom IoT Tools
+
+But lately, I just made my own IoT platform around MQTT and zigbee:
+
+
 
 ## IoT BoM
 

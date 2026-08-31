@@ -42,7 +42,6 @@ https://youtu.be/oPznvdWmcTQ -->
 
 {{< youtube "oPznvdWmcTQ" >}}
 
-
 Just that sometimes, there is not enough juice from the sun flowing for the ESP32's
 
 And you'll want to measure temp and humidity during the night as well

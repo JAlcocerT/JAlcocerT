@@ -1,13 +1,11 @@
 ---
-title: "[IoT] Sensors"
-date: 2026-09-23
+title: "[IoT] Sensors x PCB"
+date: 2026-09-10
 draft: false
 tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
-
-
 
 **Tl;DR**
 

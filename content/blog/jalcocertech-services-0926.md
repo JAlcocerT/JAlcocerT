@@ -496,7 +496,9 @@ Specialized off-grid or solar-hybrid systems (e.g., Solimpeks, Masterflux, Boyar
 
 ### 1. MPPT (Maximum Power Point Tracking)
 
-**MPPT** is an electronic algorithm and DC-DC converter circuit built inside solar inverters and charge controllers. Its job is to extract the maximum possible electrical power from your solar panels under varying sunlight and temperature conditions.
+**MPPT** is an electronic algorithm and DC-DC converter circuit built inside solar inverters and charge controllers. 
+
+Its job is to extract the maximum possible electrical power from your solar panels under varying sunlight and temperature conditions.
 
 * **The Problem:** Solar panels have a non-linear relationship between voltage and current. If you draw too much current, the panel voltage collapses; if you don't draw enough, current drops. Power output ($\text{Watts} = \text{Volts} \times \text{Amps}$) peaks at only one exact combination of voltage and current, called the **Maximum Power Point ($V_{\text{mp}}, I_{\text{mp}}$)**.
 * **How It Works:** As clouds pass or the panels heat up, this sweet spot constantly shifts. The MPPT controller continuously sweeps and adjusts its internal electrical resistance thousands of times a second to keep the panels operating at peak power.
@@ -555,6 +557,16 @@ RecoBart?
 ### FPV
 
 You can [prepare to ULM/PPL](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl): `https://ulm-ppl-test.pages.dev/`
+
+{{< youtube "Fgdb4F_G_XM" >}}
+
+<!-- 
+https://youtube.com/shorts/Fgdb4F_G_XM -->
+
+{{< youtube "3T_XmODBKNU" >}}
+
+<!-- 
+https://youtube.com/shorts/3T_XmODBKNU -->
 
 Or just get ready to *DYOR* and make a DIY dron.
 

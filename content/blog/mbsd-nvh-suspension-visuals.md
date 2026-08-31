@@ -1,9 +1,9 @@
 ---
 title: "Suspension videos"
-date: 2026-09-25
+date: 2026-10-15
 draft: false
 tags: ["MBSD x Active Damping","LMS Filter"]
-description: '.'
+description: 'A light framework that can do stuff'
 url: 'visualizing-suspension-nvh'
 ---
 
@@ -11,6 +11,9 @@ url: 'visualizing-suspension-nvh'
 **Tl;DR**
 
 **Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 ## Suspensions Types

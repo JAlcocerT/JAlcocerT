@@ -1,6 +1,6 @@
 ---
 title: "Controlling: from bikes to humidity"
-date: 2026-09-01
+date: 2026-10-01
 draft: false
 tags: ["MBSD x 3D Simulation","PID","Control Theory","PySymverse"]
 description: 'System Theory, SISO, MIMO...'
