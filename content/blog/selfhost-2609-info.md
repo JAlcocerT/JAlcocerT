@@ -281,6 +281,15 @@ Check that `forgejo:3000` ready:
 
 ### Selfhosted Media
 
+
+qbit and prowlarr at `6011` and `9696`.
+
+```sh
+sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent prowlarr
+```
+
+yt-distil: `http://192.168.1.2:8001`
+
 #### Kodi vs Jellyfin
 
 with kodi adons

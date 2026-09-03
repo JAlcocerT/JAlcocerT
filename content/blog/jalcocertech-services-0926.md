@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-09-01T07:20:21+01:00
+date: 2026-09-02T07:20:21+01:00
 draft: false
 tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads","MailPit"]
 description: 'Beyond software, AI Fluency and proper distribution.'
@@ -713,10 +713,25 @@ This setup is working quite nicely thanks to skills:
 
 Every business has its own delivery
 
-But every business owner will resonate when you ask [how they are getting customers](https://jalcocert.github.io/JAlcocerT/poc-107/#the-service-to-rule-them-all)
+But every business owner will resonate when you ask [how they are getting customers](https://jalcocert.github.io/JAlcocerT/poc-107/#the-service-to-rule-them-all).
+
 
 
 1. With a proper website: [webaudits here](https://webaudit.jalcocertech.com/)
+
+> But hey, dont just attract and convert, **make them want to stay** (LTV goes up!)
+
+
+
+{{< details title="Web Audits x Custom Web review 📌" closed="true" >}}
+
+```sh
+
+```
+
+{{< /details >}}
+
+
 
 2. With outbound marketing: get leads, enrich leads, reachout via email
 
@@ -724,14 +739,14 @@ But every business owner will resonate when you ask [how they are getting custom
 cd ./fossengineerpapermod/custom-mail #for organic/custom newsletter
 #make prod-up
 
-  cd custom-mail
-  cp .env.production.sample .env.production
-  # edit .env.production
-  make prod-up
-  docker compose -f docker-compose.prod.yml config
-  Then in your existing Cloudflare Tunnel config, point the public hostname to:
+cd custom-mail
+cp .env.production.sample .env.production
+# edit .env.production
+make prod-up
+docker compose -f docker-compose.prod.yml config
+Then in your existing Cloudflare Tunnel config, point the public hostname to:
 
-  http://custom-mail:8088
+http://custom-mail:8088
 
 cd ./poc/genbi-energy-solutions/waitlist/ #it can be re-used nicely for lead-gen for other projects
 ```
@@ -764,7 +779,42 @@ You get what you ~~deserve~~ negotiate
 
 Lately I was asked: *how can we work together?*
 
-Very interesting converging questions, but zooming out the real one is: do we really want to work together? have we validated our ideas and we can create a win-win situation?
+Very interesting converging questions, but zooming out the real one is: do we really want to work together? 
+
+have we validated our ideas and we can create a win-win situation?
+
+I created a formbricks flow to validate precisely that with [this form](https://app.formbricks.com/s/cmtljp6ee1j5d01xdkqdqpdyp)
+
+{{< details title="Formbricks x JSON form 📌" closed="true" >}}
+
+Flow I made them go through:
+  1. Who they are     
+  2. One-sentence idea
+  3. Actual stage: raw, researched, talked to buyers, pre-sold, shipped, revenue                           
+  4. Buyer clarity
+  5. Evidence: paid, pilot, calls, waitlist, competitors, none                                             
+  6. Pain intensity
+  7. Concrete paid outcome                                                                                 
+  8. First 10-buyer distribution path                                                                      
+  9. What exists today
+  10. 14-day commitment
+  11. Biggest blocker              
+  12. Contact info                                                                                         
+  The intent is to classify people into: raw idea, needs validation, ready to test, ready to build, or     
+  already commercial. It deliberately exposes weak ideas by asking for buyer clarity, evidence,            
+  distribution, and commitment.                                                                            
+                                       
+```sh
+python .agents\skills\formbricks-as-code\scripts\validate_survey.py forms\idea-state-intake.json --funnel
+  
+Result: OK.        
+cd forms           
+uv run python main.py status cmtljp6ee1j5d01xdkqdqpdyp inProgress  
+```
+
+{{< /details >}}
+
+
 
 **What do I do?**
 

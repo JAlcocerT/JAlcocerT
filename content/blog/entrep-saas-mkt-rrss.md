@@ -13,6 +13,11 @@ Can you create quality content and build a community with social media (Twitter/
 
 +++ High quality [infographics](#about-infographics)
 
+<!-- https://www.youtube.com/watch?v=ZTSI3DDP_4A -->
+
+{{< youtube "ZTSI3DDP_4A" >}}
+
+
 **Intro**
 
 * WHY Im writting this post: 
