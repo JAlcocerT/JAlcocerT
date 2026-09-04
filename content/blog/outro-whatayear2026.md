@@ -53,8 +53,9 @@ From [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/)
 
 From regular openAI API calls, to do have them [done via BAML](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#baml-x-pgsql-x-matplotlib)
 
-and from SQL, to malloy: https://github.com/malloydata/malloy
+and from SQL, to [malloy DSL](https://fossengineer.com/malloy-semantic-modeling-language/)and google OKF
 
+* https://github.com/malloydata/malloy
 * https://docs.malloydata.dev/documentation/user_guides/sql_experts1
 
 > Because semantic matters, whatever you are building

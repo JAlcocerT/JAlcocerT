@@ -670,7 +670,7 @@ However, by using **Power BI Datasets (Live Connection)**, you can replicate tha
 
 ### SQL vs Malloy
 
-**Malloy** is a modern, open-source language for data modeling and querying, created by **Lloyd Tabb** (the founder of Looker) and a team at Google.
+**[Malloy](https://fossengineer.com/malloy-semantic-modeling-language/)** is a modern, open-source language for data modeling and querying, created by **Lloyd Tabb** (the founder of Looker) and a team at Google.
 
 * https://github.com/malloydata/malloy
 * https://www.malloydata.dev/

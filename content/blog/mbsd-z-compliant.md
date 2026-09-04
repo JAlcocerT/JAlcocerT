@@ -1,6 +1,6 @@
 ---
 title: "Time for MultiBodySystemsDynamics (dot) com"
-date: 2026-09-04
+date: 2026-09-03
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper","Forgejo"]
 description: 'Mechanism agentic centered design.'
@@ -22,10 +22,10 @@ Because ideas are worthless and **execution is everything**
 
 {{< details title="Executing with CC 📌" closed="true" >}}
 
-
-
 Claude Code - Start with this agentic coding assistant that runs in your terminal
+
 Computer Use - Explore this set of tools that lets Claude interact with desktop applications
+
 Agents - Understand what makes these applications successful as agents
 
 Claude Code has access to generic, flexible tools like:
@@ -36,6 +36,7 @@ write - Create any file
 edit - Modify files
 glob - Find files
 grep - Search file contents
+
 It notably doesn't have specialized tools like "refactor code" or "install dependencies." Instead, Claude figures out how to use the basic tools to accomplish these complex tasks. This abstraction allows it to handle countless programming scenarios that the developers never explicitly planned for.
 
 ```sh
@@ -55,6 +56,7 @@ A skill isn't just a single skill.md file. The folder around it can carry other 
 
 Drop a reference.md next to the skill for detailed material, then link to it from skill.md. Claude only reads it when it actually needs that depth. Your main file stays short.
 Put scripts in the folder too. Claude executes them rather than loading their contents into context. That means a skill can carry its own tooling, like a check.sh that runs all the gates.
+
 The takeaway: keep skill.md itself lean. Push the heavy material, the long explanations and the executable scripts, into side files. The lean file describes what to do; the side files hold the depth and the tools.
 
 With this one:
@@ -69,6 +71,7 @@ claude -p "summarize the changes in this diff"
 ```
 
 Get a cold second opinion
+
 The sub-agent code review you'd run before a pull request works here too. Point it at an unsupervised run.
 
 Open a fresh session or sub-agent and have it review the changed code with no memory of how the code was built. Because it has no stake in the approach, it catches the things the original run talked itself past. A second reviewer with fresh eyes finds what the author rationalized away.

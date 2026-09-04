@@ -611,6 +611,9 @@ kinematics.py  ──►  OpenSCAD  ──►  CadQuery  ──►  FreeCAD  ─
   (math)           (quick check)   (BREP/STEP)    (FEM/draw)   (render)
 ```
 
+https://jalcocert.github.io/JAlcocerT/fem/
+https://fossengineer.com/beso-topology-optimization-calculix/
+
 ```sh
 #herdr #lazydocker #lazygit
 git clone https://github.com/JAlcocerT/mbsd-core
@@ -618,11 +621,17 @@ git clone https://github.com/JAlcocerT/mbsd-examples
 #codex --yolo
 ```
 
-https://www.youtube.com/watch?v=CPLdltN7wgE
+* https://github.com/JAlcocerT/mbsd-examples/releases
+* https://github.com/JAlcocerT/mbsd-core/releases/tag/v0.2.0
+
+<!-- 
+https://www.youtube.com/watch?v=CPLdltN7wgE 
+-->
+
+{{< youtube "CPLdltN7wgE" >}}
+
 
 You can also do FEM with 3dcad https://github.com/JAlcocerT/3Design/tree/main/z-freecad
-
-
 
 > And [added](https://github.com/JAlcocerT/mbsd/commit/0ca8b9ba376e4d7887a47bda15ab1c70837a61c9) the bike W calculator from [this old practice](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm) :)
 
@@ -726,11 +735,35 @@ But every business owner will resonate when you ask [how they are getting custom
 {{< details title="Web Audits x Custom Web review 📌" closed="true" >}}
 
 ```sh
+git clone https://github.com/JAlcocerT/morita-web
 
+cd /home/jalcocert/poc_webs_magnet
+make audit-full-fast URL=https://psikolognevinkeskin.info/
+```
+
+That is probably the one you want: full audit suite with link checks enabled,
+using the faster Lychee Docker checker.
+
+Other variants:
+
+```sh
+make audit URL=https://psikolognevinkeskin.info/
+```
+
+Runs the suite but skips link checks by default.
+
+```sh
+make audit-full URL=https://psikolognevinkeskin.info/
+```
+Runs full suite with the default Docker link checker.
+
+```sh
+cd /home/jalcocert/poc_webs_magnet
+docker compose -f docker-compose.prod.yml down
+docker compose -f docker-compose.prod.yml up -d --build
 ```
 
 {{< /details >}}
-
 
 
 2. With outbound marketing: get leads, enrich leads, reachout via email
@@ -807,7 +840,7 @@ Flow I made them go through:
 ```sh
 python .agents\skills\formbricks-as-code\scripts\validate_survey.py forms\idea-state-intake.json --funnel
   
-Result: OK.        
+#Result: OK.        
 cd forms           
 uv run python main.py status cmtljp6ee1j5d01xdkqdqpdyp inProgress  
 ```

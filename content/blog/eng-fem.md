@@ -3,11 +3,10 @@ title: "FEM and a Self-Optimizing design loop"
 date: 2026-05-08
 draft: false
 tags: ["MBSD x 3D Simulation","Von Misses","FreeCad X FEM"]
-description: 'Using physics guardrails for AI driven design.'
+description: 'Using physics guardrails for AI driven design with Calculix Beso.'
 url: 'fem'
 math: true
 ---
-
 
 **Tl;DR**
 

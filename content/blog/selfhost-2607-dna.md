@@ -2,7 +2,7 @@
 title: "SelfHosted Data Analytics"
 date: 2026-07-18T20:20:21+01:00
 draft: false
-tags: ["ADK vs LangChain","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","msSQL","Malloy DSL","Semantics x CV","DSL"]
+tags: ["ADK vs LangChain","WhoDB vs DBCode vs Dbeaver","GCP VWB vs JHUB","msSQL","Semantics x CV","DSL"]
 description: 'D&A tools like WrenAI, Rill and Vanna mean nothing w/o a proper Capability Framework to avoid noise. No Hello!'
 url: 'selfhosting-data-analytics'
 ---
