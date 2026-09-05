@@ -177,6 +177,19 @@ flowchart TD
     Evidence --> Weekly[Weekly proof: delivered, unblocked, decisions, risks, ownership]
 ```
 
+### HomeLab Updates 0926
+
+I was trying lately technitium at Omarchy
+
+![alt text](/blog_img/selfh/technitium-sqlite.png)
+
+<!-- 
+https://www.youtube.com/watch?v=62crffG6Uw8 -->
+
+{{< youtube "62crffG6Uw8" >}}
+
+
+
 ### Architect or Principal
 
 Just in case you are preparing for an internal promo / outside CV or how to frame what you do for prospects.

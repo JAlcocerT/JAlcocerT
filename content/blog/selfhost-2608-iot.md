@@ -8,103 +8,7 @@ url: 'home-lab-tools-for-iot'
 ---
 
 
-```bash
-cd ~/Desktop/poc/building-geo-pl
-make pull-data
-```
-
-```sh
-
-  cd /home/jalcocert/Desktop/poc/iot-esp32-mlx
-  make upload PORT=/dev/ttyACM0 WIFI_SSID='Piszymsiu' WIFI_PASSWORD_FILE=/tmp/iot-fan-wifi-pass
-  printf '%s' 'your-wifi-password' > /tmp/iot-mlx-wifi-pass
-  - Fan projects: /tmp/iot-fan-wifi-pass
-  - Water project: /tmp/iot-water-wifi-pass
-  - New MLX project I added: /tmp/iot-mlx-wifi-pass
-```
-
-```sh
-cd /home/jalcocert/Desktop/poc/iot-esp32-motors/3-pin-fan-mosfet-pwm-mqtt
-make upload \
-   PORT=/dev/ttyUSB0 \
-   WIFI_SSID='your-wifi-name' \
-   WIFI_PASSWORD_FILE=/tmp/iot-fan-wifi-pass
-
-make monitor PORT=/dev/ttyACM0 BAUD=115200
-
-make pub MQTT_TEST_CMD=status
-make pub MQTT_TEST_CMD=full #make pub MQTT_TEST_CMD=on
-make pub MQTT_TEST_CMD=freq:250
-make pub MQTT_TEST_CMD=duty:50
-# make pub MQTT_TEST_CMD=freq:1000
-# make pub MQTT_TEST_CMD=duty:40
-
-# make pub MQTT_TEST_CMD=freq:25000
-# make pub MQTT_TEST_CMD=duty:40
-```
-
-```sh
-#iot-rpi-dht-insulation
-cd ./poc/iot-dashboard
-docker compose up -d --build
-curl -s localhost:3037/api/health #http://localhost:3030/?range=1h #which can reference z2m at http://localhost:8080/
-
-#make db-tail
-```
-
-
-
-http://192.168.1.2:3037/?range=7d
-
-<!-- https://youtube.com/shorts/mKVvW_jl3UI -->
-
-{{< youtube "mKVvW_jl3UI" >}}
-
-<!--
-https://www.youtube.com/watch?v=XDYZoMRJFeQ
--->
-
-{{< youtube "XDYZoMRJFeQ" >}}
-
-
-I got to understand DC PWM thanks to: https://github.com/JAlcocerT/poc/tree/main/iot-esp32-motors
-
-{{< youtube "nqNyRvu7_KM" >}}
-<!--
-https://youtube.com/shorts/nqNyRvu7_KM-->
-
-3wire and 4 wires DC are not the same
-
-With a 4-wire fan, you can control speed directly without a MOSFET, diode, or external power-switching circuit.
-
-And learn a couple of things while [tinkering with Zigbee](https://github.com/JAlcocerT/poc/tree/main/iot-sonoff-dongle), which got integrated: https://github.com/JAlcocerT/poc/tree/main/iot-dashboard
-
-<!--
-https://youtube.com/shorts/WAa7nOc5z9g-->
-
-{{< youtube "WAa7nOc5z9g" >}}
-
-
-https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks/6-fpv-telemetry
-
-https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks/7-tomatoes
-
-https://github.com/andrewdavidmackenzie/pigg
-
-[![shields.io Stars](https://img.shields.io/github/stars/chartdb/chartdb)](https://github.com/chartbrew/chartbrew/stargazers)
-
-
-iot sim card
-
-m2m = machine to machine
-
-I heard that teltonika also do routers for EV stations to send telemetry
-
-https://telnyx.com/pricing/iot-data-plans
-https://en.wikipedia.org/wiki/Machine_to_machine
-
 **TL;DR**
-
 
 Ok, you can [buy this](#conclusions).
 
@@ -130,11 +34,6 @@ That plants care [about VPD](https://jalcocert.github.io/JAlcocerT/plants-102-an
 
 suuuure
 
-
-
-
-Summer is coming!
-
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers" title="MicroControllers scripts | Repo" icon="github" >}}
@@ -158,7 +57,6 @@ Specially as I have also built some poc about how to go solar depending on your 
 cd ./poc/go-solar
 ```
 
-
 ## Protocols
 
 Among all [messaging protocols](https://jalcocert.github.io/JAlcocerT/messaging-protocols/), mqtt has something to say.
@@ -181,10 +79,9 @@ mosquitto_sub -h 192.168.1.2 -t "esp32/#" -v
 #mosquitto_sub -h 192.168.1.2 -t "esp32/temperature/dht11"
 ```
 
-
 ### Tools for MQTT
 
-You can get inspired at: https://selfh.st/apps/?search=mqtt
+You can get inspired at: `https://selfh.st/apps/?search=mqtt`
 
 Previously, Ive tinkered with:
 
@@ -235,21 +132,21 @@ tmux ls
 
 Few years ago, I [wrote this post](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/) explaining how to use the MLX sensor with a Pi4 2GB.
 
- pinout is the correct tool, and it confirms this is a Raspberry Pi 4B.
+pinout is the correct tool, and it confirms this is a Raspberry Pi 4B.
 
-  Use the J8 section:
+Use the J8 section:
 
-  J8:
-  3V3    (1) (2)  5V
-  GPIO2  (3) (4)  5V
-  GPIO3  (5) (6)  GND
+J8:
+3V3    (1) (2)  5V
+GPIO2  (3) (4)  5V
+GPIO3  (5) (6)  GND
 
-  So your MLX90614 should be:
+So your MLX90614 should be:
 
-  VIN -> 3V3    pin 1
-  SDA -> GPIO2  pin 3
-  SCL -> GPIO3  pin 5
-  GND -> GND    pin 6
+VIN -> 3V3    pin 1
+SDA -> GPIO2  pin 3
+SCL -> GPIO3  pin 5
+GND -> GND    pin 6
 
 Its time to make the setup work with a ESP32 and MQTT.
 
@@ -375,7 +272,16 @@ Summary of your "Super-Sensor" ESP32:
 
 ### ESP32 x Water Pump
 
-{{< youtube "u5m470h2U" >}}
+Time to put this together:
+
+<!-- 
+https://youtube.com/shorts/nqNyRvu7_KM 
+-->
+
+{{< youtube "U-u5m470h2U" >}}
+
+{{< youtube "nqNyRvu7_KM" >}}
+
 
 {{< youtube "kDPNhy8Ep7o" >}}
 
@@ -385,18 +291,14 @@ https://youtube.com/shorts/kDPNhy8Ep7o -->
 
 ## SelfHosted IoT Tools
 
-OpenHUB
-
-https://fossengineer.com/selfhosting-velxio-arduino/
+OpenHUB, HA, Node-Red and ESPhome.
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="OpenHUB | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Home Assistant | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-ESPHome
-
-Probably also `https://esphome.io` if you like ESP32 boards!
+Yea, `https://esphome.io` if you like ESP32 boards!
 
 
 {{< cards cols="2" >}}
@@ -441,11 +343,9 @@ docker ps -a | grep -i home-assistant
 
 ### Custom IoT Tools
 
-But lately, I just made my own IoT platform around MQTT and zigbee:
+But lately, I just made my own **DIY IoT platform** around MQTT and zigbee:
 
 
-
-## IoT BoM
 
 
 ---
@@ -481,6 +381,7 @@ Deal:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
+
 ### The Software for D&A
 
 #### MicroControllers
@@ -501,7 +402,7 @@ sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud 
 Needed a cool `.md` compatible way to keep my daily notes for when im not working with my laptop...
 
 
-{{% details title="Why Starting a Tech Blog? 🚀" closed="true" %}}
+{{% details title="LogSeq vs SilverBullet 🚀" closed="true" %}}
 
 Logseq Web is the wrong model for your specific setup.
 
@@ -778,10 +679,14 @@ Since you are likely using a breadboard now to connect both sensors:
 
 ### IoT BoM to get started
 
+Getting started?
+
+Get some of these:
+
 1. ESP32 or a PicoW ~5/10$
-2. DHT11/22 ~
+2. DHT11/22 ~1/5$
 3. MLX90614 infrared sensors ~20$
-4. TP4056 - to control the battery charge ~10$ with shield
+4. TP4056 - to control the battery charge ~10$ with the shield
 
 For your [automatic watering setup](https://jalcocert.github.io/JAlcocerT/plants-103-inspiration/#the-iot-and-controlled-watering):
 
@@ -828,56 +733,3 @@ git clone
 2. Pumps also go around P/Q: ~~price/quantity~~ Power, Flow *and height, Best Efficiency Point (BEP)...*
 
 3. 
-
-
-
-Omarchy
-
-
-Your VM has 8192 MB RAM, but your host has ~14 GB total and 0 swap, so Linux killed qemu-system-x86.
-
-  Run this to lower the VM to 4 GB RAM and 2 CPUs:
-
-  virsh --connect qemu:///session shutdown omarchy-4.0.1 2>/dev/null || true
-
-  virsh --connect qemu:///session setmaxmem omarchy-4.0.1 4096M --config
-  virsh --connect qemu:///session setmem omarchy-4.0.1 4096M --config
-  virsh --connect qemu:///session setvcpus omarchy-4.0.1 2 --config
-
-  virsh --connect qemu:///session start omarchy-4.0.1
-  gnome-boxes
-
-  If Boxes still acts weird, open the same running VM with:
-
-  virt-viewer --connect qemu:///session --attach omarchy-4.0.1
-
-  Your 30 GB disk is fine. The immediate problem is RAM.
-
-──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
-
-
-› perfect that works, now how can i provide a .env that i have in my pc to the vm?
-
-
-• Best simple/safe way: use a temporary local HTTP server on your host, then download it inside the VM.
-
-  On your host, from the directory containing .env:
-
-  cd /path/to/directory/with/env
-  python3 -m http.server 8765 --bind 127.0.0.1
-
-  Inside the VM, download it using QEMU’s user-network host alias:
-
-  curl -o .env http://10.0.2.2:8765/.env
-
-  Then stop the server on your host with Ctrl+C.
-
-  If 10.0.2.2 does not work, try:
-
-  curl -o .env http://192.168.122.1:8765/.env
-
-  For a sensitive .env, clean up after:
-
-  chmod 600 .env
-
-  And make sure you stop the Python server right after transfer.

@@ -29,12 +29,12 @@ ncdu /
 #sudo journalctl --vacuum-time=7d
 ```
 
-lynx browser and helium
-btop > htop, herdr > ghostty, 
+* lynx browser and helium
+* btop > htop
+* herdr > ghostty
+* gram > vscode
 
-Gram > vscode
-
-If you are using FreeCad, be prepare to have 15GB, and for Arduino CLI ~8GB, for Kicad ~4gb
+If you are using [FreeCad](https://fossengineer.com/selfhosting-freecad/), be prepare to have 15GB, and for Arduino CLI ~8GB, for Kicad ~4gb
 
 https://open-design.ai/agents/
 
@@ -48,10 +48,10 @@ curl -L \
   chmod +x /home/jalcocert/Applications/T3-Code-0.0.33-x86_64.AppImage
 ```
 
-https://github.com/fathah/hermes-desktop/releases/download/v0.7.3/hermes-desktop-0.7.3.AppImage
+Want an agent that learns with you? Try [Hermes](https://fossengineer.com/hermes-agent-self-improving-ai-agent/)
 
-https://github.com/nousresearch/hermes-agent
-
+* https://github.com/fathah/hermes-desktop/releases/download/v0.7.3/hermes-desktop-0.7.3.AppImage
+* https://github.com/nousresearch/hermes-agent
 
 ```sh
 #https://github.com/nousresearch/hermes-agent/releases/download/v0.5.15/hermes-agent
@@ -62,7 +62,6 @@ curl -L \
 ```
 
 I had an [hermes agent](https://fossengineer.com/hermes-agent-self-improving-ai-agent/) that pushed to [this repo](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101) after I reviewed the quality at my local Forgejo.
-
 
 ```sh
 ssh -T -o BatchMode=yes forgejo-home
@@ -124,7 +123,6 @@ The global Git config includes:
 user.name=hermesagent
 user.email=alice@example.com
 ```
-
 
 Authentication Check
 
@@ -195,7 +193,6 @@ forgejo-home:hermesagent/pi-connectivity.git remaining_test_refs=0
 forgejo-home:hermesagent/selfhosted-connectivity.git remaining_test_refs=0
 forgejo-home:hermesagent/optimum-path.git remaining_test_refs=0
 ```
-
 
 Conclusion: the temporary validation branch was removed from all checked Forgejo repositories.
 
@@ -552,8 +549,6 @@ RecoBart?
 
 ```
 
-
-
 ### FPV
 
 You can [prepare to ULM/PPL](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl): `https://ulm-ppl-test.pages.dev/`
@@ -600,8 +595,6 @@ https://www.youtube.com/watch?v=hw_CAQCFCmA
 
 Then perform [damage diagnosis](https://youtube.com/shorts/OPuNbaIYuRM)
 
-
-
 ### Mechanism Design
 
 With the release of this OSS framework for mbsd: https://github.com/JAlcocerT/mbsd-core
@@ -630,7 +623,6 @@ https://www.youtube.com/watch?v=CPLdltN7wgE
 
 {{< youtube "CPLdltN7wgE" >}}
 
-
 You can also do FEM with 3dcad https://github.com/JAlcocerT/3Design/tree/main/z-freecad
 
 > And [added](https://github.com/JAlcocerT/mbsd/commit/0ca8b9ba376e4d7887a47bda15ab1c70837a61c9) the bike W calculator from [this old practice](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm) :)
@@ -639,8 +631,7 @@ You can also do FEM with 3dcad https://github.com/JAlcocerT/3Design/tree/main/z-
 
 You can learn mbsd theory here: https://github.com/moorepants/learn-multibody-dynamics/
 
-or here: ebooks.jalcocertech
-
+or here: `ebooks.jalcocertech`
 
 #### Multi Body Systems Dynamics dot com
 
@@ -653,7 +644,6 @@ http://192.168.1.2:3034/hermesagent/mbsd/commit/5751bd7702319119ffc3cac7165ef59f
 I took all the goodies from the github and forgejo repos: *2D/3D*
 
 The idea is to finally launch the [overdue oss mbsd framework](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics)
-
 
 not https://multibodysystemdynamics.pages.dev/ [this](https://github.com/JAlcocerT/Slider-Crank/tree/main/landing) but 
 https://multibodysystemsdynamics.com/
@@ -700,7 +690,7 @@ Create the GitHub releases after pushing tags, core first, examples second.
 
 ## Others
 
-https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#productized-services
+* https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#productized-services
 
 ### D&A
 
