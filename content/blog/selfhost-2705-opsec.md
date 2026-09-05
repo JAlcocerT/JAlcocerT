@@ -2,12 +2,14 @@
 title: "How secure is your SelfHosting"
 date: 2027-05-01T23:20:21+01:00
 draft: false
-tags: ["Selfhosted OpSec"]
+tags: ["Selfhosted OpSec","OSINT"]
 description: '.'
 url: 'selfhosting-opsec-tools'
 ---
 
 **Tl;DR**
+
+https://fossengineer.com/selfhosting-worldmonitor-osint-dashboard/
 
 
 **Intro**

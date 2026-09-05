@@ -179,7 +179,7 @@ flowchart TD
 
 ### HomeLab Updates 0926
 
-I was trying lately technitium at Omarchy
+I was trying lately technitium for custom DNS at Omarchy
 
 ![alt text](/blog_img/selfh/technitium-sqlite.png)
 

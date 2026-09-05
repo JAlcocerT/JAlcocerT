@@ -565,11 +565,100 @@ https://youtube.com/shorts/3T_XmODBKNU -->
 
 Or just get ready to *DYOR* and make a DIY dron.
 
-Before flying, make sure you are aware about licenses, permissions, insurances and limitations
+Configure your controls:
+
+Pos 1 (Up): ANGLE box highlights yellow (Maximum guardrails / full auto-level).
+Pos 2 (Mid): HORIZON box highlights yellow (Auto-level with flip capability).
+Pos 3 (Down): Neither highlights (Full manual Acro mode).
+
+If you are going without VTX, lower the Power to 25mW. 100mW is too much.
+
+* **The Hex Drivers Won't Fit It:** The 4-piece RC hex set (1.5, 2.0, 2.5, 3.0 mm) only fits **recessed screw heads** (screws with a hole in the top).
+* **The Nut Needs an Outer Socket:** The M5 nut is a standard hexagon on the **outside** measuring **8 mm across the flats**. The driver must wrap around it, not go inside it.
+
+To tighten or remove those nuts, you need an **8 mm socket**:
+
+* An **8 mm one-way ratcheting FPV prop tool** (the fastest option for prop swaps).
+* A standard **8 mm socket / nut driver** from a hardware store.
+* A basic **8 mm box wrench** or small adjustable spanner.
+
+Once you have an 8 mm socket paired with that 4-piece RC hex driver set, you have all the wrench sizes needed to tear down and rebuild a standard 5-inch drone.
+
+**Hex keys and Allen keys are the exact same shape**—both are standard 6-sided hexagons ("Allen" is just a brand name for a hex wrench).
+
+
+> Oh, And before flying, make sure you are aware about licenses, permissions, insurances, limitations and comply with them
 
 I even made my own build for ELRS https://github.com/JAlcocerT/meteor-dron/tree/main/ExpressLRS-build
 
+[6 Ways ](https://www.youtube.com/watch?v=Z5qyrMmWzrE)to RUIN Your FPV Drone!
+
+* **Nylon Standoffs:** Using nylon standoffs in your drone frame or flight control stack can lead to breakage and instability during crashes.
+* **Unnecessary 3D Printed Parts:** Adding non-essential parts like spoilers increases weight and can negatively affect flight performance.
+* **Stacking Pin Headers:** These can cause intermittent connections and are prone to vibration issues, leading to erratic flight behavior.
+* **Ribbon Cables:** They are not durable under shock and vibration, making them a poor choice for connecting ESCs and flight controllers.
+* **Slammed Builds:** Keeping the top and bottom plates too close can lead to short circuits and complicate maintenance.
+Titanium Motor Screws: They can be brittle and may break under stress, causing motors to detach during flight.
+
 #### FPV Telemetry
+
+If you are interested to make overlays, get the .BTL and claibrate the power consumption to what your charger tells you after the session. 
+
+Then the A flowing will be accurate.
+
+Log  Duration  Start V  End V   Delta mAh
+  01      2.3 s   15.51   15.29        7
+  02     10.1 s   15.27   15.46       48
+  03      2.8 s   15.50   14.89       10
+  04      2.9 s   15.48   14.99       15
+  05      4.4 s   15.47   14.86       11
+  06      7.2 s   16.61   14.47       12
+  07      6.4 s   16.53   16.32       41
+  08     63.6 s   16.50   15.62      148
+  09     53.8 s   16.25   15.83      199
+
+
+As i knew it was 8 and 9 and my charger told me 175mah, instead of 347mah
+
++Firmware revision: Betaflight 4.2.4 (fbcaf8c50) STM32F405
+    14 +Firmware date:     Oct 20 2020 08:18:45
+    15 +Craft name:        NOVICE-IV
+
+For the bigger drone i got, i also made some power calibration:
+
+Updated consumption-iflight-f722-twing.md with the new Ovonic run.
+
+  Key result:
+
+  Log 1 duration:        268.7 s
+  Betaflight reported:  500 mAh
+  Charger replaced:     600 mAh
+  Current scale:        100
+
+  Calibration math:
+
+  600 / 500 = 1.20
+  new scale = 100 * 1.20 = 120
+
+
+Remember that this is important for batteries and other componentes like ESC/FC:
+
+Ovonic 1300 mAh 100C: 130 A theoretical
+Corrected 99th percentile: 52.3 A = 40% of rating
+
+Tattu 850 mAh 75C: 63.75 A theoretical
+Corrected 99th percentile: 52.3 A = 82% of rating
+
+Motors: XING 2450KV
+  Props:  5x5x3 V1S tri-blades
+  Pack:   4S
+
+  And the average airborne power estimate:
+
+  Charger-based: about 127 W
+  Corrected Blackbox-based: about 139 W
+  Reasonable estimate: about 130-140 W
+
 
 <!-- 
 https://www.youtube.com/watch?v=hw_CAQCFCmA 
@@ -589,7 +678,7 @@ https://www.youtube.com/watch?v=hw_CAQCFCmA
 | **Nominal (Average)** | **3.6V – 3.7V** | **3.7V** |
 | **Cut-off / Empty** | **2.8V – 3.0V** | **3.0V** |
 
-> You can configure EdgeTX to inform you about battery level in real time
+> You can configure EdgeTX to inform you about battery level in real time! Thats (its Rx, not RX+)
 
 2. Get ready to perform RCA from telemetry when you'll have [a fpv crash](https://youtu.be/4opTp09Ne7A)
 

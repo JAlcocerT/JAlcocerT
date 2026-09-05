@@ -433,6 +433,11 @@ Some more [omarchy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-decemb
 * `https://omarchy.org/`
 * `https://tryomarchy.com/`
 
+The name **Omarchy** is a portmanteau of **"Omakase"** and **"Arch"**:
+
+* **Omakase (お任せ):** A Japanese dining concept meaning "I leave it up to you". In an omakase meal, you don't order individual items; the chef curates and prepares the entire progression of dishes based on what is best.
+* **Arch:** Refers to **Arch Linux**, the lightweight, rolling-release distribution that forms the base of the operating system.
+
 This brings docker, lazydocker, herdrd, lazygit installed by default :)
 
 Run this to lower the VM to 4 GB RAM and 2 CPUs: *You can get started using 1.2GB of RAM and I could tinker with <4GB*
@@ -479,6 +484,11 @@ You can also connect your airpids [via plugins](https://plugins.omarchy.org/expl
 * https://github.com/patcastle/omarchy-battery-health
 * https://plugins.omarchy.org/plugin.html?id=io.github.aryan-techie.bluetooth
 * https://plugins.omarchy.org/plugin.html?id=io.github.heyimhere.hardware-panel
+
+
+```sh
+scp -P 2022 dhh@127.0.0.1:/home/dhh/Downloads/wiki-technitium.md /home/jalcocert/Desktop/
+```
 
 ### PWA Power
 
@@ -532,3 +542,8 @@ make deploy
   4. Export JSON/CSV.
   5. Cache runtime/assets for offline use.
   6. Keep app private and keep mbsd-core clean.
+
+### Solo Design
+
+With Open Deesign, ofc.
+
