@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-09-02T07:20:21+01:00
+date: 2026-09-06T07:20:21+01:00
 draft: false
 tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads","MailPit"]
 description: 'Beyond software, AI Fluency and proper distribution.'
@@ -77,7 +77,7 @@ ssh -T -o BatchMode=yes forgejo-home
 
 Forgejo Write Access Validation
 
-Date: 2026-09-19  
+Date: 2026-0...
 Local machine user: `jalcocert`  
 Forgejo SSH account validated: `hermesagent`  
 Forgejo host alias: `forgejo-home`  

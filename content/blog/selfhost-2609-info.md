@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Information flow"
-date: 2026-09-11T07:20:21+01:00
+date: 2026-09-10T07:20:21+01:00
 draft: false
 tags: ["FilesMD","Forgejo","Zetlekasten","No Hello x Async","SoloPreneur CheckList"]
 description: 'From The algorithm to a daily information frameworks.'
@@ -16,18 +16,16 @@ You better write daily/weekly notes and work with them
 **Intro**
 
 * Why Im writting this post: *bc I want to standardize the way i capture information across my forcely scattered daily flow and create meta-frameworks with it to apply cross-domain*
-* [What Ive learnt](#conclusions) with it: When principles/ideas are clear, [apply them harder](https://jalcocert.github.io/JAlcocerT/poc-107/#destilling-read-books) 
+* [What Ive learnt](#conclusions) with it: *When principles/ideas are clear, just [apply them harder](https://jalcocert.github.io/JAlcocerT/poc-107/#destilling-read-books)*
 
 ## Why you need this
 
 I dont care if you are a director, an IC that ~~moonlights~~ has independent consilting work, or a solo-preneur:
 
-
 {{% details title="QnA to the team to avoid accountability laundring 🚀" closed="true" %}}
 
 
 {{% /details %}}
-
 
 Use when someone asks for a quick call without enough written context:
 
@@ -46,17 +44,16 @@ Once I have that, I can point you to the right fix or doc update.
 
 {{% /details %}}
 
-
 You better [ask questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/) on time
 
 {{% details title="QnA for Product teams 🚀" closed="true" %}}
 
 {{% /details %}}
 
-Yep, make sure meetings are clear and actionable
+Yep, make sure meetings are clear and actionable :)
 
 {{< callout type="info" >}}
-Starting with: WHO will do WHAT by WHEN
+A good start is WHO will do WHAT by WHEN
 {{< /callout >}}
 
 EOD Accountability Review:
@@ -72,6 +69,20 @@ https://youtu.be/6SyqMqIPQiI
 -->
 
 {{< youtube "6SyqMqIPQiI" >}}
+
+When you are a solo-founder, you dont have time for bs.
+
+You can avoid noise, non-sense promises, wishes with such form: https://app.formbricks.com/s/cmtljp6ee1j5d01xdkqdqpdyp
+
+```sh
+
+```
+
+{{% details title="QnA for ppl that need help with their ideas 🚀" closed="true" %}}
+
+{{% /details %}}
+
+
 
 ## The Setup
 
@@ -89,6 +100,8 @@ https://github.com/hedgedoc/hedgedoc
 For some cases, you can consider to just write into [your Forgejo instance](#selfhosted-forgejo), in case that github is non accesible.
 
 Ill assume that you are fine with `.md` files
+
+
 
 
 
@@ -200,7 +213,7 @@ The easiest way to understand the difference is **scope of execution vs. scope o
 | Software Architect                 | Principal Engineer                 |
 +------------------------------------+------------------------------------+
 | Focuses on the "Blueprint."        | Focuses on the "Execution & Truth."|
-| Works with product and business to | Goes deep into complex systems,     |
+| Works with product and business to | Goes deep into complex systems,    |
 | map out *what* to build and how    | enforces standards, and writes core|
 | systems interact broadly.          | code/infrastructure.               |
 +------------------------------------+------------------------------------+
@@ -208,7 +221,6 @@ The easiest way to understand the difference is **scope of execution vs. scope o
 * **The Architect** spends a lot of time in cross-functional stakeholder meetings, drawing system diagrams, analyzing vendor tech, and ensuring the business goals match the technology stack. In many companies, architects rarely touch production code anymore.
 
 * **The Principal Engineer** is usually the **highest-ranking technical hands-on expert** in the room. They design systems too, but they are also expected to build the foundational architecture, debug the most ambiguous, critical outages, and optimize engineering processes.
-
 
 1. You Own the "Infrastructure of Rules"
 
@@ -232,14 +244,11 @@ Managers get pulled into HR drama. Principals are insulated from most of that.
 
 Your value comes from your output, your technical direction, and the documentation (like your wikis) that you build to make the rest of the team self-sufficient.
 
-
 **So ask honestly**: do you want *status, control, income, or optionality**? 
 
 They are NOT the same game.
 
-What are you optimizing for next?
-
-
+> What are you optimizing for next?
 
 ---
 
@@ -247,7 +256,13 @@ What are you optimizing for next?
 
 ### Useful CLI Tools
 
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/
+Coming from [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/#homelab-commands)
+
+Ive lately found useful:
+
+```sh
+herdr
+```
 
 ### Selfhosted Forgejo
 
@@ -290,10 +305,9 @@ Check that `forgejo:3000` ready:
 
 1. https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.0
 
-2. Matrix with the flavour [conduit](https://fossengineer.com/selfhosting-matrix-conduit-server-with-docker/) or [synapse](https://fossengineer.com/selfhosting-matrix-synapse-docker/)
+2. Matrix: with the flavour [conduit](https://fossengineer.com/selfhosting-matrix-conduit-server-with-docker/) or [synapse](https://fossengineer.com/selfhosting-matrix-synapse-docker/)
 
 ### Selfhosted Media
-
 
 qbit and prowlarr at `6011` and `9696`.
 

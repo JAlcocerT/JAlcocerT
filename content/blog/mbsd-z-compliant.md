@@ -1,6 +1,6 @@
 ---
 title: "Time for MultiBodySystemsDynamics (dot) com"
-date: 2026-09-03
+date: 2026-09-05
 draft: false
 tags: ["Mechanism Analytics x Simulations","JAlcocerTech WhitePaper","Forgejo"]
 description: 'Mechanism agentic centered design.'
@@ -183,113 +183,162 @@ The landing and the leads are mine :)
 
 ## Conclusions
 
-Lately Ive seen many people in charge of noisy roadmaps.
+Lately Ive seen many people in charge of noisy roadmaps or [release plans](https://github.com/JAlcocerT/mbsd-examples/blob/main/docs/release-plan.md).
+
+
 
 Not sure whats the excuse to make a clear: planned / next / released.
 
-  mbsd-examples/docs/release-plan.md:73
+Recommended release order:
 
-  New ladder:
-
-  0.4.0: export schema and CAD handoff bridge
-  0.5.0: experimental 3D model vocabulary
-  0.6.0: 2D solver hardening and API maturity
-  0.7.0: 3D kinematics preview
-  0.8.0: 3D dynamics preview
-  0.9.0: integration and case-study track
-  0.9.1+: additional curated examples, integrations, and case studies
-
-   0.4.0 -> portable exports
-  0.5.0 -> 3D vocabulary
-  0.6.0 -> stronger 2D foundation
-  0.7.0 -> 3D kinematics preview
-  0.8.0 -> limited 3D dynamics preview
-  0.9.x -> integrations, case studies, validation stories
-  1.0.0 -> stable public API and honest capability boundary
+1. Push mbsd-core/main; confirm CI.
+2. Push core v0.3.0; create GitHub release.
+3. Push mbsd-examples/main; confirm CI.
+4. Push examples v0.3.0; create GitHub release.
+5. Update the website/docs, as specified in the roadmap.
 
 
-  mbsd-core branch stack:
+There are some useful gh clis to [keep the release order](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#faq):
 
-  v0.4.0-dev  1c0c45d  export schema dev
-  v0.5.0-dev  dc194b3  spatial vocabulary dev
-  v0.6.0-dev  ebd2008  diagnostics dev
-  v0.7.0-dev  42f559b  spatial kinematics dev
-  v0.8.0-dev  14eb993  spatial dynamics dev
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+git push origin main
+git push origin v0.3.0
+```
 
-  mbsd-examples branch stack:
+Then:
 
-  v0.4.0-dev  d90a8a7  export handoff example
-  v0.5.0-dev  1be3c09  spatial vocabulary example
-  v0.6.0-dev  801da5a  diagnostics panel example
-  v0.7.0-dev  9850fbb  spatial kinematics preview example
-  v0.8.0-dev  924442d  spatial dynamics preview example
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+git push origin main
+git push origin v0.3.0
+```
 
-  What’s included locally:
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+git add readme.md
+git commit -m "Fix release README links"
+git tag -fa v0.3.0 -m "v0.3.0"
+git push origin main
+git push origin v0.3.0
 
-  - 0.4: JSON/CSV export surface for PWA/CAD handoff.
-  - 0.5: experimental 3D vocabulary: poses, quaternions, bodies, frames, model payloads.
-  - 0.6: PWA-friendly 2D configuration diagnostics.
-  - 0.7: experimental 3D point kinematics and spherical-joint residuals.
-  - 0.8: limited experimental 3D free-body dynamics preview.
+#Wait for core CI, then:
+
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+git add README.md
+git commit -m "Clarify relationship to MBSD Core"
+git tag -fa v0.3.0 -m "v0.3.0"
+git push origin main
+git push origin v0.3.0
+```
+
+  What is already strong: narrow scope, honest limitations, MIT license, changelogs, paired versions,
+  reproducible examples, numerical checks, CI across Python 3.10–3.13, and a clear roadmap. That is a
+  solid first OSS framework foundation.
+
+See `mbsd-examples/docs/release-plan.md:73`
+
+New ladder:
+
+0.4.0: export schema and CAD handoff bridge
+0.5.0: experimental 3D model vocabulary
+0.6.0: 2D solver hardening and API maturity
+0.7.0: 3D kinematics preview
+0.8.0: 3D dynamics preview
+0.9.0: integration and case-study track
+0.9.1+: additional curated examples, integrations, and case studies
+
+  0.4.0 -> portable exports
+0.5.0 -> 3D vocabulary
+0.6.0 -> stronger 2D foundation
+0.7.0 -> 3D kinematics preview
+0.8.0 -> limited 3D dynamics preview
+0.9.x -> integrations, case studies, validation stories
+1.0.0 -> stable public API and honest capability boundary
+
+
+mbsd-core branch stack:
+
+v0.4.0-dev  1c0c45d  export schema dev
+v0.5.0-dev  dc194b3  spatial vocabulary dev
+v0.6.0-dev  ebd2008  diagnostics dev
+v0.7.0-dev  42f559b  spatial kinematics dev
+v0.8.0-dev  14eb993  spatial dynamics dev
+
+mbsd-examples branch stack:
+
+v0.4.0-dev  d90a8a7  export handoff example
+v0.5.0-dev  1be3c09  spatial vocabulary example
+v0.6.0-dev  801da5a  diagnostics panel example
+v0.7.0-dev  9850fbb  spatial kinematics preview example
+v0.8.0-dev  924442d  spatial dynamics preview example
+
+What’s included locally:
+
+- 0.4: JSON/CSV export surface for PWA/CAD handoff.
+- 0.5: experimental 3D vocabulary: poses, quaternions, bodies, frames, model payloads.
+- 0.6: PWA-friendly 2D configuration diagnostics.
+- 0.7: experimental 3D point kinematics and spherical-joint residuals.
+- 0.8: limited experimental 3D free-body dynamics preview.
 
 Local-only v0.8.2-dev is ready in both repos.
 
-  mbsd-core:
+mbsd-core:
 
-  - Branch: v0.8.2-dev
-  - Commit: b3d24ff Prepare v0.8.2 spatial dynamics solver dev
-  - Version: 0.8.2.dev0
-  - Added:
-      - SpatialMechanism.simulate(...)
-      - SpatialDynamicsResult
-      - translational mass dynamics
-      - fixed-orientation spatial dynamics
-      - force inputs
-      - finite-difference translational constraint Jacobians
-      - Lagrange multiplier acceleration solve
-      - position/velocity projection back onto constraints
-      - dynamic-result JSON export via result_to_dict() / result_to_json()
+- Branch: v0.8.2-dev
+- Commit: b3d24ff Prepare v0.8.2 spatial dynamics solver dev
+- Version: 0.8.2.dev0
+- Added:
+    - SpatialMechanism.simulate(...)
+    - SpatialDynamicsResult
+    - translational mass dynamics
+    - fixed-orientation spatial dynamics
+    - force inputs
+    - finite-difference translational constraint Jacobians
+    - Lagrange multiplier acceleration solve
+    - position/velocity projection back onto constraints
+    - dynamic-result JSON export via result_to_dict() / result_to_json()
 
-  mbsd-examples:
+mbsd-examples:
 
-  - Branch: v0.8.2-dev
-  - Commit: 254a43e Prepare v0.8.2 spatial dynamics solver examples dev
-  - Version: 0.8.2.dev0
-  - Added:
-      - examples/spatial_dynamics_solver_preview.py
-      - generated local artifact:
-          - artifacts/spatial/spatial-dynamic-result.json
+- Branch: v0.8.2-dev
+- Commit: 254a43e Prepare v0.8.2 spatial dynamics solver examples dev
+- Version: 0.8.2.dev0
+- Added:
+    - examples/spatial_dynamics_solver_preview.py
+    - generated local artifact:
+        - artifacts/spatial/spatial-dynamic-result.json
 
-  Verification:
+Verification:
 
-  - Core: 36 passed, examples ran, Ruff clean.
-  - Examples: 27 passed, all examples ran, gallery generated, Ruff clean.
+- Core: 36 passed, examples ran, Ruff clean.
+- Examples: 27 passed, all examples ran, gallery generated, Ruff clean.
 
-  I also updated the private PWA roadmap at:
+I also updated the private PWA roadmap at:
 
-  private-pwa-roadmap.md
+private-pwa-roadmap.md
 
-  Important caveat remains: this is a limited translational constrained spatial dynamics solver with
-  fixed orientations. It is useful for a PWA 3D lab/prototype, but still not full rotational
-  constrained 3D rigid-body dynamics.
+Important caveat remains: this is a limited translational constrained spatial dynamics solver with
+fixed orientations. It is useful for a PWA 3D lab/prototype, but still not full rotational
+constrained 3D rigid-body dynamics.
 
-   My Recommendation
+  My Recommendation
 
-  For the private PWA: use v0.8.2-dev now.
+For the private PWA: use v0.8.2-dev now.
 
-  For public OSS: do not publish this as a headline until later. I’d place it in:
+For public OSS: do not publish this as a headline until later. I’d place it in:
 
-  v0.9.0: experimental spatial dynamics preview
+v0.9.0: experimental spatial dynamics preview
 
-  Then keep v0.8.0 focused on:
+Then keep v0.8.0 focused on:
 
-  v0.8.0: Mechanism.spatial() and constrained 3D kinematics preview
+v0.8.0: Mechanism.spatial() and constrained 3D kinematics preview
 
-  That gives you a cleaner story:
+That gives you a cleaner story:
 
-  0.7.0: spatial vocabulary and point kinematics
-  0.8.0: spatial mechanism API and constrained kinematics
-  0.9.0: experimental spatial dynamics and case-study integrations
+0.7.0: spatial vocabulary and point kinematics
+0.8.0: spatial mechanism API and constrained kinematics
+0.9.0: experimental spatial dynamics and case-study integrations
 
 * multibodysystemsdynamics.com - Landing
 * app.multibodysystemsdynamics.com - PWA
@@ -332,86 +381,93 @@ git switch -c v0.4.0-dev
   git push origin main
   git push origin v0.3.0
 
->  /home/jalcocert/Desktop/mbsd-framework/mbsd-examples/docs/release-plan.md
+>  See `/home/jalcocert/Desktop/mbsd-framework/mbsd-examples/docs/release-plan.md`
 
 
-  For v0.4.0, I’d define this as: MBSD can write mechanism and result data into clean external formats
-  that other tools can consume.
+```sh
+gh release create v0.3.0 \
+  --repo JAlcocerT/mbsd-examples \
+  --title "MBSD Examples v0.3.0 - Week 3 Examples" \
+  --notes-file CHANGELOG.md
+```
 
-  Not “MBSD becomes a CAD tool.”
+For v0.4.0, I’d define this as: MBSD can write mechanism and result data into clean external formats
+that other tools can consume.
 
-  Good 0.4.0 scope:
+Not “MBSD becomes a CAD tool.”
 
-  - Export mechanism topology:
-      - bodies
-      - joints
-      - drives
-      - springs/forces where simple
-      - metadata/units
+Good 0.4.0 scope:
 
-  - Export solved trajectories:
-      - time array
-      - body poses: x, y, theta
-      - optional point traces
-      - constraint residual summaries
+- Export mechanism topology:
+- bodies
+- joints
+- drives
+- springs/forces where simple
+- metadata/units
 
-  - Add a stable JSON format:
-      - mechanism.to_dict()
-      - mechanism.to_json(path)
-      - maybe result_to_dict(result)
-      - maybe export_trajectory_csv(...)
+- Export solved trajectories:
+- time array
+- body poses: x, y, theta
+- optional point traces
+- constraint residual summaries
 
-  - Examples repo:
-      - one JSON export example
-      - one CSV trajectory export example
-      - one “CAD handoff” example showing how exported points could become CAD/sketch data
+- Add a stable JSON format:
+- mechanism.to_dict()
+- mechanism.to_json(path)
+- maybe result_to_dict(result)
+- maybe export_trajectory_csv(...)
 
-  The CAD bridge should probably be data-first:
+- Examples repo:
+- one JSON export example
+- one CSV trajectory export example
+- one “CAD handoff” example showing how exported points could become CAD/sketch data
 
-  mbsd-core -> JSON / CSV / simple neutral data
-  examples  -> show FreeCAD / Blender / CADQuery-style handoff later
+The CAD bridge should probably be data-first:
 
-  I would avoid adding FreeCAD, CadQuery, Blender, or STEP export as core dependencies in v0.4.0.
+mbsd-core -> JSON / CSV / simple neutral data
+examples  -> show FreeCAD / Blender / CADQuery-style handoff later
 
-  3D Track
+I would avoid adding FreeCAD, CadQuery, Blender, or STEP export as core dependencies in v0.4.0.
 
-  For v0.5.0, I’d treat this as the first experimental 3D branch of the framework.
+3D Track
 
-  Not “full production 3D multibody dynamics.”
+For v0.5.0, I’d treat this as the first experimental 3D branch of the framework.
 
-  Good 0.5.0 scope:
+Not “full production 3D multibody dynamics.”
 
-  - Add experimental 3D namespace, maybe:
+Good 0.5.0 scope:
 
-  from mbsd.experimental import spatial
+- Add experimental 3D namespace, maybe:
 
-  or:
+from mbsd.experimental import spatial
 
-  import mbsd.spatial
+or:
 
-  - Define basic 3D concepts:
-      - body pose
-      - rotation representation
-      - mass/inertia placeholder
-      - simple joints sketch
-      - coordinate conventions
+import mbsd.spatial
 
-  - Provide one or two examples:
-      - free rigid body pose representation
-      - simple pendulum-like spatial setup
-      - maybe visualization/export only, not dynamics yet
+- Define basic 3D concepts:
+  - body pose
+  - rotation representation
+  - mass/inertia placeholder
+  - simple joints sketch
+  - coordinate conventions
 
-  - Keep it clearly labeled experimental:
-      - API may change
-      - not equivalent to planar solver yet
-      - no broad contact/collision/multiphysics claims
+- Provide one or two examples:
+  - free rigid body pose representation
+  - simple pendulum-like spatial setup
+  - maybe visualization/export only, not dynamics yet
 
-  The useful split is:
+- Keep it clearly labeled experimental:
+  - API may change
+  - not equivalent to planar solver yet
+  - no broad contact/collision/multiphysics claims
 
-  v0.4.0: make 2D results portable
-  v0.5.0: start a careful 3D model vocabulary
+The useful split is:
 
-  That sequence is good because exports will also help the 3D story later.
+v0.4.0: make 2D results portable
+v0.5.0: start a careful 3D model vocabulary
+
+That sequence is good because exports will also help the 3D story later.
 
 
 ### Cool Builder Channels

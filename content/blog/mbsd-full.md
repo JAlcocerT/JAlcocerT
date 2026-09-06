@@ -540,121 +540,126 @@ git clone http://user:pwd@192.168.1.2:3034/hermesagent/mbsd.git local-mbsd
 
 git push origin v0.1.0 only pushes the tag. It does not necessarily create a full GitHub Release with notes/assets. GitHub may show the tag, but the polished release page is better created manually or with GitHub CLI.
 
-  Best option with GitHub CLI:
+Best option with GitHub CLI: 
 
-  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
 
-  gh repo create JAlcocerT/mbsd-core \
-    --public \
-    --source=. \
-    --remote=origin \
-    --push
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
 
-  gh release create v0.1.0 \
-    --title "MBSD Core v0.1.0 - Week 1 Core" \
-    --notes-file CHANGELOG.md
+gh repo create JAlcocerT/mbsd-core \
+  --public \
+  --source=. \
+  --remote=origin \
+  --push
 
-  If the repo already exists:
+gh release create v0.1.0 \
+  --title "MBSD Core v0.1.0 - Week 1 Core" \
+  --notes-file CHANGELOG.md
+```
 
-  git remote add origin https://github.com/JAlcocerT/mbsd-core.git
-  git push -u origin main
-  git push origin v0.1.0
+If the repo already exists:
 
+git remote add origin https://github.com/JAlcocerT/mbsd-core.git
+git push -u origin main
+git push origin v0.1.0
+
+```sh
+gh release create v0.1.0 \
+  --repo JAlcocerT/mbsd-core \
+  --title "MBSD Core v0.1.0 - Week 1 Core" \
+  --notes-file CHANGELOG.md
+```
+
+For the examples repo, I’d create it separately as: `JAlcocerT/mbsd-examples`
+
+Purpose: Generated plots, GIFs, notebooks, richer mechanisms, educational material, and weekly demo drops for MBSD Core.
+
+Suggested structure:
+
+```md
+mbsd-examples/
+README.md
+LICENSE
+examples/
+  slider-crank/
+  four-bar/
+  mass-spring/
+gallery/
+  png/
+  gif/
+  mp4/
+notebooks/
+docs/
+```
+
+I’d use MIT there too unless you want media under a Creative Commons license.
+
+Keep **mbsd-core as the dependency**, not duplicated code.
+
+What’s in v0.1.0:
+
+- Three runnable examples copied from core:
+  - driven slider
+  - mass-spring-damper
+  - slider-crank analysis
+
+- Generated Week 1 PNG gallery:
+  - gallery/png/driven-slider.png
+  - gallery/png/mass-spring-damper.png
+  - gallery/png/slider-crank-analysis.png
+
+- Gallery regeneration script.
+- Smoke tests.
+- GitHub Actions CI for Python 3.10 to 3.13.
+- MIT license.
+- Changelog and release plan.
+
+Verification passed:
+
+4 tests passed
+all 3 examples run
+gallery generation works
+ruff check passed
+
+Repo state:
+
+repo: /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+branch: main
+commit: 64f0e25
+tag: v0.1.0
+status: clean
+
+Publish order matters: push mbsd-core first, then mbsd-examples, because examples uses mbsd-core as a sibling/local source in dev and CI checks both out as siblings.
+
+Commands after creating GitHub repos:
+
+
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+git log --oneline
+git remote add origin https://github.com/JAlcocerT/mbsd-core.git
+git push -u origin main
+git push origin v0.1.0
+
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+git remote add origin https://github.com/JAlcocerT/mbsd-examples.git
+git push -u origin main
+git push origin v0.1.0
+```
+
+* https://github.com/JAlcocerT/mbsd-core/releases/tag/v0.1.0
+  
+```sh
   gh release create v0.1.0 \
     --repo JAlcocerT/mbsd-core \
     --title "MBSD Core v0.1.0 - Week 1 Core" \
     --notes-file CHANGELOG.md
+```
 
-  For the examples repo, I’d create it separately as:
-
-  JAlcocerT/mbsd-examples
-
-  Purpose:
-
-  Generated plots, GIFs, notebooks, richer mechanisms, educational material, and weekly demo drops for MBSD Core.
-
-  Suggested structure:
-
-  mbsd-examples/
-    README.md
-    LICENSE
-    examples/
-      slider-crank/
-      four-bar/
-      mass-spring/
-    gallery/
-      png/
-      gif/
-      mp4/
-    notebooks/
-    docs/
-
-  I’d use MIT there too unless you want media under a Creative Commons license. Keep mbsd-core as the dependency, not duplicated code.
-
-• Prepared the companion examples repo:
-
-  mbsd-examples
-
-  What’s in v0.1.0:
-
-  - Three runnable examples copied from core:
-      - driven slider
-      - mass-spring-damper
-      - slider-crank analysis
-
-  - Generated Week 1 PNG gallery:
-      - gallery/png/driven-slider.png
-      - gallery/png/mass-spring-damper.png
-      - gallery/png/slider-crank-analysis.png
-
-  - Gallery regeneration script.
-  - Smoke tests.
-  - GitHub Actions CI for Python 3.10 to 3.13.
-  - MIT license.
-  - Changelog and release plan.
-
-  Verification passed:
-
-  4 tests passed
-  all 3 examples run
-  gallery generation works
-  ruff check passed
-
-  Repo state:
-
-  repo: /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
-  branch: main
-  commit: 64f0e25
-  tag: v0.1.0
-  status: clean
-
-  Publish order matters: push mbsd-core first, then mbsd-examples, because examples uses mbsd-core as a sibling/local source in dev and CI checks both out as siblings.
-
-  Commands after creating GitHub repos:
-
-  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
-  git log --oneline
-  git remote add origin https://github.com/JAlcocerT/mbsd-core.git
-  git push -u origin main
-  git push origin v0.1.0
-
-  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
-  git remote add origin https://github.com/JAlcocerT/mbsd-examples.git
-  git push -u origin main
-  git push origin v0.1.0
-  
-  
-  https://github.com/JAlcocerT/mbsd-core/releases/tag/v0.1.0
-  
-   gh release create v0.1.0 \
-      --repo JAlcocerT/mbsd-core \
-      --title "MBSD Core v0.1.0 - Week 1 Core" \
-      --notes-file CHANGELOG.md
-  https://github.com/JAlcocerT/mbsd-core/releases/tag/v0.1.0
+* https://github.com/JAlcocerT/mbsd-core/releases/tag/v0.1.0
 
 
----
-
+```sh
  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
 
   gh repo create JAlcocerT/mbsd-examples \
@@ -662,36 +667,41 @@ git push origin v0.1.0 only pushes the tag. It does not necessarily create a ful
     --source=. \
     --remote=origin \
     --push
+```
 
-  If it says it cannot add origin, that is fine if the repo was created. Then run:
+If it says it cannot add origin, that is fine if the repo was created. Then run:
 
-  git remote -v
-  git push -u origin main
-  git push origin v0.1.0
 
-  If origin is missing or wrong:
+```sh
+git remote -v
+git push -u origin main
+git push origin v0.1.0
+```
 
-  git remote add origin https://github.com/JAlcocerT/mbsd-examples.git
-  # or, if origin already exists:
-  git remote set-url origin https://github.com/JAlcocerT/mbsd-examples.git
+If origin is missing or wrong:
 
-  Then create the GitHub Release:
+git remote add origin https://github.com/JAlcocerT/mbsd-examples.git
+# or, if origin already exists:
+git remote set-url origin https://github.com/JAlcocerT/mbsd-examples.git
 
-  gh release create v0.1.0 \
-    --repo JAlcocerT/mbsd-examples \
-    --title "MBSD Examples v0.1.0 - Week 1 Examples" \
-    --notes-file CHANGELOG.md
+Then create the GitHub Release:
 
-  Quick pre-push sanity check:
+```sh
+gh release create v0.1.0 \
+  --repo JAlcocerT/mbsd-examples \
+  --title "MBSD Examples v0.1.0 - Week 1 Examples" \
+  --notes-file CHANGELOG.md
+```
 
-  git log --oneline
-  git status --short --branch
+Quick pre-push sanity check:
 
-  Expected:
+```sh
+git log --oneline
+git status --short --branch
 
-  bb070f4 Release MBSD Examples v0.1.0 candidate
-  ## main
-
+#Expected: bb070f4 Release MBSD Examples v0.1.0 candidate
+ ## main
+```
 
 
 ### How did you started doing mechanical simulations?

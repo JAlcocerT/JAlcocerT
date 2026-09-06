@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Meeting AI. AIoT with a Raspberry Pi."
-date: 2026-09-10
+date: 2026-09-20
 draft: false
 tags: ["Tinkering IRL","M2M","Arduino-CLI x Velxio","ADK x TTS"]
 description: 'IoT Meets AI via MQTT. The Internet of Tomorrow.'
@@ -10,9 +10,7 @@ url: 'just-about-iot'
 
 **TL;DR:** 
 
-
 +++ Destiling knowledge to ebooks - IoT edition
-
 
 ## Intro
 

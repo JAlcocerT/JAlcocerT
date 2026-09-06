@@ -1,6 +1,6 @@
 ---
 title: "3D vibrations for aircrafts"
-date: 2026-09-18T08:20:21+01:00
+date: 2026-09-20T08:20:21+01:00
 draft: false
 tags: ["Mechanical Engineering","MBSD x Airplanes Engine Mount","ULM/PPL"]
 description: 'Simulating .'
@@ -16,8 +16,9 @@ The moment 2D mechanics is not enough.
 
 **Intro**
 
-* WHY Im writting this post: 
+* WHY Im writting this post: *Bc I want to fully understand all 3d effects that will affect me during my ULM/PPL prep and as a way to test my mbsd oss fwk*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
+
 
 
 The dimension reduction worked great for cars.

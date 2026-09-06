@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Sensors x PCB"
-date: 2026-09-10
+date: 2026-09-20
 draft: false
 tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
@@ -13,34 +13,8 @@ Isnt it time to build something real?
 
 **Intro**
 
-* WHY Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
-
-
-Recently, arduino has been bought by QCOM.
-
-Historically, Arduino has maintained a strong open-source philosophy for both its hardware and software.
-
-The schematics, PCB designs, and core firmware for Arduino boards like the Uno, Mega, and others have been openly available, allowing manufacturers and hobbyists to create compatible clones or customize designs. 
-
-The Arduino Integrated Development Environment (IDE) and associated libraries are also open-source, supporting collaborative development and community-driven improvements.
-
-https://github.com/855princekumar/sense-hive
-
-### Lora
-
-<!-- 
-
-RYLR 998, a blue chip equipped with a LoRa ultra-long-range modem, perfect for various hardware integrations including Raspberry Pi, Arduino, and ESP-32.
-
-https://www.youtube.com/watch?v=9azEfCQNhSA
-
-Takeaways
-
-The Ryder 998 is a low-power, low-cost chip that can send messages over 12 miles without any infrastructure.
-LoRa technology has the potential to disrupt the status quo of communication technology.
-The Ryder 998 can be used in a variety of applications, including IoT, emergency response, and extreme outdoor activities.
-The chip's low power consumption and versatility make it an attractive option for many industries. -->
+* WHY Im writting this post: *bc I need a recap and all the BoM that Id wish to have found years back to get started* 
+* WHAT [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 ## Home Assistant
@@ -170,6 +144,36 @@ Also these: https://www.youtube.com/@homeassistant_facil/videos - https://www.yo
 ---
 
 ## FAQ
+
+
+### Arduino x QCOM
+
+Recently, arduino has been bought by QCOM.
+
+Historically, Arduino has maintained a strong open-source philosophy for both its hardware and software.
+
+The schematics, PCB designs, and core firmware for Arduino boards like the Uno, Mega, and others have been openly available, allowing manufacturers and hobbyists to create compatible clones or customize designs. 
+
+The Arduino Integrated Development Environment (IDE) and associated libraries are also open-source, supporting collaborative development and community-driven improvements.
+
+https://github.com/855princekumar/sense-hive
+
+### Lora
+
+<!-- 
+
+RYLR 998, a blue chip equipped with a LoRa ultra-long-range modem, perfect for various hardware integrations including Raspberry Pi, Arduino, and ESP-32.
+
+https://www.youtube.com/watch?v=9azEfCQNhSA
+
+Takeaways
+
+The Ryder 998 is a low-power, low-cost chip that can send messages over 12 miles without any infrastructure.
+LoRa technology has the potential to disrupt the status quo of communication technology.
+The Ryder 998 can be used in a variety of applications, including IoT, emergency response, and extreme outdoor activities.
+The chip's low power consumption and versatility make it an attractive option for many industries. -->
+
+
 
 ### Sensors
 
