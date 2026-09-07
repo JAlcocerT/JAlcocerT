@@ -15,7 +15,6 @@ url: 'jalcocertech-services-update'
 * WHY Im writting this post: *Bc I was supposed to launch [a mbsd fwk here](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics), but I just [released an ebook](https://ebooks.jalcocertech.com/books/mechanism-analytics/) so far*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
-
 As always i go to termix and see whats going on:
 
 ```sh
@@ -23,6 +22,7 @@ As always i go to termix and see whats going on:
 htop #btop
 ```
 
+See if you are missing disk space:
 
 ```sh
 ncdu /
@@ -36,7 +36,7 @@ ncdu /
 
 If you are using [FreeCad](https://fossengineer.com/selfhosting-freecad/), be prepare to have 15GB, and for Arduino CLI ~8GB, for Kicad ~4gb
 
-https://open-design.ai/agents/
+* https://open-design.ai/agents/
 
 Ive tried [t3 code](https://github.com/pingdotgg/t3code/releases) with my Pi.
 
@@ -95,7 +95,9 @@ The validation checked:
 - Cleanup by deleting the temporary branch.
 - Confirmation that no temporary test refs remained afterward.
 
-HTTP/password-based remotes were not validated. The successful validation applies to the configured SSH access through `forgejo-home`.
+HTTP/password-based remotes were not validated.
+
+The successful validation applies to the configured SSH access through `forgejo-home`.
 
 SSH Configuration Found
 
@@ -307,10 +309,8 @@ The heat pump's micro-controller modulates the pump speed in real-time according
 * **How it works:** Used when individual room thermostatic valves (TRVs) or underfloor zone actuators open and close.
 * **Why it matters:** As zones shut off, the pump senses the rising hydraulic resistance and automatically dials down its speed, eliminating pipe whistling, cavitation noise, and saving electricity.
 
-
 * **Constant Pressure Control ($\Delta p\text{-c}$):**
 * Maintains a constant differential pressure across the manifold regardless of how many individual loops are calling for heat.
-
 
 Summary Comparison: Heat Pump vs. Basic DC Control
 
@@ -323,9 +323,8 @@ Summary Comparison: Heat Pump vs. Basic DC Control
 
 A residential air-to-water heat pump operates using **two separate, sealed fluid circuits** that interface through a specialized heat exchanger called a **condenser** (often a brazed plate heat exchanger).
 
----
 
-### Circuit 1: The Refrigerant Loop (Thermodynamic Core)
+Circuit 1: The Refrigerant Loop (Thermodynamic Core)
 
 * **Medium:** High-pressure chemical refrigerant (e.g., R32, R290 propane, or R410A).
 * **Mover:** The high-power **compressor** (1,000W–5,000W+).
@@ -334,9 +333,7 @@ A residential air-to-water heat pump operates using **two separate, sealed fluid
 2. **Compressor:** Squeezes the gaseous refrigerant into a high-pressure, superheated gas ($60^\circ\text{C}\text{–}85^\circ\text{C}$).
 3. **Expansion Valve:** Drops the refrigerant pressure back down to restart the cycle.
 
----
-
-### The Bridge: Brazed Plate Heat Exchanger (BPHE)
+The Bridge: Brazed Plate Heat Exchanger (BPHE)
 
 A compact block composed of dozens of corrugated, razor-thin stainless steel plates brazed together in alternating layers.
 
@@ -344,9 +341,7 @@ A compact block composed of dozens of corrugated, razor-thin stainless steel pla
 * Cold return water flows up every even channel in the opposite direction (counter-flow).
 * Heat passes instantly through the thin steel plates without the refrigerant and water ever physically mixing. As heat leaves the refrigerant, it condenses back into liquid.
 
----
-
-### Circuit 2: The Hydronic Water Loop (Home Distribution)
+Circuit 2: The Hydronic Water Loop (Home Distribution)
 
 * **Medium:** Pressurized water (often mixed with anti-corrosion inhibitors and glycol).
 * **Mover:** The small **ECM circulator pump** (10W–50W).
@@ -364,14 +359,11 @@ Where these two circuits meet depends on the heat pump's design:
 | **Monobloc** | The heat exchanger is inside the **outdoor unit** | **Water pipes** run through the wall into the home |
 | **Split System** | The heat exchanger is inside the **indoor unit** (hydrobox) | **Refrigerant copper lines** run through the wall |
 
-
 Modern residential heat pump compressors use a 3-phase **Brushless DC (BLDC) motor**—specifically referred to in HVAC terminology as a **PMSM** (Permanent Magnet Synchronous Motor) or simply an **Inverter Compressor**.
 
 The electrical setup brings the concept full circle back to your FPV drone:
 
----
-
-### How the Compressor Motor is Driven
+How the Compressor Motor is Driven
 
 Unlike your 19W pump (which hides its tiny DC driver internally) and older legacy heat pumps (which used single-speed AC induction motors), a modern heat pump compressor is driven by an external, high-power **Inverter Drive** (essentially a giant industrial ESC).
 
@@ -389,9 +381,7 @@ Mains AC Power (230V/400V)
 
 ```
 
----
-
-### Connecting the Concepts: FPV Drone vs. Pump vs. Compressor
+Connecting the Concepts: FPV Drone vs. Pump vs. Compressor
 
 | Feature | Your FPV Drone Motor | Your 19W Watering Pump | Heat Pump Inverter Compressor |
 | --- | --- | --- | --- |
@@ -408,10 +398,7 @@ In **electrical engineering** terms:
 * **Rectifier:** Converts **AC $\rightarrow$ DC**
 * **Inverter:** Converts **DC $\rightarrow$ AC**
 
-
 > In fact, I was simulating rectifiers and inverters :)
-
----
 
 The Problem with Direct Grid AC
 
@@ -423,16 +410,16 @@ $$\text{Speed (RPM)} = \frac{120 \times \text{Frequency}}{\text{Number of Motor 
 
 At a fixed $50\text{Hz}$, a standard 2-pole motor will always spin at roughly **$3000\text{ RPM}$**. It has only two states: **100% full speed** or **0% completely off**.
 
-
 How the "Inverter" Solves This in 3 Stages
 
-To make the motor run at any custom speed (e.g., 20%, 45%, or 90%), the system must create its own custom frequency on demand. It does this in three steps:
+To make the motor run at any custom speed (e.g., 20%, 45%, or 90%), the system must create its own custom frequency on demand. 
+
+It does this in three steps:
 
 ```
 Step 1: Rectification        Step 2: DC Bus          Step 3: INVERSION
   Mains AC (50Hz fixed)   ──>   Raw DC Power   ──>   Synthesized AC/Pulsed Drive
      [ AC to DC ]                 [ Clean ]            [ DC to AC (Variable Hz) ]
-
 ```
 
 1. **Rectification (AC $\rightarrow$ DC):** Diodes convert the fixed $50\text{Hz}$ grid AC power into raw DC voltage ($\sim 325\text{V} \text{ DC}$).
@@ -445,41 +432,36 @@ The stage that creates the variable speed is the **DC-to-AC Inverter stage**.
 
 Manufacturers began labeling entire appliances (air conditioners, heat pumps, refrigerators, washing machines) as **"Inverter" models** to distinguish these modern, variable-speed, energy-saving units from old-fashioned, noisy "On/Off" appliances.
 
----
-
-### Why Use a BLDC Inverter Instead of Basic AC?
+Why Use a BLDC Inverter Instead of Basic AC?
 
 * **Stepless Modulation (10%–100% capacity):** Instead of noisily banging on and off at full blast like older single-speed fridges/ACs, the inverter varies the driving frequency smoothly. On a mild day, it throttles down to run slowly and whisper-quiet on just 300W–500W.
 * **Extreme Efficiency:** Permanent magnet BLDC rotors eliminate the rotor electrical losses ($I^2R$ copper losses) inherent in traditional AC induction motors.
 * **No Massive Inrush Current:** Soft-starting the BLDC motor eliminates the huge 50A–80A starting surge (locked-rotor amps) typical of legacy compressors, preventing home lights from flickering.
 
-### Conversion Losses in the Inverter Drive
+Conversion Losses in the Inverter Drive
 
 The conversion from grid AC $\rightarrow$ DC $\rightarrow$ synthesized 3-phase AC has an overall electrical efficiency of **95% to 98%**, meaning the conversion loss is only **2% to 5%**.
 
 ```
 AC Grid In (100%) ──> [Rectifier / PFC] ──> [DC Bus] ──> [Inverter / IGBTs] ──> Motor (95–98%)
                          (~1–2% loss)                       (~1–3% loss)
-
 ```
 
 * **Where the loss goes:** Mainly switching losses and internal resistance in the power transistors (IGBTs / MOSFETs), dissipating as low-grade heat on the drive’s aluminum heatsink.
 * **Why it is worth it:** Sacrificing **3%** of power in electronic conversion allows the compressor to modulate to lower speeds, saving **30% to 50%** in thermodynamic energy compared to cycling an on/off motor at full blast.
 
----
-
-### Are Solar-Assisted Heat Pumps Using AC or DC Compressors?
+Are Solar-Assisted Heat Pumps Using AC or DC Compressors?
 
 Solar-assisted heat pumps divide into two architectures depending on their system design:
 
-#### 1. Standard Grid-Tied PV Systems (AC Coupled)
+1. Standard Grid-Tied PV Systems (AC Coupled)
 
 Most residential rooftop solar installations use standard inverter heat pumps powered via the home's main AC electrical panel.
 
 * **Flow:** Solar Panels (DC) $\rightarrow$ Solar Inverter (AC) $\rightarrow$ Heat Pump Inverter (DC $\rightarrow$ 3-Phase AC).
 * **Why it's common:** Allows the heat pump to draw from the electrical grid at night and feed excess solar power back to the grid during sunny peaks without dedicated proprietary wiring.
 
-#### 2. Direct-DC / Hybrid Solar Heat Pumps (DC Coupled)
+2. Direct-DC / Hybrid Solar Heat Pumps (DC Coupled)
 
 Specialized off-grid or solar-hybrid systems (e.g., Solimpeks, Masterflux, Boyard) feed solar energy directly into the DC link:
 
@@ -489,9 +471,7 @@ Specialized off-grid or solar-hybrid systems (e.g., Solimpeks, Masterflux, Boyar
 
 **MPPT** and **HEMS** are two key technologies that optimize energy flow in modern solar and smart-home setups: MPPT handles **hardware-level electrical efficiency**, while HEMS handles **system-level software automation**.
 
----
-
-### 1. MPPT (Maximum Power Point Tracking)
+1. MPPT (Maximum Power Point Tracking)
 
 **MPPT** is an electronic algorithm and DC-DC converter circuit built inside solar inverters and charge controllers. 
 
@@ -501,9 +481,7 @@ Its job is to extract the maximum possible electrical power from your solar pane
 * **How It Works:** As clouds pass or the panels heat up, this sweet spot constantly shifts. The MPPT controller continuously sweeps and adjusts its internal electrical resistance thousands of times a second to keep the panels operating at peak power.
 * **Impact:** An MPPT controller harvests **20% to 30% more energy** than an older, direct-connection PWM controller.
 
----
-
-### 2. HEMS (Home Energy Management System)
+2. HEMS (Home Energy Management System)
 
 **HEMS** is the "central brain" (software and smart controller hardware) that orchestrates energy generation, storage, and consumption across the entire house.
 
@@ -515,9 +493,7 @@ Instead of having isolated devices operating blindly, a HEMS coordinates:
 * **Heat Pumps & Water Heaters** (SG-Ready / thermal storage)
 * **Dynamic Grid Tariffs** (hourly electricity pricing)
 
----
-
-### How They Compare & Work Together
+How They Compare & Work Together
 
 | Feature | MPPT | HEMS |
 | --- | --- | --- |
@@ -533,7 +509,6 @@ Instead of having isolated devices operating blindly, a HEMS coordinates:
 <!-- https://youtu.be/6McNDPk7-j8 -->
 
 {{< youtube "6McNDPk7-j8" >}}
-
 
 https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
 
@@ -551,10 +526,21 @@ RecoBart?
 
 ### FPV
 
+Get to know your batteries: how much [they weight](https://youtube.com/shorts/_msLOGVlX-I), the way [their resistance](https://youtube.com/shorts/oAeiAAeTb9Y) will change across their lifespan
+
+Average: ~8.21 A
+p95:     ~25.10 A
+p99:     ~57.29 A
+
+And the average airborne power estimate:
+
+Charger-based: ~134 W
+Corrected Blackbox-based: ~132 W
+Reasonable estimate: 132-134 W
+
 You can [prepare to ULM/PPL](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl): `https://ulm-ppl-test.pages.dev/`
 
 {{< youtube "Fgdb4F_G_XM" >}}
-
 <!-- 
 https://youtube.com/shorts/Fgdb4F_G_XM -->
 
@@ -570,6 +556,8 @@ Configure your controls:
 Pos 1 (Up): ANGLE box highlights yellow (Maximum guardrails / full auto-level).
 Pos 2 (Mid): HORIZON box highlights yellow (Auto-level with flip capability).
 Pos 3 (Down): Neither highlights (Full manual Acro mode).
+
+> Id also add the beeper and [Flip over crash modes](https://youtube.com/shorts/MxkflxLcyCo)
 
 If you are going without VTX, lower the Power to 25mW. 100mW is too much.
 

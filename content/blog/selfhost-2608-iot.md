@@ -3,7 +3,7 @@ title: "Selfhosted IoT"
 date: 2026-08-22
 draft: false
 tags: ["Sonoff x Zigbee","Z2M","Tinkering IRL","M2M","Tech Talk"]
-description: 'A homelab and sensors. The 101 BoM to get you started.'
+description: 'A homelab, sensors, pumps and water. The 101 BoM to get you started.'
 url: 'home-lab-tools-for-iot'
 ---
 
@@ -19,14 +19,13 @@ Next.
 * WHY Im writting this post: *Isnt it time to do some recap to IoT, HA and the solar panel?* 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
-
 Is it just about having few sensors and NFC tags enough?
 
 Automatic plant watering?
 
-Be a system theory pro with PIDs?
+Oh no...
 
-Oh no...will I also have to learn [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/), take into account [electromagnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) to avoid EMF  kickbacks
+will I also have to learn [electronics](https://jalcocert.github.io/JAlcocerT/electronics-101/), take into account [electromagnetism](https://jalcocert.github.io/JAlcocerT/electromagnetism-101/) to avoid EMF  kickbacks
 
 what else will it be?
 
@@ -288,6 +287,12 @@ https://youtube.com/shorts/nqNyRvu7_KM
 <!-- https://youtube.com/shorts/U-u5m470h2U -->
 <!-- 
 https://youtube.com/shorts/kDPNhy8Ep7o -->
+
+This has been a journey with [prep work for the ESP32](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water) to work with the water
+
+1. First this one with the BMS x 3s 18650 working [like so](https://youtube.com/shorts/XrFf6oWHI84)
+2. Then, a timed smoke test loaded to the ESP32 to wait 10s, push water for 3, then just keep blinking
+3. Wrapping it all together and instead of a hard coded logic, one that I can control via mqtt when the esp32 will move the pump - *This is a good addition to my `./poc/iot-dashboard`
 
 ## SelfHosted IoT Tools
 

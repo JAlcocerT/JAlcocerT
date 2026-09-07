@@ -18,6 +18,8 @@ How different control theory from my automatic watering setup for crop intellige
 * WHY Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+Be a system theory pro with PIDs?
+
 
 PID
 
@@ -219,10 +221,17 @@ Why use a diagram instead of just the math?
 
 
 
+### FPV PID
+
+If you are into fpv drones, betaflight gives you control for the PID to set how the dron replies to your controls :)
+
+https://youtube.com/shorts/tZ2Ku_vZ3qw
+
 ## PID x DHT Sensors
 
 
 ![DHT Webapp](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/dht-webapp/dht-webapp.png)
+
 
 
 The short answer is: **You can absolutely use PID logic without writing a single formal equation.**

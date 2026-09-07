@@ -205,7 +205,21 @@ https://www.youtube.com/watch?v=62crffG6Uw8 -->
 
 ### Architect or Principal
 
-Just in case you are preparing for an internal promo / outside CV or how to frame what you do for prospects.
+Just in case you are preparing for an internal promo / [outside CV](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#when-was-the-last-time-you-applied) or how to frame what you do for prospects.
+
+Currently i observe a huge gap between expectations: people billing 1k/person/day for adding one line to a csv
+
+Versus: the cost per task being literally smashed with every new model released (to cents of a $)
+
+How long will that gap / arbitrage possibility last?
+
+Looking for a way to elevate yourself from the how, upstream to the what's and why's?
+
+If you are an IC, you might consider:
+
+* **The Architect** spends a lot of time in cross-functional stakeholder meetings, drawing system diagrams, analyzing vendor tech, and ensuring the business goals match the technology stack. In many companies, architects rarely touch production code anymore.
+
+* **The Principal Engineer** is usually the **highest-ranking technical hands-on expert** in the room. They design systems too, but they are also expected to build the foundational architecture, debug the most ambiguous, critical outages, and optimize engineering processes.
 
 The easiest way to understand the difference is **scope of execution vs. scope of design**:
 
@@ -218,13 +232,11 @@ The easiest way to understand the difference is **scope of execution vs. scope o
 | systems interact broadly.          | code/infrastructure.               |
 +------------------------------------+------------------------------------+
 
-* **The Architect** spends a lot of time in cross-functional stakeholder meetings, drawing system diagrams, analyzing vendor tech, and ensuring the business goals match the technology stack. In many companies, architects rarely touch production code anymore.
-
-* **The Principal Engineer** is usually the **highest-ranking technical hands-on expert** in the room. They design systems too, but they are also expected to build the foundational architecture, debug the most ambiguous, critical outages, and optimize engineering processes.
-
 1. You Own the "Infrastructure of Rules"
 
-As a Principal, you are responsible for defining team standards and dev velocity. This means you have the organizational power to unilaterally destroy accountability laundering and useless meetings.
+As a Principal, you are responsible for defining team standards and dev velocity. 
+
+This means you have the organizational power to unilaterally destroy accountability laundering and useless meetings.
 
 You can literally write a policy that says: *"No sync calls without a written ticket and log,"* and because you are the Principal, it becomes law.
 
