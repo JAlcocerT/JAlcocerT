@@ -437,7 +437,7 @@ And after: *coudlnt resist to try [CodeEdit](https://github.com/CodeEditApp/Code
 
 ```sh
 #npm install -g @openai/codex #https://github.com/openai/codex/releases/tag/rust-v0.118.0
-npm install @openai/codex
+npm install @openai/codex #npm install -g @openai/codex@latest for updates
 
 cat <<'EOF' > package.json
 {

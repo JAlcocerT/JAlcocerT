@@ -294,6 +294,125 @@ This has been a journey with [prep work for the ESP32](https://github.com/JAlcoc
 2. Then, a timed smoke test loaded to the ESP32 to wait 10s, push water for 3, then just keep blinking
 3. Wrapping it all together and instead of a hard coded logic, one that I can control via mqtt when the esp32 will move the pump - *This is a good addition to my `./poc/iot-dashboard`
 
+How I did that?
+
+First, recapping the logic of the 3wire fan setup with PWM control over mqtt. [This one](https://github.com/JAlcocerT/poc/blob/main/iot-esp32-motors/3-pin-fan-mosfet-pwm-mqtt/components.json).
+
+The mosfet was not heating and everyone was happy.
+
+But that was only pulling ~0.2A, now, the pump will demand ~1.5A
+
+So...time to test:
+
+**Yes, exactly.**
+
+From the ESP32’s perspective, there are only **three wires** in total connected to its pins:
+
+* **`VIN` (5V):** Power in from the buck converter `OUT+`.
+* **`GND`:** Return path to the buck converter `OUT-` (which shares ground with battery negative and the MOSFET source).
+* **`GPIO23`:** That single output signal wire going to the 220 $\Omega$ gate resistor.
+
+Everything else (the 10k pulldown resistor, the MOSFET, the pump, the diode, and the 12V rails) sits on the power board/breadboard side.
+
+BTW, Thinking of it as **3 sections** is the most accurate and practical mental model for building and troubleshooting it:
+
+* **1. The Supply Domain (Battery & BMS):**
+The raw energy source. It delivers unregulated ~9 V–12.6 V on the high side and protects against short-circuit, over-current, and cell under-voltage on the low side (`P-`).
+* **2. The Logic Domain (Brain & Regulation):**
+The low-power 5 V and 3.3 V system. This includes the MP1584 buck converter and the ESP32. It only handles milliamps of current and needs clean, quiet voltage rails to avoid brownouts and resets.
+* **3. The Power/Load Domain (Actuator & Switch):**
+The high-current, noisy circuit. This contains the pump, the flyback diode, the fuse, the manual switch, and the MOSFET's drain-to-source channel carrying that 1.7 A.
+
+The domains separate logically, but they touch at two specific crossover points:
+
+* **The Gate Resistor:** The ESP32 (Logic) talks to the MOSFET Gate (Power) via that single wire through the 220 $\Omega$ resistor.
+* **The Shared Ground:** All three domains tie their negative reference together at `BMS P-` so the 3.3 V logic signal has a stable baseline against the MOSFET's Source pin.
+
+```mermaid
+flowchart TB
+    %% ==========================================
+    %% DOMAIN 1: SUPPLY DOMAIN
+    %% ==========================================
+    subgraph Supply["1. Supply Domain (Energy Source)"]
+        BAT["3S 18650 Pack<br/>(9.0 V – 12.6 V)"]
+        BMS["3S BMS (Protection)<br/>[P+ / P-]"]
+        FUSE["2A Slow-Blow Fuse<br/>(Overcurrent Protection)"]
+        
+        BAT --> BMS
+        BMS -- "Raw Battery +" --> FUSE
+    end
+
+    %% ==========================================
+    %% DOMAIN 2: LOGIC DOMAIN
+    %% ==========================================
+    subgraph Logic["2. Logic Domain (Brain & Regulation)"]
+        BUCK["MP1584 Buck Converter<br/>(Steps down to 5.0 V)"]
+        ESP["ESP32 Dev Board<br/>(Firmware / MQTT Control)"]
+
+        BUCK -- "Regulated 5 V (VIN)" --> ESP
+    end
+
+    %% ==========================================
+    %% DOMAIN 3: POWER / LOAD DOMAIN
+    %% ==========================================
+    subgraph Power["3. Power Domain (High-Current Load)"]
+        SW["Manual SPST Switch<br/>(Hardware Enable)"]
+        
+        subgraph MotorClamp["Motor & Snubber Assembly"]
+            PUMP["12 V Water Pump<br/>(~1.7 A Running)"]
+            DIODE["Flyback Diode (D1)<br/>(Clamps Inductive Kick)"]
+            CAP["Bulk Cap (C1)<br/>(Buffers Inrush Dips)"]
+            
+            PUMP --- DIODE
+            PUMP --- CAP
+        end
+
+        subgraph GateNetwork["Gate Bias & Switch"]
+            RG["Gate Resistor (220 Ω)"]
+            R1["Pulldown Resistor (10 kΩ)"]
+            FET["IRLZ44N N-Ch MOSFET<br/>(Low-Side Switch)"]
+            
+            RG --> FET
+            R1 -.-> FET
+        end
+
+        SW -- "Switched 12 V Rail" --> MotorClamp
+        MotorClamp -- "Switched Return (Drain)" --> FET
+    end
+
+    %% ==========================================
+    %% INTER-DOMAIN BRIDGES
+    %% ==========================================
+    %% Positive Feeders
+    FUSE -- "Fused 12 V Rail" --> BUCK
+    FUSE -- "Fused 12 V Rail" --> SW
+
+    %% Logic to Gate Drive Bridge (Single Control Wire)
+    ESP == "GPIO23 (3.3 V Logic Signal)" ==> RG
+
+    %% Common Ground Reference Bus
+    BMS -. "Protected Return (P-)" .-> GND_BUS(("Shared Star Ground (GND)"))
+    BUCK -. "GND (OUT- / IN-)" .-> GND_BUS
+    ESP -. "GND" .-> GND_BUS
+    FET -. "Source" .-> GND_BUS
+    R1 -. "Pulldown Return" .-> GND_BUS
+    CAP -. "Negative Leg" .-> GND_BUS
+
+    %% ==========================================
+    %% STYLING
+    %% ==========================================
+    classDef supplyStyle fill:#ffe6cc,stroke:#d79b00,stroke-width:2px,color:#333;
+    classDef logicStyle fill:#dae8fc,stroke:#6c8ebf,stroke-width:2px,color:#333;
+    classDef powerStyle fill:#f8cecc,stroke:#b85450,stroke-width:2px,color:#333;
+    classDef gndStyle fill:#d5e8d4,stroke:#82b366,stroke-width:2px,stroke-dasharray: 5 5,color:#333;
+
+    class Supply,BAT,BMS,FUSE supplyStyle;
+    class Logic,BUCK,ESP logicStyle;
+    class Power,SW,PUMP,DIODE,CAP,RG,R1,FET powerStyle;
+    class GND_BUS gndStyle;
+```
+
+
 ## SelfHosted IoT Tools
 
 OpenHUB, HA, Node-Red and ESPhome.
@@ -380,6 +499,51 @@ Deal:
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge for the ones who want to create step by step" >}}
 {{< /cards >}}
 
+
+If anything:
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+    classDef bridge fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>( DIY = $0)"):::free
+    L1("Web Audits 🛡️<br/>(Reveals Problem )"):::free
+    L11("Tech Blog/Youtube"):::free
+    L12("ebooks"):::free
+    L13("mbsd framework OSS"):::free
+    L14("OSS guides"):::free
+
+    L3("Done With You<br/>(Trade $$ for knowledge)"):::mid
+    L4("Done For You<br/>(Trade $$$ for outcomes)"):::high
+    L44("GenBI<br/>Shopify PoC"):::bridge
+    L45("Real Estate<br/>Funnel Bot"):::bridge
+    L46("Energy Solutions<br/>HVAC"):::bridge
+    L47("IoT Solutions<br/>Crops"):::bridge
+    L48("Weddings<br/>Photo QR"):::bridge
+
+    %% --- Connections ---
+    L0 --> L1
+    L1 --> L3
+    L12 --> L3
+    L13 -->|MultiBodySystemsDynamicscom| L3
+    L14 -->|FOSS Engineer| L3
+    L0 --> L11
+    L0 --> L12
+    L0 --> L13
+    L0 --> L14
+    L3 --> L4
+    L4 -->|Productized Service| L44
+    L4 -->|Productized Service| L45
+    L4 -->|Productized Service| L46
+    L4 -->|Productized Service| L47
+    L4 -->|Productized Service| L48
+```
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}

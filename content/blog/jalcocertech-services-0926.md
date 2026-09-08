@@ -559,6 +559,8 @@ Pos 3 (Down): Neither highlights (Full manual Acro mode).
 
 > Id also add the beeper and [Flip over crash modes](https://youtube.com/shorts/MxkflxLcyCo)
 
+> > And fixed props couple of times here and [here](https://youtube.com/shorts/CjpbsHnJWk8)
+
 If you are going without VTX, lower the Power to 25mW. 100mW is too much.
 
 * **The Hex Drivers Won't Fit It:** The 4-piece RC hex set (1.5, 2.0, 2.5, 3.0 mm) only fits **recessed screw heads** (screws with a hole in the top).
@@ -612,21 +614,21 @@ As i knew it was 8 and 9 and my charger told me 175mah, instead of 347mah
     14 +Firmware date:     Oct 20 2020 08:18:45
     15 +Craft name:        NOVICE-IV
 
-For the bigger drone i got, i also made some power calibration:
+For the bigger drone i got, i also made some power calibration: *working initially for gentle flights [like so](https://youtube.com/shorts/jbYu9kYmBqc)*
 
 Updated consumption-iflight-f722-twing.md with the new Ovonic run.
 
-  Key result:
+Key result:
 
-  Log 1 duration:        268.7 s
-  Betaflight reported:  500 mAh
-  Charger replaced:     600 mAh
-  Current scale:        100
+Log 1 duration:        268.7 s
+Betaflight reported:  500 mAh
+Charger replaced:     600 mAh
+Current scale:        100
 
-  Calibration math:
+Calibration math:
 
-  600 / 500 = 1.20
-  new scale = 100 * 1.20 = 120
+600 / 500 = 1.20
+new scale = 100 * 1.20 = 120
 
 
 Remember that this is important for batteries and other componentes like ESC/FC:
@@ -671,6 +673,17 @@ https://www.youtube.com/watch?v=hw_CAQCFCmA
 2. Get ready to perform RCA from telemetry when you'll have [a fpv crash](https://youtu.be/4opTp09Ne7A)
 
 Then perform [damage diagnosis](https://youtube.com/shorts/OPuNbaIYuRM)
+
+#### FPV Apps
+
+Some people put together freemium apps: `https://vueladrones.app`
+
+So far, i was tinkering with the python CLI for the dji tello and attempted one of my first desktop apps to control the tello via laptop keyboard here.
+
+But so far the best result was with the CLI only one, which included face recognition of the video feed.
+
+> Others also do real world services, like cleaning with drones `https://www.droneguru.es/servicios/#limpieza`
+
 
 ### Mechanism Design
 

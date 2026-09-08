@@ -273,7 +273,7 @@ You can get started as per [openai manual](https://help.openai.com/en/articles/1
 
 ```sh
 #codex
-codex --approval-mode full-auto
+codex --approval-mode full-auto #npm install -g @openai/codex@latest
 #codex --provider openai --model o3-mini --quiet --approval-mode full-auto "$(cat ./prompts/codex-tree-stack-components.md)" > ./Outputs_Model/output-codex-tree-stack-components-plan.json #saved the full reply with errors 
 ```
 

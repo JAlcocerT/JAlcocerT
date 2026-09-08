@@ -99,6 +99,86 @@ the PIO question flow:
 - Agent output packages the result.
 - Governance questions feed back into leadership decisions and clarify future versions.
 
+For these Director-style PIOs, Problem → Integrations → Outcome flows more naturally because it mirrors:
+
+What issue are we solving?
+What data/systems are involved?
+What does the assessment produce?
+
+
+```mermaid
+flowchart LR
+    A[Start With Desired State Criterion] --> B[Problem Questions]
+
+    B --> B1[Why does this matter?]
+    B --> B2[What risk exists?]
+    B --> B3[What cannot be considered aligned?]
+    B --> B4[What loopholes or ambiguity must be closed?]
+
+    B1 --> C[Problem Statement]
+    B2 --> C
+    B3 --> C
+    B4 --> C
+
+    C --> D[Integration Questions]
+    D --> D1[What systems hold the evidence?]
+    D --> D2[What is the primary evidence key?]
+    D --> D3[Which standards or policies apply?]
+    D --> D4[Which human inputs are needed?]
+    D --> D5[Which evidence is preferred when sources conflict?]
+
+    D1 --> E[Evidence / Integration Model]
+    D2 --> E
+    D3 --> E
+    D4 --> E
+    D5 --> E
+
+    C --> F[Outcome Questions]
+    E --> F
+
+    F --> F1[What are we trying to determine?]
+    F --> F2[What evidence proves or disproves conformance?]
+    F --> F3[What gaps should be identified?]
+    F --> F4[What result should the reviewer receive?]
+
+    F1 --> G[Outcome]
+    F2 --> G
+    F3 --> G
+    F4 --> G
+
+    G --> H[Assessment Logic]
+    E --> H
+
+    H --> H1[Pass]
+    H --> H2[Action Required]
+    H --> H3[Unable To Assess]
+
+    H1 --> I[Agent Output]
+    H2 --> I
+    H3 --> I
+    G --> I
+
+    I --> I1[Reviewer-Ready Artifact]
+    I --> I2[Evidence Summary]
+    I --> I3[Findings And Risk]
+    I --> I4[Remediation Actions]
+    I --> I5[Executive Summary]
+
+    I --> J[Governance Questions]
+    J --> J1[Who owns the decision?]
+    J --> J2[What does the assistant not do?]
+    J --> J3[What needs leadership confirmation?]
+
+    J1 --> K[Director Review Position]
+    J2 --> K
+    J3 --> L[Leadership Decisions Needed]
+
+    L -.feeds back.-> B
+    L -.clarifies.-> D
+    L -.sets thresholds.-> H
+```
+
+
 The core questions we asked were:
 
 - Problem: Why does this matter? What risk exists? What cannot be considered aligned? What ambiguity must be closed?

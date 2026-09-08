@@ -27,6 +27,9 @@ You will be also able to make/tinker with flutter apps: *because the official on
 
 Best of all, it can motivate you to get into DIY.
 
-Whatever you do, make sure to follow the applicable licenses and legislations 
+Whatever you do, make sure to make your own research and follow all the applicable licenses and legislations 
 
-* https://dronemap.pansa.pl/
+* https://dronemap.pansa.pl/ & https://uav.pansa.pl
+* https://drones.enaire.es/
+
+For insurances you can consider places like `https://aeropolisa.pl/` or https://www.coverdrone.com/es/mapa-de-seguridad-para-drones/
