@@ -1,9 +1,9 @@
 ---
-title: "Okta Alternatives? Go for Selfhosted SSO Tools"
+title: "Okta Alternatives? Selfhosted SSO Tools"
 date: 2027-01-05
 draft: false
-tags: ["TinyAuth v6","Supabase Auth vs PB","Authelia vs Authentik vs KeyCloak","PocketID","WorkOS"]
-description: 'A look to F/OSS Selfhosted Single Sign On and authentication Tools'
+tags: ["TinyAuth v6","Supabase Auth vs PB","Authelia vs Authentik vs KeyCloak","PocketID","WorkOS","PIM x PAM"]
+description: 'F/OSS Single Sign On and authentication Tools'
 url: 'open-source-sso-tools'
 ---
 
@@ -451,3 +451,46 @@ So even my old ~400$ laptop from 2010 could handle this
 
 <!-- 
 https://www.youtube.com/watch?v=t8LpwHygDfg -->
+
+### PIM vs PAM
+
+Authelia and Authentik primarily provide **Identity Provider (IdP)**, **Single Sign-On (SSO)**, and **Identity and Access Management (IAM)** capabilities rather than dedicated PIM/PAM.
+
+While they handle *who you are* and *how you log in*, they lack the advanced privileged access controls required for formal PIM/PAM compliance.
+
+#### Core Difference: IAM/SSO vs. PIM/PAM
+
+PIM (Privileged Identity Management) and PAM (Privileged Access Management) are security practices and software solutions designed to safeguard, control, and monitor elevated (admin-level) access to critical systems, data, and infrastructure:
+
+PAM (Privileged Access Management): An umbrella term and system for managing high-level credentials across the enterprise. It secures access via password vaulting, session recording, and multi-factor authentication (MFA) so users never see raw root/admin passwords (e.g., CyberArk, Delinea).
+
+PIM (Privileged Identity Management): A specific subset of PAM (popularized by Microsoft Entra ID / Azure) focused on Just-In-Time (JIT) access. Instead of giving a developer permanent Contributor or Admin rights, PIM grants temporary, time-bound access (e.g., 4 hours) that requires justification and approval before activating.
+
+| Feature / Capability | **IAM / SSO / IdP**<br>
+
+<br>*(Authelia, Authentik, Keycloak, Okta)* | **PIM / PAM**<br>
+
+<br>*(Microsoft Entra PIM, CyberArk, Teleport)* |
+| --- | --- | --- |
+| **Primary Goal** | Authenticate identity & enforce Multi-Factor Authentication (MFA). | Govern, elevate, and audit **admin-level / privileged** access. |
+| **Access Duration** | **Standing Access:** Once logged in, you keep your granted roles indefinitely. | **Just-In-Time (JIT):** Access expires automatically (e.g., valid for 2–4 hours). |
+| **Workflow / Gate** | Verifies password + TOTP/passkey $\rightarrow$ issues session token. | Requires a justification ticket, approval workflow, and elevation step. |
+| **Session Control** | Checks permissions via OIDC/SAML tokens. | Live session recording, keystroke logging, credential vaulting. |
+
+---
+
+#### Where Authelia and Authentik Fit
+
+* **Authelia:** A lightweight authentication server. It adds an authentication gateway (2FA/MFA, reverse proxy protection) in front of applications. It does **not** do temporary privilege elevation, credential vaulting, or approval workflows.
+* **Authentik:** A versatile open-source Identity Provider (IdP). It manages users, groups, SSO (SAML/OAuth2/OIDC), and user directory syncing. While it has rich authorization policies, it is still an **IAM/IdP platform**, not a JIT privileged access manager.
+
+#### What Real PIM/PAM Tools Add for Compliance
+
+* **PIM (Just-In-Time Elevation):** *Microsoft Entra PIM*, *AWS IAM Identity Center (with JIT integration)*, or *Teleport*.
+* *Example:* A developer logs in via SSO as a standard user. When production breaks, they request `Azure Contributor` access via PIM. A lead approves it, access activates for **2 hours**, and automatically revokes afterward.
+
+* **PAM (Credential Vaulting & Session Recording):** *CyberArk*, *HashiCorp Boundary/Vault*, *Delinea*, or *Teleport*.
+* *Example:* An engineer needs root access to a production database. The PAM tool checks out a temporary token, logs the engineer in without revealing the password, and records the entire terminal session for compliance audits.
+
+
+Authelia and Authentik handle **Authentication & SSO** (getting through the front door). PIM and PAM handle **Privileged Elevation & Governance** (handing out temporary keys to the server room with an active supervisor watching).

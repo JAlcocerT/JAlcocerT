@@ -291,7 +291,9 @@ https://youtube.com/shorts/kDPNhy8Ep7o -->
 This has been a journey with [prep work for the ESP32](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water) to work with the water
 
 1. First this one with the BMS x 3s 18650 working [like so](https://youtube.com/shorts/XrFf6oWHI84)
+
 2. Then, a timed smoke test loaded to the ESP32 to wait 10s, push water for 3, then just keep blinking
+
 3. Wrapping it all together and instead of a hard coded logic, one that I can control via mqtt when the esp32 will move the pump - *This is a good addition to my `./poc/iot-dashboard`
 
 How I did that?

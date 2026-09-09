@@ -7,7 +7,9 @@ description: "Grafana works across homelab and IoT monitoring because both need 
 
 Grafana is useful because many problems become time-series questions.
 
-Server metrics, sensor readings, energy usage, network behavior, and application health all need trends, thresholds, alerts, and dashboards. The same observability interface can serve infrastructure and physical systems.
+Server metrics, sensor readings, energy usage, network behavior, and application health all need trends, thresholds, alerts, and dashboards. 
+
+The same observability interface can serve infrastructure and physical systems.
 
 Monitoring is a shared language across domains.
 

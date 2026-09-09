@@ -393,6 +393,15 @@ Or just via bluetooth: https://github.com/permissionlesstech/bitchat
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/serverless-invoices" title="Serverless Invoices | Docker Config for HomeLab 🐋 ↗" >}}
 {{< /cards >}}
 
+### Web Analytics
+
+```sh
+#/tmp/foss-post-rybbit
+docker stop $(docker ps -q --filter label=com.docker.compose.project=rybbit_foss_trial)
+
+docker rm $(docker ps -aq --filter label=com.docker.compose.project=rybbit_foss_trial)
+```
+
 ### About The Coasean Ceiling
 
 

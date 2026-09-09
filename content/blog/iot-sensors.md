@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Sensors x PCB"
-date: 2026-09-20
+date: 2026-09-11
 draft: false
 tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
@@ -192,7 +192,9 @@ This sensor is produced by Melexis and can measure the temperature of an object 
 {{% details title="More about the MLX90614 " closed="true" %}}
 
 
-Working Principle: The sensor measures the infrared radiation emitted by an object to determine its temperature. All objects emit thermal radiation based on their temperature, and this radiation falls within the infrared spectrum. 
+Working Principle: The sensor measures the infrared radiation emitted by an object to determine its temperature.
+
+All objects emit thermal radiation based on their temperature, and this radiation falls within the infrared spectrum. 
 
 The sensor detects this radiation and converts it into an electrical signal that can be used to calculate the object's temperature.
 
@@ -204,25 +206,21 @@ Two Sensors in One: The sensor actually contains two separate sensors within a s
 
 This dual-sensor setup helps improve accuracy, as it compensates for changes in the sensor's ambient temperature.
 
-
 {{% /details %}} 
-
-
 
 Communication Interface: The MLX90614 GY-906 sensor can communicate with microcontrollers or other devices using the **I2C (Inter-Integrated Circuit) communication protocol**. 
 
 This makes it relatively easy to integrate the sensor into various projects and systems.
 
-
 It already has a built-in 3.3V voltage stabilizer and pull-up resistors of the I2c bus to be powered by 4.7 kΩ resistors. 
 
 We also know that the ranges of measured temperatures are: -40°C…85°C for the ambient temperature and -40°C…380°C for the temperature of the tested object. 
 
-The module has a measurement accuracy of 0.5°C for the measurement range To=0°C…60°C ( object temperature ), Ta=0°C…50°C ( surrounding temperature ) with a resolution of 0.2°C. The largest measurement error we will encounter is ±4°C, but for very high temperatures.
+The module has a measurement accuracy of 0.5°C for the measurement range To=0°C…60°C ( object temperature ), Ta=0°C…50°C ( surrounding temperature ) with a resolution of 0.2°C. 
+
+The largest measurement error we will encounter is ±4°C, but for very high temperatures.
 
 {{% details title="MLX90614 Python, Influx and grafana " closed="true" %}}
-
-
 
 <https://www.youtube.com/watch?v=CftxT8k0jww&t=5s>
 
@@ -248,7 +246,6 @@ you should see something different than -- in at least one of the buckets.
 
 Install Adafruit-blinka <https://pypi.org/project/Adafruit-Blinka/>
 and also: adafruit-circuitpython-mlx90614 <https://pypi.org/project/adafruit-circuitpython-mlx90614/>
-
 
 
 ```py

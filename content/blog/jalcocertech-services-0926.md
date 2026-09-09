@@ -590,6 +590,16 @@ I even made my own build for ELRS https://github.com/JAlcocerT/meteor-dron/tree/
 * **Slammed Builds:** Keeping the top and bottom plates too close can lead to short circuits and complicate maintenance.
 Titanium Motor Screws: They can be brittle and may break under stress, causing motors to detach during flight.
 
+#### FPV assembly
+
+https://www.youtube.com/watch?v=ulAdXUTfees
+
+https://www.youtube.com/watch?v=vqQHIRdJOec
+
+https://www.youtube.com/watch?v=1ys1R9ZNMKA
+
+https://www.youtube.com/watch?v=9Jhi3VOZ9w8
+
 #### FPV Telemetry
 
 If you are interested to make overlays, get the .BTL and claibrate the power consumption to what your charger tells you after the session. 
