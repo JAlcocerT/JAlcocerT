@@ -414,6 +414,88 @@ flowchart TB
     class GND_BUS gndStyle;
 ```
 
+So i continued, and to make [this timed logic](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/components.json) work I connected the [components like so](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/components.json):
+
+Here is the complete point-to-point connection summary for each component on your breadboard:
+
+---
+
+**1. MP1584 Buck Converter (Pre-calibrated to 5.0V)**
+
+* **`IN+`**: Connects to the **fused $+12\text{V}$ rail** (`FUSED_P_PLUS`).
+* **`IN-`**: Connects to the **common Ground rail** (`GND` / BMS `P-`).
+* **`OUT+`**: Connects to the **ESP32 `VIN` (or `5V`) pin**.
+* **`OUT-`**: Connects to the **common Ground rail** (`GND` / ESP32 `GND`).
+
+**2. ESP32 NodeMCU Development Board**
+
+* **`VIN` (or `5V` pin)**: Connects to **MP1584 `OUT+**` ($5.0\text{V}$ input).
+* **`GND`**: Connects to the **common Ground rail** (`GND` / BMS `P-`).
+* **`GPIO 23`**: Connects to one leg of the **gate resistor ($22\ \Omega$ or $220\ \Omega$)**.
+
+**3. IRLZ44N N-Channel MOSFET**
+*(Orientation: Metal tab facing away, flat printed front facing you, pins pointing down)*
+
+* **Pin 1 (Left - Gate)**: Connects to:
+* The second leg of the **gate resistor** (from GPIO 23).
+* One leg of the **$10\text{ k}\Omega$ pulldown resistor**.
+
+
+* **Pin 2 (Middle - Drain)**: Connects to:
+* **Pump Black wire ($-$)**.
+* **1N4007 Diode Anode (plain black end)**.
+
+
+* **Pin 3 (Right - Source)**: Connects to:
+* The **common Ground rail** (`GND` / BMS `P-`).
+* The other leg of the **$10\text{ k}\Omega$ pulldown resistor**.
+
+
+
+**4. 12V 3.6W Water Pump**
+
+* **Red Wire ($+$)**: Connects to the **switched positive rail** (`SWITCHED_P_PLUS`, after the manual switch).
+* **Black Wire ($-$)**: Connects directly to the **MOSFET Drain (Pin 2)**.
+
+**5. 1N4007 Flyback Diode**
+
+* **Cathode (Silver Stripe end)**: Connects to **Pump Red ($+$)** / switched $+12\text{V}$ rail.
+* **Anode (Plain black end)**: Connects to **Pump Black ($-$)** / MOSFET Drain (Pin 2).
+
+**6. Resistors**
+
+* **Gate Series Resistor ($22\ \Omega$ or $220\ \Omega$)**: Sits in series between **ESP32 GPIO 23** and **MOSFET Gate (Pin 1)**.
+* **$10\text{ k}\Omega$ Pulldown Resistor**: Bridges directly across **MOSFET Gate (Pin 1)** and **MOSFET Source / GND (Pin 3)**.
+
+**7. 470 µF Bulk Electrolytic Capacitor**
+
+* **Positive leg (longer lead)**: Connects to the **fused $+12\text{V}$ rail** (`FUSED_P_PLUS`).
+* **Negative leg (shorter lead, white/silver stripe with minus signs)**: Connects to the **common Ground rail** (`GND` / BMS `P-`).
+
+**8. Manual SPST Switch & 2A Fuse**
+
+* **2A Slow-Blow Fuse**: In series between BMS **`P+`** and the breadboard positive rail (`FUSED_P_PLUS`).
+* **SPST Switch**: In series between `FUSED_P_PLUS` and `SWITCHED_P_PLUS` (powers only the pump positive lead).
+
+**Pre-Power Quick Check**
+Before seating the 18650 cells:
+
+1. Ensure the **manual switch is OPEN (OFF)**.
+2. Multimeter in continuity mode: verify that **BMS `P-**`, **MOSFET Source (Pin 3)**, **ESP32 `GND**`, and **MP1584 `OUT-**` all beep together as one continuous ground plane.
+3. Verify the **1N4007 silver band** points away from the MOSFET Drain and toward the positive rail.
+
+{{< youtube "M231o6d-kqM" >}}
+
+<!-- https://www.youtube.com/shorts/M231o6d-kqM -->
+
+> I got this one working with the buck converting the 10.5V of the 3s to 5.00v
+
+Then, i [charged the 18650](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#faq) with a `xtar VC4SL`
+
+After this, I made now the buck to go from 4.2x3=12.6v to 5v
+
+
+
 
 ## SelfHosted IoT Tools
 

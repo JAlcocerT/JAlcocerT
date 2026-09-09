@@ -208,7 +208,9 @@ https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/
 
 Get a good charger
 
-I got ahead with a `ISDT 608AC charger`and so far no issues
+I got ahead with a `ISDT 608AC charger`and so far no issues with the Li-Po
+
+For Li-Ion the radiomaster can charge them, you can get a `XTAR VC4SL` or `ISDT N8 / N16` in case that you want to charge 18650 separately
 
 ### Laptops and Phones
 
@@ -495,6 +497,7 @@ Rigid, standard Lithium-Ion (Li-ion) batteries store slightly more energy per ki
 Why Standard Li-ion Holds More Energy per kg
 
 1. **Electrolyte Composition:** Traditional Li-ion uses a liquid organic electrolyte, which allows lithium ions to move very quickly and efficient chemical packing. LiPo uses a gel-like or polymer matrix electrolyte, which is slightly bulkier and less energy-dense at a chemical level.
+
 2. **Active Material Ratio:** Standard cylindrical cells (like 18650 or 21070 cells) can compress active chemistry inside a rigid metal shell very tightly, packing more energy into the internal material relative to its weight.
 
 The Trade-off: System vs. Cell Level
