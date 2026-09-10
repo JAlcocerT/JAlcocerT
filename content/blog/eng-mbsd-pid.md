@@ -225,7 +225,11 @@ Why use a diagram instead of just the math?
 
 If you are into fpv drones, betaflight gives you control for the PID to set how the dron replies to your controls :)
 
-https://youtube.com/shorts/tZ2Ku_vZ3qw
+<!-- https://youtube.com/shorts/tZ2Ku_vZ3qw -->
+
+
+{{< youtube "tZ2Ku_vZ3qw" >}}
+
 
 ## PID x DHT Sensors
 

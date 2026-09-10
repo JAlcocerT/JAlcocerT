@@ -495,7 +495,340 @@ Then, i [charged the 18650](https://jalcocert.github.io/JAlcocerT/understanding-
 After this, I made now the buck to go from 4.2x3=12.6v to 5v
 
 
+And I also prepared the mqtt version for the ESP32.
 
+For the agents to dont be aware of your WIFI credentials nor making it part of the code:
+
+```sh
+printf '%s' 'YOUR_WIFI_PASSWORD' > /tmp/iot-fan-wifi-pass
+chmod 600 /tmp/iot-fan-wifi-pass
+```
+
+Or:
+
+```sh
+read -rsp "Wi-Fi password: " WIFI_SECRET
+printf '%s' "$WIFI_SECRET" > /tmp/iot-water-wifi-pass
+unset WIFI_SECRET
+chmod 600 /tmp/iot-water-wifi-pass
+
+
+# cat /tmp/iot-water-wifi-pass
+
+# Safer verification without revealing the password:
+
+# wc -c < /tmp/iot-water-wifi-pass
+# stat -c '%a %n' /tmp/iot-water-wifi-pass
+```
+
+
+After loading [the script](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/mqtt_pump_control.ino) it is mainly waiting for commands.
+
+```sh
+cd ./poc/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet
+make help
+```
+
+The ESP32 will:
+
+- Connects to Wi-Fi
+- Connects to MQTT at 192.168.1.2:1883.
+- Subscribes to: `esp32/pump/cmd`
+
+- Publishes retained status to:
+
+esp32/pump/availability = online
+esp32/pump/state = {"pump":"off","max_runtime_ms":5000}
+
+The five-second maximum is compiled [into the ESP32 firmware](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/mqtt_pump_control.ino):
+
+const unsigned long MAX_PUMP_RUNTIME_MS = 5000;
+
+Any longer pulse is rejected locally by the ESP32—even if EMQX or another client requests it:
+
+pulse:3000  → accepted
+pulse:5000  → accepted
+pulse:5001  → rejected
+
+The broker only transports commands; the ESP32 enforces the limit and automatically sets GPIO23 LOW when the accepted pulse expires.
+
+It then waits for one of these commands:
+
+```sh
+status
+off
+pulse:3000
+```
+
+When the ESP32 receives an accepted command such as: `pulse:3000`
+
+GPIO23 (D23) goes HIGH at approximately 3.3 V for three seconds. Through the 220 Ω resistor, this
+drives the MOSFET gate and turns the MOSFET on/conducting, allowing pump current to flow.
+
+After three seconds, GPIO23 returns LOW, the 10 kΩ pulldown discharges the gate, and the MOSFET turns
+off.
+
+More precisely: the MOSFET is “on/conducting,” rather than electrically “open.” Keep the ESP32 ground
+connected to the MOSFET source/BMS P− common ground.
+
+For example, this requests a three-second pulse:
+
+```sh
+# #make pub-pulse PULSE_MS=3000
+# make pub-status
+# make pub-off
+docker run --rm --network host eclipse-mosquitto:2 \
+  mosquitto_pub -h 192.168.1.2 \
+  -t esp32/pump/cmd \
+  -m 'pulse:3000'
+```
+
+{{< youtube "sWO9hesYCjw" >}}
+
+<!-- 
+https://youtube.com/shorts/sWO9hesYCjw 
+-->
+
+The ESP32 will set GPIO23 HIGH for three seconds, automatically return it LOW, and publish updated
+state.
+
+Do not send the pulse until the complete pump circuit is connected and supervised. 
+
+Measuring drain-to-source voltage (VDS) while the 1 A pump runs helps evaluate MOSFET
+conduction.
+
+For an IRLZ44N, flat face toward you, legs down:
+
+Pin 2: Drain — red probe
+Pin 3: Source — black probe/common GND
+
+During pulse:5000, approximately:
+
+VDS < 0.10 V       Good
+VDS 0.10–0.30 V    Usable cautiously; check temperature
+VDS > 0.50 V       Poorly enhanced, incorrect wiring, or unsuitable MOSFET
+
+status is safe to test now because it does not activate GPIO23.
+
+On the server, subscribe to all pump topics:
+
+```sh
+mosquitto_sub -h localhost -t 'esp32/pump/#' -v
+```
+
+If mosquitto_sub is unavailable:
+
+```sh
+docker run --rm --network host eclipse-mosquitto:2 \
+  mosquitto_sub -h localhost -t 'esp32/pump/#' -v
+```
+
+You should immediately see the retained messages:
+
+```md
+esp32/pump/availability online
+esp32/pump/state {"pump":"off","max_runtime_ms":5000}
+```
+
+Leave that terminal running for live updates. From another server terminal, safely request status:
+
+```sh
+mosquitto_pub -h localhost -t esp32/pump/cmd -m status
+```
+
+The subscriber will display the command and the ESP32’s response.
+
+On the server:
+
+```sh
+mosquitto_sub -h localhost -p 1883 -t 'esp32/pump/#' -v
+```
+ 
+Or use the EMQX web dashboard, commonly:
+
+  http://192.168.1.2:18083
+
+  In EMQX, use the WebSocket MQTT client or inspect connected clients. Look for:
+
+  Client ID: esp32-pump-ef78
+  Topics:   esp32/pump/#
+
+  You should see:
+
+  esp32/pump/availability online
+  esp32/pump/state {"pump":"off","max_runtime_ms":5000}
+
+  EMQX is the broker; mosquitto_sub and mosquitto_pub are simply compatible command-line clients for
+  observing and sending MQTT messages.
+
+#### Voltaje Divider
+
+Battery Voltage Monitoring (Voltage Divider): Add a high-value resistive divider (e.g., $100\text{ k}\Omega$ / $27\text{ k}\Omega$) from the 12V rail to an ESP32 ADC pin so your software knows when the battery is too low to run the pump
+
+#### Adding Solar
+
+Do not order a custom PCB just yet. 
+
+A successful manual breadboard test proves only the raw power path; designing a board now almost guarantees you will have to pay for a redesign later.
+
+The recommended progression moves from firmware validation to peripheral expansion, followed by prototyping, and finally custom hardware manufacturing:
+
+**1. Finish the Core Software Cycle First (Immediate Next Step)**
+
+* **Timed Smoke Test:** Run the battery-powered ESP32 through the 3-second cycle using `timed_smoke_test.ino` to verify there are no inductive resets or brownouts.
+* **Wi-Fi & MQTT Integration:** Upload your networking firmware (`mqtt_pump_control.ino`). Confirm the ESP32 can maintain Wi-Fi connection and handle MQTT commands without crashing when the pump starts and stops.
+* **Deep Sleep & Power Budgeting:** If this is intended to be off-grid, configure the ESP32 to sleep between waterings. An ESP32 idling at 80–150 mA on Wi-Fi will drain a 3S pack in a couple of days regardless of solar.
+
+
+**2. Add the Solar & Monitoring Upgrades (Breadboard Stage)**
+
+* **3S Solar Charge Controller:** A 3S pack requires a dedicated charging controller with an MPPT or CC/CV charge profile (such as a **CN3791 or TP5100** board configured for 3S/12.6V, or a proper 12V solar charge controller). You cannot connect a solar panel directly to the BMS.
+* **Battery Voltage Monitoring (Voltage Divider):** Add a high-value resistive divider (e.g., $100\text{ k}\Omega$ / $27\text{ k}\Omega$) from the 12V rail to an ESP32 ADC pin so your software knows when the battery is too low to run the pump.
+
+**3. Build a Perforated Board Prototype (Stripboard / Perfboard)**
+
+* Solder your current breadboard layout onto a standard perfboard or proto-shield.
+* Breadboard spring clips loosen over time and degrade with temperature shifts and moisture. Soldering the proven components ensures mechanical reliability during field testing.
+
+**4. Move to Custom PCB Design (Final Step)**
+
+* Once the complete system—solar charging, battery sensing, Wi-Fi/MQTT, sleep cycles, and pump switching—has run reliably for several days on the bench, capture the schematic in KiCad or EasyEDA.
+* Route wide power traces for the 12V and motor loops, place mounting holes for your enclosure, and send the gerber files to a fabricator.
+
+
+The main difference comes down to how each board manages solar power conversion, efficiency, and battery configuration:
+
+| Feature | **TP4056 (Linear Charger)** | **MPPT Charger (e.g., CN3791 / MP2467)** |
+| --- | --- | --- |
+| **Charging Method** | Linear regulation | High-efficiency switch-mode (Buck/Boost) |
+| **Solar Voltage Tracking** | None; pulls solar panel voltage down to battery level | Actively matches the panel's Maximum Power Point ($V_{mp}$) |
+| **Battery Compatibility** | **Single cell only (1S / 3.7V–4.2V)** | Available for **1S, 2S, 3S, 4S** multi-cell packs |
+| **Efficiency in Sub-optimal Light** | Low (~30%–60% of panel rating is wasted as heat) | High (typically **85%–95%** overall energy harvest) |
+| **Input Voltage Range** | Narrow (typically 4.5V–6V max) | Wide (often supports 6V to 28V+ panels) |
+
+**Key Takeaways**
+
+* **Voltage Mismatch & Wasted Power:** A standard 12V or 18V solar panel connected to a standard TP4056 will either burn it out due to high input voltage or force the panel to collapse down to 4.2V, throwing away more than half of the usable wattage as heat.
+* **Multi-Cell Packs:** A standard TP4056 can only charge a **1S** (single 3.7V cell) setup. To charge a **3S** (12.6V) pack like the one in your schematic directly from solar, an **MPPT step-up/step-down multi-cell board** is required to deliver the proper voltage and CC/CV profile.
+* **Cost vs. Performance:** The TP4056 works reliably for small 5V USB panels and single-cell projects, but an MPPT board is necessary to safely and efficiently step solar voltages up or down for a 3S pack.
+
+| Feature | **MPPT (Maximum Power Point Tracking)** | **PWM (Pulse Width Modulation)** |
+| --- | --- | --- |
+| **Operating Principle** | High-frequency DC-to-DC converter that dynamically adjusts load to match peak panel wattage. | Rapid on/off switch that pulls panel voltage directly down to the battery's voltage level. |
+| **Conversion Efficiency** | **90% – 99%** | **70% – 80%** (drops lower in cold or low-light conditions) |
+| **Voltage Flexibility** | High input voltage support (e.g., 50V–150V+ panel arrays into a 12V/24V battery). | Panel nominal voltage must strictly match battery voltage (e.g., 18V $V_{mp}$ panel for a 12V battery). |
+| **System Scale** | Best for medium-to-large setups (>200W), multi-panel arrays, and residential/commercial solar. | Best for small systems (<150W–200W), single-panel DIY, RVs, and trickle-charging. |
+| **Cost** | Significantly higher ($40 to $500+) | Very low ($10 to $30) |
+
+---
+
+**MPPT Pros & Cons**
+
+*Pros:*
+
+* **Maximum Energy Harvest:** Captures up to **30% more energy** than PWM, especially in cloudy, low-light, or cold weather.
+* **Higher Panel Voltage Allowed:** Lets you wire panels in series at high DC voltage, allowing for longer cable runs with thinner, cheaper wiring and lower transmission losses.
+* **System Expandability:** Easy to add more panels to an existing array without replacing the battery bank voltage configuration.
+
+*Cons:*
+
+* **Higher Price Tag:** Complex internal circuitry and microcontrollers make it 3x–5x more expensive than PWM.
+* **Size and Weight:** Larger enclosures, bulkier inductors, and heavier heatsinks.
+* **Marginal Value on Tiny Setups:** Overkill for small (<100W) installations where the extra power gained doesn't justify the controller's cost.
+
+---
+
+**PWM Pros & Cons**
+
+*Pros:*
+
+* **Extremely Cheap:** Lowest cost-per-unit solution for basic solar installations.
+* **Simple & Reliable:** Fewer active electronic components result in low standby draw and solid long-term durability.
+* **Compact Footprint:** Lightweight and easy to fit into tight enclosure boxes.
+
+*Cons:*
+
+* **Wasted Capacity:** Forces the panel to operate at battery voltage; any excess voltage is simply lost rather than converted to current.
+* **Strict Voltage Constraints:** Cannot step down high array voltages (e.g., cannot use high-voltage grid-tie panels with a 12V battery bank).
+* **Poor Poor-Weather Performance:** Harvest drops sharply when temperatures fall or in overcast lighting conditions.
+
+| Feature | **TP4056** | **TP5100** | **CN3791** | **3S MPPT Charger (e.g., CN3795 / MP2467)** |
+| --- | --- | --- | --- | --- |
+| **Topology** | Linear regulator | Switching (Buck converter) | Switching (Buck converter) | Switching (Buck/Boost) |
+| **Solar MPPT?** | No | No (fixed DC input) | **Yes** (Input voltage tracking) | **Yes** (Input voltage tracking) |
+| **Supported Battery** | **1S only** (4.2V) | **1S or 2S** (4.2V / 8.4V) | **1S only** (4.2V) | **3S** (12.6V) |
+| **Input Voltage** | 4.5V – 5.5V | 5V – 18V | 4.5V – 28V | 15V – 28V+ |
+| **Max Charge Rate** | 1A | Up to 2A | Up to 4A | Typically 2A – 5A+ |
+
+**TP5100: A Switching Upgrade, But Not for Solar or 3S**
+
+* **The Pros:** Unlike the linear TP4056, the TP5100 is an efficient **buck (step-down) switcher**. It handles higher input voltages (up to 18V) without turning excess energy into extreme heat.
+* **The Limit:** It only supports **1S (4.2V) or 2S (8.4V)** batteries. It **cannot charge a 3S (12.6V) pack**. Furthermore, it lacks MPPT circuitry, meaning a cloud passing over a solar panel can cause the input voltage to collapse and stall the charge cycle.
+
+**CN3791: Real Solar Tracking, But Built for 1S**
+
+* **The Pros:** The CN3791 has built-in **MPPT** (specifically constant-voltage tracking) designed for solar panels. It monitors panel voltage so it never drags the panel below its peak output ($V_{mp}$).
+* **The Limit:** The standard CN3791 IC is hardwired for **single-cell lithium (1S / 4.2V)**. Even though it accepts high solar panel voltages (up to 28V), it only outputs 4.2V.
+
+**What Your Schematic Actually Needs**
+Because your circuit uses a **3S pack (~12.6V full charge)**, neither the standard TP5100 nor the CN3791 can charge it.
+
+To charge that 3S pack from solar, look for:
+
+* **CN3795 or CN3722:** The multi-cell siblings of the CN3791, designed specifically for adjustable multi-cell lithium packs (including 3S and 4S) with MPPT.
+* **Synchronous Buck-Boost MPPT modules:** Modules using chips like the **LT8490** or **SC8815**, which can take an 18V solar panel and safely step it down to 12.6V CC/CV for your BMS.
+
+Neither—the primary recommended board is a **Synchronous Switching Boost (Step-Up) CC/CV Charger**, not a standard PWM or true MPPT tracker.
+
+| Feature | **Recommended 5V-to-3S Board (e.g., SD35XX / IP2326)** | **Standard Solar PWM** | **Solar MPPT Boost (e.g., SC8815 / LT8490)** |
+| --- | --- | --- | --- |
+| **Topology** | Switching Boost (DC-DC Step-Up) | Direct Pulse Switch (Step-Down only) | Synchronous Buck-Boost with dynamic tracking |
+| **Can it step 5V up to 12.6V?** | **Yes** | **No** (PWM can only pass through or drop voltage) | **Yes** |
+| **Tracking Method** | Fixed input adaptive current limiting | None | Dynamic curve sweep ($V_{mp}$ tracking) |
+| **Cost** | ~$2 to $5 | ~$10 to $20 | ~$25 to $60+ |
+
+**Why It Is Not Traditional PWM**
+A standard PWM solar controller requires the solar panel's voltage to be **higher** than the battery pack (e.g., an 18V panel for a 12V battery). Because your panel outputs only **5V** and the 3S pack reaches **12.6V**, a PWM controller cannot work—it cannot step voltage up.
+
+**Why It Is Not Fully "True MPPT"**
+Budget 5V-to-3S boost charger boards use switching regulators with **adaptive input voltage regulation**, not true continuous MPPT tracking. When a cloud passes over and the 5V panel begins to sag, the chip throttles back charging current to stop the panel from completely collapsing to 0V. While technically "pseudo-MPPT" or input-voltage limiting, it delivers roughly 85%–90% efficiency without the high cost and complexity of a full MPPT tracking stage.
+
+That works cleanly with the recommended boost charger. In that setup, the **5V panel slowly charges the 18650 pack**, and the **18650 pack supplies the high current bursts for the pump**.
+
+**How the Energy Flow Operates**
+
+* **Charging Phase (Continuous & Slow):**
+* Sun hits the 5V panel $\rightarrow$ 5V-to-3S boost charger steps 5V up to 12.6V $\rightarrow$ feeds current through `BMS P+` and `BMS P-` $\rightarrow$ BMS charges and balances the three 18650 cells.
+
+
+* **Discharge Phase (On-Demand & Fast):**
+* When ESP32 GPIO23 turns ON the MOSFET, the pump draws its full ~1.7A (20W) directly from the 3S battery pack via `BMS P+`, completely bypassing the solar charger.
+
+
+
+**How to Wire It to Your Existing JSON Schematic**
+
+The solar charger simply sits in parallel across the BMS main port:
+
+* **Panel to Charger Input:**
+* Solar Panel (+) $\rightarrow$ Charger `IN+`
+* Solar Panel (-) $\rightarrow$ Charger `IN-`
+
+
+* **Charger Output to Battery Pack:**
+* Charger `OUT+` $\rightarrow$ Connect to **`BMS_P_PLUS`** (before fuse `F1`, so charging the pack does not depend on the pump fuse).
+* Charger `OUT-` $\rightarrow$ Connect to **`GND`** (`BMS_P_MINUS`).
+
+
+**The Sizing Rule: Energy Balance**
+
+Because the pump uses 20W and a 5V panel delivers about 2.5W to 5W:
+
+* A 5V / 1A panel produces roughly **5 Watt-hours** per hour of peak sunlight.
+* Running your 20W pump for **3 minutes** consumes only **1 Watt-hour**.
+* That means 1 hour of decent sunlight easily banks enough charge in the 18650s to run several multi-minute pump cycles.
+
+As long as the pump duty cycle is intermittent (e.g., watering plants for a few minutes a day), the 3S 18650 pack acts as the energy buffer while the 5V panel trickles power back in.
 
 ## SelfHosted IoT Tools
 
