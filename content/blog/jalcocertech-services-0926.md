@@ -538,6 +538,16 @@ Charger-based: ~134 W
 Corrected Blackbox-based: ~132 W
 Reasonable estimate: 132-134 W
 
+```sh
+ffmpeg -display_rotation 0 -i "DJI_20260910191149_0027_D.MP4" `
+    -map 0:v:0 -map 0:a? -c copy -movflags +faststart `
+    "DJI_20260910191149_0027_D_landscape.MP4"
+```
+
+{{< youtube "32e9TJaRjV0" >}}
+
+<!-- https://youtu.be/32e9TJaRjV0 -->
+
 You can [prepare to ULM/PPL](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl): `https://ulm-ppl-test.pages.dev/`
 
 {{< youtube "Fgdb4F_G_XM" >}}
@@ -1038,6 +1048,17 @@ flowchart LR
 ```
 
 Also, the daily notes have stopped to flow here and the `cv-laitex` similarly, just to be part of a personal / career folders inside my services.
+
+### Case Studies
+
+
+#### Clarity of Execution
+
+You might not know yet, but you need **proper governance**.
+
+You cant be an AI first company before you are a data ready team.
+
+To be a data ready team, you need proper RACI model across product, architecture and delivery.
 
 ---
 

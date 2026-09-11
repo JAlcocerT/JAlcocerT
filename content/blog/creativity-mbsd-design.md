@@ -85,11 +85,14 @@ This is what it got rendered after a while:
 
 <!-- https://youtu.be/0fmFl3hVgaA
  -->
+
 {{< youtube "0fmFl3hVgaA" >}}
 
 This workflow replies to:
 
-1. How does the mechanism move and what are the forces involved? Aka will it break while it operates?
+1. How does the mechanism move and what are the forces involved? 
+
+> Aka will it break while it operates?
 
 2. How can I manufacture it? (Optional)
 
