@@ -9,6 +9,11 @@ url: 'selfhosting-manufacturing-tools'
 
 **TL;DR**
 
+<!-- https://youtu.be/ON7J_xA55Io
+ -->
+
+{{< youtube "ON7J_xA55Io" >}}
+
 ---
 
 **Intro**

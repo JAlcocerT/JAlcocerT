@@ -526,6 +526,13 @@ RecoBart?
 
 ### FPV
 
+3d printing/design/manufacturing coming up: `https://aetherfpv.com/pages/gravity-drone-stand`
+<!-- 
+https://youtu.be/ON7J_xA55Io -->
+
+{{< youtube "ON7J_xA55Io" >}}
+
+
 Get to know your batteries: how much [they weight](https://youtube.com/shorts/_msLOGVlX-I), the way [their resistance](https://youtube.com/shorts/oAeiAAeTb9Y) will change across their lifespan
 
 Average: ~8.21 A

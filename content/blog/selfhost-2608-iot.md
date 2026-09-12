@@ -492,6 +492,7 @@ Before seating the 18650 cells:
 
 Then, i [charged the 18650](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#faq) with a `xtar VC4SL`
 
+
 After this, I made now the buck to go from 4.2x3=12.6v to 5v
 
 
@@ -665,6 +666,15 @@ Or use the EMQX web dashboard, commonly:
 
 Battery Voltage Monitoring (Voltage Divider): Add a high-value resistive divider (e.g., $100\text{ k}\Omega$ / $27\text{ k}\Omega$) from the 12V rail to an ESP32 ADC pin so your software knows when the battery is too low to run the pump
 
+#### Could this be a product?
+
+{{< callout type="warning" >}}
+Mind 
+{{< /callout >}}
+
+![gemini - watering product sample](/blog_img/electronic/watering-whats-next.jpg)
+
+
 #### Adding Solar
 
 Do not order a custom PCB just yet. 
@@ -788,12 +798,20 @@ Neither—the primary recommended board is a **Synchronous Switching Boost (Step
 | **Cost** | ~$2 to $5 | ~$10 to $20 | ~$25 to $60+ |
 
 **Why It Is Not Traditional PWM**
+
 A standard PWM solar controller requires the solar panel's voltage to be **higher** than the battery pack (e.g., an 18V panel for a 12V battery). Because your panel outputs only **5V** and the 3S pack reaches **12.6V**, a PWM controller cannot work—it cannot step voltage up.
 
 **Why It Is Not Fully "True MPPT"**
-Budget 5V-to-3S boost charger boards use switching regulators with **adaptive input voltage regulation**, not true continuous MPPT tracking. When a cloud passes over and the 5V panel begins to sag, the chip throttles back charging current to stop the panel from completely collapsing to 0V. While technically "pseudo-MPPT" or input-voltage limiting, it delivers roughly 85%–90% efficiency without the high cost and complexity of a full MPPT tracking stage.
 
-That works cleanly with the recommended boost charger. In that setup, the **5V panel slowly charges the 18650 pack**, and the **18650 pack supplies the high current bursts for the pump**.
+Budget 5V-to-3S boost charger boards use switching regulators with **adaptive input voltage regulation**, not true continuous MPPT tracking.
+
+When a cloud passes over and the 5V panel begins to sag, the chip throttles back charging current to stop the panel from completely collapsing to 0V.
+
+While technically "pseudo-MPPT" or input-voltage limiting, it delivers roughly 85%–90% efficiency without the high cost and complexity of a full MPPT tracking stage.
+
+That works cleanly with the recommended boost charger.
+
+In that setup, the **5V panel slowly charges the 18650 pack**, and the **18650 pack supplies the high current bursts for the pump**.
 
 **How the Energy Flow Operates**
 
@@ -804,8 +822,6 @@ That works cleanly with the recommended boost charger. In that setup, the **5V p
 * **Discharge Phase (On-Demand & Fast):**
 * When ESP32 GPIO23 turns ON the MOSFET, the pump draws its full ~1.7A (20W) directly from the 3S battery pack via `BMS P+`, completely bypassing the solar charger.
 
-
-
 **How to Wire It to Your Existing JSON Schematic**
 
 The solar charger simply sits in parallel across the BMS main port:
@@ -814,11 +830,9 @@ The solar charger simply sits in parallel across the BMS main port:
 * Solar Panel (+) $\rightarrow$ Charger `IN+`
 * Solar Panel (-) $\rightarrow$ Charger `IN-`
 
-
 * **Charger Output to Battery Pack:**
 * Charger `OUT+` $\rightarrow$ Connect to **`BMS_P_PLUS`** (before fuse `F1`, so charging the pack does not depend on the pump fuse).
 * Charger `OUT-` $\rightarrow$ Connect to **`GND`** (`BMS_P_MINUS`).
-
 
 **The Sizing Rule: Energy Balance**
 
@@ -829,6 +843,8 @@ Because the pump uses 20W and a 5V panel delivers about 2.5W to 5W:
 * That means 1 hour of decent sunlight easily banks enough charge in the 18650s to run several multi-minute pump cycles.
 
 As long as the pump duty cycle is intermittent (e.g., watering plants for a few minutes a day), the 3S 18650 pack acts as the energy buffer while the 5V panel trickles power back in.
+
+
 
 ## SelfHosted IoT Tools
 
