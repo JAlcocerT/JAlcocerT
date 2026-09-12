@@ -91,7 +91,6 @@ GND (Bluetti -) ───┬───────────────┴─�
 
 To make the MOSFET turn fully ON and shut completely OFF, you need two resistors: a **pull-down resistor** (to keep it off when the switch is open) and a **switch to +12V** (or +5V).
 
-
 ```
           +12V Power Rail
            │
@@ -142,7 +141,9 @@ Here is the exact pin-by-pin layout using your breadboard's grid coordinates (Ro
 
 Step-by-Step Component Grid Placement
 ComponentLeg / WireBreadboard HoleConnection Purpose12V Plug (Bluetti)Red Wire (+12V)+ Rail (any red hole)Powers the positive railBlue Wire (GND)- Rail (any blue hole)Powers the ground railIRLZ44N MOSFET (text facing left)Pin 1 (Gate)Row 20, Hole EControl gate terminalPin 2 (Drain)Row 21, Hole ESwitched negative pump outputPin 3 (Source)Row 22, Hole ECurrent return terminalGround Jumper WireLeg 1Row 22, Hole AConnects Source to ground railLeg 2- Rail (blue hole)Completes MOSFET ground circuit10 k$\Omega$ ResistorLeg 1Row 20, Hole BConnects to GateLeg 2Row 22, Hole BConnects to Source/GNDWater Pump (AW500S)Red Wire (+)+ Rail (red hole)Constant +12V power to pumpBlack Wire (–)Row 21, Hole AControlled by MOSFET Drain1N4007 DiodeCathode (Silver Stripe)+ Rail (red hole)Reverse bias power clampAnode (Plain Black end)Row 21, Hole BConnected to Drain / Pump (–)Manual SwitchTerminal 1+ Rail (red hole)12V trigger sourceTerminal 2Row 20, Hole ADelivers 12V to Gate to turn ON
+
 Final Check Before Powering Up
+
 Row 20 (Gate): Contains only MOSFET Pin 1 (E20), one side of the 10k resistor (B20), and one wire from the Switch (A20).
 
 Row 21 (Drain): Contains only MOSFET Pin 2 (E21), Pump Black wire (A21), and Diode Anode (B21).

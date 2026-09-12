@@ -264,3 +264,14 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
 {{< /cards >}}
+
+#### Gyroflow
+
+Yes—most practical Gyroflow workflows can be automated:
+
+  - Stabilize and batch-render videos.
+  - Apply presets and external gyro logs.
+  - Configure output and synchronization through JSON.
+  - Watch folders automatically.
+  - Export projects, metadata, motion data, and STMaps.
+  - Orchestrate everything from Python using subprocess.

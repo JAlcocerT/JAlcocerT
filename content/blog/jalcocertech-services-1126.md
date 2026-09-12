@@ -55,7 +55,47 @@ One of my favourite converging questions I got this year
 
 ### Choosing my WoW
 
-The beauty of optionality is that i can choose
+The beauty of optionality is that i can choose.
+
+in large services / consulting / delivery orgs, especially around “innovation” 
+  work.                                                                                                    
+                                                                                                           
+  The pattern is common:                                                                                   
+                                                                                                           
+  1. A POC gets attention.                                                                                 
+  2. Product/business wants MVP quickly.                                                                   
+  3. Slides turn into implied scope.                                                                       
+  4. Delivery dates appear before architecture.                                                            
+  5. Architecture/product/delivery ownership is unclear.                                                   
+  6. ICs/domain experts are asked whether things are “possible.”                                           
+  7. “Possible” gets translated into “committed.”                                                          
+  8. If it works, credit diffuses upward/across teams.                                                     
+  9. If it fails, the people closest to the implementation absorb blame.                                   
+                                                                                                           
+  What is less healthy, but still common:                                                                  
+                                                                                                           
+  Promotion evidence tied to outcomes outside your control.                                                
+  Mid-level calibration while expecting senior/lead ambiguity absorption.                                  
+  PM silence when boundaries should be protected.                                                          
+  No clear RACI but high expectation of accountability.                                                    
+  Frameworks/playbooks shared but not adopted because no owner is enforcing them.                          
+                                                                                                           
+  So yes, typical. But “typical” does not mean “good deal for you.”                                        
+                                                                                                           
+  The practical read:                                                                                      
+                                                                                                           
+  This is normal organizational gravity.                                                                   
+  Capable ICs become the glue unless they actively refuse unmanaged ownership.                             
+
+Your advantage is that you can now see the pattern. The move is not to fix the whole environment. The move is to operate cleanly inside it:                                                      
+                                                                                                           
+  deliver assigned scope;                                                                                  
+  document assumptions;                                                                                    
+  ask who owns product/architecture/delivery;                                                              
+  separate data feasibility from MVP feasibility;                                                          
+  avoid taking accountability without authority;                                                           
+  use the job for cashflow and evidence;                                                                   
+  save your real leverage for places where upside is explicit.      
 
 ---
 
