@@ -379,6 +379,8 @@ It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlc
 ./upload-deepsleep.sh /dev/ttyACM0
 ```
 
+then:
+
 ```sh
 cd /home/jalcocert/Desktop/poc/iot-rpi-dht
 
@@ -389,13 +391,11 @@ make flash PORT=/dev/ttyUSB0
 
 make flash-picow
 
-ESP32 firmware files are under:
+#ESP32 firmware files are under:
+#iot-rpi-dht/scripts-microcontrollers/firmware-esp32/
 
-iot-rpi-dht/scripts-microcontrollers/firmware-esp32/
-
-Pico W firmware files are under:
-
-iot-rpi-dht/scripts-microcontrollers/firmware-picow/
+#Pico W firmware files are under:
+#iot-rpi-dht/scripts-microcontrollers/firmware-picow/
 ```
 
 ```sh
@@ -445,7 +445,6 @@ WebSockets are excellent for low-latency bidirectional communication, you can al
 | **HTTP REST** | Medium / Request-Reply | Infrequent commands, basic webhooks | Express, Flask, Home Assistant Webhooks |
 | **ESPHome API** | Native Native-TCP | Zero-code firmware, direct Home Assistant integration | **Home Assistant** + ESPHome dashboard |
 
-
 WebSockets is the most direct and lowest-latency option, but for overall reliability in a homelab environment, **MQTT is generally considered the industry standard.**
 
 While WebSockets works well, it leaves the burden of connection recovery, message delivery guarantees, and state management entirely on your custom code.
@@ -471,7 +470,6 @@ The Verdict for Your Homelab
 * **Use WebSockets if:** You are building a custom, highly responsive dashboard/stream (e.g., high-frequency telemetry, live canvas drawing, low-latency robot control) where occasional lost packets during a Wi-Fi blip don't break the system.
 * **Use MQTT if:** You want a reliable **set-and-forget** home automation setup (toggling relays, controlling lights, periodic sensor reads) where messages must not be dropped and devices need to recover gracefully from reboots.
 * **Use ESPHome (Native API) if:** Your homelab runs **Home Assistant**—it handles firmware, encryption, state syncing, and reconnection out of the box with zero custom C++ needed.
-
 
 That bidirectional workflow—publishing sensor readings while subscribing to command topics—is the core design pattern of **MQTT in IoT**.
 
@@ -542,7 +540,6 @@ You can make of these sensors good companions:
 2. - Soil humidity
 3. MLX - If you want surface, like leaves temp
 4. DB if you want water temp
-
 
 #### More BoM
 

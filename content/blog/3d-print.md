@@ -2,7 +2,7 @@
 title: "[Learning] 3D Printing"
 date: 2026-10-20
 draft: false
-tags: ["Tinkering IRL","Blender"]
+tags: ["Tinkering IRL","Blender","Dron Stand"]
 description: 'Toys or Additive manufacturing at home?'
 url: '3d-printing-101'
 ---
@@ -54,13 +54,12 @@ I recently got to know that pcbway can estimate the cost and send you plastic an
 
 ### My First 3dPrint
 
-1. Thanks to `https://aetherfpv.com/pages/gravity-drone-stand` I got a STL with a fantastic design that brings a 
+Thanks to `https://aetherfpv.com/pages/gravity-drone-stand` I got a STL with a fantastic design that brings a dron stand
 
-and via `https://drukex.pl/en/pricing/#wycena-form` I got a quote
-
+1.  via `https://drukex.pl/en/pricing/#wycena-form` I got my first quote
 
 ```sh
-cd ./
+cd ./dron-standing
 make inspect-print-ready-quote
 make inspect-quote-8
 ```
@@ -89,4 +88,6 @@ make open-original-animation-detail-180
 
 2. I also tried `https://drukarex.pl/`
 
-> Also got to know that there is an agregator `https://craftcloud3d.com/` which can also print in metals like aluminum or titanium (they also have cnc machining and molding - crazy that this can be some kind of manufacturing as a service!)
+>  Materiał PETG, warstwa 0,20 mm, 4 ścianki, wypełnienie 30%
+
+3. Also got to know that there is an agregator `https://craftcloud3d.com/` which can also print in metals like aluminum or titanium (they also have cnc machining and molding - crazy that this can be some kind of manufacturing as a service!)

@@ -1,8 +1,8 @@
 ---
-title: "[IoT] Sensors x PCB"
-date: 2026-09-11
+title: "[IoT] Sensors x PCB x Gerber"
+date: 2026-09-13
 draft: false
-tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV"]
+tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV","KiCad x Power Stage"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
@@ -13,8 +13,8 @@ Isnt it time to build something real?
 
 **Intro**
 
-* WHY Im writting this post: *bc I need a recap and all the BoM that Id wish to have found years back to get started* 
-* WHAT [Ive learnt](#conclusions) with it: *Ive ended*
+* WHY Im writting this post: *bc I need a recap and all [the BoM](#bom) that Id wish to have found years back to get started* 
+* WHAT [Ive learnt](#conclusions) with it: *Ive ended up sending my first*
 
 
 ## Home Assistant
@@ -116,6 +116,8 @@ These were really easy to setup and if you are getting started they are perfect.
 
 The MLX will get you ambient temp and IR temp of an object
 
+### DS18B20
+
 ### a
 
 The movement sensor
@@ -174,6 +176,126 @@ The Ryder 998 can be used in a variety of applications, including IoT, emergency
 The chip's low power consumption and versatility make it an attractive option for many industries. -->
 
 
+### BoM
+
+you can get cables with 3a/60w support
+
+ToolBest Household RoleYour Clamp MeterHigh-Current AC Testing Hands-Free. Clamping over a live wire at your breaker panel to see how many Amps an induction hob, oven, heat pump, or EV charger is pulling without breaking the circuit.UT61E+ MultimeterPrecision Probing & Fault Finding. Measuring actual wall voltage, checking micro-currents, tracing broken wires, inspecting capacitors, and bench work (FPV & IoT).
+
+For electronics you will be working a lot with DC.
+
+Beyond the basic inventory with R,C, MOSFETs and Diodes
+
+<!-- 
+https://youtube.com/shorts/oxZVchAZV0U -->
+
+{{< youtube "oxZVchAZV0U" >}}
+
+  Good easy replacements for the 20 W / 3S pack: to work instead of the 1N4007 (1A rated)                          
+                                                                                                           
+  - SS34 — 3 A, 40 V Schottky; a very good fit                                                             
+  - 1N5822 — 3 A, 40 V Schottky; also good                                                                 
+  - 1N5408 — 3 A, 1000 V conventional diode; workable, though Schottky is preferable  
+
+You will probably need:
+
+1. Get some buck converts to convert DC up to DC down: LM2596 or MP1584EN will do for ~10$/10units
+
+<!-- https://youtube.com/shorts/k25uMBmTulA -->
+
+{{< youtube "k25uMBmTulA" >}}
+
+{{% details title="LM2596 or MP1584EN " closed="true" %}}
+
+| Feature | LM2596 (Previous Blue Module) | MP1584EN (Current Green Module) |
+| --- | --- | --- |
+| **Size** | Bulky | Very compact |
+| **Efficiency & Tech** | Older (150 kHz switching) | Modern & more efficient (1.5 MHz) |
+| **Adjustment Dial** | Multi-turn pot (easy to dial in precisely) | Single-turn pot (extremely twitchy) |
+| **Max Input** | ~40V | ~28V |
+
+For the LM256 the brass slotted screw on top of the blue trimmer.
+
+Use a precision flathead screwdriver to turn it while your multimeter probes are on **OUT+** and **OUT-**:
+
+* Turn **counter-clockwise** to decrease the output voltage.
+* Turn **clockwise** to increase it.
+
+Because this is a multi-turn trimmer (typically 25 turns), you often have to rotate it **10 to 15 full turns counter-clockwise** before the output voltage starts dropping from the input level.
+
+Once it enters the active range, small turns will make fine adjustments.
+
+{{% /details %}} 
+
+2. For powering: you can make an [overkill with a bluetti](https://youtube.com/shorts/1nK0-MDh7LY) and a [DC connector](https://youtube.com/shorts/HwavCMkah0o), or get [some 18650 batteries](https://youtube.com/shorts/_msLOGVlX-I) 
+
+with a TP4056 for a 1s setup
+
+{{< youtube "WAKNiSjsrOw" >}}
+
+See how the data has been flowing for a while:
+
+```sh
+#cd ./poc/iot-rpi-dht-insulation
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "
+SELECT 
+  date(received_at) AS day,
+  ROUND(AVG(CASE WHEN device = 'esp32' AND metric = 'humidity' THEN value END), 2) AS esp_humidity,
+  ROUND(AVG(CASE WHEN device = 'esp32' AND metric = 'temperature' THEN value END), 2) AS esp_temp,
+  ROUND(AVG(CASE WHEN device = 'pico' AND metric = 'humidity' THEN value END), 2) AS pico_humidity,
+  ROUND(AVG(CASE WHEN device = 'pico' AND metric = 'temperature' THEN value END), 2) AS pico_temp,
+  COUNT(*) AS total_readings
+FROM readings 
+WHERE device IN ('esp32', 'pico') 
+  AND metric IN ('humidity', 'temperature')
+GROUP BY day 
+ORDER BY day;"
+```
+
+<!-- https://youtube.com/shorts/WAKNiSjsrOw -->
+
+or with a **BMS for the 3s** to avoid them to be used below their operating voltage
+
+{{< youtube "WAKNiSjsrOw" >}}
+
+
+{{% details title="Tp4056 vs BMS vs Shield " closed="true" %}}
+
+| Feature / Board | **18650 Battery Shield V3** (Your black board) | **Standard TP4056 Module** (With protection) | **3S–5S 100A BMS** (Your large green board) |
+| --- | --- | --- | --- |
+| **Cell Configuration** | 1S (1 cell, 3.7V nominal) | 1S (1 cell, 3.7V nominal) | 3S, 4S, or 5S (configurable multi-cell) |
+| **Output Voltages** | Regulated **5V** (USB & pins) and **3V** pins | Direct battery voltage (~3.0V – 4.2V) | Raw pack voltage (~9.0V – 12.6V in 3S) |
+| **Max Continuous Current** | ~1A – 2A (5V boosted rail) | ~1A – 3A (limited by protection chip) | 60A – 100A |
+| **Built-in Charging** | Yes (Micro-USB / 5V input, ~0.5A charge) | Yes (Micro/Type-C, adjustable up to 1A) | No (Requires external CC/CV 12.6V charger) |
+| **Primary Use Case** | Low-power 5V/3.3V boards (ESP32, Arduino) | 1S DIY power banks, single-cell sensors | Power tools, heavy inverters, 12V motors |
+| **Pros** | • All-in-one (holder, charger, boost, protection)<br>
+
+<br>• Direct plug-and-play 5V output for ESP32<br>
+
+<br>• Works directly with a 5V solar panel | • Tiny footprint and very cheap<br>
+
+<br>• Extremely low idle parasitic draw<br>
+
+<br>• Easy to integrate into custom enclosures | • Handles massive current & high motor startup spikes<br>
+
+<br>• Active cell balance monitoring across series cells<br>
+
+<br>• Heavy copper pads for thick wiring |
+| **Cons** | • Zero reverse polarity protection (burns instantly)<br>
+
+<br>• Boost circuit wastes ~10–15% efficiency<br>
+
+<br>• Cannot drive 12V loads (like your pump) | • No 5V boost (needs external step-up for 5V)<br>
+
+<br>• Requires separate battery holder / soldering<br>
+
+<br>• Cannot handle 12V loads | • No built-in charger circuit<br>
+
+<br>• High idle standby drain for small projects<br>
+
+<br>• Physical overkill and tricky 3S pin-jumping |
+
+{{% /details %}} 
 
 ### Sensors
 
@@ -190,7 +312,6 @@ It's also known as a pyrometer or non-contact thermometer.
 This sensor is produced by Melexis and can measure the temperature of an object without making physical contact with it, which makes it useful in various applications.
 
 {{% details title="More about the MLX90614 " closed="true" %}}
-
 
 Working Principle: The sensor measures the infrared radiation emitted by an object to determine its temperature.
 
@@ -625,3 +746,16 @@ Adding [nginx](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/)
 
 
 {{% /details %}} 
+
+### KiCad x Power Stage PCB Design
+
+Coming from this [high level overview of the watering design](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#esp32-x-water-pump)
+
+Its about time to remove some of [the cables at my table](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/components.json)
+
+I got [a PRD](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/prd.md) and some instructions / [concerns](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/concerns2.md) of what i need to get a cleaner power stage prototype for the watering setup:
+
+```sh
+#choco install kicad
+winget install --id KiCad.KiCad --exact --source winget  
+```

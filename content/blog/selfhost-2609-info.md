@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted Information flow"
-date: 2026-09-12T07:20:21+01:00
+date: 2026-09-18T07:20:21+01:00
 draft: false
 tags: ["FilesMD","Forgejo","Zetlekasten","No Hello x Async","SoloPreneur CheckList"]
 description: 'From The algorithm to a daily information frameworks.'

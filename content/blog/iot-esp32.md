@@ -25,9 +25,7 @@ It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlc
 ./upload-deepsleep.sh /dev/ttyACM0
 ```
 
-https://github.com/gsampallo/mqtt_valvula
-
-https://fossengineer.com/selfhosting-velxio-arduino/
+[Discovering velxio](https://fossengineer.com/selfhosting-velxio-arduino/) was kind of interesting
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
@@ -46,13 +44,48 @@ sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite
 sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE device = 'pico' AND metric = 'humidity' GROUP BY day ORDER BY day;"
 
 sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT COUNT(*), MAX(received_at) FROM readings;"
+
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "
+SELECT 
+  date(received_at) AS day,
+  ROUND(AVG(CASE WHEN device = 'esp32' AND metric = 'humidity' THEN value END), 2) AS esp_humidity,
+  ROUND(AVG(CASE WHEN device = 'esp32' AND metric = 'temperature' THEN value END), 2) AS esp_temp,
+  ROUND(AVG(CASE WHEN device = 'pico' AND metric = 'humidity' THEN value END), 2) AS pico_humidity,
+  ROUND(AVG(CASE WHEN device = 'pico' AND metric = 'temperature' THEN value END), 2) AS pico_temp,
+  COUNT(*) AS total_readings
+FROM readings 
+WHERE device IN ('esp32', 'pico') 
+  AND metric IN ('humidity', 'temperature')
+GROUP BY day 
+ORDER BY day;"
+
+
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "
+WITH RankedReadings AS (
+  SELECT 
+    device,
+    metric,
+    value,
+    received_at,
+    ROW_NUMBER() OVER (
+      PARTITION BY device, metric 
+      ORDER BY received_at DESC
+    ) AS rn
+  FROM readings
+  WHERE device IN ('esp32', 'pico')
+    AND metric IN ('humidity', 'temperature')
+)
+SELECT 
+  device,
+  metric,
+  value AS latest_value,
+  received_at AS last_seen
+FROM RankedReadings
+WHERE rn = 1
+ORDER BY device, metric;"
 ```
 
-
-
-People are transforming everything to a smart device with a simple ESP
-
-https://www.youtube.com/watch?v=dpU7yZE1PkE
+People are transforming everything [to a smart device with a simple ESP](https://www.youtube.com/watch?v=dpU7yZE1PkE)
 
 ![alt text](/blog_img/iot/Sensor-db.png)
 
@@ -809,6 +842,8 @@ MPU-6050: This is a popular and versatile accelerometer that is also compatible 
 
 
 ### DSB18B20
+
+https://jalcocert.github.io/RPi/posts/rpi-iot-ds18b20/
 
 -55 to 125C
 

@@ -112,7 +112,6 @@ But the setup is also working for the PicoW.
 
 Make sure that you see data flowing:
 
-
 ```sh
 #mosquitto_sub -h 192.168.1.2 -t "pico/#" -v
 #docker ps -a --filter "name=timescale"
@@ -126,6 +125,54 @@ tmux ls
 ```
 
 > See `http://192.168.1.2:8077`
+
+You can also see whats the latest at the db:
+
+```sh
+#cd ./poc/iot-rpi-dht
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT COUNT(*), MAX(received_at) FROM readings;"
+
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT date(received_at) AS day, COUNT(*) AS rows, AVG(value) AS avg_value FROM readings WHERE device = 'pico' AND metric = 'humidity' GROUP BY day ORDER BY day;"
+
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "
+SELECT 
+  date(received_at) AS day,
+  ROUND(AVG(CASE WHEN device = 'esp32' AND metric = 'humidity' THEN value END), 2) AS esp_humidity,
+  ROUND(AVG(CASE WHEN device = 'esp32' AND metric = 'temperature' THEN value END), 2) AS esp_temp,
+  ROUND(AVG(CASE WHEN device = 'pico' AND metric = 'humidity' THEN value END), 2) AS pico_humidity,
+  ROUND(AVG(CASE WHEN device = 'pico' AND metric = 'temperature' THEN value END), 2) AS pico_temp,
+  COUNT(*) AS total_readings
+FROM readings 
+WHERE device IN ('esp32', 'pico') 
+  AND metric IN ('humidity', 'temperature')
+GROUP BY day 
+ORDER BY day;"
+
+
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "
+WITH RankedReadings AS (
+  SELECT 
+    device,
+    metric,
+    value,
+    received_at,
+    ROW_NUMBER() OVER (
+      PARTITION BY device, metric 
+      ORDER BY received_at DESC
+    ) AS rn
+  FROM readings
+  WHERE device IN ('esp32', 'pico')
+    AND metric IN ('humidity', 'temperature')
+)
+SELECT 
+  device,
+  metric,
+  value AS latest_value,
+  received_at AS last_seen
+FROM RankedReadings
+WHERE rn = 1
+ORDER BY device, metric;"
+```
 
 ### ESP32 x MQTT x MLX90614
 
@@ -279,8 +326,11 @@ https://youtube.com/shorts/nqNyRvu7_KM
 
 {{< youtube "U-u5m470h2U" >}}
 
+Yep, it pushes 1L in ~12 seconds with those 20w consumption!
+
 {{< youtube "nqNyRvu7_KM" >}}
 
+See it powered via the bluetti:
 
 {{< youtube "kDPNhy8Ep7o" >}}
 
@@ -304,15 +354,11 @@ The mosfet was not heating and everyone was happy.
 
 But that was only pulling ~0.2A, now, the pump will demand ~1.5A
 
-So...time to test:
-
-**Yes, exactly.**
-
-From the ESP32’s perspective, there are only **three wires** in total connected to its pins:
+So...time to test: From the ESP32’s perspective, there are only **three wires** in total connected to its pins:
 
 * **`VIN` (5V):** Power in from the buck converter `OUT+`.
 * **`GND`:** Return path to the buck converter `OUT-` (which shares ground with battery negative and the MOSFET source).
-* **`GPIO23`:** That single output signal wire going to the 220 $\Omega$ gate resistor.
+* **`GPIO23`:** That single output signal wire going to the 220 $\Omega$ gate resistor going to the MOSFET to control it.
 
 Everything else (the 10k pulldown resistor, the MOSFET, the pump, the diode, and the 12V rails) sits on the power board/breadboard side.
 
@@ -674,10 +720,11 @@ Mind
 
 ![gemini - watering product sample](/blog_img/electronic/watering-whats-next.jpg)
 
+I mean...sth more...
+
+![alt text](/blog_img/electronic/esp32-pump-poc.jpg)
 
 #### Adding Solar
-
-Do not order a custom PCB just yet. 
 
 A successful manual breadboard test proves only the raw power path; designing a board now almost guarantees you will have to pay for a redesign later.
 
@@ -704,7 +751,6 @@ The recommended progression moves from firmware validation to peripheral expansi
 
 * Once the complete system—solar charging, battery sensing, Wi-Fi/MQTT, sleep cycles, and pump switching—has run reliably for several days on the bench, capture the schematic in KiCad or EasyEDA.
 * Route wide power traces for the 12V and motor loops, place mounting holes for your enclosure, and send the gerber files to a fabricator.
-
 
 The main difference comes down to how each board manages solar power conversion, efficiency, and battery configuration:
 
@@ -902,8 +948,13 @@ docker ps -a | grep -i home-assistant
 
 But lately, I just made my own **DIY IoT platform** around MQTT and zigbee:
 
+```sh
+cd ./poc/iot-dashboard
+```
 
+<!-- https://youtube.com/shorts/WAa7nOc5z9g -->
 
+{{< youtube "WAa7nOc5z9g" >}}
 
 ---
 

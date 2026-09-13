@@ -9,3 +9,7 @@ math: true
 ---
 
 **Tl;DR**
+
+https://youtube.com/shorts/ZBMt_urbh-o
+
+https://youtube.com/shorts/hlBfrZnJ07g

@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-09-10T07:20:21+01:00
+date: 2026-09-13T07:20:21+01:00
 draft: false
 tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads","MailPit"]
 description: 'Beyond software, AI Fluency and proper distribution.'
