@@ -609,8 +609,9 @@ pulse:3000
 
 When the ESP32 receives an accepted command such as: `pulse:3000`
 
-GPIO23 (D23) goes HIGH at approximately 3.3 V for three seconds. Through the 220 Ω resistor, this
-drives the MOSFET gate and turns the MOSFET on/conducting, allowing pump current to flow.
+GPIO23 (D23) goes HIGH at approximately 3.3 V for three seconds. 
+
+Through the 220 Ω resistor, this drives the MOSFET gate and turns the MOSFET on/conducting, allowing pump current to flow.
 
 After three seconds, GPIO23 returns LOW, the 10 kΩ pulldown discharges the gate, and the MOSFET turns
 off.
@@ -677,7 +678,9 @@ esp32/pump/availability online
 esp32/pump/state {"pump":"off","max_runtime_ms":5000}
 ```
 
-Leave that terminal running for live updates. From another server terminal, safely request status:
+Leave that terminal running for live updates. 
+
+From another server terminal, safely request status:
 
 ```sh
 mosquitto_pub -h localhost -t esp32/pump/cmd -m status
@@ -693,20 +696,26 @@ mosquitto_sub -h localhost -p 1883 -t 'esp32/pump/#' -v
  
 Or use the EMQX web dashboard, commonly:
 
-  http://192.168.1.2:18083
+http://192.168.1.2:18083
 
-  In EMQX, use the WebSocket MQTT client or inspect connected clients. Look for:
+In EMQX, use the WebSocket MQTT client or inspect connected clients. Look for:
 
-  Client ID: esp32-pump-ef78
-  Topics:   esp32/pump/#
+Client ID: esp32-pump-ef78
+Topics:   esp32/pump/#
 
-  You should see:
+You should see:
 
-  esp32/pump/availability online
-  esp32/pump/state {"pump":"off","max_runtime_ms":5000}
+esp32/pump/availability online
+esp32/pump/state {"pump":"off","max_runtime_ms":5000}
 
-  EMQX is the broker; mosquitto_sub and mosquitto_pub are simply compatible command-line clients for
-  observing and sending MQTT messages.
+EMQX is the broker; mosquitto_sub and mosquitto_pub are simply compatible command-line clients for
+observing and sending MQTT messages.
+
+
+{{< youtube "1tAaPIVKSoM" >}}
+
+{{< youtube "1tAaPIVKSoM" >}}
+
 
 #### Voltaje Divider
 

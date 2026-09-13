@@ -1,8 +1,8 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-09-13T07:20:21+01:00
+date: 2026-09-12T07:20:21+01:00
 draft: false
-tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads","MailPit"]
+tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads x MailPit"]
 description: 'Beyond software, AI Fluency and proper distribution.'
 url: 'jalcocertech-services-update'
 ---
@@ -13,7 +13,7 @@ url: 'jalcocertech-services-update'
 **Intro**
 
 * WHY Im writting this post: *Bc I was supposed to launch [a mbsd fwk here](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics), but I just [released an ebook](https://ebooks.jalcocertech.com/books/mechanism-analytics/) so far*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* What [Ive learnt](#conclusions) with it: *Ive ended up following [the roadmap for my mbsd oss fwk](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#multi-body-systems-dynamics-dot-com) and with a good [foundation for outbound marketing](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#attract-and-convert)*
 
 As always i go to termix and see whats going on:
 
@@ -1059,6 +1059,8 @@ Also, the daily notes have stopped to flow here and the `cv-laitex` similarly, j
 ### Case Studies
 
 
+#### Electronic Design
+
 #### Clarity of Execution
 
 You might not know yet, but you need **proper governance**.
@@ -1066,6 +1068,15 @@ You might not know yet, but you need **proper governance**.
 You cant be an AI first company before you are a data ready team.
 
 To be a data ready team, you need proper RACI model across product, architecture and delivery.
+
+And to even get started: you need to have some kind of logic
+
+Example: a date is not a product definition
+<!-- 
+https://youtu.be/K-eXcT1XgdE -->
+
+{{< youtube "K-eXcT1XgdE" >}}
+
 
 ---
 
@@ -1152,5 +1163,5 @@ git clone git@gitlab.com:fossengineer1/fossengineerpapermod.git
 
 
 ```md
-Add Zoneless as an optional USDC payout method to this marketplace while preserving checkout and every existing payout method; start by reading https://zoneless.com/docs/agent-marketplace-quickstart.md and follow it.
+Added Zoneless as an optional USDC payout method to this marketplace while preserving checkout and every existing payout method; start by reading https://zoneless.com/docs/agent-marketplace-quickstart.md and follow it.
 ```

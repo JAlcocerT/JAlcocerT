@@ -9,7 +9,7 @@ url: 'buying-house-data-analytics'
 
 **TL;DR**
 
-
+After [asking RE questions](https://jalcocert.github.io/JAlcocerT/python-real-estate-mortage-calculator/#getting-better-at-re), you might buy one
 
 **Intro**
 
@@ -24,7 +24,6 @@ Make sure you understand also monetary aggregates. While taking a credit, you wi
 {{< /callout >}}
 
 +++ How to estimate [painting costs](#estimating-painting-costs-with-ai)?
-
 
 ## Property Costs Analytics
 
@@ -74,10 +73,9 @@ And in the meantime I thought on how to estimate the **painting cost, given a ho
 
 You can find sample house plans at:
 
-* https://www.funda.nl/detail/koop/vijfhuizen/huis-jack-sharp-park-29/43919214/
-* https://www.funda.nl/detail/koop/heerhugowaard/huis-steigerdijk-41/43938874/
-* https://www.funda.nl/detail/koop/vijfhuizen/huis-jack-sharp-park-13/43843421/
-
+* `https://www.funda.nl/detail/koop/vijfhuizen/huis-jack-sharp-park-29/43919214/`
+* `https://www.funda.nl/detail/koop/heerhugowaard/huis-steigerdijk-41/43938874/`
+* `https://www.funda.nl/detail/koop/vijfhuizen/huis-jack-sharp-park-13/43843421/`
 
 {{< callout type="warning" >}}
 Whatever you will do...
@@ -133,7 +131,11 @@ A new operation would be:
 * **Volatile and Risky:** Even if a bank were to offer such a product, the operation would carry an immense exchange rate risk for the borrower. The value of your debt could fluctuate wildly, making it impossible to predict your future payments or the total cost of the loan. This is the primary reason why tens of thousands of Poles sued their banks.
 * **Costly and Complex:** The legal and financial mess of the past makes it clear that such a loan is not a simple transaction. It would be subject to extreme scrutiny, and you would likely need to engage in complex legal proceedings if currency rates were to move against you.
 
-In short, while technically a "debt in Swiss franc" could be arranged, it would not be a standard, safe, or even available product from a Polish bank today. The market and legal system have moved away from this type of transaction due to the immense risks it created for consumers. The only existing CHF mortgages are those taken out years ago, and even they are being converted to PLN through court-mandated settlements.
+In short, while technically a "debt in Swiss franc" could be arranged, it would not be a standard, safe, or even available product from a Polish bank today. 
+
+The market and legal system have moved away from this type of transaction due to the immense risks it created for consumers. 
+
+The only existing CHF mortgages are those taken out years ago, and even they are being converted to PLN through court-mandated settlements.
 
 {{% /details %}}
 
@@ -148,11 +150,19 @@ This created a standardized way to price various financial products, from mortga
 
 1. Market-Based and Standardized
 
-LIBOR was seen as the most accurate reflection of the prevailing cost of money for banks. By using it as a benchmark, a bank could offer a loan with an interest rate of, for example, "LIBOR + 3%." This meant the borrower's interest rate would automatically adjust in sync with the global financial market, making the loan transparent and fair for both the lender and the borrower. It was a standardized and efficient way to price loans, as everyone knew what the "base" rate was.
+LIBOR was seen as the most accurate reflection of the prevailing cost of money for banks. By using it as a benchmark, a bank could offer a loan with an interest rate of, for example, "LIBOR + 3%."
+
+This meant the borrower's interest rate would automatically adjust in sync with the global financial market, making the loan transparent and fair for both the lender and the borrower.
+
+It was a standardized and efficient way to price loans, as everyone knew what the "base" rate was.
 
 2. Risk Management
 
-Tying a loan to a variable benchmark like LIBOR was an essential tool for banks to manage **interest rate risk**. When a bank issued a loan with a fixed interest rate, it was exposed to the risk of its own borrowing costs rising, which would cut into its profit margin. By linking a loan to a floating rate, the bank's income from the loan would rise or fall in line with its own funding costs, thereby protecting its profit.
+Tying a loan to a variable benchmark like LIBOR was an essential tool for banks to manage **interest rate risk**.
+
+When a bank issued a loan with a fixed interest rate, it was exposed to the risk of its own borrowing costs rising, which would cut into its profit margin.
+
+By linking a loan to a floating rate, the bank's income from the loan would rise or fall in line with its own funding costs, thereby protecting its profit.
 
 ***
 

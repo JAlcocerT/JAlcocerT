@@ -944,7 +944,7 @@ if monthly_payment is not None:
 
 {{< details title="Questions for R.E | Iterate and make them better! 📌" closed="true" >}}
 
-Sí, las preguntas que has enumerado son muy buenas y cubren una amplia gama de aspectos importantes a considerar al visitar un piso para comprar, especialmente si tu objetivo es la inversión.
+Aspectos importantes a considerar al visitar un piso para comprar, especialmente si tu objetivo es la inversión.
 
 Aquí te doy algunas observaciones y sugerencias adicionales:
 

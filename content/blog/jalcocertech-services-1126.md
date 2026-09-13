@@ -13,9 +13,14 @@ Still thinking on headcounts to mess around with a project instead of [getting ~
 
 **Intro**
 
-* WHY Im writting this post: 
+* WHY Im writting this post:
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+A friend told me once that I will do sth with energy at some point
+
+Another, the coding is my thing
+
+It seems that both were right.
 
 ## Updates
 

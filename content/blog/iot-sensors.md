@@ -186,7 +186,10 @@ For electronics you will be working a lot with DC.
 
 Beyond the basic inventory with R,C, MOSFETs, Diodes, bread and perf/protoboards...
 
-https://youtube.com/shorts/9hrpytHT5fs
+<!-- https://youtube.com/shorts/9hrpytHT5fs -->
+
+{{< youtube "9hrpytHT5fs" >}}
+
 
 <!-- https://youtube.com/shorts/M9cDkwMA-bo -->
 
@@ -765,6 +768,16 @@ Yep, the one that [could become a product](https://jalcocert.github.io/JAlcocerT
 
 Its about time to remove some of [the cables at my table](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/components.json)
 
+<!-- 
+https://youtube.com/shorts/1tAaPIVKSoM -->
+
+{{< youtube "1tAaPIVKSoM" >}}
+
+{{< youtube "1tAaPIVKSoM" >}}
+
+{{< youtube "ijX3CeVUTPh9yz7Z" >}}
+
+
 I got [a PRD](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/prd.md) and some instructions / [concerns](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/concerns2.md) of what i need to get a cleaner power stage prototype for the watering setup:
 
 ```sh
@@ -776,11 +789,29 @@ Placed here [all the kicad learnings](https://github.com/JAlcocerT/poc/blob/main
 
 #### My First PCB
 
-Got to know about these for [my first order](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/order-1.md)
+For [my first order](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/order-1.md)
+
+Got to know about these
 
 * Satland `https://www.prototypy.com/t/61,Home`
 * Tecno service `https://tspcb.pl/en/order-inquiry/`
 * Aisler, JLCPCB / PCBWay...
+
+
+When ordering bare boards (no assembly required), compress these files into a single .zip:
+
+*.GTL / *.GBL (Top and Bottom Copper)
+
+*.GTS / *.GBS (Top and Bottom Solder Mask)
+
+*.GTO / *.GBO (Top and Bottom Silkscreen)
+
+*.GM1 or *.GKO / *-Edge_Cuts.gbr (Board Outline)
+
+*.DRL / *-PTH.drl, *-NPTH.drl (Excellon Drill files)
+
+Standard specs to select in their order forms: 2 Layers, 1.6 mm thickness, FR4, 1 oz (35 µm) copper, HASL lead-free (or ENIG gold), and green mask with white silkscreen.
+
 
 
 ## IoT - LangChain x PG
