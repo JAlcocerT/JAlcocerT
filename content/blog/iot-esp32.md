@@ -1005,22 +1005,4 @@ def tick_timer(timer):
     print("T2 = %f", t2)
     alph.set_digit(int(t2*100),2);
 timer1.init(freq=2,mode=Timer.PERIODIC,callback=tick_timer)
-
 ```
-
-# IoT - LangChain x PG
-
-This is coming up as some shape of tech talk this year.
-
-And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
-
-
-### What it is esp home
-
-https://github.com/espressif/esptool
-
-## What it is tasmota
-
-https://github.com/arendst/Tasmota
-
-https://github.com/tasmota/tasmotizer

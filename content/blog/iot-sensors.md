@@ -184,7 +184,14 @@ ToolBest Household RoleYour Clamp MeterHigh-Current AC Testing Hands-Free. Clamp
 
 For electronics you will be working a lot with DC.
 
-Beyond the basic inventory with R,C, MOSFETs and Diodes
+Beyond the basic inventory with R,C, MOSFETs, Diodes, bread and perf/protoboards...
+
+https://youtube.com/shorts/9hrpytHT5fs
+
+<!-- https://youtube.com/shorts/M9cDkwMA-bo -->
+
+{{< youtube "M9cDkwMA-bo" >}}
+
 
 <!-- 
 https://youtube.com/shorts/oxZVchAZV0U -->
@@ -232,6 +239,8 @@ Once it enters the active range, small turns will make fine adjustments.
 with a TP4056 for a 1s setup
 
 {{< youtube "WAKNiSjsrOw" >}}
+<!-- https://youtube.com/shorts/WAKNiSjsrOw -->
+
 
 See how the data has been flowing for a while:
 
@@ -252,11 +261,12 @@ GROUP BY day
 ORDER BY day;"
 ```
 
-<!-- https://youtube.com/shorts/WAKNiSjsrOw -->
 
 or with a **BMS for the 3s** to avoid them to be used below their operating voltage
 
-{{< youtube "WAKNiSjsrOw" >}}
+{{< youtube "W4AZVNudnyQ" >}}
+
+<!-- https://youtube.com/shorts/W4AZVNudnyQ -->
 
 
 {{% details title="Tp4056 vs BMS vs Shield " closed="true" %}}
@@ -749,7 +759,9 @@ Adding [nginx](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/)
 
 ### KiCad x Power Stage PCB Design
 
-Coming from this [high level overview of the watering design](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#esp32-x-water-pump)
+Coming from this [high level overview of the watering design](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#esp32-x-water-pump).
+
+Yep, the one that [could become a product](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#could-this-be-a-product)
 
 Its about time to remove some of [the cables at my table](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/components.json)
 
@@ -759,3 +771,31 @@ I got [a PRD](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp
 #choco install kicad
 winget install --id KiCad.KiCad --exact --source winget  
 ```
+
+Placed here [all the kicad learnings](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/z-learnings.md) to generate the gerber files for production
+
+#### My First PCB
+
+Got to know about these for [my first order](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/order-1.md)
+
+* Satland `https://www.prototypy.com/t/61,Home`
+* Tecno service `https://tspcb.pl/en/order-inquiry/`
+* Aisler, JLCPCB / PCBWay...
+
+
+## IoT - LangChain x PG
+
+This is coming up as some shape of tech talk this year.
+
+And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
+
+
+### What it is esp home
+
+https://github.com/espressif/esptool
+
+## What it is tasmota
+
+https://github.com/arendst/Tasmota
+
+https://github.com/tasmota/tasmotizer
