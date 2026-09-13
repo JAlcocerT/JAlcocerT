@@ -260,7 +260,7 @@ New ladder:
 mbsd-core branch stack:
 
 v0.4.0-dev  1c0c45d  export schema dev
-v0.5.0-dev  dc194b3  spatial vocabulary dev
+v0.5.0-dev  dc194b3  spatial vocabulary dev (3D)
 v0.6.0-dev  ebd2008  diagnostics dev
 v0.7.0-dev  42f559b  spatial kinematics dev
 v0.8.0-dev  14eb993  spatial dynamics dev
@@ -366,23 +366,25 @@ Local-only means:
 git switch -c v0.4.0-dev
 ```
 
-  No v0.4.0 tag was created, and neither dev branch has an upstream. GitHub will not see them unless
-  you explicitly push them.
+No v0.4.0 tag was created, and neither dev branch has an upstream. 
 
-  For tomorrow’s v0.3.0 release, remember to switch back to main before pushing:
+GitHub will not see them unless you explicitly push them.
 
-  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
-  git switch main
-  git push origin main
-  git push origin v0.3.0
+For the `v0.3.0` release, remember to switch back to main before pushing:
 
-  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
-  git switch main
-  git push origin main
-  git push origin v0.3.0
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+git switch main
+git push origin main
+git push origin v0.3.0
+
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+git switch main
+git push origin main
+git push origin v0.3.0
+```
 
 >  See `/home/jalcocert/Desktop/mbsd-framework/mbsd-examples/docs/release-plan.md`
-
 
 ```sh
 gh release create v0.3.0 \
@@ -391,8 +393,7 @@ gh release create v0.3.0 \
   --notes-file CHANGELOG.md
 ```
 
-For v0.4.0, I’d define this as: MBSD can write mechanism and result data into clean external formats
-that other tools can consume.
+For v0.4.0, I’d define this as: MBSD can write mechanism and result data into clean external formats that other tools can consume.
 
 Not “MBSD becomes a CAD tool.”
 
@@ -548,8 +549,7 @@ scp -P 2022 dhh@127.0.0.1:/home/dhh/Downloads/wiki-technitium.md /home/jalcocert
 
 ### PWA Power
 
-From   /home/jalcocert/Desktop/mbsd-framework/mbsd-core-web-later
-
+From  `/home/jalcocert/Desktop/mbsd-framework/mbsd-core-web-later`
 
 ```sh
 cd /home/jalcocert/Desktop/mbsd-framework/app-mbsd

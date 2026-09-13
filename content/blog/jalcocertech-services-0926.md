@@ -3,7 +3,7 @@ title: "[JAlcocerTech] Services Recap x Outbound System"
 date: 2026-09-12T07:20:21+01:00
 draft: false
 tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads x MailPit"]
-description: 'Beyond software, AI Fluency and proper distribution.'
+description: 'Beyond software, mbsd 0-4-0, 0-4-AI Fluency and proper distribution.'
 url: 'jalcocertech-services-update'
 ---
 
@@ -13,7 +13,7 @@ url: 'jalcocertech-services-update'
 **Intro**
 
 * WHY Im writting this post: *Bc I was supposed to launch [a mbsd fwk here](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics), but I just [released an ebook](https://ebooks.jalcocertech.com/books/mechanism-analytics/) so far*
-* What [Ive learnt](#conclusions) with it: *Ive ended up following [the roadmap for my mbsd oss fwk](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#multi-body-systems-dynamics-dot-com) and with a good [foundation for outbound marketing](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#attract-and-convert)*
+* What [Ive learnt](#conclusions) with it: *Ive ended up following the roadmap for [my mbsd oss fwk](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#multi-body-systems-dynamics-dot-com) and with a good [foundation for outbound marketing](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#attract-and-convert)*
 
 As always i go to termix and see whats going on:
 
@@ -801,9 +801,88 @@ git push origin v0.2.0
 
 Create the GitHub releases after pushing tags, core first, examples second.
 
+The **v0.4.0**: make 2D results portable
+
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+git switch main
+#git merge --ff-only v0.4.0-dev
+#  git tag -a v0.4.0 -m "MBSD Core v0.4.0"
+git push origin main
+git push origin v0.4.0 #post CI pass
+
+# gh release create v0.4.0 \
+#   --repo JAlcocerT/mbsd-core \
+#   --title "MBSD Core v0.4.0 - Week 4 Export" \
+#   --notes-file CHANGELOG.md
+
+awk '
+  /^## v0\.4\.0 / { found=1; next }
+  /^## / && found { exit }
+  found { print }
+' CHANGELOG.md | gh release create v0.4.0 \
+  --repo JAlcocerT/mbsd-core \
+  --verify-tag \
+  --title "MBSD Core v0.4.0 - Week 4 Export" \
+  --notes-file - \
+  --latest
+```
+
+Then release examples:
+
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+git switch main
+git push origin main
+git push origin v0.4.0
+```
+
+```sh
+git switch main
+git merge --ff-only v0.4.0-dev
+git tag -a v0.4.0 -m "MBSD Examples v0.4.0"
+git push origin main
+```
+
+Wait for examples CI to pass, then:
+
+```sh
+git push origin v0.4.0
+
+awk '
+  /^## v0\.4\.0 / { found=1; next }
+  /^## / && found { exit }
+  found { print }
+' CHANGELOG.md | gh release create v0.4.0 \
+  --repo JAlcocerT/mbsd-examples \
+  --verify-tag \
+  --title "MBSD Examples v0.4.0 - Week 4 Export Handoff" \
+  --notes-file - \
+  --latest
+```
+
+The progression is coherent:
+
+- 0.4: portable 2D data
+- 0.5: experimental 3D vocabulary
+- 0.6: reinforce 2D foundations
+- 0.7: 3D kinematics
+- 0.8: limited 3D dynamics
+- Pre-1.0: stabilize, document and
+  validate both APIs
+
+Then, the **v0.5.0**: establishes conventions and data contracts before solver equations depend on them. That reduces future API churn and avoids overstating 3D capability.
+
 > I couldnt avoid to email again to Gabe Morris :)
 
 > > And email to selfh.st
+
+- Project Chrono/PyChrono
+- Exudyn
+- Siconos
+- OpenModelica
+- MBDyn
+- preCICE
 
 ## Others
 
