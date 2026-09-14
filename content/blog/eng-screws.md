@@ -13,3 +13,10 @@ math: true
 https://youtube.com/shorts/ZBMt_urbh-o
 
 https://youtube.com/shorts/hlBfrZnJ07g
+
+
+
+**Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*

@@ -7,6 +7,10 @@ description: 'JAlcocerTech'
 url: 'creating-brands'
 ---
 
+**Tl;DR**
+
+
+**Intro**
 
 * WHY Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*

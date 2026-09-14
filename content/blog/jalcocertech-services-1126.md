@@ -37,14 +37,28 @@ Its been few weekly releases for the multi body OSS framework:
 
 ### Leeeeads
 
-Oh yea, the leads
+Oh yea, the leads!
 
 
 ---
 
 ## Conclusions
 
-The Ways of Working of many are far from perfect
+* Stop asking "Do they see it?
+* Start asking "Is this priced correctly?"   
+
+
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
+
+### How can we work together?
+
+One of my favourite converging questions I got this year
+
+The Ways of Working (WoW) of many are far from perfect
 
 And im not even talking about using AI
 
@@ -54,31 +68,34 @@ Learn how to delegate the work ~~to agents~~ to anyone
 
 just not your understanding *unless you have a team to deploy ideas*
 
-### How can we work together?
-
-One of my favourite converging questions I got this year
-
 ### Choosing my WoW
 
 The beauty of optionality is that i can choose.
 
+As my career is no longer bottlenecked by permission but **by how well I allocate leverage**, taking care of my time and boundaries is crucial.
+
+Having a [clear game](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/my-game.md) and [playbook](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/playbook.md) help to operate this smoothly
+
+When [ppl asked me for collaborations](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#conclusions), I make sure to cross-check their proposal with a bs detection form i created as a code here and [deployed to formbricks](https://app.formbricks.com/s/cmtljp6ee1j5d01xdkqdqpdyp)
+
+
+
 in large services / consulting / delivery orgs, especially around “innovation” 
-  work.                                                                                                    
-                                                                                                           
-  The pattern is common:                                                                                   
-                                                                                                           
-  1. A POC gets attention.                                                                                 
-  2. Product/business wants MVP quickly.                                                                   
-  3. Slides turn into implied scope.                                                                       
-  4. Delivery dates appear before architecture.                                                            
-  5. Architecture/product/delivery ownership is unclear.                                                   
-  6. ICs/domain experts are asked whether things are “possible.”                                           
-  7. “Possible” gets translated into “committed.”                                                          
-  8. If it works, credit diffuses upward/across teams.                                                     
-  9. If it fails, the people closest to the implementation absorb blame.                                   
-                                                                                                           
-  What is less healthy, but still common:                                                                  
-                                                                                                           
+work.
+
+The pattern is common:
+
+1. A POC gets attention.
+2. Product/business wants MVP quickly.
+3. Slides turn into implied scope.
+4. Delivery dates appear before architecture.
+5. Architecture/product/delivery ownership is unclear.
+6. ICs/domain experts are asked whether things are “possible.”
+7. “Possible” gets translated into “committed.”
+8. If it works, credit diffuses upward/across teams.
+9. If it fails, the people closest to the implementation absorb blame.                                   
+        
+What is less healthy, but still common:                                                                                                           
   Promotion evidence tied to outcomes outside your control.                                                
   Mid-level calibration while expecting senior/lead ambiguity absorption.                                  
   PM silence when boundaries should be protected.                                                          
@@ -92,8 +109,11 @@ in large services / consulting / delivery orgs, especially around “innovation�
   This is normal organizational gravity.                                                                   
   Capable ICs become the glue unless they actively refuse unmanaged ownership.                             
 
-Your advantage is that you can now see the pattern. The move is not to fix the whole environment. The move is to operate cleanly inside it:                                                      
-                                                                                                           
+Now see the pattern?
+
+The move is not to fix the whole environment. 
+
+The move is to operate cleanly inside it:             
   deliver assigned scope;                                                                                  
   document assumptions;                                                                                    
   ask who owns product/architecture/delivery;                                                              
@@ -101,6 +121,8 @@ Your advantage is that you can now see the pattern. The move is not to fix the w
   avoid taking accountability without authority;                                                           
   use the job for cashflow and evidence;                                                                   
   save your real leverage for places where upside is explicit.      
+
+
 
 ---
 

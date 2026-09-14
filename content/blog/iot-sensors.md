@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Sensors x PCB x Gerber"
-date: 2026-09-13
+date: 2026-09-14
 draft: false
 tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV","KiCad x Power Stage"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
@@ -13,16 +13,24 @@ Isnt it time to build something real?
 
 **Intro**
 
-* WHY Im writting this post: *bc I need a recap and all [the BoM](#bom) that Id wish to have found years back to get started* 
-* WHAT [Ive learnt](#conclusions) with it: *Ive ended up sending my first*
+* WHY Im writting this post: *bc I need a recap and all [the BoM](#bom) that Id wish to have found years back to get started with IoT* 
+* WHAT [Ive learnt](#conclusions) with it: *Ive ended up understanding why Mosfet GDS controlled with 3.3v is ok for my smaller pump, but not for the 20w one, also sent my [first pcb for manufacturing](#kicad-x-power-stage-pcb-design)*
 
 
-## Home Assistant
+
+## Home Automation
+
+### Home Assistant
 
 https://works-with.home-assistant.io/certified-products/
 
+### DIY Custom HA
 
-## Pi
+```sh
+cd ./poc/
+```
+
+### Pi
 
 A raspberry Pi inside a container - https://github.com/ptrsr/pi-ci
 
@@ -180,7 +188,9 @@ The chip's low power consumption and versatility make it an attractive option fo
 
 you can get cables with 3a/60w support
 
-ToolBest Household RoleYour Clamp MeterHigh-Current AC Testing Hands-Free. Clamping over a live wire at your breaker panel to see how many Amps an induction hob, oven, heat pump, or EV charger is pulling without breaking the circuit.UT61E+ MultimeterPrecision Probing & Fault Finding. Measuring actual wall voltage, checking micro-currents, tracing broken wires, inspecting capacitors, and bench work (FPV & IoT).
+ToolBest Household RoleYour Clamp MeterHigh-Current AC Testing Hands-Free. Clamping over a live wire at your breaker panel to see how many Amps an induction hob, oven, heat pump, or EV charger is pulling without breaking the circuit.
+
+`UT61E+` MultimeterPrecision Probing & Fault Finding. Measuring actual wall voltage, checking micro-currents, tracing broken wires, inspecting capacitors, and bench work (FPV & IoT).
 
 For electronics you will be working a lot with DC.
 
@@ -201,7 +211,7 @@ https://youtube.com/shorts/oxZVchAZV0U -->
 
 {{< youtube "oxZVchAZV0U" >}}
 
-  Good easy replacements for the 20 W / 3S pack: to work instead of the 1N4007 (1A rated)                          
+Good easy replacements for the 20 W / 3S pack: to work instead of the 1N4007 (1A rated)                          
                                                                                                            
   - SS34 — 3 A, 40 V Schottky; a very good fit                                                             
   - 1N5822 — 3 A, 40 V Schottky; also good                                                                 
@@ -243,7 +253,6 @@ with a TP4056 for a 1s setup
 
 {{< youtube "WAKNiSjsrOw" >}}
 <!-- https://youtube.com/shorts/WAKNiSjsrOw -->
-
 
 See how the data has been flowing for a while:
 

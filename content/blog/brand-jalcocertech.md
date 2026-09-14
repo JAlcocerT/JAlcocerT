@@ -13,6 +13,9 @@ Hows my brand and outbound email marketing going?
 
 **Intro**
 
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 
 ---
 

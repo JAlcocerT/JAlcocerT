@@ -7,7 +7,6 @@ description: 'A homelab, sensors, pumps and water. The 101 BoM to get you starte
 url: 'home-lab-tools-for-iot'
 ---
 
-
 **TL;DR**
 
 Ok, you can [buy this](#conclusions).
@@ -17,7 +16,7 @@ Next.
 **Intro**
 
 * WHY Im writting this post: *Isnt it time to do some recap to IoT, HA and the solar panel?* 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* What [Ive learnt](#conclusions) with it: *Ive ended up doing [another tech talk](#the-tech-talk)*
 
 Is it just about having few sensors and NFC tags enough?
 
@@ -1395,3 +1394,17 @@ git clone
 2. Pumps also go around P/Q: ~~price/quantity~~ Power, Flow *and height, Best Efficiency Point (BEP)...*
 
 3. 
+
+### The Tech Talk
+
+The draft of the talk is [here](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard/tech-talk.md).
+
+
+```sh
+cd ./iot-dashboard
+```
+
+<!-- https://youtu.be/fk3dq6V5PD8 -->
+
+{{< youtube "fk3dq6V5PD8" >}}
+

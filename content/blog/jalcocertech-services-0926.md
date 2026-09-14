@@ -258,6 +258,9 @@ Because this matters
 <!-- 
 https://youtu.be/05GzJoGKdfo -->
 
+Other buildings, mountains will affect the ROI of your PV setup.
+
+Luckily, we can simulate that in advance:
 
 {{< youtube "Jf6WlQyYer0" >}}
 
@@ -998,9 +1001,16 @@ You get what you ~~deserve~~ negotiate
 
 Lately I was asked: *how can we work together?*
 
-Very interesting converging questions, but zooming out the real one is: do we really want to work together? 
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
+
+Very interesting converging questions, but zooming out the real one is: *do we really want to work together*?  
 
 have we validated our ideas and we can create a win-win situation?
+
+> can we create a win-win where each of us leverages in the other's output?
 
 I created a formbricks flow to validate precisely that with [this form](https://app.formbricks.com/s/cmtljp6ee1j5d01xdkqdqpdyp)
 
@@ -1018,10 +1028,10 @@ Flow I made them go through:
   9. What exists today
   10. 14-day commitment
   11. Biggest blocker              
-  12. Contact info                                                                                         
-  The intent is to classify people into: raw idea, needs validation, ready to test, ready to build, or     
-  already commercial. It deliberately exposes weak ideas by asking for buyer clarity, evidence,            
-  distribution, and commitment.                                                                            
+12. Contact info                                                                                         
+The intent is to classify people into: raw idea, needs validation, ready to test, ready to build, or     
+already commercial. It deliberately exposes weak ideas by asking for buyer clarity, evidence,            
+distribution, and commitment.                                                                            
                                        
 ```sh
 python .agents\skills\formbricks-as-code\scripts\validate_survey.py forms\idea-state-intake.json --funnel
@@ -1043,10 +1053,13 @@ By standardizing data models, governance, and architecture, I make sure analytic
 
 {{< youtube "4sSa28Xk5Yw" >}}
 
-https://youtu.be/K-eXcT1XgdE
+<!-- https://youtu.be/K-eXcT1XgdE -->
 
 
-Concerned about time to value?
+{{< youtube "K-eXcT1XgdE" >}}
+
+
+Concerned about **time to value**?
 
 Do not let the MVP date become the product.
 
@@ -1055,13 +1068,11 @@ cd ./poc/libg/telecom-executive #https://executive-check.pages.dev/ #https://pm-
 npx wrangler pages deploy telecom-executive --project-name executive-check --branch main
 ```
 
-
 {{< youtube "K-eXcT1XgdE" >}}
 
 <!-- 
 https://youtu.be/K-eXcT1XgdE 
 -->
-
 
 What can I recommend you if you are starting out?
 
@@ -1142,7 +1153,7 @@ Also, the daily notes have stopped to flow here and the `cv-laitex` similarly, j
 
 #### Clarity of Execution
 
-You might not know yet, but you need **proper governance**.
+You might not know yet, but you need **proper [governance](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/governance.md)**.
 
 You cant be an AI first company before you are a data ready team.
 
@@ -1155,6 +1166,11 @@ Example: a date is not a product definition
 https://youtu.be/K-eXcT1XgdE -->
 
 {{< youtube "K-eXcT1XgdE" >}}
+
+If you are still working in a `9-5` while working in your free time to make your business, make sure to have a **clear picture** of what [your game is](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/my-game.md) and a [playbook to execute](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/playbook.md).
+
+
+
 
 
 ---

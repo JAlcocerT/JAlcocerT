@@ -1,6 +1,6 @@
 ---
 title: "Using Blender for Sewing"
-date: 2026-10-20T08:00:21+01:00
+date: 2026-11-20T08:00:21+01:00
 draft: false
 tags: ["Python","Design Patterns",]
 description: 'Creating is easier than ever (?)'
@@ -16,7 +16,7 @@ Why not combining [blender](https://jalcocert.github.io/JAlcocerT/using-blender-
 
 **Intro**
 
-* WHY Im writting this post: 
+* WHY Im writting this post: bc the latest LLMs are getting very good at 3D
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 

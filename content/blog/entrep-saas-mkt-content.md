@@ -17,9 +17,12 @@ Can you create quality content and build a community with social media (Twitter/
 {{< youtube "ZTSI3DDP_4A" >}}
 
 
+**Tl;DR**
+
+
 **Intro**
 
-* WHY Im writting this post: 
+* Why Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 

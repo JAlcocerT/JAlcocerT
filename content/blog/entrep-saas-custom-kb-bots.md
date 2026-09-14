@@ -1,6 +1,6 @@
 ---
 title: "KB and Local Bots to end Silos for good"
-date: 2026-10-01T23:20:21+01:00
+date: 2026-11-01T23:20:21+01:00
 draft: false
 tags: ["Custom Chatbots x Local AI and KB","Tech Talk 99","RoadMap26","Docs Bot","Scribbly","Forgejo"]
 description: 'Building a custom BOT platform to end with silos.'
@@ -20,7 +20,7 @@ Data first, then AI centric.
 
 **Intro**
 
-* Why Im writting this post: *to extend this personal information flow to SMBs*
+* Why Im writting this post: *to extend my personal information flow to SMBs, bc most likely than not governance is not in place*
 * [What Ive learnt](#conclusions) with it:  
 
 

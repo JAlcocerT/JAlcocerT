@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-09-20
+date: 2026-09-19
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -938,6 +938,7 @@ There are questions that dont have a single reply:
 * How hard is to increase income? how hard is to *,save'* ~70% after taxes?
   * In other words: how hard is to change your lifesetyle ( fundamenta and fun) and your income (monetary system) so that your needs move from 50 / wants 30 / savings 20 to that proposed?
 * How many times have you been a buyer this year? and a seller? Have you tried Rejection therapy?
+* About Risk/Opportinity threshold changes: When is the moment to stop asking "do ppl see it" and start asking "is it priced correctly"?
 * Under which walls am i living in and im not aware of?
 
 ```mermaid
@@ -1378,6 +1379,6 @@ xychart
 
 BLDC pump
 
-vs
+vs stepper/servos (brushed)
 
 https://github.com/gsampallo/mqtt_valvula

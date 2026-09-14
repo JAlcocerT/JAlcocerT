@@ -25,7 +25,13 @@ https://github.com/iamceeso/zinalog?tab=readme-ov-file
 * https://docs.telemetryharbor.com/docs/oss-self-hosted/
 
 
+**Tl;DR**
+
+
 **Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 <!-- GRAFANA + PROMEt

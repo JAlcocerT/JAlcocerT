@@ -1,6 +1,6 @@
 ---
 title: "Rust desktop apps fit when reliability and packaging matter"
-date: 2026-10-16
+date: 2026-11-16
 tags: ["rust", "desktop-apps", "tauri"]
 description: "Rust desktop stacks are useful when local performance, safety, and packaging outweigh rapid scripting."
 ---

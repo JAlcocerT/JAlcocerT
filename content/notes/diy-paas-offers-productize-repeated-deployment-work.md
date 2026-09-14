@@ -1,6 +1,6 @@
 ---
 title: "DIY PaaS offers productize repeated deployment work"
-date: 2026-10-01
+date: 2026-11-01
 tags: ["paas", "services", "deployment"]
 description: "A DIY PaaS service is useful when repeated hosting, database, and deployment tasks become standardized."
 ---

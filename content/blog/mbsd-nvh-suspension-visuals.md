@@ -2,8 +2,8 @@
 title: "Suspension videos"
 date: 2026-10-15
 draft: false
-tags: ["MBSD x Active Damping","LMS Filter"]
-description: 'A light framework that can do stuff'
+tags: ["MBSD v0-8-0 x Active Damping","LMS Filter"]
+description: 'A light framework that can do stuff.'
 url: 'visualizing-suspension-nvh'
 ---
 
@@ -14,6 +14,19 @@ url: 'visualizing-suspension-nvh'
 
 * WHY Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
+
+## MBSD OSS Fwk
+
+Ive been following this roadmap, to get couple of fully OSS MIT licensed repos out there:
+
+1. 
+2. 
+
+So what?
+
+You can now:
+
+
 
 
 ## Suspensions Types

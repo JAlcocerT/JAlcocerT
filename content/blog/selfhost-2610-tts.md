@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-01
+date: 2026-10-07
 draft: false
 tags: ["HomeLab","VoiceBox"]
 description: 'A homelab .'
@@ -8,10 +8,13 @@ url: 'selfhosted-tts'
 ---
 
 
+**Tl;DR**
+
+
 **Intro**
 
-* Why Im writting this post:
-* What Ive learnt with it:
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 https://fossengineer.com/voicebox-local-ai-voice-studio/
 
