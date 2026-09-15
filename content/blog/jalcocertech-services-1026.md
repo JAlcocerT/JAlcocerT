@@ -11,6 +11,8 @@ url: 'jalcocertech-services-oct'
 
 Still thinking on headcounts to mess around with a project instead of [getting ~~shit done~~ outcomes](#choosing-my-wow)?
 
+
+
 **Intro**
 
 * WHY Im writting this post:
@@ -23,6 +25,50 @@ Another, the coding is my thing
 It seems that both were right.
 
 ## Updates
+
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+    classDef bridge fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>( DIY = $0)"):::free
+    L1("Web Audits 🛡️<br/>(Reveals Problem )"):::free
+    L11("Tech Blog/Youtube"):::free
+    L12("ebooks"):::free
+    L13("mbsd framework OSS"):::free
+    L14("OSS guides"):::free
+
+    L3("Done With You<br/>(Trade $$ for knowledge)"):::mid
+    L4("Done For You<br/>(Trade $$$ for outcomes)"):::high
+    L44("GenBI<br/>Shopify PoC"):::bridge
+    L45("Real Estate<br/>Funnel Bot"):::bridge
+    L46("Energy Solutions<br/>HVAC"):::bridge
+    L47("IoT Solutions<br/>Crops"):::bridge
+    L48("Weddings<br/>Photo QR"):::bridge
+
+    %% --- Connections ---
+    L0 --> L1
+    L1 --> L3
+    L12 --> L3
+    L13 -->|MultiBodySystemsDynamicscom| L3
+    L14 -->|FOSS Engineer| L3
+    L0 --> L11
+    L0 --> L12
+    L0 --> L13
+    L0 --> L14
+    L3 --> L4
+    L4 -->|Productized Service| L44
+    L4 -->|Productized Service| L45
+    L4 -->|Productized Service| L46
+    L4 -->|Productized Service| L47
+    L4 -->|Productized Service| L48
+```
 
 ### MBSD
 
@@ -38,6 +84,14 @@ Its been few weekly releases for the multi body OSS framework:
 ### Leeeeads
 
 Oh yea, the leads!
+
+### Governance Consulting
+
+
+Believe it or not, these are not clear and organizations still have severe governance problems:
+
+* https://ebooks.jalcocertech.com/books/dna/dna-career-skills/#project-management-essentials
+* https://ebooks.jalcocertech.com/books/managing-data-projects/faq-project-docs/
 
 
 ### Attract Convert Deliver

@@ -1,6 +1,6 @@
 ---
 title: "[IoT] Sensors x PCB x Gerber"
-date: 2026-09-14
+date: 2026-09-15
 draft: false
 tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV","KiCad x Power Stage"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
@@ -805,7 +805,7 @@ Placed here [all the kicad learnings](https://github.com/JAlcocerT/poc/blob/main
 
 #### My First PCB
 
-For [my first order](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/order-1.md)
+For [my first order](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/order-1.md) which ended up being [this one](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/fabrication-release-r2-staging-20260915)
 
 Got to know about these
 
@@ -841,7 +841,45 @@ DRC means Design Rules Check. KiCad examines the board for problems such as:
 - overlapping objects                                                                               
 - copper too close to the board edge
 - silkscreen printed over pads
-- missing or invalid board outline           
+- missing or invalid board outline       
+
+A summary of [the order](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/order-104.md), with [clarifications](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/z-clarification.md) and [assumptions](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/z-assumptions.md):
+
+Before submitting, confirm the uploaded project  
+name is power-stage-104-fabrication-release-r2-2026-09-   
+15.zip and the form still shows:                          
+                                                          
+- 65 × 45 mm                                              
+- 2 layers                                                
+- 1.55 mm FR-4 / TG135                                    
+- 35 µm copper                                            
+- lead-free HASL                                          
+- green mask both sides                                   
+- front white silkscreen, back without                    
+- routing only                                            
+- bare PCB, quantity 3 
+
+> One board was 45 euros, 3 63 euros
+
+
+### Electronics Simulations
+
+{{< youtube "nwK4nr8uqpo" >}}
+
+<!-- https://youtube.com/shorts/nwK4nr8uqpo -->
+
+{{< details title="Measure & Simulate like so before buying the Diode Resistors and Mosfet  📌"closed="true" >}}
+
+```sh
+git clone 
+```
+
+{{< /details >}}
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
+{{< /cards >}}
 
 
 ## IoT - LangChain x PG

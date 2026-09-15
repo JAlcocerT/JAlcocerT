@@ -1351,18 +1351,18 @@ Get some of these:
 
 For your [automatic watering setup](https://jalcocert.github.io/JAlcocerT/plants-103-inspiration/#the-iot-and-controlled-watering):
 
-{{< youtube "nwK4nr8uqpo" >}}
-
-<!-- https://youtube.com/shorts/nwK4nr8uqpo -->
-
-
 {{< youtube "kDPNhy8Ep7o" >}}
 
 <!-- 
 https://youtube.com/shorts/kDPNhy8Ep7o 
 -->
 
+Watering what?
+
 {{< youtube "cDfu-i_XnIE" >}}
+
+
+Oh, yep, i planted some tomatoes and thats why this all started.
 
 <!-- https://youtube.com/shorts/cDfu-i_XnIE -->
 
@@ -1372,42 +1372,26 @@ https://youtube.com/shorts/kDPNhy8Ep7o
 6. A battery: I got [a bluetti](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#testing-the-bluetti-v2) for 200$, but i was considering a Pb battery
 
 
-{{< details title="Measure & Simulate like so before buying the Diode Resistors and Mosfet  📌"closed="true" >}}
-
-```sh
-git clone 
-```
-
-{{< /details >}}
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
-{{< /cards >}}
-
-
 #### Other learnings
 
 1. Using a Multimeter / ClampMeter: from [continuity tests](https://www.youtube.com/shorts/q-BlvhkLqcU) / resistance measuring, to wall voltage readings
 
-
 2. Pumps also go around P/Q: ~~price/quantity~~ Power, Flow *and height, Best Efficiency Point (BEP)...*
 
-3. 
+3. For the Mosfet i used, the 2nd pin (GDS), the DRAIN, is connected to its top metal plate
 
 ### The Tech Talk
 
 The initial draft of the talk is [here](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard/tech-talk.md).
 
-But as the prior one, this will be placed: `https://consulting.jalcocertech.com/presentations/techtalk-from-iot-to-big-data-engineering/ppt`
+But as the prior one, this [tech talk ppt](https://github.com/JAlcocerT/selfhosted-landing/tree/master/y2026-tech-talks/5-iot-sensors-to-actuators) will be placed somewhere: `https://consulting.jalcocertech.com/presentations/techtalk-from-iot-to-big-data-engineering/ppt`
 
 ```sh
 #cd ./poc/iot-dashboard
 #git clone https://github.com/JAlcocerT/selfhosted-landing
-cd ./selfhosted-landing/
+cd ./selfhosted-landing/y2026-tech-talks/5-iot-sensors-to-actuators
 ```
 
 <!-- https://youtu.be/fk3dq6V5PD8 -->
 
 {{< youtube "fk3dq6V5PD8" >}}
-
