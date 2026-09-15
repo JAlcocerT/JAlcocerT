@@ -523,9 +523,24 @@ AgriTech? AgroTech?
 
 RecoBart?
 
-```sh
 
+```sh
+#cd ./poc/iot-rpi-dht-insulation
+sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "
+SELECT 
+  date(received_at) AS day,
+  ROUND(AVG(CASE WHEN device = 'esp32' AND metric = 'humidity' THEN value END), 2) AS esp_humidity,
+  ROUND(AVG(CASE WHEN device = 'esp32' AND metric = 'temperature' THEN value END), 2) AS esp_temp,
+  ROUND(AVG(CASE WHEN device = 'pico' AND metric = 'humidity' THEN value END), 2) AS pico_humidity,
+  ROUND(AVG(CASE WHEN device = 'pico' AND metric = 'temperature' THEN value END), 2) AS pico_temp,
+  COUNT(*) AS total_readings
+FROM readings 
+WHERE device IN ('esp32', 'pico') 
+  AND metric IN ('humidity', 'temperature')
+GROUP BY day 
+ORDER BY day;"
 ```
+
 
 ### FPV
 
@@ -706,6 +721,8 @@ Then perform [damage diagnosis](https://youtube.com/shorts/OPuNbaIYuRM)
 
 #### FPV Apps
 
+I Mean sth better that [my tello flutter desktop test](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter) and more user friendly that [my python cli based control](https://github.com/JAlcocerT/DJITelloPy)
+
 Some people put together freemium apps: `https://vueladrones.app`
 
 So far, i was tinkering with the python CLI for the dji tello and attempted one of my first desktop apps to control the tello via laptop keyboard here.
@@ -724,8 +741,8 @@ kinematics.py  ──►  OpenSCAD  ──►  CadQuery  ──►  FreeCAD  ─
   (math)           (quick check)   (BREP/STEP)    (FEM/draw)   (render)
 ```
 
-https://jalcocert.github.io/JAlcocerT/fem/
-https://fossengineer.com/beso-topology-optimization-calculix/
+* https://jalcocert.github.io/JAlcocerT/fem/
+* https://fossengineer.com/beso-topology-optimization-calculix/
 
 ```sh
 #herdr #lazydocker #lazygit

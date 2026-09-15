@@ -15,6 +15,9 @@ url: 'visualizing-suspension-nvh'
 * WHY Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+Some months ago, cc 4.6 was not there for [engine balance](https://github.com/JAlcocerT/engine-balance)
+
+
 ## MBSD OSS Fwk
 
 Ive been following this roadmap, to get couple of fully OSS MIT licensed repos out there:
@@ -26,6 +29,7 @@ So what?
 
 You can now:
 
+Via the web https://github.com/JAlcocerT/multi-body
 
 
 

@@ -321,6 +321,13 @@ or with a **BMS for the 3s** to avoid them to be used below their operating volt
 
 ### Sensors
 
+<!-- 
+https://youtube.com/shorts/lJm9zmdMi1I 
+-->
+
+{{< youtube "lJm9zmdMi1I" >}}
+
+
 
 
 #### MLX90614 GY-906 - IR
@@ -821,6 +828,20 @@ When ordering bare boards (no assembly required), compress these files into a si
 
 Standard specs to select in their order forms: 2 Layers, 1.6 mm thickness, FR4, 1 oz (35 µm) copper, HASL lead-free (or ENIG gold), and green mask with white silkscreen.
 
+
+
+{{< callout type="warning" >}}
+I got another agent's second opinion on the PCB design before manufacturing
+{{< /callout >}}
+
+DRC means Design Rules Check. KiCad examines the board for problems such as:                        
+                                                                                                    
+- copper tracks too close together                                                                  
+- tracks not connected to pads                                                                      
+- overlapping objects                                                                               
+- copper too close to the board edge
+- silkscreen printed over pads
+- missing or invalid board outline           
 
 
 ## IoT - LangChain x PG

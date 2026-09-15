@@ -1,10 +1,10 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-11-01T09:20:21+01:00
+date: 2026-10-01T09:20:21+01:00
 draft: false
 tags: ["PIO x BDD x WoW","JAlcocerTech Leads","PDLC","DRI x DACI x RACI"]
 description: 'You are not asking enough questions.'
-url: 'jalcocertech-services-nov'
+url: 'jalcocertech-services-oct'
 ---
 
 **Tl;DR**
@@ -38,6 +38,17 @@ Its been few weekly releases for the multi body OSS framework:
 ### Leeeeads
 
 Oh yea, the leads!
+
+
+### Attract Convert Deliver
+
+1. Have been doing changes and [additions to the ebooks](https://github.com/JAlcocerT/1ton-ebooks) (Free DIY): IoT and electronics!
+
+> Anytime you want `https://ebooks.jalcocertech.com/`
+
+> > The idea here is: if the quality of the free is so good, how will it be the quality of the paid consulting or DFY services?
+
+2. 
 
 
 ---

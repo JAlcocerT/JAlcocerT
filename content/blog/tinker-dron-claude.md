@@ -3,7 +3,7 @@ title: "Ryze Robotics Dron and Python SDK"
 date: 2026-04-04
 draft: false
 tags: ["Ardupilot","DJi Tello","RC","Computer Vision x PySymverse","DART"]
-description: A toy Drone, claude code and CV2.
+description: A toy Drone, claude code and CV2. Making a desktop app with flutter.
 url: 'dji-tello-python-sdk'
 ---
 
@@ -14,17 +14,16 @@ More tinkering the real world.
 
 **Intro**
 
-As software is cheap, if plants are not for you
+As software is cheap, if [plants](https://jalcocert.github.io/JAlcocerT/plants-101/) are not for you
 
-maybe drones/electronic/robotics are?
+Maybe... [drones](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/)/electronic/robotics are?
 
+I got a [dji tello](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/) some time back, and wanted to tinker back with the agents and [the python logic that controls it](https://github.com/JAlcocerT/DJITelloPy)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
-  {{< card link="https://github.com/JAlcocerT/dron" title="Dron | Repo" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/dron-tello-flutter" title="Dron | Repo" icon="github" >}}
 {{< /cards >}}
-
-
 
 ### Claude x Python
 
@@ -115,7 +114,7 @@ https://www.youtube.com/watch?v=dFudZiQ5ocY -->
 
 ## Conclusions
 
-Wouldnt it be nice to do a come back to electrical engineering?
+Wouldnt it be nice to do a *come back* to ~~electrical~~ engineering?
 
 The level of abstraction that there is in such a drone so that by pressing one key, that goes to one command and goes to...somewhere
 
@@ -162,6 +161,8 @@ uv run main.py
 
 ### What I learnt
 
+Flutter development is not straightforward: https://github.com/JAlcocerT/dron-tello-flutter
+
 Want this DFY?
 
 ~~f* off~~
@@ -201,17 +202,21 @@ I mean, here you go:
 
 ### Tello x Flutter
 
-I got some problems with the connection to the tello.
+I got some problems with the connection to the tello for [the flutter desktop app code](https://github.com/JAlcocerT/dron-tello-flutter)
 
-CC went to the route of we're using dart:io's built-in RawDatagramSocket, but some how was not getting there.
+CC went to the route of we're using `dart:io's` built-in RawDatagramSocket, but some how was not getting there.
 
 So went out and look for existing projects:
 
 1. https://github.com/mateustoin/Flutter-app-DJI-Tello-Drone/tree/main
 
-Cool! but it has 6yo and depends on https://pub.dev/packages/tello/versions which is Dart3 incompatible.
+Cool! 
 
-next
+But...
+
+it has 6yo and depends on https://pub.dev/packages/tello/versions which is Dart3 incompatible.
+
+Next -
 
 2.  https://pub.dev/packages/udp/versions that does not shows incompatibilities
 
@@ -222,45 +227,45 @@ flutter run -d linux
 
 ![alt text](/blog_img/apps/flutter-dron.png)
 
-> This is the one, btw :)
+> This is the flutter desktop app i managed to put together, with battery indication but no cam support yet :)
 
 3. https://pub.dev/packages/ryze_tello with 5yo and *also in theory*, no incompatibilities
 
 ### Whats ArduPilot?
 
-ArduPilot is an open-source autopilot system for vehicles like:
+[ArduPilot](https://github.com/ArduPilot/ardupilot) is an open-source autopilot system for vehicles like:
 
-  - drones
-  - planes
-  - helicopters
-  - rovers
-  - boats
-  - submarines
+- drones
+- planes
+- helicopters
+- rovers
+- boats
+- submarines
 
-  It is both:
+It is both:
 
-  - software: the flight/control stack that runs on the vehicle
-  - ecosystem: firmware, ground control tools, hardware support, simulation, and documentation
+- software: the flight/control stack that runs on the vehicle
+- ecosystem: firmware, ground control tools, hardware support, simulation, and documentation
 
-  What it does:
+What it does:
 
-  - stabilizes and flies the vehicle
-  - handles GPS navigation and waypoint missions
-  - supports telemetry, failsafes, return-to-home, geofencing
-  - integrates sensors like GPS, IMU, compass, barometer, lidar, cameras, etc.
+- stabilizes and flies the vehicle
+- handles GPS navigation and waypoint missions
+- supports telemetry, failsafes, return-to-home, geofencing
+- integrates sensors like GPS, IMU, compass, barometer, lidar, cameras, etc.
 
-  Typical setup:
+Typical setup:
 
-  - flight controller hardware running ArduPilot firmware
-  - a ground station such as Mission Planner or QGroundControl
-  - optional radio/telemetry link, RC transmitter, GPS, companion computer
+- flight controller hardware running ArduPilot firmware
+- a ground station such as Mission Planner or QGroundControl
+- optional radio/telemetry link, RC transmitter, GPS, companion computer
 
-  In practice, people use it for:
+In practice, people use it for:
 
-  - hobby drones
-  - research robots
-  - industrial UAVs
-  - autonomous boats and ground vehicles
+- hobby drones
+- research robots
+- industrial UAVs
+- autonomous boats and ground vehicles
 
 ### Software for Drones
 

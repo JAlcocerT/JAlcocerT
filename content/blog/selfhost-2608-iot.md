@@ -740,8 +740,8 @@ The recommended progression moves from firmware validation to peripheral expansi
 
 **1. Finish the Core Software Cycle First (Immediate Next Step)**
 
-* **Timed Smoke Test:** Run the battery-powered ESP32 through the 3-second cycle using `timed_smoke_test.ino` to verify there are no inductive resets or brownouts.
-* **Wi-Fi & MQTT Integration:** Upload your networking firmware (`mqtt_pump_control.ino`). Confirm the ESP32 can maintain Wi-Fi connection and handle MQTT commands without crashing when the pump starts and stops.
+* **Timed Smoke Test:** Run the battery-powered ESP32 through the 3-second cycle using `timed_smoke_test.ino` [script](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/timed_smoke_test.ino) to verify there are no inductive resets or brownouts.
+* **Wi-Fi & MQTT Integration:** Upload your networking firmware (`mqtt_pump_control.ino` [script](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/mqtt_pump_control.ino)). Confirm the ESP32 can maintain Wi-Fi connection and handle MQTT commands without crashing when the pump starts and stops.
 * **Deep Sleep & Power Budgeting:** If this is intended to be off-grid, configure the ESP32 to sleep between waterings. An ESP32 idling at 80–150 mA on Wi-Fi will drain a 3S pack in a couple of days regardless of solar.
 
 
@@ -1397,11 +1397,14 @@ git clone
 
 ### The Tech Talk
 
-The draft of the talk is [here](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard/tech-talk.md).
+The initial draft of the talk is [here](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard/tech-talk.md).
 
+But as the prior one, this will be placed: `https://consulting.jalcocertech.com/presentations/techtalk-from-iot-to-big-data-engineering/ppt`
 
 ```sh
-cd ./iot-dashboard
+#cd ./poc/iot-dashboard
+#git clone https://github.com/JAlcocerT/selfhosted-landing
+cd ./selfhosted-landing/
 ```
 
 <!-- https://youtu.be/fk3dq6V5PD8 -->
