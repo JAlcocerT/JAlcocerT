@@ -1009,6 +1009,12 @@ cd ./poc/genbi-energy-solutions/waitlist/ #it can be re-used nicely for lead-gen
 {{< /details >}}
 
 
+4. You can now go from website to promo video like:
+
+
+{{< youtube "4sSa28Xk5Yw" >}}
+
+
 
 ---
 

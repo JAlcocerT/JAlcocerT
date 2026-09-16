@@ -1,8 +1,8 @@
 ---
 title: "[IoT] Sensors x PCB x Gerber"
-date: 2026-09-15
+date: 2026-09-16
 draft: false
-tags: ["Polanduino x Arduino","Solar x DHT x MLX","RiscV","KiCad x Power Stage"]
+tags: ["Polanduino x Arduino","RiscV","KiCad x Power Stage"]
 description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
 url: 'iot-sensors-101'
 ---
@@ -124,7 +124,35 @@ These were really easy to setup and if you are getting started they are perfect.
 
 The MLX will get you ambient temp and IR temp of an object
 
+0. With the [Pi4 was kinda simple](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/):
+
+```sh
+pinout #this assumes that the usb and eth port are looking down, so 5V is top right
+i2cdetect -y 1
+```
+
+https://pinout.xyz/pinout/3v3_power
+
+https://jalcocert.github.io/RPi/img/RPi4-DHT22.png
+
+1. **ESP32 + MLX90614**
+
+<https://www.youtube.com/watch?v=HpsvNIAtjm4>
+
+
 ### DS18B20
+
+https://jalcocert.github.io/RPi/posts/rpi-iot-ds18b20/
+
+-55 to 125C
+
+<!-- 
+blackc able - gnd
+red - 3.3 to 5v
+yellow - data -->
+
+
+data to D13
 
 ### a
 
@@ -845,10 +873,9 @@ DRC means Design Rules Check. KiCad examines the board for problems such as:
 
 A summary of [the order](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/order-104.md), with [clarifications](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/z-clarification.md) and [assumptions](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/z-assumptions.md):
 
-Before submitting, confirm the uploaded project  
-name is power-stage-104-fabrication-release-r2-2026-09-   
-15.zip and the form still shows:                          
-                                                          
+Before submitting, confirmed the uploaded project  
+name is `power-stage-104-fabrication-release-r2-2026-09-15.zip` and the form shows: `PS104-R2-FAB-2026-09-15`
+
 - 65 × 45 mm                                              
 - 2 layers                                                
 - 1.55 mm FR-4 / TG135                                    
@@ -859,7 +886,7 @@ name is power-stage-104-fabrication-release-r2-2026-09-
 - routing only                                            
 - bare PCB, quantity 3 
 
-> One board was 45 euros, 3 63 euros
+> One board was 45 euros, x3 63 euros, fabrication ~9 working days, in my hands in ~12days
 
 
 ### Electronics Simulations
@@ -882,12 +909,16 @@ git clone
 {{< /cards >}}
 
 
-## IoT - LangChain x PG
+## IoT - LangChain x PGsql
 
 This is coming up as some shape of tech talk this year.
 
 And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
 
+```sh
+git clone https://github.com/JAlcocerT/selfhosted-landing
+cd y2026-tech-talks/4-baml-db-insights
+```
 
 ### What it is esp home
 

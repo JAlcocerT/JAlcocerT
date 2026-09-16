@@ -81,6 +81,30 @@ Its been few weekly releases for the multi body OSS framework:
 
 ### Crops - Agrotech
 
+### FPV Telemetry
+
+
+#### MPU acelerometer
+
+There are many 3-axis accelerometers that you can use with the Raspberry Pi Pico.
+
+Some of the most popular options include:
+
+MPU-6050: This is a popular and versatile accelerometer that is also compatible with the Raspberry Pi Pico. 
+
+It has a wide range of features, including a built-in gyroscope.
+
+
+**biblioman09**
+
+
+<!-- 
+<https://www.youtube.com/watch?v=JXyHuZyqjxU> 
+-->
+
+
+{{< youtube "JXyHuZyqjxU" >}}
+
 ### Leeeeads
 
 Oh yea, the leads!

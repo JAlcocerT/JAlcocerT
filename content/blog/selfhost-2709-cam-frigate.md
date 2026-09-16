@@ -207,6 +207,8 @@ Here are the commands I used and what each told us.
 
 ### Scrypted
 
+HA Security camera: Scrypted
+
 ### Other
 
 * https://github.com/ispysoftware/iSpy

@@ -14,7 +14,7 @@ How much solar is enough for the mqtt x dht setup with a ESP32?
 **Intro**
 
 * Why Im writting this post: *Bc i had [some 3yo notes](https://jalcocert.github.io/RPi/posts/rpi-mqtt/) and there is such a contrast with what im building around micro-controllers now*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* What [Ive learnt](#conclusions) with it: *Ive ended up just using arduino-CLI and making agents to script and flash my esp32's instead of messing with vscode extensions or arduino GUI*
 
 It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer) to deploy the code to the ESP32
 
@@ -31,7 +31,7 @@ It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlc
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Despite the PicoW lasting x2 in the same test battery, for some reason the esp is less picky to connect and send the data over the same 15W solar pannel
+Despite the PicoW lasting x2 in the same test battery, for some reason the esp is less picky to connect and send the data over the same 15W (5v) solar pannel
 
 ```sh
 #cd ./poc/iot-rpi-dht
@@ -113,7 +113,7 @@ I have to say [thanks to Tomasz](https://www.youtube.com/watch?v=tc3Qnf79Ny8&t=0
 
 To 'upload' the code to the ESP32, please make sure that you have the proper cable (*I was expending too many hours because of this*).
 
-Basically: not all usb cables are data cables
+> Basically: not all usb cables are data cables
 
 ## ESP32 and DHT11
 
@@ -549,40 +549,24 @@ void loop() {
 }
 ```
 
-<https://www.youtube.com/watch?v=Q2HL8rwZ20A>
 
+Before, it was about [watching videos](https://www.youtube.com/watch?v=Q2HL8rwZ20A) to [try mqtt ESP32](https://www.youtube.com/watch?v=x5A5S0hoyJ0&t=211s)
 
-### Another try mqtt ESP32
+As of today, just ask the agent to make the script for you with your mqtt server in place.
 
-
-<https://www.youtube.com/watch?v=x5A5S0hoyJ0&t=211s>
-
-
-
-
-
-## ESP32 + MLX90614
-
-<https://www.youtube.com/watch?v=HpsvNIAtjm4>
-
-WIth the [Pi4 was kinda simple](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/):
-
-```sh
-pinout #this assumes that the usb and eth port are looking down, so 5V is top right
-i2cdetect -y 1
-```
-
-https://pinout.xyz/pinout/3v3_power
-
-https://jalcocert.github.io/RPi/img/RPi4-DHT22.png
 
 ---
 
 ## Conclusions
 
+Who couldhave guessed: computers are faster as a code.
+
 ```sh
-git clone https://github.com/JAlcocerT/selfhosted-landing
-cd y2026-tech-talks/4-baml-db-insights
+#git clone https://github.com/JAlcocerT/selfhosted-landing
+#cd y2026-tech-talks/4-baml-db-insights
+cd ./poc/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet
+make help
+make compile
 ```
 
 ### Other Projects
@@ -612,7 +596,7 @@ If that resonates with you, keep reading - I will show you how to **leverage Ans
 
 ## FAQ
 
-https://github.com/micropython/micropython
+* https://github.com/micropython/micropython
 
 ### Containers? What's that?
 
@@ -715,7 +699,6 @@ It works for few other microcontrollers as well, bookmark this one!
 pinout
 ```
 
-
 ## IoT Tools
 
 Ekuiper works great when combined with [EMQx Broker](https://jalcocert.github.io/RPi/posts/rpi-mqtt/#install-mqtt-broker)
@@ -745,10 +728,6 @@ You could also do AI/ML with Ekuiper
 * TF Lite - https://ekuiper.org/docs/en/latest/guide/ai/python_tensorflow_lite_tutorial.html
     * https://www.tensorflow.org/lite/guide
 
-
-
-https://github.com/tevonsb/homeassistant-mcp
-
 ### ESP32 HA + Batteries
 
 A nice video around batteries and the esp:
@@ -768,11 +747,18 @@ https://github.com/esphome/esphome
 
 https://esphome.io/index.html
 
-
-
+* https://github.com/tevonsb/homeassistant-mcp
 
 Beginner DIY ESPHome mmWave Presence Sensor | HLK-LD2450 + ESP32
 https://www.youtube.com/watch?v=cPac-9K2xEc
+
+
+Hardware for HA: `https://forocoches.com/foro/showthread.php?t=6655749`
+
+* https://forocoches.com/foro/showthread.php?t=7806376
+* https://rpi.uroboros.es/docker.html
+
+* Contenedores docker utilizas - https://forocoches.com/foro/showthread.php?t=7806376
 
 ### Pico DHT22
 
@@ -781,22 +767,18 @@ https://www.youtube.com/watch?v=cPac-9K2xEc
 <!-- 
 https://www.youtube.com/watch?v=eNF3X3D0cH4 -->
 
-https://github.com/neeraj95575/Temperature-sensor-connect-to-raspberry-pi-pico
+* https://github.com/neeraj95575/Temperature-sensor-connect-to-raspberry-pi-pico
 
 ### ESP DHT22
-
 
 GND
 VIN (3v3 also works)
 D23
 
-
 <https://registry.platformio.org/libraries/adafruit/DHT%20sensor%20library> ---> <https://github.com/adafruit/DHT-sensor-library>
 
 
-in platformio.ini
-
-adafruit/DHT sensor library@^1.4.4
+I n platformio.ini `adafruit/DHT sensor library@^1.4.4`
 
 lib_deps=
 https://github.com/blynkkk/blynk-library.git
@@ -805,15 +787,13 @@ https://github.com/adafruit/DHT-sensor-library
 
 
 
-in the main.cpp
+in the `main.cpp`
 
 #include <DHT.h>
 
 https://github.com/adafruit/DHT-sensor-library
 
 not this one: adafruit/Adafruit Unified Sensor@^1.1.13
-
-
 
 lib_deps =
   https://github.com/adafruit/DHT-sensor-library.git
@@ -823,65 +803,6 @@ OR
 lib_deps =
   adafruit/DHT sensor library@^1.4.4
 
-### MPU acelerometer
-
-There are many 3-axis accelerometers that you can use with the Raspberry Pi Pico. Some of the most popular options include:
-
-MPU-6050: This is a popular and versatile accelerometer that is also compatible with the Raspberry Pi Pico. It has a wide range of features, including a built-in gyroscope.
-
-
-**biblioman09**
-
-
-<!-- 
-<https://www.youtube.com/watch?v=JXyHuZyqjxU> 
--->
-
-
-{{< youtube "JXyHuZyqjxU" >}}
-
-
-### DSB18B20
-
-https://jalcocert.github.io/RPi/posts/rpi-iot-ds18b20/
-
--55 to 125C
-
-<!-- 
-blackc able - gnd
-red - 3.3 to 5v
-yellow - data -->
-
-
-data to D13
-
-### Pi off grid - Solar panels
-
-<https://www.reddit.com/r/raspberry_pi/comments/2b0ccl/anyone_running_their_pi_off_of_solar_panels/>
-
-## HA Security camera
-
-Scrypted
-
-
-### RPi weather station
-
-<!-- 
-https://www.youtube.com/watch?v=5JfPzvcm0E8 
--->
-
-{{< youtube "5JfPzvcm0E8" >}}
-
-
-## Hardware for HA
-
-https://forocoches.com/foro/showthread.php?t=6655749
-
-
-* https://forocoches.com/foro/showthread.php?t=7806376
-* https://rpi.uroboros.es/docker.html
-
-* Contenedores docker utilizas - https://forocoches.com/foro/showthread.php?t=7806376
 
 ---
 
@@ -970,9 +891,6 @@ RPI pico
 from machine import Pin, Timer, I2C, SoftI2C
 #from aphanum import ALPHANUM_I2C
 from mlx90614 import MLX90614_I2C
-
-
-
 
 i2c2 = SoftI2C(scl=Pin(9),sda=Pin(8),freq=100000)
 
