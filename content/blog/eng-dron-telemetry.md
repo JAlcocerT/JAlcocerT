@@ -8,18 +8,9 @@ url: 'betaflight-dron-telemetry'
 math: true
 ---
 
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor Dron x Telemetry ↗" icon="github" >}}
-{{< /cards >}}
-
-```sh
-google-chrome --new-window /home/jalcocert/Desktop/meteor-dron/Eachine/my-first-flight/btfl_all_report.html
-```
-
-
-
 **TL;DR**
+
+Not making a [desktop app to control a dron](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter), but just a pwa to watch telemetry of FPV with betaflight
 
 **Intro**
 
@@ -35,39 +26,53 @@ https://youtube.com/shorts/KeT0DuWryEI
 {{< /cards >}}
 
 
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor Dron x Telemetry ↗" icon="github" >}}
+{{< /cards >}}
+
 ```sh
-  make coast                                                         
-  ZUPT_DECODED=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260710_165531_BETAFPV
-  G473_decoded.json 
+google-chrome --new-window /home/jalcocert/Desktop/meteor-dron/Eachine/my-first-flight/btfl_all_report.html
 ```
 
-  25-30% throttle: ~9-10 W                                           
-  30-35% throttle: ~12-13 W                                          
-  35-40% throttle: ~14-15.5 W                                        
-  40-45% throttle: ~16-18 W  
+With this, i can analyze the flights:
+
+```sh
+#cd ./meteor-dron
+make coast
+ZUPT_DECODED=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260710_165531_BETAFPV
+G473_decoded.json
+```
+
+25-30% throttle: ~9-10 W                                           
+30-35% throttle: ~12-13 W                                          
+35-40% throttle: ~14-15.5 W                                        
+40-45% throttle: ~16-18 W  
 
 10-15% throttle: ~7.7 W,  ~746 eRPM, 1.82 A                        
-  15-20% throttle: ~7.4 W,  ~752 eRPM, 1.90 A                        
-  20-25% throttle: ~8.7 W,  ~817 eRPM, 2.21 A                        
-  25-30% throttle: ~9.6 W,  ~974 eRPM, 2.46 A                        
-  30-35% throttle: ~11.9 W, ~1066 eRPM, 3.07 A                       
-  35-40% throttle: ~14.9 W, ~1177 eRPM, 3.88 A                       
-  40-45% throttle: ~16.5 W, ~1210 eRPM, 4.46 A                       
-                                                                     
-  Interesting things:                                                
-                                                                     
-  - Power rises faster than eRPM at higher throttle. From 35-40% to  
+15-20% throttle: ~7.4 W,  ~752 eRPM, 1.90 A                        
+20-25% throttle: ~8.7 W,  ~817 eRPM, 2.21 A                        
+25-30% throttle: ~9.6 W,  ~974 eRPM, 2.46 A                        
+30-35% throttle: ~11.9 W, ~1066 eRPM, 3.07 A                       
+35-40% throttle: ~14.9 W, ~1177 eRPM, 3.88 A                       
+40-45% throttle: ~16.5 W, ~1210 eRPM, 4.46 A                       
+
+Interesting things:
+
+- Power rises faster than eRPM at higher throttle.
+
+From 35-40% to  
     40-45%, eRPM barely rises, but power goes up. That can mean more 
     load, sag, airflow inefficiency, or less efficient operating     
     range.                                                           
-  - Around 35-40% throttle, the quad seems to “coast/hold” around 14-    15 W and ~1170 eRPM.                
-      - peak current: 24.9A                                          
-      - peak power: 94.9W   
+- Around 35-40% throttle, the quad seems to “coast/hold” around 14-    15 W and ~1170 eRPM.                
+    - peak current: 24.9A                                          
+    - peak power: 94.9W   
 
 ```sh
-  python .\telemetry_video.py --decoded .                            
-  \BTFL_BLACKBOX_LOG_METEOR75_PRO_20260710_165531_BETAFPVG473_decoded
-  .json --log-index 1 --duration-s 158.4
+python .\telemetry_video.py --decoded .                            
+\BTFL_BLACKBOX_LOG_METEOR75_PRO_20260710_165531_BETAFPVG473_decoded
+.json --log-index 1 --duration-s 158.4
 ```
 
 You are looking right at the heart of what makes an FPV drone feel so intensely athletic: an absurd **Power-to-Weight Ratio**, and a fascinating look at how much energy is spent just "coasting" (hovering) versus sprinting.
@@ -76,12 +81,13 @@ Let’s look at the actual physics of your specific setup (Meteor75 Pro + 680mAh
 
 1. The Insane Power-to-Weight Ratio
 
-Your drone weighs roughly **31 grams** empty. With the new 680mAh battery ($\approx 16\text{g}$), your total takeoff weight is about **47 grams**.
+Your drone weighs roughly **31 grams** empty. 
+
+With the new 680mAh battery ($\approx 16\text{g}$), your total takeoff weight is about **47 grams**.
 
 * **The Power Input:** At 100% throttle, your motors draw about 16 Amps at 4.0V = **64 Watts of electrical power**.
 * **The Power-to-Weight Ratio:** 
 $$\frac{64\text{ Watts}}{0.047\text{ kg}} \approx 1,361\text{ Watts per Kilogram}$$
-
 
 To put that into perspective, a high-performance sports car like a **Ferrari or Bugatti** usually has a power-to-weight ratio around **400 to 600 Watts per kilogram**. 
 
@@ -99,7 +105,9 @@ Your drone can push up into the sky with over **4 times its own weight**.
 
 3. Coasting vs. Sprinting: Where is the energy going?
 
-This is where your observation about "coasting" efficiency gets really interesting. Because of those exponential aerodynamic laws we talked about earlier, the energy map of your flight splits cleanly into two modes:
+This is where your observation about "coasting" efficiency gets really interesting.
+
+Because of those exponential aerodynamic laws we talked about earlier, the energy map of your flight splits cleanly into two modes:
 
 | Flight State | Thrust Needed | Power Drank | The Aerodynamic Reality |
 | --- | --- | --- | --- |
@@ -108,7 +116,11 @@ This is where your observation about "coasting" efficiency gets really interesti
 
 ### 🧠 The Engineering Insight
 
-When you write your Python script to analyze your logs, look at the **Throttle % vs. Power** line. You'll see that "coasting" around your living room keeps the drone in an incredibly peaceful, low-drain sweet spot. The moment you try to fight a gust of wind outside or do a massive loop, you cross a threshold where the drone throws its efficiency away in exchange for pure, raw, physics-defying acceleration.
+When you write your Python script to analyze your logs, look at the **Throttle % vs. Power** line. 
+
+You'll see that "coasting" around your living room keeps the drone in an incredibly peaceful, low-drain sweet spot.
+
+The moment you try to fight a gust of wind outside or do a massive loop, you cross a threshold where the drone throws its efficiency away in exchange for pure, raw, physics-defying acceleration.
 
 It's a beautiful piece of engineering—it leaves 80% of its power completely hidden in reserve, waiting for you to call on it!
 
@@ -132,7 +144,9 @@ $$\text{Total Thrust} = 4 \times 50\text{g} = 200\text{ grams of total thrust}$$
 
 ### 📉 Why this matches your real flights (The Reality Check)
 
-This $200\text{g}$ figure is the *maximum dynamic burst capability* right when your battery is completely fresh. In real life, that number shifts slightly due to three factors you can actually track in your Python logs:
+This $200\text{g}$ figure is the *maximum dynamic burst capability* right when your battery is completely fresh. 
+
+In real life, that number shifts slightly due to three factors you can actually track in your Python logs:
 
 1. **Voltage Sag:** When you punch to 100% throttle, your battery voltage drops from $4.35\text{V}$ down to maybe $3.9\text{V}$ or $4.0\text{V}$. Because motor RPM drops with lower voltage, your thrust dips closer to **$170\text{g} - 180\text{g}$** later in the flight.
 2. **Duct Efficiency:** Your Meteor75 Pro frame has plastic guard rings (ducts) around the propellers. These rings actually act like tiny airplane wings, trapping air and increasing thrust by roughly 5% to 10% compared to a drone with open propellers!
@@ -185,13 +199,12 @@ python .\run_blackbox_report.py --index 1 --mass-g 44.0
 ```
 
 ```sh
-#For your July 10 segment 0, full duration is about 192.3s, so run: 
-                                                                    
+#For your July 10 segment 0, full duration is about 192.3s, so run:
 python .\telemetry_video.py --decoded .                            
 \BTFL_BLACKBOX_LOG_METEOR75_PRO_20260710_103204_BETAFPVG473_decoded
 .json --log-index 0 --start-s 0 --duration-s 192.3 --fps 30        
-                                                                    
-#Or add a Make override:                                                                                                               
+
+#Or add a Make override:
 make telemetry DURATION=192.3   
 ```
 
@@ -221,7 +234,9 @@ make telemetry-overlay-preview VIDEO=DJI_20260712121438_0020_D.MP4 VIDEO_OFFSET=
 https://youtu.be/drupGz_-R38 
 -->
 
-{{< youtube "drupGz_-R38" >}}
+<!-- {{< youtube "drupGz_-R38" >}} -->
+
+After flying [a few sessions](https://youtu.be/drupGz_-R38):
 
 ```sh
 make telemetry TELEMETRY_DECODED=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260712_130543_BETAFPVG473_decoded.json TELEMETRY_SEQUENCE=0,1 DURATION=126 FPS=30
@@ -234,7 +249,7 @@ make telemetry-overlay-preview VIDEO=DJI_20260712124329_0021_D.MP4 VIDEO_OFFSET=
 <!-- 
 https://youtu.be/fb_zY9PMAO4 -->
 
-All thanks to [ffmpeg](https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/#ffmpeg), [just FYI](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#ffmpeg-video-workflow-for-windows):
+All thanks to [ffmpeg](https://jalcocert.github.io/JAlcocerT/docs/coolresources/video/#ffmpeg), just [FYI](https://jalcocert.github.io/JAlcocerT/web-for-moto-blogger/#ffmpeg-video-workflow-for-windows):
 
 ```sh
 ffmpeg -y -i "DJI_20260713180204_0003_D.MP4" `       
@@ -267,6 +282,66 @@ make timeline-viewer TIMELINE_DECODED=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260714_15
 
 
 ## Creating a PWA
+
+
+Why PWAs? Common Use Cases
+
+* **Serverless Data Tools:** Client-side data analytics tools (e.g., CSV analyzers, report generators) where data never leaves the user's computer, solving compliance and cloud compute cost concerns.
+* **Interactive Code Playgrounds:** In-browser coding tutorials, algorithm visualizers, or documentation sites (similar to JupyterLite or PyScript).
+* **Local-First Productivity Apps:** Specialized tools requiring complex algorithmic calculation, image manipulation, or simulation that need to work on laptops or tablets with spotty network access.
+
+These **three technologies** form a modern stack for running powerful, offline-first client applications directly in the web browser without managing dedicated backend infrastructure.
+
+| Technology | What It Is | Primary Role | Key Advantage |
+| --- | --- | --- | --- |
+| **WebAssembly (Wasm)** | Low-level binary instruction format | Runs precompiled languages (C, C++, Rust, Go) in the browser | Near-native execution speed; bypasses JS parsing overhead |
+| **Pyodide** | CPython runtime compiled to Wasm | Runs Python code and data science libraries entirely client-side | Native Python ecosystem (NumPy, Pandas, SciPy) directly in the browser |
+| **PWA** | Web application enhanced with modern browser APIs | Provides installability, caching, and an app-like shell | Works offline via Service Workers; installs on mobile and desktop |
+
+How They Work Together
+
+1. **Wasm provides the execution foundation:** Browsers historically could only execute JavaScript. Wasm provides a fast, sandboxed virtual machine that allows languages other than JS to run inside browser threads.
+
+2. **Pyodide sits on top of Wasm:** Because Python's C reference implementation (CPython) is written in C, it was compiled into a Wasm binary (`pyodide.asm.wasm`) via Emscripten. It bridges Python and JavaScript, allowing you to pass objects back and forth and manipulate the browser DOM from Python.
+
+3. **PWA delivers the full application:** A PWA wraps the interface. Its **Service Worker** intercepts network requests, downloading the heavy Pyodide runtime and Wasm binaries once and caching them locally via the Cache API. The user can launch the app from their home screen and run full Python analyses completely offline.
+
+{{< callout type="info" >}}
+**CSR (Client-Side Rendering)** is a rendering strategy
+{{< /callout >}}
+
+**PWA (Progressive Web App)** is a set of browser capabilities that turn a website into an installable, offline-capable application.
+
+A PWA almost always *uses* CSR under the hood, but a standard CSR app lacks the offline caching and operating-system integration that define a PWA.
+
+
+| Feature | Standard CSR (e.g., standard Vite + React/Vue) | Progressive Web App (PWA) |
+| --- | --- | --- |
+| **What it describes** | *How* the UI is built (JavaScript renders HTML in the browser). | *How* the app behaves (installable, offline-first, native-like). |
+| **Offline Support** | ❌ None. Shows the browser's "No Internet" screen. | ✅ Full. Service Workers cache HTML, JS, Wasm, and data for offline use. |
+| **Installability** | ❌ Runs solely inside a standard browser tab. | ✅ Can be installed to desktop/home screen with a standalone app window. |
+| **Core Enablers** | A JavaScript bundle and an empty root `<div id="root"></div>`. | **Web App Manifest** + **Service Worker** (with Cache API / IndexedDB). |
+| **OS Integration** | ❌ Standard browser limitations. | ✅ App icon, launch splash screen, badge counts, file system access, Web Share. |
+| **Background Work** | ❌ Halts when the tab closes. | ✅ Can run background sync or receive push notifications via Service Worker. |
+
+---
+
+Think of CSR as the **engine** and PWA as the **vehicle chassis and wheels**:
+
+```
+┌───────────────────────────────────────────────────────────┐
+│ Progressive Web App (PWA) Layer                           │
+│  - Web App Manifest (standalone window, home screen icon) │
+│  - Service Worker (offline caching, network interception) │
+│                                                           │
+│   ┌───────────────────────────────────────────────────┐   │
+│   │ Client-Side Rendered (CSR) App                    │   │
+│   │  - Framework code (React, Vue, Svelte, etc.)      │   │
+│   │  - Client runtime (Pyodide, Wasm, State Stores)   │   │
+│   │  - DOM manipulation and UI routing                │   │
+│   └───────────────────────────────────────────────────┘   │
+└───────────────────────────────────────────────────────────┘
+```
 
 
 
@@ -330,7 +405,6 @@ flowchart LR
     L4 -->|Productized Service| L48
 ```
 
-
 ---
 
 ## FAQ
@@ -356,42 +430,40 @@ The iflight zidora has 32mb of flash
 
 {{% details title="Zidora 32mb 🚀" closed="true" %}}
 
-
 Got what i wanted and then `erase_flash`
 
 The ELRS receiver required the 4s battery to be connected, otherwise it stays asleep.
 
 * **Identified the Brain:** We extracted the exact factory firmware profile from the flight controller (`IFLIGHT_F722_TWING`).
+
 * **Mapped the Hardware Highway:** We dug into the hardware resource codes to verify that the ExpressLRS receiver is physically soldered to the **UART1** processor pins.
+
 * **Resolved Betaflight Port Conflicts:** We discovered a software clash where multiple ports were competing to read the receiver. We cleanly deactivated the duplicate on UART3 and locked the communication exclusively to UART1 (`serial 0 64`).
+
 * **Isolated the Link Issue:** By evaluating the `0/250` telemetry readout on your RadioMaster Pocket, we diagnosed that the physical link is failing due to an existing security lock/mismatched binding phrase on the receiver chip, rather than a Betaflight configuration error.
 
-Take a breather, grab a drink, and let me know when you are ready to knock out that final handshake!
+Across all active iFlight samples
 
+- p95 current: 31.40 A
+- p95 power: 469 W
+- p99 current: 54.20 A
+- p99 power: 766 W
 
- Across all active iFlight samples
+Across the main useful segments #63/#67/#68/#69/#72
 
-  - p95 current: 31.40 A
-  - p95 power: 469 W
-  - p99 current: 54.20 A
-  - p99 power: 766 W
+- p95 current: 31.80 A
+- p95 power: 474 W
+- p99 current: 54.60 A
+- p99 power: 768 W
 
-  Across the main useful segments #63/#67/#68/#69/#72
+So the practical answer is: around 31-32 A and 470 W at p95.
 
-  - p95 current: 31.80 A
-  - p95 power: 474 W
-  - p99 current: 54.60 A
-  - p99 power: 768 W
+For context, the extreme tail is where it gets suspicious:
 
-  So the practical answer is: around 31-32 A and 470 W at p95.
+- p99.9: about 101-106 A, 1.39-1.40 kW
+- max: 240.8 A, 4.23 kW
 
-  For context, the extreme tail is where it gets suspicious:
-
-  - p99.9: about 101-106 A, 1.39-1.40 kW
-  - max: 240.8 A, 4.23 kW
-
-  That shape reinforces the earlier read: normal-ish bulk behavior, but the current sensor/logging has suspicious spikes or calibration issues in the high tail.
-
+That shape reinforces the earlier read: normal-ish bulk behavior, but the current sensor/logging has suspicious spikes or calibration issues in the high tail.
 
 {{% /details %}}
 
@@ -507,19 +579,19 @@ Bonus Component Found: You have a GPS rescue module configured on UART1 (serial 
 
 I’d treat the first power-up as a bench check, not “ready to rip”.
 
-  First time:
+First time:
 
-  - Props off.
-  - Power from USB first, check Betaflight config.
-  - Then plug LiPo in with props still off.
-  - Check no smoke, no hot ESC/motor/VTX, no weird beeping.
-  - Confirm receiver, modes, arming, failsafe.
-  - Check motor direction with props off.
-  - Then do a short hover test outside.
+- Props off.
+- Power from USB first, check Betaflight config.
+- Then plug LiPo in with props still off.
+- Check no smoke, no hot ESC/motor/VTX, no weird beeping.
+- Confirm receiver, modes, arming, failsafe.
+- Check motor direction with props off.
+- Then do a short hover test outside.
 
-  For batteries, these look like 4S drones from the logs.
+For batteries, these look like 4S drones from the logs.
 
-  4S LiPo voltage guide
+4S LiPo voltage guide
 
 - Fully charged: 16.8 V total, 4.20 V/cell
 - Nominal: 14.8 V total, 3.70 V/cell
@@ -735,7 +807,9 @@ Unified_ESP8285_2400_RX_via_BetaflightPassthrough
 Unified_ESP8285_2400_RX_via_UART
 ```
 
-Practical lesson: do not blindly match the old Web UI target string to the current dropdown. Check `prior_target_name`, platform, and the real board/product target first.
+Practical lesson: do not blindly match the old Web UI target string to the current dropdown.
+
+Check `prior_target_name`, platform, and the real board/product target first.
 
 {{% /details %}}
 
@@ -748,21 +822,36 @@ the pocket cna also emit wifi `ExpressLRS TX` and give you that section for you 
 
 You will see sth like `140,79,0,152,91,72` which gets updates as soona s you ad your passphrase in the web ui and flash it
 
-
 The reason the Meteor bound perfectly via Betaflight is because it uses an SPI ExpressLRS receiver:
 
 💡 The Difference: SPI vs. Serial (UART)
 
-The Meteor (SPI): On most Meteor tiny whoops, the ExpressLRS receiver isn't a separate chip—it is physically baked right into the main flight controller circuits. Because Betaflight literally is the operating system running that chip, it has a dedicated "Bind Receiver" button in the GUI and handles the connection directly.
+The Meteor (SPI): On most Meteor tiny whoops, the ExpressLRS receiver isn't a separate chip—it is physically baked right into the main flight controller circuits.
 
-Your New Drone (Serial UART): The firmware you just flashed (DIY_2400_RX_ESP8285_SX1280) is for a true, standalone external serial receiver. It acts like its own independent little computer. Betaflight just listens to it over a serial wire, but has no control over its actual radio pairing settings.
+Because Betaflight literally is the operating system running that chip, it has a dedicated "Bind Receiver" button in the GUI and handles the connection directly.
 
+Your New Drone (Serial UART): The firmware you just flashed (DIY_2400_RX_ESP8285_SX1280) is for a true, standalone external serial receiver.
+
+It acts like its own independent little computer. 
+
+Betaflight just listens to it over a serial wire, but has no control over its actual radio pairing settings.
 
 #### Testing Motors
 
 Props out first!
 
 ![alt text](/blog_img/dron/betaflight-motors-test.png)
+
+<!-- 
+https://youtube.com/shorts/Fgdb4F_G_XM 
+-->
+
+{{< youtube "Fgdb4F_G_XM" >}}
+
+
+{{< youtube "N5HMLNwPhio" >}}
+
+<!-- https://youtube.com/shorts/N5HMLNwPhio -->
 
 #### The Golden Pre-Flight Checklist
 
@@ -815,7 +904,9 @@ Over the Air (ELRS): Your RadioMaster Pocket talks to the drone using the ultra-
 
 Inside the Drone (CRSF): Once the receiver catches that signal, it translates the stick movements into the CRSF protocol and shoots them down the wires into the flight controller.
 
-ExpressLRS piggybacks on the CRSF language because Team BlackSheep (the creators of Crossfire) made it open, highly efficient, and incredibly fast. So in Betaflight, whenever you use ELRS, you will always select "CRSF" as your receiver protocol.
+ExpressLRS piggybacks on the CRSF language because Team BlackSheep (the creators of Crossfire) made it open, highly efficient, and incredibly fast. 
+
+So in Betaflight, whenever you use ELRS, you will always select "CRSF" as your receiver protocol.
 
 {{% /details %}}
 
@@ -836,101 +927,104 @@ Then, I went and place the modes im getting confortable with
 
 > Offline-first travel notes for tracking trips, flights, accommodations, and travel documents
 
-
 ### ISM vs LBT
+
+I got a ISM for charging my 4s LiPo's:
+
+{{< youtube "rl80bN2aR1Q" >}}
+
+<!-- https://youtube.com/shorts/rl80bN2aR1Q -->
 
 ### ESP8285 vs IoT ESP32
 
 Yes, it is conceptually similar to the ESP boards you use for IoT, but it is not the same job.
 
-  Your receiver is likely an ExpressLRS 2.4GHz receiver built around two main chips:
+Your receiver is likely an ExpressLRS 2.4GHz receiver built around two main chips: `ESP8285 + SX1280`
 
-  ESP8285 + SX1280
+The name tells us a lot: `DIY_2400_RX_ESP8285_SX1280`
 
-  The name tells us a lot:
+Meaning:
 
-  DIY_2400_RX_ESP8285_SX1280
+DIY      generic/DIY ExpressLRS target family
+2400     2.4GHz radio band
+RX       receiver
+ESP8285  microcontroller
+SX1280   Semtech 2.4GHz LoRa radio chip
 
-  Meaning:
+ESP8285 vs ESP32
 
-  DIY      generic/DIY ExpressLRS target family
-  2400     2.4GHz radio band
-  RX       receiver
-  ESP8285  microcontroller
-  SX1280   Semtech 2.4GHz LoRa radio chip
+The ESP8285 is like a smaller/older cousin of the ESP8266/ESP32 family. It has WiFi and runs firmware, but it is much less powerful than an ESP32.
 
-  ESP8285 vs ESP32
+Roughly:
 
-  The ESP8285 is like a smaller/older cousin of the ESP8266/ESP32 family. It has WiFi and runs firmware, but it is much less powerful than an ESP32.
+ESP8285: small MCU + WiFi + 1MB embedded flash
+ESP8266: similar family, usually external flash
+ESP32: much more powerful, dual-core variants, Bluetooth, more GPIO, more RAM
 
-  Roughly:
+In your ELRS receiver, the ESP8285 is not used as a general IoT web server most of the time. 
 
-  ESP8285: small MCU + WiFi + 1MB embedded flash
-  ESP8266: similar family, usually external flash
-  ESP32: much more powerful, dual-core variants, Bluetooth, more GPIO, more RAM
+It is the “brain” of the radio receiver. It:
 
-  In your ELRS receiver, the ESP8285 is not used as a general IoT web server most of the time. It is the “brain” of the radio receiver. It:
+runs ExpressLRS firmware
+controls the SX1280 radio chip
+decodes packets from your RadioMaster Pocket
+outputs CRSF serial data to the flight controller
+starts the ExpressLRS RX WiFi hotspot for config/flashing
+stores options like domain, UID, WiFi settings
 
-  runs ExpressLRS firmware
-  controls the SX1280 radio chip
-  decodes packets from your RadioMaster Pocket
-  outputs CRSF serial data to the flight controller
-  starts the ExpressLRS RX WiFi hotspot for config/flashing
-  stores options like domain, UID, WiFi settings
+The SX1280 is the actual long-range 2.4GHz radio transceiver. The ESP8285 handles logic; the SX1280 handles RF.
 
-  The SX1280 is the actual long-range 2.4GHz radio transceiver. The ESP8285 handles logic; the SX1280 handles RF.
+Why Receiver And Flight Controller?
 
-  Why Receiver And Flight Controller?
+Because they do different jobs.
 
-  Because they do different jobs.
+The receiver answers:
 
-  The receiver answers:
+What is the pilot commanding?
 
-  What is the pilot commanding?
+The flight controller answers:
 
-  The flight controller answers:
+How do I keep the drone stable and make the motors do that safely?
 
-  How do I keep the drone stable and make the motors do that safely?
+Flow:
 
-  Flow:
+RadioMaster Pocket
+    ↓ 2.4GHz ExpressLRS packets
+SX1280 radio chip on receiver
+    ↓
+ESP8285 running ExpressLRS
+    ↓ CRSF serial protocol over UART
+Flight controller running Betaflight
+    ↓ motor commands
+ESC / 4-in-1 ESC
+    ↓
+Motors
 
-  RadioMaster Pocket
-     ↓ 2.4GHz ExpressLRS packets
-  SX1280 radio chip on receiver
-     ↓
-  ESP8285 running ExpressLRS
-     ↓ CRSF serial protocol over UART
-  Flight controller running Betaflight
-     ↓ motor commands
-  ESC / 4-in-1 ESC
-     ↓
-  Motors
+The receiver does not fly the drone. It only receives your stick positions, switches, link telemetry, and packet timing.
 
-  The receiver does not fly the drone. It only receives your stick positions, switches, link telemetry, and packet timing.
+The flight controller has the IMU/gyro/accelerometer and runs the control loop thousands of times per second. It mixes your input with stabilization math:
 
-  The flight controller has the IMU/gyro/accelerometer and runs the control loop thousands of times per second. It mixes your input with stabilization math:
+pilot wants roll right
+gyro says drone is rotating too slowly/too quickly
+PID loop calculates correction
+motor outputs are adjusted
 
-  pilot wants roll right
-  gyro says drone is rotating too slowly/too quickly
-  PID loop calculates correction
-  motor outputs are adjusted
+So even if your receiver says “roll right 30%”, the FC decides exactly how much each motor should spin.
 
-  So even if your receiver says “roll right 30%”, the FC decides exactly how much each motor should spin.
+Why Not Put Everything In One Chip?
 
-  Why Not Put Everything In One Chip?
+Sometimes they do. Tiny whoops and AIO boards often integrate:
 
-  Sometimes they do. Tiny whoops and AIO boards often integrate:
+flight controller + ESC + receiver
 
-  flight controller + ESC + receiver
+But architecturally they are still separate functions.
 
-  But architecturally they are still separate functions.
+Separate receiver modules are common because:
 
-  Separate receiver modules are common because:
+radio protocols change faster than flight controllers
+receiver placement matters for antenna performance
+you can swap ELRS / Crossfire / FrSky / etc.
 
-  radio protocols change faster than flight controllers
-  receiver placement matters for antenna performance
-  you can swap ELRS / Crossfire / FrSky / etc.
-  RF design is specialized
-  Betaflight should not have to implement every radio stack directly
+RF design is specialized Betaflight should not have to implement every radio stack directly
 
-  In your case, the ESP8285 receiver is basically a tiny dedicated IoT-like computer whose only serious job is: talk ExpressLRS to your radio and CRSF to Betaflight.
+In your case, the ESP8285 receiver is basically a tiny dedicated IoT-like computer whose only serious job is: talk ExpressLRS to your radio and CRSF to Betaflight.

@@ -2,15 +2,14 @@
 title: "Ryze Robotics Dron and Python SDK"
 date: 2026-04-04
 draft: false
-tags: ["Ardupilot","DJi Tello","RC","Computer Vision x PySymverse","DART"]
+tags: ["Ardupilot","DJi Tello","RC","Computer Vision x PySymverse","DART vs PySide6","OpenCV"]
 description: A toy Drone, claude code and CV2. Making a desktop app with flutter.
 url: 'dji-tello-python-sdk'
 ---
 
-
 **Tl;DR**
 
-More tinkering the real world.
+More tinkering in the real world.
 
 **Intro**
 
@@ -25,6 +24,20 @@ I got a [dji tello](https://jalcocert.github.io/JAlcocerT/dji-tello-python-progr
   {{< card link="https://github.com/JAlcocerT/dron-tello-flutter" title="Dron | Repo" icon="github" >}}
 {{< /cards >}}
 
+Took the python CLI and made a PySide6 desktop out of it:
+
+```bash
+cd ./dron/desktop-version #gitlab one :)
+uv sync
+uv run main.py
+```
+
+{{< youtube "XNG57Co1lXA" >}}
+
+<!-- 
+https://youtube.com/shorts/XNG57Co1lXA 
+-->
+
 ### Claude x Python
 
 This is all it takes recently:
@@ -37,8 +50,6 @@ This is all it takes recently:
   {{< card link="https://jalcocert.github.io/JAlcocerT/raspberry-pi-camera-setup/" title="Pi Camera" image="/blog_img/iot/pi-cam.jpg" subtitle="Try OpenCV and yolov8 with the Pi!" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#how-to-control-dji-tello-with-python" title="DJi Tello 101" image="/blog_img/hardware/wifi_eth.jpg" subtitle="Get started with a cheap toy dron." >}}
 {{< /cards >}}
-
-
 
 ```md
 sometime ago i was using python to control my dji tello dron, do you understand the logic i built? create a wiki.md with ur understanding
@@ -113,6 +124,8 @@ https://www.youtube.com/watch?v=dFudZiQ5ocY -->
 ---
 
 ## Conclusions
+
+I got [this main.py](https://gitlab.com/fossengineer1/dron/-/blob/main/main.py?ref_type=heads) to control the DJI Tello via python CLI while seeing the camera feed.
 
 Wouldnt it be nice to do a *come back* to ~~electrical~~ engineering?
 
@@ -271,7 +284,9 @@ In practice, people use it for:
 
 * https://github.com/arpanghosh8453/open-dronelog
 
-> Drone Log analyzer: A high-performance universal dashboard application for organizing and analyzing DJI/Litchi flight logs privately in one place. Built with **Tauri v2, DuckDB, and React**.
+> Drone Log analyzer: A high-performance universal dashboard application for organizing and analyzing DJI/Litchi flight logs privately in one place. 
+
+> Built with **Tauri v2, DuckDB, and React**.
 
 ### About computer vision
 

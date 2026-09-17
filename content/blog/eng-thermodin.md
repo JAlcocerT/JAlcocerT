@@ -151,7 +151,7 @@ En este gráfico se ve claramente cómo la válvula de expansión reduce la pres
 
 Esta combinación aparece principalmente por dos motivos fundamentales: para calcular el **calor** en procesos reversibles y para entender la **exergía** (la energía que realmente es útil).
 
-### 1. La definición de Calor ($Q$)
+#### 1. La definición de Calor ($Q$)
 
 En un proceso reversible, el calor transferido se define mediante la temperatura absoluta ($T$) y el cambio de entropía ($dS$):
 
@@ -170,7 +170,7 @@ Multiplicar la temperatura por el cambio de entropía te da la cantidad de energ
 
 ---
 
-### 2. La Energía Libre de Gibbs ($G$)
+#### 2. La Energía Libre de Gibbs ($G$)
 
 Esta es quizás la ecuación más famosa que utiliza ese término:
 
@@ -190,7 +190,7 @@ En tu aerotermia, el término **$T \cdot \Delta S$** representa la energía que 
 
 ---
 
-### 3. El Trabajo Perdido (Teorema de Gouy-Stodola)
+#### 3. El Trabajo Perdido (Teorema de Gouy-Stodola)
 
 Hay una ecuación específica para calcular cuánto estás desperdiciando en tu sistema debido a las irreversibilidades (fricción en el compresor, turbulencias del gas, etc.):
 
@@ -200,9 +200,11 @@ Esta ecuación te dice que por cada grado de entropía que generas, multiplicas 
 
 * **Dato curioso:** Esto explica por qué en **Polonia** (con una $T_{ambiente}$ muy baja) el sistema es tan sensible. Cualquier ineficiencia se paga cara porque la termodinámica es mucho más implacable cuando intentas "ordenar" energía en ambientes muy fríos.
 
-### Resumen visual:
+Resumen visual:
 
-Si la **Entalpía ($H$)** es todo el dinero que tienes en la cartera, el término **$T \cdot S$** es la parte de ese dinero que la inflación (la entropía) hace que no puedas gastar en nada útil. Lo que te queda para comprar (calentar la casa) es lo que realmente importa.
+Si la **Entalpía ($H$)** es todo el dinero que tienes en la cartera, el término **$T \cdot S$** es la parte de ese dinero que la inflación (la entropía) hace que no puedas gastar en nada útil.
+
+Lo que te queda para comprar (calentar la casa) es lo que realmente importa.
 
 ¿Te suena haber visto estos diagramas de **Temperatura-Entropía (T-s)** en algún momento de tu reforma o cuando investigabas la Panasonic? Son los que tienen forma de "campana".
 
@@ -214,7 +216,7 @@ I havent put together any stirling engines... yet
 
 ![alt text](/blog_img/mechanics/stirling_engine.gif)
 
-But experimenting with thermodynamics have been great.
+But **experimenting with thermodynamics** have been great.
 
 ![alt text](/blog_img/mechanics/vapor_compression_fridge.gif)
 

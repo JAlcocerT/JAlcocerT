@@ -218,10 +218,6 @@ Final Result: SSH-based Forgejo write access is confirmed for `hermesagent` on t
 {{% /details %}}
 
 
-{{% details title="Why Starting a Tech Blog? 🚀" closed="true" %}}
-
-
-{{% /details %}}
 
 
 [Herdr](https://fossengineer.com/herdr-terminal-agent-multiplexer/) was interesting on top of tmux
@@ -544,6 +540,38 @@ ORDER BY day;"
 
 ### FPV
 
+The calibration rule
+    37 +
+    38 +```text
+    39 +new scale = current scale x Betaflight displayed mAh / charger top-up mAh
+    40 +```
+    41 +
+    42 +This automatically produces the correct direction:
+    43 +
+    44 +- If Betaflight mAh is below charger mAh, the fraction is below 1, so the new scale is lower.
+    45 +- If Betaflight mAh is above charger mAh, the fraction is above 1, so the new scale is higher.
+    46 +
+    47 +## Important decoding lesson
+    48 +
+    49 +In Betaflight 4.5, the Blackbox field `amperageLatest` is already calibrated current, stored in centi-amps:
+    50 +
+    51 +```text
+    52 +amps = amperageLatest / 100
+    53 +```
+    54 +
+    55 +It is not raw ADC data and must not be converted through the analog current-sensor formula a second time. Treating it as raw
+        ADC was the source of the earlier incorrect recommendation to raise the scale.
+
+  Session    Betaflight at scale 92    Charger refill    Difference    Implied scale
+  ━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━  ━━━━━━━━━━━━━━━
+   1                         746 mAh           767 mAh      2.7% low             89.5
+  ─────────  ────────────────────────  ────────────────  ────────────  ───────────────
+   2                         620 mAh           603 mAh     2.8% high             94.6
+
+I went from [this python CLI](https://gitlab.com/fossengineer1/dron/-/blob/main/main.py?ref_type=heads) to control a tello, to get a meteor and tinker with betaflight telemetry and then ofc, [got custom Eachine and custom Zidora 5inch dron](https://jalcocert.github.io/JAlcocerT/betaflight-dron-telemetry/#buying-second-hand-drons-x-telemetry).
+
+
+
 3d printing/design/manufacturing coming up: `https://aetherfpv.com/pages/gravity-drone-stand`
 <!-- 
 https://youtu.be/ON7J_xA55Io -->
@@ -551,7 +579,7 @@ https://youtu.be/ON7J_xA55Io -->
 {{< youtube "ON7J_xA55Io" >}}
 
 
-Get to know your batteries: how much [they weight](https://youtube.com/shorts/_msLOGVlX-I), the way [their resistance](https://youtube.com/shorts/oAeiAAeTb9Y) will change across their lifespan
+Get to know your batteries: *how much [they weight](https://youtube.com/shorts/_msLOGVlX-I), the way [their resistance (ohms)](https://youtube.com/shorts/oAeiAAeTb9Y) will change across their lifespan*
 
 Average: ~8.21 A
 p95:     ~25.10 A
@@ -908,22 +936,6 @@ Then, the **v0.5.0**: establishes conventions and data contracts before solver e
 
 * https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#productized-services
 
-### D&A
-
-Go ask unconfortable [questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/): *smart or it does NOT ship*
-
-* https://why-postmortem-checks.pages.dev
-* https://pm-pdm-checks.pages.dev
-
-### HomeLab
-
-This setup is working quite nicely thanks to skills:
-
-{{< cards cols="2" >}}
-  {{< card link="https://fossengineer.com" title="F/OSS Engineer ↗" icon="book-open" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="Home-Lab Configs 🐋 ↗" >}}
-{{< /cards >}}
-
 ### Attract and Convert
 
 Every business has its own delivery
@@ -1044,17 +1056,21 @@ Flow I made them go through:
   2. One-sentence idea
   3. Actual stage: raw, researched, talked to buyers, pre-sold, shipped, revenue                           
   4. Buyer clarity
-  5. Evidence: paid, pilot, calls, waitlist, competitors, none                                             
+  5. Evidence: paid, pilot, calls, waitlist, competitors, none
   6. Pain intensity
-  7. Concrete paid outcome                                                                                 
-  8. First 10-buyer distribution path                                                                      
+  7. Concrete paid outcome              
+  8. First 10-buyer distribution path            
   9. What exists today
   10. 14-day commitment
   11. Biggest blocker              
-12. Contact info                                                                                         
+12. Contact info 
+
+
 The intent is to classify people into: raw idea, needs validation, ready to test, ready to build, or     
-already commercial. It deliberately exposes weak ideas by asking for buyer clarity, evidence,            
-distribution, and commitment.                                                                            
+already commercial. 
+
+It deliberately exposes weak ideas by asking for buyer clarity, evidence,
+distribution, and commitment 
                                        
 ```sh
 python .agents\skills\formbricks-as-code\scripts\validate_survey.py forms\idea-state-intake.json --funnel
@@ -1078,6 +1094,9 @@ By standardizing data models, governance, and architecture, I make sure analytic
 
 <!-- https://youtu.be/K-eXcT1XgdE -->
 
+So what?
+
+You get to ship, what you want, in time:
 
 {{< youtube "K-eXcT1XgdE" >}}
 
@@ -1099,7 +1118,7 @@ https://youtu.be/K-eXcT1XgdE
 
 What can I recommend you if you are starting out?
 
-1. Do *and avoid bs* `https://aegis-freedom.pages.dev/`
+1. Do stuff. *And avoid bs:* `https://aegis-freedom.pages.dev/`
 2. Maximize active income and save
 3. **Value based or nothing**
 
@@ -1176,6 +1195,13 @@ Also, the daily notes have stopped to flow here and the `cv-laitex` similarly, j
 
 #### Clarity of Execution
 
+Working in D&A?
+
+Go ask unconfortable [questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/): *smart or it does NOT ship*
+
+* https://why-postmortem-checks.pages.dev
+* https://pm-pdm-checks.pages.dev
+
 You might not know yet, but you need **proper [governance](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/governance.md)**.
 
 You cant be an AI first company before you are a data ready team.
@@ -1191,10 +1217,6 @@ https://youtu.be/K-eXcT1XgdE -->
 {{< youtube "K-eXcT1XgdE" >}}
 
 If you are still working in a `9-5` while working in your free time to make your business, make sure to have a **clear picture** of what [your game is](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/my-game.md) and a [playbook to execute](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/playbook.md).
-
-
-
-
 
 ---
 

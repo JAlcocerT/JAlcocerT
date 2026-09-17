@@ -53,7 +53,7 @@ You better [ask questions](https://jalcocert.github.io/JAlcocerT/questions-for-e
 Yep, make sure meetings are clear and actionable :)
 
 {{< callout type="info" >}}
-A good start is WHO will do WHAT by WHEN
+A good start is *WHO will do WHAT by WHEN*
 {{< /callout >}}
 
 EOD Accountability Review:
@@ -78,7 +78,7 @@ You can avoid noise, non-sense promises, wishes with such form: https://app.form
 
 ```
 
-{{% details title="QnA for ppl that need help with their ideas 🚀" closed="true" %}}
+{{% details title="QnA for ppl that need help with ideas 🚀" closed="true" %}}
 
 {{% /details %}}
 

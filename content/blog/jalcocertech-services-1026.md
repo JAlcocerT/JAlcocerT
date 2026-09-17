@@ -15,7 +15,7 @@ Still thinking on headcounts to mess around with a project instead of [getting ~
 
 **Intro**
 
-* WHY Im writting this post:
+* WHY Im writting this post: *a*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 A friend told me once that I will do sth with energy at some point
@@ -105,17 +105,7 @@ It has a wide range of features, including a built-in gyroscope.
 
 {{< youtube "JXyHuZyqjxU" >}}
 
-### Leeeeads
-
-Oh yea, the leads!
-
-### Governance Consulting
-
-
-Believe it or not, these are not clear and organizations still have severe governance problems:
-
-* https://ebooks.jalcocertech.com/books/dna/dna-career-skills/#project-management-essentials
-* https://ebooks.jalcocertech.com/books/managing-data-projects/faq-project-docs/
+## Others
 
 
 ### Attract Convert Deliver
@@ -128,6 +118,42 @@ Believe it or not, these are not clear and organizations still have severe gover
 
 2. 
 
+### Leeeeads
+
+Oh yea, the leads!
+
+What am i doing about that?
+
+## Case Studies
+
+### Electronic Design
+
+Yep, i designed and sent for manufacturing recently my first pcb.
+
+There were 3 stages:
+
+1. Electronic Simulation
+
+2. Bread and protoboard testing
+
+3. PCB Design with KiCAD
+
+
+### Governance Consulting
+
+Believe it or not, these are not clear and organizations still have severe governance problems:
+
+* https://ebooks.jalcocertech.com/books/dna/dna-career-skills/#project-management-essentials
+* https://ebooks.jalcocertech.com/books/managing-data-projects/faq-project-docs/
+
+### HomeLab
+
+This setup is working quite nicely thanks to skills:
+
+{{< cards cols="2" >}}
+  {{< card link="https://fossengineer.com" title="F/OSS Engineer ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="Home-Lab Configs 🐋 ↗" >}}
+{{< /cards >}}
 
 ---
 

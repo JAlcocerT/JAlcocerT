@@ -138,7 +138,7 @@ make flash-picow
 make mqtt-listen MQTT_HOST=192.168.1.2 MQTT_TOPIC='pico/#'
 ```
 
-So with both pushing data:
+So with both pushing data: *started [here](https://jalcocert.github.io/JAlcocerT/thermodynamics/#aerotermia-poc-x-rpi-dht22) with thermodynamics and ~ aerotermia+dht22*
 
 ```sh
 #git clone /poc

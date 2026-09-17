@@ -20,9 +20,11 @@ Isnt it time to build something real?
 
 ## Home Automation
 
-### Home Assistant
+Home Assistant is great
 
-https://works-with.home-assistant.io/certified-products/
+And you have some products built around it: `https://works-with.home-assistant.io/certified-products/`
+
+But hey, are we still drag n dropping?
 
 ### DIY Custom HA
 
@@ -803,6 +805,84 @@ Adding [nginx](https://fossengineer.com/selfhosting-nginx-proxy-manager-docker/)
 
 
 {{% /details %}} 
+
+
+### One ESP - Few Sensors
+
+For the **MLX90614**, it makes the most sense to use the **default I2C pins** on the ESP32. 
+
+While the ESP32 is flexible and allows you to map I2C to almost any pin, using the defaults ensures that almost every library (like the Adafruit one) will work instantly without you having to write extra lines of code to "remap" the pins.
+
+The Best Choice: GPIO 21 and 22
+
+On your 30-pin ESP-WROOM-32, these are labeled as **D21** and **D22**.
+
+| MLX90614 Pin | ESP32 Pin (GPIO) | Label on Board |
+| :--- | :--- | :--- |
+| **SDA (Data)** | **GPIO 21** | **D21** |
+| **SCL (Clock)** | **GPIO 22** | **D22** |
+| **VCC** | **3V3** | **3.3V** |
+| **GND** | **GND** | **GND** |
+
+1.  **Hardware Support:** GPIO 21 and 22 are connected to the ESP32's internal I2C hardware peripheral. This means the chip handles the communication timing very efficiently.
+
+2.  **No "Strapping" Conflicts:** Unlike GPIO 15 (which you asked about earlier) or GPIO 0, these pins don't affect how the ESP32 boots up. You can have the sensor plugged in while you upload code, and it won't cause any errors.
+
+3.  **Library Compatibility:** Most code examples you find online for the MLX90614 will assume you are using 21 and 22. It saves you the headache of debugging "Sensor not found" errors.
+
+Can you use the DHT11 and MLX90614 at the same time?
+
+Absolutely!
+
+This is a very common setup.
+
+Since they use different communication methods, they won't interfere with each other. 
+
+Here is your "Master Plan" for wiring both:
+
+| Sensor | Data Pin 1 | Data Pin 2 | Power |
+| :--- | :--- | :--- | :--- |
+| **DHT11** | **D4** (Digital) | *None* | 3.3V & GND |
+| **MLX90614** | **D21** (SDA) | **D22** (SCL) | 3.3V & GND |
+
+> **Pro Tip:** Since the ESP32 only has one `3V3` pin and a couple of `GND` pins, you might need a small **breadboard** to share the power and ground lines between the two sensors. 
+
+Most **MLX90614 modules** (the GY-906 version) come with those 4 pins. 
+
+The "extra" pins you might see on the bare sensor (which has 4 pins in a circle) are usually combined or simplified on the PCB module to make it easy to use with microcontrollers like your ESP32.
+
+Understanding the 4 Pins
+
+Here is what each pin does and where it goes on your **ESP-WROOM-32**:
+
+| Pin Label | Function | ESP32 Connection | Why? |
+| :--- | :--- | :--- | :--- |
+| **VIN** | Voltage In | **3V3** | Powers the sensor. Even if the module can handle 5V, 3.3V is safer for the ESP32. |
+| **GND** | Ground | **GND** | Completes the electrical circuit. |
+| **SCL** | Serial Clock | **D22 (GPIO 22)** | This is the "metronome" that keeps the data timing in sync. |
+| **SDA** | Serial Data | **D21 (GPIO 21)** | This is the actual pipe where the temperature data travels. |
+
+Why 4 pins instead of 3 (like the DHT11)?
+
+The DHT11 uses a custom **1-wire protocol** where the "clock" and "data" are mashed into a single wire. It’s simple, but a bit slow and error-prone.
+
+The MLX90614 uses **I2C (Inter-Integrated Circuit)**.
+
+This requires two wires for data communication:
+
+1.  **SDA:** Sends the actual bits of temperature data.
+2.  **SCL:** Sends a steady pulse (the clock) so the ESP32 knows exactly when to "read" each bit on the SDA line.
+
+This makes I2C much faster and more reliable than the DHT11's method. 
+
+Plus, you can actually hook up **multiple different I2C sensors** to the same two pins (D21 and D22), and the ESP32 can talk to them individually using their "addresses."
+
+A Quick Tip for a `ESP-WROOM-32`
+
+Since you are likely using a breadboard now to connect both sensors:
+
+* **The "Power Rail":** Connect the ESP32's **3V3** pin to the red (+) rail on your breadboard and **GND** to the blue (-) rail. 
+* **Shared Power:** Now you can just plug the VIN and GND from both the DHT11 and the MLX90614 into those rails.
 
 ### KiCad x Power Stage PCB Design
 
