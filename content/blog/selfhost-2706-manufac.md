@@ -18,7 +18,7 @@ url: 'selfhosting-manufacturing-tools'
 
 **Intro**
 
-* Why Im writting this post: *After designing as a code 3d printed parts, simulate the FEM and create my first pcb post electronic simulations, its time to put together a design for manufacturing post*
+* Why Im writting this post: *After designing as a code 3d printed parts and making and improving a fpv stand (among other goodies), simulate the FEM and create my first pcb post electronic simulations, its time to put together a design for manufacturing post*
 * What Ive learnt with it:
 
 ### Manufacturing Tools

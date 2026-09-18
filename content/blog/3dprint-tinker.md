@@ -7,7 +7,6 @@ description: abcd
 url: 'starting-with-3dprinting'
 ---
 
-
 **Tl;DR**
 
 One of those things in the bucket list of every tinkerer.

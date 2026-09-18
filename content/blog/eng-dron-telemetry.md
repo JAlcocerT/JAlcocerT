@@ -349,6 +349,12 @@ Think of CSR as the **engine** and PWA as the **vehicle chassis and wheels**:
 
 ## Conclusions
 
+Create this [quick pwa here](https://github.com/JAlcocerT/meteor-dron/tree/main/betaflight-energy-check/cf-pages): `https://fpv-logs.pages.dev/`
+
+```sh
+make deploy PROJECT_NAME=fpv-logs  
+```
+
 {{< callout type="warning" >}}
 Remember to use betaflight to get the telemetry for a limited time not to overheat your controller with the rising temp
 {{< /callout >}}
@@ -916,7 +922,15 @@ Then, I went and place the modes im getting confortable with
 
 ![alt text](/blog_img/dron/betaflight-modes.png)
 
+If you will fly without gogles, make sure that still your VTX antena is connected
+
+{{< callout type="warning" >}}
+Been there, done that: the stationary wave will fry your VTX in seconds, its all about wave reflection when it finds a wall of infinite ohms, instead of the expected 50mohms of the antena
+{{< /callout >}}
+
 ### Interesting PWAs
+
+From the obvious: betaflight: `app.betaflight.com`
 
 * https://forocoches.com/foro/showthread.php?t=10665137
 * https://gasolinapp.inforapida.es/
@@ -927,9 +941,11 @@ Then, I went and place the modes im getting confortable with
 
 > Offline-first travel notes for tracking trips, flights, accommodations, and travel documents
 
+* See also vert-sh, 
+
 ### ISM vs LBT
 
-I got a ISM for charging my 4s LiPo's:
+I got a ISM (!= ISM) for charging my 4s LiPo's:
 
 {{< youtube "rl80bN2aR1Q" >}}
 
@@ -1028,3 +1044,9 @@ you can swap ELRS / Crossfire / FrSky / etc.
 RF design is specialized Betaflight should not have to implement every radio stack directly
 
 In your case, the ESP8285 receiver is basically a tiny dedicated IoT-like computer whose only serious job is: talk ExpressLRS to your radio and CRSF to Betaflight.
+
+### Interesting Channels
+
+1. https://www.youtube.com/@thinkflight/videos
+
+https://www.youtube.com/watch?v=xgCrJKTvTho

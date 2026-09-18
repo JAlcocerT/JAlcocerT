@@ -9,6 +9,8 @@ url: 'selfhosting-energy-monitoring'
 
 **TL;DR**
 
+https://www.youtube.com/@QuantumMakers
+
 ---
 
 **Intro**

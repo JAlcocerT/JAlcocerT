@@ -568,6 +568,26 @@ The calibration rule
   ─────────  ────────────────────────  ────────────────  ────────────  ───────────────
    2                         620 mAh           603 mAh     2.8% high             94.6
 
+ +
+    63 +| Battery flight | Real energy used | Average current | Average power | P99 current |
+    64 +|---|---:|---:|---:|---:|
+    65 +| Round 1 battery 1 | 4.53 Wh | 7.51 A | 120 W | 40.3 A |
+    66 +| Round 1 battery 2 | 5.22 Wh | 7.25 A | 117 W | 35.8 A |
+    67 +| Round 2 850 mAh #1 | 2.21 Wh | 8.96 A | 143 W | 32.3 A |
+    68 +| Round 2 850 mAh #2 | 2.49 Wh | 9.11 A | 146 W | 34.1 A |
+    69 +| Round 2 1300 mAh #1 | 9.18 Wh | 12.65 A | 195 W | 98.0 A |
+    70 +| Round 2 1300 mAh #2* | 8.53 Wh | 14.21 A | 219 W | 122.5 A |
+    71 +| Round 3 battery 1 | 15.57 Wh | 12.57 A | 187 W | 117.4 A |
+    72 +| Round 3 battery 2 | 13.61 Wh | 15.14 A | 224 W | 137.6 A |
+    73 +| Sep 13 battery 1 | 20.02 Wh | 11.44 A | 170 W | 55.9 A |
+    74 +| Sep 13 battery 2** | 17.25 Wh | 13.61 A | 203 W | 115.4 A |
+    75 +| Sep 16 battery 1 | 9.12 Wh | 9.65 A | 149 W | 70.8 A |
+    76 +| Sep 16 battery 2*** | 5.45 Wh | 9.79 A | 152 W | 91.3 A |
+    77 +| Sep 17 battery 1 | 11.48 Wh | 9.01 A | 139 W | 59.9 A |
+    78 +| Sep 17 battery 2 | 9.53 Wh | 10.34 A | 159 W | 84.8 A |
+
+  > You need these to know you are not exceeding your battery C rating :)
+
 I went from [this python CLI](https://gitlab.com/fossengineer1/dron/-/blob/main/main.py?ref_type=heads) to control a tello, to get a meteor and tinker with betaflight telemetry and then ofc, [got custom Eachine and custom Zidora 5inch dron](https://jalcocert.github.io/JAlcocerT/betaflight-dron-telemetry/#buying-second-hand-drons-x-telemetry).
 
 
@@ -665,7 +685,53 @@ https://www.youtube.com/watch?v=9Jhi3VOZ9w8
 
 #### FPV Telemetry
 
-If you are interested to make overlays, get the .BTL and claibrate the power consumption to what your charger tells you after the session. 
+cd dron/desktop-version
+  uv sync
+  uv run main.py
+
+  
+  Your Python app
+     ↓
+  UDP                 # how app data is packaged/sent
+     ↓
+  IP / network        # addresses, e.g. 192.168.10.1
+     ↓
+  Wi‑Fi (802.11)      # local wireless networking protocol
+     ↓
+  Radio modulation    # turns bits into radio waves
+     ↓
+  Tello antenna
+
+  For your Tello:
+
+  - UDP: carries messages such as takeoff, RC movement values, telemetry, and H.264 video packets.
+  - Wi‑Fi: is the local network connection between your laptop and the drone’s access point.
+  - Modulation: is the radio-level technique Wi‑Fi uses to put digital bits onto the 2.4 GHz radio signal—typically variants of OFDM
+    with QAM-style symbols.
+
+  So UDP does not “send radio waves” itself. It hands packets down through the network stack; Wi‑Fi transports those packets over the
+  air.
+
+  One subtle but useful detail: UDP itself does not retry lost packets, but Wi‑Fi often retries a failed radio transmission at its
+  own lower layer. If it still cannot deliver it quickly enough, the UDP packet is lost. That is why live video may show a skipped
+  frame rather than freezing to wait for recovery.
+
+The tello with 1100 mah li-ion, uses 70% battery for 7 min flight
+
+
+  - 1,100 mAh = 1.1 Ah
+  - 10% use = 0.11 Ah per minute
+  - That is 0.11 × 60 = 6.6 A average current
+  - At a typical ~3.7–3.8 V battery voltage:
+
+  6.6 A × 3.7 V = 24.4 W
+  6.6 A × 3.8 V = 25.1 W
+
+  So call it ~25 W during that style of flight.
+
+> `https://fpv-logs.pages.dev/`
+
+If you are interested to make overlays, get the `.BTL` and claibrate the power consumption to what your charger tells you after the session. 
 
 Then the A flowing will be accurate.
 

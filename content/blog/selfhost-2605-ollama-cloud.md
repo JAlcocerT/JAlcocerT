@@ -21,7 +21,7 @@ https://www.youtube.com/watch?v=tYg6T_DAP-k
 
 **Intro**
 
-Running LLMs locally, even on a [PI](#how-to-enhance-a-raspberry-pi-for-ai), should not be a problem in 2025.
+Running LLMs locally, even on a [PI](#how-to-enhance-a-raspberry-pi-for-ai), should not be a problem even in 2025.
 
 * https://jalcocert.github.io/JAlcocerT/where-to-deploy/
 
@@ -31,7 +31,9 @@ sudo docker compose -f ./z-homelab-setup/evolution/2605_docker-compose.yml logs 
 
 ## Ollama What?
 
-Ollama makes it easy to get up and running with large language models locally. It is **like Docker for managing LLMs**.
+Ollama makes it easy to get up and running with large language models locally.
+
+It is **like Docker for managing LLMs**.
 
 With [modelfile](https://github.com/Decentralised-AI/ollama/blob/main/docs/modelfile.md), it creates a [profile](https://github.com/Decentralised-AI/ollama/tree/main/examples) of a model: **ollama create your_model_profile -f ./testmodelfile**
 
@@ -262,31 +264,29 @@ Local AI Use Cases Tier List:
 
 S Tier
 
-Code Autocomplete: Quen 2.5 Coder (7B parameter model) – fast, runs locally with low latency, good cloud copilot replacement.
-Photo Enhancement: Upscaly (ESR GAN models) – open-source, easy to use, 4x or 8x upscaling, works on ~4GB VRAM GPU.
-Home Automation: Frigat NVR + Home Assistant – mature ecosystem with person/vehicle detection, facial recognition, fully local.
-Image Generation: Flux 2D (via Comfy UI) – fast generation in seconds, high quality, fine-tuning supported.
-Text-to-Speech: Chatterbox – natural voice, multilingual (23+ languages), close to cloud quality.
-Speech-to-Text: Faster Whisper Large V3 Turbo – fast and accurate transcription used with local LLM cleanup.
+* Code Autocomplete: Quen 2.5 Coder (7B parameter model) – fast, runs locally with low latency, good cloud copilot replacement.
+* Photo Enhancement: Upscaly (ESR GAN models) – open-source, easy to use, 4x or 8x upscaling, works on ~4GB VRAM GPU.
+* Home Automation: like Frigat + Home Assistant – mature ecosystem with person/vehicle detection, facial recognition, fully local.
+* Image Generation: Flux 2D (via Comfy UI) – fast generation in seconds, high quality, fine-tuning supported.
+* Text-to-Speech: Chatterbox – natural voice, multilingual (23+ languages), close to cloud quality.
+* Speech-to-Text: Faster Whisper Large V3 Turbo – fast and accurate transcription used with local LLM cleanup.
+
 A/B Tier
 
-AI Chat: Quen 33B, LM Studio, Mistral – good chat experience locally with multiple model choices, supports RAG pipelines.
+* AI Chat: Quen 33B, LM Studio, Mistral – good chat experience locally with multiple model choices, supports RAG pipelines.
+
 B Tier
 
-OCR: Sura (DeepSE OCR) – solid document processing and table extraction, reliable but not cutting-edge.
+* OCR: Sura (DeepSE OCR) – solid document processing and table extraction, reliable but not cutting-edge.
+
 C Tier
 
-Video Generation: WAN 2.1 (Alibaba) – experimental, slow and expensive locally, quality still lacking.
-Voice Agents: Pipecat – pipeline combining speech-to-text, language model, and text-to-speech; latency ~800ms; limited intelligence locally.
-Agentic Coding: Not recommended locally yet – requires strong hardware; currently unstable and slow; better options with Quen models.
-AI Agents: Limited functionality locally – true autonomous agents need strong cloud models; local versions are unstable.
-D Tier
+* Video Generation: WAN 2.1 (Alibaba) – experimental, slow and expensive locally, quality still lacking.
+* Voice Agents: Pipecat – pipeline combining speech-to-text, language model, and text-to-speech; latency ~800ms; limited intelligence locally.
+* Agentic Coding: Not recommended locally yet – requires strong hardware; currently unstable and slow; better options with Quen models.
+* AI Agents: Limited functionality locally – true autonomous agents need strong cloud models; local versions are unstable.
 
-Vibe Coding: Not usable locally – complex app-building from plain English requires cloud-level models; local models insufficient.
-
-
-
-Ollama with [the mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) has been interesting!
+Ollama with [a mac M2](https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2) has been interesting!
 
 What else am I running since last month?
 

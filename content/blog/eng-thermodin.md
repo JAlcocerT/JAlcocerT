@@ -117,9 +117,7 @@ Aquí es donde entra la **entropía**. En un mundo ideal (adiabático e irrevers
 
 Sin embargo, en tu máquina real, el compresor genera fricción y calor interno, por lo que:
 
-
 $$s_2 > s_1$$
-
 
 Ese aumento de entropía es lo que hace que tu sistema no sea "perfecto" y necesites más electricidad de tus placas de la que dictaría la teoría pura.
 

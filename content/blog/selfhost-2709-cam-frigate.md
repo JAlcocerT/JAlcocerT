@@ -87,6 +87,9 @@ Beyond the ,DIY' with the Pi camera.
 
 > MIT | NVR with realtime local object detection for IP cameras
 
+
+Android/iOS app (closed source): https://github.com/blakeblackshear/frigate/discussions/24045
+
 <https://www.youtube.com/watch?v=sCkswrK0G3I>
 
 ```sh

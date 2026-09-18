@@ -776,7 +776,6 @@ services:
     #command: tail -f /dev/null #keep it running for testing
     restart: unless-stopped      
 
-
   grafana:
     image: grafana/grafana:9.5.7 #was using this one instead of latest for stability
     container_name: grafana3
@@ -953,8 +952,7 @@ DRC means Design Rules Check. KiCad examines the board for problems such as:
 
 A summary of [the order](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/order-104.md), with [clarifications](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/z-clarification.md) and [assumptions](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/z-assumptions.md):
 
-Before submitting, confirmed the uploaded project  
-name is `power-stage-104-fabrication-release-r2-2026-09-15.zip` and the form shows: `PS104-R2-FAB-2026-09-15`
+Before submitting, confirmed the uploaded project name is `power-stage-104-fabrication-release-r2-2026-09-15.zip` and the form shows: `PS104-R2-FAB-2026-09-15`
 
 - 65 × 45 mm                                              
 - 2 layers                                                
@@ -967,7 +965,6 @@ name is `power-stage-104-fabrication-release-r2-2026-09-15.zip` and the form sho
 - bare PCB, quantity 3 
 
 > One board was 45 euros, x3 63 euros, fabrication ~9 working days, in my hands in ~12days
-
 
 ### Electronics Simulations
 
@@ -1009,3 +1006,13 @@ https://github.com/espressif/esptool
 https://github.com/arendst/Tasmota
 
 https://github.com/tasmota/tasmotizer
+
+## Interesting Videos for Ideas
+
+1. https://www.youtube.com/@robojax/videos
+
+[Building H-Bridge Motor driver](https://www.youtube.com/watch?v=6ugrL5ziPn8) using TIP120 TIP125 full PCB Design with Arduino - Robojax #392 
+
+ ESP32 Tutorial 49 -[ Control DC Motor Over The internet](https://www.youtube.com/watch?v=OUgyPXNYg3g) using Adafruit IoT | SunFounder's ESP32 kit 
+
+ 2. ResinChem Tech - https://www.youtube.com/watch?v=xFfxWB_TQwE

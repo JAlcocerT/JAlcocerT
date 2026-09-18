@@ -38,7 +38,7 @@ choco install blender --version=4.2.2 -y
 
 ## Conclusions
 
-Wherever you see price = cost + margin, you are looking to a commodity
+Wherever you see `price = cost + margin`, you are looking to a commodity
 
 https://github.com/JAlcocerT/poc/tree/main/blender/dron-standing
 
@@ -95,6 +95,33 @@ make open-original-animation-detail-180
 >  Materiał PETG, warstwa 0,20 mm, 4 ścianki, wypełnienie 30%
 
 3. Also got to know that there is an agregator `https://craftcloud3d.com/` which can also print in metals like aluminum or titanium (they also have cnc machining and molding - crazy that this can be some kind of manufacturing as a service!)
+
+> And [it worked](https://youtube.com/shorts/KN0YrPE9GO8)
+
+<!-- https://youtube.com/shorts/fugTKhjW-FQ -->
+
+{{< youtube "fugTKhjW-FQ" >}}
+
+yup
+
+{{< youtube "VgRgUhA66Kk" >}}
+
+<!-- https://youtube.com/shorts/VgRgUhA66Kk -->
+
+#### Improvements
+
+So for v102, we would replace: four-finger snap-fit collar → two-jaw snap-fit collar
+
+> Yep, i snapped one!
+
+  it is not a rack-and-pinion.
+
+  The best name is a rack-and-pawl ratchet—more broadly, a discrete ratcheting linkage. The toothed long rod is the
+  rack; the arm/slider engagement acts as the locking pawl/detent.
+
+  There is no rotating circular gear (a pinion) driving the rack.
+
+> this part was strong enough thought
 
 
 ### FEM x Calculix x Beso
