@@ -3,7 +3,7 @@ title: "Robotics 101"
 date: 2026-10-30
 draft: false
 tags: ["MBSD","Electronics","RC","Drons vs FPV","IoT"]
-description: ''
+description: 'ESP32 x SG90'
 url: 'robotics-101'
 math: true
 ---
@@ -28,6 +28,13 @@ https://www.youtube.com/watch?v=C9DD_NOjnDY
 -->
 
 {{< youtube "C9DD_NOjnDY" >}}
+
+## Robotics
+
+### ESP32 x SG90
+
+
+
 
 
 ---

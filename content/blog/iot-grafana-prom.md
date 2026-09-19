@@ -1,6 +1,6 @@
 ---
 title: "Grafana Monitoring: Prometheus"
-date: 2026-10-01
+date: 2026-11-01
 draft: false
 tags: ["Homelab","Docker","Self-Hosting","Iotawatt","Prometheus vs Graphite","Grafana vs TelemetryHarbour"]
 description: 'Grafana works for IoT Same as for Monitoring a HomeLab'

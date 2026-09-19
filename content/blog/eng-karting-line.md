@@ -271,24 +271,27 @@ proton-drive filesystem list /
 proton-drive filesystem list /my-files
 ```
 
- To upload one local file with the Proton Drive CLI:
+ To upload one local file with the **Proton Drive CLI**:
 
-  proton-drive auth login
-  proton-drive filesystem upload /path/to/local-file "/destination/folder"
+```sh
+proton-drive auth login
+proton-drive filesystem upload /path/to/local-file "/destination/folder"
+```
 
-  Example, uploading ~/Downloads/report.pdf to the root of Proton Drive:
+Example, uploading `~/Downloads/report.pdf` to the root of Proton Drive:
 
-  proton-drive filesystem upload ~/Downloads/report.pdf "/"
+proton-drive filesystem upload ~/Downloads/report.pdf "/"
 
-  To see folders first:
+To see folders first: `proton-drive filesystem list "/"`
 
-  proton-drive filesystem list "/"
+To create a folder:
 
-  To create a folder:
+```sh
+proton-drive filesystem create-folder "/" "Uploads"
+proton-drive filesystem upload ~/Downloads/report.pdf "/Uploads"
+```
 
-  proton-drive filesystem create-folder "/" "Uploads"
-  proton-drive filesystem upload ~/Downloads/report.pdf "/Uploads"
-
+Like:
 ```sh
 proton-drive filesystem upload ~/Desktop/DJI_20260726095445_0040_D.MP4 /my-files/Oa5Pro-Rysy
 ```

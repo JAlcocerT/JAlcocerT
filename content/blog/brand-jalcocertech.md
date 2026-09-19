@@ -1,6 +1,6 @@
 ---
 title: "How is my Brand going?"
-date: 2026-10-28
+date: 2026-10-13
 draft: false
 tags: ["Brand HUBs","Email marketing"]
 description: 'A brand around JAlcocerTech'

@@ -230,15 +230,16 @@ Pass 2 — the raster that overturned step 7's diagnosis
 Three habits did most of the work, and they're all lifted from your existing projects rather than invented:
 
 - **Inspect the data before writing the parser.** Steps 1 and 2 each changed the design.
+
 - **Two independent paths, then check they agree.** Your `building-geo-to-blender` cross-checks its analytic horizon against a Cycles render (38.4% vs 38.9%); here the raster cross-checks the point run, and the composite cross-checks the georeferencing. Every expensive claim has a cheap second opinion.
+
 - **Refuse rather than degrade.** Both the point script and the raster script *exit* with the march radius that would fit instead of letting rays edge-clamp — because edge-clamping silently flattens distant ridges into a sunnier answer and leaves no trace in the output.
 
 Stack: Python stdlib for the data plumbing, numpy for the marching, scipy for the statistics, Pillow for the rasters, matplotlib for the charts, Leaflet for the maps. No database, no GDAL, no npm.
 
 ### Solar Rays x Buildings in a Geolocation
 
-For an off-grid or heat-pump build, annual totals are the
-wrong statistic and December is the whole design constraint.
+For an off-grid or heat-pump build, annual totals are the wrong statistic and December is the whole design constraint.
 
 
 https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#the-sun-is-interesting
@@ -301,7 +302,9 @@ To put e-bike assistance in perspective relative to human effort:
 
 For a non-professional cyclist, power output depends heavily on fitness level, body weight, and duration.
 
-Cycling power is typically measured at **FTP** (Functional Threshold Power—the maximum average wattage you can hold for roughly 1 hour) or measured in **Watts per kilogram ($\text{W/kg}$)**.
+Cycling power is typically measured at **FTP** (Functional Threshold Power—the maximum average wattage you can hold for roughly 1 hour) 
+
+or measured in **Watts per kilogram ($\text{W/kg}$)**.
 
 ---
 
@@ -335,6 +338,8 @@ This can be useful to estimate the power i applied to the bike
 git clone 
 cd ./
 ```
+
+> 
 
 ---
 
@@ -410,5 +415,5 @@ You can correlate [with household income](https://www.ine.es/ADRH/?config=config
 
 ### GPS Tracker
 
-https://www.traccar.org/docker/
-https://github.com/traccar/traccar-docker
+* https://www.traccar.org/docker/
+* https://github.com/traccar/traccar-docker

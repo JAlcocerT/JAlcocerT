@@ -318,11 +318,13 @@ Check that `forgejo:3000` ready:
 
 ### Selfhosted Communication
 
+Communication within your team is the information flow and you can also do it with OSS:
+
 1. [Simplex](https://fossengineer.com/selfhosting-simplex-chat/) with `https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.0`
 
 2. Matrix: with the flavour [conduit](https://fossengineer.com/selfhosting-matrix-conduit-server-with-docker/) or [synapse](https://fossengineer.com/selfhosting-matrix-synapse-docker/)
 
-3. 
+3. Fluxer
 
 ### Selfhosted Media
 
@@ -352,6 +354,14 @@ You can have [a look to IPTVs](https://forocoches.com/foro/showthread.php?t=1074
 
 > A native music client for Jellyfin and Navidrome/Subsonic
 
+2.  Sonixd
+
+```sh
+winget install sonixd
+```
+
+3. Supersonic
+
 ![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
 
 Navidrome is other OSS **selfhostable music server**:
@@ -368,6 +378,6 @@ Navidrome is other OSS **selfhostable music server**:
 
 * https://github.com/anthropics/claude-cookbooks
 
-* `https://ulm-ppl-test.pages.dev/`
+* As i prepare for the exam, made this webapp: `https://ulm-ppl-test.pages.dev/`
 
 From `./poc/ulm-ppl`with some books distilled.

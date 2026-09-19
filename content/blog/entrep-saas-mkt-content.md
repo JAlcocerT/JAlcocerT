@@ -7,6 +7,14 @@ description: 'Is value based content dead? Prove it wrong with data animations.'
 url: 'social-media-content'
 ---
 
+**Tl;DR**
+
+
+**Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 
 Can you create quality content and build a community with social media (Twitter/Threads)?
 
@@ -15,15 +23,6 @@ Can you create quality content and build a community with social media (Twitter/
 <!-- https://www.youtube.com/watch?v=ZTSI3DDP_4A -->
 
 {{< youtube "ZTSI3DDP_4A" >}}
-
-
-**Tl;DR**
-
-
-**Intro**
-
-* Why Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 What's the actual value of a follower?

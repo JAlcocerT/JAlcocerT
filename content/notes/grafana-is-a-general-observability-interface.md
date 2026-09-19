@@ -1,6 +1,6 @@
 ---
 title: "Grafana is a general observability interface"
-date: 2026-10-01
+date: 2026-11-01
 tags: ["grafana", "observability", "iot"]
 description: "Grafana works across homelab and IoT monitoring because both need time-series visibility."
 ---
