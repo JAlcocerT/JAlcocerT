@@ -287,7 +287,7 @@ It supports live transcription during recordings and exports in multiple formats
 It syncs audio and transcript content across devices seamlessly.
 
 {{< callout type="info" >}}
-I decided to give a try to this one, as fireflies seems to support n8n integration: https://guide.fireflies.ai/articles/4758387081-learn-about-n8n-x-fireflies-integration
+I decided to give a try to this one, as fireflies seems to support n8n integration: `https://guide.fireflies.ai/articles/4758387081-learn-about-n8n-x-fireflies-integration`
 {{< /callout >}}
 
 

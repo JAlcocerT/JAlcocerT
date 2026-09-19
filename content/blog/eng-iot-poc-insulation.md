@@ -219,6 +219,10 @@ I also tried it from the homelab: `MQTT_HOST=192.168.1.2 docker compose up -d --
 
 ## Conclusions
 
+Keep [thermodynamics](https://jalcocert.github.io/JAlcocerT/thermodynamics/#conclusions) fresh
+
+And just...
+
 Measure, dont model:
 
 {{< cards >}}
@@ -246,9 +250,9 @@ Together with a 3$ rechargable battery: `Samsung INR18650-35E`
 
 > Same that work for [the radiomaster pocket](https://jalcocert.github.io/JAlcocerT/aerospace-101/#dron-bom)!
 
-The TP4056 USB-C solar charging module is designed to charge batteries at a standard rate of 1 Amp (1000mA).
+The `TP4056` USB-C solar charging module is designed to charge batteries at a standard rate of 1 Amp (1000mA).
 
-The Samsung 35E datasheet states its ideal standard charge rate is 1.7 Amps, meaning your TP4056 board will charge this battery completely safely and well within its comfort zone without overheating the battery cell.  
+The `Samsung 35E` datasheet states its ideal standard charge rate is 1.7 Amps, meaning your TP4056 board will charge this battery completely safely and well within its comfort zone without overheating the battery cell.  
 
 The Pi Pico W draws roughly 0.1 Amps maximum when its Wi-Fi radio is blasting a data packet.
 
@@ -265,4 +269,3 @@ And who knows, I might be making some IoT x DSc project with tech talk around it
 ### Which AC is enough for my house?
 
 There is a rule of thumb [that experts in the field mentioned](https://forocoches.com/foro/showthread.php?t=10355892&page=6):
-

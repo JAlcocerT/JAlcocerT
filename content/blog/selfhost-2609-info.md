@@ -1,13 +1,11 @@
 ---
 title: "Selfhosted Information flow"
-date: 2026-09-18T07:20:21+01:00
+date: 2026-09-19T09:20:21+01:00
 draft: false
 tags: ["FilesMD","Forgejo","Zetlekasten","No Hello x Async","SoloPreneur CheckList"]
-description: 'From The algorithm to a daily information frameworks.'
+description: 'From The algorithm to a daily information frameworks. JAlcocerTech core.'
 url: 'selfhosting-information-flow'
 ---
-
-https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
 
 **TL;DR**
 
@@ -15,8 +13,8 @@ You better write daily/weekly notes and work with them
 
 **Intro**
 
-* Why Im writting this post: *bc I want to standardize the way i capture information across my forcely scattered daily flow and create meta-frameworks with it to apply cross-domain*
-* [What Ive learnt](#conclusions) with it: *When principles/ideas are clear, just [apply them harder](https://jalcocert.github.io/JAlcocerT/poc-107/#destilling-read-books)*
+* Why Im writting this post: *bc I want to standardize the way i capture information across my forcely [scattered daily flow](https://github.com/JAlcocerT/my-logseq-notes/tree/main/journals) and [create meta-frameworks](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-frameworks) with it to apply cross-domain*
+* [What Ive learnt](#conclusions) with it: *When principles/ideas/[books are clear](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks), just [apply them harder](https://jalcocert.github.io/JAlcocerT/poc-107/#destilling-read-books)*
 
 ## Why you need this
 
@@ -56,7 +54,7 @@ Yep, make sure meetings are clear and actionable :)
 A good start is *WHO will do WHAT by WHEN*
 {{< /callout >}}
 
-EOD Accountability Review:
+**EOD Accountability** Review:
 
 - What did I move forward today?
 - What did I make clearer for other people?
@@ -111,11 +109,16 @@ That's exactly what ive done around this Hormozi video *one more time*
 
 #### Audio Recaps
 
-I was using fireflies, but then I created a setup around google recorder
+I was using fireflies *even [with n8n](https://jalcocert.github.io/JAlcocerT/audio-recap/#tools-for-meetings)*, but then I created a setup around google recorder and a openai key to perform transcription (S2T), then let `codex` take it from there.
 
+![Fireflies AI has n8n integration](/blog_img/GenAI/n8n/n8n-audio-fireflies.png)
+
+
+Last year, I was working on a speech rater around openAI TTS and ST2 as well [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-speech-rater-stack)
+
+With files.md you can record audio with the PWA, just that it will stay locally.
 
 #### Gold Info for SoloPreneurs
-
 
 {{% details title="Ideas Checklist 🚀" closed="true" %}}
 
@@ -207,9 +210,9 @@ https://www.youtube.com/watch?v=62crffG6Uw8 -->
 
 Just in case you are preparing for an internal promo / [outside CV](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#when-was-the-last-time-you-applied) or how to frame what you do for prospects.
 
-Currently i observe a huge gap between expectations: people billing 1k/person/day for adding one line to a csv
+Currently i observe a huge gap between expectations: *people billing 1k/person/day for adding one line to a csv*
 
-Versus: the cost per task being literally smashed with every new model released (to cents of a $)
+Versus: *the cost per task being literally smashed with every new model released (to cents of a $)*
 
 How long will that gap / arbitrage possibility last?
 
@@ -256,11 +259,11 @@ Managers get pulled into HR drama. Principals are insulated from most of that.
 
 Your value comes from your output, your technical direction, and the documentation (like your wikis) that you build to make the rest of the team self-sufficient.
 
-**So ask honestly**: do you want *status, control, income, or optionality**? 
+**So ask honestly**: do you want *status, control, income, or optionality*? 
 
 They are NOT the same game.
 
-> What are you optimizing for next?
+> What are you **optimizing for** next?
 
 ---
 
@@ -273,7 +276,7 @@ Coming from [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025
 Ive lately found useful:
 
 ```sh
-herdr
+herdr #codex --yolo
 ```
 
 ### Selfhosted Forgejo
@@ -315,9 +318,11 @@ Check that `forgejo:3000` ready:
 
 ### Selfhosted Communication
 
-1. https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.0
+1. [Simplex](https://fossengineer.com/selfhosting-simplex-chat/) with `https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.0`
 
 2. Matrix: with the flavour [conduit](https://fossengineer.com/selfhosting-matrix-conduit-server-with-docker/) or [synapse](https://fossengineer.com/selfhosting-matrix-synapse-docker/)
+
+3. 
 
 ### Selfhosted Media
 
@@ -335,8 +340,34 @@ with kodi adons
 
 * <https://www.youtube.com/@proyectosmicropic/videos>
 
+You can have [a look to IPTVs](https://forocoches.com/foro/showthread.php?t=10742800) as seen [here](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#iptv)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
+
+#### Music
+
+1. https://github.com/Fingel/gelly
+
+> A native music client for Jellyfin and Navidrome/Subsonic
+
+![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
+
+Navidrome is other OSS **selfhostable music server**:
+
+![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/navidrome" title="Navidrome Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
+
+
 ### How Im using AI to prep for ULM/PPL
 
 * https://github.com/anthropics/claude-cookbooks
 
-* https://ulm-ppl-test.pages.dev/ from `./poc/ulm-ppl`
+* `https://ulm-ppl-test.pages.dev/`
+
+From `./poc/ulm-ppl`with some books distilled.

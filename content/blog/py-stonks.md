@@ -8,18 +8,12 @@ tags: ["yfinance x Flask x sqlite","Streamlit x PocketBase login/signup","ChartJ
 math: true
 ---
 
-
 **Tl;DR**
 
-Creating a py_stocks v2.0, or a py_stonks v1.0
-
-Got working streamlit + PB auth as per [these scripts 🐍](https://github.com/JAlcocerT/py-stonks/tree/main/hardcoded-auth-streamlit).
-
-Also a cool FastAPi + Firebase Auth (that works on desktops and *not really on phones*)
-
-And a comparison of Flask Plotly vs FastAPi with ChartJS
+Creating a py_stocks v2.0, or a `py_stonks v1.0`
 
 +++ Got to know few very logical concepts, like the [drawdown (MDD)](#what-is-maximum-drawdown-mdd).
+
 +++ Plus the cool [ipynb for animations](#on-demand-data-animations)...
 
 {{< callout type="warning" >}}
@@ -27,6 +21,12 @@ This is just a tech related post where i share my learning journey. **Dont use i
 {{< /callout >}}
 
 **Intro**
+
+Got working streamlit + PB auth as per [these scripts 🐍](https://github.com/JAlcocerT/py-stonks/tree/main/hardcoded-auth-streamlit).
+
+Also a cool FastAPi + Firebase Auth (that works on desktops and *not really on phones*)
+
+And a comparison of Flask Plotly vs FastAPi with ChartJS
 
 Some people tell you to make a business.
 
@@ -303,7 +303,7 @@ uv run streamlit run app-st.py #the app-st.py is the streamlit version
 
 Wait...
 
-Is this streamlit authentication working with the users of the pocketbase collection?
+Is this streamlit authentication working with the **users of the pocketbase collection**?
 
 ![st authentication script connected to pocketbase users collection](/blog_img/entrepre/public-build/pystonks/st-auth-pocketbase.png)
 
@@ -348,7 +348,7 @@ Im leveraging:
 
 1. The way yfinance works as per the [EDA above](#eda-on-yfinance)
 2. [Streamlit](#streamlit) is my go to for a quick UI for web apps and data presentation layer
-3. 
+3. uv as package manager
 
 ```sh
 #lsof -ti:5000 | xargs kill -9
@@ -734,7 +734,12 @@ The Firebase Auth setup will work on `localhost` out of the box. Make sure to co
 {{< /callout >}}
 
 ![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain1.png)
+
+Then
 ![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain2.png)
+
+Finally:
+
 ![alt text](/blog_img/entrepre/public-build/pystonks/firebase/fb-custom-domain3.png)
 
 * https://github.com/JAlcocerT/py-stonks/blob/main/ui-for-fastapi-firebaseauth.md
@@ -821,9 +826,13 @@ And now we are just using the same collection for this:
 
 ### What is Maximum Drawdown (MDD)?
 
-A **stock drawdown** is a measure of the decline in the value of an investment (a single stock, a portfolio, or a fund) from a recent peak to a subsequent trough. It is typically expressed as a percentage.
+A **stock drawdown** is a measure of the decline in the value of an investment (a single stock, a portfolio, or a fund) from a recent peak to a subsequent trough. 
 
-The concept is to quantify the "pain" or potential loss an investor would have experienced if they had bought at the highest point and watched their investment fall before it recovered. It's a key metric for understanding and managing risk.
+It is typically expressed as a percentage.
+
+The concept is to quantify the "pain" or potential loss an investor would have experienced if they had bought at the highest point and watched their investment fall before it recovered. 
+
+It's a key metric for understanding and managing risk.
 
 The specific metric you're looking for, which tells you the worst moment to have bought and how far down it went, is called the **Maximum Drawdown (MDD)**.
 
@@ -847,12 +856,17 @@ For example, if a stock's price history for a given year looks like this:
 2.  It then falls to $70.
 3.  It then recovers and eventually rises to $120.
 
-The peak is $100, and the trough is $70. The new peak ($120) doesn't factor into this specific drawdown calculation.
+The peak is $100, and the trough is $70. 
+
+The new peak ($120) doesn't factor into this specific drawdown calculation.
 
 Using the formula:
+
 $$MDD = \frac{(\$100 - \$70)}{\$100} \times 100 = \frac{\$30}{\$100} \times 100 = 30\%$$
 
-In this example, the maximum drawdown is 30%. This means that for a given period, the most you would have lost from a single peak was 30%.
+In this example, the maximum drawdown is 30%. 
+
+This means that for a given period, the most you would have lost from a single peak was 30%.
 
 #### Why is Maximum Drawdown Important?
 
@@ -870,7 +884,9 @@ Here are some of the most common ones:
 
 #### 1. Sharpe Ratio
 
-The Sharpe Ratio is one of the most widely used metrics for calculating **risk-adjusted return**. It helps you understand the return of an investment compared to its risk.
+The Sharpe Ratio is one of the most widely used metrics for calculating **risk-adjusted return**. 
+
+It helps you understand the return of an investment compared to its risk.
 
 * **What it tells you:** It measures the excess return an investment earns for each unit of total risk (volatility).
 * **Formula:**
@@ -885,7 +901,7 @@ Where:
 
 #### 2. Sortino Ratio
 
-The Sortino Ratio is a refinement of the Sharpe Ratio that addresses a key limitation: the Sharpe Ratio penalizes both positive and negative volatility.
+The Sortino Ratio is a refinement of the Sharpe Ratio that addresses a key limitation: *the Sharpe Ratio penalizes both positive and negative volatility.*
 
 Most investors, however, are only concerned with downside volatility (losing money).
 

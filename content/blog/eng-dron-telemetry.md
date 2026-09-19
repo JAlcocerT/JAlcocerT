@@ -731,12 +731,11 @@ DIY_2400_RX_ESP8285_SX1280_via_BetaflightPassthrough
 DIY_2400_RX_STM32_CCG_Nano_v0_5_via_BetaflightPassthrough
 ```
 
-
 {{% details title="Codex x git OSS - helped me get the right firmware " closed="true" %}}
 
 What was going on with `DIY_2400_RX_ESP8285_SX1280`?
 
-Short version: it did not disappear from ExpressLRS history. It stopped being shown as a normal Web Flasher hardware target because ExpressLRS moved ESP-based receivers toward unified firmware targets plus product-specific metadata.
+Short version: *it did not disappear from ExpressLRS history. It stopped being shown as a normal Web Flasher hardware target because ExpressLRS moved ESP-based receivers toward unified firmware targets plus product-specific metadata.*
 
 The backed-up firmware name:
 
@@ -819,6 +818,7 @@ Check `prior_target_name`, platform, and the real board/product target first.
 
 {{% /details %}}
 
+Yep, happened [here](https://fossengineer.com/expresslrs-fcc-firmware-success-story/).
 
 Thx to codex i got `/home/jalcocert/Downloads/elrs/DIY_2400_RX_ESP8285_SX1280_3.2.0_8d3388_FCC-ISM_via_WIFI.bin` at FCC
 

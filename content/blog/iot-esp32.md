@@ -549,11 +549,9 @@ void loop() {
 }
 ```
 
-
 Before, it was about [watching videos](https://www.youtube.com/watch?v=Q2HL8rwZ20A) to [try mqtt ESP32](https://www.youtube.com/watch?v=x5A5S0hoyJ0&t=211s)
 
 As of today, just ask the agent to make the script for you with your mqtt server in place.
-
 
 ---
 

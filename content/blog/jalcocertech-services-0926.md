@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-09-12T07:20:21+01:00
+date: 2026-09-14T19:20:21+01:00
 draft: false
 tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads x MailPit"]
 description: 'Beyond software, mbsd 0-4-0, 0-4-AI Fluency and proper distribution.'
@@ -537,7 +537,6 @@ GROUP BY day
 ORDER BY day;"
 ```
 
-
 ### FPV
 
 The calibration rule
@@ -827,6 +826,8 @@ But so far the best result was with the CLI only one, which included face recogn
 
 
 ### Mechanism Design
+
+> pwa: https://main.app-mbsd.pages.dev/
 
 With the release of this OSS framework for mbsd: https://github.com/JAlcocerT/mbsd-core
 

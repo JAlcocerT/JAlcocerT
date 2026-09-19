@@ -693,27 +693,33 @@ On the server:
 mosquitto_sub -h localhost -p 1883 -t 'esp32/pump/#' -v
 ```
  
-Or use the EMQX web dashboard, commonly:
+Or use the EMQX web dashboard, commonly: `http://192.168.1.2:18083`
 
-http://192.168.1.2:18083
+In EMQX, use the WebSocket MQTT client or inspect connected clients.
 
-In EMQX, use the WebSocket MQTT client or inspect connected clients. Look for:
+Look for:
 
+```md
 Client ID: esp32-pump-ef78
 Topics:   esp32/pump/#
+```
 
 You should see:
 
+```md
 esp32/pump/availability online
 esp32/pump/state {"pump":"off","max_runtime_ms":5000}
+```
 
-EMQX is the broker; mosquitto_sub and mosquitto_pub are simply compatible command-line clients for
-observing and sending MQTT messages.
-
-
-{{< youtube "1tAaPIVKSoM" >}}
+EMQX is the broker; mosquitto_sub and mosquitto_pub are simply compatible command-line clients for observing and sending MQTT messages.
 
 {{< youtube "1tAaPIVKSoM" >}}
+
+<!-- https://youtube.com/shorts/RxR26VGmgc8 -->
+
+Yep, the smaller 3W pump also works nicely:
+
+{{< youtube "RxR26VGmgc8" >}}
 
 
 #### Voltaje Divider
@@ -741,13 +747,17 @@ The recommended progression moves from firmware validation to peripheral expansi
 **1. Finish the Core Software Cycle First (Immediate Next Step)**
 
 * **Timed Smoke Test:** Run the battery-powered ESP32 through the 3-second cycle using `timed_smoke_test.ino` [script](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/timed_smoke_test.ino) to verify there are no inductive resets or brownouts.
-* **Wi-Fi & MQTT Integration:** Upload your networking firmware (`mqtt_pump_control.ino` [script](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/mqtt_pump_control.ino)). Confirm the ESP32 can maintain Wi-Fi connection and handle MQTT commands without crashing when the pump starts and stops.
-* **Deep Sleep & Power Budgeting:** If this is intended to be off-grid, configure the ESP32 to sleep between waterings. An ESP32 idling at 80–150 mA on Wi-Fi will drain a 3S pack in a couple of days regardless of solar.
 
+* **Wi-Fi & MQTT Integration:** Upload your networking firmware (`mqtt_pump_control.ino` [script](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/mqtt_pump_control.ino)). Confirm the ESP32 can maintain Wi-Fi connection and handle MQTT commands without crashing when the pump starts and stops.
+
+* **Deep Sleep & Power Budgeting:** If this is intended to be off-grid, configure the ESP32 to sleep between waterings. An ESP32 idling at 80–150 mA on Wi-Fi will drain a 3S pack in a couple of days regardless of solar.
 
 **2. Add the Solar & Monitoring Upgrades (Breadboard Stage)**
 
-* **3S Solar Charge Controller:** A 3S pack requires a dedicated charging controller with an MPPT or CC/CV charge profile (such as a **CN3791 or TP5100** board configured for 3S/12.6V, or a proper 12V solar charge controller). You cannot connect a solar panel directly to the BMS.
+* **3S Solar Charge Controller:** A 3S pack requires a dedicated charging controller with an MPPT or CC/CV charge profile (such as a **CN3791 or TP5100** board configured for 3S/12.6V, or a proper 12V solar charge controller). 
+
+You cannot connect a solar panel directly to the BMS.
+
 * **Battery Voltage Monitoring (Voltage Divider):** Add a high-value resistive divider (e.g., $100\text{ k}\Omega$ / $27\text{ k}\Omega$) from the 12V rail to an ESP32 ADC pin so your software knows when the battery is too low to run the pump.
 
 **3. Build a Perforated Board Prototype (Stripboard / Perfboard)**
@@ -769,8 +779,6 @@ The main difference comes down to how each board manages solar power conversion,
 | **Battery Compatibility** | **Single cell only (1S / 3.7V–4.2V)** | Available for **1S, 2S, 3S, 4S** multi-cell packs |
 | **Efficiency in Sub-optimal Light** | Low (~30%–60% of panel rating is wasted as heat) | High (typically **85%–95%** overall energy harvest) |
 | **Input Voltage Range** | Narrow (typically 4.5V–6V max) | Wide (often supports 6V to 28V+ panels) |
-
-**Key Takeaways**
 
 * **Voltage Mismatch & Wasted Power:** A standard 12V or 18V solar panel connected to a standard TP4056 will either burn it out due to high input voltage or force the panel to collapse down to 4.2V, throwing away more than half of the usable wattage as heat.
 * **Multi-Cell Packs:** A standard TP4056 can only charge a **1S** (single 3.7V cell) setup. To charge a **3S** (12.6V) pack like the one in your schematic directly from solar, an **MPPT step-up/step-down multi-cell board** is required to deliver the proper voltage and CC/CV profile.

@@ -3,11 +3,10 @@ title: "Thermodynamics"
 date: 2026-05-09
 draft: false
 tags: ["Trip Planner v4 x Go-Solar x Aerotermia PoC","HeatraPy vs PyScipe"]
-description: 'Carnot, thermodynamics. Solar plan B.'
+description: 'Carnot, heat transfer. Solar plan B.'
 url: 'thermodynamics'
 math: true
 ---
-
   
 **Tl;DR**
 
@@ -15,7 +14,10 @@ math: true
 
 **Intro**
 
-Guess what happens when you take [trip planner v4](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/poc-trip-planner-v4), the go solar with the batteries and rainny days, with...
+* WHY Im writting this post: *bc energy analysis is everywhere*
+* WHAT [Ive learnt](#conclusions) with it: *a*
+
+Guess what happens when you take [trip planner v4](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/poc-trip-planner-v4), the `go solar` with the batteries and rainny days, with...
 
 ```sh
 git clone /poc
@@ -27,7 +29,6 @@ What Happens is that you can validate the [results of ppl in forums](https://for
 Or just create a way to check if aerothermics applies to you from such [dev plan](https://github.com/JAlcocerT/poc/blob/main/aerothermics/dev-plan.md):
 
 ![alt text](/blog_img/apps/aerotermia.png)
-
 
 Es una pregunta excelente, porque a primera vista parece que la aerotermia es una máquina de "energía infinita" o un movimiento perpetuo al darte **4 kWh** de calor por cada **1 kWh** que pagas.
 
@@ -55,7 +56,7 @@ Esta ley dice que no puedes enfriar algo que ya está frío para calentar algo q
 * Para mover calor "cuesta arriba" (del aire frío de la calle a tu casa caliente), la naturaleza exige un **trabajo externo**.
 * Ese trabajo es el que realiza tu **compresor**. Si intentaras hacer esto sin electricidad, sería imposible. La aerotermia "paga" el peaje termodinámico con los vatios que generan tus placas solares.
 
-### 3. El concepto de Eficiencia vs. COP
+### 3. Eficiencia vs. COP
 
 En un radiador eléctrico tradicional, el rendimiento es del **100%** (1 kW luz = 1 kW calor). Ahí estás limitado por la Primera Ley de forma directa.
 
@@ -145,7 +146,9 @@ En este gráfico se ve claramente cómo la válvula de expansión reduce la pres
 * **Entalpía:** Es el **"cuánto"**. Te dice cuántos Julios de calor estás moviendo realmente.
 * **Entropía:** Es el **"por qué"**. Te explica por qué necesitas un compresor eléctrico y por qué el calor no entra solo a tu casa desde el frío exterior (la naturaleza prohíbe que la entropía del universo disminuya sin realizar un trabajo).
 
-¡Exacto! Tienes una memoria termodinámica excelente. Estás pensando en la relación **$T \cdot \Delta S$**.
+Tienes una memoria termodinámica excelente. 
+
+Estás pensando en la relación **$T \cdot \Delta S$**.
 
 Esta combinación aparece principalmente por dos motivos fundamentales: para calcular el **calor** en procesos reversibles y para entender la **exergía** (la energía que realmente es útil).
 
@@ -184,7 +187,9 @@ $$\Delta G = \Delta H - T \cdot \Delta S$$
 * **$T \cdot \Delta S$:** Es la energía "degradada" o "impuesto de la naturaleza". Representa la energía que se pierde inevitablemente debido al desorden (entropía).
 * **$\Delta G$:** Es el trabajo útil que nos queda disponible.
 
-En tu aerotermia, el término **$T \cdot \Delta S$** representa la energía que se gasta simplemente en "vencer" las leyes de la física para mover el calor de un sitio frío a uno caliente. Cuanto mayor sea este término, más electricidad tendrán que aportar tus placas para compensar esa ineficiencia.
+En tu aerotermia, el término **$T \cdot \Delta S$** representa la energía que se gasta simplemente en "vencer" las leyes de la física para mover el calor de un sitio frío a uno caliente.
+
+Cuanto mayor sea este término, más electricidad tendrán que aportar tus placas para compensar esa ineficiencia.
 
 ---
 
@@ -263,3 +268,8 @@ There are [some next steps](https://github.com/JAlcocerT/poc/blob/main/aerotherm
 Will this ever become a `energysolutions.jalcocertech.com`?
 
 Someone told me a long time ago that I would end up doing sth around energy and engineering, so who knows :)
+
+---
+
+## FAQ
+

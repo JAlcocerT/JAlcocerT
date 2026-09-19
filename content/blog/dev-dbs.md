@@ -426,7 +426,7 @@ ext install DBCode.dbcode
 
 ![DBCode vscode extension](/blog_img/DA/dbcode.png)
 
-We also have SQLTools for vs code: https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools
+We also have SQLTools for vs code: `https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools`
 
 {{< details title="Useful Tools to work with DBs 📌" closed="true" >}}
 
@@ -441,7 +441,6 @@ We also have SQLTools for vs code: https://marketplace.visualstudio.com/items?it
 * [ChartDB](https://github.com/chartdb/chartdb) - Database diagrams editor that allows you to visualize and design your DB with a single query.
 * [SQLiteViz](https://github.com/lana-k/sqliteviz)
 * [SQliteBrowser](https://github.com/sqlitebrowser/sqlitebrowser)
-
 
 {{< /details >}}
 

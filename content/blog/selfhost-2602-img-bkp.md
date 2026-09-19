@@ -458,8 +458,7 @@ If you are creating your own [(AI) music](https://jalcocert.github.io/JAlcocerT/
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/navidrome" title="Navidrome Media Server Tools 🐋 ↗" >}}
 {{< /cards >}}
 
-Since both Navidrome and Gonic share the Subsonic API (and the newer OpenSubsonic standard), any Subsonic-compatible client will work with them.
-
+Since both **Navidrome and Gonic** share the Subsonic API (and the newer OpenSubsonic standard), any Subsonic-compatible client will work with them.
 
 ```sh
 #sudo chown -R 1000:1000 /home/jalcocert/Home-Lab/navidrome/data

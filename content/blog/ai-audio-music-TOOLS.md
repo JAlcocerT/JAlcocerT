@@ -88,7 +88,6 @@ And they both get on pretty well with Metube: *specially if you are [building a 
 
 You can add more services to the stack, like other [youtube front-ends](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#youtube-fe) and create a: *metube + jdownloader + qbit stack*
 
-
 ### Python-Based AI Music Creation Libraries and Frameworks
 
 - **Magenta**: Google’s open-source project provides powerful tools built on TensorFlow for music generation, including pre-trained models that create melodies, harmonies, and rhythms.
@@ -106,12 +105,7 @@ You can add more services to the stack, like other [youtube front-ends](https://
 
 This approach suits developers keen to customize AI music generation or integrate it with other projects.
 
-In summary, for quick music creation, use ready AI platforms; for deeper programming control, leverage Python AI libraries like Magenta and music21 to generate and manipulate music.[1][2][3]
-
-[1](https://suno.com)
-[2](https://pyseek.com/2025/04/generate-music-using-python-deep-learning/)
-[3](https://github.com/ayeshabasit/AI-Music-Generator)
-
+In summary, for quick music creation, use ready AI platforms; for deeper programming control, leverage Python AI libraries like Magenta and music21 to generate and manipulate music.
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/local-ai-audio" title="Local AI Audio 101 ↗ " >}}
@@ -129,10 +123,10 @@ https://www.youtube.com/watch?v=Sj8hXeMcoUg
 {{< youtube "Sj8hXeMcoUg" >}}
 
 
-Takes a song, separates voice and beat, then inputs your voice to it (not foss)
+Takes a song, separates voice and beat, then inputs your voice to it (not foss):
 
-<https://huggingface.co/spaces/facebook/MusicGen>
-<https://gist.github.com/mberman84/45545e48040ef6aafb6a1cb3442edb83>
+* https://huggingface.co/spaces/facebook/MusicGen
+* https://gist.github.com/mberman84/45545e48040ef6aafb6a1cb3442edb83
 
 
 <https://gist.github.com/mberman84/afd800f8d4a8764a22571c1a82187bad>
@@ -140,6 +134,7 @@ Takes a song, separates voice and beat, then inputs your voice to it (not foss)
 <https://github.com/facebookresearch/audiocraft>
 
 audiocraft
+
 How To Install Audiocraft Locally - Meta's FREE And Open AI Music Gen
 
 https://gist.github.com/mberman84/afd800f8d4a8764a22571c1a82187bad
@@ -148,12 +143,10 @@ https://gist.github.com/mberman84/afd800f8d4a8764a22571c1a82187bad
 arm64: apt install ffmpeg
 conda install -c pytorch -c conda-forge pytorch
 
-
 https://www.gyan.dev/ffmpeg/builds/
 choco install ffmpeg
-ffmpeg –version
+#ffmpeg –version
 ```
-
 
 * {{< newtab url="/" text="The Site" >}}
 * {{< newtab url="" text="The Source Code at Github" >}}

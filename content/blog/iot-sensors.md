@@ -18,6 +18,8 @@ Isnt it time to build something real?
 
 
 
+
+
 ## Home Automation
 
 Home Assistant is great
@@ -124,9 +126,12 @@ These were really easy to setup and if you are getting started they are perfect.
 
 ### MLX
 
+This sensor will be helpful to [test insulation](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#we-need-the-mlx) and build your energy solutions as [service offering](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#energy-solutions)
+
 The MLX will get you ambient temp and IR temp of an object
 
-0. With the [Pi4 was kinda simple](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/):
+
+1. With the [Pi4 was kinda simple](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/):
 
 ```sh
 pinout #this assumes that the usb and eth port are looking down, so 5V is top right
@@ -137,14 +142,14 @@ https://pinout.xyz/pinout/3v3_power
 
 https://jalcocert.github.io/RPi/img/RPi4-DHT22.png
 
-1. **ESP32 + MLX90614**
+2. With the combo **ESP32 + MLX90614** also works [as seen recently](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#esp32-x-mqtt-x-mlx90614)
 
 <https://www.youtube.com/watch?v=HpsvNIAtjm4>
 
 
 ### DS18B20
 
-https://jalcocert.github.io/RPi/posts/rpi-iot-ds18b20/
+I also got this one working with [the Pi4 some time ago](https://jalcocert.github.io/RPi/posts/rpi-iot-ds18b20/)
 
 -55 to 125C
 
@@ -215,6 +220,8 @@ The chip's low power consumption and versatility make it an attractive option fo
 
 
 ### BoM
+
+[IoT bom](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#iot-bom-to-get-started) to get started?
 
 you can get cables with 3a/60w support
 
@@ -896,10 +903,11 @@ https://youtube.com/shorts/1tAaPIVKSoM -->
 
 {{< youtube "1tAaPIVKSoM" >}}
 
-{{< youtube "1tAaPIVKSoM" >}}
+<!-- {{< youtube "1tAaPIVKSoM" >}} -->
+
+![KICAD UI check](/blog_img/electronic/kicad-power-stage.png)
 
 {{< youtube "ijX3CeVUTPh9yz7Z" >}}
-
 
 I got [a PRD](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/prd.md) and some instructions / [concerns](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/concerns2.md) of what i need to get a cleaner power stage prototype for the watering setup:
 
@@ -920,8 +928,7 @@ Got to know about these
 * Tecno service `https://tspcb.pl/en/order-inquiry/`
 * Aisler, JLCPCB / PCBWay...
 
-
-When ordering bare boards (no assembly required), compress these files into a single .zip:
+When ordering bare boards (no assembly required), compress these files into a `.zip`:
 
 *.GTL / *.GBL (Top and Bottom Copper)
 
@@ -935,17 +942,17 @@ When ordering bare boards (no assembly required), compress these files into a si
 
 Standard specs to select in their order forms: 2 Layers, 1.6 mm thickness, FR4, 1 oz (35 µm) copper, HASL lead-free (or ENIG gold), and green mask with white silkscreen.
 
-
-
 {{< callout type="warning" >}}
 I got another agent's second opinion on the PCB design before manufacturing
 {{< /callout >}}
 
-DRC means Design Rules Check. KiCad examines the board for problems such as:                        
-                                                                                                    
-- copper tracks too close together                                                                  
-- tracks not connected to pads                                                                      
-- overlapping objects                                                                               
+**DRC** means Design Rules Check.
+
+KiCad examines the board for problems such as:                        
+
+- copper tracks too close together
+- tracks not connected to pads
+- overlapping objects
 - copper too close to the board edge
 - silkscreen printed over pads
 - missing or invalid board outline       
@@ -968,14 +975,28 @@ Before submitting, confirmed the uploaded project name is `power-stage-104-fabri
 
 ### Electronics Simulations
 
+I was starting [here](https://jalcocert.github.io/JAlcocerT/electronics-101/#conclusions) with electronics simulations:
+
+```sh
+git clone https://github.com/JAlcocerT/electronics-101
+#cd ./electronics-101/sample-pyscipe
+uv run main.py --only mosfet --scenario compare   # overlay: with vs without diode 
+```
+
+![alt text](/blog_img/electronic/esp32-pump-plants.png)
+
+
+{{< youtube "JbixCdhRzDo" >}}
+
+
 {{< youtube "nwK4nr8uqpo" >}}
 
 <!-- https://youtube.com/shorts/nwK4nr8uqpo -->
 
-{{< details title="Measure & Simulate like so before buying the Diode Resistors and Mosfet  📌"closed="true" >}}
+{{< details title="Measure & Simulate | Before buying the Diode Resistors and Mosfet  📌"closed="true" >}}
 
 ```sh
-git clone 
+cd ./electronics-101
 ```
 
 {{< /details >}}
@@ -1013,6 +1034,6 @@ https://github.com/tasmota/tasmotizer
 
 [Building H-Bridge Motor driver](https://www.youtube.com/watch?v=6ugrL5ziPn8) using TIP120 TIP125 full PCB Design with Arduino - Robojax #392 
 
- ESP32 Tutorial 49 -[ Control DC Motor Over The internet](https://www.youtube.com/watch?v=OUgyPXNYg3g) using Adafruit IoT | SunFounder's ESP32 kit 
+ESP32 Tutorial 49 -[ Control DC Motor Over The internet](https://www.youtube.com/watch?v=OUgyPXNYg3g) using Adafruit IoT | SunFounder's ESP32 kit 
 
  2. ResinChem Tech - https://www.youtube.com/watch?v=xFfxWB_TQwE

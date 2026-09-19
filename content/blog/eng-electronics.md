@@ -2,7 +2,7 @@
 title: "Electronics 101"
 date: 2026-04-03
 draft: false
-tags: ["Simulations","KiCad vs Atopile","PySpice x RemotionJS"]
+tags: ["Simulations","KiCad vs Atopile","PySpice x RemotionJS","LPF vs HPF"]
 description: 'Simulating EMR within electronics components.'
 url: 'electronics-101'
 math: true
@@ -10,18 +10,17 @@ math: true
 
 **Tl;DR**
 
-Prep-work for watering plants :)
+Prep-work for watering plants with [PyScipe](https://fossengineer.com/pyspice-python-circuit-simulation/) :)
 
 **Intro**
 
 You might have tinkered with IoT
 
-But without really understanding the under lying layer.
+But without really understanding the underlying layer.
 
 This sits on top of Electromagnetism, yet below IoT and [messaging protocols](https://jalcocert.github.io/JAlcocerT/messaging-protocols/).
 
-
-## Circuit Boards Design
+### Circuit Boards Design
 
 Everything is...[code](https://jalcocert.github.io/JAlcocerT/things-as-a-code/). 
 
@@ -40,8 +39,6 @@ After drafting [several ideas around electronics](https://github.com/JAlcocerT/e
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/electronics-101/tree/master" title="NEW - electronics 101" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Electornics as a code with python- Source Code on Github" >}}
 {{< /cards >}}
-
-
 
 ---
 
@@ -99,7 +96,6 @@ npx remotion render SchematicKickback schematic_kickback.mp4
   {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
 
-
 ```sh
 #sudo apt update && sudo apt install ffmpeg
 ls *.mp4 | sed "s/^/file '/; s/$/'/" > file_list.txt #add .mp4 of current folder to a list
@@ -114,13 +110,13 @@ Its just that some are based on garbage and produce (surprise) more non sense ga
 
 {{< youtube "JbixCdhRzDo" >}}
 
-*Why would someone pay you if you can just overfit past and give just a vague range of possibilities for the future?*
+*Why would someone pay you if you can just overfit the past and give just a vague range of possibilities for the future?*
 
-*Will the mosfet be fried, yes or no?*
+*Will the mosfet be fried under the operation conditions, yes or no?*
 
 <!-- https://youtu.be/JbixCdhRzDo -->
 
-No more: will I get an unexpected quickback due to transitory behaviour?
+No more: *will I get an unexpected quickback due to transitory behaviour?*
 
 ![Vibe Coding - Simpsons Halloween S2](/blog_img/dev/vibe-coding.png)
 
@@ -217,7 +213,6 @@ docker logs emqx -f
 ```
 
 > Connect to the UI via: `http://192.168.1.11:18083`
-
 
 Or if you prefer a quick CLI way to check the pushed data:
 
@@ -371,7 +366,6 @@ For another time, ill be testing the deep sleep option to see how it improves th
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
 1. https://schemdraw.readthedocs.io/en/stable/usage/start.html
 
 ```sh
@@ -380,9 +374,10 @@ uv add schemdraw #https://github.com/cdelker/schemdraw/
 
 2. 
 
-
 DC motors are simpler to control (just vary voltage) but brushed ones wear out and BLDC needs a 3-phase inverter
+
 AC motors (induction) are dumb-rugged — no electronics needed, just plug into the wall, but speed control requires a VFD
+
 Modern trend: AC is being eaten by BLDC everywhere efficiency or precision matters (EVs, drones, modern HVAC, e-bikes)
 
 | Tool | Use | License |
@@ -400,7 +395,6 @@ Modern trend: AC is being eaten by BLDC everywhere efficiency or precision matte
 | **PySAM** | Python bindings for SAM | BSD |
 | **Verilog-A in Ngspice** | Behavioural device modelling | BSD |
 
-
 ### LPF
 
 A **low-pass filter** lets low frequencies through unchanged and attenuates (reduces) high frequencies.
@@ -414,15 +408,13 @@ OUTPUT signal:   the 1 Hz components are still there at full strength
 
 The filter has **one parameter**: the cutoff frequency f_c. Below f_c the filter is "open"; above f_c it progressively closes.
 
-
 From the L4:
 
 In the watering BRD ([sample-pyscipe](../../sample-pyscipe)) the smoothing cap on the 5 V rail is a tiny LPF. 
 
-The 0.1 µF bypass cap forms an LPF with the trace inductance, blocking high-frequency noise from reaching the ESP32. 
+The `0.1 µF` bypass cap forms an LPF with the trace inductance, blocking high-frequency noise from reaching the ESP32. 
 
 **Every well-designed power rail has an LPF on it, often hidden in the layout.**
-
 
 | Where | What the LPF does | Typical f_c |
 |-------|-------------------|-------------|
@@ -492,7 +484,6 @@ Useful conversions to memorize:
 
 The reason engineers use dB: a multi-decade frequency response would be impossible to read on a linear scale. dB compresses 6 orders of magnitude into 120 dB — manageable.
 
-
 ### What's the difference between a "first-order" and "second-order" filter?
 
 The order is the number of independent energy-storing elements in the filter:
@@ -507,8 +498,6 @@ The buffered cascade in plot 3 is a 2nd-order LPF.
 
 It's two 1st-order stages, isolated by a buffer, so their transfer functions multiply.
 
-
-
 ### Where does the 2π come from in f_c = 1/(2πRC)?
 
 Conversion between angular frequency ω (in rad/s) and ordinary frequency f (in Hz):
@@ -517,9 +506,15 @@ Conversion between angular frequency ω (in rad/s) and ordinary frequency f (in 
 ω = 2π · f
 ```
 
-A sine wave at 1 Hz completes 2π radians of phase per second. The "natural" frequency for the math is ω, but humans measure in Hz, so we live with the 2π. It's a unit conversion, nothing more.
+A sine wave at 1 Hz completes 2π radians of phase per second. 
 
-If you ever see `ω_c = 1/(RC)` (no 2π), it means we're working in radians per second instead of cycles per second. Same circuit, same f_c, just expressed in rad/s.
+The "natural" frequency for the math is ω, but humans measure in Hz, so we live with the 2π.
+
+It's a unit conversion, nothing more.
+
+If you ever see `ω_c = 1/(RC)` (no 2π), it means we're working in radians per second instead of cycles per second.
+
+Same circuit, same f_c, just expressed in rad/s.
 
 ### What about LC filters? When do you use those instead of RC?
 

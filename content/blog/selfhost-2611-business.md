@@ -244,12 +244,27 @@ But...you can also have the linux way: *with webtops and with dockur*
 
 ### D&A Tech
 
+DuckDB - MotherDuck - Huey
+
 Sqlite is pretty much everywhere: *from pi-hole v6 to pocketbase*
 
 ```sh
 #choco install dbeaver
 flatpak install flathub io.dbeaver.DBeaverCommunity
 ```
+
+1. sqlitebrowser
+
+![SQLite Database Browser - sqlitebrowser"](/blog_img/entrepre/public-build/pystonks/dbbrowser-sqlite-pystonks.png)
+
+2. dbcode
+
+![DBCode vscode extension](/blog_img/DA/dbcode.png)
+
+3. chartDB
+
+![ChartDB Working with the PyStonks Schema](/blog_img/DA/sql/dbchart-sqlite-schema.png)
+
 
 ---
 

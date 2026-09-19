@@ -2,10 +2,14 @@
 title: "Selfhosted TTS"
 date: 2026-10-07
 draft: false
-tags: ["HomeLab","VoiceBox"]
-description: 'A homelab .'
+tags: ["HomeLab","VoiceBox","SunoAI x music"]
+description: 'A homelab that speaks.'
 url: 'selfhosted-tts'
 ---
+
+
+
+https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
 
 
 **Tl;DR**
@@ -21,6 +25,19 @@ https://fossengineer.com/voicebox-local-ai-voice-studio/
 https://fossengineer.com/chatterbox-local-open-source-tts/
 
 https://fossengineer.com/kittentts-local-cpu-tts/
+
+
+## AI x Music
+
+https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#open-source-ai-tools-for-music-creation
+
+https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#sunoai
+
+
+[1](https://suno.com)
+[2](https://pyseek.com/2025/04/generate-music-using-python-deep-learning/)
+[3](https://github.com/ayeshabasit/AI-Music-Generator)
+
 
 ---
 

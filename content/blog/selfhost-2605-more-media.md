@@ -2,7 +2,7 @@
 title: "Selfhosted Media"
 date: 2026-05-12
 draft: false
-tags: ["Self-Hosting Nextcloud","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex","sftpGO"]
+tags: ["Self-Hosting Nextcloud","Audiobooks vs Podcasts","FFmpeg x Prowlarr","Codex","sftpGO","rclone x GDrive"]
 description: 'Organizing my media server with agents. Code too with forgejo.'
 url: 'selfhosting-media'
 ---
@@ -852,23 +852,27 @@ graph TD
 
 ### How to Immich
 
- The generated folders are different:
+The generated folders are different:
 
-  thumbs          = resized preview images
-  encoded-video   = transcoded video versions
-  profile         = profile images
+thumbs          = resized preview images
+encoded-video   = transcoded video versions
+profile         = profile images
 
-  Those are not originals.
+Those are not originals.
 
-  The caveat: Immich can only preserve what it was given. If your phone/client uploaded an already-processed JPEG instead of the camera RAW/HEIC original, then Immich’s “original” is that uploaded JPEG. Also, if metadata
-  was stripped before upload by the source app/device, Immich cannot recreate it.
+The caveat: Immich can only preserve what it was given. If your phone/client uploaded an already-processed JPEG instead of the camera RAW/HEIC original, then Immich’s “original” is that uploaded JPEG. 
 
-  So the practical answer:
+Also, if metadatawas stripped before upload by the source app/device, Immich cannot recreate it.
 
-  /mnt/data2tb/immich/library/upload = keep/backup; contains original uploaded assets
-  /mnt/data2tb/immich/library/thumbs = generated
-  /mnt/data2tb/immich/library/encoded-video = generated
+So the practical answer:
 
+```sh
+/mnt/data2tb/immich/library/upload = keep/backup; contains original uploaded assets
+/mnt/data2tb/immich/library/thumbs = generated
+/mnt/data2tb/immich/library/encoded-video = generated
+```
+
+Then:
 ```sh
 rsync -a --info=progress2 /mnt/data2tb/immich/library/upload/ /mnt/backup2tb/backup_from_data2tb_immich/library/upload/ #130mb/s to usbC
 ```
@@ -881,22 +885,25 @@ jdupes -r -S /mnt/data2tb/pixel8pro /mnt/data2tb/Sync_Pixel
 
 ```sh
 #sudo snap install czkawka #UI wont work
-
   cd /tmp
   wget https://github.com/qarmin/czkawka/releases/latest/download/linux_czkawka_cli_x86_64
   chmod +x linux_czkawka_cli_x86_64
   sudo install -m 755 linux_czkawka_cli_x86_64 /usr/local/bin/czkawka_cli
+```
 
-  Test it:
+Test it:
 
-  czkawka_cli --help
+```sh
+czkawka_cli --help
+```
 
-  Then your duplicate scan should work as:
+Then your duplicate scan should work as:
 
-  czkawka_cli dup \
-    -d "/mnt/data2tb/old-Synced SEPT23" \
-    -d "/mnt/data2tb/Z_BackUP_HD-SDD" \
-    -f /mnt/backup2tb/czkawka_old_synced_vs_zbackup.txt
+```sh
+czkawka_cli dup \
+  -d "/mnt/data2tb/old-Synced SEPT23" \
+  -d "/mnt/data2tb/Z_BackUP_HD-SDD" \
+  -f /mnt/backup2tb/czkawka_old_synced_vs_zbackup.txt
 
 czkawka_cli dup \
     -d "/mnt/data2tb/old-Synced SEPT23" \
@@ -1252,9 +1259,10 @@ rclone config
 and when asked:
 
 Use auto config?
-n
 
-Then rclone gives you a URL. Open that URL on your laptop/desktop, sign in to Google, copy the token/code back into the server prompt.
+Then rclone gives you a URL.
+
+Open that URL on your laptop/desktop, sign in to Google, copy the token/code back into the server prompt.
 
 For backups, the only artifact you need to preserve is: `~/.config/rclone/rclone.conf`
 
@@ -1271,9 +1279,10 @@ geeqie P1000130.RW2
 
 Geeqie: best if you want a lightweight viewer. 
 
-It is focused on fast
-  browsing, thumbnails, zoom, and folder-based viewing, and it supports RW2
-  directly. It is not a RAW editor.
+It is focused on fast browsing, thumbnails, zoom, and folder-based viewing, and it supports RW2 directly.
+
+It is not a RAW editor.
+
 - RawTherapee: best if you want strong RAW processing and editing. It is much
   heavier than a simple viewer, but it gives you serious control over
   development.
