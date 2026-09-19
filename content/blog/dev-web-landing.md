@@ -135,7 +135,7 @@ Im also exploring how these kind of themes do it so that it incorporates a Keyst
 * ✅ Localization
 * ✅ Blog
 * ✅ **CMS!!!** for editing blog post (thanks to **Keystatic CMS**)
-* ✅ PWA (thanks to vite-pwa)
+* ✅ Progressive Web App (thanks to vite-pwa)
 
 
 {{< details title="Im well aware that a Bachata-Cerdo uses | Understanding Mizar with KeyStaticCMS 📌" closed="true" >}}

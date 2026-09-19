@@ -117,7 +117,7 @@ flatpak install flathub org.localsend.localsend_app
 
 > PairDrop: Transfer Files Cross-Platform. **No Setup, No Signup**. 
 
-> > Another open PWA to do similar job via WebRTC and WS was [Snapdrop](https://github.com/SnapDrop/snapdrop)
+> > Another open PWA to do similar job *via WebRTC* and WS was [Snapdrop](https://github.com/SnapDrop/snapdrop)
 
 6. Would SCP or FTP be faster instead?
 

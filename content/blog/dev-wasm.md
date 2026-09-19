@@ -12,18 +12,18 @@ url: 'wasm'
 Understanding WASM and how it [relates with Containers](#wasm-vs-containers).
 
 +++ [WASM + PWA](#wasm-and-pwa) as your FFMPEG [video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) editor
+
 +++ Practical WASM with [VERT](#practical-wasm---vert) to convert files
 
-Keep reading if you like portability and serverless/edge computing.
-
 **Intro**
+
+Keep reading if you like portability and serverless/edge computing :)
 
 Context for WASM, in case you have been doing CSR projects recently, like I've been:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/csr-and-js" title="CSR can do That | Post ↗"  >}}
 {{< /cards >}}
-
 
 In a regular Client-Side Rendering (CSR) setup, the **JavaScript code is executed in the client's browser**, and this process involves an overhead that makes it slower than compiled languages. 
 
@@ -199,7 +199,9 @@ This setup leverages the strengths of both technologies:
 
 1.  **FFmpeg to WASM**: The core of this process involves compiling the powerful and well-established **FFmpeg** library from its original C code into a **WASM module**. This makes the video processing logic available to run directly inside a web browser.
 
-2.  **PWA Functionality**: The PWA part gives your web application a native feel. You'd use a **service worker** to make the app work offline and a **manifest file** to allow users to install it on their home screen. The user interface (HTML, CSS, JavaScript) handles the front-end, like file selection and progress indicators.
+2.  **PWA Functionality**: The PWA part gives your web application a native feel. You'd use a **service worker** to make the app work offline and a **manifest file** to allow users to install it on their home screen.
+
+The user interface (HTML, CSS, JavaScript) handles the front-end, like file selection and progress indicators.
 
 3.  **The Video Processing Flow**:
     * A user visits your PWA and selects a video file.

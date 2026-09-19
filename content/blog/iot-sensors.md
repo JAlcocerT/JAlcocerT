@@ -284,6 +284,40 @@ Once it enters the active range, small turns will make fine adjustments.
 
 {{% /details %}} 
 
+
+
+{{% details title="DC to DC with XL4015" closed="true" %}}
+
+The **XL4015** is a higher-power step-down (buck) converter.
+
+While the LM2596 and MP1584EN max out around 2A to 3A, the XL4015 is built for **up to 5A continuous output** (with appropriate heatsinking) and frequently comes in variants with **adjustable current limiting** (constant current / constant voltage).
+
+Here is how the XL4015 slots directly into your comparison:
+
+| Feature | LM2596 (Blue Module) | MP1584EN (Green Module) | XL4015 (Common Red/Blue Module) |
+| --- | --- | --- | --- |
+| **Size** | Bulky (~43 × 21 mm) | Ultra-compact (~22 × 17 mm) | Largest footprint (~54 × 24 mm to 65 × 36 mm) |
+| **Max Practical Current** | ~1.5A continuous (3A peak with heatsink) | ~1.5A continuous (3A short burst) | **4A continuous, 5A max** (with heatsink) |
+| **Efficiency & Tech** | Older bipolar tech, 150 kHz | Modern CMOS, ~1.5 MHz | Modern MOSFET-based, 180 kHz, ~96% peak efficiency |
+| **Adjustment Dial** | Multi-turn pot (CV only) | Single-turn pot (CV only, very twitchy) | **Multi-turn pot** (often **dual pots** for both CV and CC) |
+| **Max Input** | ~40V | ~28V | **~36V to 38V** (dropout ~1.5V) |
+| **Current Limiting (CC)** | No (voltage regulation only) | No (voltage regulation only) | **Yes, on dual-pot models** (can charge batteries or drive LEDs) |
+
+Key Practical Differences
+
+* **Real 4A–5A Muscle:** The LM2596 and MP1584EN will thermal-throttle or fail if pushed past 2A for prolonged periods. The XL4015 uses an internal low-$R_{DS(on)}$ power MOSFET instead of an old bipolar transistor, meaning significantly lower heat dissipation at 3A–4A.
+* **True Constant Current (CC / CV):** Most common XL4015 boards feature two multi-turn trimmers (and often three onboard LEDs: Constant Current, Constant Voltage, and Fully Charged). This makes the XL4015 a functional, benchtop-style CC/CV charger for lithium packs, lead-acid batteries, or high-power LED strings, whereas the LM2596 and MP1584EN simply shut down or brown out under overcurrent.
+
+* **Thermal Overhead:** Because it is designed to push up to 75W, almost all XL4015 boards ship with or require an aluminum stick-on heatsink over the IC.
+
+If you need tiny physical size, stick with the **MP1584EN**. 
+
+If you need simple 1A–2A step-down with an easy dial, the **LM2596** works fine. 
+
+If you need higher current (3A–5A), battery charging, or fine-tuned current limiting, use the **XL4015**.
+
+{{% /details %}} 
+
 2. For powering: you can make an [overkill with a bluetti](https://youtube.com/shorts/1nK0-MDh7LY) and a [DC connector](https://youtube.com/shorts/HwavCMkah0o), or get [some 18650 batteries](https://youtube.com/shorts/_msLOGVlX-I) 
 
 with a TP4056 for a 1s setup

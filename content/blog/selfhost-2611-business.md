@@ -265,6 +265,12 @@ flatpak install flathub io.dbeaver.DBeaverCommunity
 
 ![ChartDB Working with the PyStonks Schema](/blog_img/DA/sql/dbchart-sqlite-schema.png)
 
+and from SQL, to [malloy DSL](https://fossengineer.com/malloy-semantic-modeling-language/)and google OKF
+
+* https://github.com/malloydata/malloy
+* https://docs.malloydata.dev/documentation/user_guides/sql_experts1
+
+> Because semantic matters, whatever you are building
 
 ---
 

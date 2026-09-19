@@ -47,18 +47,13 @@ Coming from [last year review](https://jalcocert.github.io/JAlcocerT/tech-recap-
 
 **Side Quests**
 
-0. About Type safe: something that some languages like RUST have
+0. About Type safe: *something that some languages like RUST have*
 
 From [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/) we evolved to [TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/)
 
 From regular openAI API calls, to do have them [done via BAML](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#baml-x-pgsql-x-matplotlib)
 
-and from SQL, to [malloy DSL](https://fossengineer.com/malloy-semantic-modeling-language/)and google OKF
 
-* https://github.com/malloydata/malloy
-* https://docs.malloydata.dev/documentation/user_guides/sql_experts1
-
-> Because semantic matters, whatever you are building
 
 0. For social media outreach, `https://www.growchief.com/` was an inspiration.
 
@@ -125,11 +120,10 @@ I have done a ~monthly series on stuff Ive tried or actively used.
 
 Also, have upgraded the x300 and x13 OS'es with a better backup strategy.
 
-Oh, and Im quite happy with proton mail and custom domains.
-
+Oh, and Im quite happy with proton mail and custom domains: *more since there is proton drive cli*
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="repo↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="HomeLab repo ↗" >}}
 {{< /cards >}}
 
 0. Create individual pages on `jalcocertech.com` with stripe plugged.
@@ -138,9 +132,7 @@ Share on social media / ads and do `draft:true` when old, but history will be ke
 
 0. BiP user flows around newsletter layers
 
-0. Creating D&A Reports with AI
-
-Because power BI and looker might not be enough
+0. Creating D&A Reports with AI: *Because power BI and looker might not be enough for the ai era*
 
 
 0. [Blogspot](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/#preparing-for-blogspot-migration) vs Wordpress Migrations *with Free web Audits plugged in*
@@ -703,7 +695,7 @@ From that point I started making quick videos: from [intro to tech talks](https:
 
 https://www.youtube.com/shorts/j3N4mu-YAaI
 
-### Serverless
+#### Serverless
 
 Im not forgetting the [CSR learnings](https://jalcocert.github.io/JAlcocerT/csr-and-js/) from last year.
 
@@ -788,7 +780,13 @@ sudo apt update && sudo apt install tmux -y
 
 Trying for the first time the mac ecosystem was also interesting.
 
-### Tech Talks
+#### PWAs
+
+These has been the tech surprise of the year.
+
+Examples: Spliit, betaflight, files.md, snapdrop, vert, compress.lol which i forked when talking about WASM...
+
+#### Tech Talks
 
 1. About langchain connected to a database...v2. [Post](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/). [Video](https://youtu.be/XS0vLK9x9nc).
 
@@ -796,9 +794,9 @@ Trying for the first time the mac ecosystem was also interesting.
 
 3. [Big Data x IoT](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk)
 
-4. Dron Telemetry, FPVs...
+4. ~~Dron Telemetry, FPVs...~~
 
-5. Tomatoes IoT end to end setup: *with arduino-cli, electronics simulations, components and their connections, velxio...*
+5. [Tomatoes IoT](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#the-tech-talk) end to end setup: *with arduino-cli, electronics simulations, components and their connections, mqtt and zigbee...*
 
 99. Duckdb x motherduck
 
@@ -844,23 +842,23 @@ xargs -0 awk '
 I was not expecting to:
 
 1. Learn about plants
-2. Make a decent come back to real *world* engineering: the mbsd framework with NVH analysis, the electronics simulations for EMR kickback that helped me relate with fpv/drone builds, watering plant systems and the cool hydrofoils
-3. That the FPV A1/A3 license made me [prepare the ULM/PPL](https://ulm-ppl-test.pages.dev/) for bigger flying things [here](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl)
+2. Make a decent come back to real *world* engineering: the mbsd framework with NVH analysis, the electronics simulations for EMR kickback that helped me relate with fpv/drone builds, watering plant systems, the power layer electronic design, the first 3d prints and the cool hydrofoils
+3. That going into the FPV world with the A1/A3 license made me [prepare the ULM/PPL](https://ulm-ppl-test.pages.dev/) for bigger flying things [here](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl)
 4. To see the gap between whats possible vs whats expected grow instead of shrinking
-5. for the nth time realize that we are not doing good questions at all neither improve our questioning process
+5. for the n-th time realize that we are not doing good questions at all neither improve our questioning process
 6. still find people at 30+ y.o with the startup mode of 0 earnings now, no reasonable process to get better, but trust me bro that ill reach 150k MRO soon *(and finding ppl who buy those stories)*
 
 #### Quotes
 
-
-
 Trading all risk/volatility is selling the tail probability of bigger success
 
-> How do many still complain about no upside when they have traded fully the upside for a 'risk free' promise?
+> How do many still complain about no upside when they have traded fully the upside for a *'risk free'* promise?
 
 Founders write strategy decks, ship nothing. Dont be a founder.
 
-No premature pivot. Continue in one direction. The missing piece is usually applying the [previous book harder](https://jalcocert.github.io/JAlcocerT/poc-107/#destilling-read-books).
+No premature pivot. Continue in one direction.
+
+The missing piece is usually applying the [previous book harder](https://jalcocert.github.io/JAlcocerT/poc-107/#destilling-read-books).
 
 0. As the cost of replies goes down, the quality of our questions will matter most.
 
@@ -872,7 +870,6 @@ Every business is a kind of game and you can see how many of them play: `https:/
 2. What a priviledge is to choose what challenge make you struggle
 3. Attention is all you need
 4. Intelligence and risk tolerance are 2 different skills and favoured in different environments
-
 5. Doing something for an extended period of time without guarantees of success is what makes the difference
 
 > And i could not agree more - that Y axis es left blank, because it applies to several concepts in life: from cash flows to body transformations...
@@ -889,7 +886,7 @@ A certain Negative cash flow year one then...uncertainty
 8. You just loose if you dont try
 9. Complexity is a good excuse / shelter - that gives the sensation that nobody will copy you, that you are working...
 
-10. First you focus and create. Then you diversify to maintain.
+10. First you focus. Create. Then you diversify to maintain.
 
 11. [How good](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#why-creating-like-a-ba) are your ideas? How good are you describing them?
 
@@ -1379,6 +1376,6 @@ xychart
 
 BLDC pump
 
-vs stepper/servos (brushed)
+vs stepper/servos (brushed) like the sg90
 
 https://github.com/gsampallo/mqtt_valvula

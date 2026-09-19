@@ -494,7 +494,6 @@ void connect_mqttServer() {
           delay(2000);
         }
   }
-  
 }
 
 //this function will be executed whenever there is data available on subscribed topics

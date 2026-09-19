@@ -829,6 +829,8 @@ But so far the best result was with the CLI only one, which included face recogn
 
 > pwa: https://main.app-mbsd.pages.dev/
 
+> https://multibodysystemsdynamics.com/
+
 With the release of this OSS framework for mbsd: https://github.com/JAlcocerT/mbsd-core
 
 ```

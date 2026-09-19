@@ -386,7 +386,6 @@ cd ./poc/pwa-spliit-analyzer
 C:\Python312\python.exe -m http.server 5173 --bind 127.0.0.1
 ```
 
-
 [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/spliit_analyzer.ipynb)
 
 Some, like https://app.files.md/ allow you to interact with your local files!

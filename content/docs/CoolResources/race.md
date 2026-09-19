@@ -22,7 +22,7 @@ For which we need:
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-iot/" title="IoT | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-The output: a cool PWA https://gopro-telemetry-overlay.pages.dev/
+The output: https://gopro-telemetry-overlay.pages.dev/
 
 ## Racing Data
 

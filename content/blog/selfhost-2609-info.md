@@ -151,7 +151,7 @@ You are already aware, PoC, make a [hyperframe](https://jalcocert.github.io/JAlc
 
 If it was not clear, now has to be.
 
-No more ~~bs~~ hello, accountability laundring, weaponized incompetence, underf...
+[No more ~~bs~~ hello](https://fossengineer.com/no-hello-is-not-enough/), accountability laundring, weaponized incompetence, underf...
 
 ...Pardon my French, I meant:
 
@@ -193,6 +193,8 @@ flowchart TD
     Evidence --> Weekly[Weekly proof: delivered, unblocked, decisions, risks, ownership]
 ```
 
+> Turn vague work [into clear next actions](https://fossengineer.com/turning-vague-work-into-clear-next-actions/), with [such communication framework](https://fossengineer.com/stakeholder-communication-framework/) and [accountability playbook](https://fossengineer.com/accountability-communication-playbook/)
+
 ### HomeLab Updates 0926
 
 I was trying lately technitium for **custom DNS at Omarchy**
@@ -208,7 +210,7 @@ https://www.youtube.com/watch?v=62crffG6Uw8 -->
 
 ### Architect or Principal
 
-Just in case you are preparing for an internal promo / [outside CV](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#when-was-the-last-time-you-applied) or how to frame what you do for prospects.
+Just in case you are preparing for a promo / [outside CV](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#when-was-the-last-time-you-applied) or how to frame what you do for prospects.
 
 Currently i observe a huge gap between expectations: *people billing 1k/person/day for adding one line to a csv*
 

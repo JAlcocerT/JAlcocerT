@@ -236,7 +236,7 @@ Nuxt and Next.js both offer full stack features but have differences reflecting 
 
 - Nuxt (based on Vue) provides built-in server-side rendering (SSR), static site generation (SSG), automatic routing, and zero-config TypeScript support. It includes a server framework to create APIs, handle backend logic, and fetch data from databases within the same codebase.
 - It uses Vite as a bundler for fast development with hot module replacement and code splitting.
-- Nuxt emphasizes convention-over-configuration, providing a modular architecture with pre-built modules for authentication, PWA support, and SEO optimization, speeding up development.
+- Nuxt emphasizes convention-over-configuration, providing a modular architecture with pre-built modules for authentication, progressive web app support, and SEO optimization, speeding up development.
 - The Nitro engine in Nuxt enables flexible deployment targets and backend functionality, supporting a full-stack experience seamlessly integrated with Vue syntax.
 
 | Feature                          | Nuxt (Vue)                           | Next.js (React)                      |
