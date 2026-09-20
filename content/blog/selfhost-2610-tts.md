@@ -17,8 +17,8 @@ https://mermaid.js.org/syntax/entityRelationshipDiagram.html
 
 **Intro**
 
-* Why Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* WHY Im writting this post: 
+* WHAT [Ive learnt](#conclusions) with it: *Ive ended*
 
 https://fossengineer.com/voicebox-local-ai-voice-studio/
 
@@ -65,7 +65,11 @@ Each entry captures the **non-obvious insight** — not the feature list, the *d
 
 ## ⭐ The AI Agent Stack (May 2026 batch)
 
-The biggest learning from this batch: **modern self-hosted AI tooling is splitting into five distinct layers** that don't compete, they compose. Most readers (and most projects' own marketing) conflate these layers. The honest map:
+The biggest learning from this batch: **modern self-hosted AI tooling is splitting into five distinct layers** that don't compete, they compose. 
+
+Most readers (and most projects' own marketing) conflate these layers. 
+
+The honest map:
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
@@ -87,7 +91,9 @@ The biggest learning from this batch: **modern self-hosted AI tooling is splitti
 └─────────────────────────────────────────────────────────────────┘
 ```
 
-**The layers don't just stack — they cross.** OpenClaw's SDK integration embeds Pi as its agent runtime, so a single message routed through OpenClaw can ultimately be processed by a Pi session in OpenClaw's container, which in turn might invoke an Agent OS standard or an OpenSpec workflow inside that session. The boundaries blur productively.
+**The layers don't just stack — they cross.** OpenClaw's SDK integration embeds Pi as its agent runtime, so a single message routed through OpenClaw can ultimately be processed by a Pi session in OpenClaw's container, which in turn might invoke an Agent OS standard or an OpenSpec workflow inside that session. 
+
+The boundaries blur productively.
 
 The right AI-first developer stack today might combine: **Hermes/OpenClaw/NanoClaw** (your messenger-resident assistant) + **Pi or Claude Code** (your terminal-resident coding agent) + **Agent OS** (your codebase's standards) + **OpenSpec** (your coding workflow) + **Paperclip or Symphony** (orchestration when you have many agents working in parallel).
 

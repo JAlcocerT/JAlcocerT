@@ -28,7 +28,7 @@ And the time for concepts, semantics and **orchestrating outcomes**.
 
 I consolidated the initial mbsd repo via: https://github.com/juliusbrussee/caveman just to save tokens.
 
-Created: http://192.168.1.2:3034/hermesagent/mbsd/src/branch/oss-core-2d and pushed later to https://github.com/JAlcocerT/hermesagent/commits/tinker/hermesagent/mbsd/
+Created: `http://192.168.1.2:3034/hermesagent/mbsd/src/branch/oss-core-2d` and pushed later to `https://github.com/JAlcocerT/hermesagent/commits/tinker/hermesagent/mbsd/`
 
 ## Gabe Morris - Mechanism
 

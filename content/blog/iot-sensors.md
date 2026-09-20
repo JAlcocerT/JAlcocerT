@@ -128,8 +128,7 @@ These were really easy to setup and if you are getting started they are perfect.
 
 This sensor will be helpful to [test insulation](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#we-need-the-mlx) and build your energy solutions as [service offering](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#energy-solutions)
 
-The MLX will get you ambient temp and IR temp of an object
-
+The **MLX90614 sensor** will get you ambient temp and IR temp of an object
 
 1. With the [Pi4 was kinda simple](https://jalcocert.github.io/RPi/posts/rpi-iot-MLX90614/):
 

@@ -61,7 +61,7 @@ curl -L \
   chmod +x /home/jalcocert/Applications/T3-Code-0.0.33-x86_64.AppImage
 ```
 
-I had an [hermes agent](https://fossengineer.com/hermes-agent-self-improving-ai-agent/) that pushed to [this repo](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101) after I reviewed the quality at my local Forgejo.
+I had an [](https://fossengineer.com/hermes-agent-self-improving-ai-agent/) that pushed to [this repo](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101) after I reviewed the quality at my local Forgejo.
 
 ```sh
 ssh -T -o BatchMode=yes forgejo-home
@@ -990,9 +990,79 @@ The progression is coherent:
 
 Then, the **v0.5.0**: establishes conventions and data contracts before solver equations depend on them. That reduces future API churn and avoids overstating 3D capability.
 
+
+
+{{% details title="For the 0-5-0 was like 🚀" closed="true" %}}
+
+Compared with 0.4.0, users of 0.5.0 can now describe and export experimental 3D models.
+
+  They can:
+
+  - Represent 3D positions and orientations with Pose3D and quaternions.
+  - Define spatial bodies with mass, center of mass, principal inertia and pose.
+  - Define world or body-local coordinate frames.
+  - Describe fixed and spherical joint connections.
+  - Export the spatial model to versioned JSON.
+  - Use documented SI units, right-handed XYZ coordinates and body-to-world rotations.
+  - Run a pendulum-like 3D vocabulary/export example.
+
+  0.4.0 already provided working 2D kinematics, constrained dynamics and JSON/CSV handoffs. Those
+  remain available unchanged.
+
+  The important limitation: 0.5.0 describes 3D mechanisms, but does not solve their 3D kinematics or
+  dynamics yet.
+
+ cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+
+  git switch main
+  git merge --ff-only v0.5.0-dev
+  git tag -a v0.5.0 -m "MBSD Core v0.5.0"
+  git push origin main
+  git push origin v0.5.0
+
+
+  awk '
+    /^## v0\.5\.0 / { found=1; next }
+    /^## / && found { exit }
+    found { print }
+  ' CHANGELOG.md | gh release create v0.5.0 \
+    --repo JAlcocerT/mbsd-core \
+    --verify-tag \
+    --title "MBSD Core v0.5.0 - Experimental 3D Vocabulary" \
+    --notes-file - \
+    --latest
+
+
+  Then examples:
+
+  cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+
+  git switch main
+  git merge --ff-only v0.5.0-dev
+  git tag -a v0.5.0 -m "MBSD Examples v0.5.0"
+  git push origin main
+  git push origin v0.5.0
+
+
+  awk '
+    /^## v0\.5\.0 / { found=1; next }
+    /^## / && found { exit }
+    found { print }
+  ' CHANGELOG.md | gh release create v0.5.0 \
+    --repo JAlcocerT/mbsd-examples \
+    --verify-tag \
+    --title "MBSD Examples v0.5.0 - Experimental 3D Vocabulary" \
+    --notes-file - \
+    --latest
+
+{{% /details %}}
+
+* https://github.com/JAlcocerT/mbsd-core/releases/tag/v0.5.0
+* https://github.com/JAlcocerT/mbsd-examples/releases/tag/v0.5.0
+
 > I couldnt avoid to email again to Gabe Morris :)
 
-> > And email to selfh.st
+> > And email to `selfh.st`
 
 - Project Chrono/PyChrono
 - Exudyn
@@ -1006,6 +1076,9 @@ Then, the **v0.5.0**: establishes conventions and data contracts before solver e
 * https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#productized-services
 
 ### Attract and Convert
+
+
+> [waiting list for energy](https://github.com/JAlcocerT/poc/tree/main/genbi-energy-solutions/waitlist), or for whatever, like this foss email capture
 
 Every business has its own delivery
 

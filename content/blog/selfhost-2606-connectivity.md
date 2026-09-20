@@ -1,9 +1,9 @@
 ---
-title: "Selfhosted Connectivity"
+title: "Selfhosted Connectivity with TR-181 and TR-471"
 date: 2026-06-17
 draft: false
-tags: ["TapMap vs PortMaster vs WireShark","Bind9 vs PiHole vs Technitum","TR471","iroh","Friis x Path Loss","QoS/AQM"]
-description: 'A homelab Open-Telemetry evaluation of WIFI metrics via EasyMesh, TR-181 and nmap.'
+tags: ["TapMap vs PortMaster vs WireShark","Bind9 vs PiHole vs Technitum","iroh","Friis x Path Loss","QoS/AQM","nmap"]
+description: 'A homelab Open-Telemetry evaluation of WIFI metrics via EasyMesh.'
 url: 'selfhosted-connectivity'
 math: true
 ---
@@ -15,13 +15,13 @@ Home connectivity is not just "do I have internet?"
 
 ## Intro
 
-For a useful homelab, I want repeatable ways to measure throughput, latency under load, Wi-Fi quality, LAN inventory, DNS behavior, and eventually TR-181/EasyMesh data from the router itself.
+For a useful homelab, I want repeatable ways to measure throughput, latency under load, Wi-Fi quality, LAN inventory, DNS behavior, and eventually `TR-181/EasyMesh` data from the router itself.
 
-Whether the uplink is 4G, coax, fiber, or Starlink, the home network becomes the base layer for everything else: self-hosted apps, backups, media, VPN, local AI services, and family communication.
+Whether the uplink is 4G, coax, fiber, or Starlink, the home network becomes the base layer for everything else: *self-hosted apps, backups, media, VPN, local AI services, and family communication*.
 
 This post is a cleanup of my June 2026 connectivity notes.
 
-With all the learnings from a MV1 Compal and a NME5410
+With all the learnings from a MV1 Compal and a NME5410 cable modems:
 
 ```sh
 #git pull
@@ -641,8 +641,9 @@ make devices-list  selfhosted-connectivity devices list
   http://192.168.1.18:8080
 ```
 
-If devices.yaml already exists, devices init will refuse to overwrite it. Use this only if you want to reset it:
+If devices.yaml already exists, devices init will refuse to overwrite it.
 
+Use this only if you want to reset it:
 
 ```sh
 make performance
@@ -667,7 +668,6 @@ make performance
 ```
 
 This uses systemctl --user, installs under `~/.config/systemd/user/`, and does not require root.
-
 
 ```sh
 git init && git add . && git commit -m "Initial commit: Starting " && gh repo create connectivity-checks --private --source=. --remote=origin --push
@@ -709,7 +709,6 @@ That split keeps the public post readable while still preserving the lab noteboo
 - DNS observability and packet capture solve different layers of the same home-network debugging problem.
 - LAN inventory should be periodic, because self-hosted networks quietly accumulate devices.
 
-
 ---
 
 ## FAQ
@@ -745,15 +744,25 @@ One SSID can have several BSSIDs across bands, mesh nodes, or enterprise APs.
 
 ### Why does the AP know client RSSI better than the Pi?
 
-RSSI is measured by the receiving radio. The Pi knows how loudly it hears the AP. The AP knows how loudly it hears each client. For client diagnostics, the AP-side number is usually the useful one.
+RSSI is measured by the receiving radio. 
+
+The Pi knows how loudly it hears the AP.
+
+The AP knows how loudly it hears each client. For client diagnostics, the AP-side number is usually the useful one.
 
 ### What is DFS, and why is channel 100 interesting?
 
-DFS channels in 5 GHz are shared with radar systems. They can be less crowded, but the AP must move if radar is detected. Channel 100 was useful here because nearby lower 5 GHz channels looked busier.
+DFS channels in 5 GHz are shared with radar systems. They can be less crowded, but the AP must move if radar is detected. 
+
+Channel 100 was useful here because nearby lower 5 GHz channels looked busier.
 
 ### Would OpenWrt on the Pi add more TR-181 fields?
 
-Yes, especially with `bbfdm + obuspa`, but the role matters. A Pi as a Wi-Fi station still cannot report AP-side client RSSI. A Pi or router acting as AP/gateway exposes much more useful network state.
+Yes, especially with `bbfdm + obuspa`, but the role matters.
+
+A Pi as a Wi-Fi station still cannot report AP-side client RSSI. 
+
+A Pi or router acting as AP/gateway exposes much more useful network state.
 
 ### Can I run an EasyMesh agent?
 
@@ -828,8 +837,6 @@ url: 'selfhosted-connectivity'
 **Tl;DR**
 
 Tinkering with agents and OSS connectivity
-
-
 
 adguard, Unbound, pihole...?
 

@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-09-19
+date: 2026-09-25
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -1085,7 +1085,7 @@ Like these articles:
 
 
 
-#### Discovery of the Years
+### Discovery of the Years
 
 Wait...how many years already?!?!
 
@@ -1103,19 +1103,19 @@ Wait...how many years already?!?!
 
 2026 - *the end of the fomo (?)*
 
-##### Closed Projects
+#### Closed Projects
 
 Aka ~~,failed apps'~~: *projects where i just learnt*
 
 1. ~~ClingThere~~ and ~~BaJ~~
-2. ~~btcmeet~~ you artists can serve yourself [here](https://jalcocert.github.io/JAlcocerT/link-artists/)
+2. ~~bctmeet~~ you artists can serve yourself [here](https://jalcocert.github.io/JAlcocerT/link-artists/)
 3. ~~Trip-Planner~~ - Yes, the one created [here](https://github.com/JAlcocerT/Py_Trip_Planner/) that you can SelfHost and use!
 4. ~~financeinmotion.fyi~~ superseeded by Unfolding Data *(YT + ChartJS / Matplotlib / Remotion)*
 5. ~~EntrepreAI~~, with all those: CV CreAItor,Speech RAIter,AIssistant - PPT, ...
 6. ~~Webifyer / Web CreAItor~~ : DFY/DWY websites for those with the right signal.
 7. ~~Wordpress MigrAItions~~ same with ~~Portfolio CreAItor~~
 8. ~~Cursos udemy~~
-9. ~~PyInsightChAIn~~ Understand crypto with AI> Just copy paste the code yourself
+9. ~~PyInsightChAIn~~ Understand crypto with AI? Just copy paste the code yourself :)
 10. ~~IoDoctor reloaded~~: A second opinion, No kyc, [no receta](https://github.com/cssninjaStudio/dokto)
 
 

@@ -1195,22 +1195,20 @@ you expose anything outside the tunnel
 
 If everything public goes through Cloudflare Tunnel, I would prioritize Cloudflare-side controls instead:
 
-Cloudflare Access for admin apps
-WAF/security rules
-rate limiting for login paths
-country/IP restrictions if useful
-2FA on Cloudflare account
-no direct router port forwards to the homelab
+* Cloudflare Access for admin apps
+* WAF/security rules rate limiting for login paths country/IP restrictions if useful
+* 2FA on Cloudflare account no direct router port forwards to the homelab
 
 For your homelab, the better setup is:
 
-Public internet -> Cloudflare Tunnel -> selected apps
-Admin access -> Tailscale/WireGuard/VPN
-Router port forwards -> none, or only absolutely required
-SSH -> LAN/VPN only
+* Public internet -> Cloudflare Tunnel -> selected apps
+* Admin access -> Tailscale/WireGuard/VPN
+* Router port forwards -> none, or only absolutely required
+* SSH -> LAN/VPN only
 
-Then Fail2ban becomes optional rather than essential. It’s still fine to install, but it won’t see most Cloudflare-side attack traffic unless requests reach your service with real
-client IPs and your logs are configured accordingly.
+Then Fail2ban becomes optional rather than essential. 
+
+It’s still fine to install, but it won’t see most Cloudflare-side attack traffic unless requests reach your service with real client IPs and your logs are configured accordingly.
 
 ---
 
@@ -1220,9 +1218,7 @@ For a normal personal Google Drive account, you mainly need this:
 2. a Google account login in a browser
 3. an rclone remote config stored on the server
 
-The artifact rclone creates is usually:
-
-~/.config/rclone/rclone.conf
+The artifact rclone creates is usually: `~/.config/rclone/rclone.conf`
 
 That file contains the Google Drive remote definition and OAuth token. Treat it like a secret.
 
@@ -1242,9 +1238,7 @@ root_folder_id: leave blank
 service_account_file: leave blank
 auto config: yes, if browser available
 
-After browser login, rclone saves credentials here:
-
-/home/jalcocert/.config/rclone/rclone.conf
+After browser login, rclone saves credentials here: `/home/jalcocert/.config/rclone/rclone.conf`
 
 Test it:
 
@@ -1252,9 +1246,7 @@ rclone lsd gdrive:
 rclone mkdir gdrive:homelab-backups
 rclone lsd gdrive:
 
-If the server has no browser/GUI, run:
-
-rclone config
+If the server has no browser/GUI, run: `rclone config`
 
 and when asked:
 
@@ -1266,7 +1258,9 @@ Open that URL on your laptop/desktop, sign in to Google, copy the token/code bac
 
 For backups, the only artifact you need to preserve is: `~/.config/rclone/rclone.conf`
 
-If using restic, also preserve your restic repository password. Without it, the encrypted backup is unrecoverable.
+If using restic, also preserve your restic repository password. 
+
+Without it, the encrypted backup is unrecoverable.
 
 ### How to Photos
 
@@ -1293,16 +1287,16 @@ It is not a RAW editor.
   clearly lightweight-and-RAW-focused as Geeqie, and Geeqie has the clearest
   RW2 support documentation among the lightweight viewers I checked.
 
-  My recommendation for your use case:
+My recommendation for your use case:
 
-  - Just view RW2: Geeqie
-  - View and do quick RAW edits: RawTherapee
-  - Full photo workflow: darktable
+- Just view RW2: Geeqie
+- View and do quick RAW edits: RawTherapee
+- Full photo workflow: darktable
 
 
 ### How to youtube
 
-With claude code as a builder, ffmpeg, yt-dl and openai API key...
+With claude code as a builder, ffmpeg, yt-dl and any openai API key...
 
 ![alt text](/blog_img/apps/yt-distill.png)
 

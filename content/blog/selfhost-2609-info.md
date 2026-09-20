@@ -206,7 +206,30 @@ https://www.youtube.com/watch?v=62crffG6Uw8 -->
 
 {{< youtube "62crffG6Uw8" >}}
 
+I made **DHCP reservations** at my home CM so that `192.168.1.2` is the x300 and `192.168.1.18` the pi4 with hermes.
 
+Useful CLI tools were:
+
+- ip addr — found your computer’s LAN address/subnet.
+- ip route — identified the router and 192.168.1.0/24 network.
+- ping — discovered active devices and inspected TTL.
+- ip neigh — showed IP-to-MAC mappings (the key discovery tool).
+- nc (netcat) — checked ports and read the SSH banner.
+- getent hosts — attempted hostname/reverse-DNS lookup.
+- curl — inspected the router page and checked MAC-vendor data.
+
+The decisive commands were:
+
+```sh
+ip neigh show dev wlan0
+ping -c 1 192.168.1.18
+nc -zv 192.168.1.18 22
+nc 192.168.1.18 22
+#nmap or arp-scan would also be ideal, but neither was installed.
+```
+
+
+> [ncdu](https://fossengineer.com/ncdu-terminal-disk-usage-analyzer/) has been very useful to check disk space
 
 ### Architect or Principal
 
