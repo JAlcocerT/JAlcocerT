@@ -1,6 +1,6 @@
 ---
 title: "Robotics 101"
-date: 2026-10-30
+date: 2026-10-25
 draft: false
 tags: ["MBSD","Electronics","RC","Drons vs FPV","IoT","SG90 vs MT76"]
 description: 'ESP32 x SG90'

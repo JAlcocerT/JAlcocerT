@@ -1,7 +1,7 @@
 ---
 title: "Mechathro que?"
 date: 2026-12-31
-draft: true
+draft: false
 tags: ["MBSD","Electronics","RC","Drons vs FPV","IoT"]
 description: ''
 url: 'mechatronics-101'

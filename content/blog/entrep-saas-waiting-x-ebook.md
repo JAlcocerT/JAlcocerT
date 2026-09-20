@@ -8,7 +8,7 @@ description: 'A waiting list that gets you leads.'
 
 **TL;DR**
 
-What happenes after doing the n ebooks here and this tech about BRD development.
+What happenes after doing the `n ebooks` here and this tech about BRD development.
 
 **Intro**
 

@@ -7,7 +7,9 @@ description: "A DIY PaaS service is useful when repeated hosting, database, and 
 
 A DIY PaaS offer productizes deployment repetition.
 
-Many small projects need the same foundations: hosting, database, domain, SSL, backups, monitoring, and simple admin. Packaging those foundations can make service delivery faster and less bespoke.
+Many small projects need the same foundations: hosting, database, domain, SSL, backups, monitoring, and simple admin. 
+
+Packaging those foundations can make service delivery faster and less bespoke.
 
 The platform is valuable when it removes repeated setup decisions.
 

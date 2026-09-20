@@ -1,24 +1,12 @@
 ---
 title: "Cibernetica 101"
-date: 2026-10-30
+date: 2026-10-27
 draft: false
 tags: ["Electronics","RC","IoT"]
 description: ''
 url: 'cyber-101'
 math: true
 ---
-
-
-
-water stuff
-
-seems like hydrofoil bikes have been a thing for a while now
-https://www.youtube.com/watch?v=RaYhyeGxYoA
-
-
-https://www.youtube.com/watch?v=In8f0C_B9HA
-
-and there are DFY already `https://manta5.com/collections/hydrofoil-bikes`
 
 
 **TL;DR**
@@ -32,6 +20,10 @@ Ya estan los chavales con la cibernetica :)
 
 
 Coming from this section with [the BOM](https://jalcocert.github.io/JAlcocerT/aerospace-101/#dron-bom).
+
+Lets say that ive been tinkering with drones this year more than i expected.
+
+
 
 {{< youtube "kSGEzpkgsu0" >}}
 
@@ -65,6 +57,15 @@ Nah, Time to bridge digital with real world:
 
 ---
 
+water stuff
+
+seems like hydrofoil bikes have been a thing for a while now
+https://www.youtube.com/watch?v=RaYhyeGxYoA
+
+
+https://www.youtube.com/watch?v=In8f0C_B9HA
+
+and there are DFY already `https://manta5.com/collections/hydrofoil-bikes`
 
 
 ### Interesting Blogs

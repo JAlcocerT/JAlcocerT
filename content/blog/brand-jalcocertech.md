@@ -2,7 +2,7 @@
 title: "How is my Brand going?"
 date: 2026-10-13
 draft: false
-tags: ["Brand HUBs","Email marketing"]
+tags: ["Brand HUBs","Email marketing","JAlcocerTech Core"]
 description: 'A brand around JAlcocerTech'
 url: 'branded-jalcocertech'
 ---

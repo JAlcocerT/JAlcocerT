@@ -7,7 +7,9 @@ description: "Automated content is valuable only when curation preserves quality
 
 Automated content can scale noise as easily as value.
 
-The system needs curation: topic selection, source quality, visual clarity, voice, timing, and feedback from the audience. Automation helps production, but judgment protects trust.
+The system needs curation: topic selection, source quality, visual clarity, voice, timing, and feedback from the audience. 
+
+Automation helps production, but judgment protects trust.
 
 The bottleneck moves from making content to choosing what deserves to exist.
 

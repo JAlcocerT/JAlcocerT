@@ -7,6 +7,20 @@ description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranea
 url: "webs-for-restaurants"
 ---
 
+A restaurant website should do more than display a menu.
+
+It can support discovery, reservations, events, private offers, reviews, local SEO, analytics, waitlists, delivery links, and customer communication. For local businesses, the site is part of operations.
+
+The page should reduce friction between appetite and action.
+
+This can be a good addition going forward:
+
+* https://github.com/firecrawl/fireplexity
+
+> Open Source Perplexity like AI search engine with real-time citations, streaming responses, and live data powered by Firecrawl
+
+AI search engine with web, news, and images. You will need firecrawl and groq Apis.
+
 https://github.com/JAlcocerT/markdown-plus-plus
 
 https://github.com/usememos/memos

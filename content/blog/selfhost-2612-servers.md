@@ -1,6 +1,6 @@
 ---
 title: "Just SelfHosted"
-date: 2026-11-01T23:20:21+01:00
+date: 2026-12-01T23:20:21+01:00
 draft: false
 tags: ["DNS x SSL","Glances","BackUps x P2P","Nala"]
 description: 'Selfhosting.'

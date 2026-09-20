@@ -3,18 +3,24 @@ title: "Mass produced information content"
 date: 2026-10-12T07:20:21+01:00
 draft: false
 tags: ["Social Media Marketing","Side-Quest26","Youtube","Stocks x Stonks"]
-description: 'Is value based content dead? Prove it wrong with data animations.'
+description: 'Is value based content dead?'
 url: 'social-media-content'
 ---
 
 **Tl;DR**
 
+Proving that volume + quality data animations is possible with hyperframes.
 
 **Intro**
 
-* Why Im writting this post: 
+* Why Im writting this post: *bc this year i started making some f1 shorts with matplotlib, then tried remotionJS and hyperframes, but didnt make a checkpoint on how this can apply to my brand*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+Lately im not only creating `z-learnings.md` after I try a new workflow.
+
+I get done a `.html` that distills interactively all the trade-offs in the topic.
+
+Those will be the essence of how i want my posts to be post this way of bloging, at sth like `jalcocertech-core`
 
 Can you create quality content and build a community with social media (Twitter/Threads)?
 

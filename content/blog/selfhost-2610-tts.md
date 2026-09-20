@@ -17,15 +17,8 @@ https://mermaid.js.org/syntax/entityRelationshipDiagram.html
 
 **Intro**
 
-* WHY Im writting this post: 
+* WHY Im writting this post: *bc i was surprised with [voicebox](https://fossengineer.com/voicebox-local-ai-voice-studio/), [chatterbox](https://fossengineer.com/chatterbox-local-open-source-tts/) and [kittenTTS](https://fossengineer.com/kittentts-local-cpu-tts/), but got to know simpler [local audio workflows with kokoro-82M](https://github.com/JAlcocerT/poc/blob/main/fpv-kpis/z-learnings.md) and this needs a checkpoint.
 * WHAT [Ive learnt](#conclusions) with it: *Ive ended*
-
-https://fossengineer.com/voicebox-local-ai-voice-studio/
-
-https://fossengineer.com/chatterbox-local-open-source-tts/
-
-https://fossengineer.com/kittentts-local-cpu-tts/
-
 
 ## AI x Music
 

@@ -7,7 +7,9 @@ description: "Many engineering domains connect through conservation of energy, m
 
 Engineering fields are more connected than their toolchains suggest.
 
-Heat transfer, electrical engineering, mechanics, fluids, and control often share conservation laws, differential equations, boundary conditions, and feedback loops. Seeing the shared structure makes new domains less foreign.
+Heat transfer, electrical engineering, mechanics, fluids, and control often share conservation laws, differential equations, boundary conditions, and feedback loops.
+
+Seeing the shared structure makes new domains less foreign.
 
 Science provides the common grammar underneath engineering specializations.
 

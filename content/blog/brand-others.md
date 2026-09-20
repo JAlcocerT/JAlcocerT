@@ -2,7 +2,7 @@
 title: "How to create Brands"
 date: 2026-11-20
 draft: false
-tags: ["PoC 104","Brand HUBs"]
+tags: ["PoC 104","Brand HUBs","JAlcocerTech Core"]
 description: 'JAlcocerTech'
 url: 'creating-brands'
 ---
@@ -15,7 +15,9 @@ url: 'creating-brands'
 * WHY Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+---
 
+## FAQ
 
 ### Eayp
 

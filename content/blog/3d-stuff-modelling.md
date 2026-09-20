@@ -1,5 +1,5 @@
 ---
-title: "3d Printing"
+title: "3D Modelling"
 date: 2026-12-31
 draft: false
 tags: ["Blender","OpenSCad vs CadQuery","ThreeJS & BabbylonJS","ArchViz"]

@@ -7,7 +7,9 @@ description: "Engineering turns scientific principles into workable designs unde
 
 Engineering starts where physics meets constraints.
 
-The principles may come from mechanics, fluids, heat, electricity, materials, and control, but the design must also satisfy cost, manufacturing, safety, maintenance, environment, and usability. That constraint stack is the engineering problem.
+The principles may come from mechanics, fluids, heat, electricity, materials, and control, but the design must also satisfy cost, manufacturing, safety, maintenance, environment, and usability.
+
+That constraint stack is the engineering problem.
 
 Knowing physics is necessary; making tradeoffs is the job.
 

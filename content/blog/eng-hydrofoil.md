@@ -2,7 +2,7 @@
 title: "Hydrofoil"
 date: 2026-11-20
 draft: false
-tags: ["IRL","Betaflight vs VESC"]
+tags: ["IRL","Betaflight vs VESC","CFD Simulation"]
 description: '.'
 url: 'hydro-foil-engineering'
 ---
@@ -19,7 +19,7 @@ These things can be quite expensive ~10k$
 
 I finally tried this: `https://wakeschool.pl/oferta/#szkola-e-foil`
 
-What a coincidence that *with some grade of imagination* its a mix of FPV and watering plant technology :)
+What a coincidence that *with some grade of imagination*, hydrofoil a mix of FPV and watering plant technology :)
 
 
 ## The fun part

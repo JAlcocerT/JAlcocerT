@@ -1,6 +1,6 @@
 ---
 title: "Image generation workflows need model and asset governance"
-date: 2026-11-01
+date: 2026-12-01
 tags: ["image-generation", "stable-diffusion", "assets"]
 description: "AI image workflows become useful when prompts, models, outputs, and rights are organized."
 ---

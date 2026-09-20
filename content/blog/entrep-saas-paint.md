@@ -9,6 +9,20 @@ math: true
 ---
 
 
+Matching demand and supply is not enough for local services.
+
+The customer needs trust in the provider, quote, availability, and outcome. 
+
+The provider needs trust in the lead quality and job details.
+
+Without that, a marketplace becomes noisy lead forwarding.
+
+Trust design comes before scale.
+
+Related:
+
+- [Estimating house work and capturing leads](/paint-lead-generation/)
+
 **Tl;DR**
 
 Its more and more difficult to find people to do home/paint/manual jobs.

@@ -1,6 +1,6 @@
 ---
 title: "Suspension NVH is about energy transfer through the chassis"
-date: 2026-12-25
+date: 2026-10-25
 tags: ["suspension", "nvh", "vehicle-dynamics"]
 description: "Suspension vibration depends on how road inputs, springs, dampers, tires, and chassis modes transfer energy."
 ---
