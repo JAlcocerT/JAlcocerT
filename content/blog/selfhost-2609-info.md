@@ -3,7 +3,7 @@ title: "Selfhosted Information flow"
 date: 2026-09-19T09:20:21+01:00
 draft: false
 tags: ["FilesMD","Forgejo","Zetlekasten","No Hello x Async","SoloPreneur CheckList"]
-description: 'From The algorithm to a daily information frameworks. JAlcocerTech core.'
+description: 'From The algorithm to a daily information frameworks. Company brain.'
 url: 'selfhosting-information-flow'
 ---
 
@@ -99,7 +99,7 @@ For some cases, you can consider to just write into [your Forgejo instance](#sel
 
 Ill assume that you are fine with `.md` files
 
-
+Bc why wouldnt you at this point.
 
 
 

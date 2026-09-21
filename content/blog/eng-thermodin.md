@@ -215,7 +215,7 @@ Lo que te queda para comprar (calentar la casa) es lo que realmente importa.
 
 ## Conclusions
 
-I havent put together any stirling engines... yet
+I havent put together any *stirling engines*... yet
 
 ![alt text](/blog_img/mechanics/stirling_engine.gif)
 

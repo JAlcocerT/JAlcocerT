@@ -10,6 +10,9 @@ math: true
 
 **Tl;DR**
 
+After the middle dron dis-assembly, i got to know few things about screw and put together this html
+
+https://github.com/JAlcocerT/poc/tree/main/physics-screws
 
 **Intro**
 

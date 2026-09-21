@@ -3,7 +3,7 @@ title: "[IoT] Sensors x PCB x Gerber"
 date: 2026-09-16
 draft: false
 tags: ["Polanduino x Arduino","RiscV","KiCad x Power Stage"]
-description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers] or your Arduino.
+description: Sensors for ESP32, a Raspberry Pi Pico W [Microcontrollers].
 url: 'iot-sensors-101'
 ---
 
@@ -226,7 +226,10 @@ you can get cables with 3a/60w support
 
 ToolBest Household RoleYour Clamp MeterHigh-Current AC Testing Hands-Free. Clamping over a live wire at your breaker panel to see how many Amps an induction hob, oven, heat pump, or EV charger is pulling without breaking the circuit.
 
-`UT61E+` MultimeterPrecision Probing & Fault Finding. Measuring actual wall voltage, checking micro-currents, tracing broken wires, inspecting capacitors, and bench work (FPV & IoT).
+`UT61E+` Multimeter Precision Probing & Fault Finding. Measuring actual wall voltage, checking micro-currents, tracing broken wires, inspecting capacitors, and bench work (FPV & IoT).
+
+<!-- https://youtube.com/shorts/4O8zDTVYAfE -->
+{{< youtube "4O8zDTVYAfE" >}}
 
 For electronics you will be working a lot with DC.
 
@@ -284,6 +287,8 @@ Once it enters the active range, small turns will make fine adjustments.
 {{% /details %}} 
 
 
+{{< youtube "4BQjhCBnIFI" >}}
+<!-- https://youtube.com/shorts/4BQjhCBnIFI -->
 
 {{% details title="DC to DC with XL4015" closed="true" %}}
 
@@ -316,6 +321,9 @@ If you need simple 1A–2A step-down with an easy dial, the **LM2596** works fin
 If you need higher current (3A–5A), battery charging, or fine-tuned current limiting, use the **XL4015**.
 
 {{% /details %}} 
+
+{{< youtube "Bd1tlPm1oLA" >}}
+<!-- https://youtube.com/shorts/Bd1tlPm1oLA -->
 
 2. For powering: you can make an [overkill with a bluetti](https://youtube.com/shorts/1nK0-MDh7LY) and a [DC connector](https://youtube.com/shorts/HwavCMkah0o), or get [some 18650 batteries](https://youtube.com/shorts/_msLOGVlX-I) 
 

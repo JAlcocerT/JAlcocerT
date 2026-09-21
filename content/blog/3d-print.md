@@ -143,6 +143,70 @@ Skipping my oss mbsd framework this time, just curious to see how stress flow th
 * https://jalcocert.github.io/JAlcocerT/fem/
 * https://fossengineer.com/beso-topology-optimization-calculix/
 
+
+* https://github.com/JAlcocerT/poc/blob/main/blender/dron-standing-fea/z-learnings.md
+
+![alt text](/blog_img/data-experiments/component-stress-overview.png)
+
++-----------------------------------------------------------------------------------------+
+|                                    INPUT GEOMETRY                                       |
+|                                    Watertight STLs                                      |
++-----------------------------------------------------------------------------------------+
+                                            │
+                                            ▼
++-----------------------------------------------------------------------------------------+
+| 1. GEOMETRY PROCESSING             FreeCAD 1.1.1 (Snap)                                 |
+|                                    Converts STL skins to faceted BRep solids            |
++-----------------------------------------------------------------------------------------+
+                                            │
+                                            ▼
++-----------------------------------------------------------------------------------------+
+| 2. MESHING & OPTIMIZATION          Gmsh 4.15.2 (Python venv)                            |
+|                                    Linear tetrahedrons + Netgen volume optimization     |
++-----------------------------------------------------------------------------------------+
+                                            │
+                                            ▼
++-----------------------------------------------------------------------------------------+
+| 3. SOLVER                          CalculiX 2.21 + SPOOLES (Unpacked in tools/)          |
+|                                    Linear static analysis using C3D4 elements           |
++-----------------------------------------------------------------------------------------+
+                                            │
+                                            ▼
++-----------------------------------------------------------------------------------------+
+| 4. POST-PROCESSING                 MeshIO 5.3.5 & NumPy 2.5.3                           |
+|                                    Extract FRD fields; write summary.json & VTU exports |
++-----------------------------------------------------------------------------------------+
+                                            │
+                                            ▼
++-----------------------------------------------------------------------------------------+
+| 5. VISUALIZATION                   Blender 5.1.2 & Pillow                               |
+|                                    Surface stress heatmaps in assembly context          |
++-----------------------------------------------------------------------------------------+
+
+  Run it with:
+
+```sh
+cd /home/jalcocert/Desktop/poc/blender/dron-standing-fea
+./run-fea.sh cases/frame-screen.json
+./run-fea.sh cases/frame-screen-fine.json
+```
+
+Built and tested a fully local FEA pipeline:
+
+  - Verified all eight printable STLs are watertight.
+  - Installed project-local Gmsh and CalculiX—no system/admin installation needed.
+  - Used FreeCAD to reconstruct the STL as a faceted BRep.
+  - Created automatic tetrahedral meshes with quality reporting.
+  - Applied a placeholder 19.62 N load—equivalent to 2 kg—to the isolated stand frame.
+  - Solved coarse and fine meshes and exported viewable VTU results.
+
+  Results:
+
+  - Coarse: 3.08 mm displacement, 27.65 MPa peak stress.
+  - Fine: 5.96 mm displacement, 41.35 MPa peak stress.
+
+  Because the values changed substantially, the model is not converged. The software workflow works, but this particular test is only a pipeline demonstration—not validation of the complete assembled stand.
+
 ### Blend x STL x FCstd
 
 An **STL file** (short for *Stereolithography* or *Standard Tessellation Language*) is a standard 3D file format that represents the surface geometry of a 3D object using a collection of connected **triangles** (a polygon mesh).
