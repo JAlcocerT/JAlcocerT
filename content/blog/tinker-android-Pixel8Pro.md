@@ -282,3 +282,105 @@ The Poco F1 was quite an interesting one and also the first phone I changed its 
 
 
 If you loose it: `https://www.google.com/android/find/`
+
+### Factory Reset
+
+Here is the complete summary of the process, key learnings, and steps used to wipe the Pixel 8 Pro clean for the buyer despite the severely damaged screen.
+
+1. **Broken Digitizer Workaround (USB OTG):**
+* Even when an OLED panel has dead zones or an unresponsive digitizer, Android natively supports plug-and-play USB HID devices.
+* Connecting a physical USB/wireless keyboard and trackpad combo via a USB-C adapter allows full control over the UI, navigation, and typing.
+
+
+2. **The "Factory Reset Protection" (FRP) Trap:**
+* Wiping an Android device via Recovery Mode or settings without manually removing linked Google accounts first triggers FRP.
+* On first boot, FRP forces the next user to enter the *previous owner's* Google account email and password, rendering the device useless to a buyer.
+
+
+3. **Autofill vs. Main Account Hook:**
+* Simply logging out of apps (WhatsApp, Signal) isn't enough; the system-level Google Account must be explicitly unlinked from **Passwords, passkeys & accounts** so that the "Accounts for [User]" list is empty and the Google autofill identity disconnects.
+
+
+
+
+4. **Cryptographic Erasure on Modern Android:**
+* Android uses file-based encryption (FBE). Triggering a factory reset discards the cryptographic keys, instantly rendering all previous personal data on the UFS 3.1 storage unrecoverable without needing third-party shredder tools.
+
+Step-by-Step Procedure Executed
+
+1. **Device Interface Setup:**
+* Connected the Logitech wireless keyboard and trackpad receiver to the Pixel 8 Pro using a USB-C OTG dongle.
+* Unlocked the phone by typing the lock screen PIN on the keyboard.
+
+
+2. **Account Disconnection (Disarming FRP):**
+* Navigated to **Settings > Passwords, passkeys & accounts**.
+
+
+* Removed messaging accounts (WhatsApp, Signal).
+* Selected the primary Google account under **Accounts for Jesus** and clicked **Remove account**.
+
+
+* Authenticated with the screen PIN to verify the removal, leaving the account sync list completely empty and autofill unlinked (`Add an account` displayed).
+
+
+
+
+3. **Executing the Wipe:**
+* Navigated to **Settings > System > Reset options**.
+* Selected **Erase all data (factory reset)**.
+* Confirmed the action and entered the screen lock PIN one final time.
+
+
+4. **Verification:**
+* The phone rebooted, wiped the user storage partition, and loaded into the stock out-of-the-box welcome setup wizard (showing the multi-language greeting / "Hola" and setup graphics).
+
+
+Step 1: Remove Your Google Account
+(This is the most critical step to prevent the phone from locking the buyer out due to Factory Reset Protection).
+
+Swipe down from the top of the screen with your mouse to pull down the notification shade, and click the Gear icon (Settings).
+
+Scroll down through the settings menu and click on Passwords & accounts (Hasła i konta).
+
+Under the "Accounts for..." section, click on your main Google email address.
+
+Click the large Remove account (Usuń konto) button.
+
+A confirmation pop-up will appear. Click Remove account again.
+
+Enter your lock screen PIN or pattern using your keyboard/mouse to authorize the removal.
+
+Step 2: Perform the Factory Reset
+Now that your account is safely disconnected, you can wipe the device.
+
+Go back to the main Settings page.
+
+Scroll down to the bottom and click on System.
+
+Click on Reset options (Opcje resetowania).
+
+Click on Erase all data (factory reset) (Wyczyść wszystkie dane / reset fabryczny).
+
+Look at the bottom right corner of the screen and click the Erase all data button.
+
+Enter your lock screen PIN one final time.
+
+Click Erase all data one last time to confirm.
+
+To ensure absolutely nothing remains and that the phone is perfectly clean before you trigger the final wipe:
+
+Click on that top Google row right under "Preferred service". If it opens up your email settings, see if there is an option to sign out or disconnect the identity completely.
+
+If it just takes you to autofill settings, don't sweat it too much—since the actual account sync under "Accounts for Jesus" is empty, the primary security lock is already disarmed.
+
+The Final Step
+Now that the accounts list is clear, you can head straight to the finish line:
+
+Go back to the main Settings page.
+
+Click System -> Reset options.
+
+Click Erase all data (factory reset) and confirm it.
+
+Once the phone reboots, it will completely scrub all of those residual autofill caches, Bitwarden/authenticator toggles, and any hidden app data. You are good to go!

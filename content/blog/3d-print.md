@@ -13,7 +13,7 @@ You just need `.STL` to bring designs to the real world
 
 **Intro**
 
-* WHY Im writting this post: *bc this power staging makes a mess and i want to put some order to the table* 
+* WHY Im writting this post: *bc [this power staging](https://jalcocert.github.io/JAlcocerT/iot-sensors-101/#kicad-x-power-stage-pcb-design) makes a mess and i want to put some order to the table* 
 * WHAT [Ive learnt](#conclusions) with it: *Ive ended up sending for [manufacturing STLs for the first time](#my-first-3dprint) a [fpv dron stand](https://github.com/JAlcocerT/poc/tree/main/blender/dron-standing)*
 
 
@@ -23,19 +23,48 @@ Its not the time to talk about design for manufacturing (yet).
 
 ### Design Files 101
 
-1. .STL
-2. 
+Its all about `.STL`, `.Blend` and `FCstd` [files](#blend-x-stl-x-fcstd)
+
+And about getting these installed:
 
 ```sh
-choco install openscad
+#choco install openscad
 ```
 
-### Blender can do?
+Blender can do what?
 
 ```sh
 choco install blender --version=4.2.2 -y
 #  choco info blender 
 #brew install --cask blender #this got me the latest 5.1
+```
+
+
+{{% details title="Houdini vs Blender 🚀" closed="true" %}}
+
+Houdini and Blender are competitors in the general 3D digital content creation (DCC) market, but they target different core audiences and strengths.
+
+Rather than being direct head-to-head rivals for every task, they are often used together in professional pipelines.
+
+| Feature | Houdini (by SideFX) | Blender (Open Source) |
+| --- | --- | --- |
+| **Core Architecture** | **Procedural & Node-Based:** Every action is built into a data node network. Non-destructive by nature. | **Hybrid/Traditional:** Tool-based with parametric modifiers, sculpting, and a growing procedural node ecosystem (*Geometry Nodes*). |
+| **Primary Strength** | **VFX & Complex Simulations:** Unmatched for dynamics like destruction, fire, smoke, water, crowds, and complex particle systems. | **All-in-One Generalist Workflow:** Fast polygonal modeling, digital sculpting, UV unwrapping, 2D/3D animation, and quick rendering. |
+| **Learning Curve** | **Very Steep:** Requires understanding data flow, mathematical concepts, and often VEX/Python scripting. | **Accessible:** More intuitive user interface for artists and hobbyists getting started with 3D. |
+| **Target Industry** | Film/TV VFX studios, AAA game development pipelines, and high-end technical direction. | Indie studios, solo developers, concept artists, freelancers, and small-to-mid production teams. |
+| **Cost** | Commercial software (ranging from free learning/apprentice versions to thousands per year for full licenses). | 100% Free & Open-Source (GPL). |
+
+* **Where Blender Wins:** Hard-surface modeling, sculpting, rapid asset creation, character animation, and self-contained solo production. Blender allows artists to build and render a scene from scratch much faster for standard 3D tasks.
+* **Where Houdini Wins:** Large-scale simulations and automated environment generation. If a film scene requires thousands of crumbling building pieces interacting with realistic smoke and fire, Houdini handles that complexity without breaking.
+* **Overlap (The Competition):** Blender's **Geometry Nodes** feature brings node-based procedural workflows into Blender, positioning it as a lightweight alternative to Houdini's procedural modeling and motion graphics setup. However, Houdini remains far ahead for advanced physics and heavy visual effects.
+
+In professional pipelines, studio artists frequently **combine both**: modeling base assets in Blender (or Maya) and passing them into Houdini to perform heavy FX and dynamic simulations.
+
+{{% /details %}}
+
+What about Freecad?
+```sh
+freecad
 ```
 
 
@@ -49,11 +78,12 @@ Wherever you see `price = cost + margin`, you are looking to a commodity
 
 ### Where to get Models
 
-
+1. thingyverse
+2. makerworld
 
 ### Where to get them printed
 
-I recently got to know that pcbway can estimate the cost and send you plastic and even metal 3dprints.
+I recently got to know that pcbway can estimate the cost and send you plastic and even metal 3dprints :O
 
 
 

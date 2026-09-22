@@ -106,11 +106,11 @@ But what this guy created on that **article is simply fantastic**.
 
 What?!
 
-{{< youtube "ijX3CeVUTPh9yz7Z" >}}
+{{< youtube "Cu7VlrpoVZY" >}}
 
 We could use one of these for trackdays / karting and so on?
 
-<!-- https://youtu.be/Cu7VlrpoVZY?si=ijX3CeVUTPh9yz7Z -->
+<!-- https://youtu.be/Cu7VlrpoVZY -->
 
 <!-- 
 arduino
@@ -123,6 +123,11 @@ https://www.youtube.com/watch?v=DPqiIzK97K0 -->
 ### DHT11 and DHT22
 
 These were really easy to setup and if you are getting started they are perfect.
+
+```sh
+sqlite3 -header -column /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite \
+  "SELECT COUNT(*), MAX(received_at) FROM readings;"
+```
 
 ### MLX
 
@@ -219,6 +224,118 @@ The chip's low power consumption and versatility make it an attractive option fo
 
 
 ### BoM
+
+BMS board
+
+a bare TP4056—it is an 18650 Battery Shield V3, which is a complete, self-contained single-cell power bank system.
+
+Why You Didn't Need an Extra BMS for That Setup
+On the bottom of that board sits an all-in-one power management IC (usually an IP5306 or a TP4056 paired with an onboard boost controller and protection chips). It already provides:
+
+Over-discharge protection: Automatically shuts off the 5V and 3V rails when the 18650 cell drops around ~2.9V–3.0V.
+
+Over-charge protection: Stops charging from the Micro-USB port once the cell reaches 4.2V.
+
+Over-current and short-circuit protection.
+
+Voltage conversion: Boosts the single cell's ~3.7V up to a regulated 5V (USB port and pins) and steps it to 3V pins.
+
+Because that shield already contains a full 1S management and protection circuit, you did not need a separate BMS for it.
+
+that works fine for powering the ESP32 alone, but there are three crucial details to ensure it stays reliable:
+
+1. Solar Panel Voltage Limit (5V to 6V Max)
+
+The charging input chip on this shield accepts 5V to 8V maximum.
+
+Use a 5V or 6V (nominal) solar panel.
+
+Do not plug a standard 12V or 18V solar panel directly into this board's Micro-USB input, or the input charging IC (marked U2) will instantly burn out.
+
+2. Pass-Through Charging Behavior
+
+This shield supports simultaneous charging and discharging. However, the charging circuit only draws about 500mA (0.5A) from the input port.
+
+While an active ESP32 uses ~150–250mA, brief Wi-Fi transmissions spike to ~500mA. On cloudy days or low-sun conditions, the incoming solar energy might only cover the ESP32’s consumption without adding charge to the battery. Utilizing ESP32 Deep Sleep between readings or transmissions will keep the battery healthy and charging properly.
+
+3. The Slide Switch Only Controls the Big USB-A Port
+
+The slide switch on the side disconnects only the large USB-A socket.
+
+The solder pins along the edge labeled 5V and 3V stay powered on permanently, regardless of that switch's position. If you want to shut the ESP32 off manually while using those pins, you will need an external inline switch.
+
+Perfboards / Protoboards (Permanent & Soldered)
+
+Once your circuit works on a breadboard, you solder components onto these boards to create a permanent, vibration-resistant device.
+
+Green Double-Sided Board (Bottom-Left):
+
+Made of FR-4 (fiberglass) with plated through-holes (copper lines both sides and passes through the barrel).
+
+Highly durable, resists heat well (pads won't peel off easily when soldering), and creates very strong solder joints. This is the best board for your final off-grid pump project.
+
+Brown Single-Sided Board (Bottom-Right, 5×7 cm):
+
+Made of FR-2 (paper-phenolic/Bakelite) with copper pads only on the bottom side.
+
+Cheaper and more brittle. The copper pads can easily lift or tear off if your soldering iron stays on them a second too long.
+
+Breadboards: ~1.0A max (realistically 1.5A for brief spikes). The tiny metal spring clips inside breadboards have relatively high contact resistance. Pushing your pump's ~2A continuous (and 4A–6A inrush) through a breadboard will cause voltage drops, contact heating, and will eventually melt the plastic tracks. Never route the pump motor's high-current loop through the breadboard clips.
+
+Perfboards (Soldered): Up to 10A+, depending on the wire you use. The isolated copper donut pads themselves don't carry continuous current across points—you bridge them with wire. If you solder solid 20 AWG or 22 AWG copper hookup wire (or trimmed component lead legs) directly along the high-current path between the BMS, MOSFET, and pump terminals, it handles 5A–10A easily without heating up.
+
+**Current Limits**
+
+* **Breadboards:** **~1.0A max** (realistically 1.5A for brief spikes). The tiny metal spring clips inside breadboards have relatively high contact resistance. Pushing your pump's ~2A continuous (and 4A–6A inrush) through a breadboard will cause voltage drops, contact heating, and will eventually melt the plastic tracks. **Never route the pump motor's high-current loop through the breadboard clips.**
+* **Perfboards (Soldered):** **Up to 10A+**, depending on the wire you use. The isolated copper donut pads themselves don't carry continuous current across points—**you bridge them with wire**. If you solder solid 20 AWG or 22 AWG copper hookup wire (or trimmed component lead legs) directly along the high-current path between the BMS, MOSFET, and pump terminals, it handles 5A–10A easily without heating up.
+
+---
+
+**Perfboards vs. Custom KiCad PCBs**
+
+A custom PCB ordered from a fabrication house (via KiCad) is **significantly better** in almost every way, except for delivery time and cost on one-off prototypes.
+
+| Factor | Hand-Soldered Perfboard | Custom KiCad PCB |
+| --- | --- | --- |
+| **Reliability & Strength** | High risk of short circuits, messy wiring underneath, joints can snap with vibration. | Clean, vibration-proof, insulated solder mask prevents accidental shorts. |
+| **Current Handling** | Depends entirely on the gauge of hookup wire you manually solder. | You design wide copper traces or copper pours (e.g., 2–3 mm wide) capable of 5A–10A cleanly. |
+| **Assembly Time** | Very slow: requires stripping, bending, point-to-point jumpers, and solder bridging. | Fast: parts drop straight through clearly labeled silkscreen footprints and solder down in minutes. |
+| **Size & Neatness** | Bulky, limited to 2.54 mm grid spacing. | Extremely compact; fits neatly into a tailored 3D-printed enclosure. |
+| **Cost & Speed** | Instant build at your desk; costs pennies. | Takes 3–7 business days to manufacture and ship; costs around $2 to $5 for 5 boards (plus shipping). |
+
+For an off-grid device with a pump that vibrates, building a quick prototype on the **green FR-4 perfboard** will verify everything works. If you want a rock-solid, weather-sealed device that will run unattended for months or years, designing a small board in **KiCad** is well worth the effort.
+
+Do you plan to build just one of these units, or are you looking to deploy several?
+
+The switch with the metal lever is a **heavy-duty toggle switch** (latching, typically rated for 10A–15A). It physically stays in the ON or OFF position and is built to switch high-current power lines directly.
+
+The switches in the compartment box are **12×12 mm tactile push buttons** with snap-on colored caps. They are **not** interchangeable with your toggle switch for main power.
+
+**Why the Tactile Buttons Cannot Replace the Toggle Switch Directly**
+
+* **Momentary, Not Latching:** These buttons only make electrical contact while your finger is actively holding them down. The moment you let go, the connection opens and power cuts out.
+* **Very Low Current Rating:** Tactile switches are rated for signal levels—typically **50 mA (0.05A) at 12V**. Routing your 3S battery (~12V) or the pump's ~2A through one of these will weld the tiny internal contacts shut or melt the plastic body almost instantly.
+
+**When You Can Use the Colored Buttons**
+
+You can use them as **logic inputs to the ESP32**, but not in the main power path:
+
+* Solder a tactile button between an ESP32 GPIO pin and GND (using the ESP32's internal pull-up resistor).
+* When pressed, the ESP32 detects the button press in software and activates the MOSFET to run the pump for a set duration (e.g., "run for 10 seconds, then shut off").
+
+If you want a small board-mounted switch to cut the main battery power cleanly, look for a **mini latching toggle switch** or a **high-current slide switch** rated for at least **3A to 5A DC**.
+
+You are thinking of **SPST** or **SPDT**.
+
+Looking at the photo, because it has only two screw terminals on the bottom, it is an **SPST** switch:
+
+* **SPST (Single Pole, Single Throw):** A simple ON/OFF switch with **2 terminals**. Flip it one way, the circuit is connected (closed); flip it the other, it disconnects (open). This is exactly what you have wired inline to cut main power.
+* **SPDT (Single Pole, Double Throw):** Has **3 terminals**. It switches one incoming wire between two different output paths (like selecting between Battery A and Battery B, or an ON-OFF-ON configuration).
+
+The letters break down as:
+
+* **Pole:** The number of separate circuits the switch controls at once (Single Pole = 1 line).
+* **Throw:** The number of active positions each pole can connect to (Single Throw = 1 path, Double Throw = 2 selectable paths).
 
 [IoT bom](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#iot-bom-to-get-started) to get started?
 
@@ -325,7 +442,7 @@ If you need higher current (3A–5A), battery charging, or fine-tuned current li
 {{< youtube "Bd1tlPm1oLA" >}}
 <!-- https://youtube.com/shorts/Bd1tlPm1oLA -->
 
-2. For powering: you can make an [overkill with a bluetti](https://youtube.com/shorts/1nK0-MDh7LY) and a [DC connector](https://youtube.com/shorts/HwavCMkah0o), or get [some 18650 batteries](https://youtube.com/shorts/_msLOGVlX-I) 
+2. For powering: you can make an [overkill with a bluetti](https://youtube.com/shorts/1nK0-MDh7LY) and a [DC connector](https://youtube.com/shorts/HwavCMkah0o), or get [some 18650 batteries](https://youtube.com/shorts/_msLOGVlX-I) anda `XTAR VC4SL` charger 
 
 with a TP4056 for a 1s setup
 
@@ -948,7 +1065,7 @@ https://youtube.com/shorts/1tAaPIVKSoM -->
 
 ![KICAD UI check](/blog_img/electronic/kicad-power-stage.png)
 
-{{< youtube "ijX3CeVUTPh9yz7Z" >}}
+<!-- {{< youtube "ijX3CeVUTPh9yz7Z" >}} -->
 
 I got [a PRD](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/prd.md) and some instructions / [concerns](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-101/concerns2.md) of what i need to get a cleaner power stage prototype for the watering setup:
 
@@ -1046,35 +1163,3 @@ cd ./electronics-101
   {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics 101 | Repo" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/VideoEditionRemorion" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
-
-
-## IoT - LangChain x PGsql
-
-This is coming up as some shape of tech talk this year.
-
-And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
-
-```sh
-git clone https://github.com/JAlcocerT/selfhosted-landing
-cd y2026-tech-talks/4-baml-db-insights
-```
-
-### What it is esp home
-
-https://github.com/espressif/esptool
-
-## What it is tasmota
-
-https://github.com/arendst/Tasmota
-
-https://github.com/tasmota/tasmotizer
-
-## Interesting Videos for Ideas
-
-1. https://www.youtube.com/@robojax/videos
-
-[Building H-Bridge Motor driver](https://www.youtube.com/watch?v=6ugrL5ziPn8) using TIP120 TIP125 full PCB Design with Arduino - Robojax #392 
-
-ESP32 Tutorial 49 -[ Control DC Motor Over The internet](https://www.youtube.com/watch?v=OUgyPXNYg3g) using Adafruit IoT | SunFounder's ESP32 kit 
-
- 2. ResinChem Tech - https://www.youtube.com/watch?v=xFfxWB_TQwE

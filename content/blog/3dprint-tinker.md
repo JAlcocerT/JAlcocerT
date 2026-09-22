@@ -251,6 +251,10 @@ This plug-in enables GIMP to run Python scripts.
 
 ### Free Software for 3D Printing
 
+This is Onshape, a cloud-based 3D computer-aided design (CAD) software by PTC.
+
+But why would you use it, when you have OSS:
+
 1. **OctoPrint** - https://octoprint.org/
     * https://github.com/OctoPrint/OctoPrint
     * https://www.raspberrypi.com/tutorials/set-up-raspberry-pi-octoprint/

@@ -231,6 +231,52 @@ nc 192.168.1.18 22
 
 > [ncdu](https://fossengineer.com/ncdu-terminal-disk-usage-analyzer/) has been very useful to check disk space
 
+I was getting connectivity troubles while testing `iwd`, for which I had to connect ethernet to resolve as i lost wifi connection:
+
+1. How Ubuntu’s Wi-Fi Architecture Fits Together
+
+Linux networking works in layers, and understanding which tool operates at which layer explains why things broke:
+
+```
+[ Frontends / CLIs / UIs ]  -->  nmcli / nmtui, Impala, GNOME Wi-Fi Settings
+                                          |
+[ Network Daemon ]          -->  NetworkManager (orchestrates connections, DNS, DHCP)
+                                          |
+[ Wireless Backend ]        -->  wpa_supplicant (Ubuntu default)  OR  iwd (Impala default)
+                                          |
+[ Kernel & Hardware ]       -->  cfg80211, mac80211, Wi-Fi driver, network card (wlan0)
+
+```
+
+
+2. Root Cause: Why Installing Impala Broke the Internet
+
+* **Device Lockout:** Only **one** wireless daemon can control the hardware radio interface at a time.
+* **Backend Conflict:** Impala installs and relies on `iwd`. When `iwd` starts, it claims exclusive control of the Wi-Fi card (e.g., `wlan0`).
+* **Silent Failure:** NetworkManager defaults to expecting `wpa_supplicant`. When `iwd` takes the card without NetworkManager being explicitly configured to talk to `iwd` as its backend, NetworkManager suddenly marks the Wi-Fi device as **unmanaged** or **unavailable**, severing all active connections.
+
+3. The CLI Landscape (Which Tool Does What)
+
+| Command | Role | Layer | Best Used For |
+| --- | --- | --- | --- |
+| **`nmcli`** | NetworkManager CLI | Manager | Ubuntu's default tool for scanning, connecting, and viewing network device states. |
+| **`nmtui`** | NetworkManager Text UI | Manager | Interactive terminal GUI with arrow-key navigation for those who dislike flag syntax. |
+| **`iwctl`** | iwd CLI | Backend | Managing Wi-Fi when using `iwd` or Impala (powering adapters on/off, manual scans). |
+| **`wpa_cli`** | wpa_supplicant CLI | Backend | Interacting directly with the standard legacy Wi-Fi authentication daemon. |
+| **`ip`** | iproute2 suite | Kernel / Low-Level | Checking raw interface status (`ip link`) and assigned IP addresses (`ip a`). |
+| **`iw`** | nl80211 CLI | Kernel / Wireless | Low-level wireless device queries directly via the Linux wireless subsystem. |
+| **`systemctl`** | systemd service manager | Init / Services | Starting, stopping, enabling, disabling, and masking/unmasking background daemons. |
+
+4. Step-by-Step Restoration Logic
+
+Fixing this problem requires a strict sequence of state changes:
+
+1. **Stop & release the hardware:** Stop and disable `iwd` so it releases its lock on the Wi-Fi card (`sudo systemctl stop iwd && sudo systemctl disable iwd`).
+2. **Clear configuration overrides:** Remove drop-in configuration files under `/etc/NetworkManager/conf.d/` that force `wifi.backend=iwd`.
+3. **Restore default packages:** Reinstall `wpasupplicant` and `network-manager` if any dependencies were stripped during Impala's installation.
+4. **Restart core services:** Unmask and start `wpa_supplicant` first, then restart `NetworkManager` so it detects the restored backend and claims the Wi-Fi card cleanly.
+5. **Reconnect:** Bring the interface up and re-associate via `nmcli device wifi connect ...`.
+
 ### Architect or Principal
 
 Just in case you are preparing for a promo / [outside CV](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#when-was-the-last-time-you-applied) or how to frame what you do for prospects.
@@ -406,3 +452,7 @@ Navidrome is other OSS **selfhostable music server**:
 * As i prepare for the exam, made this webapp: `https://ulm-ppl-test.pages.dev/`
 
 From `./poc/ulm-ppl`with some books distilled.
+
+### Upgrading my Desk
+
+I got an IKEA desk, with DELL U2518D upgraded to U2724DE with KVM included and ERGOTRON MXV gas desk mount for the VESA 100x100

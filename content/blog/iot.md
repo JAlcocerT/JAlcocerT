@@ -709,3 +709,36 @@ _DHT22 connection to a Raspberry Pi 4_ -->
 
 * Data Sources: <https://superset.apache.org/docs/databases/db-connection-ui>
 * API info: <https://superset.apache.org/docs/api>
+
+
+
+## IoT - LangChain x PGsql
+
+This is coming up as some shape of tech talk this year.
+
+And will be using a db2rest setup finally, to avoid the complexities of pulling life data from pgsql to a slidev component
+
+```sh
+git clone https://github.com/JAlcocerT/selfhosted-landing
+cd y2026-tech-talks/4-baml-db-insights
+```
+
+### What it is esp home
+
+https://github.com/espressif/esptool
+
+## What it is tasmota
+
+https://github.com/arendst/Tasmota
+
+https://github.com/tasmota/tasmotizer
+
+## Interesting Videos for Ideas
+
+1. https://www.youtube.com/@robojax/videos
+
+[Building H-Bridge Motor driver](https://www.youtube.com/watch?v=6ugrL5ziPn8) using TIP120 TIP125 full PCB Design with Arduino - Robojax #392 
+
+ESP32 Tutorial 49 -[ Control DC Motor Over The internet](https://www.youtube.com/watch?v=OUgyPXNYg3g) using Adafruit IoT | SunFounder's ESP32 kit 
+
+ 2. ResinChem Tech - https://www.youtube.com/watch?v=xFfxWB_TQwE
