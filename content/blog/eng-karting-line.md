@@ -88,10 +88,9 @@ Yep, sth was terribly wrong with the GPS here...
 
 This is a great reason to finally get a separated GPS module for my FPVs and other experiments
 
+<!-- https://youtu.be/v1I5b4-JE00 
 
-{{< youtube "v1I5b4-JE00" >}}
-
-
+{{< youtube "v1I5b4-JE00" >}} -->
 
 #### Karting and Theoretical Optimum Path
 
@@ -128,7 +127,7 @@ make spa-gd-video
 https://www.youtube.com/watch?v=v1I5b4-JE00&t=9s 
 -->
 
-{{< youtube "v1I5b4-JE00" >}}
+<!-- {{< youtube "v1I5b4-JE00" >}} -->
 
 
 > Where are these videos from? An [European roadtrip](#tools-and-tech-for-trips)!
@@ -181,9 +180,7 @@ With the VW Golf:
 
 With the laguna mk2:
 
-#### Nurburgring World Record
-
-And what do i get by adding the car parameters to my model?
+Nurburgring World Record: *And what do i get by adding the car parameters to my model?*
 
 ---
 
@@ -220,19 +217,6 @@ npx wrangler pages deploy dist --project-name=gopro-telemetry-overlay
 <!-- https://youtu.be/1l7Q3Ul4Yh0 -->
 
 {{< youtube "1l7Q3Ul4Yh0" >}}
-
-
-{{< filetree/container >}}
-  {{< filetree/folder name="config" >}}
-    {{< filetree/file name="acme.json" >}}
-    {{< filetree/file name="config.yml - Automatically created" >}}
-    {{< filetree/file name="traefik.yml" >}}
-    {{< /filetree/folder >}}
-  {{< filetree/file name="docker-compose.x300.yaml" >}}
-  {{< filetree/file name=".env" >}}
-  {{< filetree/file name="cf-token" >}}
-{{< /filetree/container >}}
-
 
 ---
 

@@ -178,3 +178,39 @@ docker system df
 ## FAQ
 
 
+### PWAs Ive ship
+
+{{< filetree/container >}}
+  {{< filetree/folder name="config" >}}
+    {{< filetree/file name="acme.json" >}}
+    {{< filetree/file name="config.yml - Automatically created" >}}
+    {{< filetree/file name="traefik.yml" >}}
+    {{< /filetree/folder >}}
+  {{< filetree/file name="docker-compose.x300.yaml" >}}
+  {{< filetree/file name=".env" >}}
+  {{< filetree/file name="cf-token" >}}
+{{< /filetree/container >}}
+
+1. https://jalcocert.github.io/JAlcocerT/optimal-karting-line/#pwa---gopro-telemetry-extractor
+
+here is sth more: https://gopro-telemetry-overlay.pages.dev
+
+```sh
+cd ./optimum-path/overlay-pwa
+make dev #make deploy
+# npm cache clean --force
+
+#npx wrangler pages deployment list 
+#npx wrangler pages deploy dist
+
+npx wrangler pages deploy dist --project-name=gopro-telemetry-overlay
+```
+
+<!-- https://youtu.be/1l7Q3Ul4Yh0 -->
+
+{{< youtube "1l7Q3Ul4Yh0" >}}
+
+2. 
+
+
+

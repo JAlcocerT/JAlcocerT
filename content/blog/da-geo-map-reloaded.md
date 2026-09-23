@@ -10,14 +10,11 @@ math: true
 
 **TL;DR**
 
-
+Doing cool stuff with [geo data, *sun* and blender](#blender-x-gis)
 
 **Intro**
 
 Coming from [this post](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#geo-from-r-to-py)
-
-
-
 
 
 https://www.youtube.com/watch?v=4R4xRH-Nyac
@@ -241,8 +238,7 @@ Stack: Python stdlib for the data plumbing, numpy for the marching, scipy for th
 
 For an off-grid or heat-pump build, annual totals are the wrong statistic and December is the whole design constraint.
 
-
-https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#the-sun-is-interesting
+Yep, [the sun is interesting](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#the-sun-is-interesting).
 
 #### Blender x GIS
 
@@ -253,6 +249,10 @@ https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#the-sun
 {{< youtube "cSTCZVzS1fs" >}}
 
 And [with blenderGIS](https://fossengineer.com/blendergis-geodata-in-blender/) you can create interesting simulations:
+
+```sh
+cd ./poc/blender-
+```
 
 <!-- https://www.youtube.com/watch?v=K9aOr2y4J5s -->
 
@@ -292,7 +292,6 @@ To put e-bike assistance in perspective relative to human effort:
 * **Pro Cyclist:** Sustains **350 W to 450 W** during intense efforts.
 
 > You can imagine how hard was to cross from UK to FR [by a bike powered plane](https://en.wikipedia.org/wiki/MIT_Daedalus)!
-
 
 ```sh
 
@@ -393,7 +392,6 @@ flowchart LR
     L4 -->|Productized Service| L47
     L4 -->|Productized Service| L48
 ```
-
 
 ---
 

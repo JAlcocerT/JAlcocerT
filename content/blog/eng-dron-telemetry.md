@@ -3,7 +3,7 @@ title: "Dron Telemetry 101"
 date: 2026-07-10
 draft: false
 tags: ["Electronics","RC","Betaflight x BBL Logs","DC Motor","ERLS TX and RX"]
-description: 'Creating a PWA around dron flight data.'
+description: 'Creating a PWA around dron flight data. ELRS x nmcli.'
 url: 'betaflight-dron-telemetry'
 math: true
 ---
@@ -13,6 +13,8 @@ math: true
 Not making a [desktop app to control a dron](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter), but just a pwa to watch telemetry of FPV with betaflight
 
 **Intro**
+
+Ive got to fly a FPV drone!
 
 <!-- 
 https://youtube.com/shorts/KeT0DuWryEI 
@@ -283,8 +285,9 @@ make timeline-viewer TIMELINE_DECODED=BTFL_BLACKBOX_LOG_METEOR75_PRO_20260714_15
 
 ## Creating a PWA
 
+Why PWAs? 
 
-Why PWAs? Common Use Cases
+Common Use Cases
 
 * **Serverless Data Tools:** Client-side data analytics tools (e.g., CSV analyzers, report generators) where data never leaves the user's computer, solving compliance and cloud compute cost concerns.
 * **Interactive Code Playgrounds:** In-browser coding tutorials, algorithm visualizers, or documentation sites (similar to JupyterLite or PyScript).
@@ -695,11 +698,14 @@ nmcli dev wifi connect "ExpressLRS RX" password "expresslrs"
 #Device 'wlp3s0' successfully activated with '27d2f846-...'.
 ```
 
- nmcli dev wifi list
+If you do `nmcli dev wifi list`
+
+```md
 IN-USE  BSSID              SSID                        MODE   CHAN  RATE        SIGNAL  BARS  SECURITY  
         1C:56:8E:26:1A:F8  TOTOLINK_LR350              Infra  1     270 Mbit/s  92      ▂▄▆█  WPA1 WPA2 
         4E:EB:D6:10:26:0F  ExpressLRS RX               Infra  1     54 Mbit/s   77      ▂▄▆_  WPA2      
         B8:A5:35:CB:9F:18  DN5CR18                     Infra  6     405 Mbit/s  77      ▂▄▆_  WPA2      
+```
 
 Inside the https://github.com/ExpressLRS/ExpressLRS portal `http://10.0.0.1/`: `ISM` vs `CE_LBT` regions 
 
@@ -854,6 +860,7 @@ https://youtube.com/shorts/Fgdb4F_G_XM
 
 {{< youtube "Fgdb4F_G_XM" >}}
 
+Yep, there is power:
 
 {{< youtube "N5HMLNwPhio" >}}
 

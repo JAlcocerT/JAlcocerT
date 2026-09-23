@@ -18,7 +18,17 @@ https://www.youtube.com/@QuantumMakers
 * Why Im writting this post: *Bc batteries are a thing and you might want to bring sense to a bluetti or custom 18650 packs with BMS*
 * What Ive learnt with it: *d*
 
+{{< youtube "UjD94SGqIdM" >}}
 
+<!-- 
+https://www.youtube.com/shorts/UjD94SGqIdM 
+-->
+
+{{< youtube "IiuDQhFgmq4" >}}
+
+<!-- 
+https://www.youtube.com/shorts/IiuDQhFgmq4 
+-->
 ## Solar
 
 ### MPPT vs PWM

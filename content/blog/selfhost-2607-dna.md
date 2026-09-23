@@ -60,46 +60,26 @@ Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check t
 
 ## AI/BI Tools
 
-Since the last time, chartbrew reached version 5:
+Since the last time, [chartbrew](https://github.com/chartbrew/chartbrew) reached version 5:
 
 [![shields.io Stars](https://img.shields.io/github/stars/chartdb/chartdb)](https://github.com/chartdb/chartdb/stargazers)
 
-
-https://github.com/chartbrew/chartbrew
-
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartbrew/" title="ChartBrew | Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-chartDB or DB2rest
-
-{{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/AI_Gen" title="AIGen | Docker Configs 🐋✅ ↗" >}}
 {{< /cards >}}
 
-
-https://github.com/clidey/whodb
-
-https://github.com/obra/superpowers
-
-https://pydantic.dev/
-
 I talked about Rill and WrenAI [sometime back](https://jalcocert.github.io/JAlcocerT/creating-a-generative-bi-solution/#existing-genbi-solutions)
-
-https://github.com/Canner/WrenAI
-
-https://docs.getwren.ai/oss/concepts/architecture#correctness-is-a-system-not-a-switch
 
 
 ### Whats New
 
-Rill vs WrenAI vs Vanna
+Rill vs WrenAI vs Vanna:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartbrew/" title="WrenAI | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/chartbrew/" title="Vanna | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 - **Apache DevLake** = DevOps/SDLC Analytics & Metrics
 - **Delta Lake** = Data Storage Layer for Data Lakes

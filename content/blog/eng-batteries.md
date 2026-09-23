@@ -23,7 +23,8 @@ Its been inspiring [this post from Sean](https://www.seangoedecke.com/blog-about
 
 Dealing with three distinctly different types of lithium battery chemistries.?
 
-Each one is engineered for a completely different purpose: one values balanced driving performance, one is built for extreme safety and longevity, and the other is optimized for pure, lightweight power.
+Each one is engineered for a completely different purpose: *one values balanced driving performance, one is built for extreme safety and longevity, and the other is optimized for pure, lightweight power*.
+
 <!-- 
 https://www.youtube.com/watch?v=454yPdhbPWs -->
 
@@ -70,7 +71,7 @@ And that the bluetti can bring interesting MQTT data:
 I didnt manage to use [uvx to connect via BLE to the bluetti](https://github.com/JAlcocerT/poc/tree/main/iot-bluetti)
 {{< /callout >}}
 
-Your portable power station utilizes **LiFePO4** chemistry, LFP (Lithium Iron Phosphate)
+The portable power station utilizes **LiFePO4** chemistry, LFP (Lithium Iron Phosphate)
 
 * **The Goal:** Absolute longevity, safety, and stability.
 * **How it compares:** This is the marathon runner of the group. LFP batteries can easily handle 3,000 to 3,500+ charge cycles before dropping to 80% health (compared to the ~1,000 to 1,500 typical of an automotive NMC battery). 
@@ -197,12 +198,13 @@ They have a massive "C-rating," meaning they can discharge almost their entire c
 
 The catch is that they are fragile, have a short lifespan (often showing degradation after just 100–200 cycles), and require strict care (like discharging them to a storage voltage of 3.8V when not in use) to prevent them from puffing up or becoming fire hazards.
 
-{{< cards >}}
+<!-- {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/" title="DJI Tello 101" image="/blog_img/outro/honda-road.jpg" subtitle="With car analytics" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/electr-diode/#canbus-electronics" title="Car telemetry" image="/blog_img/outro/honda-road.jpg" subtitle="Canbus x AI" >}}
-{{< /cards >}}
+{{< /cards >}} -->
 
-https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/
+* https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming
+* https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/
 
 #### Be careful with FPV bateries
 
@@ -353,12 +355,15 @@ When you write your C++ sketch in the Arduino IDE, calling `#include <NimBLEDevi
 
 ## Conclusions
 
+You have these all over your home:
+
 <!-- 
 https://youtube.com/shorts/_msLOGVlX-I 
 -->
 
 {{< youtube "_msLOGVlX-I" >}}
 
+And maybe in your car:
 
 | Metric | Cupra EV (NMC) | Your Bluetti (LiFePO4) | Your 1S Drone (LiPo) |
 | --- | --- | --- | --- |
@@ -511,6 +516,8 @@ While pure **Li-ion chemistry wins on raw energy density (Wh/kg)**, LiPo often w
 Standard Li-ion is optimal when aiming for maximum total energy capacity per kilogram (such as in long-range drones, power tools, or electric vehicles).
 
 ### Car batteries
+
+These have been interesting to watch:
 
 <!-- https://www.youtube.com/watch?v=NMkQib8CTZs -->
 

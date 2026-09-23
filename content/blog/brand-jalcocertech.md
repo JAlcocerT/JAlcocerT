@@ -34,3 +34,13 @@ AI...employees coming?
 Comercial ones like: `https://www.lindy.ai/pricing`
 
 Maybe, try to build a brand *before its too late*.
+
+
+---
+
+## FAQ
+
+### Typst
+
+* https://typst.app/
+* https://typst.app/universe/package/graceful-genetics

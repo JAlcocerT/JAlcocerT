@@ -162,12 +162,13 @@ PWA coming up as subdomain: http://192.168.1.2:3034/hermesagent/mbsd/src/branch/
 
 ## Showcase - Engine Vibrations
 
-Say that you can to simulate a new engine type:
+Say that you can now simulate a new engine type:
 
 {{< youtube "HVqYlP1MC6E" >}}
 
 <!-- 
-https://www.youtube.com/watch?v=HVqYlP1MC6E -->
+https://www.youtube.com/watch?v=HVqYlP1MC6E
+ -->
 
 ```sh
 git clone 
@@ -185,7 +186,7 @@ Yep, [these can get 20L displacement](https://jalcocert.github.io/JAlcocerT/unde
 
 ## The Web x Leads
 
-Inspired by diode inc, i decided to make the core engine OSS.
+Inspired by diode inc, i decided to make [the core engine OSS](https://github.com/JAlcocerT/mbsd-core).
 
 The landing and the leads are mine :)
 
@@ -248,6 +249,10 @@ What is already strong: narrow scope, honest limitations, MIT license, changelog
 That is a solid first OSS framework foundation.
 
 See `mbsd-examples/docs/release-plan.md:73`
+
+{{% details title="Houdini vs Blender 🚀" closed="true" %}}
+
+
 
 New ladder:
 
@@ -325,7 +330,7 @@ Verification:
 - Core: 36 passed, examples ran, Ruff clean.
 - Examples: 27 passed, all examples ran, gallery generated, Ruff clean.
 
-I also updated the private PWA roadmap at: `private-pwa-roadmap.md`
+I placed a private PWA roadmap at: `private-pwa-roadmap.md`
 
 Important caveat remains: this is a limited translational constrained spatial dynamics solver with fixed orientations. 
 
@@ -349,8 +354,11 @@ That gives you a cleaner story:
 0.8.0: spatial mechanism API and constrained kinematics
 0.9.0: experimental spatial dynamics and case-study integrations
 
+{{% /details %}}
+
+
 * multibodysystemsdynamics.com - Landing
-* app.multibodysystemsdynamics.com - PWA
+* app.multibodysystemsdynamics.com - PWA wrapping mbsd-core / mbsd-examples
 * multibodysystemsdynamics.com/roadmap
 * multibodysystemsdynamics.com/whitepaper
 
@@ -358,7 +366,6 @@ That gives you a cleaner story:
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
-
 
 ---
 
@@ -489,70 +496,6 @@ https://www.youtube.com/watch?v=DudAEiP6lKU
 
 {{< youtube "DudAEiP6lKU" >}}
 
-### Omarchy
-
-Some more [omarchy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-december-2025/#omarchy)
-
-* `https://omarchy.org/`
-* `https://tryomarchy.com/`
-
-The name **Omarchy** is a portmanteau of **"Omakase"** and **"Arch"**:
-
-* **Omakase (お任せ):** A Japanese dining concept meaning "I leave it up to you". In an omakase meal, you don't order individual items; the chef curates and prepares the entire progression of dishes based on what is best.
-* **Arch:** Refers to **Arch Linux**, the lightweight, rolling-release distribution that forms the base of the operating system.
-
-This brings docker, lazydocker, herdrd, lazygit installed by default :)
-
-Run this to lower the VM to 4 GB RAM and 2 CPUs: *You can get started using 1.2GB of RAM and I could tinker with <4GB*
-
-```sh
-virsh --connect qemu:///session shutdown omarchy-4.0.1 2>/dev/null || true
-
-virsh --connect qemu:///session setmaxmem omarchy-4.0.1 4096M --config
-virsh --connect qemu:///session setmem omarchy-4.0.1 4096M --config
-virsh --connect qemu:///session setvcpus omarchy-4.0.1 2 --config
-
-virsh --connect qemu:///session start omarchy-4.0.1
-gnome-boxes
-```
-
-If Boxes still acts weird, open the same running VM with:
-
-```sh
-virt-viewer --connect qemu:///session --attach omarchy-4.0.1
-```
-
-I send some goodies via:
-
-```sh
-  ssh -p 2022 dhh@127.0.0.1 \
-    'umask 077; mkdir -p ~/Desktop; cat > ~/Desktop/.env; stat -c "%a %s %n" ~/Desktop/.env' \
-    < /home/jalcocert/Desktop/JAlcocerT/.env
-#  cat ~/Desktop/.env | grep '^OPENAI_API_KEY='
-```
-
-Now just add whatever programs you use beyond the browser:
-
-```sh
-omarchy pkg add bitwarden gram proton-vpn-gtk-app #this flows from pacman repos, not AUR :)
-yay -S helium-browser-bin #alternative chromium based
-omarchy pkg add arduino-cli blender freecad
-omarhcy install service tailscale
-#omarchy bar position bottom #modifies the omarchy/shell.json
-```
-
-You can also connect your airpids [via plugins](https://plugins.omarchy.org/explore.html): https://github.com/thisisgm/omarchy-pods
-
-* https://github.com/tharinfernando/omarchy-protonvpn
-* https://github.com/patcastle/omarchy-battery-health
-* https://plugins.omarchy.org/plugin.html?id=io.github.aryan-techie.bluetooth
-* https://plugins.omarchy.org/plugin.html?id=io.github.heyimhere.hardware-panel
-
-
-```sh
-scp -P 2022 dhh@127.0.0.1:/home/dhh/Downloads/wiki-technitium.md /home/jalcocert/Desktop/
-```
-
 ### PWA Power
 
 From  `/home/jalcocert/Desktop/mbsd-framework/mbsd-core-web-later`
@@ -597,16 +540,12 @@ The actual git repos I found include mbsd-core, mbsd-examples, local-mbsd, herme
 
 So the feature shape is clear for app-mbsd:
 
-  1. Static Pyodide PWA.
-  2. Run three initial planar demos.
-  3. Show animation, plots, residuals, diagnostics.
-  4. Export JSON/CSV.
-  5. Cache runtime/assets for offline use.
-  6. Keep app private and keep mbsd-core clean.
-
-### Solo Design
-
-With Open Deesign, ofc.
+1. Static Pyodide PWA.
+2. Run three initial planar demos.
+3. Show animation, plots, residuals, diagnostics.
+4. Export JSON/CSV.
+5. Cache runtime/assets for offline use.
+6. Keep app private and keep mbsd-core clean.
 
 ### Whitepaper 101
 
@@ -659,7 +598,7 @@ To translate those points into a clean document structure, arrange them into sta
 
 Marking it as a **"Living Technical Draft"** pre-v1.0 (as the terminal notes suggest) is sound practice—it gives you room to align mathematical proofs with the actual implementation as features land behind their validation gates.
 
-### The Core Roles of Docs
+**The Core Roles of Docs**
 
 Each document serves a specific layer in the pipeline from strategic intent down to implementation:
 
@@ -701,7 +640,7 @@ In a standard software lifecycle, the chronological progression flows as follows
 4. **Roadmap (Mid-stage):** Once PRD scope is visible, prioritize features into releases and delivery gates.
 5. **FRD (Just-in-Time Implementation):** Written sprint-by-sprint or phase-by-phase as engineering begins detailed implementation.
 
-#### Practical Caveat for Open-Source & Deep Tech
+**Practical Caveat for Open-Source & Deep Tech**
 
 For open-source projects or solo technical initiatives like `mbsd-core`, formal enterprise BRDs and FRDs are often skipped or condensed.
 

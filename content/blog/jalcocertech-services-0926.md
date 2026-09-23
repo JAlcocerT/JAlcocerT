@@ -519,7 +519,7 @@ https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
 
 #### Crops
 
-AgriTech? AgroTech? 
+AgriTech? AgroTech? [Crops intelligence](https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/)?
 
 RecoBart?
 
@@ -757,8 +757,9 @@ git clone git@gitlab.com:fossengineer1/dron.git
 
 But so far the best result was with the CLI only one, which included face recognition of the video feed.
 
-> Others also do real world services, like cleaning with drones `https://www.droneguru.es/servicios/#limpieza`
+Until I made [this with PyQT](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-version?ref_type=heads)
 
+> Others also do real world services, like cleaning with drones `https://www.droneguru.es/servicios/#limpieza`
 
 ### Mechanism Design
 
@@ -766,7 +767,7 @@ But so far the best result was with the CLI only one, which included face recogn
 
 > https://multibodysystemsdynamics.com/
 
-With the release of this OSS framework for mbsd: https://github.com/JAlcocerT/mbsd-core
+With [the release of the whitepaper](https://jalcocert.github.io/JAlcocerT/whitepaper-mbsd/#recommended-document-outline) and OSS framework for mbsd: https://github.com/JAlcocerT/mbsd-core
 
 ```
 kinematics.py  ──►  OpenSCAD  ──►  CadQuery  ──►  FreeCAD  ──►  Blender
@@ -1328,24 +1329,24 @@ You can also do this with the forgejo setup if you are not afraid of `.md`: `htt
 
 Created a Codex skill for this workflow:                    
 C:/Users/j--e-/.codex/skills/weekly-work-summarizer/SKILL.md 
-  It includes:
-                                                                                                                
-  - EOW summary workflow                                                                                        
-  - director TL;DR email workflow                                                                               
-  - daily ticket/hour bullet allocation workflow                                                                
-  - CV/career evidence note workflow                                                                            
-  - style rules for Jira/Teams/email-safe output                                                                
-  - reusable templates in C:/Users/j--e-/.codex/skills/weekly-work-summarizer/references/templates.md           
-  - UI metadata in agents/openai.yaml                                                                           
-                                                                                                                
-  Validation passed: Skill is valid!                                                                            
-                                                                                                                
-  Future trigger examples:                                                                                      
-                                                                                                                
-  - “Use weekly-work-summarizer to create this week’s EOW”                                                      
-  - “Make the director TLDR from this week’s notes”                                                             
-  - “Create CV bullets from this week”                                                                          
-  - “Generate hours reporting bullets from Monday to Friday”                                                    
+It includes:
+                                                                                                              
+- EOW summary workflow                                                                                        
+- director TL;DR email workflow                                                                               
+- daily ticket/hour bullet allocation workflow                                                                
+- CV/career evidence note workflow                                                                            
+- style rules for Jira/Teams/email-safe output                                                                
+- reusable templates in C:/Users/j--e-/.codex/skills/weekly-work-summarizer/references/templates.md           
+- UI metadata in agents/openai.yaml                                                                           
+                                                                                                              
+Validation passed: Skill is valid!                                                                            
+                                                                                                              
+Future trigger examples:                                                                                      
+                                                                                                              
+- “Use weekly-work-summarizer to create this week’s EOW”                                                      
+- “Make the director TLDR from this week’s notes”                                                             
+- “Create CV bullets from this week”                                                                          
+- “Generate hours reporting bullets from Monday to Friday”                                                    
                     
 #### Inbound marketing x Branded Videos
 

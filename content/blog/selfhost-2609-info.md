@@ -137,7 +137,7 @@ You are already aware, PoC, make a [hyperframe](https://jalcocert.github.io/JAlc
 
 ## Conclusions
 
-If it was not clear, now has to be.
+If [it was](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#anti-patterns-vs-better-framing) not clear, now [communication patterns](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#six-stakeholder-communication-patterns) have to be.
 
 [No more ~~bs~~ hello](https://fossengineer.com/no-hello-is-not-enough/), [vague work](https://fossengineer.com/turning-vague-work-into-clear-next-actions/), accountability laundring, weaponized incompetence, underf...
 
@@ -479,6 +479,66 @@ foreach ($f in Get-ChildItem *.pdf) {
 
 From `./poc/ulm-ppl`with some books distilled.
 
-### Upgrading my Desk
+### Omarchy
 
-I got an IKEA desk, with DELL U2518D upgraded to U2724DE with KVM included and ERGOTRON MXV gas desk mount for the VESA 100x100
+Some more [omarchy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-december-2025/#omarchy)
+
+* `https://omarchy.org/`
+* `https://tryomarchy.com/`
+
+The name **Omarchy** is a portmanteau of **"Omakase"** and **"Arch"**:
+
+* **Omakase (お任せ):** A Japanese dining concept meaning "I leave it up to you". In an omakase meal, you don't order individual items; the chef curates and prepares the entire progression of dishes based on what is best.
+* **Arch:** Refers to **Arch Linux**, the lightweight, rolling-release distribution that forms the base of the operating system.
+
+This brings docker, lazydocker, herdrd, lazygit installed by default :)
+
+Run this to lower the VM to 4 GB RAM and 2 CPUs: *You can get started using 1.2GB of RAM and I could tinker with <4GB*
+
+```sh
+virsh --connect qemu:///session shutdown omarchy-4.0.1 2>/dev/null || true
+
+virsh --connect qemu:///session setmaxmem omarchy-4.0.1 4096M --config
+virsh --connect qemu:///session setmem omarchy-4.0.1 4096M --config
+virsh --connect qemu:///session setvcpus omarchy-4.0.1 2 --config
+
+virsh --connect qemu:///session start omarchy-4.0.1
+gnome-boxes
+```
+
+If Boxes still acts weird, open the same running VM with:
+
+```sh
+virt-viewer --connect qemu:///session --attach omarchy-4.0.1
+```
+
+I send some goodies via:
+
+```sh
+  ssh -p 2022 dhh@127.0.0.1 \
+    'umask 077; mkdir -p ~/Desktop; cat > ~/Desktop/.env; stat -c "%a %s %n" ~/Desktop/.env' \
+    < /home/jalcocert/Desktop/JAlcocerT/.env
+#  cat ~/Desktop/.env | grep '^OPENAI_API_KEY='
+```
+
+Now just add whatever programs you use beyond the browser:
+
+```sh
+omarchy pkg add bitwarden gram proton-vpn-gtk-app #this flows from pacman repos, not AUR :)
+yay -S helium-browser-bin #alternative chromium based
+omarchy pkg add arduino-cli blender freecad
+omarhcy install service tailscale
+#omarchy bar position bottom #modifies the omarchy/shell.json
+```
+
+You can also connect your airpods [via plugins](https://plugins.omarchy.org/explore.html): https://github.com/thisisgm/omarchy-pods
+
+* https://github.com/tharinfernando/omarchy-protonvpn
+* https://github.com/patcastle/omarchy-battery-health
+* https://plugins.omarchy.org/plugin.html?id=io.github.aryan-techie.bluetooth
+* https://plugins.omarchy.org/plugin.html?id=io.github.heyimhere.hardware-panel
+
+
+```sh
+scp -P 2022 dhh@127.0.0.1:/home/dhh/Downloads/wiki-technitium.md /home/jalcocert/Desktop/
+```

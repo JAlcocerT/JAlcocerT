@@ -986,6 +986,8 @@ or the only thing is there can be is active and deferred active?
 
 3. Zettlekasten: visible at `/notes` [here](https://jalcocert.github.io/JAlcocerT/notes/)
 
+4. Accountability laundring, underfiltering, weaponized incompetence
+
 
 #### Interesting Posts
 
@@ -1004,6 +1006,8 @@ And podcasts:
 The fwk: keep / stop / start.
 
 #### Keep Doing
+
+I release a whitepaper around a OSS mbsd framework and learnt [how that doc relate to BRD/PRD/FRD](https://jalcocert.github.io/JAlcocerT/whitepaper-mbsd/#recommended-document-outline) 
 
 0. Not flight schedules at 6am, no stupid commitments
 1. Vibe Coding and BiP
