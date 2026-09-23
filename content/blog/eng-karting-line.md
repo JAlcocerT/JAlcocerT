@@ -185,10 +185,6 @@ With the laguna mk2:
 
 And what do i get by adding the car parameters to my model?
 
-
-#### Golf vs Laguna Fast Lap Comparison
-
-
 ---
 
 ## Conclusions

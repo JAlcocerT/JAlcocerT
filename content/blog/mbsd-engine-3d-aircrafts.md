@@ -17,7 +17,14 @@ The moment 2D mechanics is not enough.
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
-https://www.youtube.com/watch?v=TiTb08qBEKY
+<!-- www.youtube.com/watch?v=ijI3iOOcEog -->
+
+{{< youtube "ijI3iOOcEog" >}}
+
+{{< youtube "TiTb08qBEKY" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=TiTb08qBEKY -->
 
 
 The dimension reduction worked great for cars.

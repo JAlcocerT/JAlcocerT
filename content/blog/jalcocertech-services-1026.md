@@ -16,7 +16,7 @@ Still thinking on headcounts to mess around with a project instead of [getting ~
 **Intro**
 
 * WHY Im writting this post: *a*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* What [Ive learnt](#conclusions) with it: *Ive ended up [telling agents the WHY](#pio), not the how, via PIO fwk*
 
 A friend told me once that I will do sth with energy at some point
 
@@ -246,6 +246,8 @@ The move is to operate cleanly inside it:
 ### PIO
 
 In software engineering, operations, and business analysis, framing PIO as **Problem, Integration, Outcome** creates a sharp model for designing architecture, automating workflows, and writing clear business requirements.
+
+> See `https://www.seangoedecke.com/tell-agents-the-why/`
 
 * **Problem:** The specific operational bottleneck, system defect, data silo, or manual inefficiency in the current workflow (e.g., *"Customer support manually re-keys order data across two legacy databases, causing a 24-hour fulfillment lag"*). **THE WHY** *and slightly what*
 * **Integration:** The technical connection, automated workflow, API bridge, or architectural change introduced to bridge the gap (e.g., *"Deploy an event-driven webhook via an enterprise service bus (ESB) to sync order status in real time"*). **whats everything/systems that the agent needs? where is the agent going to take info from?**

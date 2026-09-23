@@ -8,21 +8,31 @@ url: 'whitepaper-mbsd'
 math: true
 ---
 
-
 **Tl;DR**
+
+A [whitepaper](#whitepaper-101) around mbsd (self-funded): `https://multibodysystemsdynamics.com/whitepaper`
 
 **Intro**
 
-* https://multibodysystemdynamics.pages.dev/
+* Why Im writting this post: *Bc The engine behind `https://multibodysystemsdynamics.com/` cant be closed source.*
+* What [Ive learnt](#conclusions) with it: *Ive ended up putting together a roadmap and whitepaper for an OSS mbsd framework with the first release already out*
 
+From the [wedding conversation with Gilabert](https://jalcocert.github.io/JAlcocerT/what-do-i-do/), my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and [inspired by diode Inc](https://www.youtube.com/watch?v=B8DbMJ1Zr4I).
+
+We are coming from [this agentic mbsd centered design post](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#mbsd-framework-applications):
+
+```sh
+make list-user-repos NEW_USER=hermesagent
+make tinker-to-github #https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd
+```
+
+* https://multibodysystemdynamics.pages.dev/
 
 Some people are were billing 50$/h and paying 5$/h for such expertise.
 
 Now its OSS and thats fine.
 
 Because ideas are worthless and **execution is everything**
-
-
 
 {{< details title="Executing with CC 📌" closed="true" >}}
 
@@ -41,7 +51,11 @@ edit - Modify files
 glob - Find files
 grep - Search file contents
 
-It notably doesn't have specialized tools like "refactor code" or "install dependencies." Instead, Claude figures out how to use the basic tools to accomplish these complex tasks. This abstraction allows it to handle countless programming scenarios that the developers never explicitly planned for.
+It notably doesn't have specialized tools like "refactor code" or "install dependencies." 
+
+Instead, Claude figures out how to use the basic tools to accomplish these complex tasks. 
+
+This abstraction allows it to handle countless programming scenarios that the developers never explicitly planned for.
 
 ```sh
 claude 
@@ -58,10 +72,19 @@ Use `Claude.md` for conventions `skills` for procedures tied to tasks and `Hooks
 
 A skill isn't just a single skill.md file. The folder around it can carry other things, and this is what makes skills powerful for verification.
 
-Drop a reference.md next to the skill for detailed material, then link to it from skill.md. Claude only reads it when it actually needs that depth. Your main file stays short.
-Put scripts in the folder too. Claude executes them rather than loading their contents into context. That means a skill can carry its own tooling, like a check.sh that runs all the gates.
+Drop a reference.md next to the skill for detailed material, then link to it from skill.md. 
 
-The takeaway: keep skill.md itself lean. Push the heavy material, the long explanations and the executable scripts, into side files. The lean file describes what to do; the side files hold the depth and the tools.
+Claude only reads it when it actually needs that depth. Your main file stays short.
+
+Put scripts in the folder too. Claude executes them rather than loading their contents into context.
+
+That means a skill can carry its own tooling, like a check.sh that runs all the gates.
+
+The takeaway: keep skill.md itself lean.
+
+Push the heavy material, the long explanations and the executable scripts, into side files.
+
+The lean file describes what to do; the side files hold the depth and the tools.
 
 With this one:
 
@@ -76,9 +99,15 @@ claude -p "summarize the changes in this diff"
 
 Get a cold second opinion
 
-The sub-agent code review you'd run before a pull request works here too. Point it at an unsupervised run.
+The sub-agent code review you'd run before a pull request works here too. 
 
-Open a fresh session or sub-agent and have it review the changed code with no memory of how the code was built. Because it has no stake in the approach, it catches the things the original run talked itself past. A second reviewer with fresh eyes finds what the author rationalized away.
+Point it at an unsupervised run.
+
+Open a fresh session or sub-agent and have it review the changed code with no memory of how the code was built.
+
+Because it has no stake in the approach, it catches the things the original run talked itself past.
+
+A second reviewer with fresh eyes finds what the author rationalized away.
 
 **PLUGINS** are how CC packages a setup and moves it between ppl https://agent-plugins.org/
 
@@ -91,24 +120,6 @@ Open a fresh session or sub-agent and have it review the changed code with no me
 
 {{< /details >}}
 
-{{< details title="Executing with CC 📌" closed="true" >}}
-
-
-{{< /details >}}
-
-**Intro**
-
-* Why Im writting this post: *Bc The engine behind `https://multibodysystemsdynamics.com/` cant be closed source.*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
-
-From the [wedding conversation with Gilabert](https://jalcocert.github.io/JAlcocerT/what-do-i-do/), my last mbsd post with [the framework launch](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) and [inspired by diode Inc](https://www.youtube.com/watch?v=B8DbMJ1Zr4I).
-
-We are coming from [this agentic mbsd centered design post](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#mbsd-framework-applications):
-
-```sh
-make list-user-repos NEW_USER=hermesagent
-make tinker-to-github #https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd
-```
 
 Current behavior in `scripts/tinker-to-github.sh:1`:
 
@@ -232,9 +243,9 @@ git push origin main
 git push origin v0.3.0
 ```
 
-  What is already strong: narrow scope, honest limitations, MIT license, changelogs, paired versions,
-  reproducible examples, numerical checks, CI across Python 3.10–3.13, and a clear roadmap. That is a
-  solid first OSS framework foundation.
+What is already strong: narrow scope, honest limitations, MIT license, changelogs, paired versions, reproducible examples, numerical checks, CI across Python 3.10–3.13, and a clear roadmap.
+
+That is a solid first OSS framework foundation.
 
 See `mbsd-examples/docs/release-plan.md:73`
 
@@ -248,7 +259,7 @@ New ladder:
 0.9.0: integration and case-study track
 0.9.1+: additional curated examples, integrations, and case studies
 
-  0.4.0 -> portable exports
+0.4.0 -> portable exports
 0.5.0 -> 3D vocabulary
 0.6.0 -> stronger 2D foundation
 0.7.0 -> 3D kinematics preview
@@ -314,15 +325,13 @@ Verification:
 - Core: 36 passed, examples ran, Ruff clean.
 - Examples: 27 passed, all examples ran, gallery generated, Ruff clean.
 
-I also updated the private PWA roadmap at:
+I also updated the private PWA roadmap at: `private-pwa-roadmap.md`
 
-private-pwa-roadmap.md
+Important caveat remains: this is a limited translational constrained spatial dynamics solver with fixed orientations. 
 
-Important caveat remains: this is a limited translational constrained spatial dynamics solver with
-fixed orientations. It is useful for a PWA 3D lab/prototype, but still not full rotational
-constrained 3D rigid-body dynamics.
+It is useful for a PWA 3D lab/prototype, but still not full rotational constrained 3D rigid-body dynamics.
 
-  My Recommendation
+My Recommendation
 
 For the private PWA: use v0.8.2-dev now.
 
@@ -345,14 +354,11 @@ That gives you a cleaner story:
 * multibodysystemsdynamics.com/roadmap
 * multibodysystemsdynamics.com/whitepaper
 
-### Compliant Mechanism
-
-Dynamics is trickier when **solids are flexible** -- aka when we stop saying that they are infinitely rigid.
-
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
+
 
 ---
 
@@ -585,12 +591,11 @@ make deploy
   - mbsd-core-web-later/src/pyodide-runner.ts:1 - loads Pyodide and mounts MBSD
   - mbsd-core-web-later/vite.config.ts:1 - relative static build config
 
-  One caveat: I did not find a .git directory inside mbsd-core-web-later, so it appears to be a project
-  folder in this workspace, not currently a standalone git repo. The actual git repos I found include
-  mbsd-core, mbsd-examples, local-mbsd, hermesagent-mbsd, mbsd, etc.
+One caveat: I did not find a .git directory inside mbsd-core-web-later, so it appears to be a project folder in this workspace, not currently a standalone git repo. 
 
+The actual git repos I found include mbsd-core, mbsd-examples, local-mbsd, hermesagent-mbsd, mbsd, etc.
 
-  So the feature shape is clear for app-mbsd:
+So the feature shape is clear for app-mbsd:
 
   1. Static Pyodide PWA.
   2. Run three initial planar demos.
@@ -603,3 +608,105 @@ make deploy
 
 With Open Deesign, ofc.
 
+### Whitepaper 101
+
+**For a technical whitepaper**, particularly for an open-source engineering library like a multibody systems dynamics (MBSD) engine.
+
+They strike the right balance between theoretical rigor, architectural design, and scope management.
+
+* **Core Problem & Philosophy ("What problem MBSD solves", "Why it stays minimalist and inspectable"):** A whitepaper needs a compelling technical thesis. Explaining why this tool exists instead of using bulky existing suites (e.g., ADAMS, Simpack, Drake, or MuJoCo) defines its niche immediately.
+
+* **Theoretical Foundation ("Mathematical formulations and conventions", "Full rotational 3D dynamics"):** Essential for peer trust. Specifying conventions (quaternions vs. Euler angles, coordinate frame definitions, constraint stabilization methods like Baumgarte or direct DAE solvers) makes the implementation scientifically credible.
+
+* **Architecture & Interoperability ("Planar and spatial architecture", "Neutral interchange"):** Details how the engine fits into modern engineering workflows (CAD, DCC, web visualizers) without forcing users into a proprietary ecosystem.
+
+* **Empirical Rigor ("Validation methodology and benchmark cases"):** Multibody simulation requires proof of energy conservation, convergence, and analytical test cases (e.g., double pendulum, spinning top, four-bar linkage).
+
+* **Scope Discipline ("Honest capability boundaries"):** This is often missing in technical whitepapers. Stating what the engine *cannot* or *chooses not* to do (e.g., deformable bodies, non-smooth impact mechanics, or real-time gaming approximations) builds technical credibility.
+
+* **Roadmap Differentiation:** A common mistake is turning a whitepaper into a release schedule. Keeping the roadmap to a short reference and deferring milestones to `roadmap.md` maintains the whitepaper as a foundational document rather than project-management churn.
+
+#### Recommended Document Outline
+
+To translate those points into a clean document structure, arrange them into standard whitepaper sections:
+
+1. **Executive Summary & Motivation**
+* Problem statement and intended domain.
+* Design philosophy: inspectability, simplicity, and composability.
+
+
+2. **Mathematical Formulation & Conventions**
+* Reference frames, coordinates, and transformation representations.
+* Kinematic constraints, equations of motion, and numerical integration approaches.
+
+
+3. **Software Architecture**
+* Layering (planar core, full 3D spatial dynamics).
+* Data structures, serialization, and agent-ready/deterministic execution principles.
+
+
+4. **Interoperability & Ecosystem Integration**
+* Schema design for neutral interchange (FreeCAD, Blender, Web/PWA frontends).
+
+
+5. **Validation, Benchmarks & Boundaries**
+* Canonical benchmark comparisons against analytical solutions.
+* Known limitations and explicit out-of-scope boundaries.
+
+
+6. **Future Vision**
+* High-level trajectory referencing `roadmap.md`.
+
+Marking it as a **"Living Technical Draft"** pre-v1.0 (as the terminal notes suggest) is sound practice—it gives you room to align mathematical proofs with the actual implementation as features land behind their validation gates.
+
+### The Core Roles of Docs
+
+Each document serves a specific layer in the pipeline from strategic intent down to implementation:
+
+| Document | Primary Question | Audience | Purpose |
+| --- | --- | --- | --- |
+| **BRD** *(Business Requirements)* | **Why** are we building this? | Executives, sponsors, stakeholders | Defines business problems, ROI, market opportunity, and success metrics. |
+| **Whitepaper** | **How** does the underlying thesis / science work? | External users, researchers, architects | Explains mathematical models, core technical innovations, and design philosophy. |
+| **PRD** *(Product Requirements)* | **What** does the user need? | Product managers, designers, engineering leads | Outlines user personas, user journeys, features, and non-functional requirements. |
+| **Roadmap** | **When** will value be delivered? | All stakeholders, customers, teams | Strategic timeline mapping releases to milestones and validation gates. |
+| **FRD** *(Functional Requirements)* | **How specifically** must it behave? | Engineers, QA, technical implementers | Low-level functional specs, API signatures, edge cases, and acceptance criteria. |
+
+---
+
+How They Relate to Each Other
+
+```
+   [ Business Intent ]       BRD
+                              │
+   [ Technical Thesis ]       ├─────────► Whitepaper (Public/Academic facing)
+                              ▼
+   [ Product Definition ]     PRD
+                              ├─────────► Roadmap (Timeline & release gates)
+                              ▼
+   [ System Execution ]       FRD
+
+```
+
+* **Whitepaper vs. BRD/PRD:** A BRD states business need (*"We need a lightweight physics engine to reduce licensing costs by 40%"*), while a PRD states capability (*"The engine must support 6-DOF constraints in the browser"*). A Whitepaper establishes the *foundational science and design philosophy* that proves those goals are theoretically feasible (*"Formulation of dual quaternions for singularity-free 3D dynamics"*).
+* **Whitepaper vs. Roadmap:** The whitepaper is relatively timeless—it defines foundational architecture, physics conventions, and capability boundaries. The roadmap is dynamic—it organizes the rollout of those capabilities across specific release milestones and validation gates.
+* **PRD vs. FRD:** The PRD defines the functional requirement from the user's viewpoint (*"User can import a FreeCAD assembly"*). The FRD defines the exact behavior, inputs, transformations, and schema specifications (*"Accepts STEP AP214 format; maps rotational joints to constraint solver ID 0x04"*).
+
+What Goes First?
+
+In a standard software lifecycle, the chronological progression flows as follows:
+
+1. **BRD (First):** Establish whether the problem is worth solving and what business value it creates.
+2. **Whitepaper / Concept Paper (Early):** For deep-tech, academic, or open-source engineering systems (like MBSD), the whitepaper is drafted early to validate the mathematical and architectural hypotheses before writing user-facing product specs.
+3. **PRD (Middle):** Convert business and technical goals into explicit product capabilities and user stories.
+4. **Roadmap (Mid-stage):** Once PRD scope is visible, prioritize features into releases and delivery gates.
+5. **FRD (Just-in-Time Implementation):** Written sprint-by-sprint or phase-by-phase as engineering begins detailed implementation.
+
+#### Practical Caveat for Open-Source & Deep Tech
+
+For open-source projects or solo technical initiatives like `mbsd-core`, formal enterprise BRDs and FRDs are often skipped or condensed.
+
+In these environments, the standard workflow typically boils down to three core artifacts:
+
+1. **`whitepaper.md`**: Foundational math, architecture, and constraints (the technical reference manual).
+2. **`roadmap.md`**: Phases, release gates, and target milestones.
+3. **Implementation Issues / PRs**: Acting as the lightweight PRD/FRD layer.

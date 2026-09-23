@@ -112,7 +112,6 @@ And pushing to epub kindle compatible is also fine.
 
 You can also try with [these tools](#converting-to-epub)
 
-
 2. Katex is also great
 
 3. Recently, I got to know about Typst [here](https://atareao.es/podcast/todavia-sufres-con-word-para-hacer-tu-tesis-o-proyecto-usa-typst/)

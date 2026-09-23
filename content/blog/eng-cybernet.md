@@ -8,6 +8,12 @@ url: 'cyber-101'
 math: true
 ---
 
+https://www.youtube.com/watch?v=V_mZsiZcy7s
+
+https://www.youtube.com/watch?v=XKQgvmeApjI
+
+https://www.youtube.com/watch?v=g0sRbt8xrbY 
+
 
 **TL;DR**
 

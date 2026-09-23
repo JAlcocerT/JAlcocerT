@@ -17,112 +17,15 @@ Isnt it time to build something real?
 * WHAT [Ive learnt](#conclusions) with it: *Ive ended up understanding why Mosfet GDS controlled with 3.3v is ok for my smaller pump, but not for the 20w one, also sent my [first pcb for manufacturing](#kicad-x-power-stage-pcb-design)*
 
 
-
-
-
-## Home Automation
-
-Home Assistant is great
-
-And you have some products built around it: `https://works-with.home-assistant.io/certified-products/`
-
-But hey, are we still drag n dropping?
-
-### DIY Custom HA
-
-```sh
-cd ./poc/
-```
-
-### Pi
-
-A raspberry Pi inside a container - https://github.com/ptrsr/pi-ci
-
-> A Raspberry **Pi emulator in a Docker image** that lets developers easily prepare and flash RPi configurations.
-
-
-### IoT with a RPi4
-
-### IoT with a PicoW
-
-## IoT with Esp32
-
-## IoT with Arduino
-
-## IoT with RISC-V
-
-{{< details title="AI Asisted Web Search... 📌" closed="true" >}}
-
-**Arduino and Open-Source Principles**
-
-- Arduino's hardware schematics and PCB layouts are open-source.
-- The firmware and Arduino IDE are licensed permissively, fostering widespread community modification and distribution.
-- This open stance has led to a vast ecosystem of compatible clones, embedded projects, and community innovations.
-
-**RISC-V and Open-Source**
-
-RISC-V, an open instruction set architecture (ISA), is also fully open. 
-
-It was designed to be a free and open standard, allowing anyone to develop compatible chips, tools, and implementations without licensing fees. 
-
-This openness aims to promote innovation and democratize access to processor design, similar to Arduino’s ethos in hardware and firmware.
-
-**Similarities and Differences**
-
-- Both Arduino and RISC-V embody open-source principles, but they operate in different layers of hardware design: **Arduino in microcontroller boards and firmware, RISC-V at the processor architecture level.**
-
-- RISC-V's openness is in the ISA itself, encouraging a broad ecosystem of CPUs and chips, while Arduino’s openness is in the hardware and development tools for embedded devices.
-
-- The recent Qualcomm-Arduino deal may impact Arduino's traditional open-source stance, especially if proprietary chips and closed support ecosystems become more prominent, whereas RISC-V remains fully open by design and community advocacy.
-
-In summary, both Arduino's hardware/software and RISC-V are open-source principles, but with different scopes—Arduino in microcontroller hardware and software, and RISC-V in CPU architecture.
-
-[1](https://www.jeffgeerling.com/blog/2025/qualcomms-buying-arduino-%E2%80%93-what-it-means-makers)
-
-{{< /details >}}
-
-> WIth open hardware, things like https://github.com/mfolejewski/Polanduino happen :)
-
-> >  Polanduino - Arduino from Poland (RP2040 board) 
-
-## Motivation for Arduino
-
-Arduino + Acelerometer data in real time?
-
-Wait.
-
-People are doing... what?
-
-Combining Blender + Arduino + Real Time Accelerometer Data: https://pabramsor.com/blender-and-arduino-accelerometer/
-
-I have pending a post about Blender.
-
-But what this guy created on that **article is simply fantastic**.
-
-> See in real time where the arduino is moving rendered into blender https://github.com/Bardo91
-
-> > Impressive that this was [done back in 2011](https://elescritoriodetesla.blogspot.com/2011/09/acelerometro-arduino-y-blender3d.html)
-
-
-What?!
-
-{{< youtube "Cu7VlrpoVZY" >}}
-
-We could use one of these for trackdays / karting and so on?
-
-<!-- https://youtu.be/Cu7VlrpoVZY -->
-
-<!-- 
-arduino
-https://www.youtube.com/watch?v=DPqiIzK97K0 -->
-
-### PolanDuino
-
 ## Sensors Ive tried
 
 ### DHT11 and DHT22
 
-These were really easy to setup and if you are getting started they are perfect.
+These ![were really easy to setup](https://jalcocert.github.io/RPi/img/RPi4-DHT22.png) and if you are getting started they are perfect.
+
+
+<!-- https://jalcocert.github.io/RPi/img/RPi4-DHT22.png -->
+
 
 ```sh
 sqlite3 -header -column /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite \
@@ -142,9 +45,8 @@ pinout #this assumes that the usb and eth port are looking down, so 5V is top ri
 i2cdetect -y 1
 ```
 
-https://pinout.xyz/pinout/3v3_power
+* https://pinout.xyz/pinout/3v3_power
 
-https://jalcocert.github.io/RPi/img/RPi4-DHT22.png
 
 2. With the combo **ESP32 + MLX90614** also works [as seen recently](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#esp32-x-mqtt-x-mlx90614)
 
@@ -179,6 +81,17 @@ Soil humidity!
 
 ## Conclusion
 
+Home Assistant is great
+
+And you have some products built around it: `https://works-with.home-assistant.io/certified-products/`
+
+But hey, are we still drag n dropping?
+
+Ship a **DIY Custom HA**
+
+```sh
+cd ./poc/iot-dashboard
+```
 
 Interesting YT channels for IoT and sensors.
 
@@ -186,8 +99,6 @@ Tom Stanton - https://www.youtube.com/watch?v=6gchoHrsCp4 ~DIY
 
 Also these: https://www.youtube.com/@homeassistant_facil/videos - https://www.youtube.com/@homeassistant_facil/videos
 
-
-### **RISC-V open source arquitecture**
 
 
 ---
@@ -206,6 +117,39 @@ The schematics, PCB designs, and core firmware for Arduino boards like the Uno, 
 The Arduino Integrated Development Environment (IDE) and associated libraries are also open-source, supporting collaborative development and community-driven improvements.
 
 https://github.com/855princekumar/sense-hive
+
+
+**Motivation for Arduino**
+
+Arduino + Acelerometer data in real time?
+
+Wait.
+
+People are doing... what?
+
+Combining Blender + Arduino + Real Time Accelerometer Data: https://pabramsor.com/blender-and-arduino-accelerometer/
+
+I have pending a post about Blender.
+
+But what this guy created on that **article is simply fantastic**.
+
+> See in real time where the arduino is moving rendered into blender https://github.com/Bardo91
+
+> > Impressive that this was [done back in 2011](https://elescritoriodetesla.blogspot.com/2011/09/acelerometro-arduino-y-blender3d.html)
+
+What?!
+
+{{< youtube "Cu7VlrpoVZY" >}}
+
+We could use one of these for trackdays / karting and so on?
+
+<!-- https://youtu.be/Cu7VlrpoVZY -->
+
+<!-- 
+arduino
+https://www.youtube.com/watch?v=DPqiIzK97K0 -->
+
+There is also: PolanDuino
 
 ### Lora
 

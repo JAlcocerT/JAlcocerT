@@ -186,7 +186,7 @@ Several open source tools can help convert complex **PDFs, such as database sche
 
 
 {{< callout type="info" >}}
-After trying few, I liked the most [Kerzberg](https://github.com/Goldziher/kreuzberg). See below.
+After trying few, I liked the most [Kerzberg](https://github.com/Goldziher/kreuzberg)
 {{< /callout >}}
 
 Some notable open source options are:
@@ -279,7 +279,6 @@ uv run ./z-PyMuPDF/test-pymupdf.py
 ```sh 
 git clone https://github.com/JAlcocerT/jira-datamodel
 #cd z-test-quivir-megaparse
-#cd 
 ```
 
 13. https://github.com/wisupai/e2m ❌ too long to download dependencies

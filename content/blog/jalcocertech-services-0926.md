@@ -223,10 +223,6 @@ Final Result: SSH-based Forgejo write access is confirmed for `hermesagent` on t
 
 [Herdr](https://fossengineer.com/herdr-terminal-agent-multiplexer/) was interesting on top of tmux
 
-<!-- www.youtube.com/watch?v=ijI3iOOcEog -->
-
-{{< youtube "ijI3iOOcEog" >}}
-
 coming from the [experiment on heat pump viability](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/#the-experiment)
 
 and the [data driven insulation](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/)
@@ -381,7 +377,7 @@ Mains AC Power (230V/400V)
 
 ```
 
-Connecting the Concepts: FPV Drone vs. Pump vs. Compressor
+{{< details title="Connecting the Concepts: FPV Drone vs. Pump vs. Compressor 📌" closed="true" >}}
 
 | Feature | Your FPV Drone Motor | Your 19W Watering Pump | Heat Pump Inverter Compressor |
 | --- | --- | --- | --- |
@@ -504,7 +500,14 @@ How They Compare & Work Together
 
 **In practice:** The **MPPT** ensures your panels generate the absolute maximum wattage possible; the **HEMS** decides in real-time where those watts can be used to save the most money.
 
+{{< /details >}}
+
+
 ### IoT
+
+```sh
+cd ./poc/iot-dashboard
+```
 
 <!-- https://youtu.be/6McNDPk7-j8 -->
 
@@ -519,7 +522,6 @@ https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
 AgriTech? AgroTech? 
 
 RecoBart?
-
 
 ```sh
 #cd ./poc/iot-rpi-dht-insulation
@@ -538,61 +540,25 @@ GROUP BY day
 ORDER BY day;"
 ```
 
+Things that can happen after planting tomatoes and tinkering IRL.
+
 ### FPV
 
-The calibration rule
-    37 +
-    38 +```text
-    39 +new scale = current scale x Betaflight displayed mAh / charger top-up mAh
-    40 +```
-    41 +
-    42 +This automatically produces the correct direction:
-    43 +
-    44 +- If Betaflight mAh is below charger mAh, the fraction is below 1, so the new scale is lower.
-    45 +- If Betaflight mAh is above charger mAh, the fraction is above 1, so the new scale is higher.
-    46 +
-    47 +## Important decoding lesson
-    48 +
-    49 +In Betaflight 4.5, the Blackbox field `amperageLatest` is already calibrated current, stored in centi-amps:
-    50 +
-    51 +```text
-    52 +amps = amperageLatest / 100
-    53 +```
-    54 +
-    55 +It is not raw ADC data and must not be converted through the analog current-sensor formula a second time. Treating it as raw
-        ADC was the source of the earlier incorrect recommendation to raise the scale.
+The [calibration rule](https://github.com/JAlcocerT/meteor-dron/blob/main/betaflight-energy-check/z-learnings-final.md) `new scale = current scale x Betaflight displayed mAh / charger top-up mAh`
 
-  Session    Betaflight at scale 92    Charger refill    Difference    Implied scale
-  ━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━  ━━━━━━━━━━━━━━━
-   1                         746 mAh           767 mAh      2.7% low             89.5
-  ─────────  ────────────────────────  ────────────────  ────────────  ───────────────
-   2                         620 mAh           603 mAh     2.8% high             94.6
+In Betaflight 4.5, the Blackbox field `amperageLatest` is already calibrated current, stored in centi-amps:
 
- +
-    63 +| Battery flight | Real energy used | Average current | Average power | P99 current |
-    64 +|---|---:|---:|---:|---:|
-    65 +| Round 1 battery 1 | 4.53 Wh | 7.51 A | 120 W | 40.3 A |
-    66 +| Round 1 battery 2 | 5.22 Wh | 7.25 A | 117 W | 35.8 A |
-    67 +| Round 2 850 mAh #1 | 2.21 Wh | 8.96 A | 143 W | 32.3 A |
-    68 +| Round 2 850 mAh #2 | 2.49 Wh | 9.11 A | 146 W | 34.1 A |
-    69 +| Round 2 1300 mAh #1 | 9.18 Wh | 12.65 A | 195 W | 98.0 A |
-    70 +| Round 2 1300 mAh #2* | 8.53 Wh | 14.21 A | 219 W | 122.5 A |
-    71 +| Round 3 battery 1 | 15.57 Wh | 12.57 A | 187 W | 117.4 A |
-    72 +| Round 3 battery 2 | 13.61 Wh | 15.14 A | 224 W | 137.6 A |
-    73 +| Sep 13 battery 1 | 20.02 Wh | 11.44 A | 170 W | 55.9 A |
-    74 +| Sep 13 battery 2** | 17.25 Wh | 13.61 A | 203 W | 115.4 A |
-    75 +| Sep 16 battery 1 | 9.12 Wh | 9.65 A | 149 W | 70.8 A |
-    76 +| Sep 16 battery 2*** | 5.45 Wh | 9.79 A | 152 W | 91.3 A |
-    77 +| Sep 17 battery 1 | 11.48 Wh | 9.01 A | 139 W | 59.9 A |
-    78 +| Sep 17 battery 2 | 9.53 Wh | 10.34 A | 159 W | 84.8 A |
+It is not raw ADC data and must not be converted through the analog current-sensor formula a second time. 
 
-  > You need these to know you are not exceeding your battery C rating :)
+> You [need these](https://github.com/JAlcocerT/meteor-dron/tree/main/betaflight-energy-check/cf-pages) to know you are not exceeding your battery C rating :)
+
+> > https://fpv-logs.pages.dev/
 
 I went from [this python CLI](https://gitlab.com/fossengineer1/dron/-/blob/main/main.py?ref_type=heads) to control a tello, to get a meteor and tinker with betaflight telemetry and then ofc, [got custom Eachine and custom Zidora 5inch dron](https://jalcocert.github.io/JAlcocerT/betaflight-dron-telemetry/#buying-second-hand-drons-x-telemetry).
 
 
-
 3d printing/design/manufacturing coming up: `https://aetherfpv.com/pages/gravity-drone-stand`
+
 <!-- 
 https://youtu.be/ON7J_xA55Io -->
 
@@ -601,15 +567,11 @@ https://youtu.be/ON7J_xA55Io -->
 
 Get to know your batteries: *how much [they weight](https://youtube.com/shorts/_msLOGVlX-I), the way [their resistance (ohms)](https://youtube.com/shorts/oAeiAAeTb9Y) will change across their lifespan*
 
-Average: ~8.21 A
-p95:     ~25.10 A
-p99:     ~57.29 A
+* Average: ~8.21 A
+* p95:     ~25.10 A
+* p99:     ~57.29 A
 
-And the average airborne power estimate:
-
-Charger-based: ~134 W
-Corrected Blackbox-based: ~132 W
-Reasonable estimate: 132-134 W
+And the average airborne power estimate, Charger-based: ~134 W
 
 ```sh
 ffmpeg -display_rotation 0 -i "DJI_20260910191149_0027_D.MP4" `
@@ -624,6 +586,7 @@ ffmpeg -display_rotation 0 -i "DJI_20260910191149_0027_D.MP4" `
 You can [prepare to ULM/PPL](https://github.com/JAlcocerT/poc/tree/main/ulm-ppl): `https://ulm-ppl-test.pages.dev/`
 
 {{< youtube "Fgdb4F_G_XM" >}}
+
 <!-- 
 https://youtube.com/shorts/Fgdb4F_G_XM -->
 
@@ -636,9 +599,9 @@ Or just get ready to *DYOR* and make a DIY dron.
 
 Configure your controls:
 
-Pos 1 (Up): ANGLE box highlights yellow (Maximum guardrails / full auto-level).
-Pos 2 (Mid): HORIZON box highlights yellow (Auto-level with flip capability).
-Pos 3 (Down): Neither highlights (Full manual Acro mode).
+1. Pos 1 (Up): ANGLE box highlights yellow (Maximum guardrails / full auto-level).
+2. Pos 2 (Mid): HORIZON box highlights yellow (Auto-level with flip capability).
+3. Pos 3 (Down): Neither highlights (Full manual Acro mode).
 
 > Id also add the beeper and [Flip over crash modes](https://youtube.com/shorts/MxkflxLcyCo)
 
@@ -647,6 +610,7 @@ Pos 3 (Down): Neither highlights (Full manual Acro mode).
 If you are going without VTX, lower the Power to 25mW. 100mW is too much.
 
 * **The Hex Drivers Won't Fit It:** The 4-piece RC hex set (1.5, 2.0, 2.5, 3.0 mm) only fits **recessed screw heads** (screws with a hole in the top).
+
 * **The Nut Needs an Outer Socket:** The M5 nut is a standard hexagon on the **outside** measuring **8 mm across the flats**. The driver must wrap around it, not go inside it.
 
 To tighten or remove those nuts, you need an **8 mm socket**:
@@ -658,7 +622,6 @@ To tighten or remove those nuts, you need an **8 mm socket**:
 Once you have an 8 mm socket paired with that 4-piece RC hex driver set, you have all the wrench sizes needed to tear down and rebuild a standard 5-inch drone.
 
 **Hex keys and Allen keys are the exact same shape**—both are standard 6-sided hexagons ("Allen" is just a brand name for a hex wrench).
-
 
 > Oh, And before flying, make sure you are aware about licenses, permissions, insurances, limitations and comply with them
 
@@ -718,16 +681,14 @@ cd dron/desktop-version
 
 The tello with 1100 mah li-ion, uses 70% battery for 7 min flight
 
+- 1,100 mAh = 1.1 Ah
+- 10% use = 0.11 Ah per minute
+- That is 0.11 × 60 = 6.6 A average current
+- At a typical ~3.7–3.8 V battery voltage:
 
-  - 1,100 mAh = 1.1 Ah
-  - 10% use = 0.11 Ah per minute
-  - That is 0.11 × 60 = 6.6 A average current
-  - At a typical ~3.7–3.8 V battery voltage:
+6.6 A × 3.7 V = 24.4 W | 6.6 A × 3.8 V = 25.1 W
 
-  6.6 A × 3.7 V = 24.4 W
-  6.6 A × 3.8 V = 25.1 W
-
-  So call it ~25 W during that style of flight.
+So call it ~25 W during that style of flight.
 
 > `https://fpv-logs.pages.dev/`
 
@@ -735,39 +696,15 @@ If you are interested to make overlays, get the `.BTL` and claibrate the power c
 
 Then the A flowing will be accurate.
 
-Log  Duration  Start V  End V   Delta mAh
-  01      2.3 s   15.51   15.29        7
-  02     10.1 s   15.27   15.46       48
-  03      2.8 s   15.50   14.89       10
-  04      2.9 s   15.48   14.99       15
-  05      4.4 s   15.47   14.86       11
-  06      7.2 s   16.61   14.47       12
-  07      6.4 s   16.53   16.32       41
-  08     63.6 s   16.50   15.62      148
-  09     53.8 s   16.25   15.83      199
-
-
 As i knew it was 8 and 9 and my charger told me 175mah, instead of 347mah
 
+```md
 +Firmware revision: Betaflight 4.2.4 (fbcaf8c50) STM32F405
     14 +Firmware date:     Oct 20 2020 08:18:45
     15 +Craft name:        NOVICE-IV
+```
 
 For the bigger drone i got, i also made some power calibration: *working initially for gentle flights [like so](https://youtube.com/shorts/jbYu9kYmBqc)*
-
-Updated consumption-iflight-f722-twing.md with the new Ovonic run.
-
-Key result:
-
-Log 1 duration:        268.7 s
-Betaflight reported:  500 mAh
-Charger replaced:     600 mAh
-Current scale:        100
-
-Calibration math:
-
-600 / 500 = 1.20
-new scale = 100 * 1.20 = 120
 
 
 Remember that this is important for batteries and other componentes like ESC/FC:
@@ -781,13 +718,6 @@ Corrected 99th percentile: 52.3 A = 82% of rating
 Motors: XING 2450KV
   Props:  5x5x3 V1S tri-blades
   Pack:   4S
-
-  And the average airborne power estimate:
-
-  Charger-based: about 127 W
-  Corrected Blackbox-based: about 139 W
-  Reasonable estimate: about 130-140 W
-
 
 <!-- 
 https://www.youtube.com/watch?v=hw_CAQCFCmA 
@@ -819,7 +749,11 @@ I Mean sth better that [my tello flutter desktop test](https://jalcocert.github.
 
 Some people put together freemium apps: `https://vueladrones.app`
 
-So far, i was tinkering with the python CLI for the dji tello and attempted one of my first desktop apps to control the tello via laptop keyboard here.
+So far, i was tinkering with [the python CLI](https://gitlab.com/fossengineer1/dron/-/blob/main/main.py) for the dji tello and attempted one of my first desktop apps to control the tello via laptop keyboard here.
+
+```sh
+git clone git@gitlab.com:fossengineer1/dron.git
+```
 
 But so far the best result was with the CLI only one, which included face recognition of the video feed.
 
@@ -1011,7 +945,7 @@ They can:
 
 The important limitation: 0.5.0 describes 3D mechanisms, but does not solve their 3D kinematics or dynamics yet.
 
-``sh
+```sh
 cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
 
 git switch main
@@ -1042,7 +976,6 @@ git merge --ff-only v0.5.0-dev
 git tag -a v0.5.0 -m "MBSD Examples v0.5.0"
 git push origin main
 git push origin v0.5.0
-
 
 awk '
   /^## v0\.5\.0 / { found=1; next }
@@ -1167,8 +1100,6 @@ cd ./poc/genbi-energy-solutions/waitlist/ #it can be re-used nicely for lead-gen
 
 
 {{< youtube "4sSa28Xk5Yw" >}}
-
-
 
 ---
 

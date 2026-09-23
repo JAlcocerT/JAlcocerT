@@ -63,6 +63,7 @@ In professional pipelines, studio artists frequently **combine both**: modeling 
 {{% /details %}}
 
 What about Freecad?
+
 ```sh
 freecad
 ```
@@ -85,7 +86,7 @@ Wherever you see `price = cost + margin`, you are looking to a commodity
 
 I recently got to know that pcbway can estimate the cost and send you plastic and even metal 3dprints :O
 
-
+I got my first 3dprints [done like so](#my-first-3dprint)
 
 ---
 
@@ -223,19 +224,21 @@ cd /home/jalcocert/Desktop/poc/blender/dron-standing-fea
 
 Built and tested a fully local FEA pipeline:
 
-  - Verified all eight printable STLs are watertight.
-  - Installed project-local Gmsh and CalculiX—no system/admin installation needed.
-  - Used FreeCAD to reconstruct the STL as a faceted BRep.
-  - Created automatic tetrahedral meshes with quality reporting.
-  - Applied a placeholder 19.62 N load—equivalent to 2 kg—to the isolated stand frame.
-  - Solved coarse and fine meshes and exported viewable VTU results.
+- Verified all eight printable STLs are watertight.
+- Installed project-local Gmsh and CalculiX—no system/admin installation needed.
+- Used FreeCAD to reconstruct the STL as a faceted BRep.
+- Created automatic tetrahedral meshes with quality reporting.
+- Applied a placeholder 19.62 N load—equivalent to 2 kg—to the isolated stand frame.
+- Solved coarse and fine meshes and exported viewable VTU results.
 
-  Results:
+Results:
 
-  - Coarse: 3.08 mm displacement, 27.65 MPa peak stress.
-  - Fine: 5.96 mm displacement, 41.35 MPa peak stress.
+- Coarse: 3.08 mm displacement, 27.65 MPa peak stress.
+- Fine: 5.96 mm displacement, 41.35 MPa peak stress.
 
-  Because the values changed substantially, the model is not converged. The software workflow works, but this particular test is only a pipeline demonstration—not validation of the complete assembled stand.
+Because the values changed substantially, the model is not converged. 
+
+The software workflow works, but this particular test is only a pipeline demonstration—not validation of the complete assembled stand.
 
 ### Blend x STL x FCstd
 

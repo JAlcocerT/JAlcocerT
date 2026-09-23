@@ -236,10 +236,14 @@ https://github.com/pbogre/jetlog?tab=readme-ov-file#docker-recommended
 
 ### Chats
 
+Matrix: synapse, conduit
+
 https://fossengineer.com/bitchat-mesh-messaging/
 
 https://github.com/chattocorp/chatto?ref=selfh.st
-https://github.com/fluxerapp/fluxer?ref=selfh.st
+
+https://github.com/fluxerapp/fluxer
+https://fossengineer.com/selfhosting-fluxer-open-chat-voip/
 
 ### Notes
 

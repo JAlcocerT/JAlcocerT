@@ -17,7 +17,7 @@ This aims to solve the "Garbage In, Garbage Out" problem of product development.
 
 > [Smart or it does not ship](https://jalcocert.github.io/JAlcocerT/poc-103/#helping-pms-and-pdms)
 
-> > ps://pm-pdm-checks.pages.dev and this [communication framework](https://fossengineer.com/stakeholder-communication-framework/)
+> > https://pm-pdm-checks.pages.dev and this [communication framework](https://fossengineer.com/stakeholder-communication-framework/)
 
 ---
 
@@ -107,23 +107,6 @@ Who owns the mess if this breaks?
 * [ ] **The Rollback:** How do we "undo" this launch in under 5 minutes?
 * [ ] **The Owner:** Who is the single person responsible for the success metric after launch?
 
----
-
-### Summary: The One-Page Sign-Off
-
-If the PM/PdM cannot answer these 11 points, the PRD is incomplete:
-
-1. **Problem:** (One sentence)
-2. **User:** (Named persona)
-3. **Current Workaround:** (What they do today)
-4. **The Bet:** (If X, then Y by Date)
-5. **Confidence:** (% 1–100)
-6. **Success Metric:** (Numeric threshold)
-7. **Kill Criterion:** (The "give up" date/metric)
-8. **The Cut Line:** (Must-haves vs. Nice-to-haves)
-9. **Deadline Reason:** (The "Why" behind the date)
-10. **Failure Mode:** (Worst case scenario)
-11. **Owner:** (Primary point of contact)
 
 ---
 
@@ -190,3 +173,19 @@ If any line is blank or hand-wavy, the brief isn't ready.
 > **Rule of Thumb:** A brief that requires a [60-minute meeting](https://jalcocert.github.io/JAlcocerT/effective-meetings-data-analytics/#as-a-meeting-owner) to explain is a brief that isn't finished.
 
 > > How does your current team culture typically react when an engineer asks "How am I supposed to do that?"—is it met with collaboration or defensiveness?
+
+Summary: The One-Page Sign-Off
+
+If the PM/PdM cannot answer these 11 points, the PRD is incomplete:
+
+1. **Problem:** (One sentence)
+2. **User:** (Named persona)
+3. **Current Workaround:** (What they do today)
+4. **The Bet:** (If X, then Y by Date)
+5. **Confidence:** (% 1–100)
+6. **Success Metric:** (Numeric threshold)
+7. **Kill Criterion:** (The "give up" date/metric)
+8. **The Cut Line:** (Must-haves vs. Nice-to-haves)
+9. **Deadline Reason:** (The "Why" behind the date)
+10. **Failure Mode:** (Worst case scenario)
+11. **Owner:** (Primary point of contact)

@@ -14,7 +14,7 @@ How much solar is enough for the mqtt x dht setup with a ESP32?
 **Intro**
 
 * Why Im writting this post: *Bc i had [some 3yo notes](https://jalcocert.github.io/RPi/posts/rpi-mqtt/) and there is such a contrast with what im building around micro-controllers now*
-* What [Ive learnt](#conclusions) with it: *Ive ended up just using arduino-CLI and making agents to script and flash my esp32's instead of messing with vscode extensions or arduino GUI*
+* What [Ive learnt](#conclusions) with it: *Ive ended up just using `arduino-CLI` and making agents to script and flash my esp32's instead of messing with vscode extensions or arduino GUI*
 
 It was key to use [these arduino-cli learnings](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer) to deploy the code to the ESP32
 
@@ -93,19 +93,11 @@ In this project we will be collecting **Temperature and Humidity Data** from a D
 
 The data store will be in MongoDB, which will live in a Docker container.
 
-https://www.youtube.com/watch?v=V_mZsiZcy7s
-
-https://www.youtube.com/watch?v=XKQgvmeApjI
-
-https://www.youtube.com/watch?v=g0sRbt8xrbY 
-
 **The ESP32 and the RPi - Killer Combination**
 
 I know this is supposed to be a RPi centered repo and web, but couldn't resist to add some small project that uses the ESP32.
 
 An interesting tool I found to simulate these projects in the browser is: <https://wokwi.com/>
-
-
 
 ## Testing ESP32
 

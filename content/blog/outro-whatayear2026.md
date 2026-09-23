@@ -784,7 +784,7 @@ Trying for the first time the mac ecosystem was also interesting.
 
 These has been the tech surprise of the year.
 
-Examples: Spliit, betaflight, files.md, snapdrop, vert, compress.lol which i forked when talking about WASM...
+Examples: *Spliit, betaflight, files.md, [snapdrop](https://github.com/SnapDrop/snapdrop)/[pairdrop](https://github.com/schlagmichdoch/PairDrop), [vert](https://fossengineer.com/selfhosting-vert-local-file-converter/#what-is-vert), compress.lol which [i forked](https://github.com/JAlcocerT/compress.lol) when talking about [WASM](https://jalcocert.github.io/JAlcocerT/wasm/)...*
 
 #### Tech Talks
 
@@ -990,6 +990,7 @@ or the only thing is there can be is active and deferred active?
 #### Interesting Posts
 
 * https://nav.al/feedback
+* https://www.seangoedecke.com/llms-reward-expertise/
 
 And podcasts:
 

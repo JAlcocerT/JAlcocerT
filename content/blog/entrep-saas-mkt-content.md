@@ -3,7 +3,7 @@ title: "Mass produced information content"
 date: 2026-10-12T07:20:21+01:00
 draft: false
 tags: ["Social Media Marketing","Side-Quest26","Youtube","Stocks x Stonks"]
-description: 'Is value based content dead?'
+description: 'Is value based content dead? Typst'
 url: 'social-media-content'
 ---
 
@@ -99,6 +99,14 @@ Do we really need Matplotlib despite been so configurable?
 
 Or can we go with Shadcn charts / or [Recharts](https://recharts.github.io) as done lately for the trip planner?
 
+
+## Typst
+
+**Typst is a complete, modern document typesetting system** and programming language designed to replace LaTeX.
+
+
+
+
 ---
 
 ## Conclusions
@@ -155,7 +163,7 @@ But the human frictions on *doing things* risk,uncertainties... are still there.
 
 You can also try with:
 
-* Reportlab as seen on [this video](https://www.youtube.com/watch?v=0SQb__Zrg5Y) https://pypi.org/project/reportlab/
+* Reportlab as seen on [this video](https://www.youtube.com/watch?v=0SQb__Zrg5Y) - `https://pypi.org/project/reportlab/`
 * Typst
 
 * https://towardsdatascience.com/from-default-python-line-chart-to-journal-quality-infographics-80e3949eacc3

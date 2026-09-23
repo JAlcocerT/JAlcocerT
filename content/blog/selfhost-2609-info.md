@@ -20,10 +20,7 @@ You better write daily/weekly notes and work with them
 
 I dont care if you are a director, an IC that ~~moonlights~~ has independent consilting work, or a solo-preneur:
 
-{{% details title="QnA to the team to avoid accountability laundring 🚀" closed="true" %}}
-
-
-{{% /details %}}
+QnA the team to [avoid accountability laundring](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/accountability-framework.md)
 
 Use when someone asks for a quick call without enough written context:
 
@@ -42,11 +39,7 @@ Once I have that, I can point you to the right fix or doc update.
 
 {{% /details %}}
 
-You better [ask questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/) on time
-
-{{% details title="QnA for Product teams 🚀" closed="true" %}}
-
-{{% /details %}}
+You better [ask questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/) on time. Arent you [QnA'ing Product teams](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/#the-engineers-no-fluff-checklist)?
 
 Yep, make sure meetings are clear and actionable :)
 
@@ -70,17 +63,12 @@ https://youtu.be/6SyqMqIPQiI
 
 When you are a solo-founder, you dont have time for bs.
 
-You can avoid noise, non-sense promises, wishes with such form: https://app.formbricks.com/s/cmtljp6ee1j5d01xdkqdqpdyp
+You can avoid noise, non-sense promises, wishes [with such form](https://github.com/JAlcocerT/jalcocertech-services/tree/master/forms): https://app.formbricks.com/s/cmtljp6ee1j5d01xdkqdqpdyp
 
 ```sh
-
+cd ./jalcocertech-services/forms
+#make help
 ```
-
-{{% details title="QnA for ppl that need help with ideas 🚀" closed="true" %}}
-
-{{% /details %}}
-
-
 
 ## The Setup
 
@@ -120,13 +108,13 @@ With files.md you can record audio with the PWA, just that it will stay locally.
 
 #### Gold Info for SoloPreneurs
 
+You need to ship, fix/kill (quick). 
+
 {{% details title="Ideas Checklist 🚀" closed="true" %}}
 
 For this I dedicated a full post few weeks ago.
 
 The general idea checklist is as follows:
-
-
 
 {{% /details %}}
 
@@ -151,7 +139,7 @@ You are already aware, PoC, make a [hyperframe](https://jalcocert.github.io/JAlc
 
 If it was not clear, now has to be.
 
-[No more ~~bs~~ hello](https://fossengineer.com/no-hello-is-not-enough/), accountability laundring, weaponized incompetence, underf...
+[No more ~~bs~~ hello](https://fossengineer.com/no-hello-is-not-enough/), [vague work](https://fossengineer.com/turning-vague-work-into-clear-next-actions/), accountability laundring, weaponized incompetence, underf...
 
 ...Pardon my French, I meant:
 
@@ -197,7 +185,7 @@ flowchart TD
 
 ### HomeLab Updates 0926
 
-I was trying lately technitium for **custom DNS at Omarchy**
+I was trying lately technitium for **custom DNS at Omarchy**:
 
 ![alt text](/blog_img/selfh/technitium-sqlite.png)
 
@@ -205,6 +193,13 @@ I was trying lately technitium for **custom DNS at Omarchy**
 https://www.youtube.com/watch?v=62crffG6Uw8 -->
 
 {{< youtube "62crffG6Uw8" >}}
+
+Beyond herdr, these CLIs have been helpful:
+
+```sh
+#herdr
+docker port jellyfin
+```
 
 I made **DHCP reservations** at my home CM so that `192.168.1.2` is the x300 and `192.168.1.18` the pi4 with hermes.
 
@@ -228,10 +223,9 @@ nc 192.168.1.18 22
 #nmap or arp-scan would also be ideal, but neither was installed.
 ```
 
-
 > [ncdu](https://fossengineer.com/ncdu-terminal-disk-usage-analyzer/) has been very useful to check disk space
 
-I was getting connectivity troubles while testing `iwd`, for which I had to connect ethernet to resolve as i lost wifi connection:
+I was getting connectivity troubles while testing `iwd`, for which I had to connect via ethernet to resolve as i lost wifi connection:
 
 1. How Ubuntu’s Wi-Fi Architecture Fits Together
 
@@ -289,7 +283,7 @@ How long will that gap / arbitrage possibility last?
 
 Looking for a way to elevate yourself from the how, upstream to the what's and why's?
 
-If you are an IC, you might consider:
+{{% details title="If you are an IC, you might consider" closed="true" %}}
 
 * **The Architect** spends a lot of time in cross-functional stakeholder meetings, drawing system diagrams, analyzing vendor tech, and ensuring the business goals match the technology stack. In many companies, architects rarely touch production code anymore.
 
@@ -326,9 +320,13 @@ Nobody questions why your Slack status is "Away" or "Focusing"—they just assum
 
 Architects get pulled into endless discovery calls with product managers and clients to figure out "what is possible."
 
-Managers get pulled into HR drama. Principals are insulated from most of that. 
+Managers get pulled into HR drama.
+
+Principals are insulated from most of that. 
 
 Your value comes from your output, your technical direction, and the documentation (like your wikis) that you build to make the rest of the team self-sufficient.
+
+{{% /details %}}
 
 **So ask honestly**: do you want *status, control, income, or optionality*? 
 
@@ -395,7 +393,7 @@ Communication within your team is the information flow and you can also do it wi
 
 2. Matrix: with the flavour [conduit](https://fossengineer.com/selfhosting-matrix-conduit-server-with-docker/) or [synapse](https://fossengineer.com/selfhosting-matrix-synapse-docker/)
 
-3. Fluxer
+3. [Fluxer](https://fossengineer.com/selfhosting-fluxer-open-chat-voip/)
 
 ### Selfhosted Media
 
@@ -421,6 +419,10 @@ You can have [a look to IPTVs](https://forocoches.com/foro/showthread.php?t=1074
 
 #### Music
 
+Navidrome, subsonic or [gonic](https://github.com/sentriz/gonic) are OSS **selfhostable music servers**.
+
+You need clients:
+
 1. https://github.com/Fingel/gelly
 
 > A native music client for Jellyfin and Navidrome/Subsonic
@@ -435,13 +437,37 @@ winget install sonixd
 
 ![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
 
-Navidrome is other OSS **selfhostable music server**:
+4. [Ultrasonic](https://gitlab.com/ultrasonic/ultrasonic) or [tempus](https://github.com/eddyizm/tempus) worked great as android client and you have them at fdroid or obtenium
+
+
+5. With [supersonic](https://github.com/supersonic-app/supersonic)  or [sublime](https://github.com/sublime-music/sublime-music) (desktop) you can connect to subsonic or jellyfin servers
 
 ![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/navidrome" title="Navidrome Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
+
+#### PDFs
+
+Discovering [Kreuzberg](https://github.com/Goldziher/kreuzberg) some [time back](https://jalcocert.github.io/JAlcocerT/jira-data-model-with-ai) was great, just now that its now at: https://github.com/kreuzberg-dev/kreuzberg-lts?tab=contributing-ov-file
+
+And new development will be: https://github.com/xberg-io/xberg
+
+```sh
+#uv add kreuzberg
+
+foreach ($f in Get-ChildItem *.pdf) {
+    uvx kreuzberg extract "$f" > "$($f.BaseName).txt"
+}
+#curl -X POST -F "file=@Ebook-cover-SSGs.pdf" http://192.168.1.2:8027/extract > sample-pdf-to-text.txt
+```
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/stirling-pdf/" title="Stirling-pdf | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 
