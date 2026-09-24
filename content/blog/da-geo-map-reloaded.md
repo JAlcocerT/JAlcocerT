@@ -2,7 +2,7 @@
 title: "Just maps v2"
 date: 2026-07-17T08:00:21+01:00
 draft: false
-tags: ["Real Estate x DFV","GeoJSON vs GPX","PostGIS","Go Pro GPS"]
+tags: ["Real Estate x DFV","GeoJSON vs GPX","PostGIS","Go Pro GPS","Dawarich"]
 description: 'More GeoSpatial analysis to help home buyers looking for energy efficiency.'
 url: 'geo-data-analytics'
 math: true
@@ -16,19 +16,23 @@ Doing cool stuff with [geo data, *sun* and blender](#blender-x-gis)
 
 Coming from [this post](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#geo-from-r-to-py)
 
-
-https://www.youtube.com/watch?v=4R4xRH-Nyac
+Ive seen ppl doing cool stuff with: [blenderGis adon](https://www.youtube.com/watch?v=4R4xRH-Nyac), [maplibre and maptiler](https://www.youtube.com/watch?v=uPM2gNSWX9o&list=PLAxJ4-o7ZoPcfLJ0w7k-woHJXkbjSiKb3) and [f4map](https://www.youtube.com/results?search_query=f4map)
+<!-- 
+https://www.youtube.com/watch?v=4R4xRH-Nyac 
 
 https://www.youtube.com/watch?v=uPM2gNSWX9o&list=PLAxJ4-o7ZoPcfLJ0w7k-woHJXkbjSiKb3
 
 https://www.youtube.com/results?search_query=f4map
+-->
 
-This is a good chance:
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/tinkering-telemetry-trackdays/" title="TrackDays and GoPro Telemetry " image="/blog_img/karting/gopro-gps-trackday-speed.png" subtitle="GPS Telemetry from a GoPro | Post" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/dji-oa5pro-firmware-updates/#extracting-telemetry-data-from-gph9" title="GoPro MetaData Magic 101 " image="/blog_img/karting/gopro-speed-sample.png" subtitle="OA5 Firmware and comparison with GoPro" >}}
 {{< /cards >}}
+
+
+This is a **good chance to**:
 
 1. To have a look to French Real estate [again](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/#real-estate):
 
@@ -46,7 +50,7 @@ This is a good chance:
 Just this GoPro telemetry bc doing the reverse engineering to a Laguna mk2 was tricky and doing `candump` turned off the car before going to spa
 {{< /callout >}}
 
-4. Just imagine how a Drone x GPS could be!
+4. Just imagine how a FPV Drone Telemetry x GPS could be!
 
 5. Phyphox take off data: *remember that you can configure replicable experiments via QR!*
 
@@ -77,11 +81,11 @@ cd ./poc/building-geo-to-blender
 ## SelfHosted GPX
 
 
-https://github.com/gpxstudio/gpx.studio
+0. GPXStudio - https://github.com/gpxstudio/gpx.studio
 
 > MIT | the online GPX file editor
 
-https://gpx.studio/app#10.96/42.9481/-0.2867/0/70
+> > https://gpx.studio/app#10.96/42.9481/-0.2867/0/70
 
 1. GeoLibre - https://github.com/opengeos/GeoLibre that you can find https://geolibre.app/
 
@@ -89,22 +93,28 @@ https://gpx.studio/app#10.96/42.9481/-0.2867/0/70
 
 You have several integrations `http://localhost:3333/settings/integrations` like with [Velomate](https://fossengineer.com/selfhosting-velomate/)
 
-https://github.com/JAlcocerT/Home-Lab/tree/main/dawarich
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dawarich" title="Dawarich | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 
 > Make sure to have proper [Application hosts in the .env](https://github.com/JAlcocerT/Home-Lab/blob/main/dawarich/.env.sample#L9)
 
 > > on a fresh self-hosted install you should be able to sign in with the seeded default account:
 
-  - Username: demo@dawarich.app
-  - Password: safepassword (github.com (https://github.com/Freika/dawarich))
+- Username: `demo@dawarich.app`
+- Password: `safepassword` (github.com (https://github.com/Freika/dawarich))
 
 For Cloudflare exposure, the important bit is that the app container must join the shared tunnel network, and Rails must allow the public hostname in APPLICATION_HOSTS.
-  - If you expose the same service both locally and through Cloudflare, the local port mapping can stay in place. The tunnel just adds another path in.
-  - The tunnel side does not need a separate reverse proxy here; your existing cloudflared container can route directly to dawarich_app:3000.
-  - Browser issues can look like app failures, but in this case the service was fine; the problem was the client path and DNS/IPv6 timing.
+
+- If you expose the same service both locally and through Cloudflare, the local port mapping can stay in place. The tunnel just adds another path in.
+- The tunnel side does not need a separate reverse proxy here; your existing cloudflared container can route directly to dawarich_app:3000.
+- Browser issues can look like app failures, but in this case the service was fine; the problem was the client path and DNS/IPv6 timing.
 
 ```sh
-
+#network -> container name
+docker network connect cloudflared_tunnel dawarich_app
+#docker inspect gitea --format '{{json .NetworkSettings.Networks}}' | jq
 ```
 
 Go to CF and add `dawarich_app:3000`
@@ -150,6 +160,7 @@ https://github.com/dawarich-app/atlas
 ### French DFV Prices x Geo
 
 
+If you like housing analytics and you live in France, you are in paradise:
 
 ```sh
 python scripts/build_transaction_map.py
@@ -266,8 +277,6 @@ cd ./poc/blender-
 
 The amount of power (assistance) an e-bike provides depends on the **motor rating**, the **jurisdiction/legal limits**, and the difference between **continuous** vs. **peak** power.
 
-* https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm
-
 1. Typical Power Ratings (Nominal / Continuous)
 
 * **250 Watts (Standard / EU, UK, Australia):** In Europe, the UK, and Australia, the legal maximum for a standard pedal-assist bike (pedelec) is **250 W continuous rated power**.
@@ -293,9 +302,6 @@ To put e-bike assistance in perspective relative to human effort:
 
 > You can imagine how hard was to cross from UK to FR [by a bike powered plane](https://en.wikipedia.org/wiki/MIT_Daedalus)!
 
-```sh
-
-```
 
 {{< youtube "cSTCZVzS1fs" >}}
 
@@ -331,14 +337,14 @@ If you ask a non-professional to stomp on the pedals as hard as possible for a b
 
 I remember that we made an experiment during the studies where we logged bike sensor data
 
+* https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm
+
 This can be useful to estimate the power i applied to the bike
 
 ```sh
-git clone 
-cd ./
+git clone JAlcocert/hermesagent/
+cd ./tinker/hermesagent/mbsd/bike-practicas-cdm
 ```
-
-> 
 
 ---
 

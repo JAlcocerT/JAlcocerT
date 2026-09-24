@@ -269,6 +269,8 @@ ffmpeg -y -i "DJI_20260713180204_0003_D.MP4" `
 #ffmpeg -f concat -safe 0 -i file_list.txt -c copy D:\DCIM\DJI_001\output.mp4
 ```
 
+There were [some interesting findings](https://github.com/JAlcocerT/meteor-dron/tree/main/interesting-findings) and I [ended up](https://github.com/JAlcocerT/meteor-dron/blob/main/Makefile#L82) puting a [simple web/app](https://github.com/JAlcocerT/meteor-dron/blob/main/timeline_viewer.py) to do this:
+
 ![alt text](/blog_img/dron/telemetry-dashboard-101.png)
 
 {{< callout type="info" >}}

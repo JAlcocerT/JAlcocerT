@@ -2,7 +2,7 @@
 title: "Enough Electronics for a Dron or...Canbus"
 date: 2026-06-26
 draft: false
-tags: ["Electronics","Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable","ELM327 vs STM32G431","Betaflight PWA"]
+tags: ["Diode","PySpice","KiCad-CLI","RadioMaster Pocket x EdgeTX","CANable","ELM327 vs STM32G431","Betaflight PWA","SavvyCAN"]
 description: 'The electronics you can learn for free x Building a custom FPV Drone.'
 url: 'electr-diode'
 math: true
@@ -14,7 +14,7 @@ Someone is already doing this!
 
 **Intro**
 
-I saw a podcast on the beach and luckily, this exists: https://github.com/diodeinc/pcb
+I saw a podcast on the beach and luckily, [this](https://fossengineer.com/pcb-zener-kicad/) exists: https://github.com/diodeinc/pcb
 
 Which complemented beautifully these OSS for electronics:
 
@@ -25,7 +25,7 @@ What do i mean?
 
 That it was a matter of time for someone to do electronic design and simulation as a code
 
-Better said: to make agents do so, with proper physical rails.
+Better said: *to make agents do so, with proper physical rails.*
 
 ### Dron electronics
 
@@ -497,7 +497,9 @@ That usually is not helpful, but since you later did ip link set can0 up, the 25
 
 The most useful thing missing was the statistics version:
 
+```sh
 ip -details -statistics link show can0
+```
 
 Your shown command was without -statistics, so we did not see RX/error counters.
 
@@ -642,10 +644,11 @@ There is quite a lot of OSS for CAN bus reverse engineering, from SavvyCAN to ca
   {{< card link="https://github.com/JAlcocerT/meteor-dron" title="Meteor Dron x Telemetry ↗" icon="github" >}}
 {{< /cards >}}
 
+Despite my best efforts to map the wires correctly, i didnt get data flowing from the Mitsubishi, *nor the Laguna later on* to my laptop:
+
 {{< youtube "q-BlvhkLqcU" >}}
 
-It is a rich ecosystem.
-
+Anyways...this is a rich ecosystem.
 
 Same happens around ESCs and motors:
 
@@ -660,9 +663,9 @@ To shorten those weekend projects with the knowledge from someone who has done t
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled free value!" >}}
 {{< /cards >}}
 
-For your use case I’d split it by adapter type: **For the CANable Use SavvyCAN first.**
+For your use case I’d split it by adapter type: **For the CANable Use [SavvyCAN](https://fossengineer.com/savvycan-canbus-reverse-engineering/) first.**
 
-It is a Qt desktop CAN tool for capturing, saving, visualizing, reverse engineering, and debugging CAN frames, and it supports Qt SerialBus drivers including socketcan, which matches your can0 setup. 
+It is a **Qt desktop CAN tool** for capturing, saving, visualizing, reverse engineering, and debugging CAN frames, and it supports Qt SerialBus drivers including socketcan, which matches your can0 setup. 
 
 > See https://github.com/collin80/SavvyCAN
 
@@ -705,7 +708,7 @@ https://www.youtube.com/watch?v=pontoaAcyZM
 A practical beginner workflow:
 
 1. Open SavvyCAN *its like wireshark, but instead network traffic, the canbus!*
-2. Load a sample log from /home/jalcocert/Desktop/SavvyCAN/examples.
+2. Load a sample log from `/home/jalcocert/Desktop/SavvyCAN/examples`.
 3. Look at the main frame list.
 4. Try filtering by CAN ID.
 5. Open graphing tools to plot bytes/signals.
@@ -933,38 +936,6 @@ Keep them conceptually separate.
 
 ## FAQ
 
-This \(\sigma(z) = \frac{1}{1 + e^{-z}}\) is an inline expression.
-
-then
-
-$$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
-
-more
-
-$$
-\begin{aligned}
-  \nabla \cdot \mathbf{E} &= \frac{\rho}{\varepsilon_0} \\
-  \nabla \cdot \mathbf{B} &= 0 \\
-  \nabla \times \mathbf{E} &= -\frac{\partial \mathbf{B}}{\partial t} \\
-  \nabla \times \mathbf{B} &= \mu_0 \left( \mathbf{J} + \varepsilon_0 \frac{\partial \mathbf{E}}{\partial t} \right)
-\end{aligned}
-$$
-
-$$
-\begin{aligned}
-  2x + 3 &= 7 \\
-  2x &= 4 \\
-  x &= 2
-\end{aligned}
-$$
-
-
-The logistic function:
-$$\sigma(z) = \frac{1}{1 + e^{-z}}$$
-
-The Fourier Transform:
-$$F(\omega) = \int_{-\infty}^{\infty} f(t)\, e^{-j \omega t} \, dt$$
-
 
 ### IoT MQTT
 
@@ -1118,7 +1089,7 @@ Oh...and i can integrate it via mqtt with ESP32's:
 
 #### Solar x Travel
 
-If you need sth more than software and a glm for workations.
+If you need sth more than software and [a glm router](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/) for workations.
 
 > You can repurpose this later on for your homelab / garden!
 
@@ -1128,11 +1099,13 @@ If you [like analogies](https://jalcocert.github.io/JAlcocerT/fluids/#the-analog
 
 A DC boost does the oppositee of [a buck converter](https://jalcocert.github.io/JAlcocerT/electromagnetism-for-ac-dc-motors/#ac-vs-dc-power-transmission), it tries to rise DC voltage
 
+{{< callout type="info" >}}
 A **ram pump** does sth similar to the DC boost but with fluids!
+{{< /callout >}}
 
 #### Buck Converter
 
-You got one of those to lower the voltage inside your dron electronics to the 5V that they like :)
+You got one of those to lower the voltage inside your dron electronics to supply the 5V that they like :)
 
 ### STM32G431 vs ESP32
 
@@ -1145,6 +1118,7 @@ While it is tempting to look at a powerhouse like the **ESP32** (with its built-
 To talk to a car, a microcontroller needs a dedicated internal hardware peripheral called a CAN Controller to manage the bit-timing, frame styling, and error-checking.
 
 * **The STM32G431:** It has a built-in **FDCAN** controller right on the silicon. This hardware module natively understands both classic CAN 2.0 and the newer CAN-FD (up to 5 Mbps) standard. It handles the blistering pace of thousands of car messages per second at the hardware level without stressing the main CPU core.
+
 * **The ESP32:** The classic ESP32 only has a built-in controller for **classic CAN 2.0** (historically called the Twin Turbo CAN controller or SJA1000 clone). It **does not support CAN-FD** natively. While newer variants like the ESP32-H2 or ESP32-C6 include basic CAN functionality, their implementations are not as robust or high-performance as STM32's dedicated automotive-grade silicon.
 
 2. High-Speed Native USB Support (The Critical Flaw of ESP32)
@@ -1182,27 +1156,27 @@ But because your goal is to **sniff a raw firehose of high-speed data directly i
 
 Understandable, but they are different kinds of devices.
 
-  Your CANable-style USB adapter is basically a raw CAN interface:
+Your CANable-style USB adapter is basically a raw CAN interface:
 
-  Linux/can-utils -> can0 -> CANable -> raw CAN frames
+Linux/can-utils -> can0 -> CANable -> raw CAN frames
 
-  It lets you see/send CAN frames directly, but it does not automatically know OBD commands, protocols, headers, PIDs, or vehicle-specific meanings.
+It lets you see/send CAN frames directly, but it does not automatically know OBD commands, protocols, headers, PIDs, or vehicle-specific meanings.
 
-  An ELM327 is more like an OBD interpreter/modem:
+An ELM327 is more like an OBD interpreter/modem:
 
-  App -> ELM327 AT commands -> ELM327 sends OBD requests -> ECU replies -> ELM327 formats response
+App -> ELM327 AT commands -> ELM327 sends OBD requests -> ECU replies -> ELM327 formats response
 
-  So when an app asks for RPM, the ELM327 handles the diagnostic conversation. It sends the request, receives the ECU reply, and presents it in a simpler way.
+So when an app asks for RPM, the ELM327 handles the diagnostic conversation. It sends the request, receives the ECU reply, and presents it in a simpler way.
 
-  Roughly:
+Roughly:
 
-  CANable:
-    "Here are raw CAN frames. You figure out what they mean."
+CANable:
+  "Here are raw CAN frames. You figure out what they mean."
 
-  ELM327:
-    "Ask me for RPM, coolant temp, DTCs, etc. I’ll query the car."
+ELM327:
+  "Ask me for RPM, coolant temp, DTCs, etc. I’ll query the car."
 
-  Your CANable can do what an ELM327 does, but only if you send the correct OBD diagnostic frames yourself or use software that speaks OBD over SocketCAN. Passive candump alone will not ask the ECU for RPM.
+Your CANable can do what an ELM327 does, but only if you send the correct OBD diagnostic frames yourself or use software that speaks OBD over SocketCAN. Passive candump alone will not ask the ECU for RPM.
 
 
 

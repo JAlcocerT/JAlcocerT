@@ -542,6 +542,8 @@ ORDER BY day;"
 
 Things that can happen after planting tomatoes and tinkering IRL.
 
+{{< youtube "_YBjNO8urfE" >}}
+
 ### FPV
 
 The [calibration rule](https://github.com/JAlcocerT/meteor-dron/blob/main/betaflight-energy-check/z-learnings-final.md) `new scale = current scale x Betaflight displayed mAh / charger top-up mAh`

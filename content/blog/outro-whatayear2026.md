@@ -436,7 +436,10 @@ Should I call this Embeded analytics?
 
 I ended up [planting tomatoes around IoT](https://jalcocert.github.io/JAlcocerT/plants-101/)
 
-With very interesting yield results for the tomatoes
+With very interesting yield results for the tomatoes: batch 1, 2 and 3
+
+{{< youtube "_YBjNO8urfE" >}}
+
 
 Also along the way, I made a solid IoT setups
 

@@ -30,13 +30,16 @@ All to get the ICE with [a nicer model](https://jalcocert.github.io/JAlcocerT/fl
 
 ### Aerodynamics
 
-
+Why should you care?
 
 <!-- 
 https://youtube.com/shorts/fkx65D_QE7o
 -->
 
 {{< youtube "fkx65D_QE7o" >}}
+
+Do you like kitesurf or...kite...karting?
+
 
 
 <!-- https://www.youtube.com/watch?v=hObWTCserzA -->
