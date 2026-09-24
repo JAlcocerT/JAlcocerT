@@ -18,7 +18,8 @@ This is everything that I did (and what not) missed.
 
 ## Fluid Recap
 
-https://jalcocert.github.io/JAlcocerT/fluids/#the-governing-equations
+[Fluids are governed by cool equations](https://jalcocert.github.io/JAlcocerT/fluids/#the-governing-equations).
+
 
 <!-- https://www.youtube.com/watch?v=KeTh-TIhL9M -->
 

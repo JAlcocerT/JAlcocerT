@@ -138,7 +138,7 @@ make open-original-animation-detail-180
 
 {{< youtube "fugTKhjW-FQ" >}}
 
-yup
+yup, the dji tello looks good with the stand:
 
 {{< youtube "VgRgUhA66Kk" >}}
 

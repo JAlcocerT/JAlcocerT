@@ -50,7 +50,9 @@ i2cdetect -y 1
 
 2. With the combo **ESP32 + MLX90614** also works [as seen recently](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#esp32-x-mqtt-x-mlx90614)
 
-<https://www.youtube.com/watch?v=HpsvNIAtjm4>
+This [guy made it work](https://www.youtube.com/watch?v=HpsvNIAtjm4) with a bluetooth setup
+
+{{< youtube "MrbbDrVht_I" >}}
 
 
 ### DS18B20
@@ -170,6 +172,10 @@ The chip's low power consumption and versatility make it an attractive option fo
 ### BoM
 
 BMS board
+
+{{< youtube "_oqitDJHneU" >}}
+<!-- 
+https://youtube.com/shorts/_oqitDJHneU -->
 
 a bare TP4056—it is an 18650 Battery Shield V3, which is a complete, self-contained single-cell power bank system.
 
@@ -476,6 +482,13 @@ https://youtube.com/shorts/lJm9zmdMi1I
 The MLX90614 GY-906 is an **infrared (IR) temperature sensor** module commonly used for non-contact temperature measurements.
 
 It's also known as a pyrometer or non-contact thermometer.
+
+<!-- 
+https://youtube.com/shorts/MrbbDrVht_I 
+-->
+
+{{< youtube "MrbbDrVht_I" >}}
+
 
 This sensor is produced by Melexis and can measure the temperature of an object without making physical contact with it, which makes it useful in various applications.
 
@@ -1061,7 +1074,7 @@ KiCad examines the board for problems such as:
 
 A summary of [the order](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/order-104.md), with [clarifications](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/z-clarification.md) and [assumptions](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/z-assumptions.md):
 
-Before submitting, confirmed the uploaded project name is `power-stage-104-fabrication-release-r2-2026-09-15.zip` and the form shows: `PS104-R2-FAB-2026-09-15`
+Before submitting, confirmed [the uploaded project](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104) name is `power-stage-104-fabrication-release-r2-2026-09-15.zip` and the form shows: `PS104-R2-FAB-2026-09-15`
 
 - 65 × 45 mm                                              
 - 2 layers                                                
@@ -1074,6 +1087,31 @@ Before submitting, confirmed the uploaded project name is `power-stage-104-fabri
 - bare PCB, quantity 3 
 
 > One board was 45 euros, x3 63 euros, fabrication ~9 working days, in my hands in ~12days
+
+```sh
+cd ./poc/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104
+#make help
+make pcb-104-gerbers
+#make pcb-104-open
+```
+
+
+On this board, square pads are pin 1 and circles are pin 2.
+
+{{< youtube "jE5CsIJgGyk" >}}
+
+<!-- https://youtube.com/shorts/jE5CsIJgGyk -->
+
+For the two-wire power connectors, that happens to mean:                 
+                                                                          
+- J1 FUSED IN: square = FUSED+, circle = GND                             
+- J2 PUMP: square = PUMP+, circle = PUMP- — not GND                      
+- J3 ENABLE: square = FUSED+, circle = PUMP+                             
+- J5 BUCK IN: square = FUSED+, circle = GND                              
+- J4 ESP32: square = GPIO23 data/control, circle = GND                   
+                                                                          
+So: squares are not universally “+”; they mean pin 1. Circles are not    
+universally GND; they mean pin 2.      
 
 ### Electronics Simulations
 

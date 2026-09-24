@@ -1011,6 +1011,8 @@ I tinkered with maps [earlier this year](https://jalcocert.github.io/JAlcocerT/g
 
 And recently made [a reloaded version](https://jalcocert.github.io/JAlcocerT/geo-data-analytics/)
 
+<!-- {{< youtube "K9aOr2y4J5s" >}} -->
+
 {{< youtube "K9aOr2y4J5s" >}}
 
 

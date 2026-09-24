@@ -153,7 +153,9 @@ https://github.com/dawarich-app/atlas
 
 ## GoPro GPS
 
-
+https://box2overtake.com/blog/pitlane/#try-it
+https://github.com/jlleongarcia/Py_RouteTracker
+https://pitlane.box2overtake.com/
 
 ## Building around GeoData
 
