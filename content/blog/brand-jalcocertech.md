@@ -44,3 +44,5 @@ Maybe, try to build a brand *before its too late*.
 
 * https://typst.app/
 * https://typst.app/universe/package/graceful-genetics
+
+> https://github.com/JAlcocerT/mbsd/tree/master/integrated-engine-lab/typst-report

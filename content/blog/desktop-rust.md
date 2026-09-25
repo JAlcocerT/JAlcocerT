@@ -1,12 +1,11 @@
 ---
 title: "Desktop Apps with RUST"
-date: 2026-11-16
+date: 2026-09-25
 draft: false
-tags: ["Rust x Vue","RemotionJS"]
-description: 'Using Rust Tauri instead of CustomTkinter and GoLang Wails.'
+tags: ["Rust x Vue vs Qt vs PWAs","RemotionJS","DJI Tello","stlite"]
+description: 'Using Rust Tauri instead of CustomTkinter or GoLang Wails.'
 url: 'desktop-apps-with-rust'
 ---
-
 
 **Tl;DR**
 
@@ -14,24 +13,21 @@ From [Go](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/
 
 **Intro**
 
-* WHY Im writting this post: 
+* WHY Im writting this post: *bc the [go-karting](https://github.com/JAlcocerT/go-karting) desktop was cool, the [PWA Gopro version with ffmpeg](https://github.com/JAlcocerT/optimum-path/tree/master/overlay-pwa) even more and the [dji tello Qt Desktop](https://gitlab.com/fossengineer1/dron) could be better*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 This year I have used Go to make one of my first desktop apps *around the GoPro telemetry and ffmpeg*
 
-Also...flutter to some extent: for the tello here, and a comparison with flet
+* https://github.com/JAlcocerT/go-karting - Tinkered [here](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/)
 
-So im just curious, if there are so nice apps like: Zed, [open drone log](https://github.com/arpanghosh8453/open-dronelog)
+Also...flutter to some extent: *for the tello here, and a comparison with flet*
+
+So im just curious, if there are so nice RUST apps like: Zed, [open drone log](https://github.com/arpanghosh8453/open-dronelog)
+
+And also [rust can make things be cross-platform](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#cross-platform-comparison-2026)...
 
 
-That are powered by RUST, 
-
-A collection of stupid ideas that I just do to test AI models.
-
-1. App for dogs
-2. App counter for knitting
-3. Pomodoro / Focus to do
 
 ## Rust vs Go for Desktop
 
@@ -135,9 +131,15 @@ If you are already leaning toward **Vue**, here is why you might pick the Rust v
 
 ## FAQ
 
+
+
 ### Where to find OSS?
 
 1. Sourceforge.net
 2. Github / Gitlab
 3. Ubuntu's PPA's
 4. GHCR, dockerhub, QUAY
+
+### Streamlit PWA with stlite
+
+https://github.com/whitphx/stlite

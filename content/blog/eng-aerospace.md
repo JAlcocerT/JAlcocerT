@@ -55,6 +55,8 @@ https://www.youtube.com/watch?v=o6FMjOl0TRA -->
 
 #### Stall Speed
 
+There is a sweet spot:
+
 <!-- 
 https://www.youtube.com/watch?v=al8d8BU-rT0 -->
 

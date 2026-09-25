@@ -812,6 +812,57 @@ Analysts who answer these questions proactively move beyond reporting background
 Start **driving outcomes** across teams, programs, and the broader D&A organization.
 
 
+### About PMs Iron Triangle
+
+In project management, what you are describing is known as the **Iron Triangle** (or the Triple Constraint). 
+
+While they aren't "blockers" in the sense of a technical bug, they are the **four fundamental constraints** that constantly push against each other. 
+
+If you change one, at least one other must be adjusted to keep the project from collapsing.
+
+#### 1. Scope (The "What")
+
+This is the list of deliverables and features. 
+* **The Conflict:** When scope increases ("Scope Creep") without adding more time or money, quality usually drops because the team is stretched too thin.
+* **PM Reality:** You have to protect the boundaries. If a stakeholder wants more features, they must accept a later date or a higher bill.
+
+#### 2. Speed / Time (The "When")
+
+This is your schedule and deadline.
+* **The Conflict:** Crashing a schedule (trying to do it faster) almost always increases **Price** (hiring more people, paying overtime) or risks **Quality** (cutting corners on testing).
+* **PM Reality:** Time is often the most "fixed" constraint. If the deadline is a hard wall, you must be aggressive about cutting Scope.
+
+#### 3. Quality (The "How Well")
+
+This is the standard the work must meet. 
+* **The Conflict:** Quality is often the "silent victim." When a project is over-budget and behind schedule, teams feel pressured to skip reviews or documentation to catch up.
+* **PM Reality:** Lowering quality creates "technical debt," which blocks you later in the form of bugs and rework.
+
+#### 4. Price / Cost (The "How Much")
+
+This is the budget, including salaries, tools, and resources.
+* **The Conflict:** A tight budget limits your **Speed** (you can't hire more help) and your **Scope** (you can't afford the materials/hours for extra features).
+* **PM Reality:** Money can sometimes buy speed, but only to a point (as the saying goes: "Nine women can't make a baby in one month").
+
+
+#### The "Pick Two" Rule
+
+There is a famous PM adage that summarizes these trade-offs perfectly: 
+
+> **"Fast, Cheap, or Good: Pick two."**
+
+* **Fast + Cheap** = Low Quality (it’ll be messy).
+* **Fast + Good** = Expensive (you need top-tier talent and overtime).
+* **Good + Cheap** = Slow (it will take a long time to get there with limited resources).
+
+Other "Real-World" Blockers
+
+While the Iron Triangle defines the constraints, actual **blockers** that stop work entirely often include:
+
+* **Dependencies:** Waiting on another team to finish their part.
+* **Stakeholder Indecision:** "Decision paralysis" where a lack of approval halts progress.
+* **Resource Availability:** A key developer gets sick or a specialized tool breaks.
+
 ### How to's about SQLite
 
 SQLite is a very handy and portable DB to place some logs.

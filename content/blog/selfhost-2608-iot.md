@@ -612,7 +612,9 @@ Through the 220 Ω resistor, this drives the MOSFET gate and turns the MOSFET on
 
 After three seconds, GPIO23 returns LOW, the 10 kΩ pulldown discharges the gate, and the MOSFET turns off.
 
-More precisely: the MOSFET is “on/conducting,” rather than electrically “open.” Keep the ESP32 ground connected to the MOSFET source/BMS P− common ground.
+More precisely: the MOSFET is “on/conducting,” rather than electrically “open.” 
+
+Keep the ESP32 ground connected to the MOSFET source/BMS P− common ground.
 
 For example, this requests a three-second pulse:
 
@@ -632,8 +634,7 @@ docker run --rm --network host eclipse-mosquitto:2 \
 https://youtube.com/shorts/sWO9hesYCjw 
 -->
 
-The ESP32 will set GPIO23 HIGH for three seconds, automatically return it LOW, and publish updated
-state.
+The ESP32 will set GPIO23 HIGH for three seconds, automatically return it LOW, and publish updated state.
 
 Do not send the pulse until the complete pump circuit is connected and supervised. 
 
@@ -857,7 +858,9 @@ Neither—the primary recommended board is a **Synchronous Switching Boost (Step
 
 **Why It Is Not Traditional PWM**
 
-A standard PWM solar controller requires the solar panel's voltage to be **higher** than the battery pack (e.g., an 18V panel for a 12V battery). Because your panel outputs only **5V** and the 3S pack reaches **12.6V**, a PWM controller cannot work—it cannot step voltage up.
+A standard PWM solar controller requires the solar panel's voltage to be **higher** than the battery pack (e.g., an 18V panel for a 12V battery).
+
+Because your panel outputs only **5V** and the 3S pack reaches **12.6V**, a PWM controller cannot work—it cannot step voltage up.
 
 **Why It Is Not Fully "True MPPT"**
 

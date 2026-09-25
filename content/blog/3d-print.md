@@ -171,11 +171,7 @@ And i made [a second order](https://github.com/JAlcocerT/poc/blob/main/blender/o
 
 Skipping my oss mbsd framework this time, just curious to see how stress flow through the 3d print I got:
 
-* https://jalcocert.github.io/JAlcocerT/fem/
-* https://fossengineer.com/beso-topology-optimization-calculix/
-
-
-* https://github.com/JAlcocerT/poc/blob/main/blender/dron-standing-fea/z-learnings.md
+You can get [FEM](https://jalcocert.github.io/JAlcocerT/fem/)/FEA done with [Calculix/Beso](https://fossengineer.com/beso-topology-optimization-calculix/) as I captured at [these learnings notes](https://fossengineer.com/beso-topology-optimization-calculix/)
 
 ![alt text](/blog_img/data-experiments/component-stress-overview.png)
 
@@ -214,7 +210,7 @@ Skipping my oss mbsd framework this time, just curious to see how stress flow th
 |                                    Surface stress heatmaps in assembly context          |
 +-----------------------------------------------------------------------------------------+
 
-  Run it with:
+Run it with:
 
 ```sh
 cd /home/jalcocert/Desktop/poc/blender/dron-standing-fea
@@ -222,7 +218,7 @@ cd /home/jalcocert/Desktop/poc/blender/dron-standing-fea
 ./run-fea.sh cases/frame-screen-fine.json
 ```
 
-Built and tested a fully local FEA pipeline:
+Built and tested a **fully local FEA pipeline**:
 
 - Verified all eight printable STLs are watertight.
 - Installed project-local Gmsh and CalculiX—no system/admin installation needed.
@@ -301,4 +297,7 @@ You write pure code in a script file (`.scad`), compile it, and the software ren
 
 ### 3d Print x Power Stage
 
-https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104
+After making work in a bread->protoboard->PCB [this water pump power stage](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104)
+
+Putting together a 3d print encapsulation was the obvious next step:
+

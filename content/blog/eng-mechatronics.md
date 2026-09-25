@@ -1,5 +1,5 @@
 ---
-title: "Mechathro que?"
+title: "Mecatro que?"
 date: 2026-12-31
 draft: false
 tags: ["MBSD","Electronics","RC","Drons vs FPV","IoT"]
@@ -22,8 +22,9 @@ Mechanics + electronics = mechatronics
 
 This is where I put together an old lesson
 
-Around bike dynamics, with sensors
+Around bike dynamics and sensors
 
+* https://github.com/JAlcocerT/mbsd/tree/master/bike-practicas-cdm
+* https://github.com/JAlcocerT/mbsd/tree/master/bike-practicas-cdm-python
 
-
-https://github.com/JAlcocerT/mbsd/tree/master/bike-practicas-cdm
+![alt text](/blog_img/mechanics/path_power_colored.png)

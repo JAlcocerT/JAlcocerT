@@ -797,7 +797,7 @@ https://www.youtube.com/watch?v=CPLdltN7wgE
 
 You can also do FEM with 3dcad https://github.com/JAlcocerT/3Design/tree/main/z-freecad
 
-> And [added](https://github.com/JAlcocerT/mbsd/commit/0ca8b9ba376e4d7887a47bda15ab1c70837a61c9) the bike W calculator from [this old practice](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm) :)
+> And [added](https://github.com/JAlcocerT/mbsd/commit/0ca8b9ba376e4d7887a47bda15ab1c70837a61c9) the [bike W calculator](https://github.com/JAlcocerT/mbsd/tree/master/bike-practicas-cdm-python) from [this old practice](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm) :)
 
 ![alt text](/blog_img/mechanics/path_power_colored.png)
 

@@ -313,8 +313,6 @@ Cycling power is typically measured at **FTP** (Functional Threshold Power—the
 
 or measured in **Watts per kilogram ($\text{W/kg}$)**.
 
----
-
 Sustained Power (1-Hour Continuous Effort)
 
 For an average adult male weighing around $75\text{ kg } (165\text{ lbs})$:
@@ -340,13 +338,17 @@ If you ask a non-professional to stomp on the pedals as hard as possible for a b
 I remember that we made an experiment during the studies where we logged bike sensor data
 
 * https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/mbsd/bike-practicas-cdm
+* https://github.com/JAlcocerT/mbsd/tree/master/bike-practicas-cdm-python
 
-This can be useful to estimate the power i applied to the bike
+This can be useful to [estimate the power i applied to the bike](https://github.com/JAlcocerT/mbsd/tree/master/bike-practicas-cdm-python)
 
 ```sh
 git clone JAlcocert/hermesagent/
 cd ./tinker/hermesagent/mbsd/bike-practicas-cdm
 ```
+
+![alt text](/blog_img/mechanics/path_power_colored.png)
+
 
 ---
 

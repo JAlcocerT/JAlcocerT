@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-09-25
+date: 2026-09-26
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -73,7 +73,7 @@ get proper data lineage trazability to see what worked (what are the *features* 
 
 and feedback to the lead engine.
 
-0. Audio TTS/S2T: among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/)
+0. Audio TTS/S2T: among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/), also KoKoro did
 
 1. Delivery Analytics - Bc you better [drive outcomes](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#bluf)
 
@@ -549,9 +549,12 @@ The results?
 
 Well, a first [Go Desktop App](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails) that makes this: *with Wails*
 
+* https://github.com/JAlcocerT/go-karting
+* https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust
+
 {{< youtube "M03HU4DWhyE" >}}
 
-12. Which made me go deeper into **GPX, OSM and GIS**
+12. Which made me go [deeper into maps](https://jalcocert.github.io/JAlcocerT/geo-data-analytics/): **GPX, OSM and GIS**
 
 13. So was coming back to maps, but with animations this time:
 
@@ -572,7 +575,7 @@ uv run animate_french_market.py
 
 14. Racing *best lap* optimizer / simulator.
 
-It all started with the *Optimum Path* Idea.
+It all started with [the *Optimum Path* Idea](https://github.com/JAlcocerT/).
 
 Then I put together a repo that leveraged the existing Go Pro extraction / overlays to get the circuit path.
 
@@ -587,7 +590,7 @@ And tinkered with few algorithms to optimize the path: [minimum curvature](https
   {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
 {{< /cards >}}
 
-Surprise, surprise: simple mode + realistic assumptions wins the day
+Surprise, surprise: *simple mode + realistic assumptions wins the day :O*
 
 {{< youtube "zm0OJcpuLV8" >}}
 
@@ -598,7 +601,6 @@ Taking the learnings of optimum path and the route tracker, I just put this toge
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/go-karting" title="Go Desktop x Karting ↗" icon="github" >}}
 {{< /cards >}}
-
 
 15. Talking about racing...whats going on with F1 this year?
 
@@ -652,7 +654,7 @@ git clone https://
 
 efecto cantillon for inflation and entrepreneur mindset
 
-Cantillon defined the entrepreneur as someone who buys at a certain price and sells at an uncertain price.
+> Cantillon defined the entrepreneur as someone who buys at a certain price and sells at an uncertain price.
 
 To him, the entrepreneur is the "risk-bearer" who stabilizes the market by taking on the gamble of the future.
 
@@ -672,14 +674,16 @@ And electrum, metamask and mymonero kept working.
 
 16. Tech videos were not a priority this year.
 
-Basically: Im not focusing on building a B2C tech audience.
+Basically: *Im not focusing on building a B2C tech audience.*
 
 I finally uploaded some from last year, just with youtube music:
 
 * [Goose Desktop](https://youtu.be/ZW5eEocyrTU) 
 * [GrowChief](https://youtu.be/in8uTdLhFqI)
 
-Others, from the vibe coding sessions: helped to bring [quick demos](https://youtu.be/WFi0LD8Ux4A) to their related product landing.
+Others, from the vibe coding sessions: *helped to bring [quick demos](https://youtu.be/WFi0LD8Ux4A) to their related product landing.*
+
+And...i uploaded a lot of raw shorts of my tinkering and related them to posts.
 
 17. I made **some animations**.
 
@@ -850,6 +854,7 @@ I was not expecting to:
 4. To see the gap between whats possible vs whats expected grow instead of shrinking
 5. for the n-th time realize that we are not doing good questions at all neither improve our questioning process
 6. still find people at 30+ y.o with the startup mode of 0 earnings now, no reasonable process to get better, but trust me bro that ill reach 150k MRO soon *(and finding ppl who buy those stories)*
+7. Create my [first pcb](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104), with 3d prints around it to encapsulate it
 
 #### Quotes
 
@@ -991,11 +996,13 @@ or the only thing is there can be is active and deferred active?
 
 4. Accountability laundring, underfiltering, weaponized incompetence
 
+5. [Peter Principle](https://es.wikipedia.org/wiki/Principio_de_Peter): *Con el tiempo, todo puesto tiende a ser ocupado por un empleado que es incompetente para desempeñar sus obligaciones + El trabajo es realizado por aquellos empleados que no han alcanzado todavía su nivel de incompetencia.*
 
 #### Interesting Posts
 
 * https://nav.al/feedback
 * https://www.seangoedecke.com/llms-reward-expertise/
+* https://lucumr.pocoo.org/2026/9/7/astra-why/
 
 And podcasts:
 
@@ -1126,6 +1133,11 @@ Aka ~~,failed apps'~~: *projects where i just learnt*
 9. ~~PyInsightChAIn~~ Understand crypto with AI? Just copy paste the code yourself :)
 10. ~~IoDoctor reloaded~~: A second opinion, No kyc, [no receta](https://github.com/cssninjaStudio/dokto)
 
+A collection of stupid ideas that I just do to test AI models.
+
+1. App for dogs
+2. App counter for knitting
+3. Pomodoro / Focus to do
 
 Else, use a PaaS or watch a yt tutorial to setup wordpress.
 

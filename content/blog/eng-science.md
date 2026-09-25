@@ -159,6 +159,26 @@ https://www.youtube.com/watch?v=WfJbF0xkUOY
 ## Chemistry
 
 
+## Chemistry
+
+Some time back I was [doing soap at home](https://jalcocert.github.io/JAlcocerT/making-soap-at-home/):
+
+$$
+NaOH(s) \xrightarrow{H_2O} Na^+(aq) + OH^-(aq) + \text{heat}
+$$
+
+### Batteries
+
+What?
+
+[Batteries](https://jalcocert.github.io/JAlcocerT/understanding-batteries/) are a rabbit hole...
+
+
+* LiPo: for FPVs
+* Li-ion: For cinematic drones
+* LiFePo4: stable, like for a bluetti UPS
+
+
 $$\ce{Hg^2+ ->[I-] HgI2 ->[I-] [Hg^{II}I4]^2-}$$
 
 https://jalcocert.github.io/JAlcocerT/making-soap-at-home/
