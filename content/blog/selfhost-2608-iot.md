@@ -610,11 +610,9 @@ GPIO23 (D23) goes HIGH at approximately 3.3 V for three seconds.
 
 Through the 220 Ω resistor, this drives the MOSFET gate and turns the MOSFET on/conducting, allowing pump current to flow.
 
-After three seconds, GPIO23 returns LOW, the 10 kΩ pulldown discharges the gate, and the MOSFET turns
-off.
+After three seconds, GPIO23 returns LOW, the 10 kΩ pulldown discharges the gate, and the MOSFET turns off.
 
-More precisely: the MOSFET is “on/conducting,” rather than electrically “open.” Keep the ESP32 ground
-connected to the MOSFET source/BMS P− common ground.
+More precisely: the MOSFET is “on/conducting,” rather than electrically “open.” Keep the ESP32 ground connected to the MOSFET source/BMS P− common ground.
 
 For example, this requests a three-second pulse:
 

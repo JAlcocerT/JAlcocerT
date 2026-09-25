@@ -3,7 +3,7 @@ title: "Science is so Cool!"
 date: 2026-11-30T23:20:21+01:00
 draft: false
 tags: ["Heat Transfer vs Electrical Engineering","Analogies"]
-description: 'A Science recap.'
+description: 'A Science recap for builders.'
 url: 'cool-science'
 ---
 
@@ -249,6 +249,9 @@ I used Wolfram and Matlab during my studies.
 4. See also the [Sympy](https://pypi.org/project/sympy/) Python library for symbolic mathematics
 
 > Matlab had a similar feature, which I used on [this thesis](https://github.com/JAlcocerT/Bike_dynamic_simulator)
+
+
+### Analogies
 
 
 ---

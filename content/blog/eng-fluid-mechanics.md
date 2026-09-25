@@ -285,7 +285,10 @@ In all three systems, **Power** is calculated by multiplying the "Push" (Across 
 
 4. Why this matters for Heat Transfer
 
-In real engineering, these analogies often collide. Think of a **Liquid Cooling System** in a high-end PC:
+In real engineering, these analogies often collide. 
+
+Think of a **Liquid Cooling System** in a high-end PC:
+
 1.  **The CPU** creates "Current" (Heat).
 2.  **The Water** acts as a "Carrier" (Fluid Flow).
 3.  **The Pump** provides the "Voltage" (Pressure) to overcome the "Resistance" (Narrow tubes).
@@ -319,7 +322,11 @@ Yes. FreeCAD has two relevant workbenches:
 
 - **FEM Workbench** — structural and thermal FEM via CalculiX and Elmer solvers, with a GUI mesh generator. Good for static stress and simple heat transfer, not CFD.
 
-- **CfdOF Add-on** — a CFD workbench built on top of **OpenFOAM**. You define geometry in FreeCAD, mesh it (SnappyHexMesh or cfMesh), set boundary conditions, and run OpenFOAM in the background. Visualisation is done via ParaView. This is the closest you get to a free ANSYS Fluent workflow.
+- **CfdOF Add-on** — a CFD workbench built on top of **OpenFOAM**. 
+
+You define geometry in FreeCAD, mesh it (SnappyHexMesh or cfMesh), set boundary conditions, and run OpenFOAM in the background. Visualisation is done via ParaView. 
+
+> This is the closest you get to a free ANSYS Fluent workflow.
 
 ```sh
 git clone /3Design

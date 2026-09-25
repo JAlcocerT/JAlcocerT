@@ -1095,8 +1095,7 @@ make pcb-104-gerbers
 #make pcb-104-open
 ```
 
-
-On this board, square pads are pin 1 and circles are pin 2.
+On [the pcb I designed](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/fabrication-release-r2-staging-20260915), square pads are pin 1 and circles are pin 2.
 
 {{< youtube "jE5CsIJgGyk" >}}
 
@@ -1110,8 +1109,31 @@ For the two-wire power connectors, that happens to mean:
 - J5 BUCK IN: square = FUSED+, circle = GND                              
 - J4 ESP32: square = GPIO23 data/control, circle = GND                   
                                                                           
-So: squares are not universally “+”; they mean pin 1. Circles are not    
-universally GND; they mean pin 2.      
+Anyways, [I tested the pcb](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104/z-pcb-checks.md) for proper continuity of the board before pluging the devices: *trying to go [from mess to order](https://youtube.com/shorts/9YUOK2XxBcs)*
+
+{{< youtube "IoNLm0x4Fjc" >}}
+
+<!-- 
+https://youtube.com/shorts/IoNLm0x4Fjc -->
+
+Then, soldered:
+
+{{< youtube "WFi0LD8Ux4A" >}}
+
+And...it worked just as I tested with the protoboard:
+
+```sh
+# #make pub-pulse PULSE_MS=3000
+# make pub-status
+# make pub-off
+docker run --rm --network host eclipse-mosquitto:2 \
+  mosquitto_pub -h 192.168.1.2 \
+  -t esp32/pump/cmd \
+  -m 'pulse:3000'
+```
+
+{{< youtube "WFi0LD8Ux4A" >}}
+
 
 ### Electronics Simulations
 

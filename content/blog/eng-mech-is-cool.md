@@ -161,7 +161,7 @@ https://youtube.com/shorts/iely3Q70Bps?si=lsQyCiGEevA3BicW
 
 ### Cool Physics Animations
 
-There are **people very creative** out there: https://jakevdp.github.io/
+There are **people very creative** out there: `https://jakevdp.github.io/`
 
 See for yourself how cool are these animations:
 
