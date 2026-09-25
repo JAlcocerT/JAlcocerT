@@ -1003,6 +1003,7 @@ or the only thing is there can be is active and deferred active?
 * https://nav.al/feedback
 * https://www.seangoedecke.com/llms-reward-expertise/
 * https://lucumr.pocoo.org/2026/9/7/astra-why/
+* https://sumnerevans.com/posts/software-engineering/forget-mcp-write-cli-apps/
 
 And podcasts:
 

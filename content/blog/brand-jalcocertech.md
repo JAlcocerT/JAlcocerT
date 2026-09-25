@@ -17,6 +17,10 @@ Hows my brand and outbound email marketing going?
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
+
+https://www.remotion.dev/prompts/cinematic-tech-intro
+
+
 ---
 
 ## Conclusions
@@ -44,5 +48,6 @@ Maybe, try to build a brand *before its too late*.
 
 * https://typst.app/
 * https://typst.app/universe/package/graceful-genetics
+* https://github.com/qjcg/awesome-typst
 
 > https://github.com/JAlcocerT/mbsd/tree/master/integrated-engine-lab/typst-report

@@ -10,8 +10,7 @@ math: true
 
 **TL;DR**
 
-Home connectivity is not just "do I have internet?"
-
+[Home connectivity](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity) is not just "do I have internet?"
 
 ## Intro
 

@@ -143,3 +143,29 @@ If you are already leaning toward **Vue**, here is why you might pick the Rust v
 ### Streamlit PWA with stlite
 
 https://github.com/whitphx/stlite
+
+https://github.com/lylo/pagecord-cli
+https://pagecord.com/ai
+
+typst
+
+https://github.com/sentriz/gonic
+https://www.music-assistant.io/
+https://github.com/Arthi-chaud/Meelo?ref=selfh.st
+https://github.com/vedderb/bldc
+
+https://github.com/dragonflyoss/dragonfly
+
+krezuberf and xberg
+
+https://github.com/Formsmith746/SketchForge-3D
+
+https://github.com/Stirling-Tools/Stirling-PDF/releases/tag/v3.0.0
+
+
+Jev OSS: https://www.seangoedecke.com/jev-means-structured-output-is-interesting-again/
+
+https://github.com/usememos/memos
+https://github.com/timothepoznanski/poznote
+
+https://github.com/photoprism/photoprism

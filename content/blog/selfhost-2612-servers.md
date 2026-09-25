@@ -145,6 +145,12 @@ Pragmatism some may call it.
 {{< /cards >}}
 
 
+### Connectivity
+
+Not just speed-tests, and DNS, but...
+
+* https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
+
 
 ---
 
