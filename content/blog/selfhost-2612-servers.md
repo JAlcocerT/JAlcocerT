@@ -23,6 +23,12 @@ All those backups, monitoring, IoT...
 
 Yes, all that.
 
+* http://192.168.1.2:3034/hermesagent/pi-connectivity
+#http://192.168.1.2:3034/hermesagent/tr471-checks
+#http://192.168.1.2:3034/hermesagent/selfhosted-connectivity
+#http://192.168.1.2:3034/hermesagent/pi-connectivity
+#https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
+
 
 ## HomeLab x OSS
 

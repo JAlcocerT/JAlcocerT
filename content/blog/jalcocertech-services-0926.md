@@ -812,11 +812,8 @@ or here: `ebooks.jalcocertech`
 
 #### Multi Body Systems Dynamics dot com
 
-http://192.168.1.2:3034/hermesagent/mbsd/src/branch/master
-http://192.168.1.2:3034/hermesagent/electronics-101/src/branch/master/samples-motors
-https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101
-http://192.168.1.2:3034/hermesagent/pi-connectivity
-http://192.168.1.2:3034/hermesagent/mbsd/commit/5751bd7702319119ffc3cac7165ef59f194d1b1c#diff-c3c9e15a6c85805e37f84b9ce1c44b1db55a0d95
+* http://192.168.1.2:3034/hermesagent/mbsd/src/branch/master
+* http://192.168.1.2:3034/hermesagent/mbsd/commit/5751bd7702319119ffc3cac7165ef59f194d1b1c#diff-c3c9e15a6c85805e37f84b9ce1c44b1db55a0d95
 
 I took all the goodies from the github and forgejo repos: *2D/3D*
 
@@ -831,10 +828,10 @@ So you can [continue where you left it](http://192.168.1.2:3034/hermesagent/mbsd
   {{< card link="https://github.com/JAlcocerT//" title="MBSD OSS Framework ↗" icon="github" >}}
 {{< /cards >}}
 
-app.multibodysystemsdynamics.com
-multibodysystemsdynamics.com
-multibodysystemsdynamics.com/roadmap
-multibodysystemsdynamics.com/whitepaper
+* app.multibodysystemsdynamics.com
+* multibodysystemsdynamics.com
+* multibodysystemsdynamics.com/roadmap
+* multibodysystemsdynamics.com/whitepaper
 
 ```sh
 #herdr
@@ -951,7 +948,7 @@ They can:
 
 0.4.0 already provided working 2D kinematics, constrained dynamics and JSON/CSV handoffs. Those remain available unchanged.
 
-The important limitation: 0.5.0 describes 3D mechanisms, but does not solve their 3D kinematics or dynamics yet.
+The important limitation: `0.5.0` describes 3D mechanisms, but does not solve their 3D kinematics or dynamics yet.
 
 ```sh
 cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
@@ -1002,9 +999,6 @@ awk '
 * https://github.com/JAlcocerT/mbsd-core/releases/tag/v0.5.0
 * https://github.com/JAlcocerT/mbsd-examples/releases/tag/v0.5.0
 
-> I couldnt avoid to email again to Gabe Morris :)
-
-> > And email to `selfh.st`
 
 - Project Chrono/PyChrono
 - Exudyn
@@ -1025,13 +1019,9 @@ Every business has its own delivery
 
 But every business owner will resonate when you ask [how they are getting customers](https://jalcocert.github.io/JAlcocerT/poc-107/#the-service-to-rule-them-all).
 
-
-
 1. With a proper website: [webaudits here](https://webaudit.jalcocertech.com/)
 
 > But hey, dont just attract and convert, **make them want to stay** (LTV goes up!)
-
-
 
 {{< details title="Web Audits x Custom Web review 📌" closed="true" >}}
 
@@ -1325,11 +1315,11 @@ Its an **awsome PWA** that can write local files *and `.weba` audios*: `https://
 Underpaid in the D&A space? Document all that you do and put together an awsome CV.
 {{< /callout >}}
 
-You can also do this with the forgejo setup if you are not afraid of `.md`: `https://speedtest.fossengineer.com/jalcocert/my-logseq-notes`
+You can also do this with *the forgejo setup* if you are not afraid of `.md`: `https://speedtest.fossengineer.com/jalcocert/my-logseq-notes`
 
-```sh
-
-```
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/forgejo" title="Forgejo | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 ### Skills im using 

@@ -38,7 +38,7 @@ sqlite3 /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite
 
 The SQLite backend subscribes to that broker over the network and stores readings locally. 
 
-The Next.js dashboard reads the local SQLite file directly — no MQTT access needed.
+The `Next.js` dashboard reads the local SQLite file directly — no MQTT access needed.
 
 ```
 Server (192.168.1.2)              Your laptop / dev machine

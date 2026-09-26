@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-09-26
+date: 2026-10-18
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -645,13 +645,16 @@ uv run tests/plot_historical_gweiss.py TROW --start 2005-01-01 --brand "@LibrePo
 
 All powered via [Unfolding Data](https://gitlab.com/fossengineer1/unfolding-data)
 
-{{< cards >}}
+<!-- {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
+{{< /cards >}} -->
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="Unfolding Data Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-
 ```sh
-git clone https://
+git clone https://github.com/JAlcocerT/UnfoldingData
 ```
 
 efecto cantillon for inflation and entrepreneur mindset
@@ -797,6 +800,7 @@ Trying for the first time the mac ecosystem was also interesting.
 These has been the tech surprise of the year.
 
 Examples: *Spliit, betaflight, files.md, [snapdrop](https://github.com/SnapDrop/snapdrop)/[pairdrop](https://github.com/schlagmichdoch/PairDrop), [vert](https://fossengineer.com/selfhosting-vert-local-file-converter/#what-is-vert), compress.lol which [i forked](https://github.com/JAlcocerT/compress.lol) when talking about [WASM](https://jalcocert.github.io/JAlcocerT/wasm/)...*
+PWAs can even make the gopro telemetry fully in the browser with ffmpeg: https://fossengineer.com/selfhosting-py-routetracker-pitlane-pwa/
 
 #### Tech Talks
 
@@ -816,9 +820,9 @@ Examples: *Spliit, betaflight, files.md, [snapdrop](https://github.com/SnapDrop/
 
 And ending Q1 of 2026...89.
 
-Passed 100 published in Aug.
+Passed 100 published in Aug. 145 end of sept
 
-Ok, its cooked.
+Ok, its cooked as software.
 
 ```sh
 #du -sh .
@@ -1331,7 +1335,9 @@ Crazy.
 
 Marketing with `cold emails` where the applications you sent to companies with BANT.
 
-And doing interviews? You guessed it: sales.
+And doing interviews? 
+
+You guessed it: sales.
 
 ```mermaid
 graph LR

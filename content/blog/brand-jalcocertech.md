@@ -18,6 +18,12 @@ Hows my brand and outbound email marketing going?
 
 
 
+### Why not just RemotionJS
+
+```sh
+
+```
+
 https://www.remotion.dev/prompts/cinematic-tech-intro
 
 

@@ -20,12 +20,13 @@ Whether the uplink is 4G, coax, fiber, or Starlink, the home network becomes the
 
 This post is a cleanup of my June 2026 connectivity notes.
 
-With all the learnings from a MV1 Compal and a NME5410 cable modems:
+With all the learnings from a `MV1 Compal` and a `NME5410` cable modems:
 
 ```sh
 #git pull
 #http://192.168.1.2:3034/hermesagent/tr471-checks
 #http://192.168.1.2:3034/hermesagent/selfhosted-connectivity
+#http://192.168.1.2:3034/hermesagent/pi-connectivity
 #https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
 make devices-remember ID=192.168.1.12 NAME=laptop TAGS=trusted
 make devices-remember ID=192.168.1.13 NAME=appliance TAGS=iot

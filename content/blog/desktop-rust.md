@@ -14,7 +14,7 @@ From [Go](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/
 **Intro**
 
 * WHY Im writting this post: *bc [the tkinter](https://github.com/JAlcocerT/optimum-path/tree/master/4-apexsim-desktop) and [go-karting](https://github.com/JAlcocerT/go-karting) desktop were cool. The [PWA Gopro version with ffmpeg](https://github.com/JAlcocerT/optimum-path/tree/master/overlay-pwa) even more and the [dji tello Qt Desktop](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-version) could be better*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* What [Ive learnt](#conclusions) with it: *Ive ended up having nice desktop versions to control the tello with [Go](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-go?ref_type=heads), Python QT and [Rust](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-rust?ref_type=heads)*
 
 
 This year I have [used Go to make one of my first desktop apps](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails) *around the GoPro telemetry and ffmpeg*
@@ -22,14 +22,11 @@ This year I have [used Go to make one of my first desktop apps](https://jalcocer
 * https://github.com/JAlcocerT/go-karting - Tinkered [here](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/)
 * https://github.com/JAlcocerT/optimum-path/tree/master/4-apexsim-desktop
 
-
 Also...flutter to some extent: *for the tello here, and a comparison with flet*
 
 So im just curious, if there are so nice RUST apps like: Zed, Gram, [open drone log](https://github.com/arpanghosh8453/open-dronelog)
 
 And also [rust can make things be cross-platform](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#cross-platform-comparison)...
-
-
 
 ## Rust vs Go for Desktop
 
@@ -118,12 +115,68 @@ If you are already leaning toward **Vue**, here is why you might pick the Rust v
 * **Rust + Tauri** is your "Tank": It takes longer to build, but it’s more secure, slightly faster, and can run on your phone.
 
 
+## Tello x Rust
+
+At desktop-rust: `Rust + Tauri 2 + Vue` controller with UDP commands, telemetry, video, photos, recording, logs, safety controls, and Wi-Fi preflight detection.
+
+Run it offline with:
+
+```sh
+#git clone git@gitlab.com:fossengineer1/dron.git
+#cd dron
+make run-rust
+```
+
+Other targets:
+
+```sh
+make dev-rust
+make test-rust
+make build-rust
+```
+
+Captures go to `~/Pictures/Tello-Rust/`.
+
+The optimized Linux binary is 8.7 MB. Builds, tests, strict linting, and launch smoke-test pass.
+
+It has not yet been flight-tested.
+
+Control and video use separate paths: commands use UDP 8889, while video uses UDP 11111 plus FFmpeg. So flying can work while decoding fails.
+
+I rebuilt the app with:
+
+- Fresh streamoff → streamon reset
+- More reliable FFmpeg probing
+- Robust JPEG framing
+- Visible video diagnostics
+
+Reconnect to Tello and run:
+
+make run-rust
+
+The status will now identify:
+
+- No UDP video packets
+- FFmpeg decoder failure
+- Video feed ready
+
+Size comparison:
+
+- Rust binary: 8.7 MB
+- Python bundle: 553 MB
+
+Rust is smaller because Tauri reuses installed WebKitGTK and FFmpeg. 
+
+The Python bundle includes Python, PySide6/Qt, OpenCV, NumPy, and their native libraries.
+
+Thus the Rust binary is small, but not completely dependency-free.
+
 --- 
 
 ## Conclusions
 
-{{< callout type="warning" >}}
-The key distinction is “one cross-platform codebase” versus “one universal binary.
+{{< callout type="info" >}}
+The key distinction is [one cross-platform codebase](https://gitlab.com/fossengineer1/dron/-/blob/main/z-learnings-codebase-tradeoffs.md?ref_type=heads) versus “one universal binary.
 {{< /callout >}}
 
 PySide is already cross-platform; a CI build matrix can produce Linux, Windows and macOS artifacts from the existing source.
@@ -132,97 +185,93 @@ Choose Wails if you want to reuse your frontend instincts and learn Go. Choose T
 
 a truly universal native desktop binary—one file running unchanged on Windows, Linux, and macOS—does not practically exist.
 
-  Each OS uses different:
+Each OS uses different:
 
-  - Executable formats: PE, ELF and Mach-O
-  - System APIs and UI frameworks
-  - Security/signing systems
-  - CPU architectures
-  - Runtime libraries
+- Executable formats: PE, ELF and Mach-O
+- System APIs and UI frameworks
+- Security/signing systems
+- CPU architectures
+- Runtime libraries
 
-  “Universal binary” usually means multiple CPU architectures for the same OS, such as a macOS app containing Intel and Apple Silicon code.
+“Universal binary” usually means multiple CPU architectures for the same OS, such as a macOS app containing Intel and Apple Silicon code.
 
-  Closest alternatives are:
+Closest alternatives are:
 
-  - A web app or PWA running in a browser
-  - A Java .jar, provided a compatible JVM exists
-  - WebAssembly, provided an appropriate runtime exists
-  - Portable source code with separate platform builds
+- A web app or PWA running in a browser
+- A Java .jar, provided a compatible JVM exists
+- WebAssembly, provided an appropriate runtime exists
+- Portable source code with separate platform builds
 
-  So the realistic goal is:
+So the realistic goal is:
 
-  > One codebase, automated builds, multiple platform-specific packages.
+> One codebase, automated builds, multiple platform-specific packages.
 
-  That applies to PySide, Wails, Tauri, Electron, Flutter, .NET and nearly every desktop framework.
+That applies to PySide, Wails, Tauri, Electron, Flutter, .NET and nearly every desktop framework.
 
 Flutter provides one cross-platform codebase, but you still build separate desktop artifacts:
 
-  - Windows → .exe and supporting files or installer
-  - Linux → executable bundle/package
-  - macOS → .app or .dmg
+- Windows → .exe and supporting files or installer
+- Linux → executable bundle/package
+- macOS → .app or .dmg
 
-  Each build uses its platform’s native Flutter engine and system integration. Generally, you build Windows on Windows, macOS on macOS, and Linux on Linux.
+Each build uses its platform’s native Flutter engine and system integration. Generally, you build Windows on Windows, macOS on macOS, and Linux on Linux.
 
-  A CI matrix can automate all three builds whenever you publish a release. Flutter removes most platform-specific application development—it does not create one universal executable.
+A CI matrix can automate all three builds whenever you publish a release. Flutter removes most platform-specific application development—it does not create one universal executable.
 
 xactly—that’s the core beauty of PWAs.
 
-  You deploy one application, and any supported browser can run it across Windows, Linux, macOS, Android and iOS. Updates happen centrally without rebuilding installers.
+You deploy one application, and any supported browser can run it across Windows, Linux, macOS, Android and iOS. Updates happen centrally without rebuilding installers.
 
-  The trade-off is hardware access. A normal PWA cannot directly open the Tello’s arbitrary UDP ports or decode its raw UDP H.264 stream. For this drone controller, you would still need a local native bridge/service that communicates with
-  the Tello while the PWA talks to that bridge through HTTP, WebSocket or WebRTC.
+The trade-off is hardware access. A normal PWA cannot directly open the Tello’s arbitrary UDP ports or decode its raw UDP H.264 stream. For this drone controller, you would still need a local native bridge/service that communicates with
+the Tello while the PWA talks to that bridge through HTTP, WebSocket or WebRTC.
 
-  So:
+So:
 
-  - Typical business app: PWA can genuinely be “write once, run almost everywhere.”
-  - Tello controller: PWA supplies the portable UI, but a platform-specific native bridge remains necessary.
+- Typical business app: PWA can genuinely be “write once, run almost everywhere.”
+- Tello controller: PWA supplies the portable UI, but a platform-specific native bridge remains necessary.
 
-  Browsers achieve portability partly by deliberately restricting direct operating-system and network access.
+Browsers achieve portability partly by deliberately restricting direct operating-system and network access.
 
-  A normal browser/PWA cannot open arbitrary UDP sockets to the Tello.
+A normal browser/PWA cannot open arbitrary UDP sockets to the Tello.
 
-  Browser networking is primarily restricted to:
+Browser networking is primarily restricted to:
 
-  - HTTP/HTTPS
-  - WebSocket
-  - WebRTC, whose UDP transport is controlled by the browser—not exposed as arbitrary UDP sockets
-  - WebTransport, which also cannot communicate with a raw Tello UDP endpoint
+- HTTP/HTTPS
+- WebSocket
+- WebRTC, whose UDP transport is controlled by the browser—not exposed as arbitrary UDP sockets
+- WebTransport, which also cannot communicate with a raw Tello UDP endpoint
 
-  The Tello expects direct UDP communication on:
+The Tello expects direct UDP communication on:
 
-  - 8889 — commands
-  - 8890 — telemetry
-  - 11111 — H.264 video
+- 8889 — commands
+- 8890 — telemetry
+- 11111 — H.264 video
 
-  Therefore, a pure PWA cannot control it directly.
+Therefore, a pure PWA cannot control it directly.
 
-  You would need:
+You would need:
 
-  PWA
-    ↕ HTTP / WebSocket / WebRTC
-  Local native bridge
-    ↕ Tello UDP
-  Drone
+PWA
+↕ HTTP / WebSocket / WebRTC
+Local native bridge
+↕ Tello UDP
+Drone
 
-  The bridge could be your existing Python backend, a Go service, or a Rust service. It would still need a platform-specific executable, although the entire UI could remain one centrally deployed PWA.
+The bridge could be your existing Python backend, a Go service, or a Rust service. It would still need a platform-specific executable, although the entire UI could remain one centrally deployed PWA.
 
 The UI could be implemented in two ways:
 
-  1. Embedded Vue UI — recommended
+1. Embedded Vue UI — recommended
 
-     Package the Vue frontend inside an Android app and render it in a WebView. Kotlin communicates with it through a controlled JavaScript bridge. Android WebView integration
+Package the Vue frontend inside an Android app and render it in a WebView. Kotlin communicates with it through a controlled JavaScript bridge. Android WebView integration
 
-  2. Independent PWA plus local service
+2. Independent PWA plus local service
 
-     A native Android service exposes localhost HTTP/WebSocket endpoints, and Chrome/PWA connects to them. This preserves a more independent PWA, but background-service rules, CORS, lifecycle management and browser security make it more
-     complicated.
+A native Android service exposes localhost HTTP/WebSocket endpoints, and Chrome/PWA connects to them. This preserves a more independent PWA, but background-service rules, CORS, lifecycle management and browser security make it more
+complicated.
 
 
-### Why not just RemotionJS
 
-```sh
-
-```
 
 ---
 
@@ -325,31 +374,72 @@ make install-bundle-py #launch Tello Desktop Control from your apps :)
 
 Created a complete isolated desktop-go (desktop-go/README.md) comparison using Go, Vue 3, and Wails.
 
-  Implemented:
+* https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-go
 
-  - Raw Go UDP connection to the Tello
-  - Telemetry parsing
-  - Takeoff, land and emergency landing
-  - 20 Hz RC control with input watchdog
-  - Slow/fast modes and acceleration
-  - Flips and simultaneous movement
-  - FFmpeg H.264 video decoding
-  - Photos, MP4 recording and CSV logs
-  - Vue HUD and controls matching the PySide app
-  - Safe focus-loss and shutdown behavior
-  - JAlcocerTech icon
-  - Four Go unit tests
+Implemented:
 
-  Commands:
+- Raw Go UDP connection to the Tello
+- Telemetry parsing
+- Takeoff, land and emergency landing
+- 20 Hz RC control with input watchdog
+- Slow/fast modes and acceleration
+- Flips and simultaneous movement
+- FFmpeg H.264 video decoding
+- Photos, MP4 recording and CSV logs
+- Vue HUD and controls matching the PySide app
+- Safe focus-loss and shutdown behavior
+- JAlcocerTech icon
+- Four Go unit tests
 
-  make run-go
-  make test-go
-  make build-go
+Commands:
 
-  The production binary already exists at:
+```sh
+make run-go
+make test-go
+make build-go
+```
 
-  ./desktop-go/build/bin/desktop-go
+The production binary already exists at: `./desktop-go/build/bin/desktop-go`
 
-  It is approximately 8.9 MB, although FFmpeg remains an external dependency.
+It is approximately 8.9 MB, although FFmpeg remains an external dependency.
 
-  The goal is to run either controller successfully; the PySide failure was caused by the Go controller still holding UDP ports 8890 and 11111. Stop the Go process before run-pyqt; the Go UDP timeout remains to diagnose.
+The goal is to run either controller successfully; the PySide failure was caused by the Go controller still holding **UDP ports 8890 and 11111**. 
+
+Stop the Go process before run-pyqt; the Go UDP timeout remains to diagnose.
+
+```sh
+nmcli device wifi connect TELLO-9BE292 ifname wlan0
+```
+
+Verify:
+```sh
+ip route get 192.168.10.1
+```
+
+It should report src 192.168.10.x. Then:
+```sh
+make run-go
+```
+
+### Face Detection vs Face Recognition
+
+Detecting a face is not the same as recognice it!
+
+Currently:
+
+- Video: Tello H.264 → UDP 11111 → djitellopy → OpenCV frames.
+- Face detection: OpenCV Haar Cascade, haarcascade_frontalface_default.xml.
+- Face recognition: None.
+
+Lowest-hanging upgrade:
+
+- Detection: Replace Haar with YuNet.
+- Recognition: Add SFace.
+- Storage: Save enrolled face embeddings in a small SQLite database.
+- Reliability: Require consistent matches across several frames; otherwise show Unknown.
+
+So the practical stack is:
+
+Tello → OpenCV → YuNet → SFace → SQLite → Name / Unknown
+
+This stays local, works on CPU, integrates directly with the existing Python/OpenCV application, and avoids the infrastructure required by Frigate or Immich.

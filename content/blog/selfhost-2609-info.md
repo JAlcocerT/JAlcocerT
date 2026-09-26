@@ -1,5 +1,5 @@
 ---
-title: "Selfhosted Information flow"
+title: "Selfhosted Information flow with Omarchy"
 date: 2026-09-19T09:20:21+01:00
 draft: false
 tags: ["FilesMD","Forgejo","Zetlekasten","No Hello x Async","SoloPreneur CheckList"]
@@ -550,7 +550,6 @@ You can also connect your airpods [via plugins](https://plugins.omarchy.org/expl
 * https://github.com/patcastle/omarchy-battery-health
 * https://plugins.omarchy.org/plugin.html?id=io.github.aryan-techie.bluetooth
 * https://plugins.omarchy.org/plugin.html?id=io.github.heyimhere.hardware-panel
-
 
 ```sh
 scp -P 2022 dhh@127.0.0.1:/home/dhh/Downloads/wiki-technitium.md /home/jalcocert/Desktop/

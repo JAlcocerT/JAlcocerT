@@ -250,9 +250,7 @@ That is a solid first OSS framework foundation.
 
 See `mbsd-examples/docs/release-plan.md:73`
 
-{{% details title="Houdini vs Blender 🚀" closed="true" %}}
-
-
+{{% details title="MBSD Release Plan 🚀" closed="true" %}}
 
 New ladder:
 
@@ -271,7 +269,6 @@ New ladder:
 0.8.0 -> limited 3D dynamics preview
 0.9.x -> integrations, case studies, validation stories
 1.0.0 -> stable public API and honest capability boundary
-
 
 mbsd-core branch stack:
 
@@ -330,7 +327,7 @@ Verification:
 - Core: 36 passed, examples ran, Ruff clean.
 - Examples: 27 passed, all examples ran, gallery generated, Ruff clean.
 
-I placed a private PWA roadmap at: `private-pwa-roadmap.md`
+> I placed a private PWA roadmap at: `private-pwa-roadmap.md`
 
 Important caveat remains: this is a limited translational constrained spatial dynamics solver with fixed orientations. 
 
