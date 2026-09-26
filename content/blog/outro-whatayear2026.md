@@ -553,6 +553,7 @@ Later a [PySide6 (Qt) for the tello](https://gitlab.com/fossengineer1/dron/-/tre
 
 > [TKinter post](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-python/), [Go post](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails), [Rust post](https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust)
 
+> > > A truly universal native desktop binary—one file running unchanged on Windows, Linux, and macOS—does not practically exist
 
 {{< youtube "M03HU4DWhyE" >}}
 

@@ -1000,13 +1000,6 @@ awk '
 * https://github.com/JAlcocerT/mbsd-examples/releases/tag/v0.5.0
 
 
-- Project Chrono/PyChrono
-- Exudyn
-- Siconos
-- OpenModelica
-- MBDyn
-- preCICE
-
 ## Others
 
 * https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#productized-services
@@ -1055,7 +1048,6 @@ docker compose -f docker-compose.prod.yml up -d --build
 ```
 
 {{< /details >}}
-
 
 2. With outbound marketing: get leads, enrich leads, reachout via email
 
@@ -1123,25 +1115,24 @@ I created a formbricks flow to validate precisely that with [this form](https://
 {{< details title="Formbricks x JSON form 📌" closed="true" >}}
 
 Flow I made them go through:
-  1. Who they are     
-  2. One-sentence idea
-  3. Actual stage: raw, researched, talked to buyers, pre-sold, shipped, revenue                           
-  4. Buyer clarity
-  5. Evidence: paid, pilot, calls, waitlist, competitors, none
-  6. Pain intensity
-  7. Concrete paid outcome              
-  8. First 10-buyer distribution path            
-  9. What exists today
-  10. 14-day commitment
-  11. Biggest blocker              
+
+1. Who they are     
+2. One-sentence idea
+3. Actual stage: raw, researched, talked to buyers, pre-sold, shipped, revenue                           
+4. Buyer clarity
+5. Evidence: paid, pilot, calls, waitlist, competitors, none
+6. Pain intensity
+7. Concrete paid outcome              
+8. First 10-buyer distribution path            
+9. What exists today
+10. 14-day commitment
+11. Biggest blocker              
 12. Contact info 
 
 
-The intent is to classify people into: raw idea, needs validation, ready to test, ready to build, or     
-already commercial. 
+The intent is to classify people into: raw idea, needs validation, ready to test, ready to build, or already commercial. 
 
-It deliberately exposes weak ideas by asking for buyer clarity, evidence,
-distribution, and commitment 
+It deliberately exposes weak ideas by asking for buyer clarity, evidence, distribution, and commitment 
                                        
 ```sh
 python .agents\skills\formbricks-as-code\scripts\validate_survey.py forms\idea-state-intake.json --funnel
@@ -1258,36 +1249,6 @@ flowchart LR
 ```
 
 Also, the daily notes have stopped to flow here and the `cv-laitex` similarly, just to be part of a personal / career folders inside my services.
-
-### Case Studies
-
-
-#### Electronic Design
-
-#### Clarity of Execution
-
-Working in D&A?
-
-Go ask unconfortable [questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/): *smart or it does NOT ship*
-
-* https://why-postmortem-checks.pages.dev
-* https://pm-pdm-checks.pages.dev
-
-You might not know yet, but you need **proper [governance](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/governance.md)**.
-
-You cant be an AI first company before you are a data ready team.
-
-To be a data ready team, you need proper RACI model across product, architecture and delivery.
-
-And to even get started: you need to have some kind of logic
-
-Example: a date is not a product definition
-<!-- 
-https://youtu.be/K-eXcT1XgdE -->
-
-{{< youtube "K-eXcT1XgdE" >}}
-
-If you are still working in a `9-5` while working in your free time to make your business, make sure to have a **clear picture** of what [your game is](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/my-game.md) and a [playbook to execute](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/playbook.md).
 
 ---
 

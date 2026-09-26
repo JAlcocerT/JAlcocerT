@@ -106,6 +106,15 @@ $$
 $$
 
 
+### Fluids
+
+[Betz law](https://jalcocert.github.io/JAlcocerT/fluids/#betzs-law-and-the-limits-of-fluid-energy-extraction), [Bernuli](https://jalcocert.github.io/JAlcocerT/fluids/#bernuli), Euler, [volumetric efficiency](https://jalcocert.github.io/JAlcocerT/fluids/#volumetric-efficiency)
+
+### Aero
+
+https://jalcocert.github.io/JAlcocerT/aerospace-101/#aerodynamics
+https://jalcocert.github.io/JAlcocerT/aerospace-101/#propulsion
+
 ### Sailing
 
 Sailing...3 times faster than wind speed?
@@ -272,6 +281,8 @@ I used Wolfram and Matlab during my studies.
 
 
 ### Analogies
+
+
 
 
 ---

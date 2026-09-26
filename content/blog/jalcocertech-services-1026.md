@@ -11,8 +11,6 @@ url: 'jalcocertech-services-oct'
 
 Still thinking on headcounts to mess around with a project instead of [getting ~~shit done~~ outcomes](#choosing-my-wow)?
 
-
-
 **Intro**
 
 * WHY Im writting this post: *a*
@@ -76,6 +74,22 @@ Its been few weekly releases for the multi body OSS framework:
 
 * https://github.com/JAlcocerT/mbsd-core
 * https://ebooks.jalcocertech.com/books/mechanism-analytics/
+
+
+There are other oss fwks with interesting potential to have a look:
+
+* https://www.mbdyn.org/
+  * https://github.com/zanoni-mbdyn/blendyn
+
+MBDyn (https://www.mbdyn.org/) graphical post-processor for blender (https://www.blender.org/)
+
+* Some people put together mbd x fem - https://mbdfem.com/ 
+- Project Chrono/PyChrono
+- Exudyn
+- Siconos
+- OpenModelica
+- MBDyn
+- preCICE
 
 ### Energy
 
@@ -159,10 +173,14 @@ This setup is working quite nicely thanks to skills:
 
 ## Conclusions
 
+Making questions is the first step.
+
+Then its about making good questions, like:
+
 * Stop asking "Do they see it?
 * Start asking "Is this priced correctly?"   
 
-
+If you have questions, reach out:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
@@ -237,6 +255,34 @@ The move is to operate cleanly inside it:
   use the job for cashflow and evidence;                                                                   
   save your real leverage for places where upside is explicit.      
 
+### Case Studies
+
+#### Electronic Design
+
+#### Clarity of Execution
+
+Working in D&A?
+
+Go ask unconfortable [questions](https://jalcocert.github.io/JAlcocerT/questions-for-engineers/): *smart or it does NOT ship*
+
+* https://why-postmortem-checks.pages.dev
+* https://pm-pdm-checks.pages.dev
+
+You might not know yet, but you need **proper [governance](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/governance.md)**.
+
+You cant be an AI first company before you are a data ready team.
+
+To be a data ready team, you need proper RACI model across product, architecture and delivery.
+
+And to even get started: you need to have some kind of logic
+
+Example: a date is not a product definition
+<!-- 
+https://youtu.be/K-eXcT1XgdE -->
+
+{{< youtube "K-eXcT1XgdE" >}}
+
+If you are still working in a `9-5` while working in your free time to make your business, make sure to have a **clear picture** of what [your game is](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/my-game.md) and a [playbook to execute](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/playbook.md).
 
 
 ---

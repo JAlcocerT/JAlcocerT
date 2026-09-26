@@ -146,9 +146,9 @@ Crazy....
 
 This is being the year of bridging concepts.
 
-I would have never guessed how, where and when I would be coming back to them.
+I would have never guessed *how, where and when* I would be coming back to them.
 
-The executing speed is less of a problem
+The executing speed is less of a problem nowadays
 
 The blocker is being more about knowledge management.
 
@@ -318,13 +318,14 @@ While the "math" matches up beautifully for **Laminar Flow** (smooth water), it 
 
 **Can FreeCAD do this?**
 
-Yes. FreeCAD has two relevant workbenches:
+FreeCAD has two relevant workbenches:
 
 - **FEM Workbench** — structural and thermal FEM via CalculiX and Elmer solvers, with a GUI mesh generator. Good for static stress and simple heat transfer, not CFD.
-
 - **CfdOF Add-on** — a CFD workbench built on top of **OpenFOAM**. 
 
-You define geometry in FreeCAD, mesh it (SnappyHexMesh or cfMesh), set boundary conditions, and run OpenFOAM in the background. Visualisation is done via ParaView. 
+You define geometry in FreeCAD, mesh it (SnappyHexMesh or cfMesh), set boundary conditions, and run OpenFOAM in the background. 
+
+Visualisation is done via ParaView. 
 
 > This is the closest you get to a free ANSYS Fluent workflow.
 

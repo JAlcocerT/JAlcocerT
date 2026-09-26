@@ -125,7 +125,7 @@ https://www.youtube.com/watch?v=dFudZiQ5ocY -->
 
 ## Conclusions
 
-I got [this main.py](https://gitlab.com/fossengineer1/dron/-/blob/main/main.py?ref_type=heads) to control the DJI Tello via python CLI while seeing the camera feed.
+I got [this main.py](https://gitlab.com/fossengineer1/dron/-/blob/main/main.py?ref_type=heads) to control the **DJI Tello via python CLI** while seeing the camera feed.
 
 Wouldnt it be nice to do a *come back* to ~~electrical~~ engineering?
 

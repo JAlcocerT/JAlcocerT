@@ -271,9 +271,7 @@ Here's a breakdown of some of the most popular options: **Key Python GUI Framewo
 * **Flet:**
     * Flet is a framework that enables you to build cross platform applications, including desktop applications. It is based on flutter, and allows for very quick UI development.
 
-* https://pypi.org/project/PyAutoGUI/
-
-**Key Considerations:**
+> https://pypi.org/project/PyAutoGUI/
 
 * **Cross-platform compatibility:** If you need your application to run on multiple operating systems, choose a framework that supports cross-platform development.
 * **Complexity:** Consider the complexity of your application and choose a framework that matches your needs. Tkinter is suitable for simple applications, while PyQt/PySide and wxPython are better for more complex ones.
@@ -288,17 +286,13 @@ But people bet on that: see that people in Polymarket gave Mercedes a premium ev
 
 `https://polymarket.com/event/fed-decision-in-april`
 
-The primary smart contract address for Polymarket on the Ethereum network is:
-
-0x0d08db747095e91780711724267a183e8522aa64 
+The primary smart contract address for Polymarket on the Ethereum network is: `0x0d08db747095e91780711724267a183e8522aa64`
 
 * https://etherscan.io/address/0x0d08db747095e91780711724267a183e8522aa64
 
 Additionally, Polymarket uses proxy wallet contracts and multisig safes for user accounts, which are deployed on the Polygon network.
 
-For example, a Polymarket proxy wallet factory address on Polygon is:
-
-0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
+For example, a Polymarket proxy wallet factory address on Polygon is: `0xaB45c5A4B0c941a2F231C04C3f49182e1A254052`
 
 * https://polygonscan.com/address/0xaB45c5A4B0c941a2F231C04C3f49182e1A254052
 
