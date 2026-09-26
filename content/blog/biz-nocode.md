@@ -32,7 +32,6 @@ You can go for a full fledge CRM.
 
 > Or...with No Code DBs x BaseRow?
 
-
 ### CRM
 
 Should you use GHL? Close?
@@ -67,9 +66,9 @@ For PDFs you have:
 
 > agpl | Take potentially dangerous PDFs, office documents, or images and convert them to safe PDFs 
 
-[Notion](https://www.notion.com/product/notion-for-product-development)? Obsidian?
+[Notion](https://www.notion.com/product/notion-for-product-development)? 
 
-Or...
+Obsidian? Or...
 
 <!-- 
 https://youtu.be/jyzcDIudczA 
@@ -102,7 +101,7 @@ wget -P ~/Applications https://github.com/logseq/logseq/releases/download/0.10.1
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-| Aspect | **Logseq** | Affine | Joplin  |
+| **Aspect** | **Logseq** | Affine | Joplin  |
 |--------|--------|--------|--------------------------|
 | **Storage** | Flat Markdown files (git-native) | Database/blocks (export MD) | SQLite (export MD)  [slashdot](https://slashdot.org/software/comparison/Joplin-vs-Logseq/) |
 | **Paradigm** | Block outliner, bi-links, queries | Canvas + docs + DBs (Notion-like) | Hierarchical notebooks/tags  [zblesk](https://zblesk.net/blog/tried-and-ditched-logseq-and-affine/) |
@@ -113,13 +112,11 @@ wget -P ~/Applications https://github.com/logseq/logseq/releases/download/0.10.1
 | **Mobile** | Good Android/iOS | Beta web/mobile | Strong cross-platform  [slashdot](https://slashdot.org/software/comparison/Joplin-vs-Logseq/) |
 | **Learning Curve** | Medium (queries/templates) | Low-medium | Low  [zblesk](https://zblesk.net/blog/tried-and-ditched-logseq-and-affine/) |
 
-See also [memos](https://usememos.com/): https://github.com/usememos/memos which is also markdown native **and MIT**.
+Be prepared for **more vibe coded tools** to appear, like: `https://github.com/OlaProeis/ironPad`
 
-And be prepared for **more vibe coded tools** to appear, like: https://github.com/OlaProeis/ironPad
+>  Ironpad is a local-first, file-based project management system. Rust backend (Axum), Vue 3 frontend, markdown files as the database, Git integration for versioning 
 
->  Ironpad is a local-first, file-based project management system I've been building with AI. Rust backend (Axum), Vue 3 frontend, markdown files as the database, Git integration for versioning 
-
-If you are starting out some new business adventure: *logseq + markdown + git* can be your friend.
+If you are starting out some **new business adventure**: *logseq + markdown + git* can be your friend.
 
 Plus, you can use it via Nekko in few environment via web.
 

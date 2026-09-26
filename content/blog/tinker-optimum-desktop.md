@@ -73,6 +73,8 @@ If I will ever want to share this, I dont want to do it via webapp and have a co
 
 ### Creating
 
+As I was tinkering...wanted to try **python desktop capabilities via tkinter**
+
 ```sh
 pip install customtkinter
 cd 4-apexsim-desktop && python3.10 main.py
@@ -84,7 +86,7 @@ cd 4-apexsim-desktop && python3.10 main.py
 
 ## Conclusions
 
-I manage to make this as simple as:
+I manage to make this as simple as: https://github.com/JAlcocerT/optimum-path/tree/master/4-apexsim-desktop
 
 ```sh
 git clone https://github.com/JAlcocerT/optimum-path

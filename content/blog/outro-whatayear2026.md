@@ -547,10 +547,12 @@ all without having to use closed sourced apps that in most cases dont work on Li
 
 The results?
 
-Well, a first [Go Desktop App](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails) that makes this: *with Wails*
+Well, a [first tkinter python desktop app](https://github.com/JAlcocerT/optimum-path/tree/master/4-apexsim-desktop), then a [Go x Wails Desktop App](https://github.com/JAlcocerT/go-karting).
 
-* https://github.com/JAlcocerT/go-karting
-* https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust
+Later a [PySide6 (Qt) for the tello](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-version), for which I made the Go x Wails and Rust x Tauri versions
+
+> [TKinter post](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-python/), [Go post](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails), [Rust post](https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust)
+
 
 {{< youtube "M03HU4DWhyE" >}}
 
@@ -671,6 +673,9 @@ Talking about trends, what happened with crypto bros?
 The sha256 still holds strong, it was all about hashing https://www.devtoolbox.co/tools/hash-generator
 
 And electrum, metamask and mymonero kept working.
+
+Polymarket was right [about Mercedes in preseason](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-python/#who-will-win-f1-2026), but not about Spain vs France :)
+
 
 16. Tech videos were not a priority this year.
 

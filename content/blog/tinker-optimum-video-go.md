@@ -9,7 +9,7 @@ url: 'gopro-telemetry-desktop-with-go'
 
 **TL;DR**
 
-I was not expecting to do cool desktop apps.
+I was not expecting to do cool [desktop apps with tkinter](https://github.com/JAlcocerT/optimum-path/tree/master/4-apexsim-desktop)
 
 Nor using **Go Lang**.
 
@@ -73,7 +73,6 @@ go version
 ```
 
 ```sh
-
 sudo apt install -y libgtk-3-dev libwebkit2gtk-4.1-dev build-essential
 go install github.com/wailsapp/wails/v3/cmd/wails3@latest
 
@@ -207,16 +206,12 @@ Summary Table: Which Charting Library?
 2.  **Type Safety:** Wails v3 (the current standard in 2026) creates TypeScript models for your Go structs. If you change a data field in Go, your Vue code will immediately show an error if it doesn't match.
 3.  **Live Development:** You get the "Web Dev" experience. When you change a Vue file, the desktop app updates instantly (Hot Reload) without you having to restart the Go backend.
 
----
-
-### Comparison: Vue + Go vs. Vue + Rust (Tauri)
+#### Comparison: Vue + Go vs. Vue + Rust (Tauri)
 
 Since both use web technologies for the UI, the choice usually comes down to the backend language:
 
 * **Wails (Go + Vue):** Use this if you want **maximum development speed**. Go is much easier to write than Rust, and the "glue" between the UI and the backend is more automated in Wails.
 * **Tauri (Rust + Vue):** Use this if you need **maximum security and performance**. Rust offers finer control over memory and slightly smaller binaries, but it will take you longer to write the code.
-
-Summary
 
 If you already know a bit of Vue.js frontend, **Wails is likely your best path**. 
 
@@ -273,41 +268,43 @@ make deb
 cp bin/glasshud-x86_64.AppImage ~/Applications/ #this is picked up by appimagelauncher
 ```
 
-The size difference is the key trade-off in practice: the AppImage bundles GTK + shared libraries (118 MB), while the .deb is tiny (4.4 MB) because it relies on the system 
-  having those libraries already.                                                                                                                                             
-                                                                                                                                                                              
-  For your friend:                                                                                                                                                            
-  - Send glasshud-x86_64.AppImage → they run chmod +x glasshud-x86_64.AppImage && ./glasshud-x86_64.AppImage, then install ffmpeg + exiftool if missing
-  - Send glasshud.deb → they run sudo apt install ./glasshud.deb and apt handles everything including ffmpeg and exiftool automatically           
+The size difference is the key trade-off in practice: the AppImage bundles GTK + shared libraries (118 MB), while the .deb is tiny (4.4 MB) because it relies on the system having those libraries already. 
+
+For yourfriend:
+
+- Send glasshud-x86_64.AppImage → they run chmod +x glasshud-x86_64.AppImage && ./glasshud-x86_64.AppImage, then install ffmpeg + exiftool if missing
+- Send glasshud.deb → they run sudo apt install ./glasshud.deb and apt handles everything including ffmpeg and exiftool automatically           
 
 ```sh
 time make exe
 ```
 
 bin/glasshud.exe — 11 MB, built from Linux with no Docker needed.                       
-                                                                                                                                                                              
-make exe is ready. What your Windows friend needs to do:                                                                             
+
+make exe is ready.
+
+What your Windows friend needs to do:                                                                             
                                                                                                                                                                   
 1. Install ffmpeg and exiftool (one-time)
+
+```md
 winget install Gyan.FFmpeg                                                                                                                                                  
 winget install OliverBetz.ExifTool                                                                                                                                          
+```
 
 2. Double-click glasshud.exe — WebView2 (Edge) is already built into Windows 10/11 so the UI works out of the box.  
-
-
 
 --- 
 
 ## FAQ
 
-
-Yes, absolutely. In 2026, all four languages—**Rust, Python, Go, and C**—can be shipped cross-platform (Windows, macOS, and Linux) from a single codebase.
+All four languages—**Rust, Python, Go, and C**—can be shipped cross-platform (Windows, macOS, and Linux) from a single codebase.
 
 However, "how" they achieve this varies significantly. 
 
 Some feel like a natural part of the OS, while others feel like a "web page in a box."
 
-### Cross-Platform Comparison (2026)
+### Cross-Platform Comparison
 
 | Language | Primary Frameworks | Distribution Difficulty | Resulting Experience |
 | :--- | :--- | :--- | :--- |
@@ -319,6 +316,7 @@ Some feel like a natural part of the OS, while others feel like a "web page in a
 1. Rust: The Modern Champion
 
 Rust is currently the favorite for cross-platform desktop apps because of **Tauri**. 
+
 * **How it works:** It uses the "Webview" already installed on your computer (Edge on Windows, Safari on Mac). This means you don't have to ship a whole browser with your app.
 * **Shipping:** You get a single `.exe` or `.app` file that is often under 10MB.
 

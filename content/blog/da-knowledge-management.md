@@ -52,7 +52,7 @@ These are some knowledge management tools, noting their data storage method:
 
 * **Joplin:** A feature-rich, open-source note-taking and to-do app that uses a **database** (SQLite by default, or other databases via sync targets) to store notes, with robust Markdown support and synchronization.
 
-* **Logseq:** An open-source, local-first knowledge base and outliner that stores its content as **Markdown or Org-mode flat files** directly on your filesystem, focusing on bi-directional linking and block-based editing.
+* **Logseq:** An open-source, **local-first** knowledge base and outliner that stores its content as **Markdown or Org-mode flat files** directly on your filesystem, focusing on bi-directional linking and block-based editing.
 
 * **BookStack:** A user-friendly, self-hosted platform ideal for organizing documentation and wikis, relying on a **database** (MySQL/MariaDB) to manage its structured content.
 
@@ -145,11 +145,11 @@ The Verdict
 
 ## Conclusions
 
-To edit collaboratively, see https://github.com/ether/etherpad-lite
+To edit collaboratively, see `https://github.com/ether/etherpad-lite`
 
 > Apache v2 |  Etherpad: A modern really-real-time collaborative document editor. 
 
-Or: https://rustpad.io/ at https://github.com/ekzhang/rustpad
+Or: `https://rustpad.io/` at `https://github.com/ekzhang/rustpad`
 
 Efficient and minimal collaborative code editor, self-hosted, **no database required**
 
@@ -157,7 +157,7 @@ Rustpad is an open-source collaborative text editor based on the operational tra
 
 Share a link to this pad with others, and they can edit from their browser while seeing your changes in real time.
 
-Built using Rust and TypeScript. See the GitHub repository for details.
+Built using Rust and TypeScript.
 
 If you are looking for simplicity, have a look to the **flat file and local first** options, like [raneto](https://github.com/JAlcocerT/Home-Lab/tree/main/raneto) or:
 

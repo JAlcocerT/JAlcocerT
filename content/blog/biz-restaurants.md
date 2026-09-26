@@ -23,8 +23,6 @@ AI search engine with web, news, and images. You will need firecrawl and groq Ap
 
 https://github.com/JAlcocerT/markdown-plus-plus
 
-https://github.com/usememos/memos
-
 https://github.com/ZhFahim/anchor
 
 Why was so hard to have an offline editor like: https://app.files.md/

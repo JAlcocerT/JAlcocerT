@@ -9,12 +9,15 @@ url: 'jalcocertech-services-update'
 
 **Tl;DR**
 
-Throughput be like.
+Pure throughput be like.
 
 **Intro**
 
 * WHY Im writting this post: *Bc I was supposed to launch [a mbsd fwk here](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics), but I just [released an ebook](https://ebooks.jalcocertech.com/books/mechanism-analytics/) so far*
 * What [Ive learnt](#conclusions) with it: *Ive ended up following the roadmap for [my mbsd oss fwk](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#multi-body-systems-dynamics-dot-com) and with a good [foundation for outbound marketing](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#attract-and-convert)*
+
+
+## HomeLab x Agentic Workflows
 
 As always i go to termix and see whats going on:
 
@@ -65,12 +68,14 @@ curl -L \
 I had an [](https://fossengineer.com/hermes-agent-self-improving-ai-agent/) that pushed to [this repo](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101) after I reviewed the quality at my local Forgejo.
 
 ```sh
+#  ssh -T git@gitlab.com
+
 ssh -T -o BatchMode=yes forgejo-home
 # gh auth status #I disabled mine to avoid conflicts while tinkering
 ```
 
 * Get a repo
-* Then made it available at forgejo for the agent http://192.168.1.2:3034/hermesagent/electronics-101
+* Then made it available at forgejo for the agent `http://192.168.1.2:3034/hermesagent/electronics-101`
 * Then put it back to [gh here](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/electronics-101)
 * And test with https://webaudit.jalcocertech.com/
 
@@ -104,7 +109,8 @@ SSH Configuration Found
 
 The local SSH config contains:
 
-```sshconfig
+```md
+sshconfig
 Host forgejo-home
     HostName 192.168.1.2
     Port 2235
@@ -219,8 +225,6 @@ Final Result: SSH-based Forgejo write access is confirmed for `hermesagent` on t
 {{% /details %}}
 
 
-
-
 [Herdr](https://fossengineer.com/herdr-terminal-agent-multiplexer/) was interesting on top of tmux
 
 coming from the [experiment on heat pump viability](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/#the-experiment)
@@ -228,7 +232,6 @@ coming from the [experiment on heat pump viability](https://jalcocert.github.io/
 and the [data driven insulation](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/)
 
 ![alt text](/blog_img/mechanics/heat_pump.gif)
-
 
 Coming from [this post](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/).
 
@@ -504,6 +507,8 @@ How They Compare & Work Together
 
 
 ### IoT
+
+Ive put together a DIY/Custom HA version that summarizes all my home sensor, including thre Zigbee ones:
 
 ```sh
 cd ./poc/iot-dashboard

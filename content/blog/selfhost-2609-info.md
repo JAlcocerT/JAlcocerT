@@ -78,7 +78,18 @@ Earlier this year I got my [read books notes distilled](https://jalcocert.github
 
 ### Tools
 
-https://github.com/hedgedoc/hedgedoc
+Earlier this year I [explored some note tools: Affine, Joplin and logseq](https://jalcocert.github.io/JAlcocerT/no-code-tools-for-business/#note-tools), i kept the latter focusing in the pure .md and git capabilities.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/joplin" title="Joplin | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/logseq" title="LogSeq | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Last year, [as knowledge management tools](https://jalcocert.github.io/JAlcocerT/knowledge-management/#knowledge-management-tools) I covered: Raneto, Silverbullet
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Business/Notes" title="Note Tools | Docker Configs 🐋 ↗" >}}
+    {{< card link="https://fossengineer.com/selfhostable-note-taking-tools/" title="OSS Note taking tools ↗" >}}
+{{< /cards >}}
 
 
 ### The Indie Way
@@ -89,11 +100,13 @@ Ill assume that you are fine with `.md` files
 
 Bc why wouldnt you at this point.
 
-
-
 #### YT Summaries
 
 That's exactly what ive done around this Hormozi video *one more time*
+
+```sh
+cd ./poc/yt-distil
+```
 
 #### Audio Recaps
 
