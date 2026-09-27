@@ -116,6 +116,8 @@ $$
 
 [Betz law](https://jalcocert.github.io/JAlcocerT/fluids/#betzs-law-and-the-limits-of-fluid-energy-extraction), [Bernuli](https://jalcocert.github.io/JAlcocerT/fluids/#bernuli), Euler, [volumetric efficiency](https://jalcocert.github.io/JAlcocerT/fluids/#volumetric-efficiency)
 
+> https://github.com/JAlcocerT/poc/tree/main/physics-pumps
+
 ### Aero
 
 https://jalcocert.github.io/JAlcocerT/aerospace-101/#aerodynamics

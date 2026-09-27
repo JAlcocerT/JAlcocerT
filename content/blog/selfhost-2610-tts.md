@@ -32,6 +32,10 @@ https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#sunoai
 [3](https://github.com/ayeshabasit/AI-Music-Generator)
 
 
+## Conclusions
+
+### HomeLab Updates 1026
+
 ---
 
 
@@ -44,6 +48,15 @@ https://github.com/lfnovo/open-notebook
 https://github.com/Priveetee/TypeType
 
 `yt-distill` poc
+
+
+
+### The Software for D&A
+
+#### MicroControllers
+
+
+#### In the server
 
 
 # Project Learnings — fossengineer.com

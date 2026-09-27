@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-10-02T09:20:21+01:00
+date: 2026-09-27T10:20:21+01:00
 draft: false
 tags: ["PIO x BDD x WoW","JAlcocerTech Leads","PDLC","DRI x DACI x RACI"]
 description: 'You are not asking enough questions.'
@@ -11,9 +11,11 @@ url: 'jalcocertech-services-oct'
 
 Still thinking on headcounts to mess around with a project instead of [getting ~~shit done~~ outcomes](#choosing-my-wow)?
 
+https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/#offer-configuration
+
 **Intro**
 
-* WHY Im writting this post: *a*
+* WHY Im writting this post: *To continue the Home x IoT Improvements*
 * What [Ive learnt](#conclusions) with it: *Ive ended up [telling agents the WHY](#pio), not the how, via PIO fwk*
 
 A friend told me once that I will do sth with energy at some point
@@ -100,11 +102,241 @@ https://www.youtube.com/watch?v=eFGkopoCTYY
 
 ### Energy
 
-My TP4056 setup with the ESP32 x DHT11 suffer recently from a full cloudy week.
+My [TP4056 setup](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#home-solar-test-x-tp4056) with the ESP32 x DHT11 suffer recently from a full cloudy week.
 
 I measured the 18650 voltage and it was 3.5V
 
+
+{{< callout type="info" >}}
+After catching one sunny day (27-sept) moved the 5V solar panel south and between 10am-pm went up to
+{{< /callout >}}
+
+Surprise, energy [and geolocation matters](https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/#geo-matters) :O
+```sh
+sqlite3 -header -column /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT device, metric, value, topic, received_at, received_ms FROM readings WHERE device='esp32' ORDER BY received_ms DESC LIMIT 1;"
+
+sqlite3 -header -column /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "WITH intervals AS (SELECT device, topic, received_ms - LAG(received_ms) OVER (PARTITION BY topic ORDER BY received_ms) AS delta_ms FROM readings WHERE device IN
+  │ ('esp32','pico')), normal AS (SELECT * FROM intervals WHERE delta_ms BETWEEN 1 AND 600000), counts AS (SELECT device, topic, ROUND(delta_ms/1000.0) AS seconds, COUNT(*) AS occurrences, ROW_NUMBER() OVER (PARTITION BY device, topic ORDER BY COUNT(*) DESC,
+  │ ROUND(delta_ms/1000.0)) AS rn FROM normal GROUP BY device, topic, ROUND(delta_ms/1000.0)) SELECT n.device, n.topic, COUNT(*) AS intervals, ROUND(AVG(n.delta_ms)/1000.0,2) AS avg_seconds, ROUND(MIN(n.delta_ms)/1000.0,2) AS min_seconds, ROUND(MAX(n.delta_ms)/1000.0,2) AS
+```
+
+
+- ESP32: approximately every 64 seconds (average ~67 seconds).
+- Pico W: approximately every 60 seconds.
+
+Each device sends temperature and humidity as separate MQTT messages during each cycle. Long offline gaps were excluded.
+
+
+• Based on the observed ~64-second cycle, I’d infer:
+
+  - ~60 seconds deep sleep
+  - ~4 seconds booting, reconnecting to Wi‑Fi/MQTT, reading and publishing
+  - ~1,350 cycles/day
+  - ~1.5 hours/day awake
+
+Assuming 80–120 mA average while awake and near-ideal deep sleep:
+
+Daily charge ≈ 120–180 mAh
+Daily energy ≈ 0.40–0.60 Wh
+
+A normal ESP32 development board’s regulator, USB chip and LEDs may raise this to roughly:
+
+≈ 0.5–0.9 Wh/day
+≈ 140–260 mAh/day from a 3.7 V battery
+
+So my practical estimate is around 0.6 Wh/day. A 2,000 mAh Li-ion battery would likely last approximately 7–12 days after conversion losses.
+
+The ESP32 chip itself draws about 10 µA in deep sleep, but Wi‑Fi receive uses ~95–100 mA and transmission peaks at 180–240 mA. Espressif ESP32 datasheet (https://documentation.espressif.com/esp32_datasheet_en.html)
+
+The frequent Wi‑Fi reconnections dominate consumption. Extending sleep from 1 minute to 5 minutes could reduce daily usage by roughly 75–80%.
+
+{{< callout type="warning" >}}
+A short deepsleep is not efficient as connecting back to wifi requires an energy peak. So upgraded [this esp32 script](https://github.com/JAlcocerT/poc/blob/main/iot-rpi-dht/scripts-microcontrollers/firmware-esp32/esp32-dht11-mqtt-emqx-deepsleep.cpp) to this one that pushes every 10minutes.
+{{< /callout >}}
+
+
+• The Pico W appears to remain connected to Wi‑Fi between its one-minute publications. For that setup, I’d estimate:
+
+  - Wi‑Fi power saving enabled: ~20–35 mA average
+  - Power saving disabled/busy loop: ~40–70 mA average
+  - Likely daily energy: ~2.5–6 Wh/day
+  - Practical midpoint: ~4 Wh/day
+
+  That is roughly 5–8× your deep-sleeping ESP32.
+
+  The Pico W’s CYW43439 radio can average below 1.3 mA in Wi‑Fi power-save mode, but active receive uses ~37–43 mA and transmission can peak above 270 mA; the RP2040 and board add their own consumption. 
+
+  A 2,000 mAh Li-ion might therefore last only around 1–3 days. If the Pico disconnects and enters genuine low-power sleep between readings, consumption could be reduced substantially.
+
+ If the Pico W truly deep-sleeps for 60 seconds, powers down the Wi‑Fi chip, then wakes and reconnects, I’d estimate:
+
+  Awake/reconnecting: 4–6 seconds per cycle
+  Daily consumption:  ~0.4–0.9 Wh
+  Battery usage:       ~120–240 mAh/day at 3.7 V
+
+  A practical midpoint is ~0.6 Wh/day, similar to your ESP32. A 2,000 mAh battery might last roughly 8–14 days.
+
+  Important: RP2040 deep sleep is around 180 µA, but the CYW43439 radio must also be explicitly powered down; otherwise consumption will be much higher. Raspberry Pi documentation (https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html)
+
+  Increasing the sleep interval would make a large difference:
+
+  - Every 1 minute: ~0.6 Wh/day
+  - Every 5 minutes: ~0.15–0.25 Wh/day
+  - Every 15 minutes: ~0.07–0.15 Wh/day
+
+Wi‑Fi reconnection, rather than the sensor reading or MQTT publication, dominates the energy usage.
+
+After having these for several weeks inside and outside home, now i can do **per hour checks of T and H**:
+
+```sh
+  sqlite3 -header -column \
+  /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite \
+  "WITH hourly AS (
+    SELECT
+      device,
+      metric,
+      strftime('%Y-%m-%d %H:00:00', received_at) AS hour_bucket,
+      AVG(value) AS avg_value
+    FROM readings
+    WHERE received_ms >= (strftime('%s','now') - 7*24*60*60)*1000
+      AND topic IN (
+        'esp32/temperature/dht11',
+        'esp32/humidity/dht11',
+        'pico/temperature/dht22',
+        'pico/humidity/dht22'
+      )
+    GROUP BY device, metric, hour_bucket
+  ),
+  paired AS (
+    SELECT
+      e.hour_bucket,
+      e.metric,
+      e.avg_value AS esp32_value,
+      p.avg_value AS pico_value
+    FROM hourly e
+    JOIN hourly p
+      ON p.hour_bucket = e.hour_bucket
+     AND p.metric = e.metric
+    WHERE e.device = 'esp32'
+      AND p.device = 'pico'
+  )
+  SELECT
+    hour_bucket,
+    ROUND(MAX(CASE WHEN metric='temperature'
+      THEN esp32_value END), 2) AS esp32_temp,
+    ROUND(MAX(CASE WHEN metric='temperature'
+      THEN pico_value END), 2) AS pico_temp,
+    ROUND(MAX(CASE WHEN metric='temperature'
+      THEN esp32_value-pico_value END), 2) AS temp_diff,
+    ROUND(MAX(CASE WHEN metric='humidity'
+      THEN esp32_value END), 2) AS esp32_humidity,
+    ROUND(MAX(CASE WHEN metric='humidity'
+      THEN pico_value END), 2) AS pico_humidity,
+    ROUND(MAX(CASE WHEN metric='humidity'
+      THEN esp32_value-pico_value END), 2) AS humidity_diff
+  FROM paired
+  GROUP BY hour_bucket
+  HAVING COUNT(DISTINCT metric) = 2
+  ORDER BY hour_bucket;"
+```
+
+This generates all 168 hourly buckets, including hours with no readings:
+
+```sh
+  sqlite3 -header -column \
+  /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite \
+  "WITH RECURSIVE hours(hour_bucket) AS (
+    SELECT datetime(
+      strftime('%Y-%m-%d %H:00:00','now'),
+      '-167 hours'
+    )
+
+    UNION ALL
+
+    SELECT datetime(hour_bucket, '+1 hour')
+    FROM hours
+    WHERE hour_bucket < strftime('%Y-%m-%d %H:00:00','now')
+  ),
+  counts AS (
+    SELECT
+      strftime('%Y-%m-%d %H:00:00', received_at) AS hour_bucket,
+      device,
+      COUNT(*) AS row_count
+    FROM readings
+    WHERE received_ms >=
+          (strftime('%s','now') - 7*24*60*60)*1000
+      AND device IN ('esp32','pico')
+    GROUP BY hour_bucket, device
+  )
+  SELECT
+    h.hour_bucket,
+    CASE WHEN COALESCE(MAX(
+      CASE WHEN c.device='esp32' THEN c.row_count END
+    ),0) > 0 THEN 'yes' ELSE 'no' END AS esp32_pushed,
+
+    COALESCE(MAX(
+      CASE WHEN c.device='esp32' THEN c.row_count END
+    ),0) AS esp32_rows,
+
+    CASE WHEN COALESCE(MAX(
+      CASE WHEN c.device='pico' THEN c.row_count END
+    ),0) > 0 THEN 'yes' ELSE 'no' END AS pico_pushed,
+
+    COALESCE(MAX(
+      CASE WHEN c.device='pico' THEN c.row_count END
+    ),0) AS pico_rows
+
+  FROM hours h
+  LEFT JOIN counts c ON c.hour_bucket = h.hour_bucket
+  GROUP BY h.hour_bucket
+  ORDER BY h.hour_bucket;"
+```
+
+{{< callout type="warning" >}}
+As i have the picoW with home power - No data means the script got stucked = I had a [connectivity problems](https://jalcocert.github.io/JAlcocerT/selfhosted-connectivity/) *yet again*
+{{< /callout >}}
+
+> Yep, im keeping that in [the original 60s picow script](https://github.com/JAlcocerT/poc/commit/4092fdb313e9d5ec3ca980171fe1f261a344e4b4#diff-07fdd9112d53f980a29d956d81694442f796e68a05403fc27616dbbcd0761613) as a feature, *which I detect with the led always ON*, not as a bug to know when my ISP is tricking me ;)
+
+> > But I tweaked [the esp32 logic](https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/#the-esp-logic) yet [again](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer), but keeping [this robust deep sleep and wifi reconnections](https://github.com/JAlcocerT/poc/blob/main/iot-rpi-dht/scripts-microcontrollers/firmware-esp32/low-power-notes.md#flow-diagrams) as that one is outside home and I would not realize as quick that Id need to unplug and plug after a router connection issue
+
+To push [the new script](https://github.com/JAlcocerT/poc/blob/main/iot-rpi-dht/scripts-microcontrollers/firmware-esp32/esp32-dht11-mqtt-emqx-deepersleep.cpp) and [learnings](https://github.com/JAlcocerT/poc/blob/main/iot-rpi-dht/scripts-microcontrollers/firmware-esp32/deeper-sleep-notes.md):
+
+```sh
+cd iot-rpi-dht
+make deepersleep-upload PORT=/dev/ttyACM0 #10 min interval now
+```
+
+Use `mosquitto_sub` to watch MQTT messages live:
+
+```sh
+#mosquitto_sub -h 127.0.0.1 -p 1883 -t '#' -v
+#Only monitor the ESP32:
+mosquitto_sub -h 127.0.0.1 -p 1883 -t 'esp32/#' -v
+#
+#docker run --rm --network host eclipse-mosquitto:2 mosquitto_sub -h 192.168.1.2 -p 1883 -t 'esp32/#' -v
+```
+
+Or both devices:
+
+```sh
+mosquitto_sub -h 127.0.0.1 -p 1883 \
+  -t 'esp32/#' \
+  -t 'pico/#' \
+  -v
+```
+
+This allow the esp32 to push sensor info [when properly connected to your wifi](https://github.com/JAlcocerT/poc/blob/main/iot-rpi-dht/scripts-microcontrollers/firmware-esp32/deeper-sleep-notes.md#temporary-credential-workflow):
+
+```sh
+make deepersleep-upload PORT=/dev/ttyACM0
+```
+
 ### Crops - Agrotech
+
+After getting the watering setup PoC working, I wanted to tinker with the [esp32 wifi connection](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-wifi): beyond [the wifimanager](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-wifi/z-learnings-1-wifimanager.md)
+
+The goal, get all integrated in this *user-friendly* DIY custom dashboard:
 
 ```sh
 cd ./poc/iot-dashboard-v2
@@ -160,6 +392,26 @@ It has a wide range of features, including a built-in gyroscope.
 Oh yea, the leads!
 
 What am i doing about that?
+
+It's all about having a proper leads pipeline:
+
+```sh
+cd ./fossengineer/
+cd ./wait #https://github.com/JAlcocerT/poc/tree/main/genbi-energy-solutions/waitlist
+```
+
+### Webs
+
+I sunseted all custom diy websites from 2024, *as they churned anyways*
+
+Created this thought: `https://github.com/JAlcocerT/poc/tree/main/pwa-margincms`
+
+As a PWA that you can use offline via chrome: https://margin-cms.pages.dev/
+
+With simple gg syncronization via PAT.
+
+> Oh, and you also have the free web audits to show that you have a problem: https://webaudit.jalcocertech.com/
+
 
 ## Case Studies
 

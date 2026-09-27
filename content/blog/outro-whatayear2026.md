@@ -557,6 +557,11 @@ Later a [PySide6 (Qt) for the tello](https://gitlab.com/fossengineer1/dron/-/tre
 
 {{< youtube "M03HU4DWhyE" >}}
 
+{{< callout type="warning" >}}
+Getting rust to work with CNN made me do [this AI architectural recap](https://github.com/JAlcocerT/poc/tree/main/physics-ai)
+{{< /callout >}}
+
+
 12. Which made me go [deeper into maps](https://jalcocert.github.io/JAlcocerT/geo-data-analytics/): **GPX, OSM and GIS**
 
 13. So was coming back to maps, but with animations this time:
@@ -865,6 +870,8 @@ I was not expecting to:
 5. for the n-th time realize that we are not doing good questions at all neither improve our questioning process
 6. still find people at 30+ y.o with the startup mode of 0 earnings now, no reasonable process to get better, but trust me bro that ill reach 150k MRO soon *(and finding ppl who buy those stories)*
 7. Create my [first pcb](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104), with 3d prints around it to encapsulate it
+
+
 
 #### Quotes
 

@@ -1,14 +1,20 @@
 ---
-title: "Grafana Monitoring: Prometheus"
+title: "Grafana Monitoring or DIY?"
 date: 2026-11-01
 draft: false
-tags: ["Homelab","Docker","Self-Hosting","Iotawatt","Prometheus vs Graphite","Grafana vs TelemetryHarbour"]
+tags: ["Homelab","Self-Hosting","Iotawatt","Prometheus vs Graphite","Grafana vs TelemetryHarbour"]
 description: 'Grafana works for IoT Same as for Monitoring a HomeLab'
 url: 'selfhosting-grafana'
 ---
 
 
 **Tl;DR**
+
+
+**Intro**
+
+* Why Im writting this post: *bc I got to know and use grafana several years ago and now its clearly obsolete versus DIY IoT dashboards*
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 You can do very cool things with grafana
 
@@ -23,15 +29,6 @@ https://github.com/iamceeso/zinalog?tab=readme-ov-file
 
 
 * https://docs.telemetryharbor.com/docs/oss-self-hosted/
-
-
-**Tl;DR**
-
-
-**Intro**
-
-* Why Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 <!-- GRAFANA + PROMEt
@@ -327,8 +324,7 @@ mqttx bench pub -c 5000 -t bench/%i
 
 
 
-
-<https://mqttx.app/docs/get-started>
+https://mqttx.app/docs/get-started
 
 ```sh
 docker run -d --name emqx -p 1883:1883 -p 8083:8083 -p 8883:8883 -p 8084:8084 -p 18083:18083 emqx/emqx
@@ -453,7 +449,6 @@ select * from sensor_data_table
 
 ### About Node Red x MQTT
 
-
 Node-RED is a programming tool for wiring together hardware devices, APIs, and online services in new and interesting ways. 
 
 It's built on Node.js, a server-side JavaScript platform, and offers a browser-based flow editor that makes it easy to wire together flows using the wide range of nodes in the palette.
@@ -489,5 +484,6 @@ MQTT provides a light-weight, efficient protocol for communicating between devic
 * https://github.com/traceloop/openllmetry
 * https://github.com/langfuse/langfuse
   
-  Or with LangSmith
+Or with LangSmith
+
 Also DataDog - https://docs.datadoghq.com/llm_observability/ 

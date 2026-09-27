@@ -725,21 +725,11 @@ Battery Voltage Monitoring (Voltage Divider): Add a high-value resistive divider
 
 #### Could this be a product?
 
-{{< callout type="warning" >}}
-Mind 
-{{< /callout >}}
-
-![gemini - watering product sample](/blog_img/electronic/watering-whats-next.jpg)
-
-I mean...sth more...
-
-![alt text](/blog_img/electronic/esp32-pump-poc.jpg)
-
-#### Adding Solar
-
 A successful manual breadboard test proves only the raw power path; designing a board now almost guarantees you will have to pay for a redesign later.
 
 The recommended progression moves from firmware validation to peripheral expansion, followed by prototyping, and finally custom hardware manufacturing:
+
+{{% details title="Next steps 🚀" closed="true" %}}
 
 **1. Finish the Core Software Cycle First (Immediate Next Step)**
 
@@ -767,6 +757,21 @@ You cannot connect a solar panel directly to the BMS.
 * Once the complete system—solar charging, battery sensing, Wi-Fi/MQTT, sleep cycles, and pump switching—has run reliably for several days on the bench, capture the schematic in KiCad or EasyEDA.
 * Route wide power traces for the 12V and motor loops, place mounting holes for your enclosure, and send the gerber files to a fabricator.
 
+{{% /details %}}
+
+
+{{< callout type="warning" >}}
+Mind that this is WIP!
+{{< /callout >}}
+
+![gemini - watering product sample](/blog_img/electronic/watering-whats-next.jpg)
+
+I mean...sth more...
+
+![alt text](/blog_img/electronic/esp32-pump-poc.jpg)
+
+#### Adding Solar
+
 The main difference comes down to how each board manages solar power conversion, efficiency, and battery configuration:
 
 | Feature | **TP4056 (Linear Charger)** | **MPPT Charger (e.g., CN3791 / MP2467)** |
@@ -789,7 +794,9 @@ The main difference comes down to how each board manages solar power conversion,
 | **System Scale** | Best for medium-to-large setups (>200W), multi-panel arrays, and residential/commercial solar. | Best for small systems (<150W–200W), single-panel DIY, RVs, and trickle-charging. |
 | **Cost** | Significantly higher ($40 to $500+) | Very low ($10 to $30) |
 
----
+
+
+{{% details title="MPPT vs PWM 🚀" closed="true" %}}
 
 **MPPT Pros & Cons**
 
@@ -804,8 +811,6 @@ The main difference comes down to how each board manages solar power conversion,
 * **Higher Price Tag:** Complex internal circuitry and microcontrollers make it 3x–5x more expensive than PWM.
 * **Size and Weight:** Larger enclosures, bulkier inductors, and heavier heatsinks.
 * **Marginal Value on Tiny Setups:** Overkill for small (<100W) installations where the extra power gained doesn't justify the controller's cost.
-
----
 
 **PWM Pros & Cons**
 
@@ -847,7 +852,9 @@ To charge that 3S pack from solar, look for:
 * **CN3795 or CN3722:** The multi-cell siblings of the CN3791, designed specifically for adjustable multi-cell lithium packs (including 3S and 4S) with MPPT.
 * **Synchronous Buck-Boost MPPT modules:** Modules using chips like the **LT8490** or **SC8815**, which can take an 18V solar panel and safely step it down to 12.6V CC/CV for your BMS.
 
-Neither—the primary recommended board is a **Synchronous Switching Boost (Step-Up) CC/CV Charger**, not a standard PWM or true MPPT tracker.
+{{% /details %}}
+
+The primary recommended board is a **Synchronous Switching Boost (Step-Up) CC/CV Charger**, not a standard PWM or true MPPT tracker.
 
 | Feature | **Recommended 5V-to-3S Board (e.g., SD35XX / IP2326)** | **Standard Solar PWM** | **Solar MPPT Boost (e.g., SC8815 / LT8490)** |
 | --- | --- | --- | --- |
@@ -879,32 +886,8 @@ In that setup, the **5V panel slowly charges the 18650 pack**, and the **18650 p
 * **Charging Phase (Continuous & Slow):**
 * Sun hits the 5V panel $\rightarrow$ 5V-to-3S boost charger steps 5V up to 12.6V $\rightarrow$ feeds current through `BMS P+` and `BMS P-` $\rightarrow$ BMS charges and balances the three 18650 cells.
 
-
 * **Discharge Phase (On-Demand & Fast):**
 * When ESP32 GPIO23 turns ON the MOSFET, the pump draws its full ~1.7A (20W) directly from the 3S battery pack via `BMS P+`, completely bypassing the solar charger.
-
-**How to Wire It to Your Existing JSON Schematic**
-
-The solar charger simply sits in parallel across the BMS main port:
-
-* **Panel to Charger Input:**
-* Solar Panel (+) $\rightarrow$ Charger `IN+`
-* Solar Panel (-) $\rightarrow$ Charger `IN-`
-
-* **Charger Output to Battery Pack:**
-* Charger `OUT+` $\rightarrow$ Connect to **`BMS_P_PLUS`** (before fuse `F1`, so charging the pack does not depend on the pump fuse).
-* Charger `OUT-` $\rightarrow$ Connect to **`GND`** (`BMS_P_MINUS`).
-
-**The Sizing Rule: Energy Balance**
-
-Because the pump uses 20W and a 5V panel delivers about 2.5W to 5W:
-
-* A 5V / 1A panel produces roughly **5 Watt-hours** per hour of peak sunlight.
-* Running your 20W pump for **3 minutes** consumes only **1 Watt-hour**.
-* That means 1 hour of decent sunlight easily banks enough charge in the 18650s to run several multi-minute pump cycles.
-
-As long as the pump duty cycle is intermittent (e.g., watering plants for a few minutes a day), the 3S 18650 pack acts as the energy buffer while the 5V panel trickles power back in.
-
 
 
 ## SelfHosted IoT Tools
@@ -980,8 +963,10 @@ After writing [about electronics](https://jalcocert.github.io/JAlcocerT/electron
 
 {{< youtube "6McNDPk7-j8" >}}
 
+I made another [tech talk](#tech-talk) around the DIY IoT Dashboard that integrates with [Zigbee](#zigbee)
 
 ```sh
+cd ./poc/iot-dashboard
 #docker system prune -a --volumes
 ```
 
@@ -1048,15 +1033,6 @@ flowchart LR
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
-
-
-### The Software for D&A
-
-#### MicroControllers
-
-
-#### In the server
-
 
 
 ### HomeLab Updates 0826

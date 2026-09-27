@@ -91,6 +91,18 @@ Last year, [as knowledge management tools](https://jalcocert.github.io/JAlcocerT
     {{< card link="https://fossengineer.com/selfhostable-note-taking-tools/" title="OSS Note taking tools ↗" >}}
 {{< /cards >}}
 
+Im putting together sth [between a note tool and git CMS here](https://github.com/JAlcocerT/poc/tree/main/pwa-margincms):
+
+```sh
+cd ./poc/pwa-
+#make serve
+make cf-login
+make cf-project PROJECT=margin-cms  # first deployment only
+make deploy PROJECT=margin-cms
+#  npx --yes wrangler@latest pages project list
+```
+
+> `https://margin-cms.pages.dev/`
 
 ### The Indie Way
 
@@ -238,6 +250,8 @@ nc 192.168.1.18 22
 
 > [ncdu](https://fossengineer.com/ncdu-terminal-disk-usage-analyzer/) has been very useful to check disk space
 
+> > For releasing space `docker system prune -a --volumes` 
+
 I was getting connectivity troubles while testing `iwd`, for which I had to connect via ethernet to resolve as i lost wifi connection:
 
 1. How Ubuntu’s Wi-Fi Architecture Fits Together
@@ -254,7 +268,6 @@ Linux networking works in layers, and understanding which tool operates at which
 [ Kernel & Hardware ]       -->  cfg80211, mac80211, Wi-Fi driver, network card (wlan0)
 
 ```
-
 
 2. Root Cause: Why Installing Impala Broke the Internet
 

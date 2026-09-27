@@ -14,7 +14,7 @@ From [Go](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/
 **Intro**
 
 * WHY Im writting this post: *bc [the tkinter](https://github.com/JAlcocerT/optimum-path/tree/master/4-apexsim-desktop) and [go-karting](https://github.com/JAlcocerT/go-karting) desktop were cool. The [PWA Gopro version with ffmpeg](https://github.com/JAlcocerT/optimum-path/tree/master/overlay-pwa) even more and the [dji tello Qt Desktop](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-version) could be better*
-* What [Ive learnt](#conclusions) with it: *Ive ended up having nice desktop versions to control the tello with [Go](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-go?ref_type=heads), Python QT and [Rust](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-rust?ref_type=heads), including [facedetection ](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-rust-face?ref_type=heads)and [appimage bundle](https://gitlab.com/fossengineer1/dron/-/blob/main/z-learnings-rust.md?ref_type=heads)*
+* What [Ive learnt](#conclusions) with it: *Ive ended up having nice desktop versions to control the tello with [Go](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-go?ref_type=heads), Python QT and [Rust](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-rust?ref_type=heads), including [facedetection ](https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-rust-face?ref_type=heads)and [appimage bundle](https://gitlab.com/fossengineer1/dron/-/blob/main/z-learnings-rust.md?ref_type=heads) and an [AIxCNN recap](https://github.com/JAlcocerT/poc/tree/main/physics-pumps)*
 
 This year I have [used Go to make one of my first desktop apps](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails) *around the GoPro telemetry and ffmpeg*
 
@@ -448,6 +448,55 @@ Documented [rust learnings here](https://gitlab.com/fossengineer1/dron/-/blob/ma
 - Logo and AppImageLauncher integration
 - Runtime dependencies and portability limits
 - Testing and physical-drone validation
+
+### Autonomous flights
+
+Put together another desktop version that allows to configure routes:
+
+```sh
+cd ./dron
+make run-rust-route
+#Or rebuild first:
+make build-rust-route
+make run-rust-route
+```
+
+```json
+{
+  "name": "Twenty centimetre return",
+  "steps": [
+    {
+      "action": "takeoff"
+    },
+    {
+      "action": "wait",
+      "seconds": 2
+    },
+    {
+      "action": "move",
+      "direction": "forward",
+      "distanceCm": 200
+    },
+    {
+      "action": "wait",
+      "seconds": 2
+    },
+    {
+      "action": "move",
+      "direction": "back",
+      "distanceCm": 200
+    },
+    {
+      "action": "wait",
+      "seconds": 2
+    },
+    {
+      "action": "land"
+    }
+  ]
+}
+```
+
 
 --- 
 

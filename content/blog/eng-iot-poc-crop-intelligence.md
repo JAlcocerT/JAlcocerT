@@ -398,6 +398,8 @@ make flash-picow
 #iot-rpi-dht/scripts-microcontrollers/firmware-picow/
 ```
 
+For the ESP32 firmware of the watering setup:
+
 ```sh
 cd ./poc/iot-esp-water
 
@@ -539,10 +541,11 @@ You can make of these sensors good companions:
 1. DHT22 - For air temp & humidity
 2. - Soil humidity
 3. MLX - If you want surface, like leaves temp
-4. DB if you want water temp
+4. The DB if you want water temp
 
 #### More BoM
 
+4. Switches: *SPST or DPDT*
 4. Battery 18650 - *I got Samsung 35E (INR18650-35E)*
 5. ESP32
 6. Solar panel
