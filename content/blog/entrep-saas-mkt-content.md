@@ -22,6 +22,8 @@ I get done a `.html` that distills interactively all the trade-offs in the topic
 
 Those will be the essence of how i want my posts to be post this way of bloging, at sth like `jalcocertech-core`
 
+> I was aiming a similar concept with [the hubs earlier this year](https://jalcocert.github.io/JAlcocerT/poc-103/#the-hubs)
+
 Can you create quality content and build a community with social media (Twitter/Threads)?
 
 +++ High quality [infographics](#about-infographics)

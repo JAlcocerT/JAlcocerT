@@ -2,8 +2,8 @@
 title: "Desktop Apps with RUST"
 date: 2026-09-25
 draft: false
-tags: ["Rust x Vue vs Qt vs PWAs","RemotionJS","DJI Tello","stlite","CNN x libfacedetection"]
-description: 'Using Rust Tauri instead of CustomTkinter or GoLang Wails.'
+tags: ["Rust x Vue vs Qt vs Go","RemotionJS","CNN x libfacedetection"]
+description: 'Using Rust Tauri with the DJI Tello instead of CustomTkinter or GoLang Wails.'
 url: 'desktop-apps-with-rust'
 ---
 

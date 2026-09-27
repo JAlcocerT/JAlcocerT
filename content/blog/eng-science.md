@@ -81,6 +81,12 @@ Reactive power is crucial for efficient electricity transmission and distributio
 https://github.com/JAlcocerT/ThreeBodies
 https://github.com/JAlcocerT/ThreeBodies/blob/main/Z_DeployMe/3bodes-flask.png
 
+
+I found `https://github.com/qunabu/Gravity` - `https://qunabu.github.io/Gravity/` with narration and smooth transitions powered by `TypeScript + Three.js + Vite`.
+
+* https://ciechanow.ski/moon/
+
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/mechanical-engineering-cool-stuff/" title="Summarizer" image="/blog_img/GenAI/yt-summaries/yt-summaries-groq.png" subtitle="With Groq API" >}}
   {{< card link="https://github.com/JAlcocerT/Slider-Crank" title="Slider Crank" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Slider Crank Mechanism in Python" >}}

@@ -75,6 +75,7 @@ Its been few weekly releases for the multi body OSS framework:
 * https://github.com/JAlcocerT/mbsd-core
 * https://ebooks.jalcocertech.com/books/mechanism-analytics/
 
+All linked to: https://multibodysystemsdynamics.com/ for which I have the web UI repo here.
 
 There are other oss fwks with interesting potential to have a look:
 
@@ -91,11 +92,33 @@ MBDyn (https://www.mbdyn.org/) graphical post-processor for blender (https://www
 - MBDyn
 - preCICE
 
+https://www.youtube.com/watch?v=NxZ1tf8J1oY
+
+https://www.youtube.com/watch?v=4_Z05iMmDNU
+
+https://www.youtube.com/watch?v=eFGkopoCTYY
+
 ### Energy
+
+My TP4056 setup with the ESP32 x DHT11 suffer recently from a full cloudy week.
+
+I measured the 18650 voltage and it was 3.5V
 
 ### Crops - Agrotech
 
+```sh
+cd ./poc/iot-dashboard-v2
+```
+
 ### FPV Telemetry
+
+fpv dron prop vortex
+https://www.youtube.com/shorts/hgqM9Z0d6QU
+
+https://www.youtube.com/@rctestflight
+https://www.youtube.com/@fpv-geek
+https://www.youtube.com/@JoshuaBardwell/videos
+https://www.youtube.com/@opendrone
 
 
 #### MPU acelerometer
@@ -147,9 +170,7 @@ Yep, i designed and sent for manufacturing recently my first pcb.
 There were 3 stages:
 
 1. Electronic Simulation
-
 2. Bread and protoboard testing
-
 3. PCB Design with KiCAD
 
 
@@ -211,12 +232,7 @@ Having a [clear game](https://github.com/JAlcocerT/my-logseq-notes/blob/main/dai
 
 When [ppl asked me for collaborations](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#conclusions), I make sure to cross-check their proposal with a bs detection form i created as a code here and [deployed to formbricks](https://app.formbricks.com/s/cmtljp6ee1j5d01xdkqdqpdyp)
 
-
-
-in large services / consulting / delivery orgs, especially around “innovation” 
-work.
-
-The pattern is common:
+in large services / consulting / delivery orgs, especially around “innovation” work. The pattern is common:
 
 1. A POC gets attention.
 2. Product/business wants MVP quickly.
@@ -228,32 +244,33 @@ The pattern is common:
 8. If it works, credit diffuses upward/across teams.
 9. If it fails, the people closest to the implementation absorb blame.                                   
         
-What is less healthy, but still common:                                                                                                           
-  Promotion evidence tied to outcomes outside your control.                                                
-  Mid-level calibration while expecting senior/lead ambiguity absorption.                                  
-  PM silence when boundaries should be protected.                                                          
-  No clear RACI but high expectation of accountability.                                                    
-  Frameworks/playbooks shared but not adopted because no owner is enforcing them.                          
-                                                                                                           
-  So yes, typical. But “typical” does not mean “good deal for you.”                                        
-                                                                                                           
-  The practical read:                                                                                      
-                                                                                                           
-  This is normal organizational gravity.                                                                   
-  Capable ICs become the glue unless they actively refuse unmanaged ownership.                             
+What is less healthy, but still common:                                              
+                                                            
+Promotion evidence tied to outcomes outside your control.                                                
+Mid-level calibration while expecting senior/lead ambiguity absorption.                                  
+PM silence when boundaries should be protected.                                                          
+No clear RACI but high expectation of accountability.                                                    
+Frameworks/playbooks shared but not adopted because no owner is enforcing them.                          
+                                                                                                          
+So yes, typical. But “typical” does not mean “good deal for you.”                                        
+                                                                                                          
+The practical read:                                                                                      
+                                                                                                          
+This is normal organizational gravity.                                                                   
+Capable ICs become the glue unless they actively refuse unmanaged ownership.                             
 
 Now see the pattern?
 
 The move is not to fix the whole environment. 
 
 The move is to operate cleanly inside it:             
-  deliver assigned scope;                                                                                  
-  document assumptions;                                                                                    
-  ask who owns product/architecture/delivery;                                                              
-  separate data feasibility from MVP feasibility;                                                          
-  avoid taking accountability without authority;                                                           
-  use the job for cashflow and evidence;                                                                   
-  save your real leverage for places where upside is explicit.      
+deliver assigned scope;                                                                                  
+document assumptions;                                                                                    
+ask who owns product/architecture/delivery;                                                              
+separate data feasibility from MVP feasibility;                                                          
+avoid taking accountability without authority;                                                           
+use the job for cashflow and evidence;                                                                   
+save your real leverage for places where upside is explicit.      
 
 ### Case Studies
 
