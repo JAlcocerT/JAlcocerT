@@ -451,7 +451,7 @@ Documented [rust learnings here](https://gitlab.com/fossengineer1/dron/-/blob/ma
 
 ### Autonomous flights
 
-Put together another desktop version that allows to configure routes:
+Put together another desktop version that allows to configure routes: https://gitlab.com/fossengineer1/dron/-/tree/main/desktop-rust-route
 
 ```sh
 cd ./dron
@@ -460,6 +460,8 @@ make run-rust-route
 make build-rust-route
 make run-rust-route
 ```
+
+You can make routes as code via json:
 
 ```json
 {
@@ -496,7 +498,11 @@ make run-rust-route
   ]
 }
 ```
+<!-- 
+https://youtube.com/shorts/uUpWJnqrUgg
+-->
 
+{{< youtube "uUpWJnqrUgg" >}}
 
 --- 
 

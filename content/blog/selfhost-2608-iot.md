@@ -57,7 +57,7 @@ cd ./poc/go-solar
 
 Among all [messaging protocols](https://jalcocert.github.io/JAlcocerT/messaging-protocols/), mqtt has something to say.
 
-Oh...no this is not regarding internet protocols like UDP and TCP.
+Oh...no this is not regarding internet protocols like `UDP and TCP`.
 
 But about ways to send information
 

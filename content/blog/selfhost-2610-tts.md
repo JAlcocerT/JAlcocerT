@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-07
+date: 2026-10-09
 draft: false
 tags: ["HomeLab","VoiceBox","SunoAI x music"]
 description: 'A homelab that speaks.'

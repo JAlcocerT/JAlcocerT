@@ -25,6 +25,12 @@ Think of **TCP** and **UDP** as the two primary "shipping methods" for data on t
 
 They both live at the **Transport Layer** of the networking stack, but they have completely different philosophies on how to get a package from Point A to Point B.
 
+> This was useful for [the Tello dron desktop connection](https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust/#appimage-and-learnings) and for [the Zigbee setup](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#zigbee)
+
+{{< callout type="info" >}}
+MQTT is an IP-based protocol *it requires Wi-Fi, Ethernet, and a TCP/IP network stack*, whereas Zigbee is a low-power RF radio protocol (IEEE 802.15.4) that does not understand Wi-Fi or IP addresses.
+{{< /callout >}}
+
 ### TCP (Transmission Control Protocol)
 
 **The "Certified Mail" approach.** TCP is obsessed with accuracy and reliability. Before it sends any data, it performs a "three-way handshake" to make sure the receiver is ready. 

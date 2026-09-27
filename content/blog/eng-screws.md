@@ -2,7 +2,7 @@
 title: "Screws are a thing"
 date: 2026-10-09
 draft: false
-tags: ["3D"]
+tags: ["3D","Design"]
 description: 'Another rabbit-hole..'
 url: 'understanding-screws'
 math: true

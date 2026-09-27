@@ -655,10 +655,11 @@ https://www.youtube.com/watch?v=9Jhi3VOZ9w8
 
 #### FPV Telemetry
 
-cd dron/desktop-version
-  uv sync
-  uv run main.py
-
+```sh
+cd ./dron/desktop-version
+uv sync
+uv run main.py
+```
   
   Your Python app
      ↓
@@ -672,19 +673,23 @@ cd dron/desktop-version
      ↓
   Tello antenna
 
-  For your Tello:
+For your Tello:
 
-  - UDP: carries messages such as takeoff, RC movement values, telemetry, and H.264 video packets.
-  - Wi‑Fi: is the local network connection between your laptop and the drone’s access point.
-  - Modulation: is the radio-level technique Wi‑Fi uses to put digital bits onto the 2.4 GHz radio signal—typically variants of OFDM
-    with QAM-style symbols.
+- UDP: carries messages such as takeoff, RC movement values, telemetry, and H.264 video packets.
+- Wi‑Fi: is the local network connection between your laptop and the drone’s access point.
+- Modulation: is the radio-level technique Wi‑Fi uses to put digital bits onto the 2.4 GHz radio signal—typically variants of OFDM
+  with QAM-style symbols.
 
-  So UDP does not “send radio waves” itself. It hands packets down through the network stack; Wi‑Fi transports those packets over the
-  air.
+So UDP does not “send radio waves” itself.
 
-  One subtle but useful detail: UDP itself does not retry lost packets, but Wi‑Fi often retries a failed radio transmission at its
-  own lower layer. If it still cannot deliver it quickly enough, the UDP packet is lost. That is why live video may show a skipped
-  frame rather than freezing to wait for recovery.
+It hands packets down through the network stack; Wi‑Fi transports those packets over the air.
+
+One subtle but useful detail: UDP itself does not retry lost packets, but Wi‑Fi often retries a failed radio transmission at its
+own lower layer. 
+
+If it still cannot deliver it quickly enough, the UDP packet is lost. 
+
+That is why live video may show a skipped frame rather than freezing to wait for recovery.
 
 The tello with 1100 mah li-ion, uses 70% battery for 7 min flight
 

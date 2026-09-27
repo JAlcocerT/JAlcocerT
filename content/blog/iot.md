@@ -2,7 +2,7 @@
 title: "[IoT ebook] Meeting AI. AIoT with a Raspberry Pi."
 date: 2026-10-20
 draft: false
-tags: ["Tinkering IRL","M2M","Arduino-CLI","ADK x TTS"]
+tags: ["Tinkering IRL","M2M","ADK x TTS"]
 description: 'IoT Meets AI via MQTT. The Internet of Tomorrow.'
 url: 'just-about-iot'
 ---
@@ -14,7 +14,7 @@ Destiling knowledge to ebooks - IoT edition
 
 ## Intro
 
-* WHY Im writting this post: *a*
+* WHY Im writting this post: *bc this has been the year of `Arduino-CLI`*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 Ive been recently putting together some ~3year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
@@ -156,8 +156,7 @@ I wanted to try with an low cost (~20$) Solar Panel `CL-0915` which goes up to 1
 
 ### ESP32 IoT Projects
 
-* ESP 32
-  * https://esp32c3.pinout.xyz/
+* ESP 32 `https://esp32c3.pinout.xyz/`
 
 > You can do ton of stuff with a ESP32, like building a [drone](https://jalcocert.github.io/JAlcocerT/useful-dron-stuff/):
 

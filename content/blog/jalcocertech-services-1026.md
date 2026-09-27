@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-09-27T10:20:21+01:00
+date: 2026-09-27T15:20:21+01:00
 draft: false
 tags: ["PIO x BDD x WoW","JAlcocerTech Leads","PDLC","DRI x DACI x RACI"]
 description: 'You are not asking enough questions.'
@@ -102,37 +102,96 @@ https://www.youtube.com/watch?v=eFGkopoCTYY
 
 ### Energy
 
+**1. Model the balcony recess in Blender — my pick.** The scene currently has no loggia at all: 21E is an extruded box with a red marker where the balcony should be. But the recess now drives **45% of the answer**, and the 40.9° profile cap is doing that work invisibly. Cutting the real 1.5 m × 2.5 m opening into the facade would let you look at a render of the sunlit patch on your own floor and say "yes, that's where it reaches" or "no, it comes further in". That's the verification the number can't give itself, and it's the same job the 21F A/B render did.
+
+**2. The seasonal animation.** Twelve frames at 17:00 through the year, showing 21F's shadow climbing your facade and the roof shadow retreating. The counterintuitive headline — March and September are your worst months, December is among your best — is hard to believe in a table and obvious in a loop. `create_ffmpeg_concat.py` is already there.
+
+**3. Nothing to do but keep logging, for two things.** The τ fit needs winter. And the drift test needs September–October, when the departure moves 68 min instead of 13.
+
+**4. A window-open detector from the humidity channels** — you're already logging humidity on both sensors, and an opening shows as a step in both. That would let the winter fit exclude ventilated periods rather than being poisoned by them. Worth building, but it's an enabler with nothing to test against until winter, so I'd hold it.
+
+Want me to start on the recess model? It's the one that makes your observations more useful rather than just prettier — if the render disagrees with what you see on the floor, that tells us the soffit or depth is off before you've spent weeks logging against a wrong cap.
+
+> I got to know *via T3 desktop* that the flat next to me, 21F, costs me a consistent 2 h+ every clear day
+
+> > https://github.com/JAlcocerT/poc/tree/main/building-geo-pl
+
+
+A few things, and one natural stopping point worth naming first: **the most interesting question left — does the model predict the seasonal drift? — is now blocked on calendar time, not work.** September data does more for it than anything I could build.
+
+That said, ranked by value against effort:
+
+## 1. The three-climate comparison — cheapest, and it's the actual payoff
+
+You now have the *same pipeline* run at three latitudes with three different dominant obstructions, and nobody has ever put them side by side:
+
+| | Gourette | Jerez | Warsaw |
+|---|---|---|---|
+| December sun peaks at | 23.6° | ~30.9° | **14.2°** |
+| What blocks it | **terrain** (ridges 1 km away) | **its own wall** (18× the neighbours) | **one neighbour + its own roof** |
+| Direct sun/year | — | 2626 h | **652 h** |
+| The counterintuitive bit | 10.7% annual loss but 38.5% in December | 5.7× between facade bearings | worst months are March/September |
+
+Every number already exists. A single comparison doc plus one chart would make the whole family legible as one body of work rather than four folders — and the finding writes itself: *the thing that takes your sun is completely different at each site, and in every case it isn't what the resident assumes.*
+
+## 2. Make the October re-run one command — small, high leverage
+
+Right now, when you pull fresh data, `validate_against_sensors.py` runs but the pre-registered predictions live in markdown and the comparison is manual. 
+
+Half an hour of work makes it emit predicted-vs-observed per day for whatever dates are present, flag the drift automatically, and say whether the 68-minute September signal showed up. Then the test you're actually waiting on costs you one command instead of a conversation.
+
+## 3. The seasonal animation — the best artifact
+
+Now that the loggia is properly modelled with recess and parapet, a year sweep at fixed clock time would show the roof shadow retreating and 21F's climbing.
+
+The March/September-are-worst inversion is hard to believe in a table and obvious in a loop. ~15 minutes of render time; `create_ffmpeg_concat.py` is already there.
+
+## 4. "Sun hours for any address" — the reusable thing
+
+Everything's in place: geocode → OSM footprints → height grid → horizon → profile caps → hours. Generalising `site.json` so it takes an address and a floor would turn four one-off studies into a tool. This is what I'd build if you wanted something other people could use.
+
+## Not worth doing yet
+
+The **pooled multi-commune DVF study** (the terrain offers matched pairs, but sales cluster, so it's a sampling bet). The **energy calibration** — blocked on winter, and the ventilation problem means summer data can't fix it.
+
+And **consolidating the drifted shared modules** into a real package: genuinely overdue now that `horizon_profile.py` exists in three forks plus this one, but boring, and nothing is currently broken by it.
+
+---
+
+**My pick: #1, then #2.** The comparison costs almost nothing because the numbers exist, and it's the one that makes everything else make sense. Then #2 so September arrives as a result rather than a task.
+
+![alt text](/blog_img/data-experiments/geo/preview_aerial.png)
+
+
 My [TP4056 setup](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#home-solar-test-x-tp4056) with the ESP32 x DHT11 suffer recently from a full cloudy week.
 
 I measured the 18650 voltage and it was 3.5V
 
-
 {{< callout type="info" >}}
-After catching one sunny day (27-sept) moved the 5V solar panel south and between 10am-pm went up to
+After catching one sunny day (27-sept) moved the 5V solar panel south and between 10am-12pm went up to 3.6v
 {{< /callout >}}
 
 Surprise, energy [and geolocation matters](https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/#geo-matters) :O
+
 ```sh
 sqlite3 -header -column /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "SELECT device, metric, value, topic, received_at, received_ms FROM readings WHERE device='esp32' ORDER BY received_ms DESC LIMIT 1;"
 
 sqlite3 -header -column /home/jalcocert/poc/iot-rpi-dht-insulation/ingester/data/readings.sqlite "WITH intervals AS (SELECT device, topic, received_ms - LAG(received_ms) OVER (PARTITION BY topic ORDER BY received_ms) AS delta_ms FROM readings WHERE device IN
   │ ('esp32','pico')), normal AS (SELECT * FROM intervals WHERE delta_ms BETWEEN 1 AND 600000), counts AS (SELECT device, topic, ROUND(delta_ms/1000.0) AS seconds, COUNT(*) AS occurrences, ROW_NUMBER() OVER (PARTITION BY device, topic ORDER BY COUNT(*) DESC,
-  │ ROUND(delta_ms/1000.0)) AS rn FROM normal GROUP BY device, topic, ROUND(delta_ms/1000.0)) SELECT n.device, n.topic, COUNT(*) AS intervals, ROUND(AVG(n.delta_ms)/1000.0,2) AS avg_seconds, ROUND(MIN(n.delta_ms)/1000.0,2) AS min_seconds, ROUND(MAX(n.delta_ms)/1000.0,2) AS
+  │ ROUND(delta_ms/1000.0)) AS rn FROM normal GROUP BY device, topic, ROUND(delta_ms/1000.0)) SELECT n.device, n.topic, COUNT(*) AS intervals, ROUND(AVG(n.delta_ms)/1000.0,2) AS avg_seconds, ROUND(MIN(n.delta_ms)/1000.0,2) AS min_seconds, ROUND(MAX(n.delta_ms)/1000.0,2) AS..............
 ```
-
 
 - ESP32: approximately every 64 seconds (average ~67 seconds).
 - Pico W: approximately every 60 seconds.
 
 Each device sends temperature and humidity as separate MQTT messages during each cycle. Long offline gaps were excluded.
 
+Based on the observed ~64-second cycle, I’d infer:
 
-• Based on the observed ~64-second cycle, I’d infer:
-
-  - ~60 seconds deep sleep
-  - ~4 seconds booting, reconnecting to Wi‑Fi/MQTT, reading and publishing
-  - ~1,350 cycles/day
-  - ~1.5 hours/day awake
+- ~60 seconds deep sleep
+- ~4 seconds booting, reconnecting to Wi‑Fi/MQTT, reading and publishing
+- ~1,350 cycles/day
+- ~1.5 hours/day awake
 
 Assuming 80–120 mA average while awake and near-ideal deep sleep:
 
@@ -146,43 +205,49 @@ A normal ESP32 development board’s regulator, USB chip and LEDs may raise this
 
 So my practical estimate is around 0.6 Wh/day. A 2,000 mAh Li-ion battery would likely last approximately 7–12 days after conversion losses.
 
-The ESP32 chip itself draws about 10 µA in deep sleep, but Wi‑Fi receive uses ~95–100 mA and transmission peaks at 180–240 mA. Espressif ESP32 datasheet (https://documentation.espressif.com/esp32_datasheet_en.html)
+The ESP32 chip itself draws about 10 µA in deep sleep, but Wi‑Fi receive uses ~95–100 mA and transmission peaks at 180–240 mA. 
 
-The frequent Wi‑Fi reconnections dominate consumption. Extending sleep from 1 minute to 5 minutes could reduce daily usage by roughly 75–80%.
+> [Espressif ESP32 datasheet](https://documentation.espressif.com/esp32_datasheet_en.html)
+
+The frequent Wi‑Fi reconnections dominate consumption. 
+
+Extending sleep from 1 minute to 5 minutes could reduce daily usage by roughly 75–80%.
 
 {{< callout type="warning" >}}
 A short deepsleep is not efficient as connecting back to wifi requires an energy peak. So upgraded [this esp32 script](https://github.com/JAlcocerT/poc/blob/main/iot-rpi-dht/scripts-microcontrollers/firmware-esp32/esp32-dht11-mqtt-emqx-deepsleep.cpp) to this one that pushes every 10minutes.
 {{< /callout >}}
 
+The Pico W appears to remain connected to Wi‑Fi between its one-minute publications. For that setup, I’d estimate:
 
-• The Pico W appears to remain connected to Wi‑Fi between its one-minute publications. For that setup, I’d estimate:
+- Wi‑Fi power saving enabled: ~20–35 mA average
+- Power saving disabled/busy loop: ~40–70 mA average
+- Likely daily energy: ~2.5–6 Wh/day
+- Practical midpoint: ~4 Wh/day
 
-  - Wi‑Fi power saving enabled: ~20–35 mA average
-  - Power saving disabled/busy loop: ~40–70 mA average
-  - Likely daily energy: ~2.5–6 Wh/day
-  - Practical midpoint: ~4 Wh/day
+That is roughly 5–8× your deep-sleeping ESP32.
 
-  That is roughly 5–8× your deep-sleeping ESP32.
+The Pico W’s CYW43439 radio can average below 1.3 mA in Wi‑Fi power-save mode, but active receive uses ~37–43 mA and transmission can peak above 270 mA; the RP2040 and board add their own consumption. 
 
-  The Pico W’s CYW43439 radio can average below 1.3 mA in Wi‑Fi power-save mode, but active receive uses ~37–43 mA and transmission can peak above 270 mA; the RP2040 and board add their own consumption. 
+A 2,000 mAh Li-ion might therefore last only around 1–3 days. 
 
-  A 2,000 mAh Li-ion might therefore last only around 1–3 days. If the Pico disconnects and enters genuine low-power sleep between readings, consumption could be reduced substantially.
+If the Pico disconnects and enters genuine low-power sleep between readings, consumption could be reduced substantially.
 
- If the Pico W truly deep-sleeps for 60 seconds, powers down the Wi‑Fi chip, then wakes and reconnects, I’d estimate:
+If the Pico W truly deep-sleeps for 60 seconds, powers down the Wi‑Fi chip, then wakes and reconnects, I’d estimate:
 
-  Awake/reconnecting: 4–6 seconds per cycle
-  Daily consumption:  ~0.4–0.9 Wh
-  Battery usage:       ~120–240 mAh/day at 3.7 V
+Awake/reconnecting: 4–6 seconds per cycle
+Daily consumption:  ~0.4–0.9 Wh
+Battery usage:       ~120–240 mAh/day at 3.7 V
 
-  A practical midpoint is ~0.6 Wh/day, similar to your ESP32. A 2,000 mAh battery might last roughly 8–14 days.
+A practical midpoint is ~0.6 Wh/day, similar to your ESP32. A 2,000 mAh battery might last roughly 8–14 days.
 
-  Important: RP2040 deep sleep is around 180 µA, but the CYW43439 radio must also be explicitly powered down; otherwise consumption will be much higher. Raspberry Pi documentation (https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html)
+Important: RP2040 deep sleep is around 180 µA, but the CYW43439 radio must also be explicitly powered down; otherwise consumption will be much higher. 
+> [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html)
 
-  Increasing the sleep interval would make a large difference:
+Increasing the sleep interval would make a large difference:
 
-  - Every 1 minute: ~0.6 Wh/day
-  - Every 5 minutes: ~0.15–0.25 Wh/day
-  - Every 15 minutes: ~0.07–0.15 Wh/day
+- Every 1 minute: ~0.6 Wh/day
+- Every 5 minutes: ~0.15–0.25 Wh/day
+- Every 15 minutes: ~0.07–0.15 Wh/day
 
 Wi‑Fi reconnection, rather than the sensor reading or MQTT publication, dominates the energy usage.
 
@@ -240,7 +305,7 @@ After having these for several weeks inside and outside home, now i can do **per
   ORDER BY hour_bucket;"
 ```
 
-This generates all 168 hourly buckets, including hours with no readings:
+This generates all 168 hourly buckets, **including hours with no readings**:
 
 ```sh
   sqlite3 -header -column \
@@ -250,7 +315,6 @@ This generates all 168 hourly buckets, including hours with no readings:
       strftime('%Y-%m-%d %H:00:00','now'),
       '-167 hours'
     )
-
     UNION ALL
 
     SELECT datetime(hour_bucket, '+1 hour')
@@ -336,11 +400,45 @@ make deepersleep-upload PORT=/dev/ttyACM0
 
 After getting the watering setup PoC working, I wanted to tinker with the [esp32 wifi connection](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-wifi): beyond [the wifimanager](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-wifi/z-learnings-1-wifimanager.md)
 
-The goal, get all integrated in this *user-friendly* DIY custom dashboard:
+The goal, get all integrated in [this *user-friendly* DIY custom dashboard](https://github.com/JAlcocerT/poc/tree/main/iot-dashboard-v2):
 
 ```sh
 cd ./poc/iot-dashboard-v2
+#sudo docker stop qbittorrent
 ```
+
+In the v2 dashboard, use the new “Pump control & schedule” panel to:
+
+- Run a confirmed 0.5–5 second pulse
+- Stop the pump
+- Refresh its status
+- Create/cancel persistent one-shot schedules
+- Review recent commands and outcomes
+
+See these CLI equivalents [in the makefile](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/Makefile) to my initial verions:
+`/home/jalcocert/Desktop/poc/iot-esp-water/esp32-wifi` and `/home/jalcocert/Desktop/poc/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet`
+
+```sh
+make pump-status
+make pump-pulse PULSE_MS=3000
+make pump-off
+
+# docker run --rm --network host eclipse-mosquitto:2 \
+#   mosquitto_pub -h 192.168.1.2 \
+#   -t esp32/pump/cmd \
+#   -m 'pulse:3000'
+#Or from esp32-wifi:
+# make pub-off
+
+make pump-schedule RUN_AT="2026-09-28 08:00" PULSE_MS=3000
+make pump-cancel SCHEDULE_ID=1
+make pump-schedules
+```
+
+![alt text](/blog_img/data-experiments/iot-dashboard-v2-pump.png)
+
+> `http://192.168.1.2:3038/?range=90d`
+
 
 ### FPV Telemetry
 
@@ -379,9 +477,15 @@ It has a wide range of features, including a built-in gyroscope.
 
 ### Attract Convert Deliver
 
-1. Have been doing changes and [additions to the ebooks](https://github.com/JAlcocerT/1ton-ebooks) (Free DIY): IoT and electronics!
+There are changes going on in all orgs.
 
-> Anytime you want `https://ebooks.jalcocertech.com/`
+Some call them: `design-sell-deliver-enable`
+
+But they come down to the same.
+
+1. Have been doing changes and [additions to the ebooks](https://github.com/JAlcocerT/1ton-ebooks) 
+
+> Anytime you want `https://ebooks.jalcocertech.com/` * There is Free DIY: IoT and electronics!
 
 > > The idea here is: if the quality of the free is so good, how will it be the quality of the paid consulting or DFY services?
 

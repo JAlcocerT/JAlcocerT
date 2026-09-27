@@ -1,6 +1,6 @@
 ---
 title: "Cibernetica 101"
-date: 2026-10-27
+date: 2026-10-23
 draft: false
 tags: ["Electronics","RC","IoT"]
 description: ''
