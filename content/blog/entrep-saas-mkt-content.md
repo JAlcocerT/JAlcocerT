@@ -32,7 +32,6 @@ Can you create quality content and build a community with social media (Twitter/
 
 {{< youtube "ZTSI3DDP_4A" >}}
 
-
 What's the actual value of a follower?
 
 Hard to calculate, but not impossible.

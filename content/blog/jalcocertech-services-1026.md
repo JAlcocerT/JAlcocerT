@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-09-27T15:20:21+01:00
+date: 2026-09-28T15:20:21+01:00
 draft: false
 tags: ["PIO x BDD x WoW","JAlcocerTech Leads","PDLC","DRI x DACI x RACI"]
 description: 'You are not asking enough questions.'
@@ -72,12 +72,74 @@ flowchart LR
 
 ### MBSD
 
-Its been few weekly releases for the multi body OSS framework: 
+Its been few weekly releases for the **multi body OSS framework**: 
 
 * https://github.com/JAlcocerT/mbsd-core
 * https://ebooks.jalcocertech.com/books/mechanism-analytics/
 
 All linked to: https://multibodysystemsdynamics.com/ for which I have the web UI repo here.
+
+```sh
+scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-6-0-concerns.md . 
+scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/whitepaper.md . 
+scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/roadmap.md .
+```
+
+{{% details title="For the 0-7-0 was like 🚀" closed="true" %}}
+
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+
+git switch main
+git merge --ff-only v0.6.0-dev
+git tag -a v0.6.0 -m "MBSD Core v0.6.0"
+git push origin main
+git push origin v0.6.0
+
+awk '
+  /^## v0\.6\.0 / { found=1; next }
+  /^## / && found { exit }
+  found { print }
+' CHANGELOG.md | gh release create v0.6.0 \
+  --repo JAlcocerT/mbsd-core \
+  --verify-tag \
+  --title "MBSD Core v0.6.0 - Experimental 3D Vocabulary" \
+  --notes-file - \
+  --latest
+```
+
+Then examples:
+
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
+
+git switch main
+git merge --ff-only v0.6.0-dev
+git tag -a v0.6.0 -m "MBSD Examples v0.6.0"
+git push origin main
+git push origin v0.6.0
+
+awk '
+  /^## v0\.6\.0 / { found=1; next }
+  /^## / && found { exit }
+  found { print }
+' CHANGELOG.md | gh release create v0.6.0 \
+  --repo JAlcocerT/mbsd-examples \
+  --verify-tag \
+  --title "MBSD Examples v0.6.0 - Diagnostics and Validation" \
+  --notes-file - \
+  --latest
+```
+
+The remaining roadmap:
+
+
+{{% /details %}}
+
+
+> I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
+
+> > And email to `selfh.st`
 
 There are other oss fwks with interesting potential to have a look:
 
@@ -241,6 +303,7 @@ Battery usage:       ~120–240 mAh/day at 3.7 V
 A practical midpoint is ~0.6 Wh/day, similar to your ESP32. A 2,000 mAh battery might last roughly 8–14 days.
 
 Important: RP2040 deep sleep is around 180 µA, but the CYW43439 radio must also be explicitly powered down; otherwise consumption will be much higher. 
+
 > [Raspberry Pi documentation](https://www.raspberrypi.com/documentation/microcontrollers/microcontroller-chips.html)
 
 Increasing the sleep interval would make a large difference:
@@ -407,6 +470,15 @@ cd ./poc/iot-dashboard-v2
 #sudo docker stop qbittorrent
 ```
 
+> https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/z-learnings-migration.md
+
+> > https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/docker-compose-zigbee.yml
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/zigbee2mqtt" title="Zigbee2mqtt | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/emqx" title="EMQX Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
 In the v2 dashboard, use the new “Pump control & schedule” panel to:
 
 - Run a confirmed 0.5–5 second pulse
@@ -555,14 +627,65 @@ Making questions is the first step.
 Then its about making good questions, like:
 
 * Stop asking "Do they see it?
-* Start asking "Is this priced correctly?"   
+* Start asking "Is this priced correctly?"
 
-If you have questions, reach out:
+Some orgs are already asking: why do we need a person?
+
+And that makes sense, the info is out there: *ppl are realizing that scrum doesnt work, aka is too slow*
+
+Now...dark factories will come (even more) to the software/IT sector
+
+If you have questions on whats going next, reach out:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
+
+Im putting together a `JAlcocerTech-Core`:
+
+```mermaid
+flowchart LR
+    %% --- Styles ---
+    classDef free fill:#E8F5E9,stroke:#2E7D32,stroke-width:2px,color:#1B5E20;
+    classDef low fill:#FFF9C4,stroke:#FBC02D,stroke-width:2px,color:#FBC02D;
+    classDef mid fill:#FFE0B2,stroke:#F57C00,stroke-width:2px,color:#F57C00;
+    classDef high fill:#FFCDD2,stroke:#C62828,stroke-width:2px,color:#C62828;
+    classDef bridge fill:#E3F2FD,stroke:#1565C0,stroke-width:3px,color:#0D47A1;
+
+    %% --- Nodes ---
+    L0("Free Content<br/>( DIY = $0)"):::free
+    L1("Web Audits 🛡️<br/>(Reveals Problem )"):::free
+    L11("Tech Blog/Youtube"):::free
+    L12("ebooks"):::free
+    L13("mbsd framework OSS"):::free
+    L14("OSS guides"):::free
+
+    L3("Done With You<br/>(Trade $$ for knowledge)"):::mid
+    L4("Done For You<br/>(Trade $$$ for outcomes)"):::high
+    L44("GenBI<br/>Shopify PoC"):::bridge
+    L45("Real Estate<br/>Funnel Bot"):::bridge
+    L46("Energy Solutions<br/>HVAC"):::bridge
+    L47("IoT Solutions<br/>Crops"):::bridge
+    L48("Weddings<br/>Photo QR"):::bridge
+
+    %% --- Connections ---
+    L0 --> L1
+    L1 --> L3
+    L12 --> L3
+    L13 -->|MultiBodySystemsDynamicscom| L3
+    L14 -->|FOSS Engineer| L3
+    L0 --> L11
+    L0 --> L12
+    L0 --> L13
+    L0 --> L14
+    L3 --> L4
+    L4 -->|Productized Service| L44
+    L4 -->|Productized Service| L45
+    L4 -->|Productized Service| L46
+    L4 -->|Productized Service| L47
+    L4 -->|Productized Service| L48
+```
 
 ### How can we work together?
 
@@ -588,7 +711,9 @@ Having a [clear game](https://github.com/JAlcocerT/my-logseq-notes/blob/main/dai
 
 When [ppl asked me for collaborations](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#conclusions), I make sure to cross-check their proposal with a bs detection form i created as a code here and [deployed to formbricks](https://app.formbricks.com/s/cmtljp6ee1j5d01xdkqdqpdyp)
 
-in large services / consulting / delivery orgs, especially around “innovation” work. The pattern is common:
+{{% details title="Large services / consulting / delivery orgs and innovation work 🚀" closed="true" %}}
+
+The pattern is common:
 
 1. A POC gets attention.
 2. Product/business wants MVP quickly.
@@ -602,31 +727,33 @@ in large services / consulting / delivery orgs, especially around “innovation�
         
 What is less healthy, but still common:                                              
                                                             
-Promotion evidence tied to outcomes outside your control.                                                
-Mid-level calibration while expecting senior/lead ambiguity absorption.                                  
-PM silence when boundaries should be protected.                                                          
-No clear RACI but high expectation of accountability.                                                    
-Frameworks/playbooks shared but not adopted because no owner is enforcing them.                          
-                                                                                                          
+Promotion evidence tied to outcomes outside your control. 
+Mid-level calibration while expecting senior/lead ambiguity absorption.
+PM silence when boundaries should be protected.
+No clear RACI but high expectation of accountability.
+
+Frameworks/playbooks shared but not adopted because no owner is enforcing them.                                                                                                          
 So yes, typical. But “typical” does not mean “good deal for you.”                                        
-                                                                                                          
-The practical read:                                                                                      
-                                                                                                          
-This is normal organizational gravity.                                                                   
+
+The practical read: This is normal organizational gravity.
+
 Capable ICs become the glue unless they actively refuse unmanaged ownership.                             
 
 Now see the pattern?
 
 The move is not to fix the whole environment. 
 
-The move is to operate cleanly inside it:             
-deliver assigned scope;                                                                                  
-document assumptions;                                                                                    
-ask who owns product/architecture/delivery;                                                              
-separate data feasibility from MVP feasibility;                                                          
-avoid taking accountability without authority;                                                           
-use the job for cashflow and evidence;                                                                   
-save your real leverage for places where upside is explicit.      
+The move is to operate cleanly inside it:
+
+1. deliver assigned scope;
+2. document assumptions;                                                     
+3. ask who owns product/architecture/delivery;                        
+4. separate data feasibility from MVP feasibility;                        
+5. avoid taking accountability without authority;                               
+6. use the job for cashflow and evidence;                
+7. **save your real leverage for places where upside is explicit.**
+
+{{% /details %}}
 
 ### Case Studies
 
@@ -657,7 +784,6 @@ https://youtu.be/K-eXcT1XgdE -->
 
 If you are still working in a `9-5` while working in your free time to make your business, make sure to have a **clear picture** of what [your game is](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/my-game.md) and a [playbook to execute](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/playbook.md).
 
-
 ---
 
 ## FAQ
@@ -669,19 +795,21 @@ In software engineering, operations, and business analysis, framing PIO as **Pro
 > See `https://www.seangoedecke.com/tell-agents-the-why/`
 
 * **Problem:** The specific operational bottleneck, system defect, data silo, or manual inefficiency in the current workflow (e.g., *"Customer support manually re-keys order data across two legacy databases, causing a 24-hour fulfillment lag"*). **THE WHY** *and slightly what*
+
 * **Integration:** The technical connection, automated workflow, API bridge, or architectural change introduced to bridge the gap (e.g., *"Deploy an event-driven webhook via an enterprise service bus (ESB) to sync order status in real time"*). **whats everything/systems that the agent needs? where is the agent going to take info from?**
+
 * **Outcome:** The quantifiable, verifiable metric or end state defining success (e.g., *"Order processing time reduced from 24 hours to under 30 seconds; 0% manual data entry errors"*). **THE WHAT**
 
 > Shift the conversation away from low-level implementation debates to high-level governance rules, evidence models, and risk ownership.
 
 Strong governance framing that clearly establish:
 
-Why the control exists.
-What is being assessed.
-What evidence is required.
-What constitutes Pass / Action Required / Unable To Assess.
-Who owns the decision.
-What the assistant can and cannot do.
+* Why the control exists.
+* What is being assessed.
+* What evidence is required.
+* What constitutes Pass / Action Required / Unable To Assess.
+* Who owns the decision.
+* What the assistant can and cannot do.
 
 That separation of responsibilities is usually what directors and architects care about most.
 
@@ -702,11 +830,11 @@ the PIO question flow:
 - Agent output packages the result.
 - Governance questions feed back into leadership decisions and clarify future versions.
 
-For these Director-style PIOs, Problem → Integrations → Outcome flows more naturally because it mirrors:
+For these Director-style PIOs, `Problem → Integrations → Outcome` flows more naturally because it mirrors:
 
-What issue are we solving?
-What data/systems are involved?
-What does the assessment produce?
+* What issue are we solving?
+* What data/systems are involved?
+* What does the assessment produce?
 
 
 ```mermaid
@@ -781,8 +909,7 @@ flowchart LR
     L -.sets thresholds.-> H
 ```
 
-
-The core questions we asked were:
+The core questions asked were:
 
 - Problem: Why does this matter? What risk exists? What cannot be considered aligned? What ambiguity must be closed?
 - Integrations: What systems hold the evidence? What is the primary evidence key? Which standards or policies apply? Which human inputs are needed?

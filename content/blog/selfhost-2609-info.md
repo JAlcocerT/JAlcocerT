@@ -433,9 +433,7 @@ yt-distil: `http://192.168.1.2:8001`
 
 #### Kodi vs Jellyfin
 
-with kodi adons
-
-* <https://www.youtube.com/@proyectosmicropic/videos>
+With kodi adons: <https://www.youtube.com/@proyectosmicropic/videos>
 
 You can have [a look to IPTVs](https://forocoches.com/foro/showthread.php?t=10742800) as seen [here](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#iptv)
 
@@ -445,7 +443,7 @@ You can have [a look to IPTVs](https://forocoches.com/foro/showthread.php?t=1074
 
 #### Music
 
-Navidrome, subsonic or [gonic](https://github.com/sentriz/gonic) are OSS **selfhostable music servers**.
+[Navidrome](https://github.com/JAlcocerT/Home-Lab/tree/main/navidrome), subsonic or [gonic](https://github.com/sentriz/gonic) are OSS **selfhostable music servers**.
 
 You need clients:
 
@@ -490,12 +488,10 @@ foreach ($f in Get-ChildItem *.pdf) {
 #curl -X POST -F "file=@Ebook-cover-SSGs.pdf" http://192.168.1.2:8027/extract > sample-pdf-to-text.txt
 ```
 
-
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/stirling-pdf/" title="Stirling-pdf | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/kreuzberg" title="Kreuzberg | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
 
 ### How Im using AI to prep for ULM/PPL
 
@@ -515,6 +511,7 @@ Some more [omarchy](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-decemb
 The name **Omarchy** is a portmanteau of **"Omakase"** and **"Arch"**:
 
 * **Omakase (お任せ):** A Japanese dining concept meaning "I leave it up to you". In an omakase meal, you don't order individual items; the chef curates and prepares the entire progression of dishes based on what is best.
+
 * **Arch:** Refers to **Arch Linux**, the lightweight, rolling-release distribution that forms the base of the operating system.
 
 This brings docker, lazydocker, herdrd, lazygit installed by default :)
@@ -563,6 +560,8 @@ You can also connect your airpods [via plugins](https://plugins.omarchy.org/expl
 * https://github.com/patcastle/omarchy-battery-health
 * https://plugins.omarchy.org/plugin.html?id=io.github.aryan-techie.bluetooth
 * https://plugins.omarchy.org/plugin.html?id=io.github.heyimhere.hardware-panel
+
+To get goodies from the VM to the regular laptop I did:
 
 ```sh
 scp -P 2022 dhh@127.0.0.1:/home/dhh/Downloads/wiki-technitium.md /home/jalcocert/Desktop/

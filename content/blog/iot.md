@@ -1,6 +1,6 @@
 ---
 title: "[IoT ebook] Meeting AI. AIoT with a Raspberry Pi."
-date: 2026-10-20
+date: 2026-10-08
 draft: false
 tags: ["Tinkering IRL","M2M","ADK x TTS"]
 description: 'IoT Meets AI via MQTT. The Internet of Tomorrow.'
@@ -16,6 +16,12 @@ Destiling knowledge to ebooks - IoT edition
 
 * WHY Im writting this post: *bc this has been the year of `Arduino-CLI`*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
+
+```sh
+cd ./poc/iot-dashboard-v2
+make db-latest
+#make PULSE_MS=3000
+```
 
 Ive been recently putting together some ~3year old scripts that I made for the Pi/PicoW/ESP32 with their associated projects
 
@@ -41,7 +47,7 @@ A raspberry Pi inside a container - https://github.com/ptrsr/pi-ci
 ### **RISC-V open source arquitecture**
 
 
-{{< details title="AI Asisted Web Search... 📌" closed="true" >}}
+{{< details title="Arduino vs RISV and OSS... 📌" closed="true" >}}
 
 **Arduino and Open-Source Principles**
 
@@ -99,7 +105,7 @@ python3 rpi_gpio_gui.py
 
 * https://github.com/appleimperio/docker-hyperhdr
 
-> MIT |  Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
+> MIT | Highly optimized open source ambient lighting implementation based on modern digital video and audio stream analysis for Windows, macOS and Linux (x86 and Raspberry Pi / ARM). 
 
 #### M2M
 
@@ -132,7 +138,7 @@ UpTime Kuma can also **monitor MQTT**:
 
 ## Hardware and Projects
 
-A Raspberry Pi [got me started](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/) all of this series!
+A Raspberry Pi [got me started](https://jalcocert.github.io/JAlcocerT/raspberrypi-starting-guide/) all of this back in 2021!
 
 Initially I wrote at Jekyll: https://jalcocert.github.io/RPi/
 
@@ -145,8 +151,7 @@ Initially I wrote at Jekyll: https://jalcocert.github.io/RPi/
 
 https://jalcocert.github.io/JAlcocerT/microcontrollers-setup-101/
 
-
-I wanted to try with an low cost (~20$) Solar Panel `CL-0915` which goes up to 15W (5V3A).
+Initially, a low cost (~20$) Solar Panel `CL-0915` which goes up to 15W (5V3A) introduced me to solar:
 
 ![Solar Panel](/blog_img/outro/solar-panel.jpg)
 
@@ -154,7 +159,9 @@ I wanted to try with an low cost (~20$) Solar Panel `CL-0915` which goes up to 1
 #git clone /IoT
 ```
 
-### ESP32 IoT Projects
+#### Micro-Controllers
+
+#### ESP32 IoT Projects
 
 * ESP 32 `https://esp32c3.pinout.xyz/`
 
@@ -167,7 +174,7 @@ https://www.youtube.com/watch?v=V_mZsiZcy7s -->
 
 {{< youtube "V_mZsiZcy7s" >}}
 
-### PicoW IoT Projects
+#### PicoW IoT Projects
 
 * Raspberry Pico W
   * https://picow.pinout.xyz/
@@ -200,6 +207,8 @@ The [DHT11 is blue](https://jalcocert.github.io/RPi/posts/rpi-iot-dht11-influxdb
 
 
 ### Raspberry Pi IoT Projects
+
+During the summer of 2023 I tinkered with the Pi 4 and some IoT end to end projects that ingested and displayed data in OSS solutions via containers.
 
 #### Python x Elastic Search
 
@@ -273,7 +282,6 @@ mapping = {
 es.indices.create(index=index_name, ignore=400, body=mapping)
 
 print(f"Index '{index_name}' created.")
-
 
 while True:
     humidity, temperature = Adafruit_DHT.read(DHT_SENSOR, DHT_PIN)
@@ -402,7 +410,6 @@ The video from ReefSpy helped me a lot with the initial setup :<https://www.yout
 And also to get the general idea of the Python code that can be used.
 
 Execute it with: `python3 dsb-read.py`
-
 
 I also included a Dockerfile, so you can `docker build -t dsb_to_timescale`
 
@@ -590,6 +597,8 @@ O.S FreeRTS ??? <https://www.youtube.com/watch?v=5pUY7xVE2gU>
 
 ### Sensors
 
+Ive put together a post dedicated to this here.
+
 #### BME680 - Air Quality
 
 #### BME280
@@ -692,6 +701,10 @@ The KY-008 is a laser transmitter module emitting a red laser beam, suitable for
 #### I2C
 
 I2C (Inter-Integrated Circuit), pronounced "I-squared-C", is a synchronous, multi-master, multi-slave, packet-switched, single-ended, serial communication bus invented by Philips Semiconductor (now NXP Semiconductors). 
+
+{{< callout type="warning" >}}
+Mind the difference with UART and canbus!
+{{< /callout >}}
 
 It is widely used for attaching lower-speed peripheral ICs to processors and microcontrollers in short-distance, intra-board communication.
 
