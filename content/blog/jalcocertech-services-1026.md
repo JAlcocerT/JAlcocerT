@@ -11,8 +11,6 @@ url: 'jalcocertech-services-oct'
 
 Still thinking on headcounts to mess around with a project instead of [getting ~~shit done~~ outcomes](#choosing-my-wow)?
 
-https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/#offer-configuration
-
 **Intro**
 
 * WHY Im writting this post: *To continue the Home x IoT Improvements*
@@ -174,16 +172,18 @@ https://www.youtube.com/watch?v=eFGkopoCTYY
 
 Want me to start on the recess model? It's the one that makes your observations more useful rather than just prettier — if the render disagrees with what you see on the floor, that tells us the soffit or depth is off before you've spent weeks logging against a wrong cap.
 
-> I got to know *via T3 desktop* that the flat next to me, 21F, costs me a consistent 2 h+ every clear day
+> I got to know *via [T3 desktop](https://fossengineer.com/t3code-web-gui-coding-agents/)* that the flat next to me, 21F, costs me a consistent 2 h+ every clear day
 
 > > https://github.com/JAlcocerT/poc/tree/main/building-geo-pl
 
+
+{{% details title="Real checks with september sun 🚀" closed="true" %}}
 
 A few things, and one natural stopping point worth naming first: **the most interesting question left — does the model predict the seasonal drift? — is now blocked on calendar time, not work.** September data does more for it than anything I could build.
 
 That said, ranked by value against effort:
 
-## 1. The three-climate comparison — cheapest, and it's the actual payoff
+**1. The three-climate comparison — cheapest, and it's the actual payoff**
 
 You now have the *same pipeline* run at three latitudes with three different dominant obstructions, and nobody has ever put them side by side:
 
@@ -196,31 +196,32 @@ You now have the *same pipeline* run at three latitudes with three different dom
 
 Every number already exists. A single comparison doc plus one chart would make the whole family legible as one body of work rather than four folders — and the finding writes itself: *the thing that takes your sun is completely different at each site, and in every case it isn't what the resident assumes.*
 
-## 2. Make the October re-run one command — small, high leverage
+**2. Make the October re-run one command — small, high leverage**
 
 Right now, when you pull fresh data, `validate_against_sensors.py` runs but the pre-registered predictions live in markdown and the comparison is manual. 
 
 Half an hour of work makes it emit predicted-vs-observed per day for whatever dates are present, flag the drift automatically, and say whether the 68-minute September signal showed up. Then the test you're actually waiting on costs you one command instead of a conversation.
 
-## 3. The seasonal animation — the best artifact
+**3. The seasonal animation — the best artifact**
 
 Now that the loggia is properly modelled with recess and parapet, a year sweep at fixed clock time would show the roof shadow retreating and 21F's climbing.
 
 The March/September-are-worst inversion is hard to believe in a table and obvious in a loop. ~15 minutes of render time; `create_ffmpeg_concat.py` is already there.
 
-## 4. "Sun hours for any address" — the reusable thing
+**4. "Sun hours for any address" — the reusable thing**
 
 Everything's in place: geocode → OSM footprints → height grid → horizon → profile caps → hours. Generalising `site.json` so it takes an address and a floor would turn four one-off studies into a tool. This is what I'd build if you wanted something other people could use.
 
-## Not worth doing yet
+**Not worth doing yet**
 
 The **pooled multi-commune DVF study** (the terrain offers matched pairs, but sales cluster, so it's a sampling bet). The **energy calibration** — blocked on winter, and the ventilation problem means summer data can't fix it.
 
 And **consolidating the drifted shared modules** into a real package: genuinely overdue now that `horizon_profile.py` exists in three forks plus this one, but boring, and nothing is currently broken by it.
 
----
-
 **My pick: #1, then #2.** The comparison costs almost nothing because the numbers exist, and it's the one that makes everything else make sense. Then #2 so September arrives as a result rather than a task.
+
+{{% /details %}}
+
 
 ![alt text](/blog_img/data-experiments/geo/preview_aerial.png)
 
@@ -472,7 +473,7 @@ cd ./poc/iot-dashboard-v2
 
 > https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/z-learnings-migration.md
 
-> > https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/docker-compose-zigbee.yml
+> > Instead of [the regular Zigbee config that includes a mqtt server](https://fossengineer.com/zigbee2mqtt-self-hosted-zigbee-bridge/) I needed [this one](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/docker-compose-zigbee.yml) to [work with my EMQX like so](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/z-learnings-migration.md#reusing-emqx-instead-of-deploying-another-broker)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/zigbee2mqtt" title="Zigbee2mqtt | Docker Config 🐋 ↗" >}}
@@ -511,8 +512,19 @@ make pump-schedules
 
 > `http://192.168.1.2:3038/?range=90d`
 
+{{< callout type="info" >}}
+I have not put [an offer around this](https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/#offer-configuration) *just yet*
+{{< /callout >}}
 
 ### FPV Telemetry
+
+https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter
+https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust/
+
+
+```sh
+
+```
 
 fpv dron prop vortex
 https://www.youtube.com/shorts/hgqM9Z0d6QU
@@ -522,6 +534,36 @@ https://www.youtube.com/@fpv-geek
 https://www.youtube.com/@JoshuaBardwell/videos
 https://www.youtube.com/@opendrone
 
+The complete compliance checklist to ensure you are 100% legal under Polish aviation law and fully protected by your insurance policy:
+
+**Administrative & Hardware (At Home)**
+
+* [ ] **A1/A3 Competency Certificate:** Downloaded from `drony.gov.pl` (PDF on phone or printed).
+* [ ] **Operator Label on Drone:** Frame clearly labeled with `whatever`.
+* [ ] **Insurance Certificate:** Policy #`number1234` (Compensa 350,000 PLN) saved on your phone. I got mine at `aeropolise.pl`
+* [ ] **Phone Charged:** DroneTower app installed and logged into your PANSA account.
+
+**At the Field (Location & Environmental Verification)**
+
+* [ ] **Outside Populated Areas:** At least **150 m** away horizontally from residential homes, roads, commercial buildings, parks, or industrial sites (Open A3 rule).
+* [ ] **Empty Airspace:** Zero uninvolved bystanders or animals in your intended flight area.
+* [ ] **Phone in Reach:** Phone has cellular signal and ringer/notifications on so aviation services can reach you if needed.
+
+**Pre-Takeoff Procedure**
+
+* [ ] **Open DroneTower App:** Drop a pin at your location.
+* [ ] **Check Airspace Status:** Confirm the zone is clear (green) and has no temporary flight restrictions (military polygons, HEMS rescue routes, national parks).
+* [ ] **Check-In:** Set max altitude ($\le$120 m AGL), set flight duration, select Open Category, and hit **Check-In**.
+
+**In-Flight Operational Rules**
+
+* [ ] **Unaided VLOS:** Maintain continuous direct line-of-sight visual contact with the quad using your eyes (no goggles, no spotter needed).
+* [ ] **Altitude Ceiling:** Never exceed **120 m (400 ft) AGL**.
+* [ ] **Manned Traffic Yield:** Give unconditional right-of-way to any low-flying aircraft or helicopters.
+
+**Post-Flight**
+
+* [ ] **End Flight in App:** Tap **End Check-In** in DroneTower as soon as your packs are done.
 
 #### MPU acelerometer
 
@@ -776,7 +818,8 @@ To be a data ready team, you need proper RACI model across product, architecture
 
 And to even get started: you need to have some kind of logic
 
-Example: a date is not a product definition
+Example: *a date is not a product definition*
+
 <!-- 
 https://youtu.be/K-eXcT1XgdE -->
 

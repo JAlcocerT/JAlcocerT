@@ -2,23 +2,52 @@
 title: "Selfhosted TTS"
 date: 2026-10-09
 draft: false
-tags: ["HomeLab","VoiceBox","SunoAI x music"]
+tags: ["Kokoro","VoiceBox","SunoAI x music"]
 description: 'A homelab that speaks.'
 url: 'selfhosted-tts'
 ---
 
-
+**Tl;DR**
 
 https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
-
-
-**Tl;DR**
 
 
 **Intro**
 
 * WHY Im writting this post: *bc i was surprised with [voicebox](https://fossengineer.com/voicebox-local-ai-voice-studio/), [chatterbox](https://fossengineer.com/chatterbox-local-open-source-tts/) and [kittenTTS](https://fossengineer.com/kittentts-local-cpu-tts/), but got to know simpler [local audio workflows with kokoro-82M](https://github.com/JAlcocerT/poc/blob/main/fpv-kpis/z-learnings.md) and this needs a checkpoint.
 * WHAT [Ive learnt](#conclusions) with it: *Ive ended*
+
+## T2S
+
+
+## S2T aka Transcription
+
+This is a good addition to `margin-cms`
+
+Imagine having the audio record capabilities and transcription from meetings directly into your notes.
+
+> [Files.md](https://fossengineer.com/files-md-local-first-markdown-notes/) has recording capabilities via pwa
+
+Then you can use some skills to bring the sauce to your daily summary, or just skip it.
+
+## Selfhosted AI-Gen Audio
+
+Earlier this year I was trying: [chatterbox](https://fossengineer.com/chatterbox-local-open-source-tts/), [qwen TTS](https://fossengineer.com/comfyui-qwen-tts/), [kitten TTS](https://fossengineer.com/kittentts-local-cpu-tts/) and [Voicebox](https://fossengineer.com/voicebox-local-ai-voice-studio/)
+
+From all those: voicebox was the clear winner to me.
+
+Also recently, Kokoro TTS surprised me locally with python to create such video with hyperframes autonomously.
+
+https://jalcocert.github.io/JAlcocerT/blog/selfhost-2605-ollama-cloud/#local-audio
+
+
+https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2
+
+### Selfhosted music server
+
+https://fossengineer.com/selfhosting-gonic/
+
+If you like CLIs: https://fossengineer.com/cliamp-terminal-music-player/
 
 ## AI x Music
 
@@ -36,8 +65,58 @@ https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#sunoai
 
 ### HomeLab Updates 1026
 
----
+Coming from [the 0926 updates](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#homelab-updates-0926).
 
+Ive been using [Dawarich](https://fossengineer.com/selfhosting-dawarich/) for [a while](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#homelab-updates-0826).
+
+Tinkered a bit with Technitium [inside Omarchy via VM](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy).
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/technitium" title="Technitium | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Also, got to know about mDNS - *which can be useful to ship the automatic watering setup with the esp32 available at a `pump.local` domain*
+
+Regarding **useful CLIs**: [herdr](https://fossengineer.com/herdr-terminal-agent-multiplexer/), [ncdu](https://fossengineer.com/ncdu-terminal-disk-usage-analyzer/), [lazydocker](https://fossengineer.com/lazydocker-terminal-ui-for-docker/)
+
+```sh
+herdr #code --yolo | opencode | claude 
+#ncdu /
+sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx jellyfin
+#docker port iot-dashboard-v2
+#lazydocker
+```
+
+These are also useful:
+
+```sh
+#whois ebooks.jalcocertech.com| grep -i -E "(creation|created|registered)"
+nslookup ebooks.jalcocertech.com
+dig ebooks.jalcocertech.com
+#sudo docker stop qbittorrent
+#docker rm -f $(docker ps -aq --filter "name=entre")
+```
+
+[Nextcloud is working reliably](https://jalcocert.github.io/JAlcocerT/selfhosted-connectivity/#self-hosting-updates) and accesible via CF only from the countries I [configured via WAF](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#cf-waf-vs-zero-trust-access).
+
+Is good to have [opencode](https://fossengineer.com/opencode-ai-coding-agent-cli/) and [lazygit](https://fossengineer.com/lazygit-terminal-ui-git/) handy too.
+
+```sh
+#docker ps --filter "status=running"
+#docker ps -a --filter "name=home-assistant"
+#docker stats home-assistant
+glances #htop btop
+```
+
+You can also connect to wifi via CLI, see `iwd` and https://fossengineer.com/impala-tui-wifi-manager/
+
+Having a look to **commento** to check that there is no spam [from time to time](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#server-maintainance):
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/commento" title="Commento | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+---
 
 ## FAQ
 
@@ -370,6 +449,10 @@ The pattern this represents — **open research framework + vendor content shipp
 **Workaround:** Rootless Podman / locked-down Kubernetes can't grant `SYS_MODULE`. Load WireGuard kernel module on the host first (`modprobe wireguard`), then `SYS_MODULE` can be dropped from the compose.
 
 ### Technitium DNS — `TechnitiumSoftware/DnsServer` (GPL v3)
+
+> https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#homelab-updates-0926
+
+> > https://jalcocert.github.io/JAlcocerT/private-dns-with-docker/ 
 
 **Key insight:** Full authoritative + recursive DNS server (vs Pi-hole's "blocking layer bolted onto a DNS resolver"). C#/.NET 10, DoT/DoH/DoQ both client and server side, DNSSEC signing of your own zones, native clustering, SSO via OIDC, 27+ DNS Apps plugins, built-in DHCP.
 

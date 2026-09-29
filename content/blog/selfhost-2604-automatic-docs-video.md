@@ -295,7 +295,7 @@ make install UV_PYTHON=3.12
 time make render all
 ```
 
-Say thx to pairdrop, see the difference
+Say **thx to pairdrop**, see the difference:
 
 <!-- https://youtu.be/r0eg5onWbn0 -->
 
@@ -303,4 +303,4 @@ Say thx to pairdrop, see the difference
 
 Oh the time for **4K with final presets**?
 
-This was 26min at the M2 and I did not dare to try it with my x13 nor the x300.
+This was *26min at the M2* and I did not dare to try it with my x13 nor the x300.

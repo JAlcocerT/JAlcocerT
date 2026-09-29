@@ -372,11 +372,13 @@ Ive lately found useful:
 
 ```sh
 herdr #codex --yolo
+#ncdu /
+#docker port iot-dashboard-v2
 ```
 
 ### Selfhosted Forgejo
 
-I got this ready in my x300 [some time ago to tinker with agents](https://jalcocert.github.io/JAlcocerT/poc-107/):
+I got [this forgejo setup](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#code-is-also-media) ready in my x300 [some time ago to tinker with agents](https://jalcocert.github.io/JAlcocerT/poc-107/):
 
 Having termix ready `http://192.168.1.2:8090/` and Forgejo `http://192.168.1.2:3034/`
 

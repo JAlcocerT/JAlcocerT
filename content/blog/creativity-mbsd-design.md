@@ -424,19 +424,9 @@ Luckily, a friend recently got a mac and I put the hands on it.
 
 Like a geek, first thing I learn was how to open the terminal: ~~`CTRL+T`~~ `cmd`
 
-Then I installed brew:
+Then I installed brew. Node and Python followed.
 
-```sh
-
-```
-
-Node and Python followed:
-
-```sh
-
-```
-
-And after: *coudlnt resist to try [CodeEdit](https://github.com/CodeEditApp/CodeEdit)
+And after: *could not resist to try [CodeEdit](https://github.com/CodeEditApp/CodeEdit)*
 
 ```sh
 #npm install -g @openai/codex #https://github.com/openai/codex/releases/tag/rust-v0.118.0
@@ -470,33 +460,36 @@ Remember about: `https://skills.sh/`
 #gemini --prompt "are you able to be queried with non interactive mode?" -m gemini-2.5-flash --yolo --debug
 ```
 
+To get you from a fresh Mac to a professional, Linux-style dev environment, follow these steps in order.
 
-To get you from a fresh Mac to a professional, Linux-style dev environment, follow these steps in order. Open your default Terminal (found in `/Applications/Utilities`) and run these.
+Open your default Terminal (found in `/Applications/Utilities`) and run these.
 
 1. Install Xcode Command Line Tools
 
 Before Homebrew can work, it needs the basic Apple compiler tools.
+
 ```bash
 xcode-select --install
 ```
+
 *A popup will appear; click **Install**.*
 
 ---
 
-2. Install Homebrew
-
-This is your primary package manager.
+2. Install Homebrew: This is your primary package manager.
 
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-**Important:** After it finishes, look at the terminal output. It will give you 2-3 lines of code to run to add Homebrew to your `PATH`. They look like this (but copy the ones from *your* terminal):
+**Important:** After it finishes, look at the terminal output. 
+
+It will give you 2-3 lines of code to run to add Homebrew to your `PATH`. They look like this (but copy the ones from *your* terminal):
+
 ```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
-
 
 3. Install Git & Basic Utilities
 
@@ -548,7 +541,6 @@ node -v
 # Check Python (via uv)
 uv --version
 ```
-
 
 Pro-Tip: The "Mise" Alternative
 

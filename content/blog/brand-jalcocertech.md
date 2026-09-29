@@ -2,7 +2,7 @@
 title: "How is my Brand going?"
 date: 2026-10-13
 draft: false
-tags: ["Brand HUBs","Email marketing","Typst","JAlcocerTech-Core"]
+tags: ["Brand HUBs","Email marketing","Typst","JAlcocerTech-Core","MailDev"]
 description: 'A brand around JAlcocerTech'
 url: 'branded-jalcocertech'
 ---
@@ -16,7 +16,7 @@ Hows my brand and outbound email marketing going?
 * Why Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
-
+* https://fossengineer.com/selfhosting-maildev/
 
 ### Why not just RemotionJS
 
