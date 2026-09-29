@@ -5,8 +5,8 @@ draft: false
 tags: ["PyVacations","NomadList","Numbeo","Trip-Planner x Weather","Costs of Living"]
 summary: 'Where am I going next? Vibe Planning and scrapped wisdom of crowds.'
 url: 'py-vacations'
+math: true
 ---
-
 
 **Tl;DR**
 
@@ -28,7 +28,7 @@ While exploring Agents (ADK).
 Following the TripPlanner, I thought that bringing cost of living data was a good idea.
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trip-planner" title="Trip Planner Selfhostable DASH | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trip-planner" title="Trip Planner Selfhostable Trip Planner | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Trip-Planner" title="Trip-Planner Repo ↗" >}}
 {{< /cards >}}
 
@@ -281,7 +281,7 @@ content
 
 ### Numbeo Data
 
-Its all about **Knowledge of Crowds**, *not the tyrannyof the experts*.
+Its all about **Knowledge of Crowds**, *not the tyranny of the experts*.
 
 $$
 \sum_{i=1}^{n} \text{opinions}_i > n \cdot \text{opinions}

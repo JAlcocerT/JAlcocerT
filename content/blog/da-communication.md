@@ -69,18 +69,25 @@ sudo snap install element-desktop
 
 As integrating project management tools is a major use case for these platforms.
 
- Here's a breakdown of how each solution handles Kanban boards and ticketing:
+Here's a breakdown of how each solution handles Kanban boards and ticketing:
 
 ### **Mattermost**
-Mattermost stands out in this area because it has **Kanban boards as a native, built-in feature**. They are not just an integration but are a core part of the Mattermost product, often referred to as "Mattermost Boards."
+
+Mattermost stands out in this area because it has **Kanban boards as a native, built-in feature**. 
+
+They are not just an integration but are a core part of the Mattermost product, often referred to as "Mattermost Boards."
 
 * **Kanban Boards:** You can create and manage Kanban boards directly within your Mattermost workspace, alongside your channels. This means you can track tasks, assign them to team members, set priorities, and see the progress of a project without ever leaving the platform.
+
 * **Ticketing System:** While it doesn't have a full-fledged, built-in ticketing system like a dedicated help desk, it integrates very tightly with external tools like **Jira**. You can use slash commands (`/jira create`) and message actions to create and link tickets from a conversation in Mattermost, keeping your team's communication and project tracking in sync.
 
 Because Mattermost's boards are a native feature, they are a strong choice if you want an all-in-one solution for team chat and project management without relying on external plugins or integrations.
 
 ### **Rocket.Chat**
-Rocket.Chat's approach is more focused on being a highly extensible platform. It doesn't have native Kanban boards or a ticketing system built-in, but it has a robust **marketplace and integration framework** that allows you to add this functionality.
+
+Rocket.Chat's approach is more focused on being a highly extensible platform. 
+
+It doesn't have native Kanban boards or a ticketing system built-in, but it has a robust **marketplace and integration framework** that allows you to add this functionality.
 
 * **Kanban Boards:** You can use integrations with popular Kanban tools like **Trello** or **Kanban Tool**. The integrations allow you to receive notifications in a Rocket.Chat channel when a card is moved, created, or updated in your Kanban board. Some integrations even allow you to create new cards directly from a chat message.
 * **Ticketing System:** Rocket.Chat can be used as a front end for a ticketing system, allowing you to manage customer service conversations from within the platform. It can integrate with dedicated ticketing software, allowing your support team to handle tickets without switching context.
@@ -88,12 +95,18 @@ Rocket.Chat's approach is more focused on being a highly extensible platform. It
 This model is ideal if your team is already using a specific project management or ticketing tool and you want a chat platform that can connect to it seamlessly.
 
 ### **Element (Matrix)**
-Element, being a client for the Matrix protocol, is primarily focused on decentralized, real-time communication. Like Rocket.Chat, it relies on integrations to provide more complex features like Kanban boards and ticketing.
+
+Element, being a client for the Matrix protocol, is primarily focused on decentralized, real-time communication.
+
+Like Rocket.Chat, it relies on integrations to provide more complex features like Kanban boards and ticketing.
 
 * **Kanban Boards & Ticketing:** There aren't native Kanban or ticketing features in the Element client. However, because Matrix is an open and federated protocol, you can build or find integrations that connect to external services like Trello, Jira, or other project management tools. This requires more technical setup and depends on the availability of integrations built by the community or third parties.
 
 ### **Zulip**
-Zulip is known for its unique topic-based messaging, which helps organize conversations. While it's great for project-related discussions, it does not have built-in Kanban boards or a ticketing system.
+
+Zulip is known for its unique topic-based messaging, which helps organize conversations. 
+
+While it's great for project-related discussions, it does not have built-in Kanban boards or a ticketing system.
 
 * **Kanban Boards & Ticketing:** Zulip focuses on its core strength—organized messaging. For project management and ticketing, it is designed to **integrate with external tools**. You would use a third-party service like Jira, Trello, or a dedicated ticketing system and then use Zulip's API or built-in integrations to get notifications in a stream or create tickets from a message.
 
@@ -106,7 +119,9 @@ Zulip is known for its unique topic-based messaging, which helps organize conver
 | **Element** | No (via integrations) | No (via integrations) | **Decentralized chat platform** that relies on external integrations. |
 | **Zulip** | No (via integrations) | No (via integrations) | **Organized messaging** that integrates with external PM tools. |
 
-If having a native Kanban board is a primary requirement and you want a single, cohesive open-source solution, **Mattermost** is the most direct answer to your question. For the others, the solution is to integrate with a dedicated, separate tool.
+If having a native Kanban board is a primary requirement and you want a single, cohesive open-source solution, **Mattermost** is the most direct answer to your question. 
+
+For the others, the solution is to integrate with a dedicated, separate tool.
 
 ---
 
@@ -119,7 +134,6 @@ See also:
 * https://github.com/spacebarchat/server
 
 >  Spacebar server - A reimplementation of the Discord.com backend, built with Typescript and love
-
 
 ```sh
 #flatpak install flathub org.telegram.desktop

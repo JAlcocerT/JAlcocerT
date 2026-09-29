@@ -415,7 +415,7 @@ Check that `forgejo:3000` ready:
 
 ### Selfhosted Communication
 
-Communication within your team is the information flow and you can also do it with OSS:
+[Communication within your team](https://jalcocert.github.io/JAlcocerT/communication-management/#oss-communication-solutions) is the information flow and you can also do it with OSS:
 
 1. [Simplex](https://fossengineer.com/selfhosting-simplex-chat/) with `https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.0`
 
@@ -423,6 +423,9 @@ Communication within your team is the information flow and you can also do it wi
 
 3. [Fluxer](https://fossengineer.com/selfhosting-fluxer-open-chat-voip/)
 
+4. [Bitchat](https://fossengineer.com/bitchat-mesh-messaging/) *that works via bluetooth*
+
+> See also [Rocket chat](https://github.com/RocketChat/Rocket.Chat) or [stoatchat](https://github.com/stoatchat/stoatchat) *i believe it was named revolt before*
 ### Selfhosted Media
 
 qbit and prowlarr at `6011` and `9696`.

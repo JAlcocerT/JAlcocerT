@@ -19,6 +19,15 @@ https://mermaid.js.org/syntax/entityRelationshipDiagram.html
 
 ## T2S
 
+You can go an use an OpenAI key:
+
+```sh
+
+```
+
+Or as I got to know recently, `Kokoro TTS` surprised me locally with python to create such video with hyperframes autonomously.
+
+https://jalcocert.github.io/JAlcocerT/blog/selfhost-2605-ollama-cloud/#local-audio
 
 ## S2T aka Transcription
 
@@ -36,16 +45,13 @@ Earlier this year I was trying: [chatterbox](https://fossengineer.com/chatterbox
 
 From all those: voicebox was the clear winner to me.
 
-Also recently, Kokoro TTS surprised me locally with python to create such video with hyperframes autonomously.
-
-https://jalcocert.github.io/JAlcocerT/blog/selfhost-2605-ollama-cloud/#local-audio
 
 
 https://jalcocert.github.io/JAlcocerT/cad-design-mbsd/#rendering-on-a-mac-m2
 
 ### Selfhosted music server
 
-https://fossengineer.com/selfhosting-gonic/
+Just [setup Gonic](https://fossengineer.com/selfhosting-gonic/) or Navidrome.
 
 If you like CLIs: https://fossengineer.com/cliamp-terminal-music-player/
 
@@ -60,6 +66,7 @@ https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#sunoai
 [2](https://pyseek.com/2025/04/generate-music-using-python-deep-learning/)
 [3](https://github.com/ayeshabasit/AI-Music-Generator)
 
+---
 
 ## Conclusions
 
@@ -95,6 +102,11 @@ nslookup ebooks.jalcocertech.com
 dig ebooks.jalcocertech.com
 #sudo docker stop qbittorrent
 #docker rm -f $(docker ps -aq --filter "name=entre")
+docker inspect forgejo --format '{{range $name, $_ := .NetworkSettings.Networks}}{{println $name}}{{end}}'
+#docker network connect cloudflared_tunnel forgejo
+#cd ./Home-Lab/forgejo
+#make migrate-repo REPO_OWNER=JAlcocerT REPO_NAME=my-logseq-notes #makes a mirror of gh
+#make sync-repo REPO_OWNER=JAlcocerT REPO_NAME=my-logseq-notes
 ```
 
 [Nextcloud is working reliably](https://jalcocert.github.io/JAlcocerT/selfhosted-connectivity/#self-hosting-updates) and accesible via CF only from the countries I [configured via WAF](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#cf-waf-vs-zero-trust-access).

@@ -247,7 +247,9 @@ No, I didnt try hydroponics in the end :)
 
 ### Whats next from here?
 
-Maybe...the 3D print thing to make a custom build with the solar panel mounted properly on top of the plants?
+Maybe...
+
+...the 3D print thing to make a custom build with the solar panel mounted properly on top of the plants?
 
 ```sh
 #streamlit run electronics-101/sample-pyscipe/solar_optimizer.py
@@ -256,6 +258,7 @@ uv run streamlit run .\solar_optimizer.py
 ```
 
 Key findings (30kWh/month @ $0.15/kWh example):
+
 - Grid-connected: $1.02/kWh (cheapest, net-zero generation)
 - Hybrid: $1.31/kWh (+battery cost, but resilience)
 - Off-grid: $2.33/kWh (most expensive, requires huge panel/battery for winter)
@@ -264,10 +267,9 @@ Key findings (30kWh/month @ $0.15/kWh example):
 Yes, this setup can [go solar](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/go-solar.md) pretty easily. Imagine a [home pv setup](https://github.com/JAlcocerT/electronics-101/tree/master/sample-pyscipe/home-scale-pv).
 {{< /callout >}}
 
-And...designed as a code with CadQuery, of course :)
+And...designed as a code with [CadQuery](https://fossengineer.com/cq-editor-cadquery-gui/), of course :)
 
 Yea...that can be an interesting upgrade
-
 
 ---
 

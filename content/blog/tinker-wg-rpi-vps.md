@@ -317,9 +317,9 @@ You can also use **[TailScale](https://jalcocert.github.io/Linux/docs/debian/lin
 
 A VPN can be useful for vacations.
 
-And this projects can help you plan them:
+And these projects can help you plan them:
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/vacation-planner-python/" title="PyVacation Blog Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/py-vacations/" title="PyVacation Blog Post" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/trip-planner-with-weather/" title="Trip Planner Blog Post" >}}
 {{< /cards >}}

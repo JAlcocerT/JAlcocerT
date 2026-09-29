@@ -783,8 +783,10 @@ The main difference comes down to how each board manages solar power conversion,
 | **Input Voltage Range** | Narrow (typically 4.5V–6V max) | Wide (often supports 6V to 28V+ panels) |
 
 * **Voltage Mismatch & Wasted Power:** A standard 12V or 18V solar panel connected to a standard TP4056 will either burn it out due to high input voltage or force the panel to collapse down to 4.2V, throwing away more than half of the usable wattage as heat.
+
 * **Multi-Cell Packs:** A standard TP4056 can only charge a **1S** (single 3.7V cell) setup. To charge a **3S** (12.6V) pack like the one in your schematic directly from solar, an **MPPT step-up/step-down multi-cell board** is required to deliver the proper voltage and CC/CV profile.
-* **Cost vs. Performance:** The TP4056 works reliably for small 5V USB panels and single-cell projects, but an MPPT board is necessary to safely and efficiently step solar voltages up or down for a 3S pack.
+
+* **Cost vs. Performance:** The `TP4056` works reliably for small 5V USB panels and single-cell projects, but an MPPT board is necessary to safely and efficiently step solar voltages up or down for a 3S pack.
 
 | Feature | **MPPT (Maximum Power Point Tracking)** | **PWM (Pulse Width Modulation)** |
 | --- | --- | --- |
@@ -793,7 +795,6 @@ The main difference comes down to how each board manages solar power conversion,
 | **Voltage Flexibility** | High input voltage support (e.g., 50V–150V+ panel arrays into a 12V/24V battery). | Panel nominal voltage must strictly match battery voltage (e.g., 18V $V_{mp}$ panel for a 12V battery). |
 | **System Scale** | Best for medium-to-large setups (>200W), multi-panel arrays, and residential/commercial solar. | Best for small systems (<150W–200W), single-panel DIY, RVs, and trickle-charging. |
 | **Cost** | Significantly higher ($40 to $500+) | Very low ($10 to $30) |
-
 
 
 {{% details title="MPPT vs PWM 🚀" closed="true" %}}

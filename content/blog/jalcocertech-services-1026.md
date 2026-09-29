@@ -162,6 +162,10 @@ https://www.youtube.com/watch?v=eFGkopoCTYY
 
 ### Energy
 
+Since I read a post about aerothermics, Ive [been gathering DHT22](https://jalcocert.github.io/JAlcocerT/thermodynamics/#aerotermia-poc-x-rpi-dht22) data for few experiments: insulation, modelling sun rays going to a particular home considering the surroundings *like mountains or neighbouring buildings*
+
+
+
 **1. Model the balcony recess in Blender — my pick.** The scene currently has no loggia at all: 21E is an extruded box with a red marker where the balcony should be. But the recess now drives **45% of the answer**, and the 40.9° profile cap is doing that work invisibly. Cutting the real 1.5 m × 2.5 m opening into the facade would let you look at a render of the sunlit patch on your own floor and say "yes, that's where it reaches" or "no, it comes further in". That's the verification the number can't give itself, and it's the same job the 21F A/B render did.
 
 **2. The seasonal animation.** Twelve frames at 17:00 through the year, showing 21F's shadow climbing your facade and the roof shadow retreating. The counterintuitive headline — March and September are your worst months, December is among your best — is hard to believe in a table and obvious in a loop. `create_ffmpeg_concat.py` is already there.
@@ -233,6 +237,8 @@ I measured the 18650 voltage and it was 3.5V
 {{< callout type="info" >}}
 After catching one sunny day (27-sept) moved the 5V solar panel south and between 10am-12pm went up to 3.6v
 {{< /callout >}}
+
+I was wondering [how much solar is enough for a micro-controller](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#how-much-solar-is-enough-for-the-esp32). Now I know.
 
 Surprise, energy [and geolocation matters](https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/#geo-matters) :O
 
@@ -460,7 +466,15 @@ This allow the esp32 to push sensor info [when properly connected to your wifi](
 make deepersleep-upload PORT=/dev/ttyACM0
 ```
 
+{{< callout type="info" >}}
+For [adding solar](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#adding-solar) I didnt manage to transform the `IP2326` from 2s to 3s [as intended](https://jalcocert.github.io/JAlcocerT/engineering-102/#conclusions), so got a `CN3303` instead
+{{< /callout >}}
+
+
+
 ### Crops - Agrotech
+
+The [BoM I put together](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#the-bom-for-the-project) and [simulated back in April](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/output.txt) worked!
 
 After getting the watering setup PoC working, I wanted to tinker with the [esp32 wifi connection](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-wifi): beyond [the wifimanager](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-wifi/z-learnings-1-wifimanager.md)
 
@@ -518,9 +532,15 @@ I have not put [an offer around this](https://jalcocert.github.io/JAlcocerT/iot-
 
 ### FPV Telemetry
 
-https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter
-https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust/
+* https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter
+* https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust/
 
+
+```sh
+
+```
+
+Ive also shipped a Kotlin version that you can get via [obtanium](https://github.com/ImranR98/Obtainium).
 
 ```sh
 
@@ -642,6 +662,8 @@ There were 3 stages:
 1. Electronic Simulation
 2. Bread and protoboard testing
 3. PCB Design with KiCAD
+
+### 3D-Design
 
 
 ### Governance Consulting

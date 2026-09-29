@@ -273,6 +273,19 @@ Someone told me a long time ago that I would end up doing sth around energy and 
 
 ## FAQ
 
+
+https://en.wikipedia.org/wiki/Boyle%27s_law
+
+PV=nrT
+
+And i could feel that while riding my bicycle during winter.
+
+### What it is Boyles Law
+
+### What it is VPD
+
+Got to know [about VPD here](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#from-t-and-h-to-vpd) while measuring how to make my living room a good home for tomatoes to grow.
+
 ### Heat Transfer
 
 
