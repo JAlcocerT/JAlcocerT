@@ -530,6 +530,14 @@ make pump-schedules
 I have not put [an offer around this](https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/#offer-configuration) *just yet*
 {{< /callout >}}
 
+### Sun Rays Modelling
+
+To take this further, I used the Pi4 with its camera:
+
+```sh
+rpicam-still --nopreview --timeout 2000 --output camera-tests/snapshot-20260930-151243.jpg
+```
+
 ### FPV Telemetry
 
 * https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/#tello-x-flutter
@@ -693,13 +701,17 @@ Then its about making good questions, like:
 * Stop asking "Do they see it?
 * Start asking "Is this priced correctly?"
 
-Some orgs are already asking: why do we need a person?
+Some orgs are already asking: *why do we need a person?*
 
 And that makes sense, the info is out there: *ppl are realizing that scrum doesnt work, aka is too slow*
 
 Now...dark factories will come (even more) to the software/IT sector
 
-If you have questions on whats going next, reach out:
+AI...employees coming?
+
+Comercial ones like: `https://www.lindy.ai/pricing`
+
+Why not building a brand *before its too late*:
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}

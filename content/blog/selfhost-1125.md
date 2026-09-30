@@ -744,10 +744,6 @@ These terms define the **networking channels** your node uses to communicate wit
 
 In short, Umbrel runs your Bitcoin node across **Tor and I2P** to ensure maximum privacy by hiding your node's real IP address from almost all peers, making your operation highly secure and censorship-resistant.
 
-That's an excellent and crucial question about security!
-
-No, your 12 words (often called a **seed phrase** or **recovery phrase**) are **not** your private key, but they are the **master key** that can generate all of your individual private keys.
-
 ---
 
 🔑 Seed Phrase vs. Private Key

@@ -150,6 +150,22 @@ Pragmatism some may call it.
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/omni-tools" title="Omni-Tools Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+### Auth
+
+https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#whats-forward-auth
+
+https://jalcocert.github.io/JAlcocerT/fastapi-x-pocketbase/#cloudflare-workers-auth
+
+https://github.com/FiloSottile/mkcert
+
+{{< callout type="warning" >}}
+Create the **A DNS Record** pointing to the Pi home address, like `pi-portainer.jalcocertech.xyz` before spinning the Traefik container!
+{{< /callout >}}
+
+{{< callout type="info" >}}
+http challenge will require portforwarding if you are behind a NAT, but **with DNS Challenge we are good to go!**
+{{< /callout >}}
+
 
 ### Connectivity
 
@@ -157,6 +173,10 @@ Not just speed-tests, and DNS, but...
 
 * https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
 
+
+#### VPNs
+
+https://github.com/WGDashboard/WGDashboard
 
 ---
 
@@ -226,3 +246,48 @@ npx wrangler pages deploy dist --project-name=gopro-telemetry-overlay
 
 
 
+### Learnings with HomeLab
+
+https://akashrajpurohit.com/blog/initial-vps-setup-checklist-first-30-minutes/
+
+Wondering which [OS to get started](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started)?
+
+Id leave ZorinOS/[Omarchy](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy) for daily driver
+
+* [2511](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025): Selfhosted adventures with umbrelOS and running a BTC node
+
+Seed Phrase vs. Private Key
+
+Your 12 words (often called a **seed phrase** or **recovery phrase**) are **not** your private key, but they are the **master key** that can generate all of your individual private keys.
+
+* [2510](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#files-files-files)
+* [2509](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/)
+* [2506](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/)
+* [2505](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/): discovered termix and [made speedtests](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently)
+* [2503](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/): more [https/ssl](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#better-https-and-ssl) tinkering, [tested immich](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich), configured [Jellifyn to use hardware acceleration](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#keep-using) and found [about forward auth](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#authentication)
+
+
+Take [seriously your homelab security](https://jalcocert.github.io/JAlcocerT/homelab-security/)
+
+## Configuring an OS
+
+Get a nice browser like: [zen](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#new-software), helium
+
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks" title="Benchmarks | Script ↗" >}}
+{{< /cards >}}
+
+
+```sh
+#df -h #check space
+docker stop $(docker ps -a -q) #stop all
+#docker volume rm $(docker volume ls -q | grep -v '^portainer_data$') #rm all volumes but portainer
+
+#docker system df
+#docker image prune -a 
+#docker builder prune -a --force
+docker system prune --all --volumes #release space from old containers
+
+#docker system prune --all --volumes #just clean all...
+```

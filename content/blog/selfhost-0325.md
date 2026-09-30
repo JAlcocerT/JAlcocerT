@@ -83,7 +83,7 @@ podman run -d -p 8888:8000 -p 9999:9000 --name=portainerpodman --restart=always 
 A very interesting web app to put together your **homelab links**:
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Config File 🐳 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Docker/blob/main/Media/Homarr_Docker-compose.yml" title="Homarr Config File 🐳 ↗"  >}}
 {{< /cards >}}
 
 **What I like about Homarr**
@@ -112,7 +112,7 @@ The good thing with Caddy, is that it will work as long as you have a good `Cadd
 
 **What do I like about Caddy**
 
-Easy setup as per [JimsGarage Video](https://www.youtube.com/watch?v=ZOtUco5EwoI) and this post https://ugeek.github.io/blog/post/2023-10-05-caddy-certificado-https-autofirmado-red-local.html
+Easy setup as per [JimsGarage Video](https://www.youtube.com/watch?v=ZOtUco5EwoI) and [this ugeek post](https://ugeek.github.io/blog/post/2023-10-05-caddy-certificado-https-autofirmado-red-local.html) 
 
 {{< callout type="warning" >}}
 Make sure to create the **A DNS Record** pointing to the Pi home address, like `pi-portainer.jalcocertech.xyz` before spinning the container!
@@ -195,7 +195,7 @@ Forward... Auth...?
 
 That seems to be another story.
 
-> And scope for another post!
+> And scope [for another post](https://jalcocert.github.io/JAlcocerT/front-end-and-auth/#whats-forward-auth)!
 
 ### Immich
 

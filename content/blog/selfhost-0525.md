@@ -196,7 +196,7 @@ To get in a quick look what Im selfhosting lately.
 1. Now the **MultiChat** project I've been tinkering on, [now](https://github.com/JAlcocerT/Streamlit-MultiChat/releases/tag/llms%2Byt) supports also the Youtube Groq Summaries:
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="//blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/comparing-rag-and-use-cases/" title="RAG 101" image="/blog_img/GenAI/rag101.jpeg" subtitle="My Fav RAGs Post" >}}
   {{< card link="https://github.com/JAlcocerT/Streamlit-MultiChat" title="MultiChat" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Chat with various LLMs x Youtube Groq Summaries" >}}
 {{< /cards >}}
 
@@ -254,7 +254,7 @@ Oterm seems to [support MCP](https://ggozad.github.io/oterm/mcp/?h=mcp#tools)
 3. I got working a **local research assistant** the searches the web for you and summarizes the content via Ollama (I added OpenAI as well and groq support is on the way for faster inference).
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher/#local-deep-researcher-project" title="Local Deep Researcher" image="//blog_img/GenAI/rag101.jpeg" subtitle="Local Deep Researcher | Post" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/understanding-langgraph-local-deep-researcher/#local-deep-researcher-project" title="Local Deep Researcher" image="/blog_img/GenAI/rag101.jpeg" subtitle="Local Deep Researcher | Post" >}}
   {{< card link="https://github.com/JAlcocerT/local-deep-researcher/tree/main/" title="Local Deep Researcher" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Forked Repo" >}}
 {{< /cards >}}
 

@@ -7,8 +7,6 @@ description: 'Selfhosting for New Comers: SSGs,Python WebApps with Traefik v3 HT
 url: 'selfhosted-apps-sept-2025'
 ---
 
-Summer is almost gone...
-
 **TL;DR:** 
 
 [Lately I](#lately-i) have been [tinkering with Python Web Apps](https://jalcocert.github.io/JAlcocerT/web-apps-with-python/) and with SGGs.

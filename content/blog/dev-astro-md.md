@@ -10,7 +10,7 @@ url: 'nextjs-toast-ui-editor'
 
 **Tl;DR**
 
-Some people sya that data is the new oil.
+Some people say that data is the new oil.
 
 Others, that [ideas are the new oil](https://nav.al/ideas)
 

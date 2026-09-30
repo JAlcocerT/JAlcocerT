@@ -792,6 +792,11 @@ And why it matters?
 ### What it is QoS/AQM
 
 
+### Other SelfHosted Speed Tests
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently
+![Cloudflare Internet Speed](/blog_img/selfh/Internet/internet-test.png)
+
 
 ## Related Notes
 

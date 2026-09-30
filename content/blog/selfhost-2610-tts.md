@@ -11,6 +11,7 @@ url: 'selfhosted-tts'
 
 https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
 
+https://github.com/swingmx/swingmusic
 
 **Intro**
 
@@ -74,7 +75,15 @@ https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#sunoai
 
 Coming from [the 0926 updates](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#homelab-updates-0926).
 
-Ive been using [Dawarich](https://fossengineer.com/selfhosting-dawarich/) for [a while](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#homelab-updates-0826).
+Ive been using [Dawarich](https://fossengineer.com/selfhosting-dawarich/) for [a while](https://jalcocert.github.io/JAlcocerT/home-lab-tools-for-iot/#homelab-updates-0826), which reminded me about a potential [synergia with wanderer](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#selfhosted-adventures)
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/wanderer" title="Selfhosted Wanderer - Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/dawarich" title="Dawarich Config 🐋 ↗" >}}
+{{< /cards >}}
+
+![Wanderer vs strava/komoot](/blog_img/selfh/umbrel-os/wanderer-integrations.png)
+
 
 Tinkered a bit with Technitium [inside Omarchy via VM](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy).
 
@@ -127,6 +136,14 @@ Having a look to **commento** to check that there is no spam [from time to time]
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/commento" title="Commento | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#homelab-commands" title="HomeLab CLIs | Docs ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="Cloudflare x Porkbun DNS API Scripts ↗" >}}
+{{< /cards >}}
+
+
+https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#traefik-x-x300-homelab
 
 ---
 

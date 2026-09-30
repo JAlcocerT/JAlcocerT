@@ -437,7 +437,7 @@ chmod +x setup-traefik.sh
 
 > Was it easy right?
 
-> > Say thanks to **the power of repetition**, as I made it recently for the [x300](#x300), a [Pi4](#pi4) and the [Firebat](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat)
+Say thanks to **the power of repetition**, as I made it recently for the [x300](#x300), a [Pi4](#pi4) and the [Firebat](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#hello-again-firebat)
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/docker-compose.vps.yml" title="Traefik x VPS Setup | Script ↗" >}}
@@ -958,12 +958,12 @@ ping adguardhome.wal.jalcocertech.com
 
 ![Using Adguard via Traefik for https](/blog_img/selfh/HomeLab/dns/adguard.png)
 
+Then you will get:
+
 ![Adguard Home DNS Servers via container](/blog_img/selfh/HomeLab/dns/adguardhome-dns-servers.png)
 
-https://github.com/JAlcocerT/Home-Lab/blob/main/adguardhome/docker-compose.traefik.yml
-https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/docker-compose.wal.yml
-
-
+* https://github.com/JAlcocerT/Home-Lab/blob/main/adguardhome/docker-compose.traefik.yml
+* https://github.com/JAlcocerT/Home-Lab/blob/main/traefik/docker-compose.wal.yml
 
 ---
 

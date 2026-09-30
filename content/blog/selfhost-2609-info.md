@@ -91,7 +91,7 @@ Last year, [as knowledge management tools](https://jalcocert.github.io/JAlcocerT
     {{< card link="https://fossengineer.com/selfhostable-note-taking-tools/" title="OSS Note taking tools ↗" >}}
 {{< /cards >}}
 
-Im putting together sth [between a note tool and git CMS here](https://github.com/JAlcocerT/poc/tree/main/pwa-margincms):
+Its [not the first time](https://jalcocert.github.io/JAlcocerT/nextjs-toast-ui-editor/) and yet Im putting together sth [between a note tool and git CMS here](https://github.com/JAlcocerT/poc/tree/main/pwa-margincms):
 
 ```sh
 cd ./poc/pwa-
@@ -448,7 +448,9 @@ You can have [a look to IPTVs](https://forocoches.com/foro/showthread.php?t=1074
 
 #### Music
 
-[Navidrome](https://github.com/JAlcocerT/Home-Lab/tree/main/navidrome), subsonic or [gonic](https://github.com/sentriz/gonic) are OSS **selfhostable music servers**.
+[Navidrome](https://github.com/JAlcocerT/Home-Lab/tree/main/navidrome), subsonic or [gonic](https://github.com/sentriz/gonic) are OSS **selfhostable music servers** that I tinkered with [some time back](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#more-stuff-lately).
+
+![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
 
 You need clients:
 

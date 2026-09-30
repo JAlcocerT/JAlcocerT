@@ -16,6 +16,9 @@ You just need `.STL` to bring designs to the real world
 * WHY Im writting this post: *bc [this power staging](https://jalcocert.github.io/JAlcocerT/iot-sensors-101/#kicad-x-power-stage-pcb-design) makes a mess and i want to put some order to the table* 
 * WHAT [Ive learnt](#conclusions) with it: *Ive ended up sending for [manufacturing STLs for the first time](#my-first-3dprint) a [fpv dron stand](https://github.com/JAlcocerT/poc/tree/main/blender/dron-standing)*
 
+Summer is almost gone...
+
+What are you waiting for? 
 
 ## Design Hello World
 
@@ -68,6 +71,36 @@ What about Freecad?
 freecad
 ```
 
+### Selfhosted OSS 3DPrinting
+
+Every program on your list is an **open-source software (OSS)**, **self-hostable** tool designed specifically for the 3D printing ecosystem.
+
+Thanks to: `https://selfh.st/apps/?search=3d`
+
+| Software | Role / Category | License | Self-Hosting Method | Notes |
+| --- | --- | --- | --- | --- |
+| **OctoPrint** | Print server & machine control | AGPLv3 | Bare metal (OctoPi image, Python), Docker | The classic Raspberry Pi print server; huge plugin ecosystem. |
+| **Obico** *(formerly The Spaghetti Detective)* | AI failure detection & remote monitoring | AGPLv3 | Docker Compose / Helm | Offers a cloud service, but the full server stack (`obico-server`) is self-hostable (GPU recommended for inference). |
+| **Manyfold** | Digital Asset Manager (DAM) for 3D models | MIT / OSS | Docker Compose | Organizes STL/3MF files, previews 3D models in the browser, and manages multi-part print projects. |
+| **Spoolman** | Filament inventory management | MIT | Docker Compose | Integrates directly with OctoPrint and Moonraker/Klipper (Mainsail/Fluidd) to track spool weights automatically. |
+| **Maker Management Platform (MMP)** | Digital Asset Manager for 3D prints | Open Source (BSD-2-Clause / MIT) | Docker Compose | Similar in purpose to Manyfold. *Note:* As of 2026, the MMP GitHub repositories are archived/seeking maintainers, so Manyfold is currently the more active alternative. |
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/octoprint" title="BotPress | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+Typical Self-Hosted 3D Printing Stack
+
+Most homelab makers combine these into a unified workflow:
+
+1. **Model Storage & Organization:** **Manyfold** stores, tags, and previews your 3D files (STLs, 3MFs).
+2. **Filament Tracking:** **Spoolman** tracks remaining spool weights, colors, and vendors.
+3. **Printer Control & Execution:** **OctoPrint** (or Klipper + Moonraker) receives sliced G-code, monitors temps, and communicates with Spoolman.
+4. **Safety & AI Monitoring:** **Obico Server** taps into OctoPrint's webcam feed to catch print failures (spaghetti/detachment) and pause the job automatically.
+
+People is really creative online:
+
+* https://www.thingiverse.com/thing:5965826 *Minimalistic Motorized Roller Blinds - NEMA 17 stepper motor gear*
 
 ---
 
@@ -75,6 +108,16 @@ freecad
 
 Wherever you see `price = cost + margin`, you are looking to a commodity
 
+For the ones that dont want to read an ebook neither to pay consulting or the DFY...
+
+I offered a *1 to many* free session, aka Webinar.
+
+At my schedule convenience. And where I try to sell you services, ofc.
+
+
+---
+
+## FAQ
 
 
 ### Where to get Models
@@ -87,10 +130,6 @@ Wherever you see `price = cost + margin`, you are looking to a commodity
 I recently got to know that pcbway can estimate the cost and send you plastic and even metal 3dprints :O
 
 I got my first 3dprints [done like so](#my-first-3dprint)
-
----
-
-## FAQ
 
 ### My First 3dPrint
 
@@ -293,11 +332,4 @@ You write pure code in a script file (`.scad`), compile it, and the software ren
 | **Parametric Control** | Native variables (`wall_thickness = 3;`) | Spreadsheet workbench / sketch constraint formulas | Driver expressions / Geometry Nodes | None |
 | **Version Control (Git)** | Perfect — plain human-readable text | Difficult — binary/zipped XML archive | Difficult — proprietary binary archive | Poor — massive list of coordinates |
 | **Target Audience** | Programmers, algorithmic designers, procedural parts | Mechanical engineers, precision machinists | 3D artists, animators, game asset creators | 3D printers, slicers, CAM mills |
-
-
-### 3d Print x Power Stage
-
-After making work in a bread->protoboard->PCB [this water pump power stage](https://github.com/JAlcocerT/poc/tree/main/iot-esp-water/esp32-cpp-mqtt-pump/power-stage-104)
-
-Putting together a 3d print encapsulation was the obvious next step:
 

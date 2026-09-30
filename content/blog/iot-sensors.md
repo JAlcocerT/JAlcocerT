@@ -1070,10 +1070,9 @@ git clone https://github.com/JAlcocerT/electronics-101
 uv run main.py --only mosfet --scenario compare   # overlay: with vs without diode 
 ```
 
-
-
 {{< youtube "JbixCdhRzDo" >}}
 
+If anything: blame these tomatoes for all this
 
 {{< youtube "nwK4nr8uqpo" >}}
 
