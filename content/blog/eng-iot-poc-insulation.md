@@ -149,7 +149,7 @@ We can have this view:
 
 ![alt text](/blog_img/entrepre/rpi-dht.png)
 
-And improve it with these:
+And improve it with these **MQTT flows**:
 
 ![alt text](/blog_img/iot/mqtt-esp-pushing.png)
 
@@ -237,12 +237,14 @@ Measure, dont model:
 
 ### Solar vs Wind
 
-The cost of a small wind turbine for a home ranges from $3,000 to $8,000 per kilowatt installed. 
+The cost of a small wind turbine for a home ranges from 3k$ to 8k$ per kilowatt installed. 
 
 In contrast, an equivalent 1 kW solar panel system would cost about $2,770 on average in the U.S. (SRT 00:07:46 - 00:08:04).
 
 * Source: https://www.youtube.com/watch?v=nPvTH7Siclg
 * Channel: Undecided with Matt Ferrell
+
+> Wind turbines look really cool anyways :)
 
 ### Home Solar Test x TP4056
 
@@ -260,7 +262,7 @@ Since your cell can safely output up to 8 Amps, the Pico W won't even wake the b
 
 ![alt text](/blog_img/electronic/solar-tp4056-picow-18650.png)
 
-Mine is a simple 15W:
+Mine is a simple 5V panel, *in theory* up to 15W:
 
 ![Solar Panel](/blog_img/outro/solar-panel.jpg)
 

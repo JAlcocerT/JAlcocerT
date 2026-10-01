@@ -14,8 +14,8 @@ math: true
 
 **Intro**
 
-* WHY Im writting this post: *bc energy analysis is everywhere*
-* WHAT [Ive learnt](#conclusions) with it: *a*
+* WHY Im writting this post: *bc energy analysis is everywhere, from [home utility bills](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-facturas/z-costs-summaries.md) to [SAHP simulations](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/#the-experiment)*
+* WHAT [Ive learnt](#conclusions) with it: *with a recap of [enthropy](#what-it-is-enthropy), [exergy](#what-it-is-exergy)*
 
 Guess what happens when you take [trip planner v4](https://github.com/JAlcocerT/Py_Trip_Planner/tree/main/poc-trip-planner-v4), the `go solar` with the batteries and rainny days, with...
 
@@ -24,19 +24,23 @@ git clone /poc
 cd poc/ #z-trip-planner-v4
 ```
 
-What Happens is that you can validate the [results of ppl in forums](https://forocoches.com/foro/showthread.php?t=9806597).
+What Happens is that you can validate the [PV + Aerothermic results of ppl in forums](https://forocoches.com/foro/showthread.php?t=9806597), aka SAHP solar assisted heat pump systems.
 
 Or just create a way to check if aerothermics applies to you from such [dev plan](https://github.com/JAlcocerT/poc/blob/main/aerothermics/dev-plan.md):
 
 ![alt text](/blog_img/apps/aerotermia.png)
 
-Es una pregunta excelente, porque a primera vista parece que la aerotermia es una máquina de "energía infinita" o un movimiento perpetuo al darte **4 kWh** de calor por cada **1 kWh** que pagas.
+## Thermodynamics
+
+
+A primera vista parece que la aerotermia es una máquina de "energía infinita" o un movimiento perpetuo al darte **4 kWh** de calor por cada **1 kWh** que pagas.
 
 Sin embargo, no violamos absolutamente ninguna ley; de hecho, la aerotermia es un ejemplo perfecto de cumplimiento estricto de la termodinámica. 
 
 El truco está en que la gente suele confundir **eficiencia** con **rendimiento**.
 
 Aquí te explico por qué no estamos rompiendo el universo:
+
 
 ### 1. Primera Ley: Conservación de la Energía
 
@@ -69,9 +73,7 @@ En la aerotermia no hablamos de rendimiento térmico, sino de **$COP$ (Coefficie
 
 Existe un límite teórico máximo de eficiencia que ninguna máquina puede superar (el Ciclo de Carnot).
 
-
 $$COP_{max} = \frac{T_{caliente}}{T_{caliente} - T_{fria}}$$
-
 
 *(Nota: Las temperaturas deben estar en Kelvin).*
 
@@ -81,10 +83,7 @@ Si en Barcelona hace $10\text{°C}$ ($283\text{ K}$) y quieres tu casa a $20\tex
 
 ¿Te habías fijado que cuando la máquina calienta tu casa, el aire que sale de la unidad exterior está mucho más frío que el ambiente? Ahí es donde ves físicamente cómo le estás "robando" la energía a la calle.
 
-
----
-
-¡Exacto! Has dado en el clavo. La **entropía** es la que dicta las reglas del juego, pero es la **entalpía** la que nos permite llevar la contabilidad de la energía que entra y sale de tu casa.
+La **entropía** es la que dicta las reglas del juego, pero es la **entalpía** la que nos permite llevar la contabilidad de la energía que entra y sale de tu casa.
 
 Para entender tu aerotermia como un físico, hay que mirar el **Ciclo de Rankine** de refrigeración. Aquí tienes las ecuaciones clave:
 
@@ -98,19 +97,14 @@ El balance de energía en cada componente de tu máquina se define por la difere
 
 $$w_c = h_2 - h_1$$
 
-
-
 *(Donde $h_1$ es la entalpía al entrar al compresor y $h_2$ al salir).*
 * **En el Condensador (Calor que calienta tu casa):**
 
 $$q_{out} = h_2 - h_3$$
 
-
 * **En el Evaporador (Calor que robas de la calle):**
 
 $$q_{in} = h_1 - h_4$$
-
-
 
 ### 2. La Segunda Ley y la Entropía ($S$)
 
@@ -144,13 +138,12 @@ En este gráfico se ve claramente cómo la válvula de expansión reduce la pres
 ### Resumen termodinámico para tu caso:
 
 * **Entalpía:** Es el **"cuánto"**. Te dice cuántos Julios de calor estás moviendo realmente.
-* **Entropía:** Es el **"por qué"**. Te explica por qué necesitas un compresor eléctrico y por qué el calor no entra solo a tu casa desde el frío exterior (la naturaleza prohíbe que la entropía del universo disminuya sin realizar un trabajo).
 
-Tienes una memoria termodinámica excelente. 
+* **Entropía:** Es el **"por qué"**. Te explica por qué necesitas un compresor eléctrico y por qué el calor no entra solo a tu casa desde el frío exterior (la naturaleza prohíbe que la entropía del universo disminuya sin realizar un trabajo).
 
 Estás pensando en la relación **$T \cdot \Delta S$**.
 
-Esta combinación aparece principalmente por dos motivos fundamentales: para calcular el **calor** en procesos reversibles y para entender la **exergía** (la energía que realmente es útil).
+Esta combinación aparece principalmente por dos motivos fundamentales: *para calcular el **calor** en procesos reversibles y para entender la **exergía** (la energía que realmente es útil)*.
 
 #### 1. La definición de Calor ($Q$)
 
@@ -215,6 +208,14 @@ Lo que te queda para comprar (calentar la casa) es lo que realmente importa.
 
 ## Conclusions
 
+{{< callout type="info" >}}
+Entropy describes energy degradation (the penalty of the Second Law of Thermodynamics).
+{{< /callout >}}
+
+{{< callout type="info" >}}
+Exergy describes energy quality or work potential (how much useful value energy actually has).
+{{< /callout >}}
+
 I havent put together any *stirling engines*... yet
 
 ![alt text](/blog_img/mechanics/stirling_engine.gif)
@@ -227,6 +228,10 @@ Looking for similar **decision intelligence** tools?
 
 Reach out for throughput and outcomes, ~~not availability~~:
 
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
 
 ### Aerotermia PoC x RPi DHT22
 
@@ -279,6 +284,54 @@ https://en.wikipedia.org/wiki/Boyle%27s_law
 PV=nrT
 
 And i could feel that while riding my bicycle during winter.
+
+
+### What it is Enthropy
+
+
+
+### What it is Exergy
+
+Storing excess solar energy as heat in water is one of the most practical and cost-effective energy storage methods for a home. 
+
+Instead of gravitational energy, you are tapping into the **specific heat capacity of water** ($c = 4{,}184\text{ J/(kg}\cdot\text{K)}$ or $\approx 1.163\text{ Wh/(kg}\cdot^\circ\text{C)}$).
+
+Water absorbs an enormous amount of thermal energy per degree of temperature increase.
+
+### Energy Density Calculation (Heating from 20°C to 90°C)
+
+In domestic systems, water is kept below boiling to avoid dangerous steam pressures—typically heating from cold tap water (**~20°C**) to hot storage (**~90°C**), giving a temperature differential of $\Delta T = 70^\circ\text{C}$.
+
+$$\text{Energy per kg} = 1.163\text{ Wh/(kg}\cdot^\circ\text{C)} \times 70^\circ\text{C} \approx \mathbf{81.4\text{ Wh/kg (or Wh/L)}}$$
+
+If pushed from **15°C up to near-boiling (95°C)** ($\Delta T = 80^\circ\text{C}$):
+
+
+$$\text{Energy per liter} \approx \mathbf{93\text{ Wh/L}}$$
+
+**Thermal water storage achieves roughly $80\text{ to }95\text{ Wh/L}$**—nearly identical to the volumetric density of a finished residential LFP battery pack (~$90\text{–}110\text{ Wh/L}$), and orders of magnitude higher than pumped hydro.
+
+---
+
+#### 10 kWh Comparison: Pumped Hydro vs. LFP vs. Hot Water
+
+| Metric | Pumped Hydro (20m drop) | LFP Battery Bank | Hot Water Tank ($\Delta T = 70^\circ\text{C}$) |
+| --- | --- | --- | --- |
+| **Medium Size / Mass** | **334,000 Liters** (334 tons) | ~100 kg | **~125 Liters** (125 kg) |
+| **Reservoir / Unit Footprint** | Olympic diving pool scale | Mini-fridge size (~100 L) | Standard small domestic boiler (~125 L) |
+| **Round-Trip / Conversion Cost** | Very high (pumps, generator) | Moderate ($150–$300/kWh) | **Extremely cheap** (immersion resistor) |
+| **Output Form** | Electricity | Electricity | **Thermal (Heat)** |
+
+To absorb 10 kWh of excess solar generation, you only need an ordinary **125-liter to 150-liter domestic hot water tank**.
+
+The Big Catch: Electricity vs. Heat (The Exergy Problem)
+
+While the numbers look incredible, the difference lies in **entropy and energy utility**:
+
+1. **Converting Electricity to Heat is ~100% efficient:** An electric immersion heater or solar diverter (like a *Myenergi eddi* or similar solar power diverter) transfers almost 100% of excess solar electrons straight into hot water.
+
+2. **Converting Heat BACK to Electricity is impractical at home:** You cannot realistically convert that 90°C water back into AC power to run your TV or lights. Thermal power generation (like a steam turbine or Stirling engine) operating across a tiny 90°C to 20°C drop has a Carnot theoretical maximum efficiency of only ~19%, and a real-world conversion efficiency under 5%.
+
 
 ### What it is Boyles Law
 

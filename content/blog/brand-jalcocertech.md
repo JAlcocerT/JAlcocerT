@@ -2,8 +2,8 @@
 title: "How is my Brand going?"
 date: 2026-10-13
 draft: false
-tags: ["Brand HUBs","Email marketing","Typst","JAlcocerTech-Core","MailDev"]
-description: 'A brand around JAlcocerTech'
+tags: ["Brand HUBs","Email marketing","Typst","JAlcocerTech-Core"]
+description: 'A brand around JAlcocerTech. With MailDev and Mailpit.'
 url: 'branded-jalcocertech'
 ---
 
@@ -85,6 +85,8 @@ I had to sit and ask myself: [what do I do](https://jalcocert.github.io/JAlcocer
 Concluded that: I do independent consulting work, driving business outcomes by building enterprise analytics systems
 
 When you dont have [a story line for chatting](https://jalcocert.github.io/JAlcocerT/what-do-i-do/#conclusions) you are far from any sales pitch.
+
+https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#inbound-marketing-x-branded-videos
 
 ### Promo Video
 

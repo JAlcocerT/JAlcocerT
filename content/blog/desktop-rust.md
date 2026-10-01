@@ -559,12 +559,17 @@ Each build uses its platform’s native Flutter engine and system integration. G
 
 A CI matrix can automate all three builds whenever you publish a release. Flutter removes most platform-specific application development—it does not create one universal executable.
 
-xactly—that’s the core beauty of PWAs.
+The core beauty of PWAs:
 
-You deploy one application, and any supported browser can run it across Windows, Linux, macOS, Android and iOS. Updates happen centrally without rebuilding installers.
+You deploy one application, and any supported browser can run it across Windows, Linux, macOS, Android and iOS.
 
-The trade-off is hardware access. A normal PWA cannot directly open the Tello’s arbitrary UDP ports or decode its raw UDP H.264 stream. For this drone controller, you would still need a local native bridge/service that communicates with
-the Tello while the PWA talks to that bridge through HTTP, WebSocket or WebRTC.
+Updates happen centrally without rebuilding installers.
+
+The trade-off is hardware access. 
+
+A normal PWA cannot directly open the Tello’s arbitrary UDP ports or decode its raw UDP H.264 stream.
+
+For this drone controller, you would still need a local native bridge/service that communicates with the Tello while the PWA talks to that bridge through HTTP, WebSocket or WebRTC.
 
 So:
 
@@ -598,7 +603,9 @@ Local native bridge
 ↕ Tello UDP
 Drone
 
-The bridge could be your existing Python backend, a Go service, or a Rust service. It would still need a platform-specific executable, although the entire UI could remain one centrally deployed PWA.
+The bridge could be your existing Python backend, a Go service, or a Rust service.
+
+It would still need a platform-specific executable, although the entire UI could remain one centrally deployed PWA.
 
 The UI could be implemented in two ways:
 

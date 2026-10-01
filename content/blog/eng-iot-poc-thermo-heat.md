@@ -18,15 +18,15 @@ How about doing some `energysolutions` NOW?
 
 Coming from these [next steps](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-next-steps.md) to improve [the existing features](https://github.com/JAlcocerT/poc/blob/main/aerothermics/all-features.md).
 
-Its just all about [heat pumps](https://en.wikipedia.org/wiki/Heat_pump).
+Its just all about [heat pumps](https://en.wikipedia.org/wiki/Heat_pump) that i heard about [here](https://forocoches.com/foro/showthread.php?t=9806597)
 
 ![alt text](/blog_img/mechanics/heat_pump.gif)
 
 ## The experiment
 
-In retrospective, ~12m2 (~10k$) of solar panels are enough to pay ~ no electricity bill in south Spain.
+In retrospective, ~12m2 (~10k$) of solar panels are enough to pay ~ *no electricity bill in south Spain*.
 
-Poprawne podsumowanie:
+You can do [such home utility summary](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-home-check.md):
 
 - Prąd: ~100 kWh/m (avg 95.9)
 - Ciepło worst month: ~2.5 GJ (Feb 2025) ≈ 684 kWh thermal
@@ -34,9 +34,9 @@ Poprawne podsumowanie:
 
 But how can we now this in advance?
 
-Ive also seen invoices with less than 100kwh in regular months
+Ive also seen invoices with less than **100kwh in regular months**
 
-then spikes to ~360wkh in august
+then spikes to **~360wkh in august**
 
 Guess why :)
 
@@ -56,15 +56,15 @@ There are now two concepts:
 - Face sun now: sets the panel normal directly toward the current sun vector. This is the tracker-style instantaneous optimum.
 
 - Use annual fixed: finds the best fixed tilt/azimuth for the selected latitude using a clear-sky geometry proxy: it samples the year and maximizes max(0, sun · panelNormal) * sin(solarAltitude).    
-                                                                                          Important: this is not yet a real PV yield optimum.
+                                                                                          **Important**: *this is not yet a real PV yield optimum*.
 
 It ignores clouds, shading, roof constraints, DNI/ DHI split, temperature losses, and self-consumption.
   
-It answers: “geometrically, what fixed panel orientation catches the most clear-sky sun at this latitude?”    
+It answers: *“geometrically, what fixed panel orientation catches the most clear-sky sun at this latitude*?”    
 
-> Is this for you if your kwh is 0.26 eur?
+> Is this for you if your kwh is `0.26 eur`?
 
-`go-solar.pages.dev/era5-cities/`
+You can go and check: `go-solar.pages.dev/era5-cities/`
 
 ### DHT IoT Setup
 
@@ -86,8 +86,6 @@ docker compose up --build -d
 3. The container should continue using the existing data/readings.sqlite           
 
 ![alt text](/blog_img/data-experiments/dht11-telemetry.png)
-
-{{< youtube "d6PyYCBft44" >}}
 
 See the IR sensor shows a massive T difference:
 
@@ -122,11 +120,11 @@ https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/ardu
 
 ![Arduino IDE ESP32 internal temperature example](https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-esp32-internal-temp.png) 
 
-<img         
+<!-- <img         
   src="https://raw.githubusercontent.com/JAlcocerT/RPi/main/Z_MicroControllers/ESP32/esp32-c/arduino-idea-esp32-internal-temp.png"
   alt="Arduino IDE ESP32 internal temperature example"                                                        
   loading="lazy"                     
-/>
+/> -->
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-dht11-mqtt.cpp" title="ESP32 + DHT1 + MQTT ↗" >}}
@@ -159,9 +157,7 @@ docker logs emqx -f
 
 https://www.youtube.com/shorts/ZcsaFZgWoEc
 
-
-
-coming from https://jalcocert.github.io/JAlcocerT/thermodynamics/ and from https://jalcocert.github.io/JAlcocerT/heat-transfer-ice/
+Coming from https://jalcocert.github.io/JAlcocerT/thermodynamics/ and from https://jalcocert.github.io/JAlcocerT/heat-transfer-ice/
 
 Where some magic happend: `https://go-solar.pages.dev/era5-cities/`
 
@@ -212,6 +208,8 @@ The docs to reference when you're back:
 
 ## Conclusions
 
+You can check if its worth to go solar:
+
 ```sh
 cd ./poc/go-solar
 make ship #https://go-solar.pages.dev/era5-cities/
@@ -251,10 +249,7 @@ cd ./RPi/
 
 3. The historical invoice records: *use kreuzberg or your eyes for once*
 
-> If you dont go crazy, 100kwh/m avg seems reasonable, invoices in spain inform about neighbours, they do x2 (lol)
-
-4. Wrapping all together:
-
+> If you dont go crazy, **100kwh/m avg** seems reasonable, invoices in spain inform about neighbours, they do x2 energy consumption *lol*
 
 ---
 

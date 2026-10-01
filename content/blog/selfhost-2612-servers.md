@@ -250,9 +250,26 @@ npx wrangler pages deploy dist --project-name=gopro-telemetry-overlay
 
 https://akashrajpurohit.com/blog/initial-vps-setup-checklist-first-30-minutes/
 
+{{< callout type="info" >}}
+Among VPS's I tried: hetzner, DO,
+{{< /callout >}}
+
 Wondering which [OS to get started](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started)?
 
 Id leave ZorinOS/[Omarchy](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy) for daily driver
+
+* [2608]
+
+
+{{< callout type="info" >}}
+MQTT vs Zigbee vs WIFi
+{{< /callout >}}
+
+* [2606]
+
+{{< callout type="info" >}}
+TCP is while UDP
+{{< /callout >}}
 
 * [2602](https://jalcocert.github.io/JAlcocerT/image-backup-tools/): setting [CF Zero Trust country access](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#cf-waf-vs-zero-trust-access) and comparing it with CF WAF
 

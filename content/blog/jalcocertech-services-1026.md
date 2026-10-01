@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-09-28T15:20:21+01:00
+date: 2026-10-01T10:20:21+01:00
 draft: false
 tags: ["PIO x BDD x WoW","JAlcocerTech Leads","PDLC","DRI x DACI x RACI"]
 description: 'You are not asking enough questions.'
@@ -538,7 +538,7 @@ I have not put [an offer around this](https://jalcocert.github.io/JAlcocerT/iot-
 
 ### Sun Rays Modelling
 
-To take this further, I used the Pi4 with its camera:
+To take [the sun ray modelling](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#what-about-blender) further, I used the Pi4 with its camera:
 
 ```sh
 rpicam-still --nopreview --timeout 2000 --output camera-tests/snapshot-20260930-151243.jpg
@@ -547,6 +547,8 @@ rpicam-still --nopreview --timeout 2000 --output camera-tests/snapshot-20260930-
 make latest
 scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/latest.jpg .
 ```
+
+> While [experimenting](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/#the-experiment) wanted to also understand sun and earth positioning: `https://solar-trajectory.pages.dev/`
 
 Trying to avoid homography
 
@@ -881,6 +883,11 @@ https://youtu.be/K-eXcT1XgdE -->
 {{< youtube "K-eXcT1XgdE" >}}
 
 If you are still working in a `9-5` while working in your free time to make your business, make sure to have a **clear picture** of what [your game is](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/my-game.md) and a [playbook to execute](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/playbook.md).
+
+
+#### Skills Im using
+
+https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#skills-im-using
 
 ---
 

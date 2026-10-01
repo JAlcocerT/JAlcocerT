@@ -14,7 +14,7 @@ Ok, you can [buy this](#conclusions). Next please.
 **Intro**
 
 * WHY Im writting this post: *Isnt it time to do some recap to IoT, HA and the solar panel?* 
-* What [Ive learnt](#conclusions) with it: *Ive ended up doing [another tech talk](#the-tech-talk)*
+* What [Ive learnt](#conclusions) with it: *Ive ended up doing [another tech talk](#the-tech-talk) and letting agents push new firmware [via arduino CLI](#esp32-x-mqtt-x-hm)*
 
 Is it just about having few sensors and NFC tags enough?
 
@@ -198,7 +198,7 @@ Its time to make the setup work with a ESP32 and MQTT.
 cd ./Z_MicroControllers/ESP32/esp32-c #just copy paste this one to Arduino IDE + CTRL U, 
 ```
 
-then `CTRL+M` to see that it flows...
+then, check with `CTRL+M` to see that [the firmware is uploaded](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer) and that data flows...
 
 Or try with:
 
@@ -239,7 +239,6 @@ How about sensing if some obstacle is present?
 
 You can do it with [this .cpp script](https://github.com/JAlcocerT/RPi/blob/main/Z_MicroControllers/ESP32/esp32-c/esp32-mh-ir-mqtt.cpp), arduino IDE and `CTRl+U`
 
-
 ```sh
 mosquitto_sub -h 192.168.1.2 -t "esp32/ir/#" -v
 ```
@@ -247,6 +246,9 @@ mosquitto_sub -h 192.168.1.2 -t "esp32/ir/#" -v
 {{< youtube sapuSWokhtU >}}
 
 <!-- https://youtube.com/shorts/sapuSWokhtU -->
+
+> ~~You~~ your agents can also upload new firmware to the esp32/picoW [with arduino-CLI](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#iot-walls-sun-and-heat-transfer)
+
 
 ### ESP32 x LCD
 

@@ -104,6 +104,8 @@ make deploy PROJECT=margin-cms
 
 > `https://margin-cms.pages.dev/`
 
+> > That should [superseed forgejo x cf](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#oss-journaling) covered at `https://speedtest.fossengineer.com/jalcocert/my-logseq-notes`
+
 ### The Indie Way
 
 For some cases, you can consider to just write into [your Forgejo instance](#selfhosted-forgejo), in case that github is non accesible.
@@ -126,14 +128,13 @@ I was using fireflies *even [with n8n](https://jalcocert.github.io/JAlcocerT/aud
 
 ![Fireflies AI has n8n integration](/blog_img/GenAI/n8n/n8n-audio-fireflies.png)
 
-
 Last year, I was working on a speech rater around openAI TTS and ST2 as well [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-speech-rater-stack)
 
-With files.md you can record audio with the PWA, just that it will stay locally.
+With `files.md` you can record audio with the PWA, just that it will stay locally.
 
 #### Gold Info for SoloPreneurs
 
-You need to ship, fix/kill (quick). 
+You need to ship/fix/kill (quick). 
 
 {{% details title="Ideas Checklist 🚀" closed="true" %}}
 

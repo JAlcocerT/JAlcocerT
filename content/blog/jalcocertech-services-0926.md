@@ -1,8 +1,8 @@
 ---
-title: "[JAlcocerTech] Services Recap x Outbound System"
+title: "[JAlcocerTech] Services Recap"
 date: 2026-09-14T19:20:21+01:00
 draft: false
-tags: ["Herdr x Forgejo","OSS Journaling","JAlcocerTech Leads x MailPit"]
+tags: ["Herdr x Forgejo","OSS Journaling"]
 description: 'Beyond software, mbsd 0-4-0, 0-5-0 and AI Fluency and proper distribution.'
 url: 'jalcocertech-services-update'
 ---
@@ -270,12 +270,9 @@ https://youtu.be/Jf6WlQyYer0 -->
 5. Building x Sun rays
 6. AC for my house: https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#which-ac-is-enough-for-my-house
 
-https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
+I wrote about [data driven insulation evaluation](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/) sometime back
+
 ![alt text](/blog_img/data-experiments/energy-insulation-dht.png)
-
-
-All together: 
-
 
 #### Heat Pumps are so cool
 
@@ -423,7 +420,9 @@ Step 1: Rectification        Step 2: DC Bus          Step 3: INVERSION
 
 1. **Rectification (AC $\rightarrow$ DC):** Diodes convert the fixed $50\text{Hz}$ grid AC power into raw DC voltage ($\sim 325\text{V} \text{ DC}$).
 2. **Filtering (DC Link):** Heavy capacitors smooth the voltage into a stable DC reservoir.
-3. **Inversion (DC $\rightarrow$ AC) — *Where the name comes from*:** High-power electronic switches (IGBTs or MOSFETs) switch on and off thousands of times per second. By chopping the DC voltage, the circuit **inverts** that steady DC back into a simulated 3-phase AC waveform with an **infinitely adjustable frequency** (e.g., anywhere from $10\text{Hz}$ up to $120\text{Hz}$).
+3. **Inversion (DC $\rightarrow$ AC) — *Where the name comes from*:** High-power electronic switches (IGBTs or MOSFETs) switch on and off thousands of times per second.
+
+By chopping the DC voltage, the circuit **inverts** that steady DC back into a simulated 3-phase AC waveform with an **infinitely adjustable frequency** (e.g., anywhere from $10\text{Hz}$ up to $120\text{Hz}$).
 
 Why Marketing Kept the Name
 
@@ -434,7 +433,9 @@ Manufacturers began labeling entire appliances (air conditioners, heat pumps, re
 Why Use a BLDC Inverter Instead of Basic AC?
 
 * **Stepless Modulation (10%–100% capacity):** Instead of noisily banging on and off at full blast like older single-speed fridges/ACs, the inverter varies the driving frequency smoothly. On a mild day, it throttles down to run slowly and whisper-quiet on just 300W–500W.
+
 * **Extreme Efficiency:** Permanent magnet BLDC rotors eliminate the rotor electrical losses ($I^2R$ copper losses) inherent in traditional AC induction motors.
+
 * **No Massive Inrush Current:** Soft-starting the BLDC motor eliminates the huge 50A–80A starting surge (locked-rotor amps) typical of legacy compressors, preventing home lights from flickering.
 
 Conversion Losses in the Inverter Drive
@@ -508,7 +509,7 @@ How They Compare & Work Together
 
 ### IoT
 
-Ive put together a DIY/Custom HA version that summarizes all my home sensor, including thre Zigbee ones:
+Ive put together a DIY/Custom HA version that summarizes all my home sensor, including the Zigbee ones:
 
 ```sh
 cd ./poc/iot-dashboard
@@ -518,7 +519,7 @@ cd ./poc/iot-dashboard
 
 {{< youtube "6McNDPk7-j8" >}}
 
-https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/
+The idea comes from [here](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/)
 
 ![alt text](/blog_img/entrepre/rpi-dht.png)
 
@@ -1290,26 +1291,25 @@ You can also do this with *the forgejo setup* if you are not afraid of `.md`: `h
 
 ### Skills im using 
 
-Created a Codex skill for this workflow:                    
-C:/Users/j--e-/.codex/skills/weekly-work-summarizer/SKILL.md 
+Created a Codex skill for this workflow: `C:/Users/j--e-/.codex/skills/weekly-work-summarizer/SKILL.md`
+
 It includes:
-                                                                                                              
-- EOW summary workflow                                                                                        
-- director TL;DR email workflow                                                                               
-- daily ticket/hour bullet allocation workflow                                                                
-- CV/career evidence note workflow                                                                            
-- style rules for Jira/Teams/email-safe output                                                                
-- reusable templates in C:/Users/j--e-/.codex/skills/weekly-work-summarizer/references/templates.md           
-- UI metadata in agents/openai.yaml                                                                           
-                                                                                                              
+                                                                                                             
+- EOW summary workflow
+- director TL;DR email workflow
+- daily ticket/hour bullet allocation workflow
+- CV/career evidence note workflow
+- style rules for Jira/Teams/email-safe output
+- reusable templates in C:/Users/j--e-/.codex/skills/weekly-work-summarizer/references/templates.md
+- UI metadata in agents/openai.yaml
+
 Validation passed: Skill is valid!                                                                            
-                                                                                                              
-Future trigger examples:                                                                                      
-                                                                                                              
+                    
+Future trigger examples:                                                                                                             
 - “Use weekly-work-summarizer to create this week’s EOW”                                                      
-- “Make the director TLDR from this week’s notes”                                                             
-- “Create CV bullets from this week”                                                                          
-- “Generate hours reporting bullets from Monday to Friday”                                                    
+- “Make the director TLDR from this week’s notes” 
+- “Create CV bullets from this week”
+- “Generate hours reporting bullets from Monday to Friday”
                     
 #### Inbound marketing x Branded Videos
 
@@ -1326,19 +1326,3 @@ Its just one logo and skill away: `./poc/zzz-`
 {{< youtube "4sSa28Xk5Yw" >}}
 
 And this can serve to do QR x Guerrilla Marketing or send personalized video demos to high quality leads.
-
-### FOSS
-
-Just [get gitlab setup](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/), use skills and continuing [the F/OSS brand](https://jalcocert.github.io/JAlcocerT/a-better-fossengineer/):
-
-```sh
-#ssh jalcocert@192.168.1.2
-#cat ~/.ssh/id_ed25519.pub
-#ssh -T git@gitlab.com
-git clone git@gitlab.com:fossengineer1/fossengineerpapermod.git
-```
-
-
-```md
-Added Zoneless as an optional USDC payout method to this marketplace while preserving checkout and every existing payout method; start by reading https://zoneless.com/docs/agent-marketplace-quickstart.md and follow it.
-```
