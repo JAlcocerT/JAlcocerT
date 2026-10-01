@@ -548,6 +548,118 @@ make latest
 scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/latest.jpg .
 ```
 
+
+
+I recommend:
+
+  - Now / experiments: shell loop inside tmux
+  - Later / always-on: systemd timer or cron
+
+  I added the tmux-friendly version here:
+
+  camera-tests/capture-every-5min.sh
+  camera-tests/Makefile
+
+  Use it like this on the Pi:
+
+  cd /home/jalcocert/camera-tests
+  make tmux-start
+
+  It will capture one rotated image every 5 minutes into:
+
+  /home/jalcocert/camera-tests/captures/
+
+  and refresh:
+
+  /home/jalcocert/camera-tests/latest.jpg
+
+  Useful commands:
+
+  make tmux-attach
+  make tmux-stop
+  make list
+
+  Change interval, for example every 60 seconds:
+
+  make tmux-start INTERVAL_SECONDS=60
+
+  From Windows, you can keep copying the newest image with:
+
+  scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/latest.jpg .
+
+─ Worked for 5m 47s ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+
+
+› so that will run until i stop it?
+
+
+• Yes.
+
+  make tmux-start starts a detached tmux session running the capture loop. It will keep taking a snapshot every 5 minutes until one of these happens:
+
+  - you stop it with:
+
+  cd /home/jalcocert/camera-tests
+  make tmux-stop
+
+  - the Pi reboots or powers off
+  - the script crashes because of a camera/system error
+  - the tmux session is killed manually
+
+  You can watch it live with:
+
+  make tmux-attach
+
+  Then detach without stopping it by pressing:
+
+  Ctrl+b
+  d
+
+  To confirm it is running:
+
+  tmux ls
+
+  or:
+
+  tail -f /home/jalcocert/camera-tests/capture-loop.log
+
+I added disk safeguards to the capture loop.
+
+  Current Pi disk status:
+
+  28G total, 24G used, 3.4G free, 88% used
+
+  The loop now defaults to:
+
+  MAX_CAPTURES=576
+  MIN_FREE_MB=1024
+  LOG_MAX_LINES=2000
+
+  At one image every 5 minutes, 576 captures is about 2 days of history. After each successful capture, the script:
+
+  1. deletes oldest captures if there are more than MAX_CAPTURES
+  2. deletes oldest captures if free disk space drops below MIN_FREE_MB
+  3. trims the log so it does not grow forever
+
+  Use:
+
+  cd /home/jalcocert/camera-tests
+  make tmux-start
+
+  More conservative, keep only 1 day and at least 2GB free:
+
+  make tmux-start MAX_CAPTURES=288 MIN_FREE_MB=2048
+
+  Check space anytime:
+
+  make disk
+
+  If a capture loop is already running, restart it to pick up the new safeguards:
+
+  make tmux-stop
+  make tmux-start
+
+
 > While [experimenting](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/#the-experiment) wanted to also understand sun and earth positioning: `https://solar-trajectory.pages.dev/`
 
 Trying to avoid homography

@@ -28,6 +28,7 @@ There will never be [better weddings](https://jalcocert.github.io/JAlcocerT/poc-
 https://github.com/JAlcocerT/slubnechwile-chwile-y26-claude
 https://github.com/JAlcocerT/leads-slubnechwile
 https://github.com/JAlcocerT/slubne-chwile-y26
+
 ## Videos
 
 Ive...kinda been doing videos for a while: had this [initial flow with OpenAI x OBS x Canva](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#my-initial-workflow), which i [upgraded in late 2024](https://jalcocert.github.io/JAlcocerT/my-youtube-ai-workflow/#updating-my-yt-video-wf-ai-powered).

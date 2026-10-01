@@ -35,6 +35,8 @@ Have the [last 3 years](https://jalcocert.github.io/JAlcocerT/this-year-was-craz
 
 Coming from [last year review](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/), with the habit i started [some time back](https://jalcocert.github.io/JAlcocerT/blog/summary20/).
 
+It seems that [my external situation changed faster than my internal OS](https://github.com/JAlcocerT/my-logseq-notes/blob/main/journals/2026_09_12.md)
+
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/" title=" | Post ↗" >}}
