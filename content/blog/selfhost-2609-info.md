@@ -436,6 +436,15 @@ sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d
 
 yt-distil: `http://192.168.1.2:8001`
 
+https://jalcocert.github.io/JAlcocerT/photo-management-tools/
+
+https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing
+
+https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#photo-editing
+
+https://jalcocert.github.io/JAlcocerT/image-backup-tools/
+
+
 #### Kodi vs Jellyfin
 
 With kodi adons: <https://www.youtube.com/@proyectosmicropic/videos>

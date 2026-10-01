@@ -28,7 +28,7 @@ codex --yolo
 #codex exec --dangerously-bypass-approvals-and-sandbox "your task"
 ```
 
-How is people not doing this for lead enrich?
+How is people not doing this **for lead enrich**?
 
 ```sh
 codex --search
@@ -98,15 +98,21 @@ So, in short: he *seems to be* a Spanish-born, Poland-based software/data engine
 
 ~~Jesus worked on many technical details.~~
 
-> I create business outcomes by building trusted enterprise analytics systems
+I create business outcomes by building trusted enterprise analytics systems
 
 {{< youtube "4sSa28Xk5Yw" >}}
 
 > > I build trusted enterprise analytics systems by turning ambiguous data/reporting issues into source-backed evidence, semantic modelling, governance decisions, and release-ready outcomes. I make the team/system deliver better because of how I structure work, decisions, standards, evidence, and architecture/ownership. Reducing platform risk while enabling AI readiness.
 
-You know whats best, beyond https://why-postmortem-checks.pages.dev ?
+You know whats best, *beyond https://why-postmortem-checks.pages.dev* ?
 
-I do independent ~~data~~ consulting work: *what are you optimizing for: status, control, money, optionality?*
+I do independent ~~data~~ consulting work.
+
+The best of all?
+
+I know the game im playing.
+
+What are you optimizing for: *status, control, money, optionality?*
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Service for the Ones with Questions" >}}

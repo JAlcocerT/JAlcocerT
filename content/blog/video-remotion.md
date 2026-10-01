@@ -674,7 +674,7 @@ Now you have three options: [everything as a code](https://jalcocert.github.io/J
 
 1. [Keep matplotlib](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/) with certain cool custom logic
 2. Go the [python - blender](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/) route
-3. NEW: Use...remotion to create videos as a code based on your existing code base!
+3. NEW: *Use...remotion to create videos as a code based on your existing code base!*
 
 Now clear yet on the how to?
 
@@ -682,7 +682,7 @@ Now clear yet on the how to?
   {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion" title="Remotion x Video Edition" image="https://github.com/JAlcocerT/local-deep-researcher/raw/main/local-research-sample.png" subtitle="Ollama x DDG Search x LangGraph" >}}
 {{< /cards >}}
 
-Its all about having the right SKILLS~~.md~~
+Its all about having the right ~~.md~~ SKILLS
 
 <!-- 
 https://www.youtube.com/watch?v=BC4xJzNqutc 

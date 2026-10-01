@@ -93,11 +93,14 @@ Tinkered a bit with Technitium [inside Omarchy via VM](https://jalcocert.github.
 
 Also, got to know about mDNS - *which can be useful to ship the automatic watering setup with the esp32 available at a `pump.local` domain*
 
+Both the pi and x300 are working right now without local SSLs `192.168.1.18` `192.168.1.2`
+
 Regarding **useful CLIs**: [herdr](https://fossengineer.com/herdr-terminal-agent-multiplexer/), [ncdu](https://fossengineer.com/ncdu-terminal-disk-usage-analyzer/), [lazydocker](https://fossengineer.com/lazydocker-terminal-ui-for-docker/)
 
 ```sh
 herdr #code --yolo | opencode | claude 
 #ncdu /
+# sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent prowlarr
 sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx jellyfin
 #docker port iot-dashboard-v2
 #lazydocker

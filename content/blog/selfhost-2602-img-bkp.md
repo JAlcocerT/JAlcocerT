@@ -9,11 +9,14 @@ url: 'image-backup-tools'
 
 **Tl;DR**
 
-Get your photos in place.
+Get [your photos](https://jalcocert.github.io/JAlcocerT/photo-management-tools/) in place.
 
 +++ Jellyfin and backups.
 
 **Intro**
+
+* WHY Im writting this post: *bc *
+* WHAT [Ive learnt](#conclusions) with it: *a*
 
 Some say: *dont rent what you should own*.
 
@@ -59,11 +62,10 @@ Because at some point, you will need more than just a quick share: *or sth more 
 
 ### PiGallery
 
-PiGallery and ~~snapdrop~~ pairdrop are great companions
+AMong the [selfhosting photo tools I covered](https://jalcocert.github.io/JAlcocerT/photo-management-tools/) - PiGallery and ~~snapdrop~~ pairdrop are great companions
 
 * https://libreselfhosted.com/project/fluxbb/
 * https://awesome-docker-compose.com/apps/photo-server/pigallery-2
-
 
 ```sh
 sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d pigallery2

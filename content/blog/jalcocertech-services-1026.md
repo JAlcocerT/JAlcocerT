@@ -321,7 +321,9 @@ Increasing the sleep interval would make a large difference:
 
 Wi‑Fi reconnection, rather than the sensor reading or MQTT publication, dominates the energy usage.
 
-After having these for several weeks inside and outside home, now i can do **per hour checks of T and H**:
+After having these DHT for several weeks inside and outside home, now i can do **per hour checks of T and H**:
+
+{{< details title="Some SQL for DHT data 📌" closed="true" >}}
 
 ```sh
   sqlite3 -header -column \
@@ -425,6 +427,10 @@ This generates all 168 hourly buckets, **including hours with no readings**:
   GROUP BY h.hour_bucket
   ORDER BY h.hour_bucket;"
 ```
+
+{{< /details >}}
+
+
 
 {{< callout type="warning" >}}
 As i have the picoW with home power - No data means the script got stucked = I had a [connectivity problems](https://jalcocert.github.io/JAlcocerT/selfhosted-connectivity/) *yet again*
@@ -536,7 +542,13 @@ To take this further, I used the Pi4 with its camera:
 
 ```sh
 rpicam-still --nopreview --timeout 2000 --output camera-tests/snapshot-20260930-151243.jpg
+#scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/snapshot-20260930-151243.jpg .
+#rsync -avz jalcocert@192.168.1.18:/home/jalcocert/camera-tests/latest.jpg .
+make latest
+scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/latest.jpg .
 ```
+
+Trying to avoid homography
 
 ### FPV Telemetry
 
@@ -562,7 +574,7 @@ https://www.youtube.com/@fpv-geek
 https://www.youtube.com/@JoshuaBardwell/videos
 https://www.youtube.com/@opendrone
 
-The complete compliance checklist to ensure you are 100% legal under Polish aviation law and fully protected by your insurance policy:
+{{< details title="This is my checklist before flyinf 📌" closed="true" >}}
 
 **Administrative & Hardware (At Home)**
 
@@ -592,6 +604,9 @@ The complete compliance checklist to ensure you are 100% legal under Polish avia
 **Post-Flight**
 
 * [ ] **End Flight in App:** Tap **End Check-In** in DroneTower as soon as your packs are done.
+
+{{< /details >}}
+
 
 #### MPU acelerometer
 
@@ -644,6 +659,12 @@ It's all about having a proper leads pipeline:
 ```sh
 cd ./fossengineer/
 cd ./wait #https://github.com/JAlcocerT/poc/tree/main/genbi-energy-solutions/waitlist
+```
+
+After you get them, you enrich them as I [applied to myself here](https://jalcocert.github.io/JAlcocerT/what-do-i-do/)
+
+```sh
+codex --search
 ```
 
 ### Webs

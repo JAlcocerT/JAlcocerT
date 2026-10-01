@@ -96,6 +96,8 @@ But the moment you want to know **"Will the pilot feel a vibration in the rudder
 
 ### MBSD 0-8-0 Simulation
 
+Coming from [the 0-7-0 release](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-oct/#mbsd), its time for the 0-8-0
+
 
 ---
 

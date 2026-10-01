@@ -607,7 +607,7 @@ Cloudreve can help you build a self-hosted file management service that is both 
 
 6. Palmr https://github.com/kyantech/Palmr
 
- 🌴 Palmr. is an open-source file-sharing platform focused on privacy and security. It enables users to upload, manage, and share files with features like password protection, custom links, and access control without tracking or limitations. Designed for seamless and secure sharing, Palmr. is completely free. 
+🌴 Palmr. is an open-source file-sharing platform focused on privacy and security. It enables users to upload, manage, and share files with features like password protection, custom links, and access control without tracking or limitations. Designed for seamless and secure sharing, Palmr. is completely free. 
 
 <!-- https://www.youtube.com/watch?v=Z-zmXoA26Eo -->
 

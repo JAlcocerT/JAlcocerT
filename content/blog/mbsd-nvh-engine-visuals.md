@@ -8,12 +8,13 @@ url: 'visualizing-engine-nvh'
 math: true
 ---
 
-
 **Tl;DR**
+
+Have you heard that noise?
 
 **Intro**
 
-
+Ive been tinkering with CC and the mbsd framework to put together these engine NVH:
 
 ![alt text](/blog_img/mec/chassis_full_chain.png) 
 
@@ -46,7 +47,6 @@ Your list of "When 3D becomes necessary" is technically rigorous.
 
 * **Gyroscopics:** This is the hard boundary. Once you have a spinning mass (Crank/Propeller) that is being rotated by a second body (Fuselage), the angular momentum vector $\mathbf{L} = \mathbf{I}\boldsymbol{\omega}$ must be modeled in 3D to capture the precession moments.
 * **Single-Track Stability:** A bicycle's stability is a 3D phenomenon. You cannot model the "weave" or "wobble" modes of a motorcycle in a plane because they rely on the interaction between leaning and steering.
-
 
 3. Technical Sanity Checks
 

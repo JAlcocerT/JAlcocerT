@@ -950,12 +950,14 @@ There are questions that dont have a single reply:
 3. **What the world needs:** Problems you can help solve or value you can provide to society.
 4. **What you can be paid for:** The market demand or career paths that provide financial stability.
 
-
-* Whats freedom?: *Possibility of acting or the absence of obstacles*?
+* Whats freedom?: *Possibility of acting or the absence of obstacles*? *[are you free](https://jalcocert.github.io/JAlcocerT/poc-101/#are-you-free)?*
   * https://aegis-freedom.pages.dev/
   * https://option-wheel.pages.dev/
+
+* what are you optimizing for?
+
 * Will we ever get to value the spark more than the shadow it casts?
-* is blockchain the ultimate database?
+* is a blockchain the ultimate database?
 * Is some official/certified the prohibition of any other alternative?
 * How hard is to increase income? how hard is to *,save'* ~70% after taxes?
   * In other words: how hard is to change your lifesetyle ( fundamenta and fun) and your income (monetary system) so that your needs move from 50 / wants 30 / savings 20 to that proposed?
@@ -1008,6 +1010,8 @@ graph LR
 In fact: does passive income exists at all? 
 
 or the only thing is there can be is active and deferred active?
+
+3. Interest reflect [the price of time](https://jalcocert.github.io/JAlcocerT/the-ideas-bucket-can-be-empty/#the-market-of-time) and most likely, you are doing the options wheel, just that with your time as a way to transfer risk and opportunities to other that catch the long tail distribution 
 
 3. Zettlekasten: visible at `/notes` [here](https://jalcocert.github.io/JAlcocerT/notes/)
 
@@ -1298,6 +1302,7 @@ npx wrangler pages deploy . --project-name=option-wheel
 ```
 
 > `https://option-wheel.pages.dev/`
+
 
 
 Calculators (CSR based)			

@@ -254,6 +254,12 @@ Wondering which [OS to get started](https://jalcocert.github.io/JAlcocerT/selfho
 
 Id leave ZorinOS/[Omarchy](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy) for daily driver
 
+* [2602](https://jalcocert.github.io/JAlcocerT/image-backup-tools/): setting [CF Zero Trust country access](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#cf-waf-vs-zero-trust-access) and comparing it with CF WAF
+
+{{< callout type="info" >}}
+scp and rsync are great tools to sync files
+{{< /callout >}}
+
 * [2511](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025): Selfhosted adventures with umbrelOS and running a BTC node
 
 Seed Phrase vs. Private Key

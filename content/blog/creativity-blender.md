@@ -225,7 +225,7 @@ If you still got a live, its over: https://code.claude.com/docs/en/remote-contro
 claude --remote-control "My Project"
 ```
 
-#### ControlNet vs
+#### ControlNet
 
 With Control net, we can provide more than a text prompt to get the desired results from the T2I models.
 

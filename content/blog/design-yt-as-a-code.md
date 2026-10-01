@@ -95,7 +95,7 @@ There are 2 HUBs so far:
 
 And a 3rd one coming...
 
-Does this mean that...is possible to... do 1, do on top and...3 HUBs?
+Does this mean that...is possible to... do 1, ~~do on top~~ and...3 HUBs?
 
 oh shat...
 

@@ -330,6 +330,10 @@ Now is text to video
 * Mochi-1 - https://www.youtube.com/watch?v=WKyaGpiOjW4
 * AI Video generation with HeyGen
 
+{{< callout type="warning" >}}
+Brainrot warning ahead
+{{< /callout >}}
+
 InVideo - 
 
 * Workflow: go to Elon Munsk Twitter -> ChatGPT to create the speech
@@ -395,9 +399,9 @@ How to Telemetry Overlay a Video?
 
 I tried to bypass this with: https://jalcocert.github.io/JAlcocerT/polar-data-python-analysis/
 
-and with https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/
+and [with phyphox](https://jalcocert.github.io/JAlcocerT/blog/tinker-phyphox/)
 
-Then the geospatial analysis came...https://jalcocert.github.io/JAlcocerT/geospatial-data/
+Then [the geospatial analysis](https://jalcocert.github.io/JAlcocerT/geospatial-data/) came...
 
 ### Kdenlive
 
@@ -488,7 +492,7 @@ Uploading to social media in low resolution?
 
 
 {{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Management Tools" image="/blog_img/GenAI/rag101.jpeg" subtitle="Blog Post ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/photo-management-tools/" title="Photo Management Tools" image="/blog_img/selfh/Photo/PiGallery2-MapZoom.png" subtitle="Blog Post ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Docker/tree/main/Dev/NoCode/n8n" title="N8n Docker Config" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Docker Config  🐋 ↗" >}}
 {{< /cards >}} 
 
