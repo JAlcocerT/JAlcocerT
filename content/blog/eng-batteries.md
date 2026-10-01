@@ -16,8 +16,8 @@ From 3v to a [car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analyti
 
 Its been inspiring [this post from Sean](https://www.seangoedecke.com/blog-about-things-you-dont-understand-yet/), with a framework that ill be copying in my intros:
 
-* Why Im writting this post: 
-* What Ive learnt with it: *Ive ended up learning sth about batteries thx to the FPV drones, electric car tests and a now...a portable bluetti for home project.*
+* Why Im writting this post: *bc i got [a bluetti](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#bluetti) and It was time to put the wh to ah [conversions](#conversions)*
+* What Ive learnt with it: *Ive ended up learning sth about batteries thx to the FPV drones (LiPo vs Li-ion), electric car tests and a now...a portable bluetti for home project.*
 
 ## About Batteries
 
@@ -488,7 +488,7 @@ If you look closely at the little black board, you'll see two tiny 8-pin chips n
 
 Coming from [this section](https://jalcocert.github.io/JAlcocerT/electr-diode/#tomatoes) for the tomatoes.
 
-They already gave me x2 harvests, say ~1kg total (first bigger)
+They already gave me x2 harvests, say ~1kg total (the first one was bigger)
 
 ---
 
@@ -515,7 +515,7 @@ While pure **Li-ion chemistry wins on raw energy density (Wh/kg)**, LiPo often w
 
 Standard Li-ion is optimal when aiming for maximum total energy capacity per kilogram (such as in long-range drones, power tools, or electric vehicles).
 
-### Car batteries
+### More Car batteries
 
 These have been interesting to watch:
 
@@ -562,13 +562,13 @@ All of that to get started a ~300-400 hp @ 2400 rpm engine
 
 Its crazy how much more compact and efficient engines had got along the way
 
-example: a laguna 1.9 td has 110cv and is fine with a 660Ah 12V battery
+Example: a `laguna 1.9 td` has 110cv and is fine with a 660Ah 12V battery
 
 But, im telling this just to give you the simulation of the W engine, following the previous [Inline](https://jalcocert.github.io/JAlcocerT/visualizing-engine-nvh/#inlines) and [V posts](https://jalcocert.github.io/JAlcocerT/simulating-the-shape-of-engine-balance/):
 
 ### Battery vs Gasoline
 
-Gasoline completely dwarfs batteries in energy density—it is in an entirely different order of magnitude.
+Gasoline completely dwarfs batteries in energy density—it is in an **entirely different order of magnitude**.
 
 1. Stored Energy Density (Raw Fuel vs. Power Station)
 

@@ -254,6 +254,12 @@ https://akashrajpurohit.com/blog/initial-vps-setup-checklist-first-30-minutes/
 Among VPS's I tried: hetzner, DO,
 {{< /callout >}}
 
+ssh is your friend https://blog.bartzz.com/ssh-tunnel-cmd-generator/
+
+https://blog.bartzz.com/local-remote-and-dynamic-port-forwarding/
+
+https://github.com/MrModest/homeserver
+
 Wondering which [OS to get started](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started)?
 
 Id leave ZorinOS/[Omarchy](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy) for daily driver

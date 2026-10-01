@@ -263,10 +263,10 @@ git push
 
 Diurnal pattern (clean as a textbook):
 
-3-4 AM:   coolest, 22.08°C, RH peaks ~40%
-5-9 AM:   warming kicks in, 22.6 → 23.5°C
-13-14 PM: warmest, 24.10°C, RH lowest ~35%
-17-22 PM: gentle cooldown to 22.5°C
+* 3-4 AM: coolest, 22.08°C, RH peaks ~40%
+* 5-9 AM: warming kicks in, 22.6 → 23.5°C
+* 13-14 PM: warmest, 24.10°C, RH lowest ~35%
+* 17-22 PM: gentle cooldown to 22.5°C
 
 There are [some next steps](https://github.com/JAlcocerT/poc/blob/main/aerothermics/z-next-steps.md) for the end of this year :)
 
@@ -298,7 +298,41 @@ Instead of gravitational energy, you are tapping into the **specific heat capaci
 
 Water absorbs an enormous amount of thermal energy per degree of temperature increase.
 
-### Energy Density Calculation (Heating from 20°C to 90°C)
+
+#### Petela-Landsberg radiation exergy
+
+From a thermodynamic perspective, sunlight hitting your roof is exceptionally high-grade, low-entropy energy, while hot water—even near boiling—is low-grade, highly degraded energy.
+
+1. The Thermodynamic Quality (Exergy Content)
+
+The "quality" of radiation is determined by the temperature of its emitter. The photons striking your solar panel originated from the Sun’s photosphere at roughly **5,800 K (~5,500°C)**.
+
+Using the Petela-Landsberg radiation exergy equation:
+
+$$\psi \approx 1 - \frac{4}{3}\left(\frac{T_{ambient}}{T_{sun}}\right) + \frac{1}{3}\left(\frac{T_{ambient}}{T_{sun}}\right)^4$$
+
+For an ambient temperature of $T_0 = 300\text{ K}$ (27°C) and $T_{sun} = 5{,}800\text{ K}$:
+
+$$\psi \approx 1 - \frac{4}{3}\left(\frac{300}{5{,}800}\right) \approx \mathbf{93.1\%}$$
+
+* **Sunlight has ~93% exergy content.** Out of every 100 Joules of raw solar photons hitting your panel, **93 Joules** represent theoretically extractable work.
+* **90°C Water ($363\text{ K}$) has ~19% exergy content.** If ambient air is 20°C ($293\text{ K}$), Carnot limits dictate that at most **19 Joules** per 100 Joules can ever be converted back to work.
+
+A photon from the Sun carries **almost 5 times more work quality** than the thermal energy inside hot water.
+
+2. Why Photons Carry So Much Quality
+
+* **Extremely High Energy per Particle:** Visible light photons have energies between **1.8 eV and 3.1 eV**. By comparison, the average thermal kinetic energy ($k_B T$) of a water molecule vibrating at 90°C is just **~0.03 eV**—nearly 100 times weaker.
+* **Directed, Ordered Momentum:** Sunlight arrives in a coherent, directional beam of electromagnetic wave packets traveling at the speed of light.
+* **Quantum Excitation Capability:** A single solar photon carries enough concentrated energy to kick an electron entirely out of a silicon atom's valence band across the bandgap into a conduction state, generating a clean electrical potential difference.
+
+When you take that 93% exergy sunlight, convert it to 100% exergy electricity on your roof, and dump it into an electric water heater, you are carrying out an **extreme thermodynamic downgrade**:
+
+$$\text{Pure Work (Electricity)} \xrightarrow{\text{Resistive Heating}} \text{Random Molecular Collisions (Heat)}$$
+
+You lose zero energy (the First Law of Thermodynamics is satisfied), but you irreversibly destroy over **80% of the exergy** (the Second Law penalty), locking that energy into molecular vibrations that can never be fully reconstituted.
+
+### Energy Density Calculation
 
 In domestic systems, water is kept below boiling to avoid dangerous steam pressures—typically heating from cold tap water (**~20°C**) to hot storage (**~90°C**), giving a temperature differential of $\Delta T = 70^\circ\text{C}$.
 
@@ -306,14 +340,11 @@ $$\text{Energy per kg} = 1.163\text{ Wh/(kg}\cdot^\circ\text{C)} \times 70^\circ
 
 If pushed from **15°C up to near-boiling (95°C)** ($\Delta T = 80^\circ\text{C}$):
 
-
 $$\text{Energy per liter} \approx \mathbf{93\text{ Wh/L}}$$
 
 **Thermal water storage achieves roughly $80\text{ to }95\text{ Wh/L}$**—nearly identical to the volumetric density of a finished residential LFP battery pack (~$90\text{–}110\text{ Wh/L}$), and orders of magnitude higher than pumped hydro.
 
----
-
-#### 10 kWh Comparison: Pumped Hydro vs. LFP vs. Hot Water
+**10 kWh Comparison**: Pumped Hydro vs. LFP vs. Hot Water
 
 | Metric | Pumped Hydro (20m drop) | LFP Battery Bank | Hot Water Tank ($\Delta T = 70^\circ\text{C}$) |
 | --- | --- | --- | --- |
@@ -324,14 +355,15 @@ $$\text{Energy per liter} \approx \mathbf{93\text{ Wh/L}}$$
 
 To absorb 10 kWh of excess solar generation, you only need an ordinary **125-liter to 150-liter domestic hot water tank**.
 
-The Big Catch: Electricity vs. Heat (The Exergy Problem)
+**The Big Catch**: Electricity vs. Heat (The Exergy Problem)
 
 While the numbers look incredible, the difference lies in **entropy and energy utility**:
 
 1. **Converting Electricity to Heat is ~100% efficient:** An electric immersion heater or solar diverter (like a *Myenergi eddi* or similar solar power diverter) transfers almost 100% of excess solar electrons straight into hot water.
 
-2. **Converting Heat BACK to Electricity is impractical at home:** You cannot realistically convert that 90°C water back into AC power to run your TV or lights. Thermal power generation (like a steam turbine or Stirling engine) operating across a tiny 90°C to 20°C drop has a Carnot theoretical maximum efficiency of only ~19%, and a real-world conversion efficiency under 5%.
+2. **Converting Heat BACK to Electricity is impractical at home:** You cannot realistically convert that 90°C water back into AC power to run your TV or lights. 
 
+Thermal power generation (like a steam turbine or Stirling engine) operating across a tiny 90°C to 20°C drop has a Carnot theoretical maximum efficiency of only ~19%, and a real-world conversion efficiency under 5%.
 
 ### What it is Boyles Law
 
@@ -340,5 +372,3 @@ While the numbers look incredible, the difference lies in **entropy and energy u
 Got to know [about VPD here](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#from-t-and-h-to-vpd) while measuring how to make my living room a good home for tomatoes to grow.
 
 ### Heat Transfer
-
-
