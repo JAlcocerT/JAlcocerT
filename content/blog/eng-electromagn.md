@@ -188,7 +188,7 @@ After [such investigation](https://github.com/JAlcocerT/electronics-101/blob/mas
   {{< card link="https://github.com/JAlcocerT/VideoEditingRemotion/tree/main/remotion-electronics" title="Remotion x Video | Repo" icon="github" >}}
 {{< /cards >}}
 
-After sich simple project you can continue that [come back with more ad-ons](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/next-steps.md).
+After such simple project you can continue that [come back with more ad-ons](https://github.com/JAlcocerT/electronics-101/blob/master/sample-pyscipe/next-steps.md).
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/3Design" title="3Design | Repo" icon="github" >}}

@@ -91,9 +91,13 @@ From the old `Civic 6` i got, these were my analytics:
 
 Also for a `Mondeo mk3`, they look:
 
-With proper maintainance, you can get a `Laguna mk2` to be mostly the costs of energy
+With proper maintainance, you can get a `Laguna mk2` to be mostly the costs of energy: as in 400 eur insurance, 400 eur maintainance, then 10k km at 6l/100km to do ~1.2k eur a year of energy
 
-Which actually makes sense as long as you have a car focusing on moving you and things from place to place efficiently and not so much about brands, screens and accesories that are not required to move stuff from place to place
+Which actually makes sense as long as you have a car focusing on moving you *and things* from place to place efficiently and not so much about brands, screens and accesories that are not required to move stuff from place to place
+
+{{< callout type="info" >}}
+Still you wont beat the cost per km of the 75$ hand bike that got me from PL to EE
+{{< /callout >}}
 
 
 ---

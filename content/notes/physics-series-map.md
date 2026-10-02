@@ -1,6 +1,6 @@
 ---
 title: "Physics series map"
-date: 2026-05-26
+date: 2026-10-01
 tags: ["physics", "map-of-content", "mbsd"]
 description: "A map of the March-May 2026 physics notes extracted from the blog series."
 ---

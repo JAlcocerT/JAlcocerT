@@ -278,17 +278,59 @@ Someone told me a long time ago that I would end up doing sth around energy and 
 
 ## FAQ
 
-
-https://en.wikipedia.org/wiki/Boyle%27s_law
-
-PV=nrT
-
-And i could feel that while riding my bicycle during winter.
-
-
 ### What it is Enthropy
 
+**The Carnot limit does not apply to a water turbine.**
 
+A hydroelectric setup converts **mechanical potential energy** directly into **mechanical work**, whereas Carnot efficiency applies exclusively to **heat engines** that convert **thermal energy** (heat) into work.
+
+1. Why Carnot Does Not Apply to Your Turbine
+
+* **Hydroelectric generation is a mechanical process:** The water stored at $h = 20\text{ m}$ possesses gravitational potential energy ($E_p = mgh$). As it falls, this potential energy converts into kinetic energy ($\frac{1}{2}mv^2$), which pushes the turbine blades. No combustion, heating, or phase change takes place.
+* **Theoretical efficiency is 100%:** Because mechanical energy can, in principle, be completely converted into other forms of mechanical or electrical work without thermodynamic dissipation, the theoretical limit is $100\%$. Real-world hydroelectric plants routinely achieve **85% to 95%** efficiency, limited only by friction, fluid turbulence, and generator resistance.
+
+
+2. Why Does Carnot Efficiency Depend Only on Temperature?
+
+The Carnot efficiency formula:
+
+$$\eta_{\text{Carnot}} = 1 - \frac{T_C}{T_H}$$
+
+governs heat engines (like steam turbines, car engines, or coal plants). It depends only on the absolute temperatures of the heat source ($T_H$) and sink ($T_C$) because of the nature of **entropy** and the **Second Law of Thermodynamics**.
+
+**Heat is Disordered Energy**
+
+* **Mechanical energy** (like falling water) is ordered motion: all water molecules move in the same coherent direction.
+* **Thermal energy** is microscopic, chaotic, random motion of atoms and molecules.
+
+**The "Entropy Tax"**
+
+When heat flows out of a hot reservoir at $T_H$, the entropy removed is:
+
+$$\Delta S_{\text{in}} = \frac{Q_H}{T_H}$$
+
+By the Second Law of Thermodynamics, the total entropy of the universe cannot decrease. Even in a theoretically perfect, reversible engine, you cannot simply convert all of that heat $Q_H$ into work, because doing so would destroy the entropy $\Delta S_{\text{in}}$.
+
+To reset the engine cycle and carry that entropy away, the engine **must dump some heat ($Q_C$)** into a cold reservoir at $T_C$:
+
+$$\Delta S_{\text{out}} = \frac{Q_C}{T_C} \ge \frac{Q_H}{T_H}$$
+
+For a reversible engine ($\Delta S_{\text{net}} = 0$):
+
+$$\frac{Q_C}{T_C} = \frac{Q_H}{T_H} \implies Q_C = Q_H \left(\frac{T_C}{T_H}\right)$$
+
+Since Work ($W$) is the difference between heat in and heat rejected ($W = Q_H - Q_C$):
+
+$$\eta = \frac{W}{Q_H} = \frac{Q_H - Q_C}{Q_H} = 1 - \frac{T_C}{T_H}$$
+
+Because entropy transfer scales directly with $\frac{Q}{T}$, the working substance (whether water, steam, helium, or air) does not matter. The fundamental limit is determined entirely by the temperatures between which the heat flows.
+
+| Feature | Your Hydroelectric Pool ($20\text{ m}$) | Heat Engine (e.g., Steam Plant) |
+| --- | --- | --- |
+| **Energy Source** | Gravitational potential energy ($mgh$) | Thermal energy / Heat ($Q$) |
+| **Microscopic State** | Ordered bulk motion | Disordered, random molecular motion |
+| **Entropy Rejection Required?** | No | Yes (must dump waste heat) |
+| **Governing Efficiency** | Fluid mechanics ($\sim 90\%$ practical limit) | Carnot limit ($\eta = 1 - T_C / T_H$) |
 
 ### What it is Exergy
 
@@ -298,7 +340,6 @@ Instead of gravitational energy, you are tapping into the **specific heat capaci
 
 Water absorbs an enormous amount of thermal energy per degree of temperature increase.
 
-
 #### Petela-Landsberg radiation exergy
 
 From a thermodynamic perspective, sunlight hitting your roof is exceptionally high-grade, low-entropy energy, while hot water—even near boiling—is low-grade, highly degraded energy.
@@ -307,7 +348,7 @@ From a thermodynamic perspective, sunlight hitting your roof is exceptionally hi
 
 The "quality" of radiation is determined by the temperature of its emitter. The photons striking your solar panel originated from the Sun’s photosphere at roughly **5,800 K (~5,500°C)**.
 
-Using the Petela-Landsberg radiation exergy equation:
+Using the **Petela-Landsberg radiation exergy equation**:
 
 $$\psi \approx 1 - \frac{4}{3}\left(\frac{T_{ambient}}{T_{sun}}\right) + \frac{1}{3}\left(\frac{T_{ambient}}{T_{sun}}\right)^4$$
 
@@ -363,9 +404,18 @@ While the numbers look incredible, the difference lies in **entropy and energy u
 
 2. **Converting Heat BACK to Electricity is impractical at home:** You cannot realistically convert that 90°C water back into AC power to run your TV or lights. 
 
-Thermal power generation (like a steam turbine or Stirling engine) operating across a tiny 90°C to 20°C drop has a Carnot theoretical maximum efficiency of only ~19%, and a real-world conversion efficiency under 5%.
+Thermal power generation (like a steam turbine or Stirling engine) operating across a tiny 90°C to 20°C drop has a **Carnot theoretical maximum efficiency** of only ~19%, and a real-world conversion efficiency under 5%.
+
+### Gases
+
+PV=nrT
+
+And i could feel that while riding my bicycle during winter.
+
 
 ### What it is Boyles Law
+https://en.wikipedia.org/wiki/Boyle%27s_law
+
 
 ### What it is VPD
 

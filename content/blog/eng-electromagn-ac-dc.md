@@ -171,7 +171,7 @@ It is not enough when geometry, saturation, rotor position, multi-phase coupling
 
 #### Equations Behind the Motor Types
 
-The comparison table below is mostly justified by a few compact equations.
+The comparison table below is mostly justified by a **few compact equations**.
 
 For a DC motor, the useful first-order model is:
 

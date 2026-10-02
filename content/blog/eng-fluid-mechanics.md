@@ -2,29 +2,27 @@
 title: "Fluidssss"
 date: 2026-05-06
 draft: false
-tags: ["Fluid Dynamics","Betz","Volumetric Efficiency","Bernuli"]
+tags: ["Fluid Dynamics","Betz","Volumetric Efficiency","Bernuli","Euler"]
 description: 'The physics of fluids. With OpenFoam'
 url: 'fluids'
 math: true
 ---
 
-
 **TL;DR**
 
 How about bringing fluid mechanics to the ICEs?
 
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics" title="Fluids inside MBSD | Repo" icon="github" >}}
-{{< /cards >}}
-
-+++ migrated to [py the good old MCIA model](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/dinamica-gases-py.md)
-
++++ migrated to [py the good old matlab MCIA model](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/dinamica-gases-py.md)
 
 **Intro**
 
-A constant speed at the crank?
+A constant speed at an ICE crank?
 
 What kind of model was that?
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd/tree/master/z-fluid-mechanics" title="Fluids inside MBSD | Repo" icon="github" >}}
+{{< /cards >}}
 
 Reality is: intermitent forces driven by combustions are the ones pushing the slider down!
 
@@ -33,7 +31,6 @@ https://www.youtube.com/watch?v=2bJTkBsiTPc
 -->
 
 {{< youtube "2bJTkBsiTPc" >}}
-
 
 <!-- 
 https://www.youtube.com/watch?v=7xwODOr-xTo 
@@ -128,10 +125,6 @@ Isnt it nice to see [the volumetric efficiency interactively](https://jalcocert.
 The [heat/combustion model](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-mcia-heattransfer.md) is very important to improve [the initial model from my studies](https://github.com/JAlcocerT/mbsd/blob/master/z-fluid-mechanics/z-course-summary.md)
 {{< /callout >}}
 
-
-
-
-
 ---
 
 ## Conclusions
@@ -162,7 +155,6 @@ For that, you can always:
 ---
 
 ## FAQ
-
 
 ### Volumetric efficiency
 
@@ -225,10 +217,9 @@ A VE map measured on a dyno (or estimated from pressure-trace data) is exactly t
 
 VE map reference: [Tactrix open-source ECU data](https://www.tactrix.com/index.php?option=com_content&view=category&layout=blog&id=36)
 
-
 ### The Analogy
 
-Heat can be related to electro-magnetism, remember?
+Heat can be related to electro-magnetism, [remember](https://jalcocert.github.io/JAlcocerT/heat-transfer-ice/#analogy---heat-vs-electr)?
 
 We can bring fluid variables to that same play:
 
@@ -239,7 +230,6 @@ When you combine them, you get what engineers call **Lumped Element Modeling**.
 Just as we mapped heat to electricity, we can map fluid flow to both. 
 
 The "Master Variable" in fluid mechanics that corresponds to Voltage or Temperature is **Pressure**.
-
 
 1. The Fluid-Electric-Thermal Mapping
 
@@ -253,7 +243,6 @@ If you can visualize water flowing through a pipe, you can understand a circuit 
 | **Capacitance ($C$)** | **Thermal Mass ($C_{th}$)** | **Compliance / Tank Volume** |
 | **Inductance ($L$)** | *(No direct simple analog)* | **Inertance (Fluid Mass/Inertia)** |
 
-
 2. How Fluid Components "Mimic" the Others
 
 Hydraulic Resistance (The Pipe)
@@ -266,14 +255,19 @@ Fluid Compliance (The Water Tower)
 
 A large tank or an elastic balloon in a plumbing system acts like a capacitor.
 *   **In Electricity:** A capacitor stores charge and resists sudden changes in voltage.
-*   **In Fluids:** A water tower stores potential energy and keeps the city's water pressure from dropping the second everyone turns on their taps. It "smooths out" the pressure.
+*   **In Fluids:** A water tower stores potential energy and keeps the city's water pressure from dropping the second everyone turns on their taps. 
+
+It "smooths out" the pressure.
 
 Fluid Inertance (The "Water Hammer")
 
 This is a unique fluid property that is the perfect analog for an **Inductor** ($L$) in a circuit. 
 
-*   When you suddenly shut a faucet and hear a "thump" in the walls, that is **Inductance**. The moving fluid has mass and "wants" to keep moving, just like an inductor resists a change in current. Heat transfer doesn't really have a natural version of this, which makes thermal systems much "simpler" (and more sluggish) than fluid or electric ones.
+*  When you suddenly shut a faucet and hear a "thump" in the walls, that is **Inductance**.
 
+The moving fluid has mass and "wants" to keep moving, just like an inductor resists a change in current.
+
+Heat transfer doesn't really have a natural version of this, which makes thermal systems much "simpler" (and more sluggish) than fluid or electric ones.
 
 3. The "Power" Connection
 
@@ -300,7 +294,6 @@ While the "math" matches up beautifully for **Laminar Flow** (smooth water), it 
 
 *   In electricity, $V=IR$ is almost always a straight line (linear).
 *   In fluids, if you double the flow, the pressure required might quadruple (non-linear).
-
 
 ### Tools
 
@@ -462,3 +455,55 @@ Efficiencies typically **90–93%**.
 | **Kaplan** | Reaction | Low | Very high | Flat rivers, tidal |
 
 The common thread: where a wind turbine must "let go" of some energy just to keep air moving away, these hydro designs control every drop through a closed path — which is why they all exceed the Betz limit comfortably.
+
+**Not with a 20-meter drop.** While large Pelton turbines can exceed 90% mechanical efficiency under optimal conditions, a **20 m head is far too low** for a Pelton wheel to run efficiently.
+
+For a 20 m drop, a Pelton turbine will typically yield only **50% to 70%** (or worse at small scales), whereas a **Crossflow (Banki)**, **Francis**, or small **Kaplan/propeller** turbine is the proper choice to hit 80% to 88% efficiency.
+
+Why a Pelton Wheel Fails at 20 Meters
+
+Pelton wheels are **impulse turbines** designed for **high head ($> 100\text{–}200\text{ m}$)** and **low flow**.
+
+Here is why low head ruins their performance:
+
+1. **Sluggish Jet Velocity:**
+A Pelton wheel converts the pressure head entirely into a high-speed jet via a nozzle:
+
+$$v = \sqrt{2gh} = \sqrt{2 \times 9.81 \times 20} \approx 19.8\text{ m/s}$$
+
+In high-head plants ($300\text{ m}$), jet speeds exceed $75\text{ m/s}$. At just $20\text{ m/s}$, the kinetic energy density of the jet is very low.
+2. **The Bucket-to-Wheel Ratio Problem:**
+Optimal Pelton efficiency requires the wheel's rim speed ($u$) to be roughly half the jet speed ($u \approx 0.46 \times v \approx 9.1\text{ m/s}$).
+To generate meaningful power with low head, you need a high volume of water ($Q$). A high flow rate requires a **large nozzle diameter ($d$)**. However, a Pelton wheel only maintains high efficiency if the wheel diameter ($D$) is at least **10 to 15 times** the nozzle diameter ($D/d \ge 10$). If $d$ is too wide relative to $D$, the jet splashes across the bucket edges, deflects unevenly, and chokes the casing, tanking efficiency.
+3. **Generator RPM Mismatch:**
+If you make the wheel large enough to satisfy the $D/d$ ratio, a rim speed of $9.1\text{ m/s}$ translates to a very low rotational speed (e.g., 200–300 RPM). Standard electrical generators run at 1500 or 3000 RPM, forcing you to use a gearbox or belt drive—introducing mechanical friction losses of 5% to 15%.
+
+What Turbine Should You Use for 20 Meters?
+
+At $20\text{ m}$ (classified as medium-to-low head), the selection depends on your water flow rate:
+
+| Turbine Type | Operating Principle | Typical Efficiency at 20 m | Best Suited For |
+| --- | --- | --- | --- |
+| **Crossflow (Banki-Michell)** | Impulse | **75% – 82%** | Small/micro-hydro, wide range of flows, simple DIY maintenance |
+| **Francis** | Reaction | **85% – 92%** | Medium to large installations with steady, continuous flow |
+| **Turgo** | Impulse | **75% – 84%** | Better than Pelton at lower heads because it handles larger water jets |
+| **Pelton** | Impulse | **50% – 70%** | Poor match; requires extremely small jets and produces low power |
+
+The Reality of "System Efficiency"
+
+Even with a turbine that achieves 90% hydro-mechanical efficiency, overall **water-to-wire** efficiency accounts for losses across the whole chain:
+
+$$\eta_{\text{total}} = \eta_{\text{pipe}} \times \eta_{\text{turbine}} \times \eta_{\text{generator}} \times \eta_{\text{inverter/grid}}$$
+
+* **Pipe friction (penstock):** $\sim 95\%$ (loses $1\text{ m}$ of head to friction)
+* **Turbine (properly matched):** $\sim 85\%$
+* **Generator / Alternator:** $\sim 85\text{–}92\%$
+* **Overall net electricity recovered:** **$65\% \text{ to } 75\%$** of the theoretical $mgh$.
+
+
+### Pumps
+
+
+ρgQH
+
+https://github.com/JAlcocerT/poc/tree/main/physics-pumps

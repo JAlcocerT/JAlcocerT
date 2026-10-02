@@ -30,6 +30,9 @@ And not [the other way around](#conclusions).
 
 ## Electrical Engineering
 
+https://jalcocert.github.io/JAlcocerT/electromagnetism-101/
+
+https://jalcocert.github.io/JAlcocerT/electromagnetism-for-ac-dc-motors/#equations-behind-the-motor-types
 
 
 <!--
@@ -292,8 +295,24 @@ I used Wolfram and Matlab during my studies.
 
 ### Analogies
 
+Heat and Electr can be [compared](https://jalcocert.github.io/JAlcocerT/heat-transfer-ice/#analogy---heat-vs-electr), but so can [fluids](https://jalcocert.github.io/JAlcocerT/fluids/#the-analogy)
 
 
+If you can visualize water flowing through a pipe, you can understand a circuit or a heat exchanger.
+
+| Electrical | Thermal | Fluid Mechanics |
+| :--- | :--- | :--- |
+| **Voltage ($V$)** | **Temperature ($T$)** | **Pressure ($P$)** |
+| **Current ($I$)** | **Heat Flow ($q$)** | **Volumetric Flow Rate ($Q$)** |
+| **Resistance ($R$)** | **Thermal Resistance ($R_{th}$)** | **Hydraulic Resistance ($R_h$)** |
+| **Capacitance ($C$)** | **Thermal Mass ($C_{th}$)** | **Compliance / Tank Volume** |
+| **Inductance ($L$)** | *(No direct simple analog)* | **Inertance (Fluid Mass/Inertia)** |
+
+In all three systems, **Power** is calculated by multiplying the "Push" (Across variable) by the "Flow" (Through variable):
+
+*   **Electric Power:** $P = V \cdot I$
+*   **Thermal Power:** $P = \Delta T \cdot q$ (Though $q$ is already a power unit, Watts)
+*   **Fluid Power:** $P = \Delta P \cdot Q$
 
 ---
 
