@@ -1,6 +1,6 @@
 ---
 title: "Getting Leads with Pocketbase"
-date: 2026-11-01T23:20:21+01:00
+date: 2026-10-08T23:20:21+01:00
 draft: false
 tags: ["Info Product","Dashboards","Supabase Auth vs PB","Roadmap26"]
 description: 'A waiting list that gets you leads.'
@@ -10,7 +10,11 @@ description: 'A waiting list that gets you leads.'
 
 What happenes after doing the `n ebooks` here and this tech about BRD development.
 
+
 **Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 Lifetime products are fine.
 

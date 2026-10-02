@@ -19,6 +19,8 @@ And not [the other way around](#conclusions).
 
 **Intro**
 
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 <!-- https://youtu.be/FPvFHcQEEj0?si=-ZnOycL8qsgJ4xKN -->
 
 {{< youtube "FPvFHcQEEj0" >}}

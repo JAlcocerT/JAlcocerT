@@ -248,6 +248,8 @@ npx wrangler pages deploy dist --project-name=gopro-telemetry-overlay
 
 ### Learnings with HomeLab
 
+A homelab can be useful for your trips: `https://viajes.jalcocertech.com`
+
 https://akashrajpurohit.com/blog/initial-vps-setup-checklist-first-30-minutes/
 
 {{< callout type="info" >}}
@@ -260,9 +262,15 @@ https://blog.bartzz.com/local-remote-and-dynamic-port-forwarding/
 
 https://github.com/MrModest/homeserver
 
+
+Location data can also be interesting and you can gather it with [Dawarich](https://fossengineer.com/selfhosting-dawarich/)
+
 Wondering which [OS to get started](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/#which-linux-to-get-started)?
 
 Id leave ZorinOS/[Omarchy](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy) for daily driver
+
+
+To buckup your code, I was wondering with: some custom scripts, [git-sync](https://github.com/AkashRajpurohit/git-sync)...but you can do it with a local Forgejo
 
 * [2608]
 
@@ -293,10 +301,18 @@ Your 12 words (often called a **seed phrase** or **recovery phrase**) are **not*
 * [2509](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-sept-2025/)
 * [2506](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/)
 * [2505](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/): discovered termix and [made speedtests](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recently)
+
 * [2503](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/): more [https/ssl](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#better-https-and-ssl) tinkering, [tested immich](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich), configured [Jellifyn to use hardware acceleration](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#keep-using) and found [about forward auth](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#authentication)
+
+{{< callout type="warning" >}}
+More notes in [activating HA](https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin#permanent-fix-hardware-acceleration-amd-5600g) for the 5600G
+{{< /callout >}}
+
 
 
 Take [seriously your homelab security](https://jalcocert.github.io/JAlcocerT/homelab-security/)
+
+If you dont, you might get strange ads within Umami web analytics UI.
 
 ## Configuring an OS
 

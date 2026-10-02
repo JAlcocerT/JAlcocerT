@@ -7,6 +7,13 @@ description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
 
+
+
+**Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 <!-- A compute framework for turning complex data into vectors.
 https://github.com/superlinked/superlinked -->
 la hula kula
@@ -877,6 +884,8 @@ I was not expecting to:
 
 #### Quotes
 
+You dont need a new book, you need to [apply prior book harder](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks)
+
 Trading all risk/volatility is selling the tail probability of bigger success
 
 > How do many still complain about no upside when they have traded fully the upside for a *'risk free'* promise?
@@ -1001,6 +1010,8 @@ graph LR
 * Where is the line between being flexible and being chaotic?
 
 #### Interesting Concepts
+
+Dark factory and company brain
 
 1. Non-chalant
 

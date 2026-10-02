@@ -8,6 +8,18 @@ url: 'cyber-101'
 math: true
 ---
 
+<!-- 
+https://www.youtube.com/watch?v=lRsLuCLnH20 -->
+
+
+{{< youtube "lRsLuCLnH20" >}}
+
+https://www.youtube.com/watch?v=ZlTgW__Ryy0
+
+[Dron delayed stall](https://www.youtube.com/watch?v=tQrVuyGhSMA)
+
+[Jellyfin radarr sonarr](https://www.youtube.com/watch?v=kSx2W34abKs)
+
 https://www.youtube.com/watch?v=V_mZsiZcy7s
 
 https://www.youtube.com/watch?v=XKQgvmeApjI

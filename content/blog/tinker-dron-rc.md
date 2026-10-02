@@ -11,7 +11,11 @@ url: 'rc-tinkering'
 
 From the [DJI Tello](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/) to a custom FPV
 
+
 **Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 Having some thoughts around electro-magnetism, electronics 101, ac/dc motors...
 

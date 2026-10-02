@@ -3,18 +3,32 @@ title: "3D Modelling"
 date: 2026-12-02
 draft: false
 tags: ["Blender","OpenSCad vs CadQuery","ThreeJS & BabbylonJS","ArchViz"]
-description: 'From Digital Modelling to 3D Printing 101'
+description: 'From Digital Modelling to 3D Printing 101 with SketchForge'
 url: '3d-modelling-101'
 ---
 
 
 https://github.com/ad3m3r5/scratch-map?tab=readme-ov-file
+https://github.com/papyDoctor/openscad-shape25 An OpenScad libray that add curved chamfers (concave and convex) to polygons
+
+https://github.com/JAlcocerT/SketchForge-3D
+
+A local-first browser 3D design editor for building, cutting, importing STL files, and exporting models.
+
+![fpv stand STL x sketchforge](/blog_img/mechanics/fpv-stand.png)
+
+
+
 
 
 **Tl;DR**
 
 
+
 **Intro**
+
+* WHY Im writting this post: *bc I wanted to try SketchForge*
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 ## Blender

@@ -7,3 +7,10 @@ description: 'Gears are a rabbit-hole'
 url: 'understanding-gears'
 math: true
 ---
+
+
+
+**Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*

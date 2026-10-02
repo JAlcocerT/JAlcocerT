@@ -14,7 +14,7 @@ You better write daily/weekly notes and work with them
 **Intro**
 
 * Why Im writting this post: *bc I want to standardize the way i capture information across my forcely [scattered daily flow](https://github.com/JAlcocerT/my-logseq-notes/tree/main/journals) and [create meta-frameworks](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-frameworks) with it to apply cross-domain*
-* [What Ive learnt](#conclusions) with it: *When principles/ideas/[books are clear](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks), just [apply them harder](https://jalcocert.github.io/JAlcocerT/poc-107/#destilling-read-books)*
+* [What Ive learnt](#conclusions) with it: *Got to know about the [company brain](#company-brain). Also recovered the idea that when principles/ideas/[books are clear](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks), just [apply them harder](https://jalcocert.github.io/JAlcocerT/poc-107/#destilling-read-books)*
 
 ## Why you need this
 
@@ -583,3 +583,64 @@ To get goodies from the VM to the regular laptop I did:
 ```sh
 scp -P 2022 dhh@127.0.0.1:/home/dhh/Downloads/wiki-technitium.md /home/jalcocert/Desktop/
 ```
+
+### Company Brain
+
+Got to know via [this pelado video](https://www.youtube.com/watch?v=1Wq1mJ-PAeQ)
+
+A "Company Brain" acts as the operational, real-time layer that traditional Knowledge Sciences, Taxonomies, and Ontologies have historically tried to build by hand.
+
+Rather than replacing these disciplines, it automates their creation, maintenance, and retrieval.
+
+1. Relation to Knowledge Sciences (Ciencias del Conocimiento)
+
+Knowledge Management (KM) and Knowledge Sciences study how organizations create, retain, structure, and transfer knowledge. A Company Brain directly addresses the core theoretical challenges in this field:
+
+* **Tacit vs. Explicit Knowledge (The SECI Model):**
+* Traditional KM struggles with *tacit knowledge*—insights that exist only inside employees' heads or informal chats. People rarely take time to codify it into formal manuals.
+* A Company Brain automates the **externalization** step: it listens passively to daily interactions (Slack threads, Jira tickets, pull requests, meeting transcripts) and converts informal, ephemeral chatter into persistent, searchable organizational memory.
+
+* **Organizational Amnesia:**
+* In KM, employee turnover is the primary cause of lost intellectual capital. By capturing decisions and context in real time, the Company Brain breaks dependence on individual tenure.
+
+* **The "Write-Time" vs. "Read-Time" Shift:**
+* Classic KM required high friction at *write-time* (employees writing documentation).
+* A Company Brain shifts the burden to *read-time synthesis* using AI, gathering raw interactions automatically and synthesizing answers only when asked.
+
+2. Relation to Taxonomies
+
+A taxonomy is a hierarchical classification scheme (e.g., *Engineering → Infrastructure → Kubernetes → Carpenter*).
+
+* **From Static to Dynamic Classification:**
+* Traditional corporate taxonomies are rigid trees designed manually by information architects. They fail because companies evolve faster than taxonomy committees can update folders and tags.
+* A Company Brain uses **dynamic, bottom-up clustering**. It observes emerging terms, tools, and project codenames as they appear in conversations and categorizes them automatically.
+
+
+* **Semantic Tagging at Scale:**
+* Instead of requiring a support agent to manually select 5 dropdown tags on a Zendesk ticket, the AI evaluates the context and associates the ticket with the correct taxonomy nodes automatically.
+
+* **Multi-Faceted Navigation:**
+* Traditional taxonomies force an asset into a single branch. A Company Brain enables polyhierarchical indexing, meaning an incident post-mortem can simultaneously belong to *Client Relations*, *Kubernetes Cost Optimization*, and *Security*.
+
+3. Relation to Ontologies
+
+While a taxonomy is a simple hierarchy, an **ontology** defines entities, their attributes, and the complex, typed relationships between them (e.g., `Employee` *owns* `Microservice`, which *runs on* `Kubernetes Cluster`, which *experienced* `Incident #402`).
+
+* **Building Dynamic Enterprise Knowledge Graphs:**
+* The modern Company Brain doesn't just store flat text chunks; it constructs or queries an underlying **Knowledge Graph** (a concrete implementation of an ontology).
+* When reading Slack messages or tickets, the model performs **Named Entity Recognition (NER)** and **Entity Resolution**, identifying that "Dave", "@dave_dev", and "David Miller" refer to the same node in the ontology.
+
+
+* **Contextual & Causal Reasoning:**
+* Because an ontology models relationships (`caused_by`, `fixed_by`, `depends_on`), the Company Brain can answer multi-hop questions: *"Why did the checkout service fail after the Carpenter upgrade last Tuesday, and who resolved it?"*
+
+* **Ontology Alignment & Self-Healing:**
+* As technical stacks and organizational charts shift, the system updates the relationship edges automatically, preventing the semantic drift that usually ruins enterprise ontologies.
+
+
+| Dimension | Knowledge Sciences (KM) | Taxonomies | Ontologies | Company Brain |
+| --- | --- | --- | --- | --- |
+| **Primary Goal** | Retain capital and facilitate learning | Organize and categorize content | Model domains and formal relationships | Automate capture, context, and retrieval |
+| **Maintenance** | Manual (documentation drives) | Manual (controlled vocabularies) | Manual (formal logic / RDF / OWL) | **Passive & continuous** (ambient AI) |
+| **Data Source** | Structured portals, wikis | Folders, navigation trees | Schemas, graph databases | **Unstructured chatter, tickets, code, docs** |
+| **Failure Mode** | Abandonment due to human fatigue | Becomes outdated and restrictive | Too complex and brittle to maintain | Risk of noise, hallucination, or data leaks |

@@ -21,12 +21,18 @@ url: 'fpv-programming'
 
 https://www.youtube.com/watch?v=uC9hVyqGvDE
 
+
+eachine novice 4 - stm32F405
+
 **TL;DR**
 
 At this point, whats stopping you to create a cool app for [the tello DJI](https://jalcocert.github.io/JAlcocerT/dji-tello-python-sdk/)?
 
+
 **Intro**
 
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 First of all, an fpv is probably sth for what you need [such license](https://jalcocert.github.io/JAlcocerT/dji-tello-python-programming/#about-dron-regulations).
 
 This guy knows what he's talking about: `https://github.com/Bardo91`, aka Pablo ramon soria.

@@ -2,7 +2,7 @@
 title: "Making an enhanced DIY offering via PaaS"
 date: 2027-10-01T09:20:21+01:00
 draft: false
-tags: ["DIY Platform Service","RoadMap26","PostgreSQL","Web Audit"]
+tags: ["DIY Platform Service","Coolify vs ","PostgreSQL","Web Audit"]
 description: 'A platform service offering for B2C to get up to speed with services that dont require any customization.'
 url: 'creating-a-diy-paas-service'
 ---
@@ -26,6 +26,7 @@ Benefit from what's automated for the masses.
 * WHY Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+Knowing [when to go to managed services vs shared hosting vs vps](https://akashrajpurohit.com/blog/vps-vs-shared-hosting-vs-managed-services-when-to-choose-what/) can help your entrepreneurial path
 
 I want to **combine a Landing x PaaS Tool**s to enable B2C users to get up to speed quickly with certain services that dont require any customization.
 

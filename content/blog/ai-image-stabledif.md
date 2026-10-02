@@ -9,7 +9,11 @@ url: 'stable-difussion-free-generation'
 
 **TL;DR**
 
+
 **Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 ### How to Install Stable Difussion
 

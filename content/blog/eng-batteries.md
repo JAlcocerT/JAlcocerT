@@ -17,7 +17,7 @@ From 3v to a [car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analyti
 Its been inspiring [this post from Sean](https://www.seangoedecke.com/blog-about-things-you-dont-understand-yet/), with a framework that ill be copying in my intros:
 
 * Why Im writting this post: *bc i got [a bluetti](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#bluetti) and It was time to put the wh to ah [conversions](#conversions)*
-* What Ive learnt with it: *Ive ended up learning sth about batteries thx to the FPV drones (LiPo vs Li-ion), electric car tests and a now...a portable bluetti for home project.*
+* What Ive learnt with it: *Ive ended up learning sth about batteries like [the SoC](#the-state-of-charge), thx to the FPV drones (LiPo vs Li-ion), electric car tests and a now...a portable bluetti for home project.*
 
 ## About Batteries
 
@@ -687,3 +687,11 @@ While pure **Li-ion chemistry wins on raw energy density (Wh/kg)**, LiPo often w
 * **Power Output (C-Rating):** LiPo batteries deliver massive spikes of instant current (high burst power), making them preferred for RC drones and racing applications despite their slightly lower total Wh/kg capacity.
 
 Standard Li-ion is optimal when aiming for maximum total energy capacity per kilogram (such as in long-range drones, power tools, or electric vehicles).
+
+
+### The State of Charge
+
+
+{{< callout type="info" >}}
+See [a SoC experiment](https://github.com/JAlcocerT/poc/tree/main/physics-electronics/soc-18650) with the esp32
+{{< /callout >}}

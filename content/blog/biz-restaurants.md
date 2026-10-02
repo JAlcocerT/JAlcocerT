@@ -48,7 +48,11 @@ QR Restaurantes Free + Web if ~~Pay~~ you qualify.
 
 Only for TOP clients :)
 
+
 **Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 For B2B only as per [this section](#the-how-behind-the-idea).
 

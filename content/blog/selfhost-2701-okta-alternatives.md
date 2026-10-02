@@ -14,7 +14,11 @@ https://github.com/tinyauthapp/tinyauth/releases/tag/v5.1.0?ref=selfh.st
 
 Claude [Mythos](https://red.anthropic.com/2026/mythos-preview/) is out-there, you better take security measures.
 
+
 **Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 There is kind of a rush for shipping PoCs now.
 

@@ -21,7 +21,11 @@ https://www.youtube.com/watch?v=LZUhBRJwp4M -->
 tags: ["Tinkering","Battle City NES",""]
 description: GPU passthrough
 
+
 **Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 People are going crazy with gaming on Linux.
 

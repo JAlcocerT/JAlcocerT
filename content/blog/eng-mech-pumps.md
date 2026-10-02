@@ -7,3 +7,9 @@ description: 'Another rabbit-hole.'
 url: 'understanding-pumps'
 math: true
 ---
+
+
+**Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*

@@ -2,7 +2,7 @@
 title: "Selfhosted Tools for your Car"
 date: 2027-02-05
 draft: false
-tags: ["OpenPilot","LubeLog","Canbus Mapping","GPS"]
+tags: ["OpenPilot","LubeLog vs WheelerKeeper","Canbus Mapping","GPS"]
 description: 'A look to F/OSS '
 url: 'open-source-car-tools'
 ---
@@ -15,7 +15,9 @@ url: 'open-source-car-tools'
 * Why Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
-https://github.com/hargata/lubelog
+* https://github.com/hargata/lubelog
+* wheeler keeper https://box2overtake.com/blog/wheeler-keeper/
+
 
 https://github.com/commaai/openpilot
 
@@ -81,6 +83,17 @@ When was the last time tat you questioned if you are optimizing sth that is wort
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled free value!" >}}
 {{< /cards >}}
+
+
+### Car Analytics
+
+From the old `Civic 6` i got, these were my analytics:
+
+Also for a `Mondeo mk3`, they look:
+
+With proper maintainance, you can get a `Laguna mk2` to be mostly the costs of energy
+
+Which actually makes sense as long as you have a car focusing on moving you and things from place to place efficiently and not so much about brands, screens and accesories that are not required to move stuff from place to place
 
 
 ---
@@ -222,10 +235,10 @@ networks:
 ```
 
 
-https://github.com/pyston/pyston
+
 
 https://github.com/Freika/dawarich
-
+https://fossengineer.com/selfhosting-dawarich/
 
 https://github.com/pbogre/jetlog
 https://github.com/pbogre/jetlog?tab=readme-ov-file#docker-recommended

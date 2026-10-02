@@ -70,16 +70,15 @@ docker exec -u www-data nextcloud php /var/www/html/occ config:system:get truste
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/nextcloud" title="Nextcloud | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Immich has been recently updated: https://github.com/immich-app/immich/releases/tag/v2.2.0
+Immich has been recently updated: `https://github.com/immich-app/immich/releases/tag/v2.2.0`
 
 And If you dont want **Nextcloud** (despite having a [photo feature](https://nextcloud.com/blog/how-we-got-to-the-new-nextcloud-photos/?ref=selfh.st)) nor Immich...for your latest [photo/video](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/) workflows...
 
-Neither pay for google photos: https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper
+Neither pay for google photos: `https://github.com/TheLastGimbus/GooglePhotosTakeoutHelper`
 
 You can get away with [Immich respecting your files structure](https://www.youtube.com/watch?v=aY47XEm8mF4), or you could just use PiGallery. 
 
-Which has also been recently upgraded: https://github.com/bpatrik/pigallery2/releases/tag/3.0.0
-
+Which has also been recently upgraded: `https://github.com/bpatrik/pigallery2/releases/tag/3.0.0`
 
 Read-only access is recommended for both.
 
@@ -117,7 +116,7 @@ flatpak install flathub org.localsend.localsend_app
 
 > PairDrop: Transfer Files Cross-Platform. **No Setup, No Signup**. 
 
-> > Another open PWA to do similar job *via WebRTC* and WS was [Snapdrop](https://github.com/SnapDrop/snapdrop)
+> > Another **open PWA** to do similar job *via WebRTC* and WS was [Snapdrop](https://github.com/SnapDrop/snapdrop)
 
 6. Would SCP or FTP be faster instead?
 

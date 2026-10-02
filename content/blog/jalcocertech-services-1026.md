@@ -545,7 +545,7 @@ rpicam-still --nopreview --timeout 2000 --output camera-tests/snapshot-20260930-
 #scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/snapshot-20260930-151243.jpg .
 #rsync -avz jalcocert@192.168.1.18:/home/jalcocert/camera-tests/latest.jpg .
 make latest
-scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/latest.jpg .
+#scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/captures/snapshot-20261002-084222.jpg .
 ```
 
 
@@ -833,14 +833,16 @@ Making questions is the first step.
 
 Then its about making good questions, like:
 
-* Stop asking "Do they see it?
-* Start asking "Is this priced correctly?"
+* Stop asking: "Do they see it?
+* Start asking: "Is this priced correctly?"
 
 Some orgs are already asking: *why do we need a person?*
 
 And that makes sense, the info is out there: *ppl are realizing that scrum doesnt work, aka is too slow*
 
-Now...dark factories will come (even more) to the software/IT sector
+How long could it last earning 6 figures by prompting an agent?
+
+Now...dark factories will come *(even more)* to the software/IT sector
 
 AI...employees coming?
 

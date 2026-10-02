@@ -18,7 +18,11 @@ Mechanics + electronics = mechatronics
   {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics | Repo" icon="github" >}}
 {{< /cards >}}
 
+
 **Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 This is where I put together an old lesson
 
