@@ -11,11 +11,11 @@ url: 'emails-101'
 
 SMTP stuff is messy, a collection of thoughts that helped me understand tech email concepts better.
 
-This post is an email 101 for me to test few ESPs and learn how to use email APIs.
+This post is an **email 101** for me to test few ESPs and learn how to use email APIs.
 
 **Intro**
 
-I was happy enough with Google and Stripe integrated into cal.com
+I was happy enough with Google and Stripe integrated into `cal.com`
 
 ![Cal x Stripe](/blog_img/email/cal-email-stripe.png)
 
@@ -98,7 +98,9 @@ In short, **SMTP is the reliable, standardized way that email is pushed across t
 
 How to do email stuff...with code
 
-Mailtrap competitors primarily include other email testing and delivery platforms that offer similar capabilities for email sandboxing, deliverability testing, spam checking, and transactional email sending. Some well-known Mailtrap competitors are:
+Mailtrap competitors primarily include other email testing and delivery platforms that offer similar capabilities for email sandboxing, deliverability testing, spam checking, and transactional email sending. 
+
+Some well-known Mailtrap competitors are:
 
 - [Mailgun](https://www.mailgun.com/pricing/): Offers advanced email sending APIs, email validation, and analytics for deliverability and engagement.
 - [SendGrid](https://sendgrid.com/en-us/pricing?tab=1_1) (by Twilio!): Provides scalable email sending, marketing campaign features, and email analytics.
@@ -125,8 +127,6 @@ Regarding ease of configuration among the competitors:
 | Postmark     | Simple and focused on transactional email                | Straightforward setup, less marketing complexity. No free tier  |
 | [Mailgun](#mailgun)      | Moderate to advanced, developer-centered                  | Powerful API but requires technical knowledge     |
 | Amazon SES   | More technical, requires AWS knowledge                    | Powerful but steeper learning curve                |
-
-
 
 
 {{< callout type="warning" >}}

@@ -1,9 +1,9 @@
 ---
-title: "Ways to get Leads"
-date: 2026-10-04T09:20:21+01:00
+title: "Ways to get Leads around Cloudflare KV vs workers"
+date: 2026-10-04T15:20:21+01:00
 draft: false
-tags: ["Info Product","gotify vs ntfy","Supabase Auth vs PB","RoadMap26"]
-description: 'How hard is to make waiting list that capture leads? Cloudflare KV.'
+tags: ["RoadMap26","gotify vs ntfy","Supabase Auth vs PB","Mailtrap"]
+description: 'How hard is to make waiting list that capture leads?'
 ---
 
 **TL;DR**
@@ -222,6 +222,506 @@ pull and forget commands, the listmonk import, and an ADR for "homelab pulls, li
 that I'd build it in small commits, as we did with the Worker. Does listmonk work for you, or do you
 already have a sending tool in mind?
 
+The capture side is unified for the three main sites: one Worker, one store, one alert path, one consent model, attribution on every lead.
+
+What's missing falls into four groups.
+
+  1. Properties not yet on the Worker
+
+  ┌─────────────────────────────┬───────────────────┬──────────────────────────────────────────────┐
+  │          Property           │  Captures today   │                What it needs                 │
+  │                             │        via        │                                              │
+  ├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
+  │                             │ Formbricks        │ Bookings via a Cal.com webhook into the      │
+  │ consulting.jalcocertech.com │ qualifier,        │ Worker (kind: booking, signature checked);   │
+  │                             │ Cal.com bookings, │ the qualifier as your own form, replacing    │
+  │                             │  OpenAI chatbot   │ Formbricks                                   │
+  ├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
+  │ ebooks.jalcocertech.com     │ a Formbricks link │ A route plus a subscribe box, like the       │
+  │                             │                   │ jalcocertech articles                        │
+  ├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
+  │                             │                   │ Its backend also posts the lead to the       │
+  │ webaudit.jalcocertech.com   │ its own Express + │ Worker (kind: audit), and the bundled        │
+  │                             │  PocketBase       │ consent checkbox gets split. That's the last │
+  │                             │                   │  real legal issue on a live site             │
+  ├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
+  │                             │                   │ The forms.jalcocertech.com cross-origin      │
+  │ leadarchitect.org           │ (on Firebase)     │ entry point, which the Worker already        │
+  │                             │                   │ supports and just needs its hostname         │
+  └─────────────────────────────┴───────────────────┴──────────────────────────────────────────────┘
+
+  2. What happens to leads after capture (the biggest gap)
+
+  - Unsubscribe and "forget me": manual today (make lead-delete). There's no suppression list, so
+    someone who unsubscribes on one site could still be emailed from another.
+  - Sending: the quarterly email would go out by hand with BCC from Proton. There are no proper
+    unsubscribe links or bounce handling.
+  - Double opt-in: subscriptions are confirmed with a single checkbox. Anyone could type someone else's
+    address. A confirmation email ("click to confirm") is best practice in the EU and the strongest
+    proof of consent. It needs a sending tool first.
+  - Backup: KV is the only copy of every lead. It's durable, but a bug or a mistaken delete would be
+    permanent.
+
+  The homelab pull job (leads-hub phase 2) solves all four:
+  - a nightly copy into SQLite (your backup);
+  - per-site subscriber lists and a shared suppression list;
+  - forget <email> across all sites;
+  - an import into listmonk, which handles double opt-in, unsubscribe links and bounces;
+  - a weekly ntfy digest.
+
+  3. Protection and monitoring
+
+  - Spam: only the hidden honeypot field today. Turnstile and a rate limit are ready to add if bots
+    appear.
+  - CI: the Worker's 21 tests only run when someone runs them. A GitHub Action could run them on every
+    push.
+  - Errors: the alert fires on new leads, but nothing alerts you if the Worker starts failing (for
+    example, KV errors).
+
+  4. Small open items from earlier
+
+  - Turn on Cloudflare Web Analytics for jalcocertech.com (its privacy page says it's used).
+  - Consulting privacy policy: replace Umami with Cloudflare Web Analytics, add OpenAI, and decide on
+    the paid call.
+  - Optional: ntfy failure alerts for the rebuild Worker.
+
+  My recommended order:
+  1. The quick legal items (webaudit checkbox, consulting policy, analytics toggle), about an hour.
+  2. leads-hub phase 2: pull job, SQLite backup, suppression list and forget, then listmonk with double
+     opt-in.
+  3. Consulting bookings and qualifier.
+  4. ebooks and webaudit, then CI and spam protection as needed.
+
+  Shall I start with phase 2? First an ADR in core ("homelab pulls, listmonk sends, double opt-in"),
+  then the pull job in small commits, as with the Worker. You'd only need to create a read-only KV API
+  token for the homelab, and tell me where listmonk should run (your homelab with a tunnel, like ntfy).
+
+### SMTP Transactional
+
+• Your post recommends different tools by use case:
+
+  - Transactional email: Mailtrap first, then Resend, then Mailjet (source (content/blog/dev-email.md:688)).
+  - Newsletters/marketing: MailerLite, or Listmonk + Mailjet (source (content/blog/dev-email.md:690)).
+  - Regular personal/domain email: Proton Mail or Gmail.
+  - High-volume/AWS users: Amazon SES.
+  - Local development/testing: MailHog.
+  - Self-hosting a production mail server: generally not recommended.
+
+> I talked before [about these mail APIs](https://jalcocert.github.io/JAlcocerT/emails-101/#conclusions): https://mailtrap.io/domains and https://resend.com/domains and https://app.mailjet.com/dashboard
+
+ It's already verified in Mailtrap:
+  its signing records (DKIM) and DMARC record are in place. For production, I agree with your instinct:
+  one subdomain of jalcocertech.com for every brand.
+
+  What the DNS shows:
+  - jalcocertech.com and fossengineer.com are set up for Proton: mail servers, an SPF record allowing
+    only Proton, and DMARC p=quarantine. If Mailtrap sent "from" those root domains, the messages would
+    fail that check and land in spam. That's why the root domains should stay Proton-only, for your
+    manual mail.
+  - news.libreportfolio.fyi has Mailtrap's DKIM records and a DMARC record. It's ready to send today.
+  - news.jalcocertech.com doesn't exist yet. It's free to set up.
+
+  Recommendation: news.jalcocertech.com as the single sending domain for now.
+
+  ┌────────────────┬───────────────────────────────────────────────────────────────────────────────┐
+  │                │                                      Why                                      │
+  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+  │ Separate from  │ A subdomain gets its own authentication records, so your root domains' Proton │
+  │ Proton         │  setup is untouched                                                           │
+  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+  │ Reputation     │ If a campaign ever gets spam complaints, the damage stays on news. and        │
+  │ protection     │ doesn't hurt the mailbox you use daily                                        │
+  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+  │ One setup for  │ Each brand still has its own sender name: FOSS Engineer                       │
+  │ all brands     │ <fossengineer@news.jalcocertech.com>, MBSD <mbsd@news.jalcocertech.com>,      │
+  │                │ JAlcocerTech <hello@news.jalcocertech.com>                                    │
+  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+  │ Replies still  │ Reply-To is set to contact@jalcocertech.com / hello@jalcocertech.com, so a    │
+  │ reach Proton   │ reply to any email lands in your Proton inbox                                 │
+  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+  │ Passes the     │ Mailtrap signs as news.jalcocertech.com, which matches the sender address.    │
+  │ DMARC check    │ Your root p=quarantine also applies to subdomains, so proper signing is       │
+  │                │ required, and Mailtrap provides it                                            │
+  └────────────────┴───────────────────────────────────────────────────────────────────────────────┘
+
+  The trade-off: fossengineer subscribers will see "jalcocertech" in the address. With the sender name
+  set to "FOSS Engineer", that's a minor oddity, and you can add per-brand subdomains later without
+  changing code; it's just configuration.
+
+  One Mailtrap detail to use from the start: it has separate transactional and bulk sending streams.
+  Confirmation emails go through transactional, newsletters and drips through bulk. That keeps your
+  confirmation emails delivering reliably even if a campaign does badly.
+
+  The plan:
+  2. Test with news.libreportfolio.fyi: you subscribe with your own email, the confirmation arrives
+     through Mailtrap, you click, and the lead becomes confirmed. Then we test unsubscribe the same
+     way.
+  3. Meanwhile you set up news.jalcocertech.com in Mailtrap. Add it as a sending domain, then copy the
+     DNS records it shows (DKIM, DMARC, link tracking) into the jalcocertech.com zone in Cloudflare. I
+     can't write DNS with my login. When it shows as verified, we switch the sender over with a config
+     change.
+
+  What I need from you for the test:
+  - A Mailtrap API token with sending permission. Add it yourself so it stays out of the chat:
+  cd ~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/worker
+  npx wrangler secret put MAILTRAP_TOKEN
+  - The test sender address, e.g. test@news.libreportfolio.fyi. Mailtrap accepts any address on a
+    verified domain.
+
+  Before real subscribers get these emails (step 4), the privacy pages will need to name Mailtrap as
+  the email provider. That's already on the ADR checklist.
+
+```sh
+curl --location --request POST \
+'https://send.api.mailtrap.io/api/send' \
+--header 'Authorization: Bearer <YOUR_API_TOKEN>' \
+--header 'Content-Type: application/json' \
+--data-raw '{"from":{"email":"hello@demomailtrap.com","name":"Mailtrap Test"},"to":[{"email":"some@mail.com"}],"subject":"You are awesome!","text":"Congrats for sending test email with Mailtrap!","category":"Integration Test"}'
+
+
+curl --location --request POST \
+'https://send.api.mailtrap.io/api/send' \
+--header "Authorization: Bearer $MAILTRAP_API_TOKEN" \
+--header 'Content-Type: application/json' \
+--data-raw '{"from":{"email":"noreply@news.libreportfolio.fyi","name":"Mailtrap Test"},"to":[{"email":"some@mail.com"}],"subject":"You are awesome!","text":"Congrats for sending a test email with Mailtrap!","category":"Integration Test"}'
+```
+
+
+  One Mailtrap detail to use from the start: it has separate transactional and bulk sending streams.
+  Confirmation emails go through transactional, newsletters and drips through bulk. That keeps your
+  confirmation emails delivering reliably even if a campaign does badly.
+
+
+  What's next, as listed before:
+  1. news.jalcocertech.com in Mailtrap. You add the domain and the DNS records, and I can check them
+     afterwards. Once that's done and the privacy pages name Mailtrap, double opt-in can go on for
+     visitors.
+  2. leads-hub v0 on the homelab: SQLite backup of leads and the do-not-send list, forget <email>, and
+     Mailpit for testing.
+
+
+  To run it on the homelab (steps in leads-hub/hub/README.md):
+  1. Create a Cloudflare API token: dashboard → My Profile → API Tokens → Custom Token, with Account ·
+     go with custom template and look for `Workers KV Storage` · Read. *Similar place where i created the R2 for slubne*
+  2. Copy leads-hub/hub/ to the homelab and run cp .env.example .env (paste the token, then chmod 600
+     .env).
+
+```sh
+git clone https://github.com/JAlcocerT/jalcocertech-core
+cd ./jalcocertech-core/leads-hub/hub
+cp .env.example .env
+#curl -X GET "https://api.cloudflare.com/client/v4/accounts/abcd/tokens/verify" \
+  #-H "Authorization: Bearer cfat_edfghijkl"
+chmod 600 .env
+```
+
+3. Run mkdir -p data && docker compose up -d --build
+
+After that, the next build step is the drip engine (ADR 0003 step 3).
+
+
+● Step 2 of ADR 0003 is done: the leads mirror is running on the homelab. I've recorded that in the hub
+  README, the leads-hub README, the ADR and z-learnings (88b7945, pushed).
+
+  What runs now, with nothing for you to do:
+  - Every 15 minutes it copies new and changed leads and the do-not-send list from Cloudflare into
+    data/leads.db.
+  - Once a day it writes a backup to data/backups/, keeping 14.
+  - If pulls start failing, you get an ntfy alert, and another when they recover. That's only if you
+    filled NTFY_TOKEN in .env; without it, failures appear only in the logs.
+
+  Handy commands on the homelab, in ~/jalcocertech-core/leads-hub/hub:
+  docker compose run --rm hub status                          # counts per site / kind / status
+  docker compose run --rm hub subscribers fossengineer.com    # who may be emailed
+  docker compose run --rm hub forget someone@x.com --dry-run  # erasure preview
+
+  Updates later: git pull && docker compose up -d --build.
+
+  What's left:
+  1. Drip engine (ADR 0003 step 3): email sequences written as files in the repo, sent through the hub
+     and tested against Mailpit first. Every email will carry an unsubscribe link signed with the same
+     key as the Worker, so that key has to be copied to the homelab.
+  2. Production email, on your side when you're ready: set up news.jalcocertech.com in Mailtrap, name
+     Mailtrap on the privacy pages, then turn double opt-in on for visitors.
+
+ I'd still keep it on the
+  homelab, and use the laptop only for testing.
+
+  ┌─────────────────┬─────────────────┬────────────────────────────────────────────────────────────┐
+  │                 │     Homelab     │                           Laptop                           │
+  ├─────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+  │ Pulls every 15  │ Always          │ Only while awake; catches up after sleep (nothing is lost, │
+  │ min             │                 │  leads wait in KV)                                         │
+  ├─────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+  │ Daily backup    │ Every day       │ Only on days the laptop runs                               │
+  ├─────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+  │ Failure alerts  │ Meaningful      │ Noisy: offline or asleep looks like a failure              │
+  ├─────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+  │ Personal data   │ Stays at home   │ A copy of every lead travels in your bag; needs disk       │
+  │                 │                 │ encryption                                                 │
+  ├─────────────────┼─────────────────┼────────────────────────────────────────────────────────────┤
+  │ Drips (next     │ Sends on        │ Emails go out late or in bursts after sleep                │
+  │ step)           │ schedule        │                                                            │
+  └─────────────────┴─────────────────┴────────────────────────────────────────────────────────────┘
+
+  The drips are the deciding factor. Once leads-hub sends sequences ("day 0, day 3, day 7"), it has to
+  run on an always-on machine. And it must run in one place only, or people get every email twice.
+
+  Suggested split:
+  - Homelab: docker compose up -d, the real service; it's already built there.
+  - Laptop: development and tests (uv run pytest), plus the occasional one-off command like status,
+    pointed at a temporary database. No always-on container.
+
+  If you want it working right away, while the homelab login gets sorted, running it on the laptop for
+  now is fine; pulls are read-only, so nothing breaks. Then move it, and copy data/leads.db across or
+  just let the homelab do a fresh pull, which rebuilds everything from KV.
+
+
+the design I'm going with, following the ADR's rules:
+
+  - Sequences are files in the repo: sequences/<id>.toml (Python reads TOML natively, so still no
+    dependencies) plus one text file per email. Reviewing them is just reading a diff.
+  - Never twice. Each (sequence, step, person) gets one row, written before the send. If a send crashes
+    midway, that person misses the email instead of getting it twice.
+  - Before every email: the person must still be a confirmed subscriber and not on the do-not-send
+    list. The unsubscribe footer is added automatically, so no template can leave it out. The link is
+    signed exactly as the Worker expects, and the headers allow one-click unsubscribe.
+  - No blasting old lists: each sequence only enrolls people who confirm after its enroll_since date.
+  - Swappable sender: SMTP for Mailpit, or Mailtrap's bulk API. Drips are off unless DRIPS_ENABLED=1,
+    and --dry-run shows what would go out.
+  - Re-confirmation email (from the ADR checklist): a special audience that sends legacy single-opt-in
+    subscribers a Worker confirm link.
+
+The drip engine (ADR 0003 step 3) is built and pushed as hub v0.2.0 (20ca693), but nothing will send
+  yet. All three sequences are drafts and disabled, and sending also needs DRIPS_ENABLED=1. 29 tests
+  pass.
+
+  How it works:
+  - Sequences are files. Each is a .toml plus one plain-text file per email, in
+    leads-hub/hub/sequences/. Changing wording means editing text and committing.
+  - Who gets them:
+    - People who confirmed on that site and aren't on the do-not-send list.
+    - Only people who confirm after the sequence's enroll_since date, so turning on a welcome series
+      never emails your existing subscribers.
+    - The reconfirm sequences instead target subscribers from before double opt-in. Their email carries
+      a Worker confirm link for their own lead.
+  - Checked right before every email: still confirmed, not unsubscribed. Unsubscribing stops the
+    sequence.
+  - Never twice: if a send crashes midway, that person misses the email rather than getting it twice. A
+    refusal from the provider is retried up to 3 times. At most 50 emails go out per run.
+  - Every email gets the unsubscribe footer added automatically, plus the one-click unsubscribe headers
+    Gmail and Yahoo require.
+  - Sender is set by SENDER: smtp goes to Mailpit (catches mail, delivers nothing), mailtrap uses
+    Mailtrap's bulk API.
+
+  Testing found two problems:
+  - A real bug, fixed. Python's mail library encoded the long unsubscribe header (=?utf-8?q?=3Chttps…),
+    which would have broken one-click unsubscribe. I only saw it by reading the headers Mailpit
+    received. It's fixed, and a test now checks the raw bytes.
+  - Cloudflare blocks Python's default client on all three sites. It returns 403 before the Worker
+    runs. Browsers, curl and Google's crawler get through, so this shouldn't affect mail providers. I
+    noted it in z-learnings.
+
+  Verified end to end: links signed on the hub produce exactly the same signature as the Worker's code
+  (a test enforces this). A preview's unsubscribe link opened the live Worker's "Unsubscribe me" page,
+  branded for the right site; opening it doesn't unsubscribe anyone.
+
+  What's drafted:
+  - jt-welcome: a welcome email on day 0, "where to start" on day 3, and "what are you building?" on
+    day 7.
+  - reconfirm-foss and reconfirm-jt: one email each, asking older subscribers to confirm.
+
+  I sign them "— JAlcocerTech" rather than guess your name.
+
+  Your steps on the homelab:
+  1. git pull && docker compose up -d --build. The database picks up the new tables automatically.
+  2. Copy the signing key, so unsubscribe links there match the Worker's:
+  ssh jalcocert@192.168.1.2 'mkdir -p ~/jalcocertech-core/leads-hub/hub/secrets'
+  scp ~/.config/leads-hub/token_secret jalcocert@192.168.1.2:~/jalcocertech-core/leads-hub/hub/secrets/
+  3. Read the drafts:
+  docker compose run --rm hub drip-preview jt-welcome you@example.org
+     This lands in the homelab's Mailpit, which you can reach with ssh -L 18025:localhost:8025 ….
+
+  Still open:
+  - Your review of the email wording.
+  - Step 4, production email:
+    - Verify news.jalcocertech.com in Mailtrap.
+    - Add webhooks so bounces and spam complaints go on the do-not-send list. Not built yet.
+    - Name Mailtrap on the privacy pages.
+    - Then turn on double opt-in for visitors, and the sequences.
+  - Automatic 30-day drop of subscribers who never re-confirm isn't built yet. It's noted in the ADR
+    checklist.
+
+
+  What we've done
+
+  MBSD: framework, site and app
+
+  - mbsd-core / mbsd-examples: reviewed for the 0.7.0 open-source release, which you published.
+  - multi-body (private):
+    - web-sleek/ is live at multibodysystemsdynamics.com: Astro, deployed by direct upload. web/ (v1)
+      is untouched.
+    - app/ is live at app.multibodysystemsdynamics.com: a Pyodide app that installs as a PWA, running
+      mbsd-core from a pinned wheel.
+    - make leads and related commands read leads from KV and show status and unsubscribed addresses.
+    - The z-learnings/ notes record the build.
+
+  Domains, alerts and operations
+
+  - One address per site. Apex/www rules on each domain and redirects for the *.pages.dev addresses.
+    The jalcocertech apex, which pointed at a LAN address, is fixed. architecture/check-redirects.sh
+    checks every site.
+  - ntfy runs on the homelab at ntfy.jalcocertech.com, closed to anonymous access, with a write-only
+    user that posts alerts.
+  - ops/site-rebuilds is a scheduled Worker that rebuilds Pages sites daily at 23:30 UTC, so
+    future-dated posts appear on their day. fossengineer is the first site using it.
+  - Analytics: Umami dropped in favour of Cloudflare Web Analytics.
+
+  Lead capture: the forms Worker (leads-forms, v0.4.0)
+
+  - One Worker handles the forms on all three sites: multibodysystemsdynamics.com, fossengineer.com and
+    www.jalcocertech.com, at /api/forms/*.
+    - Storage: each lead goes to KV, with retention per kind: questions 24 months, newsletter
+      subscriptions without expiry.
+    - Alerts: an ntfy alert for each lead, showing only the email domain.
+    - Forms work without JavaScript.
+    - Two site profiles: "respond" sites only answer what was asked; "growth" sites can also send
+      updates, with consent.
+  - fossengineer: contact and privacy pages, a question form, a quarterly newsletter box mid-post, and
+    the Commento comments disclosed in the privacy page. Also fixed: the /apps/ chips, of which 25 out
+    of 52 were empty.
+  - jalcocertech: the formsubmit service is gone, replaced by the Worker forms; there's a growth-style
+    privacy page, a mid-article newsletter box, and the Tello series published.
+  - Double opt-in:
+    - The confirmation email goes out through Mailtrap; confirm and unsubscribe links are signed.
+    - Opening a link only shows a button, so mail scanners can't confirm or unsubscribe anyone.
+    - One-click unsubscribe works.
+    - Unsubscribes go on a do-not-send list that stores only a hash of the address.
+    - Tested live: subscribe, confirm, unsubscribe. It's currently on for your test address only.
+
+  leads-hub on the homelab (hub/, v0.2.1)
+
+  - Running in Docker: it pulls from KV every 15 minutes, needs no tunnel, and writes a daily SQLite
+    backup kept for 14 days.
+  - What it does:
+    - lists who may be emailed;
+    - erases a person on request with forget;
+    - applies the retention limits to its local copy;
+    - stops if leads vanish in bulk, instead of wiping the copy;
+    - sends an ntfy alert when pulls fail.
+  - Drip engine: sequences as files, never the same email twice, the do-not-send list checked before
+    every email, and an unsubscribe footer plus one-click headers on every email. It sends through
+    Mailpit or Mailtrap. Its signed links match the Worker's exactly, and the live Worker accepts them.
+  - Drafts, all off: jt-welcome (3 emails). The re-confirmation tooling is off and not needed.
+
+  Documentation in jalcocertech-core
+
+  - ADRs: 0001 (one central forms Worker), 0002 (retention per kind), 0003 (do-it-yourself email).
+  - Notes: leads-hub/z-learnings.md (timeline and lessons), z-audits.md, the architecture playbooks,
+    and READMEs for the Worker and the hub.
+
+  What's next
+
+  To switch on real email (ADR 0003 step 4), in this order:
+  1. You: set up news.jalcocertech.com in Mailtrap and add its DNS records in Cloudflare. I can verify
+     them afterwards.
+  2. Me: bounce and spam-complaint webhooks from Mailtrap feeding the do-not-send list. This is the
+     last unbuilt item on the ADR checklist.
+  3. Me: name Mailtrap and describe double opt-in on the three privacy pages, and make jalcocertech's
+     newsletter box show "check your inbox".
+  4. Together: delete your test leads from KV, then turn double opt-in on (DOUBLE_OPT_IN_SITES = "*").
+  5. You: review the jt-welcome emails. Then set enabled = true and enroll_since to that day, and
+     DRIPS_ENABLED=1 on the homelab.
+
+  Small loose ends:
+  - On the homelab: git pull && docker compose up -d --build, and copy token_secret into secrets/ for
+    drips.
+  - Delete the old test emails from your local Mailpit, and rm ~/.config/leads-hub/unsub_test_link.
+
+  Larger items, when you want them:
+  - Consulting / ebooks / webaudit: the Cal.com booking webhook, a qualifier to replace Formbricks, the
+    webaudit form, and the paid-call question (it conflicts with "no billing").
+  - Spam protection: Turnstile, if spam starts arriving.
+  - forms.jalcocertech.com for leadarchitect.org, which isn't hosted on Cloudflare.
+  - Enrichment and a weekly summary for the growth site, once its privacy page covers it.
+  - Before any billing: a virtual office address on the sites.
+
+  My suggestion is to start with step 1, the Mailtrap domain. Nothing customer-facing can go live
+  without it.
+
+Here's what I'd write, grouped into series,
+  each answering one concrete question like your current articles do. The working material is already
+  written: the z-learnings, ADRs and READMEs.
+
+  Series 1: Python in the browser (MBSD app)
+
+  1. "Ship a Python library as an installable web app with Pyodide": running mbsd-core from a pinned
+     wheel, installing a wheel instead of raw source (the PackageNotFoundError trap), the service
+     worker for offline use, the install prompt, and deploying it as a Pages subdomain.
+  2. "app.domain or domain/app? Where to put a lead-magnet PWA (and SEO)": the decision we took for
+     MBSD: the site carries the SEO, the app carries the experience.
+
+  Series 2: Lead capture without a SaaS
+
+  3. "Contact forms with Cloudflare Workers KV and self-hosted ntfy alerts": the post you mentioned.
+     Form → Worker → KV → phone notification, sent only after the lead is stored and never slowing the
+     visitor. Alerts show only the email domain.
+  4. "One forms Worker for every site: same-origin routes over Pages": a zone route takes over the path
+     while Pages serves the rest of the site, so there's no CORS. Covers going from Pages Functions to
+     one Worker for Astro and Hugo sites, and forms that work without JavaScript.
+  5. "Retention as a KV TTL: privacy policy enforced by the platform": short; questions expire after 24
+     months, newsletter subscriptions don't (ADR 0002).
+  6. "Self-hosting ntfy behind a Cloudflare Tunnel, locked down": closed to anonymous access, a
+     write-only publisher user, and why the web UI login matters.
+
+  Series 3: Your own email stack (no listmonk)
+
+  7. "Double opt-in on Cloudflare Workers with signed links": stateless HMAC tokens, why links must not
+     act on GET (mail scanners), and one-click unsubscribe per RFC 8058.
+  8. "A do-not-send list that stores no email addresses": hashed suppression entries, and why every
+     sender checks them.
+  9. "A drip engine in ~400 lines of standard-library Python": sequences as TOML files, never sending
+     twice, Mailpit vs Mailtrap behind one interface.
+  10. "The email header bug that silently breaks one-click unsubscribe": short and very searchable.
+      Python folds the long List-Unsubscribe header into =?utf-8?q?…, and Mailpit is how we caught it.
+  11. "Mailpit vs Mailtrap vs listmonk: what each is actually for": a decision post built on ADR 0003.
+
+  Series 4: Homelab and Cloudflare operations
+
+  12. "A pull-only homelab: mirroring Cloudflare KV to SQLite without a tunnel": the backup copy
+      follows the retention limits too, and a safety brake stops a wrong setting from wiping it.
+  13. "Publish future-dated posts on Cloudflare Pages with a cron Worker": deploy hooks plus a
+      scheduled trigger. Hugo's buildFuture gotcha included.
+  14. "One canonical address per site: apex vs www and *.pages.dev redirects on Cloudflare": zone
+      rules, Bulk Redirects, and the redirect check script.
+  15. "Debugging notes from a week on Cloudflare": a listicle of gotchas:
+      - Pages secrets only apply after a redeploy.
+      - The www 522 came from a missing Pages custom domain.
+      - Cloudflare returns 403 to Python's default client.
+      - Docker creates bind-mount folders as root.
+      - Python in Docker hides print output in the logs.
+
+  Series 5: Process (fits the growth profile)
+
+  16. "Architecture Decision Records for a one-person business": how the ADRs and z-learnings kept this
+      project coherent.
+  17. "GDPR-friendly lead capture for a small EU business": respond vs growth profiles, consent
+      records, and the Polish e-communications law (PKE) requiring consent for B2B email. Framed as
+      experience, not legal advice.
+
+  What I'd keep out of every article
+
+  - Your account ID, KV namespace ID, tokens, ntfy usernames and topic, homelab IP, personal email
+    addresses.
+  - Anything that maps your infrastructure for an attacker. Generic placeholders instead.
+
+  Suggested order
+
+  1. Start with #1 (Pyodide PWA) and #3 (KV + ntfy): the two you asked for, and the most broadly
+     useful.
+  2. Then #10, short and highly searchable.
+  3. Then #7 → #9, as a 3-part email series, each linking to the next.
+  4. Each one can carry the mid-article newsletter box, so the series feeds the pipeline it describes.
 
 ---
 
@@ -231,8 +731,7 @@ For places where i just accept inbound only: https://multibodysystemsdynamics.co
 
 For the ones that will do outbound as well: `https://www.jalcocertech.com/contact/`
 
-
-
+No excuses to get a waiting list or an Info Product with lead capture
 
 Want this implemented for your ideas?
 
@@ -661,7 +1160,7 @@ The part you can't skip is the publisher user and its token (step 2), plus the t
   secret put commands (step 3). After that, tell me and I'll redeploy and send the test alert.
 
 
-  Check users:
+Check users:
 
 ```sh
 cd /home/jalcocert/Home-Lab/ntfy
