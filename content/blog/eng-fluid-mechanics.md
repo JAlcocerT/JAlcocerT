@@ -279,7 +279,7 @@ In all three systems, **Power** is calculated by multiplying the "Push" (Across 
 
 4. Why this matters for Heat Transfer
 
-In real engineering, these analogies often collide. 
+In real engineering, these analogies often collide!
 
 Think of a **Liquid Cooling System** in a high-end PC:
 

@@ -1,8 +1,8 @@
 ---
-title: "[JAlcocerTech] Services Recap x Outbound System"
-date: 2026-10-01T10:20:21+01:00
+title: "[JAlcocerTech] Services Recap x Leads"
+date: 2026-10-03T10:20:21+01:00
 draft: false
-tags: ["PIO x BDD x WoW","JAlcocerTech Leads","PDLC","DRI x DACI x RACI"]
+tags: ["PIO x BDD x WoW","JAlcocerTech Leads","PDLC","DRI x DACI x RACI","CF KV"]
 description: 'You are not asking enough questions.'
 url: 'jalcocertech-services-oct'
 ---
@@ -13,7 +13,7 @@ Still thinking on headcounts to mess around with a project instead of [getting ~
 
 **Intro**
 
-* WHY Im writting this post: *To continue the Home x IoT Improvements*
+* WHY Im writting this post: *bc I wanted to continue the Home x IoT Improvements, made the [mbsd 0-7-0 release](#mbsd) and used [cloudflare KV to get leads](#leeeeads)*
 * What [Ive learnt](#conclusions) with it: *Ive ended up [telling agents the WHY](#pio), not the how, via PIO fwk*
 
 A friend told me once that I will do sth with energy at some point
@@ -75,33 +75,83 @@ Its been few weekly releases for the **multi body OSS framework**:
 * https://github.com/JAlcocerT/mbsd-core
 * https://ebooks.jalcocertech.com/books/mechanism-analytics/
 
-All linked to: https://multibodysystemsdynamics.com/ for which I have the web UI repo here.
+All linked to: https://multibodysystemsdynamics.com/ for which I have the [web UI repo here](https://github.com/JAlcocerT/multi-body).
 
-```sh
-scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-6-0-concerns.md . 
-scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/whitepaper.md . 
-scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/roadmap.md .
-```
 
 {{% details title="For the 0-7-0 was like 🚀" closed="true" %}}
 
 ```sh
+scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-6-0-concerns.md . 
+#scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/whitepaper.md . 
+#scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/roadmap.md .
+```
+
+Both repos are in good shape and I'd release tomorrow. There's one thing to fix first (the install
+  instructions) and one thing to do in the right order (tagging). I didn't change any files.
+
+  What I checked
+  - mbsd-core: all 67 tests pass, ruff is clean, and the 3 bundled examples run. Constraint residuals
+    are around 1e-10.
+  - mbsd-examples: make check passes, covering 13 examples, the gallery and ruff. Regenerating the
+    gallery gives byte-identical PNGs, so the committed images match the code.
+  - New spatial code: spatial/kinematics.py looks correct. Poses compose and invert properly,
+    point_velocity uses a world-frame angular velocity consistently, and the fixed-joint residual flips
+    the quaternion sign to take the shortest rotation. Negative body indices are rejected when frames
+    and joints are created, which I confirmed. The README is careful to say this is residual-based with
+    no 3D solver, which keeps expectations right.
+
+  Fix before tagging
+  1. The install instructions still point to v0.6.0.
+     - mbsd-core/readme.md:24 has git checkout v0.6.0.
+     - mbsd-examples/README.md:25-26 checks out v0.6.0 for both repos. Anyone following the README
+       tomorrow gets last week's release.
+  2. Tag core before you push examples to main. The examples CI checks out JAlcocerT/mbsd-core@v0.7.0,
+     and that tag isn't on the remote yet. Both repos are on local v0.7.0-dev branches with no
+     upstream. Do it in this order: merge core into main, push, tag v0.7.0, push the tag; then do the
+     same for examples. Otherwise the examples CI goes red on release day.
+
+  Worth tidying, but not blockers
+  - Private plans in public changelogs. They mention "PWA-style validation panels", "PWA/CAD consumers"
+    and "Keep public browser/PWA code outside the OSS repositories". If the PWA is your private
+    product (there's a private-pwa-roadmap.md next to the repos), you may not want it in OSS
+    changelogs. "Week 7 release" is also internal wording.
+  - Stale version notes in the core README. It says "MBSD 0.4.0 includes portable export helpers" and
+    "The 0.4.0 handoff schemas". This reads fine as history, but a "since 0.4" style would date better.
+  - The examples README is a stack of per-release notes (v0.4.0, v0.5.0, v0.6.0, 0.7.0). That belongs
+    in the CHANGELOG; a short description of what each example shows would read better.
+  - No PyPI release yet. Installing requires cloning, and examples uses uv.sources = ../mbsd-core.
+    That's fine while the API changes weekly, but pip install mbsd would make it much easier to adopt.
+    The packaging (hatchling, wheel smoke test in CI) is ready for it.
+  - Spatial tests: joint_residual_jacobian is only checked by finite differences. An analytic Jacobian
+    for the spherical joint would give you a reference to check against, and you'll need one anyway for
+    a 3D solver.
+
+  Overall
+  The scope is honest: "planar is stable, spatial is experimental", and the README says when to use
+  Chrono, Exudyn or Simbody instead. The validation is thorough for a project this size, with residual
+  checks, finite-difference checks on derivatives, provenance in results, and versioned schemas that
+  can still read v1. release-compatibility.json plus CI pinned to the paired core tag is a clean way to
+  keep the two repos in step.
+
+
+```sh
+#claude --dangerously-skip-permissions -p "promptwhateverrrr" #yolo
 cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
 
 git switch main
-git merge --ff-only v0.6.0-dev
-git tag -a v0.6.0 -m "MBSD Core v0.6.0"
+git merge --ff-only v0.7.0-dev
+git tag -a v0.7.0 -m "MBSD Core v0.7.0"
 git push origin main
-git push origin v0.6.0
+git push origin v0.7.0
 
 awk '
-  /^## v0\.6\.0 / { found=1; next }
+  /^## v0\.7\.0 / { found=1; next }
   /^## / && found { exit }
   found { print }
-' CHANGELOG.md | gh release create v0.6.0 \
+' CHANGELOG.md | gh release create v0.7.0 \
   --repo JAlcocerT/mbsd-core \
   --verify-tag \
-  --title "MBSD Core v0.6.0 - Experimental 3D Vocabulary" \
+  --title "MBSD Core v0.7.0 - Spatial Kinematics Preview" \
   --notes-file - \
   --latest
 ```
@@ -112,53 +162,664 @@ Then examples:
 cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
 
 git switch main
-git merge --ff-only v0.6.0-dev
-git tag -a v0.6.0 -m "MBSD Examples v0.6.0"
+git merge --ff-only v0.7.0-dev
+git tag -a v0.7.0 -m "MBSD Examples v0.7.0"
 git push origin main
-git push origin v0.6.0
+git push origin v0.7.0
 
 awk '
-  /^## v0\.6\.0 / { found=1; next }
+  /^## v0\.7\.0 / { found=1; next }
   /^## / && found { exit }
   found { print }
-' CHANGELOG.md | gh release create v0.6.0 \
+' CHANGELOG.md | gh release create v0.7.0 \
   --repo JAlcocerT/mbsd-examples \
   --verify-tag \
-  --title "MBSD Examples v0.6.0 - Diagnostics and Validation" \
+  --title "MBSD Examples v0.6.0 - Spatial Kinematics Preview" \
   --notes-file - \
   --latest
 ```
 
-The remaining roadmap:
+> https://github.com/JAlcocerT/mbsd-core/releases/tag/v0.7.0
 
+The remaining **roadmap**:
+
+Publish only MBSD Core to PyPI:
+
+- Package: mbsd
+- Version: 0.7.0
+- Artifacts:
+  - mbsd-0.7.0-py3-none-any.whl
+  - mbsd-0.7.0.tar.gz
+
+- Runtime dependencies: NumPy and SciPy
+- Includes planar APIs plus experimental mbsd.spatial
+
+Do not publish mbsd-examples yet. Its wheel is only a package marker and does not include the runnable examples or gallery. Users should clone that repository.
+
+After tagging:
+
+```sh
+cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
+
+uv build
+uvx twine check dist/*
+uvx twine upload dist/mbsd-0.7.0*
+
+Users could then install with:
+
+pip install mbsd==0.7.0
+```
+
+GitHub releases and PyPI serve different purposes.
+
+  PyPI advantages
+
+  - Users install directly with pip install mbsd.
+  - Dependency managers can resolve versions automatically.
+  - Tools such as uv, Poetry and CI understand package constraints.
+  - Easier adoption without cloning the repository.
+  - Standard upgrade path: pip install --upgrade mbsd.
+  - Establishes mbsd as a normal Python dependency.
+
+  GitHub release advantages
+
+  - Shows release notes, tags and source history.
+  - Better for reviewing code and downloading examples.
+  - Supports repository-specific artifacts.
+  - Useful for development snapshots and experimental releases.
+
+  The sensible model is to use both:
+
+  1. Git tag and GitHub release remain the authoritative release record.
+  2. Publish the same tested mbsd-core wheel and sdist to PyPI.
+  3. Keep mbsd-examples as a GitHub/source-first repository.
+
+The main PyPI cost is permanence: published versions generally cannot be replaced. If 0.7.0 is wrong,
+you publish 0.7.1; you do not overwrite it. That encourages stricter final checks, which your current
+release process already provides.
+
+> It was time to rebump the [web](https://github.com/JAlcocerT/multi-body/tree/master/web-sleek) and [app](https://github.com/JAlcocerT/multi-body/tree/master/app): `https://github.com/JAlcocerT/multi-body`
+
+I didn't change the live site's repo (multi-body/); its last commit is still your "cf upload". I
+  only read it and copied its content into the new site. Your core, examples and mbsd/ workbench
+  folders are also untouched.
+
+  All changes are in the two repos I created, plus two notes files at the framework root:
+  - multibodysystemsdynamics-site/: the first commit (d5522a0) is your original landing page,
+    unchanged, so you can roll back to it. Then the Astro port (3a91022) and the content moved over
+    from v1 (499247f).
+  - app-mbsd/: the first commit (2f955dc) is the old prototype as it was, then the restructure
+    (68ba499).
+  - At the framework root: z-multibody-webs-order.md and the new z-review.md.
+
+  Nothing is pushed or deployed.
+
+  z-review.md covers:
+  - Where I changed things: a table of every folder, saying touched or read-only.
+  - Changes per repo: every commit, and every place I altered your own wording. For example, I replaced
+    the broken code sample, rewrote the private-repo "Reproduce" section, fixed the swapped Grashof
+    table, and rewrote the legal pages. It also lists the new copy I wrote that you haven't reviewed
+    yet.
+  - What works: only what I actually tested, with the numbers.
+  - What doesn't work yet or is unverified:
+    - Blocking launch: nothing is deployed, the legal pages still need your details, the app needs the
+      v0.7.0 tag first, and the site's solver buttons 404 until the app is live.
+    - Never run against the real service: the contact and ebook storage, analytics, and the app on
+      Safari/iOS. The browser tests also live only in my scratch folder, not in any repo.
+    - Content caveats: the case-study figures are the closest real ones, not exact matches, and I kept
+      v1's performance claims without re-checking them.
+  - My strategic view:
+    - What works: the split between open core, free tools, site content and consulting; real numbers as
+      the brand; and v1's writing as your best SEO asset.
+    - What doesn't: the old "platform" story clashes with the consulting-plus-open-core story; the
+      email capture is still manual; the app's first load is heavy on mobile; there's no outside proof
+      like testimonials yet; and two sites plus a PWA plus weekly releases is a lot to maintain alone.
+
+
+What I checked:
+  - multi-body is private. An anonymous request to the GitHub API returns 404, while mbsd-core,
+    mbsd-examples and mechanism are public (MIT). So the line between private product and public engine
+    is already where you want it.
+  - The v0.7.0 tag is on ef891e4 in core. That's exactly the commit the app's wheel was built and
+    tested from, so the app's version check now passes.
+  - external/ doesn't reference the OSS you just released. The two submodules point to JAlcocerT/mbsd
+    (your private workbench) and mechanism, not to mbsd-core/mbsd-examples. Neither is checked out
+    locally.
+  - Your GitHub releases have no files attached, and the name mbsd is unclaimed on PyPI.
+
+  Why one private repo for site and app is right:
+  - They change together: tool deep-link parameters, brand, UTM conventions and the privacy policy
+    (which covers both) all span the two.
+  - The OSS stays clean, and only released, tagged versions cross into the private repo.
+  - You stop having a third local repo with no remote; today the site and app exist only on your disk.
+
+  Proposed layout:
+  multi-body/                 (private)
+    web/                      ← multibodysystemsdynamics-site (Astro + functions/)
+    app/                      ← app-mbsd (Vite PWA)
+    docs/                     ← z-*.md, UTM convention, decisions worth keeping from v1
+    archive/web-v1/           ← or simply delete it after the DNS switch; git history keeps it
+    external/                 ← dev-only references (optional)
+
+  The real decision: how the app gets mbsd-core. Today it builds the wheel from a sibling ../mbsd-core
+  checkout. That works on your laptop but not in a clean clone or a Cloudflare build. Options:
+
+  ┌─────────────────────────────────┬────────────────────────────────────┬─────────────────────────┐
+  │             Option              │                Pros                │          Cons           │
+  ├─────────────────────────────────┼────────────────────────────────────┼─────────────────────────┤
+  │ A. Publish mbsd to PyPI; the    │ Cleanest: no checkout needed,      │                         │
+  │ app downloads the pinned        │ works in any CI; pip install mbsd  │ One more release step   │
+  │ version and checks its hash     │ helps OSS adoption; claims the     │ (uv publish)            │
+  │                                 │ name before someone else does      │                         │
+  ├─────────────────────────────────┼────────────────────────────────────┼─────────────────────────┤
+  │ B. Attach the wheel to each     │                                    │ Less discoverable;      │
+  │ GitHub release; the app         │ No PyPI account needed             │ still a manual upload   │
+  │ downloads it                    │                                    │ unless CI does it       │
+  ├─────────────────────────────────┼────────────────────────────────────┼─────────────────────────┤
+  │ C. Submodule external/mbsd-core │ Works offline; matches your        │ Submodules are fiddly;  │
+  │  at the tag; build the wheel    │ current external/ habit            │ CI needs uv; easy to    │
+  │ during the app build            │                                    │ forget to update        │
+  └─────────────────────────────────┴────────────────────────────────────┴─────────────────────────┘
+
+  I'd recommend A. Option C is fine as a convenience for local work, but it shouldn't be how deploys
+  get core. Whichever you pick, the version check (mbsd.pin.json + hash) stays the same; only the place
+  the wheel comes from changes.
+
+  Things to settle before moving:
+  1. Keep the histories? Both repos are tiny (3 and 2 commits). git subtree add --prefix=web
+     ../multibodysystemsdynamics-site main keeps every commit. A plain copy is simpler. I'd keep them;
+     it's free.
+  2. Two Cloudflare Pages projects from one repo. Each gets a root directory (web/, app/) and build
+     watch paths, so editing a glossary entry doesn't redeploy the 30 MB app. The site's functions/
+     folder has to sit at its project root, which it does if the root directory is web/.
+  3. What happens to web/v1/. Once DNS points at the new site, keeping v1 in the tree gives you two
+     copies of the glossary and case studies to maintain. Archive or delete it, but first move out
+     anything still useful (decisions/, perhaps programmatic-formbricks/ if you might bring the
+     Formbricks qualifier back).
+  4. What external/mbsd (the private workbench) is for. The case-study figures came from it. That's
+     fine as a source, but don't make deploys depend on it: copy the assets in, as I did, so builds
+     never need access to a private submodule.
+  5. Shared tooling at the root: a top-level Makefile (make web, make app, make check) and one CI
+     workflow running the site checks plus the app's Python/Pyodide tests on push.
+
+  Suggested order:
+  1. Publish mbsd 0.7.0 to PyPI (or attach the wheels to the GitHub release).
+  2. Switch the app to download the pinned wheel.
+  3. Move web/ and app/ into multi-body, keeping history.
+  4. Set up the two Pages projects.
+  5. Switch DNS.
+  6. Archive v1.
+
+  Tell me which way you want to fetch core, and whether to keep the history, and I'll do the move.
+  Publishing to PyPI needs your account, so that step is yours. I can prepare the commands.
+
+
+The app doesn't need PyPI at all. It only needs one file, the 54 KB mbsd-0.7.0-py3-none-any.whl
+  built from your v0.7.0 tag, and the sync script already accepts a wheel from anywhere (MBSD_WHEEL=…).
+  There are three ways to supply it without PyPI:
+
+  1. Commit the wheel into the private repo (e.g. app/vendor/mbsd-0.7.0-py3-none-any.whl). This is the
+     simplest. 54 KB per release is nothing for git, builds need no network or core checkout, and the
+     hash in mbsd.pin.json still guarantees it's the exact file. Updating means build at the new tag,
+     copy the file in, bump the pin.
+  2. Attach the wheel to the GitHub release and have the app download it by URL and hash. It's tidier
+     than committing binaries, but each release needs an upload step, which is manual unless a GitHub
+     Action does it.
+  3. Submodule at the tag, built during the app build. It works, but it's the most fragile in CI.
+
+  For getting the app live, I'd do option 1 now. It removes the last dependency on your local folder
+  layout.
+
+  Is PyPI worth it before 1.0? Not necessary yet. Do it if you want people to use the library, and I'd
+  lean towards doing it soon, for these reasons:
+
+  - 0.x is normal on PyPI. By semver convention 0.x means "API may change", and your Development Status
+    :: 3 - Alpha classifier says so explicitly. Plenty of widely used packages lived on 0.x for years.
+    Nobody expects stability from 0.7.
+  - The name is free right now. mbsd is short and unclaimed, and a single upload reserves it. If
+    someone else takes it, you'd have to publish under something like mbsd-core.
+  - It makes adoption easier. "Clone, check out the tag, uv sync" loses most casual users; pip install
+    mbsd doesn't. Your README, site and tool pages could all show the one-liner.
+  - The cost is small with GitHub Actions trusted publishing: a tag push builds and uploads
+    automatically, with no API tokens. That fits your weekly release rhythm.
+
+  The downside is a soft commitment: once it's on PyPI, people may pin it, and you can yank releases
+  but not delete them cleanly. Keep mbsd.spatial clearly marked experimental (it already is), and treat
+  breaking changes in 0.x minor versions as allowed but documented in the changelog.
+
+  My suggestion: commit the wheel into the private repo now, so the app's path to launch doesn't depend
+  on any of this. Then, when you're ready, add trusted publishing to mbsd-core and publish 0.7.0 to
+  claim the name. After that, the app can switch to downloading from PyPI, or just keep committing the
+  wheel.
+
+
+......
+
+
+● These are the commands, in order. Run them from mbsd-framework/. I checked the starting state:
+multi-body is on master with no uncommitted changes, its .gitignore only ignores .env, and both local
+repos use a main branch.
+
+1. Branch and add the OSS repos as submodules at v0.7.0
+
+```sh
+cd ~/Desktop/mbsd-framework/multi-body
+git switch -c web-sleek-and-app
+
+git submodule add https://github.com/JAlcocerT/mbsd-core.git external/mbsd-core
+git submodule add https://github.com/JAlcocerT/mbsd-examples.git external/mbsd-examples
+git -C external/mbsd-core checkout v0.7.0
+git -C external/mbsd-examples checkout v0.7.0
+git add .gitmodules external/mbsd-core external/mbsd-examples
+git commit -m "Reference mbsd-core and mbsd-examples v0.7.0 as submodules"
+```
+
+2. Bring in the new site and the app, keeping their git history
+
+```sh
+#git subtree add needs a clean working tree, so do this before building anything. ./web is left
+#untouched.
+
+git subtree add --prefix=web-sleek ../multibodysystemsdynamics-site main
+git subtree add --prefix=app       ../app-mbsd main
+```
+
+3. Build the wheel from the tag and put it in the repo
+
+```sh
+mkdir -p app/vendor
+(cd external/mbsd-core && uv build --wheel --out-dir ../../app/vendor)
+ls -la app/vendor # expect mbsd-0.7.0-py3-none-any.whl (~54 KB)
+sha256sum app/vendor/mbsd-0.7.0-py3-none-any.whl
+```
+
+4. Point paths at the new layout
+
+Four one-line edits:
+- the app uses the committed wheel by default;
+- the app's version check and demo tests look in external/mbsd-core;
+- the site's snippet check does the same.
+
+```sh
+# # app: use the committed wheel unless MBSD_WHEEL is overridden
+# sed -i '/^CF_PAGES_BRANCH/a export MBSD_WHEEL ?= $(CURDIR)/vendor/mbsd-0.7.0-py3-none-any.whl' app/Makefile
+# # app: fallback core checkout + CPython demo tests now live in external/
+# sed -i 's|"\.\./mbsd-core"|"../external/mbsd-core"|' app/scripts/sync-mbsd-wheel.mjs
+# sed -i 's|"test:demos": "../mbsd-core/.venv/bin/python tests/test_demos.py"|"test:demos": "uv run --project ../external/mbsd-core python tests/test_demos.py"|' app/package.json
+# # web-sleek: the snippet check runs against external/mbsd-core
+# sed -i 's|^MBSD_PYTHON ?= ../mbsd-core/.venv/bin/python|MBSD_PYTHON ?=../external/mbsd-core/.venv/bin/python|' web-sleek/Makefile
+# sed -i 's|ROOT.parent / "mbsd-core"|ROOT.parent / "external" / "mbsd-core"|'web-sleek/scripts/verify-snippets.py
+# 1. Remove the unwanted .gitignore
+rm app/vendor/.gitignore
+
+# 2. Fix path in verify-snippets.py
+sed -i 's|ROOT.parent / "mbsd-core"|ROOT.parent / "external" / "mbsd-core"|' web-sleek/scripts/verify-snippets.py
+
+# 3. Clean up spacing in web-sleek/Makefile
+sed -i 's|^MBSD_PYTHON ?=\.\./|MBSD_PYTHON ?= ../|' web-sleek/Makefile
+
+# Confirm settings
+git check-ignore -v app/vendor/mbsd-0.7.0-py3-none-any.whl || echo "wheel not ignored: ok"
+grep -n 'external' web-sleek/scripts/verify-snippets.py
+```
+
+If the wheel's filename ever disagrees with app/mbsd.pin.json, the sync script stops the build, so the hardcoded `0.7.0` in the Makefile can't drift silently.
+
+5. Verify, then commit and push:
+
+```sh
+# Sync and run test suites
+(cd external/mbsd-core && uv sync)
+(cd app && npm ci && make test && make build)
+(cd web-sleek && npm ci && make check)
+
+# Check status, stage, commit, and push
+git status --short
+git add app/vendor/mbsd-0.7.0-py3-none-any.whl \
+        app/Makefile \
+        app/package.json \
+        app/scripts/sync-mbsd-wheel.mjs \
+        web-sleek/Makefile \
+        web-sleek/scripts/verify-snippets.py
+git commit -m "Vendor mbsd 0.7.0 wheel for the app; point web-sleek and app at external/"
+git push -u origin web-sleek-and-app
+```
+
+**What's left** is the list from before: merge the PR, fill in the legal placeholders, deploy the app and
+then the site, move the domain, and tidy up the old folders.
+
+
+All commands organized in order, with broken lines fixed, placeholders highlighted, and your decision to keep the `web/` directory intact reflected in Step 6.
+
+Run these from `~/Desktop/mbsd-framework/multi-body`:
+
+Step 1: Merge the PR
+
+```bash
+gh pr create --base master --head web-sleek-and-app --fill
+gh pr merge web-sleek-and-app --merge --delete-branch
+git switch master && git pull
+git submodule update --init external/mbsd-core external/mbsd-examples
+```
+
+Step 2: Fill in Legal Placeholders
+
+> Avoid using `|` or `&` characters in these variables, as `sed` uses them as delimiters.
+
+```bash
+# Define your legal metadata
+ENTITY="Your Name or Company S.L."
+ADDRESS="Street 1, 28001 Madrid, Spain"
+AUTHORITY="Agencia Española de Protección de Datos (aepd.es)"
+JURISDICTION="Spain"
+
+# Replace placeholders across legal markdown files
+sed -i -e "s|{{LEGAL_ENTITY}}|$ENTITY|g" \
+       -e "s|{{LEGAL_ADDRESS}}|$ADDRESS|g" \
+       -e "s|{{SUPERVISORY_AUTHORITY}}|$AUTHORITY|g" \
+       -e "s|{{JURISDICTION}}|$JURISDICTION|g" \
+       web-sleek/src/content/legal/*.md
+
+# Verify and commit
+(cd web-sleek && make check-legal)
+git commit -am "Fill in legal details" && git push
+
+```
+
+Step 3: Cloudflare Setup
+
+```bash
+# Authenticate and inspect account
+npx wrangler login
+npx wrangler whoami
+npx wrangler pages project list
+
+# Create production projects
+npx wrangler pages project create app-mbsd --production-branch main
+npx wrangler pages project create multibodysystemsdynamics-site --production-branch main
+
+# Create KV storage for lead collection (copy the printed ID)
+npx wrangler kv namespace create LEADS
+```
+
+*Update `web-sleek/wrangler.toml`: uncomment the `[[kv_namespaces]]` block and insert the namespace ID output from above.*
+
+```bash
+# (Optional) Add notification webhook secret
+npx wrangler pages secret put LEAD_WEBHOOK_URL --project-name multibodysystemsdynamics-site
+
+# Commit KV configuration
+git commit -am "Bind LEADS KV namespace" && git push
+
+```
+
+Step 4: Deploy & Verify Staging
+
+```bash
+# Deploy app and site
+(cd app && make deploy)
+(cd web-sleek && make deploy)
+
+# Test contact form API submission (expects HTTP 202)
+curl -s -o /dev/null -w "%{http_code}\n" -X POST \
+  https://multibodysystemsdynamics-site.pages.dev/api/contact \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Deploy test","email":"you@example.com","project":"Something else","details":"test"}'
+
+# Verify lead storage in KV (replace <LEADS_ID>)
+npx wrangler kv key list --namespace-id <LEADS_ID> --remote
+```
+
+Step 5: Configure Custom Domains
+
+Create an API token with `Cloudflare Pages: Edit` permissions before executing:
+
+```bash
+# Set your Cloudflare variables
+ACCOUNT="<account-id>"
+TOKEN="<api-token>"
+OLD="<v1-project-name>"
+API="https://api.cloudflare.com/client/v4/accounts/$ACCOUNT/pages/projects"
+
+# 1. Attach app subdomain (zero downtime)
+curl -s -X POST "$API/app-mbsd/domains" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"app.multibodysystemsdynamics.com"}'
+
+# 2. Reassign apex domain from v1 to new site
+curl -s -X DELETE "$API/$OLD/domains/multibodysystemsdynamics.com" \
+  -H "Authorization: Bearer $TOKEN"
+
+curl -s -X POST "$API/multibodysystemsdynamics-site/domains" \
+  -H "Authorization: Bearer $TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{"name":"multibodysystemsdynamics.com"}'
+
+# 3. Check status until state shows "active"
+curl -s "$API/multibodysystemsdynamics-site/domains" \
+  -H "Authorization: Bearer $TOKEN" | python3 -m json.tool | grep -E '"name"|"status"'
+```
+
+Dashboard Tasks
+
+* **Redirect Rules:** Navigate to `Rules` → `Redirect Rules`, set `[www.multibodysystemsdynamics.com/](https://www.multibodysystemsdynamics.com/)*` → `[https://multibodysystemsdynamics.com/$](https://multibodysystemsdynamics.com/$){1}` with status **301**.
+* **Web Analytics:** Navigate to `Analytics` → `Web Analytics` → add the site to activate telemetry mentioned in your privacy policy.
+
+Live Smoke Test:
+
+```bash
+for p in / /tools/ /glossary/grashof-condition/ /case-studies/practica/ /legal/privacy/ /rss.xml; do
+  curl -s -o /dev/null -w "%{http_code} $p\n" "https://multibodysystemsdynamics.com$p"
+done
+curl -s -o /dev/null -w "%{http_code} app\n" https://app.multibodysystemsdynamics.com/
+
+```
+
+Step 6: Mark Old v1 as Inactive (Preserving All Files)
+
+This retains `decisions/`, `programmatic-formbricks/`, and legacy source code in place, only annotating the status:
+
+```bash
+cat >> web/v1/readme.md <<'EOF'
+
+> **Status (2026-10):** no longer deployed. multibodysystemsdynamics.com is served from `web-sleek/`.
+> Glossary, case studies, FAQ and legal content were ported there and are edited in `web-sleek/src/content/`.
+> `decisions/`, `programmatic-formbricks/`, `playbooks/` and `requirements/` remain the reference here.
+EOF
+
+git commit -am "Mark web/v1 as not deployed; content lives in web-sleek" && git push
+```
+
+
+ The new app is live in production at https://app-mbsd.pages.dev. This replaces the old prototype in
+    that project; I switched its production branch from app-mbsd to main. make deploy ran the version
+    check, the Python and Pyodide tests, then the upload. I re-tested the live URL in a real browser:
+    the site's four-bar link solves (49.6°, μ 46.1–99.2°), the service worker takes over, and an
+    offline reload still solves, with no errors. Cache headers are correct in production.
+  - app.multibodysystemsdynamics.com is attached to the app, but it's waiting on DNS (below).
+  - Contact-form storage is ready: I created the KV namespace LEADS (e4e917c9…) and bound it in
+    web-sleek/wrangler.toml.
+  - Site project created: multibodysystemsdynamics-site, empty until its first deploy.
+  - "Not deployed" note added to web/v1/readme.md; nothing else in web/ was touched.
+  - Committed and pushed: e6ff6d4 on master.
+  - Your live site is untouched. The apex domain still serves v1 from the multibodysystemsdynamics
+    project. All three projects are direct-upload, so the merge to master deployed nothing.
+
+  What I need from you:
+
+  1. One DNS record (about 30 seconds). Your wrangler login can't write DNS. In the Cloudflare
+     dashboard: multibodysystemsdynamics.com → DNS → Add record:
+     - Type CNAME, Name app, Target app-mbsd.pages.dev, Proxied (orange cloud).
+
+     Alternatively: Workers & Pages → app-mbsd → Custom domains → click Activate, which creates the
+     record for you. Tell me when it's done and I'll confirm the domain goes active and test it.
+  2. Your legal details, so I can fill in the placeholders, deploy the site and switch the apex domain:
+     - Legal entity: your name as a sole trader, or a company name.
+     - Postal address to show.
+     - Supervisory authority: for Spain, AEPD (aepd.es); otherwise your country's.
+     - Jurisdiction for the terms, e.g. Spain.
+
+     Once I have these: fill them in, run make deploy for the site, test it on
+     multibodysystemsdynamics-site.pages.dev, including a test enquiry into KV, then move the apex
+     domain from v1 to the new project. The move means a few minutes while the new certificate is
+     issued. v1 stays deployed as your rollback.
+  3. Two dashboard toggles, whenever convenient:
+     - Turn on Web Analytics for the site; the privacy policy says you use it.
+     - www doesn't exist today. That's not a regression, but adding a www CNAME plus a redirect rule to
+       the apex is a nice extra.
+
+  New leads currently go only into KV, so nothing notifies you when someone writes. If you want a ping,
+  give me a Slack, Discord or n8n webhook URL and I'll set it as LEAD_WEBHOOK_URL.
+
+can i do so that instead of proxy to app, ill have ci/cd via github?
+
+● Yes, and I'd recommend it. These are two separate things, though:
+
+  1. The DNS record is still needed, whatever deploys the app. It's what points
+  app.multibodysystemsdynamics.com at the Pages project. CI/CD only changes who uploads the build
+  (GitHub instead of your laptop), not where the domain points. On "proxy": both settings work. Proxied
+  (orange cloud) is Cloudflare's default for Pages custom domains, and DNS-only (grey) is fine too.
+  Either way, add the CNAME app → app-mbsd.pages.dev record or click Activate in the Pages dashboard.
+
+  2. For CI/CD, use GitHub Actions rather than Cloudflare's "Connect to Git". Cloudflare's built-in git
+  integration doesn't fit here:
+  - Your three projects are direct-upload, and Cloudflare can't convert a direct-upload project to
+    git-connected; you'd have to recreate the projects.
+  - Its builder clones submodules, and the private external/mbsd would fail the build.
+  - It can't run your gates (the version check, the Python and Pyodide tests, check-legal) the way a
+    workflow can.
+
+  GitHub Actions with cloudflare/wrangler-action keeps the existing projects and deploys exactly as
+  make deploy does today:
+
+  .github/workflows/deploy-app.yml   on push to master, paths: app/**
+    checkout (no submodules) → init only external/mbsd-core
+    → npm ci → make test (CPython + Pyodide) → MBSD_STRICT_PIN build
+    → wrangler pages deploy dist --project-name app-mbsd --branch main
+
+  .github/workflows/deploy-web.yml   on push to master, paths: web-sleek/**
+    checkout → init external/mbsd-core → npm ci → make check (astro, function types, snippets,
+  check-legal)
+    → wrangler pages deploy dist --project-name multibodysystemsdynamics-site --branch main
+
+  Both: pull requests run the same checks and deploy a preview (branch = PR branch),
+  so every PR gets its own *.pages.dev URL.
+
+  How it works:
+  - Path filters: editing a glossary entry redeploys only the site, and touching app/ redeploys only
+    the app.
+  - Private repo access: never needed. The workflows only pull the public external/mbsd-core, and the
+    app uses the committed wheel.
+  - Secrets: add two in GitHub, under Settings → Secrets and variables → Actions:
+    - CLOUDFLARE_ACCOUNT_ID = 6f6de37edde332d0622d5802db839ff7
+    - CLOUDFLARE_API_TOKEN: create it in Cloudflare under My Profile → API Tokens, with the single
+      permission Account → Cloudflare Pages → Edit.
+  - make deploy keeps working from your laptop as a fallback.
+
+  The site workflow will fail at check-legal until the legal placeholders are filled in. That's
+  intended: it stops a placeholder privacy page from going live through CI too.
+
+  Shall I write both workflow files and push them? Once you've added the two secrets, the next push to
+  master deploys automatically.
+
+
+  Existing projects
+  A. GitHub Actions + wrangler (direct upload): Keeps them as they are: app-mbsd (already live, domain
+  attached), multibodysystemsdynamics-site (KV bound)
+  B. Cloudflare "Connect to Git": Cloudflare can't convert direct-upload projects, so you'd recreate
+  both (new names), re-attach the app domain and re-bind KV
+  ────────────────────────────────────────
+  Private external/mbsd submodule
+  A. GitHub Actions + wrangler (direct upload): Not a problem: checkout skips submodules and pulls only
+
+  the public external/mbsd-core
+  B. Cloudflare "Connect to Git": Breaks builds. Cloudflare clones submodules and doesn't support
+  private ones. You'd have to remove that submodule or move it out of the repo
+  ────────────────────────────────────────
+  Quality gates before deploy
+  A. GitHub Actions + wrangler (direct upload): Full control: version check, Python and Pyodide tests,
+  astro check, snippets, check-legal. A failing gate blocks the deploy
+  B. Cloudflare "Connect to Git": Only what fits in one build command. Possible, but the Python tests
+  need uv installed on each run and the Pyodide smoke test adds ~20 s, all inside Cloudflare's build
+  image
+  ────────────────────────────────────────
+  Monorepo (only redeploy what changed)
+  A. GitHub Actions + wrangler (direct upload): paths: filters per workflow
+  B. Cloudflare "Connect to Git": Supported too (root directory plus build watch paths per project)
+  ────────────────────────────────────────
+  PR previews
+  A. GitHub Actions + wrangler (direct upload): Yes, but you wire it up (deploy with the PR branch
+  name;
+  posting the preview URL as a PR comment takes an extra step)
+  B. Cloudflare "Connect to Git": Yes, out of the box, with the URL posted on the PR automatically
+  ────────────────────────────────────────
+  Setup effort
+  A. GitHub Actions + wrangler (direct upload): Two workflow files (I write them) plus two GitHub
+  secrets (account ID and an API token)
+  B. Cloudflare "Connect to Git": A few dashboard clicks, but also: recreate projects, deal with the
+  submodule, configure Node version and build commands
+  ────────────────────────────────────────
+  Secrets to manage
+  A. GitHub Actions + wrangler (direct upload): A Cloudflare API token stored in GitHub (scoped to
+  Pages: Edit only)
+  B. Cloudflare "Connect to Git": None in GitHub; Cloudflare's GitHub app handles access
+  ────────────────────────────────────────
+  Build limits (free tiers)
+  A. GitHub Actions + wrangler (direct upload): GitHub Actions: 2,000 min/month for private repos; each
+
+  run ~2–3 min
+  B. Cloudflare "Connect to Git": Cloudflare Pages: 500 builds/month, one build at a time
+  ────────────────────────────────────────
+  Where you see failures
+  A. GitHub Actions + wrangler (direct upload): GitHub Actions tab, with full logs next to the code
+  B. Cloudflare "Connect to Git": Cloudflare dashboard; GitHub shows only a pass/fail check
+  ────────────────────────────────────────
+  Manual fallback
+  A. GitHub Actions + wrangler (direct upload): make deploy from your laptop still works, same path
+  B. Cloudflare "Connect to Git": Mixing manual uploads with git-connected projects gets confusing
+  ────────────────────────────────────────
+  Lock-in / portability
+  A. GitHub Actions + wrangler (direct upload): Plain CI; the deploy step is the only
+  Cloudflare-specific part
+  B. Cloudflare "Connect to Git": Tied to Cloudflare's builder
+
+  What favours B: the least moving parts if you were starting fresh, PR preview comments for free, and
+  no API token to look after.
+
+  What favours A: it works with the projects and domain you already have, it sidesteps the private
+  submodule entirely, and it enforces the checks that caught real problems earlier: the version check,
+  the demo tests, and the legal placeholders.
+
+  My recommendation: A. In your setup, B's biggest advantage (simplicity) is cancelled out by having to
+  recreate the projects and restructure the repo around the private submodule. With A, nothing that's
+  live today changes, and every deploy runs the same gates you just watched pass locally.
+
+**Next core release (for later)**:
+
+```sh
+git -C external/mbsd-core fetch --tags && git -C external/mbsd-core checkout v0.8.0
+git rm app/vendor/mbsd-0.7.0-py3-none-any.whl
+(cd external/mbsd-core && uv build --wheel --out-dir ../../app/vendor)
+# then bump app/mbsd.pin.json (version + ref) and the MBSD_WHEEL line in app/Makefile
+git add external/mbsd-core app/vendor app/mbsd.pin.json app/Makefile && git commit -m "Bump mbsd to
+0.8.0"
+```
+
+Two caveats
+
+- Cloudflare can't build this repo from git as-is. Its git integration clones submodules, and
+external/mbsd (your private workbench) will fail to clone. Deploy with make deploy from web-sleek/
+and app/ instead (that uploads the build directly), or remove that submodule before connecting the
+repo to Cloudflare. The committed wheel means the app build never needs a submodule anyway.
+
+- Once the push looks good, archive or delete the old standalone folders
+(multibodysystemsdynamics-site/, app-mbsd/, mbsd-core-web-later/), so you only edit one copy.
+
+I can run all of this myself if you'd rather; it stops before pushing, so you can review the branch
+first.
 
 {{% /details %}}
-
-
-> I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
-
-> > And email to `selfh.st`
-
-There are other oss fwks with interesting potential to have a look:
-
-* https://www.mbdyn.org/
-  * https://github.com/zanoni-mbdyn/blendyn
-
-MBDyn (https://www.mbdyn.org/) graphical post-processor for blender (https://www.blender.org/)
-
-* Some people put together mbd x fem - https://mbdfem.com/ 
-- Project Chrono/PyChrono
-- Exudyn
-- Siconos
-- OpenModelica
-- MBDyn
-- preCICE
-
-https://www.youtube.com/watch?v=NxZ1tf8J1oY
-
-https://www.youtube.com/watch?v=4_Z05iMmDNU
-
-https://www.youtube.com/watch?v=eFGkopoCTYY
 
 ### Energy
 
@@ -179,6 +840,11 @@ Want me to start on the recess model? It's the one that makes your observations 
 > I got to know *via [T3 desktop](https://fossengineer.com/t3code-web-gui-coding-agents/)* that the flat next to me, 21F, costs me a consistent 2 h+ every clear day
 
 > > https://github.com/JAlcocerT/poc/tree/main/building-geo-pl
+
+<!-- https://youtu.be/dglagVUkynA -->
+
+{{< youtube "dglagVUkynA" >}}
+
 
 
 {{% details title="Real checks with september sun 🚀" closed="true" %}}
@@ -226,6 +892,11 @@ And **consolidating the drifted shared modules** into a real package: genuinely 
 
 {{% /details %}}
 
+
+```sh
+cd ~/Desktop/poc/building-geo-pl
+make pull-data
+```
 
 ![alt text](/blog_img/data-experiments/geo/preview_aerial.png)
 
@@ -721,6 +1392,8 @@ https://www.youtube.com/@opendrone
 
 {{< /details >}}
 
+> Got to know about `https://opendrone.be/` so I applied my `./poc/fpv-kpi` to see if the build make sense specially as all repos are opened `https://github.com/orgs/OpenDrone-hw/repositories`
+
 
 #### MPU acelerometer
 
@@ -781,6 +1454,280 @@ After you get them, you enrich them as I [applied to myself here](https://jalcoc
 codex --search
 ```
 
+I got to know about **cloudflare workers KV** while improving *Independent engineering for systems in motion.*
+
+![alt text](/blog_img/mechanics/cf-dns-exp.png)
+
+Once i configured the CNAMES:
+
+```sh
+dig multibodysystemsdynamics.com any
+#ping app.multibodysystemsdynamics.com #app-mbsd.pages.dev
+```
+
+
+[Some time ago](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics) i made https://multibodysystemdynamics.pages.dev/
+
+> http://app.multibodysystemsdynamics.com/ -> app-mbsd.pages.dev
+
+  From ~/Desktop/mbsd-framework/multi-body/web-sleek. First, point the config at the v1 project, so the
+  KV binding and make deploy target it:
+
+  sed -i 's/^name = "multibodysystemsdynamics-site"/name = "multibodysystemsdynamics"/' wrangler.toml
+  sed -i 's/^CF_PAGES_PROJECT ?= multibodysystemsdynamics-site/CF_PAGES_PROJECT ?=
+  multibodysystemsdynamics/' Makefile
+  sed -i 's/^CF_PAGES_BRANCH ?= main/CF_PAGES_BRANCH ?= master/' Makefile
+  grep -E "^name|^CF_PAGES" wrangler.toml Makefile          # check all three changed
+
+    Deploy (legal check, build, upload to production):
+
+  make deploy
+
+  Check the live domain:
+
+  for p in / /tools/ /glossary/grashof-condition/ /case-studies/practica/ /legal/privacy/ /rss.xml; do
+    curl -s -o /dev/null -w "%{http_code} $p\n" "https://multibodysystemsdynamics.com$p"; done
+  curl -s https://multibodysystemsdynamics.com/ | grep -o "<title>[^<]*"   # should show the new title
+
+  Commit the config change:
+
+  git -C .. add web-sleek/wrangler.toml web-sleek/Makefile
+  git -C .. commit -m "web-sleek: deploy to the multibodysystemsdynamics project (apex domain)" && git
+  -C .. push
+
+Rollback if needed
+
+  Dashboard → Workers & Pages → multibodysystemsdynamics → Deployments → the v1 deployment (de5c9561,
+  branch master) → ⋯ → Rollback to this deployment. The apex serves v1 again within seconds.
+
+  Notes
+
+  - The KV binding moves along automatically. It's defined in wrangler.toml, so the deploy applies it
+    to the v1 project, and the contact form keeps writing to the same LEADS namespace.
+  - The multibodysystemsdynamics-site project becomes redundant. Keep it as a staging copy, or delete
+    it later with npx wrangler pages project delete multibodysystemsdynamics-site.
+  - v1's own files stay in git under web/, untouched, as you wanted. Only the served deployment
+    changes.
+  - www still doesn't exist; adding a www CNAME plus a redirect rule to the apex remains an optional
+    extra.
+
+  I can run these myself and run the live checks if you'd like. Say so and I'll do it.
+
+```sh
+cd ./multi-body/web-sleek #new https://multibodysystemsdynamics.pages.dev #old kineo https://multibodysystemdynamics.pages.dev/
+make deploy #make dev
+#curl -s https://multibodysystemsdynamics.com/rss.xml | head -10
+#ping www.multibodysystemsdynamics.com
+make leads-show
+```
+
+> https://multibodysystemsdynamics.com/rss.xml
+
+whats KV?
+
+KV is Cloudflare Workers KV, a simple key-value store that lives on Cloudflare's network, roughly a giant dictionary where each entry is a key (a name) plus a value (any text, here JSON).
+
+How the site uses it: when someone sends the contact form or requests the ebook, the site's small
+backend function (web-sleek/functions/api/contact.ts) saves the submission as one entry:
+
+  key:   enquiry:2026-10-04T09:30:12.000Z:3f2a…      (or ebook:… for ebook requests)
+  value: {"name":"Ada","email":"ada@acme.com","project":"Solver validation",
+          "details":"…","receivedAt":"…","country":"ES","referer":"…"}
+
+  LEADS is the namespace (think of it as one dictionary) I created for these. It's bound to the site in
+  wrangler.toml, which is how the function finds it.
+
+  Reading your leads:
+  - Dashboard: Storage & Databases → KV → LEADS shows every entry.
+  - Command line:
+  npx wrangler kv key list --namespace-id e4e917c99f9d46ecab4c2bf25074090f --remote
+  npx wrangler kv key get "<key from the list>" --namespace-id e4e917c99f9d46ecab4c2bf25074090f
+  --remote
+
+Why KV for this:
+- It's free at your scale: the free tier allows 1,000 writes and 100,000 reads a day, plus 1 GB of
+  storage. That's far more than a contact form will ever use.
+- No server or database to run. It's built into the same Cloudflare account and deployment as the
+  site.
+- Nothing is lost. Even if you never set up notifications, every enquiry is kept.
+
+Limitations:
+- It doesn't notify you. Leads just sit there until you look, which is why I suggested adding a
+  webhook (Slack, Discord, n8n) for a ping per enquiry. The function supports both at once: stored in
+  KV and sent to the webhook.
+- It's a store, not a CRM. No search, statuses or replies. At higher volume you'd forward leads to a
+  CRM or an email inbox instead.
+- It's eventually consistent: a new entry can take up to a minute to appear everywhere. That doesn't
+  matter for a contact form.
+
+The privacy policy already mentions "form storage (Workers KV)" for exactly this.
+
+
+I've already validated it twice: a test submission through the live domain returned 202 and appeared in LEADS, and I deleted it afterwards. Here's how to check it yourself, end to end.
+
+1. Send a real submission through the site. Open https://multibodysystemsdynamics.com/contact/, fill
+in the form with your own email, and press Send enquiry. You should see "Thanks — your enquiry has
+been received." If the backend failed, you'd instead see "The form could not be sent right now. Send
+it by email instead." For the ebook path, do the same at /education/.
+
+2. Look at it in the dashboard. Go to: **Storage & Databases → KV → LEADS → KV Pairs** 
+
+Your entry appears as enquiry:2026-10-04T… (or ebook:…). Click it to see the JSON. It can take up to a minute to show up.
+
+3. Or from the terminal (in multi-body/web-sleek): `NS=e4e917c99f9d46ecab4c2bf25074090f`
+
+```sh
+# list all leads (key + email/project metadata)
+npx wrangler kv key list --namespace-id $NS --remote
+
+# read one in full
+npx wrangler kv key get "enquiry:2026-10-04T…" --namespace-id $NS --remote
+
+# delete your test entry afterwards
+npx wrangler kv key delete "enquiry:2026-10-04T…" --namespace-id $NS --remote
+
+#npx wrangler kv key get "enquiry:2026-10-04T10:12:41.585Z:8612a6e5-07de-4ec5-831a-33e2c90decfb" --namespace-id $NS --remote
+#{"kind":"enquiry","name":"cerdo","email":"jesalctag@gmail.com","project":"Mechanism modeling","details":"eres un cerd
+```
+
+4. Quick backend-only check (no browser), to tell a page problem apart from a storage problem:
+
+```sh
+curl -s -w " %{http_code}\n" -X POST https://multibodysystemsdynamics.com/api/contact \
+  -H "Content-Type: application/json" \
+  -d '{"name":"KV check","email":"you@example.com","project":"Something else","details":"test"}'
+# expect: {"ok":true} 202
+```
+
+Reading the responses:
+
+  ┌─────────────────────┬─────────────────────────────────────────────────────────────────────────┐
+  │      Response       │                                 Meaning                                 │
+  ├─────────────────────┼─────────────────────────────────────────────────────────────────────────┤
+  │ 202 {"ok":true}     │ Saved to KV                                                             │
+  ├─────────────────────┼─────────────────────────────────────────────────────────────────────────┤
+  │ 422 invalid_fields  │ Validation rejected it (bad email or missing fields): the backend works │
+  ├─────────────────────┼─────────────────────────────────────────────────────────────────────────┤
+  │ 503 not_configured  │ The KV binding isn't attached to the deployment                         │
+  ├─────────────────────┼─────────────────────────────────────────────────────────────────────────┤
+  │ 502 delivery_failed │ KV (and the webhook, if set) both failed to write                       │
+  └─────────────────────┴─────────────────────────────────────────────────────────────────────────┘
+
+What doesn't happen yet: nothing emails you when a lead arrives. Leads wait in KV until you look.
+Since your mail runs through Proton, the simplest notification is a webhook, for example a Discord or
+Slack channel. Give me the URL and I'll set it as LEAD_WEBHOOK_URL. Each enquiry is then saved to KV
+and posted to the channel.
+
+
+To read every lead in one go, without copying keys around:
+
+```sh
+for k in $(npx wrangler kv key list --namespace-id $NS --remote | python3 -c "import
+json,sys;[print(x['name']) for x in json.load(sys.stdin)]"); do
+  echo "== $k"; npx wrangler kv key get "$k" --namespace-id $NS --remote; echo; done
+```
+
+![alt text](/blog_img/mechanics/cf-kv.png)
+
+I've added make targets for the leads, tested each one against the live KV, and committed them
+  (d5aff35). Run them from multi-body/web-sleek:
+
+  make leads                     # table: time, kind, email, project
+  make leads-show                # every lead in full (JSON)
+  make leads-keys                # raw keys, for copy-paste
+  make lead KEY=enquiry:...      # one lead
+  make lead-delete KEY=...       # delete one
+  make leads-test                # send a test enquiry to the live site (expect 202)
+  make leads-clean-tests         # delete test leads (emails ending in @example.com)
+
+  Example output:
+
+  received (UTC)             kind     email                              project
+  2026-10-04 10:12:41        enquiry  abcd@gmail.com                Mechanism modeling
+
+  1 lead(s). Show one: make lead KEY=<key>   keys: make leads-keys
+
+  - No more install prompt: wrangler is now a dev dependency of web-sleek.
+  - No ID to remember: the scripts read the namespace ID from wrangler.toml.
+  - Test cleanup: make leads-test sends from kv-check@example.com, so make leads-clean-tests removes it
+    along with any other @example.com test. I already ran that, which also removed your earlier
+    you@example.com curl test. Only your Gmail entry remains; delete it with make lead-delete
+    KEY=$(make -s leads-keys | head -1) when you're done with it.
+  - The commands are in the README under "Leads (contact + ebook forms)".
+
+{{< callout type="info" >}}
+CF goodies: *R2 object storage, D1 sqlite and workers KV*
+{{< /callout >}}
+
+ Beyond the PWA, the wheel and KV, here's what we did and what came out of it.
+
+  Release and OSS
+  - Reviewed mbsd-core and mbsd-examples before 0.7.0. Caught the stale v0.6.0 checkout lines in both
+    READMEs, and the release-order trap: tag core before pushing examples, or the examples CI breaks.
+  - Found a real core bug: grashof_class() labels a Grashof linkage with the shortest output link as
+    "double-rocker". It's still open, worth an issue and a test for 0.8.
+  - Checked the new spatial kinematics maths and found it correct.
+
+  The website
+  - Turned an invisible page into an indexable site. The old landing page was all JavaScript-injected,
+    with nothing for crawlers. It's now static Astro with 25 pages, sitemap, canonical tags, OG images
+    and structured data.
+  - Built "instant preview, full solver one click away". The tool pages run closed-form maths in about
+    11 KB of JS, then hand off to the real solver with the parameters in the URL. Both sides give the
+    same numbers (49.6°, μ 46.1–99.2°).
+  - Made the code samples trustworthy. The site's code sample called a method that doesn't exist; now
+    every Python sample on the site runs against your core (make snippets), and the hero's residual is
+    computed instead of hardcoded.
+  - Migrated v1 without losing anything. All 17 indexed URLs kept, broken images replaced with real
+    figures, and a factual error fixed (the swapped Grashof table). Your old web/ is preserved as you
+    asked.
+
+  The app
+  - Found it was silently broken. import mbsd failed in Pyodide because raw source has no package
+    metadata. The wheel fixed that and pinned what visitors run to a tagged release.
+  - Made "offline" honest. The service worker now caches everything atomically, prompts for updates,
+    and uses versioned immutable paths. Tested with an actual offline reload, not assumed.
+  - Kept the demo models in one place. They became one real Python file, tested in CPython and in
+    Pyodide, instead of a string inside TypeScript.
+
+  Infrastructure and process
+  - Put web and app in one private repo, with the OSS pulled in from outside. Submodules at release
+    tags plus a 54 KB committed wheel: no PyPI needed yet, and builds never touch the private
+    workbench.
+  - Shipped to production with no downtime. Deploying into the existing project instead of moving the
+    domain kept rollback to a single click.
+  - Replaced the Formbricks flow with a tiny Pages Function. Store in KV, optionally ping a webhook,
+    fall back to a pre-filled email, with a honeypot against bots. Less third-party code, and you own
+    the data.
+  - Debugged Cloudflare's quirks along the way: production branch names, the www 522 (a hostname not
+    registered on the project, not a DNS issue), email obfuscation hiding addresses from grep, and the
+    edge rewriting sw.js cache headers.
+
+  Legal and privacy
+  - Replaced two deployed "Do not deploy this stub" pages with an accurate privacy policy and terms,
+    plus a build guard so placeholders can't reach production again.
+  - Linked the site to JAlcocerTech without exposing your home. The insight: a visible NIP leads to the
+    CEIDG address. GDPR is covered now; the virtual-office step is written down for later.
+
+  Lessons worth keeping
+  1. Verify, don't assume. Several of the biggest finds (the broken app, broken images, deployed stubs,
+     the non-running sample) came from actually running or fetching things rather than reading code.
+  2. Same numbers everywhere. Core, examples, site preview and app all agree on the same test cases,
+     and that agreement is your brand.
+  3. Guards over reminders. The version check, check-legal and the snippet runner each turn a "remember
+     to…" into a build that refuses to proceed.
+  4. Separate what's public from what's private on purpose. OSS engine, private product, tagged
+     releases crossing the boundary, and no personal data leaking through a side channel like the NIP.
+
+  Still open, in rough order:
+  - the www → apex redirect rule;
+  - a lead webhook, so new enquiries notify you;
+  - Web Analytics;
+  - GitHub Actions deploys;
+  - the virtual office address and NIP;
+  - the email-gated report in the app, which is the piece that turns tool usage into contacts.
+
+
 ### Webs
 
 I sunseted all custom diy websites from 2024, *as they churned anyways*
@@ -791,7 +1738,7 @@ As a PWA that you can use offline via chrome: https://margin-cms.pages.dev/
 
 With simple gg syncronization via PAT.
 
-> Oh, and you also have the free web audits to show that you have a problem: https://webaudit.jalcocertech.com/
+> Oh, and you also have the **free web audits** to show that yours have a problem: https://webaudit.jalcocertech.com/
 
 
 ## Case Studies

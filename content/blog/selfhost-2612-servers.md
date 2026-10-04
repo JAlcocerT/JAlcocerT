@@ -173,10 +173,23 @@ Not just speed-tests, and DNS, but...
 
 * https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
 
+You can assess speed test [by the avg yt upload time](https://jalcocert.github.io/JAlcocerT/tplink-archer-mr200-router-review/#youtube-upload) or with proper [connectivity tests](https://jalcocert.github.io/JAlcocerT/selfhosted-connectivity/)
+
 
 #### VPNs
 
 https://github.com/WGDashboard/WGDashboard
+
+https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/#vps-to-deploy-a-wireguard-server
+
+https://account.proton.me/u/3/vpn/WireGuard
+
+
+#### Start Services
+
+A typical one is the DNS service
+
+You can also create your own, for example: so that your battery wont charge over 80% to preserve its lifespan 
 
 ---
 

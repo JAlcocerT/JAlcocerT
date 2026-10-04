@@ -1,8 +1,8 @@
 ---
 title: "Suspension videos"
-date: 2026-10-15
+date: 2026-10-25
 draft: false
-tags: ["MBSD v0-8-0 x Active Damping","LMS Filter"]
+tags: ["MBSD v1-0-0 x Active Damping","LMS Filter"]
 description: 'A light framework that can do stuff.'
 url: 'visualizing-suspension-nvh'
 ---

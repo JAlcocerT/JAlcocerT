@@ -130,7 +130,7 @@ CF Workers would be the one in charge to allow access to certain static paths li
 ```sh
 sudo apt install gh
 gh auth login
-gh repo create payroll-workers-pb --public --source=. --remote=origin --push
+#gh repo create payroll-workers-pb --public --source=. --remote=origin --push
 ```
 
 {{< callout type="info" >}}

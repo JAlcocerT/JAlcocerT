@@ -110,7 +110,7 @@ dig @localhost youtube.com
 
 * https://github.com/TechnitiumSoftware/DnsServer
 
-> agpl 3 | Technitium DNS Server
+> agpl 3 | [Technitium](https://fossengineer.com/selfhosting-technitium-dns/#technitium-vs-pi-hole-vs-adguard-home) DNS Server
 
 ### Choosing a DNS for PiHole
 

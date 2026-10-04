@@ -1,11 +1,50 @@
 ---
 title: "Flutter Apps for Desktop?"
-date: 2026-10-02
+date: 2026-10-03
 draft: false
-tags: ["Android","Ente Photos","wger","FlutterFlow","DART","GoPro Telemetry","DJI Tello","Obtanium"]
-description: 'Flutter Apps. Python via Flet? Or just PWA?'
+tags: ["Android","DART vs Kotlin","GoPro Telemetry","DJI Tello","Obtanium"]
+description: 'Flutter Apps? Python via Flet? Or just PWAs?'
 url: 'from-python-to-flutter'
 ---
+
+
+**Tl;DR**
+
+Its possible now.
+
+**Intro**
+
+* WHY Im writting this post: *bc after making [this rust desktop app](https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust/) I wanted to have another look to flutter*
+* What [Ive learnt](#conclusions) with it: *Ive ended up using obtanium for my first native android app with kotlin. Was not expecting to [recap SHA256 signatures](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/11-signing-vs-bitcoin-web-desktop.md?ref_type=heads) nor [publish about it](https://gitlab.com/fossengineer1/dron/-/tree/feature/android-native/kotlin-android-release-learnings/posts?ref_type=heads) neither [about](https://gitlab.com/fossengineer1/dron/-/tree/feature/android-native/rust-desktop-learnings/posts?ref_type=heads the rust desktop)*
+
+Web applications use a different delivery model. Normally the browser does not
+retain an independently installed executable package and later compare a new
+bundle against its old author's signature. It requests the current resources
+from an origin each time.
+Trust is concentrated in the origin:
+https://example.com
+        ↓
+DNS + hosting/deployment account + TLS certificate/private key
+HTTPS/TLS authenticates the server/domain and protects resources in transit.
+The browser's same-origin policy then separates content belonging to different
+origins.
+
+herefore web applications are not really “published without keys.” The keys
+and credentials are located elsewhere:
+
+Domain registrar credentials
+DNS-provider credentials
+Hosting/cloud deployment credentials
+CI/CD credentials
+TLS private key or a managed certificate service
+Source repository credentials
+
+Compromising those systems lets an attacker change what the trusted web origin
+serves. Every visitor can then receive the malicious code immediately, without
+installing an APK.
+Modern hosting often hides TLS key management behind services such as managed
+certificates, making the cryptography less visible to the developer. The trust
+requirement still exists.
 
 
 Affine and Appflowy are having web and desktop apps.
@@ -16,12 +55,7 @@ not sure if those are done with flutter, but they are cool
 
 <!-- https://youtu.be/bhPHwVsrTo0 -->
 
-**Tl;DR**
 
-**Intro**
-
-* WHY Im writting this post: *bc *
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 Flutter is used in many places.
 
@@ -253,7 +287,130 @@ But just wondering if flutter would make this easier
 
 Who cares that [Pyston](https://github.com/pyston/pyston) is no longer maintained when we have Rust and Go
 
+"Ente Photos","wger","FlutterFlow"
 
+Ended up creating [this kotlin native app](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/01-scope-and-architecture.md?ref_type=heads) from the rust desktop one.
+
+Some [local test](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/03-local-build-and-test.md?ref_type=heads) at the PC were done, but to fully test it I used it and [validated](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/08-obtanium-validation.md?ref_type=heads) in my Pixel 9 Pro via obtanium.
+
+You will need to **create [some secrets](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/04-signing-and-secrets.md?ref_type=heads)**: *you better [back them up](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/05-backups-keys-and-recovery.md?ref_type=heads)*
+
+ In this case:
+
+- .p12 = private key + public certificate. Secret.
+- .pem created with keytool -exportcert = public certificate only. Not secret.
+
+The .pem contains:
+
+- Public key
+- Name/organization/city/country fields
+- Validity dates
+- Certificate fingerprint
+
+  Check its first line:
+
+```sh
+head -1 tello-native-release-certificate.pem
+```
+
+  For your exported certificate it should say:
+
+  -----BEGIN CERTIFICATE-----
+
+  A PEM can theoretically hold a private key, but then it would say BEGIN PRIVATE KEY or BEGIN
+  ENCRYPTED PRIVATE KEY. Your exported .pem does not.
+
+  Also, that old .pem belongs to the abandoned C=41710 certificate and is not needed. The production
+  private key is the validated .p12 backup.
+
+ Yes. To preserve the ability to sign updates, the irreplaceable pair is:
+
+  1. tello-native-release-2026-10-03.p12
+  2. Its password
+
+  The analogy:
+
+   Android signing                            Bitcoin
+  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+   .p12 containing the private signing key    Encrypted wallet file
+  ─────────────────────────────────────────  ──────────────────────────────────────────
+   .p12 password                              Wallet decryption password
+  ─────────────────────────────────────────  ──────────────────────────────────────────
+   Public certificate/fingerprint             Public address
+  ─────────────────────────────────────────  ──────────────────────────────────────────
+   Signing an APK update                      Signing a transaction
+  ─────────────────────────────────────────  ──────────────────────────────────────────
+   Android verifies the signature             Bitcoin network verifies the transaction
+
+  The difference from 12 seed words:
+
+  - Bitcoin seed words can regenerate the wallet’s private keys from nothing.
+  - Your .p12 password cannot regenerate the .p12.
+  - Lose the .p12, and the password alone is useless.
+  - Lose the password, and the encrypted .p12 is generally useless.
+  - Anyone obtaining both can publish APKs that appear to be authentic updates.
+
+  So your .p12 is closer to an encrypted Bitcoin wallet file—not the 12 words themselves.
+
+  Also record these non-secret details for convenience:
+
+  Alias: tello-native
+  Package ID: tech.jalcocer.tello
+  Certificate fingerprint: F0:AD:A1:BE:...:89:8E
+
+  The .pem and fingerprint are public and cannot sign anything.
+
+{{< callout type="info" >}}
+Captured all the [learnings here](https://gitlab.com/fossengineer1/dron/-/tree/feature/android-native/kotlin-android-release-learnings?ref_type=heads)
+{{< /callout >}}
+
+ The two irreplaceable items are:
+
+  - tello-native-release-2026-10-03.p12
+  - Its password (used as both keystore and key password)
+
+  Confirm the file SHA-256 is: `b430d9d58a11cd3740476b69bdd5b0f373820dd7c12fca8c2ebb9b3758b6a543`
+
+  Also record:
+
+```md
+  Alias: tello-native
+  Package ID: tech.jalcocer.tello
+```
+
+Keep at least two encrypted copies in separate locations. You do not need to back up GitHub Secrets
+or Base64 data—they can be recreated from the .p12 and password. 
+
+Yes, SHA-256 hashes can be public. They cannot reconstruct the key or password.
+
+  Safe to publish:
+
+  - File checksum
+  - Certificate fingerprint
+  - Alias
+  - Package ID
+
+  Never publish:
+
+  - .p12 file
+  - Base64 representation
+  - Keystore/key password
+
+The certificate fingerprint is already publicly visible inside every signed APK.
+
+
+
+### DJI Tello Android in Kotlin
+
+
+> https://github.com/JAlcocerT/tello-kotlin/releases/tag/android-v0.1.1
+
+> https://gitlab.com/fossengineer1/dron/-/commits/feature/android-native
+
+
+{{< callout type="info" >}}
+To **make another release** follow [these notes](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/10-release-runbook.md?ref_type=heads)
+{{< /callout >}}
 
 ---
 
@@ -621,3 +778,160 @@ https://f-droid.org/en/packages/eu.darken.capod/
 * Bitwarden
 * vaultwarden
 * Aegis    * <https://www.opensourcealternative.to/project/Aegis> -->
+
+### Using Obtanium
+
+> https://github.com/ImranR98/Obtainium/releases
+
+```sh
+#apt install openjdk-17-jre-headless 
+keytool -genkeypair \
+  -keystore tello-native-release.p12 \
+  -storetype PKCS12 \
+  -alias tello-native \
+  -keyalg RSA \
+  -keysize 4096 \
+  -validity 10000
+
+# Generating 4,096 bit RSA key pair and self-signed certificate (SHA384withRSA) with a validity of 10,000 days
+# 	for: CN=JAlcocerT, OU=JAlcocerTech, O=JAlcocerTech, L=Seville, ST=Spain, C=41710
+```
+
+
+Owner: CN=JAlcocerT, OU=JAlcocerTech, O=JAlcocerTech, L=Seville, ST=Spain, C=41710
+
+```sh
+/secure/off-repo/path/tello-native# keytool -exportcert -rfc \
+  -keystore tello-native-release.p12 \
+  -alias tello-native \
+  -file tello-native-release-certificate.pem
+
+##Enter keystore password:  
+#Certificate stored in file <tello-native-release-certificate.pem>
+```
+
+Then created the public repo:
+```sh
+#sudo apt install gh
+gh auth login
+gh repo create tello-kotlin --public --source=. --remote=origin --push
+```
+
+The standalone app is now live at `JAlcocerT/tello-kotlin`. Completed:
+
+- Native Android project copied into its own repository
+- Release workflow adjusted for the new root layout
+- Unit tests and debug APK build passed
+- Obtainium guide and learnings updated
+- Commits pushed through 4f3cf52
+
+Before creating a release, regenerate the key because C=41710 should be the country code C=ES. 
+
+Also, the current key is root-owned and readable by other users.
+
+Run as your normal user:
+
+```sh
+mkdir -p /home/jalcocert/.local/share/tello-signing
+chmod 700 /home/jalcocert/.local/share/tello-signing
+cd /home/jalcocert/.local/share/tello-signing
+
+keytool -genkeypair \
+  -keystore tello-native-release.p12 \
+  -storetype PKCS12 \
+  -alias tello-native \
+  -keyalg RSA \
+  -keysize 4096 \
+  -validity 10000 \
+  -dname "CN=JAlcocerT, OU=JAlcocerTech, O=JAlcocerTech, L=Seville, ST=Seville, C=ES"
+
+chmod 600 tello-native-release.p12
+```
+
+Then verify the fingerprint, back up the new key twice, and configure the four GitHub secrets.
+
+Do not create `android-v0.1.0` until that is finished.
+  
+The updated steps are in `/home/jalcocert/Desktop/tello-kotlin/z-obtanium-guide.md`.
+
+That is the correct final signing key:
+
+- Identity: C=ES
+- Alias: tello-native
+- RSA: 4096-bit
+- Valid until: February 2054
+- SHA-256:`F0:AD:A1:BE:30:83:D3:E3:7A:5C:3E:92:22:D5:97:88:54:E3:C3:C6:7A:91:A5:32:3E:42:C3:88:13:37:89:8E`
+
+Save that fingerprint in your password manager. 
+
+Do not export a `.pem` nor regenerate the key.
+
+Then continue through Steps 3–5 to upload [the four GitHub secrets](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/04-signing-and-secrets.md?ref_type=heads) and use [Github actions for release](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/06-github-actions-release.md?ref_type=heads)
+
+```sh
+ANDROID_KEYSTORE_BASE64
+ANDROID_KEYSTORE_PASSWORD
+ANDROID_KEY_ALIAS
+ANDROID_KEY_PASSWORD
+```
+
+```sh
+cd ~/Desktop/tello-kotlin
+
+base64 -w 0 "$HOME/.local/share/tello-signing/tello-native-release.p12" \
+  | gh secret set ANDROID_KEYSTORE_BASE64
+
+read -rsp "Keystore password: " TELLO_PASSWORD
+echo
+printf '%s' "$TELLO_PASSWORD" | gh secret set ANDROID_KEYSTORE_PASSWORD
+printf '%s' 'tello-native' | gh secret set ANDROID_KEY_ALIAS
+printf '%s' "$TELLO_PASSWORD" | gh secret set ANDROID_KEY_PASSWORD
+unset TELLO_PASSWORD
+
+#gh secret list
+```
+
+### Kotlin
+
+[Kotlin needs java](https://gitlab.com/fossengineer1/dron/-/blob/feature/android-native/kotlin-android-release-learnings/07-challenges-and-fixes.md?ref_type=heads#5-confusion-about-why-kotlin-needed-java)
+
+Kotlin/Gradle Android builds run on the JVM.
+
+JDK 17 is a build toolchain dependency. It does not change the native Kotlin
+application architecture. The Java setup step passed in both CI runs.
+
+  Instead, securely save:
+
+  - GitHub account access
+  - 2FA recovery codes
+  - .p12 signing file
+  - .p12 password
+
+  If a GitHub token is lost, it can be recreated. If the .p12 is lost, the existing Android app cannot
+  be updated normally.
+
+you can restart as repository owner—but repository ownership cannot override Android’s signature
+  check. I’ll verify the current Android signing guidance so I can distinguish “publish a replacement”
+  from “update the already-installed app” precisely.
+
+• Searching the web
+
+• Searched the web for https://developer.android.com/studio/publish/app-signing
+
+───────────────────────────────────────────────────────────────────────────────────────────────────────
+
+• Yes—you can start over, but it would not be a seamless update.
+
+  With a new key:
+
+  - Same package ID: Android rejects installation over the existing app. Users must uninstall the old
+    app first, then install the replacement.
+
+  - New package ID: Android treats it as a completely separate app; it can coexist with the old one.
+
+  Owning the GitHub repository lets you publish anything, but it cannot override Android’s signature
+  verification. Google confirms that without managed Play App Signing, losing the app-signing key means
+  losing the ability to update that existing app. Android signing documentation
+
+  For this controller, restarting would be manageable because little app state is stored—but every user
+  would need a manual reinstall and possibly reconfigure Obtainium.

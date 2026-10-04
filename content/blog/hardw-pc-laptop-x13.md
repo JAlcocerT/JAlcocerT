@@ -334,6 +334,67 @@ If you got any, you can return the laptop or ask for a 5-10% discount.
 
 ### Battery Life
 
+Your laptop currently starts charging at 95% and stops at 100%. If it spends
+  much time plugged in, change that to:
+
+  - Start charging: 75%
+  - Stop charging: 80%
+
+  Then leave it plugged in when convenient—the laptop will stop charging at 80%,
+  avoiding needless cycles and prolonged time at 100%. For travel days,
+  temporarily charge to 100%.
+
+  Also:
+
+  - Avoid regularly draining below 15–20%.
+  - Avoid heat, especially charging under heavy workload on a bed or soft
+    surface.
+
+  - Don’t deliberately discharge it to “exercise” the battery.
+  - Occasional 100% charging is fine.
+
+
+Check anytime with:
+
+```sh
+cat /sys/class/power_supply/BAT0/cycle_count
+```
+
+Its full-charge capacity is about 84% of the original design capacity (46.15Wh versus 54.7 Wh). 
+
+One cycle represents cumulative use of 100% capacity, not necessarily one charging session.
+
+ThinkPad supports them directly. Run:
+
+```sh
+echo 75 | sudo tee /sys/class/power_supply/BAT0/charge_control_start_threshold
+echo 80 | sudo tee /sys/class/power_supply/BAT0/charge_control_end_threshold
+#Verify:
+cat /sys/class/power_supply/BAT0/charge_control_*_threshold
+```
+
+As when i restarted it came back to normal:
+
+```sh
+sudo tee /etc/systemd/system/battery-thresholds.service >/dev/null <<'EOF'
+[Unit]
+Description=Set battery charging thresholds
+
+[Service]
+Type=oneshot
+WorkingDirectory=/sys/class/power_supply/BAT0
+ExecStart=/bin/sh -c "echo 75 > charge_control_start_threshold"
+ExecStart=/bin/sh -c "echo 80 > charge_control_end_threshold"
+
+[Install]
+WantedBy=multi-user.target
+EOF
+sudo systemctl daemon-reload
+sudo systemctl enable --now battery-thresholds.service
+cat /sys/class/power_supply/BAT0/charge_control_*_threshold
+```
+
+
 ```sh
 upower -e
 upower -i /org/freedesktop/UPower/devices/battery_BAT0 #could be _BAT1...
@@ -355,3 +416,11 @@ sudo systemctl status tlp
 
 flatpak install flathub com.github.d4nj1.tlpui #https://flathub.org/apps/com.github.d4nj1.tlpui
 ```
+
+### X13 x Thunderbolt
+
+Thunderbolt 3/4 physically looks like USB‑C, but not every USB‑C port supports Thunderbolt.
+
+- Your X13 Gen 2 AMD has USB‑C 3.2 Gen 2—no Thunderbolt.
+- The X13 Gen 6 AMD has two Thunderbolt 4 / USB4 ports supporting up to 40 Gbps.
+- A lightning-bolt symbol near a USB‑C port often indicates Thunderbolt.

@@ -293,7 +293,7 @@ curl 192.168.1.11:8065/api/healthcheck
 ```
 
 {{< callout type="info" >}}
-InternetSpeedTracker has influxDB 2.0 integration, inc ase that you want to use this with Grafana. Also integrations with: tg, webhooks, gotify, ntfy,...
+InternetSpeedTracker has influxDB 2.0 integration, inc ase that you want to use this with Grafana. Also integrations with: tg, webhooks, gotify, [ntfy](https://github.com/binwiederhier/ntfy),...
 {{< /callout >}}
 
 ---

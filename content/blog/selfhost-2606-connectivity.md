@@ -589,12 +589,50 @@ rsync -av --info=progress2 \
 
 Are you into these?
 
+
+
+{{% details title="Testing Internet" closed="true" %}}
+
+* `https://www.speedtest.pl/`
+
+```sh
+ip addr show
+hostname -I
+
+#sudo apt-get install net-tools
+#ifconfig
+
+ping -c 4 192.168.3.1 #gateway
+ping 9.9.9.9 #quad9
+```
+
+```sh
+sudo apt-get install dnsutils -y #dns resolution
+nslookup github.com 
+dig google.com
+```
+
+See also `speed.cloudflare.com` or as an alternative, via CLI:
+
+```sh
+sudo apt-get install speedtest-cli
+speedtest-cli #speedtest-cli --simple
+```
+
+```sh
+curl -sS https://ipinfo.io/json #the command to use to see your IP
+curl -sS http://ip-api.com/json/ #provides info about country, ISP, ...
+curl -6 ifconfig.me #ipv6 info 
+```
+
+{{% /details %}}
+
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000 Review" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/telecom-concepts-101/" title="More Telco Stuff" image="/blog_img/outro/telecom/2cm.png" subtitle="Concepts and Tools for the telecom industry" >}}
 {{< /cards >}}
 
-Most AI PoCs (19/20) fail
+Most AI PoCs (19/20) ~~fail~~ dont become MVPs
 
 Knowing what you are doing before starting, get you closer to be the 1/20:
 

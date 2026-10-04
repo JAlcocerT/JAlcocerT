@@ -97,6 +97,7 @@ I'd keep **JAMstack** to avoid Mythos and similar coming inside my homelab :)
 dig fossengineer.com any
 #ping fossengineer.com
 ```
+
 Not [with codex cli](https://github.com/JAlcocerT/docs-testing/tree/master) this time, but directly with IDE:
 
 ```sh

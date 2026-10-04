@@ -232,15 +232,14 @@ Download an [OS like **ZorinOS**](https://jalcocert.github.io/JAlcocerT/selfhost
 
 2. [Proton CLI](https://proton.me/support/drive-cli): finally arrived!
 
-Download https://proton.me/download/drive/cli/index.html
+Download: `https://proton.me/download/drive/cli/index.html`
 
 ```sh
-https://proton.me/download/drive/cli/index.html
+#https://proton.me/download/drive/cli/index.html
 
-  cd /home/jalcocert/Downloads
-  chmod +x proton-drive
-  install -m 0755 proton-drive "$HOME/.local/bin/proton-drive"
-
+cd /home/jalcocert/Downloads
+chmod +x proton-drive
+install -m 0755 proton-drive "$HOME/.local/bin/proton-drive"
 ```
 
 You will auth with a link and get https://account.proton.me/auth-desktop
@@ -272,6 +271,7 @@ proton-drive filesystem upload ~/Downloads/report.pdf "/Uploads"
 ```
 
 Like:
+
 ```sh
 proton-drive filesystem upload ~/Desktop/DJI_20260726095445_0040_D.MP4 /my-files/Oa5Pro-Rysy
 ```

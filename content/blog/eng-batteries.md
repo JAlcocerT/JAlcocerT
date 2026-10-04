@@ -16,12 +16,12 @@ From 3v to a [car](https://jalcocert.github.io/JAlcocerT/buying-car-data-analyti
 
 Its been inspiring [this post from Sean](https://www.seangoedecke.com/blog-about-things-you-dont-understand-yet/), with a framework that ill be copying in my intros:
 
-* Why Im writting this post: *bc i got [a bluetti](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#bluetti) and It was time to put the wh to ah [conversions](#conversions)*
+* Why Im writting this post: *bc i got [a bluetti](https://jalcocert.github.io/JAlcocerT/understanding-batteries/#bluetti),it was time to put the wh to ah [conversions](#conversions) and to know [how to properly charge my x13](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/#battery-life)*
 * What Ive learnt with it: *Ive ended up learning sth about batteries like [the SoC](#the-state-of-charge), thx to the FPV drones (LiPo vs Li-ion), electric car tests and a now...a portable bluetti for home project.*
 
 ## About Batteries
 
-Dealing with three distinctly different types of lithium battery chemistries.?
+Dealing with three distinctly different types of lithium battery chemistries?
 
 Each one is engineered for a completely different purpose: *one values balanced driving performance, one is built for extreme safety and longevity, and the other is optimized for pure, lightweight power*.
 
@@ -29,6 +29,7 @@ Each one is engineered for a completely different purpose: *one values balanced 
 https://www.youtube.com/watch?v=454yPdhbPWs -->
 
 {{< youtube "454yPdhbPWs" >}}
+
 
 
 ### Car batteries

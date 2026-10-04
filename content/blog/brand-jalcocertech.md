@@ -1,5 +1,5 @@
 ---
-title: "How is my Brand going?"
+title: "How is my Brand going? x Outbound System"
 date: 2026-10-13
 draft: false
 tags: ["Brand HUBs","Email marketing","Typst","JAlcocerTech-Core"]

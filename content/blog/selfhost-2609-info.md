@@ -211,7 +211,7 @@ flowchart TD
 
 ### HomeLab Updates 0926
 
-I was trying lately technitium for **custom DNS at Omarchy**:
+I was trying lately [technitium](https://fossengineer.com/selfhosting-technitium-dns/#technitium-vs-pi-hole-vs-adguard-home) for **custom DNS at Omarchy**:
 
 ![alt text](/blog_img/selfh/technitium-sqlite.png)
 

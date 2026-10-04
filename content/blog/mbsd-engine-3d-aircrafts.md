@@ -1,8 +1,8 @@
 ---
 title: "3D vibrations for aircrafts"
-date: 2026-10-09T08:20:21+01:00
+date: 2026-10-17T08:20:21+01:00
 draft: false
-tags: ["Mechanical Engineering","MBSD v0-8-0 x Airplanes Engine Mount","ULM/PPL"]
+tags: ["Mechanical Engineering","MBSD v0-9-0 x Airplanes Engine Mount","ULM/PPL"]
 description: 'Simulating before jumping to a plane.'
 url: 'aircraft-engine-analysis'
 ---
@@ -94,9 +94,9 @@ If you are designing the **internal balance** of the engine (e.g., "Do I need co
 
 But the moment you want to know **"Will the pilot feel a vibration in the rudder pedals during a steep turn?"**, you have to leave the 2D world and embrace the full 6-DOF 3D dynamics.
 
-### MBSD 0-8-0 Simulation
+### MBSD 0-9-0 Simulation
 
-Coming from [the 0-7-0 release](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-oct/#mbsd), its time for the 0-8-0
+Coming from [the 0-7-0 release](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-oct/#mbsd), its time for the 0-9-0
 
 
 ---

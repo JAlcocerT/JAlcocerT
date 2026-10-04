@@ -108,8 +108,8 @@ So you just need the storage layer:
 #make sqlite-count
 # cd ./poc/iot-rpi-dht/scripts-microcontrollers/backend-node-sqlite
 sqlite3 data/readings.sqlite "select * from readings order by received_ms desc limit 10;"
-2|esp32/humidity/dht11|humidity|45.0|2026-06-04T14:42:47.351Z|1780584167351
-1|esp32/temperature/dht11|temperature|25.3|2026-06-04T14:42:47.251Z|1780584167251
+#2|esp32/humidity/dht11|humidity|45.0|2026-06-04T14:42:47.351Z|1780584167351
+#1|esp32/temperature/dht11|temperature|25.3|2026-06-04T14:42:47.251Z|1780584167251
 ```
 
 I made it better: *because hardcoding wifi/pwd is not nice*

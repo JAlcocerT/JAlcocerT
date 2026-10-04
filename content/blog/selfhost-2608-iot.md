@@ -721,23 +721,32 @@ Yep, the smaller 3W pump also works nicely:
 {{< youtube "RxR26VGmgc8" >}}
 
 
-#### Voltaje Divider
+#### Voltage Divider
 
 Battery Voltage Monitoring (Voltage Divider): Add a high-value resistive divider (e.g., $100\text{ k}\Omega$ / $27\text{ k}\Omega$) from the 12V rail to an ESP32 ADC pin so your software knows when the battery is too low to run the pump
 
+
+{{< callout type="info" >}}
+These are just about kirchof [as a voltage divider](https://github.com/JAlcocerT/poc/tree/main/physics-electronics/voltage-divider) works with 2 resistor in serios, having one of them much more ohms than the other
+{{< /callout >}}
+
 #### Could this be a product?
 
-A successful manual breadboard test proves only the raw power path; designing a board now almost guarantees you will have to pay for a redesign later.
+A successful manual breadboard test proves only the raw power path
+
+{{% details title="Next steps... 🚀" closed="true" %}}
+
+Designing a board now almost guarantees you will have to pay for a redesign later
 
 The recommended progression moves from firmware validation to peripheral expansion, followed by prototyping, and finally custom hardware manufacturing:
-
-{{% details title="Next steps 🚀" closed="true" %}}
 
 **1. Finish the Core Software Cycle First (Immediate Next Step)**
 
 * **Timed Smoke Test:** Run the battery-powered ESP32 through the 3-second cycle using `timed_smoke_test.ino` [script](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/timed_smoke_test.ino) to verify there are no inductive resets or brownouts.
 
-* **Wi-Fi & MQTT Integration:** Upload your networking firmware (`mqtt_pump_control.ino` [script](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/mqtt_pump_control.ino)). Confirm the ESP32 can maintain Wi-Fi connection and handle MQTT commands without crashing when the pump starts and stops.
+* **Wi-Fi & MQTT Integration:** Upload your networking firmware (`mqtt_pump_control.ino` [script](https://github.com/JAlcocerT/poc/blob/main/iot-esp-water/esp32-bms-prepwork/esp32-bms-mosfet/mqtt_pump_control.ino)). 
+
+Confirm the ESP32 can maintain Wi-Fi connection and handle MQTT commands without crashing when the pump starts and stops.
 
 * **Deep Sleep & Power Budgeting:** If this is intended to be off-grid, configure the ESP32 to sleep between waterings. An ESP32 idling at 80–150 mA on Wi-Fi will drain a 3S pack in a couple of days regardless of solar.
 
@@ -848,6 +857,7 @@ The main difference comes down to how each board manages solar power conversion,
 * **The Limit:** The standard CN3791 IC is hardwired for **single-cell lithium (1S / 4.2V)**. Even though it accepts high solar panel voltages (up to 28V), it only outputs 4.2V.
 
 **What Your Schematic Actually Needs**
+
 Because your circuit uses a **3S pack (~12.6V full charge)**, neither the standard TP5100 nor the CN3791 can charge it.
 
 To charge that 3S pack from solar, look for:

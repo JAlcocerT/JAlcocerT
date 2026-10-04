@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-09
+date: 2026-10-10
 draft: false
 tags: ["Kokoro","VoiceBox","SunoAI x music"]
 description: 'A homelab that speaks.'
@@ -71,6 +71,16 @@ https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#sunoai
 
 ## Conclusions
 
+A friend tried `https://pr.tn/ref/RHJ7YZE8` proton unlimited https://account.proton.me/u/3/mail/users-addresses
+
+  1. Your friend creates a free Proton account with a Proton Mail address.
+  2. You upgrade your account to Proton Duo.
+  3. In Proton settings, create a family group.
+  4. Go to Users and addresses → Invite user.
+  5. Enter your friend’s Proton address and allocate storage.
+  6. They accept the invitation and switch to your Duo plan.
+
+
 
 ### FOSS
 
@@ -101,7 +111,7 @@ Ive been using [Dawarich](https://fossengineer.com/selfhosting-dawarich/) for [a
 ![Wanderer vs strava/komoot](/blog_img/selfh/umbrel-os/wanderer-integrations.png)
 
 
-Tinkered a bit with Technitium [inside Omarchy via VM](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy).
+Tinkered a bit with [Technitium](https://fossengineer.com/selfhosting-technitium-dns/#technitium-vs-pi-hole-vs-adguard-home) inside [Omarchy via VM](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy).
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/technitium" title="Technitium | Docker Config 🐋 ↗" >}}
@@ -121,6 +131,22 @@ sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud 
 #docker port iot-dashboard-v2
 #lazydocker
 ```
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+winget install sonixd
+```
+
+Been also working with notifications in the homelab lately:
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gotify" title="gotify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ntfy" title="notify | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 These are also useful:
 
