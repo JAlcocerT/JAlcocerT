@@ -1,5 +1,5 @@
 ---
-title: "[JAlcocerTech] Services Recap x Leads"
+title: "[JAlcocerTech] Services and Execution"
 date: 2026-10-03T10:20:21+01:00
 draft: false
 tags: ["PIO x BDD x WoW","JAlcocerTech Leads","PDLC","DRI x DACI x RACI","CF KV"]
@@ -1473,6 +1473,7 @@ dig multibodysystemsdynamics.com any
   From ~/Desktop/mbsd-framework/multi-body/web-sleek. First, point the config at the v1 project, so the
   KV binding and make deploy target it:
 
+```sh
   sed -i 's/^name = "multibodysystemsdynamics-site"/name = "multibodysystemsdynamics"/' wrangler.toml
   sed -i 's/^CF_PAGES_PROJECT ?= multibodysystemsdynamics-site/CF_PAGES_PROJECT ?=
   multibodysystemsdynamics/' Makefile
@@ -1499,6 +1500,7 @@ Rollback if needed
 
   Dashboard → Workers & Pages → multibodysystemsdynamics → Deployments → the v1 deployment (de5c9561,
   branch master) → ⋯ → Rollback to this deployment. The apex serves v1 again within seconds.
+```
 
   Notes
 
@@ -1530,19 +1532,24 @@ KV is Cloudflare Workers KV, a simple key-value store that lives on Cloudflare's
 How the site uses it: when someone sends the contact form or requests the ebook, the site's small
 backend function (web-sleek/functions/api/contact.ts) saves the submission as one entry:
 
-  key:   enquiry:2026-10-04T09:30:12.000Z:3f2a…      (or ebook:… for ebook requests)
-  value: {"name":"Ada","email":"ada@acme.com","project":"Solver validation",
-          "details":"…","receivedAt":"…","country":"ES","referer":"…"}
+```md
+key:   enquiry:2026-10-04T09:30:12.000Z:3f2a…      (or ebook:… for ebook requests)
+value: {"name":"Ada","email":"ada@acme.com","project":"Solver validation",
+        "details":"…","receivedAt":"…","country":"ES","referer":"…"}
+```
 
-  LEADS is the namespace (think of it as one dictionary) I created for these. It's bound to the site in
-  wrangler.toml, which is how the function finds it.
+LEADS is the namespace (think of it as one dictionary) I created for these. It's bound to the site in
+wrangler.toml, which is how the function finds it.
 
-  Reading your leads:
-  - Dashboard: Storage & Databases → KV → LEADS shows every entry.
-  - Command line:
-  npx wrangler kv key list --namespace-id e4e917c99f9d46ecab4c2bf25074090f --remote
-  npx wrangler kv key get "<key from the list>" --namespace-id e4e917c99f9d46ecab4c2bf25074090f
-  --remote
+Reading your leads:
+- Dashboard: Storage & Databases → KV → LEADS shows every entry.
+- Command line:
+
+```sh
+npx wrangler kv key list --namespace-id e4e917c99f9d46ecab4c2bf25074090f --remote
+npx wrangler kv key get "<key from the list>" --namespace-id e4e917c99f9d46ecab4c2bf25074090f
+--remote
+```
 
 Why KV for this:
 - It's free at your scale: the free tier allows 1,000 writes and 100,000 reads a day, plus 1 GB of
@@ -1614,10 +1621,11 @@ Reading the responses:
   └─────────────────────┴─────────────────────────────────────────────────────────────────────────┘
 
 What doesn't happen yet: nothing emails you when a lead arrives. Leads wait in KV until you look.
-Since your mail runs through Proton, the simplest notification is a webhook, for example a Discord or
-Slack channel. Give me the URL and I'll set it as LEAD_WEBHOOK_URL. Each enquiry is then saved to KV
-and posted to the channel.
 
+Since your mail runs through Proton, the simplest notification is a webhook, for example a Discord or
+Slack channel.
+
+Give me the URL and I'll set it as LEAD_WEBHOOK_URL. Each enquiry is then saved to KV and posted to the channel.
 
 To read every lead in one go, without copying keys around:
 
@@ -1661,12 +1669,13 @@ CF goodies: *R2 object storage, D1 sqlite and workers KV*
 
  Beyond the PWA, the wheel and KV, here's what we did and what came out of it.
 
-  Release and OSS
-  - Reviewed mbsd-core and mbsd-examples before 0.7.0. Caught the stale v0.6.0 checkout lines in both
-    READMEs, and the release-order trap: tag core before pushing examples, or the examples CI breaks.
-  - Found a real core bug: grashof_class() labels a Grashof linkage with the shortest output link as
-    "double-rocker". It's still open, worth an issue and a test for 0.8.
-  - Checked the new spatial kinematics maths and found it correct.
+  Release and OSS:
+
+- Reviewed mbsd-core and mbsd-examples before 0.7.0. Caught the stale v0.6.0 checkout lines in both
+  READMEs, and the release-order trap: tag core before pushing examples, or the examples CI breaks.
+- Found a real core bug: grashof_class() labels a Grashof linkage with the shortest output link as
+  "double-rocker". It's still open, worth an issue and a test for 0.8.
+- Checked the new spatial kinematics maths and found it correct.
 
   The website
   - Turned an invisible page into an indexable site. The old landing page was all JavaScript-injected,

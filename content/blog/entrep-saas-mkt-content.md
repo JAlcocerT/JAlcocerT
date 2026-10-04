@@ -105,7 +105,7 @@ Or can we go with Shadcn charts / or [Recharts](https://recharts.github.io) as d
 
 **Typst is a complete, modern document typesetting system** and programming language designed to replace LaTeX.
 
-
+This is how ive created the oss mbsd whitepaper 
 
 
 ---

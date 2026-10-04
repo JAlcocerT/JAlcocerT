@@ -1,11 +1,12 @@
 ---
 title: "How is my Brand going? x Outbound System"
-date: 2026-10-13
+date: 2026-10-09
 draft: false
 tags: ["Brand HUBs","Email marketing","Typst","JAlcocerTech-Core"]
 description: 'A brand around JAlcocerTech. With MailDev and Mailpit.'
 url: 'branded-jalcocertech'
 ---
+
 
 **Tl;DR**
 
@@ -125,6 +126,12 @@ Dont be an open solar panel, embrace the [risk and opportunities](#risk-and-oppo
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
+### About JAlcocerTech Core
+
+```sh
+git clone https://github.com/JAlcocerT/jalcocertech-core
+#git clone https://github.com/JAlcocerT/jalcocertech-services
+```
 
 ---
 
