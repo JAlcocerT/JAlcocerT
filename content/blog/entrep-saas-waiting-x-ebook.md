@@ -140,13 +140,96 @@ To do all this setup you need such [api and creds](https://github.com/JAlcocerT/
 npx wrangler login
 ```
 
+
+Done today:
+- The new site is live at multibodysystemsdynamics.com, with www redirecting to it permanently.
+- The solver app is live at app.multibodysystemsdynamics.com, working offline and pinned to core
+  v0.7.0.
+- Leads are stored in KV, with instant ntfy alerts to your phone through your homelab, and make leads
+  to read them.
+- Web Analytics is on, matching the privacy policy.
+- [Everything is documented](https://github.com/JAlcocerT/multi-body/tree/master/z-learnings) in z-learnings/01–11.
+
+Still open:
+
+1. Caching → "Respect Existing Headers" for the domain (optional, one toggle).
+2. GitHub Actions deploys, whenever you want push-to-deploy.
+3. The leads-hub pull and enrichment pipeline, plus the multi-site key format (z-learnings/08).
+    Update the privacy policy before enrichment starts.
+4. The virtual office address and NIP on the site (web-sleek/docs/legal-todo.md), before invoicing
+    clients who come through the site.
+5. The core grashof_class() fix for 0.8.
+6. The app's gated validation report, the next step for turning tool usage into leads.
+
+
+One detail: both jalcocertech.com and www.jalcocertech.com now serve the site, the same duplicate
+  situation MBSD's www had. Here the direction is reversed: the jalcocertech site's canonical address
+  is https://www.jalcocertech.com (its Astro site setting). So add a redirect rule on the
+  jalcocertech.com zone, going from the apex to www:
+
+  ┌────────────────────────┬───────────────────────────────────┐
+  │         Field          │               Value               │
+  ├────────────────────────┼───────────────────────────────────┤
+  │ Request URL (wildcard) │ https://jalcocertech.com/*        │
+  ├────────────────────────┼───────────────────────────────────┤
+  │ Target URL             │ https://www.jalcocertech.com/${1} │
+  ├────────────────────────┼───────────────────────────────────┤
+  │ Status                 │ 301, Preserve query string ✓      │
+  └────────────────────────┴───────────────────────────────────┘
+
+
+The capture side now works on all three sites. The gap is the other half: what happens to leads after
+  they arrive. You're collecting subscriptions on three sites, but unsubscribes are manual, there's no
+  proper list to send your quarterly email from, and nothing checks consent before mail goes out.
+  That's where I'd go next.
+
+  1. Quick wins (an hour or so, mostly you):
+  - Turn on Cloudflare Web Analytics for jalcocertech.com. Its privacy page says it's used, and you'll
+    want per-post traffic next to per-post signups.
+  - Webaudit's bundled consent checkbox. Split it into "send my report" (required) and "marketing"
+    (optional), and stop tracking leads.csv / manual-leads/ in git. This is the last real legal issue
+    from the audit on a live site.
+
+  2. leads-hub phase 2, minimal version (my main recommendation): a homelab job that pulls from KV and
+  turns raw leads into something you can operate.
+  - The pull job (Python plus SQLite, on a timer, read-only KV token) as designed in z-learnings/08.
+  - A subscriber list per site, with forget <email> (removes the person from SQLite and KV) and a
+    suppression list, so someone who unsubscribes is never emailed again from any site.
+  - Sending the quarterly email: I'd suggest listmonk, a self-hosted newsletter tool that suits your
+    homelab. The pull job imports each site's subscribers into its own list. listmonk handles
+    unsubscribe links, bounces and the "one-click unsubscribe" email headers properly, which manual BCC
+    from Proton doesn't, and it gets harder to do by hand as lists grow.
+  - A weekly ntfy digest: new leads per site, which pages converted, pending unsubscribes.
+
+  Nothing in this step enriches or profiles anyone, so no privacy-policy changes are needed.
+
+  3. The consulting funnel (your highest-intent leads):
+  - Bookings as leads: Cal.com sends a webhook, the Worker verifies the signature and stores a booking
+    lead.
+  - A qualifier on your own form, replacing Formbricks. It would feed the same store and drop one
+    third-party service from the policy.
+  - The paid-call question needs settling first: either business address and NIP, terms (regulamin) and
+    the consumer withdrawal checkbox, or "B2B only". An accountant can confirm this quickly.
+
+Later:
+- Turnstile if spam appears (there's been none so far).
+- CI that runs the Worker's tests on every push.
+- Enrichment for the growth site, but only after its privacy page says so.
+- The MBSD items still open (core grashof_class() fix, the app's gated report).
+
+If you agree with step 2, I'd start by laying out leads-hub phase 2 in core: the SQLite schema, the
+pull and forget commands, the listmonk import, and an ADR for "homelab pulls, listmonk sends". After
+that I'd build it in small commits, as we did with the Worker. Does listmonk work for you, or do you
+already have a sending tool in mind?
+
+
 ---
 
 ## Conclusions
 
 For places where i just accept inbound only: https://multibodysystemsdynamics.com/contact/
 
-For the ones that will do outbound as well:
+For the ones that will do outbound as well: `https://www.jalcocertech.com/contact/`
 
 
 
@@ -423,7 +506,7 @@ The new doc is z-learnings/07-leads-backends.md, and it's linked from the folder
 
 ### OSS Notifications
 
-  https://fossengineer.com/selfhosting-gotify/
+I had to catch up with [gotify](https://fossengineer.com/selfhosting-gotify/) to and [ntfy](https://fossengineer.com/selfhosting-ntfy-docker/#faq)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gotify" title="gotify | Docker Config 🐋 ↗" >}}
@@ -523,7 +606,8 @@ docker exec -it ntfy ntfy access leads-publisher leads write-only
 #docker exec -it ntfy ntfy access yosuaperro leads read-only   # only if yosuaperro isn't an admin
 docker exec -it ntfy ntfy token add leads-publisher           # prints tk_…
 ```
-  3. Store the two secrets. Run these yourself, so the token never passes through our chat:
+
+3. Store the two secrets. Run these to **add the secrets to CF**
 
 ```sh
 cd ~/Desktop/mbsd-framework/multi-body/web-sleek
@@ -617,20 +701,20 @@ But functionally, yosuaperro is already authenticated and can publish.
 
   Test from any machine:
 
+```sh
   curl -i -d "anonymous test" https://ntfy.jalcocertech.com/alerts-test
-
+```
   If auth is working, this should fail with unauthorized/forbidden.
 
   Then test with your admin user:
-
+```sh
   curl -i -u admin \
     -H "Title: auth test" \
     -d "authenticated publish works" \
     https://ntfy.jalcocertech.com/alerts-test
+```
 
-  That one should work.
-
-
+That one should work.
 
  Lead alerts are live. Every enquiry or ebook request on the site now stores the lead in KV and sends
   a notification to your Android through ntfy.jalcocertech.com.
@@ -671,3 +755,45 @@ But functionally, yosuaperro is already authenticated and can publish.
   3. GitHub Actions deploys.
   4. The leads-hub pull and enrichment pipeline, plus the multi-site key format (z-learnings/08).
   5. The virtual office address and NIP.
+
+
+there is CLI support for tk_ tokens.
+
+  On your server:
+
+  cd /home/jalcocert/Home-Lab/ntfy
+
+  Create a token for an existing user:
+
+  sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy token add yosuaperro
+
+  Create one with a label:
+
+  sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy token add --label="android phone" yosuaperro
+
+  Create one that expires:
+
+  sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy token add --expires=30d --label="android phone" yosuaperro
+
+  List tokens:
+
+```sh
+sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy token list
+#list the for one particular user and get the tk_
+#sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy token list leads-publisher
+```
+
+Remove a token:
+
+sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy token remove yosuaperro tk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Important: ntfy docs say tokens currently grant full access to that user account, so the token inherits what the user can do. If yosuaperro is admin, its token is effectively admin-level. For narrower access,
+create a limited user first, grant ACLs, then create a token for that user. (docs.ntfy.sh)
+
+Example:
+
+sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy user add android
+sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy access android "alerts-*" rw
+sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy token add --label="android phone" android
+
+Then use the returned tk_... token in apps/scripts instead of the password.

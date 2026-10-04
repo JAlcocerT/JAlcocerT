@@ -1058,4 +1058,4 @@ In your case, the ESP8285 receiver is basically a tiny dedicated IoT-like comput
 
 1. https://www.youtube.com/@thinkflight/videos
 
-https://www.youtube.com/watch?v=xgCrJKTvTho
+* https://www.youtube.com/watch?v=xgCrJKTvTho

@@ -8,6 +8,8 @@ url: 'tech-recap-2026'
 ---
 
 
+There are many [possibilities around 2.4ghz](https://fossengineer.com/2-4ghz-radio-protocols/#the-short-version), depending on how you encode info
+
 
 **Intro**
 

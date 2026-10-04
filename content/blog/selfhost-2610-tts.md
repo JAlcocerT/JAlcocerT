@@ -148,14 +148,18 @@ Been also working with notifications in the homelab lately:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ntfy" title="notify | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+> https://github.com/Aetherinox/ntfy-desktop#linux-1 and connection with uptime kuma (mqtt too?)
+
 These are also useful:
 
 ```sh
 #whois ebooks.jalcocertech.com| grep -i -E "(creation|created|registered)"
 nslookup ebooks.jalcocertech.com
 dig ebooks.jalcocertech.com
+
 #sudo docker stop qbittorrent
 #docker rm -f $(docker ps -aq --filter "name=entre")
+#docker system prune --all
 docker inspect forgejo --format '{{range $name, $_ := .NetworkSettings.Networks}}{{println $name}}{{end}}'
 #docker network connect cloudflared_tunnel forgejo
 #cd ./Home-Lab/forgejo
@@ -188,11 +192,15 @@ Having a look to **commento** to check that there is no spam [from time to time]
 {{< /cards >}}
 
 
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#traefik-x-x300-homelab
+* https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#traefik-x-x300-homelab
 
 ---
 
 ## FAQ
+
+```sh
+#git init #gh secret list
+```
 
 https://github.com/mortennordbye/homelab
 

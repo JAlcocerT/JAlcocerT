@@ -1740,6 +1740,139 @@ With simple gg syncronization via PAT.
 
 > Oh, and you also have the **free web audits** to show that yours have a problem: https://webaudit.jalcocertech.com/
 
+Ive started unifying my workflows across brands.
+
+Initially was doing a custom mail tests with [fastapi x sqlite x mailpit here](https://gitlab.com/fossengineer1/fossengineerpapermod/-/tree/main/custom-mail)
+
+Site: multibodysystemsdynamics.com
+Hosting: Cloudflare Pages (direct upload)
+Stack: Astro + Pages Function
+Can it use the KV namespace directly?: ✅ already does
+────────────────────────────────────────
+Site: www.jalcocertech.com
+Hosting: Cloudflare Pages, git-connected to JAlcocerT/jalcocertech
+Stack: Astro
+Can it use the KV namespace directly?: ✅ possible (same account)
+────────────────────────────────────────
+Site: fossengineer.com
+Hosting: Cloudflare Pages, git-connected to fossengineer1/fossengineerpapermod
+Stack: Hugo (PaperMod)
+Can it use the KV namespace directly?: ✅ possible, but Hugo has no server code of its own
+
+
+  What I've confirmed so far (from the repos, plus the parts of the earlier live check that were
+  reliable):
+
+  Property: www.jalcocertech.com (jalcocertech)
+  Stack / hosting: Astro, Cloudflare Pages
+  Lead capture today: Footer form posts to formsubmit.co, emailing contact@jalcocertech.com
+  Notes: The contact page form has no action and no script, so submitting it reloads the page with name
+
+  and email in the URL and nothing is sent. No privacy page in the repo
+  ────────────────────────────────────────
+  Property: consulting.jalcocertech.com (selfhosted-landing)
+  Stack / hosting: Astro in Docker on the homelab via a Cloudflare tunnel
+  Lead capture today: A Formbricks survey link plus a cal.com booking embed; also a chatbot widget
+  Notes: Has privacy and terms pages. My first search matched "gtag" (Google Analytics); not yet
+  confirmed whether it really loads
+  ────────────────────────────────────────
+  Property: ebooks.jalcocertech.com (1ton-ebooks)
+  Stack / hosting: Astro, deployed to Pages
+  Lead capture today: No forms, just cal.com links
+  Notes: Its site setting is ebooks.jalcocert.com (not jalcocertech), so the canonical URLs and sitemap
+
+  may point at the wrong domain. Was confirming. No legal pages
+  ────────────────────────────────────────
+  Property: webaudit(s).jalcocertech.com (poc_webs_magnet)
+  Stack / hosting: Express + PocketBase, Turnstile, Docker
+  Lead capture today: Audit form saves name, email and website into PocketBase (leads, audits) and a
+  CSV
+  file
+  Notes: The checkbox combines "results are sent by email" with "I accept marketing comms", which isn't
+
+  valid consent: marketing consent must be separate and optional. leads.csv and manual-leads/*.md are
+  committed to git (the repo is private, so it isn't exposed, but personal data is in git history)
+
+  All four repos are private.
+
+  This matters for leads-hub because each property captures leads differently today: formsubmit,
+  Formbricks, PocketBase, and one broken form. That's an argument for the central Worker (option C). It
+  would also fix the www contact form and the bundled consent along the way.
+
+
+There's also an unrelated issue to fix: the apex jalcocertech.com resolves publicly to 192.168.1.11,
+a private home-network address. 
+
+Visitors typing jalcocertech.com without www can't reach anything,
+and it reveals an internal IP. 
+
+It's probably an A record meant for your homelab. Point the apex at the site, and/or add the same www-style redirect we just did for MBSD.
+
+The key design change: *one central forms Worker instead of a function per site*
+
+Copying the Pages Function into every site would mean four copies drifting apart, and it can't work
+for leadarchitect.org (Firebase) or easily for Hugo.
+
+Instead:
+
+  any site (Astro, Hugo, Firebase…)  ──fetch──►  https://forms.jalcocertech.com/v1/submit   (one
+  Cloudflare Worker)
+                                                    ├─ checks Origin against an allowlist of your sites
+                                                    ├─ validates per form kind (enquiry / ebook /
+  newsletter)
+                                                    ├─ honeypot (+ Turnstile later if spam appears)
+                                                    ├─ KV write: <site>:<kind>:<iso>:<uuid>, 24-month
+  TTL, consent record
+                                                    └─ ntfy alert (site · kind · email domain)
+
+  homelab leads-hub (pull-only, every 10 min)  ◄── Cloudflare API, read-only KV token
+    SQLite: leads_raw → enrichment → digest / export / UI
+
+  - One codebase and one deploy, with consistent validation, consent handling and alerts on every site.
+  - Each site only needs a form and ~20 lines of JS. It works for Astro, Hugo and Firebase alike.
+  - MBSD can keep its current function at first and switch its form to the Worker later, at which point
+    the old function goes.
+
+  GDPR across sites (no billing, so the address gap stays acceptable)
+
+  1. One privacy-policy template, adapted per site: controller (JAlcocerTech), Cloudflare as processor,
+     the homelab, purposes per form kind, 24-month retention, rights, and UODO for complaints.
+  2. Newsletter forms need explicit opt-in consent (an unticked checkbox), proof of that consent stored
+     with each lead (policy version and time), and a way to unsubscribe. Enquiry and ebook forms don't
+     need a consent checkbox; replying to someone who asked is enough of a legal basis.
+  3. Enrichment and linking the same person across sites must be described in every policy before the
+     pipeline runs: legitimate interest, plus the right to object.
+  4. Deletion requests: a leads-hub forget <email> command that removes the person from SQLite and KV
+     across all sites.
+  5. leadarchitect.org on Firebase: check whether it runs Google Analytics. If it sets cookies, that
+     site needs a consent banner.
+
+  leads-hub on the homelab
+
+  - Separate private repo: a Python pull job, SQLite, and a systemd timer or Docker Compose.
+  - Tables: leads_raw (unchanged, keyed by the KV key) → people (deduplicated by email across sites) →
+    enrichment (all locally computable: free vs company email domain, MX check, company domain, site
+    and kind history, a simple score).
+  - Outputs: a weekly ntfy digest, CSV export, and optionally Datasette for a browser interface on the
+    SQLite file. That would sit on the homelab, behind Cloudflare Access.
+
+  Proposed phases
+
+  1. Forms Worker + key format: build the Worker at forms.jalcocertech.com, write the shared policy
+     template, migrate MBSD's form, and confirm with a test from each site.
+  2. leads-hub v0: pull job, SQLite, deletion command, deployment on the homelab.
+  3. Roll out to jalcocertech.com and fossengineer.com: forms plus updated privacy policies.
+  4. Enrichment and digest, once the policies say so.
+  5. leadarchitect.org, after checking its Firebase setup.
+
+  A few decisions before I start on phase 1:
+  1. A central Worker at forms.jalcocertech.com. OK, or would you prefer a different name or domain?
+  2. Which form kinds per site? For example: enquiry on jalcocertech.com, newsletter on
+     fossengineer.com?
+  3. Is Datasette fine as the leads interface, or would you rather start with only make commands, like
+     now?
+  4. The jalcocertech.com apex: should I tell you exactly what to change in DNS, or is the 192.168.1.11
+     record intentional?
 
 ## Case Studies
 
@@ -1771,6 +1904,20 @@ This setup is working quite nicely thanks to skills:
   {{< card link="https://fossengineer.com" title="F/OSS Engineer ↗" icon="book-open" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="Home-Lab Configs 🐋 ↗" >}}
 {{< /cards >}}
+
+Ive made some updates: `https://fossengineer.com/contact/` and `https://fossengineer.com/privacy/`
+
+
+What's on you:
+
+- Unsubscribes are manual for now. When someone replies "unsubscribe", run make leads to find them
+  and make lead-delete KEY=… to remove them. The forget <email> command comes with leads-hub phase 2.
+
+- The quarterly email itself: your subscriber list is make leads (filter fossengineer.com /
+  newsletter). Send from hello@teco.com with recipients in BCC, so subscribers don't see each
+  other's addresses.
+
+CF Workers free plan gives: 100,000 requests per day + Up to 10 ms CPU time per request + Community support
 
 ---
 
