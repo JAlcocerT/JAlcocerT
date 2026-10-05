@@ -33,23 +33,23 @@ Using Resend mail API, together with Pocketbase to:
 
 ### Capturing Leads with FastAPI x sqlite
 
-https://gitlab.com/fossengineer1/fossengineerpapermod/-/tree/main/custom-mail
+I was putting sth together at the homelab: https://gitlab.com/fossengineer1/fossengineerpapermod/-/tree/main/custom-mail
 
 ## Capturing Leads with KV
 
 The idea came while tinkering with mbsd here:
 
 ```sh
+#claude --dangerously-skip-permissions 
 #cd ./poc/multi-body/web-sleek
 make leads-show
 ```
 
-If the homelab is a consumer that pulls, enriches and analyses, it never
-  has to be reachable from the internet, and the same pipeline can serve every site.
+If the homelab is a consumer that pulls, enriches and analyses, it never has to be reachable from the internet, and the same pipeline can serve every site.
 
-  Pull-only, multi-site: what I'd do
+Pull-only, multi-site: what I'd do
 
-  1. One shared KV namespace, with the site in every key.
+1. One shared KV namespace, with the site in every key.
   LEADS (one namespace, bound in every site's Pages project)
     multibodysystemsdynamics.com:enquiry:2026-10-04T10:12:41Z:<uuid>
     fossengineer.com:newsletter:…
@@ -133,6 +133,7 @@ If the homelab is a consumer that pulls, enriches and analyses, it never
 ### Multisite Lead pull
 
 https://github.com/JAlcocerT/multi-body/blob/master/z-learnings/08-multisite-leads-pull.md
+
 
 To do all this setup you need such [api and creds](https://github.com/JAlcocerT/multi-body/blob/master/z-learnings/09-credentials-and-apis.md)
 
@@ -226,75 +227,191 @@ The capture side is unified for the three main sites: one Worker, one store, one
 
 What's missing falls into four groups.
 
-  1. Properties not yet on the Worker
+1. Properties not yet on the Worker
 
-  ┌─────────────────────────────┬───────────────────┬──────────────────────────────────────────────┐
-  │          Property           │  Captures today   │                What it needs                 │
-  │                             │        via        │                                              │
-  ├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
-  │                             │ Formbricks        │ Bookings via a Cal.com webhook into the      │
-  │ consulting.jalcocertech.com │ qualifier,        │ Worker (kind: booking, signature checked);   │
-  │                             │ Cal.com bookings, │ the qualifier as your own form, replacing    │
-  │                             │  OpenAI chatbot   │ Formbricks                                   │
-  ├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
-  │ ebooks.jalcocertech.com     │ a Formbricks link │ A route plus a subscribe box, like the       │
-  │                             │                   │ jalcocertech articles                        │
-  ├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
-  │                             │                   │ Its backend also posts the lead to the       │
-  │ webaudit.jalcocertech.com   │ its own Express + │ Worker (kind: audit), and the bundled        │
-  │                             │  PocketBase       │ consent checkbox gets split. That's the last │
-  │                             │                   │  real legal issue on a live site             │
-  ├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
-  │                             │                   │ The forms.jalcocertech.com cross-origin      │
-  │ leadarchitect.org           │ (on Firebase)     │ entry point, which the Worker already        │
-  │                             │                   │ supports and just needs its hostname         │
-  └─────────────────────────────┴───────────────────┴──────────────────────────────────────────────┘
+┌─────────────────────────────┬───────────────────┬──────────────────────────────────────────────┐
+│          Property           │  Captures today   │                What it needs                 │
+│                             │        via        │                                              │
+├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
+│                             │ Formbricks        │ Bookings via a Cal.com webhook into the      │
+│ consulting.jalcocertech.com │ qualifier,        │ Worker (kind: booking, signature checked);   │
+│                             │ Cal.com bookings, │ the qualifier as your own form, replacing    │
+│                             │  OpenAI chatbot   │ Formbricks                                   │
+├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
+│ ebooks.jalcocertech.com     │ a Formbricks link │ A route plus a subscribe box, like the       │
+│                             │                   │ jalcocertech articles                        │
+├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
+│                             │                   │ Its backend also posts the lead to the       │
+│ webaudit.jalcocertech.com   │ its own Express + │ Worker (kind: audit), and the bundled        │
+│                             │  PocketBase       │ consent checkbox gets split. That's the last │
+│                             │                   │  real legal issue on a live site             │
+├─────────────────────────────┼───────────────────┼──────────────────────────────────────────────┤
+│                             │                   │ The forms.jalcocertech.com cross-origin      │
+│ leadarchitect.org           │ (on Firebase)     │ entry point, which the Worker already        │
+│                             │                   │ supports and just needs its hostname         │
+└─────────────────────────────┴───────────────────┴──────────────────────────────────────────────┘
 
-  2. What happens to leads after capture (the biggest gap)
+2. What happens to leads after capture (the biggest gap)
 
-  - Unsubscribe and "forget me": manual today (make lead-delete). There's no suppression list, so
-    someone who unsubscribes on one site could still be emailed from another.
-  - Sending: the quarterly email would go out by hand with BCC from Proton. There are no proper
-    unsubscribe links or bounce handling.
-  - Double opt-in: subscriptions are confirmed with a single checkbox. Anyone could type someone else's
-    address. A confirmation email ("click to confirm") is best practice in the EU and the strongest
-    proof of consent. It needs a sending tool first.
-  - Backup: KV is the only copy of every lead. It's durable, but a bug or a mistaken delete would be
-    permanent.
+- Unsubscribe and "forget me": manual today (make lead-delete). There's no suppression list, so
+  someone who unsubscribes on one site could still be emailed from another.
+- Sending: the quarterly email would go out by hand with BCC from Proton. There are no proper
+  unsubscribe links or bounce handling.
+- Double opt-in: subscriptions are confirmed with a single checkbox. Anyone could type someone else's
+  address. A confirmation email ("click to confirm") is best practice in the EU and the strongest
+  proof of consent. It needs a sending tool first.
+- Backup: KV is the only copy of every lead. It's durable, but a bug or a mistaken delete would be
+  permanent.
 
-  The homelab pull job (leads-hub phase 2) solves all four:
-  - a nightly copy into SQLite (your backup);
-  - per-site subscriber lists and a shared suppression list;
-  - forget <email> across all sites;
-  - an import into listmonk, which handles double opt-in, unsubscribe links and bounces;
-  - a weekly ntfy digest.
+The homelab pull job (leads-hub phase 2) solves all four:
+- a nightly copy into SQLite (your backup);
+- per-site subscriber lists and a shared suppression list;
+- forget <email> across all sites;
+- an import into listmonk, which handles double opt-in, unsubscribe links and bounces;
+- a weekly ntfy digest.
 
-  3. Protection and monitoring
+3. Protection and monitoring
 
-  - Spam: only the hidden honeypot field today. Turnstile and a rate limit are ready to add if bots
-    appear.
-  - CI: the Worker's 21 tests only run when someone runs them. A GitHub Action could run them on every
-    push.
-  - Errors: the alert fires on new leads, but nothing alerts you if the Worker starts failing (for
-    example, KV errors).
+- Spam: only the hidden honeypot field today. Turnstile and a rate limit are ready to add if bots
+  appear.
+- CI: the Worker's 21 tests only run when someone runs them. A GitHub Action could run them on every
+  push.
+- Errors: the alert fires on new leads, but nothing alerts you if the Worker starts failing (for
+  example, KV errors).
 
-  4. Small open items from earlier
+4. Small open items from earlier
 
-  - Turn on Cloudflare Web Analytics for jalcocertech.com (its privacy page says it's used).
-  - Consulting privacy policy: replace Umami with Cloudflare Web Analytics, add OpenAI, and decide on
-    the paid call.
-  - Optional: ntfy failure alerts for the rebuild Worker.
+- Turn on Cloudflare Web Analytics for jalcocertech.com (its privacy page says it's used).
+- Consulting privacy policy: replace Umami with Cloudflare Web Analytics, add OpenAI, and decide on
+  the paid call.
+- Optional: ntfy failure alerts for the rebuild Worker.
 
-  My recommended order:
-  1. The quick legal items (webaudit checkbox, consulting policy, analytics toggle), about an hour.
-  2. leads-hub phase 2: pull job, SQLite backup, suppression list and forget, then listmonk with double
-     opt-in.
-  3. Consulting bookings and qualifier.
-  4. ebooks and webaudit, then CI and spam protection as needed.
+My recommended order:
+1. The quick legal items (webaudit checkbox, consulting policy, analytics toggle), about an hour.
+2. leads-hub phase 2: pull job, SQLite backup, suppression list and forget, then listmonk with double
+    opt-in.
+3. Consulting bookings and qualifier.
+4. ebooks and webaudit, then CI and spam protection as needed.
 
-  Shall I start with phase 2? First an ADR in core ("homelab pulls, listmonk sends, double opt-in"),
-  then the pull job in small commits, as with the Worker. You'd only need to create a read-only KV API
-  token for the homelab, and tell me where listmonk should run (your homelab with a tunnel, like ntfy).
+Shall I start with phase 2? First an ADR in core ("homelab pulls, listmonk sends, double opt-in"),
+then the pull job in small commits, as with the Worker. You'd only need to create a read-only KV API
+token for the homelab, and tell me where listmonk should run (your homelab with a tunnel, like ntfy).
+
+#### Checking Leads
+
+A new multibody enquiry came in today at 07:09 UTC (09:09 Polish time): project "2D / 3D dynamics advice", from a Gmail address.
+
+Your own tests also used Gmail, so check the address in case it's you.
+
+Read the full message, with name, email, details and the page it came from:
+  
+```sh
+#cd ~/Desktop/mbsd-framework/multi-body/web-sleek && make lead KEY=multibodysystemsdynamics.com:enquiry:2026-10-05T07:09:10.148Z:2718ee99-ab0a-472c-ab32-ef2e835d0e64
+```
+
+On the homelab the same lead appears after the next pull:
+
+```sh
+docker compose run --rm hub status    # counts only
+```
+
+The hub has no "show one lead" command yet. For reading enquiries, make leads / make lead here is the tool.
+
+The hub is the backup and the mailing engine.
+
+Replying: write from Proton (hello@jalcocertech.com) to the address in the lead. 
+
+{{< callout type="info" >}}
+It's a reply to an enquiry, not marketing, so no consent or double opt-in is involved.
+{{< /callout >}}
+
+That's the unified workflow. Every site sends its forms through the same Worker:
+
+  form on multibodysystemsdynamics.com / fossengineer.com / www.jalcocertech.com
+    → leads-forms Worker  → KV (the inbox of record)
+                          → ntfy (the notification you got)
+  homelab hub  ── every 15 min ──► pulls KV → data/leads.db (+ daily backup)
+
+  make leads on the laptop reads KV directly: the live inbox, with nothing in between. The homelab
+  keeps a copy, synced automatically every 15 minutes by the hub container's loop
+  (PULL_EVERY_SECONDS=900). You don't need to trigger anything.
+
+Folder on the homelab: the one you ran docker compose up from, which was `~/jalcocertech-core/leads-hub/hub` in your earlier output:
+
+```sh
+#ssh jalcocert@192.168.1.2
+cd ~/jalcocertech-core/leads-hub/hub
+```
+
+Check the sync:
+
+```sh
+docker compose logs --tail 5 hub
+```
+
+Look for a line like listed 13 · new 1 · … after 07:09 UTC; new 1 is today's enquiry arriving.
+
+```sh
+docker compose run --rm hub status
+```
+
+The multibodysystemsdynamics.com  enquiry  - count should be one higher than before, with last pull:
+
+To confirm that exact lead is in the copy (prints only key, kind and time, no personal data):
+
+```sh
+docker compose exec hub python -c 'import sqlite3; c = sqlite3.connect("/data/leads.db"); print(c.execute("SELECT key, kind, received_at FROM leads WHERE key LIKE \"multibodysystemsdynamics.com:enquiry:2026-10-05%\"").fetchall())'
+#docker compose exec hub sqlite3 /data/leads.db "SELECT key, kind, received_at FROM leads WHERE key LIKE 'multibodysystemsdynamics.com:enquiry:2026-10-05%';"
+```
+
+If status doesn't show it yet, either 15 minutes haven't passed since 07:09 UTC or the pull is failing; the logs will say which.
+
+A leadshub show <key> command for reading a lead on the homelab is a small add-on if you want one.
+Day to day, make lead on the laptop is enough.
+
+ that's the full enquiry in the homelab database. It's a normal
+  SQLite file on the homelab disk, mounted into the container:
+
+  ~/jalcocertech-core/leads-hub/hub/data/
+  ├── leads.db                ← the live copy (container sees it as /data/leads.db)
+  └── backups/
+      └── leads-20261005.db   ← one per day, newest 14 kept
+
+  What's inside:
+
+  ┌────────────────┬───────────────────────────────────────────────────────────────────────────────┐
+  │     Table      │                                     Holds                                     │
+  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+  │                │ One row per form submission: site, kind, email, status, received_at, plus     │
+  │ leads          │ raw, the complete JSON as the visitor sent it (name, message, project,        │
+  │                │ consent, page, UTM)                                                           │
+  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+  │ suppressions   │ Unsubscribes, stored as hashes only                                           │
+  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+  │ enrollments,   │ Drip state (empty until drips are enabled)                                    │
+  Reading an enquiry on the homelab. From the hub folder:
+
+```sh
+docker compose exec hub python -c 'import sqlite3, json; c = sqlite3.connect("/data/leads.db"); row = c.execute("SELECT raw FROM leads WHERE key LIKE \"multibodysystemsdynamics.com:enquiry:2026-10-05%\"").fetchone(); print(json.dumps(json.loads(row[0]), indent=2)) if row else print("No match found")'
+```
+  With the SQLite CLI installed on the homelab (sudo apt install sqlite3), you can open the file
+  directly:
+
+```sh
+sqlite3 data/leads.db "SELECT received_at, site, kind, email FROM leads ORDER BY received_at DESC LIMIT 10;"
+#sqlite3 -header -column data/leads.db "SELECT received_at, site, kind, email FROM leads ORDER BY received_at DESC LIMIT 10;"
+```
+
+Two things to know:
+
+- It's a copy, not the inbox. The Worker writes to KV, the hub copies from it, and deleting a row
+  here doesn't delete it in KV. Use forget for that.
+- It holds personal data, so keep it private on the homelab: chmod 700 data makes it readable only by
+  your user.
+
+Those Python one-liners are clumsy. I can add two small hub commands, leadshub leads (latest leads in
+a table) and leadshub show <key> (one lead in full), so on the homelab it's just docker compose run
+--rm hub show <key>. Want me to add them?
 
 ### SMTP Transactional
 
@@ -649,79 +766,130 @@ The drip engine (ADR 0003 step 3) is built and pushed as hub v0.2.0 (20ca693), b
   My suggestion is to start with step 1, the Mailtrap domain. Nothing customer-facing can go live
   without it.
 
-Here's what I'd write, grouped into series,
-  each answering one concrete question like your current articles do. The working material is already
-  written: the z-learnings, ADRs and READMEs.
+Here's what I'd write, grouped into series, each answering one concrete question like your current articles do. The working material is already
+written: the z-learnings, ADRs and READMEs.
 
-  Series 1: Python in the browser (MBSD app)
+Series 1: Python in the browser (MBSD app)
 
-  1. "Ship a Python library as an installable web app with Pyodide": running mbsd-core from a pinned
-     wheel, installing a wheel instead of raw source (the PackageNotFoundError trap), the service
-     worker for offline use, the install prompt, and deploying it as a Pages subdomain.
-  2. "app.domain or domain/app? Where to put a lead-magnet PWA (and SEO)": the decision we took for
-     MBSD: the site carries the SEO, the app carries the experience.
+1. "Ship a Python library as an installable web app with Pyodide": running mbsd-core from a pinned
+    wheel, installing a wheel instead of raw source (the PackageNotFoundError trap), the service
+    worker for offline use, the install prompt, and deploying it as a Pages subdomain.
+2. "app.domain or domain/app? Where to put a lead-magnet PWA (and SEO)": the decision we took for
+    MBSD: the site carries the SEO, the app carries the experience.
 
-  Series 2: Lead capture without a SaaS
+Series 2: Lead capture without a SaaS
 
-  3. "Contact forms with Cloudflare Workers KV and self-hosted ntfy alerts": the post you mentioned.
-     Form → Worker → KV → phone notification, sent only after the lead is stored and never slowing the
-     visitor. Alerts show only the email domain.
-  4. "One forms Worker for every site: same-origin routes over Pages": a zone route takes over the path
-     while Pages serves the rest of the site, so there's no CORS. Covers going from Pages Functions to
-     one Worker for Astro and Hugo sites, and forms that work without JavaScript.
-  5. "Retention as a KV TTL: privacy policy enforced by the platform": short; questions expire after 24
-     months, newsletter subscriptions don't (ADR 0002).
-  6. "Self-hosting ntfy behind a Cloudflare Tunnel, locked down": closed to anonymous access, a
-     write-only publisher user, and why the web UI login matters.
+3. "Contact forms with Cloudflare Workers KV and self-hosted ntfy alerts": the post you mentioned.
+    Form → Worker → KV → phone notification, sent only after the lead is stored and never slowing the
+    visitor. Alerts show only the email domain.
+4. "One forms Worker for every site: same-origin routes over Pages": a zone route takes over the path
+    while Pages serves the rest of the site, so there's no CORS. Covers going from Pages Functions to
+    one Worker for Astro and Hugo sites, and forms that work without JavaScript.
+5. "Retention as a KV TTL: privacy policy enforced by the platform": short; questions expire after 24
+    months, newsletter subscriptions don't (ADR 0002).
+6. "Self-hosting ntfy behind a Cloudflare Tunnel, locked down": closed to anonymous access, a
+    write-only publisher user, and why the web UI login matters.
 
-  Series 3: Your own email stack (no listmonk)
+Series 3: Your own email stack (no listmonk)
 
-  7. "Double opt-in on Cloudflare Workers with signed links": stateless HMAC tokens, why links must not
-     act on GET (mail scanners), and one-click unsubscribe per RFC 8058.
-  8. "A do-not-send list that stores no email addresses": hashed suppression entries, and why every
-     sender checks them.
-  9. "A drip engine in ~400 lines of standard-library Python": sequences as TOML files, never sending
-     twice, Mailpit vs Mailtrap behind one interface.
-  10. "The email header bug that silently breaks one-click unsubscribe": short and very searchable.
-      Python folds the long List-Unsubscribe header into =?utf-8?q?…, and Mailpit is how we caught it.
-  11. "Mailpit vs Mailtrap vs listmonk: what each is actually for": a decision post built on ADR 0003.
+7. "Double opt-in on Cloudflare Workers with signed links": stateless HMAC tokens, why links must not
+    act on GET (mail scanners), and one-click unsubscribe per RFC 8058.
+8. "A do-not-send list that stores no email addresses": hashed suppression entries, and why every
+    sender checks them.
+9. "A drip engine in ~400 lines of standard-library Python": sequences as TOML files, never sending
+    twice, Mailpit vs Mailtrap behind one interface.
+10. "The email header bug that silently breaks one-click unsubscribe": short and very searchable.
+    Python folds the long List-Unsubscribe header into =?utf-8?q?…, and Mailpit is how we caught it.
+11. "Mailpit vs Mailtrap vs listmonk: what each is actually for": a decision post built on ADR 0003.
 
-  Series 4: Homelab and Cloudflare operations
+Series 4: Homelab and Cloudflare operations
 
-  12. "A pull-only homelab: mirroring Cloudflare KV to SQLite without a tunnel": the backup copy
-      follows the retention limits too, and a safety brake stops a wrong setting from wiping it.
-  13. "Publish future-dated posts on Cloudflare Pages with a cron Worker": deploy hooks plus a
-      scheduled trigger. Hugo's buildFuture gotcha included.
-  14. "One canonical address per site: apex vs www and *.pages.dev redirects on Cloudflare": zone
-      rules, Bulk Redirects, and the redirect check script.
-  15. "Debugging notes from a week on Cloudflare": a listicle of gotchas:
-      - Pages secrets only apply after a redeploy.
-      - The www 522 came from a missing Pages custom domain.
-      - Cloudflare returns 403 to Python's default client.
-      - Docker creates bind-mount folders as root.
-      - Python in Docker hides print output in the logs.
+12. "A pull-only homelab: mirroring Cloudflare KV to SQLite without a tunnel": the backup copy
+    follows the retention limits too, and a safety brake stops a wrong setting from wiping it.
+13. "Publish future-dated posts on Cloudflare Pages with a cron Worker": deploy hooks plus a
+    scheduled trigger. Hugo's buildFuture gotcha included.
+14. "One canonical address per site: apex vs www and *.pages.dev redirects on Cloudflare": zone
+    rules, Bulk Redirects, and the redirect check script.
+15. "Debugging notes from a week on Cloudflare": a listicle of gotchas:
+    - Pages secrets only apply after a redeploy.
+    - The www 522 came from a missing Pages custom domain.
+    - Cloudflare returns 403 to Python's default client.
+    - Docker creates bind-mount folders as root.
+    - Python in Docker hides print output in the logs.
 
-  Series 5: Process (fits the growth profile)
+Series 5: Process (fits the growth profile)
 
-  16. "Architecture Decision Records for a one-person business": how the ADRs and z-learnings kept this
-      project coherent.
-  17. "GDPR-friendly lead capture for a small EU business": respond vs growth profiles, consent
-      records, and the Polish e-communications law (PKE) requiring consent for B2B email. Framed as
-      experience, not legal advice.
+16. "Architecture Decision Records for a one-person business": how the ADRs and z-learnings kept this
+    project coherent.
+17. "GDPR-friendly lead capture for a small EU business": respond vs growth profiles, consent
+    records, and the Polish e-communications law (PKE) requiring consent for B2B email. Framed as
+    experience, not legal advice.
 
-  What I'd keep out of every article
+What I'd keep out of every article
 
-  - Your account ID, KV namespace ID, tokens, ntfy usernames and topic, homelab IP, personal email
-    addresses.
-  - Anything that maps your infrastructure for an attacker. Generic placeholders instead.
+- Your account ID, KV namespace ID, tokens, ntfy usernames and topic, homelab IP, personal email
+  addresses.
+- Anything that maps your infrastructure for an attacker. Generic placeholders instead.
 
-  Suggested order
+Suggested order
 
-  1. Start with #1 (Pyodide PWA) and #3 (KV + ntfy): the two you asked for, and the most broadly
-     useful.
-  2. Then #10, short and highly searchable.
-  3. Then #7 → #9, as a 3-part email series, each linking to the next.
-  4. Each one can carry the mid-article newsletter box, so the series feeds the pipeline it describes.
+1. Start with #1 (Pyodide PWA) and #3 (KV + ntfy): the two you asked for, and the most broadly
+    useful.
+2. Then #10, short and highly searchable.
+3. Then #7 → #9, as a 3-part email series, each linking to the next.
+4. Each one can carry the mid-article newsletter box, so the series feeds the pipeline it describes.
+
+
+## Improving the workflow
+
+Adding a "what's next" section to the [overview](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/overview.md), then linking it from the indexes and committing:
+
+I've added architecture/overview.md with five Mermaid diagrams and pushed it (89f2b73). 
+
+It's linked as "Start here" from the architecture README and the root README, and GitHub renders the diagrams
+directly. I checked all five with mermaid's CLI and redrew the system map after the first render came
+out tangled.
+
+1. System context: the sites on Pages, the forms and rebuild Workers, KV, Mailtrap, the homelab
+    (ntfy, leads-hub, Mailpit), the laptop and your phone, plus who calls whom.
+2. Capturing a lead: the order is store first, answer the visitor, then alert; a failed store sends
+    no alert.
+3. Double opt-in and unsubscribe: subscribe → "check your inbox" → button page → confirm, and the
+    do-not-send entry on unsubscribe.
+4. Subscription states: pending → confirmed → unsubscribed → subscribed again.
+5. Homelab loop: pull → retention → daily backup → drips (only when enabled), with the safety brake.
+
+It also has a table of where each piece runs, a status table, and the next steps below.
+
+What's next for the multi-site lead pipeline
+
+1. Go live with email. This is the main remaining milestone.
+- You: verify news.jalcocertech.com in Mailtrap (DNS records in Cloudflare).
+- Me: a webhook so bounces and spam complaints go on the do-not-send list; the last unbuilt item in
+  ADR 0003.
+- Me: update the three privacy pages to name Mailtrap and describe double opt-in.
+- Together: delete your test leads from KV, then turn double opt-in on for all sites
+  (DOUBLE_OPT_IN_SITES = "*").
+
+2. First real drip. Review the 3 jt-welcome emails, set enroll_since to the go-live day, enable the
+sequence, and set DRIPS_ENABLED=1 on the homelab.
+
+3. Small improvements:
+- leadshub leads and leadshub show <key> on the homelab, replacing the Python one-liners.
+- "Check your inbox" in jalcocertech's newsletter box. This matters before double opt-in goes on
+  there.
+
+4. More properties:
+- consulting (Cal.com booking webhook);
+- webaudit's form;
+- ebooks;
+- forms.jalcocertech.com for leadarchitect.org, which isn't on Cloudflare.
+
+5. Later: Turnstile if spam shows up, then enrichment and a weekly summary for the growth site, once
+its privacy page covers it.
+
+Step 1 starts with you setting up the Mailtrap domain; I can build the bounce webhook and the
+privacy-page changes in the meantime. And when you've read today's MBSD enquiry, reply from Proton.
 
 ---
 

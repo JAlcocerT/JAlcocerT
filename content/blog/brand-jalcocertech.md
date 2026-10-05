@@ -3,7 +3,7 @@ title: "How is my Brand going? x Outbound System"
 date: 2026-10-09
 draft: false
 tags: ["Brand HUBs","Email marketing","Typst","JAlcocerTech-Core"]
-description: 'A brand around JAlcocerTech. With MailDev and Mailpit.'
+description: 'A multisite brand around JAlcocerTech. With MailDev and Mailpit.'
 url: 'branded-jalcocertech'
 ---
 
