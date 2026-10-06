@@ -3,19 +3,28 @@ title: "How secure is your SelfHosting"
 date: 2027-05-01T23:20:21+01:00
 draft: false
 tags: ["Selfhosted OpSec","OSINT"]
-description: '.'
+description: 'Is your homelab safe?'
 url: 'selfhosting-opsec-tools'
 ---
 
 **Tl;DR**
 
-https://fossengineer.com/selfhosting-worldmonitor-osint-dashboard/
-
+Agents are out there, secure your homelab.
 
 **Intro**
 
 * Why Im writting this post:
 * What Ive learnt with it:
+
+
+https://fossengineer.com/selfhosting-worldmonitor-osint-dashboard/
+
+
+How could i not mention:
+
+* https://github.com/lissy93/web-check
+
+> 🕵️‍♂️ All-in-one OSINT tool for analysing any website
 
 ### DNS
 

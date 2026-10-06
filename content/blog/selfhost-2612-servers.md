@@ -56,6 +56,15 @@ https://x.com/tom_doerr/status/1979894065400263086
 
 {{< tweet user="tom_doerr" id="1979894065400263086" >}}
 
+## DBs
+
+I really like services that operate without a db.
+
+If the architecture needs one, i like the portability of [sqlite](https://github.com/sqlite/sqlite), which is used inside many projects, like pocketbase or url shorteners.
+
+For OLAP workloads , you can have a look to duckdb
+
+
 
 ### PaaS
 
@@ -90,6 +99,11 @@ Glances has been a great discovery.
 
 And its written in python!
 
+https://github.com/lissy93/personal-security-checklist
+
+### Networking
+
+https://networkingtoolbox.net/
 ### DNS
 
 #### SSL x HTTPs

@@ -840,24 +840,50 @@ Suggested order
 4. Each one can carry the mid-article newsletter box, so the series feeds the pipeline it describes.
 
 
+{{< callout type="info" >}}
+Got to know about mailflare
+{{< /callout >}}
+
+* **Resend:** Mailflare has native API integration. Resend’s free tier gives you **3,000 emails/month** (100 emails/day limit).
+* **Amazon SES:** Highly scalable and cheap ($0.10 per 1,000 emails), with free promotional tiers for new AWS accounts.
+* **Other SMTP (Mailjet, SendGrid, Postmark):** If running Mailflare on Workers, provider choice is generally restricted to REST/HTTP API providers (like Resend or SES) because Cloudflare Workers cannot open arbitrary, long-lived raw TCP socket connections required for traditional port 25/587/465 SMTP unless an HTTP-to-SMTP bridge or HTTP API is used.
+
+| Goal | Inbound | Outbound Provider | Cost |
+| --- | --- | --- | --- |
+| **All-in-One Cloudflare** | Cloudflare Email Routing | Cloudflare Email Sending | **$5/month** (Workers Paid) |
+| **100% Free Setup** | Cloudflare Email Routing | Resend (Free API key) | **$0/month** (up to 3k emails/mo) |
+| **High Volume / Cheap** | Cloudflare Email Routing | AWS SES (API credentials) | **~$0.10 / 1,000 emails** |
+
+If you already pay $5/month for Workers Paid, you can run everything inside Cloudflare without touching third-party services. 
+
+If you are on the free tier, grab a free Resend API key and paste it into Mailflare's domain settings.
+
+| Feature | On Free Plan | On $5 Workers Paid Plan |
+| --- | --- | --- |
+| **R2 Free Allowance** | 10 GB storage, 1M writes, 10M reads | **Same** (Overages billed pay-as-you-go) |
+| **R2 Egress Fees** | $0 | **$0** |
+| **Cloudflare Web Analytics** | Basic traffic & Core Web Vitals | **Unchanged** (Tied to Zone plan, not Workers) |
+| **Workers Analytics Engine** | 100k writes/day, 10k reads/day | **10M writes/month, 1M reads/month** |
+
+
 ## Improving the workflow
 
 Adding a "what's next" section to the [overview](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/overview.md), then linking it from the indexes and committing:
 
 I've added architecture/overview.md with five Mermaid diagrams and pushed it (89f2b73). 
 
-It's linked as "Start here" from the architecture README and the root README, and GitHub renders the diagrams
-directly. I checked all five with mermaid's CLI and redrew the system map after the first render came
-out tangled.
+It's linked as "Start here" from the architecture README and the root README, and GitHub renders the diagrams directly. I checked all five with mermaid's CLI and redrew the system map after the first render came out tangled.
 
-1. System context: the sites on Pages, the forms and rebuild Workers, KV, Mailtrap, the homelab
-    (ntfy, leads-hub, Mailpit), the laptop and your phone, plus who calls whom.
-2. Capturing a lead: the order is store first, answer the visitor, then alert; a failed store sends
-    no alert.
-3. Double opt-in and unsubscribe: subscribe → "check your inbox" → button page → confirm, and the
-    do-not-send entry on unsubscribe.
+1. System context: the sites on Pages, the forms and rebuild Workers, KV, Mailtrap, the homelab ([ntfy](https://fossengineer.com/selfhosting-ntfy-docker/), leads-hub, [Mailpit](https://fossengineer.com/selfhosting-mailpit/)), the laptop and your phone, plus who calls whom.
+2. Capturing a lead: the order is store first, answer the visitor, then alert; a failed store sends no alert.
+3. Double opt-in and unsubscribe: subscribe → "check your inbox" → button page → confirm, and the do-not-send entry on unsubscribe.
 4. Subscription states: pending → confirmed → unsubscribed → subscribed again.
 5. Homelab loop: pull → retention → daily backup → drips (only when enabled), with the safety brake.
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/gotify/" title="Gotify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/mailpit/" title="Mailpit | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 It also has a table of where each piece runs, a status table, and the next steps below.
 
@@ -865,14 +891,12 @@ What's next for the multi-site lead pipeline
 
 1. Go live with email. This is the main remaining milestone.
 - You: verify news.jalcocertech.com in Mailtrap (DNS records in Cloudflare).
-- Me: a webhook so bounces and spam complaints go on the do-not-send list; the last unbuilt item in
-  ADR 0003.
+- Me: a webhook so bounces and spam complaints go on the do-not-send list; the last unbuilt item in ADR 0003.
 - Me: update the three privacy pages to name Mailtrap and describe double opt-in.
 - Together: delete your test leads from KV, then turn double opt-in on for all sites
   (DOUBLE_OPT_IN_SITES = "*").
 
-2. First real drip. Review the 3 jt-welcome emails, set enroll_since to the go-live day, enable the
-sequence, and set DRIPS_ENABLED=1 on the homelab.
+2. First real drip. Review the 3 jt-welcome emails, set enroll_since to the go-live day, enable the sequence, and set DRIPS_ENABLED=1 on the homelab.
 
 3. Small improvements:
 - leadshub leads and leadshub show <key> on the homelab, replacing the Python one-liners.

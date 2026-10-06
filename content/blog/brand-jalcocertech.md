@@ -2,11 +2,10 @@
 title: "How is my Brand going? x Outbound System"
 date: 2026-10-09
 draft: false
-tags: ["Brand HUBs","Email marketing","Typst","JAlcocerTech-Core"]
-description: 'A multisite brand around JAlcocerTech. With MailDev and Mailpit.'
+tags: ["JAlcocerTech-Core","Typst","RevOps x Email","Archify"]
+description: 'A multisite brand hub around JAlcocerTech. With MailDev and Mailpit.'
 url: 'branded-jalcocertech'
 ---
-
 
 **Tl;DR**
 
@@ -16,6 +15,9 @@ Hows my brand and outbound email marketing going?
 
 * Why Im writting this post: *bc if you are good, you should not be [giving for free your upside](#risk-and-opportunities)*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
+
+Ive started [telling the agents why i need](https://www.seangoedecke.com/tell-agents-the-why/) things and there has been some interesting surprises: like having my posts with draft=false into a future date to be effectively scheduled without me having to re-run Ci/Cd.
+
 
 
 ## Mail
@@ -128,10 +130,68 @@ Dont be an open solar panel, embrace the [risk and opportunities](#risk-and-oppo
 
 ### About JAlcocerTech Core
 
+As started [here](https://jalcocert.github.io/JAlcocerT/blog/entrep-saas-waiting-x-ebook/#checking-leads), you can get leads via a serverless architecture around cf kv and workers:
+
 ```sh
 git clone https://github.com/JAlcocerT/jalcocertech-core
 #git clone https://github.com/JAlcocerT/jalcocertech-services
+cd ~/jalcocertech-core/leads-hub/hub
+#docker compose logs --tail 5 hub
+sqlite3 data/leads.db "SELECT received_at, site, kind, email FROM leads ORDER BY received_at DESC LIMIT 10;"
+# docker compose exec hub python -c 'import sqlite3, json; c = sqlite3.connect("/data/leads.db"); row = c.execute("SELECT raw FROM leads WHERE key LIKE \"fossengineer.com:enquiry:2026-10-06%\"").fetchone(); print(json.dumps(json.loads(row[0]), indent=2)) if row else print("No match found")'
 ```
+
+### Lead Hub Architecture with Archify
+
+To make things clear, i got to know and applied a new skill: https://github.com/tt-a1i/archify
+
+```sh
+npx skills add tt-a1i/archify -g
+#codex --yolo
+claude update
+#npm update -g @anthropic-ai/claude-code
+##claude --dangerously-skip-permissions
+
+#Get-ChildItem -Path . -Recurse -Force -File -Filter "combine_pbip_model.py" -ErrorAction SilentlyContinue
+#uv run .\iac-fwk-test.py sql --fast
+# later, off-peak, the heavy ones on their own:
+#uv run .\iac-fwk-test.py sql --only SQL-TAG-04 SQL-TAG-07 SQL-TAG-08 SQL-CRT-01       
+#SQL-REC-01 SQL-TRI-01 --timeout 1800
+```
+
+If you like mermaid diagrams and [ever thought to be an architect](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#architect-or-principal), this is for you
+
+
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/gotify/" title="Gotify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/mailpit/" title="Mailpit | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+### Outbound mail
+
+> https://mxtoolbox.com/SuperTool.aspx?action=mx%3agerleadarchitect.com&run=toolpage#
+
+```sh
+git clone http://192.168.1.2:3034/jalcocert/leads-slubnechwile/src/commit/c2605d3ded7244d008b17c6ecc310ff36f50ca86/zzz-hormozi-actionplan-leadarchitect.md
+#http://192.168.1.2:3034/hermesagent/email-outbound-check
+```
+
+
+### About Leverage
+
+To achieve all what i want to achieve, im always looking for better workflows as my time allocation is maxed out already
+
+Few months ago, using coding agents with [long plans.md](https://developers.openai.com/cookbook/articles/codex_exec_plans), skills, [plugins](https://agent-plugins.org/)...
+
+Agentic cli tools like herdr that wrap codex cli / claude code / hermes agents have helped me ship like never before.
+
+Using the T3 code and https://github.com/ilysenko/codex-desktop-linux for this
+
+https://github.com/generalaction/emdash
+
+But whats next?
+
 
 ---
 
@@ -282,3 +342,33 @@ graph LR
     style D fill:#f8d7da,stroke:#dc3545,stroke-width:1px
     style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
 ```
+
+
+#### Skills Im using
+
+Coming from [here](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#skills-im-using)
+
+1. Archify
+2. Zettel blog notes, weekly work summarizer
+3. huashu design
+4. blog post editor, image gen
+
+### Web audits x checks
+
+
+There are no excuses to have a website A+ for the planet: https://www.websitecarbon.com/website/fossengineer-com/
+
+* https://github.com/lissy93/web-check
+
+> 🕵️‍♂️ All-in-one OSINT tool for analysing any website
+
+localhost:6160 or via curl to your local endpoint (you wont be able to do curl to the hosted we-check.xyz)
+
+> > Lissy93 have a lot other interesting OSS tools! 
+
+https://github.com/lissy93/awesome-privacy
+https://awesome-privacy.xyz/all/#media-photo-management
+https://privacytools.io/trending/today
+https://www.bitdoze.com/self-hosted/#level-up
+https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/
+https://selfh.st/apps/

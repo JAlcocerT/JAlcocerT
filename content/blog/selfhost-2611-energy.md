@@ -152,6 +152,7 @@ See [a panel I-V](https://github.com/JAlcocerT/poc/tree/main/physics-electronics
 {{< callout type="info" >}}
 See [a panel I-V](https://github.com/JAlcocerT/poc/tree/main/physics-electronics/solar-panel) with the esp32
 {{< /callout >}}
+
 ### Charging via CC-CV
 
 
@@ -173,8 +174,22 @@ MPPT chooses the panel point, but [CC/CV charges the battery safely](https://git
 
 
 
-
 ### Blackout Prep work
+
+
+### HomeLab Updates 1126
+
+{{< callout type="info" >}}
+Despite this section being selfhost center, i cant deny the nice tech and building in the edge with cf: we can get linkshorteners, [git repos](https://github.com/deathbyknowledge/ripgit), mails... to work with cf d1/r2/kv/workers.
+{{< /callout >}}
+
+
+```sh
+docker builder prune -af
+docker image prune -f
+
+```
+
 
 ---
 
@@ -196,3 +211,43 @@ https://www.youtube.com/watch?v=5JfPzvcm0E8
 -->
 
 {{< youtube "5JfPzvcm0E8" >}}
+
+### Interesting Edge Tools
+
+1. [Ripgit](https://github.com/deathbyknowledge/ripgit) which you might like if youve seen [forgejo](https://fossengineer.com/selfhosting-forgejo/)
+
+2. For mail you have mailflare and also tempik. For local testing with docker I liked [mailpit](https://fossengineer.com/selfhosting-mailpit/)
+
+3. If you are BiP with a roadmap: feedlog can be interesting and also allows to be deployed via Docker locally. For a kanban seeder is also cool!
+
+> Having a feedback section + roadmap (kanban) + changelog make sense!
+
+> > A [client board](https://seederpm.xyz/docs/features/client-board/), [client requests](https://seederpm.xyz/docs/features/client-requests/) and [daily planner](https://seederpm.xyz/docs/features/daily-planner/) make so much sense
+
+4. Last year I tinkered a lot with authentication: Logto, Firebase auth, even with pocketbase BaaS that i managed to combine with streamlit and with astro static sites with some cf workers connection. Turns out that all that have been simplified further wuth projects like [cloudflare base](https://github.com/cloudflarebase/cloudflarebase) which is **the open source firebase for CF** and uses better-auth internally.
+
+They [claim to be cheaper](https://cloudflarebase.com/#pricing) than firebase and supabase
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/pocketbase" title="PocketBase | Config 🐋 ↗" >}}
+{{< /cards >}}
+
+
+5. If you have been crazy building websites without CMS, maybe [monolith](https://github.com/one-ea/Monolith) or [emdash](https://github.com/emdash-cms/emdash) or [emdash](https://github.com/emdash-cms/emdash) inspire you to make a decent `margin-cms`
+
+WordPress was built for a different era. Running WordPress today means managing PHP alongside JavaScript, layering caches to get acceptable performance, and knowing that 96% of WordPress security vulnerabilities come from plugins. EmDash is what WordPress would look like if you started from scratch with today's tools.
+
+Built for agents. EmDash publishes agent skills that teach coding assistants its APIs, a CLI that lets agents manage content and schema programmatically, and a built-in MCP server so AI tools like Claude and ChatGPT can interact with your site directly.
+
+Runs anywhere. EmDash uses portable abstractions at every layer -- Kysely for SQL, S3 API for storage -- that work with SQLite, D1, Turso, PostgreSQL, R2, AWS S3, or local files. It runs best on Cloudflare, but it's not locked to it.
+
+> multi-platform import (WordPress/Ghost/Hexo/Hugo/Jekyll/Halo)
+
+{{< callout type="warning" >}}
+Emdash uses SSR/server output, monolith uses another SSR/api so that when you edit in CMS its saved to the DB then next refresh loads the new content from the db (inside monolith the db stores .md though) - None of them are SSG with a git based workflow were you edit .md - commit - ci/cd - astro built - static html deploy
+{{< /callout >}}
+
+
+{{< callout type="warning" >}}
+When portability, static output, rollback and githistory matter just go for a  gitbased cms
+{{< /callout >}}

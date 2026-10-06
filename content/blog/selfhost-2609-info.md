@@ -460,15 +460,15 @@ You can have [a look to IPTVs](https://forocoches.com/foro/showthread.php?t=1074
 
 [Navidrome](https://github.com/JAlcocerT/Home-Lab/tree/main/navidrome), subsonic or [gonic](https://github.com/sentriz/gonic) are OSS **selfhostable music servers** that I tinkered with [some time back](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#more-stuff-lately).
 
-![Gonic music server](/blog_img/selfh/HomeLab/gonic.png)
+![NaviDrome UI](/blog_img/selfh/HomeLab/navidrome.png)
 
-You need clients:
+You need music clients:
 
 1. https://github.com/Fingel/gelly
 
 > A native music client for Jellyfin and Navidrome/Subsonic
 
-2.  Sonixd
+2.  [Sonixd](https://github.com/jeffvli/sonixd)
 
 ```sh
 winget install sonixd

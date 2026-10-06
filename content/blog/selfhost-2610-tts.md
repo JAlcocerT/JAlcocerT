@@ -132,6 +132,15 @@ sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud 
 #lazydocker
 ```
 
+To do some clean up:
+
+```sh
+comm -23 \
+    <(docker network ls --format '{{.Name}}' | sort -u) \
+    <(docker ps --format '{{.Networks}}' | tr ',' '\n' | sort -u)
+#docker network prune
+```
+
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
@@ -149,6 +158,22 @@ Been also working with notifications in the homelab lately:
 {{< /cards >}}
 
 > https://github.com/Aetherinox/ntfy-desktop#linux-1 and connection with uptime kuma (mqtt too?)
+
+Oh, and with [oss link shorteners](https://fossengineer.com/selfhosted-open-source-url-shorteners/): [snapp](https://github.com/urania-dev/snapp) was interesting, dub too feature heavy, [kutt](https://github.com/thedevs-network/kutt), shlink, yourls and [ha.mr](https://github.com/p2r3/ha.mr) whose creator has a very [interesting video about how link shorteners work](https://www.youtube.com/watch?v=TOr1Vvji6jA)
+
+> But finding [Sink](https://github.com/miantiao-me/Sink) and [Slite](https://github.com/miantiao-me/Slite) that are a good match if you already use CF KV and D1
+
+The video presents a novel approach to link shortening and QR code generation that eliminates the need for a database, ensuring links remain recoverable even if the service goes down. The method focuses on optimizing link encoding and compression, resulting in potentially smaller QR codes and links without ads or registration.
+Key points
+
+    Traditional link shorteners store full links in a database, raising privacy concerns and potential link loss if the service shuts down.
+    The proposed "link compressor" removes redundant parts of URLs, significantly reducing their length without losing essential information.
+    Encoding techniques are employed to represent common URL components with fewer bits, allowing for more efficient storage.
+    The system uses a fixed dictionary for compression, optimizing the encoding of frequently used characters in URLs.
+    The QR code generation process is improved by using the alphanumeric character set, resulting in smaller and more efficient QR codes compared to existing tools.
+    The project is experimental and not intended as a commercial product, but it demonstrates the potential for more efficient link management.
+
+> Once you are done, you make sure that all links in your website work with `https://github.com/linkchecker/linkchecker`
 
 These are also useful:
 

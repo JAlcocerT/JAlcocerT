@@ -1433,7 +1433,7 @@ But they come down to the same.
 
 > > The idea here is: if the quality of the free is so good, how will it be the quality of the paid consulting or DFY services?
 
-2. 
+2. Have added the latest tech-talks to `https://consulting.jalcocertech.com/presentations/techtalk-from-iot-to-big-data-engineering/ppt`
 
 ### Leeeeads
 
@@ -1445,7 +1445,10 @@ It's all about having a proper leads pipeline:
 
 ```sh
 cd ./fossengineer/
-cd ./wait #https://github.com/JAlcocerT/poc/tree/main/genbi-energy-solutions/waitlist
+#https://github.com/JAlcocerT/poc/tree/main/genbi-energy-solutions/waitlist
+cd ./poc/tree/main/genbi-energy-solutions/waitlist
+#https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub
+#cd ./jalcocertech-core/
 ```
 
 After you get them, you enrich them as I [applied to myself here](https://jalcocert.github.io/JAlcocerT/what-do-i-do/)
@@ -1458,13 +1461,12 @@ I got to know about **cloudflare workers KV** while improving *Independent engin
 
 ![alt text](/blog_img/mechanics/cf-dns-exp.png)
 
-Once i configured the CNAMES:
+Once i configured the `CNAMES`:
 
 ```sh
 dig multibodysystemsdynamics.com any
 #ping app.multibodysystemsdynamics.com #app-mbsd.pages.dev
 ```
-
 
 [Some time ago](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/#launching-multibodysystemsdynamics) i made https://multibodysystemdynamics.pages.dev/
 
@@ -1916,6 +1918,10 @@ This setup is working quite nicely thanks to skills:
 
 Ive made some updates: `https://fossengineer.com/contact/` and `https://fossengineer.com/privacy/`
 
+{{< callout type="info" >}}
+I made some cron job to allow me to publish `draft:false` for future days without having to commit to initiate the CI/CD - Full static + schedules working
+{{< /callout >}}
+
 
 What's on you:
 
@@ -1926,7 +1932,7 @@ What's on you:
   newsletter). Send from hello@teco.com with recipients in BCC, so subscribers don't see each
   other's addresses.
 
-CF Workers free plan gives: 100,000 requests per day + Up to 10 ms CPU time per request + Community support
+**CF Workers free plan gives**: 100,000 requests per day + Up to 10 ms CPU time per request + Community support
 
 ---
 
@@ -2101,10 +2107,6 @@ https://youtu.be/K-eXcT1XgdE -->
 
 If you are still working in a `9-5` while working in your free time to make your business, make sure to have a **clear picture** of what [your game is](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/my-game.md) and a [playbook to execute](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-frameworks/playbook.md).
 
-
-#### Skills Im using
-
-https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#skills-im-using
 
 ---
 

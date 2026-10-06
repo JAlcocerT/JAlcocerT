@@ -7,6 +7,13 @@ description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
 
+[Some readers](https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/) ar egetting tired of llm slop, [particularly the ai assisted summaries](https://map.simonsarris.com/p/resist-summary) some, also [encourage to ignore workslop](https://www.seangoedecke.com/how-to-protect-yourself-from-workslop/)
+
+I really appreciate when i find ppl [genuinely writting](https://map.simonsarris.com/p/fujifilm-x100-vs-leica-q-vs-ricoh) and [commenting about learnings/mistakes](https://map.simonsarris.com/p/designing-a-new-old-home-mistakes)
+
+> I also liked the concept of ToC with *Designing a New Old Home series, Table of Contents* and the one of paid subscribers at the end of the series :)
+
+
 
 There are many [possibilities around 2.4ghz](https://fossengineer.com/2-4ghz-radio-protocols/#the-short-version), depending on how you encode info
 
@@ -888,6 +895,8 @@ I was not expecting to:
 
 You dont need a new book, you need to [apply prior book harder](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks)
 
+The [opposite of summary](https://map.simonsarris.com/p/resist-summary) is attention to detail.
+
 Trading all risk/volatility is selling the tail probability of bigger success
 
 > How do many still complain about no upside when they have traded fully the upside for a *'risk free'* promise?
@@ -963,7 +972,7 @@ There are questions that dont have a single reply:
 3. **What the world needs:** Problems you can help solve or value you can provide to society.
 4. **What you can be paid for:** The market demand or career paths that provide financial stability.
 
-* Whats freedom?: *Possibility of acting or the absence of obstacles*? *[are you free](https://jalcocert.github.io/JAlcocerT/poc-101/#are-you-free)?*
+* Whats freedom?: *Possibility of acting or the absence of obstacles*? *[are you free](https://jalcocert.github.io/JAlcocerT/poc-101/#are-you-free)?* is [moderm freedom](https://lukesmith.xyz/articles/modern-freedom-means-being-a-slave-to-impulses/) different?
   * https://aegis-freedom.pages.dev/
   * https://option-wheel.pages.dev/
 

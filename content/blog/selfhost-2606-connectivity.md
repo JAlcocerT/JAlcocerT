@@ -25,7 +25,9 @@ With all the learnings from a `MV1 Compal` and a `NME5410` cable modems:
 ```sh
 #git pull
 #http://192.168.1.2:3034/hermesagent/tr471-checks
+#http://192.168.1.2:3034/hermesagent/tr471-checks/src/branch/main/results.md
 #http://192.168.1.2:3034/hermesagent/selfhosted-connectivity
+#http://192.168.1.2:3034/hermesagent/selfhosted-connectivity/src/branch/main/features.md
 #http://192.168.1.2:3034/hermesagent/pi-connectivity
 #https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
 make devices-remember ID=192.168.1.12 NAME=laptop TAGS=trusted
