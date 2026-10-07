@@ -139,6 +139,8 @@ cd ~/jalcocertech-core/leads-hub/hub
 #docker compose logs --tail 5 hub
 sqlite3 data/leads.db "SELECT received_at, site, kind, email FROM leads ORDER BY received_at DESC LIMIT 10;"
 # docker compose exec hub python -c 'import sqlite3, json; c = sqlite3.connect("/data/leads.db"); row = c.execute("SELECT raw FROM leads WHERE key LIKE \"fossengineer.com:enquiry:2026-10-06%\"").fetchone(); print(json.dumps(json.loads(row[0]), indent=2)) if row else print("No match found")'
+
+sqlite3 -readonly -json data/leads.db "SELECT received_at, site, kind, email, json(raw) AS raw FROM leads ORDER BY received_at DESC LIMIT 10;"
 ```
 
 ### Lead Hub Architecture with Archify
@@ -192,6 +194,9 @@ https://github.com/generalaction/emdash
 
 But whats next?
 
+How to bring memory for agents?
+
+Will it be hermes, [agentmemory](https://github.com/rohitg00/agentmemory)
 
 ---
 

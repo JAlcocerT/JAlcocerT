@@ -2,7 +2,7 @@
 title: "Selfhosted Notes Tools"
 date: 2027-04-05
 draft: false
-tags: ["Zetlekasten","Knowledge Management"]
+tags: ["Zetlekasten","Knowledge Management","PWA","Cloudflare KV"]
 description: 'A look to F/OSS KB'
 url: 'daily-notes-with-oss'
 ---

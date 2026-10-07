@@ -313,6 +313,7 @@ On the homelab the same lead appears after the next pull:
 
 ```sh
 docker compose run --rm hub status    # counts only
+#sqlite3 -readonly -json data/leads.db "SELECT received_at, site, kind, email, json(raw) AS raw FROM leads ORDER BY received_at DESC LIMIT 10;"
 ```
 
 The hub has no "show one lead" command yet. For reading enquiries, make leads / make lead here is the tool.
@@ -932,8 +933,55 @@ Want this implemented for your ideas?
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
 {{< /cards >}}
 
-
 ---
+
+## FAQ
+<!-- 
+<https://www.youtube.com/watch?v=5psZ6LVbJfA> 
+<https://github.com/jmlcas/gogs/tree/main>
+-->
+
+### What are some Free FireBase Alternatives?
+
+* Firebase: A Google-backed platform, Firebase offers a comprehensive suite of tools for web and mobile application development, including real-time databases, authentication, analytics, and hosting. It's well-integrated with other Google services and is known for its scalability and ease of use.
+
+* PocketBase: A newer, lightweight alternative, PocketBase focuses on providing a simple backend solution with features like real-time databases, file storage, and user authentication. It's designed for ease of setup and use, targeting smaller projects or those requiring a more straightforward approach.
+
+* Appwrite: An open-source Backend-as-a-Service (BaaS) solution, Appwrite offers a variety of backend services such as databases, authentication, storage, and real-time capabilities. It aims to be a Firebase alternative with a focus on self-hosting, privacy, and customizability.
+
+* You can be interested to [**Self-Host AppWrite**](https://appwrite.io/)
+    * Appwrite is an open-source platform for building applications at any scale, using your preferred programming languages and tools: Appwrite's open-source platform lets you add Auth, DBs, Functions and Storage to your product and build any application at any scale, own your data, and use your preferred coding languages and tools.
+    * BSD License https://github.com/appwrite/appwrite
+
+* **PocketBase** - F/OSS Real Time Backend in one file <https://github.com/pocketbase/pocketbase>
+    * <https://github.com/pocketbase/pocketbase> MIT
+
+* AppSmith - <https://docs.appsmith.com/>
+    * <https://docs.appsmith.com/getting-started/setup/installation-guides/docker>
+
+
+```yml
+version: "3"
+services:
+   appsmith:
+     image: index.docker.io/appsmith/appsmith-ee
+     container_name: appsmith
+     ports:
+         - "80:80"
+         - "443:443"
+     volumes:
+         - ./stacks:/appsmith-stacks
+     restart: unless-stopped
+```
+
+Appsmith is a low-code development platform designed for the rapid creation of web applications. It leverages a reactive binding architecture and an MVC-like separation, focusing on widgets, datasources, queries, and JavaScript. Widgets in Appsmith are visual components representing the 'views', while datasources encapsulate connections to databases and APIs. Queries and embedded JavaScript act as 'controllers', managing the flow of data between the views and models. Appsmith's framework is inherently reactive, automatically updating the application based on changes in its state, which simplifies the development process and enhances user experience efficiency.
+
+
+
+## Why Supabase?
+
+Firebase but F/OSS!
+
 
 <!-- https://github.com/appwrite/appwrite
 https://appwrite.io/docs/advanced/self-hosting
@@ -1016,8 +1064,6 @@ Supabase offers a very compelling alternative to Firebase, covering many of the 
 * **Ecosystem:** Firebase has a larger ecosystem of tools and integrations.
 * **Complexity:** Self-hosting Supabase can be more complex than using the hosted Firebase platform.
 
-### Conclusion
-
 Supabase is a strong contender in the **backend-as-a-service** (BaaS) space.
 
 Its open-source nature, PostgreSQL database, and self-hosting capabilities make it a very attractive option for developers who want more control and flexibility.  While Firebase has a more mature ecosystem and might be easier to get started with, Supabase is quickly gaining ground and is a serious alternative to consider for your next project.  The choice ultimately depends on your specific needs and priorities. If you are looking for an open-source, flexible and powerful backend, Supabase is definitely worth exploring.
@@ -1060,13 +1106,6 @@ Same as postgres.
 
 > Postgres with GPUs for ML/AI apps.
 
-
-
-## Why Supabase?
-
-Firebase but F/OSS
-
-
 ### Algolia and ElasticSearch
 
 Supabase Overview
@@ -1106,46 +1145,6 @@ Choosing Between Algolia and Elasticsearch with Supabase
   - Suitable for projects requiring complex search functionalities and where technical setup is feasible.
 
 
-## FAQ
-<!-- 
-<https://www.youtube.com/watch?v=5psZ6LVbJfA> 
-<https://github.com/jmlcas/gogs/tree/main>
--->
-
-### What are some Free FireBase Alternatives?
-
-* Firebase: A Google-backed platform, Firebase offers a comprehensive suite of tools for web and mobile application development, including real-time databases, authentication, analytics, and hosting. It's well-integrated with other Google services and is known for its scalability and ease of use.
-
-* PocketBase: A newer, lightweight alternative, PocketBase focuses on providing a simple backend solution with features like real-time databases, file storage, and user authentication. It's designed for ease of setup and use, targeting smaller projects or those requiring a more straightforward approach.
-
-* Appwrite: An open-source Backend-as-a-Service (BaaS) solution, Appwrite offers a variety of backend services such as databases, authentication, storage, and real-time capabilities. It aims to be a Firebase alternative with a focus on self-hosting, privacy, and customizability.
-
-* You can be interested to [**Self-Host AppWrite**](https://appwrite.io/)
-    * Appwrite is an open-source platform for building applications at any scale, using your preferred programming languages and tools: Appwrite's open-source platform lets you add Auth, DBs, Functions and Storage to your product and build any application at any scale, own your data, and use your preferred coding languages and tools.
-    * BSD License https://github.com/appwrite/appwrite
-
-* **PocketBase** - F/OSS Real Time Backend in one file <https://github.com/pocketbase/pocketbase>
-    * <https://github.com/pocketbase/pocketbase> MIT
-
-* AppSmith - <https://docs.appsmith.com/>
-    * <https://docs.appsmith.com/getting-started/setup/installation-guides/docker>
-
-
-```yml
-version: "3"
-services:
-   appsmith:
-     image: index.docker.io/appsmith/appsmith-ee
-     container_name: appsmith
-     ports:
-         - "80:80"
-         - "443:443"
-     volumes:
-         - ./stacks:/appsmith-stacks
-     restart: unless-stopped
-```
-
-Appsmith is a low-code development platform designed for the rapid creation of web applications. It leverages a reactive binding architecture and an MVC-like separation, focusing on widgets, datasources, queries, and JavaScript. Widgets in Appsmith are visual components representing the 'views', while datasources encapsulate connections to databases and APIs. Queries and embedded JavaScript act as 'controllers', managing the flow of data between the views and models. Appsmith's framework is inherently reactive, automatically updating the application based on changes in its state, which simplifies the development process and enhances user experience efficiency.
 
 ## f/oss low code vs no code
 

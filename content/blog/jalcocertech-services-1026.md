@@ -1449,6 +1449,7 @@ cd ./fossengineer/
 cd ./poc/tree/main/genbi-energy-solutions/waitlist
 #https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub
 #cd ./jalcocertech-core/
+sqlite3 -readonly -json data/leads.db "SELECT received_at, site, kind, email, json(raw) AS raw FROM leads ORDER BY received_at DESC LIMIT 10;"
 ```
 
 After you get them, you enrich them as I [applied to myself here](https://jalcocert.github.io/JAlcocerT/what-do-i-do/)

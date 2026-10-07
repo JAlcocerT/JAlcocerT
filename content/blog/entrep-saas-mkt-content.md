@@ -16,6 +16,13 @@ Proving that volume + quality data animations is possible with hyperframes.
 * Why Im writting this post: *bc this year i started making some f1 shorts with matplotlib, then tried remotionJS and hyperframes, but didnt make a checkpoint on how this can apply to my brand*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+```sh
+git clone https://github.com/JAlcocerT/jalcocertech-core
+#git clone https://github.com/JAlcocerT/jalcocertech-services
+cd ~/jalcocertech-core/leads-hub/hub
+sqlite3 -readonly -json data/leads.db "SELECT received_at, site, kind, email, json(raw) AS raw FROM leads ORDER BY received_at DESC LIMIT 10;"
+```
+
 Lately im not only creating `z-learnings.md` after I try a new workflow.
 
 I get done a `.html` that distills interactively all the trade-offs in the topic.

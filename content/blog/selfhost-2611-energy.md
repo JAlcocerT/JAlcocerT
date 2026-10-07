@@ -176,6 +176,8 @@ MPPT chooses the panel point, but [CC/CV charges the battery safely](https://git
 
 ### Blackout Prep work
 
+Get to know your [consumptions data](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#energy-consumption-data-points)
+
 
 ### HomeLab Updates 1126
 
