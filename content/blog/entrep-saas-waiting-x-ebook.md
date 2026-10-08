@@ -867,7 +867,7 @@ If you are on the free tier, grab a free Resend API key and paste it into Mailfl
 | **Workers Analytics Engine** | 100k writes/day, 10k reads/day | **10M writes/month, 1M reads/month** |
 
 
-## Improving the workflow
+### Improving the workflow
 
 Adding a "what's next" section to the [overview](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/overview.md), then linking it from the indexes and committing:
 
@@ -1095,12 +1095,11 @@ sh get-docker.sh && docker version
 {{< /dropdown >}}
 
 
-## Conclusions
+Conclusions
 
 Supabase can also be a Vector DB
 
-Same as postgres.
-
+Same as postgres!
 
 * https://github.com/postgresml/postgresml
 
@@ -1144,8 +1143,6 @@ Choosing Between Algolia and Elasticsearch with Supabase
   - Offers more control and customization in search configurations.
   - Suitable for projects requiring complex search functionalities and where technical setup is feasible.
 
-
-
 ## f/oss low code vs no code
 
 * https://www.appsmith.com/
@@ -1153,46 +1150,42 @@ https://github.com/appsmithorg/appsmith
 
 https://www.youtube.com/watch?v=hDzgO2FB_ms
 
-### Learnings from mbsd
+### Learnings from mbsd x leads
 
-The new doc is z-learnings/07-leads-backends.md, and it's linked from the folder's README.md.
+The new doc is `z-learnings/07-leads-backends.md`, and it's linked from the folder's README.md.
 
-  What it covers:
-  - A side-by-side table of the five options across 15 criteria, including setup effort, ongoing
-    maintenance, cost, uptime, admin view, notifications, surveys and branching, data ownership and
-    privacy-policy impact. The options:
-    - KV (current);
-    - Formbricks Cloud (your v1);
-    - PocketBase;
-    - Supabase;
-    - FastAPI + SQLite.
-  - The Formbricks column describes your actual v1 setup:
-    - the 5-question qualifier with three endings;
-    - the two action classes;
-    - the Python provisioning CLI;
-    - the dashboard steps that were never finished (routing logic, notification destinations);
-    - the plan limit you hit on external-URL buttons.
-  - Two ways to connect any backend to the static site:
-    - the browser posts straight to the service;
-    - or /api/contact stores the lead in KV first, then forwards it. This is the recommended one,
-      because a homelab outage can then never lose a lead.
-  - Homelab notes:
-    - expose it through a Cloudflare Tunnel instead of open router ports;
-    - accept requests only from the site's function, using a shared secret;
-    - back up the SQLite file;
-    - plan for home power or internet outages.
+What it covers:
 
-  Verdict:
-  - Now: KV plus a notification webhook. Zero maintenance, and it's already live.
-  - If you want a lead inbox with statuses and notes: keep KV as the safe inbox and also forward to
-    PocketBase on the homelab. It gives the best interface for the least effort.
-  - Formbricks only if you need surveys with branching or scoring again, not for basic capture.
-  - Supabase or PocketBase once the app needs accounts, saved projects or a gated report. Leads and app
-    data can then share one backend.
-  - FastAPI + SQLite only if the API grows well beyond a form.
+- A side-by-side table of the five options across 15 criteria, including setup effort, ongoing  maintenance, cost, uptime, admin view, notifications, surveys and branching, data ownership and
+  privacy-policy impact. The options:
+  - KV (current);
+  - Formbricks Cloud (your v1);
+  - PocketBase;
+  - Supabase;
+  - FastAPI + SQLite.
+- The Formbricks column describes your actual v1 setup:
+  - the 5-question qualifier with three endings;
+  - the two action classes;
+  - the Python provisioning CLI;
+  - the dashboard steps that were never finished (routing logic, notification destinations);
+  - the plan limit you hit on external-URL buttons.
+- Two ways to connect any backend to the static site:
+  - the browser posts straight to the service;
+  - or /api/contact stores the lead in KV first, then forwards it. This is the recommended one, because a homelab outage can then never lose a lead.
+- Homelab notes:
+  - expose it through a Cloudflare Tunnel instead of open router ports;
+  - accept requests only from the site's function, using a shared secret;
+  - back up the SQLite file;
+  - plan for home power or internet outages.
 
-  The doc ends with a checklist for switching: add the forward, update the privacy policy's list of
-  processors, store the secret, and confirm with make leads-test.
+Verdict:
+- Now: KV plus a notification webhook. Zero maintenance, and it's already live.
+- If you want a lead inbox with statuses and notes: keep KV as the safe inbox and also forward to PocketBase on the homelab. It gives the best interface for the least effort.
+- Formbricks only if you need surveys with branching or scoring again, not for basic capture.
+- Supabase or PocketBase once the app needs accounts, saved projects or a gated report. Leads and app data can then share one backend.
+- FastAPI + SQLite only if the API grows well beyond a form.
+
+The doc ends with a checklist for switching: add the forward, update the privacy policy's list of processors, store the secret, and confirm with make leads-test.
 
 ### OSS Notifications
 

@@ -2080,8 +2080,6 @@ The move is to operate cleanly inside it:
 
 ### Case Studies
 
-#### Electronic Design
-
 #### Clarity of Execution
 
 Working in D&A?

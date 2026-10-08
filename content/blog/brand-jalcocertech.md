@@ -2,8 +2,8 @@
 title: "How is my Brand going? x Outbound System"
 date: 2026-10-09
 draft: false
-tags: ["JAlcocerTech-Core","Typst","RevOps x Email","Archify"]
-description: 'A multisite brand hub around JAlcocerTech. With MailDev and Mailpit.'
+tags: ["JAlcocerTech-Core","Typst","RevOps x Email","Archify",'EayP']
+description: 'A multi-site brand hub around JAlcocerTech. With MailDev and Mailpit.'
 url: 'branded-jalcocertech'
 ---
 
@@ -377,3 +377,5 @@ https://privacytools.io/trending/today
 https://www.bitdoze.com/self-hosted/#level-up
 https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/
 https://selfh.st/apps/
+
+### EayP x EmDash x Monolith

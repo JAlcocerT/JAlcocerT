@@ -725,6 +725,7 @@ Yep, the smaller 3W pump also works nicely:
 
 Battery Voltage Monitoring (Voltage Divider): Add a high-value resistive divider (e.g., $100\text{ k}\Omega$ / $27\text{ k}\Omega$) from the 12V rail to an ESP32 ADC pin so your software knows when the battery is too low to run the pump
 
+{{< youtube "1qZDohQySAQ" >}}
 
 {{< callout type="info" >}}
 These are just about kirchof [as a voltage divider](https://github.com/JAlcocerT/poc/tree/main/physics-electronics/voltage-divider) works with 2 resistor in serios, having one of them much more ohms than the other
