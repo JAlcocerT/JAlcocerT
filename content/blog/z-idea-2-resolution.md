@@ -787,7 +787,9 @@ Think of it this way: Jenkins is the **builder**, and Argo CD is the **delivery 
 
 Argo CD is a **declarative, GitOps continuous delivery (CD) tool** specifically built for Kubernetes.
 
-The core idea is simple: You define what your application environment should look like (the "Desired State") in a Git repository. Argo CD monitors that repository and compares it to what is actually running in your Kubernetes cluster (the "Live State").
+The core idea is simple: You define what your application environment should look like (the "Desired State") in a Git repository. 
+
+Argo CD monitors that repository and compares it to what is actually running in your Kubernetes cluster (the "Live State").
 
 * **Syncing:** If you change your code in Git, Argo CD automatically updates Kubernetes to match.
 * **Self-Healing:** If someone accidentally deletes a component in Kubernetes, Argo CD notices the "drift" and automatically recreates it to match Git.
@@ -796,7 +798,9 @@ Does it relate to **Jenkins?**
 
 Yes, but they aren't competitors; they are usually **teammates**.
 
-While Jenkins is a "do-it-all" automation engine, it wasn't originally built for the cloud-native, containerized world of Kubernetes. Here is how they relate:
+While Jenkins is a "do-it-all" automation engine, it wasn't originally built for the cloud-native, containerized world of Kubernetes. 
+
+Here is how they relate:
 
 1. The Hand-off (The CI/CD Pipeline)
 
@@ -820,7 +824,6 @@ In a typical workflow, Jenkins handles the **Continuous Integration (CI)** and A
 > **The Bottom Line:** Use Jenkins to turn your code into an image, and use Argo CD to put that image into production.
 
 > > Both can be helpful for HFAD which relate with DORA metrics!!
-
 
 A great article: You rolled out coding agents. Engineers are faster. PRs flood in.
 
@@ -863,11 +866,10 @@ This setup was not enough:
     {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/imgproxy" title="N8N | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Lately I got to know:
+Lately I got to know a OSS ig clone that you can selfhost:
 
 ```sh
 git clone https://github.com/JAlcocerT/foldergram
-
 ```
 
 Some people still have my free time to get this kind of things running:
@@ -877,7 +879,7 @@ Some people still have my free time to get this kind of things running:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/filebrowser" title="Filebrowser | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Yep, im cooking some upgrades: https://ebooks.jalcocertech.com/books/servers/
+Yep, im cooking some upgrades: `https://ebooks.jalcocertech.com/books/servers/`
 
 ```sh
 git clone https://github.com/JAlcocerT/Home-Lab

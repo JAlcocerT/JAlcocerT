@@ -122,6 +122,11 @@ Monitor your pages anytime with:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami Web Analytics | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+Or your services & wifi
+
+https://github.com/henrygd/beszel/releases/tag/v0.21.0
+https://beszel.dev/guide/wifi
+
 ### BackUps
 
 #### Your Videos and Media
@@ -197,6 +202,18 @@ https://github.com/WGDashboard/WGDashboard
 https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/#vps-to-deploy-a-wireguard-server
 
 https://account.proton.me/u/3/vpn/WireGuard
+
+For travel: *Dawarich, Trek, GeoPulse, Wanderer, Reitti...*
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="AdventureLog | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="AirTrail | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+The [wanderer mobile app](https://github.com/open-wanderer/wanderer/releases/tag/v0.21.0) for Android and iOS is now officially in public beta to [superseed komoot](https://wanderer.to/use/plugins/#komoot-plugin) and [plan routes](https://wanderer.to/app/find-trails/)
+
+![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
+
 
 
 #### Start Services

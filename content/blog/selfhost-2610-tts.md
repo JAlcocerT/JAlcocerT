@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-10
+date: 2026-10-16
 draft: false
 tags: ["Kokoro","VoiceBox","SunoAI x music"]
 description: 'A homelab that speaks.'
@@ -117,6 +117,10 @@ Tinkered a bit with [Technitium](https://fossengineer.com/selfhosting-technitium
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/technitium" title="Technitium | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+{{< callout type="warning" >}}
+Mind the contamination that live data might provide to the LLMs.
+{{< /callout >}}
+
 Also, got to know about mDNS - *which can be useful to ship the automatic watering setup with the esp32 available at a `pump.local` domain*
 
 Both the pi and x300 are working right now without local SSLs `192.168.1.18` `192.168.1.2`
@@ -127,7 +131,7 @@ Regarding **useful CLIs**: [herdr](https://fossengineer.com/herdr-terminal-agent
 herdr #code --yolo | opencode | claude 
 #ncdu /
 # sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent prowlarr
-sudo docker compose -f 2604_docker-compose.yml up -d uptime....pihole nextcloud ncdb.......uptimekuma pocketbase termix lunalytics...littlyx jellyfin
+sudo docker compose -f 2610_docker-compose.yml up -d termix nextcloud ncdb sftpgo forgejo forgejo-forgejo-db-1 ntfy mailpit uptimekuma maintenant technitium pocketbase jellyfin qbittorrent prowlarr umami lunalytics littlyx dawarich_app dawarich_db
 #docker port iot-dashboard-v2
 #lazydocker
 ```
@@ -218,6 +222,30 @@ Having a look to **commento** to check that there is no spam [from time to time]
 
 
 * https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#traefik-x-x300-homelab
+* https://fossengineer.com/selfhosting-traefik/
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tiny-auth" title="Tiny Auth Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+For media: `https://selfh.st/apps/?tag=Photos`
+
+https://github.com/paulomarques742/imago
+https://imago.742studio.eu/
+
+https://foldergram.github.io/?ref=selfh.st
+> Point it at your folders, browse everything through a fast feed-style interface. No cloud, no accounts — just your files and SQLite.
+
+https://github.com/open-noodle/gallery a fork of immich :)
+
+> Some time back i tried immich but i didnt like that my folder order is not respected and also neither need the heavy face recognition
+
+High performance self-hosted photo and video management solution.
+
+https://github.com/storytold?ref=selfh.st
+
+https://github.com/andrii-kryvoviaz/slink
 
 ---
 

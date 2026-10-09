@@ -43,7 +43,7 @@ Openrouteservice: Free Open Source Geo-services API
 {{< youtube "iW_bSdwom2c" >}}
 
 
-Which sounds like some how to reitti that we covered [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#gpx-is-great)
+Which sounds like *some how to* **reitti** that we covered [here](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025/#gpx-is-great)
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/reitti/" title="Reitti | Docker Config 🐋 ↗" >}}

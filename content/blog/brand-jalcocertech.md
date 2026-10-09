@@ -378,4 +378,18 @@ https://www.bitdoze.com/self-hosted/#level-up
 https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/
 https://selfh.st/apps/
 
-### EayP x EmDash x Monolith
+### EayP v4 x EmDash x Monolith
+
+Coming from [eayp v3 here](https://jalcocert.github.io/JAlcocerT/diy-webs-via-paas/#testing-the-web-audits-with-eayp-v3) and [here](https://jalcocert.github.io/JAlcocerT/take-ideas-to-their-digital-resolution/#eayp-v3)
+
+0. Interesting Recipes
+
+How could I not offer something very special to entreagujaypunto: *to capture all those recipes*
+
+```sh
+#git clone https://github.com/JAlcocerT/foldergram
+```
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/foldergram" title="Foldergram | Docker Config 🐋 ↗" >}}
+{{< /cards >}}

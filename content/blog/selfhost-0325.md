@@ -225,13 +225,15 @@ It provides a very *similar* experience to Google Photos.
 
 ![Immich Map Feature](/blog_img/selfh/Photo/immich-map.png)
 
+The ui/x is lovely:
+
 ![Immich UI](/blog_img/selfh/Photo/immich.png)
 
 5. When you create a new user, they will be prompted to change their password during the first login
 
 
 {{< callout type="info" >}}
-Alternatively, see [these photo tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/): like PiGallery or Nextcloud
+Alternatively, see [these photo tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/): *like PiGallery or Nextcloud*
 {{< /callout >}}
 
 ---

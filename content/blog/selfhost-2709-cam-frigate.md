@@ -198,6 +198,8 @@ Here are the commands I used and what each told us.
 
 ### Integrating Frigate with Home Assistant
 
+https://github.com/oleost/VisionState
+
 <https://www.scrypted.app/>
 <https://homebridge.io/>
 <https://www.home-assistant.io/>

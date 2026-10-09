@@ -1203,6 +1203,49 @@ make pump-schedules
 
 > `http://192.168.1.2:3038/?range=90d`
 
+/C:/Users/j--e-/Desktop/poc/iot-esp-water/esp32-wifi/wifi_manager_pump/wifi_manager_pump.ino:48
+C:/Users/j--e-/Desktop/poc/physics-electronics/voltage-divider/scripts-microcontrollers/firmware-esp32/esp32-dht11-mqtt-emqx-battery-monitor.cpp
+C:\Users\j--e-\Desktop\poc\iot-esp32-mppt\ina226-CN3722
+
+
+  mosquitto_sub -h 192.168.1.2 -p 1883 -t 'esp32/mppt/#' -v
+  mosquitto_sub -h 192.168.1.2 -p 1883 -t 'esp32/#' -v                  
+
+
+  - DHT11 DATA → D4 / GPIO4
+  - Voltage-divider midpoint → D34 / GPIO34                             
+  - Pump driver → GPIO23                                                
+  - INA226 SDA → GPIO21                                                 
+  - INA226 SCL → GPIO22                                                 
+  - INA226 VCC → 3V3                                                    
+  - INA226 GND → GND                                                    
+  - Shared panel/divider ground                                         
+  - INA226 address 0x40 and 0.1 Ω shunt 
+
+esp32/mppt/status partial-measurement
+esp32/mppt/panel/voltage 10.278
+esp32/mppt/charge/voltage 0.000
+esp32/mppt/charge/current -0.005
+esp32/mppt/charge/power -0.000
+esp32/mppt/status partial-measurement
+
+make upload PORT=COM7 WIFI_SSID="Piszymsiu" WIFI_PASSWORD="whateveryourwifipwdis123"
+
+{{< youtube "x1tMh0gp9_Y" >}}
+
+sqlite3 -header -csv -readonly /home/jalcocert/poc/iot-dashboard-v2/data/readings.sqlite \
+"SELECT datetime(received_ms / 1000, 'unixepoch', 'localtime') AS time_local,
+    value AS panel_voltage_v
+  FROM readings
+  WHERE topic = 'esp32/panel/voltage'
+    AND received_ms >= unixepoch('now', 'localtime', 'start of day', 'utc') * 1000
+    AND received_ms <  unixepoch('now', 'localtime', 'start of day', '+1 day', 'utc') * 1000
+  ORDER BY received_ms ASC;" > "panel_voltage_$(date +%F).csv"
+
+scp jalcocert@192.168.1.2:/home/jalcocert/panel_voltage_2026-10-09.csv .
+
+<!-- https://youtube.com/shorts/x1tMh0gp9_Y -->
+
 {{< callout type="info" >}}
 I have not put [an offer around this](https://jalcocert.github.io/JAlcocerT/iot-crop-intelligence/#offer-configuration) *just yet*
 {{< /callout >}}

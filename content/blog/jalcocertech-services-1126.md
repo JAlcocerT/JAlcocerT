@@ -18,7 +18,7 @@ Shipping is [the foundation](https://www.seangoedecke.com/shipping-is-the-founda
 
 ## BiP
 
-1. Astro SSG x Edge capabilities within Cloudflare offerings: *scheduled posts via CI/CD, posts with auth, contact form, newsletter, GDPR compliant, cms x pwa x offline optional*
+1. Astro SSG x Edge capabilities within Cloudflare offerings: *scheduled posts via CI/CD, posts with auth, contact form, newsletter, GDPR compliant, webp & mdx support, cms x pwa x offline optional*
 
 2. Auth: better-auth with transactional emails setup in CF and google signin configured
 

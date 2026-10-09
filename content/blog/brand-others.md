@@ -18,13 +18,3 @@ url: 'creating-brands'
 ---
 
 ## FAQ
-
-### Eayp
-
-0. Interesting Recipes
-
-How could I not offer something very special to entreagujaypunto: *to capture all those recipes*
-
-```sh
-#eayp v3
-```
