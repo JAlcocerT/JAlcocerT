@@ -1,8 +1,8 @@
 ---
 title: "How is my Brand going? x Outbound System"
-date: 2026-10-09
+date: 2026-10-10
 draft: false
-tags: ["JAlcocerTech-Core","Typst","RevOps x Email","Archify",'EayP']
+tags: ["JAlcocerTech-Core","Typst","RevOps x Email","Archify",'EayP',"VSL"]
 description: 'A multi-site brand hub around JAlcocerTech. With MailDev and Mailpit.'
 url: 'branded-jalcocertech'
 ---
@@ -360,8 +360,7 @@ Coming from [here](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-u
 
 ### Web audits x checks
 
-
-There are no excuses to have a website A+ for the planet: https://www.websitecarbon.com/website/fossengineer-com/
+There are no excuses to have a **website A+ for the planet**: https://www.websitecarbon.com/website/fossengineer-com/
 
 * https://github.com/lissy93/web-check
 
@@ -377,6 +376,54 @@ https://privacytools.io/trending/today
 https://www.bitdoze.com/self-hosted/#level-up
 https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/
 https://selfh.st/apps/
+
+
+#### Web Best practices
+
+{{% details title="The ones I captured this year so far... 🚀" closed="true" %}}
+
+I scanned all 145 non-draft blog files dated 2026. I found 13 strong matches.
+
+Posts containing the guidance itself
+
+| Date | Post | Relevant material |
+|---|---|---|
+| Jan 2 | [A boilerplate to create Landings for lead generation](https://jalcocert.github.io/JAlcocerT/diy-landing-boilerplate/#what-should-a-landing-have) | Landing-page anatomy, ATF, social proof, components, conversion, Astro and the DIY boilerplate. |
+| Jan 31 | [How to analyze Business Opportunities](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/) | Reusable "cool and modern UI" prompt, development plan, content files and technical stack. |
+| Feb 8 | [How to (Dis)qualify Business Opportunities](https://jalcocert.github.io/JAlcocerT/ideas-to-execution/#creating-with-ai) | AI-assisted website creation prompt plus architecture, UX/UI and review templates. |
+| Feb 23 | [Are agents and DAOs the inevitable future?](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-with-dao/#for-vibe-coders) | Full **Cinematic Landing Page Builder** prompt and fixed design system. |
+| Mar 17 | [If I would have known - Web Apps edition](https://jalcocert.github.io/JAlcocerT/learnt-while-building-web-apps/#collecting-cool-prompts-for-blueprints) | "Collecting cool prompts for BluePrints"; points toward the PBi/PoC collections. |
+| Mar 30 | [From Idea to Resolution](https://jalcocert.github.io/JAlcocerT/take-ideas-to-their-digital-resolution/#my-favourite-prompts) | "My favourite prompts," base landing prompt, full cinematic prompt and landing-page essentials. |
+| May 1 | [How to PoC around Brands](https://jalcocert.github.io/JAlcocerT/poc-103/) | Embedded landing-page/agentic-engineering starter prompt. |
+| May 3 | [How to PoC - Arbitrage with AI](https://jalcocert.github.io/JAlcocerT/poc-104/) | Another copy of the same reusable website-building prompt. |
+
+Posts linking directly to stored GitHub guidance
+
+| Date | Post | GitHub material |
+|---|---|---|
+| Jan 21 | [Improving a micro-SaaS Conversion](https://jalcocert.github.io/JAlcocerT/iterating-and-improving-a-micro-saas/) | [`poc_shopify/landing/z-atf-changes.md`](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-atf-changes.md) for effective above-the-fold design. |
+| Feb 2 | [The insights for a profitable Shopify](https://jalcocert.github.io/JAlcocerT/custom-analytics-for-shopify/) | Landing [tech stack](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/tech-stack.md), [UI forms](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-form-tech.md), [form psychology](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-form-psychology.md), [ATF changes](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-atf-changes.md) and [business strategy](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/business-strategy.md). |
+| Mar 7 | [Learning with/from agents](https://jalcocert.github.io/JAlcocerT/ideas-to-execution-after-learning/) | Links to [`PBi/z-prompt-collection.md`](https://github.com/JAlcocerT/PBi/tree/main/z-prompt-collection.md); broader UI/prompt collection. |
+| Mar 27 | [OSS-AI Generated Videos with Remotion](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/) | Links directly to [`btc-powerlaw/tech-stack.md`](https://github.com/JAlcocerT/btc-powerlaw/blob/master/tech-stack.md) and [`GEMINI.md`](https://github.com/JAlcocerT/btc-powerlaw/blob/master/GEMINI.md). |
+| Apr 2 | [OOP 101 for Engineers](https://jalcocert.github.io/JAlcocerT/object-oriented-programming-101/) | References the [`btc-powerlaw`](https://github.com/JAlcocerT/btc-powerlaw) UI prompt and using `GEMINI.md` for a cinematic educational site. |
+| May 2 | [Launching a MBSD framework?](https://jalcocert.github.io/JAlcocerT/design-centric-mbsd/) | Links directly to [`Slider-Crank/prompt-blueprint.md`](https://github.com/JAlcocerT/Slider-Crank/blob/main/prompt-blueprint.md). |
+
+Additional backlinks to the central guidance
+
+These do not contain or directly link to the GitHub prompt files, but they point readers back to the central prompt or landing-practices sections:
+
+- [Closing the code to impact gap](https://jalcocert.github.io/JAlcocerT/how-is-for-agents-what-and-why-for-you/)
+- [Improving a HomeLab Privacy with OSS DNS](https://jalcocert.github.io/JAlcocerT/private-dns-with-docker/)
+- [F1 Data Animations](https://jalcocert.github.io/JAlcocerT/f1-data-animated/)
+- [Just Data Animations x Kilo Code](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/)
+- [From PoC to OutReach](https://jalcocert.github.io/JAlcocerT/poc-107/)
+
+The most natural canonical source is currently **Are agents and DAOs the inevitable future?** for visual design and **DIY Landing Boilerplate** for conversion/architecture. 
+
+Several later posts duplicate the full prompt, so centralizing it in one repository file would reduce drift.
+
+
+{{% /details %}}
 
 ### EayP v4 x EmDash x Monolith
 

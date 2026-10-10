@@ -563,8 +563,9 @@ Your Next Step!!!
 
 Choose **ONE** of these puddles (Software Houses are usually the easiest to start with since they speak your "tech" language).
 
+The **Logistics/TSL (Transport, Shipping, Logistics)** puddle in Poland is a "gold mine" because it is a massive industry that traditionally relies on manual sales, but currently faces razor-thin margins and high competition.
 
-The **Logistics/TSL (Transport, Shipping, Logistics)** puddle in Poland is a "gold mine" because it is a massive industry that traditionally relies on manual sales, but currently faces razor-thin margins and high competition. Using Apify/Firecrawl to give them a technological edge is a perfect **Grand Slam Offer**.
+Using Apify/Firecrawl to give them a technological edge is a perfect **Grand Slam Offer**.
 
 Here is how you structure it based on the Hormozi concepts we've discussed:
 
@@ -579,7 +580,7 @@ Here is how you structure it based on the Hormozi concepts we've discussed:
 
 **The Lead Magnet (The "Reveal the Problem" Magnet)**
 
-Instead of generic leads, you give them **Market Intelligence**.
+Instead of generic leads, you give them **Market Intelligence**:
 
 * **The Magnet:** "The Manufacturer Shipping Audit."
 * **The Value:** Use Apify to scrape data on manufacturers in Germany/Benelux that just expanded their warehouse capacity or opened new production lines.

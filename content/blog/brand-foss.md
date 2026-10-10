@@ -96,6 +96,7 @@ I'd keep **JAMstack** to avoid Mythos and similar coming inside my homelab :)
 ```sh
 dig fossengineer.com any
 #ping fossengineer.com
+whois fossengineer.com| grep -i -E "(creation|created|registered)"
 ```
 
 Not [with codex cli](https://github.com/JAlcocerT/docs-testing/tree/master) this time, but directly with IDE:

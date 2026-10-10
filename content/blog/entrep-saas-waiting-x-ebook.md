@@ -2,7 +2,7 @@
 title: "Ways to get Leads around Cloudflare KV vs workers"
 date: 2026-10-04T15:20:21+01:00
 draft: false
-tags: ["RoadMap26","gotify vs ntfy","Supabase Auth vs PB","Mailtrap"]
+tags: ["RoadMap26","gotify vs ntfy","Supabase Auth vs PB","Mailtrap x MailJet"]
 description: 'How hard is to make waiting list that capture leads?'
 ---
 
@@ -299,7 +299,7 @@ token for the homelab, and tell me where listmonk should run (your homelab with 
 
 #### Checking Leads
 
-A new multibody enquiry came in today at 07:09 UTC (09:09 Polish time): project "2D / 3D dynamics advice", from a Gmail address.
+A new multibody enquiry came in today at 07:09 UTC (09:09 CET time): project "2D / 3D dynamics advice", from a Gmail address.
 
 Your own tests also used Gmail, so check the address in case it's you.
 
@@ -809,8 +809,10 @@ Series 4: Homelab and Cloudflare operations
     follows the retention limits too, and a safety brake stops a wrong setting from wiping it.
 13. "Publish future-dated posts on Cloudflare Pages with a cron Worker": deploy hooks plus a
     scheduled trigger. Hugo's buildFuture gotcha included.
+
 14. "One canonical address per site: apex vs www and *.pages.dev redirects on Cloudflare": zone
     rules, Bulk Redirects, and the redirect check script.
+
 15. "Debugging notes from a week on Cloudflare": a listicle of gotchas:
     - Pages secrets only apply after a redeploy.
     - The www 522 came from a missing Pages custom domain.
@@ -821,10 +823,8 @@ Series 4: Homelab and Cloudflare operations
 Series 5: Process (fits the growth profile)
 
 16. "Architecture Decision Records for a one-person business": how the ADRs and z-learnings kept this
-    project coherent.
-17. "GDPR-friendly lead capture for a small EU business": respond vs growth profiles, consent
-    records, and the Polish e-communications law (PKE) requiring consent for B2B email. Framed as
-    experience, not legal advice.
+  project coherent.
+17. "GDPR-friendly lead capture for a small EU business": respond vs growth profiles, consent records, and the CET e-communications law (PKE) requiring consent for B2B email. Framed as experience, not legal advice.
 
 What I'd keep out of every article
 
@@ -866,6 +866,907 @@ If you are on the free tier, grab a free Resend API key and paste it into Mailfl
 | **Cloudflare Web Analytics** | Basic traffic & Core Web Vitals | **Unchanged** (Tied to Zone plan, not Workers) |
 | **Workers Analytics Engine** | 100k writes/day, 10k reads/day | **10M writes/month, 1M reads/month** |
 
+> I tried with mailjet: https://app.mailjet.com/account/sender
+
+Wrangler reads wrangler.toml there to know which Worker gets the secret (leads-forms).
+
+  The API key is already stored from your earlier message, so only the secret is missing:
+
+  cd ~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/worker
+  npx wrangler secret put MAILJET_SECRET_KEY
+
+  It shows a prompt; paste the Secret key from Mailjet and press Enter. It should say ✨ Success!
+  Uploaded secret MAILJET_SECRET_KEY.
+
+  If you'd rather redo both, or regenerated the pair in Mailjet:
+  npx wrangler secret put MAILJET_API_KEY       # paste the API key
+  npx wrangler secret put MAILJET_SECRET_KEY    # paste the Secret key
+
+  Running it as ! cd … && npx wrangler secret put MAILJET_SECRET_KEY here works too, as long as the
+  prompt accepts your paste. Your own terminal is the safest option.
+
+
+  To get the email, either:
+  - subscribe again with the address that's already in the test list, or
+  - add the other address too. The secret replaces the whole list, so include both, separated by a
+    comma:
+  cd ~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/worker
+  npx wrangler secret put DOI_TEST_EMAILS      # first@…,second@…
+
+  On the local .env question: yes, and it's useful. The hub can call Mailjet directly from the laptop,
+  which checks your keys and the news.jalcocertech.com sender independently of the Worker:
+  1. Create `~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/hub/.env` (git-ignored), with permissions `chmod 600 .env`:
+  SENDER=mailjet
+  MAILJET_API_KEY=…
+  MAILJET_SECRET_KEY=…
+  SENDER_EMAIL=noreply@news.jalcocertech.com
+
+2. Tell me, and I'll run leadshub mail-test <your address>. It sends one plain test email through Mailjet.
+
+If Mailjet rejects the sender or the keys, you'll see its exact error message.
+
+The Worker doesn't need a local file: its keys live in Cloudflare (wrangler secret put).
+
+.dev.vars would only matter for running the Worker locally with wrangler dev, which we don't do.
+
+
+The confirmation flow works on the real sending domain, through Mailjet. Subscribe on the site, Mailjet emails from noreply@news.jalcocertech.com, you confirm on the page, and KV shows the lead as confirmed.
+
+It's recorded in the docs and pushed (f06e607). Roadmap items 1.2c and 1.3 are ticked, and z-learnings has the Mailjet lessons:
+- the ownership record has to sit under news;
+- held emails are released once the domain validates;
+- click tracking is off;
+- a 200 response from Mailjet isn't proof of success.
+
+What you just did also sets up the drip test.
+
+You're now a confirmed jalcocertech subscriber, confirmed today, and `jt-welcome` enrolls anyone confirmed from 2026-10-10.
+
+Once drips are on at the homelab, you'll be the first person to get the welcome series.
+
+On the homelab (roadmap 1.9, 2.3 and 2.4), in `~/jalcocertech-core/leads-hub/hub`:
+
+1. Run git pull.
+2. Copy token_secret into secrets/ (the scp command from earlier).
+
+```sh
+# 1. Create directory and restrict directory permissions
+ssh jalcocert@192.168.1.2 \
+  'mkdir -p ~/jalcocertech-core/leads-hub/hub/secrets && chmod 700 ~/jalcocertech-core/leads-hub/hub/secrets'
+
+# 2. Copy the token file
+scp ~/.config/leads-hub/token_secret \
+  jalcocert@192.168.1.2:~/jalcocertech-core/leads-hub/hub/secrets/token_secret
+
+# 3. Lock down file permissions and verify
+ssh jalcocert@192.168.1.2 \
+  'chmod 600 ~/jalcocertech-core/leads-hub/hub/secrets/token_secret && ls -la ~/jalcocertech-core/leads-hub/hub/secrets/'
+```
+
+3. In .env, set: `cd jalcocertech-core/leads-hub/hub`
+
+DRIPS_ENABLED=1
+SENDER=mailjet
+MAILJET_API_KEY=…
+MAILJET_SECRET_KEY=…
+SENDER_EMAIL=noreply@news.jalcocertech.com
+
+  Step 3, also on the laptop: this sends your Mailjet lines plus the drip settings to the homelab's
+  .env. Any old lines with those names are removed first, so nothing is duplicated:
+  cd ~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/hub
+  { grep -E '^(MAILJET_API_KEY|MAILJET_SECRET_KEY)=' .env; echo 'SENDER=mailjet'; echo
+  'SENDER_EMAIL=noreply@news.jalcocertech.com'; echo 'DRIPS_ENABLED=1'; } \
+  | ssh jalcocert@192.168.1.2 'cd ~/jalcocertech-core/leads-hub/hub && sed -i -E
+  "/^(MAILJET_API_KEY|MAILJET_SECRET_KEY|SENDER|SENDER_EMAIL|DRIPS_ENABLED)=/d" .env && cat >> .env &&
+  chmod 600 .env && grep -oE "^[A-Z_]+=" .env'
+  The last part prints only the variable names now in the homelab .env, never the values. Check that
+  MAILJET_API_KEY=, MAILJET_SECRET_KEY=, SENDER=, SENDER_EMAIL= and DRIPS_ENABLED= appear once each,
+  next to your existing CF_* lines.
+
+```sh
+cd ~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/hub
+
+{
+  grep -E '^(MAILJET_API_KEY|MAILJET_SECRET_KEY)=' .env
+  echo 'SENDER=mailjet'
+  echo 'SENDER_EMAIL=noreply@news.jalcocertech.com'
+  echo 'DRIPS_ENABLED=1'
+} | ssh jalcocert@192.168.1.2 '
+  cd ~/jalcocertech-core/leads-hub/hub || exit 1
+  touch .env
+  # Ensure file ends with newline before appending
+  [ -s .env ] && [ -n "$(tail -c1 .env)" ] && echo "" >> .env
+  # Strip existing entries
+  sed -i -E "/^(MAILJET_API_KEY|MAILJET_SECRET_KEY|SENDER|SENDER_EMAIL|DRIPS_ENABLED)=/d" .env
+  # Append new stream
+  cat >> .env
+  chmod 600 .env
+  # Verification: show keys only
+  grep -oE "^[A-Z_]+=" .env
+'
+```
+
+4. Run `docker compose up -d --build`
+
+Within 15 minutes you should get "Welcome to JAlcocerTech" in Gmail. "Where to start" follows on day 3 and "What are you building?" on day 7. docker compose run --rm hub drip-status should show the first one as sent.
+
+If you'd rather see it in Mailpit first, keep `SENDER=smtp` for one cycle.
+
+It's sent once only, so it won't then go out again through Mailjet.
+
+Left before double opt-in goes on for every visitor:
+- 1.4: a webhook so Mailjet's bounce, spam and blocked events go on the do-not-send list. I can build this next.
+- 1.5: the three privacy pages name Mailjet and describe double opt-in.
+- 1.7: delete your test leads from KV.
+- 1.8: set DOUBLE_OPT_IN_SITES = "*".
+
+
+> `docker compose logs hub` helped validate
+
+The Mailjet event webhook (roadmap 1.4) is live in Worker v0.6.0 and pushed (d15e272). 
+
+It does nothing until you paste its URL into Mailjet: `https://app.mailjet.com/account/triggers`
+
+  What it does:
+  - It listens at `https://www.jalcocertech.com/api/forms/mailjet-events?key=….`
+  - Permanent failures go on the do-not-send list, stored as a hash, never the address: hard bounces,
+    spam complaints, recipient blocks and Mailjet unsubscribes. Soft bounces (full mailbox, temporary
+    errors) are ignored.
+  - Spam complaints also alert ntfy, naming only the email domain.
+  - The key keeps others out. A wrong key gets 403. Anything sent with the right key gets 200, even
+    malformed data, so Mailjet doesn't keep retrying for 24 hours.
+
+  Tested: 38 tests pass. Live, a harmless "sent" event with the real key got 200 and suppressed
+  nothing, and a wrong key got 403.
+
+  Your step (roadmap 1.4b):
+  1. Show the URL. It's in a private file on the laptop because it contains the key: `cat ~/.config/leads-hub/mailjet_webhook_url`
+  2. In Mailjet, go to Account settings → Event notifications (webhooks).
+  3. Paste the URL for these 4 events: Bounce, Spam, Blocked, Unsub. Leave Sent, Open and Click empty;
+     tracking is off anyway.
+  4. If Mailjet offers grouped events, either setting works; the endpoint handles both.
+
+  If Mailjet has a "test" button, using it is safe: test events have no real address to suppress.
+
+ It has one URL field per event type: paste the same URL into four of them
+  and tick Group events. Mailjet recommends grouping, and the endpoint handles grouped events.
+
+  1. Get the URL, on the laptop:
+  cat ~/.config/leads-hub/mailjet_webhook_url
+  It looks like https://www.jalcocertech.com/api/forms/mailjet-events?key=… with a long random key.
+  Copy the whole line.
+
+  2. On Mailjet's Event API page:
+
+  ┌───────────────────┬───────────────┬──────────────┐
+  │       Event       │      URL      │ Group events │
+  ├───────────────────┼───────────────┼──────────────┤
+  │ Bounce            │ paste the URL │ ✅ tick      │
+  ├───────────────────┼───────────────┼──────────────┤
+  │ Spam              │ paste the URL │ ✅ tick      │
+  ├───────────────────┼───────────────┼──────────────┤
+  │ Blocked           │ paste the URL │ ✅ tick      │
+  ├───────────────────┼───────────────┼──────────────┤
+  │ Unsub             │ paste the URL │ ✅ tick      │
+  ├───────────────────┼───────────────┼──────────────┤
+  │ Sent, Open, Click │ leave empty   │ —            │
+  └───────────────────┴───────────────┴──────────────┘
+
+  3. Save. If Mailjet shows a test button or checks the URL when you save, it should succeed, because
+  the endpoint answers 200.
+
+  Paste the URL only into Mailjet, not here: anyone with that key could add addresses to your
+  do-not-send list. If it ever leaks, I can generate a new key in a minute.
+
+  Tell me once it's saved, and whether we go on with 1.7 (deleting the test leads) and 1.8 (double
+  opt-in on for every site).
+
+The webhook is connected:
+
+  - Both Mailjet tests arrived: two POSTs from Mailjet's servers, each answered with 200, so the URL
+    and key are right.
+  - Nothing was suppressed: KV has 0 do-not-send entries. Mailjet's test payloads don't contain a real
+    address, so there was nothing to block or clean up.
+  - No ntfy alert is correct: alerts only fire for a real spam complaint from a real address.
+
+  When a real bounce or complaint happens, that address goes on the do-not-send list within seconds,
+  and both the Worker and the hub's drips skip it from then on. Roadmap 1.4b is ticked (76782e8), and I
+  deleted the log file.
+
+
+Roadmap 1.7 is done: I deleted the 12 test leads from KV and recorded it (bf47bfc).
+
+On the homelab, run this once, when you see the "pull failed" alert or before: `cd ~/jalcocertech-core/leads-hub/hub && docker compose run --rm hub pull --force`
+
+  Last step, 1.8: double opt-in for every visitor. It means:
+  - Newsletter subscribers on fossengineer and jalcocertech, and jalcocertech enquiries with "updates"
+    ticked, get the Mailjet confirmation email. Only confirmed ones receive newsletters or drips.
+  - MBSD doesn't change: it has no newsletter.
+  - Plain enquiries don't change on any site.
+
+  It's one line in wrangler.toml plus a deploy. Then a real test on each site with your test address:
+  - fossengineer: the quarterly box.
+  - jalcocertech: the article box and the footer with "updates" ticked.
+
+  DOI_TEST_EMAILS becomes redundant after that, and we can remove it.
+
+  Should I turn it on?
+
+✻ Baked for 55s · done 10:20
+
+● Background command "cd ~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/worker && timeout 600 npx
+wrangler tail leads-forms --format json > /tmp/claude-1000/-home-jalcocert-Desktop-mbsd-framework/01ff
+748a-bc78-4036-83a7-51fe1d24ec0d/scratchpad/mj-events.jsonl 2>&1" failed with exit code 124
+
+● Bash(rm -f /tmp/claude-1000/-home-jalcocert-Desktop-mbsd-framework/01ff748a-bc78-4036-83a7-51fe1d24ec
+      0d/scratchpad/mj-events.jsonl; ls /tmp/claude-1000/-home-jalcoce…)
+  ⎿  0
+
+● The log watcher from the webhook test stopped after its 10-minute limit, as set, and no log files are
+  left on disk.
+
+  I'm waiting on your answer about 1.8: should I turn double opt-in on for every visitor?
+
+They're the two real subscriptions that check double opt-in now works for every visitor, not just
+  your test address. Use your Gmail for both.
+
+  Test 1: fossengineer newsletter
+  1. Go to https://fossengineer.com/contact/, or any post with the quarterly-email box.
+  2. Enter your Gmail, tick the consent box, and subscribe.
+  3. ✅ The box should say: "Almost there — check your inbox and confirm your subscription."
+  4. ✅ Gmail should get "Confirm your subscription to FOSS Engineer" from FOSS Engineer
+     <noreply@news.jalcocertech.com>.
+  5. Open the link and press Confirm my subscription.
+
+  Test 2: jalcocertech footer, an enquiry plus updates
+  1. Go to https://www.jalcocertech.com/ and scroll to the footer form.
+  2. Enter your Gmail, type "test" as the problem, and tick "also send me occasional updates".
+  3. ✅ It should say: "Thanks — received. I'll reply by email. To get updates too, confirm via the
+     email I just sent."
+  4. ✅ Gmail should get "Confirm your subscription to JAlcocerTech".
+  5. Open the link and confirm.
+
+  Then tell me what you saw at each ✅. I'll check that both leads are confirmed in KV.
+
+
+● The email side of the lead pipeline is fully live (f355d37). Every subscription on every site now
+  goes through double opt-in, sent by Mailjet from news.jalcocertech.com, with the do-not-send list fed
+  by unsubscribes, bounces and complaints. Roadmap section 1 is closed, and ADR 0003 is marked
+  "Implemented, live for all sites".
+
+  Running on its own now:
+  - Forms on 3 sites go to KV, with an ntfy alert to your phone.
+  - Subscriptions: a confirmation email, a confirm page, then confirmed. Unconfirmed sign-ups are
+    deleted after 30 days.
+  - Homelab: pulls every 15 minutes, keeps daily backups, and runs the jt-welcome drips through
+    Mailjet.
+  - Bounces and spam complaints go on the do-not-send list automatically.
+  - Privacy pages match what the code does.
+
+  Coming up, in date order:
+  - ~10/13 and ~10/17: emails 2 and 3 of the welcome series should reach your Gmail (roadmap 2.5).
+  - After 10/17 (1.10): delete your 3 remaining test subscriptions. I can list and delete them, as we
+    did today.
+
+  For you now: reply to the real enquiries. The jos…@gmail person has written 5 times (MBSD and
+  fossengineer), and there's the mail.ru one. Read them with make lead KEY=… or docker compose run --rm
+  hub leads on the homelab.
+
+  Next, when you want:
+  - 5.1, Turnstile: spam has started, with 3 lead-gen pitches in 3 days. Cloudflare's free CAPTCHA
+    alternative would stop it before it reaches KV and your phone.
+  - 3.3: a weekly ntfy summary from the hub (new leads per site, subscribers, drips sent).
+  - Section 4: more properties: consulting, webaudit, ebooks.
+
+ADR 0004 is written and both parts are built and pushed (0aad757 in core, 05a4c0d in multi-body).
+
+  ADR 0004 (architecture/adr/0004-spam-handling-without-challenges.md) records three decisions:
+  1. Blocklist now. SPAM_BLOCKLIST lives in wrangler.toml and starts with blastleadgeneration.com.
+  2. Turnstile deferred. It would add third-party JavaScript to every page with a form, which is every
+     article. It would break the forms that work without JavaScript, and it wouldn't stop hand-written
+     pitches anyway. We revisit only on an automated flood, and even then a per-IP rate limit comes
+     first.
+  3. Weekly ntfy summary with counts only, never addresses or messages.
+
+  Worker v0.7.0, live (42 tests): a blocklisted sender gets the normal "thanks" reply. Behind the
+  scenes the submission is stored for 30 days as spam:…: no ntfy alert, no confirmation email, and it
+  never becomes a lead. Adding another spam source is one line plus a deploy.
+
+  Hub v0.4.0 (41 tests): spam entries are counted, never copied as leads. A new leadshub digest command
+  builds the summary, and the run loop sends it every Monday at 07:00 UTC, once per week, at low
+  priority. A typical summary:
+  Leads weekly - 2026-W43
+  New leads: 2
+    fossengineer.com enquiry: 1
+    jalcocertech.com newsletter: 1
+  Confirmed subscriptions: 1 (jalcocertech.com 1)
+  Unsubscribes: 0
+  Drips sent: 1 (jt-welcome 1)
+  Do-not-send list: 0 (+0)
+  Spam filtered (last 30 days): 0
+  Pulls: 672 (0 failed)
+
+  On the homelab, soon:
+```sh
+cd ~/jalcocertech-core/leads-hub/hub
+git pull && docker compose up -d --build
+docker compose run --rm hub digest            # preview the summary
+```
+  - Update before the next spam arrives. The old hub version would copy a spam: entry as a lead. It
+    cleans itself up after the update, but it's tidier not to.
+  - The weekly summary needs ntfy credentials: NTFY_URL and NTFY_TOKEN in the homelab .env. If you
+    didn't get the "pull failed" alert after deleting the test leads, they're probably missing. Use the
+    same leads-publisher token as the Worker. Then try docker compose run --rm hub digest --send.
+
+All of this below happens on the homelab, in the hub folder where you've been running the other commands:
+
+```sh
+ssh jalcocert@192.168.1.2
+cd ~/jalcocertech-core/leads-hub/hub
+```
+
+1. Update the code: `git pull`
+2. Add the ntfy settings to .env: `nano .env`
+
+  Make sure these two lines exist, once each:
+
+```
+NTFY_URL=https://ntfy.jalcocertech.com/leads
+NTFY_TOKEN=tk_…
+```
+
+- NTFY_URL is the same address the Worker posts to. The `.env.example` already has it, so it may be there with only the token empty.
+- NTFY_TOKEN is the leads-publisher user's token, the one you gave the Worker. 
+
+If you don't have it saved, list it from the ntfy container on the homelab:
+
+```sh  
+docker ps --format '{{.Names}}' | grep -i ntfy # find the container name
+docker exec ntfy ntfy token list leads-publisher #get the tk_ again
+#Save with Ctrl+O, Enter, then Ctrl+X. Check the names are there without printing values:
+grep -oE '^(NTFY_URL|NTFY_TOKEN)=' .env
+```
+
+3. Rebuild and restart:
+
+```sh
+docker compose up -d --build
+docker compose logs --tail 5 hub        # expect "… · spam 0" at the end of the pull line
+```
+
+4. Test the **weekly summary** now instead of waiting for Monday:
+
+```sh
+docker compose run --rm hub digest --send
+```
+
+Your phone should show "Leads weekly - 2026-W41" with the counts. 
+
+It also marks this week as sent, so the next automatic one comes on Monday 10/12 at 07:00 UTC (09:00 CET).
+
+The next summary arrives on its own, Monday 10/12 at 09:00 CET time.
+
+  Where things stand:
+  - Lead pipeline: fully live. Forms on 3 sites, double opt-in through Mailjet, the do-not-send list
+    with the bounce webhook, the spam blocklist, homelab backups, the welcome drips, and the weekly
+    summary.
+  - Coming up: welcome emails 2 and 3 around 10/13 and 10/17. After the last one, tell me and I'll
+    delete your 3 test subscriptions (roadmap 1.10).
+  - Next build options, when you want them: roadmap section 4 (consulting with Cal.com bookings, the
+    webaudit form, ebooks), or a few more articles from today's lessons. The Cloudflare 1010 block
+    hitting our own alerts would make a good short post.
+
+consulting.jalcocertech.com is now on the lead hub. It's deployed and recorded in the roadmap
+  (0eaa14f in core, ac4b2d9 in the consulting repo).
+
+  What changed on the site:
+  - A "Qualify in 60 sec" section sits just above the booking calendar. It asks for the offer, the
+    decision or problem, stage, budget, timeline, email, and optionally name, role and an unticked
+    updates box (double opt-in). After sending, it points to "Next: book your call ↓".
+  - Every former Formbricks button (hero, the three offer cards, "see first", the slider) now scrolls
+    to this form or to a small "Notify me about talks" box. The offer cards pre-select their tier.
+  - Umami is gone. The privacy page is rewritten to match what the site does. Your own promise that
+    qualifier answers are deleted after 90 days if the person doesn't book is now true: I changed the
+    Worker to match it.
+  - I built from a clean copy of the repo, so your untracked drafts (sales-pitch pages, slides) weren't
+    published.
+
+  Behind it: consulting has its own registry entry ("JAlcocerTech Consulting"). 
+  
+  Qualifiers send a high-priority ntfy alert with offer, budget and timeline, and only the email domain. 
+  
+The Cal.com webhook endpoint is ready and rejects unsigned calls.
+
+  Your 3 steps to finish consulting:
+  1. Cal.com paid event (4A.1b): paste the description text and add the required checkbox. Both are in
+     architecture/roadmap-leads.md, ready to copy, with NIP, REGON and the withdrawal wording.
+  2. Cal.com webhook (4A.4b): `Settings → Developer → Webhooks → New`. `https://app.cal.com/settings/developer/webhooks`
+     - URL: `https://consulting.jalcocertech.com/api/forms/calcom`
+     - Secret: `cat ~/.config/leads-hub/calcom_webhook_secret` (paste it into Cal.com only)
+     - Triggers: `Booking created, requested, paid, rescheduled, cancelled`
+  3. Live test (4A.8): send the qualifier once with your Gmail, and you should get the ntfy alert. If
+     Cal.com lets you, make a test booking, which should alert "Booking created".
+
+  One thing to check: the privacy page uses privacy@jalcocertech.com (that address was already there).
+  Make sure that mailbox or alias exists in Proton. If it doesn't, I'll switch it to contact@.
+
+  After that comes ebooks (4B). Its open decision: should the ebook form email a download link after
+  confirming, or keep downloads open with an optional newsletter?
+
+
+ ticked roadmap 4A.4b (3dbe36c). Two things remain for consulting.
+
+  1. The live test (4A.8): send the qualifier on https://consulting.jalcocertech.com/#qualify with your
+  Gmail. Within seconds your phone should get "New qualifier – consulting.jalcocertech.com", showing
+  offer, budget and timeline, and only the email domain. It's a test lead, so I'll add it to the
+  clean-up list.
+
+  2. The Cal.com description and checkbox (4A.1b), if you haven't pasted them yet.
+
+  Then ebooks (4B). Its one decision is how a visitor gets an ebook:
+  - (a) Email the download link after confirming: the Worker sends a "here's your ebook" email once
+    they click the confirmation link. You get an engaged list of readers, and nobody gets a download
+    without a real address.
+  - (b) Open downloads plus an optional newsletter box: no gate at all. That's friendlier for readers
+    and better for SEO, but you learn less about who reads.
+
+  Your consulting page currently presents the ebooks as the free, self-serve tier ("Read first"), which
+  slightly favours (b). With (a), the ebooks become a lead magnet. Which do you prefer?
+
+```md
+One concrete AI / data / self-hosting decision, answered in a 30-minute working session.
+
+  What you get
+  • A live working session on the decision you described in the qualifier
+  • A written deliverable within 48 h: the decision, the recommended path, the next 3 action items and
+  the failure modes to watch
+  • An async follow-up by email
+
+  Plan or refund
+  If the deliverable isn't actionable, email contact@jalcocertech.com within 7 days of receiving it for
+  a full refund. You keep the document either way.
+
+  Before you book
+  • Send the 60-second qualifier first: https://consulting.jalcocertech.com/#qualify
+  • Free reschedule up to 24 h before the slot. A no-show without notice forfeits the slot and the fee.
+  • Bring sanitized snippets rather than production data.
+
+  Provided by JAlcocerTech – Jesús Alcocer Tagua · NIP 5252685135 · REGON 527463522 ·
+  contact@jalcocertech.com
+  Terms: https://consulting.jalcocertech.com/terms/ · Privacy:
+  https://consulting.jalcocertech.com/privacy/
+```
+
+Required checkbox (same event → Advanced → Booking questions → Add → Checkbox → Required): https://app.cal.com/event-types/645729?tabName=bookingForm
+
+```md
+I ask for the call to take place before the 14-day withdrawal period ends and understand that I lose
+my right to withdraw once the call has been held. I have read the Terms and the Privacy Policy.
+```
+
+Is old code preserved? 
+
+Yes, nothing is lost.
+  - Formbricks: z-formbricks/ (the Python script, survey JSONs, notes) is untouched in the consulting
+    repo.
+  - Umami was removed from the two layouts, but it's in git history. Both repos now also have a
+    pre-lead-hub tag, pushed to GitHub, marking the last commit before my changes:
+    - consulting: pre-lead-hub → ecbf0c7 (the live build before was fee7a83)
+    - ebooks: pre-lead-hub → 4cb5e77 (the live build before was 5b0bfa6)
+
+    git checkout pre-lead-hub brings back the exact old state at any time.
+  - Your GitHub Pages blog: I haven't touched it. I never opened, built or pushed any GitHub Pages repo
+    in this work. It stays exactly as is. If it links to the old Formbricks survey, those links still
+    work as long as the survey is active in Formbricks; nothing I did affects that.
+
+
+
+
+
+The **webaudit code** is done and pushed.
+
+Webaudit isn't live yet: it runs from your homelab, so it needs your update there and a live test.
+
+ What I found and fixed in webaudit:
+- The required checkbox bundled marketing with getting the report, and promised "results are sent via
+  email". Nothing sends email; the report shows on screen. Now there's a required box for terms and
+  privacy only, plus an optional, unticked box for tips and offers. Tested in Chromium: the request
+  carries marketing: false unless the box is ticked.
+- The CSV recorded consent: YES for everyone, whatever was ticked. It now records the real choice.
+- Live leads were written into a file tracked by git. Production mounts the repo folder into the
+  container, so leads.csv on the homelab was a tracked file. It's untracked now, together with
+  manual-leads/, and new leads go to an ignored data/ folder.
+- Each audit now also lands in the lead hub, as kind audit with the score. Only the backend can send
+  these, using a key. You get a "New audit – score 72/100" ntfy alert, and the optional box triggers
+  the Mailjet confirmation.
+- The API only answers its own site. Umami is removed, and the privacy page is rewritten.
+- The old state is tagged pre-lead-hub, and the Formbricks code is kept.
+
+  Your homelab steps (roadmap 4C.5), in the webaudit repo folder:
+
+```sh
+cd ./poc_webs_magnet
+# 1. Back up the live lead files first (git pull would otherwise remove them)
+mkdir -p data && cp leads.csv data/leads.csv && cp -r manual-leads data/manual-leads
+git checkout -- leads.csv manual-leads 2>/dev/null   # drop local edits so the pull can untrack them
+# 2. Update
+git pull
+# 3. Add the key (same value as the Worker's; on the laptop: 
+#cat ~/.config/leads-hub/forms_server_key
+nano .env        # add: FORMS_SERVER_KEY=…
+# 4. Recreate the container (code is mounted; `make prod` rebuilds on start)
+docker compose -f docker-compose.prod.yml up -d --force-recreate
+docker compose -f docker-compose.prod.yml logs -f --tail 20
+```
+  Then live test (4C.6): audit a site with your Gmail and tick the optional box. You should see the
+  report on screen, a "New audit" ntfy alert, the log line 📮 Lead forwarded to the lead hub, and a
+  Mailjet confirmation from "JAlcocerTech Web Audit".
+
+  Still open:
+  - 4C.2: leads.csv and manual-leads/ remain in the git history (private repo). Cleaning that means
+    rewriting history, which is your call, whenever you like.
+  - 4C.7: the new privacy page promises that audit records are deleted after 24 months, and nothing in
+    PocketBase enforces that yet. I'd build a small clean-up job next.
+
+
+
+ Still 403, so it's either the key, or something blocking the request that only happens from the
+  homelab. The log hides which, because it doesn't print the response body. Two things to pin it down.
+
+  1. Run this on the homelab. It makes the same call from inside the container, with the key the
+  container actually has, and prints the key's fingerprint and the full answer. It never shows the key
+  itself:
+
+```sh
+docker exec auditmagnet-prod node -e '
+const k=(process.env.FORMS_SERVER_KEY||"").trim();
+console.log("len",k.length,"sha",require("crypto").createHash("sha256").update(k).digest("hex").slice
+(0,16));
+fetch("https://webaudit.jalcocertech.com/api/forms/submit",{method:"POST",headers:{"Content-Type":"ap
+plication/json","X-Forms-Key":k,"User-Agent":"auditmagnet-server/1.0"},body:JSON.stringify({kind:"aud
+it",email:"probe@example.org",website:"not-a-url"})}).then(async r=>console.log(r.status, (await
+r.text()).slice(0,120)))'
+```
+  And on the laptop, for comparison:
+  printf %s "$(cat ~/.config/leads-hub/forms_server_key)" | sha256sum | cut -c1-16
+
+  How to read the result:
+  - 422 {"error":"invalid_website"}: the key works, and the problem is elsewhere.
+  - 403 {"error":"forbidden"}: the fingerprints will differ, so the key is wrong; copy it with scp.
+  - 403 error code: … or an HTML page: Cloudflare is blocking the homelab's request before the Worker.
+
+ the key in the container is 65 characters, not 64, even after
+  trimming spaces and quotes. So one extra visible character slipped in when pasting (a leading =, a >,
+  a stray letter). The fingerprint doesn't match the laptop's either.
+
+  Copy the key file instead of pasting. From the laptop:
+
+```sh
+scp ~/.config/leads-hub/forms_server_key jalcocert@192.168.1.2:/tmp/fsk
+# ssh jalcocert@192.168.1.2 'cd ~/poc_webs_magnet && sed -i "/^FORMS_SERVER_KEY=/d" .env && printf
+# "FORMS_SERVER_KEY=%s\n" "$(cat /tmp/fsk)" >> .env && rm /tmp/fsk && grep -c "^FORMS_SERVER_KEY="
+# .env'
+
+ssh jalcocert@192.168.1.2 '
+  cd ~/poc_webs_magnet || exit 1
+  touch .env
+  # Ensure the existing file ends with a clean newline
+  [ -s .env ] && [ -n "$(tail -c1 .env)" ] && echo "" >> .env
+  # Remove any existing key entry
+  sed -i "/^FORMS_SERVER_KEY=/d" .env
+  # Append new key cleanly without escape sequence pitfalls
+  printf "FORMS_SERVER_KEY=%s\n" "$(< /tmp/fsk)" >> .env
+  rm -f /tmp/fsk
+  chmod 600 .env
+  # Verification: returns count of matching lines (should output 1)
+  grep -c "^FORMS_SERVER_KEY=" .env
+'
+```
+
+  It should print 1: exactly one key line.
+
+  Then on the homelab, recreate the container so it reads the new .env, and probe again:
+
+```sh
+  cd ~/poc_webs_magnet
+  docker compose -f docker-compose.prod.yml up -d --force-recreate
+  docker exec auditmagnet-prod node scripts/lead-hub-probe.mjs
+
+```
+  Expect key length 64 · sha256 fa13eed332b8b08d and "OK: key accepted". The container takes about 30
+  seconds to rebuild the frontend on start, but the probe works right away.
+
+  After that, run one real audit with the optional box ticked. You should get the "New audit" alert and
+  the Mailjet confirmation.
+
+```sh
+docker compose -f docker-compose.prod.yml logs -f --tail 20
+auditmagnet-prod  | 10:57:20 ▶ src/pages/privacy.astro
+auditmagnet-prod  | 10:57:20   └─ /privacy/index.html (+2ms) 
+auditmagnet-prod  | 10:57:20 ▶ src/pages/terms.astro
+auditmagnet-prod  | 10:57:20   └─ /terms/index.html (+2ms) 
+auditmagnet-prod  | 10:57:20 ✓ Completed in 328ms.
+auditmagnet-prod  | 
+auditmagnet-prod  | 10:57:20 [build] 3 page(s) built in 2.21s
+auditmagnet-prod  | 10:57:20 [build] Complete!
+auditmagnet-prod  | Launching Production Server on port 3001...
+auditmagnet-prod  | node server.js
+auditmagnet-prod  | 📦 Serving production frontend from /dist
+auditmagnet-prod  | 🚀 Audit Server running on port 3001
+auditmagnet-prod  | 📡 Accessible on your local network!
+auditmagnet-prod  | 🔐 PocketBase authed as service@audit.local
+auditmagnet-prod  | GET / 200 4.012 ms - 72402
+auditmagnet-prod  | 🚀 Starting orchestrated audit for: https://multibodysystemsdynamics.com/ (Lead: cerdi, Job: 76dd91fa-7f5e-4446-baa9-3c18e52e1eb8)
+auditmagnet-prod  | 📦 PB stored: lead=bqrgbx9scz9t3xh audit=4ohjq9cxc6qcnkq platform=unknown
+auditmagnet-prod  | ✅ Audit complete! Score: 80 | Platform: unknown
+auditmagnet-prod  | POST /api/audit 200 18390.725 ms - 1634
+auditmagnet-prod  | 📮 Lead forwarded to the lead hub
+```
+
+I've recorded the rollout (5ab098c). Once you confirm the alert and the email, all three old sites
+  are on the lead hub:
+
+  ┌────────────┬──────────────────────────────────────────────────────────────────────────┐
+  │    Site    │                                  Status                                  │
+  ├────────────┼──────────────────────────────────────────────────────────────────────────┤
+  │ consulting │ ✅ qualifier, updates and the Cal.com webhook, all live and tested       │
+  ├────────────┼──────────────────────────────────────────────────────────────────────────┤
+  │ ebooks     │ ✅ the footer newsletter, live and tested                                │
+  ├────────────┼──────────────────────────────────────────────────────────────────────────┤
+  │ webaudit   │ ✅ forwarding to the lead hub works; your confirmation is the last check │
+  └────────────┴──────────────────────────────────────────────────────────────────────────┘
+
+  Left for webaudit, in my suggested order:
+  1. 4C.7, the PocketBase clean-up job: delete leads and audits older than 24 months, which the new
+     privacy page promises. It's a small script on the homelab's schedule. I'd do this next.
+  2. 4C.2, scrubbing leads.csv and manual-leads/ from git history: your decision. It rewrites the
+     repo's history (a force push, and other clones need re-cloning). The repo is private, so it's
+     optional hygiene rather than urgent.
+
+  What's next after that is up to you: the remaining roadmap (leadarchitect.org via
+  forms.jalcocertech.com, enrichment for the growth site, the virtual office), or a few more posts from
+  the webaudit lessons. The bundled-consent finding and the 65-character key are both worth writing
+  up.
+
+
+Fact-checking the last one turned up something worth knowing: leads.csv
+  changed in 4 commits since January, so some lead rows are in webaudit's git history. I corrected the
+  post to say so instead of "nothing leaked". It's your own test data, but it makes the history
+  clean-up (4C.2) more than cosmetic.
+
+  PocketBase clean-up (4C.7, 6ea7bc8):
+  - The server now deletes records older than 24 months once a day, as the privacy page promises.
+  - A returning user's lead is kept as long as they have a newer audit.
+  - I tested it against fake dated data, and the dry run matched exactly what a real run deletes.
+
+  To check what's in PocketBase, on the homelab in ~/poc_webs_magnet:
+  git pull && docker compose -f docker-compose.prod.yml up -d --force-recreate
+  docker exec auditmagnet-prod node scripts/pb-retention.mjs
+  It prints totals and what would be deleted. Nothing is deleted without --apply, and only counts are
+  shown. Since only you have used it, expect a few test leads and audits and 0 to delete (none are 24
+  months old).
+
+  Open items:
+  - 4C.2: scrubbing the lead rows from webaudit's git history. It rewrites history, needs a force push,
+    and other clones must re-clone. Your decision, now or never.
+  - 1.10 (around 10/17): delete your remaining test subscriptions and leads, now across all six sites.
+  - Further roadmap:
+    - leadarchitect.org via forms.jalcocertech.com;
+    - enrichment for the growth site;
+    - the virtual office address, needed once billing starts.
+
+
+All three points are done and pushed. Webaudit now uses only the lead hub for leads.
+
+  1. The audit summary goes to the lead hub. Each audit lead now carries the overall score, the
+     detected platform, and the four category scores (performance, SEO, links, security). Worker
+     v0.10.1 is live, all 49 tests pass, and malformed values are dropped.
+  2. PocketBase and the CSV are off by default, with the code kept (22b8a94). PB_ENABLED=true or
+     LEADS_CSV_ENABLED=true in .env turns either back on, if you ever build client features. Started
+     locally, the server reports pocketbase: off, leadHub: on and creates no CSV folder.
+  3. The PocketBase server is untouched, since other projects in jalcocertech-services still point at
+     it. The privacy page now describes just the lead hub record plus the homelab backup copy.
+
+  forget and the 24-month expiry now cover webaudit completely, with no second database to remember.
+  Recorded as roadmap 4C.8 (2cea815).
+
+  On the homelab, in ~/poc_webs_magnet:
+
+```sh
+git pull
+docker compose -f docker-compose.prod.yml up -d --force-recreate
+docker compose -f docker-compose.prod.yml logs --tail 5     # expect: "🗂️  PocketBase off … lead hub"
+```
+
+  - Your PB_SERVICE_* lines in .env can stay. They're simply unused now.
+  - Your old test records in PocketBase can be deleted in its admin UI, or left: nothing writes there
+    any more.
+  - A test audit afterwards should still give the "New audit" alert. make leads on the laptop will show
+    its score summary.
+
+
+
+● The HTTPS and certificate checks are in webaudit's security score (e4a3be6). They're not live until
+  you update the homelab. Each finding is written for a site owner:
+
+  ┌─────────────────────────────┬────────┬─────────────────────────────────────────────────────────┐
+  │            Check            │ Points │                     Example finding                     │
+  ├─────────────────────────────┼────────┼─────────────────────────────────────────────────────────┤
+  │ HTTPS works with a valid    │ 30     │ "The HTTPS certificate is not valid (expired) —         │
+  │ certificate                 │        │ visitors get a security warning."                       │
+  ├─────────────────────────────┼────────┼─────────────────────────────────────────────────────────┤
+  │ http:// redirects to        │ 15     │ "http:// does not redirect to https:// — old links and  │
+  │ https://                    │        │ typed addresses stay unencrypted."                      │
+  ├─────────────────────────────┼────────┼─────────────────────────────────────────────────────────┤
+  │ Certificate valid for more  │ 10     │ "The certificate expires in 6 day(s)…"                  │
+  │ than 14 more days           │        │                                                         │
+  ├─────────────────────────────┼────────┼─────────────────────────────────────────────────────────┤
+  │ TLS 1.2 or newer            │ 5      │ "The server negotiates TLSv1.1, which is outdated."     │
+  ├─────────────────────────────┼────────┼─────────────────────────────────────────────────────────┤
+  │ Security headers            │ 40     │ "Missing security header: Content-Security-Policy"      │
+  └─────────────────────────────┴────────┴─────────────────────────────────────────────────────────┘
+
+  I tested it against the badssl.com examples (expired, self-signed, wrong host, TLS 1.0/1.1/1.2, no
+  redirect), and each produced the right finding. A timeout is never counted against a site; only
+  problems we actually saw are reported. Your own site now scores a fair 70 instead of looking insecure
+  because of missing headers. The findings list is stored with each audit, ready for the emailed
+  report.
+
+  On the homelab: git pull, then docker compose -f docker-compose.prod.yml up -d --force-recreate.
+
+  I've put the emailed full report on the roadmap as 4C.11 (291db72), for whenever you want it: sent to
+  anyone who asks, address confirmed first, and the follow-up sequence only with consent.
+
+  My suggestion from before still stands, and it's the bigger lever: 2 weeks of distribution instead of
+  building. 10 personal conversations a week, 2 posts made from the 36 articles you already have, and
+  one talk or community contribution. The weekly ntfy summary will show what moved. I'm happy to help
+  with that side too: drafting LinkedIn posts from your articles, a short note for your network, or a
+  one-page letter template.
+
+
+
+  Where the three sites stand:
+
+  ┌────────────┬────────────────────────────────────────────────────────────────────────────────────┐
+  │    Site    │                                       State                                        │
+  ├────────────┼────────────────────────────────────────────────────────────────────────────────────┤
+  │            │ Lead hub (qualifier, updates, signed Cal.com webhook), honest legal pages with one │
+  │ consulting │  contact address, Cal.com business details and withdrawal checkbox, clean favicon, │
+  │            │  real 404, working header links                                                    │
+  ├────────────┼────────────────────────────────────────────────────────────────────────────────────┤
+  │            │ Footer newsletter with double opt-in, consulting links through the qualifier,      │
+  │ ebooks     │ security headers live (search still works thanks to the WebAssembly fix), your     │
+  │            │ June rework published                                                              │
+  ├────────────┼────────────────────────────────────────────────────────────────────────────────────┤
+  │            │ Lead hub only (PocketBase off), split consent, HTTPS and certificate checks with   │
+  │ webaudit   │ findings in Top Issues, honest CTAs to the qualifier, retention, CORS. Pending     │
+  │            │ your git pull and recreate for the favicon and CTA commits                         │
+  └────────────┴────────────────────────────────────────────────────────────────────────────────────┘
+
+  All three repos have a pre-lead-hub tag for the old state, and none of your untracked work was
+  touched or published.
+
+  Still open from earlier, all optional or on your side:
+  - The homelab pull for webaudit;
+  - 4C.2: scrubbing the old leads.csv rows from webaudit's git history;
+  - 4C.11: the emailed deep report;
+  - 1.10, around 10/17: deleting your test leads across all six sites.
+
+
+
+
+
+
+The emailed full report is built and pushed, and the Worker side is live (v0.11.0). The webaudit side goes live after your homelab update. I tested it locally with a real deep run, but nothing has gone through the live chain yet.
+
+How it works for a visitor:
+1. In the audit form they tick "Email me the full report, including a deep check of every link". It's
+    optional and independent of the marketing box.
+2. Their normal result shows, plus: "✉️  Check your inbox: confirm your email and the full report
+    arrives a few minutes later."
+3. Email: "Start your full report for shop.io". The link opens a page with a button, and nothing runs
+    until they press it. That proves the address and stops anyone from triggering crawls of random
+    sites.
+4. Pressing it starts a background deep audit: all checks plus the link crawl, with an 8-minute limit
+    instead of 120 seconds, and one job at a time.
+5. Email: "Your website report for shop.io: 68/100", with the verdict, the 3 priorities and a link to
+    the report, valid 7 days.
+
+The report is your one-pager made automatic: headline, score card, four scores, "the most important", "why it matters", 3 numbered priorities, the broken-links table and "See how I'd fix this →". It adapts to phone width, with no JavaScript and no tracking.
+
+Safeguards:
+- Keyed server-to-server calls.
+- The do-not-send list and the spam blocklist are respected.
+- The URL is re-checked against the SSRF guard before the deep run.
+- The start button works once only.
+- The raw run files are deleted afterwards.
+- Expired reports return a "this link has expired" page.
+- The privacy page is updated (reports kept 7 days, requests 8).
+
+The local deep run caught a bug: a link checker that failed (not installed on my laptop) was scoredas "broken links". It now shows as "not checked", and the overall score is recomputed without it.
+
+  On the homelab, in `~/poc_webs_magnet`:
+```sh  
+git pull && docker compose -f docker-compose.prod.yml up -d --force-recreate
+docker compose -f docker-compose.prod.yml logs -f --tail 20
+```
+
+  Live test: audit one of your own sites, e.g. https://www.jalcocertech.com, with your Gmail and tick
+  only the full-report box. Then:
+  1. Expect the "Start your full report" email, and press the button. The logs should show the deep run.
+  2. Within a few minutes: the report email, plus a low-priority ntfy note "Full report sent".
+  3. Open the report link.
+
+  The real link crawl will run on the homelab, where linkchecker is installed.
+
+  Not built yet (4C.13): the follow-up email sequence for people who also tick the marketing box. I'd
+  draft it disabled for your review once the report flow is confirmed live.
+
+
+
+ No AI model is involved. The report is entirely script and template: lib/render-report.mjs, about 250
+  lines of plain JavaScript. Every sentence comes from a rule applied to the measured results:
+
+  ┌───────────────────────────┬────────────────────────────────────────────────────────────────────┐
+  │    Part of the report     │                         How it's produced                          │
+  ├───────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Headline ("Clear wins for │                                                                    │
+  │  search visibility and    │ The two lowest category scores, mapped to plain names              │
+  │ security")                │                                                                    │
+  ├───────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Verdict sentence          │ One of three templates, picked by score band (80+, 50–79, below    │
+  │                           │ 50)                                                                │
+  ├───────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │                           │ Thresholds on real numbers: load time over 2.5 s, blocking over    │
+  │ "The most important"      │ 0.3 s, page over 2.5 MB, broken-link count, certificate within 30  │
+  │                           │ days of expiry, then high-severity findings                        │
+  ├───────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ "Why it matters"          │ A fixed business sentence for each problem type found              │
+  ├───────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │                           │ Candidates ranked by severity (HTTPS first, then speed, broken     │
+  │ 3 priorities              │ links, SEO, trust, headers). Speed advice quotes the actual image  │
+  │                           │ and JavaScript sizes                                               │
+  ├───────────────────────────┼────────────────────────────────────────────────────────────────────┤
+  │ Layout                    │ Your one-pager's CSS, made responsive                              │
+  └───────────────────────────┴────────────────────────────────────────────────────────────────────┘
+
+  Why I built it this way:
+  - It's accurate by construction. Every number is measured and every claim matches a check. An AI
+    could invent a problem or misquote a number, and in a document meant to show a business owner a
+    could invent a problem or misquote a number, and in a document meant to show a business owner a
+    real problem, one wrong claim costs your credibility.
+  - No extra processor and no data leaving your stack. Nothing about the visitor or their site goes to
+    an AI provider, so there's nothing new for the privacy page.
+  - It's free, instant and identical every time. The same site always produces the same report, which
+    is easy to test and debug.
+
+The trade-off: it's generic in tone.
+
+It can't say "como comentamos en la playa" like your handmade Spanish Flow report, and it can't spot an unusual pattern no rule covers.
+
+If you want more personal reports, here are two options:
+
+  1. An AI-written opening paragraph only. A model such as Claude writes 2–3 warm sentences from the
+     already-computed facts, while every number and priority stays rule-based. This means a new
+     processor on the privacy page and a few cents per report. I'd add a guard that checks every number
+     in the paragraph exists in the data.
+  2. A human pass for warm leads, which fits the volume you have now. An option to hold a report so you
+     can add a personal note before it's sent ("Hi Santi, as we discussed…"), and everyone else gets
+     the automatic version.
+
+```sh
+cd ./poc-web-magnets
+```
+
+> For now I'd stay script-based, and add option 2 if warm leads start coming in.
+
+
+
+```sh
+git remote -v
+#For just the origin URL:
+git remote get-url origin
+```
 
 ### Improving the workflow
 
@@ -873,7 +1774,9 @@ Adding a "what's next" section to the [overview](https://github.com/JAlcocerT/ja
 
 I've added architecture/overview.md with five Mermaid diagrams and pushed it (89f2b73). 
 
-It's linked as "Start here" from the architecture README and the root README, and GitHub renders the diagrams directly. I checked all five with mermaid's CLI and redrew the system map after the first render came out tangled.
+It's linked as "Start here" from the architecture README and the root README, and GitHub renders the diagrams directly.
+
+I checked all five with mermaid's CLI and redrew the system map after the first render came out tangled.
 
 1. System context: the sites on Pages, the forms and rebuild Workers, KV, Mailtrap, the homelab ([ntfy](https://fossengineer.com/selfhosting-ntfy-docker/), leads-hub, [Mailpit](https://fossengineer.com/selfhosting-mailpit/)), the laptop and your phone, plus who calls whom.
 2. Capturing a lead: the order is store first, answer the visitor, then alert; a failed store sends no alert.
@@ -890,7 +1793,8 @@ It also has a table of where each piece runs, a status table, and the next steps
 
 What's next for the multi-site lead pipeline
 
-1. Go live with email. This is the main remaining milestone.
+1. Go live with email. This is the main remaining milestone:
+
 - You: verify news.jalcocertech.com in Mailtrap (DNS records in Cloudflare).
 - Me: a webhook so bounces and spam complaints go on the do-not-send list; the last unbuilt item in ADR 0003.
 - Me: update the three privacy pages to name Mailtrap and describe double opt-in.
@@ -900,27 +1804,26 @@ What's next for the multi-site lead pipeline
 2. First real drip. Review the 3 jt-welcome emails, set enroll_since to the go-live day, enable the sequence, and set DRIPS_ENABLED=1 on the homelab.
 
 3. Small improvements:
+
 - leadshub leads and leadshub show <key> on the homelab, replacing the Python one-liners.
 - "Check your inbox" in jalcocertech's newsletter box. This matters before double opt-in goes on
   there.
 
 4. More properties:
+
 - consulting (Cal.com booking webhook);
 - webaudit's form;
 - ebooks;
 - forms.jalcocertech.com for leadarchitect.org, which isn't on Cloudflare.
 
-5. Later: Turnstile if spam shows up, then enrichment and a weekly summary for the growth site, once
-its privacy page covers it.
+5. Later: Turnstile if spam shows up, then enrichment and a weekly summary for the growth site, once its privacy page covers it.
 
-Step 1 starts with you setting up the Mailtrap domain; I can build the bounce webhook and the
-privacy-page changes in the meantime. And when you've read today's MBSD enquiry, reply from Proton.
 
 ---
 
 ## Conclusions
 
-For places where i just accept inbound only: https://multibodysystemsdynamics.com/contact/
+For places where i just accept inbound only: `https://multibodysystemsdynamics.com/contact/`
 
 For the ones that will do outbound as well: `https://www.jalcocertech.com/contact/`
 
@@ -1475,8 +2378,10 @@ create a limited user first, grant ACLs, then create a token for that user. (doc
 
 Example:
 
+```sh
 sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy user add android
 sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy access android "alerts-*" rw
 sudo docker compose -f docker-compose.prod.yml exec ntfy ntfy token add --label="android phone" android
+```
 
-Then use the returned tk_... token in apps/scripts instead of the password.
+Then use the returned `tk_...` token in apps/scripts instead of the password.

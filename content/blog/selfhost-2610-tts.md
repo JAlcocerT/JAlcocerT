@@ -130,8 +130,9 @@ Regarding **useful CLIs**: [herdr](https://fossengineer.com/herdr-terminal-agent
 ```sh
 herdr #code --yolo | opencode | claude 
 #ncdu /
+
 # sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent prowlarr
-sudo docker compose -f 2610_docker-compose.yml up -d termix nextcloud ncdb sftpgo forgejo forgejo-forgejo-db-1 ntfy mailpit uptimekuma maintenant technitium pocketbase jellyfin qbittorrent prowlarr umami lunalytics littlyx dawarich_app dawarich_db
+sudo docker compose -f 2610_docker-compose.yml up -d termix nextcloud ncdb sftpgo forgejo forgejo-forgejo-db-1 ntfy pocketbase mailpit uptimekuma maintenant technitium jellyfin qbittorrent prowlarr dawarich_app dawarich_db #umami lunalytics littlyx
 #docker port iot-dashboard-v2
 #lazydocker
 ```
