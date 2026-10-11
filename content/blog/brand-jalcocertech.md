@@ -2008,3 +2008,191 @@ ou have seven ready-to-send leads from the Leeds dentists run. The next step is 
 
   If any screen doesn't match what I've described, send me a screenshot and I'll tell you what to
   click.
+
+
+#### Medallion
+
+> https://app.smartlead.ai/app/email-campaigns-v2
+
+Dentists are a poor trade for UK company-only outreach,
+  because most practices aren't limited companies. Trades where limited companies are the norm should
+  give 3–5 times more leads per scrape. Good candidates are trades with high-value jobs and a "website
+  = trust" problem:
+  - architects;
+  - solicitors and accountants (businesses, not individuals);
+  - building contractors, kitchen and bathroom fitters;
+  - letting agents;
+  - private clinics (physio, aesthetics).
+
+  An outbound data pipeline in bronze, silver and gold layers (a "medallion" layout)
+
+  Your inbound side is: forms → Cloudflare KV inbox → the homelab hub pulls into SQLite. The outbound
+  equivalent fits in leadarchitect-uk, as one DuckDB file. That's the natural tool for layered data: it
+  reads the JSON and CSV files you already produce directly, everything is SQL, and you already use
+  it. Keeping it in its own repository, separate from the inbound leads hub, follows ADR 0005.
+
+  BRONZE  raw, append-only, as received
+    apify/<run>.json            Maps listings
+    ch/<company_no>.json        Companies House responses
+    audits/<domain>/<date>.json Lighthouse + checks
+    smartlead/<date>-<campaign>.csv   campaign export (download from the UI)
+    events.csv                  what you log by hand: replied/positive/call/won/opt-out
+
+  SILVER  cleaned, one row per thing, keys joined
+    businesses   (place_id, trading name, domain, trade, city, category)
+    companies    (company_no, status, type, match method: postcode / name / footer number)
+    contacts     (email, domain, found on which page, role address y/n)
+    findings     (domain, date, finding type, value, PDF path)
+    sends        (email, campaign, step, sent_at, bounced)
+    outcomes     (email, replied, positive, call, won, opted out)
+
+  GOLD    aggregates only, no personal data, kept forever
+    funnel by batch / trade / city:
+      scraped → website → email → company → finding → sent → replied → positive → call → won
+    reply rate by finding type (speed vs HTTPS vs heavy page)
+    cost per positive reply (Apify spend + Smartlead + your time)
+
+  How Smartlead data gets in without the API: each campaign has a lead CSV export in the UI that
+  includes status (sent, replied, bounced) and Smartlead's reply categories (Interested, Not
+  interested). You download it once a week into data/bronze/smartlead/, and make ingest loads it. Calls
+  and won work go in events.csv, one line each.
+
+  Retention, consistent with your legitimate-interest assessment:
+  - Bronze and silver hold personal data, so they're deleted after 90 days, as now.
+  - Gold holds aggregate numbers only, so it's kept forever. That's where the learning lives.
+  - Kept beyond 90 days:
+    - the suppression list (opt-outs and bounces), which you must keep to honour them;
+    - a business-domain contact log, so no business is emailed twice. These are business domains, not
+      personal data.
+
+  Commands:
+  - make ingest: bronze → silver → gold.
+  - make funnel: prints the gold tables.
+  - make send: the filters from earlier, reading the suppression list and contact log from silver.
+
+  The weekly view would look like:
+
+  batch   trade     scraped  email  company  sent  replies  positive  calls
+  b1      dentist     30      16       6       4       ?        ?       ?
+  b2      dentist    210      93      18      11       ?        ?       ?
+
+  It's about half a day of work: DuckDB SQL for the layers, a small Python loader, and the Make
+  targets. Today's two batches would be loaded as the first rows.
+
+  Do you want me to write it up as ADR 0006 in jalcocertech-core and then build it in leadarchitect-uk?
+
+
+  The outbound funnel data pipeline is built, tested on today's two batches, and committed: ADR 0006 is
+  in jalcocertech-core (bf0311a), the code is in leadarchitect-uk (92cf7b7).
+
+  What you have now
+
+  - Bronze is the files the pipeline already writes (Maps listings, enrichment, audit results), plus:
+    - the sent batches in data/sends/;
+    - Smartlead exports in data/bronze/smartlead/;
+    - the outcomes you log in data/bronze/events.csv.
+  - Silver is one DuckDB file, data/lake.duckdb, with one cleaned table per stage. It's rebuilt from
+    bronze every time, written in plain SQL in lake/silver.sql.
+  - Gold is counts only, in gold/*.csv. These files are committed and kept after the 90-day deletion,
+    so the lessons stay without the people.
+  - Keep lists in data/keep/ (git-ignored) are never deleted: opt-outs and bounces, business domains
+    already contacted, and the list of batches.
+
+  Batches 1 and 2 are loaded as b1 and b2:
+
+  run         scraped  site  email  company  finding  sent   sent per 100
+  Leeds          30     26     16       6        7      4       13.3
+  Sheffield      70     64     32       5        6      3        4.3
+  Bristol        70     59     34       7        8      3        4.3
+  Manchester     70     52     24       6        7      5        7.1
+
+  What I tested:
+  - Re-runs don't duplicate gold rows.
+  - Logging an outcome by email or by domain lands on the right batch, and opt-outs are suppressed for
+    good.
+  - A sample Smartlead export loads. I made it up, then deleted it.
+  - make send reproduces every decision I made by hand today. On the same four cities, all 15 sent
+    businesses are held back as already contacted, and the 3 dissolved companies, the 3 registered
+    offices in other towns and the chain are all dropped.
+
+  Two bugs fixed on the way:
+  - An opt-out logged by email address didn't match its business domain.
+  - The old make clean-old deleted any folder under data/ older than 90 days. That would have wiped the
+    opt-out list once it was old enough. It now deletes only run folders and dated files.
+
+  To test it:
+
+  ```sh
+  cd ~/Desktop/mbsd-framework/leadarchitect-uk
+  make funnel                    # the four views: per run, per trade, per batch, per finding type
+  make send RUNS=2026-10-11-dentist-leeds-uk,2026-10-11-dentist-bristol-uk BATCH=t1
+  cat data/sends/t1.dropped.csv  # why each lead was held back
+  rm data/sends/t1.*             # it's a draft; nothing is recorded until mark-sent
+```
+
+  That send picks only Beyu Dental (6 s). Everything else is already contacted or fails a rule. Earlier
+  I held Beyu back by hand because one run measured 3.9 s; the code can't know that, so check a
+  borderline pick on pagespeed.web.dev before sending it.
+
+  From here, a batch goes:
+  1. scrape, enrich and batch as before;
+  2. make send RUNS=… BATCH=b3, then upload b3.draft.csv and launch;
+  3. make mark-sent BATCH=b3 CAMPAIGN="UK test 3";
+  4. log each reply with make event WHO=… E=positive (or optout, call, …).
+
+  Smartlead exports: Smartlead's export columns are a guess until we see a real one. Once there are
+  replies (end of the week), export a campaign's leads into data/bronze/smartlead/ and run make funnel.
+  It lists any column it doesn't recognise, and I'll adapt the loader.
+
+  The roadmap has two new open items: that first export (7.8b), and trying a trade where limited
+  companies are common (7.8c). Dentists yield only about 6 sends per 100 listings.
+
+
+
+  7.3 Volume (October–November):
+  - The goal: about 30 sends a week, so about 100 by mid-November. That's the first point where reply
+    rates mean anything.
+  - Dentists can't get you there: at about 6 sends per 100 listings, that's about 500 listings a week.
+    So the first step is a trade experiment: 3 trades with mostly limited companies, one city each,
+    compared on sends per 100 listings. Keep the ones at 15 or more.
+  - Also in this section:
+    - the weekly Monday-to-Friday rhythm;
+    - connecting the third inbox, with at most 15 real sends per inbox a day;
+    - staying on Smartlead's free tier while it sends;
+    - Apify credit;
+    - the monthly make clean-old.
+
+  7.4 Decision points. This table turns the numbers into actions:
+
+  ┌─────────────┬──────────────────────────────┬───────────────────────────────────────────────────┐
+  │     At      │              If              │                       Then                        │
+  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
+  │ ~50 sends   │ bounces > 3% or any          │ stop and fix                                      │
+  │             │ complaint                    │                                                   │
+  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
+  │ ~100 sends  │ replies ≥ 3% and at least 1  │ scale the best trade                              │
+  │             │ positive                     │                                                   │
+  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
+  │ ~100 sends  │ replies < 1%                 │ change one thing at a time: subject, then finding │
+  │             │                              │  type, then trade                                 │
+  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
+  │ ~200 sends  │ calls but no paid work       │ look at the offer and price, not volume           │
+  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
+  │ ~200 sends  │ no positive replies at all   │ rethink the offer                                 │
+  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
+  │ first paid  │ delivery took more than a    │ reprice the fix pack                              │
+  │ job         │ day                          │                                                   │
+  └─────────────┴──────────────────────────────┴───────────────────────────────────────────────────┘
+
+  7.5 Tooling backlog, built only when a phase needs it:
+  - strip taglines from trading names during enrichment;
+  - flag borderline speed picks like Beyu;
+  - grow the chains list for each new trade;
+  - a helper that finds the right PDF for a reply;
+  - plus the hello@ alias and the leadarchitect.org testimonials.
+
+  7.6 Deferred: US prospects, paper letters for the EU, the Smartlead API, and moving the lake to the
+  homelab.
+
+  The most useful thing to do before Monday is 7.2.7. If you want, I can draft the reply templates and
+  the fix-pack quote now.

@@ -155,6 +155,7 @@ Approximately ~ One year ago I was: *finally moving from copy pasting from web t
 
 ```sh
 claude --version
+###claude --dangerously-skip-permissions
 #0.2.126 (Claude Code)
 jalcocert@BYOD-00335:~$ codex --version
 #0.1.2504211509
