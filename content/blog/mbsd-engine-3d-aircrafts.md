@@ -96,14 +96,13 @@ But the moment you want to know **"Will the pilot feel a vibration in the rudder
 
 ### MBSD 0-9-0 Simulation
 
-Coming from [the 0-7-0 release](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-oct/#mbsd), its time for the 0-9-0
+Coming from [the 0-8-0 release](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#mbsd), its time for the 0-9-0
 
 ```sh
-#scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/*.md . #v-0-7-0-concerns.md
 scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-8-0-concerns.md . 
 ```
 
-I got inspired by this project roadmap: `https://dbackup.app/roadmap/`
+I got inspired by this project's roadmap: `https://dbackup.app/roadmap/`
 
 {{% details title="For the 0-9-0 was like 🚀" closed="true" %}}
 
@@ -210,6 +209,34 @@ v0.8.1 contains no dynamics. All four v0.8.0 concerns are now addressed:
 {{% /details %}}
 
 > https://app.multibodysystemsdynamics.com/?demo=slider-crank&r=0.35&l=1.15&e=0&rpm=60&steps=241
+
+
+> I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
+
+> > And email to `https://selfh.st/submit/`
+
+
+
+There are other oss fwks with interesting potential to have a look:
+
+* https://www.mbdyn.org/
+  * https://github.com/zanoni-mbdyn/blendyn
+
+MBDyn (https://www.mbdyn.org/) graphical post-processor for blender (https://www.blender.org/)
+
+* Some people put together mbd x fem - https://mbdfem.com/ 
+- Project Chrono/PyChrono
+- Exudyn
+- Siconos
+- OpenModelica
+- MBDyn
+- preCICE
+
+https://www.youtube.com/watch?v=NxZ1tf8J1oY
+
+https://www.youtube.com/watch?v=4_Z05iMmDNU
+
+https://www.youtube.com/watch?v=eFGkopoCTYY
 
 
 ---

@@ -203,6 +203,8 @@ https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/#vps-to-dep
 
 https://account.proton.me/u/3/vpn/WireGuard
 
+https://proton.me/support/aliases-mail
+
 For travel: *Dawarich, Trek, GeoPulse, Wanderer, Reitti...*
 
 {{< cards cols="2" >}}

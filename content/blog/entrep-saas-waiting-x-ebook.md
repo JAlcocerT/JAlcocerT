@@ -3,7 +3,7 @@ title: "Ways to get Leads around Cloudflare KV vs workers"
 date: 2026-10-04T15:20:21+01:00
 draft: false
 tags: ["RoadMap26","gotify vs ntfy","Supabase Auth vs PB","Mailtrap x MailJet"]
-description: 'How hard is to make waiting list that capture leads?'
+description: 'How hard is to make waiting list that capture leads? Multisite inbound.'
 ---
 
 **TL;DR**
@@ -1761,6 +1761,291 @@ cd ./poc-web-magnets
 > For now I'd stay script-based, and add option 2 if warm leads start coming in.
 
 
+ The "Full Report" fix goes live with your next homelab update.
+
+  1. A command-line audit with flags: make report. It uses the same pipeline as the website (the same
+  scores, findings, priorities and HTML report), creates no lead and sends no email:
+
+```sh
+make report URL=https://jalcocertech.com                         # summary in the terminal
+make report URL=https://jalcocertech.com ARGS="--links --html"   # + link crawl, HTML report in reports/
+make report URL=https://jalcocertech.com ARGS="--no-lighthouse --json=out.json"
+node scripts/audit-cli.mjs --help                            # all options
+```
+
+  ┌──────────────────────────────────┬─────────────────────────────────────────────────────────────┐
+  │               Flag               │                           Effect                            │
+  ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ --links                          │ Also crawl links (slow, up to 3 levels deep)                │
+  ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ --no-lighthouse / --no-seo /     │ Skip a category (shown as "not checked", not counted)       │
+  │ --no-security                    │                                                             │
+  ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ --html[=file]                    │ Write the HTML report (default reports/<host>-<date>.html,  │
+  │                                  │ ignored by git)                                             │
+  ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ --json[=file]                    │ Write the full results as JSON, or print them, ready to     │
+  │                                  │ pipe into other tools                                       │
+  ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ --link-method=… /                │ Choose the link checker and its time budget                 │
+  │ --link-timeout=…                 │                                                             │
+  ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+  ├──────────────────────────────────┼─────────────────────────────────────────────────────────────┤
+  │ --keep                           │ Keep the raw Lighthouse, SEO, security and link files       │
+  └──────────────────────────────────┴─────────────────────────────────────────────────────────────┘
+
+  It prints: overall score, each category, platform, diagnosis and the three priorities. The laptop
+  lacks Lighthouse and linkchecker, so it's best run on the homelab, where every tool is installed:
+
+```sh
+docker exec auditmagnet-prod node scripts/audit-cli.mjs https://jalcocertech.com --links --html=data/example.html
+```  
+
+  Write HTML output into data/, which is ignored by git and visible on the homelab disk.
+
+  2. "Full Report" was showing raw JSON. It now opens the same HTML report as the emailed one: verdict,
+  scores, the most important points, why it matters, priorities, and the broken links if that box was
+  ticked. It keeps the old link's 24-hour lifetime, so the privacy page stays accurate. The raw JSON is
+  still there as rawReportUrl for scripts.
+
+  On the homelab: git pull, then docker compose -f docker-compose.prod.yml up -d --force-recreate. Then
+  run an audit and press Full Report.
+
+  This also helps the Apify flow later: make report … --json gives the pipeline the same findings the
+  website shows, for any list of sites.
+
+
+All three sites are now at 98–100, measured with the full tool on this laptop (linkchecker in Docker,
+  make report … --links --link-method=docker):
+
+  ┌──────────────────────┬────────┬───────┬─────────────┬──────────┬──────────┬──────────┐
+  │         Site         │ Before │ After │ Performance │   SEO    │ Security │  Links   │
+  ├──────────────────────┼────────┼───────┼─────────────┼──────────┼──────────┼──────────┤
+  │ www.jalcocertech.com │ 71     │ 98    │ 86 → 95     │ 76 → 100 │ 70 → 100 │ 40 → 100 │
+  ├──────────────────────┼────────┼───────┼─────────────┼──────────┼──────────┼──────────┤
+  │ ebooks               │ 95     │ 100   │ 100         │ 79 → 100 │ 100      │ 100      │
+  ├──────────────────────┼────────┼───────┼─────────────┼──────────┼──────────┼──────────┤
+  │ consulting           │ 84     │ 99    │ 88 → 98     │ 74 → 100 │ 70 → 100 │ 100      │
+  └──────────────────────┴────────┴───────┴─────────────┴──────────┴──────────┴──────────┘
+
+  Everything is committed, pushed and live. For each site I checked the security headers in a real
+  browser: no blocked content, and Mermaid diagrams, the Cal.com calendar and the Alpine demo all still
+  work. The before/after HTML reports are in poc_webs_magnet/reports/.
+
+  Fixes to the audit tool: it had two false findings, so I fixed it first.
+  - The sitemap check now follows robots.txt and finds sitemap-index.xml (Astro's default name).
+  - Contact detection now reads the whole page and recognises Cloudflare's hidden email links.
+  - The homelab needs a git pull and container recreate to pick this up.
+
+  What changed on the sites:
+  - Sitemaps, robots.txt, canonical links and social tags on all three.
+  - Security headers on all three: HSTS, a content security policy and anti-framing.
+  - Footer: contact email added on all three. Terms link added on www and ebooks; consulting already
+    had one.
+  - Fonts are now served from the sites themselves instead of Google Fonts. Most of the slow first
+    paint was waiting on the Google Fonts stylesheet, which www loaded twice. www's LCP went from 3.8 s
+    to 2.4 s.
+  - The Cal.com embed (about 1 MB of JavaScript) now loads only when a visitor scrolls near the
+    calendar.
+  - www: the 6 broken links in the connectivity article are fixed. Four notes now link to your blog.
+    "Self-hosted servers need periodic inventory" is plain text marked "coming December 2026", because
+    it's scheduled for 9 December. The missing image is added.
+  - ebooks:
+    - Real 404 page: unknown addresses now return a proper 404 instead of the library page. Even
+      /robots.txt didn't exist before; the site just served the homepage.
+    - 273 broken chapter links fixed: the 404 page exposed them. Chapters linked to each other as
+      chapter.md and to example scripts that aren't published. A small build step now rewrites chapter
+      links and turns links to unpublished files into plain text.
+    - New homepage description: the old one was template text.
+
+  Please check:
+  - The new /terms/ page on www (ebooks links to it too). I wrote that legal wording myself, so please
+    read it.
+  - The remaining 1–2 points come from Cloudflare Email Obfuscation. It loads a script that blocks the
+    first paint for about 0.45–0.8 s on any page showing an email address. You can turn it off in the
+    zone settings, or exclude just the footer email, but either way scrapers would see your address.
+    It's your call, and keeping it is reasonable.
+  - The /presentations/ba-brd/ deck on consulting is unstyled in production. Its stylesheets are
+    requested from /assets/… instead of the deck's own folder. It was already broken before today and I
+    haven't touched it.
+  - Disk space: your main disk is at 98% (3.9 GB free), which is probably why /tmp filled up earlier.
+
+  Learnings are recorded in jalcocertech-core/leads-hub/z-learnings.md.
+
+The homelab update worked: the public /health shows the audit server up, the lead hub on and every
+  audit script present. To confirm the new checks from the outside, run one audit in the web UI on a
+  site with a weak share image. A good test is any site whose link preview on LinkedIn shows a small
+  logo. It should now get a "Fix how the site looks when shared" priority.
+
+  What's next
+
+  The sites are now technically in good shape (www 99, ebooks 100, consulting 97). The useful next step
+  is getting people to use them, not more building.
+
+  1. Distribution (this week)
+  - Post the 71 → 99 article on LinkedIn. It shows the audit working on a real site, and it now gets a
+    proper share card. Give the before/after numbers and one concrete finding, like the 273 broken
+    links a missing 404 page was hiding. End by offering the free audit.
+  - Spin one or two more posts out of the eight articles. "Your link preview is a 248×56 logo" is a
+    quick, visual hook for business owners.
+  - Use make report for warm conversations on LinkedIn, not cold email: we covered earlier that cold
+    commercial email needs prior consent in Poland. When someone engages with a post, ask if they'd
+    like their site checked, then send them the HTML report. That's the "show a problem, ask if they
+    want more" approach you described.
+
+  2. Small loose ends (each well under an hour)
+  - About 17 October: delete your own test leads (roadmap 1.10).
+  - The /presentations/ba-brd/ deck on consulting is unstyled. It requests its stylesheets from
+    /assets/… instead of its own folder. Rebuilding the deck with the right base path fixes it, or
+    remove it if it's not needed.
+  - Your root disk is at 98%, which is what filled /tmp earlier. Worth a cleanup, e.g. docker system
+    prune and old node_modules.
+
+  3. Lead follow-up, once leads come in
+  - 4C.13 audit-followup drip: drafted but disabled. Turn it on once you've reviewed the copy.
+  - "Hold for a personal note" option: a warm lead skips the automatic email so you can write
+    personally.
+  - 4A.9 Cal.com prefill: the qualifier passes name and email into the booking form, removing one step
+    before payment.
+
+  4. Parked until you decide or need them
+  - 4C.2: rewriting git history to remove the old leads.csv.
+  - forms.jalcocertech.com for sites hosted outside Cloudflare (leadarchitect.org).
+  - The Apify prospecting flow.
+
+  My recommendation is to do the LinkedIn post and the ba-brd fix now, and leave everything in section
+  3 until real leads arrive. Building more before there's demand is the trap you mentioned earlier.
+  Should I draft the LinkedIn post?
+
+
+PDF download is built and pushed, and listing the links works: make reports prints every storedreport with its web link and its PDF link.
+
+On the homelab
+
+This time the image must be rebuilt (--build), because the Dockerfile now installs fonts:
+
+```sh
+cd ~/poc_webs_magnet && git pull
+docker compose -f docker-compose.prod.yml up -d --build --force-recreate
+```
+
+To list the stored reports:
+
+```sh
+docker exec auditmagnet-prod make -s reports              # valid reports only
+docker exec auditmagnet-prod make -s reports ARGS="--all" # include expired ones
+```
+
+The output looks like this (from my local test):
+
+- "full" is the 24-hour "Full report" from an audit on the site; "deep" is the emailed 7-day report.
+- "PDF printed" means someone (or you) has already downloaded it.
+- Reports from before this update also get a working .pdf link. Only their HTML page lacks the
+  button.
+- The script only reads. It changes nothing and isn't reachable from the web.
+
+What's new
+
+- A "Download PDF" button on both report types. The server prints the report with the Chromium
+  already in the container the first time someone asks (about 0.7 s on my laptop), keeps the PDF next
+  to the HTML, and deletes both together. After that, downloads are instant. Expired reports return
+  the same "expired" page as the web version; unknown or malformed links return 404.
+- Print styles: A4, desktop layout, colours kept, nothing split across pages. A short report fits on
+  one page; a long one (10 broken links, many issues) came out as 2 clean pages. The button doesn't
+  appear in the PDF.
+- CLI: make report URL=… ARGS="--pdf" saves the PDF to reports/. Handy for prospects you talk to on
+  LinkedIn.
+- Privacy page: our PDF copy is deleted with the report; the downloaded file is the visitor's to
+  keep.
+
+Check after deploying
+
+1. Run an audit on the site, click "Full report", then "Download PDF".
+2. Open the PDF. If the text looks right (not empty boxes), the fonts are working.
+
+The PDFs I looked at were printed on this laptop, not inside the container, so that check is the one thing I haven't verified.
+
+That's also why I added two font packages to the image (about 10 MB).
+
+The report-ready email doesn't include a PDF link yet; the button is on the report page it links to.
+
+Adding a "Download PDF" line to the email is a small Worker change if you want it.
+
+depending on which emails you mean.
+
+  1. The HTML report, and therefore the PDF
+
+  All in poc_webs_magnet/lib/render-report.mjs:
+
+  ┌───────────────────────────┬───────────────────────────────────────────┬───────────────────────┐
+  │         Function          │                 Controls                  │      Edit it for      │
+  ├───────────────────────────┼───────────────────────────────────────────┼───────────────────────┤
+  │                           │ The words: headline, verdict, "The most   │ Copy, thresholds,     │
+  │ buildReportContent() (top │ important" facts and their thresholds     │ which findings become │
+  │  half)                    │ (LCP > 2.5 s etc.), "Why it matters", the │  priorities           │
+  │                           │  3 priorities and their order             │                       │
+  ├───────────────────────────┼───────────────────────────────────────────┼───────────────────────┤
+  │                           │                                           │ Colours, logo,        │
+  │ renderReport() (bottom    │ The layout: the HTML and the CSS inside   │ sections, the CTA     │
+  │ half)                     │ <style>                                   │ text and link, the    │
+  │                           │                                           │ footer                │
+  ├───────────────────────────┼───────────────────────────────────────────┼───────────────────────┤
+  │ The @media print { … }    │ The PDF only: A4, margins, spacing, page  │ Making the PDF look   │
+  │ block inside that CSS     │ breaks                                    │ different from the    │
+  │                           │                                           │ web version           │
+  └───────────────────────────┴───────────────────────────────────────────┴───────────────────────┘
+
+  lib/report-pdf.mjs only tells Chromium to print the HTML, so there's nothing to style there.
+
+  After editing, preview without touching production:
+  make report URL=https://www.jalcocertech.com ARGS="--html --pdf"   # writes
+  reports/<host>-<date>.html and .pdf
+  On the homelab, it goes live with git pull and a recreate; no rebuild needed, since the repo is
+  mounted into the container. Reports already generated keep their old look.
+
+  2. The drip emails (welcome series etc.)
+
+  These live in jalcocertech-core/leads-hub/hub/:
+
+  - Content:
+    - sequences/jt-welcome.toml is the sequence itself: steps, delays (0, 3, 7 days), subjects, sender
+      name, enabled.
+    - sequences/jt-welcome/01-welcome.txt, 02-best-of.txt and 03-ask-me.txt are the bodies, in plain
+      text. Paragraphs are separated by blank lines, and $origin, $brand and other placeholders are
+      filled in. An unknown placeholder raises an error, so a typo can't go out.
+  - The wrapper: src/leadshub/sequences.py.
+    - render() turns the text into the HTML version: a simple centred layout with system font and
+      paragraphs.
+    - FOOTER_TEXT is the unsubscribe footer. It's always added, so a template can't forget it.
+  - When and to whom (not the look): src/leadshub/drip.py.
+
+  A new sequence is one more .toml file plus its text files. After editing, run git pull on the
+  homelab; the hub reads the files on each run.
+
+  3. The Worker's emails
+
+  These aren't drips, but they're also emails: subscription confirmation, "start your full report" and
+  "your report is ready". They're in jalcocertech-core/leads-hub/worker/src/email.ts:
+
+  ┌──────────────────────┬──────────────────────────────────────────────────────────────────────────┐
+  │       Function       │                                  Email                                   │
+  ├──────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+  │ confirmationEmail()  │ Double opt-in "Confirm your subscription to …"                           │
+  ├──────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+  │ reportConfirmEmail() │ "Start your full report for …"                                           │
+  ├──────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+  │ reportReadyEmail()   │ "Your website report for …: 98/100" (the place to add a "Download PDF"   │
+  │                      │ link)                                                                    │
+  ├──────────────────────┼──────────────────────────────────────────────────────────────────────────┤
+  │ reportFailedEmail()  │ When a deep report couldn't be generated                                 │
+  └──────────────────────┴──────────────────────────────────────────────────────────────────────────┘
+
+  Changes there need npm test and then npx wrangler deploy from leads-hub/worker.
+
+  One thing I noticed in that file: if SENDER_EMAIL isn't set, these emails fall back to
+  noreply@news.libreportfolio.fyi. Production sets SENDER_EMAIL, so it has no effect today, but it's
+  another domain sitting in your code. I can switch the fallback to news.jalcocertech.com the next time
+  we touch the Worker.
 
 ```sh
 git remote -v

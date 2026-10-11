@@ -127,6 +127,8 @@ Both the pi and x300 are working right now without local SSLs `192.168.1.18` `19
 
 Regarding **useful CLIs**: [herdr](https://fossengineer.com/herdr-terminal-agent-multiplexer/), [ncdu](https://fossengineer.com/ncdu-terminal-disk-usage-analyzer/), [lazydocker](https://fossengineer.com/lazydocker-terminal-ui-for-docker/)
 
+For AI: *~~windsurf, cursor, zed, gram, antigravity, kilo code, roo code, gemini cli, Goose Desktop~~ claude code, codex CLI, T3 Code, opencode....*
+
 ```sh
 herdr #code --yolo | opencode | claude 
 #ncdu /
@@ -171,12 +173,17 @@ Oh, and with [oss link shorteners](https://fossengineer.com/selfhosted-open-sour
 The video presents a novel approach to link shortening and QR code generation that eliminates the need for a database, ensuring links remain recoverable even if the service goes down. The method focuses on optimizing link encoding and compression, resulting in potentially smaller QR codes and links without ads or registration.
 Key points
 
-    Traditional link shorteners store full links in a database, raising privacy concerns and potential link loss if the service shuts down.
-    The proposed "link compressor" removes redundant parts of URLs, significantly reducing their length without losing essential information.
-    Encoding techniques are employed to represent common URL components with fewer bits, allowing for more efficient storage.
-    The system uses a fixed dictionary for compression, optimizing the encoding of frequently used characters in URLs.
-    The QR code generation process is improved by using the alphanumeric character set, resulting in smaller and more efficient QR codes compared to existing tools.
-    The project is experimental and not intended as a commercial product, but it demonstrates the potential for more efficient link management.
+Traditional link shorteners store full links in a database, raising privacy concerns and potential link loss if the service shuts down.
+
+The proposed "link compressor" removes redundant parts of URLs, significantly reducing their length without losing essential information.
+
+Encoding techniques are employed to represent common URL components with fewer bits, allowing for more efficient storage.
+
+The system uses a fixed dictionary for compression, optimizing the encoding of frequently used characters in URLs.
+
+The QR code generation process is improved by using the alphanumeric character set, resulting in smaller and more efficient QR codes compared to existing tools.
+
+The project is experimental and not intended as a commercial product, but it demonstrates the potential for more efficient link management.
 
 > Once you are done, you make sure that all links in your website work with `https://github.com/linkchecker/linkchecker`
 
@@ -263,6 +270,59 @@ https://github.com/lfnovo/open-notebook
 https://github.com/Priveetee/TypeType
 
 `yt-distill` poc
+
+
+### Travel Router as Home Router
+
+I was wondering of the Glnet could be my home router, if i can use https://opnsense.org/ or if i need a CM at all.
+
+**No, you do not need a cable modem at all.**
+
+The standalone **ONT on your wall is already your modem.**
+
+Why People Get Confused by the Term "Modem"
+
+Historically, internet types used different devices:
+
+* **DOCSIS (Coaxial cable TV network like legacy UPC):** Needed a dedicated **Cable Modem** to translate high-frequency coaxial RF signals into Ethernet.
+* **DSL / VDSL (Old copper phone lines like Neostrada):** Needed an **ADSL/VDSL Modem** to demodulate phone line frequencies.
+* **Fiber Optic (Your setup):** Uses an **ONT (Optical Network Terminal)**. It demodulates light pulses coming through the glass fiber and turns them directly into standard Gigabit Ethernet frames.
+
+
+The box Play delivered to you is a **router + Wi-Fi access point**, not a modem. It does no optical conversion.
+
+```
+[ Glass Fiber in Wall ]
+           │
+           ▼
+┌─────────────────────────┐
+│     Orange ONT Box      │  <-- THIS IS YOUR MODEM (Keep this plugged in)
+│ (Demodulates light)     │
+└──────────┬──────────────┘
+           │
+           │ (Standard RJ45 Ethernet Cable carrying VLAN 35)
+           ▼
+┌─────────────────────────┐
+│ Play Factory Box        │  <-- THIS IS JUST A ROUTER / AP (You can remove it)
+│ (Currently routing)     │
+└─────────────────────────┘
+```
+
+When you replace the Play router with your GL.iNet, a UniFi Gateway, or your Ubuntu homelab running **OpenWrt**:
+
+```
+[ Orange ONT Box ]
+       │
+       │ (Standard RJ45 Ethernet Cable carrying VLAN 35)
+       ▼
+[ Your Custom Router / GL.iNet / Homelab VM ]
+       │
+       ▼
+[ Your Devices & Wi-Fi ]
+
+```
+
+As long as the **ONT on the wall stays connected to power and fiber**, you can plug that incoming Ethernet cable directly into any router you want and send the factory box back into storage.
 
 
 

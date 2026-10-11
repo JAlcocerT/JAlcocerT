@@ -239,7 +239,9 @@ They [claim to be cheaper](https://cloudflarebase.com/#pricing) than firebase an
 
 WordPress was built for a different era. Running WordPress today means managing PHP alongside JavaScript, layering caches to get acceptable performance, and knowing that 96% of WordPress security vulnerabilities come from plugins. EmDash is what WordPress would look like if you started from scratch with today's tools.
 
-Built for agents. EmDash publishes agent skills that teach coding assistants its APIs, a CLI that lets agents manage content and schema programmatically, and a built-in MCP server so AI tools like Claude and ChatGPT can interact with your site directly.
+Built for agents.
+
+EmDash publishes agent skills that teach coding assistants its APIs, a CLI that lets agents manage content and schema programmatically, and a built-in MCP server so AI tools like Claude and ChatGPT can interact with your site directly.
 
 Runs anywhere. EmDash uses portable abstractions at every layer -- Kysely for SQL, S3 API for storage -- that work with SQLite, D1, Turso, PostgreSQL, R2, AWS S3, or local files. It runs best on Cloudflare, but it's not locked to it.
 
@@ -253,3 +255,5 @@ Emdash uses SSR/server output, monolith uses another SSR/api so that when you ed
 {{< callout type="warning" >}}
 When portability, static output, rollback and githistory matter just go for a  gitbased cms
 {{< /callout >}}
+
+> You can also have a look to: `https://github.com/sveltia/sveltia-cms` or to foldergram

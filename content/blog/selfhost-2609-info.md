@@ -132,24 +132,6 @@ Last year, I was working on a speech rater around openAI TTS and ST2 as well [he
 
 With `files.md` you can record audio with the PWA, just that it will stay locally.
 
-#### Gold Info for SoloPreneurs
-
-You need to ship/fix/kill (quick). 
-
-{{% details title="Ideas Checklist 🚀" closed="true" %}}
-
-For this I dedicated a full post few weeks ago.
-
-The general idea checklist is as follows:
-
-{{% /details %}}
-
-{{% details title="Prospects/Clients Checklist 🚀" closed="true" %}}
-
-
-
-{{% /details %}}
-
 
 #### Info to Video
 
@@ -427,6 +409,7 @@ Check that `forgejo:3000` ready:
 4. [Bitchat](https://fossengineer.com/bitchat-mesh-messaging/) *that works via bluetooth*
 
 > See also [Rocket chat](https://github.com/RocketChat/Rocket.Chat) or [stoatchat](https://github.com/stoatchat/stoatchat) *i believe it was named revolt before*
+
 ### Selfhosted Media
 
 qbit and prowlarr at `6011` and `9696`.
@@ -437,24 +420,25 @@ sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d
 
 yt-distil: `http://192.168.1.2:8001`
 
-https://jalcocert.github.io/JAlcocerT/photo-management-tools/
+You can also have a look to these [photo management tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/) and [backups](https://jalcocert.github.io/JAlcocerT/image-backup-tools/): *[PiGallery2](https://fossengineer.com/selfhosting-pigallery2/), [Immich](https://fossengineer.com/selfhosting-immich/), [entee](https://fossengineer.com/selfhosting-ente-e2ee-photos-auth-locker/), [Photoview](https://fossengineer.com/selfhosting-Photoview-docker/)*
 
-https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing
+Later on you can [edit the photos](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#photo-editing) or [the videos](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing)
 
-https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#photo-editing
 
-https://jalcocert.github.io/JAlcocerT/image-backup-tools/
+
 
 
 #### Kodi vs Jellyfin
 
-With kodi adons: <https://www.youtube.com/@proyectosmicropic/videos>
-
-You can have [a look to IPTVs](https://forocoches.com/foro/showthread.php?t=10742800) as seen [here](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#iptv)
+Im happy with Jellyfin:
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin" title="Jellyfin Media Server Tools 🐋 ↗" >}}
 {{< /cards >}}
+
+You can have a look to Kodu With kodi adons: `https://www.youtube.com/@proyectosmicropic/videos`
+
+You can have [a look to **IPTVs**](https://forocoches.com/foro/showthread.php?t=10742800) as seen [here](https://jalcocert.github.io/JAlcocerT/selfhosting-media/#iptv)
 
 #### Music
 

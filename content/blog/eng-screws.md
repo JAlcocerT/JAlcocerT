@@ -1,6 +1,6 @@
 ---
 title: "Screws are a thing"
-date: 2026-10-19
+date: 2026-10-24
 draft: false
 tags: ["3D","Design"]
 description: 'Another rabbit-hole..'
