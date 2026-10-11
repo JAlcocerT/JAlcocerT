@@ -1008,7 +1008,7 @@ This is the consolidated version of what I wrote and tested across those posts a
 
 ### Improved RE and GenBI
 
-I found 10 posts dated 2026 mentioning one or both domains.
+I found 12 source posts dated 2026 mentioning one or both domains.
 
 Six contain substantial discussion; the rest are roadmap, portfolio, or monitoring references.
 
@@ -1092,9 +1092,13 @@ Both domains became proof assets inside your value ladder:
 
 By April, you presented them together as portfolio PoCs in How to PoC (content/blog/poc-101.md:350): *demonstrations of what your consulting/full-service tier could deliver*.
 
+The live domains, repository files and all 12 related 2026 posts are indexed in the expandable section below.
+
 {{% details title="Real Estate and GenBI repositories 📌" closed="true" %}}
 
 The clearest domain-to-repository mapping is:
+
+> Some implementation repositories are private working repos. These links remain useful as my project inventory, but readers without access will see a GitHub 404. `Data-Chat` is public; the live sites and related blog posts are public.
 
 | Domain | Primary repository | Role |
 |---|---|---|
