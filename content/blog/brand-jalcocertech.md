@@ -2560,3 +2560,57 @@ Limits on how big each batch can be:
 - Monthly: make clean-old.
 
 If you like, just say "Monday run" next week and I'll do steps 1–3, except the Smartlead clicks.
+
+you're sending twice as many emails as leads,
+  and you've left out scraping.
+
+  Monthly cost at 20 new leads a day
+
+  ┌───────────────────────────────────────────────────────────────────────────────────────┬─────────┐
+  │                                         Item                                          │ $/month │
+  ├───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
+  │ Smartlead                                                                             │ 40      │
+  ├───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
+  │ Google Workspace, 2 inboxes                                                           │ 40      │
+  ├───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
+  │ Apify: 400 leads at ~18 sends per 100 listings means ~2,200 listings (~$11 of usage); │ ~49     │
+  │  beyond the $5 free credit that needs the Starter plan                                │         │
+  ├───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
+  │ Total                                                                                 │ ~130    │
+  └───────────────────────────────────────────────────────────────────────────────────────┴─────────┘
+
+  - Per lead: about $0.32.
+  - Per email: about $0.16, since each lead gets the first email and a follow-up, so 800 emails a
+    month.
+
+  What 400 leads a month should produce, using the ranges from earlier:
+
+  ┌──────────────────────────────────┬───────────┐
+  │                                  │ Per month │
+  ├──────────────────────────────────┼───────────┤
+  │ Replies (3–8%)                   │ 12–32     │
+  ├──────────────────────────────────┼───────────┤
+  │ Positive replies (1–3%)          │ 4–12      │
+  ├──────────────────────────────────┼───────────┤
+  │ Calls                            │ 1–4       │
+  ├──────────────────────────────────┼───────────┤
+  │ Paid fix packs (10–30% of calls) │ 0–1       │
+  └──────────────────────────────────┴───────────┘
+
+  Break-even is one fix pack (£390, about $500) every 3–4 months. If outbound can't manage that at 400
+  leads a month, it doesn't work anyway, and the tools aren't the problem.
+
+  Your time costs more than the tools: about an hour each Monday, replies, calls, and the delivery
+  itself (the roadmap's last decision point checks whether a fix pack really fits in a day).
+
+  What I'd do
+  1. Commit for two months, not a year: monthly billing everywhere.
+  2. Don't buy Apify Starter yet. This month's remaining credit plus November's free $5 covers the next
+     2–3 batches. Upgrade only once a trade shows replies.
+  3. Set a stop rule now: no positive reply after about 300 sends means change the offer or the market
+     before spending more. At least 1 call by 400 sends means keep going and scale the best trade.
+  4. Leave the third Workspace inbox out for now. At 20 leads a day, two inboxes are enough. It's worth
+     $20 a month only if you push past 30 leads a day.
+
+  At about 75 leads a week, you'll reach the 300-send point by mid-November, so the first verdict costs
+  about $200–250 in tools.
