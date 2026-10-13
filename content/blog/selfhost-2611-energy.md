@@ -187,10 +187,22 @@ Despite this section being selfhost center, i cant deny the nice tech and buildi
 
 
 ```sh
-docker builder prune -af
-docker image prune -f
-
+docker builder prune -a
+docker image prune -a
+docker system df
 ```
+
+I tried Gladys and it has interesting integrations with tappo, zigbee2mqtt...
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gladys/" title="Gladys | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant/" title="Home Assistant | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+But honestly, i just dont care about learning how to use a tool that ,,I'' ve not designed anymore. Just give me mqtt [with emqx](https://fossengineer.com/selfhosting-emqx/) and ill get a custom dashboard done.
+
+
+For travel, i got to know `https://hotelist.com/` which is some kind of...numbeo for hotel ratings?
 
 
 ---

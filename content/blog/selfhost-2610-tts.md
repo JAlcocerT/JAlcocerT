@@ -2,7 +2,7 @@
 title: "Selfhosted TTS"
 date: 2026-10-16
 draft: false
-tags: ["Kokoro","VoiceBox","SunoAI x music"]
+tags: ["Kokoro","VoiceBox","SunoAI x music","VPS x DR Test","ONT x DHCP"]
 description: 'A homelab that speaks.'
 url: 'selfhosted-tts'
 ---
@@ -132,6 +132,7 @@ For AI: *~~windsurf, cursor, zed, gram, antigravity, kilo code, roo code, gemini
 ```sh
 herdr #code --yolo | opencode | claude 
 #ncdu /
+find . -type d -name ".venv" ### -exec rm -rf {} +
 
 # sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent prowlarr
 sudo docker compose -f 2610_docker-compose.yml up -d termix nextcloud ncdb sftpgo forgejo forgejo-forgejo-db-1 ntfy pocketbase mailpit uptimekuma maintenant technitium jellyfin qbittorrent prowlarr dawarich_app dawarich_db #umami lunalytics littlyx
@@ -271,6 +272,18 @@ https://github.com/Priveetee/TypeType
 
 `yt-distill` poc
 
+### Testing a backup Strategy in the cloud
+
+I recently saw [this post](https://akashrajpurohit.com/blog/choosing-the-right-vps-provider-comparing-digitalocean-linode-vultr-hetzner-for-different-use-cases/) that compares few VPS providers
+
+It reminded my that some time back, i also tested as a wg server VPS's like DO droplet and hetzner 
+
+As [now im energy aware](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#energy-consumption-data-points) that my CM+x300 home server are costing me ~20kwh/month@0.25eur/kwh = 5 eur/month which is far lower than the ~60 eur/month id be paying.
+
+But... renting on of those servers for an afternoon can be interesting to:
+
+1. Test in Batch all my Home-Lab projects with agents and flag which ones are not working anymore
+2. Test that my backup strategy and DR (disaster recovery works) 
 
 ### Travel Router as Home Router
 

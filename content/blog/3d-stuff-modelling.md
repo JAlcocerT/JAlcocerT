@@ -18,6 +18,13 @@ A local-first browser 3D design editor for building, cutting, importing STL file
 ![fpv stand STL x sketchforge](/blog_img/mechanics/fpv-stand.png)
 
 
+ A local-first 3D design editor that runs in your browser.
+ 
+A local-first browser 3D design editor for building, cutting, importing STL files, and exporting models.
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/octoprint" title="Octoprint | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/sketchforge" title="SketchForge 3D | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 

@@ -7,6 +7,20 @@ description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranea
 url: "webs-for-restaurants"
 ---
 
+If you are shipping, get inspired with:
+
+https://akashrajpurohit.com/consulting/?utm_source=akashrajpurohit.com&utm_medium=footer
+https://akashrajpurohit.com/contact/?utm_source=akashrajpurohit.com&utm_medium=footer
+
+https://catchintent.com/pricing/
+
+https://www.kelviq.com/?ref=checkout vs stripe
+
+https://hydrafetch.com/pricing/
+
+https://paprikaethnicwear.com/?utm_source=akashrajpurohit.com
+https://akashrajpurohit.com/blog/your-next-backend-could-just-be-a-google-sheet/
+
 A restaurant website should do more than display a menu.
 
 It can support discovery, reservations, events, private offers, reviews, local SEO, analytics, waitlists, delivery links, and customer communication. For local businesses, the site is part of operations.

@@ -141,6 +141,12 @@ Any [solar panel](https://youtube.com/shorts/e_GwgidIPFg) with no load has poten
 
 Yet, makes no actual work / provides power / throughput
 
+```sh
+#git clone /jalcocertech-core
+cd ./jalcocertech-core/leads-hub/hub #for inbound checks
+make lead-messages LIMIT=5
+```
+
 Dont be an open solar panel, embrace the [risk and opportunities](#risk-and-opportunities):
 
 

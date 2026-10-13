@@ -906,15 +906,14 @@ In that setup, the **5V panel slowly charges the 18650 pack**, and the **18650 p
 
 ## SelfHosted IoT Tools
 
-OpenHUB, HA, Node-Red and ESPhome.
+OpenHaB, HA, Node-Red and ESPhome...
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="OpenHUB | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Home Assistant | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-Yea, `https://esphome.io` if you like ESP32 boards!
-
+Yea, check `https://esphome.io` if you like ESP32 boards!
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/velxio/" title="Velxio | Docker Config 🐋 ↗" >}}

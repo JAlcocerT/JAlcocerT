@@ -1204,23 +1204,24 @@ make pump-schedules
 > `http://192.168.1.2:3038/?range=90d`
 
 /C:/Users/j--e-/Desktop/poc/iot-esp-water/esp32-wifi/wifi_manager_pump/wifi_manager_pump.ino:48
-C:/Users/j--e-/Desktop/poc/physics-electronics/voltage-divider/scripts-microcontrollers/firmware-esp32/esp32-dht11-mqtt-emqx-battery-monitor.cpp
+
+C:/Users/j--e-/Desktop/poc/physics-electronics/voltage-divider/scripts-microcontrollers/firmware-esp32 esp32-dht11-mqtt-emqx-battery-monitor.cpp
+
 C:\Users\j--e-\Desktop\poc\iot-esp32-mppt\ina226-CN3722
 
 
-  mosquitto_sub -h 192.168.1.2 -p 1883 -t 'esp32/mppt/#' -v
-  mosquitto_sub -h 192.168.1.2 -p 1883 -t 'esp32/#' -v                  
+mosquitto_sub -h 192.168.1.2 -p 1883 -t 'esp32/mppt/#' -v
+mosquitto_sub -h 192.168.1.2 -p 1883 -t 'esp32/#' -v                  
 
-
-  - DHT11 DATA → D4 / GPIO4
-  - Voltage-divider midpoint → D34 / GPIO34                             
-  - Pump driver → GPIO23                                                
-  - INA226 SDA → GPIO21                                                 
-  - INA226 SCL → GPIO22                                                 
-  - INA226 VCC → 3V3                                                    
-  - INA226 GND → GND                                                    
-  - Shared panel/divider ground                                         
-  - INA226 address 0x40 and 0.1 Ω shunt 
+- DHT11 DATA → D4 / GPIO4
+- Voltage-divider midpoint → D34 / GPIO34
+- Pump driver → GPIO23
+- INA226 SDA → GPIO21
+- INA226 SCL → GPIO22
+- INA226 VCC → 3V3
+- INA226 GND → GND
+- Shared panel/divider ground
+- INA226 address 0x40 and 0.1 Ω shunt 
 
 esp32/mppt/status partial-measurement
 esp32/mppt/panel/voltage 10.278
@@ -1233,6 +1234,7 @@ make upload PORT=COM7 WIFI_SSID="Piszymsiu" WIFI_PASSWORD="whateveryourwifipwdis
 
 {{< youtube "x1tMh0gp9_Y" >}}
 
+```sql
 sqlite3 -header -csv -readonly /home/jalcocert/poc/iot-dashboard-v2/data/readings.sqlite \
 "SELECT datetime(received_ms / 1000, 'unixepoch', 'localtime') AS time_local,
     value AS panel_voltage_v
@@ -1241,8 +1243,13 @@ sqlite3 -header -csv -readonly /home/jalcocert/poc/iot-dashboard-v2/data/reading
     AND received_ms >= unixepoch('now', 'localtime', 'start of day', 'utc') * 1000
     AND received_ms <  unixepoch('now', 'localtime', 'start of day', '+1 day', 'utc') * 1000
   ORDER BY received_ms ASC;" > "panel_voltage_$(date +%F).csv"
+```
 
+
+```sh
 scp jalcocert@192.168.1.2:/home/jalcocert/panel_voltage_2026-10-09.csv .
+```
+
 
 <!-- https://youtube.com/shorts/x1tMh0gp9_Y -->
 
@@ -1262,44 +1269,42 @@ make latest
 #scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/captures/snapshot-20261002-084222.jpg .
 ```
 
-
-
 I recommend:
 
-  - Now / experiments: shell loop inside tmux
-  - Later / always-on: systemd timer or cron
+- Now / experiments: shell loop inside tmux
+- Later / always-on: systemd timer or cron
 
-  I added the tmux-friendly version here:
+I added the tmux-friendly version here:
 
-  camera-tests/capture-every-5min.sh
-  camera-tests/Makefile
+camera-tests/capture-every-5min.sh
+camera-tests/Makefile
 
-  Use it like this on the Pi:
+Use it like this on the Pi:
 
-  cd /home/jalcocert/camera-tests
-  make tmux-start
+cd /home/jalcocert/camera-tests
+make tmux-start
 
-  It will capture one rotated image every 5 minutes into:
+It will capture one rotated image every 5 minutes into:
 
-  /home/jalcocert/camera-tests/captures/
+/home/jalcocert/camera-tests/captures/
 
-  and refresh:
+and refresh:
 
-  /home/jalcocert/camera-tests/latest.jpg
+/home/jalcocert/camera-tests/latest.jpg
 
-  Useful commands:
+Useful commands:
 
-  make tmux-attach
-  make tmux-stop
-  make list
+make tmux-attach
+make tmux-stop
+make list
 
-  Change interval, for example every 60 seconds:
+Change interval, for example every 60 seconds:
 
-  make tmux-start INTERVAL_SECONDS=60
+make tmux-start INTERVAL_SECONDS=60
 
-  From Windows, you can keep copying the newest image with:
+From Windows, you can keep copying the newest image with:
 
-  scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/latest.jpg .
+scp jalcocert@192.168.1.18:/home/jalcocert/camera-tests/latest.jpg .
 
 ─ Worked for 5m 47s ────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
 
@@ -1309,69 +1314,69 @@ I recommend:
 
 • Yes.
 
-  make tmux-start starts a detached tmux session running the capture loop. It will keep taking a snapshot every 5 minutes until one of these happens:
+make tmux-start starts a detached tmux session running the capture loop. It will keep taking a snapshot every 5 minutes until one of these happens:
 
-  - you stop it with:
+- you stop it with:
 
-  cd /home/jalcocert/camera-tests
-  make tmux-stop
+cd /home/jalcocert/camera-tests
+make tmux-stop
 
-  - the Pi reboots or powers off
-  - the script crashes because of a camera/system error
-  - the tmux session is killed manually
+- the Pi reboots or powers off
+- the script crashes because of a camera/system error
+- the tmux session is killed manually
 
-  You can watch it live with:
+You can watch it live with:
 
-  make tmux-attach
+make tmux-attach
 
-  Then detach without stopping it by pressing:
+Then detach without stopping it by pressing:
 
-  Ctrl+b
-  d
+Ctrl+b
+d
 
-  To confirm it is running:
+To confirm it is running:
 
-  tmux ls
+tmux ls
 
-  or:
+or:
 
-  tail -f /home/jalcocert/camera-tests/capture-loop.log
+tail -f /home/jalcocert/camera-tests/capture-loop.log
 
 I added disk safeguards to the capture loop.
 
-  Current Pi disk status:
+Current Pi disk status:
 
-  28G total, 24G used, 3.4G free, 88% used
+28G total, 24G used, 3.4G free, 88% used
 
-  The loop now defaults to:
+The loop now defaults to:
 
-  MAX_CAPTURES=576
-  MIN_FREE_MB=1024
-  LOG_MAX_LINES=2000
+MAX_CAPTURES=576
+MIN_FREE_MB=1024
+LOG_MAX_LINES=2000
 
-  At one image every 5 minutes, 576 captures is about 2 days of history. After each successful capture, the script:
+At one image every 5 minutes, 576 captures is about 2 days of history. After each successful capture, the script:
 
-  1. deletes oldest captures if there are more than MAX_CAPTURES
-  2. deletes oldest captures if free disk space drops below MIN_FREE_MB
-  3. trims the log so it does not grow forever
+1. deletes oldest captures if there are more than MAX_CAPTURES
+2. deletes oldest captures if free disk space drops below MIN_FREE_MB
+3. trims the log so it does not grow forever
 
-  Use:
+Use:
 
-  cd /home/jalcocert/camera-tests
-  make tmux-start
+cd /home/jalcocert/camera-tests
+make tmux-start
 
-  More conservative, keep only 1 day and at least 2GB free:
+More conservative, keep only 1 day and at least 2GB free:
 
-  make tmux-start MAX_CAPTURES=288 MIN_FREE_MB=2048
+make tmux-start MAX_CAPTURES=288 MIN_FREE_MB=2048
 
-  Check space anytime:
+Check space anytime:
 
-  make disk
+make disk
 
-  If a capture loop is already running, restart it to pick up the new safeguards:
+If a capture loop is already running, restart it to pick up the new safeguards:
 
-  make tmux-stop
-  make tmux-start
+make tmux-stop
+make tmux-start
 
 
 > While [experimenting](https://jalcocert.github.io/JAlcocerT/how-to-check-hot-pump-viability/#the-experiment) wanted to also understand sun and earth positioning: `https://solar-trajectory.pages.dev/`

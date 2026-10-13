@@ -86,7 +86,7 @@ Thanks to: `https://selfh.st/apps/?search=3d`
 | **Maker Management Platform (MMP)** | Digital Asset Manager for 3D prints | Open Source (BSD-2-Clause / MIT) | Docker Compose | Similar in purpose to Manyfold. *Note:* As of 2026, the MMP GitHub repositories are archived/seeking maintainers, so Manyfold is currently the more active alternative. |
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/octoprint" title="BotPress | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/octoprint" title="Octoprint | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
 Typical Self-Hosted 3D Printing Stack
@@ -100,7 +100,7 @@ Most homelab makers combine these into a unified workflow:
 
 People is really creative online:
 
-* https://www.thingiverse.com/thing:5965826 *Minimalistic Motorized Roller Blinds - NEMA 17 stepper motor gear*
+* `https://www.thingiverse.com/thing:5965826` *Minimalistic Motorized Roller Blinds - NEMA 17 stepper motor gear*
 
 ---
 

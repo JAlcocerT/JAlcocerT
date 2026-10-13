@@ -7,6 +7,23 @@ description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
 
+for on boarding flows: https://bitly.com/a/sign_up
+
+https://levels.io/
+
+Compensations be like https://www.levels.fyi/2025/
+
+> https://www.levels.fyi/heatmap/europe/
+
+I loved this https://levels.io/projects
+
+`/now`
+
+**Intro**
+
+* WHY Im writting this post: *bc *
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 [Some readers](https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/) ar egetting tired of llm slop, [particularly the ai assisted summaries](https://map.simonsarris.com/p/resist-summary) some, also [encourage to ignore workslop](https://www.seangoedecke.com/how-to-protect-yourself-from-workslop/)
 
 I really appreciate when i find ppl [genuinely writting](https://map.simonsarris.com/p/fujifilm-x100-vs-leica-q-vs-ricoh) and [commenting about learnings/mistakes](https://map.simonsarris.com/p/designing-a-new-old-home-mistakes)
@@ -18,10 +35,6 @@ I really appreciate when i find ppl [genuinely writting](https://map.simonsarris
 There are many [possibilities around 2.4ghz](https://fossengineer.com/2-4ghz-radio-protocols/#the-short-version), depending on how you encode info
 
 
-**Intro**
-
-* WHY Im writting this post: *bc *
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 <!-- A compute framework for turning complex data into vectors.
 https://github.com/superlinked/superlinked -->
@@ -55,8 +68,8 @@ It seems that [my external situation changed faster than my internal OS](https:/
 
 
 {{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/" title=" | Post ↗" >}}
-  {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
+  {{< card link="https://github.com/" title="Core ↗" icon="github" >}}
+  {{< card link="https://github.com/" title="Services ↗" icon="github" >}}
 {{< /cards >}}
 
 
@@ -75,9 +88,9 @@ From regular openAI API calls, to do have them [done via BAML](https://jalcocert
 
 0. For social media outreach, `https://www.growchief.com/` was an inspiration.
 
-But also their discord bouble on the web for any BiP Project.
+Also their discord bouble on the web for any BiP Project.
 
-> As the alternative i knew about `heyreach.io` for Linkedin
+> As the alternative i knew about `heyreach` for Linkedin and `smartlead` for mails
 
 0. When finding leads...
 
@@ -87,9 +100,9 @@ Specially after having some thoughts about analytical reflections of OLTP tables
 
 For the ones that want to break the silos
 
-get proper data lineage trazability to see what worked (what are the *features* of a prospect that actually bought from you)
+Get proper data lineage & trazability to see what worked (what are the *features* of a prospect that actually bought from you)
 
-and feedback to the lead engine.
+Then, feedback to the lead engine.
 
 0. Audio TTS/S2T: among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/), also KoKoro did
 
@@ -1371,6 +1384,10 @@ Using time...to enhance the human capital you got.
 Crazy.
 
 Marketing with `cold emails` where the applications you sent to companies with BANT.
+
+> If you present an offer to people with BANT and does not work, is it broken?
+
+> > Any offer and its pricing has
 
 And doing interviews? 
 
