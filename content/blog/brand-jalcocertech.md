@@ -2128,23 +2128,23 @@ Dentists are a poor trade for UK company-only outreach,
 
   To test it:
 
-  ```sh
-  cd ~/Desktop/mbsd-framework/leadarchitect-uk
-  make funnel                    # the four views: per run, per trade, per batch, per finding type
-  make send RUNS=2026-10-11-dentist-leeds-uk,2026-10-11-dentist-bristol-uk BATCH=t1
-  cat data/sends/t1.dropped.csv  # why each lead was held back
-  rm data/sends/t1.*             # it's a draft; nothing is recorded until mark-sent
+```sh
+cd ~/Desktop/mbsd-framework/leadarchitect-uk
+make funnel                    # the four views: per run, per trade, per batch, per finding type
+make send RUNS=2026-10-11-dentist-leeds-uk,2026-10-11-dentist-bristol-uk BATCH=t1
+cat data/sends/t1.dropped.csv  # why each lead was held back
+rm data/sends/t1.*             # it's a draft; nothing is recorded until mark-sent
 ```
 
-  That send picks only Beyu Dental (6 s). Everything else is already contacted or fails a rule. Earlier
-  I held Beyu back by hand because one run measured 3.9 s; the code can't know that, so check a
-  borderline pick on pagespeed.web.dev before sending it.
+That send picks only Beyu Dental (6 s). Everything else is already contacted or fails a rule. 
 
-  From here, a batch goes:
-  1. scrape, enrich and batch as before;
-  2. make send RUNS=… BATCH=b3, then upload b3.draft.csv and launch;
-  3. make mark-sent BATCH=b3 CAMPAIGN="UK test 3";
-  4. log each reply with make event WHO=… E=positive (or optout, call, …).
+Earlier I held Beyu back by hand because one run measured 3.9 s; the code can't know that, so check a borderline pick on pagespeed.web.dev before sending it.
+
+From here, a batch goes:
+1. scrape, enrich and batch as before;
+2. make send RUNS=… BATCH=b3, then upload b3.draft.csv and launch;
+3. make mark-sent BATCH=b3 CAMPAIGN="UK test 3";
+4. log each reply with make event WHO=… E=positive (or optout, call, …).
 
   Smartlead exports: Smartlead's export columns are a guess until we see a real one. Once there are
   replies (end of the week), export a campaign's leads into data/bronze/smartlead/ and run make funnel.
@@ -2202,3 +2202,361 @@ Dentists are a poor trade for UK company-only outreach,
 
   The most useful thing to do before Monday is 7.2.7. If you want, I can draft the reply templates and
   the fix-pack quote now.
+
+
+
+The pipeline is running in the background: accountants, architects and kitchen fitters, in Leeds and
+  Bristol, 60 listings each, 360 in total. Each run goes scrape → enrich → audit. The audits take about
+  a minute per qualifying site, so expect roughly 1–2 hours in total. I'll pick the batch with make
+  send when it finishes.
+
+  Volume: what "maxing out" should mean this week
+
+  I'd stop short of the technical maximum, for two reasons:
+
+  - These inboxes have sent only 15 real cold emails so far. Going from 15 to 30 a day per inbox in one
+    week is the jump that gets a domain flagged, and you've already had 1 bounce. Aim for 10–12 a day
+    per inbox, about 20–25 a day across both.
+  - Skip Saturday. Businesses don't read email at the weekend. A Saturday email gets buried by Monday
+    or looks automated, so keep the schedule Monday–Friday.
+
+That gives Wednesday to Friday plus Monday morning ≈ 70–90 emails. With the 15 already sent, that's about 100 by early next week, which is your first decision point (roadmap 7.4). 
+  
+Batch 1 and 2 follow-ups also go out from Friday and count towards each inbox's daily total, so set the new campaign to about 20 new leads a day.
+
+How many leads I can give you depends on the yield of the new trades, which is exactly what this run
+measures. If they hit 15 or more per 100 listings, 360 listings gives 50–60 leads.
+
+What the **data layers** (bronze, silver, gold) do from here:
+
+  ┌────────────┬──────────────────────────────────────┬────────────────────────────────────────────┐
+  │   When    │             What you do             │          What the layers give you           │
+  ├───────────┼─────────────────────────────────────┼─────────────────────────────────────────────┤
+  │ Every     │                                     │ The rules pick the leads and skip anyone    │
+  │ batch     │ make send → upload → make mark-sent │ contacted, opted out or bounced (Thompson & │
+  │           │                                     │  Thomas is already blocked)                 │
+  ├───────────┼─────────────────────────────────────┼─────────────────────────────────────────────┤
+  │ Every     │ make event WHO=…                    │ Outcomes linked to the batch, trade, city   │
+  │ reply     │ E=positive/optout/call/won          │ and finding type                            │
+  ├───────────┼─────────────────────────────────────┼─────────────────────────────────────────────┤
+  │           │ Smartlead export into               │ Sends, bounces and replies per batch        │
+  │ Mondays   │ data/bronze/smartlead/, then make   │ without counting by hand; batches.md filled │
+  │           │ funnel                              │  in from it                                 │
+  ├───────────┼─────────────────────────────────────┼─────────────────────────────────────────────┤
+  │           │                                     │ Which trade gives the most leads per        │
+  │ At about  │ Read per trade and per finding type │ listing, and whether speed or HTTPS         │
+  │ 100 sends │  in make funnel                     │ findings get replies. That's how 7.4 gets   │
+  │           │                                     │ decided                                     │
+  ├───────────┼─────────────────────────────────────┼─────────────────────────────────────────────┤
+  │           │                                     │ Deletes personal data older than 90 days.   │
+  │ Monthly   │ make clean-old                      │ Gold (counts only) and the opt-out and      │
+  │           │                                     │ contacted lists stay, so the lessons        │
+  │           │                                     │ outlive the data                            │
+  ├───────────┼─────────────────────────────────────┼─────────────────────────────────────────────┤
+  │           │                                     │ E.g. "do role addresses (info@) reply more  │
+  │ Later     │ Ad-hoc SQL on data/lake.duckdb      │ than named ones?", "days from send to       │
+  │           │                                     │ reply", "bounces by how the email was       │
+  │           │                                     │ found"                                      │
+  └───────────┴─────────────────────────────────────┴─────────────────────────────────────────────┘
+
+> In short: bronze is what the pipeline produced, silver is that data cleaned into one table per stage, and gold is the numbers that decide what to do next.
+
+
+
+● Batch 3 is ready: 66 leads in leadarchitect-uk/data/sends/b3.draft.csv, from 360 listings scraped
+  today.
+
+  The trade experiment already answered its first question. Per 120 listings, the active companies
+  found were:
+
+  ┌─────────────────────────────────────────────────────────────────┬────────────────┬─────────────┐
+  │                              Trade                              │    Active      │ Picked for  │
+  │                                                                 │   companies    │     b3      │
+  ├─────────────────────────────────────────────────────────────────┼────────────────┼─────────────┤
+  │ accountants                                                     │ 45             │ 21          │
+  ├─────────────────────────────────────────────────────────────────┼────────────────┼─────────────┤
+  │ architects                                                      │ 41             │ 22          │
+  ├─────────────────────────────────────────────────────────────────┼────────────────┼─────────────┤
+  │ kitchen fitters (really home improvement: carpets, flooring,    │ 37             │ 23          │
+  │ plumbers, stone)                                                │                │             │
+  ├─────────────────────────────────────────────────────────────────┼────────────────┼─────────────┤
+  │ dentists (per 240)                                              │ 24             │ 15 in b1–b2 │
+  └─────────────────────────────────────────────────────────────────┴────────────────┴─────────────┘
+
+  These trades give 3–4 times as many emailable companies per listing as dentists. Replies will show
+  which one also buys.
+
+  Held back (60):
+  - 22 matched on name only, with the registered office in another town;
+  - 14 weak findings;
+  - 13 under 6 s;
+  - 6 not active companies;
+  - 2 wrong inboxes (recruitment@ and similar);
+  - 1 security issue that's already fixed;
+  - 1 typo address (ninfo@), removed by hand.
+
+  The reasons are in data/sends/b3.dropped.csv.
+
+  Rules added after reviewing the list (49b9e85):
+  - Speed claims are capped at "over 20 seconds". Some sites measured 30–45 s. That's probably real,
+    but it reads as implausible, and Google's free PageSpeed quota without a key was used up today, so
+    I couldn't cross-check. "Over 20 seconds" is true either way.
+  - Jobs, HR and billing inboxes are skipped.
+  - "Name -Tagline" names are cleaned, e.g. Fletcher & Gill.
+
+  Two leads go to named people rather than info@ (3bd Architects, Canning and Partners). That's allowed
+  for companies under UK rules, and the email reads the same.
+
+  In Smartlead:
+  1. Before anything else: in UK test 1 and 2, open Settings and switch open and click tracking off.
+     Their follow-ups go out Friday.
+  2. Duplicate "UK test 2" and name it UK test 3 – trades. Import data/sends/b3.draft.csv with the same
+     mapping: finding_short and finding as custom fields; don't import report_pdf, run, domain or
+     finding_type. Expect 66 leads and 0 duplicates.
+  3. Check tracking is off in the copy as well.
+  4. Set max new leads per day to 20, Monday–Friday, 09:00–16:00 London. That sends 20 on Wednesday,
+     Thursday and Friday, and the last 6 on Monday. With Friday's follow-ups, each inbox stays at about
+     12–15 a day.
+  5. Send a test, then Launch. Then run:
+  make mark-sent BATCH=b3 CAMPAIGN="UK test 3 – trades"
+     This records the 66 domains as contacted, so no later scrape can email them twice.
+
+  Replies: the PDFs are in each run's batch/audits/ folder, e.g.
+  data/2026-10-13-architect-leeds-uk/batch/audits/<site>.pdf.
+
+  After this week you'll have about 80 sends in total: three new trades plus dentists, both finding
+  types, and two cities per trade. That's close to the first decision point (roadmap 7.4).
+
+✻ Baked for 1m 49s · done 21:27
+
+```sh
+cd ./leadarchitect-uk/data/sends
+
+```
+
+
+● Batch 3 doesn't repeat anyone, and I've checked it directly: its 66 rows are 66 different businesses,
+  and none were emailed in batches 1–2 or are on the suppression list.
+
+  Commands I ran (all in leadarchitect-uk):
+
+  1. Scrape, enrich and audit for each of the six trade/city pairs. I ran them in a loop, equivalent
+     to:
+
+```sh
+make scrape Q="accountant" L="Leeds, UK" MAX=60
+make enrich RUN=data/2026-10-13-accountant-leeds-uk
+make batch  RUN=data/2026-10-13-accountant-leeds-uk
+```
+
+2. The picking, run directly instead of through make:
+
+```sh
+.venv/bin/python pipeline/lake.py send --runs=<the six 2026-10-13 runs> --batch=b3 --max=500
+```
+
+That's the same as make send RUNS=… BATCH=b3 SEND_MAX=500.
+
+3. One manual step: I removed the ninfo@ row from the draft and noted it in b3.dropped.csv.
+
+What stops repeats, all applied inside make send:
+
+  ┌──────────────────┬─────────────────────────────────────┬──────────────────────────────────────┐
+  │      Check       │               Source                │               Catches                │
+  ├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
+  │ Domain already   │ data/keep/contacted.csv + every     │ The same business in a later scrape, │
+  │ contacted        │ data/sends/bN.csv                   │  even under a different email        │
+  │                  │                                     │ address                              │
+  ├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
+  │ Suppressed       │ data/keep/suppression.csv           │ Opt-outs and bounces (Thompson &     │
+  │                  │                                     │ Thomas is in it)                     │
+  ├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
+  │ Duplicate within │ email and domain                    │ The same business listed twice, e.g. │
+  │  the batch       │                                     │  two locations                       │
+  ├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
+  │ Smartlead import │ "duplicates across campaigns"       │ A last net at upload                 │
+  │                  │ counter                             │                                      │
+  └──────────────────┴─────────────────────────────────────┴──────────────────────────────────────┘
+
+  Run make mark-sent right after launching. Until you run
+  make mark-sent BATCH=b3 CAMPAIGN="UK test 3 – trades"
+  the 66 are only a draft. The contact log doesn't know about them, so another make send over the same
+  runs today would pick them again. mark-sent turns the draft into data/sends/b3.csv and adds all 66
+  domains to contacted.csv, and from then on they're excluded for good.
+
+  One detail first: the audit runs locally, using the same engine as webaudit.jalcocertech.com
+  but not the hosted site. Step by step:
+
+  Step: 1. Scrape
+  Command: make scrape
+  What it calls: Apify (Google Maps actor compass/crawler-google-places). Paid from the $5 free monthly
+
+  credit, about half a cent per listing
+  Output: raw.json: name, website, address, postcode, category
+  ────────────────────────────────────────
+  Step: 2. Enrich
+  Command: make enrich
+  What it calls: The business's own website: plain HTTP requests to its homepage and contact pages to
+  find the email (no API, no cost) · Companies House API (UK government, free, your CH_API_KEY) to
+  confirm an active Ltd/LLP/PLC
+  Output: leads.csv
+  ────────────────────────────────────────
+  Step: 3. Audit
+  Command: make batch
+  What it calls: Your webaudit engine on this laptop (poc_webs_magnet/scripts/outreach-batch.mjs):
+  Lighthouse in a local Chrome, security and SEO checks, speed measured twice, one finding, the
+  branded PDF
+  Output: batch/smartlead.csv + batch/audits/*.pdf
+  ────────────────────────────────────────
+  Step: 4. Pick
+  Command: make send
+  What it calls: DuckDB (the bronze/silver/gold store) for the rules and the contacted/suppression
+  checks · Companies House again, only for name-only matches (registered office location; cached) · a
+  live HTTPS check for security findings
+  Output: data/sends/bN.draft.csv
+  ────────────────────────────────────────
+  Step: 5. Send
+  Command: you, in the Smartlead UI
+  What it calls: Smartlead sends from the Google Workspace inboxes
+  Output: the emails
+  ────────────────────────────────────────
+  Step: 6. Record
+  Command: make mark-sent, make event
+  What it calls: local files only
+  Output: contact log, outcomes, then make funnel
+
+  Only steps 1 and 5 cost money (Apify credit and your Smartlead plan). The hosted webaudit site isn't
+  involved, so nothing from these prospects lands in your PocketBase or the inbound lead hub, as ADR
+  0005 requires.
+
+I've added the impact field to b3.draft.csv and to make send, so future batches get it too (a6978c2).
+  For example, the first email in batch 3 would read:
+
+  ▎ Hi there,
+  ▎
+  ▎ I ran a quick check of Barefoot Architects's website and noticed that your homepage takes over 20
+  ▎ seconds to show its main content on a phone (Google's target is under 2.5); you can check it
+  ▎ yourself at pagespeed.web.dev.
+  ▎
+  ▎ That matters because on a phone most people won't wait that long, and Google uses page speed when
+  ▎ ranking sites.
+  ▎
+  ▎ I put it in a one-page report with the three things I'd fix first (speed, search basics, security).
+  ▎ Want me to send it over? No charge.
+
+  Two wording checks:
+  - "Barefoot Architects's" is correct but clunky, and any name ending in "s" does it. Use "the
+    {{company_name}} website" instead of "{{company_name}}'s website".
+  - "Google uses page speed when ranking sites" is accurate: it's one of Google's ranking signals. I
+    deliberately didn't claim "you're losing customers", because we can't prove that.
+
+  In Smartlead, for UK test 3:
+  1. Duplicate UK test 2 and import `data/sends/b3.draft.csv`. Map finding_short, finding and impact as
+     custom fields.
+  2. Replace the Step 1 body with:
+  Hi there,
+
+  I ran a quick check of the {{company_name}} website and noticed that {{finding}}.
+
+  {{impact}}
+
+  I put it in a one-page report with the three things I'd fix first (speed, search basics, security).
+  Want me to send it over? No charge.
+
+  Julita
+  LeadArchitect
+
+  If you'd rather not hear from me, reply "no" and I won't write again.
+  3. Keep the same subject: {{company_name}}: {{finding_short}}. Step 2 stays as it is.
+  4. Tracking off, 20 new leads a day, Monday–Friday. Send a test, then launch, then run make mark-sent
+     BATCH=b3 CAMPAIGN="UK test 3 – trades".
+
+  Batch 3 changes the trade and the wording at the same time, so if it does better than batches 1–2, we
+  won't know which change did it. With only 15 dentist emails sent, that comparison wouldn't mean much
+  anyway. From batch 3 on, keep the wording fixed and change one thing at a time.
+
+
+
+    CSV column    │                      Map to                      │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ email           │ Email (already)                                  │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ company         │ Company Name (already), used as {{company_name}} │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ finding_short   │ Custom Field → finding_short                     │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ finding         │ Custom Field → finding                           │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ impact          │ Custom Field → impact                            │
+  ├─────────────────┼──────────────────────────────────────────────────┤
+  │ everything else │ leave unmapped / Do not import                   │
+  └─────────────────┴──────────────────────────────────────────────────┘
+
+  "Everything else" covers first_name, company_evidence, website, city, country, score, performance,
+  seo, security, lcp_s, report_pdf, run, domain and finding_type. If first_name, website and city are
+  already auto-mapped, that's harmless. The template doesn't use them, and first_name is empty anyway.
+
+  About the preview:
+  - Each column previews its distinct values, not one row, so finding_short showing "20s+, 19s+, 18s+"
+    next to lcp_s "45.9, 31.0, 29.3" isn't a mismatch.
+  - One city shows as "Ls7" (a Leeds postcode district from the listing). The email doesn't use the
+    city, so ignore it.
+
+  After importing, you should see 66 leads with 0 duplicates. If the duplicate count is above 0, stop
+  and tell me, because something overlapped with b1 or b2.
+
+  Then:
+  1. Step 1: paste the new body, with the {{company_name}} website and {{impact}}.
+  2. Settings: tracking off, 20 new leads a day, Monday–Friday.
+  3. Test, then launch.
+  4. Then run make mark-sent BATCH=b3 CAMPAIGN="UK test 3 – trades".
+
+This is the same screen as before. The three fields the `email needs, finding_short, finding and impact`, still have no mapping, so they wouldn't be imported. On this screen:
+
+  1. On the finding_short row, click the empty "Maps To" box → choose Custom Field → type
+     finding_short.
+  2. On the finding row, same: Custom Field → finding.
+  3. On the impact row, same: Custom Field → impact.
+  4. Leave every other row as it is, then click Next / Import.
+
+  email and company are already mapped correctly. The remaining rows are fine either way.
+
+  The check after importing: 66 leads, 0 duplicates.
+
+
+
+
+Here's the M**onday routine**, about an hour, most of it waiting on the audits:
+
+1. Review last week (15 min)
+- In Smartlead, mark each reply's category (Interested / Not interested) so the export carries it.
+- Export each active campaign's leads (Leads → Export CSV) into `leadarchitect-uk/data/bronze/smartlead/`.
+- Log anything Smartlead doesn't know about:
+make event WHO=info@example.co.uk E=call     # or won, optout
+- make funnel, then compare the numbers with the decision table in the roadmap (7.4): bounces, reply
+  rate per trade and per finding type.
+
+2. Build the next batch (setup 10 min, then mostly waiting)
+
+```sh
+make scrape Q="architect" L="Manchester, UK" MAX=60     # trades that did best, new cities
+make enrich RUN=data/…
+make batch  RUN=data/…
+make send   RUNS=… BATCH=b4
+```
+
+Then duplicate the last campaign, import b4.draft.csv (with the three custom fields), launch, and run
+make mark-sent BATCH=b4 CAMPAIGN="UK test 4".
+
+3. Record it: a line in outbound/batches.md from the make funnel numbers. I can do this one.
+
+Limits on how big each batch can be:
+- Sending: 2 inboxes × 15 a day × 5 days = 150 emails a week. Each lead gets 2 emails (first plus
+  follow-up), so that's about 60–75 new leads a week. Connecting the third inbox (j.jedrzejewska@)
+  would raise it to about 100.
+- Apify credit: you've used about $3 of this month's $5. That leaves about 400 listings, roughly one
+  more batch this month. From November the credit resets. If a trade proves itself, Apify's paid plan
+  (about $49 a month) removes the limit.
+- Monthly: make clean-old.
+
+If you like, just say "Monday run" next week and I'll do steps 1–3, except the Smartlead clicks.
