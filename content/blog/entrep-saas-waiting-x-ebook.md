@@ -920,9 +920,12 @@ It's recorded in the docs and pushed (f06e607). Roadmap items 1.2c and 1.3 are t
 
 What you just did also sets up the drip test.
 
-You're now a confirmed jalcocertech subscriber, confirmed today, and `jt-welcome` enrolls anyone confirmed from 2026-10-10.
+You're now a confirmed jalcocertech subscriber, confirmed today, and `jt-welcome` enrolls anyone confirmed from `2026-10-10`.
 
-Once drips are on at the homelab, you'll be the first person to get the welcome series.
+Once **DRIPs** are on at the homelab, you'll be the first person to get the welcome series.
+
+> Some are using the request `https://mongemalo.com/rechazado/` and acceptance `https://mongemalo.com/importante-mensaje/` of newsletter mails as impact 
+
 
 On the homelab (roadmap 1.9, 2.3 and 2.4), in `~/jalcocertech-core/leads-hub/hub`:
 
@@ -945,23 +948,30 @@ ssh jalcocert@192.168.1.2 \
 
 3. In .env, set: `cd jalcocertech-core/leads-hub/hub`
 
+```
 DRIPS_ENABLED=1
 SENDER=mailjet
 MAILJET_API_KEY=…
 MAILJET_SECRET_KEY=…
 SENDER_EMAIL=noreply@news.jalcocertech.com
+```
 
-  Step 3, also on the laptop: this sends your Mailjet lines plus the drip settings to the homelab's
-  .env. Any old lines with those names are removed first, so nothing is duplicated:
-  cd ~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/hub
-  { grep -E '^(MAILJET_API_KEY|MAILJET_SECRET_KEY)=' .env; echo 'SENDER=mailjet'; echo
-  'SENDER_EMAIL=noreply@news.jalcocertech.com'; echo 'DRIPS_ENABLED=1'; } \
-  | ssh jalcocert@192.168.1.2 'cd ~/jalcocertech-core/leads-hub/hub && sed -i -E
-  "/^(MAILJET_API_KEY|MAILJET_SECRET_KEY|SENDER|SENDER_EMAIL|DRIPS_ENABLED)=/d" .env && cat >> .env &&
-  chmod 600 .env && grep -oE "^[A-Z_]+=" .env'
-  The last part prints only the variable names now in the homelab .env, never the values. Check that
-  MAILJET_API_KEY=, MAILJET_SECRET_KEY=, SENDER=, SENDER_EMAIL= and DRIPS_ENABLED= appear once each,
-  next to your existing CF_* lines.
+Step 3, also on the laptop: this sends your Mailjet lines plus the drip settings to the homelab's `.env`.
+
+Any old lines with those names are removed first, so nothing is duplicated:
+
+```sh
+cd ~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/hub
+{ grep -E '^(MAILJET_API_KEY|MAILJET_SECRET_KEY)=' .env; echo 'SENDER=mailjet'; echo
+'SENDER_EMAIL=noreply@news.jalcocertech.com'; echo 'DRIPS_ENABLED=1'; } \
+| ssh jalcocert@192.168.1.2 'cd ~/jalcocertech-core/leads-hub/hub && sed -i -E
+"/^(MAILJET_API_KEY|MAILJET_SECRET_KEY|SENDER|SENDER_EMAIL|DRIPS_ENABLED)=/d" .env && cat >> .env &&
+chmod 600 .env && grep -oE "^[A-Z_]+=" .env'
+```
+
+The last part prints only the variable names now in the homelab .env, never the values. 
+
+Check that `MAILJET_API_KEY=, MAILJET_SECRET_KEY=, SENDER=, SENDER_EMAIL= and DRIPS_ENABLED=` appear once each, next to your existing CF_* lines.
 
 ```sh
 cd ~/Desktop/mbsd-framework/jalcocertech-core/leads-hub/hub
@@ -995,11 +1005,11 @@ If you'd rather see it in Mailpit first, keep `SENDER=smtp` for one cycle.
 It's sent once only, so it won't then go out again through Mailjet.
 
 Left before double opt-in goes on for every visitor:
+
 - 1.4: a webhook so Mailjet's bounce, spam and blocked events go on the do-not-send list. I can build this next.
 - 1.5: the three privacy pages name Mailjet and describe double opt-in.
 - 1.7: delete your test leads from KV.
 - 1.8: set DOUBLE_OPT_IN_SITES = "*".
-
 
 > `docker compose logs hub` helped validate
 
@@ -1007,36 +1017,38 @@ The Mailjet event webhook (roadmap 1.4) is live in Worker v0.6.0 and pushed (d15
 
 It does nothing until you paste its URL into Mailjet: `https://app.mailjet.com/account/triggers`
 
-  What it does:
-  - It listens at `https://www.jalcocertech.com/api/forms/mailjet-events?key=….`
-  - Permanent failures go on the do-not-send list, stored as a hash, never the address: hard bounces,
-    spam complaints, recipient blocks and Mailjet unsubscribes. Soft bounces (full mailbox, temporary
-    errors) are ignored.
-  - Spam complaints also alert ntfy, naming only the email domain.
-  - The key keeps others out. A wrong key gets 403. Anything sent with the right key gets 200, even
-    malformed data, so Mailjet doesn't keep retrying for 24 hours.
+What it does:
+- It listens at `https://www.jalcocertech.com/api/forms/mailjet-events?key=….`
+- Permanent failures go on the do-not-send list, stored as a hash, never the address: hard bounces,
+  spam complaints, recipient blocks and Mailjet unsubscribes. Soft bounces (full mailbox, temporary
+  errors) are ignored.
+- Spam complaints also alert ntfy, naming only the email domain.
+- The key keeps others out. A wrong key gets 403. Anything sent with the right key gets 200, even malformed data, so Mailjet doesn't keep retrying for 24 hours.
 
-  Tested: 38 tests pass. Live, a harmless "sent" event with the real key got 200 and suppressed
-  nothing, and a wrong key got 403.
+Tested: 38 tests pass. Live, a harmless "sent" event with the real key got 200 and suppressed
+nothing, and a wrong key got 403.
 
-  Your step (roadmap 1.4b):
-  1. Show the URL. It's in a private file on the laptop because it contains the key: `cat ~/.config/leads-hub/mailjet_webhook_url`
-  2. In Mailjet, go to Account settings → Event notifications (webhooks).
-  3. Paste the URL for these 4 events: Bounce, Spam, Blocked, Unsub. Leave Sent, Open and Click empty;
-     tracking is off anyway.
-  4. If Mailjet offers grouped events, either setting works; the endpoint handles both.
+Your step (roadmap 1.4b):
 
-  If Mailjet has a "test" button, using it is safe: test events have no real address to suppress.
+1. Show the URL. It's in a private file on the laptop because it contains the key: `cat ~/.config/leads-hub/mailjet_webhook_url`
+2. In Mailjet, go to Account settings → Event notifications (webhooks).
+3. Paste the URL for these 4 events: Bounce, Spam, Blocked, Unsub. Leave Sent, Open and Click empty; tracking is off anyway.
+4. If Mailjet offers grouped events, either setting works; the endpoint handles both.
 
- It has one URL field per event type: paste the same URL into four of them
-  and tick Group events. Mailjet recommends grouping, and the endpoint handles grouped events.
+If Mailjet has a "test" button, using it is safe: test events have no real address to suppress.
 
-  1. Get the URL, on the laptop:
-  cat ~/.config/leads-hub/mailjet_webhook_url
-  It looks like https://www.jalcocertech.com/api/forms/mailjet-events?key=… with a long random key.
-  Copy the whole line.
+It has one URL field per event type: paste the same URL into four of them
+and tick Group events. Mailjet recommends grouping, and the endpoint handles grouped events.
 
-  2. On Mailjet's Event API page:
+1. Get the URL, on the laptop:
+
+```sh
+cat ~/.config/leads-hub/mailjet_webhook_url
+```
+
+It looks like https://www.jalcocertech.com/api/forms/mailjet-events?key=… with a long random key. Copy the whole line.
+
+2. On Mailjet's Event API page:
 
   ┌───────────────────┬───────────────┬──────────────┐
   │       Event       │      URL      │ Group events │

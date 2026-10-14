@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-16
+date: 2026-10-23
 draft: false
 tags: ["Kokoro","VoiceBox","SunoAI x music","VPS x DR Test","ONT x DHCP"]
 description: 'A homelab that speaks.'
@@ -171,8 +171,9 @@ Oh, and with [oss link shorteners](https://fossengineer.com/selfhosted-open-sour
 
 > But finding [Sink](https://github.com/miantiao-me/Sink) and [Slite](https://github.com/miantiao-me/Slite) that are a good match if you already use CF KV and D1
 
-The video presents a novel approach to link shortening and QR code generation that eliminates the need for a database, ensuring links remain recoverable even if the service goes down. The method focuses on optimizing link encoding and compression, resulting in potentially smaller QR codes and links without ads or registration.
-Key points
+The video presents a novel approach to link shortening and QR code generation that eliminates the need for a database, ensuring links remain recoverable even if the service goes down.
+
+The method focuses on optimizing link encoding and compression, resulting in potentially smaller QR codes and links without ads or registration.
 
 Traditional link shorteners store full links in a database, raising privacy concerns and potential link loss if the service shuts down.
 
@@ -243,7 +244,12 @@ For media: `https://selfh.st/apps/?tag=Photos`
 https://github.com/paulomarques742/imago
 https://imago.742studio.eu/
 
-https://foldergram.github.io/?ref=selfh.st
+* https://foldergram.github.io/
+
+```sh
+git clone /JalcocerT/foldergram
+```
+
 > Point it at your folders, browse everything through a fast feed-style interface. No cloud, no accounts — just your files and SQLite.
 
 https://github.com/open-noodle/gallery a fork of immich :)
@@ -252,9 +258,17 @@ https://github.com/open-noodle/gallery a fork of immich :)
 
 High performance self-hosted photo and video management solution.
 
-https://github.com/storytold?ref=selfh.st
+https://github.com/storytold
 
 https://github.com/andrii-kryvoviaz/slink
+
+Ive also kept using my `yt-distill` poc to go through interesting videos:
+
+```sh
+git clone ./poc/yt-distill
+
+```
+
 
 ---
 
@@ -270,7 +284,6 @@ https://github.com/lfnovo/open-notebook
 
 https://github.com/Priveetee/TypeType
 
-`yt-distill` poc
 
 ### Testing a backup Strategy in the cloud
 
@@ -337,31 +350,25 @@ When you replace the Play router with your GL.iNet, a UniFi Gateway, or your Ubu
 
 As long as the **ONT on the wall stays connected to power and fiber**, you can plug that incoming Ethernet cable directly into any router you want and send the factory box back into storage.
 
+### Macbook...or Omarchy?
 
+I tried omarchy 4 in a VM recently and i pretty much enjoyed the flow of the window manager.
 
-### The Software for D&A
+Just discovered that there is a similar project that does the same for macbooks: https://github.com/asmvik/yabai
 
-#### MicroControllers
+What to do in this case? to linux? or to go with the flow?
 
+Also this project can be interesting https://github.com/Saffsanity/sill
 
-#### In the server
+I tried a macbook Pro M2 that weights the same as my x13 gen2 (1.3kg), the build quality is excellent...but
 
+### How many users can a Pi4 2GB handle
 
-# Project Learnings — fossengineer.com
+https://www.youtube.com/watch?v=xV2SpvHHF_I
 
-A consolidated reference of what each batch of projects taught me, organized by category. 
+### The AI Agent Stack
 
-The AI agent stack (May 2026 batch) is the most detailed because it's a coherent ecosystem worth understanding as a unit.
-
-Each entry captures the **non-obvious insight** — not the feature list, the *design choice* or *honest constraint* that distinguishes the project.
-
----
-
-## ⭐ The AI Agent Stack (May 2026 batch)
-
-The biggest learning from this batch: **modern self-hosted AI tooling is splitting into five distinct layers** that don't compete, they compose. 
-
-Most readers (and most projects' own marketing) conflate these layers. 
+The biggest learning from this (May 2026) batch: **modern self-hosted AI tooling is splitting into five distinct layers** that don't compete, they compose. 
 
 The honest map:
 
@@ -560,11 +567,13 @@ Each post in this batch surfaces five "design principle" claims, not just featur
 
 ---
 
----
-
 ## Vertical applications
 
-This is the **layer above** the AI infrastructure stack — what all the infrastructure is actually *for*. Two distinct shapes here, both Apache 2.0, both shipped May 2026, both target financial services. They illustrate the open-research-vs-vendor-content pattern that's emerging across every AI vertical.
+This is the **layer above** the AI infrastructure stack — what all the infrastructure is actually *for*.
+
+Two distinct shapes here, both Apache 2.0, both shipped May 2026, both target financial services.
+
+They illustrate the open-research-vs-vendor-content pattern that's emerging across every AI vertical.
 
 ### TradingAgents — `TauricResearch/TradingAgents` (Apache 2.0)
 
@@ -599,7 +608,7 @@ This is the **layer above** the AI infrastructure stack — what all the infrast
 
 **Stack:** No runtime stack — it's reference content. Runs on Anthropic's platforms (Cowork, Managed Agents API) or Claude Code.
 
-### The contrast (worth memorizing for future vertical-content reviews)
+The contrast (worth memorizing for future vertical-content reviews)
 
 | Axis | TradingAgents | Claude for FS |
 |------|---------------|---------------|
@@ -637,26 +646,6 @@ The pattern this represents — **open research framework + vendor content shipp
 
 **Mirror detection learning:** `stirling-image/stirling-image` and `ashim-hq/ashim` are identical mirrors with same commit hash `6e103d3`. Same `package.json.name`, same homepage. Fingerprint check now codified in `z-agent-learnings.md` and in the foss-post skill's style guide.
 
----
-
-## Self-Hosting Infrastructure
-
-### Nextcloud — `nextcloud/server` (AGPL-3.0-or-later)
-
-**Key insight:** The flagship full-platform Google Workspace replacement. PHP 8.2+ backend, Vue 3 frontend, 28 bundled apps + 300+ in the App Store. v34, MariaDB recommended, Redis required for HA.
-
-**Cool feature:** Nextcloud AIO (All-In-One) image manages MariaDB+Redis+Collabora+Talk through a single management interface — the recommended production path.
-
-**FAQ patterns that worked well:** Nextcloud vs rsync (platform vs file-transfer primitive), Nextcloud vs BorgBackup (live access vs disaster recovery — complement each other with append-only Borg for ransomware resilience).
-
-### Pangolin — `fosrl/pangolin` (AGPL-3 + Fossorial Commercial)
-
-**Key insight:** Cloudflare Tunnel + Tailscale in one self-hosted platform. Three-container stack: `pangolin` (Next.js control plane) + `gerbil` (WireGuard data plane, needs `CAP_NET_ADMIN` + `SYS_MODULE`) + `traefik` v3.6 (sharing gerbil's network namespace via `network_mode: service:gerbil`).
-
-**Compose gotcha worth preserving:** Ports `80`/`443` are declared on the `gerbil` service in the compose, not on `traefik` — because Traefik shares gerbil's network namespace. Not a typo, the design.
-
-**Workaround:** Rootless Podman / locked-down Kubernetes can't grant `SYS_MODULE`. Load WireGuard kernel module on the host first (`modprobe wireguard`), then `SYS_MODULE` can be dropped from the compose.
-
 ### Technitium DNS — `TechnitiumSoftware/DnsServer` (GPL v3)
 
 > https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#homelab-updates-0926
@@ -675,17 +664,6 @@ The pattern this represents — **open research framework + vendor content shipp
 
 **Three forward-auth endpoints:** `/api/auth/traefik`, `/api/auth/nginx`, `/api/auth/caddy` — each formatted for the specific proxy's expected response shape.
 
----
-
-## Privacy & Communications
-
-### SimpleX Chat — `simplex-chat/simplex-chat` (AGPL-3.0)
-
-**Key insight:** **No user identifier of any kind** — no phone number, no username, no public key, no UUID. Routes messages through per-contact unidirectional queues with rotating addresses. Servers can't even tell who's talking to whom, let alone read content.
-
-**Crypto stack:** X3DH + Double Ratchet (Signal-equivalent) + PQXDH/Kyber-1024 (post-quantum) + AES-256-GCM + NaCl secretbox (second encryption layer on relay transport) + TLS 1.3. Two Trail of Bits audits (2022 implementation, 2024 protocol design).
-
-**Self-host pattern:** SMP server (`simplexchat/smp-server:latest`) on port 5223 + Caddy for auto-TLS Let's Encrypt. Optional Tor onion address via standard `HiddenServicePort` config. Per-contact server migration via "Change receiving address" in each contact.
 
 ---
 
@@ -703,40 +681,3 @@ The pattern this represents — **open research framework + vendor content shipp
 **Strong project warning preserved:** "DO NOT UPDATE AUTOMATICALLY" — under active development with breaking migrations. Watchtower-style auto-updaters explicitly discouraged.
 
 **Import sources:** Google Takeout, OwnTracks, Strava, Immich, GPX, GeoJSON, photo EXIF. Tracker apps: Dawarich iOS/Android, OwnTracks, Overland, GPSLogger, Home Assistant.
-
----
-
-## Earlier batch (pre-May 2026, for completeness)
-
-Already shipped wiki+post pairs: **atria, blender, conar, corecontrol, forgejo, freecad, homeassistant, nutify, onionshare, openscad, pequeroku, teable, velomate, velxio, vito**.
-
-These are individually in `Z_Codex_Posts/`. Cross-cutting learnings from that batch:
-- Non-Docker tools (Blender, FreeCAD, OpenSCAD, OnionShare) need an alternative framing — headless CLI, batch processing, Docker-wrap of binary, CI/CD relevance
-- selfh.st newsletter scraping requires authenticated browser save (Ghost CMS paywall blocks unauthenticated curl)
-- Project discovery now goes through `v5.py` (star-sorted) instead of just `v4.py` (grouped by section)
-
----
-
-## Process Learnings (Skill / Workflow Improvements)
-
-**Three durable patterns codified in this batch:**
-
-1. **Mirror / re-brand fingerprint check before generation.** Three repos (`stirling-image/stirling-image`, `ashim-hq/ashim`, plus the original `snapotter-hq/snapotter`) shipped identical SnapOtter code at the same commit hash. The fingerprint check (`head -10 package.json` + `git log --oneline -3`) takes ~5 seconds and prevents redundant artifacts. Codified in `z-agent-learnings.md` and the foss-post skill's `post-style-guide.md`.
-
-2. **Honesty about validation.** The Claude Code shell runs inside a Flatpak sandbox with no Docker access. Compose blocks ship written-from-source, not boot-tested. The skill style guide now explicitly says: never imply the compose was tested, hand back a copy-paste recipe instead, flag risky deltas (`shm_size`, `cap_add`, `network_mode`, `SELF_HOSTED=true`) so users don't strip them.
-
-3. **Wrong-flag correction loop.** I flagged NanoClaw as "suspicious stars" because I conflated "OpenClaw" (the Claude-assistant framework it references) with the 1997 Captain Claw game re-implementation. Cost ~5 minutes of investigation; recovered cleanly by cloning and reading the actual README. Lesson: if a description doesn't track, **clone and inspect** rather than relying on description alone. Don't anchor on the first interpretation.
-
----
-
-## License Distribution Across All Shipped Posts (May 2026 batch)
-
-| License | Count | Projects |
-|---------|------:|----------|
-| MIT | 11 | NanoClaw, OpenClaw, Hermes, Paperclip, Agent OS, OpenSpec, MediaLyze, Pi, **Transmute**, **TapMap**, ConvertX-ish |
-| AGPL-3.0 | 4 | Nextcloud, SimpleX Chat, Dawarich, **TREK** |
-| Apache 2.0 | 3 | Symphony, **TradingAgents**, **Claude for FS** |
-| GPL-3.0 | 2 | Technitium DNS (GPLv3), Tinyauth |
-| AGPL + Commercial dual | 2 | SnapOtter, Pangolin |
-
-**Pattern:** Permissive (MIT/Apache) dominates AI tooling; copyleft (AGPL/GPL) dominates traditional self-hosted infrastructure. Dual-license (AGPL + Commercial) appears in newer SaaS-parallel projects (SnapOtter, Pangolin) where the maintainers want a path to fund development.

@@ -35,12 +35,12 @@ https://www.youtube.com/shorts/IiuDQhFgmq4
 
 By inspecting your monthly utility bills you can get some interesting numbers:
 
-* ~100 kwh monthly consumption *with 300 kwh peaks if you live in south europe*
+* ~100/125 kwh monthly consumption *with 300 kwh peaks if you live in south europe*
 * 
 
 ### Shelly 
 
-To get more granular data: you can measure your home consumption.
+To get more granular data: *you can measure your home consumption*.
 
 This also helps to understand your daily patterns if you are wondering about a [solar](#solar) and/or [battery](#batteries) setup
 

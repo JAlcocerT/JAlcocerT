@@ -402,6 +402,13 @@ Check that `forgejo:3000` ready:
 
 1. [Simplex](https://fossengineer.com/selfhosting-simplex-chat/) with `https://github.com/simplex-chat/simplex-chat/releases/tag/v7.0.0`
 
+**Key insight:** **No user identifier of any kind** — no phone number, no username, no public key, no UUID. Routes messages through per-contact unidirectional queues with rotating addresses. Servers can't even tell who's talking to whom, let alone read content.
+
+**Crypto stack:** X3DH + Double Ratchet (Signal-equivalent) + PQXDH/Kyber-1024 (post-quantum) + AES-256-GCM + NaCl secretbox (second encryption layer on relay transport) + TLS 1.3. Two Trail of Bits audits (2022 implementation, 2024 protocol design).
+
+**Self-host pattern:** SMP server (`simplexchat/smp-server:latest`) on port 5223 + Caddy for auto-TLS Let's Encrypt. Optional Tor onion address via standard `HiddenServicePort` config. Per-contact server migration via "Change receiving address" in each contact.
+
+
 2. Matrix: with the flavour [conduit](https://fossengineer.com/selfhosting-matrix-conduit-server-with-docker/) or [synapse](https://fossengineer.com/selfhosting-matrix-synapse-docker/)
 
 3. [Fluxer](https://fossengineer.com/selfhosting-fluxer-open-chat-voip/)

@@ -37,7 +37,7 @@ Can we use [2D or 3D is a must](#summary-2d-vs-3d-for-aircraft)?
 
 ## 3D Dynamics x Airplanes
 
- While 2D is the "speed king" for automotive refinement, the airplane use case is where the **Dimensional Reduction Lemma** finally hits a hard wall. 
+While 2D is the "speed king" for automotive refinement, the airplane use case is where the **Dimensional Reduction Lemma** finally hits a hard wall. 
 
 In an aircraft, you aren't just sitting on a chassis that moves up and down; you are strapped to a power plant that is physically trying to twist the entire airframe.
 
@@ -99,7 +99,7 @@ But the moment you want to know **"Will the pilot feel a vibration in the rudder
 Coming from [the 0-8-0 release](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#mbsd), its time for the 0-9-0
 
 ```sh
-scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-8-0-concerns.md . 
+scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-8-1-concerns.md . 
 ```
 
 I got inspired by this project's roadmap: `https://dbackup.app/roadmap/`
@@ -153,7 +153,8 @@ awk '
 
 The remaining roadmap:
 
-4. 0.8.2: fixed-orientation constrained translational dynamics.
+fixed-orientation constrained translational dynamics
+
 5. 0.9.0: real rotational dynamics and orientation integration.
 6. 0.9.1: rotational joints, forces and torques.
 7. 0.9.2: 2D/3D API symmetry, documentation and API freeze.
@@ -161,63 +162,57 @@ The remaining roadmap:
 
 v0.8.1 contains no dynamics. All four v0.8.0 concerns are now addressed:
 
-  - Contradictory drive value/velocity laws are rejected.
-  - Trajectory diagnostics compare pose derivatives with reported linear and angular velocities.
-  - model_id identifies structure; excitation_id identifies sampled drive behavior.
-  - Highly underconstrained systems use rank-aware minimum-norm projection.
-  - Nested result validation remains fully hardened.
+- Contradictory drive value/velocity laws are rejected.
+- Trajectory diagnostics compare pose derivatives with reported linear and angular velocities.
+- model_id identifies structure; excitation_id identifies sampled drive behavior.
+- Highly underconstrained systems use rank-aware minimum-norm projection.
+- Nested result validation remains fully hardened.
 
-  Verification:
+Verification:
 
-  - Core: 95 tests passed.
-  - Examples: 28 tests plus all runnable examples passed.
-  - Ruff, builds, Twine and isolated wheel smoke tests passed.
-  - Both dev branches are clean.
+- Core: 95 tests passed.
+- Examples: 28 tests plus all runnable examples passed.
+- Ruff, builds, Twine and isolated wheel smoke tests passed.
+- Both dev branches are clean.
 
-  Latest commits:
+Latest commits:
 
-  - Core: 3c81df0
-  - Examples: 7a4c19c
+- Core: 3c81df0
+- Examples: 7a4c19c
 
-  And yes: the former 0.8.2 dynamics preview belongs in 0.9.0. After releasing 0.8.1, we should create
-  a fresh v0.9.0-dev from it and selectively bring over the useful old dynamics work rather than
-  releasing v0.8.2-dev.
+And yes: the former 0.8.2 dynamics preview belongs in 0.9.0. After releasing 0.8.1, we should create
+a fresh v0.9.0-dev from it and selectively bring over the useful old dynamics work rather than
+releasing v0.8.2-dev.
 
- All six findings are addressed on v0.8.1-dev.
+All six findings are addressed on v0.8.1-dev.
 
-  - Correct rotating-frame centrifugal, Coriolis and Euler forces.
-  - Correct physical reaction sign: -Cq.T @ lambda.
-  - Reject non-unit quaternions and invalid/mismatched diagnostics.
-  - Export and validate unit-separated spatial residual metrics.
-  - Include CAM and point-on-line Jacobian time derivatives.
-  - Clearly label the spherical example as an underdetermined kinematic path.
+- Correct rotating-frame centrifugal, Coriolis and Euler forces.
+- Correct physical reaction sign: -Cq.T @ lambda.
+- Reject non-unit quaternions and invalid/mismatched diagnostics.
+- Export and validate unit-separated spatial residual metrics.
+- Include CAM and point-on-line Jacobian time derivatives.
+- Clearly label the spherical example as an underdetermined kinematic path.
 
-  Verification:
+Verification:
 
-  - Core: 101 tests passed.
-  - Examples: 28 tests and all examples passed.
-  - Ruff, builds, Twine and isolated-wheel smoke tests passed.
-  - Both repositories are clean.
+- Core: 101 tests passed.
+- Examples: 28 tests and all examples passed.
+- Ruff, builds, Twine and isolated-wheel smoke tests passed.
+- Both repositories are clean.
 
-  Latest commits:
+No spatial dynamics was added. 
 
-  - Core: 8ca7d01
-  - Examples: 6e956c5
-
-  No spatial dynamics was added. That work starts with the fresh v0.9.0-dev line after releasing 0.8.1.
+That work starts with the fresh v0.9.0-dev line after releasing 0.8.1.
 
 {{% /details %}}
 
 > https://app.multibodysystemsdynamics.com/?demo=slider-crank&r=0.35&l=1.15&e=0&rpm=60&steps=241
 
-
-> I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
+I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
 
 > > And email to `https://selfh.st/submit/`
 
-
-
-There are other oss fwks with interesting potential to have a look:
+There are **other oss mbsd fwks** with interesting potential to have a look:
 
 * https://www.mbdyn.org/
   * https://github.com/zanoni-mbdyn/blendyn
@@ -243,7 +238,7 @@ https://www.youtube.com/watch?v=eFGkopoCTYY
 
 ## Conclusions
 
-Who could have guessed: for bicycles and for airplanes we have to level up the modelling to 3D
+Who could have guessed: *for bicycles and for airplanes we have to level up the modelling to 3D*
 
 
 {{< cards >}}
@@ -255,3 +250,4 @@ Who could have guessed: for bicycles and for airplanes we have to level up the m
 ---
 
 ## FAQ
+

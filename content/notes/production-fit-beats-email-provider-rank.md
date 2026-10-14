@@ -1,6 +1,6 @@
 ---
 title: "Production fit beats email provider rank"
-date: 2026-10-10
+date: 2026-10-11
 tags: ["email", "mailjet", "listmonk", "marketing", "deliverability"]
 description: "The third-ranked email provider can still be the right choice when it fits the real stack, compliance context, and operating loop."
 ---
@@ -15,7 +15,7 @@ The first messages landing in Gmail spam were a warning to finish the domain and
 
 SPF and DKIM were necessary, but a `200` response was still not proof of inbox delivery.
 
-The European angle also mattered: Mailjet has deep European roots and stores customer data in EU data centres. 
+The European angle also mattered: *Mailjet has deep European roots and stores customer data in EU data centres*. 
 
 That is a better fit for an EU-facing stack, even if another API looks nicer in isolation.
 

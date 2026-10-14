@@ -1101,7 +1101,7 @@ cd ./poc/genbi-energy-solutions/waitlist/ #it can be re-used nicely for lead-gen
 
 ## Conclusions
 
-You get what you ~~deserve~~ negotiate
+You get what you ~~deserve~~ [negotiate](https://www.levels.fyi/blog/ultimate-negotiation-guide.html)
 
 Lately I was asked: *how can we work together?*
 

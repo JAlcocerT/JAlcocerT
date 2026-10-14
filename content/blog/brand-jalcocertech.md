@@ -9,12 +9,12 @@ url: 'branded-jalcocertech'
 
 **Tl;DR**
 
-Hows my brand and outbound email marketing going?
+Hows my brand and outbound email going?
 
 **Intro**
 
 * Why Im writting this post: *bc if you are good, you should not be [giving for free your upside](#risk-and-opportunities)*
-* What [Ive learnt](#conclusions) with it: *Ive ended up being [pragmatic](https://www.jalcocertech.com/support/articles/cloudflare-pragmatism-oss-exit-plan/) and exploring how to help [UK businesses](https://developer.company-information.service.gov.uk/manage-applications/6acb6fbe9edf417a7cadee77/view/live#)*
+* What [Ive learnt](#conclusions) with it: *Ive ended up being [pragmatic](https://www.jalcocertech.com/support/articles/cloudflare-pragmatism-oss-exit-plan/) and exploring how to help [UK businesses](https://developer.company-information.service.gov.uk/manage-applications/6acb6fbe9edf417a7cadee77/view/live#). I unified my inbounds with a custom multisite fwk and set the outbound 101 to test offers.*
 
 Ive started [telling the agents why i need](https://www.seangoedecke.com/tell-agents-the-why/) things and there has been some interesting surprises: like having my posts with draft=false into a future date to be effectively scheduled without me having to re-run Ci/Cd.
 
@@ -22,10 +22,15 @@ Ive started [telling the agents why i need](https://www.seangoedecke.com/tell-ag
 
 ## Mail
 
+Last year I said that email was hard.
+
+Since then, I discovered some local testing mail for devs to get familiar with smtp: mailpit, inbucket, maildev...
 
 * https://fossengineer.com/selfhosting-maildev/
 
-There will never be [better weddings](https://jalcocert.github.io/JAlcocerT/poc-101/#better-weddings) without the mail outbound and to lower the CaC, you can [use email DRIP](https://jalcocert.github.io/JAlcocerT/quick-weddings-poc/#drip-to-convert) to increase the conversion rate to the people that was attracted, but didnt buy.
+There will never be [better weddings](https://jalcocert.github.io/JAlcocerT/poc-101/#better-weddings) without proper mail outbound.
+
+To lower the CaC, you can [use email DRIP](https://jalcocert.github.io/JAlcocerT/quick-weddings-poc/#drip-to-convert) to increase the conversion rate to the people that was attracted, but didnt convert/buy.
 
 
 https://github.com/JAlcocerT/slubnechwile-chwile-y26-claude
@@ -1226,7 +1231,7 @@ git clone https://github.com/JAlcocerT/EntreAgujayPunto #decapCMS
 
 0. Interesting Recipes
 
-How could I not offer something very special to entreagujaypunto: *to capture all those recipes*
+How could I not offer something very special to entreagujaypunto: *to capture all those projects with an editable UI*
 
 ```sh
 #git clone https://github.com/JAlcocerT/foldergram
@@ -1843,33 +1848,31 @@ You're signed in and on the right form. Fill it in like this:
   │ URL              │ matches what you do)                                                        │
   └──────────────────┴─────────────────────────────────────────────────────────────────────────────┘
 
-  Then Create application → open it → Create new key → choose REST. You can leave the restricted IPs
-  and JavaScript domains empty.
+Then Create application → open it → Create new key → choose REST. You can leave the restricted IPs and JavaScript domains empty.
 
-  Copy the key into ~/Desktop/mbsd-framework/leadarchitect-uk/.env:
-  CH_API_KEY=your-key-here
+Copy the key into ~/Desktop/mbsd-framework/leadarchitect-uk/.env:
+`CH_API_KEY=your-key-here`
 
-  Don't paste it here. Once it's in, tell me, and I'll run a quick check that the key works with one
-  well-known company search, without printing the key.
+Don't paste it here. Once it's in, tell me, and I'll run a quick check that the key works with one well-known company search, without printing the key.
 
-  Signing up with a Proton passmail.net alias is fine; Companies House doesn't care which email you
-  use.
+Signing up with a Proton passmail.net alias is fine; Companies House doesn't care which email you use.
 
   > `https://www.getleadarchitect.com/privacy/`
 
+Go to `console.apify.com → Settings → API & Integrations`, and copy your Personal API token (it starts with apify_api_…). 
+  
+If it's Julita's account, as the APIFY_julita name in your old script
+ suggests, use the token from that account.
 
-   Go to console.apify.com → Settings → API & Integrations, and copy your Personal API token (it
-     starts with apify_api_…). If it's Julita's account, as the APIFY_julita name in your old script
-     suggests, use the token from that account.
-  2. Replace the APIFY_TOKEN= line in leadarchitect-uk/.env with it.
+2. Replace the APIFY_TOKEN= line in leadarchitect-uk/.env with it.
 
 ```env
 APIFY_TOKEN=apify_api_
 CH_API_KEY=
 ```
 
-
 Both keys work, and I ran the whole pipeline once on real UK data: 30 dentists in Leeds.
+
   ┌─────────────────────────┬──────────────────────────────────────────────────────────────────────┐
   │          Step           │                                Result                                │
   ├─────────────────────────┼──────────────────────────────────────────────────────────────────────┤
@@ -1886,21 +1889,14 @@ Both keys work, and I ran the whole pipeline once on real UK data: 30 dentists i
   │                         │ 11–17 seconds to show content on a phone, 1 has a 13 MB homepage     │
   └─────────────────────────┴──────────────────────────────────────────────────────────────────────┘
 
-  Google's own PageSpeed test agrees with the numbers: Meliora 12.9 s vs Google's 12.3 s, Indigo 16.3 s
-  vs 16.2 s. A dentist who checks will see what the email says.
+Google's own PageSpeed test agrees with the numbers: Meliora 12.9 s vs Google's 12.3 s, Indigo 16.3 s vs 16.2 s. A dentist who checks will see what the email says.
 
-  What the real data exposed, now fixed:
-  1. The Apify library changed format. The scrape ran but the script couldn't read the result. I fixed
-     it and recovered the finished run instead of paying twice.
-  2. Wrong company matches. "Jem Dental Care - Leeds" had been matched to LEEDS DENTAL CARE LIMITED, a
-     different business. Matching now ignores trade and street words and the city, and accepts only a
-     matching postcode, or an identical name once "Ltd" etc. is removed. A missed lead is better than a
-     wrong name.
-  3. Robotic names. Emails now say "Clarendon Dental Spa", not "CLARENDON DENTAL SPA LLP". The
-     registered name is kept in a company_evidence column, which records why each row qualifies.
-  4. Lighthouse varies between runs (one site measured 4.5 s, then 12–13 s). Speed findings are now
-     measured twice and the faster run is kept, and the email rounds down: "over 12 seconds… you can
-     check it yourself at pagespeed.web.dev".
+What the real data exposed, now fixed:
+
+1. The Apify library changed format. The scrape ran but the script couldn't read the result. I fixed it and recovered the finished run instead of paying twice.
+2. Wrong company matches. "Jem Dental Care - Leeds" had been matched to LEEDS DENTAL CARE LIMITED, a different business. Matching now ignores trade and street words and the city, and accepts only a matching postcode, or an identical name once "Ltd" etc. is removed. A missed lead is better than a wrong name.
+3. Robotic names. Emails now say "Clarendon Dental Spa", not "CLARENDON DENTAL SPA LLP". The registered name is kept in a company_evidence column, which records why each row qualifies.
+4. Lighthouse varies between runs (one site measured 4.5 s, then 12–13s). Speed findings are now measured twice and the faster run is kept, and the email rounds down: "over 12 seconds… you can check it yourself at pagespeed.web.dev".
 
   What an email from this batch would say:
 
@@ -1917,14 +1913,15 @@ Both keys work, and I ran the whole pipeline once on real UK data: 30 dentists i
   roadmap items 7.7b and 7.7d are ticked. The lead data stays in leadarchitect-uk/data/ (excluded from
   git, deleted after 90 days).
 
-  Next:
-  - Let warm-up run 2–3 weeks on both inboxes, and set up the hello@ and dmarc@ aliases.
-  - Then a bigger run (MAX=100) in one niche, and import the first smartlead.csv as a small campaign.
+Next:
+- Let warm-up run 2–3 weeks on both inboxes, and set up the hello@ and dmarc@ aliases.
+- Then a bigger run (MAX=100) in one niche, and import the first smartlead.csv as a small campaign.
 
-ou have seven ready-to-send leads from the Leeds dentists run. The next step is sending them by
-  hand, not integrating Smartlead.
+You have seven ready-to-send leads from the Leeds dentists run. 
 
-  What's in leadarchitect-uk/data/2026-10-11-dentist-leeds-uk/
+The next step is sending them by hand, not integrating Smartlead.
+
+What's in `leadarchitect-uk/data/2026-10-11-dentist-leeds-uk/`
 
   ┌─────────────────────────────┬──────────────────────────────────────────────────────────────────┐
   │            File             │                            What it is                            │
@@ -2131,7 +2128,9 @@ Dentists are a poor trade for UK company-only outreach,
 ```sh
 cd ~/Desktop/mbsd-framework/leadarchitect-uk
 make funnel                    # the four views: per run, per trade, per batch, per finding type
+
 make send RUNS=2026-10-11-dentist-leeds-uk,2026-10-11-dentist-bristol-uk BATCH=t1
+
 cat data/sends/t1.dropped.csv  # why each lead was held back
 rm data/sends/t1.*             # it's a draft; nothing is recorded until mark-sent
 ```
@@ -2614,3 +2613,11 @@ you're sending twice as many emails as leads,
 
   At about 75 leads a week, you'll reach the 300-send point by mid-November, so the first verdict costs
   about $200–250 in tools.
+
+
+
+### Slubne PoC
+
+```sh
+git clone /slubne-chwile-y26
+```

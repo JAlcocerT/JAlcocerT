@@ -382,3 +382,29 @@ docker system prune --all --volumes #release space from old containers
 
 #docker system prune --all --volumes #just clean all...
 ```
+
+## Self-Hosting Infrastructure
+
+### Nextcloud — `nextcloud/server` (AGPL-3.0-or-later)
+
+**Key insight:** The flagship full-platform Google Workspace replacement. PHP 8.2+ backend, Vue 3 frontend, 28 bundled apps + 300+ in the App Store. v34, MariaDB recommended, Redis required for HA.
+
+**Cool feature:** Nextcloud AIO (All-In-One) image manages MariaDB+Redis+Collabora+Talk through a single management interface — the recommended production path.
+
+**FAQ patterns that worked well:** Nextcloud vs rsync (platform vs file-transfer primitive), Nextcloud vs BorgBackup (live access vs disaster recovery — complement each other with append-only Borg for ransomware resilience).
+
+### Pangolin — `fosrl/pangolin` (AGPL-3 + Fossorial Commercial)
+
+**Key insight:** Cloudflare Tunnel + Tailscale in one self-hosted platform. Three-container stack: `pangolin` (Next.js control plane) + `gerbil` (WireGuard data plane, needs `CAP_NET_ADMIN` + `SYS_MODULE`) + `traefik` v3.6 (sharing gerbil's network namespace via `network_mode: service:gerbil`).
+
+**Compose gotcha worth preserving:** Ports `80`/`443` are declared on the `gerbil` service in the compose, not on `traefik` — because Traefik shares gerbil's network namespace. Not a typo, the design.
+
+**Workaround:** Rootless Podman / locked-down Kubernetes can't grant `SYS_MODULE`. Load WireGuard kernel module on the host first (`modprobe wireguard`), then `SYS_MODULE` can be dropped from the compose.
+
+### The Software for D&A
+
+#### MicroControllers
+
+
+#### In the server
+

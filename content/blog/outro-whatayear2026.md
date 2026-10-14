@@ -1068,6 +1068,30 @@ And podcasts:
 * MongeMalo
 * [DanKoeTalks](https://www.youtube.com/@DanKoeTalks)
 * [DanielPriestley](https://www.youtube.com/@DanielPriestley)
+* Un podcast sobre bitcoin
+
+#### Interesting YT
+
+For DIY
+
+1. FarmCraft101
+2. HRom
+
+Cars:
+
+1. SuperfastMatt
+
+Robotics/Fpv:
+
+1. CPSDrone
+2. Mediocre Nerd
+3. nils_vo
+4. Chris rosser
+
+Aero:
+
+1. LetsGoAviate
+2. SteFly (glider)
 
 
 ### For Next year...
