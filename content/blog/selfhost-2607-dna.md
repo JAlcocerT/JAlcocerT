@@ -12,6 +12,9 @@ url: 'selfhosting-data-analytics'
 
 [No Hello](https://fossengineer.com/no-hello/) is just the beginning of a proper [Governance & Communication Operating System](#quick-reference)
 
+![alt text](/blog_img/AIBI/vite-baml-genbi.png)
+
+
 **Intro**
 
 D&A is more about semantics than you could think in the first place:
@@ -57,6 +60,21 @@ sudo docker compose -f ./z-homelab-setup/evolution/2610_docker-compose.yml logs 
 {{< /cards >}}
 
 Use the [DBCode](https://dbcode.io/) extension, and if you like `ipynb`, check their [notebooks for DBs](https://dbcode.io/docs/notebooks/getting-started)
+
+
+
+### AI x Data
+
+* https://github.com/vanna-ai/vanna
+
+vanna-ai/vanna: 🤖 Chat with your SQL database 📊. Accurate Text-to-SQL Generation via LLMs using Agentic Retrieval 🔄.
+
+### Custom Chats
+
+* https://github.com/assistant-ui/assistant-ui
+
+> MIT | Typescript/React Library for AI Chat💬🚀
+
 
 ## AI/BI Tools
 

@@ -62,7 +62,6 @@ https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#open-source-ai-tools-
 
 https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#sunoai
 
-
 [1](https://suno.com)
 [2](https://pyseek.com/2025/04/generate-music-using-python-deep-learning/)
 [3](https://github.com/ayeshabasit/AI-Music-Generator)
@@ -71,16 +70,14 @@ https://jalcocert.github.io/JAlcocerT/music-with-ai-tools/#sunoai
 
 ## Conclusions
 
-A friend tried `https://pr.tn/ref/RHJ7YZE8` proton unlimited https://account.proton.me/u/3/mail/users-addresses
+A friend tried `https://pr.tn/ref/RHJ7YZE8` proton unlimited `https://account.proton.me/u/3/mail/users-addresses`
 
-  1. Your friend creates a free Proton account with a Proton Mail address.
-  2. You upgrade your account to Proton Duo.
-  3. In Proton settings, create a family group.
-  4. Go to Users and addresses → Invite user.
-  5. Enter your friend’s Proton address and allocate storage.
-  6. They accept the invitation and switch to your Duo plan.
-
-
+1. Your friend creates a free Proton account with a Proton Mail address.
+2. You upgrade your account to Proton Duo.
+3. In Proton settings, create a family group.
+4. Go to Users and addresses → Invite user.
+5. Enter your friend’s Proton address and allocate storage.
+6. They accept the invitation and switch to your Duo plan.
 
 ### FOSS
 
@@ -92,6 +89,8 @@ Just [get gitlab setup](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs
 #ssh -T git@gitlab.com
 git clone git@gitlab.com:fossengineer1/fossengineerpapermod.git
 ```
+
+I discovered interesting services, in case that you are tired of stripe:
 
 ```md
 Added Zoneless as an optional USDC payout method to this marketplace while preserving checkout and every existing payout method; start by reading https://zoneless.com/docs/agent-marketplace-quickstart.md and follow it.
@@ -110,7 +109,6 @@ Ive been using [Dawarich](https://fossengineer.com/selfhosting-dawarich/) for [a
 
 ![Wanderer vs strava/komoot](/blog_img/selfh/umbrel-os/wanderer-integrations.png)
 
-
 Tinkered a bit with [Technitium](https://fossengineer.com/selfhosting-technitium-dns/#technitium-vs-pi-hole-vs-adguard-home) inside [Omarchy via VM](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy).
 
 {{< cards cols="2" >}}
@@ -127,12 +125,21 @@ Both the pi and x300 are working right now without local SSLs `192.168.1.18` `19
 
 Regarding **useful CLIs**: [herdr](https://fossengineer.com/herdr-terminal-agent-multiplexer/), [ncdu](https://fossengineer.com/ncdu-terminal-disk-usage-analyzer/), [lazydocker](https://fossengineer.com/lazydocker-terminal-ui-for-docker/)
 
-For AI: *~~windsurf, cursor, zed, gram, antigravity, kilo code, roo code, gemini cli, Goose Desktop~~ claude code, codex CLI, T3 Code, opencode....*
+For AI: *~~windsurf, cursor, zed, gram, antigravity, kilo code, roo code, gemini cli, Goose Desktop~~ claude code, codex CLI, T3 Code, opencode....*. Combined with [gitpane](https://github.com/affromero/gitpane) or [mgitstatus](https://github.com/fboender/multi-git-status/blob/master/mgitstatus):
 
 ```sh
-herdr #code --yolo | opencode | claude 
+herdr #code --yolo | opencode | claude
+mgitstatus #this has been interesting to try and superseed an IDE
+#lazygit #lazydocker
+#cargo install gitpane
+```
+
+For [maintainance](https://github.com/JAlcocerT/Home-Lab/blob/main/maintenance.md):
+
+```sh
 #ncdu /
 find . -type d -name ".venv" ### -exec rm -rf {} +
+find . -type f \( -iname '*.sqlite' -o -iname '*.sqlite3' -o -iname '*.db' \)
 
 # sudo docker compose -f ./z-homelab-setup/evolution/2601_docker-compose.yml up -d qbittorrent prowlarr
 sudo docker compose -f 2610_docker-compose.yml up -d termix nextcloud ncdb sftpgo forgejo forgejo-forgejo-db-1 ntfy pocketbase mailpit uptimekuma maintenant technitium jellyfin qbittorrent prowlarr dawarich_app dawarich_db #umami lunalytics littlyx
@@ -158,14 +165,14 @@ comm -23 \
 winget install sonixd
 ```
 
-Been also working with notifications in the homelab lately:
+Been also working with notifications in the homelab lately: *it has been cool*
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gotify" title="gotify | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ntfy" title="notify | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-> https://github.com/Aetherinox/ntfy-desktop#linux-1 and connection with uptime kuma (mqtt too?)
+> `https://github.com/Aetherinox/ntfy-desktop#linux-1` and connection with uptime kuma (mqtt too?)
 
 Oh, and with [oss link shorteners](https://fossengineer.com/selfhosted-open-source-url-shorteners/): [snapp](https://github.com/urania-dev/snapp) was interesting, dub too feature heavy, [kutt](https://github.com/thedevs-network/kutt), shlink, yourls and [ha.mr](https://github.com/p2r3/ha.mr) whose creator has a very [interesting video about how link shorteners work](https://www.youtube.com/watch?v=TOr1Vvji6jA)
 
@@ -217,7 +224,7 @@ Is good to have [opencode](https://fossengineer.com/opencode-ai-coding-agent-cli
 glances #htop btop
 ```
 
-You can also connect to wifi via CLI, see `iwd` and https://fossengineer.com/impala-tui-wifi-manager/
+You can also connect to wifi via CLI, see `iwd` or [impala TUI](https://fossengineer.com/impala-tui-wifi-manager/)
 
 Having a look to **commento** to check that there is no spam [from time to time](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#server-maintainance):
 
@@ -241,8 +248,8 @@ Having a look to **commento** to check that there is no spam [from time to time]
 
 For media: `https://selfh.st/apps/?tag=Photos`
 
-https://github.com/paulomarques742/imago
-https://imago.742studio.eu/
+* https://github.com/paulomarques742/imago
+* https://imago.742studio.eu/
 
 * https://foldergram.github.io/
 
@@ -252,9 +259,9 @@ git clone /JalcocerT/foldergram
 
 > Point it at your folders, browse everything through a fast feed-style interface. No cloud, no accounts — just your files and SQLite.
 
-https://github.com/open-noodle/gallery a fork of immich :)
+* https://github.com/open-noodle/gallery a fork of immich :)
 
-> Some time back i tried immich but i didnt like that my folder order is not respected and also neither need the heavy face recognition
+> Some time back i [tried immich](https://fossengineer.com/selfhosting-immich/) but i didnt like that my folder order is not respected and also neither need the heavy face recognition
 
 High performance self-hosted photo and video management solution.
 
@@ -283,6 +290,62 @@ https://github.com/mortennordbye/homelab
 https://github.com/lfnovo/open-notebook
 
 https://github.com/Priveetee/TypeType
+
+
+### Preparing backups
+
+Frist of all, some cleanup:
+
+```sh
+containers_to_stop=(
+  z-poc-trip-planner-adk-web-1
+  z-poc-trip-planner-adk-adk-1
+  libreportfolio-flask
+  chartbrew-foss-trial-app
+  chartbrew-foss-trial-db
+  chartbrew-foss-trial-redis
+  inbucket-safe
+  dbackup
+  ppp-caddy
+  ppp-app
+  ppp-db
+  feedlog
+  feedlog-db
+  gladys
+  gladys-ext-prohand-gladys-electricity-maps
+  filebrowser
+  kener
+)
+
+docker stop --timeout 60 "${containers_to_stop[@]}"
+
+#docker rm "${containers_to_stop[@]}"
+
+docker builder prune -a
+docker image prune -a
+```
+
+It has been [a while](https://github.com/JAlcocerT/Home-Lab/blob/main/z-homelab-setup/evolution/2605_docker-compose.yml) since I updated these configs.
+
+But first, I moved from the OS drive towards `/mnt/data1tb/services` all the containers.
+
+```sh
+cd ./Home-Lab/tree/main/z-homelab-setup/evolution
+docker compose -f 202610_docker-compose.yml up -d build
+```
+
+
+{{< callout type="warning" >}}
+Remember to setup [CF Geoblocking](https://github.com/JAlcocerT/Home-Lab/blob/main/cf-security.md) for your public services like nextcloud
+{{< /callout >}}
+
+```sh
+cd jalcocertech-core/leads-hub/hub
+docker compose run --rm hub digest --send #weekly summaries towards ntfy
+```
+
+
+
 
 
 ### Testing a backup Strategy in the cloud
@@ -352,7 +415,7 @@ As long as the **ONT on the wall stays connected to power and fiber**, you can p
 
 ### Macbook...or Omarchy?
 
-I tried omarchy 4 in a VM recently and i pretty much enjoyed the flow of the window manager.
+I tried omarchy 4 in [a VM](https://github.com/JAlcocerT/Home-Lab/blob/main/z-benchmarks/vm-101.md) not long [ago](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy) and i pretty much enjoyed the flow of the window manager.
 
 Just discovered that there is a similar project that does the same for macbooks: https://github.com/asmvik/yabai
 
@@ -360,11 +423,26 @@ What to do in this case? to linux? or to go with the flow?
 
 Also this project can be interesting https://github.com/Saffsanity/sill
 
-I tried a macbook Pro M2 that weights the same as my x13 gen2 (1.3kg), the build quality is excellent...but
+I tried a macbook Pro M2 that weights the same as my x13 gen2 (1.3kg), the build quality is excellent...but I have some [desktop/homelab goodies for starters](https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab)
 
 ### How many users can a Pi4 2GB handle
 
+Im more and more interested about architecture and system design:
+
 https://www.youtube.com/watch?v=xV2SpvHHF_I
+
+So just took [my benchmarks](https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks) and applied it.
+
+Bc deploying and putting features fast infront of prospects matter
+
+The questions is: via a [VPS/HomeLab](https://jalcocert.github.io/JAlcocerT/where-to-deploy/#vps) or now using CF KV Workers?
+
+I compared [clouds](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#other-clouds) and [mini-pcs/sbcs](https://jalcocert.github.io/RPi/posts/minipc-vs-pi/) in several occasions.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
+{{< /cards >}}
 
 ### The AI Agent Stack
 

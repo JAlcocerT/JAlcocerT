@@ -24,6 +24,8 @@ It seems that both were right.
 
 ## Updates
 
+Since the last one:
+
 
 ```mermaid
 flowchart LR
@@ -86,52 +88,32 @@ scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-6-0-concerns.md .
 #scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/roadmap.md .
 ```
 
-Both repos are in good shape and I'd release tomorrow. There's one thing to fix first (the install
-  instructions) and one thing to do in the right order (tagging). I didn't change any files.
+Both repos are in good shape and I'd release tomorrow. There's one thing to fix first (the install instructions) and one thing to do in the right order (tagging). I didn't change any files.
 
-  What I checked
-  - mbsd-core: all 67 tests pass, ruff is clean, and the 3 bundled examples run. Constraint residuals
-    are around 1e-10.
-  - mbsd-examples: make check passes, covering 13 examples, the gallery and ruff. Regenerating the
-    gallery gives byte-identical PNGs, so the committed images match the code.
-  - New spatial code: spatial/kinematics.py looks correct. Poses compose and invert properly,
-    point_velocity uses a world-frame angular velocity consistently, and the fixed-joint residual flips
-    the quaternion sign to take the shortest rotation. Negative body indices are rejected when frames
-    and joints are created, which I confirmed. The README is careful to say this is residual-based with
-    no 3D solver, which keeps expectations right.
+What I checked:
 
-  Fix before tagging
-  1. The install instructions still point to v0.6.0.
-     - mbsd-core/readme.md:24 has git checkout v0.6.0.
-     - mbsd-examples/README.md:25-26 checks out v0.6.0 for both repos. Anyone following the README
-       tomorrow gets last week's release.
-  2. Tag core before you push examples to main. The examples CI checks out JAlcocerT/mbsd-core@v0.7.0,
-     and that tag isn't on the remote yet. Both repos are on local v0.7.0-dev branches with no
-     upstream. Do it in this order: merge core into main, push, tag v0.7.0, push the tag; then do the
-     same for examples. Otherwise the examples CI goes red on release day.
+- mbsd-core: all 67 tests pass, ruff is clean, and the 3 bundled examples run. Constraint residuals are around 1e-10.
+- mbsd-examples: make check passes, covering 13 examples, the gallery and ruff. Regenerating the gallery gives byte-identical PNGs, so the committed images match the code.
+- New spatial code: spatial/kinematics.py looks correct. Poses compose and invert properly,
+  point_velocity uses a world-frame angular velocity consistently, and the fixed-joint residual flips the quaternion sign to take the shortest rotation. Negative body indices are rejected when frames and joints are created, which I confirmed. The README is careful to say this is residual-based with no 3D solver, which keeps expectations right.
 
-  Worth tidying, but not blockers
-  - Private plans in public changelogs. They mention "PWA-style validation panels", "PWA/CAD consumers"
-    and "Keep public browser/PWA code outside the OSS repositories". If the PWA is your private
-    product (there's a private-pwa-roadmap.md next to the repos), you may not want it in OSS
-    changelogs. "Week 7 release" is also internal wording.
-  - Stale version notes in the core README. It says "MBSD 0.4.0 includes portable export helpers" and
-    "The 0.4.0 handoff schemas". This reads fine as history, but a "since 0.4" style would date better.
-  - The examples README is a stack of per-release notes (v0.4.0, v0.5.0, v0.6.0, 0.7.0). That belongs
-    in the CHANGELOG; a short description of what each example shows would read better.
-  - No PyPI release yet. Installing requires cloning, and examples uses uv.sources = ../mbsd-core.
-    That's fine while the API changes weekly, but pip install mbsd would make it much easier to adopt.
-    The packaging (hatchling, wheel smoke test in CI) is ready for it.
-  - Spatial tests: joint_residual_jacobian is only checked by finite differences. An analytic Jacobian
-    for the spherical joint would give you a reference to check against, and you'll need one anyway for
-    a 3D solver.
+Fix before tagging:
 
-  Overall
-  The scope is honest: "planar is stable, spatial is experimental", and the README says when to use
-  Chrono, Exudyn or Simbody instead. The validation is thorough for a project this size, with residual
-  checks, finite-difference checks on derivatives, provenance in results, and versioned schemas that
-  can still read v1. release-compatibility.json plus CI pinned to the paired core tag is a clean way to
-  keep the two repos in step.
+1. The install instructions still point to v0.6.0.
+    - mbsd-core/readme.md:24 has git checkout v0.6.0.
+    - mbsd-examples/README.md:25-26 checks out v0.6.0 for both repos. Anyone following the README tomorrow gets last week's release.
+2. Tag core before you push examples to main. The examples CI checks out JAlcocerT/mbsd-core@v0.7.0, and that tag isn't on the remote yet. Both repos are on local v0.7.0-dev branches with no upstream. Do it in this order: merge core into main, push, tag v0.7.0, push the tag; then do the same for examples. Otherwise the examples CI goes red on release day.
+
+Worth tidying, but not blockers:
+
+- Private plans in public changelogs. They mention "PWA-style validation panels", "PWA/CAD consumers" and "Keep public browser/PWA code outside the OSS repositories". If the PWA is your private product (there's a private-pwa-roadmap.md next to the repos), you may not want it in OSS changelogs. "Week 7 release" is also internal wording.
+- Stale version notes in the core README. It says "MBSD 0.4.0 includes portable export helpers" and "The 0.4.0 handoff schemas". This reads fine as history, but a "since 0.4" style would date better.
+- The examples README is a stack of per-release notes (v0.4.0, v0.5.0, v0.6.0, 0.7.0). That belongs in the CHANGELOG; a short description of what each example shows would read better.
+- No PyPI release yet. Installing requires cloning, and examples uses uv.sources = ../mbsd-core. That's fine while the API changes weekly, but pip install mbsd would make it much easier to adopt. The packaging (hatchling, wheel smoke test in CI) is ready for it.
+
+- Spatial tests: joint_residual_jacobian is only checked by finite differences. An analytic Jacobian for the spherical joint would give you a reference to check against, and you'll need one anyway for a 3D solver.
+
+Overall The scope is honest: "planar is stable, spatial is experimental", and the README says when to use Chrono, Exudyn or Simbody instead. The validation is thorough for a project this size, with residual checks, finite-difference checks on derivatives, provenance in results, and versioned schemas that can still read v1. release-compatibility.json plus CI pinned to the paired core tag is a clean way to keep the two repos in step.
 
 
 ```sh
@@ -550,7 +532,6 @@ npx wrangler pages secret put LEAD_WEBHOOK_URL --project-name multibodysystemsdy
 
 # Commit KV configuration
 git commit -am "Bind LEADS KV namespace" && git push
-
 ```
 
 Step 4: Deploy & Verify Staging

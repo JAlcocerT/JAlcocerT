@@ -12,11 +12,15 @@ url: 'open-source-dna'
 * Why Im writting this post: 
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
+https://www.youtube.com/watch?v=Wf0uwVaNnQ4&time_continue=50&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fgenbi.jalcocertech.com%2F
+
 
 https://fossengineer.com/chartbrew-dashboard-builder/
 https://fossengineer.com/malloy-semantic-modeling-language/
 
-baml adk 
+baml adk
+
+> Made some poc with [trip planner adn adk](https://github.com/JAlcocerT/poc/tree/main/z-poc-trip-planner-adk)
 
 how you store knowledge: [OKF](https://fossengineer.com/open-knowledge-format/) 
 
@@ -28,12 +32,14 @@ I definitely [agree with wrenai](https://docs.getwren.ai/oss/reference/architect
 
 Wren AI is built as an open context layer for agents. Architecturally, that means two things:
 
-    Business meaning is stored in explicit project artifacts: MDL, instructions, profiles, and memory.
-    Correctness is handled as a system of primitives the agent can orchestrate, not as one hidden feature.
+Business meaning is stored in explicit project artifacts: MDL, instructions, profiles, and memory.
+Correctness is handled as a system of primitives the agent can orchestrate, not as one hidden feature.
 
 The result is a stack where agents can generate governed BI, from a SQL answer to a deployed GenBI dashboard, through governed business context, while Wren AI handles modeling, planning, validation, execution, and recall.
 
 > This also plays nicely with open-intelligent-ui projects and similar like [openui](https://github.com/thesysdev/openui) or [mastra](https://github.com/mastra-ai)
+
+Tools like [ChartBrew](https://fossengineer.com/chartbrew-dashboard-builder/) are also trendy: Open-source reporting platform to build and share live dashboards from APIs, SQL and NoSQL databases, with powerful AI assistant, scheduling, and embeddable charts 📈📊
 
 ---
 

@@ -203,7 +203,7 @@ This has 2 sides:
 
 Something like a desktop app communicating with local llms running in house could be a thing. 
 
-Like ~Goose.
+Like ~Goose or T3.
 
 2. The Local wiki / SknowledBase / [KB](https://jalcocert.github.io/JAlcocerT/knowledge-management/#conclusions) / [selfhostable notes](https://fossengineer.com/selfhostable-note-taking-tools/) / info part:
 
@@ -291,97 +291,9 @@ graph TD
     style T3 fill:#bbf7d0,stroke:#166534,stroke-dasharray: 5 5
 ```
 
-
-
-
-
 ---
 
 ## FAQ
-
-### The Business Game
-
-
-The **launch strategy**: *aka, focus strategy*:
-
-| Element | Decision |
-| :--- | :--- |
-| **One Avatar** | |
-| **One Product** | |
-| **One Channel** | |
-
-The **Tier of Service**: 
-
-* Enhanced DIY when you claim the free tier where you bring your own key and data + using built in functions
-* DFY for custom logics like calling functions, calendar, forms...
-
-The **customer segmentation**: SMB
-
-The **tech stack**: *this solution can start as a consulting / setup service, then and only when there are PxV signals...a potential product*
-
-```mermaid
-mindmap
-  root((Business Framework))
-    Niche (WHO)
-      Target Audience
-      Pain Points
-    Offer (WHAT)
-      The Solution
-        Product Development (Product Dev)
-          BRD (Why - BRD)
-          PRD (What - PRD)
-          FRD (How - FRD)
-        Service Delivery (Service Delivery)
-          SOW (Scope - SOW)
-          SLA (Quality - SLA)
-          SOP (Process - SOP)
-      Value Proposition
-    Leads (HOW)
-      Distribution
-      Sales Channels
-```
-
-| Requirement | Specification | Clarification / Decision |
-| :--- | :--- | :--- |
-| **Frontend Framework** | | |
-| **Styling/UI Library** | | |
-| **[Backend](https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/)/Database** | | |
-| **[Authentication](https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/)** | | |
-
-
-* Supply - DFY, finite *on demand basis*
-* Demand - constrained
-  * *Visitors of FossEngineer that are potential interested into OSS, but will be leaning more towards a DIY offer*
-  * *Targeted users via APIFY google maps scrapping + cold emails / social media reach*
-
-But it does not apply, as the goal of this is more closing a long chapter and making the final learnings with it.
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
-
-As the why, what was very clear, its time to put together the final HOW:
-
-```md
-# Project Name: [SaaS Name]
-
-## 1. The Why (BRD)
-- **Problem:** [Describe the pain point]
-- **Value Prop:** [How I solve it]
-- **Monetization:** [e.g., $9/mo Subscription via Stripe]
-
-## 2. The What (PRD)
-- **Primary User Flow:** Landing -> Auth -> Core Feature -> Payment.
-- **V1 Features:** - [ ] Auth (Google/Email)
-  - [ ] Feature A (The core value)
-  - [ ] Settings (Billing/Delete account)
-
-## 3. The How (FRD)
-- **Stack:** T3 Stack (Next.js, Prisma, TRPC)
-- **DB Schema:** - User: id, email, stripe_id
-  - Data: id, user_id, content, timestamp
-```
 
 
 

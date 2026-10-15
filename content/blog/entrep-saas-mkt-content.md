@@ -3,11 +3,17 @@ title: "Mass produced information content"
 date: 2026-10-22T07:20:21+01:00
 draft: false
 tags: ["Social Media Marketing","Side-Quest26","VSL","Youtube","Stocks x Stonks"]
-description: 'Is value based content dead? Typst'
+description: 'Is value based content dead? Typst and more Goodies 4 Marketers.'
 url: 'social-media-content'
 ---
 
 **Tl;DR**
+
+https://github.com/JAlcocerT/DataInMotion/tree/libreportfolio
+
+Its been one year since i placed [some goodies for marketers](https://jalcocert.github.io/JAlcocerT/where-to-deploy/#goodies-for-marketers) after this [123 session](https://youtu.be/qQ13MKLfqYQ)
+
+Back then: *APIFY + smartlead +* crm's https://elest.io/fully-managed-services/applications/crm-erp? `https://www.hubspot.com/`
 
 Proving that volume + quality data animations is possible with hyperframes.
 
@@ -15,6 +21,19 @@ Proving that volume + quality data animations is possible with hyperframes.
 
 * Why Im writting this post: *bc this year i started making some f1 shorts with matplotlib, then tried remotionJS and hyperframes, but didnt make a checkpoint on how this can apply to my brand*
 * What [Ive learnt](#conclusions) with it: *Ive ended*
+
+```sh
+cd jalcocertech-core/leads-hub/hub
+docker compose run --rm hub digest --send #weekly summaries towards ntfy
+make lead-messages LIMIT=5
+```
+
+Some needs [.env.sample](https://github.com/JAlcocerT/Home-Lab/blob/main/forgejo/.env.sample) files
+
+```sh
+cd Home-Lab/forgejo
+nano .env
+```
 
 ```sh
 git clone https://github.com/JAlcocerT/jalcocertech-core

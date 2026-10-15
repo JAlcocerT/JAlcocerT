@@ -379,13 +379,13 @@ I have discovered **about lazydocker**:
 ```sh
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
+#source ~/.bashrc
 lazydocker
 ```
 
 > You can press `?` to see further commands, but basically you can just select a container and get exec it directly to it without writing docker CLI commands :)
 
->> for containers you can also look to podman desktop, [orbstack (paid)](https://orbstack.dev/pricing), 
+>> For containers you can also look to podman desktop, [orbstack (paid)](https://orbstack.dev/pricing), 
 
 And tmux has also been great:
 
@@ -458,6 +458,7 @@ People are still doing cool stuff with the Pis
 ```sh
 #sudo du -ahx / | sort -rh | head -n 50
 sudo du -ahx . | sort -rh | head -n 50 #from current folder and below
+#ncdu /
 ```
 
 2. I want to clean old container stuff

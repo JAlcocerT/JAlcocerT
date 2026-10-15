@@ -155,12 +155,6 @@ time curl http://localhost:11434/api/generate -d '{
 }'
 ```
 
-For the mac M2:
-
-```sh
-
-```
-
 You can also:
 
 ```sh
@@ -545,24 +539,6 @@ AI agents
 * 👉 <https://www.youtube.com/watch?v=rIRkxZSn-A8>
 * <https://www.youtube.com/watch?v=MGr1V4LyGFA>
 
-
-### AI x Data
-
-* https://github.com/chartbrew/chartbrew
-
-* https://github.com/vanna-ai/vanna
-
-vanna-ai/vanna: 🤖 Chat with your SQL database 📊. Accurate Text-to-SQL Generation via LLMs using Agentic Retrieval 🔄.
-
-Rill or WrenAI
-
-
-### Custom Chats
-
-* https://github.com/assistant-ui/assistant-ui
-
-> MIT | Typescript/React Library for AI Chat💬🚀
-
 ### TTS
 
 TTS is always interesting.
@@ -585,7 +561,9 @@ TPU (Tensor Processing Unit)?
 
 Focus: TPUs are specifically **designed for running Google's TensorFlow** machine learning framework. They are optimized for high-performance matrix multiplication, a fundamental operation in many deep learning algorithms.
 
-Architecture: TPUs are **custom-designed by Google** with a focus on maximizing performance for TensorFlow workloads. They prioritize speed and efficiency for specific tasks within the TensorFlow ecosystem.
+Architecture: TPUs are **custom-designed by Google** with a focus on maximizing performance for TensorFlow workloads. 
+
+They prioritize speed and efficiency for specific tasks within the TensorFlow ecosystem.
 
 > You will hear more and more about NPU - Neural Processing Units
 
@@ -608,7 +586,7 @@ They are also available as standalone chips from some manufacturers.
 
 ### About Ubuntu 2604 LTS
 
-The latest, `https://releases.ubuntu.com/` is coming with the kernel 7.
+The latest, `https://releases.ubuntu.com/` is coming with the **kernel 7**.
 
 I ended up trying it first [on a VM](https://jalcocert.github.io/JAlcocerT/testing-nix-os/#interesting-stuff-regarding-emulation), with a check with codex on the must follow steps for a reliable setup:
 
@@ -618,7 +596,6 @@ gnome-boxes
 #codex
 apt update && apt upgrade -y
 ```
-
 
 * https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks
 * https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab
@@ -686,7 +663,7 @@ uv python install 3.12
 #uv run script.py
 ```
 
-Nah, manage everything via uv with whatever python version!
+Nah, manage everything via `uv` with whatever python version!
 
 > Similarly as I did with this mac M2 :)
 
@@ -770,7 +747,9 @@ Instead of saying: *"Write a marketing post about our new AI tool,"* a pro uses 
 
 Which part of this framework do you find hardest to implement when you're working with AI?
 
-While **DEFINE** is about the architecture and preparation, **CREATE** is the engine for the actual drafting and iterative execution. It is the framework used to turn those requirements into a high-quality final product.
+While **DEFINE** is about the architecture and preparation, **CREATE** is the engine for the actual drafting and iterative execution. 
+
+It is the framework used to turn those requirements into a high-quality final product.
 
 Here is how pro power users break down the **C.R.E.A.T.E.** framework:
 

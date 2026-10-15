@@ -24,14 +24,17 @@ Ive started [telling the agents why i need](https://www.seangoedecke.com/tell-ag
 
 Last year I said that email was hard.
 
-Since then, I discovered some local testing mail for devs to get familiar with smtp: mailpit, inbucket, maildev...
-
-* https://fossengineer.com/selfhosting-maildev/
+Since then, I discovered some local testing mail for devs to get familiar with smtp: [mailpit](https://fossengineer.com/selfhosting-mailpit/), [inbucket](https://fossengineer.com/selfhosting-inbucket/), [maildev](https://fossengineer.com/selfhosting-maildev/)...
 
 There will never be [better weddings](https://jalcocert.github.io/JAlcocerT/poc-101/#better-weddings) without proper mail outbound.
 
 To lower the CaC, you can [use email DRIP](https://jalcocert.github.io/JAlcocerT/quick-weddings-poc/#drip-to-convert) to increase the conversion rate to the people that was attracted, but didnt convert/buy.
 
+{{< callout type="info" >}}
+Tools like [notifuse](https://fossengineer.com/selfhosting-notifuse-email-platform/), [listmonk](https://fossengineer.com/selfhosting-listmonk-newsletter/), [mautic](https://fossengineer.com/selfhosting-mautic-marketing-automation/) help with email marketing/newsletter/transactional. [Growchief](https://fossengineer.com/selfhosting-growchief/) with the outreach automation
+{{< /callout >}}
+
+But...I ended up building my DIY/custom one :)
 
 https://github.com/JAlcocerT/slubnechwile-chwile-y26-claude
 https://github.com/JAlcocerT/leads-slubnechwile
@@ -861,7 +864,9 @@ There's also a real point in it: HSTS is worth having on the apex itself, so bro
 
 {{% details title="The ones I captured this year so far... 🚀" closed="true" %}}
 
-I scanned all 145 non-draft blog files dated 2026. I found 14 strong matches.
+I scanned all 145 non-draft blog files dated 2026. 
+
+I found 14 strong matches.
 
 Posts containing the guidance itself
 

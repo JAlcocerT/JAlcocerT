@@ -12,6 +12,9 @@ math: true
 
 [Home connectivity](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity) is not just "do I have internet?"
 
+
+https://github.com/JAlcocerT/poc/tree/main/iperf
+
 ## Intro
 
 For a useful homelab, I want repeatable ways to measure throughput, latency under load, Wi-Fi quality, LAN inventory, DNS behavior, and eventually `TR-181/EasyMesh` data from the router itself.

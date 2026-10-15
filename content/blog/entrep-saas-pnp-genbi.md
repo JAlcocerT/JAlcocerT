@@ -366,6 +366,8 @@ graph LR
     R -->|Live Interactive Chart| U
 ```
 
+As long as you have these envs:
+
 ```env
 OPENAI_API_KEY=your_key
 DATABASE_URL=postgresql://admin:securepassword@localhost:5432/umami_warehouse
@@ -625,11 +627,11 @@ WHich I used [here](https://jalcocert.github.io/JAlcocerT/audio-recap/#the-fasta
 
 **Vanna AI** (GitHub: vanna-ai/vanna): RAG-based SQL agent with viz. Train on your schema/docs, query in English → SQL + charts. Embed via Streamlit/API. Less semantic layer than Wren.[1][2][3]
 
-**MindsDB**: ML-integrated text-to-SQL + predictions. Natural language queries → SQL/models/charts. Docker-friendly, broad DB support. More ML-heavy.[1]
+**MindsDB**: ML-integrated text-to-SQL + predictions. Natural language queries → SQL/models/charts. Docker-friendly, broad DB support. More ML-heavy.
 
-**DB-GPT**: Multi-agent text-to-SQL framework. Complex workflows, AI security. Experimental but powerful for advanced BI.[1]
+**DB-GPT**: Multi-agent text-to-SQL framework. Complex workflows, AI security. Experimental but powerful for advanced BI.
 
-**Chat2DB**: Desktop/web SQL client with built-in LLM text-to-SQL + charts. Multi-DB (Postgres/MySQL), no-code dashboards. Closest plug-and-play.[4][5]
+**Chat2DB**: Desktop/web SQL client with built-in LLM text-to-SQL + charts. Multi-DB (Postgres/MySQL), no-code dashboards. Closest plug-and-play.
 
 
 | Project | Stars (approx) | Key Strength | Viz/Dashboards | Self-Host | DBs |

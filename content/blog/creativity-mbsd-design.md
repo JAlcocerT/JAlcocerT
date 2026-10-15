@@ -2,7 +2,7 @@
 title: "Bringing Mechanisms to Life"
 date: 2026-03-19T07:00:21+01:00
 draft: false
-tags: ["3D Design","OpenSCAD x Blender","CadQuery","Euler Angles"]
+tags: ["3D Design","OpenSCAD x Blender x Tmux","CadQuery","Euler Angles"]
 description: 'A Hybrid pipeline - From Python to Blender and a mac M2'
 url: 'cad-design-mbsd'
 ---
@@ -378,17 +378,17 @@ In the world of 3D design and robotics, these are simply two different mathemati
 
  Think of them as **Directions** vs. **Rotations**.
 
-1. Euler Angles: The "Human" Way
+1. **Euler Angles**: *The "Human" Way*
 
 Euler angles describe a rotation as a sequence of three movements around the $X$, $Y$, and $Z$ axes. 
 
-You probably know them as **Roll, Pitch, and Yaw**.
+> You probably know them as **Roll, Pitch, and Yaw**.
 
 * **How they work:** You rotate by $x$ degrees, then $y$ degrees, then $z$ degrees. 
 * **The Order Matters:** Rotating $X$ then $Y$ results in a different orientation than $Y$ then $X$. This is called "Rotation Order" (e.g., XYZ vs. ZYX).
 * **The Problem (Gimbal Lock):** This is the "deal-breaker" for complex simulators. If you rotate one axis by $90^\circ$ so that it aligns with another axis, you lose a degree of freedom. The "gimbals" lock together, and the math breaks down because the computer doesn't know which way is "up" anymore.
 
-2. Quaternions: The "Computer" Way
+2. **Quaternions**: *The "Computer" Way*
 
 Quaternions are much harder for humans to visualize but are the "gold standard" for 3D engines like Blender, Unity, and high-end physics simulators.
 
@@ -418,13 +418,17 @@ Libraries like `scipy.spatial.transform` or `mathutils` (inside Blender) can con
 
 The first 2 steps are pretty straight forward on my [x13 laptop](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/).
 
-But the rendering was taking ~8 min per image, despite dropping the resolution from 4k to 1080p at the script calling blender.
+But the rendering was taking ~8 min per image as it was using CPU
 
-Luckily, a friend recently got a mac and I put the hands on it.
+even after dropping the resolution from 4k to 1080p at the script calling blender.
+
+Luckily, a friend recently got a *mac M2* and I put the hands on it.
 
 Like a geek, first thing I learn was how to open the terminal: ~~`CTRL+T`~~ `cmd`
 
-Then I installed brew. Node and Python followed.
+Then I installed brew. 
+
+Node and Python followed.
 
 And after: *could not resist to try [CodeEdit](https://github.com/CodeEditApp/CodeEdit)*
 
@@ -460,7 +464,7 @@ Remember about: `https://skills.sh/`
 #gemini --prompt "are you able to be queried with non interactive mode?" -m gemini-2.5-flash --yolo --debug
 ```
 
-To get you from a fresh Mac to a professional, Linux-style dev environment, follow these steps in order.
+To get you from a fresh Mac to a professional, Linux-style dev environment, I followed:
 
 Open your default Terminal (found in `/Applications/Utilities`) and run these.
 
@@ -474,8 +478,6 @@ xcode-select --install
 
 *A popup will appear; click **Install**.*
 
----
-
 2. Install Homebrew: This is your primary package manager.
 
 ```bash
@@ -484,7 +486,9 @@ xcode-select --install
 
 **Important:** After it finishes, look at the terminal output. 
 
-It will give you 2-3 lines of code to run to add Homebrew to your `PATH`. They look like this (but copy the ones from *your* terminal):
+It will give you 2-3 lines of code to run to add Homebrew to your `PATH`. 
+
+They look like this (but copy the ones from *your* terminal):
 
 ```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -520,13 +524,13 @@ brew install uv
 
 5. Install a Better Terminal & Editor
 
-Since you want minimal and OSS, let's grab **Ghostty** (the current favorite fast/minimal terminal) and **Zed**.
+as minimal and OSS, I grabed **Ghostty** (the current favorite fast/minimal terminal) and **Zed** as IDE:
 
 ```bash
 brew install --cask ghostty zed
 ```
 
-6. Verify Your Setup
+6. Verifying the Setup
 
 Run these to make sure everything is linked correctly:
 
@@ -558,8 +562,8 @@ mise use --global python@latest
 
 To run **docker in mac** we will need something like [QEMU](https://jalcocert.github.io/JAlcocerT/testing-nix-os/) or [wsl for Windows](https://jalcocert.github.io/JAlcocerT/web-for-phd-researcher/#conclusions)
 
-yea...a VM, as it cant run natively
+yea...a VM...as it cant run docker natively
 
-```sh
+#### Mac useful CLIs
 
-```
+1. Open the terminal

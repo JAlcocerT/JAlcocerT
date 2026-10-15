@@ -1,6 +1,6 @@
 ---
 title: "3D Dynamics - Vibrations for aircrafts"
-date: 2026-10-17T08:20:21+01:00
+date: 2026-10-15T18:20:21+01:00
 draft: false
 tags: ["Mechanical Engineering","MBSD v0-9-0 x Airplanes Engine Mount","ULM/PPL"]
 description: 'Simulating before jumping to a plane.'
@@ -55,10 +55,10 @@ In a plane, you are constantly pitching (climbing/diving) and yawing (turning).
 
 * **The Solver Requirement:** This is a cross-product effect ($\vec{M} = \vec{\omega} \times \vec{L}$).
 
-Since it couples the rotation of one axis to a moment in another, it cannot be modeled in a single 2D plane.
+{{< callout type="warning" >}}
+Since it couples the rotation of one axis to a moment in another, it cannot be modeled in a single 2D plane
+{{< /callout >}}
 
-
----
 
 2. Thrust-Moment Coupling
 
@@ -67,8 +67,6 @@ In our 2D engine model, we focused on "shake" (inertial forces). In an airplane,
 * **The Offset:** If the engine is mounted even slightly above or below the center of gravity of the wing or fuselage, that thrust creates a permanent **pitching moment**.
 
 * **Engine Mounts:** Airplane mounts (often called "Lord mounts") have to handle this constant axial tension/compression while still isolating the $1\times$ and $2\times$ vibration from the cockpit. A 2D model literally cannot see the $z$-axis thrust.
-
----
 
 3. Six-Degree-of-Freedom (6-DOF) Airframe Response
 
@@ -80,8 +78,6 @@ In a plane, the "Chassis" is a lightweight, flexible aluminum or carbon fiber tu
 
 * **The Mount Matrix:** Airplane mounts are often arranged in a "ring" or "dynafocal" configuration, where the mounts are angled so their focal point is the engine's CG. This makes the $K$ (stiffness) matrix a dense 6×6 block that couples every single translation to a rotation.
 
-Summary: 2D vs. 3D for Aircraft
-
 | Feature | 2D Multi-Body | 3D Multi-Body |
 | :--- | :--- | :--- |
 | **Piston Inertia** | Perfect | Same |
@@ -92,11 +88,11 @@ Summary: 2D vs. 3D for Aircraft
 
 If you are designing the **internal balance** of the engine (e.g., "Do I need counterweights on this Lycoming O-360 crankshaft?"), the **2D phasor framework** is still the best and fastest tool. 
 
-But the moment you want to know **"Will the pilot feel a vibration in the rudder pedals during a steep turn?"**, you have to leave the 2D world and embrace the full 6-DOF 3D dynamics.
+But the moment you want to know **"Will the pilot feel a vibration in the rudder pedals during a steep turn?"**, you have to leave the 2D world and embrace the full **6-DOF 3D dynamics**.
 
 ### MBSD 0-9-0 Simulation
 
-Coming from [the 0-8-0 release](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#mbsd), its time for the 0-9-0
+Coming from [the 0-8-0 release](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#mbsd), its time for the 0-9-0 where we take a good foundation around [quaternons](jalcocert.github.io/JAlcocerT/cad-design-mbsd/#about-euler-angles)
 
 ```sh
 scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-8-1-concerns.md . 

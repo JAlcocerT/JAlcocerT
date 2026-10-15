@@ -42,7 +42,6 @@ well, i dont know whats the excuse
 
 ### Python DASH
 
-
 * How to develop a python dash app inside a running docker container
     * Docker and Docker extension
     * DevContainer extension
@@ -88,7 +87,7 @@ yea, ive re-bumped the old slider crank repo started here with Codex CLI x Claud
 Just that this time im aware of:
 
 1. very cool prompts to impress via my landings
-2. CSR can do a lot...
+2. [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/) can do a lot...
 
 
 ```sh
@@ -100,7 +99,7 @@ git clone https://github.com/JAlcocerT/ThreeBodies/ #root has a DASH version
 
 Until that point I got it working here as you can see on [this video](https://www.youtube.com/watch?v=b35XuJI98kI).
 
-But I said about CSR, right?
+But I said **about [CSR](https://jalcocert.github.io/JAlcocerT/csr-and-js/)**, right?
 
 ```sh
 cd landing

@@ -343,7 +343,7 @@ Get better *high paying* clients: they pay more and trust more your decisions :)
 
 Dedicate time to prospect clients.
 
-Outbound (the one you choose) >>> Inbound
+Outbound *(the one you choose)* > Inbound
 
 ---
 

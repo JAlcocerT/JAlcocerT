@@ -8,12 +8,11 @@ url: 'ideas-and-opportunities-health-check'
 math: true
 ---
 
-
 **Tl;DR**
 
 Business are games, with defined rules.
 
-Get to know them *to potentitally win*.
+Get to know them to *potentitally* win.
 
 **Intro**
 
@@ -590,15 +589,13 @@ graph LR
 
 Expand it [here](https://mermaid.live/edit#pako:eNp9lGtv2jAUhv-K5Ympk6DNhVyIpkoEaIdW1svYJi3hg0kcsBrsyHZKGOK_zyGBwIaaT9jnfd732DlkCyMWY-jBBUfZEjy8hBSop9UCPyiRYBQxylYkEmBEF4TiqiryeSWvNkFwUTurxOXzFDxxEuEZ6HRuwUTfFrum9hw854hKIjc3P1mar46qRjLR1RYI4Qt-wzTHIdwr7ifBPWdCgAniKg-0TgLvJxVRCZ44S4isscdJ8JhhjiShi0voY402ojGN2OqQOvaDMZWYYyFvfMY5W5eSARPyxGPsVx4jf1pjUz-YogL4OY_xed601n7D8rzRfqXBNA7p8a1MkGr3LmXraqcf-LlQd60O2fCf5_zm9o5FuZhV1lYBHkiCwajIMBVY1AH-tp-mLFKHZBR8yee7k5whEZKTeb6v-RzRaKm4fbXutzCuLXBlaa1Ptd0gCOFXjDPwEahrX4NfGKVyuW_makjeMBck2Sjx7NxGL23MxmZYXtR_Gg1cGY1mFJTnEXKTllN2bPq72lBvox7SsnqY0ISkqfch0ZJu4rbVydgr9j5ommXPzXrZWZNYLj0jK07x_oHsJUfMNN9n_AOTXGRiJJaIc7TxgAWsU3BQg3EXxzE6soaLnK71buTwEOnGzgkZR6b1L6mfk6OmWTOKj2SSRLrmXCBhW30pSAw9yXPchivMV6hcwm3pGkK5xOVfxVM_Y8RfQxjSnWIyRH8ztjpgnOWLJfQSlAq1yrMYSTwkSH1UGomae8wHLKcSeoZj7T2gt4UF9DqGrtvXds-xtJ5jW7ahqhvo2fq1Yfe6bs9wXdPUNHfXhn_2qWpUHd1RWrdrm7rRtezdXzrGgLE).
 
-
-
 ## Building a HOW with Sense
 
 A **BRD** is what works best for me now to ship fast [as described here](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk).
 
 Take time and define properly the why and what: *including what's out of scope, specially if you are just one person*
 
-It's all about doing *spec-driven development* with AI agents and ship your vision.
+It's all about doing SDD - *spec-driven development* with AI agents and ship your vision.
 
 Call it SRS: software requirement speficication, whatever.
 
@@ -691,7 +688,6 @@ The full copy od the landing, has to be goberned by a single `site.md` file.
 Consider adding a Terms of Service / **terms and conditions and privacy policy** to the website, which will be governed by two separated markdown files.
 
 Add also a faq section, that instead of been controlled via a json, lets have it controlled as per the frontmatter and content of separated markdown files inside the folder `faq`. 
-
 ```
 
 Go to [AntiGravity IDE] and ask if the `brd.md` refined already with Gemini is clear enough.
@@ -737,14 +733,13 @@ This makes perfect sense and completes the "holy trinity" of the Hormozi framewo
 
 This connects the **Market** (Who), the **Offer** (What), and the **Leads** (How).
 
-Your synthesis of the "Hot Dog" analogy and the "Niche Slap" is critical because it highlights a counter-intuitive truth: **Constraint creates profit.**
+> **Constraint creates profit**
 
-Most people fear that narrowing their focus will limit their income, but as you correctly pointed out, it actually increases the **Value Per Customer.**
-
+Most people fear that narrowing their focus will limit their income, but it actually increases the **Value Per Customer.**
 
 1. The Value-Specificity Correlation
 
-You hit the nail on the head with the Time Management example. This is the **Expertise Premium**.
+This is the **Expertise Premium**.
 
 * When you are a generalist, you are a **commodity** (priced by the market).
 * When you are a specialist, you are a **monopoly** (priced by you).
@@ -824,9 +819,13 @@ Now that you have protected your mind and time from your *and other's* non disco
 Hopefully, that helps you avoid going for ideas like:
 
 1. A SaaS model to aim for V and low P, for a non well defined avatar, when you dont want OpEx and think it will all be GM - *Like Webifyer and all the web/CMS [I tried here](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#about-webifyer)*
+
 2. To provide custom D&A services to the wrong avatar (*that also have wrong avatar and pays you less than your opportunity cost*) - *Been there, done that, [here](https://jalcocert.github.io/JAlcocerT/custom-re-rag)*
-3. To expect people to consume your DIY/Infoproduct when you dont do ads, neither took the time to built a community. - Hopefully, I havent done that because I made the [1tonebooks here](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#conclusions) just to consolidate my knowledge and help for free.
+
+3. To expect people to consume your DIY/Infoproduct when you dont do ads, neither took the time to built a community. Luckily, I havent done that because I made the [1tonebooks here](https://jalcocert.github.io/JAlcocerT/interesting-books-and-diy-offer/#conclusions) just to consolidate my knowledge and help for free.
+
 4. WIP Operational Discipline:  *high-ticket custom services alternative for the ones (to be found) who have great projects*
+
 5. WIP The growth bet: *via the QR photo app + the ads experiment* 
 
 > PS: The price is part of the product/service

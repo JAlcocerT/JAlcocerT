@@ -1,6 +1,6 @@
 ---
 title: "Pumps are a thing"
-date: 2026-10-20
+date: 2026-11-20
 draft: false
 tags: ["Centrifugal Pumps","Axial Pumps"]
 description: 'Another rabbit-hole.'

@@ -1,9 +1,9 @@
 ---
-title: "Where to Deploy? Get a VPS"
+title: "Where to Deploy? A VPS?"
 date: 2025-09-10
 draft: false
 tags: ["Infra","Lean Startup","Elestio vs Hetzner vs DO","Goodies 4 Marketers"]
-description: 'Resources to launch your stuff in front of your clients. From CRMs, ERPs to forums.'
+description: 'Resources to launch your stuff in front of your clients.'
 url: 'where-to-deploy'
 ---
 
@@ -70,7 +70,7 @@ https://youtu.be/F-9KWQByeU0
 
 Below Ill leave some updates tricks to take into consideration when spinning up a VPS.
 
-If you need big GPU power, isntead of just CPU, you can always try https://www.runpod.io/gpu-instance/pricing and similar services.
+If you need big GPU power, isntead of just CPU, you can always try `https://www.runpod.io/gpu-instance/pricing` and similar services.
 
 * https://accounts.hetzner.com/_ray/pow (I tried the CX22 model x2 vCPU)
 * https://cloud.digitalocean.com
@@ -91,7 +91,7 @@ With the Cloud, you forget about power consumption at home:
 
 * https://www.digitalocean.com/pricing/droplets
 
-> From ~4/m for 1vcpu
+> From ~4$/m for 1vcpu
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-wg-easy-with-a-vps/" title="Configuring a DO VPS as VPN Server" image="/blog_img/selfh/DO-Amsterdam.png" subtitle="Setting up wgeasy withing a DO Droplet" >}}
@@ -122,12 +122,12 @@ With the Cloud, you forget about power consumption at home:
 
 ---
 
-##  Others
+###  Others
 
 
 {{< cards cols="2" >}}
   {{< card link="https://www.pikapods.com/" title="PikaPods ↗" >}}
-  {{< card link="https://fly.io/" title="Dev Focus Public Cloud ↗" >}}
+  {{< card link="https://fly.io/" title="FLY - Dev Focus Public Cloud ↗" >}}
 {{< /cards >}}
 
 For **AI workloads** you will be interested in some **cloud GPU**:
@@ -143,13 +143,13 @@ For **AI workloads** you will be interested in some **cloud GPU**:
 
 ### Elestio
 
-I used https://elest.io/ to try some open source projects.
+I used `https://elest.io/` to try some open source projects.
 
 Their mission is great:
 
->  Fully managed DevOps platform to deploy your code and open-source software 
+> Fully managed DevOps platform to deploy your code and open-source software 
 
-* You manage it all from https://dash.elest.io/login
+* You manage it all from `https://dash.elest.io/login`
 
 They also provide guides and high level features on the OSS projects.
 
@@ -159,7 +159,9 @@ See: https://elest.io/fully-managed-services/hosting-and-infrastructure
 
 ## Conclusions
 
-Its up to you: Homelab vs VPS
+Its up to you: Homelab vs VPS? Capex vs Opex?
+
+I tried both ways:
 
 1. Get a [x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/#energy-x300), get a ~15w avg at 0,25eur/kwh will cost you ~32eur/y (or 2,74 a month)
 

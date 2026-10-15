@@ -524,7 +524,7 @@ The name **Omarchy** is a portmanteau of **"Omakase"** and **"Arch"**:
 
 This brings docker, lazydocker, herdrd, lazygit installed by default :)
 
-Run this to lower the VM to 4 GB RAM and 2 CPUs: *You can get started using 1.2GB of RAM and I could tinker with <4GB*
+Run this to lower the VM to 4 GB RAM and 2 CPUs: *You can get started using **1.2GB of RAM** and I could tinker with <4GB*
 
 ```sh
 virsh --connect qemu:///session shutdown omarchy-4.0.1 2>/dev/null || true
@@ -562,7 +562,7 @@ omarhcy install service tailscale
 #omarchy bar position bottom #modifies the omarchy/shell.json
 ```
 
-You can also connect your airpods [via plugins](https://plugins.omarchy.org/explore.html): https://github.com/thisisgm/omarchy-pods
+You can also connect your **airpods [via plugins](https://plugins.omarchy.org/explore.html)**: https://github.com/thisisgm/omarchy-pods
 
 * https://github.com/tharinfernando/omarchy-protonvpn
 * https://github.com/patcastle/omarchy-battery-health
@@ -574,6 +574,8 @@ To get goodies from the VM to the regular laptop I did:
 ```sh
 scp -P 2022 dhh@127.0.0.1:/home/dhh/Downloads/wiki-technitium.md /home/jalcocert/Desktop/
 ```
+
+> Yep, some interesting DNS learnings :)
 
 ### Company Brain
 

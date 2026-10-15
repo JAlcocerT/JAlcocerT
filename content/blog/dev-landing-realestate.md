@@ -328,6 +328,7 @@ So...for further iterations, id just keep it with NextJS.
 
 ### Validate the Website
 
+These are good starting points:
 
 {{< hextra/feature-grid >}}
  

@@ -1,6 +1,6 @@
 ---
 title: "Gears are a thing"
-date: 2026-10-21
+date: 2026-11-21
 draft: false
 tags: ["W Engine","3d print","cam profiles"]
 description: 'Gears are a rabbit-hole'
