@@ -806,7 +806,7 @@ first.
 
 Since I read a post about aerothermics, Ive [been gathering DHT22](https://jalcocert.github.io/JAlcocerT/thermodynamics/#aerotermia-poc-x-rpi-dht22) data for few experiments: insulation, modelling sun rays going to a particular home considering the surroundings *like mountains or neighbouring buildings*
 
-
+> https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/z-setups/1s/components-1s.json
 
 **1. Model the balcony recess in Blender — my pick.** The scene currently has no loggia at all: 21E is an extruded box with a red marker where the balcony should be. But the recess now drives **45% of the answer**, and the 40.9° profile cap is doing that work invisibly. Cutting the real 1.5 m × 2.5 m opening into the facade would let you look at a render of the sunlit patch on your own floor and say "yes, that's where it reaches" or "no, it comes further in". That's the verification the number can't give itself, and it's the same job the 21F A/B render did.
 

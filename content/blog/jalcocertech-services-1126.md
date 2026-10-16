@@ -16,9 +16,12 @@ Shipping is [the foundation](https://www.seangoedecke.com/shipping-is-the-founda
 * WHY Im writting this post: **
 * What [Ive learnt](#conclusions) with it: **
 
+
+If you are new around: just get a 20$ AI sub and lets get to it
+
 ## BiP
 
-After [shipping several SaaS](#shipping-saas) in public, these is what I wish I had known earlier from the tech-stack angle to create basically anything:
+After [shipping several SaaS](#shipping-saas) in public, these is what I wish I had known earlier from the tech-stack angle to create basically anything: *to get started is not as hard as [getting data apps right](https://github.com/JAlcocerT/poc/tree/main/zzz-books)*
 
 1. Astro SSG x Edge capabilities within Cloudflare offerings: *scheduled posts via CI/CD, posts with auth, contact form, newsletter, DRIP, GDPR compliant, webp & mdx support, cms x pwa x offline optional.* With no [broken links](https://fossengineer.com/linkchecker-broken-link-checker/), [web-check](https://fossengineer.com/selfhosting-web-check/)ed, Google search console for feedback and web audited and with a VSL.
 
@@ -34,6 +37,9 @@ After [shipping several SaaS](#shipping-saas) in public, these is what I wish I 
 
 7. Product analytics: posthog is amazing
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}
+{{< /cards >}}
 
 ### The Business Game
 
@@ -133,6 +139,7 @@ As the why, what was very clear, its time to put together the final HOW:
 
 ### Case Studies
 
+With stuff ive been doing.
 
 #### MultiSite InBound
 
@@ -148,13 +155,15 @@ Aka [the clients you choose](https://jalcocert.github.io/JAlcocerT/custom-re-rag
 
 #### Shipping SaaS
 
+Lately im putting these together into `/projects` with `/roadmap & /vision` and `/changelog`
+
 1. Wedding QRs: *google sign-in/up + CF s3/r2* 
 2. Web Audits
 3. MarginCMS: *what if I just needed git compatible notes with sign/in to Forgejo and PWA support? what if foldergram could use git?*
 4. Real estate: *once an idea and [tech talk](https://jalcocert.github.io/JAlcocerT/custom-re-rag/#a-new-tech-talk), [later white-labeled](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/), now another producticed service*
 5. GenBI: *the kind of PoC that you prepare sth, ship a video, have a waiting list and test the market interest*
 
-> Outro: mbsd-oss and selfhosted-connectivity
+> Outro: mbsd-oss x PWA and selfhosted-connectivity
 
 #### Meta Frameworks
 

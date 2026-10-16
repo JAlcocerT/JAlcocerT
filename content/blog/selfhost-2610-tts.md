@@ -336,8 +336,19 @@ docker compose -f 202610_docker-compose.yml up -d build
 
 
 {{< callout type="warning" >}}
-Remember to setup [CF Geoblocking](https://github.com/JAlcocerT/Home-Lab/blob/main/cf-security.md) for your public services like nextcloud
+Remember to setup [CF Geoblocking](https://github.com/JAlcocerT/Home-Lab/blob/main/cf-security.md) for your public services *like nextcloud*
 {{< /callout >}}
+
+
+https://github.com/kopia/kopia
+
+Cross-platform backup tool for Windows, macOS & Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.
+
+https://github.com/restic/restic
+
+Fast, secure, efficient backup program
+
+
 
 ```sh
 cd jalcocertech-core/leads-hub/hub
@@ -425,6 +436,11 @@ Also this project can be interesting https://github.com/Saffsanity/sill
 
 I tried a macbook Pro M2 that weights the same as my x13 gen2 (1.3kg), the build quality is excellent...but I have some [desktop/homelab goodies for starters](https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab)
 
+There are interesting options: asus expertbook a7, thinkpads x1 with little over 1kg...
+
+Its just that any alternative goes too much into the diminishing returns part.
+
+
 ### How many users can a Pi4 2GB handle
 
 Im more and more interested about architecture and system design:
@@ -443,6 +459,16 @@ I compared [clouds](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#o
   {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
 {{< /cards >}}
+
+
+### ProtonCLI x Rust
+
+How about [taking this](https://proton.me/blog/proton-drive-cli) and making a desktop that doesnt is cool?
+
+* https://github.com/ProtonDriveApps/sdk
+
+> How about doing the same for Nextcloud?
+
 
 ### The AI Agent Stack
 

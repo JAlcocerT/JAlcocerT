@@ -17,16 +17,6 @@ The moment 2D mechanics is not enough.
 * What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
-<!-- www.youtube.com/watch?v=ijI3iOOcEog -->
-
-{{< youtube "ijI3iOOcEog" >}}
-
-{{< youtube "TiTb08qBEKY" >}}
-
-<!-- 
-https://www.youtube.com/watch?v=TiTb08qBEKY -->
-
-
 The dimension reduction worked great for cars.
 
 But how about airplanes?
@@ -98,7 +88,9 @@ Coming from [the 0-8-0 release](https://jalcocert.github.io/JAlcocerT/starting-w
 scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-8-1-concerns.md . 
 ```
 
-I got inspired by this project's roadmap: `https://dbackup.app/roadmap/`
+I got inspired by this project's roadmap: `https://dbackup.app/roadmap/` In fact, thats sth i want to have in my project soon, with a `/changelog` as well that feeds from the same the repo has.
+
+No [open fatigue](https://openfatigue.ai/) around here.
 
 {{% details title="For the 0-9-0 was like 🚀" closed="true" %}}
 
@@ -202,6 +194,10 @@ That work starts with the fresh v0.9.0-dev line after releasing 0.8.1.
 
 {{% /details %}}
 
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}
+{{< /cards >}}
+
 > https://app.multibodysystemsdynamics.com/?demo=slider-crank&r=0.35&l=1.15&e=0&rpm=60&steps=241
 
 I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
@@ -247,3 +243,45 @@ Who could have guessed: *for bicycles and for airplanes we have to level up the 
 
 ## FAQ
 
+
+
+<!-- www.youtube.com/watch?v=ijI3iOOcEog -->
+
+{{< youtube "ijI3iOOcEog" >}}
+
+{{< youtube "TiTb08qBEKY" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=TiTb08qBEKY -->
+
+
+* https://app.fireflies.ai/perks
+* Perplexity and commet (from W11 only on the desktop) 
+
+do we really need `betterpic` and similar tool?
+
+Or have they been superseeded by image 2 from openai?
+
+https://skills.sh/
+
+https://www.youtube.com/watch?v=qfWpPEgea2A&t=191s
+
+https://www.youtube.com/watch?v=rlLwSr-wIAg&t=431s
+
+https://github.com/martingaido/ai-prompt-engineering-docs/blob/main/gemini-for-google-workspace-prompting-guide-101.pdf
+
+aristotel onassis
+
+<!-- engine starting
+https://www.youtube.com/shorts/mzWr2ZGf7OU
+
+https://www.youtube.com/watch?v=gmV4qwLfOMY
+derivatives
+
+The Trillion Dollar Equation
+https://www.youtube.com/watch?v=A5w-dEgIU1M
+ -->
+
+
+<!-- 
+https://www.youtube.com/shorts/D8Q0Y6R4NiI -->

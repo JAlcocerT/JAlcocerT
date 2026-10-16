@@ -7,10 +7,23 @@ description: 'Selfhosting.'
 url: 'selfhosting-and-servers-review'
 ---
 
+https://privacytools.io/trending/30d
+https://gitgem.org/
+https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/#second-brain--723-
+https://www.bitdoze.com/deploy-emdash-cloudflare-workers/
+https://www.bitdoze.com/emdash-send-email/
+
 **Tl;DR**
 
 Five (+) years with selfhosting...
 
+sqlite vs duck vs https://github.com/facebook/rocksdb/ that conduit uses
+
+filebrowser to https://github.com/themartz90/folderhug
+
+
+https://github.com/Pouzor/homelable?ref=selfh.st
+Self-hosted homelab infrastructure visualizer — interactive network diagram with live status monitoring
 
 **Intro**
 
@@ -55,6 +68,10 @@ https://x.com/tom_doerr/status/1979894065400263086
 -->
 
 {{< tweet user="tom_doerr" id="1979894065400263086" >}}
+
+Concepts that surprised me:
+
+1. [File formats](https://github.com/JAlcocerT/Home-Lab/blob/main/file-format.md) matter and differ between OSs
 
 ## DBs
 
@@ -216,6 +233,13 @@ The [wanderer mobile app](https://github.com/open-wanderer/wanderer/releases/tag
 
 ![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
 
+
+#### cOMMUNICATION
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/lemmy" title="NodeBB Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/lemmy" title="Lemmy Forum via your HomeLab | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
 
 
 #### Start Services

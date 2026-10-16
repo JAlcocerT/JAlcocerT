@@ -170,6 +170,31 @@ But the human frictions on *doing things* risk,uncertainties... are still there.
 
 ![alt text](/blog_img/data-experiments/life-flows-blured.png)
 
+
+###  Unify
+
+All webs must have in-bound capabilities.
+
+And a UI that attracts while performs.
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet | Github ↗" icon="github" >}}
+{{< /cards >}}
+
+All products can have integration with: `https://eu.posthog.com/project/15002/heatmaps`
+
+* https://github.com/towfiqi/serpbear
+
+### My Core
+
+```sh
+git clone jalcocertech-core
+```
+
+Also got to know https://github.com/arvarik/contrack: Privacy focused people management and search
+
+Self-hosted contact management + tracking + online enrichment for your personal and professional needs 🐦‍⬛
+
 ### How to get this done fast
 
 
@@ -284,6 +309,24 @@ Summary Recommendation
 * **Choose Typst** if you want the best "developer experience" and need to iterate on a visual layout quickly with live feedback.
 * **Choose R Markdown** if the infographic is 80% charts and 20% text, and you want it to update automatically when the data changes.
 
+
+### Typst vs OpenReports
+
+* https://typst.app/
+* https://typst.app/universe/package/graceful-genetics
+* https://github.com/qjcg/awesome-typst
+
+> https://github.com/JAlcocerT/mbsd/tree/master/integrated-engine-lab/typst-report
+
+You could also have a look to: https://github.com/varaprasadreddy9676/open-reports to create **open reports as json**
+
+Which has a lovely landing: https://open-reports-demo.onrender.com/
+
+
+
+Also got to know https://github.com/trahloff/Aldine Aldine: self-hosted, open-source collaborative LaTeX editor (an Overleaf alternative). Real-time editing, git branches, GitHub/GitLab/Gitea sync, Zotero, MCP server for Claude. Two containers, AGPL-3.0.
+
+
 ### Programmatic Social Media
 
 This is a not a completely new topic for me.
@@ -308,13 +351,16 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
 {{< /cards >}}
 
-#### Gyroflow
+### Gyroflow
 
-Yes—most practical Gyroflow workflows can be automated:
+Most practical Gyroflow workflows can be automated:
 
-  - Stabilize and batch-render videos.
-  - Apply presets and external gyro logs.
-  - Configure output and synchronization through JSON.
-  - Watch folders automatically.
-  - Export projects, metadata, motion data, and STMaps.
-  - Orchestrate everything from Python using subprocess.
+- Stabilize and batch-render videos.
+- Apply presets and external gyro logs.
+- Configure output and synchronization through JSON.
+- Watch folders automatically.
+- Export projects, metadata, motion data, and STMaps.
+- Orchestrate everything from Python using subprocess.
+
+#### Gyroflow CLI 101
+

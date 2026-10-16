@@ -603,16 +603,6 @@ Will it be hermes, [agentmemory](https://github.com/rohitg00/agentmemory)
 
 ## FAQ
 
-### Typst
-
-* https://typst.app/
-* https://typst.app/universe/package/graceful-genetics
-* https://github.com/qjcg/awesome-typst
-
-> https://github.com/JAlcocerT/mbsd/tree/master/integrated-engine-lab/typst-report
-
-### Gyroflow CLI 101
-
 
 
 

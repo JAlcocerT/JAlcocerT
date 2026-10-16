@@ -8,6 +8,13 @@ url: 'custom-bots-kb'
 math: true
 ---
 
+https://github.com/Christian-Gennari/Nostos with a lovely landing https://nostos.page/
+
+A home for your reading life. Read your books, capture what stays with you, and turn your reading into thought and writing in one self-hosted study.
+
+
+https://github.com/baselhusam/daily-hub
+A personal command center for projects, tasks, and daily habits. Self-hosted, single-user, Next.js + SQLite.
 
 https://www.mindstudio.ai/blog/andrej-karpathy-llm-wiki-knowledge-base-claude-code
 
