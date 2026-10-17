@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-23
+date: 2026-10-24
 draft: false
 tags: ["Kokoro","VoiceBox","SunoAI x music","VPS x DR Test","ONT x DHCP"]
 description: 'A homelab that speaks.'
@@ -269,12 +269,13 @@ https://github.com/storytold
 
 https://github.com/andrii-kryvoviaz/slink
 
-Ive also kept using my `yt-distill` poc to go through interesting videos:
+Ive also kept using my `yt-distill` poc to go through [interesting videos](https://github.com/JAlcocerT/my-logseq-notes/tree/main/distilled-videos/business-hormozi):
 
 ```sh
 git clone ./poc/yt-distill
-
 ```
+
+From here, [destilling is not the problem](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md), its just doing.
 
 
 ---
@@ -365,11 +366,14 @@ I recently saw [this post](https://akashrajpurohit.com/blog/choosing-the-right-v
 
 It reminded my that some time back, i also tested as a wg server VPS's like DO droplet and hetzner 
 
+Also, i put together some [101 vps setup](https://github.com/JAlcocerT/Home-Lab/tree/main/z-hetzner-vps-setup) that we can reuse.
+
 As [now im energy aware](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#energy-consumption-data-points) that my CM+x300 home server are costing me ~20kwh/month@0.25eur/kwh = 5 eur/month which is far lower than the ~60 eur/month id be paying.
 
 But... renting on of those servers for an afternoon can be interesting to:
 
-1. Test in Batch all my Home-Lab projects with agents and flag which ones are not working anymore
+1. Test in Batch all my Home-Lab OSS projects docker compose with agents and flag which ones are not working anymore
+
 2. Test that my backup strategy and DR (disaster recovery works) 
 
 ### Travel Router as Home Router
@@ -767,7 +771,6 @@ The pattern this represents — **open research framework + vendor content shipp
 **Pattern preserved:** `TINYAUTH_AUTH_USERS=user:$$2a$$10$$...` requires `$$` escaping for literal `$` in compose env values.
 
 **Three forward-auth endpoints:** `/api/auth/traefik`, `/api/auth/nginx`, `/api/auth/caddy` — each formatted for the specific proxy's expected response shape.
-
 
 ---
 

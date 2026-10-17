@@ -14,7 +14,13 @@ Doing cool stuff with [geo data, *sun* and blender](#blender-x-gis)
 
 **Intro**
 
+* WHY Im writting this post: *Bc*
+* WHAT [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 Coming from [this post](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#geo-from-r-to-py)
+
+I got to know about ArcGis and GeoGis.
 
 Ive seen ppl doing cool stuff with: [blenderGis adon](https://www.youtube.com/watch?v=4R4xRH-Nyac), [maplibre and maptiler](https://www.youtube.com/watch?v=uPM2gNSWX9o&list=PLAxJ4-o7ZoPcfLJ0w7k-woHJXkbjSiKb3) and [f4map](https://www.youtube.com/results?search_query=f4map)
 <!-- 
@@ -276,6 +282,8 @@ cd ./poc/blender-
 
 
 #### Coasting behind an ebike
+
+> https://www.komoot.com/es-es/tour/3144407523
 
 The amount of power (assistance) an e-bike provides depends on the **motor rating**, the **jurisdiction/legal limits**, and the difference between **continuous** vs. **peak** power.
 

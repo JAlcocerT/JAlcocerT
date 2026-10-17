@@ -88,7 +88,9 @@ Coming from [the 0-8-0 release](https://jalcocert.github.io/JAlcocerT/starting-w
 scp jalcocert@192.168.1.2:/home/jalcocert/multibody-tests/v-0-8-1-concerns.md . 
 ```
 
-I got inspired by this project's roadmap: `https://dbackup.app/roadmap/` In fact, thats sth i want to have in my project soon, with a `/changelog` as well that feeds from the same the repo has.
+I got inspired by this project's roadmap: `https://dbackup.app/roadmap/`
+
+In fact, thats sth i want to have in each of my project soon, with a `/changelog` as well, that feeds from the same the repo has.
 
 No [open fatigue](https://openfatigue.ai/) around here.
 
@@ -168,9 +170,7 @@ Latest commits:
 - Core: 3c81df0
 - Examples: 7a4c19c
 
-And yes: the former 0.8.2 dynamics preview belongs in 0.9.0. After releasing 0.8.1, we should create
-a fresh v0.9.0-dev from it and selectively bring over the useful old dynamics work rather than
-releasing v0.8.2-dev.
+And yes: the former 0.8.2 dynamics preview belongs in 0.9.0. After releasing 0.8.1, we should create a fresh v0.9.0-dev from it and selectively bring over the useful old dynamics work rather than releasing v0.8.2-dev.
 
 All six findings are addressed on v0.8.1-dev.
 
@@ -193,6 +193,8 @@ No spatial dynamics was added.
 That work starts with the fresh v0.9.0-dev line after releasing 0.8.1.
 
 {{% /details %}}
+
+I put together [an engine lab](https://github.com/JAlcocerT/mbsd/tree/master/integrated-engine-lab) around the old mbsd fwk with [some typst reports](https://github.com/JAlcocerT/mbsd/tree/master/integrated-engine-lab/physical-layout-atlas)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}
@@ -231,7 +233,6 @@ https://www.youtube.com/watch?v=eFGkopoCTYY
 ## Conclusions
 
 Who could have guessed: *for bicycles and for airplanes we have to level up the modelling to 3D*
-
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}

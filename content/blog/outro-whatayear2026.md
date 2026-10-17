@@ -7,10 +7,14 @@ description: 'Looking back to the learnings of 2026.'
 url: 'tech-recap-2026'
 ---
 
+I havent read new books, but have gone [back to my notes](https://github.com/JAlcocerT/jalcocertech-services/tree/master/docs/destilled-ebooks/z-read-books-notes), understood my [patterns and blinspots](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-summary.md), specially to form [an operator 101](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md). 
+
+This has been possible thanks to some /skills.
+
+
+
 https://github.com/Arthur031221/Rumbleback
 
-
-for on boarding flows: https://bitly.com/a/sign_up
 
 https://levels.io/
 
@@ -18,16 +22,16 @@ Compensations be like https://www.levels.fyi/2025/
 
 > https://www.levels.fyi/heatmap/europe/
 
-I loved this https://levels.io/projects
-
 `/now`
 
 **Intro**
 
-* WHY Im writting this post: *bc *
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
-[Some readers](https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/) ar egetting tired of llm slop, [particularly the ai assisted summaries](https://map.simonsarris.com/p/resist-summary) some, also [encourage to ignore workslop](https://www.seangoedecke.com/how-to-protect-yourself-from-workslop/)
+* WHY Im writting this post: *Bc*
+* WHAT [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+[Some readers](https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/) are getting tired of llm slop, [particularly the ai assisted summaries](https://map.simonsarris.com/p/resist-summary) some, also [encourage to ignore workslop](https://www.seangoedecke.com/how-to-protect-yourself-from-workslop/)
 
 I really appreciate when i find ppl [genuinely writting](https://map.simonsarris.com/p/fujifilm-x100-vs-leica-q-vs-ricoh) and [commenting about learnings/mistakes](https://map.simonsarris.com/p/designing-a-new-old-home-mistakes)
 

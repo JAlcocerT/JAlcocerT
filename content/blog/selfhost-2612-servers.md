@@ -7,6 +7,10 @@ description: 'Selfhosting.'
 url: 'selfhosting-and-servers-review'
 ---
 
+https://www.pragmaticengineer.com/
+
+https://github.com/rahilp/second-brain-cloudflare
+
 https://privacytools.io/trending/30d
 https://gitgem.org/
 https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/#second-brain--723-
@@ -121,7 +125,10 @@ https://github.com/lissy93/personal-security-checklist
 ### Networking
 
 https://networkingtoolbox.net/
+
 ### DNS
+
+https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts
 
 #### SSL x HTTPs
 
@@ -138,6 +145,12 @@ Monitor your pages anytime with:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami Web Analytics | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
+
+Having a script that adds programmatically your monitors to uptime is nice
+
+Connecting uptime kuma `http://192.168.1.2:3001/dashboard/7` with ntfy is a good idea as well
+
+You can also try maintenant `http://192.168.1.2:3810/endpoints`
 
 Or your services & wifi
 
