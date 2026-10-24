@@ -6,6 +6,24 @@ tags: ["GenBI",""]
 description: 'A look to F/OSS '
 url: 'open-source-dna'
 ---
+
+
+1. https://github.com/neondatabase/neon
+
+> Apache v2 | Neon: Serverless Postgres. We separated storage and compute to offer autoscaling, code-like database branching, and scale to zero.
+
+2. Cloudflare D1: *An interesting companion for CF R2*
+
+https://blog.cloudflare.com/serverless-matrix-homeserver-workers/?ref=selfh.st/
+
+> If you followed my serverless series of posts, that will be of interest!
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
+
 https://github.com/dbgate/dbgate?ref=selfh.st
 
 

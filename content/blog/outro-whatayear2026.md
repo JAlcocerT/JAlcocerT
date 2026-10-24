@@ -71,8 +71,9 @@ Have the [last 3 years](https://jalcocert.github.io/JAlcocerT/this-year-was-craz
 
 Coming from [last year review](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/), with the habit i started [some time back](https://jalcocert.github.io/JAlcocerT/blog/summary20/).
 
-It seems that [my external situation changed faster than my internal OS](https://github.com/JAlcocerT/my-logseq-notes/blob/main/journals/2026_09_12.md)
+It seems that [my external situation changed faster than *my internal OS*](https://github.com/JAlcocerT/my-logseq-notes/blob/main/journals/2026_09_12.md)
 
+A change of mindset causes overtime a change of life outputs overtime (for better or worst).
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/" title="Core ↗" icon="github" >}}
@@ -93,13 +94,22 @@ From regular openAI API calls, to do have them [done via BAML](https://jalcocert
 
 
 
+<!-- ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png) -->
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks//" title="eBooks | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 0. For social media outreach, `https://www.growchief.com/` was an inspiration.
 
 Also their discord bouble on the web for any BiP Project.
 
-> As the alternative i knew about `heyreach` for Linkedin and `smartlead` for mails
+> As the alternative see: `heyreach` for Linkedin and `smartlead` for cold mails
 
-0. When finding leads...
+> > https://github.com/opencoredev/social-sdk - https://social-sdk.dev/docs/platforms
+
+1. When finding leads...
 
 This was an awsome example of data analytics.
 
@@ -111,22 +121,16 @@ Get proper data lineage & trazability to see what worked (what are the *features
 
 Then, feedback to the lead engine.
 
-0. Audio TTS/S2T: among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/), also KoKoro did
+Its all possible if you have a clear foundations, for example, around medallion.
 
-1. Delivery Analytics - Bc you better [drive outcomes](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#bluf)
+2. Audio TTS/S2T: among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/), also KoKoro did quite well
 
-2. Promote in subreddit to get feedback?
+3. Delivery Analytics - Bc you better [drive outcomes](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#bluf) or get obsolete
 
-3. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> [D&A ebook](https://ebooks.jalcocertech.com/books/dna/)
+4. Promote in subreddit to get feedback?
 
+5. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> [D&A ebook](https://ebooks.jalcocertech.com/books/dna/)
 
-
-<!-- ![Data Analytics - webook](/blog_img/shipping/dna-1ton-ebook.png) -->
-
-{{< cards cols="2" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks//" title="eBooks | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
 
 I thought that Id do for this year a separated `blog.jalc...` based on this [canvas repo](https://github.com/JAlcocerT/canvas).
 
@@ -158,7 +162,7 @@ I have done a ~monthly series on stuff Ive tried or actively used.
 
 Also, have upgraded the x300 and x13 OS'es with a better backup strategy.
 
-Oh, and Im quite happy with proton mail and custom domains: *more since there is proton drive cli*
+Oh, and Im quite happy with proton mail and custom domains: *more since there is [proton drive cli](https://jalcocert.github.io/JAlcocerT/optimal-karting-line/#files-sync)*
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="HomeLab repo ↗" >}}
@@ -178,6 +182,9 @@ Share on social media / ads and do `draft:true` when old, but history will be ke
 The free web audit is a thing: <https://webaudit.jalcocertech.com/>
 
 Which I put together [here](https://github.com/JAlcocerT/poc_webs_magnet).
+
+This thing is burning, as per the [PHP cve of october](https://fossengineer.com/php-drama-ssl-certificates-october-2026/).
+
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit" title="Web Audits 101 x BlogSpot | Post ↗" >}}
@@ -338,7 +345,7 @@ A nice landing is a matter of: *a cool responsive UI with a demo video, a form a
 
 This is awsome to validate ideas: *a part of which dis-qualifying prospects is key.*
 
-4. Status Pages for services: Kener / UptimeKuma. 
+4. Status Pages for services: *Kener / [UptimeKuma](https://fossengineer.com/selfhosting-uptime-Kuma-docker/) / [checkmate](https://fossengineer.com/selfhosting-checkmate-container-monitoring/) / [kuvasz](https://fossengineer.com/selfhosting-kuvasz-uptime-monitoring/)*. 
 
 SLA matters and [some people need that status pages](https://jalcocert.github.io/JAlcocerT/link-artists/#status-pages) or the information that it exists.
 
@@ -648,7 +655,9 @@ Taking the learnings of optimum path and the route tracker, I just put this toge
   {{< card link="https://github.com/JAlcocerT/go-karting" title="Go Desktop x Karting ↗" icon="github" >}}
 {{< /cards >}}
 
-15. Talking about racing...whats going on with F1 this year?
+The most interesting was the[ lap optimizer with gradient descent](https://jalcocert.github.io/JAlcocerT/optimal-karting-line/#karting-and-theoretical-optimum-path)
+
+16. Talking about racing...whats going on with F1 this year?
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="Py GeoSpatial ↗" icon="github" >}}
@@ -703,7 +712,7 @@ git clone https://github.com/JAlcocerT/UnfoldingData
 
 efecto cantillon for inflation and entrepreneur mindset
 
-> Cantillon defined the entrepreneur as someone who buys at a certain price and sells at an uncertain price.
+> Cantillon defined the entrepreneur as someone who *buys at a certain price and sells at an uncertain price.*
 
 To him, the entrepreneur is the "risk-bearer" who stabilizes the market by taking on the gamble of the future.
 
@@ -717,12 +726,11 @@ To him, the entrepreneur is the "risk-bearer" who stabilizes the market by takin
 
 Talking about trends, what happened with crypto bros?
 
-The sha256 still holds strong, it was all about hashing https://www.devtoolbox.co/tools/hash-generator
+The sha256 still holds strong, it was all about hashing and some curves `https://www.devtoolbox.co/tools/hash-generator`
 
 And electrum, metamask and mymonero kept working.
 
 Polymarket was right [about Mercedes in preseason](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-python/#who-will-win-f1-2026), but not about Spain vs France :)
-
 
 16. Tech videos were not a priority this year.
 
@@ -745,14 +753,14 @@ Including [data races](https://jalcocert.github.io/JAlcocerT/video-creation-with
 
 > There is a dollar index call DXY! :O
 
-18. That was true until in March/April I tinkered more and more with RemotionJS and HyperFrames
+18. That was true until in March/April I tinkered more and more around RemotionJS and HyperFrames
 
 From that point I started making quick videos: from [intro to tech talks](https://jalcocert.github.io/JAlcocerT/plants-102-and-iot/#big-data-tech-talk), to [quick about me's](https://youtu.be/4sSa28Xk5Yw) ...
 
-19. How i [mapped a canbus](https://youtube.com/shorts/q-BlvhkLqcU) and failed to connect it properly to a car
+19. How i [mapped a canbus](https://youtube.com/shorts/q-BlvhkLqcU) and failed to connect it properly to a car and [get signals](https://www.youtube.com/shorts/j3N4mu-YAaI) before [Spa](https://jalcocert.github.io/JAlcocerT/optimal-karting-line/#spa)
 
+20. I ended up learning quite a lot about electronics, sent to manufacture my first pcb and wrap it all around the automatic watering setup, with a dashboard ofc
 
-https://www.youtube.com/shorts/j3N4mu-YAaI
 
 #### Serverless
 
@@ -806,18 +814,6 @@ It just keeps working with the power of CSR under the hood.
 5. Betaflight pwa is just amazing and it works offline too
 
 6. Getting GoPro Telemetry embedded in a video via PWA is also amazing
-1. https://github.com/neondatabase/neon
-
-> Apache v2 | Neon: Serverless Postgres. We separated storage and compute to offer autoscaling, code-like database branching, and scale to zero.
-
-2. Cloudflare D1: *An interesting companion for CF R2*
-
-https://blog.cloudflare.com/serverless-matrix-homeserver-workers/?ref=selfh.st/
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/databases/" title="DB | Docs ↗" icon="book-open" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/serverless/" title="Serverless | Docs ↗" icon="book-open" >}}
-{{< /cards >}}
 
 #### Server HomeLab Selfhosting
 
@@ -1187,7 +1183,7 @@ Like these articles:
 2. x30>x24 youtube tech videos, more elaborated, *probably without AI voice*
 3. Go all-in to find new clients
 4. Not scalable but clients want it? Sell w high gross margin to the ones who can benefit
-
+5. New workflows and wraps are nice, but just over things that are worth doing. *Lean: DELETE before you Automate.*
 
 
 ### Discovery of the Years

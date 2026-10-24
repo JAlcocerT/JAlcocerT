@@ -9,6 +9,13 @@ url: 'social-media-content'
 
 **Tl;DR**
 
+The bar to create *slop* is lower than ever.
+
+**Intro**
+
+* Why Im writting this post: *bc this year i started making some f1 shorts with matplotlib, then tried remotionJS and hyperframes, but didnt make a checkpoint on how this can apply to my brand*
+* What [Ive learnt](#conclusions) with it: *Ive ended up wrapping up my workflow*
+
 https://github.com/JAlcocerT/DataInMotion/tree/libreportfolio
 
 Its been one year since i placed [some goodies for marketers](https://jalcocert.github.io/JAlcocerT/where-to-deploy/#goodies-for-marketers) after this [123 session](https://youtu.be/qQ13MKLfqYQ)
@@ -17,10 +24,6 @@ Back then: *APIFY + smartlead +* crm's https://elest.io/fully-managed-services/a
 
 Proving that volume + quality data animations is possible with hyperframes.
 
-**Intro**
-
-* Why Im writting this post: *bc this year i started making some f1 shorts with matplotlib, then tried remotionJS and hyperframes, but didnt make a checkpoint on how this can apply to my brand*
-* What [Ive learnt](#conclusions) with it: *Ive ended up wrapping up my workflow*
 
 ```sh
 cd jalcocertech-core/leads-hub/hub
@@ -93,14 +96,6 @@ Just in case you want to [share your plot/checks](https://github.com/JAlcocerT/D
 For X to post images you need a paid plan, [threads might](https://github.com/JAlcocerT/DataInMotion/blob/libreportfolio/zzz-meta-next-steps.md)
 {{< /callout >}}
 
-**Tl;DR**
-
-The bar to create *slop* is lower than ever.
-
-**Intro**
-
-* WHY Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 Can we generate mass produced & quality information content?
@@ -199,12 +194,16 @@ Self-hosted contact management + tracking + online enrichment for your personal 
 
 ### Workflow Wrap v2
 
-Coming from here:
+Coming from [this wrap](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#workflow-wrap) for [this medallion](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#medallion) outbound [flow](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#outbound) with [these roadmap decision points](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/roadmap-leads.md#74-decision-points)
+
+Im using the web audits as [lead magnet for outreach](https://github.com/JAlcocerT/poc_webs_magnet/blob/master/docs/outreach.md)
 
 ```sh
 git clone https://github.com/JAlcocerT/my-logseq-notes
-cd ./my-logseq-notes/daily-solo
+cd ./my-logseq-notes/daily-solo #https://www.getleadarchitect.com/
 ```
+
+> Mailjet `https://app.mailjet.com/signin` has been working fine for Inbound (newsletter), as plan B: `https://resend.com`, `https://mailtrap.io/`
 
 The supervisor translates that into a bounded task for the worker. You do not need to manually coordinate every agent conversation.
 

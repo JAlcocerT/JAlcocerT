@@ -2324,7 +2324,9 @@ Worker publishes structured status
         ↓
 Supervisor gives you only blockers, decisions, and meaningful movement
 
-Your Desktop confirms that this is a good fit. You have distinct areas such as dron, tello-kotlin, poc, opendrone-be-checks, test-cms, and a very large Home-Lab. They should not all be treated as equally active projects. I would classify them into:
+Your Desktop confirms that this is a good fit. You have distinct areas such as dron, tello-kotlin, poc, opendrone-be-checks, test-cms, and a very large Home-Lab. 
+
+They should not all be treated as equally active projects. I would classify them into:
 
 - Active product projects
 - Infrastructure and services
@@ -2346,7 +2348,11 @@ The repository contract in your notes is good. I would keep:
 
 I would add two important concepts.
 
-First, distinguish project state from supervisor instructions. STATUS.json should describe what happened and what is blocked. A separate TASK.json or DISPATCH.json should describe what the worker is currently authorized to do. This prevents a worker from quietly expanding its own scope.
+First, distinguish project state from supervisor instructions. `STATUS.json` should describe what happened and what is blocked.
+
+A separate `TASK.json` or `DISPATCH.json` should describe what the worker is currently authorized to do. 
+
+This prevents a worker from quietly expanding its own scope.
 
 Second, every status update needs verifiable identity and evidence:
 
@@ -2379,7 +2385,7 @@ Second, every status update needs verifiable identity and evidence:
 }
 ```
 
-The recommendation and default_if_unanswered fields are important.
+The recommendation and `default_if_unanswered` fields are important.
 
 They allow agents to continue through low-risk ambiguity while escalating decisions that genuinely belong to you.
 
@@ -2400,7 +2406,9 @@ For dron:
 - Accept only changes that preserve Linux support.
 - Escalate hardware-dependent failures.
 
-The supervisor translates that into a bounded task for the worker. You do not need to manually coordinate every agent conversation.
+The supervisor translates that into a bounded task for the worker.
+
+You do not need to manually coordinate every agent conversation.
 
 A few concrete issues in the current notes are worth fixing early:
 
@@ -2415,6 +2423,7 @@ A few concrete issues in the current notes are worth fixing early:
 
 The strongest version of this system is therefore a small control plane:
 
+```
 portfolio/
   projects.yaml
   dispatch/
@@ -2422,8 +2431,11 @@ portfolio/
   daily/
   schemas/
   scripts/
+```
 
-Each project repository contains its own contract and status. The portfolio directory contains priorities, assignments, decisions, and generated reports. That keeps project context local while giving you one place to steer the whole system.
+Each project repository contains its own contract and status. The portfolio directory contains priorities, assignments, decisions, and generated reports. 
+
+That keeps project context local while giving you one place to steer the whole system.
 
 I would build the first version around three workflows:
 
@@ -2434,7 +2446,9 @@ I would build the first version around three workflows:
 Once those work reliably, add automatic retries, scheduled workers, release promotion, and cross-project dependency handling. The real success criterion is simple: every morning you should see a short list of decisions and exceptions, rather than a pile of repositories that require manual inspection.
 
 
-The high-level orchestrator should manage the portfolio as a collection of projects with different visibility, risk, maturity, and autonomy. Each project should communicate through one shared protocol, regardless of whether it is a drone app, a proof of concept, a homelab service, or an open-source CLI.
+The high-level orchestrator should manage the portfolio as a collection of projects with different visibility, risk, maturity, and autonomy. 
+
+Each project should communicate through one shared protocol, regardless of whether it is a drone app, a proof of concept, a homelab service, or an open-source CLI.
 
 The important distinction is that private, public, and OSS should not be one field.
 
@@ -2510,16 +2524,20 @@ The project repository remains the source of truth for implementation details, t
 
 The communication framework should have four standard files or endpoints in every project:
 
+```
 .project/
   manifest.yaml       # identity, classification, ownership, integrations
   roadmap.yaml        # milestones and acceptance criteria
   status.json         # current machine-readable state
   decisions.ndjson    # append-only decisions and answers
   boundaries.yaml     # permissions and quality gates
+```
 
-The orchestrator should pull these files daily and validate them against shared schemas. It should not need to understand every project’s technology stack.
+The orchestrator should pull these files daily and validate them against shared schemas. 
 
-A common status.json could look like this:
+It should not need to understand every project’s technology stack.
+
+A common `status.json` could look like this:
 
 ```json
 {

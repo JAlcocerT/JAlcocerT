@@ -8,6 +8,18 @@ url: 'custom-bots-kb'
 math: true
 ---
 
+**Tl;DR**
+
+DELETE before you Automate.
+
+Data first, then AI centric.
+
+**Intro**
+
+* Why Im writting this post: *to extend my personal information flow to SMBs, bc most likely than not governance is not in place*
+* [What Ive learnt](#conclusions) with it:  
+
+
 https://github.com/siyuan-note/siyuan
 https://github.com/Crosstalk-Solutions/project-nomad?ref=selfh.st
 
@@ -20,19 +32,6 @@ https://github.com/baselhusam/daily-hub
 A personal command center for projects, tasks, and daily habits. Self-hosted, single-user, Next.js + SQLite.
 
 https://www.mindstudio.ai/blog/andrej-karpathy-llm-wiki-knowledge-base-claude-code
-
-
-**Tl;DR**
-
-DELETE before you Automate.
-
-Data first, then AI centric.
-
-**Intro**
-
-* Why Im writting this post: *to extend my personal information flow to SMBs, bc most likely than not governance is not in place*
-* [What Ive learnt](#conclusions) with it:  
-
 
 
 

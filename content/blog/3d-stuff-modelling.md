@@ -2,7 +2,7 @@
 title: "3D Modelling"
 date: 2026-12-02
 draft: false
-tags: ["Blender","OpenSCad vs CadQuery","ThreeJS & BabbylonJS","ArchViz"]
+tags: ["Blender","OpenSCad vs CadQuery","ThreeJS & BabbylonJS","ArchViz","CADcraft"]
 description: 'From Digital Modelling to 3D Printing 101 with SketchForge'
 url: '3d-modelling-101'
 ---

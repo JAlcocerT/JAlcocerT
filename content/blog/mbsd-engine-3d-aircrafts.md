@@ -1,5 +1,5 @@
 ---
-title: "3D Dynamics - Vibrations for aircrafts"
+title: "3D Dynamics - Vibrations and aircrafts"
 date: 2026-10-23T18:20:21+01:00
 draft: false
 tags: ["Mechanical Engineering","MBSD v0-9-0 x Airplanes Engine Mount","ULM/PPL"]
@@ -235,13 +235,26 @@ Validation completed:
 
 The release boundary remains explicit: *no quaternion integration, torque response, offset-COM dynamics, contact, or coupled six-DOF rotational dynamics.*
 
-MBSD 0.9.0 — Spatial Translational Dynamics
+**MBSD 0.9.0** — Spatial Translational Dynamics
 
-The release boundary should remain explicit: it is spatial because translation can occur along arbitrary 3D directions, but it does not yet include rotational dynamics, torque response, quaternion integration, offset-center-of-mass effects, contact, or fully coupled 6-DOF motion.
+The release boundary should remain explicit: *it is spatial because translation can occur along arbitrary 3D directions, but it does not yet include rotational dynamics, torque response, quaternion integration, offset-center-of-mass effects, contact, or fully coupled 6-DOF motion.*
 
 {{% /details %}}
 
 I put together [an engine lab](https://github.com/JAlcocerT/mbsd/tree/master/integrated-engine-lab) around the old mbsd fwk with [some typst reports](https://github.com/JAlcocerT/mbsd/tree/master/integrated-engine-lab/physical-layout-atlas)
+
+But it was about time to try [freecad around the new multi-body](https://github.com/JAlcocerT/multi-body/tree/master/external/mbsd-freecad):
+
+{{< youtube "3W7d2ajYpPI" >}}
+
+<!-- https://youtu.be/3W7d2ajYpPI -->
+
+
+{{< youtube "mFcojiog0S4" >}}
+
+<!-- 
+https://youtu.be/mFcojiog0S4 -->
+
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}
@@ -285,6 +298,7 @@ Who could have guessed: *for bicycles and for airplanes we have to level up the 
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
+
 
 
 ---
@@ -333,3 +347,6 @@ https://www.youtube.com/watch?v=A5w-dEgIU1M
 
 <!-- 
 https://www.youtube.com/shorts/D8Q0Y6R4NiI -->
+
+
+

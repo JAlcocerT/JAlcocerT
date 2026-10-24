@@ -170,6 +170,11 @@ The driver isn't superhuman; the model is leaving 3 s on the table because it ca
 
 > Real-beats-sim by 3 s, mostly explainable by transient grip the ellipse can't represent is exactly what richer dynamics should fix, [tinkered here](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/optimum-path).
 
+Nurburgring is other great circuit
+
+The kind of track day that you wouldnt miss with your friends *for anything in the world*
+
+<!-- 
 ### Nurburgring
 
 The kind of track day that you wouldnt miss with your friends for anything in the world
@@ -180,7 +185,8 @@ With the VW Golf:
 
 With the laguna mk2:
 
-Nurburgring World Record: *And what do i get by adding the car parameters to my model?*
+Nurburgring World Record: *And what do i get by adding the car parameters to my model?* 
+-->
 
 ---
 
