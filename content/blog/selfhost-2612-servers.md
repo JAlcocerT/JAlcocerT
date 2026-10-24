@@ -122,6 +122,10 @@ And its written in python!
 
 https://github.com/lissy93/personal-security-checklist
 
+Security, OSTINT etc matters and these can help:
+
+1. https://github.com/fail2ban/fail2ban?ref=selfh.st
+
 ### Networking
 
 https://networkingtoolbox.net/
@@ -129,6 +133,10 @@ https://networkingtoolbox.net/
 ### DNS
 
 https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts
+
+I tried pihole, have a look to adguard and https://github.com/0xERR0R/blocky?ref=selfh.st
+
+But technitium has been my go to
 
 #### SSL x HTTPs
 
@@ -151,6 +159,9 @@ Having a script that adds programmatically your monitors to uptime is nice
 Connecting uptime kuma `http://192.168.1.2:3001/dashboard/7` with ntfy is a good idea as well
 
 You can also try maintenant `http://192.168.1.2:3810/endpoints`
+
+And [glances](https://github.com/nicolargo/glances)
+
 
 Or your services & wifi
 

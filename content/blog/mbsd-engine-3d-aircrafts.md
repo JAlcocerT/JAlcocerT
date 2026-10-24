@@ -1,6 +1,6 @@
 ---
 title: "3D Dynamics - Vibrations for aircrafts"
-date: 2026-10-15T18:20:21+01:00
+date: 2026-10-23T18:20:21+01:00
 draft: false
 tags: ["Mechanical Engineering","MBSD v0-9-0 x Airplanes Engine Mount","ULM/PPL"]
 description: 'Simulating before jumping to a plane.'
@@ -101,19 +101,19 @@ No [open fatigue](https://openfatigue.ai/) around here.
 cd /home/jalcocert/Desktop/mbsd-framework/mbsd-core
 
 git switch main
-git merge --ff-only v0.8.0-dev
-git tag -a v0.8.0 -m "MBSD Core v0.8.0"
+git merge --ff-only v0.9.0-dev
+git tag -a v0.9.0 -m "MBSD Core v0.9.0"
 git push origin main
-git push origin v0.8.0
+git push origin v0.9.0
 
 awk '
-  /^## v0\.8\.0 / { found=1; next }
+  /^## v0\.9\.0 / { found=1; next }
   /^## / && found { exit }
   found { print }
-' CHANGELOG.md | gh release create v0.8.0 \
+' CHANGELOG.md | gh release create v0.9.0 \
   --repo JAlcocerT/mbsd-core \
   --verify-tag \
-  --title "MBSD Core v0.8.0 - Constrained spatial kinematics" \
+  --title "MBSD Core v0.9.0 - Spatial Translational Dynamics" \
   --notes-file - \
   --latest
 ```
@@ -124,28 +124,26 @@ Then examples:
 cd /home/jalcocert/Desktop/mbsd-framework/mbsd-examples
 
 git switch main
-git merge --ff-only v0.8.0-dev
-git tag -a v0.8.0 -m "MBSD Examples v0.8.0"
+git merge --ff-only v0.9.0-dev
+git tag -a v0.9.0 -m "MBSD Examples v0.9.0"
 git push origin main
-git push origin v0.8.0
+git push origin v0.9.0
 
 awk '
   /^## v0\.8\.0 / { found=1; next }
   /^## / && found { exit }
   found { print }
-' CHANGELOG.md | gh release create v0.8.0 \
+' CHANGELOG.md | gh release create v0.9.0 \
   --repo JAlcocerT/mbsd-examples \
   --verify-tag \
-  --title "MBSD Examples v0.8.0 - Constrained spatial kinematics" \
+  --title "MBSD Examples v0.9.0 - Spatial Translational Dynamics" \
   --notes-file - \
   --latest
 ```
 
-The remaining roadmap:
+The remaining roadmap: fixed-orientation constrained translational dynamics
 
-fixed-orientation constrained translational dynamics
-
-5. 0.9.0: real rotational dynamics and orientation integration.
+5. [0.9.0](https://github.com/JAlcocerT/mbsd-core/releases/tag/v0.9.0): ~~real rotational dynamics and orientation integration~~
 6. 0.9.1: rotational joints, forces and torques.
 7. 0.9.2: 2D/3D API symmetry, documentation and API freeze.
 8. 1.0.0: stable minimal 2D/3D kinematics and dynamics.
@@ -191,6 +189,55 @@ Verification:
 No spatial dynamics was added. 
 
 That work starts with the fresh v0.9.0-dev line after releasing 0.8.1.
+
+All five videos and `engine-gallery.mp4` (placed at `multi-body/external/mbsd-freecad/exports/engine-gallery.mp4`) were rebuilt and verified.
+
+Re-render with:
+
+```sh
+make inline-engine-videos
+make engine-reel
+```
+
+
+Prepared the paired 0.9.0 release candidate across mbsd-core and mbsd-examples.
+
+Key changes:
+
+- Added restricted simulate_fixed_orientation() spatial translational dynamics.
+- Added world-frame force descriptors, accelerations, multipliers, and physical reactions.
+- Added position-, velocity-, and acceleration-level diagnostics.
+- Added strict dynamic-result JSON schema and reader.
+- Added optional coordinate-drive acceleration laws.
+- Replaced fixed-step derivative validation with adaptive Richardson estimation.
+- Made spatial result arrays read-only and strengthened in-memory validation.
+- Clarified and renamed rotating-frame pseudo-force handling while retaining compatibility.
+- Added analytic force-driven and constrained-translation examples.
+- Updated versions, lockfiles, changelogs, compatibility manifests, CI references, documentation, and the roadmap.
+
+Important files:
+
+- spatial dynamics implementation (mbsd-core/src/mbsd/spatial/dynamics.py)
+- spatial builder API (mbsd-core/src/mbsd/spatial/builder.py)
+- Core changelog (mbsd-core/CHANGELOG.md)
+- force-driven example (mbsd-examples/examples/spatial_force_driven_translation.py)
+- constrained translation example (mbsd-examples/examples/spatial_constrained_translation.py)
+- roadmap (roadmap.md)
+
+Validation completed:
+
+- Core: 112 passed
+- Examples: 31 passed
+- Ruff passed in both repositories.
+- Full example workflow passed.
+- Built mbsd-0.9.0 wheel and source distribution.
+- Built mbsd_examples-0.9.0 wheel and source distribution.
+
+The release boundary remains explicit: *no quaternion integration, torque response, offset-COM dynamics, contact, or coupled six-DOF rotational dynamics.*
+
+MBSD 0.9.0 — Spatial Translational Dynamics
+
+The release boundary should remain explicit: it is spatial because translation can occur along arbitrary 3D directions, but it does not yet include rotational dynamics, torque response, quaternion integration, offset-center-of-mass effects, contact, or fully coupled 6-DOF motion.
 
 {{% /details %}}
 

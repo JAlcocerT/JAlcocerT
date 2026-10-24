@@ -13,7 +13,7 @@ What happenes after doing the `n ebooks` here and this tech about BRD developmen
 **Intro**
 
 * WHY Im writting this post: *bc I got to know [CF KV for leads](https://github.com/JAlcocerT/multi-body/tree/master/z-learnings)*
-* What [Ive learnt](#conclusions) with it: *Ive ended up reviewing oss notifications services*
+* What [Ive learnt](#conclusions) with it: *Ive ended up reviewing oss notifications services and making a multi-site inbound setup*
 
 Lifetime products are fine.
 
@@ -316,7 +316,9 @@ docker compose run --rm hub status    # counts only
 #sqlite3 -readonly -json data/leads.db "SELECT received_at, site, kind, email, json(raw) AS raw FROM leads ORDER BY received_at DESC LIMIT 10;"
 ```
 
-The hub has no "show one lead" command yet. For reading enquiries, make leads / make lead here is the tool.
+The hub has no "show one lead" command yet.
+
+For reading enquiries, make leads / make lead here is the tool.
 
 The hub is the backup and the mailing engine.
 
@@ -326,16 +328,20 @@ Replying: write from Proton (hello@jalcocertech.com) to the address in the lead.
 It's a reply to an enquiry, not marketing, so no consent or double opt-in is involved.
 {{< /callout >}}
 
-That's the unified workflow. Every site sends its forms through the same Worker:
+That's the unified workflow. 
 
-  form on multibodysystemsdynamics.com / fossengineer.com / www.jalcocertech.com
-    → leads-forms Worker  → KV (the inbox of record)
-                          → ntfy (the notification you got)
-  homelab hub  ── every 15 min ──► pulls KV → data/leads.db (+ daily backup)
+Every site sends its forms through the same Worker:
 
-  make leads on the laptop reads KV directly: the live inbox, with nothing in between. The homelab
-  keeps a copy, synced automatically every 15 minutes by the hub container's loop
-  (PULL_EVERY_SECONDS=900). You don't need to trigger anything.
+```md
+form on multibodysystemsdynamics.com / fossengineer.com / www.jalcocertech.com
+  → leads-forms Worker  → KV (the inbox of record)
+                        → ntfy (the notification you got)
+homelab hub  ── every 15 min ──► pulls KV → data/leads.db (+ daily backup)
+
+make leads on the laptop reads KV directly: the live inbox, with nothing in between. The homelab
+keeps a copy, synced automatically every 15 minutes by the hub container's loop
+(PULL_EVERY_SECONDS=900). You don't need to trigger anything.
+```
 
 Folder on the homelab: the one you ran docker compose up from, which was `~/jalcocertech-core/leads-hub/hub` in your earlier output:
 
@@ -370,33 +376,37 @@ If status doesn't show it yet, either 15 minutes haven't passed since 07:09 UTC 
 A leadshub show <key> command for reading a lead on the homelab is a small add-on if you want one.
 Day to day, make lead on the laptop is enough.
 
- that's the full enquiry in the homelab database. It's a normal
-  SQLite file on the homelab disk, mounted into the container:
+ that's the full enquiry in the homelab database. It's a normal SQLite file on the homelab disk, mounted into the container:
 
-  ~/jalcocertech-core/leads-hub/hub/data/
-  ├── leads.db                ← the live copy (container sees it as /data/leads.db)
-  └── backups/
-      └── leads-20261005.db   ← one per day, newest 14 kept
+```md
+~/jalcocertech-core/leads-hub/hub/data/
+├── leads.db                ← the live copy (container sees it as /data/leads.db)
+└── backups/
+    └── leads-20261005.db   ← one per day, newest 14 kept
+```
 
-  What's inside:
+What's inside:
 
-  ┌────────────────┬───────────────────────────────────────────────────────────────────────────────┐
-  │     Table      │                                     Holds                                     │
-  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
-  │                │ One row per form submission: site, kind, email, status, received_at, plus     │
-  │ leads          │ raw, the complete JSON as the visitor sent it (name, message, project,        │
-  │                │ consent, page, UTM)                                                           │
-  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
-  │ suppressions   │ Unsubscribes, stored as hashes only                                           │
-  ├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
-  │ enrollments,   │ Drip state (empty until drips are enabled)                                    │
-  Reading an enquiry on the homelab. From the hub folder:
+┌────────────────┬───────────────────────────────────────────────────────────────────────────────┐
+│     Table      │                                     Holds                                     │
+├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+│                │ One row per form submission: site, kind, email, status, received_at, plus     │
+│ leads          │ raw, the complete JSON as the visitor sent it (name, message, project,        │
+│                │ consent, page, UTM)                                                           │
+├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+│ suppressions   │ Unsubscribes, stored as hashes only                                           │
+├────────────────┼───────────────────────────────────────────────────────────────────────────────┤
+│ enrollments,   │ Drip state (empty until drips are enabled)                                    │
+
+
+Reading an enquiry on the homelab. From the hub folder:
 
 ```sh
+#cd ./jalcocertech-core/leads-hub/hub
 docker compose exec hub python -c 'import sqlite3, json; c = sqlite3.connect("/data/leads.db"); row = c.execute("SELECT raw FROM leads WHERE key LIKE \"multibodysystemsdynamics.com:enquiry:2026-10-05%\"").fetchone(); print(json.dumps(json.loads(row[0]), indent=2)) if row else print("No match found")'
 ```
-  With the SQLite CLI installed on the homelab (sudo apt install sqlite3), you can open the file
-  directly:
+
+With the SQLite CLI installed on the homelab (sudo apt install sqlite3), you can open the file directly:
 
 ```sh
 sqlite3 data/leads.db "SELECT received_at, site, kind, email FROM leads ORDER BY received_at DESC LIMIT 10;"
@@ -410,9 +420,7 @@ Two things to know:
 - It holds personal data, so keep it private on the homelab: chmod 700 data makes it readable only by
   your user.
 
-Those Python one-liners are clumsy. I can add two small hub commands, leadshub leads (latest leads in
-a table) and leadshub show <key> (one lead in full), so on the homelab it's just docker compose run
---rm hub show <key>. Want me to add them?
+I can add two small hub commands, leadshub leads (latest leads in a table) and leadshub show <key> (one lead in full), so on the homelab it's just docker compose run --rm hub show <key>.
 
 ### SMTP Transactional
 

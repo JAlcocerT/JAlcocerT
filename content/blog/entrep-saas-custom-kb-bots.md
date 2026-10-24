@@ -8,6 +8,9 @@ url: 'custom-bots-kb'
 math: true
 ---
 
+https://github.com/siyuan-note/siyuan
+https://github.com/Crosstalk-Solutions/project-nomad?ref=selfh.st
+
 https://github.com/Christian-Gennari/Nostos with a lovely landing https://nostos.page/
 
 A home for your reading life. Read your books, capture what stays with you, and turn your reading into thought and writing in one self-hosted study.

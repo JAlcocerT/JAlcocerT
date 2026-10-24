@@ -1,6 +1,6 @@
 ---
 title: "Automated content needs curation to avoid noise"
-date: 2026-10-20
+date: 2026-10-27
 tags: ["content", "social-media", "automation"]
 description: "Automated content is valuable only when curation preserves quality, point of view, and audience fit."
 ---
@@ -11,7 +11,7 @@ The system needs curation: topic selection, source quality, visual clarity, voic
 
 Automation helps production, but judgment protects trust.
 
-The bottleneck moves from making content to choosing what deserves to exist.
+**The bottleneck moves** from making content to choosing what deserves to exist.
 
 Related:
 

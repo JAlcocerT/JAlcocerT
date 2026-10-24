@@ -6,6 +6,8 @@ tags: ["GenBI",""]
 description: 'A look to F/OSS '
 url: 'open-source-dna'
 ---
+https://github.com/dbgate/dbgate?ref=selfh.st
+
 
 https://github.com/JAlcocerT/poc/tree/main/zzz-books
 

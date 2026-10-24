@@ -1,6 +1,6 @@
 ---
 title: "Mass produced information content"
-date: 2026-10-22T07:20:21+01:00
+date: 2026-10-25T07:20:21+01:00
 draft: false
 tags: ["Social Media Marketing","Side-Quest26","VSL","Youtube","Stocks x Stonks"]
 description: 'Is value based content dead? Typst and more Goodies 4 Marketers.'
@@ -20,7 +20,7 @@ Proving that volume + quality data animations is possible with hyperframes.
 **Intro**
 
 * Why Im writting this post: *bc this year i started making some f1 shorts with matplotlib, then tried remotionJS and hyperframes, but didnt make a checkpoint on how this can apply to my brand*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* What [Ive learnt](#conclusions) with it: *Ive ended up wrapping up my workflow*
 
 ```sh
 cd jalcocertech-core/leads-hub/hub
@@ -195,8 +195,36 @@ Also got to know https://github.com/arvarik/contrack: Privacy focused people man
 
 Self-hosted contact management + tracking + online enrichment for your personal and professional needs 🐦‍⬛
 
-### How to get this done fast
 
+
+### Workflow Wrap v2
+
+Coming from here:
+
+```sh
+git clone https://github.com/JAlcocerT/my-logseq-notes
+cd ./my-logseq-notes/daily-solo
+```
+
+The supervisor translates that into a bounded task for the worker. You do not need to manually coordinate every agent conversation.
+
+Your daily note should then contain only:
+
+1. Decisions you need to make.
+2. Projects blocked by you or external credentials.
+3. Projects that changed materially.
+4. Projects that went stale.
+5. Releases or visibility changes requiring approval.
+6. Suggested priorities for the day.
+
+The biggest design principle is this:
+
+> The orchestrator owns portfolio direction and governance. The project agent owns technical execution. The repository owns evidence.
+
+That gives you a unified high-level steering system without forcing the orchestrator to understand every codebase.
+
+
+### How to get this done fast
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
@@ -350,6 +378,8 @@ uv run tests/plot_historical_gweiss.py CAT --start 2005-01-01 --brand "@LibrePor
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/UnfoldingData" title="UnfoldingData Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code of UnfoldingData plots and animations for Youtube Channel" >}}
 {{< /cards >}}
+
+
 
 ### Gyroflow
 

@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-24
+date: 2026-10-25
 draft: false
 tags: ["Kokoro","VoiceBox","SunoAI x music","VPS x DR Test","ONT x DHCP"]
 description: 'A homelab that speaks.'
@@ -129,7 +129,10 @@ For AI: *~~windsurf, cursor, zed, gram, antigravity, kilo code, roo code, gemini
 
 ```sh
 herdr #code --yolo | opencode | claude
+#opencode upgrade
 mgitstatus #this has been interesting to try and superseed an IDE
+
+glances #htop #btop
 #lazygit #lazydocker
 #cargo install gitpane
 ```
@@ -165,7 +168,7 @@ comm -23 \
 winget install sonixd
 ```
 
-Been also working with notifications in the homelab lately: *it has been cool*
+Been also working with [notifications in the homelab](https://jalcocert.github.io/JAlcocerT/blog/entrep-saas-waiting-x-ebook/#oss-notifications) lately: *it has been cool [for inbound marketing](https://jalcocert.github.io/JAlcocerT/blog/entrep-saas-waiting-x-ebook/#conclusions)*
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gotify" title="gotify | Docker Config 🐋 ↗" >}}
@@ -340,6 +343,11 @@ docker compose -f 202610_docker-compose.yml up -d build
 Remember to setup [CF Geoblocking](https://github.com/JAlcocerT/Home-Lab/blob/main/cf-security.md) for your public services *like nextcloud*
 {{< /callout >}}
 
+You have this nice client: https://github.com/Obiente/native
+
+```sh
+cd /home/jalcocert/Downloads && sudo apt install -y ./nextcloud-native-linux-amd64.deb
+```
 
 https://github.com/kopia/kopia
 

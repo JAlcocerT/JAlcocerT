@@ -1,6 +1,6 @@
 ---
 title: "Suspension videos"
-date: 2026-10-25
+date: 2026-10-24
 draft: false
 tags: ["MBSD v1-0-0 x Active Damping","LMS Filter"]
 description: 'A light framework that can do stuff.'

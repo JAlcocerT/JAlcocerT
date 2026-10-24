@@ -9,20 +9,25 @@ url: 'branded-jalcocertech'
 
 **Tl;DR**
 
-Hows my brand and outbound email going?
+Hows my brand *and outbound email* going?
 
 **Intro**
 
 * Why Im writting this post: *bc if you are good, you should not be [giving for free your upside](#risk-and-opportunities)*
-* What [Ive learnt](#conclusions) with it: *Ive ended up being [pragmatic](https://www.jalcocertech.com/support/articles/cloudflare-pragmatism-oss-exit-plan/) and exploring how to help [UK businesses](https://developer.company-information.service.gov.uk/manage-applications/6acb6fbe9edf417a7cadee77/view/live#). I unified my inbounds with a custom multisite fwk and set the outbound 101 to test offers.*
+* What [Ive learnt](#conclusions) with it: *Ive ended up being [pragmatic](https://www.jalcocertech.com/support/articles/cloudflare-pragmatism-oss-exit-plan/) and exploring how to help [UK businesses](https://developer.company-information.service.gov.uk/manage-applications/6acb6fbe9edf417a7cadee77/view/live#). I unified my inbounds with a custom multisite fwk and set the outbound 101 to test offers.* As i want to move towards a portfolio at this points, was lazy and put together this [workflow wrap](#workflow-wrap).
 
-Ive started [telling the agents why i need](https://www.seangoedecke.com/tell-agents-the-why/) things and there has been some interesting surprises: like having my posts with draft=false into a future date to be effectively scheduled without me having to re-run Ci/Cd.
+Ive started [telling the agents why i need](https://www.seangoedecke.com/tell-agents-the-why/) things and there has been some interesting surprises: *like having my posts with draft=false into a future date to be effectively scheduled without me having to re-run Ci/CD manually*.
 
+If something can be achieved via an integration/API, why not letting agents doing so.
+
+For example: *[GSC](#google-search-api), [PSI](#psi-api) or API for web analytics, the gov UK [company house](https://www.jalcocertech.com/support/articles/uk-lead-list-apify-websites-companies-house/) one*
+
+You can get interesting outcomes, like [DRIP sequences](https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub/sequences/jt-welcome), around [infra that you can re-use](https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub/sequences) for few sites, all with [GDPR double opt-in](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/adr/0003-diy-email-double-opt-in-drips.md)
 
 
 ## Mail
 
-Last year I said that email was hard.
+Last year I said that [email is hard](https://jalcocert.github.io/JAlcocerT/emails-101/).
 
 Since then, I discovered some local testing mail for devs to get familiar with smtp: [mailpit](https://fossengineer.com/selfhosting-mailpit/), [inbucket](https://fossengineer.com/selfhosting-inbucket/), [maildev](https://fossengineer.com/selfhosting-maildev/)...
 
@@ -34,11 +39,7 @@ To lower the CaC, you can [use email DRIP](https://jalcocert.github.io/JAlcocerT
 Tools like [notifuse](https://fossengineer.com/selfhosting-notifuse-email-platform/), [listmonk](https://fossengineer.com/selfhosting-listmonk-newsletter/), [mautic](https://fossengineer.com/selfhosting-mautic-marketing-automation/) help with email marketing/newsletter/transactional. [Growchief](https://fossengineer.com/selfhosting-growchief/) with the outreach automation
 {{< /callout >}}
 
-But...I ended up building my DIY/custom one :)
-
-https://github.com/JAlcocerT/slubnechwile-chwile-y26-claude
-https://github.com/JAlcocerT/leads-slubnechwile
-https://github.com/JAlcocerT/slubne-chwile-y26
+But...I ended up building my DIY/custom one for [slub](https://github.com/JAlcocerT/slubnechwile-chwile-y26-claude) - [chwi](https://github.com/JAlcocerT/slubne-chwile-y26) and not only :)
 
 ## Videos
 
@@ -59,26 +60,29 @@ To extract thumbnails from your video [see this](https://jalcocert.github.io/JAl
 I also went crazy and made some [simple video edits with kdenlive](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#kdenlive)
 
 
-https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing
-https://jalcocert.github.io/JAlcocerT/photo-management-tools/
+> here you have some [video editing notes](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#video-editing) and [photo management tools](https://jalcocert.github.io/JAlcocerT/photo-management-tools/)
 
 But things accelerated and I had a chat with a youtuber friend [about text to video and brainrot shorts](https://jalcocert.github.io/JAlcocerT/photo-video-tinkering/#text2video)
 
 But at the time i tried some [animations as a code](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/) with [python x matplotlib x financial data](https://jalcocert.github.io/JAlcocerT/animations-as-a-code/#matplotlib-animations), then, made [some map animations](https://jalcocert.github.io/JAlcocerT/geo-maps-and-data/#animated-videos)
 
-https://github.com/JAlcocerT/DataInMotion
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/eda-f1" title="EDA F1 ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/DataInMotion" title="Data In Motion ↗" icon="github" >}}
+{{< /cards >}}
 
 Later, i bite [remotion x yfinance](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/#yfinance-x-remotionjs) and also [made data animations](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/) around [f1](https://jalcocert.github.io/JAlcocerT/ai-scripts-and-animated-data/#f1) and [its race data](https://jalcocert.github.io/JAlcocerT/f1-data-animated/)
-
-https://github.com/JAlcocerT/eda-f1
 
 Then, i tinkered around [repo to ~~post~~ video](https://jalcocert.github.io/JAlcocerT/oss-automatic-docs-and-tech-video/#about-foss---repo-to-video)
 
 How could I not...use [remotion for mechanisms videos](https://jalcocert.github.io/JAlcocerT/video-creation-with-remotion/#mechanisms-x-remotionjs)
 
-https://github.com/JAlcocerT/3Design
-https://github.com/JAlcocerT/mbsd
 
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/3Design" title="3Design ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd" title="mbsd x videos ↗" icon="github" >}}
+{{< /cards >}}
 
 Not as a full time thing, not as a...minor thing.
 
@@ -90,15 +94,21 @@ And in theory, there is nothing stopping you [to go viral](https://jalcocert.git
 Videos is going to be an important [part of JAlcocerTech-Core](#conclusions)
 {{< /callout >}}
 
+Bc non of those were about branding, attraction and conversion
+
+Those mentions were about features, describing stuff
+
+But what if you need a [video sales letter](#Vsl)?
+
 ### VSL
 
 I had to sit and ask myself: [what do I do](https://jalcocert.github.io/JAlcocerT/what-do-i-do/)?
 
-Concluded that: I do independent consulting work, driving business outcomes by building enterprise analytics systems
+Concluded that: *I do independent consulting work, driving business outcomes by building enterprise analytics systems*
 
 When you dont have [a story line for chatting](https://jalcocert.github.io/JAlcocerT/what-do-i-do/#conclusions) you are far from any sales pitch.
 
-https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#inbound-marketing-x-branded-videos
+How to put together some [inbound branded videos](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#inbound-marketing-x-branded-videos)?
 
 ### Promo Video
 
@@ -114,17 +124,27 @@ If you watch TV, you should be aware of that already.
 
 ### Why not just RemotionJS
 
+As of today you can get away and create a video with AI in few ways: remotionJS, hyperframe or any of the Veo and whatever video native model is out there.
+
+Get inspired: https://www.remotion.dev/prompts/cinematic-tech-intro
+
+As of now, I like the hyperframe workflow the most:
+
 ```sh
 
 ```
 
-https://www.remotion.dev/prompts/cinematic-tech-intro
+
 
 
 
 ## Gold Info for SoloPreneurs
 
-You need to **ship**/fix/kill (quick). 
+You need to **ship**/fix/kill (quick).
+
+After distilling a lot of ideas: `http://192.168.1.2:8001`
+
+These are the main poins to never forget: *time is THE most scarce resource, allocate it properly into your project portfolio*
 
 {{% details title="Ideas Checklist 🚀" closed="true" %}}
 
@@ -134,115 +154,20 @@ The general idea checklist is as follows:
 
 {{% /details %}}
 
-{{% details title="Prospects/Clients Checklist 🚀" closed="true" %}}
+
+{{% details title="Offer Discovery - Checklist 🚀" closed="true" %}}
+
+
+
+{{% /details %}}
+
+{{% details title="Prospects/Clients - Checklist 🚀" closed="true" %}}
 
 
 
 {{% /details %}}
 
 
----
-
-## Conclusions
-
-Any [solar panel](https://youtube.com/shorts/e_GwgidIPFg) with no load has potential (V)
-
-Yet, makes no actual work / provides power / throughput
-
-```sh
-#git clone /jalcocertech-core
-cd ./jalcocertech-core/leads-hub/hub #for inbound checks
-make lead-messages LIMIT=5
-```
-
-Dont be an open solar panel, embrace the [risk and opportunities](#risk-and-opportunities):
-
-
-Have made some upgrades to the site: `https://consulting.jalcocertech.com/talks/` superseeding such `https://consulting.jalcocertech.com/presentations/opco/slides`
-
-{{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
-{{< /cards >}}
-
-
-You aren't doing anything wrong technically. Everything we built works. 
-
-The problem is that almost all your effort goes into building and almost none into talking to buyers. Here's what this session itself shows:
-
-1. You build for people who don't buy.
-- Who you write for: about 60 articles in a few weeks, nearly all "how I built X with Cloudflare,
-Workers, KV". The readers are developers. Developers don't hire consultants; they read the ebook
-and do it themselves.
-- Who pays: business owners and team leads, who search for outcomes ("site is slow", "app keeps
-breaking in production"), not tools.
-
-2. Five audiences, so nobody feels it's for them.
-- Who you speak to today: small-business site owners (audit), real estate agencies (white-label),
-data engineers and analysts (talks), PMs (coaching), and teams shipping AI ("Ship AI features").
-- What happens: a visitor can't tell in five seconds that this is for them. Each extra audience makes
-the message weaker for the rest.
-
-3. Your only clients came from people, not funnels. The hospital and real estate clients didn't come
-through a form; they came from relationships. Meanwhile your biggest asset, 70+ LinkedIn
-recommendations, sits unused. Funnels convert attention you already have; they don't create it.
-
-4. The first step asks strangers for too much. Paying $235 is a fine filter for warm leads, but a
-cold visitor won't pay someone they met two minutes ago. The audit is a good free first step, but it
-targets small-business websites while the paid call sells AI features: two different buyers.
-
-5. Time is the real constraint. With two full-time jobs, building feels productive, but it's the
-comfortable option; outreach and conversations are the uncomfortable ones. Be honest with yourself
-too: could you even deliver if three clients said yes next week?
-
-What I'd do next: 30 days, almost no new building
-
-1. Freeze the engine. It's done. No new features until it has handled 10 real leads.
-2. Pick one buyer and one offer for 90 days. You have the most evidence for one of these two:
-    - Small teams with a working app that's painful to ship or run. Your case: the hospital CI/CD
-      story. Offer: a fixed-price "make it shippable" engagement (containers, CI, HTTPS, monitoring),
-      which can be done mostly async in your evenings.
-    - Real estate agencies. You have a live product, a price and a case study. But the agencies have
-      to be found and contacted, which is the hardest part for someone with two jobs.
-
-    I'd pick the first. It's closer to what you do every day, and it suits async delivery.
-3. Have 10 conversations a week; write fewer articles. No cold email, because of the Polish rules we
-    discussed. Instead:
-    - Your network: message the people who recommended you on LinkedIn, roughly: "I now help small
-      teams make their apps shippable (versioned releases, CI, HTTPS). Do you know a team that's
-      struggling with this?" Referrals convert far better than any page.
-    - LinkedIn posts aimed at buyers: one post a week about an outcome ("A hospital team went from
-      manual deployments to versioned releases"), not the tooling. Link the case study PDF.
-    - The audit as a conversation opener: when someone engages, offer to run their site and send them
-      the PDF.
-4. Measure conversations, not content. Track one number per week: real conversations with potential
-    buyers. Ten conversations a week will produce a client long before 60 more articles will.
-5. Check your Cloudflare analytics once. If the consulting site gets around 20 human visitors a week,
-    the problem is attention, not conversion. Don't tweak the site until traffic is there.
-
-
-
-  2. Measure the right things, starting now
-
-  Right now you can't tell whether any of this works. I'd set up:
-  - Google Search Console for the three sites, with the sitemaps submitted. It's free and shows which
-    searches you appear for, months before clicks arrive. As far as I know it isn't set up yet.
-  - Monthly visitors per site in your weekly ntfy digest, from Cloudflare's analytics API. That's about
-    an hour of work in the homelab hub.
-  - The one number that matters for you: confirmed email subscribers. Your list is the asset you can
-    use on launch day.
-
-And prepare the launch for month 9
-
-What I'd stop: building more infrastructure, and articles about how the plumbing was built.
-
-The engine is done; nine months of plumbing articles brings readers who build things, not buyers.
-
-  I can do any of these next:
-  1. Search Console for the three sites (needs a DNS TXT record per domain; you click "verify").
-  2. Visitors per site in the weekly digest.
-  3. A 12-week content plan for the chosen buyer, with titles based on real searches.
-  4. The launch checklist in core.
 
 ### Google Search API
 
@@ -250,13 +175,13 @@ Google has APIs for almost all of it.
 
 The one step that needs you is creating the Google credentials.
 
-  What the APIs cover
+What the APIs cover:
 
   ┌─────────────────────────────┬─────────────────────────────┬───────────────────────────────────┐
   │            Need             │             API             │               Notes               │
   ├─────────────────────────────┼─────────────────────────────┼───────────────────────────────────┤
   │ Stats: clicks, impressions, │                             │ About 16 months of history, with  │
-  │  CTR, average position per  │ Search Console API →        │ data 2–3 days behind. Once you    │
+  │  CTR, average position per  │ **Search Console API** →        │ data 2–3 days behind. Once you    │
   │ search, page, country,      │ searchanalytics.query       │ verify a site you also see data   │
   │ device and day              │                             │ from before verification.         │
   ├─────────────────────────────┼─────────────────────────────┼───────────────────────────────────┤
@@ -274,62 +199,85 @@ The one step that needs you is creating the Google credentials.
   │                             │ verify                      │                                   │
   └─────────────────────────────┴─────────────────────────────┴───────────────────────────────────┘
 
-One property can cover all four subdomains. A domain property (sc-domain:jalcocertech.com) includes www, consulting, ebooks and webaudit. fossengineer.com and multibodysystemsdynamics.com would each need their own.
+> One property can cover all four subdomains. 
 
-How the setup would split
+A domain property (sc-domain:jalcocertech.com) includes www, consulting, ebooks and webaudit. 
+
+
+
+{{% details title="How the setup would split" closed="true" %}}
+
 
 You (about 10 minutes, once):
+
 1. Verify the domain. In Search Console, add `jalcocertech.com` as a Domain property. Because your DNS is on Cloudflare, Google offers one-click verification ("Verify with Cloudflare") and adds the TXT record for you. I could do this by API instead, but my wrangler login probably can't edit DNS,
   and the one-click route is quicker anyway.
 2. Create a service account. In a Google Cloud project, enable the Search Console API and create a service account with a JSON key. I'll give you the exact gcloud commands if you prefer the terminal.
-3. Give it access. In Search Console, under Settings → Users and permissions, add the service account's email.
+3. Give it access. In Search Console, under `Settings → Users and permissions`, add the service account's email.
 
-Me:
+The agent:
 
-- Sitemaps: submit all the sitemaps by API and check they're accepted.
+- **Sitemaps**: submit all the sitemaps by API and check they're accepted.
 - A seo command in the homelab hub: top searches, top pages, clicks and impressions, compared with the previous period. It also saves weekly snapshots to SQLite, so you can see trends over the nine months.
-- One line in your weekly ntfy digest, for example: Search: 1,240 impressions (+18%), 37 clicks, top: "github actions docker versioning".
+- One line in your weekly `ntfy digest`, for example: Search: 1,240 impressions (+18%), 37 clicks, top: "github actions docker versioning".
 - Indexing checks: whether new articles get indexed, so you can tell if Google is picking them up.
 
-One technical note: the hub uses only Python's standard library by design. Signing in as a service
-account needs an RSA-signed token, which the standard library can't produce.
+One technical note: the hub uses only Python's standard library by design.
 
-I'd either add Google's small google-auth package or sign with openssl from the script. I'd go with google-auth; one well-maintained dependency is fine for this.
+Signing in as a service account needs an RSA-signed token, which the standard library can't produce.
 
-What it won't tell you: search data shows what people searched before finding you, not who they are or whether they'd buy. For that you still need the subscriber and lead numbers. Together they show whether the plan is working.
+I'd either add Google's small google-auth package or sign with openssl from the script. 
+
+I'd go with google-auth; one well-maintained dependency is fine for this.
+
+What it won't tell you: search data shows what people searched before finding you, not who they are or whether they'd buy. 
+
+For that you still need the subscriber and lead numbers.
+
+Together they show whether the plan is working.
+
+{{% /details %}}
+
+The cloudflare deploy login's general account read access includes Web Analytics, so no extra Cloudflare token is needed yet.
+
+{{% details title="Three things stand out and were fixed" closed="true" %}}
+
+1. Google sends you almost nothing: 1 visit in 7 days, against 108 from Bing and 6 from DuckDuckGo.
+
+> Either Google isn't indexing your sites well, or it ranks them low. Search Console will show
+ which, so it's the right next step.
+
+2. fossengineer's numbers are probably mostly bots. 2,605 views have no referrer, and the top
+ countries are the US (1,170), Singapore (987) and China (497), with only 26 from Poland. 
+ 
+Singapore and China at that volume usually means crawlers that run JavaScript, not readers. 
+    
+The human audience is likely a few hundred a week.
+
+3. The fossengineer Pages address isn't redirected to the real domain, so Google sees two copies of
+ every page. It's a quick fix with a redirect rule; I can do it, the same way we did the www/apex    redirects.
+
+{{% /details %}}
 
 
 
-
-Your cloudflare deploy login's general account read access includes Web Analytics, so no extra Cloudflare token is needed yet.
-
-  Three things stand out:
-  1. Google sends you almost nothing: 1 visit in 7 days, against 108 from Bing and 6 from DuckDuckGo.
-     Either Google isn't indexing your sites well, or it ranks them low. Search Console will show
-     which, so it's the right next step.
-  2. fossengineer's numbers are probably mostly bots. 2,605 views have no referrer, and the top
-     countries are the US (1,170), Singapore (987) and China (497), with only 26 from Poland. Singapore
-     and China at that volume usually means crawlers that run JavaScript, not readers. The human
-     audience is likely a few hundred a week.
-  3. The fossengineer Pages address isn't redirected to the real domain, so Google sees two copies of
-     every page. It's a quick fix with a redirect rule; I can do it, the same way we did the www/apex
-     redirects.
-
-About the key you pasted
-
-AIzaSy… is a PageSpeed Insights API key. 
+{{< callout type="warning" >}}
+PageSpeed APIs are different than Google Search ones
+{{< /callout >}}
   
-It can't be used for Search Console: Search Console data is private, so it needs a sign-in such as a service account, not a key. I haven't stored it anywhere.
+It can't be used for Search Console: *Search Console data is private, so it needs a sign-in such as a service account, not a key.*
 
-It's now in this chat's history, so in `Google Cloud → APIs & Services → Credentials`, either restrict it to the PageSpeed Insights API only or regenerate it.
+In `Google Cloud → APIs & Services → Credentials`, either restrict it to the PageSpeed Insights API only or regenerate it.
 
 It could be useful later: the audit tool could pull Google's real-user speed data for a site with it.
 
- Search Console setup, step by step
+**Search Console setup**....
+
+{{% details title="...step by step" closed="true" %}}
 
 1. Add your sites (search.google.com/search-console):
 
-- Add property → Domain → jalcocertech.com. This one property covers www, consulting, ebooks and webaudit.
+- Add `property → Domain → jalcocertech.com`. This one property covers www, consulting, ebooks and webaudit.
 - Google detects Cloudflare and offers to verify with Cloudflare; accept, and it adds the DNS record itself.
 - Repeat for fossengineer.com and multibodysystemsdynamics.com.
 
@@ -349,180 +297,328 @@ It could be useful later: the audit tool could pull Google's real-user speed dat
 - pull the first report: what Google has indexed, which searches you appear for, and why Google sends you so little;
 - add a weekly search line to the digest, next to the Cloudflare visits.
 
-5. Optional but worth it: at bing.com/webmasters, use Import from Google Search Console. It's one click once step 1 is done, and Bing already sends you 100 times more visitors than Google.
+5. Optional but worth it: at `bing.com/webmasters`, use Import from Google Search Console. 
 
+It's one click once step 1 is done, and Bing already sends you 100 times more visitors than Google.
 
+What you need is a key for the service account you already created, a JSON file. 
 
+It's in a different place:
 
-  What the PageSpeed API can do that your web audit can't
+1. On that Credentials page, under Service Accounts, click
+    jalcocertech@jalcocertech-analytics.iam.gserviceaccount.com.
+2. Open the Keys tab at the top.
+3. Add key → Create new key.
+4. Choose JSON → Create.
 
-  Your audit runs Lighthouse on your homelab: a lab test, one simulated mobile visit from your network.
-  The PageSpeed Insights API adds two things that can't be done from there:
+A file like jalcocertech-analytics-1a2b3c….json downloads. That's the credential. Then:
 
-  1. Real-user data from Google: the big one.
-  - What it is: the PSI response includes the Chrome User Experience Report (CrUX), the speed real
-    Chrome users actually experienced on a site over the last 28 days. That covers LCP, INP
-    (responsiveness, which only exists as real-user data), CLS, FCP and TTFB, with Google's own "Core
-    Web Vitals: passed/failed" verdict.
-  - Why it matters: this is the data Google uses for ranking, and a lab test can't produce it.
-  - For a report: "Google's data shows 38% of your real mobile visitors wait more than 4 seconds"
-    convinces a site owner far more than a lab score. It's also what they see themselves at
-    pagespeed.web.dev.
-  - The limit: CrUX only has data for sites with enough Chrome traffic. Many small-business sites have
-    none. The report would then say "not enough real-user data yet" and fall back to your lab numbers.
+```sh
+mkdir -p ~/.config/leads-hub
+mv ~/Downloads/jalcocertech-analytics-*.json ~/.config/leads-hub/gsc-service-account.json
+chmod 600 ~/.config/leads-hub/gsc-service-account.json
+```
 
-  2. Lighthouse run on Google's machines.
-  - More consistent scores: results don't depend on your homelab's CPU, its other containers, or its
-    network.
-  - Lighter homelab: each audit wouldn't need Chromium and Lighthouse to run locally, which is the
-    heaviest part of the container.
-  - Desktop as well as mobile, at little extra cost.
+Keep it like a password: don't paste its contents here or commit it. 
 
-  The trade-off is that each call takes 10–30 s, and you depend on Google's quota (about 25,000
-  requests a day, plenty for you). Your own checks stay as they are: SEO, security headers, HTTPS,
-  broken links, share image. The PSI API doesn't do those.
+{{% /details %}}
 
-  What I'd build (about half a day): keep the local Lighthouse run, and add a "Real users (Google
-  data)" block to the audit and the PDF:
-  - the Core Web Vitals pass/fail verdict;
-  - each metric's real-world value, with the share of visitors in good, needs-improvement and poor;
-  - a sentence in plain language;
-  - when Google has no data, a clear "not enough real-user data", never a fake score.
-
-  That key would live as a secret on the homelab, never in the repo. Restrict or regenerate it first,
-  since it's been pasted in this chat. Then put the new key in ~/.config/leads-hub/psi_api_key on the
-  homelab, and I'll wire it in.
-
-  Should I build that after the Search Console setup, or before?
+┌──────────────────────────┬───────────────────────────────────────────────────────┬─────────────┐
+│        Credential        │                     What it's for                     │   Needed    │
+│                          │                                                       │    here?    │
+├──────────────────────────┼───────────────────────────────────────────────────────┼─────────────┤
+│ API key                  │ Public Google data (e.g. PageSpeed)                   │ No          │
+├──────────────────────────┼───────────────────────────────────────────────────────┼─────────────┤
+│ OAuth client ID          │ Apps where a person clicks "Sign in with Google"      │ No          │
+├──────────────────────────┼───────────────────────────────────────────────────────┼─────────────┤
+│ Service account key      │ A script reading your private data, such as Search    │ Yes         │
+│ (JSON)                   │ Console                                               │             │
+└──────────────────────────┴───────────────────────────────────────────────────────┴─────────────┘
 
 > https://console.cloud.google.com/welcome?project=jalcocertech-analytics and https://console.cloud.google.com/marketplace/product/google/searchconsole.googleapis.com?q=search&referrer=search&project=jalcocertech-analytics
 
 > > https://console.cloud.google.com/iam-admin/serviceaccounts/details/110474226869769663578;edit=true/keys?project=jalcocertech-analytics
 
 
-  What you need is a key for the service account you already created, a JSON file. It's in a different
-  place:
+#### PSI API
 
-  1. On that Credentials page, under Service Accounts, click
-     jalcocertech@jalcocertech-analytics.iam.gserviceaccount.com.
-  2. Open the Keys tab at the top.
-  3. Add key → Create new key.
-  4. Choose JSON → Create.
+{{% details title="What the PageSpeed API can do that your web audit can't" closed="true" %}}
 
-  A file like jalcocertech-analytics-1a2b3c….json downloads. That's the credential. Then:
+Your audit runs Lighthouse on your homelab: a lab test, one simulated mobile visit from your network.
 
-  mkdir -p ~/.config/leads-hub
-  mv ~/Downloads/jalcocertech-analytics-*.json ~/.config/leads-hub/gsc-service-account.json
-  chmod 600 ~/.config/leads-hub/gsc-service-account.json
+The PageSpeed Insights API adds two things that can't be done from there:
 
+1. Real-user data from Google: the big one.
 
-  Keep it like a password: don't paste its contents here or commit it. I'll read the file directly from
-  that path.
+- What it is: the PSI response includes the Chrome User Experience Report (CrUX), the speed real
+  Chrome users actually experienced on a site over the last 28 days. That covers LCP, INP
+  (responsiveness, which only exists as real-user data), CLS, FCP and TTFB, with Google's own "Core
+  Web Vitals: passed/failed" verdict.
+- Why it matters: this is the data Google uses for ranking, and a lab test can't produce it.
+- For a report: "Google's data shows 38% of your real mobile visitors wait more than 4 seconds"
+  convinces a site owner far more than a lab score. It's also what they see themselves at
+  pagespeed.web.dev.
+- The limit: CrUX only has data for sites with enough Chrome traffic. Many small-business sites have
+  none. The report would then say "not enough real-user data yet" and fall back to your lab numbers.
 
-  ┌──────────────────────────┬───────────────────────────────────────────────────────┬─────────────┐
-  │        Credential        │                     What it's for                     │   Needed    │
-  │                          │                                                       │    here?    │
-  ├──────────────────────────┼───────────────────────────────────────────────────────┼─────────────┤
-  │ API key                  │ Public Google data (e.g. PageSpeed)                   │ No          │
-  ├──────────────────────────┼───────────────────────────────────────────────────────┼─────────────┤
-  │ OAuth client ID          │ Apps where a person clicks "Sign in with Google"      │ No          │
-  ├──────────────────────────┼───────────────────────────────────────────────────────┼─────────────┤
-  │ Service account key      │ A script reading your private data, such as Search    │ Yes         │
-  │ (JSON)                   │ Console                                               │             │
-  └──────────────────────────┴───────────────────────────────────────────────────────┴─────────────┘
+2. Lighthouse run on Google's machines.
+
+- More consistent scores: results don't depend on your homelab's CPU, its other containers, or its
+  network.
+- Lighter homelab: each audit wouldn't need Chromium and Lighthouse to run locally, which is the
+  heaviest part of the container.
+- Desktop as well as mobile, at little extra cost.
+
+The trade-off is that each call takes 10–30 s, and you depend on Google's quota (about 25,000
+requests a day, plenty for you). 
+
+Your own checks stay as they are: SEO, security headers, HTTPS, broken links, share image.
+
+The **PSI API** doesn't do those :)
+
+What I'd build (about half a day): keep the local Lighthouse run, and add a "Real users (Google
+data)" block to the audit and the PDF:
+
+- the Core Web Vitals pass/fail verdict;
+- each metric's real-world value, with the share of visitors in good, needs-improvement and poor;
+- a sentence in plain language;
+- when Google has no data, a clear "not enough real-user data", never a fake score.
+
+That key would live as a secret on the homelab, never in the repo. 
+
+Restrict or regenerate it first, since it's been pasted in this chat.
+
+Then put the new key in `~/.config/leads-hub/psi_api_key` on the homelab, and I'll wire it in.
+
+{{% /details %}}
+
 
 ### CF API
 
 it needs a new Cloudflare API token, but there's a bigger finding first:
 
-  Only fossengineer.com sends real-visitor data. www, consulting, ebooks, webaudit and
-  multibodysystemsdynamics.com have no Cloudflare Web Analytics beacon, so for them there are no
-  human-visitor numbers to read, through the API or otherwise. Their privacy pages also say you use
-  Cloudflare's cookieless analytics. That's harmless for visitors (less tracking, not more), but the
-  pages and reality don't match.
+Only fossengineer.com sends real-visitor data. www, consulting, ebooks, webaudit and
+ multibodysystemsdynamics.com have no Cloudflare Web Analytics beacon, so for them there are no
+  human-visitor numbers to read, through the API or otherwise.
+  
+Their privacy pages also say you use **Cloudflare's cookieless analytics**. 
+
+That's harmless for visitors (less tracking, not more), but the pages and reality don't match.
 
   What it takes
 
-  1. Turn on Web Analytics for each site (you, about 5 minutes in the dashboard):
-  - Cloudflare Pages sites (www, consulting, ebooks, multibodysystemsdynamics): project → Metrics →
-    enable Web Analytics. Pages then inserts the beacon automatically; no code change.
-  - webaudit (served from your homelab through the tunnel): Analytics & Logs → Web Analytics → Add a
-    site → webaudit.jalcocertech.com, with automatic setup, which injects the beacon through
-    Cloudflare's proxy.
-  - Security headers: www and consulting already allow the beacon (I included the two Cloudflare
-    analytics hosts when we wrote them), and ebooks allows any HTTPS script. After you enable it, I'll
-    check every site for blocked requests.
+1. Turn on Web Analytics for each site (you, about 5 minutes in the dashboard):
 
-  2. Create a read-only analytics token for the homelab (you): My Profile → API Tokens → Create Token,
-  with these permissions:
-  - Account → Account Analytics → Read. This covers Web Analytics: page views and visits from real
-    browsers.
-    browsers.
-  - Zone → Analytics → Read, for your zones. This covers all requests, including bots; it's useful as a
-    second number, but don't read it as "visitors".
+- Cloudflare Pages sites (www, consulting, ebooks, multibodysystemsdynamics): project → Metrics →
+  enable Web Analytics. Pages then inserts the beacon automatically; no code change.
+- webaudit (served from your homelab through the tunnel): Analytics & Logs → Web Analytics → Add a
+  site → webaudit.jalcocertech.com, with automatic setup, which injects the beacon through
+  Cloudflare's proxy.
+- Security headers: www and consulting already allow the beacon (I included the two Cloudflare
+  analytics hosts when we wrote them), and ebooks allows any HTTPS script. After you enable it, I'll
+  check every site for blocked requests.
 
-  Save it to ~/.config/leads-hub/cf_analytics_token on the homelab, the same pattern as your other
-  secrets. Keep it separate from the KV token, so each one can do only one thing.
+2. Create a read-only analytics token for the homelab (you): `My Profile → API Tokens → Create Token`,
+with these permissions:
 
-  3. Then I'll have the hub query the GraphQL API weekly: visits and page views per site, top pages and
-  referrers. That goes into SQLite for trends and becomes one line in the ntfy digest, next to the
-  Search Console numbers.
+- Account → Account Analytics → Read. This covers Web Analytics: page views and visits from real
+  browsers.
+- Zone → Analytics → Read, for your zones. This covers all requests, including bots; it's useful as a
+  second number, but don't read it as "visitors".
 
-  Together that gives the full picture each week:
+Save it to `~/.config/leads-hub/cf_analytics_token` on the homelab, the same pattern as your other
+secrets. 
+  
+> Keep it separate from the KV token, so each one can do only one thing.
 
-  Search (Google): impressions → clicks
-  Visits (Cloudflare): per site, top pages, where they came from
-  List: confirmed subscribers
-  Leads: forms, audits, bookings
+3. Then I'll have the **hub query the GraphQL API weekly**: visits and page views per site, top pages and referrers. That goes into SQLite for trends and becomes one line in the ntfy digest, next to the
+Search Console numbers.
+
+Together that gives the full picture each week:
+
+* Search (Google): impressions → clicks
+* Visits (Cloudflare): per site, top pages, where they came from
+* List: confirmed subscribers
+Leads: forms, audits, bookings
 
 Web Analytics only counts from the day you enable it, so the sooner it's on, the more of the nine months you'll have data for.
 
+Even a real browser loads no Cloudflare analytics script on any jalcocertech.com subdomain. 
 
-Even a real browser loads no Cloudflare analytics script on any jalcocertech.com subdomain. Only
-  fossengineer.com has one, and it's the one site set up with "JS Snippet installation" instead of
+Only fossengineer.com has one, and it's the one site set up with "JS Snippet installation" instead of
   "Automatic setup".
 
-  So "Automatic setup" isn't injecting the script on your sites. Two likely causes:
-  1. The "exclude EU visitors" option. If it's on, Cloudflare skips injection for visitors in the EU.
-     You're in Poland, so you'd never see the script yourself, and only non-EU visits would be counted.
-     That fits the 3 visits a day. Check under jalcocertech.com → Manage site.
-  2. Pages-hosted sites. As far as I know, automatic injection doesn't reliably reach sites served by
-     Cloudflare Pages, which is all of yours except webaudit.
+So "Automatic setup" isn't injecting the script on your sites. Two likely causes:
+  
+1. The "exclude EU visitors" option. If it's on, Cloudflare skips injection for visitors in the EU.
+    You're in Poland, so you'd never see the script yourself, and only non-EU visits would be counted.
+    That fits the 3 visits a day. Check under jalcocertech.com → Manage site.
+2. Pages-hosted sites. As far as I know, automatic injection doesn't reliably reach sites served by
+    Cloudflare Pages, which is all of yours except webaudit.
 
-  The reliable fix is the same method fossengineer uses: the snippet in the page itself.
-  1. In the dashboard: jalcocertech.com → Manage site, switch to (or copy) the JS snippet. It looks
-     like <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
-     data-cf-beacon='{"token": "…"}'></script>.
-  2. Paste the snippet here. The token isn't secret: it's public in the HTML of every page that uses
-     it, like fossengineer's.
-  3. I'll add it to the shared layout of www, consulting, ebooks and webaudit, deploy them, and check
-     in a browser that the script loads with no security-policy blocks (www, consulting and ebooks
-     already allow it; I'll check webaudit's headers).
+The reliable fix is the same method fossengineer uses: the snippet in the page itself.
 
-  Do the same for multibodysystemsdynamics.com if you want it measured too. It also shows "Automatic
-  setup" with 0 visits.
+1. In the dashboard: jalcocertech.com → Manage site, switch to (or copy) the JS snippet. It looks
+    like <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "…"}'></script>.
+2. Paste the snippet here. The token isn't secret: it's public in the HTML of every page that uses
+    it, like fossengineer's.
+3. I'll add it to the shared layout of www, consulting, ebooks and webaudit, deploy them, and check
+    in a browser that the script loads with no security-policy blocks (www, consulting and ebooks
+    already allow it; I'll check webaudit's headers).
 
-  Leave out slubnechwile.com unless it's still yours and live; it's another site on the list with 0
-  visits.
+Do the same for multibodysystemsdynamics.com if you want it measured too. 
 
-  Once the snippet is in, the numbers start that same day, and the analytics token for the homelab
-  digest from my previous message becomes worth creating.
+It also shows "Automatic setup" with 0 visits.
 
-
-  So all your properties now report: fossengineer (already did), the four jalcocertech.com sites and
-  the two multibody ones. webaudit follows once you run the git pull and recreate on the homelab.
-
-  In a few days, create the read-only analytics token (Account → Account Analytics → Read) and save it
-  on the homelab as ~/.config/leads-hub/cf_analytics_token. I'll then add weekly visits per site to
-  your ntfy digest. One thing to know: the PWA counts page loads of the app, not solver runs. If you
-  later want "solves started", that's a small count the app can send to your own forms Worker, with no
-  third party involved.
+Once the snippet is in, the numbers start that same day, and the analytics token for the homelab
+digest from my previous message becomes worth creating.
 
 
- **The baseline for your nine-month plan**: 1 click and 93 impressions on jalcocertech.com, 120 pages
-  unknown to Google, sitemaps submitted on 10 October, the trailing-slash fix, no real-user data
-  anywhere (fossengineer's traffic is probably bots), and Mermaid's lazy loading taking www from 81 to
-  90.
+So all your properties now report: *fossengineer (already did), the four jalcocertech.com sites and
+the two multibody ones. 
+
+webaudit follows once you run the git pull and recreate on the homelab*.
+
+In a few days, create the read-only analytics token (Account → Account Analytics → Read) and save it
+on the homelab as `~/.config/leads-hub/cf_analytics_token`.
+
+I'll then add weekly visits per site to your ntfy digest. 
+
+> One thing to know: the PWA counts page loads of the app, not solver runs. 
+ 
+If you later want "solves started", that's a small count the app can send to your own forms Worker, with no third party involved.
+
+
+
+---
+
+## Conclusions
+
+Some are doing a lot to generate [organic content on social media](https://www.linkedin.com/feed/update/urn:li:activity:7432721791468367872/).
+
+Any [solar panel](https://youtube.com/shorts/e_GwgidIPFg) with no load has potential (V)
+
+Yet, makes no actual work / provides power / throughput
+
+```sh
+#git clone /jalcocertech-core
+cd ./jalcocertech-core/leads-hub/hub #for inbound checks
+make lead-messages LIMIT=5
+```
+
+Dont be an open solar panel, embrace the [risk and opportunities](#risk-and-opportunities):
+
+
+From my side: Have made some upgrades to the site: `https://consulting.jalcocertech.com/talks/` superseeding such `https://consulting.jalcocertech.com/presentations/opco/slides`
+
+{{< cards >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+{{< /cards >}}
+
+Most likely: You aren't doing anything wrong technically. 
+
+Everything built works. 
+
+The problem is that almost all your effort goes into building and almost none into talking to buyers. 
+
+{{< callout type="warning" >}}
+*Prep for / Delivering* sth that nobody wants is pointless *unless your one one of the violent ones*
+{{< /callout >}}
+
+{{% details title="What Ive learnt from this session" closed="true" %}}
+
+1. You build for people who don't buy.
+
+- Who you write for: about 60 articles in a few weeks, nearly all "how I built X with Cloudflare,
+Workers, KV". The readers are developers. Developers don't hire consultants; they read the ebook
+and do it themselves.
+- Who pays: business owners and team leads, who search for outcomes ("site is slow", "app keeps
+breaking in production"), not tools.
+
+2. Five audiences, so nobody feels it's for them.
+
+- Who you speak to today: small-business site owners (audit), real estate agencies (white-label),
+data engineers and analysts (talks), PMs (coaching), and teams shipping AI ("Ship AI features").
+- What happens: a visitor can't tell in five seconds that this is for them. Each extra audience makes
+the message weaker for the rest.
+
+3. Your only clients came from people, not funnels. The hospital and real estate clients didn't come
+through a form; they came from relationships. 
+
+Meanwhile your biggest asset, 70+ LinkedIn recommendations, sits unused. 
+
+> Funnels convert attention you already have; they don't create it.
+
+4. The first step asks strangers for too much. 
+
+Paying $235 is a fine filter for warm leads, but a cold visitor won't pay someone they met two minutes ago. The audit is a good free first step, but it targets small-business websites while the paid call sells AI features: two different buyers.
+
+5. Time is the real constraint. Building feels productive, but it's the comfortable option; outreach and conversations are the uncomfortable ones. 
+
+{{< callout type="info" >}}
+What I'd do next: *30 days, almost no new building*
+{{< /callout >}}
+
+1. Freeze the engine. 
+
+It's done (moving from ship stage towards fix, aka test/validate distribution and percieved value). 
+
+No new features until it has handled 10 real leads.
+
+2. Pick one buyer and one offer for 90 days. You have the most evidence for one of these two:
+
+- Small teams with a working app that's painful to ship or run. Your case: the hospital CI/CD
+story. Offer: a fixed-price "make it shippable" engagement (containers, CI, HTTPS, monitoring),
+which can be done mostly async in your evenings.
+- Real estate agencies. You have a live product, a price and a case study. But the agencies have
+to be found and contacted, which is the hardest part for someone with two jobs.
+
+I'd pick the first. It's closer to what you do every day, and it suits async delivery.
+
+3. Have 10 conversations a week; write fewer articles. No cold email, because of the Polish rules we
+    discussed. Instead:
+
+  - Your network: message the people who recommended you on LinkedIn, roughly: "I now help small
+    teams make their apps shippable (versioned releases, CI, HTTPS). Do you know a team that's
+    struggling with this?" Referrals convert far better than any page.
+  - LinkedIn posts aimed at buyers: one post a week about an outcome ("A hospital team went from
+    manual deployments to versioned releases"), not the tooling. Link the case study PDF.
+  - The audit as a conversation opener: when someone engages, offer to run their site and send them
+    the PDF.
+
+4. Measure conversations, not content. Track one number per week: real conversations with potential buyers. Ten conversations a week will produce a client long before 60 more articles will.
+
+5. Check your Cloudflare analytics once. If the consulting site gets around 20 human visitors a week,the problem is attention, not conversion.
+    
+{{< callout type="warning" >}}
+Don't tweak the site until traffic is there.
+{{< /callout >}}
+
+2. Measure the right things, starting now  Right now you can't tell whether any of this works.
+  
+I'd set up:
+
+- Google Search Console for the three sites, with the sitemaps submitted. It's free and shows which
+  searches you appear for, months before clicks arrive. As far as I know it isn't set up yet.
+- Monthly visitors per site in your weekly ntfy digest, from Cloudflare's analytics API. That's about
+  an hour of work in the homelab hub.
+- The one number that matters for you: confirmed email subscribers. Your list is the asset you can
+  use on launch day.
+
+What I'd stop: building more infrastructure, and articles about how the plumbing was built.
+
+The engine is done; nine months of plumbing articles brings readers who build things, not buyers.
+
+I can do any of these next:
+1. [Search Console](#google-search-api) for the three sites (needs a `DNS TXT` record per domain; you click "verify").
+2. Visitors per site in the weekly digest.
+3. A 12-week content plan for the chosen buyer, with titles based on real searches.
+4. The launch checklist in core.
+
+{{% /details %}}
+
 
 ### About JAlcocerTech Core
 
@@ -548,12 +644,14 @@ sqlite3 -readonly -json data/leads.db "SELECT received_at, site, kind, email, js
 
 To make things clear, i got to know and applied a new skill: https://github.com/tt-a1i/archify
 
+> Which reminded me [about Graphify](https://fossengineer.com/graphify-code-knowledge-graph/)
+
 ```sh
 npx skills add tt-a1i/archify -g
 #codex --yolo
 claude update
 #npm update -g @anthropic-ai/claude-code
-##claude --dangerously-skip-permissions
+## claude --dangerously-skip-permissions
 
 #Get-ChildItem -Path . -Recurse -Force -File -Filter "combine_pbip_model.py" -ErrorAction SilentlyContinue
 #uv run .\iac-fwk-test.py sql --fast
@@ -565,9 +663,8 @@ claude update
 If you like mermaid diagrams and [ever thought to be an architect](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#architect-or-principal), this is for you
 
 
-
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/gotify/" title="Gotify | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ntfy/" title="Ntfy | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/mailpit/" title="Mailpit | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
@@ -583,28 +680,23 @@ git clone http://192.168.1.2:3034/jalcocert/leads-slubnechwile/src/commit/c2605d
 
 ### About Leverage
 
-To achieve all what i want to achieve, im always looking for better workflows as my time allocation is maxed out already
+To achieve all what i want to achieve, im always looking for *better workflows* as my time allocation is maxed out already.
 
 Few months ago, using coding agents with [long plans.md](https://developers.openai.com/cookbook/articles/codex_exec_plans), skills, [plugins](https://agent-plugins.org/)...
 
-Agentic cli tools like herdr that wrap codex cli / claude code / hermes agents have helped me ship like never before.
+Agentic cli tools like `herdr` that wrap codex cli / claude code / hermes agents have helped me ship like never before.
 
-Using the T3 code and https://github.com/ilysenko/codex-desktop-linux for this
-
-https://github.com/generalaction/emdash
+Using the T3 code and `https://github.com/ilysenko/codex-desktop-linux` for this
 
 But whats next?
 
 How to bring memory for agents?
 
-Will it be hermes, [agentmemory](https://github.com/rohitg00/agentmemory)
+Will it be [hermes](https://fossengineer.com/hermes-agent-self-improving-ai-agent/), [agentmemory](https://github.com/rohitg00/agentmemory) or [Graphify](https://fossengineer.com/graphify-code-knowledge-graph/)?
 
 ---
 
 ## FAQ
-
-
-
 
 ### Risk and Opportunities
 
@@ -612,13 +704,100 @@ Will it be hermes, [agentmemory](https://github.com/rohitg00/agentmemory)
 
 The exact dynamic of the two sides of The Wheel strategy.
 
-Step 1: Selling Cash-Secured Puts (Getting Paid for Downside Risk)
+```sh
+cd ./poc/stocks-option-wheel
+npx wrangler pages deploy . --project-name=option-wheel
+```
+
+> `https://option-wheel.pages.dev/`
+
+
+{{% details title="What is the Black-Scholes Model? 🚀" closed="true" %}}
+
+The **Black-Scholes model** (developed in 1973 by economists Fischer Black, Myron Scholes, and Robert Merton) is the definitive, Nobel Prize-winning mathematical formula used by Wall Street to calculate the **"fair market price"** of an option contract.
+
+Before this formula existed, nobody really knew exactly how much an option check *should* cost. People just guessed based on intuition. Black-Scholes solved this by boiling option pricing down to a definitive equation using five unarguable baseline inputs:
+
+1. **Current Stock Price ($S$)**
+2. **Strike Price ($K$)**
+3. **Time to Expiration ($T$)**
+4. **Risk-Free Interest Rate ($r$)**
+5. **Volatility ($\sigma$)**
+
+Every single number on that options table—the Bid, the Ask, and the Last price—is directly generated by the market solving the Black-Scholes equation in real-time.
+
+It maps directly to your master workflow in three critical ways:
+
+1. It Dictates the "Fear Tax" You Collect
+
+In the Black-Scholes formula, the most powerful variable is **Volatility ($\sigma$)**. All other variables (like time and stock price) are fixed numbers.
+
+* When the market gets anxious about PepsiCo or SCHD, volatility spikes.
+* The Black-Scholes math responds to this spike by drastically pumping up the theoretical value of the options.
+* **The Connection:** This is why you can extract a heavy 9% to 14% pure risk premium. You are using the Black-Scholes formula to charge terrified buyers a higher "insurance premium" to take over their risk.
+
+2. It Mathematically Proves Time is Your Best Friend
+
+The model heavily weights **Time to Expiration ($T$)**.
+
+It dictates an effect called **Theta** (Time Decay). Because options have a hard expiration date, the Black-Scholes value of an option contract evaporates more rapidly every single day that the stock fails to crash.
+
+* **The Connection:** When you are running Step 1 or Step 2, you are an option *seller*. Black-Scholes math ensures that time acts like a slow leak in the buyer’s boat. Even if the stock does absolutely nothing, you make money purely because the calendar moves forward and the option value decays toward zero.
+
+3. It bakes the "Risk-Free Rate" right into your pocket
+
+Remember when we calculated how much of your 17.5% PepsiCo yield was the risk-free baseline? The Black-Scholes model uses the **Risk-Free Interest Rate ($r$)** as a core component of option pricing.
+
+* **The Connection:** Because central bank interest rates are sitting around 3.6%, the Black-Scholes math automatically inflates the baseline price of Put options to reflect that time-value of money. You don't have to manually fight for a higher rate; the formula automatically adds the macro interest rate directly into the premium check you collect on Day 1!
+
+
+Think of Black-Scholes as the **digital scale** the market uses to weigh risk. You aren't tricking anyone when you trade options; you are simply using a Nobel Prize-winning formula to charge a mathematically fair, highly predictable price to lease your capital out to the rest of the world!
+
+
+The Black-Scholes model calculates the price of European options. For a **Call option ($C$)** and a **Put option ($P$)**, the equations are:
+
+$$C = S_0 N(d_1) - K e^{-rT} N(d_2)$$
+
+$$P = K e^{-rT} N(-d_2) - S_0 N(-d_1)$$
+
+Where the terms $d_1$ and $d_2$ are calculated as:
+
+$$d_1 = \frac{\ln(S_0 / K) + \left(r + \frac{\sigma^2}{2}\right)T}{\sigma \sqrt{T}}$$
+
+$$d_2 = d_1 - \sigma \sqrt{T}$$
+
+🧩 Breaking Down the Variables (As They Apply to Your Wheel)
+
+* **$S_0$ (Current Stock Price):** The live price of the asset (e.g., SCHD at $31.92).
+* **$K$ (Strike Price):** The price you agree to buy or sell at (e.g., your $31.00 Put or $33.00 Call boundaries).
+* **$r$ (Risk-Free Interest Rate):** The benchmark rate (~3.6%). The formula multiplies this by time ($e^{-rT}$) to discount the strike price to its present value.
+* **$T$ (Time to Expiration):** Expressed as a fraction of a year (e.g., 117 days / 365 days = $0.32$).
+* **$\sigma$ (Implied Volatility):** The market's expectation of future turbulence. This is the ultimate multiplier.
+* **$N(d)$ (Cumulative Standard Normal Distribution):** This is the statistical math that translates the inputs into a **probability**.
+
+🧠 The Practical Translation for You
+
+In the Put equation, the $N(-d_2)$ term effectively represents the **probability that the stock will drop below your strike price** (meaning you get assigned).
+
+When you sell an option, you don't need to do this math yourself.
+
+The market's algorithms crunch this equation thousands of times per second to hand you your exact cash premium check on day one!
+
+{{% /details %}}
+
+How It Relates to the Wheel Strategy: https://github.com/JAlcocerT/poc/tree/main/stocks-option-wheel
+
+{{< callout type="warning" >}}
+Uncovered/Naked puts vs Cash-Secured Put!
+{{< /callout >}}
+
+Step 1: Selling **Cash-Secured Puts** (CSP - Getting Paid for Downside Risk)
 
 * **The Role:** You act like an **insurance seller** against a stock drop.
 * **What You Give Up:** Downside protection. If the stock crashes, you are contractually obligated to buy 100 shares at the agreed strike price, regardless of how far it falls.
 * **What You Get Paid For:** You collect an upfront cash premium for taking on that downside assignment risk. If the stock stays above your strike, you keep the cash free and clear.
 
-Step 2: Selling Covered Calls (Getting Paid to Cap Upside Potential)
+Step 2: Selling **Covered Calls** (CC - Getting Paid to Cap Upside Potential)
 
 * **The Role:** You act like a **seller who sets a firm exit price**.
 * **What You Give Up:** Unlimited upside. If the stock rallies significantly past your strike price, you do not participate in any gains beyond that strike because your shares are called away at the agreed price.
@@ -635,7 +814,7 @@ In both phases, you monetize market uncertainty and time decay (theta) in exchan
 
 That is a sharp philosophical analogy—an employment contract structurally mirrors a permanent **covered straddle / collar**, exchanging volatility and unlimited upside for capped, predictable cash flow.
 
-The Parallels: Employment vs. The Wheel
+The Parallels: *Employment vs. The Wheel*
 
 | Dimension | In "The Wheel" (Covered Call + Cash-Secured Put) | In a Standard Employment Contract |
 | --- | --- | --- |
@@ -739,26 +918,15 @@ graph LR
     style E fill:#fff3cd,stroke:#ffc107,stroke-width:1px
 ```
 
-
-#### Skills Im using
-
-Coming from [here](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-update/#skills-im-using)
-
-1. Archify
-2. Zettel blog notes, weekly work summarizer
-3. huashu design
-4. blog post editor, image gen
-
 ### Web audits x checks
 
 There are no excuses to have a **website A+ for the planet**: https://www.websitecarbon.com/website/fossengineer-com/
-
 
 ```sh
 cd ~/poc_webs_magnet && git pull && docker compose -f docker-compose.prod.yml up -d --force-recreate
 ```
 
-ou can confirm the first scheduled run published the Cloudflare post with:
+You can confirm the first scheduled run published the Cloudflare post with:
 
 ```sh
 npx wrangler pages deployment list --project-name jalcocert
@@ -786,15 +954,14 @@ https://www.bitdoze.com/self-hosted/#level-up
 https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/
 https://selfh.st/apps/
 
-Mailpit and mailjet (SMTP API) were really helpful to get this going:
+Mailpit and mailjet **SMTP APIs** were really helpful to get this going:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/linkchecker/" title="LinkChecker | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/blob/main/ntfy/" title="Mailpit | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
-On the homelab: run git pull in jalcocertech-core to pick up the hub's new fallback. 
+On the homelab: *run git pull in jalcocertech-core to pick up the hub's new fallback.*
 
 ```sh
 cd ./jalcocertech-core && git pull
@@ -802,15 +969,15 @@ cd leads-hub/hub && docker compose up -d --build
 docker compose exec hub python -c "import leadshub; print(leadshub.__version__)"   # should print 0.4.3
 ```
 
-It isn't urgent, since your .env sets the sender. 
+It isn't urgent, since your `.env` sets the sender. 
 
 To see the new email, request an emailed full report from the audit tool; the "ready" email will include the PDF link.
 
 
-  1. jalcocertech-core: pull, then rebuild the hub. The hub's code is copied into its Docker image when
-  the image is built (only sequences/ is mounted), so git pull alone doesn't change what's running:
+1. jalcocertech-core: pull, then rebuild the hub. The hub's code is copied into its Docker image when
+the image is built (only sequences/ is mounted), so git pull alone doesn't change what's running:
 
-  2. poc_webs_magnet: pull once more. The Node 18 fix for make report came after your last pull:
+2. poc_webs_magnet: pull once more. The Node 18 fix for make report came after your last pull:
 
 ```sh
 cd ~/poc_webs_magnet && git pull
@@ -821,16 +988,18 @@ docker exec auditmagnet-prod node scripts/audit-cli.mjs https://jalcocertech.com
 No rebuild or recreate is needed: the repo is mounted into the container, and nothing the server runs has changed since your last deploy.
 
 
+That report didn't show up in make reports because the CLI doesn't store reports on the server. 
 
-That report didn't show up in make reports because the CLI doesn't store reports on the server. Itonly writes the files you ask for, with no link or token, so the list never includes it. Two ways to
-  get PDFs:
+Itonly writes the files you ask for, with no link or token, so the list never includes it. Two ways to
+get PDFs:
 
-  1. For a CLI audit, ask for the PDF too:
+1. For a CLI audit, ask for the PDF too:
 
 ```sh
 docker exec auditmagnet-prod node scripts/audit-cli.mjs https://jalcocertech.com --links --html=data/example.html --pdf=data/example.pdf
 ```  
-  data/ inside the container is ~/poc_webs_magnet/data/ on the host, so the file lands at `~/poc_webs_magnet/data/example.pdf`. 
+
+data/ inside the container is `~/poc_webs_magnet/data/` on the host, so the file lands at `~/poc_webs_magnet/data/example.pdf`. 
   
 Copy it to your laptop with:
 
@@ -841,22 +1010,31 @@ scp homelab:~/poc_webs_magnet/data/example.pdf .
 
 2. For reports created on the site (the ones make reports lists), open the .pdf link in a browser, for example: `https://webaudit.jalcocertech.com/r/fcdc291f-1d55-4c62-bdf7-5bd63e5000c3.pdf`
 
-The first open prints the PDF, which takes a second. After that, make reports shows "PDF printed" for it.
+The first open prints the PDF, which takes a second. 
 
-The two box2overtake "full" reports were created before your update, so their pages have no button, but the .pdf link works for them too.
+After that, make reports shows "PDF printed" for it.
 
-Why the apex scored 60 on security: you audited jalcocertech.com, the apex, which only redirects to www. The CLI checked the headers on that redirect response, and Cloudflare's redirect doesn't carry the _headers from the site. www.jalcocertech.com scores 100. The web app doesn't have this problem because it follows redirects before auditing; the CLI doesn't yet.
+The two box2overtake "full" reports were created before your update, so their pages have no button, but the `.pdf` link works for them too.
 
-There's also a real point in it: HSTS is worth having on the apex itself, so browsers never try http://jalcocertech.com. That's a Cloudflare setting (SSL/TLS → Edge Certificates → HSTS), not a _headers change. Only switch it on if every subdomain serves HTTPS, which yours do.
+Why the apex scored 60 on security: you audited jalcocertech.com, the apex, which only redirects to www.
+
+The CLI checked the headers on that redirect response, and Cloudflare's redirect doesn't carry the _headers from the site. www.jalcocertech.com scores 100. 
+
+The web app doesn't have this problem because it follows redirects before auditing; the CLI doesn't yet.
+
+There's also a real point in it: *HSTS is worth having on the apex itself, so browsers never try `http://jalcocertech.com`*
+
+That's a Cloudflare setting (SSL/TLS → Edge Certificates → HSTS), not a `_headers` change. 
+
+{{< callout type="warning" >}}
+Only switch it ON if every subdomain serves HTTPS!
+{{< /callout >}}
 
 
 #### Web Best practices
 
 {{% details title="The ones I captured this year so far... 🚀" closed="true" %}}
 
-I scanned all 145 non-draft blog files dated 2026. 
-
-I found 14 strong matches.
 
 Posts containing the guidance itself
 
@@ -919,82 +1097,86 @@ This is the consolidated version of what I wrote and tested across those posts a
 
 1. **Start with the job of the website**
 
-   Before choosing colors or a framework, define four things: the brand and its one-line purpose, the audience, three concrete value propositions, and the primary action visitors should take. A landing page without one dominant action is just a brochure.
+Before choosing colors or a framework, define four things: *the brand and its one-line purpose, the audience, three concrete value propositions, and the primary action visitors should take.*
 
-   The website should also have a place in the value ladder. Free content attracts attention; an audit, calculator or useful interaction proves value; the CTA moves the right visitor toward DIY, DWY or DFY help.
+A landing page without one dominant action is just a brochure.
+
+The website should also have a place in the value ladder. 
+
+Free content attracts attention; an audit, calculator or useful interaction proves value; the CTA moves the right visitor toward DIY, DWY or DFY help.
 
 2. **Commit to one aesthetic direction**
 
-   Pick a deliberate identity such as editorial luxury, organic technology, raw brutalism or industrial precision. Turn it into design tokens: palette, typography, spacing, radii, borders, imagery and motion rules. Keep these consistent instead of improvising each component.
+Pick a deliberate identity such as editorial luxury, organic technology, raw brutalism or industrial precision. Turn it into design tokens: palette, typography, spacing, radii, borders, imagery and motion rules. Keep these consistent instead of improvising each component.
 
-   Avoid the usual AI-generated look: generic typography, purple gradients, interchangeable cards and decoration without context. The page should have one memorable visual idea, not ten unrelated effects.
+Avoid the usual AI-generated look: generic typography, purple gradients, interchangeable cards and decoration without context. The page should have one memorable visual idea, not ten unrelated effects.
 
 3. **Make the above-the-fold area earn the click**
 
-   The first viewport should explain what this is, who it helps, what outcome it creates and what to do next. Use a clear headline, supporting sentence and one high-contrast CTA.
+The first viewport (ATF) should explain what this is, who it helps, what outcome it creates and what to do next. Use a clear headline, supporting sentence and one high-contrast CTA.
 
-   Proof should appear early: a product preview, useful statistic, customer evidence, risk reversal or three short trust points. When appropriate, replace a passive CTA with a low-friction interaction such as entering a URL, running a check or previewing the product. Reduce time to value before asking the visitor to scroll.
+Proof should appear early: a product preview, useful statistic, customer evidence, risk reversal or three short trust points. When appropriate, replace a passive CTA with a low-friction interaction such as entering a URL, running a check or previewing the product. Reduce time to value before asking the visitor to scroll.
 
 4. **Use a dependable page hierarchy**
 
-   A practical sequence is:
+A practical sequence is:
 
-   - Navigation with one visible CTA.
-   - Hero with the promise, action and immediate proof.
-   - Social proof or trust strip.
-   - Three outcome-oriented benefits, preferably demonstrated through functional micro-interfaces rather than static cards.
-   - A short explanation of how the process works.
-   - A contrast section explaining the old way versus your approach.
-   - Offer, pricing or one strong get-started section.
-   - FAQ, legal links and a final CTA.
+- Navigation with one visible CTA.
+- Hero with the promise, action and immediate proof.
+- Social proof or trust strip.
+- Three outcome-oriented benefits, preferably demonstrated through functional micro-interfaces rather than static cards.
+- A short explanation of how the process works.
+- A contrast section explaining the old way versus your approach.
+- Offer, pricing or one strong get-started section.
+- FAQ, legal links and a final CTA.
 
-   Every section should either explain, prove, qualify or convert. If it does none of those, it is probably noise.
+Every section should either explain, prove, qualify or convert. If it does none of those, it is probably noise.
 
 5. **Treat forms as progressive commitment**
 
-   Start with easy click-based questions and delay high-friction fields until the visitor understands the value. A useful qualification flow is: opportunity size, compatibility, website or problem context, name and business email, then the result.
+Start with easy click-based questions and delay high-friction fields until the visitor understands the value. A useful qualification flow is: opportunity size, compatibility, website or problem context, name and business email, then the result.
 
-   Capture enough information before showing the scheduler so an abandoned booking can still be followed up. Branch the result: qualified visitors can book immediately; others can join a waitlist or receive a more suitable offer. For high-ticket work, fewer well-qualified leads are more useful than many anonymous submissions.
+Capture enough information before showing the scheduler so an abandoned booking can still be followed up. Branch the result: qualified visitors can book immediately; others can join a waitlist or receive a more suitable offer. For high-ticket work, fewer well-qualified leads are more useful than many anonymous submissions.
 
 6. **Show functionality, not decorative motion**
 
-   Interactions should make the product easier to understand. A chart should reveal an insight, a scheduler should demonstrate the flow, and a card animation should communicate state—not merely move because GSAP is installed.
+Interactions should make the product easier to understand. A chart should reveal an insight, a scheduler should demonstrate the flow, and a card animation should communicate state—not merely move because GSAP is installed.
 
-   Use one coherent motion language: consistent easing, restrained stagger values and a small number of high-impact sequences. Clean up animation contexts, respect reduced-motion preferences and confirm that every interaction remains usable without waiting for animation.
+Use one coherent motion language: consistent easing, restrained stagger values and a small number of high-impact sequences. Clean up animation contexts, respect reduced-motion preferences and confirm that every interaction remains usable without waiting for animation.
 
 7. **Keep the fast parts static and isolate interactivity**
 
-   Astro works well when the hero, proof, copy, FAQs and most layout ship as static HTML. Hydrate only interactive islands such as a qualification modal, chatbot, calculator or scheduler. Load below-the-fold widgets when visible or idle rather than making them part of the initial payload.
+Astro works well when the hero, proof, copy, FAQs and most layout ship as static HTML. Hydrate only interactive islands such as a qualification modal, chatbot, calculator or scheduler. Load below-the-fold widgets when visible or idle rather than making them part of the initial payload.
 
-   Start with the simplest architecture that preserves the product truth:
+Start with the simplest architecture that preserves the product truth:
 
-   - Use browser-side logic for light, stable calculations.
-   - Precompute data into JSON when Python is useful but a runtime backend is not.
-   - Add FastAPI or another backend only for heavy, dynamic or authoritative computation.
+- Use browser-side logic for light, stable calculations.
+- Precompute data into JSON when Python is useful but a runtime backend is not.
+- Add FastAPI or another backend only for heavy, dynamic or authoritative computation.
 
 8. **Separate content, design and business logic**
 
-   Marketing copy, features, testimonials, pricing and FAQs should live in Markdown or structured content rather than being scattered through components. Qualification rules belong in their own function or configuration. Secrets belong in environment variables.
+Marketing copy, features, testimonials, pricing and FAQs should live in Markdown or structured content rather than being scattered through components. Qualification rules belong in their own function or configuration. Secrets belong in environment variables.
 
-   This makes copy changes safe, lets one design serve multiple brands, and prevents a redesign from silently changing the funnel logic.
+This makes copy changes safe, lets one design serve multiple brands, and prevents a redesign from silently changing the funnel logic.
 
 9. **Make the development workflow reproducible**
 
-   Begin with a BRD and ask the agent whether the requirements are clear. Then create an explicit technical stack, independent development phases and a definition of done. Keep a `Makefile` with obvious setup, development, test and production commands.
+Begin with a BRD and ask the agent whether the requirements are clear. Then create an explicit technical stack, independent development phases and a definition of done. Keep a `Makefile` with obvious setup, development, test and production commands.
 
-   Record significant iterations as change requests. Finish with a walkthrough explaining how to run, deploy and modify the project. A beautiful result that nobody can reproduce or maintain is still a weak deliverable.
+Record significant iterations as change requests. Finish with a walkthrough explaining how to run, deploy and modify the project. A beautiful result that nobody can reproduce or maintain is still a weak deliverable.
 
 10. **Design mobile-first and verify the boring parts**
 
-    Stack complex layouts cleanly, reduce oversized hero text, simplify navigation and make every tap target comfortable. Use semantic HTML, visible focus states, descriptive labels, sufficient contrast and useful alternative text.
+Stack complex layouts cleanly, reduce oversized hero text, simplify navigation and make every tap target comfortable. Use semantic HTML, visible focus states, descriptive labels, sufficient contrast and useful alternative text.
 
-    Validate performance, accessibility, SEO and responsive behavior. Confirm that forms reach the real destination, analytics record the important funnel events, booking works, emails arrive, legal pages exist and users can unsubscribe where required.
+Validate performance, accessibility, SEO and responsive behavior. Confirm that forms reach the real destination, analytics record the important funnel events, booking works, emails arrive, legal pages exist and users can unsubscribe where required.
 
 11. **Measure the complete funnel**
 
-    Track meaningful steps: CTA click, form start, step completion, submission, qualification, booking and follow-up. Measure where people stop rather than celebrating page views.
+Track meaningful steps: CTA click, form start, step completion, submission, qualification, booking and follow-up. Measure where people stop rather than celebrating page views.
 
-    The actual definition of done is not "the landing page looks nice." It is: the right visitor understands the offer, sees proof, completes the intended action, enters a working follow-up loop and can be measured without sacrificing privacy.
+The actual definition of done is not "the landing page looks nice." It is: the right visitor understands the offer, sees proof, completes the intended action, enters a working follow-up loop and can be measured without sacrificing privacy.
 
 **Compact definition of done**
 
@@ -1007,179 +1189,6 @@ This is the consolidated version of what I wrote and tested across those posts a
 - Forms, scheduling, analytics, email and follow-up work end to end.
 - Privacy, terms, consent and unsubscribe behavior match what the system actually does.
 - The repository contains requirements, development phases, repeatable commands and a deployment walkthrough.
-
-
-{{% /details %}}
-
-
-### Improved RE and GenBI
-
-I found 12 source posts dated 2026 mentioning one or both domains.
-
-Six contain substantial discussion; the rest are roadmap, portfolio, or monitoring references.
-
-#### realestate.jalcocertech.com
-
-Your story evolved through three stages: `https://consulting.jalcocertech.com/talks/real-estate-agency-ai-website/`
-
-1. Custom full-stack Real Estate product
-
-In A SaaS for Real Estate Agencies (content/blog/entrep-saas-re-rag.md:1), you described:
-- Real-estate agencies as the target avatar
-- A conversion-ready website and property catalogue
-- Mortgage calculator with Chart.js
-- Markdown-based property storage and editing
-- Astro hybrid rendering
-- OpenAI chatbot and FastAPI scraper
-- Basic authentication, CORS and rate limiting
-- Docker deployment through your homelab
-
-Your conclusion was blunt: the product worked; client acquisition did not.
-
-2. Pivot into a white-label DFY offer
-
-In White-Labelling the Real Estate solution (content/blog/entrep-saas-re-whitelabel.md:1), you reframed the existing software as a reusable service:
-- Landing adapted from the Shopify/GenBI project
-- Cal.com booking for qualified prospects
-- Manual 1:1 onboarding
-- $1,000–$3,000 setup
-- $100–$300/month maintenance
-- Targeted prospecting toward B2B real-estate agencies
-
-The site became a funnel for selling the existing technical capability, rather than another speculative SaaS.
-
-3. Original roadmap item cancelled, reusable asset retained
-
-By March–May, you repeatedly described the original “Custom RAG and WebApp via DecapCMS” idea as cancelled and white-labelled, including in From Idea to Resolution (content/blog/z-idea-2-resolution.md:247), PoC 102 (content/blog/poc-102.md:179), and PoC 104 (content/blog/poc-104.md:168).
-
-So, realestate.jalcocertech.com became a high-ticket white-label Real Estate funnel, calculator, chatbot and managed implementation offer—not a conventional self-serve SaaS.
-
-#### genbi.jalcocertech.com
-
-The main concept was a Shopify-focused agentic COO / profit-leak detector.
-
-In The insights for a profitable Shopify (content/blog/entrep-saas-pnpshopify.md:1), you wrote that:
-
-- Shopify stores share sufficiently similar data structures to support repeatable analytics.
-- Store owners may ignore generic website audits but care about increasing profit.
-- Every project should begin with a landing page and lead capture.
-- The landing should qualify stores before admitting them to your calendar.
-- AuditPro was intended for Shopify businesses doing more than $10k revenue.
-- The offer could support high-ticket DFY analytics and potentially a success-fee model.
-
-The technical model had four layers:
-
-- PostgreSQL data
-- BAML semantic definitions
-- FastAPI/Python agentic logic
-- React/Recharts representation
-
-The landing used Astro/React, Tailwind, Framer Motion, Docker and a Cloudflare Tunnel. Its stronger ATF combined a headline, interactive URL input and video proof in the first viewport (example(content/blog/entrep-saas-slub-product-dev.md:74)).
-
-In From Shopify to Profit (content/blog/entrep-saas-pnpshopify-be.md:1), you acknowledged that the landing existed before the complete product. The next work was:
-
-- Shopify GraphQL integration
-- Completing the analytics backend
-- Manual onboarding
-- Finding prospects
-- Monitoring the public service with Uptime Kuma
-
-So, genbi.jalcocertech.com was less a finished SaaS and more a productized demonstration and qualification funnel for your Generative BI/DFY analytics capability.
-
-Shared conclusion
-
-Both domains became proof assets inside your value ladder:
-
-- realestate: industry-specific white-label software
-- genbi: industry-specific analytics and profit discovery
-- Both: high-ticket DFY lead magnets with manual onboarding
-- Shared constraint: distribution and prospecting, not software construction
-- Shared operational obligation: uptime, analytics, security and working follow-up
-
-By April, you presented them together as portfolio PoCs in How to PoC (content/blog/poc-101.md:350): *demonstrations of what your consulting/full-service tier could deliver*.
-
-The live domains, repository files and all 12 related 2026 posts are indexed in the expandable section below.
-
-{{% details title="Real Estate and GenBI repositories 📌" closed="true" %}}
-
-The clearest domain-to-repository mapping is:
-
-> Some implementation repositories are private working repos. These links remain useful as my project inventory, but readers without access will see a GitHub 404. `Data-Chat` is public; the live sites and related blog posts are public.
-
-| Domain | Primary repository | Role |
-|---|---|---|
-| [`realestate.jalcocertech.com`](https://realestate.jalcocertech.com/) | [`moi-realestate-pro-astro-bot`](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot) | Astro website, property editor, chatbot/RAG, mortgage calculator and FastAPI scraper. |
-| [`genbi.jalcocertech.com`](https://genbi.jalcocertech.com/) | [`poc_shopify`](https://github.com/JAlcocerT/poc_shopify) | Shopify AuditPro landing, qualification funnel and product-facing application. |
-| GenBI analytics engine | [`langchain-db-ui/Z_PGSQL-GenBI`](https://github.com/JAlcocerT/langchain-db-ui/tree/master/Z_PGSQL-GenBI) | PostgreSQL, FastAPI, BAML and React/Recharts experiments behind the Generative BI concept. |
-
-##### Real Estate repository
-
-The deployed service is primarily documented in [`moi-realestate-pro-astro-bot`](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot):
-
-- [Sales notes](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales.md)
-- [Sales automation](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md)
-- [B2B positioning](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-b2b.md)
-- [API security](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-api-security.md)
-- [CORS and rate-limiting change request](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-4-api-security.md)
-- [Chatbot architecture](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-chatbot-astro.md)
-- [Mortgage calculator](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/src/pages/mortgage-calculator.astro)
-- [FastAPI scraper service](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/tree/master/scraper-service)
-- [Scraper migration change request](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-5-scraper-migration.md)
-
-Earlier experiments that fed the final solution:
-
-- [`ScrewFastMoiRealEstate`](https://github.com/JAlcocerT/ScrewFastMoiRealEstate) - earlier Astro real-estate website.
-- [`Data-Chat`](https://github.com/JAlcocerT/Data-Chat) - database chat and RAG experiments.
-- [`Data-Chat/LLamaIndex/With_Mem0`](https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0) - real-estate assistant experiment with memory.
-- [`moi-realestate-pb`](https://github.com/JAlcocerT/moi-realestate-pb) - previous Streamlit/PocketBase scraper logic.
-- [`py_stocks/EDA_Mortage`](https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage) - original mortgage-calculator experiment.
-
-##### GenBI repositories
-
-[`poc_shopify`](https://github.com/JAlcocerT/poc_shopify) contains the domain-facing landing and qualification experience:
-
-- [Business requirements](https://github.com/JAlcocerT/poc_shopify/blob/master/z-brd.md)
-- [Requirement clarifications](https://github.com/JAlcocerT/poc_shopify/blob/master/clarification.md)
-- [Development phases](https://github.com/JAlcocerT/poc_shopify/blob/master/z-development-phases.md)
-- [Landing technical stack](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/tech-stack.md)
-- [Qualification-form implementation](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-form-tech.md)
-- [Qualification-form psychology](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-form-psychology.md)
-- [Above-the-fold changes](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-atf-changes.md)
-- [Landing-page business strategy](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/business-strategy.md)
-
-[`langchain-db-ui`](https://github.com/JAlcocerT/langchain-db-ui) contains the earlier and shared analytics foundation:
-
-- [`Z_PGSQL-GenBI`](https://github.com/JAlcocerT/langchain-db-ui/tree/master/Z_PGSQL-GenBI) - the four-layer GenBI experiment.
-- [GenBI technical stack](https://github.com/JAlcocerT/langchain-db-ui/blob/master/Z_PGSQL-GenBI/tech-stack.md)
-- [GenBI sales notes](https://github.com/JAlcocerT/langchain-db-ui/blob/master/Z_PGSQL-GenBI/sales.md)
-- [`Data-Chat`](https://github.com/JAlcocerT/Data-Chat) - the earlier chat-with-data foundation referenced by both project histories.
-
-##### Related 2026 posts
-
-The repositories explain the implementation. These posts preserve the decisions, experiments and commercial pivots around them.
-
-**Real Estate story**
-
-- [A SaaS for Real Estate Agencies: Custom RAG Solution](https://jalcocert.github.io/JAlcocerT/custom-re-rag/) - the full Astro, RAG/chatbot, editor, calculator, scraper and security build.
-- [White-Labelling the Real Estate Solution](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/) - the pivot from an underpriced custom project to a repeatable DFY offer.
-- [From Idea to Resolution](https://jalcocert.github.io/JAlcocerT/take-ideas-to-their-digital-resolution/) - records the original custom RAG/CMS roadmap item as cancelled and retained as a white-label asset.
-- [How to PoC 102](https://jalcocert.github.io/JAlcocerT/poc-102/) - April roadmap checkpoint for the white-labelled Real Estate project.
-- [How to PoC: Arbitrage with AI](https://jalcocert.github.io/JAlcocerT/poc-104/) - May checkpoint placing the original idea in the ideas cemetery while keeping the deployed solution.
-
-**GenBI story**
-
-- [Improving a micro-SaaS Conversion: Email Automation](https://jalcocert.github.io/JAlcocerT/iterating-and-improving-a-micro-saas/) - uses the GenBI landing as the example for a stronger ATF with an interactive input and video proof.
-- [How to Analyze Business Opportunities](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/) - places GenBI inside the wider business-opportunity and service-offer thinking.
-- [The Insights for a Profitable Shopify](https://jalcocert.github.io/JAlcocerT/custom-analytics-for-shopify/) - defines AuditPro, the Shopify-facing landing, qualification logic and four-layer GenBI architecture.
-- [From Shopify to Profit](https://jalcocert.github.io/JAlcocerT/shopify-business-data-analytics/) - continues from the landing toward Shopify integration, delivery, prospecting and service monitoring.
-- [The RevOps You Always Dreamt About](https://jalcocert.github.io/JAlcocerT/building-a-revops-center-agency/) - positions GenBI as part of the broader RevOps and consulting offer.
-
-**Shared portfolio and operations context**
-
-- [How to PoC](https://jalcocert.github.io/JAlcocerT/poc-101/) - presents GenBI and Real Estate together as proof assets in the JAlcocerTech portfolio.
-- [Spring Is Here (and So Are Weddings)](https://jalcocert.github.io/JAlcocerT/quick-weddings-poc/) - references the operational need to monitor deployed services such as `realestate.jalcocertech.com` rather than checking them manually.
-
-The practical boundary is: `poc_shopify` owns the Shopify-specific offer and conversion layer, while `langchain-db-ui/Z_PGSQL-GenBI` records the reusable analytics architecture behind it.
 
 {{% /details %}}
 
@@ -1214,8 +1223,7 @@ The shorter standard command is:
 make audit-full-fast URL=https://beyondajourney.pages.dev
 ```
 
-
-### EayP v4 x EmDash x Monolith
+### EayP v4
 
 Coming from [eayp v3 here](https://jalcocert.github.io/JAlcocerT/diy-webs-via-paas/#testing-the-web-audits-with-eayp-v3) and [here](https://jalcocert.github.io/JAlcocerT/take-ideas-to-their-digital-resolution/#eayp-v3)
 
@@ -1223,8 +1231,6 @@ Coming from [eayp v3 here](https://jalcocert.github.io/JAlcocerT/diy-webs-via-pa
 ```sh
 git clone https://github.com/JAlcocerT/EntreAgujayPunto #decapCMS
 ```
-
-0. Interesting Recipes
 
 How could I not offer something very special to entreagujaypunto: *to capture all those projects with an editable UI*
 
@@ -1253,7 +1259,9 @@ docker network connect --alias foldergram \
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/foldergram" title="Foldergram | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-I compared both projects. They serve different purposes rather than being direct alternatives.
+I compared both projects. 
+
+They serve different purposes rather than being direct alternatives.
 
    Area          Foldergram                                           EntreAgujayPunto
   ━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -1380,11 +1388,15 @@ If you want a public gallery plus a private administrator login, that would be t
 
 ### Outbound
 
+Outbound prospecting is the one that you choose (not like the inbound) and thats why it [requires different architecture](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/adr/0005-outbound-prospecting-separate-from-inbound.md), in fact, you can put together [a medallion pipeline](#medallion) around this.
+
 The US and UK are opt-out markets for B2B email, so Apify, lead enrichment and Smartlead can be done legally there.
 
-There are a few hard rules, and the US fines for ignoring them are steep.
+There are a **few hard rules**, and the US fines for ignoring them are steep.
 
-United States: legal under CAN-SPAM, with no consent needed, if every email:
+{{% details title="US vs UK vs EU contact" closed="true" %}}
+
+United States: *legal under CAN-SPAM, with no consent needed*, if every email:
 
 - Says honestly who it's from: your brand, e.g. JAlcocerTech, is fine; correct "From" and reply
   addresses.
@@ -1395,11 +1407,14 @@ United States: legal under CAN-SPAM, with no consent needed, if every email:
 - Has a working opt-out, honoured within 10 business days and permanently, across every domain you
   send from.
 
-Fines: the FTC can charge up to about $50,000 per non-compliant email. That's why the checklist isn't
-optional, even though enforcement against small, compliant senders is rare.
+Fines: the FTC can charge up to about $50,000 per non-compliant email. 
+
+That's why the checklist isn't optional, even though enforcement against small, compliant senders is rare.
 
 Scraping: pulling addresses with automated tools is an aggravating factor if the emails also break
-the rules above. Fully compliant emails avoid that problem.
+the rules above. 
+
+Fully compliant emails avoid that problem.
 
 Skip Canada (CASL requires opt-in) and Australia.
 
@@ -1414,8 +1429,10 @@ United Kingdom: legal to companies only (PECR)
 
 What the EU still asks of you, even for US/UK targets
 
-You're based in Poland, so GDPR covers your own processing of these contacts. The practical burden is
-light:
+You're based in EU, so GDPR covers your own processing of these contacts.
+
+The practical burden is light:
+
 - A one-page legitimate-interest note, written once, kept on file.
 - One sentence in the first email: "I found your business on Google Maps; reply STOP and I'll delete
   your details."
@@ -1423,7 +1440,11 @@ light:
 
 Complaints from US businesses to EU regulators are very unlikely, but this keeps you clean.
 
-Setup that protects your existing engine and your anonymity
+{{% /details %}}
+
+
+
+{{% details title="Setup that protects your existing engine and your anonymity" closed="true" %}}
 
 - Domain: a separate sending domain, never jalcocertech.com.
 - Sender: Smartlead, never the Mailjet account behind your lead engine.
@@ -1434,30 +1455,38 @@ Setup that protects your existing engine and your anonymity
   report"), a link to the full report, and one question. Don't attach the PDF; links get past spam
   filters better.
 
+{{% /details %}}
 
-Using getleadarchitect.com as a separate brand for outbound, while you learn the craft, is a sound
-  plan. Lots of agencies send cold outreach from a separate domain to protect their main one. Three
-  things to get right:
 
-  1. It shields your brand, but it doesn't hide who sends. US law requires every cold email to identify
-     the sender truthfully and include a postal address. The LeadArchitect name can carry the
-     outreach, but it must be a real, honest brand: a real site, real client stories, a real address.
-     So: no invented testimonials, and no fake "team".
-  2. Lead with the evidence, not "your website sucks". "Your homepage takes 7.8 s on mobile; here's the
-     report" makes the same point and gets better replies. Insulting openers mostly get "mark as
-     spam", which damages the domain you're warming up.
-  3. Treat it as an experiment and measure it. Per weekly batch, track:
-     - deliverability: bounces and spam rate;
-     - reply rate and positive replies;
-     - calls booked.
+Using `getleadarchitect.com` as a separate brand for outbound, while you learn the craft, is a sound
+plan. 
+  
+Lots of agencies send cold outreach from a separate domain to protect their main one. 
 
-     After 4–6 batches you'll know whether outbound works for you. That's what you wanted to learn.
+Three things to get right:
 
-  The DNS fix
+1. It shields your brand, but it doesn't hide who sends. US law requires every cold email to identify
+    the sender truthfully and include a postal address. The LeadArchitect name can carry the
+    outreach, but it must be a real, honest brand: a real site, real client stories, a real address.
+    So: no invented testimonials, and no fake "team".
+2. Lead with the evidence, not "your website sucks". "Your homepage takes 7.8 s on mobile; here's the
+    report" makes the same point and gets better replies. Insulting openers mostly get "mark as
+    spam", which damages the domain you're warming up.
+3. Treat it as an experiment and measure it. Per weekly batch, track:
+    - deliverability: bounces and spam rate;
+    - reply rate and positive replies;
+    - calls booked.
 
-  Right now getleadarchitect.com has mail records only and no web record, which is why it doesn't load.
+> After 4–6 batches you'll know whether outbound works for you. That's what you wanted to learn.
 
-  Here's the snag. To serve the apex domain (getleadarchitect.com with no www) from Cloudflare Pages,
+
+
+{{% details title="The DNS fix for getleadarchit from porkbun to CF" closed="true" %}}
+
+Right now `getleadarchitect.com` has mail records only and no web record, which is why it doesn't load.
+
+
+To serve the apex domain (getleadarchitect.com with no www) from Cloudflare Pages,
   Cloudflare must manage the domain's DNS; an external DNS provider like Porkbun only works for
   subdomains. So the clean fix is to move the DNS to Cloudflare, like your other domains, without
   breaking email:
@@ -1498,174 +1527,123 @@ failing. Leave any Smartlead or Google verification TXT records exactly as they 
   prospects would land on a Polish site with the placeholder-looking testimonials, which undermines the
   very first click.
 
-  Send me the offer line and whether you have a US mailing address yet, and I'll prepare the one-pager
-  while the DNS moves.
 
+{{% /details %}}
 
+> Put together this `https://www.getleadarchitect.com/` together in sincrony with web-audit and with a [branded report](https://www.getleadarchitect.com/sample-report.pdf)
 
-● Fair. No new site. Let's go straight to the emails, with the minimum that's still legal and works:
+Then:
 
-  - No website for now. At Porkbun, forward getleadarchitect.com to leadarchitect.org (URL forwarding,
-    one minute), so anyone who checks the domain lands somewhere. Swap out those testimonials when you
-    can, since that's where prospects will land.
-  - No links in the first email. That's best practice for cold email anyway: plain text gets past spam
-    filters better. The email states one concrete finding and asks if they want the full report. When
-    someone replies, you send them the PDF your audit tool already makes. No hosting needed.
-  - The legal minimum lives inside the email (US): your real brand name, an unsubscribe line (Smartlead
-    adds it), and a postal address in the signature.
+- No links in the first email. That's best practice for cold email anyway: plain text gets past spam
+  filters better. The email states one concrete finding and asks if they want the full report. When
+  someone replies, you send them the PDF your audit tool already makes. No hosting needed.
+- The legal minimum lives inside the email (US): your real brand name, an unsubscribe line (Smartlead
+  adds it), and a postal address in the signature.
 
-  So the only thing to build is the bridge from the Apify CSV to the Smartlead CSV. I'm writing it now
-  in the audit tool's repo. It reuses the CLI you already have:
+So the only thing to build is the bridge from the Apify CSV to the Smartlead CSV. 
 
- You can focus on the emails now: the outreach batch is built, tested and pushed. Nothing new to host.
+I'm writing it now in the audit tool's repo. It reuses the CLI you already have.
 
-  What you run each week (on the homelab, or on this laptop):
-  make outreach CSV=~/Downloads/apify-leads.csv ARGS="--limit=30"
-  It reads your Apify or enrichment export (column names are detected automatically) and runs each site
-  through the audit tool. It saves:
-  - smartlead.csv: one row per lead with company, first_name and two custom fields, finding (a plain
-    sentence) and finding_short (for the subject line);
-  - audits/<site>.pdf: the report to send when someone replies;
-  - skipped.csv and no-finding.csv: who was left out and why.
+You can focus on the emails now: *the outreach batch is built, tested and pushed*. 
 
-  It protects you automatically:
-  - keeps US businesses and UK companies only;
-  - drops UK rows that look like sole traders (no Ltd/LLP/PLC, or a free-mail address), Canada, EU
-    countries, social pages, missing emails and duplicates;
-  - doesn't email sites that are fine. A good site gets no pitch; a weak "2.9 s on a 97/100 site"
-    doesn't count.
+What you run each week (on the homelab, or on this laptop):
 
-  Tested with a fake 8-row CSV: all 5 filter cases were caught, and three of your own sites took about
-  18 s each to audit, each with a PDF. The lead data folder (outreach/) is excluded from git, and your
-  readme.md wasn't touched.
+```sh
+make outreach CSV=~/Downloads/apify-leads.csv ARGS="--limit=30"
+```
 
-  The email, in docs/outreach.md, is plain text with no links:
+It reads your Apify or enrichment export (column names are detected automatically) and runs each site
+through the audit tool. It saves:
+- `smartlead.csv`: one row per lead with company, first_name and two custom fields, finding (a plain
+  sentence) and finding_short (for the subject line);
+- audits/<site>.pdf: the report to send when someone replies;
+- skipped.csv and no-finding.csv: who was left out and why.
 
-  ▎ Subject: {{company}}: {{finding_short}}
-  ▎ Hi {{first_name}}, I ran a quick check of {{company}}'s website and noticed that {{finding}}. I put
-  ▎ the details in a one-page report… Want me to send it over? No charge.
-  ▎ — LeadArchitect · postal address · reply "no" and I won't write again.
+It protects you automatically:
+- keeps US businesses and UK companies only;
+- drops UK rows that look like sole traders (no Ltd/LLP/PLC, or a free-mail address), Canada, EU
+  countries, social pages, missing emails and duplicates;
+- doesn't email sites that are fine. A good site gets no pitch; a weak "2.9 s on a 97/100 site"
+  doesn't count.
 
-  The same file has the compliance checklist, the Smartlead settings (warm-up, tracking off, 20–30
-  emails a day) and a table of the numbers to watch per batch.
+Tthree of your own sites took about 18 s each to audit, each with a PDF. The lead data folder (outreach/) is excluded from git, and your readme.md wasn't touched.
 
-  What's left for you:
-  1. Postal address: ~~a US virtual mailbox or P.O. box. It's legally required in every US email.~~
-  2. Porkbun: URL forwarding getleadarchitect.com → leadarchitect.org, and swap those placeholder
-     testimonials when you can.
-  3. Smartlead: let the warm-up run, then import the first smartlead.csv as a 20–30 lead campaign.
-  4. Apify: export one niche in the US (e.g. dentists or plumbers in one city), with website and email
-     columns.
+The email, in `docs/outreach.md`, is [plain text](https://github.com/JAlcocerT/poc_webs_magnet/blob/master/docs/outreach.md) with no links:
 
-  Send me the first real batch's numbers after a week (bounces, replies, positive replies), and we'll
-  adjust the niche or the findings from there.
+```md
+▎ Subject: {{company}}: {{finding_short}}
+▎ Hi {{first_name}}, I ran a quick check of {{company}}'s website and noticed that {{finding}}. I put
+▎ the details in a one-page report… Want me to send it over? No charge.
+▎ — LeadArchitect · postal address · reply "no" and I won't write again.
+```
 
+The same file has the compliance checklist, the Smartlead settings (warm-up, tracking off, 20–30
+emails a day) and a table of the numbers to watch per batch.
 
-    5. Analytics
+What's left for you:
+1. Postal address: ~~a US virtual mailbox or P.O. box. It's legally required in every US email.~~
+2. Porkbun: URL forwarding getleadarchitect.com → leadarchitect.org, and swap those placeholder
+    testimonials when you can.
+3. Smartlead: let the warm-up run, then import the first `smartlead.csv` as a 20–30 lead campaign.
+4. Apify: export one niche in the US (e.g. dentists or plumbers in one city), with website and email
+    columns.
 
-  - 5a0259e Cloudflare Web Analytics script added; the server's security policy now allows it.
+Review the first real batch's numbers after a week (bounces, replies, positive replies), and we'll
+adjust the niche or the findings from there.
 
-  6. Outreach (last)
+5. Analytics: Cloudflare Web Analytics script added; the server's security policy now allows it.
 
-  - 247817d scripts/outreach-batch.mjs + make outreach: lead CSV → audits → Smartlead CSV, with one
-    finding per site and a PDF each. Plus docs/outreach.md (email template, compliance checklist,
-    Smartlead settings, metrics), and outreach/ added to .gitignore.
+6. Outreach (last):
 
-  Homelab state: you've pulled and recreated up to the report restyle (8c9e0c2). Since then, two commits affect the running server: 5a0259e (the analytics script and the security-policy change for it) and 247817d (the outreach script, used through the CLI only). One git pull plus docker compose -f
-  docker-compose.prod.yml up -d --force-recreate picks them up.
+  - 247817d `scripts/outreach-batch.mjs` + make outreach: `lead CSV → audits → Smartlead CSV`, with one
+    finding per site and a PDF each. Plus `docs/outreach.md` ([email template](https://github.com/JAlcocerT/poc_webs_magnet/blob/master/docs/outreach.md), compliance checklist,
+    Smartlead settings, metrics), and `outreach/` added to .gitignore.
 
+Homelab state: you've pulled and recreated up to the report restyle (8c9e0c2). Since then, two commits affect the running server: 5a0259e (the analytics script and the security-policy change for it) and 247817d (the outreach script, used through the CLI only). One git pull plus `docker compose -f docker-compose.prod.yml up -d --force-recreate` picks them up.
 
+The [roadmap](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/roadmap-leads.md) is updated, the ADR is written, and outbound has its own folder, all in jalcocertech-core(commit 61d5193, pushed).
 
+[ADR 0005](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/adr/0005-outbound-prospecting-separate-from-inbound.md): *outbound prospecting, kept separate from inbound.*
 
-
-
-
-The roadmap is updated, the ADR is written, and outbound has its own folder, all in jalcocertech-core(commit 61d5193, pushed).
-
-ADR 0005: outbound prospecting, kept separate from inbound. Every axis is kept apart from the inbound engine:
-
-  ┌────────┬───────────────────────┬───────────────────────────────────────────────────────────────┐
-  │        │        Inbound        │                           Outbound                            │
-  ├────────┼───────────────────────┼───────────────────────────────────────────────────────────────┤
-  │ Brand  │ JAlcocerTech          │ LeadArchitect                                                 │
-  ├────────┼───────────────────────┼───────────────────────────────────────────────────────────────┤
-  │ Domain │ jalcocertech.com etc. │ getleadarchitect.com (sending) + leadarchitect.org (site)     │
-  ├────────┼───────────────────────┼───────────────────────────────────────────────────────────────┤
-  │ Sender │ Mailjet               │ Smartlead                                                     │
-  ├────────┼───────────────────────┼───────────────────────────────────────────────────────────────┤
-  │ Who    │ people who opted in   │ UK companies from public listings                             │
-  ├────────┼───────────────────────┼───────────────────────────────────────────────────────────────┤
-  │ Data   │ lead hub (KV →        │ outreach/<date>/ files, deleted after 90 days, never in the   │
-  │        │ SQLite)               │ hub                                                           │
-  └────────┴───────────────────────┴───────────────────────────────────────────────────────────────┘
-
-It also records the eight rules:
-- UK companies only, confirmed through Companies House when unclear;
-- the lead hub stays opt-in only;
-- plain text with no links or tracking, at most one follow-up;
-- only sites with a real problem;
-- data kept to a minimum and deleted;
-- the legitimate-interest assessment on file;
-- small, measured batches, with stop conditions;
-- truthful landing pages, so the testimonials go first.
+Every axis is kept apart from the inbound engine.
 
 It also lists the alternatives rejected (EU email, the US for now, Mailjet, prospects in the hub) and
 why.
 
 Folders:
-- outbound/ (new, in core) holds the policy side:
+- `outbound/` (new, in core) holds the policy side:
   - legitimate-interest-assessment.md, the GDPR basis written out;
   - batches.md, a per-batch log with numbers only;
   - a README with the flow diagram and which folder holds what.
 - The tooling and the data stay in poc_webs_magnet, next to the audit CLI they reuse: the batch
   script, docs/outreach.md and outreach/ (excluded from git).
 
-Roadmap (architecture/roadmap-leads.md):
-
-- Ticked today's work: the talks and client-story pages (4A.10–4A.12), the audit fixes, report PDF,
-  site (5.4).
-- New §6, visibility for the nine months. It opens with the baseline (1 Google click, 120 pages
-  unknown to Google). Done: Search Console, the sitemaps, the trailing-slash fix, Mermaid. Open:
-  - the weekly digest line;
-  - Bing import;
-  - re-checking the index around 7 November;
-  - past-client messages, Reddit by hand, the marketplace profile;
-  - the month-9 launch list;
-  - restricting the PageSpeed key.
-- New §7, outbound. Done: domain authentication and the batch script. Open:
-  - Smartlead warm-up;
-  - the Porkbun forward;
-  - removing the testimonials;
-  - 7.6: review your Apify test tomorrow, with 7.7, the Companies House step, if Google Maps names
-    lack "Ltd";
-  - the first batch, the batch log, the 90-day clean-up;
-  - the US and the paper-letter pilot, both deferred.
-- "Not doing" now also lists: EU cold email, prospects in the hub, automated social posting, and
-  LinkedIn until month 9.
-- Also updated: the ADR index and core's README folder table, which now shows inbound, outbound,
-  brand/ and templates/.
-
-Still open on your side from earlier (4C.19): a git pull and recreate of webaudit on the homelab, which picks up the analytics script and the outreach script. For tomorrow, bring the Apify CSV (a few rows are enough), the actor(s) you used and the niche/area.
-
-
+[Roadmap](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/roadmap-leads.md) (architecture/roadmap-leads.md):
 
 ```sh
 git clone https://github.com/JAlcocerT/slubne-chwile-y26
 #git clone https://github.com/JAlcocerT/leads-slubnechwile
 ```
 
-I've been through both folders.
+
+{{% details title="having a look through those repo folders" closed="true" %}}
 
 They're more developed than I expected, and they change the picture from yesterday in three ways.
 
 What's there
 
 slubne-chwile-y26: Ślubne Chwile, the wedding product. It's a built proof of concept: QR code, guest
-uploads, R2, Stripe at 299 PLN, Firebase, an email drip. It has a careful B2C vs B2B analysis. The
-B2B idea was wedding photographers as recurring distribution, about 20–60 weddings a year each.
-Julita's cold calls on 15 May tested it, and the transcripts mostly answer the question: several
+uploads, R2, Stripe at 299 PLN, Firebase, an email drip. 
+
+It has a careful B2C vs B2B analysis. 
+
+The B2B idea was wedding photographers as recurring distribution, about 20–60 weddings a year each.
+
+Julita's cold calls on 15 May tested it, and the transcripts mostly answer the question: *several
 photographers no longer do weddings, and the rest said "I deliver photos fast, I don't have that
-problem". The pain wasn't felt.
+problem"*. 
+
+**The pain wasn't felt.**
 
 leads-slubnechwile: the scraping experiments plus a full LeadArchitect plan.
 - The scrape: 372 Warsaw wedding photographers from Google Maps via Apify
@@ -1686,9 +1664,11 @@ Three conflicts to resolve
     for B2B commercial email, and since November 2024 that covers phone marketing too. So the Polish
     accountants in the plan, and the Warsaw photographers in the scrape, can't legally be emailed (or
     cold-called) without consent. That also applies to the May calls, for what it's worth.
+
 2. getleadarchitect.com is doing two jobs. In your plan it sells outbound as a service to B2B firms.
     In what we built yesterday it sends website-audit findings to sell web fixes. Those are different
     offers, buyers and proof. Cold email works best with one offer per domain.
+
 3. Two pipelines. Your 04-pipeline/ (SQLite → verify → Firecrawl → AI opener → Smartlead) and my
     outreach-batch (CSV → filter → audit → finding → Smartlead) overlap. The audit finding is a
     stronger, provable opener than an AI-written line, but your version has the SQLite deduplication
@@ -1696,7 +1676,9 @@ Three conflicts to resolve
 
 What I'd do
 
-Decide what LeadArchitect sells first. Either way, the target is UK (or US once you have an address):
+Decide what LeadArchitect sells first. 
+
+Either way, the target is UK (or US once you have an address):
 
 ┌────────────┬─────────────────────────────┬────────────────────────────────────────────────────┐
 │            │  A. Website fixes (audit    │        B. Outbound as a service (your plan)        │
@@ -1710,83 +1692,106 @@ Decide what LeadArchitect sells first. Either way, the target is UK (or US once 
 ├────────────┼─────────────────────────────┼────────────────────────────────────────────────────┤
 │ Price      │ Hundreds to low thousands   │ $3.5k/month                                        │
 ├────────────┼─────────────────────────────┼────────────────────────────────────────────────────┤
-│ Risk       │ Low; easy to test this      │ High. The guarantee means working for free if it   │
+│ Risk       │ Low!!!; easy to test this      │ High. The guarantee means working for free if it   │
 │            │ month                       │ doesn't deliver, and you have no track record yet  │
 └────────────┴─────────────────────────────┴────────────────────────────────────────────────────┘
 
-My recommendation: A first. It's your audit tool's real advantage and fits your evening capacity.
-Every reply also teaches you outbound itself: deliverability, copy, enrichment. That experience is
-what would later make B credible.
+My recommendation: A first.
 
-Then make the "Apify test" a UK test. The Warsaw photographers can't go through this flow.
+It's your audit tool's real advantage and fits your evening capacity.
+
+Every reply also teaches you outbound itself: deliverability, copy, enrichment. 
+
+That experience is what would later make B credible :)
+
+{{% /details %}}
+
+{{< callout type="warning" >}}
+The b2b calls proved that you can test prospect's pain that your offer is supposed to solve and you dont even have to have the solution built.
+{{< /callout >}}
+
+{{% details title="The Warsaw photographers can't go through this flow" closed="true" %}}
+
 Concretely:
+
 1. Reuse your scrape_photographers.py with a UK query, e.g. "accountants" / "Manchester, UK" or
-    "dentist" / "Leeds, UK", about 100 results.
+"dentist" / "Leeds, UK", about 100 results.
 2. Add the two enrichment steps your data shows are missing:
-    - emails from each website, using Firecrawl (which you already use) or Apify's contact-details
-      scraper;
-    - company type from Companies House, to keep only Ltd/LLP/PLC.
+- emails from each website, using Firecrawl (which you already use) or Apify's contact-details
+  scraper;
+- company type from Companies House, to keep only Ltd/LLP/PLC.
 3. Feed that into make outreach and look at how many rows survive and how good the findings are,
-    before sending anything.
+ before sending anything.
 
-For Ślubne Chwile, the calls already gave a clear answer: photographers aren't the channel. Since
-outbound in Poland is closed, I'd leave its growth to the B2C ads funnel. The zzz-nextsteps.md list
-of security items (Firestore rules, upload rate limit) should come before spending more on ads.
+For Ślubne Chwile, the calls already gave a clear answer: photographers aren't the channel.
 
-Which way for LeadArchitect, A (website fixes) or B (outbound agency)? If A, I'll adapt your Apify
-script for a UK niche and add the email and Companies House steps.
+Since outbound in Poland is closed, I'd leave its growth to the B2C ads funnel.
 
+> The zzz-nextsteps.md list of security items (Firestore rules, upload rate limit) should come before spending more on ads.
 
+About your existing material: the Warsaw photographer scrape can't feed this flow, because they're
+  Polish and the scrape has no emails.
+  
+The "outbound agency" plan is recorded as not pursued for now (ADR 0005 amendment), with the reasons. Its Polish/CEE market needs prior consent, and there's no track record yet to sell meetings with.
 
+{{% /details %}}
 
-
-● LeadArchitect is set up as option A, website fixes for UK businesses, with its own repo and site.
-
-  Live site: https://www.getleadarchitect.com. It uses the web audit's design and has:
-  - the offer: "Your website is costing you customers";
-  - how it works and what you check;
-  - Fix pack £390 / Rebuild from £1,500;
-  - your two real client stories;
-  - an FAQ, including "Why did you email me?";
-  - a free-report call to action;
-  - a sample report PDF made from example data for a fictional dental practice, never a real prospect;
-  - a privacy notice written for the outreach data.
-
-  The bare domain redirects to www. The site sets no cookies, loads nothing from third parties, and has
-  strict security headers. Moving the domain to Cloudflare didn't touch email: MX, SPF, DKIM and DMARC
-  are unchanged.
-
-  New private repo JAlcocerT/leadarchitect-uk, with three steps:
+LeadArchitect is set up as option A, website fixes for UK businesses, with its own repo and site.
 
 ```sh
-  make scrape Q="dentist" L="Leeds, UK" MAX=100   # Apify, business fields only (no reviews)
-  make enrich RUN=data/<run>                       # email from their own site + Companies House check
-  make batch  RUN=data/<run> ARGS="--limit=30"     # audit → smartlead.csv + LeadArchitect-branded PDFs
+git clone https://github.com/JAlcocerT/leadarchitect-uk #https://www.getleadarchitect.com
 ```
 
-  - Enrichment: it finds addresses like info@company.co.uk on the business's own site, including the
-    Cloudflare-hidden ones, and rejects free-mail and other-domain addresses. Companies House confirms
-    active Ltd/LLP/PLC companies, and their registered name becomes the company name in the email.
-  - Branding: reports now carry the LeadArchitect logo and the "Fix pack from £390 →" offer. In the
-    audit engine this is a --brand option; the web audit itself is unchanged.
-  - Tested: email discovery and decoding, all the filters, branded PDFs end to end, and the site in a
-    browser on desktop and mobile. Lead data (data/) is excluded from git, and make clean-old deletes
-    runs after 90 days.
 
-  Two surprises from Cloudflare's tooling, both handled:
-  - Projects are Workers now. "Pages" projects are now created as Workers serving static files, which
-    is why the domain had to be on Cloudflare.
-  - It edited the site. The create command quietly added a server adapter to the site; I reverted it,
-    since the site is static.
+{{% details title="Creating getleadarchitect UK around webaudits and few surprises 🚀" closed="true" %}}
 
-  About your existing material: the Warsaw photographer scrape can't feed this flow, because they're
-  Polish and the scrape has no emails. The "outbound agency" plan is recorded as not pursued for now
-  (ADR 0005 amendment), with the reasons. Its Polish/CEE market needs prior consent, and there's no
-  track record yet to sell meetings with.
+Two surprises from Cloudflare's tooling, both handled:
+- Projects are Workers now. "Pages" projects are now created as Workers serving static files, which is why the domain had to be on Cloudflare.
+- It edited the site. The create command quietly added a server adapter to the site; I reverted it,
+  since the site is static.
 
-  What you need to do before the first run:
+Live site: https://www.getleadarchitect.com. It uses the web audit's design and has:
 
-1. Keys: in leadarchitect-uk/.env, add APIFY_TOKEN and CH_API_KEY. The Companies House key is free at `developer.company-information.service.gov.uk`
+- the offer: "Your website is costing you customers";
+- how it works and what you check;
+- Fix pack £390 / Rebuild from £1,500;
+- your two real client stories;
+- an FAQ, including "Why did you email me?";
+- a free-report call to action;
+- a sample report PDF made from example data for a fictional dental practice, never a real prospect;
+- a privacy notice written for the outreach data.
+
+The bare domain redirects to www.
+
+The site sets no cookies, loads nothing from third parties, and has strict security headers. Moving the domain to Cloudflare didn't touch email: MX, SPF, DKIM and DMARC are unchanged.
+
+New private repo `JAlcocerT/leadarchitect-uk`, with three steps:
+
+```sh
+make scrape Q="dentist" L="Leeds, UK" MAX=100   # Apify, business fields only (no reviews)
+make enrich RUN=data/<run>                       # email from their own site + Companies House check
+make batch  RUN=data/<run> ARGS="--limit=30"     # audit → smartlead.csv + LeadArchitect-branded PDFs
+```
+
+- Enrichment: it finds addresses like `info@company.co.uk` on the business's own site, including the
+  Cloudflare-hidden ones, and rejects free-mail and other-domain addresses. 
+  
+**Companies House** confirms active Ltd/LLP/PLC companies, and their registered name becomes the company name in the email.
+
+- Branding: reports now carry the LeadArchitect logo and the "Fix pack from £390 →" offer. 
+
+In the audit engine this is a `--brand` option; the web audit itself is unchanged.
+
+- Tested: email discovery and decoding, all the filters, branded PDFs end to end, and the site in a
+  browser on desktop and mobile. Lead data (data/) is excluded from git, and `make clean-old` deletes
+  runs after 90 days.
+
+{{% /details %}}
+
+
+What you need to do **before the first run**:
+
+1. Keys: in `leadarchitect-uk/.env`, add `APIFY_TOKEN` and `CH_API_KEY`. The Companies House key is free at `developer.company-information.service.gov.uk`
 2. Mailbox: create hello@getleadarchitect.com as a mailbox or alias in Google Workspace. The site and
     privacy notice use it; without it, replies from the site bounce. Also check that dmarc@ exists
     for the DMARC reports.
@@ -1799,10 +1804,9 @@ script for a UK niche and add the email and Companies House steps.
 4. First real run: one UK niche and city, MAX=100. Send me the three counts it prints (places, emails
     found, companies confirmed) and we'll judge the yield before anything goes to
 
+> `https://www.getleadarchitect.com/privacy/`
 
-
-  
-
+{{% details title="Gov UK House 🚀" closed="true" %}}
 
   - Who can register: anyone, from anywhere. The register is public data, and the API is free.
   - Which email: whatever you like. I'd use a project address, e.g. julita@ or
@@ -1820,9 +1824,7 @@ script for a UK niche and add the email and Companies House steps.
      empty; the key is only used from your machine or homelab.
   4. Put the key in leadarchitect-uk/.env as CH_API_KEY=…. Don't paste it here.
 
-
 Checks whether UK businesses are active limited companies llps or plcs before contacting them, using the public company search
-
 
 You're signed in and on the right form. Fill it in like this:
 
@@ -1843,286 +1845,178 @@ You're signed in and on the right form. Fill it in like this:
   │ URL              │ matches what you do)                                                        │
   └──────────────────┴─────────────────────────────────────────────────────────────────────────────┘
 
-Then Create application → open it → Create new key → choose REST. You can leave the restricted IPs and JavaScript domains empty.
+Then Create application → open it → Create new key → choose REST. 
 
-Copy the key into ~/Desktop/mbsd-framework/leadarchitect-uk/.env:
+You can leave the restricted IPs and JavaScript domains empty.
+
+Copy the key into `~/Desktop/mbsd-framework/leadarchitect-uk/.env`:
 `CH_API_KEY=your-key-here`
 
-Don't paste it here. Once it's in, tell me, and I'll run a quick check that the key works with one well-known company search, without printing the key.
 
-Signing up with a Proton passmail.net alias is fine; Companies House doesn't care which email you use.
+{{% /details %}}
 
-  > `https://www.getleadarchitect.com/privacy/`
 
 Go to `console.apify.com → Settings → API & Integrations`, and copy your Personal API token (it starts with apify_api_…). 
   
-If it's Julita's account, as the APIFY_julita name in your old script
- suggests, use the token from that account.
-
-2. Replace the APIFY_TOKEN= line in leadarchitect-uk/.env with it.
+2. Replace the `APIFY_TOKEN=` line in `leadarchitect-uk/.env` with it.
 
 ```env
 APIFY_TOKEN=apify_api_
 CH_API_KEY=
 ```
 
-Both keys work, and I ran the whole pipeline once on real UK data: 30 dentists in Leeds.
+What an email from this batch would say:
 
-  ┌─────────────────────────┬──────────────────────────────────────────────────────────────────────┐
-  │          Step           │                                Result                                │
-  ├─────────────────────────┼──────────────────────────────────────────────────────────────────────┤
-  │ Apify scrape (cents of  │ 30 places, all UK, 26 with a website                                 │
-  │ your free $5/month)     │                                                                      │
-  ├─────────────────────────┼──────────────────────────────────────────────────────────────────────┤
-  │ Emails from their own   │ 16 found, half of them info@/reception@-style                        │
-  │ sites                   │                                                                      │
-  ├─────────────────────────┼──────────────────────────────────────────────────────────────────────┤
-  │ Companies House         │ 6 confirmed active Ltd/LLP companies (4 by postcode, 2 by identical  │
-  │                         │ name), plus 1 with "Ltd" in its Google name                          │
-  ├─────────────────────────┼──────────────────────────────────────────────────────────────────────┤
-  │ Audits                  │ 7 ready to email, every one with a strong finding: 6 sites take      │
-  │                         │ 11–17 seconds to show content on a phone, 1 has a 13 MB homepage     │
-  └─────────────────────────┴──────────────────────────────────────────────────────────────────────┘
+```md
+▎ Subject: Meliora Dental: 12s+ load time
+▎ Hi there, I ran a quick check of Meliora Dental's website and noticed that your homepage takes over
+▎ 12 seconds to show its main content on a phone (Google's target is under 2.5); you can check it
+▎ yourself at pagespeed.web.dev. … — Julita, LeadArchitect
+```
 
-Google's own PageSpeed test agrees with the numbers: Meliora 12.9 s vs Google's 12.3 s, Indigo 16.3 s vs 16.2 s. A dentist who checks will see what the email says.
+About the pagespeed.web.dev mention: it's plain text, but some mail clients turn it into a link, and  spam filters notice URLs. 
 
-What the real data exposed, now fixed:
+If you'd rather keep the first email strictly link-free, I'll drop that  clause.
 
-1. The Apify library changed format. The scrape ran but the script couldn't read the result. I fixed it and recovered the finished run instead of paying twice.
-2. Wrong company matches. "Jem Dental Care - Leeds" had been matched to LEEDS DENTAL CARE LIMITED, a different business. Matching now ignores trade and street words and the city, and accepts only a matching postcode, or an identical name once "Ltd" etc. is removed. A missed lead is better than a wrong name.
-3. Robotic names. Emails now say "Clarendon Dental Spa", not "CLARENDON DENTAL SPA LLP". The registered name is kept in a company_evidence column, which records why each row qualifies.
-4. Lighthouse varies between runs (one site measured 4.5 s, then 12–13s). Speed findings are now measured twice and the faster run is kept, and the email rounds down: "over 12 seconds… you can check it yourself at pagespeed.web.dev".
+Logged and committed: the run is in outbound/batches.md (numbers only, marked "test, not sent"), and
+[roadmap](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/roadmap-leads.md) items 7.7b and 7.7d are ticked.
 
-  What an email from this batch would say:
+The lead data stays in `leadarchitect-uk/data/` (excluded from git, deleted after 90 days).Like at `leadarchitect-uk/data/2026-10-11-dentist-leeds-uk/`
 
-  ▎ Subject: Meliora Dental: 12s+ load time
-  ▎ Hi there, I ran a quick check of Meliora Dental's website and noticed that your homepage takes over
-  ▎ 12 seconds to show its main content on a phone (Google's target is under 2.5); you can check it
-  ▎ yourself at pagespeed.web.dev. … — Julita, LeadArchitect
 
-  About the pagespeed.web.dev mention: it's plain text, but some mail clients turn it into a link, and
-  spam filters notice URLs. If you'd rather keep the first email strictly link-free, I'll drop that
-  clause.
 
-  Logged and committed: the run is in outbound/batches.md (numbers only, marked "test, not sent"), and
-  roadmap items 7.7b and 7.7d are ticked. The lead data stays in leadarchitect-uk/data/ (excluded from
-  git, deleted after 90 days).
+{{% details title="What I'd do next" closed="true" %}}
 
-Next:
-- Let warm-up run 2–3 weeks on both inboxes, and set up the hello@ and dmarc@ aliases.
-- Then a bigger run (MAX=100) in one niche, and import the first smartlead.csv as a small campaign.
+1. Send this batch by hand from Workspace. Smartlead is built for volume and saves nothing at six
+    emails. Sending by hand also lets you see how each email reads and what comes back. Send from
+    julita@ as "Julita | LeadArchitect", plain text, no links. Spread them over a day or two, not all
+    at once.
+    - Before each one, open pagespeed.web.dev for that site (about 30 seconds) and confirm the number
+      still holds.
+    - Send soon: findings go stale. If it's more than about two weeks, re-run the audit.
+    - Log what you sent in outbound/batches.md, and log any opt-out permanently.
+2. Reply to responses by hand too: a yes gets the PDF from batch/audits/. This is the step where you
 
-You have seven ready-to-send leads from the Leeds dentists run. 
+**What I'd do next**
 
-The next step is sending them by hand, not integrating Smartlead.
+1. Send this batch by hand from Workspace. Smartlead is built for volume and saves nothing at six
+    emails. Sending by hand also lets you see how each email reads and what comes back. Send from
+    julita@ as "Julita | LeadArchitect", plain text, no links. Spread them over a day or two, not all
+    at once.
+    - Before each one, open pagespeed.web.dev for that site (about 30 seconds) and confirm the number
+      still holds.
+    - Send soon: findings go stale. If it's more than about two weeks, re-run the audit.
+2. Reply to responses by hand too: a yes gets the PDF from batch/audits/. This is the step where you
+    learn the most.
+3. Keep Smartlead warming up in the background. If warm-up isn't running on both inboxes yet, start
+    it now. It needs 2–3 weeks.
+4. Scale only after warm-up. Run larger scrapes (make scrape MAX=100) across a few trades and towns.
+    Going by this run (30 → 7), expect about 20–25 eligible per 100. At that volume, import the CSV
+    into Smartlead with the first email plus one follow-up 4–5 days later. That's a CSV upload with
+    column mapping, no code needed.
 
-What's in `leadarchitect-uk/data/2026-10-11-dentist-leeds-uk/`
+**How many per day**
 
-  ┌─────────────────────────────┬──────────────────────────────────────────────────────────────────┐
-  │            File             │                            What it is                            │
-  ├─────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-  │ raw.json                    │ The 30 Maps listings                                             │
-  ├─────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-  │ leads.csv                   │ The listings enriched with website email and Companies House     │
-  │                             │ match                                                            │
-  ├─────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-  │ batch/smartlead.csv         │ 7 send-ready rows: email, company, the evidence it's a company,  │
-  │                             │ the finding, subject line, path to the PDF                       │
-  ├─────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-  │ batch/audits/               │ One branded PDF report per company, ready to send when someone   │
-  │                             │ replies                                                          │
-  ├─────────────────────────────┼──────────────────────────────────────────────────────────────────┤
-  │ batch/skipped.csv,          │ Who was dropped and why                                          │
-  │ no-finding.csv              │                                                                  │
-  └─────────────────────────────┴──────────────────────────────────────────────────────────────────┘
+- About 30 a day per inbox is the usual ceiling, and only once the inbox is warmed up. Two inboxes
+  gives at most about 60 a day.
+- New or cold inboxes: start at 5–10 a day and increase over 2–3 weeks.
+- Google Workspace's own limit (about 2,000 a day) doesn't matter here. What matters is spam
+  complaints and the domain's reputation, because one burst can hurt the domain for weeks.
+- At your volume you'll stay well below this anyway: about 25 new leads per 100 scraped is a few
+  dozen emails a week, which suits learning the process.
 
-  All seven have a strong finding (11–17 s load time on mobile, or a heavy homepage). One thing to
-  check: Rodericks Dental Partners is a large chain with its own marketing team. It will almost never
-  reply to a £390 offer, so I'd drop it and send six.
+So for now: drop Rodericks, send six by hand this week, and keep warm-up running.
 
-  What I'd do next
 
-  1. Send this batch by hand from Workspace. Smartlead is built for volume and saves nothing at six
-     emails. Sending by hand also lets you see how each email reads and what comes back. Send from
-     julita@ as "Julita | LeadArchitect", plain text, no links. Spread them over a day or two, not all
-     at once.
-     - Before each one, open pagespeed.web.dev for that site (about 30 seconds) and confirm the number
-       still holds.
-     - Send soon: findings go stale. If it's more than about two weeks, re-run the audit.
-     - Log what you sent in outbound/batches.md, and log any opt-out permanently.
-  2. Reply to responses by hand too: a yes gets the PDF from batch/audits/. This is the step where you
-  What I'd do next
-
-  1. Send this batch by hand from Workspace. Smartlead is built for volume and saves nothing at six
-     emails. Sending by hand also lets you see how each email reads and what comes back. Send from
-     julita@ as "Julita | LeadArchitect", plain text, no links. Spread them over a day or two, not all
-     at once.
-     - Before each one, open pagespeed.web.dev for that site (about 30 seconds) and confirm the number
-       still holds.
-     - Send soon: findings go stale. If it's more than about two weeks, re-run the audit.
-  2. Reply to responses by hand too: a yes gets the PDF from batch/audits/. This is the step where you
-     learn the most.
-  3. Keep Smartlead warming up in the background. If warm-up isn't running on both inboxes yet, start
-     it now. It needs 2–3 weeks.
-  4. Scale only after warm-up. Run larger scrapes (make scrape MAX=100) across a few trades and towns.
-     Going by this run (30 → 7), expect about 20–25 eligible per 100. At that volume, import the CSV
-     into Smartlead with the first email plus one follow-up 4–5 days later. That's a CSV upload with
-     column mapping, no code needed.
-
-  How many per day
-
-  - About 30 a day per inbox is the usual ceiling, and only once the inbox is warmed up. Two inboxes
-    gives at most about 60 a day.
-  - New or cold inboxes: start at 5–10 a day and increase over 2–3 weeks.
-  - Google Workspace's own limit (about 2,000 a day) doesn't matter here. What matters is spam
-    complaints and the domain's reputation, because one burst can hurt the domain for weeks.
-  - At your volume you'll stay well below this anyway: about 25 new leads per 100 scraped is a few
-    dozen emails a week, which suits learning the process.
-
-  So for now: drop Rodericks, send six by hand this week, and keep warm-up running.
+{{% /details %}}
 
   > `https://www.getleadarchitect.com/#packages`
 
 
- Smartlead. But the CSV is only the list of who to email. 
+#### SmartLead Campaigns
+
+Withing Smartlead: the CSV is only the list of who to email. 
+
+> https://app.smartlead.ai/app/email-campaigns-v2
  
- **A campaign has three parts:**
+**A campaign has three parts:**
 
-  1. Leads: upload send-1.csv from `leadarchitect-uk/data/2026-10-11-dentist-leeds-uk/batch/`. When Smartlead asks you to map columns:
-     - email → Email;
-     - company, finding_short and finding → keep them as custom fields (the email text uses them);
-     - you can ignore the other columns.
-  2. Sequence: paste the two emails from my last message. Step 1 has {{company}}, {{finding_short}} and
-     {{finding}}; step 2 goes 4 days later as a reply in the same thread.
-  3. Settings:
-     - Accounts: tick all three inboxes.
-     - Schedule: Monday to Friday, 9:00–16:00, London time.
-     - Tracking: open and click tracking off, send as plain text, no unsubscribe link.
-     - Stop on reply: on.
+1. Leads: upload send-1.csv from `leadarchitect-uk/data/2026-10-11-dentist-leeds-uk/batch/`. When Smartlead asks you to map columns:
+    - email → Email;
+    - company, finding_short and finding → keep them as custom fields (the email text uses them);
+    - you can ignore the other columns.
+2. Sequence: paste the two emails from my last message. Step 1 has {{company}}, {{finding_short}} and
+    {{finding}}; step 2 goes 4 days later as a reply in the same thread.
+3. Settings:
+    - Accounts: tick all three inboxes.
+    - Schedule: Monday to Friday, 9:00–16:00, London time.
+    - Tracking: open and click tracking off, send as plain text, no unsubscribe link.
+    - Stop on reply: on.
 
-  Then send yourself a test email (there's a "send test" option in the sequence or review screen).
-  Check that the company name and the finding filled in, and that there are no links in it. Then
-  launch. It will start Monday morning on its own.
+Then send yourself a test email (there's a "send test" option in the sequence or review screen).
 
-  If any screen doesn't match what I've described, send me a screenshot and I'll tell you what to
-  click.
+Check that the company name and the finding filled in, and that there are no links in it. 
 
+Then launch. It will start Monday morning on its own.
 
 #### Medallion
 
-> https://app.smartlead.ai/app/email-campaigns-v2
-
-Dentists are a poor trade for UK company-only outreach,
-  because most practices aren't limited companies. Trades where limited companies are the norm should
-  give 3–5 times more leads per scrape. Good candidates are trades with high-value jobs and a "website
-  = trust" problem:
-  - architects;
-  - solicitors and accountants (businesses, not individuals);
-  - building contractors, kitchen and bathroom fitters;
-  - letting agents;
-  - private clinics (physio, aesthetics).
-
-  An outbound data pipeline in bronze, silver and gold layers (a "medallion" layout)
-
-  Your inbound side is: forms → Cloudflare KV inbox → the homelab hub pulls into SQLite. The outbound
-  equivalent fits in leadarchitect-uk, as one DuckDB file. That's the natural tool for layered data: it
-  reads the JSON and CSV files you already produce directly, everything is SQL, and you already use
-  it. Keeping it in its own repository, separate from the inbound leads hub, follows ADR 0005.
-
-  BRONZE  raw, append-only, as received
-    apify/<run>.json            Maps listings
-    ch/<company_no>.json        Companies House responses
-    audits/<domain>/<date>.json Lighthouse + checks
-    smartlead/<date>-<campaign>.csv   campaign export (download from the UI)
-    events.csv                  what you log by hand: replied/positive/call/won/opt-out
-
-  SILVER  cleaned, one row per thing, keys joined
-    businesses   (place_id, trading name, domain, trade, city, category)
-    companies    (company_no, status, type, match method: postcode / name / footer number)
-    contacts     (email, domain, found on which page, role address y/n)
-    findings     (domain, date, finding type, value, PDF path)
-    sends        (email, campaign, step, sent_at, bounced)
-    outcomes     (email, replied, positive, call, won, opted out)
-
-  GOLD    aggregates only, no personal data, kept forever
-    funnel by batch / trade / city:
-      scraped → website → email → company → finding → sent → replied → positive → call → won
-    reply rate by finding type (speed vs HTTPS vs heavy page)
-    cost per positive reply (Apify spend + Smartlead + your time)
-
-  How Smartlead data gets in without the API: each campaign has a lead CSV export in the UI that
-  includes status (sent, replied, bounced) and Smartlead's reply categories (Interested, Not
-  interested). You download it once a week into data/bronze/smartlead/, and make ingest loads it. Calls
-  and won work go in events.csv, one line each.
-
-  Retention, consistent with your legitimate-interest assessment:
-  - Bronze and silver hold personal data, so they're deleted after 90 days, as now.
-  - Gold holds aggregate numbers only, so it's kept forever. That's where the learning lives.
-  - Kept beyond 90 days:
-    - the suppression list (opt-outs and bounces), which you must keep to honour them;
-    - a business-domain contact log, so no business is emailed twice. These are business domains, not
-      personal data.
-
-  Commands:
-  - make ingest: bronze → silver → gold.
-  - make funnel: prints the gold tables.
-  - make send: the filters from earlier, reading the suppression list and contact log from silver.
-
-  The weekly view would look like:
-
-  batch   trade     scraped  email  company  sent  replies  positive  calls
-  b1      dentist     30      16       6       4       ?        ?       ?
-  b2      dentist    210      93      18      11       ?        ?       ?
-
-  It's about half a day of work: DuckDB SQL for the layers, a small Python loader, and the Make
-  targets. Today's two batches would be loaded as the first rows.
-
-  Do you want me to write it up as ADR 0006 in jalcocertech-core and then build it in leadarchitect-uk?
+This deserved its own [ADR](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/adr/0006-outbound-funnel-data-medallion.md) around [DuckDB](https://fossengineer.com/duckdb-local-analytics/).
 
 
-  The outbound funnel data pipeline is built, tested on today's two batches, and committed: ADR 0006 is
-  in jalcocertech-core (bf0311a), the code is in leadarchitect-uk (92cf7b7).
+{{% details title="After testing the first dentist campaign I got to know" closed="true" %}}
 
-  What you have now
+Dentists are a poor trade for UK company-only outreach, because most practices aren't limited companies.
 
-  - Bronze is the files the pipeline already writes (Maps listings, enrichment, audit results), plus:
-    - the sent batches in data/sends/;
-    - Smartlead exports in data/bronze/smartlead/;
-    - the outcomes you log in data/bronze/events.csv.
-  - Silver is one DuckDB file, data/lake.duckdb, with one cleaned table per stage. It's rebuilt from
-    bronze every time, written in plain SQL in lake/silver.sql.
-  - Gold is counts only, in gold/*.csv. These files are committed and kept after the 90-day deletion,
-    so the lessons stay without the people.
-  - Keep lists in data/keep/ (git-ignored) are never deleted: opt-outs and bounces, business domains
-    already contacted, and the list of batches.
+Trades where limited companies are the norm should give 3–5 times more leads per scrape. Good candidates are trades with high-value jobs and a "website=trust" problem:
 
-  Batches 1 and 2 are loaded as b1 and b2:
+- architects;
+- solicitors and accountants (businesses, not individuals);
+- building contractors, kitchen and bathroom fitters;
+- letting agents;
+- private clinics (physio, aesthetics).
 
-  run         scraped  site  email  company  finding  sent   sent per 100
-  Leeds          30     26     16       6        7      4       13.3
-  Sheffield      70     64     32       5        6      3        4.3
-  Bristol        70     59     34       7        8      3        4.3
-  Manchester     70     52     24       6        7      5        7.1
+{{% /details %}}
 
-  What I tested:
-  - Re-runs don't duplicate gold rows.
-  - Logging an outcome by email or by domain lands on the right batch, and opt-outs are suppressed for
-    good.
-  - A sample Smartlead export loads. I made it up, then deleted it.
-  - make send reproduces every decision I made by hand today. On the same four cities, all 15 sent
-    businesses are held back as already contacted, and the 3 dissolved companies, the 3 registered
-    offices in other towns and the chain are all dropped.
+An outbound data pipeline in bronze, silver and gold layers (a "medallion" layout)
 
-  Two bugs fixed on the way:
-  - An opt-out logged by email address didn't match its business domain.
-  - The old make clean-old deleted any folder under data/ older than 90 days. That would have wiped the
-    opt-out list once it was old enough. It now deletes only run folders and dated files.
+Your inbound side is: `forms → Cloudflare KV inbox → the homelab hub` pulls into SQLite.
 
-  To test it:
+The **outbound equivalent** fits in `leadarchitect-uk`, as one DuckDB file.
+
+That's the natural tool for layered data: *it reads the JSON and CSV files you already produce directly, everything is SQL, and you already use it*.
+
+{{% details title="How Smartlead data gets in without the API" closed="true" %}}
+
+each campaign has a lead CSV export in the UI that
+includes status (sent, replied, bounced) and Smartlead's reply categories (Interested, Not
+interested).
+
+You download it once a week into `data/bronze/smartlead/`, and make ingest loads it.
+
+Calls and won work go in `events.csv`, one line each.
+
+Retention, consistent with your legitimate-interest assessment:
+- Bronze and silver hold personal data, so they're deleted after 90 days, as now.
+- Gold holds aggregate numbers only, so it's kept forever. That's where the learning lives.
+- Kept beyond 90 days:
+  - the suppression list (opt-outs and bounces), which you must keep to honour them;
+  - a business-domain contact log, so no business is emailed twice. These are business domains, not
+    personal data.
+
+Commands:
+- make ingest: bronze → silver → gold.
+- make funnel: prints the gold tables.
+- make send: the filters from earlier, reading the suppression list and contact log from silver.
+
+{{% /details %}}
+
+
+To test it:
 
 ```sh
 cd ~/Desktop/mbsd-framework/leadarchitect-uk
-make funnel                    # the four views: per run, per trade, per batch, per finding type
+make funnel  # the four views: per run, per trade, per batch, per finding type
 
 make send RUNS=2026-10-11-dentist-leeds-uk,2026-10-11-dentist-bristol-uk BATCH=t1
 
@@ -2130,96 +2024,41 @@ cat data/sends/t1.dropped.csv  # why each lead was held back
 rm data/sends/t1.*             # it's a draft; nothing is recorded until mark-sent
 ```
 
-That send picks only Beyu Dental (6 s). Everything else is already contacted or fails a rule. 
+That send picks only Beyu Dental (6 s).
+
+Everything else is already contacted or fails a rule. 
 
 Earlier I held Beyu back by hand because one run measured 3.9 s; the code can't know that, so check a borderline pick on pagespeed.web.dev before sending it.
 
 From here, a batch goes:
+
 1. scrape, enrich and batch as before;
-2. make send RUNS=… BATCH=b3, then upload b3.draft.csv and launch;
-3. make mark-sent BATCH=b3 CAMPAIGN="UK test 3";
+2. `make send RUNS=… BATCH=b3`, then upload b3.draft.csv and launch;
+3. `make mark-sent BATCH=b3 CAMPAIGN="UK test 3"`;
 4. log each reply with make event WHO=… E=positive (or optout, call, …).
 
-  Smartlead exports: Smartlead's export columns are a guess until we see a real one. Once there are
-  replies (end of the week), export a campaign's leads into data/bronze/smartlead/ and run make funnel.
-  It lists any column it doesn't recognise, and I'll adapt the loader.
+Smartlead exports: Smartlead's export columns are a guess until we see a real one.
 
-  The roadmap has two new open items: that first export (7.8b), and trying a trade where limited
-  companies are common (7.8c). Dentists yield only about 6 sends per 100 listings.
+Once there are replies (end of the week), export a campaign's leads into data/bronze/smartlead/ and run make funnel.
 
+It lists any column it doesn't recognise, and I'll adapt the loader.
 
+The [roadmap](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/roadmap-leads.md) has two new open items: that first export (7.8b), and trying a trade where limited
+companies are common (7.8c). Dentists yield only about 6 sends per 100 listings.
 
-  7.3 Volume (October–November):
-  - The goal: about 30 sends a week, so about 100 by mid-November. That's the first point where reply
-    rates mean anything.
-  - Dentists can't get you there: at about 6 sends per 100 listings, that's about 500 listings a week.
-    So the first step is a trade experiment: 3 trades with mostly limited companies, one city each,
-    compared on sends per 100 listings. Keep the ones at 15 or more.
-  - Also in this section:
-    - the weekly Monday-to-Friday rhythm;
-    - connecting the third inbox, with at most 15 real sends per inbox a day;
-    - staying on Smartlead's free tier while it sends;
-    - Apify credit;
-    - the monthly make clean-old.
-
-  7.4 Decision points. This table turns the numbers into actions:
-
-  ┌─────────────┬──────────────────────────────┬───────────────────────────────────────────────────┐
-  │     At      │              If              │                       Then                        │
-  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
-  │ ~50 sends   │ bounces > 3% or any          │ stop and fix                                      │
-  │             │ complaint                    │                                                   │
-  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
-  │ ~100 sends  │ replies ≥ 3% and at least 1  │ scale the best trade                              │
-  │             │ positive                     │                                                   │
-  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
-  │ ~100 sends  │ replies < 1%                 │ change one thing at a time: subject, then finding │
-  │             │                              │  type, then trade                                 │
-  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
-  │ ~200 sends  │ calls but no paid work       │ look at the offer and price, not volume           │
-  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
-  │ ~200 sends  │ no positive replies at all   │ rethink the offer                                 │
-  ├─────────────┼──────────────────────────────┼───────────────────────────────────────────────────┤
-  │ first paid  │ delivery took more than a    │ reprice the fix pack                              │
-  │ job         │ day                          │                                                   │
-  └─────────────┴──────────────────────────────┴───────────────────────────────────────────────────┘
-
-  7.5 Tooling backlog, built only when a phase needs it:
-  - strip taglines from trading names during enrichment;
-  - flag borderline speed picks like Beyu;
-  - grow the chains list for each new trade;
-  - a helper that finds the right PDF for a reply;
-  - plus the hello@ alias and the leadarchitect.org testimonials.
-
-  7.6 Deferred: US prospects, paper letters for the EU, the Smartlead API, and moving the lake to the
-  homelab.
-
-  The most useful thing to do before Monday is 7.2.7. If you want, I can draft the reply templates and
-  the fix-pack quote now.
-
-
-
-The pipeline is running in the background: accountants, architects and kitchen fitters, in Leeds and
-  Bristol, 60 listings each, 360 in total. Each run goes scrape → enrich → audit. The audits take about
-  a minute per qualifying site, so expect roughly 1–2 hours in total. I'll pick the batch with make
-  send when it finishes.
-
-  Volume: what "maxing out" should mean this week
-
-  I'd stop short of the technical maximum, for two reasons:
-
-  - These inboxes have sent only 15 real cold emails so far. Going from 15 to 30 a day per inbox in one
-    week is the jump that gets a domain flagged, and you've already had 1 bounce. Aim for 10–12 a day
-    per inbox, about 20–25 a day across both.
-  - Skip Saturday. Businesses don't read email at the weekend. A Saturday email gets buried by Monday
-    or looks automated, so keep the schedule Monday–Friday.
-
-That gives Wednesday to Friday plus Monday morning ≈ 70–90 emails. With the 15 already sent, that's about 100 by early next week, which is your first decision point (roadmap 7.4). 
+The pipeline is running in the background: *accountants, architects and kitchen fitters, in Leeds and Bristol*, 60 listings each, 360 in total.
   
+Each run goes `scrape → enrich → audit`.
+
+{{% details title="B1B2 learnings vs B3" closed="true" %}}
+
+
 Batch 1 and 2 follow-ups also go out from Friday and count towards each inbox's daily total, so set the new campaign to about 20 new leads a day.
 
 How many leads I can give you depends on the yield of the new trades, which is exactly what this run
-measures. If they hit 15 or more per 100 listings, 360 listings gives 50–60 leads.
+measures. 
+
+If they hit 15 or more per 100 listings, 360 listings gives 50–60 leads.
 
 What the **data layers** (bronze, silver, gold) do from here:
 
@@ -2253,15 +2092,19 @@ What the **data layers** (bronze, silver, gold) do from here:
   │           │                                     │ found"                                      │
   └───────────┴─────────────────────────────────────┴─────────────────────────────────────────────┘
 
-> In short: bronze is what the pipeline produced, silver is that data cleaned into one table per stage, and gold is the numbers that decide what to do next.
+{{% /details %}}
+  
+{{< callout type="info" >}}
+bronze is what the pipeline produced, silver is that data cleaned into one table per stage, and gold is the numbers that decide what to do next.
+{{< /callout >}}
 
+{{% details title="Batch 3 is ready and some learnings" closed="true" %}}
 
+66 leads in `leadarchitect-uk/data/sends/b3.draft.csv`, from 360 listings scraped today.
 
-● Batch 3 is ready: 66 leads in leadarchitect-uk/data/sends/b3.draft.csv, from 360 listings scraped
-  today.
+The trade experiment already answered its first question. 
 
-  The trade experiment already answered its first question. Per 120 listings, the active companies
-  found were:
+Per 120 listings, the active companies found were:
 
   ┌─────────────────────────────────────────────────────────────────┬────────────────┬─────────────┐
   │                              Trade                              │    Active      │ Picked for  │
@@ -2277,65 +2120,63 @@ What the **data layers** (bronze, silver, gold) do from here:
   │ dentists (per 240)                                              │ 24             │ 15 in b1–b2 │
   └─────────────────────────────────────────────────────────────────┴────────────────┴─────────────┘
 
-  These trades give 3–4 times as many emailable companies per listing as dentists. Replies will show
-  which one also buys.
+These trades give 3–4 times as many emailable companies per listing as dentists. 
 
-  Held back (60):
-  - 22 matched on name only, with the registered office in another town;
-  - 14 weak findings;
-  - 13 under 6 s;
-  - 6 not active companies;
-  - 2 wrong inboxes (recruitment@ and similar);
-  - 1 security issue that's already fixed;
-  - 1 typo address (ninfo@), removed by hand.
+Replies will show which one also buys.
 
-  The reasons are in data/sends/b3.dropped.csv.
+Held back (60):
+- 22 matched on name only, with the registered office in another town;
+- 14 weak findings;
+- 13 under 6 s;
+- 6 not active companies;
+- 2 wrong inboxes (recruitment@ and similar);
+- 1 security issue that's already fixed;
+- 1 typo address (ninfo@), removed by hand.
 
-  Rules added after reviewing the list (49b9e85):
-  - Speed claims are capped at "over 20 seconds". Some sites measured 30–45 s. That's probably real,
-    but it reads as implausible, and Google's free PageSpeed quota without a key was used up today, so
-    I couldn't cross-check. "Over 20 seconds" is true either way.
-  - Jobs, HR and billing inboxes are skipped.
-  - "Name -Tagline" names are cleaned, e.g. Fletcher & Gill.
+The reasons are in `data/sends/b3.dropped.csv`.
 
-  Two leads go to named people rather than info@ (3bd Architects, Canning and Partners). That's allowed
-  for companies under UK rules, and the email reads the same.
+Rules added after reviewing the list (49b9e85):
 
-  In Smartlead:
-  1. Before anything else: in UK test 1 and 2, open Settings and switch open and click tracking off.
-     Their follow-ups go out Friday.
-  2. Duplicate "UK test 2" and name it UK test 3 – trades. Import data/sends/b3.draft.csv with the same
-     mapping: finding_short and finding as custom fields; don't import report_pdf, run, domain or
-     finding_type. Expect 66 leads and 0 duplicates.
-  3. Check tracking is off in the copy as well.
-  4. Set max new leads per day to 20, Monday–Friday, 09:00–16:00 London. That sends 20 on Wednesday,
-     Thursday and Friday, and the last 6 on Monday. With Friday's follow-ups, each inbox stays at about
-     12–15 a day.
-  5. Send a test, then Launch. Then run:
-  make mark-sent BATCH=b3 CAMPAIGN="UK test 3 – trades"
-     This records the 66 domains as contacted, so no later scrape can email them twice.
+- Speed claims are capped at "over 20 seconds". Some sites measured 30–45 s. That's probably real,
+  but it reads as implausible, and Google's free PageSpeed quota without a key was used up today, so
+  I couldn't cross-check. "Over 20 seconds" is true either way.
+- Jobs, HR and billing inboxes are skipped.
+- "Name -Tagline" names are cleaned, e.g. Fletcher & Gill.
 
-  Replies: the PDFs are in each run's batch/audits/ folder, e.g.
-  data/2026-10-13-architect-leeds-uk/batch/audits/<site>.pdf.
+Two leads go to named people rather than info@ (3bd Architects, Canning and Partners). 
 
-  After this week you'll have about 80 sends in total: three new trades plus dentists, both finding
-  types, and two cities per trade. That's close to the first decision point (roadmap 7.4).
+That's allowed for companies under UK rules, and the email reads the same.
 
-✻ Baked for 1m 49s · done 21:27
+{{% /details %}}
+
+Send a test, then Launch. Then run:
+
+```sh
+make mark-sent BATCH=b3 CAMPAIGN="UK test 3 – trades"
+#This records the 66 domains as contacted, so no later scrape can email them twice.
+```
+
+Replies: the PDFs are in each run's `batch/audits/` folder, e.g. `data/2026-10-13-architect-leeds-uk/batch/audits/<site>.pdf.`
+
+After this week you'll have about 80 sends in total: *three new trades plus dentists, both finding
+types, and two cities per trade.*
+
+That's close to the first decision point (roadmap 7.4).
+
 
 ```sh
 cd ./leadarchitect-uk/data/sends
-
 ```
 
+Batch 3 doesn't repeat anyone, and I've checked it directly: *its 66 rows are 66 different businesses,
+and none were emailed in batches 1–2 or are on the suppression list*.
 
-● Batch 3 doesn't repeat anyone, and I've checked it directly: its 66 rows are 66 different businesses,
-  and none were emailed in batches 1–2 or are on the suppression list.
 
-  Commands I ran (all in leadarchitect-uk):
+{{% details title="Commands I ran - all in leadarchitect-uk" closed="true" %}}
 
-  1. Scrape, enrich and audit for each of the six trade/city pairs. I ran them in a loop, equivalent
-     to:
+1. Scrape, enrich and audit for each of the six trade/city pairs. 
+
+I ran them in a loop, equivalent to:
 
 ```sh
 make scrape Q="accountant" L="Leeds, UK" MAX=60
@@ -2353,266 +2194,462 @@ That's the same as make send RUNS=… BATCH=b3 SEND_MAX=500.
 
 3. One manual step: I removed the ninfo@ row from the draft and noted it in b3.dropped.csv.
 
-What stops repeats, all applied inside make send:
+What stops repeats, all applied inside `make send`:
 
-  ┌──────────────────┬─────────────────────────────────────┬──────────────────────────────────────┐
-  │      Check       │               Source                │               Catches                │
-  ├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
-  │ Domain already   │ data/keep/contacted.csv + every     │ The same business in a later scrape, │
-  │ contacted        │ data/sends/bN.csv                   │  even under a different email        │
-  │                  │                                     │ address                              │
-  ├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
-  │ Suppressed       │ data/keep/suppression.csv           │ Opt-outs and bounces (Thompson &     │
-  │                  │                                     │ Thomas is in it)                     │
-  ├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
-  │ Duplicate within │ email and domain                    │ The same business listed twice, e.g. │
-  │  the batch       │                                     │  two locations                       │
-  ├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
-  │ Smartlead import │ "duplicates across campaigns"       │ A last net at upload                 │
-  │                  │ counter                             │                                      │
-  └──────────────────┴─────────────────────────────────────┴──────────────────────────────────────┘
+┌──────────────────┬─────────────────────────────────────┬──────────────────────────────────────┐
+│      Check       │               Source                │               Catches                │
+├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
+│ Domain already   │ data/keep/contacted.csv + every     │ The same business in a later scrape, │
+│ contacted        │ data/sends/bN.csv                   │  even under a different email        │
+│                  │                                     │ address                              │
+├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
+│ Suppressed       │ data/keep/suppression.csv           │ Opt-outs and bounces (Thompson &     │
+│                  │                                     │ Thomas is in it)                     │
+├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
+│ Duplicate within │ email and domain                    │ The same business listed twice, e.g. │
+│  the batch       │                                     │  two locations                       │
+├──────────────────┼─────────────────────────────────────┼──────────────────────────────────────┤
+│ Smartlead import │ "duplicates across campaigns"       │ A last net at upload                 │
+│                  │ counter                             │                                      │
+└──────────────────┴─────────────────────────────────────┴──────────────────────────────────────┘
 
-  Run make mark-sent right after launching. Until you run
-  make mark-sent BATCH=b3 CAMPAIGN="UK test 3 – trades"
-  the 66 are only a draft. The contact log doesn't know about them, so another make send over the same
-  runs today would pick them again. mark-sent turns the draft into data/sends/b3.csv and adds all 66
-  domains to contacted.csv, and from then on they're excluded for good.
+{{% /details %}}
 
-  One detail first: the audit runs locally, using the same engine as webaudit.jalcocertech.com
-  but not the hosted site. Step by step:
-
-  Step: 1. Scrape
-  Command: make scrape
-  What it calls: Apify (Google Maps actor compass/crawler-google-places). Paid from the $5 free monthly
-
-  credit, about half a cent per listing
-  Output: raw.json: name, website, address, postcode, category
-  ────────────────────────────────────────
-  Step: 2. Enrich
-  Command: make enrich
-  What it calls: The business's own website: plain HTTP requests to its homepage and contact pages to
-  find the email (no API, no cost) · Companies House API (UK government, free, your CH_API_KEY) to
-  confirm an active Ltd/LLP/PLC
-  Output: leads.csv
-  ────────────────────────────────────────
-  Step: 3. Audit
-  Command: make batch
-  What it calls: Your webaudit engine on this laptop (poc_webs_magnet/scripts/outreach-batch.mjs):
-  Lighthouse in a local Chrome, security and SEO checks, speed measured twice, one finding, the
-  branded PDF
-  Output: batch/smartlead.csv + batch/audits/*.pdf
-  ────────────────────────────────────────
-  Step: 4. Pick
-  Command: make send
-  What it calls: DuckDB (the bronze/silver/gold store) for the rules and the contacted/suppression
-  checks · Companies House again, only for name-only matches (registered office location; cached) · a
-  live HTTPS check for security findings
-  Output: data/sends/bN.draft.csv
-  ────────────────────────────────────────
-  Step: 5. Send
-  Command: you, in the Smartlead UI
-  What it calls: Smartlead sends from the Google Workspace inboxes
-  Output: the emails
-  ────────────────────────────────────────
-  Step: 6. Record
-  Command: make mark-sent, make event
-  What it calls: local files only
-  Output: contact log, outcomes, then make funnel
-
-  Only steps 1 and 5 cost money (Apify credit and your Smartlead plan). The hosted webaudit site isn't
-  involved, so nothing from these prospects lands in your PocketBase or the inbound lead hub, as ADR
-  0005 requires.
-
-I've added the impact field to b3.draft.csv and to make send, so future batches get it too (a6978c2).
-  For example, the first email in batch 3 would read:
-
-  ▎ Hi there,
-  ▎
-  ▎ I ran a quick check of Barefoot Architects's website and noticed that your homepage takes over 20
-  ▎ seconds to show its main content on a phone (Google's target is under 2.5); you can check it
-  ▎ yourself at pagespeed.web.dev.
-  ▎
-  ▎ That matters because on a phone most people won't wait that long, and Google uses page speed when
-  ▎ ranking sites.
-  ▎
-  ▎ I put it in a one-page report with the three things I'd fix first (speed, search basics, security).
-  ▎ Want me to send it over? No charge.
-
-  Two wording checks:
-  - "Barefoot Architects's" is correct but clunky, and any name ending in "s" does it. Use "the
-    {{company_name}} website" instead of "{{company_name}}'s website".
-  - "Google uses page speed when ranking sites" is accurate: it's one of Google's ranking signals. I
-    deliberately didn't claim "you're losing customers", because we can't prove that.
-
-  In Smartlead, for UK test 3:
-  1. Duplicate UK test 2 and import `data/sends/b3.draft.csv`. Map finding_short, finding and impact as
-     custom fields.
-  2. Replace the Step 1 body with:
-  Hi there,
-
-  I ran a quick check of the {{company_name}} website and noticed that {{finding}}.
-
-  {{impact}}
-
-  I put it in a one-page report with the three things I'd fix first (speed, search basics, security).
-  Want me to send it over? No charge.
-
-  Julita
-  LeadArchitect
-
-  If you'd rather not hear from me, reply "no" and I won't write again.
-  3. Keep the same subject: {{company_name}}: {{finding_short}}. Step 2 stays as it is.
-  4. Tracking off, 20 new leads a day, Monday–Friday. Send a test, then launch, then run make mark-sent
-     BATCH=b3 CAMPAIGN="UK test 3 – trades".
-
-  Batch 3 changes the trade and the wording at the same time, so if it does better than batches 1–2, we
-  won't know which change did it. With only 15 dentist emails sent, that comparison wouldn't mean much
-  anyway. From batch 3 on, keep the wording fixed and change one thing at a time.
-
-
-
-    CSV column    │                      Map to                      │
-  ├─────────────────┼──────────────────────────────────────────────────┤
-  │ email           │ Email (already)                                  │
-  ├─────────────────┼──────────────────────────────────────────────────┤
-  │ company         │ Company Name (already), used as {{company_name}} │
-  ├─────────────────┼──────────────────────────────────────────────────┤
-  │ finding_short   │ Custom Field → finding_short                     │
-  ├─────────────────┼──────────────────────────────────────────────────┤
-  │ finding         │ Custom Field → finding                           │
-  ├─────────────────┼──────────────────────────────────────────────────┤
-  │ impact          │ Custom Field → impact                            │
-  ├─────────────────┼──────────────────────────────────────────────────┤
-  │ everything else │ leave unmapped / Do not import                   │
-  └─────────────────┴──────────────────────────────────────────────────┘
-
-  "Everything else" covers first_name, company_evidence, website, city, country, score, performance,
-  seo, security, lcp_s, report_pdf, run, domain and finding_type. If first_name, website and city are
-  already auto-mapped, that's harmless. The template doesn't use them, and first_name is empty anyway.
-
-  About the preview:
-  - Each column previews its distinct values, not one row, so finding_short showing "20s+, 19s+, 18s+"
-    next to lcp_s "45.9, 31.0, 29.3" isn't a mismatch.
-  - One city shows as "Ls7" (a Leeds postcode district from the listing). The email doesn't use the
-    city, so ignore it.
-
-  After importing, you should see 66 leads with 0 duplicates. If the duplicate count is above 0, stop
-  and tell me, because something overlapped with b1 or b2.
-
-  Then:
-  1. Step 1: paste the new body, with the {{company_name}} website and {{impact}}.
-  2. Settings: tracking off, 20 new leads a day, Monday–Friday.
-  3. Test, then launch.
-  4. Then run make mark-sent BATCH=b3 CAMPAIGN="UK test 3 – trades".
-
-This is the same screen as before. The three fields the `email needs, finding_short, finding and impact`, still have no mapping, so they wouldn't be imported. On this screen:
-
-  1. On the finding_short row, click the empty "Maps To" box → choose Custom Field → type
-     finding_short.
-  2. On the finding row, same: Custom Field → finding.
-  3. On the impact row, same: Custom Field → impact.
-  4. Leave every other row as it is, then click Next / Import.
-
-  email and company are already mapped correctly. The remaining rows are fine either way.
-
-  The check after importing: 66 leads, 0 duplicates.
-
-
-
-
-Here's the M**onday routine**, about an hour, most of it waiting on the audits:
-
-1. Review last week (15 min)
-- In Smartlead, mark each reply's category (Interested / Not interested) so the export carries it.
-- Export each active campaign's leads (Leads → Export CSV) into `leadarchitect-uk/data/bronze/smartlead/`.
-- Log anything Smartlead doesn't know about:
-make event WHO=info@example.co.uk E=call     # or won, optout
-- make funnel, then compare the numbers with the decision table in the roadmap (7.4): bounces, reply
-  rate per trade and per finding type.
-
-2. Build the next batch (setup 10 min, then mostly waiting)
+Run make mark-sent right after launching. Until you run
 
 ```sh
-make scrape Q="architect" L="Manchester, UK" MAX=60     # trades that did best, new cities
-make enrich RUN=data/…
-make batch  RUN=data/…
-make send   RUNS=… BATCH=b4
+make mark-sent BATCH=b3 CAMPAIGN="UK test 3 – trades"
 ```
 
-Then duplicate the last campaign, import b4.draft.csv (with the three custom fields), launch, and run
-make mark-sent BATCH=b4 CAMPAIGN="UK test 4".
+Tthe 66 are only a draft.
 
-3. Record it: a line in outbound/batches.md from the make funnel numbers. I can do this one.
+The contact log doesn't know about them, so another make send over the same runs today would pick them again. 
 
-Limits on how big each batch can be:
-- Sending: 2 inboxes × 15 a day × 5 days = 150 emails a week. Each lead gets 2 emails (first plus
-  follow-up), so that's about 60–75 new leads a week. Connecting the third inbox (j.jedrzejewska@)
-  would raise it to about 100.
-- Apify credit: you've used about $3 of this month's $5. That leaves about 400 listings, roughly one
-  more batch this month. From November the credit resets. If a trade proves itself, Apify's paid plan
-  (about $49 a month) removes the limit.
-- Monthly: make clean-old.
+mark-sent turns the draft into data/sends/b3.csv and adds all 66 domains to contacted.csv, and from then on they're excluded for good.
 
-If you like, just say "Monday run" next week and I'll do steps 1–3, except the Smartlead clicks.
+One detail first: the audit runs locally, using the same engine as `webaudit.jalcocertech.com` but not the hosted site.
 
-you're sending twice as many emails as leads,
-  and you've left out scraping.
+{{% details title="Step by step 🚀" closed="true" %}}
 
-  Monthly cost at 20 new leads a day
+Step: 1. Scrape
+Command: make scrape
+What it calls: Apify (Google Maps actor compass/crawler-google-places). Paid from the $5 free monthly
 
-  ┌───────────────────────────────────────────────────────────────────────────────────────┬─────────┐
-  │                                         Item                                          │ $/month │
-  ├───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
-  │ Smartlead                                                                             │ 40      │
-  ├───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
-  │ Google Workspace, 2 inboxes                                                           │ 40      │
-  ├───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
-  │ Apify: 400 leads at ~18 sends per 100 listings means ~2,200 listings (~$11 of usage); │ ~49     │
-  │  beyond the $5 free credit that needs the Starter plan                                │         │
-  ├───────────────────────────────────────────────────────────────────────────────────────┼─────────┤
-  │ Total                                                                                 │ ~130    │
-  └───────────────────────────────────────────────────────────────────────────────────────┴─────────┘
+credit, about half a cent per listing
+Output: raw.json: name, website, address, postcode, category
+────────────────────────────────────────
+Step: 2. Enrich
+Command: make enrich
+What it calls: The business's own website: plain HTTP requests to its homepage and contact pages to
+find the email (no API, no cost) · Companies House API (UK government, free, your CH_API_KEY) to
+confirm an active Ltd/LLP/PLC
+Output: leads.csv
+────────────────────────────────────────
+Step: 3. Audit
+Command: make batch
+What it calls: Your webaudit engine on this laptop (poc_webs_magnet/scripts/outreach-batch.mjs):
+Lighthouse in a local Chrome, security and SEO checks, speed measured twice, one finding, the
+branded PDF
+Output: batch/smartlead.csv + batch/audits/*.pdf
+────────────────────────────────────────
+Step: 4. Pick
+Command: make send
+What it calls: DuckDB (the bronze/silver/gold store) for the rules and the contacted/suppression
+checks · Companies House again, only for name-only matches (registered office location; cached) · a
+live HTTPS check for security findings
+Output: data/sends/bN.draft.csv
+────────────────────────────────────────
+Step: 5. Send
+Command: you, in the Smartlead UI
+What it calls: Smartlead sends from the Google Workspace inboxes
+Output: the emails
+────────────────────────────────────────
+Step: 6. Record
+Command: make mark-sent, make event
+What it calls: local files only
+Output: contact log, outcomes, then make funnel
 
-  - Per lead: about $0.32.
-  - Per email: about $0.16, since each lead gets the first email and a follow-up, so 800 emails a
-    month.
+{{% /details %}}
 
-  What 400 leads a month should produce, using the ranges from earlier:
+Only steps 1 and 5 cost money (Apify credit and your Smartlead plan). 
 
-  ┌──────────────────────────────────┬───────────┐
-  │                                  │ Per month │
-  ├──────────────────────────────────┼───────────┤
-  │ Replies (3–8%)                   │ 12–32     │
-  ├──────────────────────────────────┼───────────┤
-  │ Positive replies (1–3%)          │ 4–12      │
-  ├──────────────────────────────────┼───────────┤
-  │ Calls                            │ 1–4       │
-  ├──────────────────────────────────┼───────────┤
-  │ Paid fix packs (10–30% of calls) │ 0–1       │
-  └──────────────────────────────────┴───────────┘
+The hosted webaudit site isn't involved, so nothing from these prospects lands in your PocketBase or the inbound lead hub, as ADR0005 requires.
 
-  Break-even is one fix pack (£390, about $500) every 3–4 months. If outbound can't manage that at 400
-  leads a month, it doesn't work anyway, and the tools aren't the problem.
+{{< callout type="warning" >}}
+Your time costs more than the tools
+{{< /callout >}}
 
-  Your time costs more than the tools: about an hour each Monday, replies, calls, and the delivery
-  itself (the roadmap's last decision point checks whether a fix pack really fits in a day).
+> If outbound can't manage that at 400 leads a month, it doesn't work anyway, and the tools aren't the problem.
 
-  What I'd do
-  1. Commit for two months, not a year: monthly billing everywhere.
-  2. Don't buy Apify Starter yet. This month's remaining credit plus November's free $5 covers the next
-     2–3 batches. Upgrade only once a trade shows replies.
-  3. Set a stop rule now: no positive reply after about 300 sends means change the offer or the market
-     before spending more. At least 1 call by 400 sends means keep going and scale the best trade.
-  4. Leave the third Workspace inbox out for now. At 20 leads a day, two inboxes are enough. It's worth
-     $20 a month only if you push past 30 leads a day.
-
-  At about 75 leads a week, you'll reach the 300-send point by mid-November, so the first verdict costs
-  about $200–250 in tools.
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/leadarchitect-uk" title="Lead Architect x UK x Web Audits ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet/blob/master/docs/outreach.md" title="Web Audits ↗" icon="github" >}}
+{{< /cards >}}
 
 
+{{< callout type="info" >}}
+Placed here the [medallion learnings setup](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-solo/wk41y26/2026-10-13.md), here the [costs setup](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-solo/wk41y26/2026-10-14.md) and here the [weekly workflow to take the learnings & load more leads](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-solo/wk41y26/2026-10-18.md)
+{{< /callout >}}
 
-### Slubne PoC
+You just need to have these steps clear for the weekly reviews: [wk42 review](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-solo/wk41y26/2026-10-18.md)
+
+1. Download the CSV: `https://app.smartlead.ai/app/email-campaigns-v2/4120737/leads`
+
+2. Place it at: ``
+
+3. 
+
+...
+ 
+
+
+### Workflow Wrap
 
 ```sh
-git clone /slubne-chwile-y26
+git clone https://github.com/JAlcocerT/my-logseq-notes
 ```
+
+
+The main risk is building a sophisticated reporting system before building a reliable dispatch loop. The useful minimum is:
+
+You define outcomes and priorities
+        ↓
+Supervisor selects the next task for each project
+        ↓
+Worker executes inside one repository
+        ↓
+Verifier checks tests, boundaries, and acceptance criteria
+        ↓
+Worker publishes structured status
+        ↓
+Supervisor gives you only blockers, decisions, and meaningful movement
+
+Your Desktop confirms that this is a good fit. You have distinct areas such as dron, tello-kotlin, poc, opendrone-be-checks, test-cms, and a very large Home-Lab. They should not all be treated as equally active projects. I would classify them into:
+
+- Active product projects
+- Infrastructure and services
+- Experiments
+- Reference or archived material
+- Sensitive assets and credentials
+
+Home-Lab especially should probably be treated as an infrastructure portfolio containing many services, rather than as hundreds of independent agent projects.
+
+The repository contract in your notes is good. I would keep:
+
+- VISION.md
+- ROADMAP.md
+- DECISIONS.md
+- BOUNDARIES.md
+- STATUS.json
+- AGENT.md
+- CHANGELOG.md
+
+I would add two important concepts.
+
+First, distinguish project state from supervisor instructions. STATUS.json should describe what happened and what is blocked. A separate TASK.json or DISPATCH.json should describe what the worker is currently authorized to do. This prevents a worker from quietly expanding its own scope.
+
+Second, every status update needs verifiable identity and evidence:
+
+```json
+{
+  "schema_version": "1.0",
+  "project_id": "dron",
+  "repo": "forgejo/home/dron",
+  "branch": "agent/implement-flight-log",
+  "commit": "abc123",
+  "last_run": "2026-10-17T03:15:00Z",
+  "state": "blocked",
+  "current_task": "TSK-104",
+  "next_action": "Run integration tests with mocked Tello UDP responses",
+  "evidence": {
+    "tests": "passed",
+    "lint": "passed",
+    "changed_files": 6
+  },
+  "blockers": [],
+  "decisions_needed": [
+    {
+      "id": "DEC-01",
+      "question": "Should Windows line endings be supported?",
+      "recommendation": "yes",
+      "default_if_unanswered": "yes",
+      "impact": "low"
+    }
+  ]
+}
+```
+
+The recommendation and default_if_unanswered fields are important.
+
+They allow agents to continue through low-risk ambiguity while escalating decisions that genuinely belong to you.
+
+I would also change the supervisor’s role slightly. It should not merely collect status and generate a daily note. It should:
+
+1. Read the portfolio registry.
+2. Detect stale, blocked, or finished workers.
+3. Create the next bounded task packet.
+4. Start or wake the relevant worker.
+5. Validate the worker’s result.
+6. Update the daily note with only decisions, exceptions, and portfolio-level movement.
+
+That gives you a real steering interface. You can write something like:
+
+For dron:
+- Prioritize reliable photo capture.
+- Pause new UI work.
+- Accept only changes that preserve Linux support.
+- Escalate hardware-dependent failures.
+
+The supervisor translates that into a bounded task for the worker. You do not need to manually coordinate every agent conversation.
+
+A few concrete issues in the current notes are worth fixing early:
+
+- The sample master-plan-sample.json is not valid JSON because several objects contain trailing commas.
+- The example says status.json, while the surrounding text uses uppercase STATUS.json. Pick one filename and enforce it.
+- The supervisor should not trust a worker’s claim that a task is done without checking the recorded commit and quality gates.
+- status.json should be generated or validated against a JSON Schema.
+- A worker should have a lease or run identifier so two agents cannot work on the same task simultaneously.
+- Blockers need an owner, severity, timestamp, and expiry so old blockers do not remain permanently visible.
+- GitHub promotion should be a release gate, not just another task in the worker queue.
+- Secrets should be kept outside the repositories and injected only into explicitly approved runtime environments.
+
+The strongest version of this system is therefore a small control plane:
+
+portfolio/
+  projects.yaml
+  dispatch/
+  decisions/
+  daily/
+  schemas/
+  scripts/
+
+Each project repository contains its own contract and status. The portfolio directory contains priorities, assignments, decisions, and generated reports. That keeps project context local while giving you one place to steer the whole system.
+
+I would build the first version around three workflows:
+
+- dispatch: assign one bounded task per active project
+- status: collect and validate worker heartbeats
+- triage: produce your daily note and decision queue
+
+Once those work reliably, add automatic retries, scheduled workers, release promotion, and cross-project dependency handling. The real success criterion is simple: every morning you should see a short list of decisions and exceptions, rather than a pile of repositories that require manual inspection.
+
+
+The high-level orchestrator should manage the portfolio as a collection of projects with different visibility, risk, maturity, and autonomy. Each project should communicate through one shared protocol, regardless of whether it is a drone app, a proof of concept, a homelab service, or an open-source CLI.
+
+The important distinction is that private, public, and OSS should not be one field.
+
+A project can be:
+
+- Public but proprietary
+- Public and open source
+- Private but intended for future publication
+- Private infrastructure with no external distribution
+
+I would model that as:
+
+```yml
+project_id: dron
+name: Tello Drone Platform
+
+classification:
+  visibility: private          # private | public
+  distribution: proprietary   # proprietary | open_source | internal_only
+  license: null               # MIT, Apache-2.0, proprietary, etc.
+  repository_visibility: private
+  data_sensitivity: medium    # low | medium | high
+  operational_criticality: medium
+
+portfolio:
+  area: robotics
+  type: product                # product | service | library | experiment | infrastructure
+  lifecycle: active            # idea | active | validating | maintenance | paused | archived
+  priority: high               # critical | high | normal | low
+  owner: jalcocer
+  autonomous_mode: supervised  # manual | supervised | autonomous
+
+repository:
+  path: /home/jalcocert/Desktop/dron
+  forgejo: home/dron
+  github: null
+  default_branch: main
+
+cadence:
+  worker: daily
+  supervisor_pull: daily
+  human_review: weekly
+
+governance:
+  allowed_actions:
+    - create_branch
+    - modify_source
+    - run_tests
+    - open_forgejo_pr
+  requires_human_approval:
+    - production_deploy
+    - public_release
+    - repository_visibility_change
+    - license_change
+    - paid_api_usage
+    - destructive_migration
+```
+
+I would make the orchestrator’s portfolio registry the high-level source of truth. It should answer:
+
+- What projects exist?
+- Which ones are active?
+- What outcome does each project serve?
+- How important is each project?
+- Who or what may operate on it?
+- Which repositories and deployment environments belong to it?
+- What is its visibility and distribution policy?
+- How much autonomy does its agent have?
+- When should it report?
+- What requires your approval?
+
+The project repository remains the source of truth for implementation details, technical decisions, current task state, and evidence.
+
+The communication framework should have four standard files or endpoints in every project:
+
+.project/
+  manifest.yaml       # identity, classification, ownership, integrations
+  roadmap.yaml        # milestones and acceptance criteria
+  status.json         # current machine-readable state
+  decisions.ndjson    # append-only decisions and answers
+  boundaries.yaml     # permissions and quality gates
+
+The orchestrator should pull these files daily and validate them against shared schemas. It should not need to understand every project’s technology stack.
+
+A common status.json could look like this:
+
+```json
+{
+  "schema_version": "1.0",
+  "project_id": "dron",
+  "observed_at": "2026-10-17T06:00:00Z",
+  "commit": "abc123",
+  "branch": "agent/photo-capture",
+  "lifecycle": "active",
+  "health": "blocked",
+  "current_milestone": "reliable_capture",
+  "progress": {
+    "completed": 4,
+    "total": 7,
+    "percent": 57
+  },
+  "activity": {
+    "last_worker_run": "2026-10-17T03:15:00Z",
+    "last_meaningful_change": "2026-10-16T19:10:00Z",
+    "next_action": "Run mocked UDP capture tests"
+  },
+  "quality": {
+    "tests": "passed",
+    "lint": "passed",
+    "build": "passed",
+    "security_scan": "passed"
+  },
+  "blockers": [],
+  "decisions_needed": [
+    {
+      "id": "DEC-001",
+      "question": "Should capture retries be enabled by default?",
+      "recommendation": "yes",
+      "default_if_unanswered": "yes",
+      "impact": "low"
+    }
+  ],
+  "release": {
+    "forgejo_ready": false,
+    "github_ready": false,
+    "public_release_ready": false
+  }
+}
+```
+
+I would standardize project lifecycle separately from health:
+
+```yml
+lifecycle:
+  idea
+  discovery
+  active
+  validating
+  production
+  maintenance
+  paused
+  archived
+
+health:
+  healthy
+  needs_attention
+  blocked
+  stale
+  failed
+```
+
+This prevents confusing “paused but healthy” with “active but blocked”.
+
+For roadmaps, avoid making the orchestrator copy every project task. It should only aggregate milestones and outcomes:
+
+```yml
+milestones:
+  - id: M1
+    name: Reliable photo capture
+    status: in_progress
+    target_date: 2026-10-25
+    acceptance:
+      - Capture succeeds in 20 consecutive runs
+      - No unhandled UDP socket errors
+      - Tests pass on Linux
+    outcome_ids:
+      - OUT-DRON-01
+```
+
+The worker may have dozens of implementation tasks, but the orchestrator only needs to know whether the milestone is moving toward its acceptance criteria.
+
+At the portfolio level, I would add these concepts beyond your current notes:
+
+- portfolio_area: robotics, content, infrastructure, experiments, business
+- project_type: product, library, service, experiment, automation
+- visibility: private or public
+- distribution: internal-only, proprietary, open-source
+- license
+- data_sensitivity
+- operational_criticality
+- autonomous_mode
+- human_approval_policy
+- dependencies
+- external_integrations
+- repository_locations
+- release_channels
+- current_outcome
+- next_decision
+- last_meaningful_change
+- staleness_threshold
+- archive_policy
+
+The daily pull should produce a portfolio view such as:
+
+Portfolio: 12 projects
+Active: 5
+Blocked: 2
+Stale: 1
+Awaiting human decision: 3
+Ready for release: 1
+Private: 8
+Public proprietary: 1
+Open source: 3
+
+Your daily note should then contain only:
+
+1. Decisions you need to make.
+2. Projects blocked by you or external credentials.
+3. Projects that changed materially.
+4. Projects that went stale.
+5. Releases or visibility changes requiring approval.
+6. Suggested priorities for the day.
+
+The biggest design principle is this:
+
+> The orchestrator owns portfolio direction and governance. The project agent owns technical execution. The repository owns evidence.
+
+That gives you a unified high-level steering system without forcing the orchestrator to understand every codebase.
