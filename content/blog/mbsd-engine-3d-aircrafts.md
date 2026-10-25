@@ -1,6 +1,6 @@
 ---
 title: "3D Dynamics - Vibrations and aircrafts"
-date: 2026-10-23T18:20:21+01:00
+date: 2026-10-25T10:20:21+01:00
 draft: false
 tags: ["Mechanical Engineering","MBSD v0-9-0 x Airplanes Engine Mount","ULM/PPL"]
 description: 'Simulating before jumping to a plane.'
@@ -257,10 +257,61 @@ https://youtu.be/mFcojiog0S4 -->
 
 
 {{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/mbsd-core" title="mbsd Core OSS ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}
 {{< /cards >}}
 
 > https://app.multibodysystemsdynamics.com/?demo=slider-crank&r=0.35&l=1.15&e=0&rpm=60&steps=241
+
+
+#### V6 x Plane
+
+Created roadmap-v6-airplane.md (multi-body/external/mbsd-freecad/roadmap-v6-airplane.md).
+
+The physics needs one clarification: acceleration along one axis does not automatically cause rotation around another. Cross-axis rotation needs:
+
+- A force acting away from the aircraft’s center of mass.
+- Engine or propeller reaction torque.
+- Gyroscopic reaction from pitching/yawing a spinning propeller.
+- Asymmetric aerodynamic forces.
+- Inertial-axis coupling.
+
+MBSD 0.9.2 is ready for a useful demonstration where the entire aircraft is one rigid body and engine/propeller effects are documented input loads. It supports translation, quaternion rotation, full inertia tensors, offset forces, torques, and Euler gyroscopic terms.
+
+It is not ready to dynamically couple separate pistons, crankshaft, propeller, mounts, and airframe. 
+
+
+{{< callout type="warning" >}}
+Those require the planned `0.9.3` coupled six-DOF foundation and especially `0.9.4` constrained rotational dynamics.
+{{< /callout >}}
+
+
+The roadmap proposes seven scenarios, including:
+
+- Centered versus offset thrust.
+- Pitch producing gyroscopic yaw.
+- Yaw producing gyroscopic pitch.
+- Engine spin-up producing roll reaction.
+- Idealized V6 shaking.
+- A combined take-off sequence.
+- Reversible spin and manoeuvre directions to verify every torque sign.
+
+<!-- 
+https://youtu.be/9gR15loGB1I 
+-->
+
+{{< youtube "9gR15loGB1I" >}}
+
+#### V6 x Plane x 0-9-3
+
+
+{{< youtube "9gR15loGB1I" >}}
+
+
+---
+
+## Conclusions
+
 
 I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
 
@@ -287,10 +338,6 @@ https://www.youtube.com/watch?v=4_Z05iMmDNU
 
 https://www.youtube.com/watch?v=eFGkopoCTYY
 
-
----
-
-## Conclusions
 
 Who could have guessed: *for bicycles and for airplanes we have to level up the modelling to 3D*
 

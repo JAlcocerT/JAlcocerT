@@ -2293,11 +2293,20 @@ Placed here the [medallion learnings setup](https://github.com/JAlcocerT/my-logs
 
 You just need to have these steps clear for the weekly reviews: [wk42 review](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-solo/wk41y26/2026-10-18.md)
 
-1. Download the CSV: `https://app.smartlead.ai/app/email-campaigns-v2/4120737/leads`
+1. Download the CSV at a campaigns' *lead list* section: `https://app.smartlead.ai/app/email-campaigns-v2/4120737/leads`
 
-2. Place it at: ``
+2. Place it at: `./leadarchitect-uk/data/bronze/smartlead/`
 
-3. 
+3. Ask CC to analyze it and...
+
+4. Start over: *APIFY costs ~4.5$ per 125 leads, for those you spin x2 emails each*
+
+```sh
+cd ./leadarchitect-uk #from here there is make towards ./data/sends
+make mark-sent BATCH=b5 CAMPAIGN="UK test 5 – subject A/B"
+```
+
+> This all clearly superseeds whatever i was doing at `/home/jalcocert/Desktop/fossengineerpapermod/custom-mail` with fastAPI :)
 
 ...
  

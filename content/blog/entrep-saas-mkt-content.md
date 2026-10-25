@@ -2,7 +2,7 @@
 title: "Mass produced information content"
 date: 2026-10-25T07:20:21+01:00
 draft: false
-tags: ["Social Media Marketing","Side-Quest26","VSL","Youtube","Stocks x Stonks"]
+tags: ["Social Media Marketing","Side-Quest26","VSL","Youtube","Stocks x Stonks","StykAnimate"]
 description: 'Is value based content dead? Typst and more Goodies 4 Marketers.'
 url: 'social-media-content'
 ---
@@ -205,7 +205,9 @@ cd ./my-logseq-notes/daily-solo #https://www.getleadarchitect.com/
 
 > Mailjet `https://app.mailjet.com/signin` has been working fine for Inbound (newsletter), as plan B: `https://resend.com`, `https://mailtrap.io/`
 
-The supervisor translates that into a bounded task for the worker. You do not need to manually coordinate every agent conversation.
+The idea, is that a supervisor translates that into a bounded task for the project worker.
+
+You do not need to manually coordinate every agent conversation.
 
 Your daily note should then contain only:
 
@@ -225,6 +227,8 @@ That gives you a unified high-level steering system without forcing the orchestr
 
 ### How to get this done fast
 
+Get such x10 workflows implemented for you and your team:
+
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/web/1ton-webook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
@@ -234,9 +238,6 @@ That gives you a unified high-level steering system without forcing the orchestr
 ---
 
 ## FAQ
-
-
-
 
 ### About Infographics
 

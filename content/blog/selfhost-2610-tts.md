@@ -343,11 +343,14 @@ docker compose -f 202610_docker-compose.yml up -d build
 Remember to setup [CF Geoblocking](https://github.com/JAlcocerT/Home-Lab/blob/main/cf-security.md) for your public services *like nextcloud*
 {{< /callout >}}
 
-You have this nice client: https://github.com/Obiente/native
+You have this nice client: `https://github.com/Obiente/native`
 
 ```sh
 cd /home/jalcocert/Downloads && sudo apt install -y ./nextcloud-native-linux-amd64.deb
+#docker exec -it nextcloud php -v
 ```
+
+> You better are aware of [whats going on with PHP](https://fossengineer.com/php-drama-ssl-certificates-october-2026/) and update accordingly
 
 https://github.com/kopia/kopia
 
