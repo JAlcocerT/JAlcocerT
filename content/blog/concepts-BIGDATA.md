@@ -204,7 +204,9 @@ Looking into **open-source data catalog** tools?
     
 > Nessie helps to manage the metadata that a data catalogue would use.
 
-When discussing *Nessie namespaces* it's important to understand how they function within the context of Project Nessie and its relationship with data lake technologies like Apache Iceberg. Here's a breakdown:
+When discussing *Nessie namespaces* it's important to understand how they function within the context of Project Nessie and its relationship with data lake technologies like Apache Iceberg. 
+
+Here's a breakdown:
 
 **Understanding Nessie and Namespaces:**
 
@@ -229,7 +231,6 @@ When discussing *Nessie namespaces* it's important to understand how they functi
 
 * A Nessie namespace is a logical grouping of data assets, primarily tables, within a Nessie-managed data lake.
 * Nessie's handling of namespaces is often implicit, meaning they are inferred rather than always explicitly created.
-
 
 {{< /details >}}
 
@@ -267,7 +268,6 @@ Let's say a sales report shows a sudden drop in revenue. With data lineage, you 
 3.  **The CRM system:** You might find that there was a problem with data entry in the CRM yesterday.
 4.  **The order processing system:** This system was functioning correctly.
 
-
 {{< /details >}}
 
 
@@ -283,14 +283,12 @@ So, data lineage is essentially the **history and the path** that your data take
 <!-- https://jalcocert.github.io/JAlcocerT/data-analytics-concepts/ -->
 <!-- https://greatexpectations.io/blog/what-is-data-profiling -->
 
-
-
 {{< details title="Data Profiling | EDA to know your Data 📌" closed="true" >}}
 
 <!-- 
- https://greatexpectations.io/expectations/
- https://greatexpectations.io/blog/what-is-data-profiling
-  -->
+https://greatexpectations.io/expectations/
+https://greatexpectations.io/blog/what-is-data-profiling
+-->
 
 <!-- pydantic -->
 
@@ -298,7 +296,9 @@ Imagine you've just received a big box of assorted items, and you need to unders
 
 **Data profiling is like taking inventory of that box.**
 
-**In simple terms, data profiling is the process of examining and analyzing your data to discover its characteristics, quality, and structure.** It's about getting a clear understanding of what your data actually looks like.
+**In simple terms, data profiling is the process of examining and analyzing your data to discover its characteristics, quality, and structure.**
+
+It's about getting a clear understanding of what your data actually looks like.
 
 **Think of it as creating a detailed "data report card" that answers questions like:**
 
@@ -321,9 +321,9 @@ Imagine you've just received a big box of assorted items, and you need to unders
 * **Building Trust in Data:** By understanding the characteristics and quality of your data, you can have more confidence in its reliability.
 * **Informing Data Governance:** Profiling provides valuable information for establishing data quality rules and governance policies.
 
-**Example:**
+**Example:** Let's say you have a customer database. 
 
-Let's say you have a customer database. By profiling the "Email Address" column, you might discover:
+By profiling the "Email Address" column, you might discover:
 
 * The majority of entries look like valid email addresses.
 * Some entries are missing (null values).
@@ -343,7 +343,9 @@ It's about getting to know your data intimately so you can work with it effectiv
 
 {{< details title="Data Modelling 📌" closed="true" >}}
 
-Imagine you're planning to build something complex, like a house or a website. Before you start laying bricks or writing code, you need a **blueprint**.
+Imagine you're planning to build something complex, like a house or a website.
+
+Before you start laying bricks or writing code, you need a **blueprint**.
 
 **Data modeling is like creating a blueprint for your data.**
 

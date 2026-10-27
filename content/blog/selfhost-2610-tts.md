@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-25
+date: 2026-10-30
 draft: false
 tags: ["Kokoro","VoiceBox","SunoAI x music","VPS x DR Test","ONT x DHCP"]
 description: 'A homelab that speaks.'
@@ -455,6 +455,11 @@ There are interesting options: asus expertbook a7, thinkpads x1 with little over
 
 Its just that any alternative goes too much into the diminishing returns part.
 
+I ended up going with a Dell this time and with `Omarchy 4.0.4`
+
+> It was all about F12 for bios, ventoy, GRUB2 option and <1min to install
+
+> > You can apply brand to your laptop as per `https://github.com/omacom/omarchy/blob/quattro/manual/41-branding.md`
 
 ### How many users can a Pi4 2GB handle
 

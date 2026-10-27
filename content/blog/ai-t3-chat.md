@@ -309,32 +309,40 @@ For the **QR part**, you know that we have few solutions...
 
 1. https://github.com/JAlcocerT/Streamlit_PoC/blob/main/Utils/QR_Gen.py
 
-2. [![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
+2. You can also do it with python:
+
+[![Open in Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JAlcocerT/JAlcocerT/blob/main/Z_TestingLanguages/Z_Python/QR_generation.ipynb)
 
 
-There are several open-source self-hostable link shortener tools you can consider, each with its unique features:
+There are several *open-source self-hostable* link shortener tools you can consider, each with its unique features:
 
-1. **Shlink**: A PHP-based link shortener that supports generating unique short codes or custom slugs. It collects anonymized visit stats and geolocates visitors. It offers a REST API, CLI tools, and Docker support for easy deployment. It uses modern technologies like Mezzio and Symfony and is MIT licensed.[1][3]
 
-2. **Kutt**: A modern, free, and open-source URL shortener with features like custom domains, custom URLs, password protection, link expiration, private statistics, and an admin dashboard. It has a RESTful API and can be easily installed using Docker Compose.[5]
+{{< details title="See the details... 📌" closed="true" >}}
 
-3. **YOURLS**: A well-established PHP-based URL shortener with features such as bookmarklets, developer API, detailed stats including referrers and geo-location, and extensibility through dozens of plugins. It is free, open source, and easy to self-host.[10]
+1. **Shlink**: A PHP-based link shortener that supports generating unique short codes or custom slugs. It collects anonymized visit stats and geolocates visitors. It offers a REST API, CLI tools, and Docker support for easy deployment. It uses modern technologies like Mezzio and Symfony and is MIT licensed.
 
-4. **Shrink.io (shrtn.io)**: A lightweight, privacy-focused URL shortener using SQLite by default (so no database server is required) and deployable via Docker. It emphasizes ease of use, privacy, and developer-friendly features.[6]
+2. **Kutt**: A modern, free, and open-source URL shortener with features like custom domains, custom URLs, password protection, link expiration, private statistics, and an admin dashboard. It has a RESTful API and can be easily installed using Docker Compose.
 
-5. Other notable mentions from a curated list include Polr, Lstu, Blink, and goshorly—all open source with various programming languages and features.[4][8]
+3. **YOURLS**: A well-established PHP-based URL shortener with features such as bookmarklets, developer API, detailed stats including referrers and geo-location, and extensibility through dozens of plugins. It is free, open source, and easy to self-host.
+
+4. **Shrink.io (shrtn.io)**: A lightweight, privacy-focused URL shortener using SQLite by default (so no database server is required) and deployable via Docker. It emphasizes ease of use, privacy, and developer-friendly features.
+
+5. Other notable mentions from a curated list include Polr, Lstu, Blink, and goshorly—all open source with various programming languages and features.
 
 For ease and feature richness, Shlink, Kutt, and YOURLS are highly recommended starting points for a self-hosted URL shortener.
 
 Among the popular open-source self-hosted link shorteners mentioned, some do offer QR code capabilities either built-in or through extensions/plugins:
 
-1. **Shlink**: Provides built-in QR code generation for short URLs. When you create a short URL using Shlink, it can generate a corresponding QR code that you can share or embed. This is part of its feature set, making it convenient for print or mobile scanning use cases.[1][2]
+1. **Shlink**: Provides built-in QR code generation for short URLs. When you create a short URL using Shlink, it can generate a corresponding QR code that you can share or embed. This is part of its feature set, making it convenient for print or mobile scanning use cases.
 
-2. **Kutt**: While Kutt does not include native QR code generation in its core, there are third-party tools or browser extensions available that can generate QR codes for any URL, including Kutt short links. Some community forks or plugins might add this feature. Officially, out-of-the-box QR codes are not a core feature.[3]
+2. **Kutt**: While Kutt does not include native QR code generation in its core, there are third-party tools or browser extensions available that can generate QR codes for any URL, including Kutt short links. Some community forks or plugins might add this feature. Officially, out-of-the-box QR codes are not a core feature.
 
-3. **YOURLS**: YOURLS does not include native QR code generation by default, but there are several plugins created by the community that add QR code functionality to YOURLS short URLs. This extensibility allows you to add QR generation if needed.[4]
+3. **YOURLS**: YOURLS does not include native QR code generation by default, but there are several plugins created by the community that add QR code functionality to YOURLS short URLs. This extensibility allows you to add QR generation if needed.
 
-4. Other lesser-known tools like Blink or Polr may have QR features built-in or via plugins, but the top three mentioned mostly rely on either built-in Shlink support or plugins for YOURLS for QR capabilities.[5][6]
+4. Other lesser-known tools like Blink or Polr may have QR features built-in or via plugins, but the top three mentioned mostly rely on either built-in Shlink support or plugins for YOURLS for QR capabilities.
+
+
+{{< /details >}}
 
 To summarize, **Shlink** stands out as the self-hosted URL shortener with built-in QR code generation. 
 

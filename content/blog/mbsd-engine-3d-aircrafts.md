@@ -1,6 +1,6 @@
 ---
 title: "3D Dynamics - Vibrations and aircrafts"
-date: 2026-10-25T10:20:21+01:00
+date: 2026-10-26T10:20:21+01:00
 draft: false
 tags: ["Mechanical Engineering","MBSD v0-9-0 x Airplanes Engine Mount","ULM/PPL"]
 description: 'Simulating before jumping to a plane.'
@@ -304,6 +304,7 @@ https://youtu.be/9gR15loGB1I
 
 #### V6 x Plane x 0-9-3
 
+After releasing the next bit *towards the v1.0*:
 
 {{< youtube "9gR15loGB1I" >}}
 
@@ -313,30 +314,6 @@ https://youtu.be/9gR15loGB1I
 ## Conclusions
 
 
-I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
-
-> > And email to `https://selfh.st/submit/`
-
-There are **other oss mbsd fwks** with interesting potential to have a look:
-
-* https://www.mbdyn.org/
-  * https://github.com/zanoni-mbdyn/blendyn
-
-MBDyn (https://www.mbdyn.org/) graphical post-processor for blender (https://www.blender.org/)
-
-* Some people put together mbd x fem - https://mbdfem.com/ 
-- Project Chrono/PyChrono
-- Exudyn
-- Siconos
-- OpenModelica
-- MBDyn
-- preCICE
-
-https://www.youtube.com/watch?v=NxZ1tf8J1oY
-
-https://www.youtube.com/watch?v=4_Z05iMmDNU
-
-https://www.youtube.com/watch?v=eFGkopoCTYY
 
 
 Who could have guessed: *for bicycles and for airplanes we have to level up the modelling to 3D*

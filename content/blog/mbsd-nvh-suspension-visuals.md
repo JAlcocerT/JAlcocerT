@@ -1,6 +1,6 @@
 ---
 title: "Suspension videos"
-date: 2026-10-26
+date: 2026-10-28
 draft: false
 tags: ["MBSD v1-0-0 x Active Damping","LMS Filter"]
 description: 'A light framework that can do stuff.'
@@ -187,12 +187,42 @@ The "Suspension Arc" is now **Complete.** You have moved from a 2-DOF wheel to a
 
 ## Conclusions
 
+Suspension NVH is an energy-transfer problem.
+
+Road inputs enter through tires, pass through springs and dampers, excite chassis modes, and reach the passenger as motion, sound, or harshness. 
+
+The question is not only how parts move, but how vibration travels.
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
+
+I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
+
+> > And email to `https://selfh.st/submit/`
+
+There are **other oss mbsd fwks** with interesting potential to have a look:
+
+* https://www.mbdyn.org/
+  * https://github.com/zanoni-mbdyn/blendyn
+
+MBDyn (https://www.mbdyn.org/) graphical post-processor for blender (https://www.blender.org/)
+
+* Some people put together mbd x fem - https://mbdfem.com/ 
+- Project Chrono/PyChrono
+- Exudyn
+- Siconos
+- OpenModelica
+- MBDyn
+- preCICE
+
+https://www.youtube.com/watch?v=NxZ1tf8J1oY
+
+https://www.youtube.com/watch?v=4_Z05iMmDNU
+
+https://www.youtube.com/watch?v=eFGkopoCTYY
 
 ---
 
