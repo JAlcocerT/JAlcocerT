@@ -7,6 +7,11 @@ description: 'A look to F/OSS KB'
 url: 'daily-notes-with-oss'
 ---
 
+https://selfh.st/apps/?tag=Workspace
+
+https://github.com/maciekzygmunt/excaliself
+https://github.com/yannicschuller/flowplan
+
 **Intro**
 
 * Why Im writting this post: *Last year I used ~~logseq~~ markdown*
