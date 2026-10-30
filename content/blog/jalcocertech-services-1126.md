@@ -201,19 +201,31 @@ Have been doing improvements across all my sites and having some [thoughts aroun
 https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known
 ![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
 
+1. You can get such setup around CF to get contacts forms:
+
 ```sh
 #cd /home/jalcocert/Desktop/mbsd-framework/leadarchitect-uk/data/sends
 #cd jalcocertech-core/leads-hub/hub
 docker exec homelab-leads-hub-1 python -c 'import sqlite3; c = sqlite3.connect("/data/leads.db"); print(c.execute("SELECT key, kind, received_at FROM leads WHERE key LIKE \"multibodysystemsdynamics.com:enquiry:2026-10-05%\"").fetchall())'
 ```
 
+2. You can also make a self-managed (via Jev) telegram community
+
 ##### OutBound
 
 Aka [the clients you choose](https://jalcocert.github.io/JAlcocerT/custom-re-rag/#ps-)
 
+{{< callout type="warning" >}}
+Mind the applicable regulations and law!
+{{< /callout >}}
+
+1. Via cold mail:
+
 ```sh
 
 ```
+
+2. Via cold calls:
 
 #### Shipping SaaS
 
@@ -244,16 +256,34 @@ That really helps to keep track of:
 
 Beyond *no hello's* and *who/what/by-when*:
 
-1. Product definition: *create, define, invest, smart, PIOs, BRD/PRD/FRD, project charters, RACIs whatever, but just make it have sense*
+1. Product definition: *create, define, invest, smart, PIOs, BRD/PRD/FRD, project charters, RACIs, OKRs, outcome driven product development... whatever, but... just make it have sense*
 
 2. PostMortems
+
+3. PIOs: *stop telling how's and spend time defining WHYs*
+
+4. Smaller teams ftw: network theory backs this up
+
+5. Time management: *now with pomodoro* https://github.com/JAlcocerT/omarchy-pomodoro
+
+Declare what you want, not the procedure how to get there.
+
+Start communicating *and governing* THE INTENT!
+
+Goal/intent/contract/end state
+
+#### Funnels
+
+From skalas...
 
 #### Electronic Design
 
 Practical Electronics for Inventors, Fourth Edition is a nice book
 
+#### mbsd
 
 
+#### Homelab Hardening
 
 ---
 
@@ -281,7 +311,9 @@ Coming from [here](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-u
 
 ### Integrations Im using
 
-For [email outbound and enrichment](https://github.com/JAlcocerT/leadarchitect-uk/blob/main/.env.sample), 
+For example [email outbound and enrichment](https://github.com/JAlcocerT/leadarchitect-uk/blob/main/.env.sample)
+
+But why not: smartlead, cf web analytics, or any of these web analytics tools, posthog...and [what now for any saas](https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/z-integrations.md)
 
 ```env
 
@@ -469,14 +501,33 @@ The practical boundary is: `poc_shopify` owns the Shopify-specific offer and con
 
 {{% /details %}}
 
+
+### Energy
+
+
 ### EayP v5 x EmDash x Monolith
 
-Coming from the [last eayp change](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#eayp-v4)
+Coming from the [last eayp change](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#eayp-v4) around foldergram!
 
-https://github.com/generalaction/emdash
+I got to know about: https://github.com/generalaction/emdash
+
+And still i need to [improve `margin-cms`](https://github.com/JAlcocerT/poc/tree/main/pwa-margincms) and try `markdown plus plus`
 
 ### Slubne PoC
 
+Expiry reminders versus marketing DRIP
+
+Expiry reminders are a scheduled email sequence, so “DRIP” describes the mechanism. 
+
+Keep two separate sequences:
+
+* Service reminders: “Your gallery expires soon—download your originals.”
+* Marketing DRIP: onboarding tips, upgrade offers, promotions.
+
+They can **share infrastructure**, but not automatically share recipients, consent rules, or suppression behavior. 
+
 ```sh
-git clone /slubne-chwile-y26
+git clone .../slubne-chwile-y26
 ```
+
+> For security, you can have CI/CD https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/.github/workflows/ci.yml on top of some agent+skills with regular checks to your homelab.

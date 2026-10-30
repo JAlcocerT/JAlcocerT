@@ -302,11 +302,13 @@ https://youtu.be/9gR15loGB1I
 
 {{< youtube "9gR15loGB1I" >}}
 
-#### V6 x Plane x 0-9-3
+#### V6 x Plane x 0-9-4
 
 After releasing the next bit *towards the v1.0*:
 
-{{< youtube "9gR15loGB1I" >}}
+<!-- https://youtu.be/XqoFzL-wUiA -->
+
+{{< youtube "XqoFzL-wUiA" >}}
 
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: "Energy on SelfHosted environment"
-date: 2026-11-01T18:20:21+01:00
+date: 2026-11-08
 draft: false
-tags: ["PV vs SAHP vs HVAC","Shelly x INA226"]
+tags: ["PV vs SAHP vs HVAC","Shelly x INA226","Tech Talk"]
 description: 'Its happening'
 url: 'selfhosting-energy-monitoring'
 math: true
@@ -10,13 +10,15 @@ math: true
 
 **TL;DR**
 
+Ive connected a Shelly to my iot dashboard.
+
 https://www.youtube.com/@QuantumMakers
 
 ---
 
 **Intro**
 
-* Why Im writting this post: *Bc you can do cool stuff with batteries, a tappo and some sensor bring data, you might want to bring sense to a bluetti or custom 18650 packs with BMS*
+* Why Im writting this post: *Bc you can do cool stuff with batteries, a tappo and some sensor bring data, you might want to bring sense to a bluetti or custom 18650 packs with BMS...*
 * What Ive learnt with it: *d*
 
 {{< youtube "UjD94SGqIdM" >}}
@@ -33,39 +35,72 @@ https://www.youtube.com/shorts/IiuDQhFgmq4
 
 ## Home Energy
 
-By inspecting your monthly utility bills you can get some interesting numbers:
+By inspecting your monthly utility bills you can get some interesting numbers: *aka [energy consumption data points](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#energy-consumption-data-points)*
 
-* ~100/125 kwh monthly consumption *with 300 kwh peaks if you live in south europe*
-* 
+The big snapshots: ~100/125 kwh monthly consumption *with 300 kwh peaks if you live in south europe*
+
+Some more details:
+
+* HomeLab + Router ~30w constantly, so ~20kwh a month
+* Fridge ~500 wh/day
+* Dish washer ~800wh per run
+* Washing machine *depends heavily on the mode you choose*
+* Work setups: 33w and ~100w
+
+To keep it simple with a chart:
+
+```mermaid
+pie title Monthly Electricity (Kwh)
+    "Kitchen & Major Appliances (Fridge, Cooking, Dishwasher)" : 37.80
+    "Laptops & Monitors" : 8
+    "Kettle & Coffee" : 5
+    "Homelab & Cable Modem / Wi-Fi" : 20
+    "Washing Machine & Laundry" : 10
+    "Lighting & Electronics Standby" : 9.45
+    "Other / Occasional Loads" : 6.30
+```
 
 ### Shelly 
 
 To get more granular data: *you can measure your home consumption*.
 
-This also helps to understand your daily patterns if you are wondering about a [solar](#solar) and/or [battery](#batteries) setup
+This also helps to understand your **daily consumption patterns** if you are wondering about a [solar](#solar) and/or [battery](#batteries) setup.
+
+> Time matters :)
 
 Shelly has been [adquired recently by SE](https://corporate.shelly.com/en/news/shelly-group-has-entered-into-an-investment-agreement-with-schneider-electric-on-the-intended-voluntary-public-takeover)
 
+Despite the Shelly smart control app being cool, i didnt need it to get the data at any step.
+
+The shelly has an esp32 inside, which when connected to the network provides a web server so that you input there your home wifi creds.
+
+It also allows via blueetooth and lan cable.
+
+From the portal, you can get the mqtt creds on the top right side.
+
+Oh and also update the firmware.
+
+Once the wifi details are provided, the local network dissapears and you wont need any more the `192.168.33.1`.
+
+While i was installin the shelly, i disconnected the main power at home.
+
+Luckily, i got the bluetti acted as UPS/SAI [battery](#batteries) keeping alive the homelab and CM (at ~30w the ah would last around ~5h???)
 
 ## Batteries
 
-Not as energy packed as gasoline, more than [pumping](https://github.com/JAlcocerT/poc/tree/main/physics-electronics/bucks) energy up an olimpic pool at 20m and yet pretty useful.
+Not as energy packed as gasoline, yet definitely more than [pumping](https://github.com/JAlcocerT/poc/tree/main/physics-electronics/bucks) energy up an olimpic pool at 20m and yet pretty useful.
 
-Assuming you mean **2,000 Wh (2 kWh)**—which aligns with modern portable power stations (e.g., a 2 kWh LiFePO4 battery commonly weighs around 19–22 kg)—the water requirement scales by a factor of 10.
+A **2,000 Wh (2 kWh)**—which aligns with modern portable power stations (e.g., a 2 kWh LiFePO4 battery commonly weighs around 19–22 kg)—the water requirement scales by a factor of 10.
 
 You would need roughly **52,400 kg (52.4 metric tons)** of water at real-world efficiency to match it.
 
----
-
-### Step-by-Step Breakdown
+{{% details title="Step-by-Step Breakdown 🚀" closed="true" %}}
 
 **1. Energy to Match (2 kWh):**
-
 
 $$E = 2{,}000\text{ W} \times 3{,}600\text{ s} = 7{,}200{,}000\text{ J (7.2 MJ)}$$
 
 **2. Potential Energy of Water at 20 m:**
-
 
 $$E_p = m \cdot g \cdot h = 1\text{ kg} \times 9.81\text{ m/s}^2 \times 20\text{ m} \approx 196.2\text{ J/kg}$$
 
@@ -81,7 +116,7 @@ $$m_{\text{real}} = \frac{36{,}700\text{ kg}}{0.70} \approx \mathbf{52{,}400\tex
 
 ---
 
-### Physical Scale
+**Physical Scale**
 
 * **Volume:** **$52.4\text{ m}^3$** (52,400 liters, or ~13,850 gallons).
 * **Pool Size:** A full-sized residential swimming pool (e.g., $8\text{ m} \times 4\text{ m} \times 1.6\text{ m}$ deep).
@@ -113,6 +148,8 @@ $$\text{Fuel needed} = \frac{2\text{ kWh}}{2.0\text{ kWh/L}} \approx \mathbf{1.0
 
 *(In practice, running a small inverter generator delivering 2 kW of power burns around **0.9 to 1.1 liters per hour**.)*
 
+{{% /details %}}
+
 Delivering 2 kWh of Usable Electricity
 
 | Storage Method | Weight / Volume Needed | Form of Energy | Practical Efficiency |
@@ -131,14 +168,40 @@ The bluetti setup as SAI/UPS have saved me from some energy cuts affecting my mo
 
 It stores 18Ah and i can plug solar panels with open circuit voltage of up to 28V.
 
+For bigger more efficient panels, you'd need panels with 48V
+
 #### 1s 18650 x TP
 
-I used this one to measure T/H via esp32 deep sleep and mqtt
+Coming from [this post](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#esp32-power-consumption-tweaks).
+
+I used [initially this setup](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/z-setups/1s/esp32_panel_dht_pump_1s_shield.json) to measure T/H via esp32 deep sleep and mqtt
+
+{{< callout type="info" >}}
+First try ~78h (18 oct 7pm 22 oct 2am), after the second try with same firmware/script got ~52h (22 Oct 3pm to 24th 7pm)
+{{< /callout >}}
+
+But 5h a day it was active, so i swapped to 1 min awake and 29 min asleep and expected to get ~7days
+
+
+> `http://192.168.1.2:3038/`
+
+```mermaid
+pie title ESP32 Energy
+         "Active" : 77
+         "Sleep" : 22
+         "VoltageDivider" : 1
+```
+
+{{< callout type="info" >}}
+After simulating the sun you can gather, you might consider [a 1s2p](https://jalcocert.github.io/JAlcocerT/starting-with-3dprinting/#1s2p-5v) setup to accomodate further cloudy days
+{{< /callout >}}
 
 #### 3s 18650 x BMS x PWM
 
 I applied this one for the watering setup.
 
+
+---
 
 ## Solar
 
@@ -172,6 +235,15 @@ MPPT chooses the panel point, but [CC/CV charges the battery safely](https://git
 
 ## Conclusions
 
+{{< cards >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="Free Knowledge ↗" icon="book-open" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
+{{< /cards >}}
+
+### Tech Talk
+
+Using [these brand assets](https://github.com/JAlcocerT/poc/tree/main/zzz-outbound)
+
 
 
 ### Blackout Prep work
@@ -181,10 +253,11 @@ Get to know your [consumptions data](https://jalcocert.github.io/JAlcocerT/start
 
 ### HomeLab Updates 1126
 
-{{< callout type="info" >}}
-Despite this section being selfhost center, i cant deny the nice tech and building in the edge with cf: we can get linkshorteners, [git repos](https://github.com/deathbyknowledge/ripgit), mails... to work with cf d1/r2/kv/workers.
-{{< /callout >}}
+Coming from the last post, ive done some clean up and upgraded the security!
 
+{{< callout type="info" >}}
+Despite this section being selfhost center, i cant deny the nice tech and building in the edge with cf: *we can get linkshorteners, [git repos](https://github.com/deathbyknowledge/ripgit), mails... to work with cf d1/r2/kv/workers*.
+{{< /callout >}}
 
 ```sh
 docker builder prune -a
@@ -238,7 +311,9 @@ https://www.youtube.com/watch?v=5JfPzvcm0E8
 
 > > A [client board](https://seederpm.xyz/docs/features/client-board/), [client requests](https://seederpm.xyz/docs/features/client-requests/) and [daily planner](https://seederpm.xyz/docs/features/daily-planner/) make so much sense
 
-4. Last year I tinkered a lot with authentication: Logto, Firebase auth, even with pocketbase BaaS that i managed to combine with streamlit and with astro static sites with some cf workers connection. Turns out that all that have been simplified further wuth projects like [cloudflare base](https://github.com/cloudflarebase/cloudflarebase) which is **the open source firebase for CF** and uses better-auth internally.
+4. Last year I tinkered a lot with authentication: Logto, Firebase auth, even with pocketbase BaaS that i managed to combine with streamlit and with astro static sites with some cf workers connection. 
+
+Turns out that all that have been simplified further wuth projects like [cloudflare base](https://github.com/cloudflarebase/cloudflarebase) which is **the open source firebase for CF** and uses better-auth internally.
 
 They [claim to be cheaper](https://cloudflarebase.com/#pricing) than firebase and supabase
 

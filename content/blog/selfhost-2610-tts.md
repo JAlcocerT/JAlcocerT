@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-30
+date: 2026-10-31
 draft: false
 tags: ["Kokoro","VoiceBox","SunoAI x music","VPS x DR Test","ONT x DHCP"]
 description: 'A homelab that speaks.'
@@ -125,7 +125,9 @@ Both the pi and x300 are working right now without local SSLs `192.168.1.18` `19
 
 Regarding **useful CLIs**: [herdr](https://fossengineer.com/herdr-terminal-agent-multiplexer/), [ncdu](https://fossengineer.com/ncdu-terminal-disk-usage-analyzer/), [lazydocker](https://fossengineer.com/lazydocker-terminal-ui-for-docker/)
 
-For AI: *~~windsurf, cursor, zed, gram, antigravity, kilo code, roo code, gemini cli, Goose Desktop~~ claude code, codex CLI, T3 Code, opencode....*. Combined with [gitpane](https://github.com/affromero/gitpane) or [mgitstatus](https://github.com/fboender/multi-git-status/blob/master/mgitstatus):
+For AI: *~~windsurf, cursor, zed, gram, antigravity, kilo code, roo code, gemini cli, Goose Desktop~~ claude code, codex CLI, T3 Code, opencode....*.
+
+Combined with [gitpane](https://github.com/affromero/gitpane) or [mgitstatus](https://github.com/fboender/multi-git-status/blob/master/mgitstatus):
 
 ```sh
 herdr #code --yolo | opencode | claude
@@ -148,7 +150,17 @@ find . -type f \( -iname '*.sqlite' -o -iname '*.sqlite3' -o -iname '*.db' \)
 sudo docker compose -f 2610_docker-compose.yml up -d termix nextcloud ncdb sftpgo forgejo forgejo-forgejo-db-1 ntfy pocketbase mailpit uptimekuma maintenant technitium jellyfin qbittorrent prowlarr dawarich_app dawarich_db #umami lunalytics littlyx
 #docker port iot-dashboard-v2
 #lazydocker
+#lazygit
 ```
+
+For notifications im using now ntfy instead of gotify:
+
+```sh
+#cd jalcocertech-core/leads-hub/hub
+docker compose run --rm hub digest --send #weekly summaries towards ntfy
+```
+
+Im very happy with dawarich [komoot integration](https://dawarich.app/blog/12-best-apps-for-mapping-your-walks-in-2025/?_highlight=komoo#5-komoot), it also support immich and Photoprism!
 
 To do some clean up:
 
@@ -157,7 +169,37 @@ comm -23 \
     <(docker network ls --format '{{.Name}}' | sort -u) \
     <(docker ps --format '{{.Networks}}' | tr ',' '\n' | sort -u)
 #docker network prune
+docker builder prune -a
 ```
+
+
+#### Homelab hardening
+
+Are you `readyforlinux.com`?
+
+That questions comes now with extra security implications.
+
+Luckily you have agents and tools to wrap: https://github.com/aquasecurity/trivy
+
+{{< cards cols="1" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trivy" title="Trivy | Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+```sh
+sudo apt install lynis
+sudo lynix audit system --quick
+#sudo lynis audit system --quick --no-colors --log-file /home/jalcocert/lynis.log --report-file /home/jalcocert/lynis-report.dat > /home/jalcocert/lynis-output.txt 2>&1
+```
+
+> For runtime defense and containment: `falco` & [wazuh](https://github.com/wazuh/wazuh)
+
+{{< callout type="warning" >}}
+Aim for **0 critical**!
+{{< /callout >}}
+
+As i really dont want to install many GUI apps at [the new Dell](#macbookor-omarchy), ill be using rustdesk with the homelab and i wont be needing x11 for ssh.
+
+If you are at a big corp, you might use `orca.security` for the same
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gonic" title="Gonic | Docker Config 🐋 ↗" >}}
@@ -165,7 +207,7 @@ comm -23 \
 {{< /cards >}}
 
 ```sh
-winget install sonixd
+winget install sonixd #supersonic also allows subsonic or jellyfin servers
 ```
 
 Been also working with [notifications in the homelab](https://jalcocert.github.io/JAlcocerT/blog/entrep-saas-waiting-x-ebook/#oss-notifications) lately: *it has been cool [for inbound marketing](https://jalcocert.github.io/JAlcocerT/blog/entrep-saas-waiting-x-ebook/#conclusions)*
@@ -352,6 +394,12 @@ cd /home/jalcocert/Downloads && sudo apt install -y ./nextcloud-native-linux-amd
 
 > You better are aware of [whats going on with PHP](https://fossengineer.com/php-drama-ssl-certificates-october-2026/) and update accordingly
 
+In fact, you better master your security:
+
+```sh
+
+```
+
 https://github.com/kopia/kopia
 
 Cross-platform backup tool for Windows, macOS & Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.
@@ -359,16 +407,6 @@ Cross-platform backup tool for Windows, macOS & Linux with fast, incremental bac
 https://github.com/restic/restic
 
 Fast, secure, efficient backup program
-
-
-
-```sh
-cd jalcocertech-core/leads-hub/hub
-docker compose run --rm hub digest --send #weekly summaries towards ntfy
-```
-
-
-
 
 
 ### Testing a backup Strategy in the cloud
@@ -455,11 +493,19 @@ There are interesting options: asus expertbook a7, thinkpads x1 with little over
 
 Its just that any alternative goes too much into the diminishing returns part.
 
-I ended up going with a Dell this time and with `Omarchy 4.0.4`
+I ended up going with a **Dell XPS 9350** this time and with `Omarchy 4.0.4`
 
 > It was all about F12 for bios, ventoy, GRUB2 option and <1min to install
 
 > > You can apply brand to your laptop as per `https://github.com/omacom/omarchy/blob/quattro/manual/41-branding.md`
+
+As a companion i got a keychron J2 75% :)
+
+
+
+#### Omarchy x Pomodoro
+
+* https://github.com/JAlcocerT/omarchy-pomodoro
 
 ### How many users can a Pi4 2GB handle
 
