@@ -320,7 +320,7 @@ Ive also kept using my `yt-distill` poc to go through [interesting videos](https
 git clone ./poc/yt-distill
 ```
 
-From here, [destilling is not the problem](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md), its just doing.
+From here, [*destilling* is not the problem](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md), its just doing.
 
 
 ---
@@ -330,13 +330,6 @@ From here, [destilling is not the problem](https://github.com/JAlcocerT/jalcocer
 ```sh
 #git init #gh secret list
 ```
-
-https://github.com/mortennordbye/homelab
-
-https://github.com/lfnovo/open-notebook
-
-https://github.com/Priveetee/TypeType
-
 
 ### Preparing backups
 
@@ -379,7 +372,6 @@ But first, I moved from the OS drive towards `/mnt/data1tb/services` all the con
 cd ./Home-Lab/tree/main/z-homelab-setup/evolution
 docker compose -f 202610_docker-compose.yml up -d build
 ```
-
 
 {{< callout type="warning" >}}
 Remember to setup [CF Geoblocking](https://github.com/JAlcocerT/Home-Lab/blob/main/cf-security.md) for your public services *like nextcloud*
@@ -500,6 +492,8 @@ I ended up going with a **Dell XPS 9350** this time and with `Omarchy 4.0.4`
 > > You can apply brand to your laptop as per `https://github.com/omacom/omarchy/blob/quattro/manual/41-branding.md`
 
 As a companion i got a keychron J2 75%, dygma was an interesting alternative :)
+
+To pair it it was as simple as: 
 
 #### Omarchy x Pomodoro
 

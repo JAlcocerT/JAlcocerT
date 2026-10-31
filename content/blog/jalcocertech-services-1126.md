@@ -201,7 +201,7 @@ Have been doing improvements across all my sites and having some [thoughts aroun
 https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known
 ![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
 
-1. You can get such setup around CF to get contacts forms:
+1. You can get such **serverless setup** around CF to get contacts forms:
 
 ```sh
 #cd /home/jalcocert/Desktop/mbsd-framework/leadarchitect-uk/data/sends
@@ -209,7 +209,7 @@ https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-servic
 docker exec homelab-leads-hub-1 python -c 'import sqlite3; c = sqlite3.connect("/data/leads.db"); print(c.execute("SELECT key, kind, received_at FROM leads WHERE key LIKE \"multibodysystemsdynamics.com:enquiry:2026-10-05%\"").fetchall())'
 ```
 
-2. You can also make a self-managed (via Jev) telegram community
+2. You can also make [a self-managed (via Jev) telegram community](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-solo/wk43y26/pio-inbound-tg-bot)
 
 ##### OutBound
 
@@ -227,6 +227,9 @@ Mind the applicable regulations and law!
 
 2. Via cold calls:
 
+
+3. Via...[automated outbound CVs](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-solo/wk44y26/pio-outbound-jobs): *for which [writing daily](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-history) and having a story brand helps*
+
 #### Shipping SaaS
 
 Lately im putting these together into `/projects` with `/roadmap & /vision` and `/changelog`.
@@ -234,9 +237,13 @@ Lately im putting these together into `/projects` with `/roadmap & /vision` and 
 That really helps to keep track of:
 
 1. Wedding QRs: *google sign-in/up + CF s3/r2* and its lead CaC KPIs *to test distribution and perceived value*
+
 2. Web Audits
+
 3. MarginCMS: *what if I just needed git compatible notes with sign/in to Forgejo and PWA support? what if foldergram could use git?*
+
 4. Real estate: *once an [idea](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot) and [tech talk](https://jalcocert.github.io/JAlcocerT/custom-re-rag/#a-new-tech-talk), [later white-labeled](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/), now another producticed service*
+
 5. GenBI: *the kind of PoC that you prepare sth, ship a video, have a waiting list and test the market interest* the shopify thing seems to have captured attention `https://sparkseopro.com/#pricing`
 
 6. R&D / IoT / MBSD: `http://192.168.1.2:3038/?range=90d`
@@ -244,7 +251,6 @@ That really helps to keep track of:
 7. Around getleadarchitect Im testing the website fixes and taking the learnings for an outbound agency later on. 
 
 > Outro: mbsd-oss x PWA and selfhosted-connectivity
-
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/authentication/" title="Authentication | Docs ↗" >}}
@@ -254,15 +260,19 @@ That really helps to keep track of:
 
 #### Meta Frameworks
 
-Beyond *no hello's* and *who/what/by-when*:
+Beyond *no hello's* and *who/what/by-when*: governance matters and thinking in systems and their incentives helps
 
 1. Product definition: *create, define, invest, smart, PIOs, BRD/PRD/FRD, project charters, RACIs, OKRs, outcome driven product development... whatever, but... just make it have sense*
 
 2. PostMortems
 
-3. PIOs: *stop telling how's and spend time defining WHYs*
+3. PIOs: *[stop telling how's](https://www.youtube.com/watch?v=7T-gldvgfpo) and spend time defining WHYs*
 
-4. Smaller teams ftw: network theory backs this up
+> Im building with such [clear one time integrations setup](https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/z-integrations.md), [ADRs](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-solo/wk43y26/pio-inbound-tg-bot/adr), Roadmap and changelogs
+
+> > From which i later make [builder posts](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-solo/wk44y26/pio-outbound-jobs/builder-posts)
+
+4. Smaller teams ftw: [network theory](https://github.com/JAlcocerT/poc/tree/main/physics-networktheory) backs this up
 
 5. Time management: *now with pomodoro* https://github.com/JAlcocerT/omarchy-pomodoro
 
@@ -531,3 +541,5 @@ git clone .../slubne-chwile-y26
 ```
 
 > For security, you can have CI/CD https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/.github/workflows/ci.yml on top of some agent+skills with regular checks to your homelab.
+
+> > You can also add CI/CD checks for broken links and what not

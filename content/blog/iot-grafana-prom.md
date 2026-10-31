@@ -1,8 +1,8 @@
 ---
 title: "Grafana Monitoring or DIY?"
-date: 2026-11-01
+date: 2026-12-10
 draft: false
-tags: ["Homelab","Self-Hosting","Iotawatt","Prometheus vs Graphite","Grafana vs TelemetryHarbour"]
+tags: ["Homelab","Self-Hosting","Iotawatt","Prometheus vs Graphite vs TelemetryHarbour"]
 description: 'Grafana works for IoT Same as for Monitoring a HomeLab'
 url: 'selfhosting-grafana'
 ---
@@ -10,6 +10,7 @@ url: 'selfhosting-grafana'
 
 **Tl;DR**
 
+Grafana is useful because many problems become time-series questions.
 
 **Intro**
 
@@ -63,10 +64,7 @@ See how to use [Iotawatt + Grafana](https://blog.networkprofile.org/power-monito
 
 > > Visualize metrics, logs, and traces from multiple sources like Prometheus, Loki, Elasticsearch, InfluxDB, Postgres and many more.
 
-
-
 ---
-
 
 * Check that Prometheus is working at: `http://192.168.1.100:9090/targets`
 * Add prometheus database as data source in Grafana: `http://192.168.1.100:9090`
@@ -76,9 +74,6 @@ See how to use [Iotawatt + Grafana](https://blog.networkprofile.org/power-monito
 * Use pre-existing ones:
     * For node_exporter metrics: <https://grafana.com/grafana/dashboards/1860-node-exporter-full/>
     * For cadvisor metrics: <https://grafana.com/grafana/dashboards/14282-cadvisor-exporter/>
-
-
-
 
 "The TIG Stack: Telegraph InfluxDB and Grafana with Docker"
 

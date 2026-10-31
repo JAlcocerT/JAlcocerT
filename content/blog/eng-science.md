@@ -1,6 +1,6 @@
 ---
 title: "Science is so Cool!"
-date: 2026-11-30T23:20:21+01:00
+date: 2026-12-03T23:20:21+01:00
 draft: false
 tags: ["Heat Transfer vs Electrical Engineering","Analogies"]
 description: 'A Science recap for builders.'

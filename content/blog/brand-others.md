@@ -1,6 +1,6 @@
 ---
 title: "How to create Brands"
-date: 2026-11-20
+date: 2026-11-02
 draft: false
 tags: ["Brand HUBs","JAlcocerTech-Core","EAyP"]
 description: 'JAlcocerTech'

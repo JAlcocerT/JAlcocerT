@@ -284,6 +284,11 @@ For travel, i got to know `https://hotelist.com/` which is some kind of...numbeo
 ## FAQ
 
 
+https://github.com/mortennordbye/homelab
+
+https://github.com/lfnovo/open-notebook
+
+https://github.com/Priveetee/TypeType
 
 ### Interesting Pi Ideas
 

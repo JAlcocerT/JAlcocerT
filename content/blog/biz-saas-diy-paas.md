@@ -174,6 +174,15 @@ And put together a KPI around: performance, volume, power
 
 ## Conclusions
 
+
+A DIY PaaS offer **productizes deployment repetition**.
+
+Many small projects need the same foundations: hosting, database, domain, SSL, backups, monitoring, and simple admin. 
+
+Packaging those foundations can make service delivery faster and less bespoke.
+
+The platform is valuable when it removes repeated setup decisions.
+
 This was supposed to be a: `CreAItive websites` kind of project.
 
 Because there are many old looking and laggy websites.
