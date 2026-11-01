@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-10-31
+date: 2026-11-11
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -123,7 +123,7 @@ Then, feedback to the lead engine.
 
 Its all possible if you have a clear foundations, for example, around medallion.
 
-2. Audio TTS/S2T: among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/), also KoKoro did quite well
+2. [Audio TTS/S2T](https://jalcocert.github.io/JAlcocerT/selfhosted-tts/#conclusions): among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/), also KoKoro did quite well
 
 3. Delivery Analytics - Bc you better [drive outcomes](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#bluf) or get obsolete
 
@@ -131,12 +131,13 @@ Its all possible if you have a clear foundations, for example, around medallion.
 
 5. D&A Recap + OLTP Post (ERPs) and OLAP Post -> Docs -> [D&A ebook](https://ebooks.jalcocertech.com/books/dna/)
 
-
 I thought that Id do for this year a separated `blog.jalc...` based on this [canvas repo](https://github.com/JAlcocerT/canvas).
 
 But I Just continued here.
 
 The same blog as last year, public and even clonable :)
+
+And that has gone nicely, I got some sponsorship
 
 People are using these platforms to do so: *and you have to place your email for later use*
 
@@ -145,7 +146,6 @@ People are using these platforms to do so: *and you have to place your email for
 0. [Improved FOSS](https://fossengineer.com/apps/) from blog to doc like.
 
 Multilanguage and all that stuff. 
-
 
 Still *(and will be kept)* as HUGO.
 
@@ -160,13 +160,16 @@ Added some articles like: https://fossengineer.com/no-hello/ from the [learnings
 
 I have done a ~monthly series on stuff Ive tried or actively used.
 
-Also, have upgraded the x300 and x13 OS'es with a better backup strategy.
+Also, have upgraded the x300 and x13 OS'es with a better backup & [DR strategy](https://jalcocert.github.io/JAlcocerT/selfhosted-tts/#testing-a-backup-strategy-in-the-cloud).
 
 Oh, and Im quite happy with proton mail and custom domains: *more since there is [proton drive cli](https://jalcocert.github.io/JAlcocerT/optimal-karting-line/#files-sync)*
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/" title="HomeLab repo ↗" >}}
 {{< /cards >}}
+
+{{% details title="HA has a buildint SQLite to store and plot MQTT Data!" closed="true" %}}
+
 
 0. Create individual pages on `jalcocertech.com` with stripe plugged.
 
@@ -176,7 +179,6 @@ Share on social media / ads and do `draft:true` when old, but history will be ke
 
 0. Creating D&A Reports with AI: *Because power BI and looker might not be enough for the ai era*
 
-
 0. [Blogspot](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/#preparing-for-blogspot-migration) vs Wordpress Migrations *with Free web Audits plugged in*
 
 The free web audit is a thing: <https://webaudit.jalcocertech.com/>
@@ -184,6 +186,57 @@ The free web audit is a thing: <https://webaudit.jalcocertech.com/>
 Which I put together [here](https://github.com/JAlcocerT/poc_webs_magnet).
 
 This thing is burning, as per the [PHP cve of october](https://fossengineer.com/php-drama-ssl-certificates-october-2026/).
+
+0. DIY website enhancements: *around a PaaS Website Hosting.*
+
+0. Restaurant SaaS: *aka Multi tenant Astro Apps with protected routes*
+
+0. Embeded Chatbots for a business website x [Business Knowledge Base setup](https://jalcocert.github.io/JAlcocerT/custom-bots-kb/)!.
+
+This is going to hit hard in the upcoming years.
+
+Account for the bast amount of silos that there are in every industry that can be improved.
+
+
+Forget about MMM marketing analytics, **personalized outreach** is the next big thing.
+
+If you are a data engineer with some imagination: *go become a GTM engineer*.
+
+0. ecommerce
+
+Selfhost it, provide an AI driven COO or do D&A to cluster users for proper recommendation and revenue optimization
+
+0. Tinkered with **new APIs**
+
+* `https://github.com/agustinusnathaniel/pub-apis`
+* `https://publicapis.sznm.dev/`
+
+0. Data driven stories
+
+* `https://viborc.com/`
+
+0. About [Posthog](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/#posthog): *I used it for the wedding thingy*
+
+Another idea was: Post an ebook page post on IG, then, the web session will be recorded and a YT video can be made out of that
+
+
+0. How to create a **waiting list** to test your ideas + ListMonk + SMTP - Share on ig too.
+
+0. Web Analytics x Link Analytics: *GDPR compliant*
+
+I still go for [Umami](https://github.com/JAlcocerT/Home-Lab/tree/main/umami) for Web Analytics.
+
+But in case you need the link analytics:
+
+* https://jalcocert.github.io/JAlcocerT/t3-like-chat/#selfhosted-webanalytics
+* https://github.com/idhamsy/openshortlink
+
+> `OpenShort.link` is the all-in-one, open-source, serverless URL shortener.
+
+> > It runs 100% on Cloudflare and offers one-click installation.
+
+{{% /details %}}
+
 
 
 {{< cards cols="2" >}}
@@ -199,26 +252,17 @@ Which got enhanced: *after I focused on it*
 {{< /cards >}}
 
 
-0. DIY website enhancements: *around a PaaS Website Hosting.*
-
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Web Audits 101 x Gallery | Post ↗" >}}
   {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-0. Restaurant SaaS: *aka Multi tenant Astro Apps with protected routes*
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/webs-for-restaurants" title="Restaurants micro-SaaS ↗" >}}
   {{< card link="https://github.com/" title=" Repo ↗" icon="github" >}}
 {{< /cards >}}
 
-
-0. Embeded Chatbots for a business website x [Business Knowledge Base setup](https://jalcocert.github.io/JAlcocerT/custom-bots-kb/)!.
-
-This is going to hit hard in the upcoming years.
-
-Account for the bast amount of silos that there are in every industry that can be improved.
 
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/custom-bots-kb" title=" | Post ↗" >}}
@@ -261,9 +305,9 @@ And that I quickly put together [here](https://jalcocert.github.io/JAlcocerT/int
 
 > > That's how ive done the ebook
 
-> Create ebooks be like: upload .md + upload image done via canva = download pdf/epub thanks to pandoc
+> Create ebooks be like: *upload `.md` + upload image done via canva = download pdf/epub thanks to pandoc*
 
-> > Similar to ~tiiny.host
+> > Similar to ~ `tiiny.host`
 
 Again: if you dont have a distribution, expect that nobody will care.
 
@@ -285,48 +329,12 @@ Ive also added some D&A industry use cases and [articles](https://www.jalcocerte
 
 <!-- 
 deeper Power BI expertise, particularly in BI semantic model design and self-service analytics. 
-
 consumer analytics - fmcg - consumer insights
 -->
 
-Forget about MMM marketing analytics, **personalized outreach** is the next big thing.
-
-If you are a data engineer with some imagination: *go become a GTM engineer*.
-
-0. ecommerce
-
-Selfhost it, provide an AI driven COO or do D&A to cluster users for proper recommendation and revenue optimization
-
-0. Tinkered with **new APIs**
-
-* `https://github.com/agustinusnathaniel/pub-apis`
-* `https://publicapis.sznm.dev/`
-
-0. Data driven stories
-
-* `https://viborc.com/`
-
-0. About [Posthog](https://jalcocert.github.io/JAlcocerT/how-to-record-web-sessions/#posthog): *I used it for the wedding thingy*
-
-Another idea was: Post an ebook page post on IG, then, the web session will be recorded and a YT video can be made out of that
-
 {{< cards >}}
   {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" icon="github" >}}
-  {{< card link="https://github.com/clidey/whodb" title="WhoDB Github ↗" >}}
 {{< /cards >}}
-
-0. How to create a **waiting list** to test your ideas + ListMonk + SMTP - Share on ig too.
-
-0. Web Analytics x Link Analytics: *GDPR compliant*
-
-I still go for [Umami](https://github.com/JAlcocerT/Home-Lab/tree/main/umami) for Web Analytics.
-
-But in case you need the link analytics:
-
-* https://jalcocert.github.io/JAlcocerT/t3-like-chat/#selfhosted-webanalytics
-* https://github.com/idhamsy/openshortlink
-
-> OpenShort.link is the all-in-one, open-source, serverless URL shortener. It runs 100% on Cloudflare and offers one-click installation.
 
 1. Weddings and ads 101: *a micro-SaaS ,game' has great GM, it just needs OpEx to get rolling!*
 
@@ -467,7 +475,7 @@ Which I used for the first **tech [talk](#tech-talks)** of this year.
   {{< card link="https://github.com/JAlcocerT" title="Consulting / Landing Repo | Y26 Tech Talks ↗" icon="github" >}}
 {{< /cards >}}
 
-10. Thanks to those series of doing things: the D&A / Agentic COO / for Shopify came into my mind.
+10. Thanks to those series of doing things: *the D&A / Agentic COO / for Shopify came into my mind.*
 
 {{< cards >}}
   {{< card link="https://github.com/" title="SliDev Repo | Pre Y26 Tech Talks ↗" icon="github" >}}
@@ -598,7 +606,7 @@ Later a [PySide6 (Qt) for the tello](https://gitlab.com/fossengineer1/dron/-/tre
 
 > [TKinter post](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-python/), [Go post](https://jalcocert.github.io/JAlcocerT/gopro-telemetry-desktop-with-go/#why-go-and-wails), [Rust post](https://jalcocert.github.io/JAlcocerT/desktop-apps-with-rust)
 
-> > > A truly universal native desktop binary—one file running unchanged on Windows, Linux, and macOS—does not practically exist
+A truly universal native desktop binary—one file running unchanged on Windows, Linux, and macOS—does not practically exist
 
 {{< youtube "M03HU4DWhyE" >}}
 
@@ -615,7 +623,6 @@ Getting rust to work with CNN made me do [this AI architectural recap](https://g
   {{< card link="https://github.com/JAlcocerT/eda-geospatial" title="Py Route Tracker ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/optimum-path" title="Optimum Path | Repo Section" icon="github" >}}
 {{< /cards >}}
-
 
 ```sh
 git clone https://github.com/JAlcocerT/eda-geospatial

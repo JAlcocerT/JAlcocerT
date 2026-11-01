@@ -179,7 +179,7 @@ Are you `readyforlinux.com`?
 
 That questions comes now with extra security implications.
 
-Luckily you have agents and tools to wrap: https://github.com/aquasecurity/trivy
+Luckily you have agents, [docs for security hardening and tools](https://fossengineer.com/homelab-security-hardening/) to wrap: https://github.com/aquasecurity/trivy
 
 {{< cards cols="1" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trivy" title="Trivy | Docker Config 🐋 ↗" >}}
@@ -401,7 +401,7 @@ https://github.com/restic/restic
 Fast, secure, efficient backup program
 
 
-### Testing a backup Strategy in the cloud
+#### Testing a backup Strategy in the cloud
 
 I recently saw [this post](https://akashrajpurohit.com/blog/choosing-the-right-vps-provider-comparing-digitalocean-linode-vultr-hetzner-for-different-use-cases/) that compares few VPS providers
 

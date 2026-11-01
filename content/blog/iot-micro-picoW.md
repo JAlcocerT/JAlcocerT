@@ -802,6 +802,7 @@ sqlite3 home-assistant_v2.db
 #.tables
 
 ```
+
 {{% /details %}}
 
 Create a new [HA](https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant) dashboard with the sensor info:

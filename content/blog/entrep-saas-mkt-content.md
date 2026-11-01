@@ -14,6 +14,8 @@ https://www.youtube.com/watch?v=zZ1bgIaoPas
 
 The bar to create *slop* is lower than ever.
 
+(n-1)n
+
 **Intro**
 
 * Why Im writting this post: *bc this year i started making some f1 shorts with matplotlib, then tried remotionJS and hyperframes, but didnt make a checkpoint on how this can apply to my brand*
