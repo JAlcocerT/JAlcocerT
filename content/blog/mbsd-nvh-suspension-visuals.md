@@ -1,6 +1,6 @@
 ---
 title: "Suspension videos"
-date: 2026-10-30
+date: 2026-11-07
 draft: false
 tags: ["MBSD v1-0-0 x Active Damping","LMS Filter"]
 description: 'A light framework that can do stuff.'
@@ -35,19 +35,21 @@ Via the web https://github.com/JAlcocerT/multi-body
 
 ## Suspensions Types
 
+Suspensions: Double Wishbone, macpherson...
+
+https://www.youtube.com/shorts/cx21pJaPVTc
+
 
 ## Suspension Modelling
 
 ### Quarter car
 
-![alt text](../../static/blog_img/mec/quarter_car_damper_tradeoff.png) ![alt text](../../static/blog_img/mec/quarter_car_frfs.png)
+![alt text](/blog_img/mec/quarter_car_damper_tradeoff.png) 
+
+![alt text](/blog_img/mec/quarter_car_frfs.png)
 
 
 ### Half car
-
-2. Suspensions: Double Wishbone, macpherson...
-
-https://www.youtube.com/shorts/cx21pJaPVTc
 
 
 ## Suspension design space

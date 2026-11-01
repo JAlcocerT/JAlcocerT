@@ -3,7 +3,7 @@ title: "[JAlcocerTech] Services and BiP"
 date: 2026-11-03T10:20:21+01:00
 draft: false
 tags: ["Roadmap26","CF KV"]
-description: 'All you need is to have a vision and agents.'
+description: 'All you need is to have vision (and agents).'
 url: 'jalcocertech-services-bip'
 ---
 
@@ -56,11 +56,7 @@ If that's clear, then id recommend:
 
 6. Roadmaps (kanban), changelog and gated feature requests
 
-7. Product analytics: posthog is amazing
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}
-{{< /cards >}}
+7. Product analytics: posthog is amazing and it can be one of your agents integrations for a self-improving product (P**I**Os)
 
 
 ### A change of mindset
@@ -511,6 +507,7 @@ The practical boundary is: `poc_shopify` owns the Shopify-specific offer and con
 
 {{% /details %}}
 
+### And used outreach
 
 ### Energy
 
@@ -540,6 +537,15 @@ They can **share infrastructure**, but not automatically share recipients, conse
 git clone .../slubne-chwile-y26
 ```
 
-> For security, you can have CI/CD https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/.github/workflows/ci.yml on top of some agent+skills with regular checks to your homelab.
+> For security, you can have CI/CD https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/.github/workflows/ci.yml on top of some agent+skills with regular security checks to your homelab/VPS.
 
-> > You can also add CI/CD checks for broken links and what not
+> > You can also add CI/CD checks for broken links (linkcheker, lycheeverse/lychee...) and what not
+
+### SEO
+
+Beyond having a nice performing website:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Web-checks 🐋↗" >}}
+{{< /cards >}}

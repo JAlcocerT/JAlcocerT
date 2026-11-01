@@ -1,8 +1,8 @@
 ---
-title: "Energy on SelfHosted environment"
+title: "Energy around a SelfHosted environment"
 date: 2026-11-08
 draft: false
-tags: ["PV vs SAHP vs HVAC","Shelly x INA226","Tech Talk"]
+tags: ["PV vs SAHP vs HVAC","Shelly x INA226","Tech Talk","SCADA"]
 description: 'Its happening'
 url: 'selfhosting-energy-monitoring'
 math: true
@@ -177,12 +177,25 @@ Coming from [this post](https://jalcocert.github.io/JAlcocerT/starting-with-3dpr
 
 I used [initially this setup](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/z-setups/1s/esp32_panel_dht_pump_1s_shield.json) to measure T/H via esp32 deep sleep and mqtt
 
+```sh
+cd ./data1tb/services/iot-dashboard-v2/data/readings.sqlite
+```
+
 {{< callout type="info" >}}
-First try ~78h (18 oct 7pm 22 oct 2am), after the second try with same firmware/script got ~52h (22 Oct 3pm to 24th 7pm)
+First try ~78h (18 oct 7pm 22 oct 2am), after the second try with same firmware/script got ~52h (22 Oct 3pm to 24th 7pm) and the 3rd one made ~72h
 {{< /callout >}}
 
 But 5h a day it was active, so i swapped to 1 min awake and 29 min asleep and expected to get ~7days
 
+I changed `esp32_panel_dht_pump_winter.ino` so the onboard blue LED stays dark from 22:00 to 08:00, and flashed it. 
+
+What changes at night:
+- No Wi-Fi or MQTT connect blinks.
+- No heartbeat and no fast blink while the pump runs.
+- The connect blinks are skipped entirely, so the board also doesn't sit through their delays.
+
+Exception: right after a power-on, before the board has the time from the internet, the LED blinks
+normally. That way you can still see Wi-Fi problems when you plug it in or flash it.
 
 > `http://192.168.1.2:3038/`
 
@@ -236,6 +249,12 @@ MPPT chooses the panel point, but [CC/CV charges the battery safely](https://git
 
 ## Conclusions
 
+It seems that calling dashboard to such project is an understatement.
+
+And it actually makes sense.
+
+In facts, such systems are a self-hosted SCADA.
+
 {{< cards >}}
   {{< card link="https://ebooks.jalcocertech.com" title="Free Knowledge ↗" icon="book-open" >}}
   {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
@@ -261,7 +280,7 @@ Despite this section being selfhost center, i cant deny the nice tech and buildi
 {{< /callout >}}
 
 ```sh
-docker builder prune -a
+#docker builder prune -a
 docker image prune -a
 docker system df
 ```
@@ -273,7 +292,9 @@ I tried Gladys and it has interesting integrations with tappo, zigbee2mqtt...
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/home-assistant/" title="Home Assistant | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-But honestly, i just dont care about learning how to use a tool that ,,I'' ve not designed anymore. Just give me mqtt [with emqx](https://fossengineer.com/selfhosting-emqx/) and ill get a custom dashboard done.
+But honestly, i just dont care about learning how to use a tool that ,,I'' ve not designed anymore.
+
+Just give me mqtt [with emqx](https://fossengineer.com/selfhosting-emqx/) and ill get a custom dashboard done around all functionality I need.
 
 
 For travel, i got to know `https://hotelist.com/` which is some kind of...numbeo for hotel ratings?
@@ -341,7 +362,7 @@ Runs anywhere. EmDash uses portable abstractions at every layer -- Kysely for SQ
 > multi-platform import (WordPress/Ghost/Hexo/Hugo/Jekyll/Halo)
 
 {{< callout type="warning" >}}
-Emdash uses SSR/server output, monolith uses another SSR/api so that when you edit in CMS its saved to the DB then next refresh loads the new content from the db (inside monolith the db stores .md though) - None of them are SSG with a git based workflow were you edit .md - commit - ci/cd - astro built - static html deploy
+Emdash uses `SSR/server` output, monolith uses another SSR/api so that when you edit in CMS its saved to the DB then next refresh loads the new content from the db (inside monolith the db stores .md though) - None of them are SSG with a git based workflow were you edit .md - commit - ci/cd - astro built - static html deploy
 {{< /callout >}}
 
 

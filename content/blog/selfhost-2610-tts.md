@@ -1,6 +1,6 @@
 ---
 title: "Selfhosted TTS"
-date: 2026-10-31
+date: 2026-10-25
 draft: false
 tags: ["Kokoro","VoiceBox","SunoAI x music","VPS x DR Test","ONT x DHCP"]
 description: 'A homelab that speaks.'
@@ -386,7 +386,8 @@ cd /home/jalcocert/Downloads && sudo apt install -y ./nextcloud-native-linux-amd
 
 > You better are aware of [whats going on with PHP](https://fossengineer.com/php-drama-ssl-certificates-october-2026/) and update accordingly
 
-In fact, you better master your security:
+In fact, you better master your security!
+
 
 ```sh
 
@@ -487,13 +488,13 @@ Its just that any alternative goes too much into the diminishing returns part.
 
 I ended up going with a **Dell XPS 9350** this time and with `Omarchy 4.0.4`
 
-> It was all about F12 for bios, ventoy, GRUB2 option and <1min to install
+> It was all about `F12` for bios, ventoy, GRUB2 option and <1min to install
 
 > > You can apply brand to your laptop as per `https://github.com/omacom/omarchy/blob/quattro/manual/41-branding.md`
 
 As a companion i got a keychron J2 75%, dygma was an interesting alternative :)
 
-To pair it it was as simple as: 
+To pair it it was as simple as: `Fn+1`
 
 #### Omarchy x Pomodoro
 

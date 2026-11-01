@@ -10,6 +10,8 @@ math: true
 
 **Tl;DR**
 
+https://youtube.com/shorts/AsHrqgl3rXE?si=3AgfXR6RglmEBsjt
+
 Guess what goes after mechanics and electronics
 
 **Intro**
