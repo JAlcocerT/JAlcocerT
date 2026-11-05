@@ -1,11 +1,17 @@
 ---
 title: "[JAlcocerTech] Services and BiP"
-date: 2026-11-03T10:20:21+01:00
+date: 2026-11-06T10:20:21+01:00
 draft: false
 tags: ["Roadmap26","CF KV"]
 description: 'All you need is to have vision (and agents).'
 url: 'jalcocertech-services-bip'
 ---
+
+https://github.com/JAlcocerT/poc_webs_magnet/blob/master/z-lead-capture.md
+
+```sh
+herdr #lazygit /usage /status
+```
 
 **Tl;DR**
 
@@ -42,7 +48,7 @@ After [shipping several SaaS](#shipping-saas) in public, these is what I wish I 
 
 > Are you building for feeling productive? How certain are you that your build will solve somebodies pain points? Do you even care and are just building for the sake of it?
 
-If that's clear, then id recommend:
+If that's clear, then id recommend: do and document ADR, decisions, roadmap, learnings and builder-posts.
 
 1. Astro SSG x Edge capabilities within Cloudflare offerings: *[scheduled posts](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/scheduled-rebuilds.md) via CI/CD, posts with auth, contact form, newsletter, DRIP, GDPR compliant, webp & mdx support, cms x pwa x offline optional.* With no [broken links](https://fossengineer.com/linkchecker-broken-link-checker/), [web-check](https://fossengineer.com/selfhosting-web-check/)ed, [Google search console](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#google-search-api), PageSpeed and [CF analytics via API](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#cf-api) setup for feedback and web audited and with a VSL. With the sitemaps configured for google and for `bing.com/webmasters`. Properly [audited](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-audits-x-checks) and with [web best practices](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-best-practices) in place, like [using webp images](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#baj).
 
@@ -83,8 +89,7 @@ As we go from trad BA, to specifying mechanics (BRD/PRD/FRD), the next steps abo
 
 Its crucial to have an [ideas and opportunities health check](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/):
 
-{{% details title="Why Starting a Tech Blog? 🚀" closed="true" %}}
-
+{{% details title="The decisions... 🚀" closed="true" %}}
 
 The **launch strategy**: *aka, focus strategy*:
 
@@ -170,7 +175,6 @@ mindmap
 McKinsey’s framework Three Horizons of Growth, and it focuses on managing innovation across different timeframes rather than product lifecycle actions.   
 
 BCG Growth-Share Matrix (Cash Cows, Stars, Dogs, Question Marks) is ~ PLC.
-
 
 ---
 
@@ -277,6 +281,10 @@ Declare what you want, not the procedure how to get there.
 Start communicating *and governing* THE INTENT!
 
 Goal/intent/contract/end state
+
+<!-- https://www.youtube.com/watch?v=7T-gldvgfpo -->
+
+{{< youtube "7T-gldvgfpo" >}}
 
 #### Funnels
 
@@ -398,7 +406,9 @@ The technical model had four layers:
 - FastAPI/Python agentic logic
 - React/Recharts representation
 
-The landing used Astro/React, Tailwind, Framer Motion, Docker and a Cloudflare Tunnel. Its stronger ATF combined a headline, interactive URL input and video proof in the first viewport (example(content/blog/entrep-saas-slub-product-dev.md:74)).
+The landing used Astro/React, Tailwind, Framer Motion, Docker and a Cloudflare Tunnel.
+
+Its stronger ATF combined a headline, interactive URL input and video proof in the first viewport (example(content/blog/entrep-saas-slub-product-dev.md:74)).
 
 In From Shopify to Profit (content/blog/entrep-saas-pnpshopify-be.md:1), you acknowledged that the landing existed before the complete product. The next work was:
 
@@ -534,12 +544,12 @@ Keep two separate sequences:
 They can **share infrastructure**, but not automatically share recipients, consent rules, or suppression behavior. 
 
 ```sh
-git clone .../slubne-chwile-y26
+git clone .../slubne-chwile-y26 #https://slubnechwile.com/dashboard
 ```
 
 > For security, you can have CI/CD https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/.github/workflows/ci.yml on top of some agent+skills with regular security checks to your homelab/VPS.
 
-> > You can also add CI/CD checks for broken links (linkcheker, lycheeverse/lychee...) and what not
+> > You can also add CI/CD checks for broken links (linkcheker, [lycheeverse/lychee](https://github.com/lycheeverse/lychee-action)...) and what not
 
 ### SEO
 

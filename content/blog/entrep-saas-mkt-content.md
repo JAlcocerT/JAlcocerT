@@ -1,6 +1,6 @@
 ---
 title: "Mass produced information content"
-date: 2026-11-02T07:20:21+01:00
+date: 2026-11-10T07:20:21+01:00
 draft: false
 tags: ["Social Media Marketing","Side-Quest26","VSL","Youtube","Stocks x Stonks","StykAnimate"]
 description: 'Is value based content dead? Typst and more Goodies 4 Marketers.'

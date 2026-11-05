@@ -301,7 +301,7 @@ Also there are some projects to backup websites, like:
 1. [ArchiveBox](https://github.com/ArchiveBox/ArchiveBox)
 
 {{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/archivebox" title="TinyAuth | Docker Config Setup 🐋 ↗"  >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/archivebox" title="ArchiveBox | Docker Config Setup 🐋 ↗"  >}}
 {{< /cards >}}
 
 >  MIT | 🗃 Open source self-hosted web archiving. Takes URLs/browser history/bookmarks/Pocket/Pinboard/etc., saves HTML, JS, PDFs, media, and more... 

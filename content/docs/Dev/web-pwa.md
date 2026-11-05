@@ -1,6 +1,6 @@
 ---
 title: "PWAs FTW"
-date: 2026-11-01
+date: 2026-11-30
 draft: false
 tags: ["dev"]
 summary: 'PWAs are so cool.'

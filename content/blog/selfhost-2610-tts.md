@@ -185,9 +185,13 @@ Luckily you have agents, [docs for security hardening and tools](https://fosseng
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/trivy" title="Trivy | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
+For which ive wrap it around [a skill](https://github.com/JAlcocerT/poc_webs_magnet/tree/master/.agents/skills/trivy-audit) *that ill most certainly improve over time*
+
+There are [more tools, like](https://fossengineer.com/homelab-security-hardening/): *lynis, falco and wazuh*
+
 ```sh
-sudo apt install lynis
-sudo lynix audit system --quick
+#sudo apt install lynis
+sudo lynis audit system --quick
 #sudo lynis audit system --quick --no-colors --log-file /home/jalcocert/lynis.log --report-file /home/jalcocert/lynis-report.dat > /home/jalcocert/lynis-output.txt 2>&1
 ```
 
@@ -197,7 +201,7 @@ sudo lynix audit system --quick
 Aim for **0 critical**!
 {{< /callout >}}
 
-As i really dont want to install many GUI apps at [the new Dell](#macbookor-omarchy), ill be using rustdesk with the homelab and i wont be needing x11 for ssh.
+As i really dont want to install many GUI apps at [the new Dell](#macbookor-omarchy), ill be using rustdesk with the homelab and i wont be needing *x11 enabled for ssh*.
 
 If you are at a big corp, you might use `orca.security` for the same
 
@@ -223,6 +227,9 @@ Oh, and with [oss link shorteners](https://fossengineer.com/selfhosted-open-sour
 
 > But finding [Sink](https://github.com/miantiao-me/Sink) and [Slite](https://github.com/miantiao-me/Slite) that are a good match if you already use CF KV and D1
 
+
+{{% details title="The video had sauce... 🚀" closed="true" %}}
+
 The video presents a novel approach to link shortening and QR code generation that eliminates the need for a database, ensuring links remain recoverable even if the service goes down.
 
 The method focuses on optimizing link encoding and compression, resulting in potentially smaller QR codes and links without ads or registration.
@@ -238,6 +245,8 @@ The system uses a fixed dictionary for compression, optimizing the encoding of f
 The QR code generation process is improved by using the alphanumeric character set, resulting in smaller and more efficient QR codes compared to existing tools.
 
 The project is experimental and not intended as a commercial product, but it demonstrates the potential for more efficient link management.
+
+{{% /details %}}
 
 > Once you are done, you make sure that all links in your website work with `https://github.com/linkchecker/linkchecker`
 
@@ -277,51 +286,7 @@ Having a look to **commento** to check that there is no spam [from time to time]
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/commento" title="Commento | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-{{< cards cols="1" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#homelab-commands" title="HomeLab CLIs | Docs ↗" icon="book-open" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="Cloudflare x Porkbun DNS API Scripts ↗" >}}
-{{< /cards >}}
-
-
-* https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#traefik-x-x300-homelab
-* https://fossengineer.com/selfhosting-traefik/
-
-{{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik | Docker Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tiny-auth" title="Tiny Auth Docker Config 🐋 ↗" >}}
-{{< /cards >}}
-
-For media: `https://selfh.st/apps/?tag=Photos`
-
-* https://github.com/paulomarques742/imago
-* https://imago.742studio.eu/
-
-* https://foldergram.github.io/
-
-```sh
-git clone /JalcocerT/foldergram
-```
-
-> Point it at your folders, browse everything through a fast feed-style interface. No cloud, no accounts — just your files and SQLite.
-
-* https://github.com/open-noodle/gallery a fork of immich :)
-
-> Some time back i [tried immich](https://fossengineer.com/selfhosting-immich/) but i didnt like that my folder order is not respected and also neither need the heavy face recognition
-
-High performance self-hosted photo and video management solution.
-
-https://github.com/storytold
-
-https://github.com/andrii-kryvoviaz/slink
-
-Ive also kept using my `yt-distill` poc to go through [interesting videos](https://github.com/JAlcocerT/my-logseq-notes/tree/main/distilled-videos/business-hormozi):
-
-```sh
-git clone ./poc/yt-distill
-```
-
-From here, [*destilling* is not the problem](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md), its just doing.
-
+But in fact I decided to sunset it and just backup the old comments in a json for the records.
 
 ---
 
@@ -377,14 +342,14 @@ docker compose -f 202610_docker-compose.yml up -d build
 Remember to setup [CF Geoblocking](https://github.com/JAlcocerT/Home-Lab/blob/main/cf-security.md) for your public services *like nextcloud*
 {{< /callout >}}
 
-You have this nice client: `https://github.com/Obiente/native`
+You have this **nice nextcloud client**: `https://github.com/Obiente/native`
 
 ```sh
 cd /home/jalcocert/Downloads && sudo apt install -y ./nextcloud-native-linux-amd64.deb
 #docker exec -it nextcloud php -v
 ```
 
-> You better are aware of [whats going on with PHP](https://fossengineer.com/php-drama-ssl-certificates-october-2026/) and update accordingly
+> You better are aware of [whats going on with **PHP**](https://fossengineer.com/php-drama-ssl-certificates-october-2026/) and update accordingly
 
 In fact, you better master your security!
 
@@ -393,14 +358,13 @@ In fact, you better master your security!
 
 ```
 
-https://github.com/kopia/kopia
+* https://github.com/kopia/kopia
 
 Cross-platform backup tool for Windows, macOS & Linux with fast, incremental backups, client-side end-to-end encryption, compression and data deduplication. CLI and GUI included.
 
-https://github.com/restic/restic
+* https://github.com/restic/restic
 
 Fast, secure, efficient backup program
-
 
 #### Testing a backup Strategy in the cloud
 
@@ -420,7 +384,7 @@ But... renting on of those servers for an afternoon can be interesting to:
 
 ### Travel Router as Home Router
 
-I was wondering of the Glnet could be my home router, if i can use https://opnsense.org/ or if i need a CM at all.
+I was wondering of the Glnet could be my home router, if i can use `https://opnsense.org/` or if i need a CM at all.
 
 **No, you do not need a cable modem at all.**
 
@@ -434,22 +398,23 @@ Historically, internet types used different devices:
 * **DSL / VDSL (Old copper phone lines like Neostrada):** Needed an **ADSL/VDSL Modem** to demodulate phone line frequencies.
 * **Fiber Optic (Your setup):** Uses an **ONT (Optical Network Terminal)**. It demodulates light pulses coming through the glass fiber and turns them directly into standard Gigabit Ethernet frames.
 
+The box the ISP delivered is a **router + Wi-Fi access point**, not a modem.
 
-The box Play delivered to you is a **router + Wi-Fi access point**, not a modem. It does no optical conversion.
+It does no optical conversion.
 
 ```
 [ Glass Fiber in Wall ]
            │
            ▼
 ┌─────────────────────────┐
-│     Orange ONT Box      │  <-- THIS IS YOUR MODEM (Keep this plugged in)
+│     ONT Box      │  <-- THIS IS YOUR MODEM (Keep this plugged in)
 │ (Demodulates light)     │
 └──────────┬──────────────┘
            │
            │ (Standard RJ45 Ethernet Cable carrying VLAN 35)
            ▼
 ┌─────────────────────────┐
-│ Play Factory Box        │  <-- THIS IS JUST A ROUTER / AP (You can remove it)
+│      Factory Box        │  <-- THIS IS JUST A ROUTER / AP (You can remove it)
 │ (Currently routing)     │
 └─────────────────────────┘
 ```
@@ -457,7 +422,7 @@ The box Play delivered to you is a **router + Wi-Fi access point**, not a modem.
 When you replace the Play router with your GL.iNet, a UniFi Gateway, or your Ubuntu homelab running **OpenWrt**:
 
 ```
-[ Orange ONT Box ]
+[ ONT Box ]
        │
        │ (Standard RJ45 Ethernet Cable carrying VLAN 35)
        ▼
@@ -480,7 +445,7 @@ What to do in this case? to linux? or to go with the flow?
 
 Also this project can be interesting https://github.com/Saffsanity/sill
 
-I tried a macbook Pro M2 that weights the same as my x13 gen2 (1.3kg), the build quality is excellent...but I have some [desktop/homelab goodies for starters](https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab)
+I tried a macbook Pro M2 that weights the same as my [x13 gen2](https://jalcocert.github.io/JAlcocerT/laptop-lenovo-thinkpad-x13-benchmark/) (1.3kg), the build quality is excellent...but I have some [desktop/homelab goodies for starters](https://github.com/JAlcocerT/Home-Lab/tree/main/z-desktop-x-homelab)
 
 There are interesting options: asus expertbook a7, thinkpads x1 with little over 1kg...
 

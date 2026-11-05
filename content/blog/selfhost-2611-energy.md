@@ -1,6 +1,6 @@
 ---
 title: "Energy around a SelfHosted environment"
-date: 2026-11-08
+date: 2026-11-05
 draft: false
 tags: ["PV vs SAHP vs HVAC","Shelly x INA226","Tech Talk","SCADA"]
 description: 'Its happening'
@@ -81,11 +81,11 @@ From the portal, you can get the mqtt creds on the top right side.
 
 Oh and also update the firmware.
 
-Once the wifi details are provided, the local network dissapears and you wont need any more the `192.168.33.1`.
+Once the **wifi connection details** are provided, the local network dissapears and you wont need any more the `192.168.33.1`.
 
-While i was installin the shelly, i disconnected the main power at home.
+While i was installing the shelly, i disconnected the main power at home.
 
-Luckily, i got the bluetti acted as UPS/SAI [battery](#batteries) keeping alive the homelab and CM (at ~30w the ah would last around ~5h???)
+Luckily, i got the bluetti acting as UPS/SAI [battery](#batteries) keeping alive the homelab and CM (at ~30w the Ah would last around ~5h???)
 
 ## Batteries
 
@@ -106,7 +106,6 @@ $$E = 2{,}000\text{ W} \times 3{,}600\text{ s} = 7{,}200{,}000\text{ J (7.2 MJ)}
 $$E_p = m \cdot g \cdot h = 1\text{ kg} \times 9.81\text{ m/s}^2 \times 20\text{ m} \approx 196.2\text{ J/kg}$$
 
 **3. Theoretical Mass (100% Efficiency):**
-
 
 $$m_{\text{theoretical}} = \frac{7{,}200{,}000\text{ J}}{196.2\text{ J/kg}} \approx 36{,}700\text{ kg}$$
 
@@ -142,7 +141,6 @@ Unlike the hydro turbine, a gasoline generator **is** a heat engine, so the ther
 
 **3. Fuel Required for 2 kWh:**
 
-
 $$\text{Electrical output per liter} \approx 9.2\text{ kWh} \times 0.22 \approx \mathbf{2.0\text{ kWh per liter}}$$
 
 $$\text{Fuel needed} = \frac{2\text{ kWh}}{2.0\text{ kWh/L}} \approx \mathbf{1.0\text{ liter}}$$
@@ -162,6 +160,20 @@ Delivering 2 kWh of Usable Electricity
 Chemical bonds pack an immense amount of energy into tiny masses. 
 
 Even after wasting 75% to 80% of its energy as heat and exhaust, a single bottle of gasoline still easily matches 52 metric tons of elevated water.
+
+{{< callout type="info" >}}
+I got to know an interesting option to to overdimension the setup and make ROI absurd
+{{< /callout >}}
+
+{{% details title="How about 3kwh and 2kwh for 2k? 🚀" closed="true" %}}
+
+Lately I got to know that there are plug n play batteries of ~ for ~
+
+You can plug up to x4 panels to them and connect them to any socket at home to roll
+
+In theory paired with the shelly the system would know when to feed or not energy to the outer network.
+
+{{% /details %}}
 
 ### Bluetti
 
@@ -185,17 +197,18 @@ cd ./data1tb/services/iot-dashboard-v2/data/readings.sqlite
 First try ~78h (18 oct 7pm 22 oct 2am), after the second try with same firmware/script got ~52h (22 Oct 3pm to 24th 7pm) and the 3rd one made ~72h
 {{< /callout >}}
 
-But 5h a day it was active, so i swapped to 1 min awake and 29 min asleep and expected to get ~7days
+But 5h a day it was active, so i swapped it to 1 min awake and 29 min asleep and expected to get ~7days
 
-I changed `esp32_panel_dht_pump_winter.ino` so the onboard blue LED stays dark from 22:00 to 08:00, and flashed it. 
+I changed `esp32_panel_dht_pump_winter.ino` [here](https://github.com/JAlcocerT/poc/blob/main/iot-dashboard-v2/z-setups/esp32_panel_dht_pump_winter.ino) so the onboard blue LED stays dark from 22:00 to 08:00, and flashed it. 
 
 What changes at night:
 - No Wi-Fi or MQTT connect blinks.
 - No heartbeat and no fast blink while the pump runs.
 - The connect blinks are skipped entirely, so the board also doesn't sit through their delays.
 
-Exception: right after a power-on, before the board has the time from the internet, the LED blinks
-normally. That way you can still see Wi-Fi problems when you plug it in or flash it.
+Exception: right after a power-on, before the board has the time from the internet, the LED blinks normally.
+
+That way you can still see Wi-Fi problems when you plug it in or flash it.
 
 > `http://192.168.1.2:3038/`
 
@@ -219,6 +232,7 @@ I applied this one for the watering setup.
 
 ## Solar
 
+If you just got potential, its time for you to make power:
 
 {{< callout type="info" >}}
 See [a panel I-V](https://github.com/JAlcocerT/poc/tree/main/physics-electronics/solar-panel) with the esp32
@@ -240,10 +254,20 @@ MPPT chooses the panel point, but [CC/CV charges the battery safely](https://git
 ### Measuring solar W with INA
 
 
+
+
 ### Modelling sun rays
 
+I started the experiments earlier this year around [blender](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/) and my [initial insulation experiment](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/)
 
 
+#### What to do with excess sun energy?
+
+An [AC](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#which-ac-is-enough-for-my-house)/heat pump?
+
+Charge an electric motorbike?
+
+Heat water and storage it for consumption?
 
 ---
 
@@ -273,7 +297,15 @@ Get to know your [consumptions data](https://jalcocert.github.io/JAlcocerT/start
 
 ### HomeLab Updates 1126
 
-Coming from the last post, ive done some clean up and upgraded the security!
+Coming from [the last post](https://jalcocert.github.io/JAlcocerT/selfhosted-tts/#homelab-updates-1026), ive done some clean up and [upgraded the security](https://jalcocert.github.io/JAlcocerT/selfhosted-tts/#homelab-hardening)!
+
+Ive also kept using my `yt-distill` poc to go through [interesting videos](https://github.com/JAlcocerT/my-logseq-notes/tree/main/distilled-videos/business-hormozi): *just that with local tts/s2t*
+
+```sh
+git clone ./poc/yt-distill
+```
+From here, [*destilling* is not the problem](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md), its just doing.
+
 
 {{< callout type="info" >}}
 Despite this section being selfhost center, i cant deny the nice tech and building in the edge with cf: *we can get linkshorteners, [git repos](https://github.com/deathbyknowledge/ripgit), mails... to work with cf d1/r2/kv/workers*.
@@ -285,7 +317,7 @@ docker image prune -a
 docker system df
 ```
 
-I tried Gladys and it has interesting integrations with tappo, zigbee2mqtt...
+I tried **Gladys** and it has interesting integrations with tappo, zigbee2mqtt...
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gladys/" title="Gladys | Docker Config 🐋 ↗" >}}
@@ -296,27 +328,48 @@ But honestly, i just dont care about learning how to use a tool that ,,I'' ve no
 
 Just give me mqtt [with emqx](https://fossengineer.com/selfhosting-emqx/) and ill get a custom dashboard done around all functionality I need.
 
-
 For travel, i got to know `https://hotelist.com/` which is some kind of...numbeo for hotel ratings?
 
+
+{{< cards cols="1" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#homelab-commands" title="HomeLab CLIs | Docs ↗" icon="book-open" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts" title="Cloudflare x Porkbun DNS API Scripts ↗" >}}
+{{< /cards >}}
+
+
+* https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#traefik-x-x300-homelab
+* https://fossengineer.com/selfhosting-traefik/
+
+{{< cards cols="2" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/traefik" title="Traefik | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/tiny-auth" title="Tiny Auth Docker Config 🐋 ↗" >}}
+{{< /cards >}}
+
+#### Swapping CMs
+
+I was tired of quite frequently wifi issues with my ISP router and swap it for [my own glinet](https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/).
+
+#### Router x VPN
+
+[This](https://jalcocert.github.io/JAlcocerT/selfhosted-tts/#travel-router-as-home-router) worked and I updated my CM.
+
+* https://docs.gl-inet.com/router/en/4/features_update/firmware_v4.11/#dns
+
+http://192.168.8.1/#/lanip
+http://192.168.8.1/#/multiwan
 
 ---
 
 ## FAQ
 
 
-https://github.com/mortennordbye/homelab
-
-https://github.com/lfnovo/open-notebook
-
-https://github.com/Priveetee/TypeType
+* https://github.com/mortennordbye/homelab
+* https://github.com/lfnovo/open-notebook
+* https://github.com/Priveetee/TypeType
 
 ### Interesting Pi Ideas
 
-
-1. Pi off grid - Solar panels
-
-<https://www.reddit.com/r/raspberry_pi/comments/2b0ccl/anyone_running_their_pi_off_of_solar_panels/>
+1. Pi off grid - Solar panels: ppl do it in `https://www.reddit.com/r/raspberry_pi/comments/2b0ccl/anyone_running_their_pi_off_of_solar_panels/`
 
 2.  RPi weather station
 
@@ -393,7 +446,6 @@ I compared [clouds](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#o
   {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
 {{< /cards >}}
 
-
 ### ProtonCLI x Rust
 
 How about [taking this](https://proton.me/blog/proton-drive-cli) and making a desktop that doesnt is cool?
@@ -401,7 +453,6 @@ How about [taking this](https://proton.me/blog/proton-drive-cli) and making a de
 * https://github.com/ProtonDriveApps/sdk
 
 > How about doing the same for Nextcloud?
-
 
 ### The AI Agent Stack
 
@@ -717,3 +768,28 @@ The pattern this represents — **open research framework + vendor content shipp
 **Strong project warning preserved:** "DO NOT UPDATE AUTOMATICALLY" — under active development with breaking migrations. Watchtower-style auto-updaters explicitly discouraged.
 
 **Import sources:** Google Takeout, OwnTracks, Strava, Immich, GPX, GeoJSON, photo EXIF. Tracker apps: Dawarich iOS/Android, OwnTracks, Overland, GPSLogger, Home Assistant.
+
+### Some Photos
+
+For media: `https://selfh.st/apps/?tag=Photos`
+
+* https://github.com/paulomarques742/imago
+* https://imago.742studio.eu/
+
+* https://foldergram.github.io/
+
+```sh
+git clone /JalcocerT/foldergram
+```
+
+> Point it at your folders, browse everything through a fast feed-style interface. No cloud, no accounts — just your files and SQLite.
+
+* https://github.com/open-noodle/gallery a fork of immich :)
+
+> Some time back i [tried immich](https://fossengineer.com/selfhosting-immich/) but i didnt like that my folder order is not respected and also neither need the [heavy face recognition](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#files-files-files) feature that i dont care about
+
+High performance self-hosted photo and video management solution.
+
+https://github.com/storytold
+
+https://github.com/andrii-kryvoviaz/slink
