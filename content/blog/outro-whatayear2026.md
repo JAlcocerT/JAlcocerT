@@ -158,7 +158,7 @@ Added some articles like: https://fossengineer.com/no-hello/ from the [learnings
 
 0. Talking about Home-Lab and selfhosting: I keep admiring the work that `selfh.st` puts weekly
 
-I have done a ~monthly series on stuff Ive tried or actively used.
+I have done a *~monthly* series on stuff Ive tried or actively used.
 
 Also, have upgraded the x300 and x13 OS'es with a better backup & [DR strategy](https://jalcocert.github.io/JAlcocerT/selfhosted-tts/#testing-a-backup-strategy-in-the-cloud).
 
@@ -1000,6 +1000,9 @@ There are questions that dont have a single reply:
   * https://option-wheel.pages.dev/
 
 * what are you optimizing for?
+
+* How can we live without taking into account time into our decisions?
+* How about the energy?
 
 * Will we ever get to value the spark more than the shadow it casts?
 * is a blockchain the ultimate database?

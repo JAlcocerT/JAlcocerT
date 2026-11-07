@@ -29,6 +29,12 @@ So what?
 
 You can now:
 
+{{< youtube "o_ZJoXKoIIs" >}}
+
+<!-- 
+https://youtu.be/o_ZJoXKoIIs 
+-->
+
 Via the web https://github.com/JAlcocerT/multi-body
 
 
@@ -37,10 +43,15 @@ Via the web https://github.com/JAlcocerT/multi-body
 
 Suspensions: Double Wishbone, macpherson...
 
-https://www.youtube.com/shorts/cx21pJaPVTc
+<!-- 
+https://www.youtube.com/shorts/cx21pJaPVTc 
+-->
+
+{{< youtube "cx21pJaPVTc" >}}
 
 
 ## Suspension Modelling
+
 
 ### Quarter car
 
@@ -66,23 +77,18 @@ It transforms abstract spring and damper values into recognizable market segment
 
 1. The Design-Space Contours: The Shape of Choice
 
-
 The contour maps in Section 3 reveal the "topography" of suspension engineering.
 * **The Bottom-Left "Comfort Oasis":** Your map clearly shows that the only way to reach premium comfort levels is by moving toward soft springs and low damping. 
 * **The "Travel Penalty":** Highlighting that this comfort comes at the cost of **14 mm of RMS travel** is the crucial engineering constraint. It explains why a Mercedes S-Class cannot have the low, sleek silhouette of a Porsche 911—the physics of comfort demands a larger "working envelope."
 
-
-
----
-
 2. The Pareto Fronts: The Wall of Physics
 
-
 Section 4 provides the most rigorous takeaway for an NVH engineer:
-* **The Steep Tradeoff (Comfort vs. Travel):** This is the "Hard Wall." You cannot have a soft-riding car with tight suspension packaging. Every millimeter of room the stylist takes away from the wheel arch is a direct penalty on the passenger's spine.
+* **The Steep Tradeoff (Comfort vs. Travel):** This is the "Hard Wall." You cannot have a soft-riding car with tight suspension packaging.
+
+Every millimeter of room the stylist takes away from the wheel arch is a direct penalty on the passenger's spine.
+
 * **The Shallow Tradeoff (Comfort vs. Road-Holding):** This is a profound "Secret of the Trade." It suggests that for most road-going passenger cars, **safety (grip) is a baseline requirement that is relatively easy to hit**, allowing the real engineering competition to happen on the "Comfort vs. Packaging" axis.
-
-
 
 ---
 
@@ -92,10 +98,9 @@ Section 4 provides the most rigorous takeaway for an NVH engineer:
 2. **The "Goldilocks" Family Pocket:** Centering the default at $22\text{ kN/m}$ and $1500\text{ N}\cdot\text{s/m}$ anchors the entire series. It provides the "standard" against which all other designs are judged.
 3. **The 4-D Context (Section 6):** Your acknowledgment that this is a 2D slice of a 4-D problem ($k_s, c_s, Road, Speed$) is the correct level of technical transparency. It prevents the reader from over-simplifying the result while providing a usable mental model.
 
+This chapter bridges the gap between **Simulation** and **Strategy.** 
 
-
-
-This chapter bridges the gap between **Simulation** and **Strategy.** You’ve shown that the "Best" suspension doesn't exist—only the best suspension for a **specific purpose.**
+You’ve shown that the "Best" suspension doesn't exist—only the best suspension for a **specific purpose.**
 
 ![alt text](/blog_img/mec/design_space_pareto.png)
 
@@ -112,8 +117,7 @@ This chapter bridges the gap between **Simulation** and **Strategy.** You’ve s
 > where the control loop is simulated in time. Full enumerated
 > assumption list in FAQ §[Q9](#q9-whats-the-full-list-of-model-assumptions-for-the-suspension-chapters) below.
 
-Summarised in the callout at the top of this chapter; here's the
-full enumerated list, with what each assumption costs.
+Summarised in the callout at the top of this chapter; here's the full enumerated list, with what each assumption costs.
 
 | # | Assumption | Failure mode |
 |---:|---|---|
@@ -128,20 +132,17 @@ full enumerated list, with what each assumption costs.
 | 9 | **Stationary stochastic road** (broadband PSD only) | discrete events (potholes, expansion joints) handled separately — see Road Profile FAQ Q5, Q6 |
 | 10 | **Analytical linear math, *not* MBSD** | chapters 1–3 use NumPy linear algebra (matrix EOM, eigenvalue extraction, FRF by complex matrix solve). The 2D MBSD solver is **not used** here. It returns for: (a) non-linear time-domain validation via [`dynamic_terrain_wheel*.py`](../2D-Dynamics/examples/), and (b) the active-suspension chapter's control-loop simulation |
 
-Each assumption is a deliberate choice for clarity and tractability;
-each has a known failure mode. Production NVH workflows usually
-relax #4 / #5 / #7 first (the bump-stop / tyre-detachment /
+Each assumption is a deliberate choice for clarity and tractability; each has a known failure mode. 
+
+Production NVH workflows usually relax #4 / #5 / #7 first (the bump-stop / tyre-detachment /
 non-linear-damper layer), then #2 (full-car coupling), and only
 escalate to MBSD when the linear story breaks down.
 
 The same dimensional-reduction argument made in the
 [Dimensional Reduction reference chapter](2d-physics-dimensional-generalization.md)
-applies here: the suspension is genuinely 3D, but under #1, #2,
-#8 it factorises into a planar quarter-car analysis whose linear
-output (FRFs, RMS metrics) is exact within the stated hypotheses.
-The 2D simulator is "not approximate" for these chapters; it's
-just *not used at all* — the analytical FRF is closed-form so the
-solver isn't needed.
+applies here: the suspension is genuinely 3D, but under #1, #2, #8 it factorises into a planar quarter-car analysis whose linear output (FRFs, RMS metrics) is exact within the stated hypotheses.
+
+The 2D simulator is "not approximate" for these chapters; it's just *not used at all* — the analytical FRF is closed-form so the solver isn't needed.
 
 ### Active vs SemiActive suspension
 
@@ -229,3 +230,36 @@ https://www.youtube.com/watch?v=eFGkopoCTYY
 ---
 
 ## FAQ
+
+
+There are awsome yt shorts around mechanisms, uploaded via pairdrop with some song, like:
+
+This swivel [one](https://www.youtube.com/shorts/qFynt1r7fdg):
+
+{{< youtube "j1chZ3gWCTM" >}}
+
+<!-- 
+https://youtube.com/shorts/j1chZ3gWCTM 
+-->
+
+[This](https://www.youtube.com/shorts/holIbm8Dnrg)
+
+{{< youtube "j1chZ3gWCTM" >}}
+
+
+[This](https://www.youtube.com/shorts/f4XyY6Ksu4k):
+
+{{< youtube "j1chZ3gWCTM" >}}
+
+
+This [100 mechanical movement](https://www.youtube.com/watch?v=nhd0NdZDjWw) or [this](https://www.youtube.com/watch?v=nhd0NdZDjWw)
+
+[this](https://www.youtube.com/shorts/pgPKxjZwXQc) or [this](https://www.youtube.com/shorts/E5uDDiYWO9w)
+
+{{< youtube "j1chZ3gWCTM" >}}
+
+
+### Hyperframes x Mechanisms
+
+Beyond [fpv kpis](https://github.com/JAlcocerT/poc/tree/main/fpv-kpis/hyperframe-video), hyperframe and threejs can play well together:
+

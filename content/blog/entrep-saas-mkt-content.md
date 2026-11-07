@@ -7,6 +7,8 @@ description: 'Is value based content dead? Typst and more Goodies 4 Marketers.'
 url: 'social-media-content'
 ---
 
+https://github.com/theOehrly/Fast-F1
+
 https://www.youtube.com/watch?v=AsvN_feasyY
 https://www.youtube.com/watch?v=zZ1bgIaoPas
 

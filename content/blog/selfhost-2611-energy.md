@@ -258,7 +258,9 @@ MPPT chooses the panel point, but [CC/CV charges the battery safely](https://git
 
 ### Modelling sun rays
 
-I started the experiments earlier this year around [blender](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/) and my [initial insulation experiment](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/)
+I started the experiments earlier [this year](https://youtube.com/shorts/cHIPjAG2dkk) around [blender](https://jalcocert.github.io/JAlcocerT/using-blender-with-ai/) and my [initial insulation experiment](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/)
+
+Last time i left it at [building geo PL](https://github.com/JAlcocerT/poc/tree/main/building-geo-pl/renders) that was considering the OSM buildings.
 
 
 #### What to do with excess sun energy?
@@ -283,6 +285,15 @@ In facts, such systems are a self-hosted SCADA.
   {{< card link="https://ebooks.jalcocertech.com" title="Free Knowledge ↗" icon="book-open" >}}
   {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
 {{< /cards >}}
+
+If you have a distribution list, having such [energy solution waiting list](https://github.com/JAlcocerT/poc/tree/main/genbi-energy-solutions/waitlist) can make sense.
+
+But creating a free lead magnet that provides value is just a very low hanging fruit today to not do it.
+
+Imagine solving a real pain point: how much I need to spend and what will be the ROI in my region?
+
+### Energy Lead Magnet
+
 
 ### Tech Talk
 
@@ -391,11 +402,14 @@ https://www.youtube.com/watch?v=5JfPzvcm0E8
 
 <!-- {{< youtube "5JfPzvcm0E8" >}} -->
 
+
+[Eigenvalues](https://www.youtube.com/watch?v=05QDX1xBpTE)
+
 ### Interesting Edge Tools
 
 1. [Ripgit](https://github.com/deathbyknowledge/ripgit) which you might like if youve seen [forgejo](https://fossengineer.com/selfhosting-forgejo/)
 
-2. For mail you have [mailflare](https://fossengineer.com/selfhosting-mailflare/) and also [tempik](https://fossengineer.com/selfhosting-tempik-cloudflare-temp-mail/). For local testing with docker I liked [mailpit](https://fossengineer.com/selfhosting-mailpit/)
+2. For mail you have [mailflare](https://fossengineer.com/selfhosting-mailflare/) and also [tempik](https://fossengineer.com/selfhosting-tempik-cloudflare-temp-mail/). For local testing with docker I liked [mailpit](https://fossengineer.com/selfhosting-mailpit/) `http://localhost:8025/`.
 
 3. If you are BiP'ing with a roadmap: [feedlog](https://fossengineer.com/selfhosting-feedlog/) can be interesting and also allows to be deployed via Docker locally. For a kanban [seeder](https://github.com/danielsyauqi/Seeder) is also cool!
 
@@ -403,7 +417,7 @@ https://www.youtube.com/watch?v=5JfPzvcm0E8
 
 > > A [client board](https://seederpm.xyz/docs/features/client-board/), [client requests](https://seederpm.xyz/docs/features/client-requests/) and [daily planner](https://seederpm.xyz/docs/features/daily-planner/) make so much sense
 
-4. Last year I tinkered a lot with authentication: Logto, Firebase auth, even with pocketbase BaaS that i managed to combine with streamlit and with astro static sites with some cf workers connection. 
+4. Last year I tinkered a lot with authentication: *Logto, Firebase auth, even with pocketbase BaaS that i managed to combine with streamlit and with astro static sites with some cf workers connection.*
 
 Turns out that all that have been simplified further wuth projects like [cloudflare](https://fossengineer.com/selfhosting-cloudflarebase-firebase-cloudflare/) [base](https://github.com/cloudflarebase/cloudflarebase) which is **the open source firebase for CF** and uses better-auth internally.
 
@@ -445,8 +459,6 @@ When portability, static output, rollback and githistory matter just go for a  g
 {{< /callout >}}
 
 > You can also have a look to: `https://github.com/sveltia/sveltia-cms` or to foldergram
-
-
 
 ### How many users can a Pi4 2GB handle
 

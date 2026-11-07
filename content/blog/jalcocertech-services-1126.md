@@ -192,7 +192,9 @@ With stuff ive been doing.
 
 #### MultiSite OutReach
 
-Weekly Reviews be like [this](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-solo/wk41y26/2026-10-19.md)
+Now im just doing Weekly Reviews be like [this](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-solo/wk41y26/2026-10-19.md) or this
+
+So its pretty much automatized.
 
 ##### InBound
 
@@ -210,6 +212,8 @@ docker exec homelab-leads-hub-1 python -c 'import sqlite3; c = sqlite3.connect("
 ```
 
 2. You can also make [a self-managed (via Jev) telegram community](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-solo/wk43y26/pio-inbound-tg-bot)
+
+https://github.com/yibie/awesome-jev
 
 ##### OutBound
 
