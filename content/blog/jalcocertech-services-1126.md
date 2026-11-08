@@ -563,3 +563,13 @@ Beyond having a nice performing website:
   {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Web-checks 🐋↗" >}}
 {{< /cards >}}
+
+### DNS Checks
+
+Some people are having lead magnets around email DNS checks for cold mail
+
+You can have it for free: https://github.com/domainaware/checkdmarc and https://github.com/internetstandards/Internet.nl
+
+```sh
+dig +short TXT google._domainkey.getleadarchitect.com
+```

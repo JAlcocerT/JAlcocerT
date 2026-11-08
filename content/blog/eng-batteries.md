@@ -374,7 +374,7 @@ And maybe in your car:
 | **Structure** | Rigid, heavily cooled pack | Heavy, protected block | Soft, exposed pouch |
 
 * **Heavy-Duty Energy Storage:** Bluetti (**LiFePO4** — Safe, long-lasting, heavy)
-* **High-Range Vehicles:** Cupra EV (**Lithium NMC** — Energy-dense, fast-charging)
+* **High-Range Vehicles:** [Cupra EV](https://youtu.be/xpRonutvzLU) (**Lithium NMC** — Energy-dense, fast-charging)
 * **Portable Tech:** Laptop & Pixel 8 (**Lithium Polymer** — Paper-thin, molded pouches)
 * **Extreme Flight Performance:** 1S Drone (**LiPo / LiHV** — Featherweight, explosive power, fragile)
 * **RC Control & Household:** RadioMaster & Mouse (**18650 Li-ion** or **AA NiMH** — Steady, reusable)

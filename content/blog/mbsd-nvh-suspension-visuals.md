@@ -2,7 +2,7 @@
 title: "Suspension videos"
 date: 2026-11-07
 draft: false
-tags: ["MBSD v1-0-0 x Active Damping","LMS Filter"]
+tags: ["MBSD v0-9-8 x Active Damping","LMS Filter"]
 description: 'A light framework that can do stuff.'
 url: 'visualizing-suspension-nvh'
 ---
@@ -35,7 +35,7 @@ You can now:
 https://youtu.be/o_ZJoXKoIIs 
 -->
 
-Via the web https://github.com/JAlcocerT/multi-body
+Via [the web](https://multibodysystemsdynamics.com/open-source/): `https://github.com/JAlcocerT/multi-body` which uses all the goodies released publically at `https://github.com/JAlcocerT/mbsd-examples/releases/tag/v0.9.8`
 
 
 
@@ -252,12 +252,17 @@ https://youtube.com/shorts/j1chZ3gWCTM
 {{< youtube "j1chZ3gWCTM" >}}
 
 
-This [100 mechanical movement](https://www.youtube.com/watch?v=nhd0NdZDjWw) or [this](https://www.youtube.com/watch?v=nhd0NdZDjWw)
+This [100 mechanical movement](https://www.youtube.com/watch?v=nhd0NdZDjWw) or [this](https://www.youtube.com/watch?v=nhd0NdZDjWw) [artofrendering](https://www.youtube.com/@artofrendering/shorts)
 
 [this](https://www.youtube.com/shorts/pgPKxjZwXQc) or [this](https://www.youtube.com/shorts/E5uDDiYWO9w)
 
 {{< youtube "j1chZ3gWCTM" >}}
 
+[this](https://www.youtube.com/watch?v=99X7DK1kQ68) which they use to promote their machinery parts business
+
+this [withworth](https://www.youtube.com/shorts/9ghjDxqweW8)
+
+this [artofrendering](https://www.youtube.com/@artofrendering/shorts)
 
 ### Hyperframes x Mechanisms
 

@@ -373,7 +373,7 @@ An electric car battery operates on a completely different scale.
 
 It uses a high-voltage architecture to push thousands of times more power without needing wires as thick as tree trunks.
 
-* **The Voltage:** The Cupra Born uses a standard **$400\text{V}$ electrical architecture** (specifically, the nominal voltage sits right around **$397\text{V}$** when calculated across its 216 individual cells).
+* **The Voltage:** The [Cupra](https://youtu.be/xpRonutvzLU) Born uses a standard **$400\text{V}$ electrical architecture** (specifically, the nominal voltage sits right around **$397\text{V}$** when calculated across its 216 individual cells).
 * **The Power Output:** The standard Cupra Born with the $58\text{ kWh}$ battery has a motor rated at **$150\text{ kW}$** (or $170\text{ kW}$ if it has the e-Boost pack). 150 Kilowatts is **$150,000\text{ Watts}$** of electrical power.
 
 Using the electrical formula $\text{Amps} = \text{Watts} / \text{Volts}$:
@@ -399,7 +399,7 @@ If we play out this thought experiment—where the vehicle's body, engine, wheel
 
 In battery engineering, this metric is called **Specific Power** (expressed in Watts per kilogram, $W/kg$). 
 
-If a 1S drone battery and a Cupra EV cells compare at their theoretical max if they *were* the vehicle itself...
+If a 1S drone battery and a [Cupra EV](https://youtu.be/xpRonutvzLU) cells compare at their theoretical max if they *were* the vehicle itself...
 
 This reveals the classic engineering trade-off between **Power Density** (the sprint) and **Energy Density** (the marathon):
 

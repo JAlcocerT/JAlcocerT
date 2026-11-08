@@ -253,7 +253,10 @@ MPPT chooses the panel point, but [CC/CV charges the battery safely](https://git
 
 ### Measuring solar W with INA
 
+```sh
 
+flatpak uninstall --unused
+```
 
 
 ### Modelling sun rays
@@ -271,6 +274,8 @@ Charge an electric motorbike?
 
 Heat water and storage it for consumption?
 
+You can charge your fpv batteries, like the 4s ovonic i got of 1300mah aka 19.2wh
+
 ---
 
 ## Conclusions
@@ -279,7 +284,7 @@ It seems that calling dashboard to such project is an understatement.
 
 And it actually makes sense.
 
-In facts, such systems are a self-hosted SCADA.
+In facts, such systems are a self-hosted SCADA (one of [PLC](https://en.wikipedia.org/wiki/Programmable_logic_controller)).
 
 {{< cards >}}
   {{< card link="https://ebooks.jalcocertech.com" title="Free Knowledge ↗" icon="book-open" >}}
@@ -313,8 +318,12 @@ Coming from [the last post](https://jalcocert.github.io/JAlcocerT/selfhosted-tts
 Ive also kept using my `yt-distill` poc to go through [interesting videos](https://github.com/JAlcocerT/my-logseq-notes/tree/main/distilled-videos/business-hormozi): *just that with local tts/s2t*
 
 ```sh
-git clone ./poc/yt-distill
+#git clone ./poc/yt-distill #http://localhost:8001/
+make up-local
+#docker compose --profile local rm -sf llm && docker run --rm -v "$PWD/out:/out" --entrypoint sh yt-distil:latest -c 'rm -f /out/*/video.mp4' && rm -rf models ~/.cache/huggingface/hub/models--unsloth--Qwen3-4B-Instruct-2507-GGUF ~/.cache/huggingface/hub/.locks/models--unsloth--Qwen3-4B-Instruct-2507-GGUF
+make clean-media
 ```
+
 From here, [*destilling* is not the problem](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md), its just doing.
 
 
@@ -419,7 +428,7 @@ https://www.youtube.com/watch?v=5JfPzvcm0E8
 
 4. Last year I tinkered a lot with authentication: *Logto, Firebase auth, even with pocketbase BaaS that i managed to combine with streamlit and with astro static sites with some cf workers connection.*
 
-Turns out that all that have been simplified further wuth projects like [cloudflare](https://fossengineer.com/selfhosting-cloudflarebase-firebase-cloudflare/) [base](https://github.com/cloudflarebase/cloudflarebase) which is **the open source firebase for CF** and uses better-auth internally.
+Turns out that all that have been simplified further wuth projects like [cloudflare](https://fossengineer.com/selfhosting-cloudflarebase-firebase-cloudflare/) [base](https://github.com/cloudflarebase/cloudflarebase) which is **the open source firebase for CF** and uses *better-auth* internally.
 
 They [claim to be cheaper](https://cloudflarebase.com/#pricing) than firebase and supabase
 
