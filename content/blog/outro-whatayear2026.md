@@ -1,6 +1,6 @@
 ---
 title: "What a Year...2026"
-date: 2026-11-11
+date: 2026-11-24
 draft: false
 tags: ["Year-Review","FY26"]
 description: 'Looking back to the learnings of 2026.'
@@ -899,6 +899,9 @@ xargs -0 awk '
 
 ### Outro
 
+I climbed again [(again)](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#outro--random) to the top of a country:
+
+
 #### How this year surprised me
 
 
@@ -988,7 +991,7 @@ A certain Negative cash flow year one then...uncertainty
 
 Most likely, you can get away and have an answer for your BA questions or for the BI dashboarding ones.
 
-There are questions that dont have a single reply:
+There are questions that dont have a single reply: *coming from [last year section](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#interesting-concepts)*
 
 1. **What you love:** Your passions, hobbies, and things that bring you pure joy.
 2. **What you are good at:** Your skills, talents, and natural strengths.
@@ -999,7 +1002,16 @@ There are questions that dont have a single reply:
   * https://aegis-freedom.pages.dev/
   * https://option-wheel.pages.dev/
 
-* what are you optimizing for?
+* what are you optimizing for? whats the intent?
+
+<!-- 
+https://www.youtube.com/watch?v=luvIuM5GLHc 
+-->
+
+* How do you apply rationality to your consumption patters? are you buying things you dont need to impress ppl you dont like? *Fight Club*
+
+{{< youtube "luvIuM5GLHc" >}}
+
 
 * How can we live without taking into account time into our decisions?
 * How about the energy?
@@ -1048,26 +1060,37 @@ graph LR
 
 #### Interesting Concepts
 
-Dark factory and company brain
+Some new companions for [last year list](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#interesting-concepts)
 
 1. Non-chalant
 
 * Options -> Things and not controlable
 * Choices -> Actions and are controlable
 
-2. Again: active >>>>> passive
+2. Again: active > > > > > passive
 
-In fact: does passive income exists at all? 
+In fact: *does passive income exists at all?*
 
-or the only thing is there can be is active and deferred active?
+or the only thing is there can be is active *and deferred active*?
 
 3. Interest reflect [the price of time](https://jalcocert.github.io/JAlcocerT/the-ideas-bucket-can-be-empty/#the-market-of-time) and most likely, you are doing [the options wheel](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#the-wheel-strategy), just that with your time as a way to transfer [risk and opportunities](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#risk-and-opportunities) to others [like your employer](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#employment-vs-the-wheel) that catches the long tail distribution  - *Remember the [power law](https://jalcocert.github.io/JAlcocerT/powerlaw-and-series-with-python/)?*
 
-3. Zettlekasten: visible at `/notes` [here](https://jalcocert.github.io/JAlcocerT/notes/)
+3. Zettlekasten: *visible at `/notes` [here](https://jalcocert.github.io/JAlcocerT/notes/)*
 
 4. Accountability laundring, underfiltering, weaponized incompetence
 
 5. [Peter Principle](https://es.wikipedia.org/wiki/Principio_de_Peter): *Con el tiempo, todo puesto tiende a ser ocupado por un empleado que es incompetente para desempeñar sus obligaciones + El trabajo es realizado por aquellos empleados que no han alcanzado todavía su nivel de incompetencia.*
+
+6. Dark factory and company brain
+
+7. Ambiguity
+
+8. Agency: with the right one you can declare the desired end state instead of indicate the procedure
+
+9. [Pareto Front](https://multibodysystemsdynamics.com/glossary/pareto-front/)
+
+10. [Simplicity](https://try.emdashcms.com/posts/notes-on-simplicity): *Simplicity isn't the absence of complexity. It's the result of understanding a problem well enough to solve it cleanly. Remove as a Feature.*
+
 
 #### Interesting Posts
 
@@ -1105,7 +1128,6 @@ Aero:
 
 1. LetsGoAviate
 2. SteFly (glider)
-
 
 ### For Next year...
 
@@ -1153,35 +1175,33 @@ For the very alergic to the risk...well...keep your ~0% at the bank.
 
 Its very safe there.
 
-8. Order/clean papers / old tech. Donate. ✅ 
+8. [x] Order/clean papers / old tech. Donate.
 
-9. Collecting case studies / success stories ✅
+9. [x] Collecting case studies / success stories
 
 10. Reading books - To act *not just archive knowledge, but learn, which means different behaviour to same inputs*
 
 Like around marketing and sales: Cashvertising, ...
 
-11. Review these tech notes monthly ✅
+11. Review these tech notes monthly
 
 > And thx to the `logseq x repo`, I said by to my monthly personal review that I was doing for years on one-note
 
-12. F/OSS Migration *and supporting at least one project* ✅
+12. [x] F/OSS Migration *and supporting at least one OSS project with $*
 
-> Pretty happy with Ubuntu/Zorin and OSS :)
+> Pretty happy with Ubuntu/Zorin/Omarchy as OSS OS :)
 
 #### Stop Doing
 
-1. Opening *more and more* a shallow tech stack. 
-2. Keeping 50+ tabs on chrome. *Not watching content on the phone and commet for summaries should help*.
-3. Stop building w/o a focus strategy.
+1. [x] Opening *more and more* a shallow tech stack. 
+2. Keeping 50+ tabs on chrome. *Not watching content on the phone*
+3. Stop building w/o a focus strategy / clear intent.
 
 Like with **random avatars** - Like I did In the AIssistant example
 
 Or been supply constrained and offer below market quotes for DFY products/services.
 
-Been there. Done that.
-
-
+Been there. Done that 🤯
 
 #### Start Doing
 
@@ -1234,6 +1254,7 @@ A collection of stupid ideas that I just do to test AI models.
 1. App for dogs
 2. App counter for knitting
 3. Pomodoro / Focus to do
+4. DJi Tello Android
 
 Else, use a PaaS or watch a yt tutorial to setup wordpress.
 
@@ -1241,8 +1262,7 @@ The good thing about closing projects, is that you realise that *they were not m
 
 Maybe you were trying to jump with a not so efficient method
 
-See https://en.wikipedia.org/wiki/Dick_Fosbury for inspiration
-
+See `https://en.wikipedia.org/wiki/Dick_Fosbury` for inspiration
 
 YT Tech Videos - JAlcocerTech
 
@@ -1286,10 +1306,6 @@ graph LR
     style G fill:#d4edda,stroke:#333,stroke-width:2px
 ```
 
-
-
-
-
 Calculators (CSR based)			
 
 AI powered podcast (?)	Get a Libertarian Blog (or how to ebook)	ES/EN finance blog ~ 
@@ -1321,7 +1337,7 @@ Finance in Motion / Unfolding Data (YT + ChartJS / Matplotlib / Remotion)			AI P
 
 Automations n8n chatbots etc				
 
-> Options to take into consideration when creating: brand colors, seo, check links, no 404
+> Options to take into consideration when creating: *brand colors, seo, check links, no 404*
 
 That moment when you realized that you have been doing service all the time.
 
@@ -1404,7 +1420,6 @@ xychart
     style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
     link="https://jalcocert.github.io/web3/"
   >}}
-
 {{< /hextra/feature-grid >}}
 
 
@@ -1413,3 +1428,6 @@ BLDC pump
 vs stepper/servos (brushed) like the sg90
 
 https://github.com/gsampallo/mqtt_valvula
+
+
+<!-- ![Porsche design](/blog_img/outro/porsche.png) -->

@@ -7,7 +7,9 @@ description: 'A look to F/OSS '
 url: 'open-source-dna'
 ---
 
-
+https://github.com/akkio-inc/igloo
+https://github.com/pigontech/inkvoice
+https://github.com/meerkatcrm/meerkat-crm
 1. https://github.com/neondatabase/neon
 
 > Apache v2 | Neon: Serverless Postgres. We separated storage and compute to offer autoscaling, code-like database branching, and scale to zero.

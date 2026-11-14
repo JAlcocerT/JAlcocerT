@@ -182,9 +182,13 @@ The "Suspension Arc" is now **Complete.** You have moved from a 2-DOF wheel to a
 
 ![alt text](/blog_img/mec/active_skyhook_frfs.png) 
 
+See the active pareto comparison:
+
 ![alt text](/blog_img/mec/active_pareto_comparison.png)
 
-**With "Active & Semi-Active Suspension" next, are you ready to show how the "Skyhook" algorithm can move a design point *off* the Pareto front and into the "Forbidden Zone" of low comfort AND low travel?** (This is the "Magic Carpet" effect that sells high-end cars!)
+**With "Active & Semi-Active Suspension" next, are you ready to show how the "Skyhook" algorithm can move a design point *off* the Pareto front and into the "Forbidden Zone" of low comfort AND low travel?** 
+
+(This is the "Magic Carpet" effect that sells high-end cars!)
 
 ---
 
@@ -201,8 +205,9 @@ The question is not only how parts move, but how vibration travels.
   {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
 {{< /cards >}}
 
-
 I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
+
+The way it has [modelled the spur gear](https://www.youtube.com/shorts/Uj7jDkZsAzw) is quite impressive tbh
 
 > > And email to `https://selfh.st/submit/`
 
@@ -226,6 +231,17 @@ https://www.youtube.com/watch?v=NxZ1tf8J1oY
 https://www.youtube.com/watch?v=4_Z05iMmDNU
 
 https://www.youtube.com/watch?v=eFGkopoCTYY
+
+### The model x CARs
+
+`external/mbsd-freecad-shorts`
+
+
+Whats good of a general model is that it can derive all kind of domain KPIs:
+
+1. [AntiSquat](https://youtube.com/shorts/5EOrJvm1U6I?is=ATjShWVHuTw4fFl8)
+2. [Roll Center](https://youtube.com/shorts/uX_OTOUDWL0?is=roQ1Ugx2VPVsQaTf)
+
 
 ---
 

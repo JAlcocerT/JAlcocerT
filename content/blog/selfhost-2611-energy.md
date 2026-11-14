@@ -1,6 +1,6 @@
 ---
 title: "Energy around a SelfHosted environment"
-date: 2026-11-05
+date: 2026-11-12
 draft: false
 tags: ["PV vs SAHP vs HVAC","Shelly x INA226","Tech Talk","SCADA"]
 description: 'Its happening'
@@ -12,14 +12,16 @@ math: true
 
 Ive connected a Shelly to my iot dashboard.
 
-https://www.youtube.com/@QuantumMakers
-
 ---
 
 **Intro**
 
 * Why Im writting this post: *Bc you can do cool stuff with batteries, a tappo and some sensor bring data, you might want to bring sense to a bluetti or custom 18650 packs with BMS...*
 * What Ive learnt with it: *d*
+
+
+https://www.youtube.com/@QuantumMakers
+
 
 {{< youtube "UjD94SGqIdM" >}}
 
@@ -111,7 +113,6 @@ $$m_{\text{theoretical}} = \frac{7{,}200{,}000\text{ J}}{196.2\text{ J/kg}} \app
 
 **4. Real-World Water Needed ($\sim 70\%$ Water-to-Wire Efficiency):**
 
-
 $$m_{\text{real}} = \frac{36{,}700\text{ kg}}{0.70} \approx \mathbf{52{,}400\text{ kg}}$$
 
 ---
@@ -132,8 +133,7 @@ Step-by-Step Breakdown
 
 * 1 liter of gasoline holds about **32 to 34 MJ (megajoules)** of chemical potential energy, which equals roughly **9 to 9.5 kWh** of raw thermal energy.
 
-**2. Generator Efficiency (Carnot Strikes Back!):**
-Unlike the hydro turbine, a gasoline generator **is** a heat engine, so the thermodynamic limits we discussed earlier directly apply:
+**2. Generator Efficiency (Carnot Strikes Back!):** Unlike the hydro turbine, a gasoline generator **is** a heat engine, so the thermodynamic limits we discussed earlier directly apply:
 
 * Small four-stroke engines have a thermal efficiency of only about **25% to 30%**.
 * The alternator and inverter convert mechanical motion into clean electricity at about **80% to 90%** efficiency.
@@ -254,10 +254,8 @@ MPPT chooses the panel point, but [CC/CV charges the battery safely](https://git
 ### Measuring solar W with INA
 
 ```sh
-
 flatpak uninstall --unused
 ```
-
 
 ### Modelling sun rays
 
@@ -265,6 +263,20 @@ I started the experiments earlier [this year](https://youtube.com/shorts/cHIPjAG
 
 Last time i left it at [building geo PL](https://github.com/JAlcocerT/poc/tree/main/building-geo-pl/renders) that was considering the OSM buildings.
 
+
+### House 2D to 3D
+
+Ive covered recently few projects that help with house design: [house planner](https://fossengineer.com/selfhosting-house-planner-floor-plan-3d/), 
+
+1. House Planner post (fossengineerpapermod/content/posts/house-planner-post.md) — best match. It works with true-scale 2D floor plans, 3D previews, rooms, plot/site context, utilities, underfloor heating, estimates, and versions. Use this first to test layout options.
+2. CADCraft post (fossengineerpapermod/content/posts/cadcraft-post.md) — useful if your architect can provide DXF/DWG files. It is focused on 2D drafting, layers, dimensions, snaps, hatches, and technical drawings.
+3. BIMCraft post (fossengineerpapermod/content/posts/bimcraft-post.md) — useful for developing the plans into a structured building model with walls, doors, windows, rooms, levels, MEP, schedules, and IFC. However, it is early-stage and dated December 2026, so it is future-dated relative to today.
+4. FreeCAD post (fossengineerpapermod/content/posts/freecad-post.md) — useful for parametric architectural details, custom furniture, stairs, cabinetry, and technical components, but less convenient for quickly planning an entire house.
+5. Blender post (fossengineerpapermod/content/posts/blender-post.md) — useful after the layout is fixed, for interior visualization, materials, lighting, and realistic walkthroughs.
+
+> architect 2D plan → House Planner → CADCraft/BIMCraft → Blender
+
+I did not find your actual architect plan files in the Desktop folders, only the Fossengineer repository. If you provide the PDF, image, DXF, or DWG plans, I can tell you exactly which tool fits them and what can be extracted or redesigned.
 
 #### What to do with excess sun energy?
 
@@ -302,7 +314,7 @@ Imagine solving a real pain point: how much I need to spend and what will be the
 
 ### Tech Talk
 
-Using [these brand assets](https://github.com/JAlcocerT/poc/tree/main/zzz-outbound)
+Using [these brand assets](https://github.com/JAlcocerT/poc/tree/main/zzz-outbound) Ive put together one more [talk](https://consulting.jalcocertech.com/talks/)
 
 
 
@@ -337,7 +349,7 @@ docker image prune -a
 docker system df
 ```
 
-I tried **Gladys** and it has interesting integrations with tappo, zigbee2mqtt...
+I tried **Gladys** and it has interesting integrations with [tapo](https://jalcocert.github.io/JAlcocerT/tapo-p110-review/), zigbee2mqtt...
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/gladys/" title="Gladys | Docker Config 🐋 ↗" >}}

@@ -1,6 +1,6 @@
 ---
 title: "Embedded"
-date: 2026-11-11
+date: 2026-11-25
 draft: false
 description: "A solar panel, summer and the ESP32 microcontroller"
 tags: ["Self-Hosting","IoT","MicroControllers"]

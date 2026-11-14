@@ -361,7 +361,6 @@ sequenceDiagram
 
 3. Understanding that [with CSR we can](https://jalcocert.github.io/JAlcocerT/csr-and-js/) keep WebApps simple, yet providing interactivity via API where needed
 
-
 {{< details title="Authentication and CSR | Full SelfHosting vs CF Pages + Workers  📌" closed="true" >}}
 
 Cloudflare Workers are **not a must**, but they are a very popular and recommended option for this setup. 
@@ -374,7 +373,7 @@ Here's how this works and what changes in different scenarios.
 
 When you deploy your Astro site to Cloudflare Pages, the static files are served globally from Cloudflare's CDN.
 
- However, your PocketBase server is still running on your home machine.
+However, your PocketBase server is still running on your home machine.
 
 The key to connecting them is to make your PocketBase server accessible via a public URL. 
 
@@ -432,7 +431,6 @@ Ive put together some IoT docs and the scripts I was using:
   {{< card link="https://jalcocert.github.io/JAlcocerT/cool-iot/" title="IoT | Docs ↗" icon="book-open" >}}
   {{< card link="https://github.com/JAlcocerT/RPi/tree/main/Z_MicroControllers/RPiPicoW/ConnectToWIFI" title="PicoW + Wifi Connection & + 🐍 ↗" >}}
 {{< /cards >}}
-
 
 5. And tinker a bit with [Crypto](https://jalcocert.github.io/JAlcocerT/understading-crypto-with-ai) and data via [stonks](https://jalcocert.github.io/JAlcocerT/stonks/) / [stocks with python](https://jalcocert.github.io/JAlcocerT/python-stocks-webapp/).
 
@@ -511,13 +509,13 @@ OAuth is a broader protocol for secure, delegated access and is often paired wit
   - An authorization protocol that allows users to grant third-party applications delegated access to their data.
   - Handles complex permission scopes, third-party integrations, and user consent.
   - Often uses JWT tokens as the format for access tokens.
-  - Strong security and control, but more complex to set up and manage, and better for scenarios requiring delegated access or SSO.[4][1][5]
+  - Strong security and control, but more complex to set up and manage, and better for scenarios requiring delegated access or SSO.
 
 Which Is Better?
 
-- **API Key**: Best for simple authentication between trusted services, low-security or internal APIs.[1]
-- **JWT**: Excellent for stateless authentication in scalable microservices; fast and efficient but lacks revocation and fine-grained permissions.[5][1]
-- **OAuth (with JWT tokens)**: Ideal for complex scenarios requiring delegated authorization, third-party integrations, and robust security. Preferred for external/public APIs, especially those involving user data or multi-step permissions.[4][1][5]
+- **API Key**: Best for simple authentication between trusted services, low-security or internal APIs.
+- **JWT**: Excellent for stateless authentication in scalable microservices; fast and efficient but lacks revocation and fine-grained permissions.
+- **OAuth (with JWT tokens)**: Ideal for complex scenarios requiring delegated authorization, third-party integrations, and robust security. Preferred for external/public APIs, especially those involving user data or multi-step permissions.
 
 **OAuth2.0 often uses JWT tokens as part of its workflow**, leveraging the strengths of both approaches for secure, scalable authentication and authorization.
 
@@ -526,7 +524,6 @@ For APIs exposed to external clients, OAuth is generally considered more secure 
 For internal use or single-service authentication, JWT and API keys are simpler.
 
 {{% /details %}}
-
 
 Notice also that **WHAT something is** has nothing to do with WHERRE something is. 
 
@@ -548,14 +545,13 @@ And that [BRD PRD FRD](https://jalcocert.github.io/JAlcocerT/brd-vs-frd-for-data
   {{< card link="https://jalcocert.github.io/JAlcocerT/create-your-website-hugo-ssg/" title="HUGO 101 Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
-
 13. The difference between helping and serving 🤯
 
 14. The difference between something CAN happen and WILL happen 🤯
 
 15. Compras y esperas vs esperas y compras for stocks compared to wait 7 days for consumption
 
-16. About been unhappy but certain vs uncertain and happy
+16. About been unhappy but certain *vs* uncertain and happy
 
 > Risk aversion is a thing...
 
@@ -819,6 +815,10 @@ Kind of resonates with [process](#processes) > > > result.
 
 * How can be money: invested (providing interest), always available and risk free at the same time
 
+I know that this is like... `0+0=0`
+
+* But...how could we expect to be closer to excellent w/ot even trying?
+
 6. Guesstimates and [PostMortems](https://fernandocejas.com/blog/culture/2020-06-21-learn-out-of-mistakes-postmortems/)
 
 7. Business/SaaS KPIs: CAC, EBITDA, LTV, NRR, MRR/ARR...
@@ -848,7 +848,7 @@ From the podcast: How to grow from doing hard things ( Huberman Lab x  Michael E
 
 12. Cool tinkering / tech posts
 
-13. The difference between doing nothing with **intent** to do nothing
+13. The difference between doing nothing with **intent** to just do nothing
 
 14. People call now *moonlighting* to the classical side-hustles. Or so [it seems](https://engagedly.com/blog/moonlighting-and-how-to-deal-with-moonlighting-employees/).
 
@@ -878,7 +878,7 @@ From Last [year 2024](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/
 {{< /cards >}}
 
 - [x] [Better Webs](#more-websites)
-- [x] Better AI APIs Usage: APIFY, ElevenLabs, scrapping APIs...
+- [x] Better AI APIs Usage: *APIFY, ElevenLabs, scrapping APIs...*
 - [x] Review all previous posts and see that are no commented / `WIP` /  incomplete sections
 
 {{< cards cols="1" >}}
@@ -1051,8 +1051,7 @@ Is note taking just bike-shedding?
 
 Embrace The power of notes.
 
-Without bikeshedding, but unloading your brain and sharing with others!
-
+Without *bikeshedding*, but unloading your brain and sharing with others!
 
 #### Dev Smart not Hard
 
@@ -1305,11 +1304,7 @@ It was ofc properly documented on [a KB](https://jalcocert.github.io/JAlcocerT/k
 
 ##### AI Stuff
 
-https://aistudio.google.com/prompts/new_chat
-
-* https://github.com/browser-use/browser-use
-
-> MIT |  🌐 Make websites accessible for AI agents. Automate tasks online with ease. 
+* `https://aistudio.google.com/prompts/new_chat`
 
 **More Agents**
 
@@ -1441,9 +1436,7 @@ That one I want to keep the configurations minimalistic and very simple to repli
 * https://jalcocert.github.io/JAlcocerT/selfhosted-apps-06-2025/
 * https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/
 
-Ive been taking **inspiration from**:
-
-https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#inspiration-for-a-homelab
+Ive been taking **[inspiration](https://jalcocert.github.io/JAlcocerT/docs/selfhosting/#inspiration-for-a-homelab) from**:
 
 Thanks to this sites, I get to know more cool apps:
 
@@ -1680,11 +1673,4 @@ Oh, and I climbed (again) to the top of a country.
 
 2025 - BiP *and social sign in/up*
 
-
-I know that this is like... 0+0=0
-
-But...how could we expect to be closer to excellent w/ot even trying?
-
-<!-- ![Porsche design](/blog_img/outro/porsche.png) -->
-
-Enjoy.
+Enjoy!

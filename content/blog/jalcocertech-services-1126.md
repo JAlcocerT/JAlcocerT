@@ -1,13 +1,12 @@
 ---
 title: "[JAlcocerTech] Services and BiP"
-date: 2026-11-06T10:20:21+01:00
+date: 2026-11-14T09:20:21+01:00
 draft: false
 tags: ["Roadmap26","CF KV"]
 description: 'All you need is to have vision (and agents).'
 url: 'jalcocertech-services-bip'
 ---
 
-https://github.com/JAlcocerT/poc_webs_magnet/blob/master/z-lead-capture.md
 
 ```sh
 herdr #lazygit /usage /status
@@ -261,6 +260,10 @@ That really helps to keep track of:
   {{< card link="https://jalcocert.github.io/JAlcocerT/docs/dev/fe-vs-be/" title="FE vs BE | Docs ↗" icon="book-open" >}}
 {{< /cards >}}
 
+8. TTS/ST2 interview prep / speech improvement / interviewer / fluentie for NL: *from one plane conversation*
+
+* https://why-postmortem-checks.pages.dev
+* https://pm-pdm-checks.pages.dev
 
 #### Meta Frameworks
 
@@ -300,8 +303,29 @@ Practical Electronics for Inventors, Fourth Edition is a nice book
 
 #### mbsd
 
+You should know whats coming...
+
+Just in case if you missed it, i was making single point mass lap optimization earlier this year
+
+now i got an oss mbsd framework to play around
+
+Oh...and i havent forgot about beam theory nor FEM
+
+See where this is going?
+
+#### tts and stt
+
+For yt-distill i was using lately local stt
+
+And to acelerate my yt video creation, Ive been using voicebox, properly backedup lately with my voice cloned to read the captions.
 
 #### Homelab Hardening
+
+Its never a bad moment to [improve the homelab](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#improving-the-homelab), specially with all security concerns we have with AI.
+
+Ive learnt how to [upgrade pb](https://fossengineer.com/pocketbase-upgrade-security/) and [nextcloud to avoid p2p2shell](https://fossengineer.com/upgrade-nextcloud-php2shell/)
+
+https://selfh.st/survey/2026-results/
 
 ---
 
@@ -313,7 +337,7 @@ Lovely interfaces i found recently:
 
 2. For on boarding flows: `https://bitly.com/a/sign_up`
 
-3. For roadmaps: `https://dbackup.app/roadmap/`
+3. For roadmaps: `https://dbackup.app/roadmap/` *which was one [of the points](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#for-next-year) i wanted to cover this year*
 
 4. I loved this `https://levels.io/projects` *notice the success rate and w/o profit goal*
 
@@ -327,11 +351,18 @@ Coming from [here](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-u
 3. huashu design
 4. blog post editor, image gen
 
+Most importantly: *homelab security checks skills, together with [web stuff](https://github.com/JAlcocerT/jalcocertech-core/tree/main/.claude/skills/site-analytics-review) from performance,search and cf analytics skills, a [lead hub](https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub) like inbound leads checks*.
+
+
+```sh
+make analytics-pages
+```
+
 ### Integrations Im using
 
 For example [email outbound and enrichment](https://github.com/JAlcocerT/leadarchitect-uk/blob/main/.env.sample)
 
-But why not: smartlead, cf web analytics, or any of these web analytics tools, posthog...and [what now for any saas](https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/z-integrations.md)
+But why not: smartlead, cf web analytics, or any of these web analytics tools, posthog...and [what now for any saas](https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/z-integrations.md), [inbound lead capture](https://github.com/JAlcocerT/poc_webs_magnet/blob/master/z-lead-capture.md)...
 
 ```env
 
@@ -530,9 +561,18 @@ The practical boundary is: `poc_shopify` owns the Shopify-specific offer and con
 
 Coming from the [last eayp change](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#eayp-v4) around foldergram!
 
-I got to know about: https://github.com/generalaction/emdash
+I got to know about [emdash](https://fossengineer.com/selfhosting-emdash-astro-cms/): `https://github.com/generalaction/emdash` as they call it, the spiritual succesor of [WP](https://fossengineer.com/selfhosting-wordpress-docker/) and also [about monolith](https://fossengineer.com/selfhosting-monolith-cloudflare-blog-cms/)
 
 And still i need to [improve `margin-cms`](https://github.com/JAlcocerT/poc/tree/main/pwa-margincms) and try `markdown plus plus`
+
+Having foldergram instalabble as PWA in a tablet is nice, but it lacks the writing editor i have at fieldnotes for beyond a journey.
+
+At some point all that setup should converg to a solution that im really confortable with, which has to be git first and wrap any site, from `https://cyclingthere.pages.dev/` to `eyap` `https://beyondajourney.pages.dev/`.
+
+Its good to see how far im from [the webifyer concept](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#about-webifyer) now.
+
+> `https://beyondajourney-fieldnotes.jesalctag.workers.dev/`
+
 
 ### Slubne PoC
 
@@ -542,7 +582,7 @@ Expiry reminders are a scheduled email sequence, so “DRIP” describes the mec
 
 Keep two separate sequences:
 
-* Service reminders: “Your gallery expires soon—download your originals.”
+* Service reminders: Your gallery expires soon—download your originals.
 * Marketing DRIP: onboarding tips, upgrade offers, promotions.
 
 They can **share infrastructure**, but not automatically share recipients, consent rules, or suppression behavior. 
@@ -568,7 +608,7 @@ Beyond having a nice performing website:
 
 Some people are having lead magnets around email DNS checks for cold mail
 
-You can have it for free: https://github.com/domainaware/checkdmarc and https://github.com/internetstandards/Internet.nl
+You can have it for free: `https://github.com/domainaware/checkdmarc` and `https://github.com/internetstandards/Internet.nl`
 
 ```sh
 dig +short TXT google._domainkey.getleadarchitect.com
