@@ -7,6 +7,15 @@ description: "Using Stable Difussion with DreamBooth"
 url: 'stable-difussion-free-generation'
 ---
 
+**Tl;DR**
+
+
+**Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 **TL;DR**
 
 

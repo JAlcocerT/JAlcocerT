@@ -1,16 +1,11 @@
 ---
 title: "[JAlcocerTech] Services and BiP"
-date: 2026-11-14T09:20:21+01:00
+date: 2026-11-15T09:20:21+01:00
 draft: false
 tags: ["Roadmap26","CF KV"]
 description: 'All you need is to have vision (and agents).'
 url: 'jalcocertech-services-bip'
 ---
-
-
-```sh
-herdr #lazygit /usage /status
-```
 
 **Tl;DR**
 
@@ -45,7 +40,16 @@ And...the attraction infrastructure is WIP/in-validation with this outbound setu
 
 After [BiP](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/) & [shipping several SaaS](#shipping-saas) in public, these is what I wish I had known earlier from the tech-stack angle to create basically anything: *to get started is not as hard as [getting data apps right](https://github.com/JAlcocerT/poc/tree/main/zzz-books)*.
 
-> Are you building for feeling productive? How certain are you that your build will solve somebodies pain points? Do you even care and are just building for the sake of it?
+
+trying not to use any gui apps: `https://learn.chatgpt.com/docs/linux/linux-app`
+
+```sh
+herdr #lazygit /resume /compact /usage /status
+```
+
+> Are you building for feeling productive?
+
+> > How certain are you that your build will solve somebodies pain points? Do you even care and are just building for the sake of it?
 
 If that's clear, then id recommend: *do and document ADR, decisions, roadmap, learnings and builder-posts*.
 
@@ -61,8 +65,7 @@ If that's clear, then id recommend: *do and document ADR, decisions, roadmap, le
 
 6. Roadmaps (kanban), changelog and gated feature requests
 
-7. Product analytics: posthog is amazing and it can be one of your agents integrations for a self-improving product (P**I**Os)
-
+7. Product analytics: *posthog is amazing and it can be one of your agents integrations for a self-improving product (P**I**Os)*
 
 ### A change of mindset
 
@@ -179,6 +182,19 @@ BCG Growth-Share Matrix (Cash Cows, Stars, Dogs, Question Marks) is ~ PLC.
 
 ## Conclusions
 
+SInce [last month](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-oct/) ive ended up were I played around PIOs
+
+Now, I have:
+
+{{< cards >}}
+  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
+ {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
+{{< /cards >}}
+
+```sh
+
+```
+
 {{< cards >}}
   {{< card link="https://ebooks.jalcocertech.com" title="Free Knowledge ↗" icon="book-open" >}}
   {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
@@ -271,9 +287,11 @@ Beyond *no hello's* and *who/what/by-when*: governance matters and thinking in s
 
 1. Product definition: *create, define, invest, smart, PIOs, BRD/PRD/FRD, project charters, RACIs, OKRs, outcome driven product development... whatever, but... just make it have sense*
 
-2. PostMortems
+2. PostMortems: *bc there might be gaps in the way you always worked*
 
-3. PIOs: *[stop telling how's](https://www.youtube.com/watch?v=7T-gldvgfpo) and spend time defining WHYs*
+> clarity of execution matters!
+
+3. PIOs: *[stop telling how's](https://www.youtube.com/watch?v=7T-gldvgfpo)spend time defining WHYs and [start with a contract](https://www.jalcocertech.com/blog/job-engine-pio-adrs-project-contract/) with current and desired state*. ADRs and `builder-posts`, learnings and metalearnings from them are great.
 
 > Im building with such [clear one time integrations setup](https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/z-integrations.md), [ADRs](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-solo/wk43y26/pio-inbound-tg-bot/adr), Roadmap and changelogs
 
@@ -303,6 +321,8 @@ Practical Electronics for Inventors, Fourth Edition is a nice book
 
 #### mbsd
 
+* https://multibodysystemsdynamics.com/tools/camber-gain-roll-centre-calculator/
+
 You should know whats coming...
 
 Just in case if you missed it, i was making single point mass lap optimization earlier this year
@@ -315,7 +335,7 @@ See where this is going?
 
 #### tts and stt
 
-For yt-distill i was using lately local stt
+For `yt-distil` i was using lately local stt
 
 And to acelerate my yt video creation, Ive been using voicebox, properly backedup lately with my voice cloned to read the captions.
 
@@ -325,7 +345,9 @@ Its never a bad moment to [improve the homelab](https://jalcocert.github.io/JAlc
 
 Ive learnt how to [upgrade pb](https://fossengineer.com/pocketbase-upgrade-security/) and [nextcloud to avoid p2p2shell](https://fossengineer.com/upgrade-nextcloud-php2shell/)
 
-https://selfh.st/survey/2026-results/
+* `https://selfh.st/survey/2026-results/`
+
+Some DNS just in case https://hayahora.futbol/ 
 
 ---
 
@@ -340,7 +362,6 @@ Lovely interfaces i found recently:
 3. For roadmaps: `https://dbackup.app/roadmap/` *which was one [of the points](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#for-next-year) i wanted to cover this year*
 
 4. I loved this `https://levels.io/projects` *notice the success rate and w/o profit goal*
-
 
 ### Skills Im using
 
@@ -556,6 +577,23 @@ The practical boundary is: `poc_shopify` owns the Shopify-specific offer and con
 
 ### Energy
 
+Started in [May/June](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#iot-crops-and-energy)
+
+https://jalcocert.github.io/JAlcocerT/selfhosting-energy-monitoring/
+
+```sh
+npx wrangler pages project list
+```
+
+* https://go-solar.pages.dev/
+* https://aerothermics-landing.pages.dev
+* https://solar-trajectory.pages.dev  
+
+{{% details title="Coming from... 🚀" closed="true" %}}
+
+{{% /details %}}
+
+
 
 ### EayP v5 x EmDash x Monolith
 
@@ -613,3 +651,10 @@ You can have it for free: `https://github.com/domainaware/checkdmarc` and `https
 ```sh
 dig +short TXT google._domainkey.getleadarchitect.com
 ```
+
+
+{{< details title="Made the DNS setup also for getslubnechwile 📌" closed="true" >}}
+
+
+
+{{< /details >}}

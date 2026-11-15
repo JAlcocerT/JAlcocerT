@@ -18,6 +18,7 @@ Mechanics + electronics = mechatronics
   {{< card link="https://github.com/JAlcocerT/electronics-101" title="Electronics | Repo" icon="github" >}}
 {{< /cards >}}
 
+Even a laguna mk2 has several stepers motors for the  speedmeter rpms gas level etc...
 
 **Intro**
 
@@ -32,16 +33,6 @@ Around bike dynamics and sensors
 * https://github.com/JAlcocerT/mbsd/tree/master/bike-practicas-cdm-python
 
 ![alt text](/blog_img/mechanics/path_power_colored.png)
-
-
-**Tl;DR**
-
-
-**Intro**
-
-* Why Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
-
 
 
 Examples:

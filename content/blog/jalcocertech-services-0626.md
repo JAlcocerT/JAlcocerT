@@ -116,7 +116,7 @@ It incorporates the **concept of zettelkasten**: one post, one topic.
 
 Ive done few web audits, to people I just met - With email report
 
-Santi, this one goes for you to.
+Santi, this one goes for you too.
 
 I mean, the new skill that i got:
 
@@ -145,7 +145,6 @@ The proof that you can make *(a lot of)* money with a shitty landing:
 {{< details title="See the example audit" closed="true" >}}
 
 `https://genkinfy.com/#faq`
-
 
 ```md
 make audit-full-fast URL=https://genkinfy.com/
@@ -188,13 +187,11 @@ LINK_CHECK_TIMEOUT_SECONDS=0 make audit-full URL=https://fossengineer.com
 LINK_CHECK_TIMEOUT_SECONDS=0 ./linkcheck-audit.sh https://fossengineer.com docker
 ```
 
-
 {{< /details >}}
-
 
 For **social previews**, use:
 
-- https://www.opengraph.xyz/url/https%3A%2F%2Febooks.jalcocertech.com
+- `https://www.opengraph.xyz/url/https%3A%2F%2Febooks.jalcocertech.com`
 - `https://cards-dev.twitter.com/validator` (after deploy)
 
 I also added some smoke tests to the product:
@@ -259,16 +256,6 @@ Initially this is coming from:
  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
 {{< /cards >}}
 
-Now, I have:
-
-{{< cards >}}
-  {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
- {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
-{{< /cards >}}
-
-```sh
-
-```
 
 #### RevOps / GTM
 
@@ -277,7 +264,7 @@ This was supposed to be a collaboration.
 But its just the last time im partnering for such thing.
 
 ```sh
-leadarchitect.org
+#leadarchitect.org
 ```
 
 ### The BEST - DFY
@@ -341,9 +328,7 @@ cd ./poc/go-solar
 make ship
 ```
 
-Yep, heavily inspired by my latest UI/X with trip planner: `trip-planner-9lt.pages.dev`
-
-https://jalcocert.github.io/JAlcocerT/thermodynamics/
+Yep, heavily inspired by my latest UI/X with trip planner: `trip-planner-9lt.pages.dev` and with [thermodynamics in mind](https://jalcocert.github.io/JAlcocerT/thermodynamics/)
 
 <!-- 
 ![alt text](/blog_img/apps/aerotermia.png) 
@@ -360,6 +345,8 @@ https://jalcocert.github.io/JAlcocerT/thermodynamics/
 
 ![alt text](/blog_img/entrepre/aerotermia-landing.png)
 
+Yea, go solar:
+
 ![alt text](/blog_img/entrepre/gosolar.png)
 
 {{< cards >}}
@@ -373,6 +360,8 @@ make mqtt-listen MQTT_HOST=192.168.1.2 MQTT_TOPIC='pico/#'
 # make flash # make flash PORT=/dev/ttyACM0
 make mqtt-listen MQTT_HOST=192.168.1.2 MQTT_TOPIC='esp32/#'
 ```
+
+See:
 
 ```sh
 make sqlite-start MQTT_HOST=192.168.1.2
@@ -443,7 +432,7 @@ python3 /home/jalcocert/Home-Lab/z-dns-scripts/google_workspace_dns_check.py get
 #python3 /home/jalcocert/Home-Lab/z-dns-scripts/google_workspace_dns_check.py getleadarchitect.com
 ```
 
-I checked the DNS for getslubnechwile.com.
+I checked the DNS for `getslubnechwile.com`.
 
 What’s already in place:
 
@@ -469,7 +458,7 @@ One extra note:
 
 - There is also a Google verification TXT record present: google-site-verification=..., which is useful for Google services but is separate from Workspace mail auth.
 
-If you want, I can give you the exact missing DKIM and DMARC records to add in Porkbun.
+If you want, I can give you the exact missing `DKIM` and `DMARC` records to add in Porkbun.
 
 `http://192.168.1.2:3034/explore/repos`
 
@@ -512,15 +501,14 @@ look via the given `.apps.googleusercontent.com`
 
 ![alt text](/blog_img/entrepre/gmail-smartlead.png)
 
-https://app.smartlead.ai/app/email-accounts/emails
-
-https://app.smartlead.ai/app/email-account/19740710/warmup?email=julita.j@getleadarchitect.com
+* `https://app.smartlead.ai/app/email-accounts/emails`
+* `https://app.smartlead.ai/app/email-account/19740710/warmup?email=julita.j@getleadarchitect.com`
 
 ![alt text](/blog_img/entrepre/gmail-warmup.png)
 
 {{< /details >}}
 
-* https://www.smartlead.ai/pricing
+* `https://www.smartlead.ai/pricing`
 
 ---
 
@@ -528,7 +516,7 @@ https://app.smartlead.ai/app/email-account/19740710/warmup?email=julita.j@getlea
 
 ### Whats your current agentic setup?
 
-Im using right now herdr *> tmux* to better orchestrate agents sessions and dont go crazy with deliveries waiting for my input.
+Im using right now **herdr** *> tmux* to better orchestrate agents sessions and dont go crazy with deliveries waiting for my input.
 
 ```sh
 #curl -fsSL https://herdr.dev/install.sh | sh
@@ -690,7 +678,7 @@ When you send an email from Google Workspace now, the receiving server checks:
 
 Because your script shows a clean sweep of **OK**, your domain now has a stellar reputation with global spam filters. Your emails are highly likely to go straight to the inbox!
 
-* https://admin.google.com/ac/apps/gmail/authenticateemail
+* `https://admin.google.com/ac/apps/gmail/authenticateemail`
 
 Seeing `MX: OK`, `SPF: OK`, and `NS: OK` means the absolute hardest part is over: **your domain `getslubnechwile.com` is now successfully linked to Google Workspace**, and you can actively send and receive emails.
 

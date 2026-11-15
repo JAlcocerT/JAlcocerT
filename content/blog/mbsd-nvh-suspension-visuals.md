@@ -1,6 +1,6 @@
 ---
 title: "Suspension videos"
-date: 2026-11-07
+date: 2026-11-10
 draft: false
 tags: ["MBSD v0-9-8 x Active Damping","LMS Filter"]
 description: 'A light framework that can do stuff.'
@@ -9,6 +9,7 @@ url: 'visualizing-suspension-nvh'
 
 
 **Tl;DR**
+
 
 **Intro**
 
@@ -52,6 +53,7 @@ https://www.youtube.com/shorts/cx21pJaPVTc
 
 ## Suspension Modelling
 
+This is sth that we can do know very easily around the mbsd framework.
 
 ### Quarter car
 
@@ -75,20 +77,27 @@ The visualization of the **Production Design Pockets** (Luxury, Family, Sport, T
 
 It transforms abstract spring and damper values into recognizable market segments.
 
+{{% details title="See How...🚀" closed="true" %}}
+
 1. The Design-Space Contours: The Shape of Choice
 
 The contour maps in Section 3 reveal the "topography" of suspension engineering.
+
 * **The Bottom-Left "Comfort Oasis":** Your map clearly shows that the only way to reach premium comfort levels is by moving toward soft springs and low damping. 
+
 * **The "Travel Penalty":** Highlighting that this comfort comes at the cost of **14 mm of RMS travel** is the crucial engineering constraint. It explains why a Mercedes S-Class cannot have the low, sleek silhouette of a Porsche 911—the physics of comfort demands a larger "working envelope."
 
 2. The Pareto Fronts: The Wall of Physics
 
 Section 4 provides the most rigorous takeaway for an NVH engineer:
+
 * **The Steep Tradeoff (Comfort vs. Travel):** This is the "Hard Wall." You cannot have a soft-riding car with tight suspension packaging.
 
 Every millimeter of room the stylist takes away from the wheel arch is a direct penalty on the passenger's spine.
 
-* **The Shallow Tradeoff (Comfort vs. Road-Holding):** This is a profound "Secret of the Trade." It suggests that for most road-going passenger cars, **safety (grip) is a baseline requirement that is relatively easy to hit**, allowing the real engineering competition to happen on the "Comfort vs. Packaging" axis.
+* **The Shallow Tradeoff (Comfort vs. Road-Holding):** This is a profound "Secret of the Trade." 
+
+It suggests that for most road-going passenger cars, **safety (grip) is a baseline requirement that is relatively easy to hit**, allowing the real engineering competition to happen on the "Comfort vs. Packaging" axis.
 
 ---
 
@@ -97,6 +106,8 @@ Every millimeter of room the stylist takes away from the wheel arch is a direct 
 1. **The Four Pockets (Section 5):** The $\zeta$ (damping ratio) values ($0.24$ to $0.62$) are perfectly aligned with industry standards. Showing that a **Truck** is nearly twice as damped as a **Luxury** car explains why trucks feel "abrupt" or "harsh" when unladen—they are tuned to control a massive payload, not a single driver.
 2. **The "Goldilocks" Family Pocket:** Centering the default at $22\text{ kN/m}$ and $1500\text{ N}\cdot\text{s/m}$ anchors the entire series. It provides the "standard" against which all other designs are judged.
 3. **The 4-D Context (Section 6):** Your acknowledgment that this is a 2D slice of a 4-D problem ($k_s, c_s, Road, Speed$) is the correct level of technical transparency. It prevents the reader from over-simplifying the result while providing a usable mental model.
+
+{{% /details %}}
 
 This chapter bridges the gap between **Simulation** and **Strategy.** 
 
@@ -135,12 +146,9 @@ Summarised in the callout at the top of this chapter; here's the full enumerated
 Each assumption is a deliberate choice for clarity and tractability; each has a known failure mode. 
 
 Production NVH workflows usually relax #4 / #5 / #7 first (the bump-stop / tyre-detachment /
-non-linear-damper layer), then #2 (full-car coupling), and only
-escalate to MBSD when the linear story breaks down.
+non-linear-damper layer), then #2 (full-car coupling), and only escalate to MBSD when the linear story breaks down.
 
-The same dimensional-reduction argument made in the
-[Dimensional Reduction reference chapter](2d-physics-dimensional-generalization.md)
-applies here: the suspension is genuinely 3D, but under #1, #2, #8 it factorises into a planar quarter-car analysis whose linear output (FRFs, RMS metrics) is exact within the stated hypotheses.
+The same dimensional-reduction argument made in the [Dimensional Reduction reference chapter](2d-physics-dimensional-generalization.md)applies here: the suspension is genuinely 3D, but under #1, #2, #8 it factorises into a planar quarter-car analysis whose linear output (FRFs, RMS metrics) is exact within the stated hypotheses.
 
 The 2D simulator is "not approximate" for these chapters; it's just *not used at all* — the analytical FRF is closed-form so the solver isn't needed.
 
@@ -164,7 +172,7 @@ The logic in Section 1 is the most powerful concept in the chapter.
 
 ---
 
-2. The Pareto Escape: Seeing the Forbidden Zone
+2. The Pareto Escape: *Seeing the Forbidden Zone*
 
 Your "Hero Plot" in Section 3 is the definitive proof of the series.
 * **The "Banana" and the "Line":** Showing the skyhook curve sitting *inside* the passive design cloud is a massive payoff. It proves that a skyhook car with $5\text{ mm}$ of travel is as comfortable as a luxury barge with $10\text{ mm}$ of travel.
@@ -192,13 +200,17 @@ See the active pareto comparison:
 
 ---
 
-## Conclusions
+### NVH
+
 
 Suspension NVH is an energy-transfer problem.
 
 Road inputs enter through tires, pass through springs and dampers, excite chassis modes, and reach the passenger as motion, sound, or harshness. 
 
 The question is not only how parts move, but how vibration travels.
+
+
+## Conclusions
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
@@ -213,10 +225,8 @@ The way it has [modelled the spur gear](https://www.youtube.com/shorts/Uj7jDkZsA
 
 There are **other oss mbsd fwks** with interesting potential to have a look:
 
-* https://www.mbdyn.org/
+* https://www.mbdyn.org/ - MBDyn graphical post-processor for blender
   * https://github.com/zanoni-mbdyn/blendyn
-
-MBDyn (https://www.mbdyn.org/) graphical post-processor for blender (https://www.blender.org/)
 
 * Some people put together mbd x fem - https://mbdfem.com/ 
 - Project Chrono/PyChrono
@@ -236,12 +246,21 @@ https://www.youtube.com/watch?v=eFGkopoCTYY
 
 `external/mbsd-freecad-shorts`
 
-
-Whats good of a general model is that it can derive all kind of domain KPIs:
+Whats good of a general model is that it can derive all kind of domain KPIs: *camber, toe, caster, KPI, scrub radious, [toe](https://www.youtube.com/shorts/Esx0MJM1Gqo)*
 
 1. [AntiSquat](https://youtube.com/shorts/5EOrJvm1U6I?is=ATjShWVHuTw4fFl8)
 2. [Roll Center](https://youtube.com/shorts/uX_OTOUDWL0?is=roQ1Ugx2VPVsQaTf)
+3. bump steer
+4. [kingping](https://www.youtube.com/shorts/26YqKi1mfxo)
+5. [steering rate](https://www.youtube.com/watch?v=dZtjCkTWWn8)
 
+https://www.youtube.com/watch?v=VbReLNi2JP4&t=95s
+
+### Push vs Pull
+
+https://www.youtube.com/watch?v=aIxheHwVNUM
+
+This guy even made [its own piston](https://www.youtube.com/watch?v=QePFM4mAcIs)
 
 ---
 
@@ -284,3 +303,61 @@ this [artofrendering](https://www.youtube.com/@artofrendering/shorts)
 
 Beyond [fpv kpis](https://github.com/JAlcocerT/poc/tree/main/fpv-kpis/hyperframe-video), hyperframe and threejs can play well together:
 
+### How Different Types of Engine affect drivability
+
+Does a v6 handles better then an I6 at the same curve?
+
+Lets ignore power, how does weight distriution helps the lap time?
+
+### Modelling the transient wheel behaviour
+
+SHimmy
+
+https://www.youtube.com/watch?v=gxQNnTxKYZM
+
+https://www.youtube.com/watch?v=GdubvhGUhzs
+
+https://www.youtube.com/watch?v=hTUCwvvlATE
+
+
+### Beam Theory x mbsd
+
+Got inspired with [this video](https://www.youtube.com/watch?v=cUwp7mj6dYo) to apply beam theory to the whishone bars:
+
+https://www.youtube.com/watch?v=cUwp7mj6dYo
+
+> An awsome channel btw `https://www.youtube.com/@KevinHayward7/videos`
+
+Here they do a custom sportcar simulation with a detailed tyre contact patch
+
+https://www.youtube.com/watch?v=a4Ez2nISc8k
+
+`https://appliedracingdynamics.com/`
+
+
+https://www.youtube.com/watch?v=f0ZobiOtSsM
+
+
+https://www.youtube.com/watch?v=-uXdLa2QnQ8
+
+https://www.youtube.com/watch?v=WkZ7lrLivNg
+
+https://www.youtube.com/watch?v=8zrWq6obcMo
+
+https://www.youtube.com/watch?v=uV7wEIR0BVU
+
+https://www.youtube.com/watch?v=RcaTFWFnhhc
+
+https://www.youtube.com/watch?v=xKlxfBhVdBM
+
+https://www.youtube.com/watch?v=lNInCfCkrkE
+
+https://www.youtube.com/watch?v=Qmiu1OgooJw
+
+https://www.youtube.com/watch?v=EcPkuJLBqME
+
+https://www.youtube.com/watch?v=NlEJi2x3gzM
+
+Here you can see how to place a custom push rod:
+
+https://www.youtube.com/watch?v=uJSgTbthTtE

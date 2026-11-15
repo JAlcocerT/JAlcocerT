@@ -14,7 +14,7 @@ Still thinking on headcounts to mess around with a project instead of [getting ~
 **Intro**
 
 * WHY Im writting this post: *bc I wanted to continue the Home x IoT Improvements, made the [mbsd 0-7-0 release](#mbsd) and used [cloudflare KV to get leads](#leeeeads)*
-* What [Ive learnt](#conclusions) with it: *Ive ended up [telling agents the WHY](#pio), not the how, via PIO fwk*
+* What [Ive learnt](#conclusions) with it: *Ive ended up [telling agents the WHY](#pio), not the how, via [PIO fwk](#pio)*
 
 A friend told me once that I will do sth with energy at some point
 
@@ -2079,13 +2079,15 @@ The pattern is common:
         
 What is less healthy, but still common:                                              
                                                             
-Promotion evidence tied to outcomes outside your control. 
-Mid-level calibration while expecting senior/lead ambiguity absorption.
-PM silence when boundaries should be protected.
-No clear RACI but high expectation of accountability.
+* Promotion evidence tied to outcomes outside your control. 
+* Mid-level calibration while expecting senior/lead ambiguity absorption.
+* PM silence when boundaries should be protected.
+* No clear RACI but high expectation of accountability.
 
 Frameworks/playbooks shared but not adopted because no owner is enforcing them.                                                                                                          
-So yes, typical. But “typical” does not mean “good deal for you.”                                        
+So yes, typical.
+
+But “typical” does not mean “good deal for you.”                                        
 
 The practical read: This is normal organizational gravity.
 
@@ -2097,12 +2099,12 @@ The move is not to fix the whole environment.
 
 The move is to operate cleanly inside it:
 
-1. deliver assigned scope;
-2. document assumptions;                                                     
-3. ask who owns product/architecture/delivery;                        
-4. separate data feasibility from MVP feasibility;                        
-5. avoid taking accountability without authority;                               
-6. use the job for cashflow and evidence;                
+1. deliver assigned scope
+2. document assumptions;                                                    
+3. ask who owns product/architecture/delivery                        
+4. separate data feasibility from MVP feasibility                        
+5. avoid taking accountability without authority                               
+6. use the job for cashflow and evidence         
 7. **save your real leverage for places where upside is explicit.**
 
 {{% /details %}}
@@ -2344,7 +2346,6 @@ flowchart LR
     L -.sets thresholds.-> H
 ```
 
-
 **How They Compare in the Lifecycle**
 
 | Document | Focus Level | Primary Output | Human vs. AI Role |
@@ -2374,9 +2375,7 @@ Example:
 - Outcome: “As a result…” + what the agent will assess/reference/report/       
 recommend
 
-
 For software engineering, operations, and business analysis, several frameworks mirror PIO by structuring problem-solving, architectural choices, and requirements gathering.
-
 
 ### Framework Comparison Matrix
 

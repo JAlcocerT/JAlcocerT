@@ -266,9 +266,9 @@ https://youtu.be/Jf6WlQyYer0 -->
 1. PV optimum orientation
 2. PV+Heat
 3. PV+Batteries
-4. PV +
+4. PV + 
 5. Building x Sun rays
-6. AC for my house: https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#which-ac-is-enough-for-my-house
+6. AC for my house: [whats enough?](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/#which-ac-is-enough-for-my-house)
 
 I wrote about [data driven insulation evaluation](https://jalcocert.github.io/JAlcocerT/data-driven-insulation-evaluation/) sometime back
 
@@ -661,7 +661,8 @@ cd ./dron/desktop-version
 uv sync
 uv run main.py
 ```
-  
+
+```md
   Your Python app
      ↓
   UDP                 # how app data is packaged/sent
@@ -673,6 +674,7 @@ uv run main.py
   Radio modulation    # turns bits into radio waves
      ↓
   Tello antenna
+```
 
 For your Tello:
 
@@ -685,8 +687,7 @@ So UDP does not “send radio waves” itself.
 
 It hands packets down through the network stack; Wi‑Fi transports those packets over the air.
 
-One subtle but useful detail: UDP itself does not retry lost packets, but Wi‑Fi often retries a failed radio transmission at its
-own lower layer. 
+One subtle but useful detail: UDP itself does not retry lost packets, but Wi‑Fi often retries a failed radio transmission at its own lower layer. 
 
 If it still cannot deliver it quickly enough, the UDP packet is lost. 
 
@@ -776,11 +777,13 @@ Until I made [this with PyQT](https://gitlab.com/fossengineer1/dron/-/tree/main/
 
 ### Mechanism Design
 
-> pwa: https://main.app-mbsd.pages.dev/
+> pwa: `https://main.app-mbsd.pages.dev/`
 
-> https://multibodysystemsdynamics.com/
+> `https://multibodysystemsdynamics.com/`
 
 With [the release of the whitepaper](https://jalcocert.github.io/JAlcocerT/whitepaper-mbsd/#recommended-document-outline) and OSS framework for mbsd: https://github.com/JAlcocerT/mbsd-core
+
+The workflow seems clear:
 
 ```
 kinematics.py  ──►  OpenSCAD  ──►  CadQuery  ──►  FreeCAD  ──►  Blender
@@ -1083,17 +1086,7 @@ cd ./poc/genbi-energy-solutions/waitlist/ #it can be re-used nicely for lead-gen
 
 3. Dont forget about the attribution
 
-
-
-{{< details title="Made the DNS setup also for getslubnechwile 📌" closed="true" >}}
-
-
-
-{{< /details >}}
-
-
 4. You can now go from website to promo video like:
-
 
 {{< youtube "4sSa28Xk5Yw" >}}
 
@@ -1135,7 +1128,6 @@ Flow I made them go through:
 11. Biggest blocker              
 12. Contact info 
 
-
 The intent is to classify people into: raw idea, needs validation, ready to test, ready to build, or already commercial. 
 
 It deliberately exposes weak ideas by asking for buyer clarity, evidence, distribution, and commitment 
@@ -1149,8 +1141,6 @@ uv run python main.py status cmtljp6ee1j5d01xdkqdqpdyp inProgress
 ```
 
 {{< /details >}}
-
-
 
 **What do I do?**
 
@@ -1288,13 +1278,12 @@ You can also do this with *the forgejo setup* if you are not afraid of `.md`: `h
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/forgejo" title="Forgejo | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
 ### Skills im using 
 
 Created a Codex skill for this workflow: `C:/Users/j--e-/.codex/skills/weekly-work-summarizer/SKILL.md`
 
 It includes:
-                                                                                                             
+                                                                                                            
 - EOW summary workflow
 - director TL;DR email workflow
 - daily ticket/hour bullet allocation workflow
@@ -1325,4 +1314,4 @@ Its just one logo and skill away: `./poc/zzz-`
 
 {{< youtube "4sSa28Xk5Yw" >}}
 
-And this can serve to do QR x Guerrilla Marketing or send personalized video demos to high quality leads.
+And this can serve to do QR x Guerrilla Marketing or send personalized video demos to *high* quality leads.
