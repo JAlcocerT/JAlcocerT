@@ -7,11 +7,9 @@ summary: 'Migrating Wordpress to Cool Websites. Faster, Cleaner, Better SEO and 
 url: 'wordpress-migration-to-ssg'
 ---
 
-
 **TL;DR**
 
 I was talking with my father about websites the other day and...
-
 
 **Intro**
 
@@ -40,9 +38,7 @@ We wanted to add **Umami Analytics** - The same im using for this site (which is
 
 We tried to add the Umami script on the wordpress Theme, but the option was also not available.
 
-
 <!-- 
-
 No need to be a web dev expert, but some tricks with css and components are good to have
 https://jalcocert.github.io/JAlcocerT/blog/dev-css/
 https://jalcocert.github.io/JAlcocerT/understanding-astro-ssg-components/
@@ -78,6 +74,8 @@ Observe how for both platforms they provide a ~500ms speed and http requests (th
 
 ![Wordpress Carbon vs SSG](/blog_img/web/carbon-comparison.png)
 
+You can check with:
+
 {{< hextra/feature-grid >}}
  
 {{< hextra/feature-card
@@ -103,11 +101,14 @@ Observe how for both platforms they provide a ~500ms speed and http requests (th
 
 {{< /hextra/feature-grid >}}
 
-Also, you can do cool thinks like:
+Also, you can do cool things like:
 
 {{< cards cols="1" >}}
   {{< card link="https://fossengineer.com/selfhosting-umami-with-docker/" title="GDPR Compliance Web Analytics with Umami" >}}
 {{< /cards >}}
+
+Or:
+
 {{< cards cols="2" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/blog/dev-forms/" title="Build your audience with Newsletter & Forms" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/how-to-use-mermaid-diagrams/" title="Incorporate Diagrams easily in your posts" >}}
@@ -134,9 +135,7 @@ https://massively.ghost.io/
 
 I dont use WP myself, but...
 
-
 {{< details title="Wordpres | SEO Stuff from a marketer 📌" closed="true" >}}
-
 
 On-Page SEO Tools:
 
@@ -197,8 +196,6 @@ Other Notes:
 - Check out [this app](https://joseo20-gpt.streamlit.app/) for more insights.
 
 {{< /details >}}
-
-
 
 ### The Challenges
 
@@ -325,7 +322,6 @@ We saw a few interesting ones:
 
 The [fuwari static blog made with Astro](https://github.com/saicaca/fuwari)...
 
-
 {{< callout type="info" >}}
 Testing it with Github and CloudFlare: <https://jmodels-web.pages.dev/>
 {{< /callout >}}
@@ -355,6 +351,8 @@ firebase deploy #you will get something like -> https://jalcocertech.web.app/
 
 ### Is my website performing well?
 
+You can start with:
+
 {{< cards cols="3" >}}
   {{< card link="https://pagespeed.web.dev/" title="PageSpeed Insights" >}}
   {{< card link="https://search.google.com/search-console/" title="Google Search Console" >}}
@@ -364,6 +362,8 @@ firebase deploy #you will get something like -> https://jalcocertech.web.app/
 {{< cards cols="1" >}}
   {{< card link="https://www.websitecarbon.com/" title="Website Carbon Benchmark" >}}
 {{< /cards >}}
+
+This was a revelation:
 
 {{< cards cols="2" >}}
   {{< card link="https://github.com/Lissy93/web-check" title="Web Check - GitHub" >}}

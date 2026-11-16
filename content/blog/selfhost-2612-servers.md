@@ -7,27 +7,9 @@ description: 'Selfhosting.'
 url: 'selfhosting-and-servers-review'
 ---
 
-https://www.pragmaticengineer.com/
-
-https://github.com/rahilp/second-brain-cloudflare
-
-https://privacytools.io/trending/30d
-https://gitgem.org/
-https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/#second-brain--723-
-https://www.bitdoze.com/deploy-emdash-cloudflare-workers/
-https://www.bitdoze.com/emdash-send-email/
-
 **Tl;DR**
 
 Five (+) years with selfhosting...
-
-sqlite vs duck vs https://github.com/facebook/rocksdb/ that conduit uses
-
-filebrowser to https://github.com/themartz90/folderhug
-
-
-https://github.com/Pouzor/homelable?ref=selfh.st
-Self-hosted homelab infrastructure visualizer — interactive network diagram with live status monitoring
 
 **Intro**
 
@@ -45,6 +27,25 @@ Yes, all that.
 #http://192.168.1.2:3034/hermesagent/selfhosted-connectivity
 #http://192.168.1.2:3034/hermesagent/pi-connectivity
 #https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
+
+sqlite vs duck vs https://github.com/facebook/rocksdb/ that conduit uses
+
+filebrowser to https://github.com/themartz90/folderhug
+
+https://www.pragmaticengineer.com/
+
+https://github.com/rahilp/second-brain-cloudflare
+
+https://privacytools.io/trending/30d
+https://gitgem.org/
+https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/#second-brain--723-
+https://www.bitdoze.com/deploy-emdash-cloudflare-workers/
+https://www.bitdoze.com/emdash-send-email/
+
+
+https://github.com/Pouzor/homelable?ref=selfh.st
+
+Self-hosted homelab infrastructure visualizer — interactive network diagram with live status monitoring
 
 
 ## HomeLab x OSS
@@ -124,7 +125,7 @@ https://github.com/lissy93/personal-security-checklist
 
 Security, OSTINT etc matters and these can help:
 
-1. https://github.com/fail2ban/fail2ban?ref=selfh.st
+1. https://github.com/fail2ban/fail2ban
 
 ### Networking
 
@@ -134,9 +135,15 @@ https://networkingtoolbox.net/
 
 https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts
 
-I tried pihole, have a look to adguard and https://github.com/0xERR0R/blocky?ref=selfh.st
+I tried pihole, have a look to adguard and `https://github.com/0xERR0R/blocky`
 
 But technitium has been my go to
+
+
+* `https://selfh.st/survey/2026-results/`
+
+Some DNS just in case `https://hayahora.futbol/`
+
 
 #### SSL x HTTPs
 

@@ -54,7 +54,7 @@ scoop install uv #winget #choco
 
 If that's clear, then id recommend: *do and document ADR, decisions, roadmap, learnings and builder-posts*.
 
-1. Astro SSG x Edge capabilities within Cloudflare offerings: *[scheduled posts](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/scheduled-rebuilds.md) via CI/CD, posts with auth, contact form, newsletter, DRIP, GDPR compliant, webp & mdx support, cms x pwa x offline optional.* With no [broken links](https://fossengineer.com/linkchecker-broken-link-checker/), [web-check](https://fossengineer.com/selfhosting-web-check/)ed, [Google search console](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#google-search-api), PageSpeed and [CF analytics via API](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#cf-api) setup for feedback and web audited and with a VSL. With the sitemaps configured for google and for `bing.com/webmasters`. Properly [audited](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-audits-x-checks) and with [web best practices](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-best-practices) in place, like [using webp images](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#baj).
+1. Astro SSG x Edge capabilities within Cloudflare offerings: *[scheduled posts](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/scheduled-rebuilds.md) via CI/CD, posts with auth, contact form, newsletter, DRIP, GDPR compliant, webp & mdx support, cms x pwa x offline optional.* With no [broken links](https://fossengineer.com/linkchecker-broken-link-checker/), [web-check](https://fossengineer.com/selfhosting-web-check/)ed, [Google search console](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#google-search-api), PageSpeed and [CF analytics via API](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#cf-api) setup for feedback and web audited and with a VSL. With the sitemaps configured for google and for `bing.com/webmasters`. Properly [audited](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-audits-x-checks) and with [web best practices](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-best-practices) in place, like [using webp images](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#baj). And with a [SEO](#seo) that gets the job done.
 
 > Yuu dont need hupspot to manage a newsletter like `dune.com` does
 
@@ -264,6 +264,8 @@ That really helps to keep track of:
 
 3. MarginCMS: *what if I just needed git compatible notes with sign/in to Forgejo and PWA support? what if foldergram could use git? what if you could set goals with your vision and form a **fieldnotes CMS** that [commits](https://github.com/JAlcocerT/BeyondAJourney/commit/f7486225842acddea4016ef9180987bbc438064f) and pushes to your GH thanks to an api that can just edit one repo?*
 
+> This one can become one more [OSS tool of my ecosystem](https://www.jalcocertech.com/tools/) going forward
+
 4. Real estate: *once an [idea](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot) and [tech talk](https://jalcocert.github.io/JAlcocerT/custom-re-rag/#a-new-tech-talk), [later white-labeled](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/), now another producticed service*
 
 5. GenBI: *the kind of PoC that you prepare sth, ship a video, have a waiting list and test the market interest* the shopify thing seems to have captured attention `https://sparkseopro.com/#pricing`
@@ -333,6 +335,8 @@ Just in case if you missed it, i was making single point mass lap optimization e
 
 now i got an oss mbsd framework to play around
 
+> `https://github.com/JAlcocerT/multi-body`
+
 Oh...and i havent forgot about beam theory nor FEM
 
 See where this is going?
@@ -342,7 +346,6 @@ See where this is going?
 For `yt-distil` i was using lately local stt
 
 And to acelerate my yt video creation, Ive been using voicebox, properly backedup lately with my voice cloned to read the captions.
-https://github.com/JAlcocerT/multi-body
 
 #### Homelab Hardening
 
@@ -362,12 +365,11 @@ sudo bash -c 'audit_parent=$(mktemp -d /tmp/auditmagnet-host-XXXXXX) && .agents/
 sudo .agents/skills/security-audit/scripts/fleet-security-audit.sh
 ```
 
+{{< callout type="info" >}}
+You can create [such scripts](https://github.com/JAlcocerT/poc_webs_magnet/tree/master/.agents/skills/security-audit/scripts) with AI to help you defend from security attacks
+{{< /callout >}}
+
 The last CLI makes one audit per container available in the server :)
-
-
-* `https://selfh.st/survey/2026-results/`
-
-Some DNS just in case https://hayahora.futbol/ 
 
 ---
 
@@ -393,8 +395,6 @@ Coming from [here](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-u
 4. blog post editor, image gen
 
 Most importantly: *homelab security checks skills, together with [web stuff](https://github.com/JAlcocerT/jalcocertech-core/tree/main/.claude/skills/site-analytics-review) from performance,search and cf analytics skills, a [lead hub](https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub) like inbound leads checks*.
-
-
 
 
 ```sh
@@ -661,7 +661,7 @@ git clone .../slubne-chwile-y26 #https://slubnechwile.com/dashboard
 
 > For security, you can have CI/CD https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/.github/workflows/ci.yml on top of some agent+skills with regular security checks to your homelab/VPS.
 
-> > You can also add CI/CD checks for broken links (linkcheker, [lycheeverse/lychee](https://github.com/lycheeverse/lychee-action)...), [offhost availability](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/offhost.yml) and what not
+> > You can also add CI/CD checks for broken links (linkcheker, [lycheeverse/lychee](https://github.com/lycheeverse/lychee-action)... via [gh ci/cd](https://github.com/JAlcocerT/JAlcocerT/actions/workflows/links.yml)), [offhost availability](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/offhost.yml) and what not
 
 ### SEO
 
@@ -671,6 +671,40 @@ Beyond having a nice performing website:
   {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab" title="Web-checks 🐋↗" >}}
 {{< /cards >}}
+
+{{< hextra/feature-grid >}}
+
+{{< hextra/feature-card
+  title="Google Speed Test"
+  subtitle="Test the speed and performance with PageSpeed Insights."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://pagespeed.web.dev/"
+>}}
+{{< hextra/feature-card
+  title="Website Carbon"
+  subtitle="Website’s carbon footprint and environmental impact."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(142,53,74,0.15),hsla(0,0%,50%,0));"
+  link="https://www.websitecarbon.com/"
+>}}
+{{< hextra/feature-card
+  title="Web-Check"
+  subtitle="Performance and uptime using Web-Check's analytics tool."
+  style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
+  link="https://web-check.xyz/"
+>}}
+
+{{< /hextra/feature-grid >}}
+
+{{< cards cols="3" >}}
+  {{< card link="https://search.google.com/search-console/" title="Google Search Console" >}}
+  {{< card link="https://trends.google.es/trends/" title="Bing Console" >}}  
+{{< /cards >}}
+
+{{< cards cols="3" >}}
+  {{< card link="https://trends.google.es/trends/" title="Google Trends" >}}  
+{{< /cards >}}
+
+
 
 ### DNS Checks
 

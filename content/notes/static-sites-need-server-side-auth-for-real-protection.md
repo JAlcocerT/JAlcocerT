@@ -15,13 +15,15 @@ For real protection, validate identity in a trusted environment: Cloudflare Work
 
 That layer checks tokens, cookies, or sessions before returning private data or running privileged actions.
 
-Client auth is UX. Server-side validation is enforcement.
+Client auth is UX. 
+
+Server-side validation is enforcement.
 
 Related:
 
 - Related notes:
   - [Authentication is identity, authorization is permission]({{< relref "/notes/authentication-is-identity-authorization-is-permission.md" >}})
-  - [SSO tools centralize trust and blast radius]({{< relref "/notes/sso-tools-centralize-trust-and-blast-radius.md" >}})
+  - [SSO tools centralize trust and blast radius](/notes/sso-tools-centralize-trust-and-blast-radius/)
   - [PocketBase auth keeps identity close to app data]({{< relref "/notes/pocketbase-auth-keeps-identity-close-to-app-data.md" >}})
 
 - [Serverless]({{< relref "/docs/Dev/serverless.md" >}})

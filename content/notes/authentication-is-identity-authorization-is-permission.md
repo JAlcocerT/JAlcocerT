@@ -20,7 +20,7 @@ Login is the start of the security model, not the whole model.
 Related:
 
 - Related notes:
-  - [SSO tools centralize trust and blast radius]({{< relref "/notes/sso-tools-centralize-trust-and-blast-radius.md" >}})
+  - [SSO tools centralize trust and blast radius](/notes/sso-tools-centralize-trust-and-blast-radius/)
   - [Static sites need server-side auth for real protection]({{< relref "/notes/static-sites-need-server-side-auth-for-real-protection.md" >}})
   - [PocketBase auth keeps identity close to app data]({{< relref "/notes/pocketbase-auth-keeps-identity-close-to-app-data.md" >}})
 

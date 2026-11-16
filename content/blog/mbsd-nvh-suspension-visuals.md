@@ -1,5 +1,5 @@
 ---
-title: "Suspension videos"
+title: "Suspension videos with mbsd"
 date: 2026-11-10
 draft: false
 tags: ["MBSD v0-9-8 x Active Damping","LMS Filter"]
@@ -7,9 +7,9 @@ description: 'A light framework that can do stuff.'
 url: 'visualizing-suspension-nvh'
 ---
 
-
 **Tl;DR**
 
+Geometry, time & Newtonian / Lagrangian mechanics.
 
 **Intro**
 

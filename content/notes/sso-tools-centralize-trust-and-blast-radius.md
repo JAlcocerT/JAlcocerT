@@ -1,6 +1,6 @@
 ---
 title: "SSO tools centralize trust and blast radius"
-date: 2026-12-05
+date: 2027-01-05
 tags: ["sso", "identity", "self-hosting"]
 description: "Self-hosted SSO simplifies access but concentrates security responsibility."
 ---
