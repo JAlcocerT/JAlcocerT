@@ -7,7 +7,9 @@ description: "Generative design becomes useful when simulations reject physicall
 
 AI-generated designs need physics guardrails.
 
-A model can propose shapes, mechanisms, layouts, or variants, but simulation decides whether they satisfy motion, stress, thermal, manufacturability, and load constraints. Without physics checks, generation is just plausible geometry.
+A model can propose shapes, mechanisms, layouts, or variants, but simulation decides whether they satisfy motion, stress, thermal, manufacturability, and load constraints.
+
+Without physics checks, generation is just plausible geometry.
 
 The practical loop is generate, simulate, reject, refine, and document.
 

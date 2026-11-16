@@ -2,7 +2,7 @@
 title: "[JAlcocerTech] Services and BiP"
 date: 2026-11-15T09:20:21+01:00
 draft: false
-tags: ["Roadmap26","CF KV"]
+tags: ["Roadmap26","CF KV","Scoop","Grype vs Syft vs Trivy vs Gitleaks"]
 description: 'All you need is to have vision (and agents).'
 url: 'jalcocertech-services-bip'
 ---
@@ -41,10 +41,11 @@ And...the attraction infrastructure is WIP/in-validation with this outbound setu
 After [BiP](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/) & [shipping several SaaS](#shipping-saas) in public, these is what I wish I had known earlier from the tech-stack angle to create basically anything: *to get started is not as hard as [getting data apps right](https://github.com/JAlcocerT/poc/tree/main/zzz-books)*.
 
 
-trying not to use any gui apps: `https://learn.chatgpt.com/docs/linux/linux-app`
+trying not to use any gui apps: `https://learn.chatgpt.com/docs/linux/linux-app`, just going with `https://github.com/github/copilot-cli`
 
 ```sh
 herdr #lazygit /resume /compact /usage /status
+scoop install uv #winget #choco
 ```
 
 > Are you building for feeling productive?
@@ -54,6 +55,8 @@ herdr #lazygit /resume /compact /usage /status
 If that's clear, then id recommend: *do and document ADR, decisions, roadmap, learnings and builder-posts*.
 
 1. Astro SSG x Edge capabilities within Cloudflare offerings: *[scheduled posts](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/scheduled-rebuilds.md) via CI/CD, posts with auth, contact form, newsletter, DRIP, GDPR compliant, webp & mdx support, cms x pwa x offline optional.* With no [broken links](https://fossengineer.com/linkchecker-broken-link-checker/), [web-check](https://fossengineer.com/selfhosting-web-check/)ed, [Google search console](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#google-search-api), PageSpeed and [CF analytics via API](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#cf-api) setup for feedback and web audited and with a VSL. With the sitemaps configured for google and for `bing.com/webmasters`. Properly [audited](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-audits-x-checks) and with [web best practices](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-best-practices) in place, like [using webp images](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#baj).
+
+> Yuu dont need hupspot to manage a newsletter like `dune.com` does
 
 2. Auth: *better-auth with transactional emails setup in CF and google signin/up configured*
 
@@ -257,9 +260,9 @@ That really helps to keep track of:
 
 1. Wedding QRs: *google sign-in/up + CF s3/r2* and its lead CaC KPIs *to test distribution and perceived value*
 
-2. Web Audits
+2. Web Audits [are productized diagnosis](https://jalcocert.github.io/JAlcocerT/notes/web-audits-are-productized-diagnostics/) and a pretty interesting part of an [attraction offer that shows the problem before the solution](https://jalcocert.github.io/JAlcocerT/notes/attraction-offers-should-show-the-problem-before-the-solution/). All thanks to *some [scripts & skills](https://github.com/JAlcocerT/poc_webs_magnet/tree/master/.agents/skills)* - Migrating a [WP has some challenges](https://jalcocert.github.io/JAlcocerT/wordpress-migration-to-ssg/#the-challenges)
 
-3. MarginCMS: *what if I just needed git compatible notes with sign/in to Forgejo and PWA support? what if foldergram could use git?*
+3. MarginCMS: *what if I just needed git compatible notes with sign/in to Forgejo and PWA support? what if foldergram could use git? what if you could set goals with your vision and form a **fieldnotes CMS** that [commits](https://github.com/JAlcocerT/BeyondAJourney/commit/f7486225842acddea4016ef9180987bbc438064f) and pushes to your GH thanks to an api that can just edit one repo?*
 
 4. Real estate: *once an [idea](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot) and [tech talk](https://jalcocert.github.io/JAlcocerT/custom-re-rag/#a-new-tech-talk), [later white-labeled](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/), now another producticed service*
 
@@ -280,6 +283,7 @@ That really helps to keep track of:
 
 * https://why-postmortem-checks.pages.dev
 * https://pm-pdm-checks.pages.dev
+8. for cold email get your dns in line `https://mxtoolbox.com/` [some ppl](https://forocoches.com/foro/showthread.php?t=10856551) is [building](https://themailguard.ai/) around this
 
 #### Meta Frameworks
 
@@ -338,12 +342,28 @@ See where this is going?
 For `yt-distil` i was using lately local stt
 
 And to acelerate my yt video creation, Ive been using voicebox, properly backedup lately with my voice cloned to read the captions.
+https://github.com/JAlcocerT/multi-body
 
 #### Homelab Hardening
 
 Its never a bad moment to [improve the homelab](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#improving-the-homelab), specially with all security concerns we have with AI.
 
 Ive learnt how to [upgrade pb](https://fossengineer.com/pocketbase-upgrade-security/) and [nextcloud to avoid p2p2shell](https://fossengineer.com/upgrade-nextcloud-php2shell/)
+
+Together with some [**skills** & scripts](https://github.com/JAlcocerT/poc_webs_magnet/tree/master/.agents/skills/security-audit/scripts) to make the homelab more robust:
+
+```sh
+# sudo bash -c 'audit_parent=$(mktemp -d /tmp/auditmagnet-host-XXXXXX) && .agents/skills/security-audit/scripts/security-audit.sh --image auditmagnet-prod:202611 --source . --output-dir "$audit_parent/run" --host'
+sudo bash -c 'audit_parent=$(mktemp -d /tmp/auditmagnet-host-XXXXXX) && .agents/skills/security-audit/scripts/security-audit.sh --image auditmagnet-prod:202611 --source . --output-dir "$audit_parent/run" --host && chown -R "$SUDO_USER:$SUDO_USER" "$audit_parent" && echo "Report saved to: $audit_parent/run"'
+#sudo chmod -R a+rX /tmp/auditmagnet-host-6Woowg
+#curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -b /usr/local/bin
+#curl -sSfL https://get.anchore.io/grype -o install-grype.sh
+#sudo sh install-grype.sh -b /usr/local/bin && rm install-grype.sh
+sudo .agents/skills/security-audit/scripts/fleet-security-audit.sh
+```
+
+The last CLI makes one audit per container available in the server :)
+
 
 * `https://selfh.st/survey/2026-results/`
 
@@ -375,19 +395,27 @@ Coming from [here](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-u
 Most importantly: *homelab security checks skills, together with [web stuff](https://github.com/JAlcocerT/jalcocertech-core/tree/main/.claude/skills/site-analytics-review) from performance,search and cf analytics skills, a [lead hub](https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub) like inbound leads checks*.
 
 
+
+
 ```sh
 make analytics-pages
 ```
 
 ### Integrations Im using
 
-For example [email outbound and enrichment](https://github.com/JAlcocerT/leadarchitect-uk/blob/main/.env.sample)
+For example for [**email outbound** and enrichment](https://github.com/JAlcocerT/leadarchitect-uk/blob/main/.env.sample) based on a [hypothesis of urgent pain, not just random interumption](https://jalcocert.github.io/JAlcocerT/notes/leads-are-hypotheses-about-urgent-pain/)
 
 But why not: smartlead, cf web analytics, or any of these web analytics tools, posthog...and [what now for any saas](https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/z-integrations.md), [inbound lead capture](https://github.com/JAlcocerT/poc_webs_magnet/blob/master/z-lead-capture.md)...
 
 ```env
 
 ```
+
+#### Lovely CI/CD
+
+Last year I was helping a hospital with their throughput via CI/CD workflows
+
+There is much more to say now https://github.com/JAlcocerT/slubne-chwile-y26/tree/master/.github/workflows
 
 ---
 
@@ -600,6 +628,7 @@ npx wrangler pages project list
 Coming from the [last eayp change](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#eayp-v4) around foldergram!
 
 I got to know about [emdash](https://fossengineer.com/selfhosting-emdash-astro-cms/): `https://github.com/generalaction/emdash` as they call it, the spiritual succesor of [WP](https://fossengineer.com/selfhosting-wordpress-docker/) and also [about monolith](https://fossengineer.com/selfhosting-monolith-cloudflare-blog-cms/)
+I got to know about: https://github.com/generalaction/emdash `https://try.emdashcms.com/playground`
 
 And still i need to [improve `margin-cms`](https://github.com/JAlcocerT/poc/tree/main/pwa-margincms) and try `markdown plus plus`
 
@@ -622,6 +651,7 @@ Keep two separate sequences:
 
 * Service reminders: Your gallery expires soon—download your originals.
 * Marketing DRIP: onboarding tips, upgrade offers, promotions.
+* Marketing [DRIP](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/drip.yml): onboarding tips, upgrade offers, promotions.
 
 They can **share infrastructure**, but not automatically share recipients, consent rules, or suppression behavior. 
 
@@ -631,7 +661,7 @@ git clone .../slubne-chwile-y26 #https://slubnechwile.com/dashboard
 
 > For security, you can have CI/CD https://github.com/JAlcocerT/slubne-chwile-y26/blob/master/.github/workflows/ci.yml on top of some agent+skills with regular security checks to your homelab/VPS.
 
-> > You can also add CI/CD checks for broken links (linkcheker, [lycheeverse/lychee](https://github.com/lycheeverse/lychee-action)...) and what not
+> > You can also add CI/CD checks for broken links (linkcheker, [lycheeverse/lychee](https://github.com/lycheeverse/lychee-action)...), [offhost availability](https://github.com/JAlcocerT/slubne-chwile-y26/actions/workflows/offhost.yml) and what not
 
 ### SEO
 

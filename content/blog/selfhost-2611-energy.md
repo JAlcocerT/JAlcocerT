@@ -10,7 +10,7 @@ math: true
 
 **TL;DR**
 
-Ive connected a Shelly to my iot dashboard.
+Ive connected a Shelly to home and my iot dashboard.
 
 ---
 
@@ -338,6 +338,7 @@ make clean-media
 
 From here, [*destilling* is not the problem](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md), its just doing.
 
+Ive also put together some [**skills** & scripts](https://github.com/JAlcocerT/poc_webs_magnet/tree/master/.agents/skills/security-audit/scripts) to make the homelab more robust.
 
 {{< callout type="info" >}}
 Despite this section being selfhost center, i cant deny the nice tech and building in the edge with cf: *we can get linkshorteners, [git repos](https://github.com/deathbyknowledge/ripgit), mails... to work with cf d1/r2/kv/workers*.

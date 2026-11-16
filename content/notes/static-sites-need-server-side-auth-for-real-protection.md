@@ -19,6 +19,11 @@ Client auth is UX. Server-side validation is enforcement.
 
 Related:
 
+- Related notes:
+  - [Authentication is identity, authorization is permission]({{< relref "/notes/authentication-is-identity-authorization-is-permission.md" >}})
+  - [SSO tools centralize trust and blast radius]({{< relref "/notes/sso-tools-centralize-trust-and-blast-radius.md" >}})
+  - [PocketBase auth keeps identity close to app data]({{< relref "/notes/pocketbase-auth-keeps-identity-close-to-app-data.md" >}})
+
 - [Serverless]({{< relref "/docs/Dev/serverless.md" >}})
 - [Firebase Auth SDK. Social Login and email verification.]({{< relref "/blog/dev-firebase-auth.md" >}})
 - [FrontEnd 101. SPAs and ways to do Auth]({{< relref "/blog/dev-fe.md" >}})

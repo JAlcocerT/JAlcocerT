@@ -987,6 +987,8 @@ A certain Negative cash flow year one then...uncertainty
 
 23. Innovate, imitate or... stay incompetent?
 
+24. Your time is worth nothing until is proven otherwise (for decisions like buying a car to save 30 min to go to study and earn nothing)
+
 #### Open Questions
 
 Most likely, you can get away and have an answer for your BA questions or for the BI dashboarding ones.
@@ -1011,7 +1013,6 @@ https://www.youtube.com/watch?v=luvIuM5GLHc
 * How do you apply rationality to your consumption patters? are you buying things you dont need to impress ppl you dont like? *Fight Club*
 
 {{< youtube "luvIuM5GLHc" >}}
-
 
 * How can we live without taking into account time into our decisions?
 * How about the energy?

@@ -7,7 +7,9 @@ description: "Complex technical work becomes easier to share when it is translat
 
 Technical identity becomes hard to explain when it is described through tools.
 
-Most people do not need the whole stack. They need to understand the outcome: what problems you solve, who benefits, and what changes after the work. Plain language makes complex work socially portable.
+Most people do not need the whole stack. They need to understand the outcome: what problems you solve, who benefits, and what changes after the work. 
+
+Plain language makes complex work socially portable.
 
 The explanation should start from impact.
 

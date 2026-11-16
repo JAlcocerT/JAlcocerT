@@ -7,7 +7,9 @@ description: "The jump from 2D to 3D MBSD is mostly a jump in orientation repres
 
 The hard part of moving from 2D to 3D MBSD is not adding one more position coordinate.
 
-The hard part is orientation. Euler angles can create singularities, quaternions add a unit-norm constraint, and each spatial joint blocks multiple translational and rotational directions. The reaction loads also become forces and torques, not simple planar reactions.
+The hard part is orientation. Euler angles can create singularities, quaternions add a unit-norm constraint, and each spatial joint blocks multiple translational and rotational directions. 
+
+The reaction loads also become forces and torques, not simple planar reactions.
 
 This is the real 3D wall: richer geometry means richer constraints.
 

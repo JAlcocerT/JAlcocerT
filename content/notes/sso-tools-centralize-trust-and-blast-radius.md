@@ -13,4 +13,8 @@ Convenience and risk move to the same place.
 
 Related:
 
+- Related notes:
+  - [Authentication is identity, authorization is permission]({{< relref "/notes/authentication-is-identity-authorization-is-permission.md" >}})
+  - [Static sites need server-side auth for real protection]({{< relref "/notes/static-sites-need-server-side-auth-for-real-protection.md" >}})
+
 - [Okta Alternatives? Selfhosted SSO Tools](/open-source-sso-tools/)

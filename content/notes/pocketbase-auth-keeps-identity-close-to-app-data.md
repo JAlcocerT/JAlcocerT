@@ -19,6 +19,10 @@ PocketBase is not just login; it is login plus the app database.
 
 Related:
 
+- Related notes:
+  - [Authentication is identity, authorization is permission]({{< relref "/notes/authentication-is-identity-authorization-is-permission.md" >}})
+  - [Static sites need server-side auth for real protection]({{< relref "/notes/static-sites-need-server-side-auth-for-real-protection.md" >}})
+
 - [FrontEnd 101. SPAs and ways to do Auth]({{< relref "/blog/dev-fe.md" >}})
 - [Authentication]({{< relref "/docs/Dev/authentication.md" >}})
 - [Mailtrap as PocketBase SMTP]({{< relref "/blog/dev-email-pocketbase.md" >}})

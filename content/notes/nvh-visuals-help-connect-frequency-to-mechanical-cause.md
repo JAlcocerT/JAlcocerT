@@ -7,7 +7,9 @@ description: "Engine vibration visuals are useful when they link harmonic conten
 
 NVH plots are useful when they explain cause.
 
-Frequency peaks, force loci, animations, and transfer functions should connect what is seen to what is moving: pistons, rods, crankpins, mounts, chassis modes, or firing events. Otherwise the plot becomes decorative signal art.
+Frequency peaks, force loci, animations, and transfer functions should connect what is seen to what is moving: pistons, rods, crankpins, mounts, chassis modes, or firing events.
+
+Otherwise the plot becomes decorative signal art.
 
 Good visuals make vibration mechanically interpretable.
 

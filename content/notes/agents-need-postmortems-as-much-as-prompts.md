@@ -7,7 +7,9 @@ description: "Agentic workflows improve when failures are reviewed and converted
 
 Agent workflows need postmortems.
 
-A prompt can start the work, but failures reveal missing context, weak checks, unclear acceptance criteria, unsafe assumptions, and bad tool boundaries. Those lessons should become skills, tests, templates, or operating rules.
+A prompt can start the work, but failures reveal missing context, weak checks, unclear acceptance criteria, unsafe assumptions, and bad tool boundaries. 
+
+Those lessons should become skills, tests, templates, or operating rules.
 
 Agent improvement is a learning system, not a prompt collection.
 

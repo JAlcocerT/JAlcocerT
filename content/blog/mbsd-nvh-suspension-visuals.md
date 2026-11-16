@@ -28,7 +28,7 @@ Ive been following this roadmap, to get couple of fully OSS MIT licensed repos o
 
 So what?
 
-You can now:
+You can now experiment around [syspension types](#suspensions-types)
 
 {{< youtube "o_ZJoXKoIIs" >}}
 
@@ -56,6 +56,8 @@ https://www.youtube.com/shorts/cx21pJaPVTc
 This is sth that we can do know very easily around the mbsd framework.
 
 ### Quarter car
+
+Earlier this year I experimented (in 2D) around this:
 
 ![alt text](/blog_img/mec/quarter_car_damper_tradeoff.png) 
 
@@ -154,6 +156,8 @@ The 2D simulator is "not approximate" for these chapters; it's just *not used at
 
 ### Active vs SemiActive suspension
 
+https://jalcocert.github.io/JAlcocerT/notes/active-damping-is-control-theory-applied-to-vibration/
+
 Final chapter of the suspension arc — active & semi-active suspension (skyhook + LMS) 
 
 This chapter represents the "Zenith" of the suspension narrative. By demonstrating the **Skyhook** principle, you have transitioned from observing the limitations of physics to actively manipulating them.
@@ -244,6 +248,10 @@ https://www.youtube.com/watch?v=eFGkopoCTYY
 
 ### The model x CARs
 
+A [Kart is not a single mass](https://jalcocert.github.io/JAlcocerT/notes/a-kart-is-not-a-point-mass/). 
+
+Same happens to cars.
+
 `external/mbsd-freecad-shorts`
 
 Whats good of a general model is that it can derive all kind of domain KPIs: *camber, toe, caster, KPI, scrub radious, [toe](https://www.youtube.com/shorts/Esx0MJM1Gqo)*
@@ -322,7 +330,7 @@ https://www.youtube.com/watch?v=hTUCwvvlATE
 
 ### Beam Theory x mbsd
 
-Got inspired with [this video](https://www.youtube.com/watch?v=cUwp7mj6dYo) to apply beam theory to the whishone bars:
+Got inspired with [this video](https://www.youtube.com/watch?v=cUwp7mj6dYo) to apply beam theory to the whishone bars: *all around bringing [better physics guardrails](https://jalcocert.github.io/JAlcocerT/notes/physics-guardrails-make-ai-design-useful/) specially where [the rigid body assumption](https://jalcocert.github.io/JAlcocerT/notes/fem-begins-where-rigid-body-assumption-breaks/) breaks*
 
 https://www.youtube.com/watch?v=cUwp7mj6dYo
 
@@ -361,3 +369,10 @@ https://www.youtube.com/watch?v=NlEJi2x3gzM
 Here you can see how to place a custom push rod:
 
 https://www.youtube.com/watch?v=uJSgTbthTtE
+### About Resonance
+
+A 1D system can resonate when excited in one particular way
+
+A 'real' one discretized to N dimensions, in N ways.
+
+Think how this applies to the people you bring next to you. 

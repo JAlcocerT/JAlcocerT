@@ -19,6 +19,11 @@ Login is the start of the security model, not the whole model.
 
 Related:
 
+- Related notes:
+  - [SSO tools centralize trust and blast radius]({{< relref "/notes/sso-tools-centralize-trust-and-blast-radius.md" >}})
+  - [Static sites need server-side auth for real protection]({{< relref "/notes/static-sites-need-server-side-auth-for-real-protection.md" >}})
+  - [PocketBase auth keeps identity close to app data]({{< relref "/notes/pocketbase-auth-keeps-identity-close-to-app-data.md" >}})
+
 - [FrontEnd 101. SPAs and ways to do Auth]({{< relref "/blog/dev-fe.md" >}})
 - [Authentication]({{< relref "/docs/Dev/authentication.md" >}})
 - [Serverless Invoices repo](https://github.com/JAlcocerT/serverless-invoices)
