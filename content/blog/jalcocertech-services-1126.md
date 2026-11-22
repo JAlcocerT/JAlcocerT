@@ -709,6 +709,8 @@ Some people are having lead magnets around email DNS checks for cold mail
 
 > `https://192.168.1.1/#/vpndashboard`
 
+> `site:jalcocert.github.io/JAlcocerT`
+
 You can have it for free: `https://github.com/domainaware/checkdmarc` and `https://github.com/internetstandards/Internet.nl`
 
 ```sh

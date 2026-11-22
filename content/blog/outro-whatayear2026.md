@@ -2,14 +2,14 @@
 title: "What a Year...2026"
 date: 2026-11-30
 draft: false
-tags: ["Year-Review","FY26"]
-description: 'Looking back to the learnings of 2026.'
+tags: ["Year-Review","FY26","Looking back","Learnings"]
+description: 'Flee, my friend, into your solitude! I see you stung by poisonous flies'
 url: 'tech-recap-2026'
 ---
 
 I havent read new books, but have gone [back to my notes](https://github.com/JAlcocerT/jalcocertech-services/tree/master/docs/destilled-ebooks/z-read-books-notes), understood my [patterns and blinspots](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-summary.md), specially to form [an operator 101](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md). 
 
-This has been possible thanks to some /skills.
+This has been possible thanks to some `/skills`.
 
 
 

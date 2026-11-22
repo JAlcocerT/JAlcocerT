@@ -1626,7 +1626,7 @@ npx wrangler kv key get "enquiry:2026-10-04T…" --namespace-id $NS --remote
 npx wrangler kv key delete "enquiry:2026-10-04T…" --namespace-id $NS --remote
 
 #npx wrangler kv key get "enquiry:2026-10-04T10:12:41.585Z:8612a6e5-07de-4ec5-831a-33e2c90decfb" --namespace-id $NS --remote
-#{"kind":"enquiry","name":"cerdo","email":"jesalctag@gmail.com","project":"Mechanism modeling","details":"eres un cerd
+#{"kind":"enquiry","name":"test","email":"you@example.com","project":"Mechanism modeling","details":"test enquiry"}
 ```
 
 4. Quick backend-only check (no browser), to tell a page problem apart from a storage problem:

@@ -1,5 +1,5 @@
 ---
-title: "3D Modelling"
+title: "3D (Vibe) Modelling"
 date: 2026-12-02
 draft: false
 tags: ["Blender","OpenSCad vs CadQuery","ThreeJS & BabbylonJS","ArchViz","CADcraft"]

@@ -4,9 +4,33 @@ date: 2026-12-20
 draft: false
 tags: ["Tinkering IRL","M2M","ADK x TTS"]
 description: 'IoT Meets AI via MQTT. The Internet of Tomorrow.'
-url: 'just-about-iot'
+url: 'iot-and-embeded'
 ---
 
+**TL;DR:** 
+
+Are you IoT capable or even embedded?
+
+
+**Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+By the time I was putting together my [last can-do snapshot](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/), aka services recap
+
+I put together a list of [OSS tools for physics](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#open-physics):
+
+https://fossengineer.com/pyspice-python-circuit-simulation/
+
+https://fossengineer.com/pcb-zener-kicad/
+
+https://fossengineer.com/selfhosting-velxio-arduino/
+
+https://fossengineer.com/selfhosting-ekuiper/
+
+https://fossengineer.com/selfhosting-emqx/
+https://fossengineer.com/selfhosting-esphome/
 
 **TL;DR:** 
 
