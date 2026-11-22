@@ -2,7 +2,7 @@
 title: "Suspension videos with mbsd"
 date: 2026-11-10
 draft: false
-tags: ["MBSD v0-9-8 x Active Damping","LMS Filter"]
+tags: ["MBSD v0-9-8 x Active Damping","LMS Filter","ccx","vibe modelling"]
 description: 'A light framework that can do stuff.'
 url: 'visualizing-suspension-nvh'
 ---
@@ -384,6 +384,39 @@ https://www.youtube.com/watch?v=uV7wEIR0BVU -->
 -->
 
 {{< youtube "EcPkuJLBqME" >}}
+
+<!-- 
+https://www.youtube.com/watch?v=lmgaWls7c64
+https://www.youtube.com/watch?v=X2xJDFXm7GE
+https://www.youtube.com/watch?v=iwfp6nENJQ0
+https://www.youtube.com/watch?v=_h6CYD1dssU
+ -->
+
+https://www.youtube.com/watch?v=yU1q0dfvthE
+https://www.youtube.com/watch?v=WWrmyok4ZOw
+https://www.youtube.com/watch?v=vZARRcd3_Yc
+https://www.youtube.com/watch?v=iYOmXrRyguQ
+https://www.youtube.com/watch?v=YTOdVanVlac
+https://www.youtube.com/watch?v=DeuzocXKxHQ
+https://www.youtube.com/watch?v=LEJ2GTukKqQ
+https://www.youtube.com/watch?v=1ay3cqrmCz0
+https://www.youtube.com/watch?v=Dq7JOzg5JAA
+https://www.youtube.com/watch?v=gRdz6dq1uNA
+https://www.youtube.com/watch?v=HeclLbsRHbc
+https://www.youtube.com/watch?v=feu6-6unarM
+
+https://www.youtube.com/watch?v=9l5kblTXpKY
+https://www.youtube.com/watch?v=IQe59w0VPp0
+https://www.youtube.com/watch?v=dtH9C0yxo2I
+
+{{< youtube "_h6CYD1dssU" >}}
+
+{{< youtube "iwfp6nENJQ0" >}}
+
+
+{{< youtube "lmgaWls7c64" >}}
+
+{{< youtube "X2xJDFXm7GE" >}}
 
 <!-- https://www.youtube.com/watch?v=NlEJi2x3gzM -->
 

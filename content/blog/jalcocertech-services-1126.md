@@ -78,6 +78,8 @@ herdr #lazygit /resume /compact /usage /status
 scoop install uv #winget #choco
 ```
 
+> `https://github.com/maddada/Ghostex`
+
 Why just CLI?
 
 Bc im not coding any more.
@@ -350,7 +352,8 @@ Beyond *no hello's* and *who/what/by-when*: governance matters and thinking in s
 
 4. Smaller teams ftw: [network theory](https://github.com/JAlcocerT/poc/tree/main/physics-networktheory) backs this up
 
-5. Time management: *now with pomodoro* `https://github.com/JAlcocerT/omarchy-pomodoro`
+5. Time management: *now with pomodoro* `https://github.com/JAlcocerT/omarchy-pomodoro` `https://github.com/solidtime-io/solidtime`
+
 
 Providing you work with inteligent enough agents: Declare what you want, not the procedure how to get there.
 
@@ -438,6 +441,7 @@ Coming from [here](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-u
 2. Zettel blog notes, weekly work summarizer
 3. huashu design
 4. blog post editor, image gen
+5. testing: https://github.com/DietrichGebert/ponytail with caveman
 
 Most importantly: *homelab security checks skills, together with [web stuff](https://github.com/JAlcocerT/jalcocertech-core/tree/main/.claude/skills/site-analytics-review) from performance,search and cf analytics skills, a [lead hub](https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub) like inbound leads checks*.
 
@@ -685,9 +689,13 @@ Its good to see how far im from [the webifyer concept](https://jalcocert.github.
 
 > `https://beyondajourney-fieldnotes.jesalctag.workers.dev/`
 
+> > Which allow for `https://beyondajourney.pages.dev/articles/questions-as-an-entrepreneur/`
+
 ```sh
 cd /home/jalcocert/Desktop/BeyondAJourney/cms
 npm run deploy:hosted
+#df -h
+#npx wrangler pages deployment list --project-name jalcocert
 ```
 
 The password is stored locally here: `~/.config/fieldnotes/owner-password.txt`
@@ -774,6 +782,8 @@ Beyond having a nice performing website:
 ### DNS Checks
 
 Some people are having lead magnets around email DNS checks for cold mail
+
+> `https://192.168.1.1/#/vpndashboard`
 
 You can have it for free: `https://github.com/domainaware/checkdmarc` and `https://github.com/internetstandards/Internet.nl`
 
