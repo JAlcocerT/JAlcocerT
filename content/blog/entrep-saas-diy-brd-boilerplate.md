@@ -27,8 +27,8 @@ I changed my mind for the sake of simplicity: *last thing I created in this dire
 
 Previously I was thinking to have this in a separated repo:
 
-* https://github.com/JAlcocerT/bip-boilerplate-saas
-* https://github.com/JAlcocerT/boilerplate
+* `https://github.com/JAlcocerT/bip-boilerplate-saas`
+* `https://github.com/JAlcocerT/boilerplate`
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/bip-boilerplate-saas" title="~NEW bip-boilerplate" image="/blog_img/apps/gh-jalcocert.svg" subtitle="BiP BoilerPlate for SaaS - Source Code on Github" >}}
@@ -53,7 +53,7 @@ Well, before moving forward answer these questions:
 * Can you give feedback?
 * How good are you at articulating ideas?
 
-Wanna **ship like** an entire dev team?
+> Wanna **ship like** an entire dev team?
 
 If you got ideas and now how to manage a project and people, **excuses are over**.
 
@@ -67,10 +67,9 @@ Is curiosity a career liability?
 
 Well...maybe not if you know how to **far transfer** your learning.
 
-Agentic development abstract the *how to* so that if you have a Why and a What you can get the code running:
+Agentic development abstract the *how to* so that if you have a WHY and a What you can get the code running:
 
 ![how to is not that important](/blog_img/DA/why-what-how.png)
-
 
 ### Shipping Features 
 
@@ -82,7 +81,6 @@ How about an example around: Selfservice data analytics?
 
 <!-- 
 https://youtu.be/qf-oNNNDXS0 -->
-
 
 {{< youtube "qf-oNNNDXS0" >}} 
 
@@ -176,7 +174,7 @@ Let’s explore the core principles that make AI your powerful and safe teammate
 2. Human in the Loop: Humans always make the final decisions.
 All deliverables — whether committed to repositories or shared with clients — must be reviewed by a person before submission.
 
-3. Small Iterations:Work in short cycles: break the task down → write a focused prompt → review the quick result → refine as needed.
+3. Small Iterations: Work in short cycles: break the task down → write a focused prompt → review the quick result → refine as needed.
 
 4. Reproducibility: Save and version your effective prompts and context (as templates or collections) just like code, so others can reuse and improve them.
 
@@ -186,9 +184,7 @@ All deliverables — whether committed to repositories or shared with clients �
 
 Let’s explore how to craft effective prompts for AI, so you get accurate, structured, and actionable outputs.
 
-The key is to think of **prompting as a flow**:
-
-Goal -> Context -> Instruction -> Contrains -> Output Format
+The key is to think of **prompting as a flow**: `Goal -> Context -> Instruction -> Contrains -> Output Format`
 
 Remember these principles:
 
@@ -307,7 +303,6 @@ Just do what you know, The Planning and contex: *with proper context, you make a
 * **PRD (Product Requirements):** Answers **"WHAT are we building?"** (The Features & Roadmap).
 * **FRD (Functional Requirements):** Answers **"HOW does it work?"** (The Technical Logic & CRUDs).
 
-
 Mainly the plug and play D&A tinkered [here](https://jalcocert.github.io/JAlcocerT/plug-and-play-data-analytics/#conclusions).
 
 {{< cards >}}
@@ -369,13 +364,11 @@ graph TD
     style F fill:#bbf
 ```
 
-
 ![alt text](/blog_img/AIBI/langchain-ui-vibe-techtalk.png)
 
 > The presentation now leverages Contrast Theory, Dual Coding, Social Proof, and the Zeigarnik Effect for maximum psychological impact on your BA audience!
 
 > > Together with an [example brd](https://github.com/JAlcocerT/langchain-db-ui/blob/master/brd-langchain-ui.md), [clarifications](https://github.com/JAlcocerT/langchain-db-ui/blob/master/z-clarifications.md) and [development plan](https://github.com/JAlcocerT/langchain-db-ui/blob/master/development-phases.md).
-
 
 {{< callout type="info" >}}
 From now I do: tinkering + tech ppt with engagement + email proposal + slack promo.
@@ -404,7 +397,7 @@ graph LR
     style F fill:#e1f5fe
 ```
 
-To this you can manage change of scope by adding change request like `CRQ01.md`
+To this you can **manage change of scope** by adding change request like `CRQ01.md`
 
 ---
 
@@ -434,14 +427,11 @@ The diagram says: **"I spend a little (CAC) to start a relationship that loses m
 
 If the red bars stayed below the line or the CAC box was bigger than the LTV box, the business would eventually run out of money.
 
-
 Too long payback period and good ideas can go out of track: *Payback period ~ cash flow isues*
 
 ![alt text](/blog_img/data-experiments/life-flows-blured.png)
 
-Great questions. 
-
-These terms are the building blocks of that "Payback Period" chart you liked.
+These terms are the building blocks of that "Payback Period" chart.
 
 To understand them, think of your business as a **leaky bucket**. 
 
@@ -488,8 +478,6 @@ Summary
 * **CAC** tells you if your **marketing** is efficient.
 * **Net Profit** tells you if your **entire business** is sustainable.
 
-Would you like me to show you how a high **CAC** can "kill" a company even if their **Gross Profit** looks amazing?
-
 #### The operational heartbeat
 
 The **Attract, Convert, and Deliver** workflow is the operational heartbeat of a business. 
@@ -525,7 +513,6 @@ The **Lifetime Value (LTV)** is the result of how well you continue to **Deliver
 | **Delivery** | **Gross Profit** | Measuring the efficiency of your production or service "engine". |
 | **Retention** | **LTV** | Measuring the long-term value of the customer relationship. |
 
-How they relate to your chart:
 
 * **The Red Bar (Month 0):** This is the cost of your **Attract & Convert** workflow.
 * **The Green Bars (Future Months):** This is the **Gross Profit** generated by your **Delivery** workflow.

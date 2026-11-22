@@ -5,6 +5,7 @@ draft: false
 tags: ["Roadmap26","CF KV","Scoop","Grype vs Syft vs Trivy vs Gitleaks"]
 description: 'All you need is to have vision (and agents).'
 url: 'jalcocertech-services-bip'
+math: true
 ---
 
 **Tl;DR**
@@ -40,23 +41,15 @@ And...the attraction infrastructure is WIP/in-validation with this outbound setu
 
 After [BiP](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/) & [shipping several SaaS](#shipping-saas) in public, these is what I wish I had known earlier from the tech-stack angle to create basically anything: *to get started is not as hard as [getting data apps right](https://github.com/JAlcocerT/poc/tree/main/zzz-books)*.
 
-
-trying not to use any gui apps: `https://learn.chatgpt.com/docs/linux/linux-app`, just going with `https://github.com/github/copilot-cli`
-
-```sh
-herdr #lazygit /resume /compact /usage /status
-scoop install uv #winget #choco
-```
-
 > Are you building for feeling productive?
 
 > > How certain are you that your build will solve somebodies pain points? Do you even care and are just building for the sake of it?
 
 If that's clear, then id recommend: *do and document ADR, decisions, roadmap, learnings and builder-posts*.
 
-1. Astro SSG x Edge capabilities within Cloudflare offerings: *[scheduled posts](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/scheduled-rebuilds.md) via CI/CD, posts with auth, contact form, newsletter, DRIP, GDPR compliant, webp & mdx support, cms x pwa x offline optional.* With no [broken links](https://fossengineer.com/linkchecker-broken-link-checker/), [web-check](https://fossengineer.com/selfhosting-web-check/)ed, [Google search console](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#google-search-api), PageSpeed and [CF analytics via API](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#cf-api) setup for feedback and web audited and with a VSL. With the sitemaps configured for google and for `bing.com/webmasters`. Properly [audited](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-audits-x-checks) and with [web best practices](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-best-practices) in place, like [using webp images](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#baj). And with a [SEO](#seo) that gets the job done.
+1. Astro SSG x Edge capabilities within Cloudflare offerings: *[scheduled posts](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/scheduled-rebuilds.md) via CI/CD, posts with auth, contact form, newsletter w/o ~~love~~ subscription bombing, DRIP, GDPR compliant, webp & mdx support, cms x pwa x offline optional.* With no [broken links](https://fossengineer.com/linkchecker-broken-link-checker/), [web-check](https://fossengineer.com/selfhosting-web-check/)ed, [Google search console](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#google-search-api), PageSpeed and [CF analytics via API](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#cf-api) setup for feedback and web audited and with a VSL. With the sitemaps configured for google and for `bing.com/webmasters`. Properly [audited](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-audits-x-checks) and with [web best practices](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-best-practices) in place, like [using webp images](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#baj). And with a [SEO](#seo) that gets the job done.
 
-> Yuu dont need hupspot to manage a newsletter like `dune.com` does
+> You dont need hupspot to manage a newsletter like `dune.com` does
 
 2. Auth: *better-auth with transactional emails setup in CF and google signin/up configured*
 
@@ -70,15 +63,47 @@ If that's clear, then id recommend: *do and document ADR, decisions, roadmap, le
 
 7. Product analytics: *posthog is amazing and it can be one of your agents integrations for a self-improving product (P**I**Os)*
 
+
+{{< callout type="info" >}}
+Assuming you want agentic capabilities in your team, having [preassure test your ideas](https://consulting.jalcocertech.com/talks/pressure-test-your-product-idea/) before making them reality is a good practice
+{{< /callout >}}
+
 ### A change of mindset
 
-Im feeling a lot of friction lately.
+
+Im trying not to use any gui apps: `https://learn.chatgpt.com/docs/linux/linux-app`, just going with `https://github.com/github/copilot-cli`
+
+```sh
+herdr #lazygit /resume /compact /usage /status
+scoop install uv #winget #choco
+```
+
+Why just CLI?
+
+Bc im not coding any more.
+
+I have interests, questions and can specify context goals.
+
+[Non tech people](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#why-creating-like-a-ba), managers and alike - keep doing what you are *supposed to be* good at and ship like never!
+
+Back in january I was writing about forgeting of how and [focus on why's and what's.](https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#the-tech-talk)
+
+Now i can say with confidence that you can just skip it and just focus on WHY's
+
+https://jalcocert.github.io/JAlcocerT/a-diy-boilerplate-to-ship/#why-creating-like-a-ba
+![how to is not that important](/blog_img/DA/why-what-how.png)
+
+{{< callout type="warning" >}}
+The only difference between working with virtual versus human agents, is that if you are the last HITL you are responsible for the outcome of that full virtual team. *Are you afraid of owning outcomes my friend?*
+{{< /callout >}}
+
+You can see that Im feeling a lot of friction lately.
 
 My [notes](https://github.com/JAlcocerT/my-logseq-notes/tree/main/journals) have so far been an inbound-reactive framework: *for standups, ticket tracking, and client communication ("What did I do? What is blocking me? What questions do I need to ask?").*
 
 A [solopreneur framework](https://github.com/JAlcocerT/my-logseq-notes/blob/main/journals/2026_10_18.md) has to be [outbound-generative framework](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-solo/wk42y26/master-plan-sample.json): *nobody unblocks you, and vision/tasks don’t exist until you architect them*.
 
-This requires a mindset and operational [shift towards orchestration](https://github.com/JAlcocerT/my-logseq-notes/blob/main/journals/2026_10_17.md).
+This requires a mindset and operational [shift towards **orchestration**](https://github.com/JAlcocerT/my-logseq-notes/blob/main/journals/2026_10_17.md).
 
 $$\text{Vision / PIO} \longrightarrow \text{Roadmap (Milestones)} \longrightarrow \text{Execution (Tasks)} \longrightarrow \text{Changelog (Ledger)}$$
 
@@ -89,6 +114,10 @@ As we go from trad BA, to specifying mechanics (BRD/PRD/FRD), the next steps abo
 > Fancy said as: *product & systems architecture*
 
 > > Even fancier: you need [the foundations for](https://github.com/JAlcocerT/my-logseq-notes/blob/main/daily-solo/wk42y26/2026-10-17.md) a *hierarchical autonomous multi-agent framework* to ship.
+
+For this you need proper foundations
+
+Similarly that you need an Enterprise Knowledge Layer, not just a data catalogue of silos nowadays.
 
 ### The Business Game
 
@@ -191,7 +220,6 @@ Now, I have:
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
- {{< card link="https://github.com/JAlcocerT/PoC/" title="PoC ↗" icon="github" >}}
 {{< /cards >}}
 
 ```sh
@@ -231,7 +259,7 @@ docker exec homelab-leads-hub-1 python -c 'import sqlite3; c = sqlite3.connect("
 
 2. You can also make [a self-managed (via Jev) telegram community](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-solo/wk43y26/pio-inbound-tg-bot)
 
-https://github.com/yibie/awesome-jev
+> `https://github.com/yibie/awesome-jev`
 
 ##### OutBound
 
@@ -247,8 +275,7 @@ Mind the applicable regulations and law!
 
 ```
 
-2. Via cold calls:
-
+2. Via cold calls: *using tts :)*
 
 3. Via...[automated outbound CVs](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-solo/wk44y26/pio-outbound-jobs): *for which [writing daily](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-history) and having a story brand helps*
 
@@ -285,7 +312,25 @@ That really helps to keep track of:
 
 * https://why-postmortem-checks.pages.dev
 * https://pm-pdm-checks.pages.dev
-8. for cold email get your dns in line `https://mxtoolbox.com/` [some ppl](https://forocoches.com/foro/showthread.php?t=10856551) is [building](https://themailguard.ai/) around this
+
+> Speech Sparring around `https://platform.openai.com/api-keys/`
+
+> > `https://speech.jalcocertech.com/` or `byod-00335.tail1234567.ts.net` :)
+
+```sh
+! cd wk47y26/pio-tts-stt-speech/cf && npx wrangler secret put OPENAI_API_KEY
+#make tailnet-off
+#sudo make down
+rclone config create r2 s3 provider=Cloudflare \
+ access_key_id=<ACCESS_KEY_ID> \
+ secret_access_key=<SECRET_ACCESS_KEY> \
+ endpoint=https://6f6de37edde332d0622d5802db839ff7.r2.cloudflarestorage.com \
+ acl=private no_check_bucket=true
+#make r2-remote
+#make pull-sessions
+```
+
+8. For cold email get your dns in line `https://mxtoolbox.com/` [some ppl](https://forocoches.com/foro/showthread.php?t=10856551) is [building](https://themailguard.ai/) around this
 
 #### Meta Frameworks
 
@@ -305,13 +350,13 @@ Beyond *no hello's* and *who/what/by-when*: governance matters and thinking in s
 
 4. Smaller teams ftw: [network theory](https://github.com/JAlcocerT/poc/tree/main/physics-networktheory) backs this up
 
-5. Time management: *now with pomodoro* https://github.com/JAlcocerT/omarchy-pomodoro
+5. Time management: *now with pomodoro* `https://github.com/JAlcocerT/omarchy-pomodoro`
 
-Declare what you want, not the procedure how to get there.
+Providing you work with inteligent enough agents: Declare what you want, not the procedure how to get there.
 
 Start communicating *and governing* THE INTENT!
 
-Goal/intent/contract/end state
+Goal/intent/contract/end state/desired state
 
 <!-- https://www.youtube.com/watch?v=7T-gldvgfpo -->
 
@@ -640,6 +685,26 @@ Its good to see how far im from [the webifyer concept](https://jalcocert.github.
 
 > `https://beyondajourney-fieldnotes.jesalctag.workers.dev/`
 
+```sh
+cd /home/jalcocert/Desktop/BeyondAJourney/cms
+npm run deploy:hosted
+```
+
+The password is stored locally here: `~/.config/fieldnotes/owner-password.txt`
+
+```sh
+#To read it:
+cat ~/.config/fieldnotes/owner-password.txt
+```
+
+It was generated by:
+
+```sh
+npm --prefix cms run setup:password
+```
+The corresponding Worker secrets are stored at: `~/.config/fieldnotes/worker-secrets.json`
+
+That file should never be committed or pasted into chat.
 
 ### Slubne PoC
 

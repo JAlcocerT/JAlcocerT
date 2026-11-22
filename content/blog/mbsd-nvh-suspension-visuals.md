@@ -342,33 +342,61 @@ https://www.youtube.com/watch?v=a4Ez2nISc8k
 
 `https://appliedracingdynamics.com/`
 
+<!-- 
+https://www.youtube.com/watch?v=f0ZobiOtSsM -->
 
-https://www.youtube.com/watch?v=f0ZobiOtSsM
+{{< youtube "f0ZobiOtSsM" >}}
 
+<!-- 
+https://www.youtube.com/watch?v=-uXdLa2QnQ8 -->
 
-https://www.youtube.com/watch?v=-uXdLa2QnQ8
+{{< youtube "-uXdLa2QnQ8" >}}
+<!-- 
+https://www.youtube.com/watch?v=WkZ7lrLivNg -->
 
-https://www.youtube.com/watch?v=WkZ7lrLivNg
+{{< youtube "WkZ7lrLivNg" >}}
+<!-- 
+https://www.youtube.com/watch?v=8zrWq6obcMo -->
 
-https://www.youtube.com/watch?v=8zrWq6obcMo
+{{< youtube "8zrWq6obcMo" >}}
+<!-- 
+https://www.youtube.com/watch?v=uV7wEIR0BVU -->
 
-https://www.youtube.com/watch?v=uV7wEIR0BVU
+{{< youtube "uV7wEIR0BVU" >}}
 
-https://www.youtube.com/watch?v=RcaTFWFnhhc
+<!-- https://www.youtube.com/watch?v=RcaTFWFnhhc -->
 
-https://www.youtube.com/watch?v=xKlxfBhVdBM
+{{< youtube "RcaTFWFnhhc" >}}
 
-https://www.youtube.com/watch?v=lNInCfCkrkE
+<!-- https://www.youtube.com/watch?v=xKlxfBhVdBM -->
 
-https://www.youtube.com/watch?v=Qmiu1OgooJw
+{{< youtube "xKlxfBhVdBM" >}}
 
-https://www.youtube.com/watch?v=EcPkuJLBqME
+<!-- https://www.youtube.com/watch?v=lNInCfCkrkE -->
 
-https://www.youtube.com/watch?v=NlEJi2x3gzM
+{{< youtube "lNInCfCkrkE" >}}
+
+<!-- https://www.youtube.com/watch?v=Qmiu1OgooJw -->
+
+{{< youtube "Qmiu1OgooJw" >}}
+
+<!-- https://www.youtube.com/watch?v=EcPkuJLBqME
+-->
+
+{{< youtube "EcPkuJLBqME" >}}
+
+<!-- https://www.youtube.com/watch?v=NlEJi2x3gzM -->
+
+{{< youtube "NlEJi2x3gzM" >}}
 
 Here you can see how to place a custom push rod:
 
-https://www.youtube.com/watch?v=uJSgTbthTtE
+<!-- 
+https://www.youtube.com/watch?v=uJSgTbthTtE 
+-->
+
+{{< youtube "uJSgTbthTtE" >}}
+
 ### About Resonance
 
 A 1D system can resonate when excited in one particular way
@@ -376,3 +404,13 @@ A 1D system can resonate when excited in one particular way
 A 'real' one discretized to N dimensions, in N ways.
 
 Think how this applies to the people you bring next to you. 
+
+### Steering vs Turning
+
+Wouldnt it be nice to know how much your steer input makes the car accelerate into the turn?
+
+<!-- 
+https://www.youtube.com/shorts/nvphBAYeAVo
+-->
+
+{{< youtube "nvphBAYeAVo" >}}
