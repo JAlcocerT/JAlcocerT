@@ -13,7 +13,7 @@ Agents are out there, secure your homelab.
 
 **Intro**
 
-* Why Im writting this post:
+* Why Im writting this post: *bc ive improved my skills&script about security since the last time*
 * What Ive learnt with it:
 
 
@@ -72,3 +72,12 @@ f they do not have your Cloudflare credentials or zone access, they generally ca
   - keep internal services off public DNS
   - use access control on exposed apps
   - don’t publish unnecessary TLS certs for internal names
+
+
+## Conclusions
+
+{{< cards >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="Free Distilled Knowledge ↗" icon="book-open" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
+{{< /cards >}}
+

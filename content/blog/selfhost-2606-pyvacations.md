@@ -20,10 +20,11 @@ This will just reply to the where/how.
 
 [AI] Vacation Planning - Recommendations, Costs, Weather
 
-Python App to explore vacAItion destination. LLMs ❤️ Data. 
+Python App to explore vacAItion destination. 
+
+LLMs ❤️ Data. 
 
 While exploring Agents (ADK).
-
 
 Following the TripPlanner, I thought that bringing cost of living data was a good idea.
 
@@ -36,13 +37,10 @@ For the cost of living data, we can take online info...
 
 Because weather and cost is all that matter, right?
 
-> This one goes for these people that claim to love Asia, without explainin' why :)
+> This one goes for these people that claim to love Asia, without *ever* explainin' why :)
 
-
-
-https://wanderlog.com/
-
-https://selfh.st/apps/?search=trip
+* `https://wanderlog.com/`
+* `https://selfh.st/apps/?search=trip`
 
 VPNs like: tailscale, wireguard do the trick while travelling
 
@@ -140,7 +138,7 @@ Already got freedom in time?
 
 ### My checklist before travelling
 
-For all those travel addicts: https://beyondajourney.pages.dev/
+For all those travel addicts: `https://beyondajourney.pages.dev/`
 
 ```sh
 #git clone
@@ -157,7 +155,6 @@ cd ./poc/z-poc-trip-planner-adk
 ---
 
 ## FAQ
-
 
 ```sh
 cd ./poc/z-poc-trip-planner-v4

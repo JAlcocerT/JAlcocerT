@@ -12,9 +12,6 @@ url: 'selfhosting-data-analytics'
 
 [No Hello](https://fossengineer.com/no-hello/) is just the beginning of a proper [Governance & Communication Operating System](#quick-reference)
 
-![alt text](/blog_img/AIBI/vite-baml-genbi.png)
-
-
 **Intro**
 
 D&A is more about semantics than you could think in the first place:
@@ -33,7 +30,7 @@ JHub is great.
 
 Is there [anything else](#different-ways-to-jhub)?
 
-Data -> Decision -> Delivery
+> Data -> Decision -> Delivery
 
 Speed matters, there are no excuses:
 

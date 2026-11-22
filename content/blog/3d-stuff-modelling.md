@@ -8,6 +8,16 @@ url: '3d-modelling-101'
 ---
 
 
+**Tl;DR**
+
+
+
+**Intro**
+
+* WHY Im writting this post: *bc I wanted to try SketchForge and the mbsd with beam theory*
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
 https://github.com/ad3m3r5/scratch-map?tab=readme-ov-file
 https://github.com/papyDoctor/openscad-shape25 An OpenScad libray that add curved chamfers (concave and convex) to polygons
 
@@ -25,17 +35,6 @@ A local-first browser 3D design editor for building, cutting, importing STL file
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/octoprint" title="Octoprint | Docker Config 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/sketchforge" title="SketchForge 3D | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
-
-
-
-**Tl;DR**
-
-
-
-**Intro**
-
-* WHY Im writting this post: *bc I wanted to try SketchForge*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 ## Blender

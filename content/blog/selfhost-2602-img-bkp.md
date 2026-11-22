@@ -15,11 +15,7 @@ Get [your photos](https://jalcocert.github.io/JAlcocerT/photo-management-tools/)
 
 **Intro**
 
-* WHY Im writting this post: *bc *
-* WHAT [Ive learnt](#conclusions) with it: *a*
-
-Some say: *dont rent what you should own*.
-
+WHY Im writting this post: *bc as some say: *dont rent what you should own*.
 
 {{< cards cols="1" >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/astro-web-cloudflare-pages/" title="Configuring CF WnP with Github and Astro ↗" >}}
@@ -44,7 +40,6 @@ Keep the important things at life first.
 {{< youtube id="ydG5EtQat_I" autoplay="false" >}}
 
 After testing few of them, I would recommend:
-
 
 Together with: 
 
@@ -82,7 +77,6 @@ If its too much space, you can always:
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/mazanoke" title="Mazanoke Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
-
 ### NC vs Immich
 
 We have some fresh releases since I used them [the last time](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich): *and im adding a drive to [the x300](https://jalcocert.github.io/JAlcocerT/asrock-x300-home-server/) :)*
@@ -106,7 +100,6 @@ nano /home/jalcocert/Home-Lab/z-homelab-setup/evolution/.env
 * https://github.com/immich-app/immich/releases/tag/v2.5.0
 * https://github.com/nextcloud/desktop/releases/tag/v4.0.6
 
-
 ```sh
 ./setup-env.sh #chmod +x ./evolution/setup-env.sh #there are the environment variables that are created randomly for the homelab container deployment
 #docker compose -f 2602_docker-compose.yml config | grep -E "MYSQL_|NEXTCLOUD_" #check that these will be used
@@ -125,7 +118,9 @@ sudo mount /dev/sda1 /mnt/data1tb #one time
 #cat /etc/fstab #here is where persistency happens
 #sudo chown -R 1000:1000 /mnt/data1tb/nextcloud
 #sudo mkdir -p /mnt/data1tb/nextcloud/db && sudo chown -R 1000:1000 /mnt/data1tb/nextcloud/db
+```
 
+```sh
 sudo docker compose -f /home/jalcocert/Desktop/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml up -d nextcloud-app nextclouddb #nextcloud:80
 #docker compose -f 2602_docker-compose.yml logs nextcloud-app --tail 50
 sudo docker compose -f /home/jalcocert/Desktop/Home-Lab/z-homelab-setup/evolution/2602_docker-compose.yml logs nextcloud-app nextclouddb
@@ -295,7 +290,6 @@ mkdir -p /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/
 sudo cp -r /mnt/portainer_backup/var/lib/docker/volumes/portainer_data/_data/* /media/jalcocertech/68478e63-dcfa-4361-9625-9ac1275c085c/Z_backup_cont/portainer/
 #also with rsync :)
 ```
-
 
 Other F/OSS Backup solutions
 

@@ -50,6 +50,16 @@ https://www.youtube.com/shorts/cx21pJaPVTc
 
 {{< youtube "cx21pJaPVTc" >}}
 
+<!-- https://www.youtube.com/watch?v=rRtGxJSCGCI -->
+
+{{< youtube "rRtGxJSCGCI" >}}
+
+
+{{< youtube "IiuDQhFgmq4" >}}
+
+<!-- 
+https://www.youtube.com/shorts/IiuDQhFgmq4 
+-->
 
 ## Suspension Modelling
 
@@ -223,6 +233,10 @@ The question is not only how parts move, but how vibration travels.
 
 I couldnt avoid to email again to [Gabe Morris](https://github.com/gabemorris12/mechanism) :)
 
+Also to the creator of https://github.com/moorepants/learn-multibody-dynamics
+
+> How great would have been to find such free resources when studying
+
 The way it has [modelled the spur gear](https://www.youtube.com/shorts/Uj7jDkZsAzw) is quite impressive tbh
 
 > > And email to `https://selfh.st/submit/`
@@ -310,6 +324,12 @@ this [artofrendering](https://www.youtube.com/@artofrendering/shorts)
 ### Hyperframes x Mechanisms
 
 Beyond [fpv kpis](https://github.com/JAlcocerT/poc/tree/main/fpv-kpis/hyperframe-video), hyperframe and threejs can play well together:
+
+Some people are building with:
+
+1. Sticks
+2. Threebbb
+3. Raymarching signed distance fields (SDFs) in WebGL2
 
 ### How Different Types of Engine affect drivability
 

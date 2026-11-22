@@ -7,6 +7,24 @@ description: 'A look to F/OSS '
 url: 'open-source-dna'
 ---
 
+
+**TL;DR**
+
+**Intro**
+
+* Why Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+https://www.youtube.com/watch?v=Wf0uwVaNnQ4&time_continue=50&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fgenbi.jalcocertech.com%2F
+
+
+https://fossengineer.com/chartbrew-dashboard-builder/
+https://fossengineer.com/malloy-semantic-modeling-language/
+
+baml adk
+
+![alt text](/blog_img/AIBI/vite-baml-genbi.png)
+
 https://github.com/akkio-inc/igloo
 https://github.com/pigontech/inkvoice
 https://github.com/meerkatcrm/meerkat-crm
@@ -35,18 +53,6 @@ https://dataintensive.net/
 https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/?utm_source=akashrajpurohit.com
 https://newsletter.pragmaticengineer.com/
 
-**Intro**
-
-* Why Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
-
-https://www.youtube.com/watch?v=Wf0uwVaNnQ4&time_continue=50&source_ve_path=MjM4NTE&embeds_referring_euri=https%3A%2F%2Fgenbi.jalcocertech.com%2F
-
-
-https://fossengineer.com/chartbrew-dashboard-builder/
-https://fossengineer.com/malloy-semantic-modeling-language/
-
-baml adk
 
 > Made some poc with [trip planner adn adk](https://github.com/JAlcocerT/poc/tree/main/z-poc-trip-planner-adk)
 
@@ -73,6 +79,13 @@ Tools like [ChartBrew](https://fossengineer.com/chartbrew-dashboard-builder/) ar
 
 ## Conclusions
 
+{{< cards >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="Free Distilled Knowledge ↗" icon="book-open" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
+{{< /cards >}}
+
+
+
 While some pay for *thoughtspot* for nobody knows why
 
 Or still spend days debuging powerbi to MySQL 8.0 connectors issues that appear magically in a VM, are non replicable, mysql odbc connection works, dbeaver works, but the mysql net connector for pbi does not.
@@ -96,3 +109,11 @@ In the time of debugging we can now (and also in Q4 2026...) to just use that ef
 ### Data Gobernance
 
 ### Change Management
+
+### The Software for D&A
+
+#### MicroControllers
+
+
+#### In the server
+

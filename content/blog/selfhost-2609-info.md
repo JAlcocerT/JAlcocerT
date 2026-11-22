@@ -9,7 +9,7 @@ url: 'selfhosting-information-flow'
 
 **TL;DR**
 
-You better write daily/weekly notes and work with them
+You better write daily/weekly notes *and work with them*
 
 **Intro**
 

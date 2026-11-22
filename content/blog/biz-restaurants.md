@@ -1,11 +1,40 @@
 ---
 title: "[Prototyping] Restaurants."
-date: 2027-12-30
+date: 2027-01-30
 draft: false
 tags: ["SaaS x Multi-Tenant","Just-Cook","Hotels","B2B Leads x APIFY x Web Audit","CSR vs PWA"]
 description: "MultiTenant Websites for Restaurants. 1M$ idea in the Mediterranean."
 url: "webs-for-restaurants"
 ---
+
+
+**TL;DR**
+
+I needed an excuse to try an AI powered cold call outreach setup
+
+**Intro**
+
+* WHY Im writting this post: *bc Im aware of how many bars are being opened in spain in the exact moment where they have BANT for a cool website*
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+QR Restaurantes Free + Web if ~~Pay~~ you qualify.
+
+Only for TOP clients :)
+
+
+For B2B only as per [this section](#the-how-behind-the-idea).
+
+Scrap on google maps some potential interested business: leads.
+
+The Related: *BRD, tech stack, dev phases, sales, more sales and landing psyc*
+
+Before you ask: yes, this is using my latest APIFY workflow to find leads and checked it via [my free web audit repo](https://github.com/JAlcocerT/poc_webs_magnet).
+
+Is it for price sensitive clients?
+
+Not really, just value and ROI focused minds :)
+
 
 If you are shipping, get inspired with:
 
@@ -54,31 +83,6 @@ Then edit locally and own your text, with a potential connection to the CI/CD to
 Why - was - that - hard
 
 https://github.com/karanshukla/openresto
-
-**TL;DR**
-
-
-QR Restaurantes Free + Web if ~~Pay~~ you qualify.
-
-Only for TOP clients :)
-
-
-**Intro**
-
-* WHY Im writting this post: *bc *
-* What [Ive learnt](#conclusions) with it: *Ive ended*
-
-For B2B only as per [this section](#the-how-behind-the-idea).
-
-Scrap on google maps some potential interested business: leads.
-
-The Related: *BRD, tech stack, dev phases, sales, more sales and landing psyc*
-
-Before you ask: yes, this is using my latest APIFY workflow to find leads and checked it via [my free web audit repo](https://github.com/JAlcocerT/poc_webs_magnet).
-
-Is it for price sensitive clients?
-
-Not really, just value and ROI focused minds :)
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet | Github ↗" icon="github" >}}

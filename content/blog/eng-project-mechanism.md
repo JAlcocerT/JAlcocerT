@@ -148,8 +148,6 @@ Its been very helpful to use [this gemini extension](https://marketplace.visuals
 
 ![Gemini Code Assistant](/blog_img/dev/GeminiCodeAssist.png)
 
-
-
 {{< callout type="info" >}}
 **Kudos again to Gabe!** The project is release under MIT for anyone to use and modify. 
 {{< /callout >}}

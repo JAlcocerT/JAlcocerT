@@ -1,6 +1,6 @@
 ---
 title: "Science links engineering fields through shared conservation laws"
-date: 2026-12-01
+date: 2027-01-31
 tags: ["science", "engineering", "physics"]
 description: "Many engineering domains connect through conservation of energy, mass, charge, and momentum."
 ---

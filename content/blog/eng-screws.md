@@ -1,8 +1,8 @@
 ---
 title: "Screws are a thing"
-date: 2026-12-24
+date: 2026-12-01
 draft: false
-tags: ["3D","Design","Freecad x Calculix BESO","CADcraft"]
+tags: ["3D","Design","Freecad x Calculix BESO","CADcraft","FEM x mbsd"]
 description: 'Another rabbit-hole..'
 url: 'understanding-screws'
 math: true

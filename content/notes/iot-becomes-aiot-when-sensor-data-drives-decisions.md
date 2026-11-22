@@ -7,7 +7,11 @@ description: "AIoT is useful when models transform sensor data into decisions, p
 
 IoT becomes AIoT when sensing changes decisions.
 
-Collecting data is only the first step. The AI layer should classify, predict, explain, optimize, or trigger action from sensor streams. Otherwise the system is just telemetry with a chatbot nearby.
+Collecting data is only the first step. 
+
+The AI layer should classify, predict, explain, optimize, or trigger action from sensor streams. 
+
+Otherwise the system is just telemetry with a chatbot nearby.
 
 The intelligence belongs in the decision loop.
 

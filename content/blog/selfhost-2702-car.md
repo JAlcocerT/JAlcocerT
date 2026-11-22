@@ -80,9 +80,11 @@ https://youtube.com/shorts/q-BlvhkLqcU -->
 When was the last time tat you questioned if you are optimizing sth that is worth to be optimized?
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Bring AI to your workflow" >}}
-  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled free value!" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="Free Distilled Knowledge ↗" icon="book-open" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
 {{< /cards >}}
+
+
 
 
 ### Car Analytics

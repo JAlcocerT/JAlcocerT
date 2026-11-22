@@ -1,5 +1,5 @@
 ---
-title: "Controlling: from bikes to humidity"
+title: "Controlling: cars, bikes and humidity"
 date: 2026-12-15
 draft: false
 tags: ["MBSD x 3D Simulation","PID","Control Theory","PySymverse"]
@@ -7,7 +7,6 @@ description: 'System Theory, SISO, MIMO...'
 url: 'pid-for-bicycle-mbsd-model'
 math: true
 ---
-
 
 **Tl;DR**
 
@@ -598,3 +597,6 @@ Does the idea of "tuning" the speed of the loop make sense for your specific pro
 ### References
 
 1. Okata
+
+
+### mbsd suspension and steering transfer function 

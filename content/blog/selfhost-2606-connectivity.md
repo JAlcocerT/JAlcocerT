@@ -12,9 +12,6 @@ math: true
 
 [Home connectivity](https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity) is not just "do I have internet?"
 
-
-https://github.com/JAlcocerT/poc/tree/main/iperf
-
 ## Intro
 
 For a useful homelab, I want repeatable ways to measure throughput, latency under load, Wi-Fi quality, LAN inventory, DNS behavior, and eventually `TR-181/EasyMesh` data from the router itself.
@@ -22,6 +19,8 @@ For a useful homelab, I want repeatable ways to measure throughput, latency unde
 Whether the uplink is 4G, coax, fiber, or Starlink, the home network becomes the base layer for everything else: *self-hosted apps, backups, media, VPN, local AI services, and family communication*.
 
 This post is a cleanup of my June 2026 connectivity notes.
+
+* `https://github.com/JAlcocerT/poc/tree/main/iperf`
 
 With all the learnings from a `MV1 Compal` and a `NME5410` cable modems:
 
@@ -522,11 +521,13 @@ set_var MYSQL_DATABASE_SYNC "nextcloud_sync"
 set_var MYSQL_USER_SYNC "nextcloud_sync"
 set_var MYSQL_HOST_SYNC "nextclouddb-sync"
 set_var NEXTCLOUD_TRUSTED_DOMAINS_SYNC "http://192.168.1.2:8069"
+```
 
+```sh
 sudo docker compose -f 2605_docker-compose.yml up -d nextclouddb-sync nextcloud-app-sync
 ```
 
-Cloudflare WAF reminder:
+**Cloudflare WAF** reminder:
 
 ```bash
 curl -X PATCH \
@@ -594,9 +595,9 @@ rsync -av --info=progress2 \
 
 Are you into these?
 
+It seems that these kind of ideas can be PoC, even MVPs at some organizations
 
-
-{{% details title="Testing Internet" closed="true" %}}
+{{% details title="Testing Internet..." closed="true" %}}
 
 * `https://www.speedtest.pl/`
 
@@ -631,6 +632,7 @@ curl -6 ifconfig.me #ipv6 info
 ```
 
 {{% /details %}}
+
 
 {{< cards >}}
   {{< card link="https://jalcocert.github.io/JAlcocerT/travel-router-gl-mt3000-review/" title="Travel Router" image="/blog_img/hardware/travel-router.jpg" subtitle="GL-MT3000 Review" >}}
@@ -851,18 +853,18 @@ https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#i-needed-recentl
 
 ## References
 
-- Broadband Forum: <https://www.broadband-forum.org/>
-- TR-181 spec page: <https://www.broadband-forum.org/technical/download/TR-181_Issue-2.html>
-- TR-369 / USP overview: <https://usp.technology/>
-- obuspa: <https://github.com/BroadbandForum/obuspa>
-- obudpst: <https://github.com/BroadbandForum/obudpst>
-- bbfdm: <https://dev.iopsys.eu/iopsys/bbfdm>
-- nexmon: <https://github.com/seemoo-lab/nexmon>
-- OpenWrt: <https://openwrt.org/>
-- prplMesh: <https://github.com/prplfoundation/prplMesh>
-- TapMap: <https://github.com/olalie/tapmap>
-- TapMap docs: <https://olalie.github.io/tapmap/>
-- OpenWrt on Raspberry Pi: <https://raspberrytips.com/openwrt-on-raspberry-pi/>
+- Broadband Forum: `<https://www.broadband-forum.org/>`
+- TR-181 spec page: `<https://www.broadband-forum.org/technical/download/TR-181_Issue-2.html>`
+- TR-369 / USP overview: `<https://usp.technology/>`
+- obuspa: `<https://github.com/BroadbandForum/obuspa>`
+- obudpst: `<https://github.com/BroadbandForum/obudpst>`
+- bbfdm: `<https://dev.iopsys.eu/iopsys/bbfdm>`
+- nexmon: `<https://github.com/seemoo-lab/nexmon>`
+- OpenWrt: `<https://openwrt.org/>`
+- prplMesh: `<https://github.com/prplfoundation/prplMesh>`
+- TapMap: `<https://github.com/olalie/tapmap>`
+- TapMap docs: `<https://olalie.github.io/tapmap/>`
+- OpenWrt on Raspberry Pi: `<https://raspberrytips.com/openwrt-on-raspberry-pi/>`
 
 ## Raw Session Notes Archive
 

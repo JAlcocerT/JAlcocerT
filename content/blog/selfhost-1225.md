@@ -7,15 +7,6 @@ description: 'Selfhosting with your HomeLab and PaaS.'
 url: 'selfhosted-apps-december-2025'
 ---
 
-
-Install any AI stuff, via UI:
-
-* https://pinokio.computer/
-  * https://github.com/pinokiocomputer/pinokio
-  * https://docs.pinokio.computer/download/
-
-> **MIT** |  AI Browser 
-
 **Tl;DR**
 
 A random server for ~4$/month is all you need.
@@ -129,10 +120,8 @@ Direct, built-in support in major SSGs is less common, but you can usually achie
   {{< card link="https://github.com/JAlcocerT/Home-Lab/cosmos-server" title="Cosmos Server x HomeLab" image="/blog_img/selfh/PaaS/cosmos-ui-market.png" subtitle="Docker config 🐋 ↗" >}}
 {{< /cards >}}
 
-
 * https://github.com/crocofied/CoreControl
 * https://github.com/vitodeploy/vito
-
 
 > Free and Self-Hosted Server Management Tool 
 

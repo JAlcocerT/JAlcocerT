@@ -127,9 +127,11 @@ More about [**DNS** options here](https://github.com/JAlcocerT/Home-Lab/blob/mai
 Perseverencia (el talento de los que no tenemos talento ) sin autocritica es worthless.
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://genbi.jalcocertech.com" title="Generative BI" image="/blog_img/web/astro/astro-datanova-animated-graph.png" subtitle="The insights that you could not afford to have until now" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="Free Distilled Knowledge ↗" icon="book-open" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
 {{< /cards >}}
+
+
 
 
 {{< cards >}}

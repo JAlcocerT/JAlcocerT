@@ -1,6 +1,6 @@
 ---
 title: "Self-hosted business tools raise the Coasean ceiling"
-date: 2026-12-11
+date: 2027-01-11
 tags: ["self-hosting", "business", "operations"]
 description: "Self-hosted tools can reduce coordination cost when they make small operations more capable."
 ---

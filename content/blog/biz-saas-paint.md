@@ -2,11 +2,22 @@
 title: "Estimating house work and capturing leads"
 date: 2027-11-01T23:20:21+01:00
 draft: false
-tags: ["Lead testing","Painting Home","Side-Quest26"]
+tags: ["Lead testing","Painting Home","Side-Quest27",]
 description: 'Building a platform to match offer and demand for certain jobs.'
 url: 'paint-lead-generation'
 math: true
 ---
+
+**Tl;DR**
+
+Its more and more difficult to find people to do home/paint/manual jobs.
+
+Does this mean that capturing leads for such offers can be profitable and help people get their home ready?
+
+**Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 Matching demand and supply is not enough for local services.
@@ -22,17 +33,6 @@ Trust design comes before scale.
 Related:
 
 - [Estimating house work and capturing leads](/paint-lead-generation/)
-
-**Tl;DR**
-
-Its more and more difficult to find people to do home/paint/manual jobs.
-
-Does this mean that capturing leads for such offers can be profitable and help people get their home ready?
-
-**Intro**
-
-* WHY Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 [Buying a house](https://jalcocert.github.io/JAlcocerT/buying-house-data-analytics/) is one thing.

@@ -29,11 +29,7 @@ https://www.youtube.com/@QuantumMakers
 https://www.youtube.com/shorts/UjD94SGqIdM 
 -->
 
-{{< youtube "IiuDQhFgmq4" >}}
 
-<!-- 
-https://www.youtube.com/shorts/IiuDQhFgmq4 
--->
 
 ## Home Energy
 
@@ -307,10 +303,15 @@ If you have a distribution list, having such [energy solution waiting list](http
 
 But creating a free lead magnet that provides value is just a very low hanging fruit today to not do it.
 
-Imagine solving a real pain point: how much I need to spend and what will be the ROI in my region?
+Imagine solving a real pain point: *how much I need to spend and what will be the ROI in my region?*
 
 ### Energy Lead Magnet
 
+Ive upgraded recently the carto as it required an API:
+
+> https://go-solar.pages.dev/
+
+Anyways, im consolidating now all learnings around solar of the year: including iot, batteries and what not
 
 ### Tech Talk
 
@@ -481,53 +482,3 @@ When portability, static output, rollback and githistory matter just go for a  g
 {{< /callout >}}
 
 > You can also have a look to: `https://github.com/sveltia/sveltia-cms` or to foldergram
-
-### How many users can a Pi4 2GB handle
-
-Im more and more interested about [architecture and system design](https://www.youtube.com/watch?v=xV2SpvHHF_I):
-
-So just took [my benchmarks](https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks) and applied it.
-
-Bc deploying and putting *the right* features fast infront of prospects matter
-
-The questions is: via a [VPS/HomeLab](https://jalcocert.github.io/JAlcocerT/where-to-deploy/#vps) or now using CF KV Workers?
-
-I compared [clouds](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#other-clouds) and [mini-pcs/sbcs](https://jalcocert.github.io/RPi/posts/minipc-vs-pi/) in several occasions.
-
-{{< cards >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
-  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
-{{< /cards >}}
-
-### ProtonCLI x Rust
-
-How about [taking this](https://proton.me/blog/proton-drive-cli) and making a desktop that doesnt is cool?
-
-* https://github.com/ProtonDriveApps/sdk
-
-> How about doing the same for Nextcloud?
-
-### Some Photos
-
-For media: `https://selfh.st/apps/?tag=Photos`
-
-* https://github.com/paulomarques742/imago
-* https://imago.742studio.eu/
-
-* https://foldergram.github.io/
-
-```sh
-git clone /JalcocerT/foldergram
-```
-
-> Point it at your folders, browse everything through a fast feed-style interface. No cloud, no accounts — just your files and SQLite.
-
-* https://github.com/open-noodle/gallery a fork of immich :)
-
-> Some time back i [tried immich](https://fossengineer.com/selfhosting-immich/) but i didnt like that my folder order is not respected and also neither need the [heavy face recognition](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#files-files-files) feature that i dont care about
-
-High performance self-hosted photo and video management solution.
-
-https://github.com/storytold
-
-https://github.com/andrii-kryvoviaz/slink

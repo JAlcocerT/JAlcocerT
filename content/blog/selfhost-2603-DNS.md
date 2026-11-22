@@ -854,12 +854,12 @@ echo "deb [arch=amd64] https://d3nt0h4h6pmmc4.cloudfront.net/ubuntu noble main" 
 
 sudo apt-get update
 
-2. Install Amazon Workspaces
-
+#2. Install Amazon Workspaces
 #Once the deb file has been downloaded, you can install Amazon Workspaces with the following command.
-
 sudo apt-get install workspacesclient
 ```
+
+Ive also:
 
 ```sh
 git clone https://github.com/JAlcocerT/selfhosted-landing
@@ -998,7 +998,7 @@ ctop
 1. https://github.com/hagezi/dns-blocklists
 2. https://github.com/blacklanternsecurity/baddns
 
-Before LLMs, you might have needed: https://github.com/composerize/composerize  🏃→🎼 docker run asdlksjfksdf > docker-composerize up 
+Before LLMs, you might have needed: `https://github.com/composerize/composerize` 🏃→🎼 docker run asdlksjfksdf > docker-composerize up 
 
 **Programmatic DNS updates**
 
@@ -1011,7 +1011,7 @@ Before LLMs, you might have needed: https://github.com/composerize/composerize  
 
 ### Wireshark - Checking which ads are going through
 
-* https://docs.linuxserver.io/images/docker-wireshark/
+* `https://docs.linuxserver.io/images/docker-wireshark/`
 
 ![alt text](/blog_img/networking/wireshark-ui.png)
 
@@ -1042,7 +1042,7 @@ Your invoices can be backed up with their PDF or just the JSON to save space.
 
 2. Receiving payments: *Stripe API is great and simplify a lot of things.*
 
-* https://github.com/BillaBear/billabear
+* `https://github.com/BillaBear/billabear`
 
 
 #### Monitoring
@@ -1078,8 +1078,7 @@ You can also with Uptime Kuma pages or kener!
 
 #### Chats
 
-Just see this dedicated post.
-
+Just see [this dedicated post](https://fossengineer.com/privacy-communication-tools/).
 
 #### Project Management
 
@@ -1100,7 +1099,7 @@ There will come a time to invoice someone.
 
 Why not doing [billing with OSS](https://fossengineer.com/open-source-invoice-creator/) as well?
 
-* Lago - https://github.com/getlago/lago?tab=AGPL-3.0-1-ov-file#readme
+* Lago - `https://github.com/getlago/lago?tab=AGPL-3.0-1-ov-file#readme`
 
 > Open Source Metering and Usage Based Billing API ⭐️ Consumption tracking, Subscription management, Pricing iterations, Payment orchestration & Revenue analytics
 
@@ -1153,14 +1152,13 @@ If you want the strictest privacy and are OK with friction and some breakage: Li
 
 * https://dnsprivacy.org/dns_privacy_daemon_-_stubby/
 
-### ControlD (Windscribe DNS)
-
+> ControlD (Windscribe DNS)
 
 ### Other Free Tools for monitoring Internet
 
 
 * Monitoring Internet quality
-* Wireshark - https://docs.linuxserver.io/images/docker-wireshark/
+* Wireshark - `https://docs.linuxserver.io/images/docker-wireshark/`
 * PiHole
 
 

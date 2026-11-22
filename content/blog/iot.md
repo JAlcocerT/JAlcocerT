@@ -1,6 +1,6 @@
 ---
 title: "[IoT ebook] Meeting AI. AIoT with a Raspberry Pi."
-date: 2026-11-26
+date: 2026-12-20
 draft: false
 tags: ["Tinkering IRL","M2M","ADK x TTS"]
 description: 'IoT Meets AI via MQTT. The Internet of Tomorrow.'
@@ -15,7 +15,7 @@ Destiling knowledge to ebooks - IoT edition
 ## Intro
 
 * WHY Im writting this post: *bc this has been the year of `Arduino-CLI`*
-* What [Ive learnt](#conclusions) with it: *Ive ended*
+* What [Ive learnt](#conclusions) with it: *Ive ended up improving all my published ebooks thanks to this blog and this year projects*
 
 ```sh
 cd ./poc/iot-dashboard-v2

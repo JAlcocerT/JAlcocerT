@@ -218,7 +218,7 @@ From the [stop doing](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-
 
 *For the hard to sell people: it needs to be fully scalable or nothing - accounting for my opportunity cost.*
 
-In other words: if you dont want to pay for customization, you dont get customization.
+> In other words: if you dont want to pay for customization, you dont get customization.
 
 
 

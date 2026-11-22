@@ -292,8 +292,8 @@ speedtest-cli #speedtest-cli --simple
 And for questions...
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="DWY Consulting Services" image="/blog_img/entrepre/tiersofservice/dwi/selfh-landing-astro-fastapi-bot.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/shipping/dna-1ton-ebook.png" subtitle="Distilled knowledge via web/ooks to enable you to create" >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="Free Distilled Knowledge ↗" icon="book-open" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
 {{< /cards >}}
 
 

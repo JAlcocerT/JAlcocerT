@@ -9,7 +9,7 @@ url: 'home-lab-tools-for-iot'
 
 **TL;DR**
 
-Ok, you can [buy this](#conclusions). Next please.
+Ok, you can [buy this](#conclusions). *Next please.*
 
 **Intro**
 

@@ -2,7 +2,7 @@
 title: "Take a Break - Gaming with OSS"
 date: 2026-12-23T23:20:21+01:00
 draft: false
-tags: ["Self-Hosting","Emulation","Nintendo","Yatch x EmulatorJS"]
+tags: ["Self-Hosting","Emulation","Nintendo","Yatch x EmulatorJS","REA"]
 description: 'Are games playable in Linux?'
 url: 'open-source-gaming'
 ---

@@ -1,8 +1,8 @@
 ---
 title: "Gears are a thing"
-date: 2026-12-21
+date: 2026-12-01
 draft: false
-tags: ["W Engine","3d print","cam profiles"]
+tags: ["W Engine","3d print","cam profiles","FEM x mbsd"]
 description: 'Gears are a rabbit-hole'
 url: 'understanding-gears'
 math: true

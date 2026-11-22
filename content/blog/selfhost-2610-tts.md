@@ -9,14 +9,12 @@ url: 'selfhosted-tts'
 
 **Tl;DR**
 
-https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
-
-https://github.com/swingmx/swingmusic
+Interesting use cases around voice (local AI) 
 
 **Intro**
 
 * WHY Im writting this post: *bc i was surprised with [voicebox](https://fossengineer.com/voicebox-local-ai-voice-studio/), [chatterbox](https://fossengineer.com/chatterbox-local-open-source-tts/) and [kittenTTS](https://fossengineer.com/kittentts-local-cpu-tts/), but got to know simpler [local audio workflows with kokoro-82M](https://github.com/JAlcocerT/poc/blob/main/fpv-kpis/z-learnings.md) and this needs a checkpoint.
-* WHAT [Ive learnt](#conclusions) with it: *Ive ended*
+* WHAT [Ive learnt](#conclusions) with it: *Ive ended up [cloning my voice](#clonning-my-voice) and [setting up omarchy](#macbookor-omarchy) with [pomodoro](#omarchy-x-pomodoro) pro-ductivity setup*
 
 ## T2S
 
@@ -78,6 +76,10 @@ A friend tried `https://pr.tn/ref/RHJ7YZE8` proton unlimited `https://account.pr
 4. Go to Users and addresses → Invite user.
 5. Enter your friend’s Proton address and allocate storage.
 6. They accept the invitation and switch to your Duo plan.
+
+
+### Clonning my voice
+
 
 ### FOSS
 

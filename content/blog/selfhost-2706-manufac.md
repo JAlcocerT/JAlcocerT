@@ -9,6 +9,8 @@ url: 'selfhosting-manufacturing-tools'
 
 **TL;DR**
 
+How hard can it be to manufacture what you can design with AI?
+
 <!-- https://youtu.be/ON7J_xA55Io
  -->
 
@@ -33,5 +35,12 @@ https://www.youtube.com/watch?v=R29G3hUiZnU -->
 ---
 
 ## Conclusions
+
+{{< cards >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="Free Distilled Knowledge ↗" icon="book-open" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
+{{< /cards >}}
+
+
 
 ## FAQ

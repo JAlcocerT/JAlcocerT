@@ -272,29 +272,35 @@ The ssh port at forgejo is not the default 22, so you need to
 
 The "trick" is just telling SSH to connect to a non-standard port — and doing it in a way that hides the ugly detail behind a friendly alias. Let me show you what's actually happening.
 
-  Why the port matters
+Why the port matters
 
-  ssh somewhere.com defaults to port 22. That's hardcoded into the protocol. Your Pi at 192.168.1.2 already had a regular SSH daemon listening on port 22 (the one you use to get a shell on the box). Forgejo's git SSH
-  endpoint is a separate service that has to live somewhere else.
+ssh somewhere.com defaults to port 22. That's hardcoded into the protocol. Your Pi at 192.168.1.2 already had a regular SSH daemon listening on port 22 (the one you use to get a shell on the box). Forgejo's git SSH
+endpoint is a separate service that has to live somewhere else.
 
-  In your compose file:
+In your compose file:
 
-  ports:    - "2235:22"   #SSH
+ports:    - "2235:22"   #SSH
 
-  That line means: "inside the container, Forgejo's SSH listens on port 22. Map that to port 2235 on the host." So from your LAN, Forgejo's SSH is reachable at 192.168.1.2:2235, while the host's own SSH stays on  192.168.1.2:22. Two completely different SSH services on the same machine.
-  How we tell the SSH client  
-  Three equivalent ways, ascending order of niceness:  
-  1. Inline flag every time (annoying):
-  ssh -p 2235 git@192.168.1.2
-  git clone -c core.sshCommand="ssh -p 2235" git@192.168.1.2:hermesagent/repo.git
+That line means: "inside the container, Forgejo's SSH listens on port 22. Map that to port 2235 on the host." So from your LAN, Forgejo's SSH is reachable at 192.168.1.2:2235, while the host's own SSH stays on  192.168.1.2:22. Two completely different SSH services on the same machine.
 
-  2. URL-encoded port (works for git, not for plain ssh):
-  git clone ssh://git@192.168.1.2:2235/hermesagent/repo.git
+How we tell the SSH client  
 
-  3. ~/.ssh/config alias ← what we did:
-  Read 1 file (ctrl+o to expand)
+Three equivalent ways, ascending order of niceness:  
 
-● Each line breakdown:
+1. Inline flag every time (annoying):
+
+```sh
+ssh -p 2235 git@192.168.1.2
+git clone -c core.sshCommand="ssh -p 2235" git@192.168.1.2:hermesagent/repo.git
+```
+
+2. URL-encoded port (works for git, not for plain ssh):
+
+```sh
+git clone ssh://git@192.168.1.2:2235/hermesagent/repo.git
+```
+
+3. `~/.ssh/config` alias ← what we did:
 
   ┌────────────────────────────────────────┬────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
   │               Directive                │                                                      What it does                                                      │
@@ -307,16 +313,16 @@ The "trick" is just telling SSH to connect to a non-standard port — and doing 
   ├────────────────────────────────────────┼────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤
   │ IdentitiesOnly yes                     │ "Only try this key, ignore any others ssh-agent has loaded." Prevents weird auth failures when you have multiple keys. │
   └────────────────────────────────────────┴────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-  
-  After saving this, every git/ssh tool on the system treats forgejo-home as if it were a real hostname with all those settings pre-applied. That's why a clean URL like forgejo-home:hermesagent/repo.git works — git
-  internally expands it to ssh -p 2235 -i ~/.ssh/id_ed25519_forgejo git@192.168.1.2 hermesagent/repo.git.
 
-  File location & permissions
+After saving this, every git/ssh tool on the system treats forgejo-home as if it were a real hostname with all those settings pre-applied. That's why a clean URL like forgejo-home:hermesagent/repo.git works — git
+internally expands it to ssh -p 2235 -i ~/.ssh/id_ed25519_forgejo git@192.168.1.2 hermesagent/repo.git.
 
-  - File: ~/.ssh/config (per-user). System-wide equivalent is /etc/ssh/ssh_config but you almost never want that.  - Permissions must be 600 (owner read/write only). SSH refuses to load it otherwise — that's why I ran chmod 600 after creating it.
-  - You can have as many Host <alias> blocks as you want — one per server. They stack in the same file.
+File location & permissions
 
-  So the whole "trick" was: figure out the right port from your docker-compose.yml (2235), then express it once in ~/.ssh/config so you never type it again.
+- File: ~/.ssh/config (per-user). System-wide equivalent is /etc/ssh/ssh_config but you almost never want that.  - Permissions must be 600 (owner read/write only). SSH refuses to load it otherwise — that's why I ran chmod 600 after creating it.
+- You can have as many Host <alias> blocks as you want — one per server. They stack in the same file.
+
+So the whole "trick" was: figure out the right port from your docker-compose.yml (2235), then express it once in ~/.ssh/config so you never type it again.
 
 You can even go to: `http://192.168.1.2:3034/jalcocert/mbsd` and make a fork for the agent hermes to take the repo as personal so that the ssh edits go there.
 
@@ -398,10 +404,11 @@ tmux ls
 #tmux attach -t claude-electronics #for whenever you want to come back
 ```
 
-
 {{< details title="About electronics 📌" closed="true" >}}
 
-Honest read: this is a really well-structured self-study repo — not just code, but a curriculum. The pattern you've locked in (BRD → PySpice sim → curiosities.md → next-steps.md → real build) is the right shape for
+Honest read: this is a really well-structured self-study repo — not just code, but a curriculum. 
+
+The pattern you've locked in (BRD → PySpice sim → curiosities.md → next-steps.md → real build) is the right shape for
   learning electronics, and the L1–L15 + M1–M2 + 0a–0e progression actually mirrors how an EE textbook is organized, just driven by simulation instead of math.
 
   What stands out as strong:
@@ -419,7 +426,6 @@ What I'd watch out for:
 Net: structurally one of the better learn-by-doing repos I've seen. Solder something next.
 
 {{< /details >}}
-
 
 ```sh
 # Option B: nohup — fire and forget
@@ -439,7 +445,7 @@ claude --dangerously-skip-permissions -p "Refactor X to Y, run the tests, commit
 It runs non-interactively, streams output, exits when done. Perfect for cron jobs or shell pipelines. No interactive UI, no prompts.
                                                                                                                                                                                                                            ────
 3. Recurring schedules
-                                                                                                                                                                                                                           ────  If "long-running" actually means "run every N minutes/hours," you've got two options:
+────  If "long-running" actually means "run every N minutes/hours," you've got two options:
    - System cron — standard, deterministic. crontab -e and add a claude -p ... --dangerously-skip-permissions line.
 - Claude Code's /schedule skill — lets you set up scheduled remote agents from inside a Claude session. Better UX, but the agent runs in the cloud (different model from your local Pi).
 
@@ -482,7 +488,6 @@ https://github.com/ashim-hq/ashim same as snapotter
 A Self Hosted Image Manipulator - 45+ tools, local AI, and pipelines in a single Docker container. No cloud, no telemetry. Your images never leave your machine. 
 
 https://github.com/stirling-image/stirling-image 
-
 -->
 
 {{< cards >}}
@@ -508,7 +513,6 @@ You always have: `http://192.168.1.2:6011/` and `9696`:
 Or just metube:
 
 ![MeTube UI](/blog_img/selfh/HomeLab/metube.png)
-
 
 * https://jalcocert.github.io/JAlcocerT/image-backup-tools/#how-to-detect-duplicates-files-in-the-system
 
@@ -688,54 +692,54 @@ docker run -d \
 ```sh
 du -h --max-depth=1 .
 df -hT /mnt/data2tb /mnt/backup2tb
- ```
+```
 
 /sftpgo
-  /mnt/data2tb:/srv/data2tb
+/mnt/data2tb:/srv/data2tb
 
-  So sftpgo has the whole /mnt/data2tb mounted inside it as /srv/data2tb.
+So sftpgo has the whole /mnt/data2tb mounted inside it as /srv/data2tb.
 
-  I also found compose references for pigallery2:
+I also found compose references for pigallery2:
 
-  /mnt/data2tb/Z_BackUP_HD-SDD/Z_FOTOS:/app/data/images:ro
+/mnt/data2tb/Z_BackUP_HD-SDD/Z_FOTOS:/app/data/images:ro
 
-  That one is read-only and appears in the evolution compose files, including the active 2602_docker-compose.yml. But in the current docker ps output from earlier, pigallery2 was not running, so the live user of /mnt/
-  data2tb right now is sftpgo.
+That one is read-only and appears in the evolution compose files, including the active 2602_docker-compose.yml. But in the current docker ps output from earlier, pigallery2 was not running, so the live user of /mnt/
+data2tb right now is sftpgo.
 
-  Summary:
+Summary:
 
-  - /mnt/data2tb is exFAT.
-  - Running container using it: sftpgo, mounted read/write.
-  - Compose-configured but not currently running from what I saw: pigallery2, read-only photo mount.
-  - Existing Nextcloud is not using the 2TB disk; it uses /mnt/data1tb/nextcloud/....
+- /mnt/data2tb is exFAT.
+- Running container using it: sftpgo, mounted read/write.
+- Compose-configured but not currently running from what I saw: pigallery2, read-only photo mount.
+- Existing Nextcloud is not using the 2TB disk; it uses /mnt/data1tb/nextcloud/....
 
-   NTFS makes sense for this external backup drive if you want Windows compatibility. It’s a reasonable format for “copy files here and keep it portable.” It’s just not a good format for running Nextcloud/MariaDB
-  directly.
+  NTFS makes sense for this external backup drive if you want Windows compatibility. It’s a reasonable format for “copy files here and keep it portable.” It’s just not a good format for running Nextcloud/MariaDB
+directly.
 
-  I can see the drive, but I can’t mount it from here because mounting requires local authorization/password and this shell cannot show the sudo/polkit prompt.
+I can see the drive, but I can’t mount it from here because mounting requires local authorization/password and this shell cannot show the sudo/polkit prompt.
 
-  Please run this locally:
+Please run this locally:
 
-  sudo mkdir -p /mnt/backup2tb
-  sudo mount /dev/sdc2 /mnt/backup2tb
-  df -hT /mnt/data2tb /mnt/backup2tb
+sudo mkdir -p /mnt/backup2tb
+sudo mount /dev/sdc2 /mnt/backup2tb
+df -hT /mnt/data2tb /mnt/backup2tb
 
- 1.2T  /mnt/data2tb/Z_BackUP_HD-SDD
-  155G  /mnt/data2tb/nc
-  78G   /mnt/data2tb/old-Synced SEPT23
-  66G   /mnt/data2tb/pixel8pro
-  62G   /mnt/data2tb/immich
-  19G   /mnt/data2tb/sftpgo
-  14G   /mnt/data2tb/nextcloud
-  12G   /mnt/data2tb/Sync_Pixel
-  6.3G  /mnt/data2tb/2tbepam
+1.2T  /mnt/data2tb/Z_BackUP_HD-SDD
+155G  /mnt/data2tb/nc
+78G   /mnt/data2tb/old-Synced SEPT23
+66G   /mnt/data2tb/pixel8pro
+62G   /mnt/data2tb/immich
+19G   /mnt/data2tb/sftpgo
+14G   /mnt/data2tb/nextcloud
+12G   /mnt/data2tb/Sync_Pixel
+6.3G  /mnt/data2tb/2tbepam
 
-  Destination already has:
+Destination already has:
 
-  893G  /mnt/backup2tb/Z_FOTOS
-  41G   /mnt/backup2tb/Aficiones
-  20G   /mnt/backup2tb/.Trash-1000
-  12G   /mnt/backup2tb/Estudios
+893G  /mnt/backup2tb/Z_FOTOS
+41G   /mnt/backup2tb/Aficiones
+20G   /mnt/backup2tb/.Trash-1000
+12G   /mnt/backup2tb/Estudios
 
 > `http://192.168.1.2:8069/`
 

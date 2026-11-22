@@ -8,6 +8,9 @@ url: 'understanding-pumps'
 math: true
 ---
 
+**TL;DR**
+
+This was just a quick experiment
 
 **Intro**
 

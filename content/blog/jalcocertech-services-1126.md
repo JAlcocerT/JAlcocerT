@@ -45,9 +45,9 @@ After [BiP](https://jalcocert.github.io/JAlcocerT/docs/entrepreneur/bip/) & [shi
 
 > > How certain are you that your build will solve somebodies pain points? Do you even care and are just building for the sake of it?
 
-If that's clear, then id recommend: *do and document ADR, decisions, roadmap, learnings and builder-posts*.
+If that's clear, then id recommend such [workflow wrap](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#workflow-wrap): *do and document [ADR](https://www.jalcocertech.com/support/articles/architecture-decision-records-solo-business/), decisions, roadmap, learnings and builder-posts*.
 
-1. Astro SSG x Edge capabilities within Cloudflare offerings: *[scheduled posts](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/scheduled-rebuilds.md) via CI/CD, posts with auth, contact form, newsletter w/o ~~love~~ subscription bombing, DRIP, GDPR compliant, webp & mdx support, cms x pwa x offline optional.* With no [broken links](https://fossengineer.com/linkchecker-broken-link-checker/), [web-check](https://fossengineer.com/selfhosting-web-check/)ed, [Google search console](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#google-search-api), PageSpeed and [CF analytics via API](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#cf-api) setup for feedback and web audited and with a VSL. With the sitemaps configured for google and for `bing.com/webmasters`. Properly [audited](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-audits-x-checks) and with [web best practices](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-best-practices) in place, like [using webp images](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#baj). And with a [SEO](#seo) that gets the job done.
+1. Astro SSG x Edge capabilities within Cloudflare offerings: *[scheduled posts](https://github.com/JAlcocerT/jalcocertech-core/blob/main/architecture/scheduled-rebuilds.md) via CI/CD, posts with auth, contact form, newsletter w/o ~~love~~ subscription bombing, DRIP, GDPR compliant, webp & mdx support, cms x pwa x offline optional, [rss and tg bot](https://www.jalcocertech.com/blog/telegram-bot-quiet-nightly-rss-digest/) that flag the new content to a group.* With no [broken links](https://fossengineer.com/linkchecker-broken-link-checker/), [web-check](https://fossengineer.com/selfhosting-web-check/)ed, [Google search console](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#google-search-api), PageSpeed and [CF analytics via API](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#cf-api) setup for feedback and web audited and with a VSL. With the sitemaps configured for google and for `bing.com/webmasters`. Properly [audited](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-audits-x-checks) and with [web best practices](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#web-best-practices) in place, like [using webp images](https://jalcocert.github.io/JAlcocerT/branded-jalcocertech/#baj). And with a [SEO](#seo) that gets the job done.
 
 > You dont need hupspot to manage a newsletter like `dune.com` does
 
@@ -57,9 +57,13 @@ If that's clear, then id recommend: *do and document ADR, decisions, roadmap, le
 
 4. Contact forms / qualifications:
 
-5. Newsletters/Transactional/DRIPs: *mailjet API if you want EU based*
+5. Newsletters/Transactional/DRIPs/[OSS Leads Ops](https://fossengineer.com/marketing-newsletter-lead-ops/): *mailjet API if you want EU based*
 
 6. Roadmaps (kanban), changelog and gated feature requests
+
+https://frameleaf.app/timeline/#roadmap - lovely roadmap with a section explaining what the project is not (anti-features!) :)
+
+`https://dbackup.app/roadmap/` *which was one [of the points](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#for-next-year) i wanted to cover this year*
 
 7. Product analytics: *posthog is amazing and it can be one of your agents integrations for a self-improving product (P**I**Os)*
 
@@ -75,7 +79,7 @@ Im trying not to use any gui apps: `https://learn.chatgpt.com/docs/linux/linux-a
 
 ```sh
 herdr #lazygit /resume /compact /usage /status
-scoop install uv #winget #choco
+scoop install uv #winget #choco #https://scoop.sh/#/
 ```
 
 > `https://github.com/maddada/Ghostex`
@@ -228,6 +232,8 @@ Now, I have:
 
 ```
 
+For anything else from now on: https://www.jalcocertech.com
+
 {{< cards >}}
   {{< card link="https://ebooks.jalcocertech.com" title="Free Knowledge ↗" icon="book-open" >}}
   {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
@@ -248,10 +254,16 @@ So its pretty much automatized.
 
 Have been doing improvements across all my sites and having some [thoughts around the next jalc shape](http://192.168.1.2:3034/jalcocert/jalcocertech-web-proposal)
 
-https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known
-![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/real-estate-landing/#making-website-services-known" title="Flask Intro" image="/blog_img/biz/leads/good-old-ad.png" subtitle="Deployed a Flask WebApp with https and NGINX to Hertzner" >}}
+  {{< card link="https://github.com/JAlcocerT/Data-Chat/tree/main" title="Data Chat Repo" image="/blog_img/apps/gh-jalcocert.svg" subtitle="Source Code on Github" >}}
+{{< /cards >}}
 
-1. You can get such **serverless setup** around CF to get contacts forms:
+<!-- 
+![Good old printed lead with QR in an European park](/blog_img/biz/leads/good-old-ad.png)
+ -->
+
+1. You can get such **serverless setup** around CF to get contacts forms: *you can get leads notifications to ntfy*
 
 ```sh
 #cd /home/jalcocert/Desktop/mbsd-framework/leadarchitect-uk/data/sends
@@ -261,7 +273,15 @@ docker exec homelab-leads-hub-1 python -c 'import sqlite3; c = sqlite3.connect("
 
 2. You can also make [a self-managed (via Jev) telegram community](https://github.com/JAlcocerT/my-logseq-notes/tree/main/daily-solo/wk43y26/pio-inbound-tg-bot)
 
-> `https://github.com/yibie/awesome-jev`
+> See more jev use cases: `https://github.com/yibie/awesome-jev`
+
+{{< callout type="info" >}}
+If you are getting too much spam when you review the [inbound with your skill](https://github.com/JAlcocerT/jalcocertech-core/tree/main/.codex/skills/leads-review), you can blacklist mails...
+{{< /callout >}}
+
+...or anything that contain the word lead
+
+3. Using Jev to categorize inbound lead traffic to avoid loosing precious attention
 
 ##### OutBound
 
@@ -271,7 +291,7 @@ Aka [the clients you choose](https://jalcocert.github.io/JAlcocerT/custom-re-rag
 Mind the applicable regulations and law!
 {{< /callout >}}
 
-1. Via cold mail:
+1. Via cold mail: `https://app.smartlead.ai/app/email-campaigns-v2`
 
 ```sh
 
@@ -365,9 +385,74 @@ Goal/intent/contract/end state/desired state
 
 {{< youtube "7T-gldvgfpo" >}}
 
+#### We are agents
+
+Its pretty interesting that we have lost the good old meaning of an agent
+
+The one prior to all AI stuff
+
+> An entity that perceives its environment and its able to act with intent and pursue its goals
+
+Thats why im lately clearly distinguishing between: 
+
+* virtual agents, to particularize for claude/codex/whatever LLM + harness
+* human agents, us!!
+
+Some of my tech consulting which was supposed to bepurely technical, diverted to the philosophical side
+
+And its not a bad thing to question from time to time these kind of ground truths/believes
+
+In fact, in times of accelerated changes, is the best time to do so
+
+What are the assumptions that we are making that are blocking us?
+
+Are all those still true?
+
+When was the last time that you asked yourself: why does this have to bethis way?
+
+We are all delivering something, be it: vision, ambiguity reduction or real sh*t done (final end product/service)
+
+Have you accepted some of your way of working as sth given?
+
+We all have our how's, our procedures to get what we want, when we want it
+
+What if now there is another way?
+
+What if you took back your teen hunger of questioning how shitty the status quo is?
+
+There are huge mindset gains when we start thinking about: problems and outcomes
+
+In fact, we should be revisiting the problem statements more frequently, to make sure that we are optimizing in the best way
+
+Have you thought lately around your current state and the desired state?
+
+We start talking to ourselv declaratively, as in: I want to be there / achieve xyz
+
+Then we do all those new year resolutions, weekly plannings, daily journals for geeks which go to the procedural level
+
+Then ofc there is no magic and actions need to be taken for the state to change
+
+There are many state changes that cant be driven *at least nowadays* by virtual agents
+
+And yet if you work in IT, there is no excuse: start being more declarative, start forgetting about all the prompt engineering, the hows and all stuff that you are consistently feeding to virtual entities that are most likely more capable than we are already.
+
+Define a problem, ask for an outcome and make a way to indentify clearly (programmatically) what success means
+
+Its hard to make the switch OFF to the how brain *which you can still use for othe rpurposes*
+
+But if the idea is to increase speed, GTM, to not leave intelligence in the table and make the most of these new *virtual* resources, then start being more declarative, dont micro-manage
+
+Providing you agree with my statements above, we can agree that:
+
+1. any manager who's job is to be declarative has to be shipping like a full division - Keep doing what you are supposed to be good at
+2. any engineer whos job was to get sh*it done has to be declaring outcomes like a full division - Mindset change required
+
+
 #### Funnels
 
 From skalas...
+
+to having a reliable top of the funnel with inbound marketing that you can visualize and attribute to sources
 
 #### Electronic Design
 
@@ -383,7 +468,7 @@ Just in case if you missed it, i was making single point mass lap optimization e
 
 now i got an oss mbsd framework to play around
 
-> `https://github.com/JAlcocerT/multi-body`
+> `https://github.com/JAlcocerT/multi-body` which is also at `https://hub.xerj.org/corpus/jalcocert--mbsd-core`
 
 Oh...and i havent forgot about beam theory nor FEM
 
@@ -395,9 +480,19 @@ For `yt-distil` i was using lately local stt
 
 And to acelerate my yt video creation, Ive been using voicebox, properly backedup lately with my voice cloned to read the captions.
 
+What are some use cases around this?
+
+> Yea, UC's, all those that are so hard to get in written in corporations!
+
+1. Distill youtube videos to avoid clickbaits and what not
+2. Prepare for ~~tech~~ interviews
+3. Improve your speech, articulation fluency
+4. Ship a PoC after a conversation in a plane
+
+
 #### Homelab Hardening
 
-Its never a bad moment to [improve the homelab](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#improving-the-homelab), specially with all security concerns we have with AI.
+Its never a bad moment to [improve the homelab](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#improving-the-homelab), specially with all security concerns like [the recent ssh](https://sshhole.com) we have with AI.
 
 Ive learnt how to [upgrade pb](https://fossengineer.com/pocketbase-upgrade-security/) and [nextcloud to avoid p2p2shell](https://fossengineer.com/upgrade-nextcloud-php2shell/)
 
@@ -419,19 +514,11 @@ You can create [such scripts](https://github.com/JAlcocerT/poc_webs_magnet/tree/
 
 The last CLI makes one audit per container available in the server :)
 
+PS: **Security** is a process, not a snapshot.
+
 ---
 
 ## Outro
-
-Lovely interfaces i found recently: 
-
-1. `https://www.levels.fyi/salaries/add/chat` that also populates the UI as you write (using the new quick models maybe?)
-
-2. For on boarding flows: `https://bitly.com/a/sign_up`
-
-3. For roadmaps: `https://dbackup.app/roadmap/` *which was one [of the points](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/#for-next-year) i wanted to cover this year*
-
-4. I loved this `https://levels.io/projects` *notice the success rate and w/o profit goal*
 
 ### Skills Im using
 
@@ -443,7 +530,7 @@ Coming from [here](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-u
 4. blog post editor, image gen
 5. testing: https://github.com/DietrichGebert/ponytail with caveman
 
-Most importantly: *homelab security checks skills, together with [web stuff](https://github.com/JAlcocerT/jalcocertech-core/tree/main/.claude/skills/site-analytics-review) from performance,search and cf analytics skills, a [lead hub](https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub) like inbound leads checks*.
+Most importantly: *homelab security checks skills, together with [web stuff](https://github.com/JAlcocerT/jalcocertech-core/tree/main/.claude/skills/site-analytics-review) from performance,search and cf analytics skills, a [lead hub](https://github.com/JAlcocerT/jalcocertech-core/tree/main/leads-hub/hub) like [inbound leads checks](https://github.com/JAlcocerT/jalcocertech-core/tree/main/.codex/skills/leads-review)*.
 
 
 ```sh
@@ -460,217 +547,42 @@ But why not: smartlead, cf web analytics, or any of these web analytics tools, p
 
 ```
 
+{{< callout type="info" >}}
+YOu guesses it, I use these for PIO's
+{{< /callout >}}
+
 #### Lovely CI/CD
 
 Last year I was helping a hospital with their throughput via CI/CD workflows
 
 There is much more to say now https://github.com/JAlcocerT/slubne-chwile-y26/tree/master/.github/workflows
 
+1. From linkchecks and deployments to gh pages / firebase / cloudflare pages
+2. To [DRIP campaigns](#eayp-v5-x-emdash-x-monolith)
+3. Automatic future date draft=false to release
+4. Automatic web page audit
+5. Automatic container audit to prod/selfh 
+
 ---
 
 ## FAQ
-
-
-### Improved RE and GenBI
-
-I found 12 source posts dated 2026 mentioning one or both domains.
-
-Six contain substantial discussion; the rest are roadmap, portfolio, or monitoring references.
-
-
-```sh
-#https://realestate.jalcocertech.com/
-#https://genbi.jalcocertech.com/
-```
-
-#### realestate.jalcocertech.com
-
-Your story evolved through three stages: `https://consulting.jalcocertech.com/talks/real-estate-agency-ai-website/`
-
-1. Custom full-stack Real Estate product
-
-In A SaaS for Real Estate Agencies (content/blog/entrep-saas-re-rag.md:1), you described:
-- Real-estate agencies as the target avatar
-- A conversion-ready website and property catalogue
-- Mortgage calculator with Chart.js
-- Markdown-based property storage and editing
-- Astro hybrid rendering
-- OpenAI chatbot and FastAPI scraper
-- Basic authentication, CORS and rate limiting
-- Docker deployment through your homelab
-
-Your conclusion was blunt: the product worked; client acquisition did not.
-
-2. Pivot into a white-label DFY offer
-
-In White-Labelling the Real Estate solution (content/blog/entrep-saas-re-whitelabel.md:1), you reframed the existing software as a reusable service:
-- Landing adapted from the Shopify/GenBI project
-- Cal.com booking for qualified prospects
-- Manual 1:1 onboarding
-- $1,000–$3,000 setup
-- $100–$300/month maintenance
-- Targeted prospecting toward B2B real-estate agencies
-
-The site became a funnel for selling the existing technical capability, rather than another speculative SaaS.
-
-3. Original roadmap item cancelled, reusable asset retained
-
-By March–May, you repeatedly described the original “Custom RAG and WebApp via DecapCMS” idea as cancelled and white-labelled, including in From Idea to Resolution (content/blog/z-idea-2-resolution.md:247), PoC 102 (content/blog/poc-102.md:179), and PoC 104 (content/blog/poc-104.md:168).
-
-So, realestate.jalcocertech.com became a high-ticket white-label Real Estate funnel, calculator, chatbot and managed implementation offer—not a conventional self-serve SaaS.
-
-#### genbi.jalcocertech.com
-
-The main concept was a Shopify-focused agentic COO / profit-leak detector.
-
-In The insights for a profitable Shopify (content/blog/entrep-saas-pnpshopify.md:1), you wrote that:
-
-- Shopify stores share sufficiently similar data structures to support repeatable analytics.
-- Store owners may ignore generic website audits but care about increasing profit.
-- Every project should begin with a landing page and lead capture.
-- The landing should qualify stores before admitting them to your calendar.
-- AuditPro was intended for Shopify businesses doing more than $10k revenue.
-- The offer could support high-ticket DFY analytics and potentially a success-fee model.
-
-The technical model had four layers:
-
-- PostgreSQL data
-- BAML semantic definitions
-- FastAPI/Python agentic logic
-- React/Recharts representation
-
-The landing used Astro/React, Tailwind, Framer Motion, Docker and a Cloudflare Tunnel.
-
-Its stronger ATF combined a headline, interactive URL input and video proof in the first viewport (example(content/blog/entrep-saas-slub-product-dev.md:74)).
-
-In From Shopify to Profit (content/blog/entrep-saas-pnpshopify-be.md:1), you acknowledged that the landing existed before the complete product. The next work was:
-
-- Shopify GraphQL integration
-- Completing the analytics backend
-- Manual onboarding
-- Finding prospects
-- Monitoring the public service with Uptime Kuma
-
-So, genbi.jalcocertech.com was less a finished SaaS and more a productized demonstration and qualification funnel for your Generative BI/DFY analytics capability.
-
-Shared conclusion
-
-Both domains became proof assets inside your value ladder:
-
-- realestate: industry-specific white-label software
-- genbi: industry-specific analytics and profit discovery
-- Both: high-ticket DFY lead magnets with manual onboarding
-- Shared constraint: distribution and prospecting, not software construction
-- Shared operational obligation: uptime, analytics, security and working follow-up
-
-By April, you presented them together as portfolio PoCs in How to PoC (content/blog/poc-101.md:350): *demonstrations of what your consulting/full-service tier could deliver*.
-
-The live domains, repository files and all 12 related 2026 posts are indexed in the expandable section below.
-
-{{% details title="Real Estate and GenBI repositories 📌" closed="true" %}}
-
-The clearest domain-to-repository mapping is:
-
-> Some implementation repositories are private working repos. These links remain useful as my project inventory, but readers without access will see a GitHub 404. `Data-Chat` is public; the live sites and related blog posts are public.
-
-| Domain | Primary repository | Role |
-|---|---|---|
-| [`realestate.jalcocertech.com`](https://realestate.jalcocertech.com/) | [`moi-realestate-pro-astro-bot`](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot) | Astro website, property editor, chatbot/RAG, mortgage calculator and FastAPI scraper. |
-| [`genbi.jalcocertech.com`](https://genbi.jalcocertech.com/) | [`poc_shopify`](https://github.com/JAlcocerT/poc_shopify) | Shopify AuditPro landing, qualification funnel and product-facing application. |
-| GenBI analytics engine | [`langchain-db-ui/Z_PGSQL-GenBI`](https://github.com/JAlcocerT/langchain-db-ui/tree/master/Z_PGSQL-GenBI) | PostgreSQL, FastAPI, BAML and React/Recharts experiments behind the Generative BI concept. |
-
-##### Real Estate repository
-
-The deployed service is primarily documented in [`moi-realestate-pro-astro-bot`](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot):
-
-- [Sales notes](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales.md)
-- [Sales automation](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-automation.md)
-- [B2B positioning](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-sales-b2b.md)
-- [API security](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/z-api-security.md)
-- [CORS and rate-limiting change request](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-4-api-security.md)
-- [Chatbot architecture](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-chatbot-astro.md)
-- [Mortgage calculator](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/src/pages/mortgage-calculator.astro)
-- [FastAPI scraper service](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/tree/master/scraper-service)
-- [Scraper migration change request](https://github.com/JAlcocerT/moi-realestate-pro-astro-bot/blob/master/cr-5-scraper-migration.md)
-
-Earlier experiments that fed the final solution:
-
-- [`ScrewFastMoiRealEstate`](https://github.com/JAlcocerT/ScrewFastMoiRealEstate) - earlier Astro real-estate website.
-- [`Data-Chat`](https://github.com/JAlcocerT/Data-Chat) - database chat and RAG experiments.
-- [`Data-Chat/LLamaIndex/With_Mem0`](https://github.com/JAlcocerT/Data-Chat/tree/main/LLamaIndex/With_Mem0) - real-estate assistant experiment with memory.
-- [`moi-realestate-pb`](https://github.com/JAlcocerT/moi-realestate-pb) - previous Streamlit/PocketBase scraper logic.
-- [`py_stocks/EDA_Mortage`](https://gitlab.com/fossengineer1/py_stocks/-/tree/main/EDA_Mortage) - original mortgage-calculator experiment.
-
-##### GenBI repositories
-
-[`poc_shopify`](https://github.com/JAlcocerT/poc_shopify) contains the domain-facing landing and qualification experience:
-
-- [Business requirements](https://github.com/JAlcocerT/poc_shopify/blob/master/z-brd.md)
-- [Requirement clarifications](https://github.com/JAlcocerT/poc_shopify/blob/master/clarification.md)
-- [Development phases](https://github.com/JAlcocerT/poc_shopify/blob/master/z-development-phases.md)
-- [Landing technical stack](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/tech-stack.md)
-- [Qualification-form implementation](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-form-tech.md)
-- [Qualification-form psychology](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-form-psychology.md)
-- [Above-the-fold changes](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/z-atf-changes.md)
-- [Landing-page business strategy](https://github.com/JAlcocerT/poc_shopify/blob/master/landing/business-strategy.md)
-
-[`langchain-db-ui`](https://github.com/JAlcocerT/langchain-db-ui) contains the earlier and shared analytics foundation:
-
-- [`Z_PGSQL-GenBI`](https://github.com/JAlcocerT/langchain-db-ui/tree/master/Z_PGSQL-GenBI) - the four-layer GenBI experiment.
-- [GenBI technical stack](https://github.com/JAlcocerT/langchain-db-ui/blob/master/Z_PGSQL-GenBI/tech-stack.md)
-- [GenBI sales notes](https://github.com/JAlcocerT/langchain-db-ui/blob/master/Z_PGSQL-GenBI/sales.md)
-- [`Data-Chat`](https://github.com/JAlcocerT/Data-Chat) - the earlier chat-with-data foundation referenced by both project histories.
-
-##### Related 2026 posts
-
-The repositories explain the implementation. These posts preserve the decisions, experiments and commercial pivots around them.
-
-**Real Estate story**
-
-- [A SaaS for Real Estate Agencies: Custom RAG Solution](https://jalcocert.github.io/JAlcocerT/custom-re-rag/) - the full Astro, RAG/chatbot, editor, calculator, scraper and security build.
-- [White-Labelling the Real Estate Solution](https://jalcocert.github.io/JAlcocerT/white-label-real-estate-solution/) - the pivot from an underpriced custom project to a repeatable DFY offer.
-- [From Idea to Resolution](https://jalcocert.github.io/JAlcocerT/take-ideas-to-their-digital-resolution/) - records the original custom RAG/CMS roadmap item as cancelled and retained as a white-label asset.
-- [How to PoC 102](https://jalcocert.github.io/JAlcocerT/poc-102/) - April roadmap checkpoint for the white-labelled Real Estate project.
-- [How to PoC: Arbitrage with AI](https://jalcocert.github.io/JAlcocerT/poc-104/) - May checkpoint placing the original idea in the ideas cemetery while keeping the deployed solution.
-
-**GenBI story**
-
-- [Improving a micro-SaaS Conversion: Email Automation](https://jalcocert.github.io/JAlcocerT/iterating-and-improving-a-micro-saas/) - uses the GenBI landing as the example for a stronger ATF with an interactive input and video proof.
-- [How to Analyze Business Opportunities](https://jalcocert.github.io/JAlcocerT/ideas-and-opportunities-health-check/) - places GenBI inside the wider business-opportunity and service-offer thinking.
-- [The Insights for a Profitable Shopify](https://jalcocert.github.io/JAlcocerT/custom-analytics-for-shopify/) - defines AuditPro, the Shopify-facing landing, qualification logic and four-layer GenBI architecture.
-- [From Shopify to Profit](https://jalcocert.github.io/JAlcocerT/shopify-business-data-analytics/) - continues from the landing toward Shopify integration, delivery, prospecting and service monitoring.
-- [The RevOps You Always Dreamt About](https://jalcocert.github.io/JAlcocerT/building-a-revops-center-agency/) - positions GenBI as part of the broader RevOps and consulting offer.
-
-**Shared portfolio and operations context**
-
-- [How to PoC](https://jalcocert.github.io/JAlcocerT/poc-101/) - presents GenBI and Real Estate together as proof assets in the JAlcocerTech portfolio.
-- [Spring Is Here (and So Are Weddings)](https://jalcocert.github.io/JAlcocerT/quick-weddings-poc/) - references the operational need to monitor deployed services such as `realestate.jalcocertech.com` rather than checking them manually.
-
-The practical boundary is: `poc_shopify` owns the Shopify-specific offer and conversion layer, while `langchain-db-ui/Z_PGSQL-GenBI` records the reusable analytics architecture behind it.
-
-{{% /details %}}
-
-### And used outreach
 
 ### Energy
 
 Started in [May/June](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#iot-crops-and-energy)
 
-https://jalcocert.github.io/JAlcocerT/selfhosting-energy-monitoring/
-
+And recently plugged a [Shelly to improve my selfhosting](https://jalcocert.github.io/JAlcocerT/selfhosting-energy-monitoring/):
 ```sh
 npx wrangler pages project list
 ```
 
-* https://go-solar.pages.dev/
+* https://go-solar.pages.dev - *which i needed to migrate away from Carto as it now requires API key*
 * https://aerothermics-landing.pages.dev
 * https://solar-trajectory.pages.dev  
 
 {{% details title="Coming from... 🚀" closed="true" %}}
 
 {{% /details %}}
-
-
 
 ### EayP v5 x EmDash x Monolith
 
@@ -681,7 +593,7 @@ I got to know about: https://github.com/generalaction/emdash `https://try.emdash
 
 And still i need to [improve `margin-cms`](https://github.com/JAlcocerT/poc/tree/main/pwa-margincms) and try `markdown plus plus`
 
-Having foldergram instalabble as PWA in a tablet is nice, but it lacks the writing editor i have at fieldnotes for beyond a journey.
+Having **foldergram instalabble as PWA** in a tablet is nice, but it lacks the writing editor that I have at fieldnotes for beyond a journey.
 
 At some point all that setup should converg to a solution that im really confortable with, which has to be git first and wrap any site, from `https://cyclingthere.pages.dev/` to `eyap` `https://beyondajourney.pages.dev/`.
 
@@ -713,6 +625,20 @@ npm --prefix cms run setup:password
 The corresponding Worker secrets are stored at: `~/.config/fieldnotes/worker-secrets.json`
 
 That file should never be committed or pasted into chat.
+
+Static and markdown are great, yet seem an understatement of all you can achieve with them: `https://dillinger.io/`
+
+{{< callout type="info" >}}
+Who said Features to superseed Wordpress?
+{{< /callout >}}
+
+1. PWA Installable
+2. Writting first, with nice to have flow for optimized photos / audios
+3. Git integrated: to get all CI/CD magic under the hood and SSG goodies
+
+> `https://github.com/manuelernestog/astropod`
+
+
 
 ### Slubne PoC
 
@@ -776,8 +702,6 @@ Beyond having a nice performing website:
 {{< cards cols="3" >}}
   {{< card link="https://trends.google.es/trends/" title="Google Trends" >}}  
 {{< /cards >}}
-
-
 
 ### DNS Checks
 

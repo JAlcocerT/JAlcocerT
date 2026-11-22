@@ -11,7 +11,6 @@ url: 'oss-automatic-docs-and-tech-video'
 
 Last year [here](https://jalcocert.github.io/JAlcocerT/tech-for-podcast/)... I was working for some kind of project [to do automatic docs](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-may-2025/#vibe-coded-project-docs)
 
-
 **Intro**
 
 But models have improved a lot
@@ -63,17 +62,12 @@ Because thats really all there is: https://skills.sh/
 
 ![Meme - Fantastic](/blog_img/memes/trol-trol.gif)
 
-
 > You can also see other that [people created](https://skills.sh/github/awesome-copilot/documentation-writer)
-
-
 
 
 ### From Repo to Video
 
-
-How about...creating/combining another skills, so that we do video?
-
+How about...creating/combining another skills, so that we **do video**?
 
 Yea, remotion again:
 
@@ -120,11 +114,13 @@ cd ./z-remotion-oss/video-test-remotion
 npm run dev
 ```
 
+This is the prompt i tried:
+
 ```md
  ok so inside that video-test-remotion, can we make a video that describes
-  what velxio does, using the UI/X of its components or any png that they
-  have at the repository? the video should be appealing for selfhosting
-  enthusiast
+what velxio does, using the UI/X of its components or any png that they
+have at the repository? the video should be appealing for selfhosting
+enthusiast
 ```
 
 ```sh
@@ -137,10 +133,7 @@ https://youtu.be/H5Q6fQyPptE
 
 {{< youtube "H5Q6fQyPptE" >}}
 
-
 > All powered by ,just' Haiku 4.5
-
-
 
 ---
 

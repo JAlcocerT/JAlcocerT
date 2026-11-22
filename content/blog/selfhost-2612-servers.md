@@ -22,30 +22,10 @@ All those backups, monitoring, IoT...
 
 Yes, all that.
 
-* http://192.168.1.2:3034/hermesagent/pi-connectivity
-#http://192.168.1.2:3034/hermesagent/tr471-checks
-#http://192.168.1.2:3034/hermesagent/selfhosted-connectivity
-#http://192.168.1.2:3034/hermesagent/pi-connectivity
-#https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
 
-sqlite vs duck vs https://github.com/facebook/rocksdb/ that conduit uses
+https://mermaid.js.org/syntax/entityRelationshipDiagram.html 
 
-filebrowser to https://github.com/themartz90/folderhug
-
-https://www.pragmaticengineer.com/
-
-https://github.com/rahilp/second-brain-cloudflare
-
-https://privacytools.io/trending/30d
-https://gitgem.org/
-https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/#second-brain--723-
-https://www.bitdoze.com/deploy-emdash-cloudflare-workers/
-https://www.bitdoze.com/emdash-send-email/
-
-
-https://github.com/Pouzor/homelable?ref=selfh.st
-
-Self-hosted homelab infrastructure visualizer — interactive network diagram with live status monitoring
+https://github.com/swingmx/swingmusic
 
 
 ## HomeLab x OSS
@@ -65,7 +45,6 @@ I coudldnt be happier with these daily drivers:
 flatpak install flathub app.zen_browser.zen -y
 ```
 
-
 Cloudflare tunnels keep been great, but I was surprised by tailscale funnels for those very quick PoC that might require exposing some we/app or webhooks.
 
 <!-- 
@@ -77,6 +56,36 @@ https://x.com/tom_doerr/status/1979894065400263086
 Concepts that surprised me:
 
 1. [File formats](https://github.com/JAlcocerT/Home-Lab/blob/main/file-format.md) matter and differ between OSs
+
+
+### Networking
+
+* http://192.168.1.2:3034/hermesagent/pi-connectivity
+#http://192.168.1.2:3034/hermesagent/tr471-checks
+#http://192.168.1.2:3034/hermesagent/selfhosted-connectivity
+#http://192.168.1.2:3034/hermesagent/pi-connectivity
+#https://github.com/JAlcocerT/hermesagent/tree/tinker/hermesagent/pi-connectivity
+
+sqlite vs duck vs `https://github.com/facebook/rocksdb/` *which is the one that conduit uses*
+
+filebrowser to https://github.com/themartz90/folderhug
+
+https://www.pragmaticengineer.com/
+
+https://github.com/rahilp/second-brain-cloudflare
+
+https://privacytools.io/trending/30d
+https://gitgem.org/
+https://www.bitdoze.com/self-hosted-apps-cloudflare-workers/#second-brain--723-
+https://www.bitdoze.com/deploy-emdash-cloudflare-workers/
+https://www.bitdoze.com/emdash-send-email/
+
+
+https://github.com/Pouzor/homelable?ref=selfh.st
+
+Self-hosted homelab infrastructure visualizer — interactive network diagram with live status monitoring
+
+
 
 ## DBs
 
@@ -125,20 +134,20 @@ https://github.com/lissy93/personal-security-checklist
 
 Security, OSTINT etc matters and these can help:
 
-1. https://github.com/fail2ban/fail2ban
+1. `https://github.com/fail2ban/fail2ban`
+2. For security monitoring, consider [these homelab hardening notes](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-bip/#homelab-hardening) and [skills](https://github.com/JAlcocerT/poc_webs_magnet/tree/master/.agents/skills/security-audit/scripts)
 
 ### Networking
 
-https://networkingtoolbox.net/
+`https://networkingtoolbox.net/`
 
 ### DNS
 
-https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts
+I got some [public scripts to modify DNS programmatically](https://github.com/JAlcocerT/Home-Lab/tree/main/z-dns-scripts)
 
 I tried pihole, have a look to adguard and `https://github.com/0xERR0R/blocky`
 
-But technitium has been my go to
-
+But technitium has been my go to recently
 
 * `https://selfh.st/survey/2026-results/`
 
@@ -157,7 +166,7 @@ But do you really have to?
 Monitor your pages anytime with:
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/uptime-kuma" title="Uptime Kuma 🐋 ↗" >}}
   {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/umami" title="Umami Web Analytics | Docker Config 🐋 ↗" >}}
 {{< /cards >}}
 
@@ -168,7 +177,6 @@ Connecting uptime kuma `http://192.168.1.2:3001/dashboard/7` with ntfy is a good
 You can also try maintenant `http://192.168.1.2:3810/endpoints`
 
 And [glances](https://github.com/nicolargo/glances)
-
 
 Or your services & wifi
 
@@ -198,7 +206,7 @@ In the end P2P is a pretty amazing distributed backup tool!
 I was too strict in the beginning with just use local LLMs:
 
 {{< cards cols="2" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Ollama | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/ollama" title="Ollama 🐋 ↗" >}}
 {{< /cards >}}
 
 Now I dont care much if OpenAI knows what am I vibe coding.
@@ -265,11 +273,11 @@ The [wanderer mobile app](https://github.com/open-wanderer/wanderer/releases/tag
 ![Wanderer supports creating routes and GPX](/blog_img/selfh/umbrel-os/wanderer-gpx.png)
 
 
-#### cOMMUNICATION
+#### COMMUNICATION
 
 {{< cards cols="1" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/lemmy" title="NodeBB Config 🐋 ↗" >}}
-  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/lemmy" title="Lemmy Forum via your HomeLab | Docker Config 🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/lemmy" title="NodeBB  🐋 ↗" >}}
+  {{< card link="https://github.com/JAlcocerT/Home-Lab/tree/main/lemmy" title="Lemmy Forum 🐋 ↗" >}}
 {{< /cards >}}
 
 
@@ -277,7 +285,7 @@ The [wanderer mobile app](https://github.com/open-wanderer/wanderer/releases/tag
 
 A typical one is the DNS service
 
-You can also create your own, for example: so that your battery wont charge over 80% to preserve its lifespan 
+You can also create your own, for example: *so that your battery wont charge over 80% to preserve its lifespan*
 
 ---
 
@@ -286,8 +294,8 @@ You can also create your own, for example: so that your battery wont charge over
 Selfhosting and self-learning about servers have opened my mind by brute force these last years.
 
 {{< cards >}}
-  {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
-  {{< card link="https://ebooks.jalcocertech.com" title="DIY via ebooks" image="/blog_img/entrepre/ebooks.png" subtitle="Distilled knowledge via web/ooks with free value." >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="Free Knowledge ↗" icon="book-open" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
 {{< /cards >}}
 
 {{< callout type="info" >}}
@@ -303,7 +311,6 @@ docker system df
 #docker stop $(docker ps -a -q) #stop all
 #docker system prune -a
 ```
-
 
 
 ---
@@ -326,7 +333,7 @@ docker system df
 
 1. https://jalcocert.github.io/JAlcocerT/optimal-karting-line/#pwa---gopro-telemetry-extractor
 
-here is sth more: https://gopro-telemetry-overlay.pages.dev
+here is sth more: `https://gopro-telemetry-overlay.pages.dev`
 
 ```sh
 cd ./optimum-path/overlay-pwa
@@ -343,7 +350,7 @@ npx wrangler pages deploy dist --project-name=gopro-telemetry-overlay
 
 {{< youtube "1l7Q3Ul4Yh0" >}}
 
-2. 
+2. Write / blog: *margin CMS, field notes CMS*
 
 
 
@@ -370,11 +377,9 @@ Wondering which [OS to get started](https://jalcocert.github.io/JAlcocerT/selfho
 
 Id leave ZorinOS/[Omarchy](https://jalcocert.github.io/JAlcocerT/selfhosting-information-flow/#omarchy) for daily driver
 
-
 To buckup your code, I was wondering with: some custom scripts, [git-sync](https://github.com/AkashRajpurohit/git-sync)...but you can do it with a local Forgejo
 
 * [2608]
-
 
 {{< callout type="info" >}}
 MQTT vs Zigbee vs WIFi
@@ -383,13 +388,13 @@ MQTT vs Zigbee vs WIFi
 * [2606]
 
 {{< callout type="info" >}}
-TCP is while UDP
+TCP is while UDP...
 {{< /callout >}}
 
 * [2602](https://jalcocert.github.io/JAlcocerT/image-backup-tools/): setting [CF Zero Trust country access](https://jalcocert.github.io/JAlcocerT/image-backup-tools/#cf-waf-vs-zero-trust-access) and comparing it with CF WAF
 
 {{< callout type="info" >}}
-scp and rsync are great tools to sync files
+`scp` and rsync are great tools to sync files
 {{< /callout >}}
 
 * [2511](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-nov-2025): Selfhosted adventures with umbrelOS and running a BTC node
@@ -408,8 +413,6 @@ Your 12 words (often called a **seed phrase** or **recovery phrase**) are **not*
 {{< callout type="warning" >}}
 More notes in [activating HA](https://github.com/JAlcocerT/Home-Lab/tree/main/jellyfin#permanent-fix-hardware-acceleration-amd-5600g) for the 5600G
 {{< /callout >}}
-
-
 
 Take [seriously your homelab security](https://jalcocert.github.io/JAlcocerT/homelab-security/)
 
@@ -456,10 +459,55 @@ docker system prune --all --volumes #release space from old containers
 
 **Workaround:** Rootless Podman / locked-down Kubernetes can't grant `SYS_MODULE`. Load WireGuard kernel module on the host first (`modprobe wireguard`), then `SYS_MODULE` can be dropped from the compose.
 
-### The Software for D&A
 
-#### MicroControllers
+### How many users can a Pi4 2GB handle
 
+Im more and more interested about [architecture and system design](https://www.youtube.com/watch?v=xV2SpvHHF_I):
 
-#### In the server
+So just took [my benchmarks](https://github.com/JAlcocerT/Home-Lab/tree/main/z-benchmarks) and applied it.
+
+Bc deploying and putting *the right* features fast infront of prospects matter
+
+The questions is: via a [VPS/HomeLab](https://jalcocert.github.io/JAlcocerT/where-to-deploy/#vps) or now using CF KV Workers?
+
+I compared [clouds](https://jalcocert.github.io/Linux/docs/linux__cloud/cloud/#other-clouds) and [mini-pcs/sbcs](https://jalcocert.github.io/RPi/posts/minipc-vs-pi/) in several occasions.
+
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/firebat-ak2-plus-minipc-review/" title="FireBat AK2 Plus" image="/blog_img/hardware/firebat.jpg" subtitle="Less than 1L mini PC with decent 4C/4T - The Review" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cloud-vs-single-board-computers/" title="BMax B4 MiniPC Review" image="/blog_img/hardware/bmax-b4.jpg" subtitle="BMax vs Pi vs Cloud Comparison" >}}
+{{< /cards >}}
+
+### ProtonCLI x Rust
+
+How about [taking this](https://proton.me/blog/proton-drive-cli) and making a desktop that doesnt is cool?
+
+* https://github.com/ProtonDriveApps/sdk
+
+> How about doing the same for Nextcloud?
+
+### Some Photos
+
+For media: `https://selfh.st/apps/?tag=Photos`
+
+* https://github.com/paulomarques742/imago
+* https://imago.742studio.eu/
+
+* https://foldergram.github.io/
+
+```sh
+git clone /JalcocerT/foldergram
+```
+
+> Point it at your folders, browse everything through a fast feed-style interface. No cloud, no accounts — just your files and SQLite.
+
+* https://github.com/open-noodle/gallery a fork of immich :)
+
+> Some time back i [tried immich](https://fossengineer.com/selfhosting-immich/) but i didnt like that my folder order is not respected and also neither need the [heavy face recognition](https://jalcocert.github.io/JAlcocerT/selfhosted-apps-oct-2025/#files-files-files) feature that i dont care about
+
+High performance self-hosted photo and video management solution.
+
+https://github.com/storytold
+
+https://github.com/andrii-kryvoviaz/slink
+
 

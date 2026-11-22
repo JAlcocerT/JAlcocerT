@@ -35,3 +35,12 @@ https://inkstone-demo.pages.dev/
 Live split-view Markdown preview · Realtime multi-device sync · Multiple WebDAV / S3 backups
 
 https://github.com/tianma-if/edgeever/tree/main
+
+
+## Conclusions
+
+{{< cards >}}
+  {{< card link="https://ebooks.jalcocertech.com" title="Free Distilled Knowledge ↗" icon="book-open" >}}
+  {{< card link="https://consulting.jalcocertech.com" title="Paid Consulting ↗" icon="user" >}}
+{{< /cards >}}
+

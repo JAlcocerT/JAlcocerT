@@ -12,16 +12,15 @@ Docker Model Run
 
 LocalModels: with Docker and [Ubuntu 26.04](#about-ubuntu-2604-lts)
 
+**Intro**
+
+Running LLMs locally, even on a [PI](#how-to-enhance-a-raspberry-pi-for-ai), should not be a problem even in 2025.
+
 <!-- 
 https://www.youtube.com/watch?v=tYg6T_DAP-k
 -->
 
 {{< youtube "tYg6T_DAP-k" >}}
-
-
-**Intro**
-
-Running LLMs locally, even on a [PI](#how-to-enhance-a-raspberry-pi-for-ai), should not be a problem even in 2025.
 
 * https://jalcocert.github.io/JAlcocerT/where-to-deploy/
 
@@ -519,13 +518,21 @@ Governance advantage
 
 AI agents
 
-**Semantic Kernel** (likely what you meant by "symantec kernal," as no Symantec product matches this term) is Microsoft's open-source SDK for building AI agents and integrating large language models (LLMs) into apps using C#, Python, or Java. It uses a central "kernel" to orchestrate semantic functions (natural language prompts), native code functions, memory, and planners for tasks like chaining prompts or agent workflows. [leanware](https://www.leanware.co/insights/langchain-vs-semantic-kernel-which-ai-framework-is-right-for-your-next-project)
+**Semantic Kernel** (likely what you meant by "symantec kernal," as no Symantec product matches this term) is Microsoft's open-source SDK for building AI agents and integrating large language models (LLMs) into apps using C#, Python, or Java. 
 
-
+It uses a central "kernel" to orchestrate semantic functions (natural language prompts), native code functions, memory, and planners for tasks like chaining prompts or agent workflows. 
 
 ---
 
 ## FAQ
+
+Install any AI stuff, via UI:
+
+* https://pinokio.computer/
+  * https://github.com/pinokiocomputer/pinokio
+  * https://docs.pinokio.computer/download/
+
+> **MIT** | AI Browser 
 
 ## Large Language Models (LLMs)
 
@@ -611,14 +618,14 @@ You can test the speed with this script, which now includes [the trip-planner v3
 
 Helium, zen...are interesting browsers for you to give a try
 
-* https://winboat.app/
+* `https://winboat.app/`
 
 With [a VM](https://jalcocert.github.io/JAlcocerT/testing-nix-os/#interesting-stuff-regarding-emulation) you dont have GPU passthrough and hardware acceleration.
 
 https://www.youtube.com/watch?v=qEI95GIRKaU
 
 
-* https://apps.gnome.org/Maps/
+* `https://apps.gnome.org/Maps/`
 
 There are interesting things going on: https://agelesslinux.org/map.html
 
@@ -632,11 +639,18 @@ This is a good chance to make a system format from scratch and reset the system 
 
 Hopefully, you have your **important containers volumes** pointing to external/non OS disks:
 
-https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich
-![Immich UI](/blog_img/selfh/Photo/immich.png)
+{{< cards >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/selfhosted-apps-spring-2025/#immich" title="Tech for a Trip" image="/blog_img/selfh/Photo/immich.png" subtitle="Software for trips far from home" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/image-backup-tools/#nc-vs-immich" title="Wireguard with Hetzner as VPS" image="/blog_img/selfh/media/NC-traefik/nc-32.png" subtitle="OoO days after a wedding? VPN Setup" >}}
+{{< /cards >}}
 
-https://jalcocert.github.io/JAlcocerT/image-backup-tools/#nc-vs-immich
-![alt text](/blog_img/selfh/media/NC-traefik/nc-32.png)
+<!-- 
+![Immich UI](/blog_img/selfh/Photo/immich.png) 
+-->
+
+<!-- 
+![alt text](/blog_img/selfh/media/NC-traefik/nc-32.png) 
+-->
 
 ```sh
 #docker ps -a --filter "name=nextcloud"
