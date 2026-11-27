@@ -1,6 +1,6 @@
 ---
 title: "[JAlcocerTech] Services and BiP"
-date: 2026-11-15T09:20:21+01:00
+date: 2026-11-20T09:20:21+01:00
 draft: false
 tags: ["Roadmap26","CF KV","Scoop","Grype vs Syft vs Trivy vs Gitleaks"]
 description: 'All you need is to have vision (and agents).'
@@ -73,7 +73,6 @@ Assuming you want agentic capabilities in your team, having [preassure test your
 {{< /callout >}}
 
 ### A change of mindset
-
 
 Im trying not to use any gui apps: `https://learn.chatgpt.com/docs/linux/linux-app`, just going with `https://github.com/github/copilot-cli`
 
@@ -220,7 +219,7 @@ BCG Growth-Share Matrix (Cash Cows, Stars, Dogs, Question Marks) is ~ PLC.
 
 ## Conclusions
 
-SInce [last month](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-oct/) ive ended up were I played around PIOs
+Since [last month](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-oct/) ive ended up were I played around PIOs
 
 Now, I have:
 
@@ -243,6 +242,14 @@ For anything else from now on: https://www.jalcocertech.com
 ### Case Studies
 
 With stuff ive been doing.
+
+If you havent done so already, focus on outcomes, not in tech nor feratures that nobody cares about.
+
+> The **OKR framework** & **Outcome-driven product development** shifts the focus from outputs (shipping features, code, or tasks) to measurable outcomes (solving real customer problems and driving verified business results)
+
+Building the right thing is about [saying NO](https://leaddev.com/communication/how-give-pushback-leadership) to many features *even [some ppl](https://www.seangoedecke.com/predators/#fn-1)*, so you can go all in into the ones that matter.
+
+> Remove as a Feature
 
 #### MultiSite OutReach
 
@@ -292,10 +299,6 @@ Mind the applicable regulations and law!
 {{< /callout >}}
 
 1. Via cold mail: `https://app.smartlead.ai/app/email-campaigns-v2`
-
-```sh
-
-```
 
 2. Via cold calls: *using tts :)*
 
@@ -362,7 +365,7 @@ Beyond *no hello's* and *who/what/by-when*: governance matters and thinking in s
 
 2. PostMortems: *bc there might be gaps in the way you always worked*
 
-> clarity of execution matters!
+> Clarity of execution matters!
 
 3. PIOs: *[stop telling how's](https://www.youtube.com/watch?v=7T-gldvgfpo)spend time defining WHYs and [start with a contract](https://www.jalcocertech.com/blog/job-engine-pio-adrs-project-contract/) with current and desired state*. ADRs and `builder-posts`, learnings and metalearnings from them are great.
 
@@ -385,6 +388,12 @@ Goal/intent/contract/end state/desired state
 
 {{< youtube "7T-gldvgfpo" >}}
 
+Use your authority properly, own risks *if thats what someone pays you for*
+
+Dont hide behind titles, show your track records *if you have one*
+
+> SaaS is definitely not *Silence as a Service*
+
 #### We are agents
 
 Its pretty interesting that we have lost the good old meaning of an agent
@@ -392,6 +401,8 @@ Its pretty interesting that we have lost the good old meaning of an agent
 The one prior to all AI stuff
 
 > An entity that perceives its environment and its able to act with intent and pursue its goals
+
+> an entity capable of acting in ~~the world~~ and environkment in pursuit of sth
 
 Thats why im lately clearly distinguishing between: 
 
@@ -572,6 +583,7 @@ There is much more to say now https://github.com/JAlcocerT/slubne-chwile-y26/tre
 Started in [May/June](https://jalcocert.github.io/JAlcocerT/jalcocertech-services-snapshot/#iot-crops-and-energy)
 
 And recently plugged a [Shelly to improve my selfhosting](https://jalcocert.github.io/JAlcocerT/selfhosting-energy-monitoring/):
+
 ```sh
 npx wrangler pages project list
 ```
@@ -580,7 +592,29 @@ npx wrangler pages project list
 * https://aerothermics-landing.pages.dev
 * https://solar-trajectory.pages.dev  
 
-{{% details title="Coming from... 🚀" closed="true" %}}
+{{% details title="Integrations for sizing... 🚀" closed="true" %}}
+
+| Dataset / Integration | Coverage & Resolution | API Key Required? | What It Does Best |
+| --- | --- | --- | --- |
+| **Open-Meteo** (`open-meteo.com`) | Global (including high-res European models & ERA5-Land); **Hourly** back to 1940 + 7-day forecast | **No** (free, open-source, zero auth for non-commercial use) | **Best all-in-one single API.** Returns hourly solar irradiance (including tilted plane), temperature, and precipitation in one fast JSON/CSV request—great for both Python simulations and live Home Assistant automation. |
+| **PVGIS** (EU Joint Research Centre) | All of Europe (plus Africa & parts of Asia/Americas); ~2–3 km grid; **Hourly & Monthly** | **No** (open REST API & web tool) | **Best for exact PV & battery modeling.** Accounts for your exact roof pitch, compass orientation, horizon shading, inverter losses, and battery capacity using SARAH-3 or ERA5 satellite data. |
+| **NASA POWER** (`power.larc.nasa.gov`) | Global; ~50 km grid; **Hourly & Daily** back to 1981 | **No** (open REST API & CSV export) | **Best for clean spreadsheet/CSV exports.** Combines solar irradiance and precipitation in a single tabular file without rate-limit friction, making quick multi-year water/energy balance modeling effortless. |
+| **Copernicus CDS (ERA5 / ERA5-Land)** | Global; ~9 km grid (ERA5-Land) / ~31 km (ERA5); **Hourly** back to 1940 | **Yes** (free registration + `cdsapi` token) | **Best for heavy scientific/Python analysis.** Raw NetCDF/GRIB climate reanalysis with dozens of extra variables (soil moisture, evaporation, wind gusts, dew point) if you want to model thermal pipe losses or evaporation in detail. |
+| **AEMET OpenData** (`opendata.aemet.es`) | **Spain only**; physical ground weather stations; **Daily & Sub-hourly** | **Yes** (free instant API key via email) | **Best for hyper-local Spanish rainfall extremes.** Captures real ground-gauge measurements at Seville Airport and nearby towns—ideal for stress-testing your gutters and first-flush diverter against real *gota fría* (DANA) cloudbursts. |
+| **ECA&D** (`ecad.eu`) | **All of Europe**; 20,000+ physical ground stations; **Daily** | **No** (direct bulk/station CSV downloads) | **Best for European ground-station rainfall history.** Standardizes official national meteorological rain gauges across Europe into a single format, avoiding grid-averaging smoothing when sizing rainwater cisterns. |
+
+Only **three** give you both solar radiation and precipitation together out of the box, while the others specialize in one or the other:
+
+| Dataset / Integration | Solar Radiation? | Rain (Precipitation)? | Notes |
+| --- | --- | --- | --- |
+| **Open-Meteo** | **Yes** (Hourly GHI, direct, diffuse, tilted) | **Yes** (Hourly & daily mm) | **Both in one call.** Easiest single endpoint for combined energy + water simulations. |
+| **NASA POWER** | **Yes** (Hourly & daily) | **Yes** (Hourly & daily mm) | **Both in one table.** Great for single-CSV downloads covering decades. |
+| **Copernicus CDS (ERA5 / ERA5-Land)** | **Yes** (`ssrd` / `fdir`) | **Yes** (`tp` total precipitation) | **Both in one dataset.** Most comprehensive physical variables, though raw NetCDF files take more work to parse. |
+| **PVGIS** | **Yes** (Hourly irradiance & simulated PV kWh) | **No** | **Solar only.** Strictly focused on photovoltaic and radiation modeling (no rainfall data). |
+| **AEMET OpenData** | **Partial** (Only a few specific radiation stations) | **Yes** (All stations, daily & sub-hourly mm) | **Rain-focused.** Most local weather stations in Spain measure rain, temperature, and wind, but *not* solar irradiance. |
+| **ECA&D** | **Partial** (Global radiation at select stations only) | **Yes** (All 20,000+ stations, daily mm) | **Rain-focused.** Primarily built from temperature and rain-gauge networks; solar sensors are sparse. |
+
+If you want a **single unified pipeline** that pulls both solar and rain for any coordinate in Europe without merging separate sources, stick to **Open-Meteo** (for speed and Home Assistant compatibility) or **ERA5-Land** (for maximum scientific detail).
 
 {{% /details %}}
 
@@ -664,7 +698,11 @@ git clone .../slubne-chwile-y26 #https://slubnechwile.com/dashboard
 
 ### SEO
 
-Beyond having a nice performing website:
+Beyond having a nice performing website: *is it indexed?*
+
+```sh
+site:jalcocert.github.io
+```
 
 {{< cards >}}
   {{< card link="https://github.com/JAlcocerT/poc_webs_magnet" title="Web Audit Magnet ↗" icon="github" >}}

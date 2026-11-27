@@ -2,7 +2,6 @@
 title: "PWAs FTW"
 date: 2026-11-30
 draft: false
-tags: ["dev"]
 summary: 'PWAs are so cool.'
 url: 'pwa-ftw'
 ---
@@ -10,7 +9,7 @@ url: 'pwa-ftw'
 * `https://pitlane.box2overtake.com/`
 
 
-## Interesting PWAs
+## Interesting OSS PWAs
 
 1. Betaflight
 

@@ -14,3 +14,7 @@ math: true
 
 * WHY Im writting this post: *bc *
 * What [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+
+otto vs atkinson vs miller https://www.youtube.com/watch?v=2SyONV_EruQ

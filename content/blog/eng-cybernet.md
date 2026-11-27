@@ -8,6 +8,16 @@ url: 'cyber-101'
 math: true
 ---
 
+
+**TL;DR**
+
+Ya estan los chavales con la cibernetica :)
+
+**Intro**
+
+* WHY Im writting this post: 
+* What [Ive learnt](#conclusions) with it: *Ive ended*
+
 <!-- 
 https://www.youtube.com/watch?v=lRsLuCLnH20 -->
 
@@ -26,15 +36,6 @@ https://www.youtube.com/watch?v=XKQgvmeApjI
 
 https://www.youtube.com/watch?v=g0sRbt8xrbY 
 
-
-**TL;DR**
-
-Ya estan los chavales con la cibernetica :)
-
-**Intro**
-
-* WHY Im writting this post: 
-* What [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 Coming from this section with [the BOM](https://jalcocert.github.io/JAlcocerT/aerospace-101/#dron-bom).

@@ -7,6 +7,22 @@ description: 'Flee, my friend, into your solitude! I see you stung by poisonous 
 url: 'tech-recap-2026'
 ---
 
+**TL;DR**
+
+The taste of goodbye
+
+**Intro**
+
+* WHY Im writting this post: *Bc*
+* WHAT [Ive learnt](#conclusions) with it: *Ive ended*
+
+
+Have the [last 3 years](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/) been...9?
+
+Coming from [last year review](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/), with the habit i started [some time back](https://jalcocert.github.io/JAlcocerT/blog/summary20/).
+
+
+
 I havent read new books, but have gone [back to my notes](https://github.com/JAlcocerT/jalcocertech-services/tree/master/docs/destilled-ebooks/z-read-books-notes), understood my [patterns and blinspots](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-summary.md), specially to form [an operator 101](https://github.com/JAlcocerT/jalcocertech-services/blob/master/docs/destilled-ebooks/z-read-books-notes/z-hormozi-curated.md). 
 
 This has been possible thanks to some `/skills`.
@@ -21,14 +37,6 @@ https://levels.io/
 Compensations be like https://www.levels.fyi/2025/
 
 > https://www.levels.fyi/heatmap/europe/
-
-`/now`
-
-**Intro**
-
-
-* WHY Im writting this post: *Bc*
-* WHAT [Ive learnt](#conclusions) with it: *Ive ended*
 
 
 [Some readers](https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/) are getting tired of llm slop, [particularly the ai assisted summaries](https://map.simonsarris.com/p/resist-summary) some, also [encourage to ignore workslop](https://www.seangoedecke.com/how-to-protect-yourself-from-workslop/)
@@ -54,7 +62,6 @@ Whats working, whats not and whats next?
 {{< youtube "2xAx08rBejc" >}}
 
 
-otto vs atkinson vs miller https://www.youtube.com/watch?v=2SyONV_EruQ
 
 {{< youtube "iwFSTYUL1yw" >}}
 
@@ -62,14 +69,6 @@ otto vs atkinson vs miller https://www.youtube.com/watch?v=2SyONV_EruQ
 
 <!-- 
 https://www.gowork.pl/carlos-diaz-gonzalez-digital-media,27067068/dane-kontaktowe-firmy -->
-
-**TL;DR**
-
-Have the [last 3 years](https://jalcocert.github.io/JAlcocerT/this-year-was-crazy/) been...9?
-
-**Intro**
-
-Coming from [last year review](https://jalcocert.github.io/JAlcocerT/tech-recap-and-more-2025/), with the habit i started [some time back](https://jalcocert.github.io/JAlcocerT/blog/summary20/).
 
 It seems that [my external situation changed faster than *my internal OS*](https://github.com/JAlcocerT/my-logseq-notes/blob/main/journals/2026_09_12.md)
 
@@ -86,7 +85,7 @@ A change of mindset causes overtime a change of life outputs overtime (for bette
 
 **Side Quests**
 
-0. About Type safe: *something that some languages like RUST have*
+0. About Type safe: *something that some languages, like RUST, have*
 
 From [JS](https://jalcocert.github.io/JAlcocerT/javascript-for-static-websites/) we evolved to [TS](https://jalcocert.github.io/JAlcocerT/whats-typescript/)
 
@@ -109,6 +108,11 @@ Also their discord bouble on the web for any BiP Project.
 
 > > https://github.com/opencoredev/social-sdk - https://social-sdk.dev/docs/platforms
 
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks//" title="eBooks | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
+
 1. When finding leads...
 
 This was an awsome example of data analytics.
@@ -123,7 +127,12 @@ Then, feedback to the lead engine.
 
 Its all possible if you have a clear foundations, for example, around medallion.
 
-2. [Audio TTS/S2T](https://jalcocert.github.io/JAlcocerT/selfhosted-tts/#conclusions): among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/), also KoKoro did quite well
+2. [Audio TTS/S2T](https://jalcocert.github.io/JAlcocerT/selfhosted-tts/#conclusions): among all I tried locally, [voicebox surprised me the most](https://fossengineer.com/voicebox-local-ai-voice-studio/), also KoKoro, which comes inside hyperframes, did quite well
+
+{{< cards cols="2" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/career/" title="Career | Docs ↗" >}}
+  {{< card link="https://jalcocert.github.io/JAlcocerT/cool-ebooks//" title="eBooks | Docs ↗" icon="book-open" >}}
+{{< /cards >}}
 
 3. Delivery Analytics - Bc you better [drive outcomes](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#bluf) or get obsolete
 
@@ -137,7 +146,7 @@ But I Just continued here.
 
 The same blog as last year, public and even clonable :)
 
-And that has gone nicely, I got some sponsorship
+And that has gone nicely, I got some sponsorship!
 
 People are using these platforms to do so: *and you have to place your email for later use*
 
@@ -156,9 +165,9 @@ dig fossengineer.com any
 
 Added some articles like: https://fossengineer.com/no-hello/ from the [learnings here](https://jalcocert.github.io/JAlcocerT/selfhosting-data-analytics/#quick-reference)
 
-0. Talking about Home-Lab and selfhosting: I keep admiring the work that `selfh.st` puts weekly
+0. Talking about Home-Lab and selfhosting: *I keep admiring the work that `selfh.st` puts weekly*
 
-I have done a *~monthly* series on stuff Ive tried or actively used.
+I have done a *~monthly* series on stuff Ive tried or actively used in the homelab.
 
 Also, have upgraded the x300 and x13 OS'es with a better backup & [DR strategy](https://jalcocert.github.io/JAlcocerT/selfhosted-tts/#testing-a-backup-strategy-in-the-cloud).
 
@@ -181,7 +190,7 @@ Share on social media / ads and do `draft:true` when old, but history will be ke
 
 0. [Blogspot](https://jalcocert.github.io/JAlcocerT/how-to-perform-free-web-audit/#preparing-for-blogspot-migration) vs Wordpress Migrations *with Free web Audits plugged in*
 
-The free web audit is a thing: <https://webaudit.jalcocertech.com/>
+The free web audit *productized service* is a thing: <https://webaudit.jalcocertech.com/>
 
 Which I put together [here](https://github.com/JAlcocerT/poc_webs_magnet).
 
@@ -989,6 +998,10 @@ A certain Negative cash flow year one then...uncertainty
 
 24. Your time is worth nothing until is proven otherwise (for decisions like buying a car to save 30 min to go to study and earn nothing)
 
+25. 0 track record. 0 agentic capabilities.
+
+26. who, what, by when
+
 #### Open Questions
 
 Most likely, you can get away and have an answer for your BA questions or for the BI dashboarding ones.
@@ -1068,7 +1081,7 @@ Some new companions for [last year list](https://jalcocert.github.io/JAlcocerT/t
 * Options -> Things and not controlable
 * Choices -> Actions and are controlable
 
-2. Again: active > > > > > passive
+2. Again: active > passive
 
 In fact: *does passive income exists at all?*
 
@@ -1078,7 +1091,7 @@ or the only thing is there can be is active *and deferred active*?
 
 3. Zettlekasten: *visible at `/notes` [here](https://jalcocert.github.io/JAlcocerT/notes/)*
 
-4. Accountability laundring, underfiltering, weaponized incompetence
+4. Accountability laundring/assimetry, underfiltering, weaponized incompetence
 
 5. [Peter Principle](https://es.wikipedia.org/wiki/Principio_de_Peter): *Con el tiempo, todo puesto tiende a ser ocupado por un empleado que es incompetente para desempeñar sus obligaciones + El trabajo es realizado por aquellos empleados que no han alcanzado todavía su nivel de incompetencia.*
 
@@ -1092,6 +1105,11 @@ or the only thing is there can be is active *and deferred active*?
 
 10. [Simplicity](https://try.emdashcms.com/posts/notes-on-simplicity): *Simplicity isn't the absence of complexity. It's the result of understanding a problem well enough to solve it cleanly. Remove as a Feature.*
 
+11. Ignorance tax
+
+12. `/now`
+
+13. SaaS ~~Software~~ Silence as a Service
 
 #### Interesting Posts
 
@@ -1198,9 +1216,9 @@ Like around marketing and sales: Cashvertising, ...
 2. Keeping 50+ tabs on chrome. *Not watching content on the phone*
 3. Stop building w/o a focus strategy / clear intent.
 
-Like with **random avatars** - Like I did In the AIssistant example
+Like with **random avatars** - *Like I did In the AIssistant example and many others*
 
-Or been supply constrained and offer below market quotes for DFY products/services.
+4. Been supply constrained and offer below market quotes for DFY products/services.
 
 Been there. Done that 🤯
 
@@ -1250,7 +1268,7 @@ Aka ~~,failed apps'~~: *projects where i just learnt*
 9. ~~PyInsightChAIn~~ Understand crypto with AI? Just copy paste the code yourself :)
 10. ~~IoDoctor reloaded~~: A second opinion, No kyc, [no receta](https://github.com/cssninjaStudio/dokto)
 
-A collection of stupid ideas that I just do to test AI models.
+A collection of *stupid ideas* to test AI models.
 
 1. App for dogs
 2. App counter for knitting
@@ -1272,8 +1290,8 @@ YT Shorts/Videos 4K: Ufolding Data / IoTrack
 
 YT - GoPro/DJI Telemtry Overlay Python
 * ~~PyStocks - Publish it on X/Reddit (?) ? RStocks Re-Bump?~~
-* LibrePortfolio.fyi (ES)
-* [PyVacAItions](https://jalcocert.github.io/JAlcocerT/py-vacations/#conclusions) // TripAdvAIsor
+* ~~LibrePortfolio.fyi (ES)~~
+* ~~[PyVacAItions](https://jalcocert.github.io/JAlcocerT/py-vacations/#conclusions) // TripAdvAIsor~~
 * ~~Real Estate Inv Calculator (Streamlit & Reflex)~~
 * ~~Real Estate Paint Estimaitor with AI~~
 * ~~app lista negra (orlandos)~~
@@ -1322,7 +1340,6 @@ Intentar venta en allegro de 3dprints
 Cajas para PCs 
 Utiles para cocina 
 Utiles para bicicletas 
-Impresion 3d con python?? 
 
 Bodas - SlubneChwile				
 ~~Portfolio CreAItor	Wordpress MigrAItion~~

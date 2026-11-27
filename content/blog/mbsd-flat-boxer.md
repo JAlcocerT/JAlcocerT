@@ -247,6 +247,10 @@ $$C(q, t) = 0$$
 
 "Holonomic" means it depends only on positions (and possibly explicit time), not on velocities. 
 
+{{< callout type="info" >}}
+See detailed explanation at  `https://moorepants.github.io/learn-multibody-dynamics/holonomic-eom.html`
+{{< /callout >}}
+
 Expanding into **non-holonomic** constraints moves the physics from "geometry of position" to "geometry of motion."
 
 {{< callout type="info" >}}
@@ -316,10 +320,3 @@ This makes "Inverse Kinematics" for non-holonomic systems (like autonomous drivi
 | **Constraint Focus** | Restricts "where" you can be | Restricts "how" you can move |
 | **Example** | Revolute joint, gear pair | Rolling wheel, ice skate, sled |
 | **Solver Impact** | Reduces coordinate space | Restricts velocity space only |
-
-**Does your current simulator need to handle "pure rolling" for the vehicle examples, or are you sticking to the "penalty-friction" approach which mimics non-holonomic behavior without the hard algebraic constraint?**
-
-
-{{< callout type="info" >}}
-
-{{< /callout >}}

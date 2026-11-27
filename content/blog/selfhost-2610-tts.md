@@ -459,9 +459,11 @@ I ended up going with a **Dell XPS 9350** this time and with `Omarchy 4.0.4`
 
 > > You can apply brand to your laptop as per `https://github.com/omacom/omarchy/blob/quattro/manual/41-branding.md`
 
-As a companion i got a keychron J2 75%, dygma was an interesting alternative :)
+As a companion i got a **keychron J2 75%**, dygma was an interesting alternative :)
 
-To pair it it was as simple as: `Fn+1`
+To pair it was as simple as: `Fn+1`
+
+> `https://launcher.keychron.com/#/light`
 
 #### Omarchy x Pomodoro
 

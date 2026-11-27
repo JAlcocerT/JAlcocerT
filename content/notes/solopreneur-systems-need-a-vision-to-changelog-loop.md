@@ -7,9 +7,13 @@ description: "A solo product system needs an explicit chain from intent to roadm
 
 A solo builder needs an execution loop that makes intent visible: vision or product intent becomes milestones, milestones become tasks, and completed work becomes a changelog of evidence.
 
-Without that chain, daily notes become reactive status reports. They record what happened, but do not explain which strategic decision caused the work or what was learned from the result. The loop turns a private backlog into a lightweight operating system for decisions.
+Without that chain, daily notes become reactive status reports. They record what happened, but do not explain which strategic decision caused the work or what was learned from the result. 
 
-This matters even more when agents are involved. Agents can execute tasks quickly, but they need the surrounding intent, boundaries, acceptance criteria, and feedback ledger. The human role moves upward toward defining the problem, governing tradeoffs, and updating the system when reality invalidates the plan.
+The loop turns a private backlog into a lightweight operating system for decisions.
+
+This matters even more when agents are involved. Agents can execute tasks quickly, but they need the surrounding intent, boundaries, acceptance criteria, and feedback ledger. 
+
+**The human role moves upward** toward defining the problem, governing tradeoffs, and updating the system when reality invalidates the plan.
 
 Related:
 

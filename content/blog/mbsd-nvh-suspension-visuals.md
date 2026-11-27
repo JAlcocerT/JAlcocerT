@@ -1,6 +1,6 @@
 ---
 title: "Suspension videos with mbsd"
-date: 2026-11-10
+date: 2026-11-19
 draft: false
 tags: ["MBSD v0-9-8 x Active Damping","LMS Filter","ccx","vibe modelling"]
 description: 'A light framework that can do stuff.'
@@ -225,6 +225,8 @@ The question is not only how parts move, but how vibration travels.
 
 
 ## Conclusions
+
+Some are having difficulties to find use cases when building is easier than ever.
 
 {{< cards >}}
   {{< card link="https://consulting.jalcocertech.com" title="Consulting Services" image="/blog_img/entrepre/consulting.png" subtitle="Consulting - Tier of Service" >}}
